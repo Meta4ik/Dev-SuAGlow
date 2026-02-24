@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.font-heading {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.font-body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F6F7F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #8F857B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AA987C;
+}
+
+/* Glass Effect */
+.glass-effect {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(246, 247, 248, 0.85);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Utility Classes for JS Animation */
+.animate-on-scroll {
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.animate-on-scroll.fade-up {
+  transform: translateY(30px);
+}
+
+.animate-on-scroll.fade-left {
+  transform: translateX(-30px);
+}
+
+.animate-on-scroll.fade-right {
+  transform: translateX(30px);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Dialog/Modal Styles */
+dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  max-width: 42rem;
+  max-height: 90vh;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
