@@ -169,6 +169,11 @@ const NAVBAR_HTML = `
 
         <!-- Nav Right -->
         <div class="flex items-center gap-4 md:gap-6">
+            <!-- Style Guide Link -->
+            <a href="style-guide.html" aria-label="Style Guide" class="text-charcoal hover:text-taupe transition-colors hidden sm:block">
+                <i data-lucide="swatch-book" class="w-4 h-4"></i>
+            </a>
+
             <!-- Scroll Specials CTA - Hidden unless scrolled -->
             <div class="relative items-center hidden sm:flex opacity-0 -translate-y-12 pointer-events-none group-[.nav-scrolled]/nav:opacity-100 group-[.nav-scrolled]/nav:translate-y-0 group-[.nav-scrolled]/nav:pointer-events-auto transition-all duration-[800ms] ease-out">
                 <a href="specials.html" class="flex items-center justify-center relative group w-8 h-8 rounded-full hover:bg-red-50 transition-colors">
@@ -309,6 +314,7 @@ const NAVBAR_HTML = `
 
                 <a href="financing.html" class="font-heading text-lg text-near-black">Financing</a>
                 <a href="index.html#contact" class="font-heading text-lg text-near-black">Contact Us</a>
+                <a href="style-guide.html" class="font-heading text-lg text-taupe flex items-center gap-2 mt-4"><i data-lucide="swatch-book" class="w-5 h-5"></i> Style Guide</a>
             </div>
         </div>
         <!-- Drawer Footer -->
