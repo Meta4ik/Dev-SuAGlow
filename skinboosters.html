@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Boosters | SuA K Glow Korean Med Spa</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'taupe': '#8F857B',
+                        'blue-gray': '#9DAFB6',
+                        'charcoal': '#404345',
+                        'off-white': '#F6F7F8',
+                        'warm-gold': '#AA987C',
+                        'near-black': '#131619',
+                        'light-gray': '#DFE0DD',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .heading-wide {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-weight: 300;
+            line-height: 1.1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-card:hover .arrow-icon {
+            transform: translateX(5px);
+        }
+
+        .arrow-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .img-wrapper img {
+            transition: transform 0.7s ease;
+        }
+
+        .product-card:hover .img-wrapper img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" data-nav-theme="dark"
+        class="relative min-h-[60vh] flex flex-col items-center justify-center text-center px-8 overflow-hidden pt-32">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[#F6F7F8]"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
+            <span
+                class="inline-block px-6 py-2 border border-[#AA987C]/30 text-[#AA987C] text-xs font-bold uppercase tracking-[0.5em] mb-8 rounded-full">K-Beauty
+                Hydration</span>
+            <h1 class="heading-wide text-5xl md:text-7xl mb-8 leading-[1.05]">Skin Boosters</h1>
+            <p
+                class="text-lg md:text-2xl text-[#404345]/70 max-w-3xl mx-auto mb-10 font-light tracking-wide leading-relaxed">
+                Advanced treatments focused on structural hydration, collagen stimulation, and long-term skin health.
+                Because in Korea, skincare isn't a trend. It's an investment in your foundation.
+            </p>
+        </div>
+    </section>
+
+    <!-- Boosters Grid -->
+    <section class="py-24 bg-white border-t border-black/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+
+                <!-- Rejuran -->
+                <a href="rejuran.html"
+                    class="product-card group block bg-[#F6F7F8] rounded-2xl overflow-hidden border border-black/5">
+                    <div
+                        class="img-wrapper relative h-72 md:h-80 w-full overflow-hidden bg-white/50 border-b border-black/5 flex items-center justify-center p-8">
+                        <img src="assets/rejuran-product.png"
+                            onerror="this.src='https://placehold.co/600x400/F6F7F8/404345?text=Rejuran'" alt="Rejuran"
+                            class="w-full h-full object-contain mix-blend-multiply">
+                    </div>
+                    <div class="p-10">
+                        <p class="text-[10px] uppercase font-bold tracking-[0.3em] text-taupe mb-3">Skin Repair &
+                            Regeneration</p>
+                        <h3 class="heading-wide text-3xl mb-4 group-hover:text-warm-gold transition-colors">Rejuran®
+                        </h3>
+                        <p class="font-light opacity-80 text-sm leading-relaxed mb-8">
+                            The gold standard for skin repair. Formulated with salmon-derived Polynucleotides (PN),
+                            Rejuran
+                            focuses on cellular recovery, reducing inflammation, and rebuilding skin damaged by age,
+                            sun, or stress.
+                        </p>
+                        <div class="flex items-center text-xs font-bold uppercase tracking-widest text-[#AA987C]">
+                            <span>Explore Rejuran</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Tone Up -->
+                <a href="#"
+                    class="product-card group block bg-[#F6F7F8] rounded-2xl overflow-hidden border border-black/5">
+                    <div
+                        class="img-wrapper relative h-72 md:h-80 w-full overflow-hidden bg-white/50 border-b border-black/5 flex items-center justify-center p-8">
+                        <img src="assets/korean_woman_tone_up_booster.png"
+                            onerror="this.src='https://placehold.co/600x400/F6F7F8/404345?text=Tone+Up'" alt="Tone Up"
+                            class="w-full h-full object-cover rounded-xl shadow-lg">
+                    </div>
+                    <div class="p-10">
+                        <p class="text-[10px] uppercase font-bold tracking-[0.3em] text-taupe mb-3">Brightening &
+                            Evening</p>
+                        <h3 class="heading-wide text-3xl mb-4 group-hover:text-warm-gold transition-colors">Tone Up</h3>
+                        <p class="font-light opacity-80 text-sm leading-relaxed mb-8">
+                            A specialized cocktail designed to dramatically even out skin tone, reduce pigmentation, and
+                            deliver
+                            a deeply radiant, glass-skin glow. It's the ultimate treatment for addressing dullness and
+                            uneven complexion.
+                        </p>
+                        <div class="flex items-center text-xs font-bold uppercase tracking-widest text-[#AA987C]">
+                            <span>Explore Tone Up</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Juvelook -->
+                <a href="juvelook.html"
+                    class="product-card group block bg-[#F6F7F8] rounded-2xl overflow-hidden border border-black/5">
+                    <div
+                        class="img-wrapper relative h-72 md:h-80 w-full overflow-hidden bg-white/50 border-b border-black/5 flex items-center justify-center p-8">
+                        <img src="assets/juvelook-bottles.png"
+                            onerror="this.src='https://placehold.co/600x400/F6F7F8/404345?text=Juvelook'" alt="Juvelook"
+                            class="w-full h-full object-contain mix-blend-multiply">
+                    </div>
+                    <div class="p-10">
+                        <p class="text-[10px] uppercase font-bold tracking-[0.3em] text-taupe mb-3">Structural Collagen
+                            Support</p>
+                        <h3 class="heading-wide text-3xl mb-4 group-hover:text-warm-gold transition-colors">Juvelook®
+                        </h3>
+                        <p class="font-light opacity-80 text-sm leading-relaxed mb-8">
+                            A biostimulatory skin booster combining PDLLA and Hyaluronic Acid. Instead of inflating
+                            space like fillers,
+                            it signals your skin to produce new collagen over time, acting as early scaffolding for
+                            facial structure.
+                        </p>
+                        <div class="flex items-center text-xs font-bold uppercase tracking-widest text-[#AA987C]">
+                            <span>Explore Juvelook</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Elravie Re20 -->
+                <a href="re20.html"
+                    class="product-card group block bg-[#F6F7F8] rounded-2xl overflow-hidden border border-black/5">
+                    <div
+                        class="img-wrapper relative h-72 md:h-80 w-full overflow-hidden bg-white/50 border-b border-black/5 flex items-center justify-center p-8">
+                        <img src="assets/elravie-re2o-product.png"
+                            onerror="this.src='https://placehold.co/600x400/F6F7F8/404345?text=Elravie+Re20'"
+                            alt="Elravie Re20" class="w-full h-full object-contain mix-blend-multiply">
+                    </div>
+                    <div class="p-10">
+                        <p class="text-[10px] uppercase font-bold tracking-[0.3em] text-taupe mb-3">ECM-Focused
+                            Hydration</p>
+                        <h3 class="heading-wide text-3xl mb-4 group-hover:text-warm-gold transition-colors">Elravie Re20
+                        </h3>
+                        <p class="font-light opacity-80 text-sm leading-relaxed mb-8">
+                            An advanced formulation designed to stabilize hydration at the extracellular matrix level.
+                            It focuses on creating a calmer, more elastic, balanced skin environment with superior
+                            moisture control.
+                        </p>
+                        <div class="flex items-center text-xs font-bold uppercase tracking-widest text-[#AA987C]">
+                            <span>Explore Elravie Re20</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- CellREDM -->
+                <a href="cellredm.html"
+                    class="product-card group block bg-[#F6F7F8] rounded-2xl overflow-hidden border border-black/5">
+                    <div
+                        class="img-wrapper relative h-72 md:h-80 w-full overflow-hidden bg-white/50 border-b border-black/5 flex items-center justify-center p-8 text-center pt-24">
+                        <img src="assets/bg_hero.webp"
+                            onerror="this.src='https://placehold.co/600x400/F6F7F8/404345?text=CellREDM'" alt="CellREDM"
+                            class="w-full h-full object-cover opacity-80 mix-blend-multiply rounded-xl shadow">
+                    </div>
+                    <div class="p-10">
+                        <p class="text-[10px] uppercase font-bold tracking-[0.3em] text-taupe mb-3">Dermal Matrix
+                            Support</p>
+                        <h3 class="heading-wide text-3xl mb-4 group-hover:text-warm-gold transition-colors">CellREDM
+                        </h3>
+                        <p class="font-light opacity-80 text-sm leading-relaxed mb-8">
+                            Reinforces the dermal environment using refined ECM (Extracellular Matrix) components. It
+                            focuses on
+                            thickness and density, providing structural steadiness to reinforce skin before it thins.
+                        </p>
+                        <div class="flex items-center text-xs font-bold uppercase tracking-widest text-[#AA987C]">
+                            <span>Explore CellREDM</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- BYRYZN -->
+                <a href="byryzn.html"
+                    class="product-card group block bg-[#F6F7F8] rounded-2xl overflow-hidden border border-black/5">
+                    <div
+                        class="img-wrapper relative h-72 md:h-80 w-full overflow-hidden bg-white/50 border-b border-black/5 flex items-center justify-center p-8 text-center pt-24">
+                        <img src="assets/byryzn-product.png"
+                            onerror="this.src='https://placehold.co/600x400/F6F7F8/404345?text=BYRYZN'" alt="BYRYZN"
+                            class="w-full h-full object-cover opacity-80 shadow rounded-xl">
+                    </div>
+                    <div class="p-10">
+                        <p class="text-[10px] uppercase font-bold tracking-[0.3em] text-taupe mb-3">Stabilized HA
+                            Booster</p>
+                        <h3 class="heading-wide text-3xl mb-4 group-hover:text-warm-gold transition-colors">BYRYZN®</h3>
+                        <p class="font-light opacity-80 text-sm leading-relaxed mb-8">
+                            The premium HA skin booster engineered for the dermis. Formulated with cross-linked
+                            hyaluronic acid
+                            to improve sustained dermal hydration retention, soften dehydration lines, and deliver a
+                            quiet luminosity.
+                        </p>
+                        <div class="flex items-center text-xs font-bold uppercase tracking-widest text-[#AA987C]">
+                            <span>Explore BYRYZN</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- HiloWave -->
+                <a href="#"
+                    class="product-card group block bg-[#F6F7F8] rounded-2xl overflow-hidden border border-black/5">
+                    <div
+                        class="img-wrapper relative h-72 md:h-80 w-full overflow-hidden bg-white/50 border-b border-black/5 flex items-center justify-center p-8">
+                        <img src="assets/hyaluronic-acid-structure.png"
+                            onerror="this.src='https://placehold.co/600x400/F6F7F8/404345?text=HiloWave'" alt="HiloWave"
+                            class="w-full h-full object-contain mix-blend-multiply opacity-50">
+                    </div>
+                    <div class="p-10">
+                        <p class="text-[10px] uppercase font-bold tracking-[0.3em] text-taupe mb-3">Advanced Smoothing
+                        </p>
+                        <h3 class="heading-wide text-3xl mb-4 group-hover:text-warm-gold transition-colors">HiloWave
+                        </h3>
+                        <p class="font-light opacity-80 text-sm leading-relaxed mb-8">
+                            A next-generation hydration and smoothing technology that focuses on immediate moisture
+                            restoration.
+                            Creates long-lasting suppleness for a refined, glassy complexion that beautifully reflects
+                            light.
+                        </p>
+                        <div class="flex items-center text-xs font-bold uppercase tracking-widest text-[#AA987C]">
+                            <span>Explore HiloWave</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Skinvive -->
+                <a href="skinvive.html"
+                    class="product-card group block bg-[#F6F7F8] rounded-2xl overflow-hidden border border-black/5">
+                    <div
+                        class="img-wrapper relative h-72 md:h-80 w-full overflow-hidden bg-white/50 border-b border-black/5 flex items-center justify-center p-8">
+                        <img src="assets/hero-skinvive.png"
+                            onerror="this.src='https://placehold.co/600x400/F6F7F8/404345?text=Skinvive'" alt="Skinvive"
+                            class="w-full h-full object-cover rounded-xl shadow-lg">
+                    </div>
+                    <div class="p-10">
+                        <p class="text-[10px] uppercase font-bold tracking-[0.3em] text-taupe mb-3">Microdroplet
+                            Hydration</p>
+                        <h3 class="heading-wide text-3xl mb-4 group-hover:text-warm-gold transition-colors">Skinvive™
+                        </h3>
+                        <p class="font-light opacity-80 text-sm leading-relaxed mb-8">
+                            The first and only FDA-approved hyaluronic acid (HA) microdroplet injectable in the US to
+                            improve
+                            skin smoothness of the cheeks. It hydrates from within, providing a lasting glow for up to 6
+                            months.
+                        </p>
+                        <div class="flex items-center text-xs font-bold uppercase tracking-widest text-[#AA987C]">
+                            <span>Explore Skinvive</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Brand Section (Formerly Footer) -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24">K-Beauty Medspa • Carrollton HQ</p>
+            <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">Not sure which booster is right for
+                you?<br>
+                <span class="text-warm-gold opacity-80">Our experts will diagnose and create your personalized K-Beauty
+                    protocol.</span>
+            </h3>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="btn-primary">Book
+                A Consultation</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

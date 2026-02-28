@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKINVIVE™ by JUVÉDERM® | SuA K Glow Korean Med Spa</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'taupe': '#8F857B',
+                        'blue-gray': '#9DAFB6',
+                        'charcoal': '#404345',
+                        'off-white': '#F6F7F8',
+                        'warm-gold': '#AA987C',
+                        'near-black': '#131619',
+                        'light-gray': '#DFE0DD',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .heading-wide {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-weight: 300;
+            line-height: 1.1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-card {
+            background-color: white;
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.04);
+        }
+
+        .news-card {
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .news-card:hover {
+            border-color: #AA987C;
+            background: white;
+        }
+
+        .accent-text {
+            color: #AA987C;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" data-nav-theme="dark"
+        class="relative min-h-[80vh] flex flex-col items-center justify-center md:items-start md:text-left text-center px-8 overflow-hidden pt-32">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero-skinvive.png" alt="Skinvive Hero Background"
+                class="absolute inset-0 w-full h-full object-cover object-[70%_center] md:object-right" />
+            <div
+                class="absolute inset-0 bg-white/70 md:bg-gradient-to-r md:from-white/90 md:via-white/30 md:to-transparent">
+            </div>
+        </div>
+        <div class="w-full max-w-7xl mx-auto relative z-10">
+            <div class="max-w-2xl animate-on-scroll fade-up delay-200 md:pl-12">
+                <span
+                    class="inline-block px-6 py-2 border border-[#AA987C]/30 text-[#AA987C] text-xs font-bold uppercase tracking-[0.5em] mb-8 rounded-full bg-white/50 backdrop-blur-sm">Hydration
+                    Injectable</span>
+                <h1 class="heading-wide text-5xl md:text-7xl mb-8 leading-[1.05]">SKINVIVE™<br><span
+                        class="text-3xl md:text-5xl opacity-80">by JUVÉDERM®</span></h1>
+                <p class="text-lg md:text-2xl text-[#404345]/80 mb-10 font-light tracking-wide leading-relaxed">
+                    The first and only hyaluronic acid microdroplet injectable designed to improve cheek skin smoothness
+                    for
+                    a lasting glow.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categorization Template (Reusable) -->
+    <section id="categorization" data-nav-theme="dark" class="py-12 bg-white border-y border-black/5">
+        <div class="max-w-6xl mx-auto px-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-black/5">
+                <div class="py-4 md:py-0 md:px-8 flex items-center gap-6 animate-on-scroll fade-up">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F6F7F8] flex items-center justify-center shrink-0 border border-black/5">
+                        <span class="text-3xl">🇺🇸</span>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe mb-1">Manufacturer</p>
+                        <p class="font-heading text-sm tracking-widest uppercase">Allergan Aesthetics</p>
+                    </div>
+                </div>
+                <div class="py-4 md:py-0 md:px-8 flex items-center gap-6 animate-on-scroll fade-up delay-100">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F6F7F8] flex items-center justify-center shrink-0 border border-black/5">
+                        <i data-lucide="droplets" class="w-6 h-6 text-taupe"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe mb-1">Type</p>
+                        <p class="font-heading text-sm tracking-widest uppercase">Microdroplet Injectable</p>
+                    </div>
+                </div>
+                <div class="py-4 md:py-0 md:px-8 flex items-center gap-6 animate-on-scroll fade-up delay-200">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F6F7F8] flex items-center justify-center shrink-0 border border-black/5">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-taupe"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe mb-1">Purpose</p>
+                        <p class="font-body text-xs text-charcoal/70 leading-relaxed">Boosts internal hydration for
+                            lasting skin smoothness and a glowing, healthy look.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem & Solution -->
+    <section id="problem-solution" class="py-32 px-10 bg-[#Off-white]">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="animate-on-scroll fade-right">
+                <h2 class="heading-wide text-3xl mb-12">The Problem:<br />Depletion of Hydration</h2>
+                <ul class="space-y-6 text-lg font-light leading-relaxed opacity-80 mb-12">
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Hyaluronic acid naturally decreases with age and sun exposure</li>
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Skin loses its natural moisture-retaining ability</li>
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Surface texture changes and deep dullness occur</li>
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Topical creams and serums only hydrate the surface</li>
+                </ul>
+                <div class="p-8 border-l-4 border-taupe bg-white shadow-sm">
+                    <p class="heading-wide text-xs text-[#AA987C] mb-4">K-Beauty Hydration Philosophy</p>
+                    <p class="text-xl italic font-light">"True luminosity stems from deep, structural hydration, not
+                        just surface moisture."</p>
+                </div>
+            </div>
+            <div class="animate-on-scroll fade-left delay-200">
+                <div
+                    class="bg-white p-12 md:p-16 rounded-2xl shadow-soft border border-black/5 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-taupe/5 rounded-full blur-3xl -z-10 -translate-y-1/2 translate-x-1/2">
+                    </div>
+                    <h3 class="heading-wide text-2xl mb-8">The Solution: SKINVIVE™</h3>
+                    <p class="font-light text-lg opacity-80 mb-8 leading-relaxed">
+                        Designed to break the rules of your routine and hydrate from within:
+                    </p>
+                    <ul class="space-y-4 text-sm uppercase tracking-[0.1em] font-bold opacity-70 mb-10">
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Replenishes deep hyaluronic acid</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Enhances smooth cheek texture</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Improves skin hydration and radiance</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Maintains your natural facial contours</li>
+                    </ul>
+                    <div class="pt-8 border-t border-black/10">
+                        <p class="heading-wide text-xs text-[#AA987C] mb-2">The Result</p>
+                        <p class="text-lg font-light">A lasting, effortless glow that emanates from healthy, hydrated
+                            skin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components -->
+    <section id="components" class="py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-10">
+            <div class="text-center md:text-left mb-16 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl md:text-4xl mb-6">How SKINVIVE™ Works</h2>
+                <p class="text-lg font-light opacity-70 max-w-3xl leading-relaxed">
+                    Unlike traditional fillers, SKINVIVE™ is engineered specifically for skin quality and hydration. Its
+                    unique formulation uses a microdroplet injection technique to disperse modified hyaluronic acid
+                    evenly across the dermal layer.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="p-10 border border-black/5 bg-[#F6F7F8] hover:border-[#AA987C]/30 transition-all animate-on-scroll fade-up">
+                    <h3 class="heading-wide text-sm mb-4">Modified Hyaluronic Acid</h3>
+                    <p class="text-sm opacity-60 leading-relaxed font-light">A specialized, water-attracting HA molecule
+                        designed to disperse evenly, retaining deep moisture rather than creating volume.</p>
+                </div>
+                <div
+                    class="p-10 border border-black/5 bg-[#F6F7F8] hover:border-[#AA987C]/30 transition-all animate-on-scroll fade-up delay-100">
+                    <h3 class="heading-wide text-sm mb-4">Lidocaine Integration</h3>
+                    <p class="text-sm opacity-60 leading-relaxed font-light">Formulated with a common pain reliever
+                        built right into the product to keep the fast microdroplet experience comfortable.</p>
+                </div>
+                <div
+                    class="p-10 border border-black/5 bg-[#F6F7F8] hover:border-[#AA987C]/30 transition-all animate-on-scroll fade-up delay-200">
+                    <h3 class="heading-wide text-sm mb-4">Universal Compatibility</h3>
+                    <p class="text-sm opacity-60 leading-relaxed font-light">FDA approved and clinically proven to
+                        safely and predictably improve skin across all skin types and tones.</p>
+                </div>
+                <div
+                    class="p-10 border border-black/5 bg-near-black text-white md:col-span-3 lg:col-span-3 animate-on-scroll fade-up delay-100">
+                    <p class="heading-wide text-xs text-warm-gold mb-4 tracking-[0.4em]">The Key Difference</p>
+                    <h3 class="heading-wide text-lg mb-4">Intradermal Microdroplets</h3>
+                    <p class="text-sm opacity-80 leading-relaxed font-light">Instead of placing a bolus of gel for
+                        facial shaping, SKINVIVE™ is injected through a series of tiny intradermal microdroplets just
+                        below the skin. This allows the hyaluronic acid to hydrate from within, directly creating a wide
+                        area of smoothness without altering your face shape or structural volume.</p>
+                </div>
+            </div>
+
+            <!-- Notes for Photo Placeholder Example -->
+            <div
+                class="mt-16 bg-[#F6F7F8] aspect-video w-full rounded-2xl border border-black/5 flex items-center justify-center text-charcoal/30 flex-col animate-on-scroll fade-up p-10 text-center">
+                <i data-lucide="image" class="w-12 h-12 mb-4 opacity-50"></i>
+                <p class="text-sm uppercase tracking-[0.2em]">[Diagram of Skinvive Intradermal Microdroplets]</p>
+                <p class="text-xs opacity-60 mt-2">Placeholder for graphic showing hydration within the dermal layer</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- vs Others -->
+    <section id="vs-others" class="py-32 px-10 bg-[#F6F7F8] border-t border-black/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl">How SKINVIVE™ Compares</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-8 bg-white border border-black/5 shadow-soft animate-on-scroll fade-up">
+                    <p class="heading-wide text-[10px] text-warm-gold tracking-[0.3em] font-bold mb-4">vs. Dermal
+                        Fillers</p>
+                    <p class="font-light opacity-80 text-sm leading-relaxed">Traditional HA fillers are structurally
+                        dense to add volume and shape to specific areas. SKINVIVE™ is a fluid microdroplet HA that
+                        hydrates to improve skin texture and smoothness without adding volume.</p>
+                </div>
+                <div class="p-8 bg-white border border-black/5 shadow-soft animate-on-scroll fade-up delay-100">
+                    <p class="heading-wide text-[10px] text-warm-gold tracking-[0.3em] font-bold mb-4">vs. Topical
+                        Skincare</p>
+                    <p class="font-light opacity-80 text-sm leading-relaxed">While daily moisturizers treat the
+                        outermost barrier of your skin, SKINVIVE™ treats underneath the surface, locking in deep
+                        hydration for 6 months continuously.</p>
+                </div>
+                <div class="p-8 bg-white border border-black/5 shadow-soft animate-on-scroll fade-up">
+                    <p class="heading-wide text-[10px] text-warm-gold tracking-[0.3em] font-bold mb-4">vs.
+                        Polynucleotides (Rejuran)</p>
+                    <p class="font-light opacity-80 text-sm leading-relaxed">Rejuran triggers long-term regenerative DNA
+                        repair within cells over time. SKINVIVE™ focuses directly on immediate, broad moisture retention
+                        and surface texture.</p>
+                </div>
+                <div class="p-8 bg-white border border-black/5 shadow-soft animate-on-scroll fade-up delay-100">
+                    <p class="heading-wide text-[10px] text-warm-gold tracking-[0.3em] font-bold mb-4">vs. Liquid Tox
+                    </p>
+                    <p class="font-light opacity-80 text-sm leading-relaxed">Tox treatments target active muscle
+                        movements and dynamic lines. SKINVIVE™ focuses on the static, overall hydration and smoothness
+                        of the skin layer itself.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Expectations & FAQ -->
+    <section id="faq" data-nav-theme="dark" class="py-32 px-10 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="heading-wide text-center text-3xl mb-20">What to Expect at SuA Glow</h2>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 gap-6 text-xs uppercase tracking-[0.2em] font-bold opacity-80 mb-20">
+                <div class="bg-[#F6F7F8] p-8 animate-on-scroll fade-up text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Process Time</h4>
+                    <p>~15 Minutes</p>
+                </div>
+                <div
+                    class="bg-[#F6F7F8] p-8 animate-on-scroll fade-up delay-100 text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Recovery</h4>
+                    <p>Minimal Downtime</p>
+                </div>
+                <div
+                    class="bg-[#F6F7F8] p-8 animate-on-scroll fade-up delay-200 text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Duration</h4>
+                    <p>Lasts Up To 6 Months</p>
+                </div>
+                <div
+                    class="bg-[#F6F7F8] p-8 animate-on-scroll fade-up delay-300 text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Results</h4>
+                    <p>Glowing, Refreshed Skin</p>
+                </div>
+            </div>
+
+            <!-- Notes for Photo Placeholder Example -->
+            <div
+                class="mb-20 bg-[#F6F7F8]/50 aspect-video max-w-4xl mx-auto rounded-2xl border border-black/5 flex items-center justify-center text-charcoal/30 flex-col animate-on-scroll fade-up p-10 text-center">
+                <i data-lucide="image" class="w-12 h-12 mb-4 opacity-50"></i>
+                <p class="text-sm uppercase tracking-[0.2em]">[Before and after real results from Skinvive]</p>
+                <p class="text-xs opacity-60 mt-2">Placeholder for graphic showing cheek smoothness improvements</p>
+            </div>
+
+            <div class="bg-off-white p-12 md:p-16 mb-20 animate-on-scroll fade-up shadow-sm">
+                <div class="flex items-start gap-6">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shrink-0">
+                        <i data-lucide="quote" class="w-5 h-5 text-taupe"></i>
+                    </div>
+                    <div>
+                        <p class="font-heading uppercase tracking-[0.3em] text-[10px] text-taupe font-bold mb-4">SuA
+                            Glow K-Beauty Takeaway</p>
+                        <p class="text-xl font-light italic leading-relaxed opacity-80">"At SuA Glow, we love SKINVIVE™
+                            because it aligns perfectly with the K-Beauty philosophy: achieving stunning, hydrated glass
+                            skin from within, rather than trying to mask surface problems."</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="heading-wide text-center text-2xl mb-12">Frequently Asked Questions</h3>
+            <div class="space-y-6">
+                <!-- FAQ Items -->
+                <div class="bg-[#F6F7F8] p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">What is SKINVIVE™ by
+                        JUVÉDERM®?</h4>
+                    <p class="font-light opacity-70 text-sm">SKINVIVE™ is the first and only hyaluronic acid
+                        microdroplet injectable indicated to improve skin smoothness of the cheeks and hydrate from
+                        within—without a series of treatments—for a glow that lasts through 6 months.</p>
+                </div>
+                <div class="bg-[#F6F7F8] p-8 animate-on-scroll fade-up delay-100">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Is SKINVIVE™ a filler?
+                    </h4>
+                    <p class="font-light opacity-70 text-sm">Since it contains hyaluronic acid, it is technically part
+                        of the filler category. However, unlike traditional fillers that shape and build volume,
+                        SKINVIVE™'s modified HA is strictly designed to improve cheek smoothness and hydrate without
+                        changing your face shape.</p>
+                </div>
+                <div class="bg-[#F6F7F8] p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">How much downtime does it
+                        have?</h4>
+                    <p class="font-light opacity-70 text-sm">Treatment with SKINVIVE™ has minimal downtime. Many people
+                        refer to it as "do-it-on-your-lunch-break" convenient. You may experience temporary bumps,
+                        redness, or bruising at the micro-injection sites, which usually resolve quickly.</p>
+                </div>
+                <div class="bg-[#F6F7F8] p-8 animate-on-scroll fade-up delay-100">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Can I use it if I have
+                        dark skin?</h4>
+                    <p class="font-light opacity-70 text-sm">Yes, SKINVIVE™ is FDA approved and clinically proven to
+                        safely improve skin quality across all skin types and tones.</p>
+                </div>
+                <div class="bg-[#F6F7F8] p-8 animate-on-scroll fade-up delay-100">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">How often will I need to
+                        be treated?</h4>
+                    <p class="font-light opacity-70 text-sm">Results are proven to last up to 6 months. To maintain the
+                        continuous glow and smoothness, we recommend scheduling a treatment every 6 months.</p>
+                </div>
+                <div class="bg-[#F6F7F8] p-8 animate-on-scroll fade-up delay-100">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Does it replace my
+                        moisturizer?</h4>
+                    <p class="font-light opacity-70 text-sm">No, SKINVIVE™ works within your skin layer, while your
+                        daily topical creams protect the outer skin barrier. They work best in combination for
+                        comprehensive skin health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Modifiers Placeholder for missing assets -->
+    <section class="py-12 bg-white px-10 border-t border-black/5">
+        <div
+            class="max-w-4xl mx-auto bg-white/50 border border-dashed border-charcoal/20 p-8 text-center rounded text-sm text-charcoal/50 animate-on-scroll fade-up">
+            <p class="font-bold mb-2 uppercase tracking-widest text-xs">Awaiting Assets</p>
+            <p>1. Gallery Images pending research for Skinvive.<br>2. Sophia to Identify: Proper Skinvive Diagrams.</p>
+        </div>
+    </section>
+
+    <!-- Brand Section (Formerly Footer) -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24">K-Beauty Medspa • Carrollton HQ</p>
+            <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">K-Beauty isn’t about doing everything.<br>
+                <span class="text-warm-gold opacity-80">It’s about doing the right thing.</span>
+            </h3>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="btn-primary">Book
+                Your SKINVIVE™ Consultation</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

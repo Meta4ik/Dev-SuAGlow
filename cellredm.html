@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellREDM™ | SuA K Glow Korean Med Spa</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'taupe': '#8F857B',
+                        'blue-gray': '#9DAFB6',
+                        'charcoal': '#404345',
+                        'off-white': '#F6F7F8',
+                        'warm-gold': '#AA987C',
+                        'near-black': '#131619',
+                        'light-gray': '#DFE0DD',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .heading-wide {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-weight: 300;
+            line-height: 1.1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-card {
+            background-color: white;
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.04);
+        }
+
+        .news-card {
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .news-card:hover {
+            border-color: #AA987C;
+            background: white;
+        }
+
+        .accent-text {
+            color: #AA987C;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" data-nav-theme="dark"
+        class="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-8 overflow-hidden pt-32">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[#F6F7F8]"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
+            <span
+                class="inline-block px-6 py-2 border border-[#AA987C]/30 text-[#AA987C] text-xs font-bold uppercase tracking-[0.5em] mb-8 rounded-full">ECM
+                Skin Booster</span>
+            <h1 class="heading-wide text-5xl md:text-7xl mb-8 leading-[1.05]">CellREDM™</h1>
+            <p
+                class="text-lg md:text-2xl text-[#404345]/70 max-w-3xl mx-auto mb-10 font-light tracking-wide leading-relaxed">
+                Extracellular matrix support in a syringe. Reinforces the skin's architecture, improves density, and
+                provides foundational hydration.
+            </p>
+        </div>
+    </section>
+
+    <!-- Product Categorization Template (Reusable) -->
+    <section id="categorization" data-nav-theme="dark" class="py-12 bg-white border-y border-black/5">
+        <div class="max-w-6xl mx-auto px-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-black/5">
+                <div class="py-4 md:py-0 md:px-8 flex items-center gap-6 animate-on-scroll fade-up">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F6F7F8] flex items-center justify-center shrink-0 border border-black/5">
+                        <span class="text-3xl">🇰🇷</span>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe mb-1">Origin</p>
+                        <p class="font-heading text-sm tracking-widest uppercase">South Korea</p>
+                    </div>
+                </div>
+                <div class="py-4 md:py-0 md:px-8 flex items-center gap-6 animate-on-scroll fade-up delay-100">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F6F7F8] flex items-center justify-center shrink-0 border border-black/5">
+                        <i data-lucide="droplets" class="w-6 h-6 text-taupe"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe mb-1">Type</p>
+                        <p class="font-heading text-sm tracking-widest uppercase">ECM-Focused Skin Booster</p>
+                    </div>
+                </div>
+                <div class="py-4 md:py-0 md:px-8 flex items-center gap-6 animate-on-scroll fade-up delay-200">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F6F7F8] flex items-center justify-center shrink-0 border border-black/5">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-taupe"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe mb-1">Purpose</p>
+                        <p class="font-body text-xs text-charcoal/70 leading-relaxed">Reinforces skin architecture,
+                            improves density, and provides foundational hydration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem & Solution -->
+    <section id="problem-solution" class="py-32 px-10 bg-[#Off-white]">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="animate-on-scroll fade-right">
+                <h2 class="heading-wide text-3xl mb-12">The Problem:<br />When the ECM Weakens</h2>
+                <ul class="space-y-6 text-lg font-light leading-relaxed opacity-80 mb-12">
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Skin can thin</li>
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Elasticity declines</li>
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Hydration retention decreases</li>
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Delicate areas, like under-eyes, appear more fragile</li>
+                </ul>
+                <div class="p-8 border-l-4 border-taupe bg-white shadow-sm">
+                    <p class="heading-wide text-xs text-[#AA987C] mb-4">K-Beauty Principle</p>
+                    <p class="text-xl italic font-light">"Prevention is always more elegant than repair."</p>
+                </div>
+            </div>
+            <div class="animate-on-scroll fade-left delay-200">
+                <div
+                    class="bg-white p-12 md:p-16 rounded-2xl shadow-soft border border-black/5 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-taupe/5 rounded-full blur-3xl -z-10 -translate-y-1/2 translate-x-1/2">
+                    </div>
+                    <h3 class="heading-wide text-2xl mb-8">The Solution: CellREDM™</h3>
+                    <p class="font-light text-lg opacity-80 mb-8 leading-relaxed">
+                        Designed to reinforce the extracellular matrix environment so skin can:
+                    </p>
+                    <ul class="space-y-4 text-sm uppercase tracking-[0.1em] font-bold opacity-70 mb-10">
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Retain hydration more effectively</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Support elasticity</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Improve dermal density</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Maintain structural integrity over time</li>
+                    </ul>
+                    <div class="pt-8 border-t border-black/10">
+                        <p class="heading-wide text-xs text-[#AA987C] mb-2">The Result</p>
+                        <p class="text-lg font-light">Skin that holds its ground—firmer, calmer, and architecturally
+                            intact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components -->
+    <section id="components" class="py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-10">
+            <div class="text-center md:text-left mb-16 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl md:text-4xl mb-6">Main Components of CellREDM™</h2>
+                <p class="text-lg font-light opacity-70 max-w-3xl leading-relaxed">
+                    CellREDM™ is built around the architecture skin depends on to stay strong. At its core are refined
+                    <strong>extracellular matrix (ECM) components</strong>—designed to closely mirror the structural
+                    framework that supports collagen, elastin, and hydration within the dermis. Rather than simply
+                    adding moisture, CellREDM™ reinforces the environment where these elements function.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="p-10 border border-black/5 bg-[#F6F7F8] hover:border-[#AA987C]/30 transition-all animate-on-scroll fade-up">
+                    <h3 class="heading-wide text-sm mb-4">Type I Collagen</h3>
+                    <p class="text-sm opacity-60 leading-relaxed font-light">Primary structural framework for skin
+                        thickness and integrity.</p>
+                </div>
+                <div
+                    class="p-10 border border-black/5 bg-[#F6F7F8] hover:border-[#AA987C]/30 transition-all animate-on-scroll fade-up delay-100">
+                    <h3 class="heading-wide text-sm mb-4">Type III Collagen</h3>
+                    <p class="text-sm opacity-60 leading-relaxed font-light">Elastic support layer to maintain
+                        elasticity and flexibility (especially in delicate areas).</p>
+                </div>
+                <div
+                    class="p-10 border border-black/5 bg-[#F6F7F8] hover:border-[#AA987C]/30 transition-all animate-on-scroll fade-up delay-200">
+                    <h3 class="heading-wide text-sm mb-4">Basement Membrane</h3>
+                    <p class="text-sm opacity-60 leading-relaxed font-light">Helps stabilize the interface between
+                        epidermis and dermis—critical for structural cohesion and skin resilience.</p>
+                </div>
+                <div
+                    class="p-10 border border-black/5 bg-[#F6F7F8] hover:border-[#AA987C]/30 transition-all animate-on-scroll fade-up">
+                    <h3 class="heading-wide text-sm mb-4">GAG & Hydration Elements</h3>
+                    <p class="text-sm opacity-60 leading-relaxed font-light">Assists in moisture retention within the
+                        matrix, allowing hydration to remain balanced without creating volume distortion.</p>
+                </div>
+                <div
+                    class="p-10 border border-black/5 bg-near-black text-white md:col-span-2 lg:col-span-2 animate-on-scroll fade-up delay-100">
+                    <p class="heading-wide text-xs text-warm-gold mb-4 tracking-[0.4em]">The Key Difference</p>
+                    <h3 class="heading-wide text-lg mb-4">Ultra-Refined 75μm hADM Particles</h3>
+                    <p class="text-sm opacity-80 leading-relaxed font-light">Engineered for smooth integration into the
+                        dermis, allowing even dispersion and uniform structural reinforcement.</p>
+                </div>
+            </div>
+
+            <!-- Notes for Photo Placeholder Example -->
+            <div
+                class="mt-16 bg-[#F6F7F8] aspect-video w-full rounded-2xl border border-black/5 flex items-center justify-center text-charcoal/30 flex-col animate-on-scroll fade-up p-10 text-center">
+                <i data-lucide="image" class="w-12 h-12 mb-4 opacity-50"></i>
+                <p class="text-sm uppercase tracking-[0.2em]">[Diagram of ECM showing collagen/elastin fibers]</p>
+                <p class="text-xs opacity-60 mt-2">Placeholder for graphic</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="py-32 px-10 bg-[#F6F7F8]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl md:text-4xl mb-6">CellREDM™ vs. Elravie Re2O</h2>
+                <p class="heading-wide text-xs text-[#8F857B] opacity-70 tracking-[0.3em]">The Real Difference is
+                    Particle Precision.</p>
+            </div>
+
+            <p
+                class="text-center font-light text-lg leading-relaxed max-w-3xl mx-auto opacity-80 mb-16 animate-on-scroll fade-up">
+                Both CellREDM™ and Elravie Re2O are ECM skin boosters designed to reinforce the skin’s structural
+                environment. They support collagen, elasticity, and hydration at the matrix level. But the meaningful
+                distinction comes down to <strong>particle refinement</strong>.
+            </p>
+
+            <div class="overflow-x-auto animate-on-scroll fade-up">
+                <table
+                    class="w-full min-w-[600px] bg-white border border-black/10 rounded-xl overflow-hidden shadow-sm">
+                    <thead>
+                        <tr class="bg-near-black text-white text-xs uppercase tracking-[0.2em] text-left">
+                            <th class="p-6 font-medium">Category</th>
+                            <th class="p-6 font-medium">Elravie Re2O</th>
+                            <th class="p-6 font-medium text-warm-gold">CellREDM™</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm font-light divide-y divide-black/5">
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Manufacturer
+                            </td>
+                            <td class="p-6 opacity-80">L&C Bio</td>
+                            <td class="p-6 font-medium">Hans Biome</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Particle Size
+                            </td>
+                            <td class="p-6 opacity-80">~100μm</td>
+                            <td class="p-6 font-bold text-taupe">~75μm (Ultra-Refined)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Primary Focus
+                            </td>
+                            <td class="p-6 opacity-80">Elasticity support, hydration stabilization</td>
+                            <td class="p-6 font-medium">Structural remodeling, density + texture refinement</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div
+                class="mt-16 max-w-4xl mx-auto p-10 bg-white border border-black/5 shadow-soft rounded-xl animate-on-scroll fade-up">
+                <h4 class="heading-wide text-sm mb-4 text-[#AA987C]">Why Particle Size Matters:</h4>
+                <p class="font-light leading-relaxed opacity-80">Smaller particle size (~75μm) allows for more delicate,
+                    uniform placement in the skin. This makes CellREDM™ exceptionally well-suited for refining skin
+                    texture and treating areas where precision is paramount, such as the under-eye region or fine lines.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- vs Others -->
+    <section id="vs-others" class="py-32 px-10 bg-white border-t border-black/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl">How CellREDM™ Compares</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-8 bg-[#F6F7F8] animate-on-scroll fade-up">
+                    <p class="heading-wide text-[10px] text-warm-gold tracking-[0.3em] font-bold mb-4">vs. Dermal
+                        Fillers</p>
+                    <p class="font-light opacity-80 text-sm leading-relaxed">Fillers add volume to specific areas.
+                        CellREDM™ reinforces the dermal structure itself without changing your natural facial shape.</p>
+                </div>
+                <div class="p-8 bg-[#F6F7F8] animate-on-scroll fade-up delay-100">
+                    <p class="heading-wide text-[10px] text-warm-gold tracking-[0.3em] font-bold mb-4">vs. Tox</p>
+                    <p class="font-light opacity-80 text-sm leading-relaxed">Tox softens muscular movement. CellREDM™
+                        strengthens the framework of the skin that Tox sits on.</p>
+                </div>
+                <div class="p-8 bg-[#F6F7F8] animate-on-scroll fade-up">
+                    <p class="heading-wide text-[10px] text-warm-gold tracking-[0.3em] font-bold mb-4">vs. Rejuran</p>
+                    <p class="font-light opacity-80 text-sm leading-relaxed">Rejuran focuses heavily on DNA repair and
+                        recovery (PN). CellREDM™ focuses on density and matrix reinforcement (ECM).</p>
+                </div>
+                <div class="p-8 bg-[#F6F7F8] animate-on-scroll fade-up delay-100">
+                    <p class="heading-wide text-[10px] text-warm-gold tracking-[0.3em] font-bold mb-4">vs. Juvelook</p>
+                    <p class="font-light opacity-80 text-sm leading-relaxed">Juvelook is a hybrid biostimulator that
+                        triggers new collagen. CellREDM™ reinforces the architecture where that collagen lives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Expectations & FAQ -->
+    <section id="faq" data-nav-theme="dark" class="py-32 px-10 bg-[#DFE0DD]">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="heading-wide text-center text-3xl mb-20">What to Expect at SuA Glow</h2>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 gap-6 text-xs uppercase tracking-[0.2em] font-bold opacity-80 mb-20">
+                <div class="bg-white p-8 animate-on-scroll fade-up text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Process Time</h4>
+                    <p>~60 Minutes</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-100 text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Recovery</h4>
+                    <p>Minimal. Bumps 24-72h</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-200 text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Frequency</h4>
+                    <p>Short initial series + maint.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-300 text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Results</h4>
+                    <p>Gradual density gain</p>
+                </div>
+            </div>
+
+            <!-- Notes for Photo Placeholder Example -->
+            <div
+                class="mb-20 bg-[#F6F7F8]/50 aspect-video max-w-4xl mx-auto rounded-2xl border border-black/5 flex items-center justify-center text-charcoal/30 flex-col animate-on-scroll fade-up p-10 text-center">
+                <i data-lucide="image" class="w-12 h-12 mb-4 opacity-50"></i>
+                <p class="text-sm uppercase tracking-[0.2em]">[Before and after skin density improvements]</p>
+                <p class="text-xs opacity-60 mt-2">Placeholder for graphic specifically showing under-eye</p>
+            </div>
+
+            <div class="bg-white p-12 md:p-16 mb-20 animate-on-scroll fade-up shadow-sm">
+                <div class="flex items-start gap-6">
+                    <div class="w-12 h-12 bg-[#F6F7F8] rounded-full flex items-center justify-center shrink-0">
+                        <i data-lucide="quote" class="w-5 h-5 text-taupe"></i>
+                    </div>
+                    <div>
+                        <p class="font-heading uppercase tracking-[0.3em] text-[10px] text-taupe font-bold mb-4">SuA
+                            Glow K-Beauty Takeaway</p>
+                        <p class="text-xl font-light italic leading-relaxed opacity-80">"Clients don’t call CellREDM™
+                            dramatic. They call it solid. It strengthens quietly in the background, layers seamlessly
+                            with other treatments, and gets better with consistency."</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="heading-wide text-center text-2xl mb-12">Frequently Asked Questions</h3>
+            <div class="space-y-6">
+                <!-- FAQ Items -->
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Is CellREDM™ safe?</h4>
+                    <p class="font-light opacity-70 text-sm">Yes. It is widely used internationally by aesthetic
+                        professionals and is known for its high safety profile and biocompatibility.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-100">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Who is CellREDM™ best for?
+                    </h4>
+                    <p class="font-light opacity-70 text-sm">It is ideal for anyone noting thinning or "crepey" skin,
+                        loss of resilience, or fragile areas like the under-eyes.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Does CellREDM™ add volume?
+                    </h4>
+                    <p class="font-light opacity-70 text-sm">No. It reinforces density rather than adding bulk.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-100">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">How many sessions will I
+                        need?</h4>
+                    <p class="font-light opacity-70 text-sm">We typically recommend 3 sessions spaced 4 weeks apart,
+                        followed by maintenance.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-100">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">When will I see results?
+                    </h4>
+                    <p class="font-light opacity-70 text-sm">While hydration is often felt early, structural firming
+                        usually begins a few weeks after the first treatment.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-100">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Can it be combined with
+                        other treatments?</h4>
+                    <p class="font-light opacity-70 text-sm">Yes, it pairs perfectly with Juvelook, Rejuran, or
+                        Microneedling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Modifiers Placeholder for missing assets -->
+    <section class="py-12 bg-[#DFE0DD] px-10">
+        <div
+            class="max-w-4xl mx-auto bg-white/50 border border-dashed border-charcoal/20 p-8 text-center rounded text-sm text-charcoal/50 animate-on-scroll fade-up">
+            <p class="font-bold mb-2 uppercase tracking-widest text-xs">Awaiting Assets</p>
+            <p>1. Gallery Images pending research.<br>2. Sophia to Identify: CellREDM™ Client Testimony.</p>
+        </div>
+    </section>
+
+    <!-- Brand Section (Formerly Footer) -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24">K-Beauty Medspa • Carrollton HQ</p>
+            <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">K-Beauty isn’t about doing everything.<br>
+                <span class="text-warm-gold opacity-80">It’s about doing the right thing.</span>
+            </h3>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="btn-primary">Book
+                Your CellREDM™ Consultation</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

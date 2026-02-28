@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Statement | SuA K Glow Korean Med Spa</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Cherry Widget Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@200..900&family=Slabo+27px:wght@200..900&family=Lato:wght@200..900&family=Raleway:wght@200..900&family=Montserrat:wght@200..900&family=Oswald:wght@200..900&family=Poppins:wght@200..900&family=Source+Sans+Pro:wght@200..900&family=PT+Sans:wght@200..900&family=Open+Sans:wght@200..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'taupe': '#8F857B',
+                        'blue-gray': '#9DAFB6',
+                        'charcoal': '#404345',
+                        'off-white': '#F6F7F8',
+                        'warm-gold': '#AA987C',
+                        'near-black': '#131619',
+                        'light-gray': '#DFE0DD',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .heading-wide {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-weight: 300;
+            line-height: 1.1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+    <div id="nav-placeholder"></div>
+
+    <section id="page-hero" data-nav-theme="dark"
+        class="relative min-h-[30vh] flex flex-col items-center justify-center text-center px-8 overflow-hidden pt-32 pb-12">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/bg_hero.webp" class="w-full h-full object-cover" alt="Hero Background">
+            <div class="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
+            <h1 class="heading-wide text-4xl md:text-5xl mb-6 leading-[1.05]">Accessibility Statement</h1>
+        </div>
+        <div class="absolute top-[10%] left-[-5%] w-[600px] h-[600px] bg-[#EAECED]/40 rounded-full blur-[140px] -z-10">
+        </div>
+        <div
+            class="absolute bottom-[-5%] right-[-5%] w-[700px] h-[700px] bg-[#DFE0DD]/30 rounded-full blur-[160px] -z-10">
+        </div>
+    </section>
+
+    <section data-nav-theme="light" class="py-16 px-6 bg-white shrink-0 relative z-10">
+        <div class="max-w-4xl mx-auto font-body text-sm md:text-base leading-relaxed text-charcoal/80 space-y-6">
+            <p class="font-bold">Effective Date: January 2026</p>
+
+            <h2 class="text-xl font-bold text-near-black mt-8 mb-4">Our Commitment to Accessibility</h2>
+            <p>We strive to design, develop, and maintain our website in substantial conformance with the Web Content
+                Accessibility Guidelines (WCAG) 2.1, Levels A and AA, as published by the World Wide Web Consortium
+                (W3C). These guidelines help ensure that content is perceivable, operable, understandable, and robust
+                for all users.</p>
+            <p>We also endeavor to comply with applicable accessibility requirements under the Americans with
+                Disabilities Act (ADA) and Section 508 of the Rehabilitation Act, as applicable to our operations.</p>
+
+            <h2 class="text-xl font-bold text-near-black mt-8 mb-4">Measures We Take to Support Accessibility</h2>
+            <p>To support accessibility across our digital platforms, SuA Glow has implemented the following measures:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Accessibility Training:</strong> Team members receive guidance on inclusive design and
+                    accessibility best practices.</li>
+                <li><strong>Ongoing Monitoring:</strong> We routinely review and test our website to identify and
+                    address accessibility issues in a timely manner.</li>
+                <li><strong>User Feedback:</strong> We encourage users to share accessibility feedback so we can
+                    continue to improve.</li>
+            </ul>
+
+            <h2 class="text-xl font-bold text-near-black mt-8 mb-4">Accessibility Features</h2>
+            <p>Our ongoing accessibility efforts include, but are not limited to:</p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>Keyboard-accessible navigation</li>
+                <li>Improved compatibility with screen readers and assistive technologies</li>
+                <li>Adjustable text sizing for improved readability</li>
+                <li>High-contrast color support</li>
+                <li>Descriptive alternative (alt) text for images</li>
+                <li>Closed captions for applicable video content</li>
+                <li>Accessible online forms designed for assistive technology use</li>
+            </ul>
+
+            <h2 class="text-xl font-bold text-near-black mt-8 mb-4">Limitations and Alternatives</h2>
+            <p>While we strive to ensure full accessibility, some content or features may not yet fully conform to all
+                accessibility standards. We are actively working to remediate such areas. If you encounter an
+                accessibility barrier, we will make reasonable efforts to provide the requested information or service
+                through alternative means.</p>
+
+            <h2 class="text-xl font-bold text-near-black mt-8 mb-4">Feedback and Assistance</h2>
+            <p>We welcome feedback regarding the accessibility of the SuA Glow website. If you experience difficulty
+                accessing any part of our site or need assistance, please contact us and we will respond promptly.</p>
+
+            <h2 class="text-xl font-bold text-near-black mt-8 mb-4">Contact Information</h2>
+            <p>
+                <strong>Privacy Officer</strong><br>
+                SuA Glow<br>
+                <strong>Email:</strong> info@suaglow.com<br>
+                <strong>Phone:</strong> 972-665-8737<br>
+                <strong>Address:</strong> 4116 State Highway 121, Suite 120, Office O, Carrollton, TX 75010
+            </p>
+            <p>We will respond to accessibility inquiries within a reasonable timeframe and provide support in accessing
+                the information requested.</p>
+
+            <h2 class="text-xl font-bold text-near-black mt-8 mb-4">Continuous Improvement</h2>
+            <p>Accessibility is an ongoing effort at SuA Glow. We regularly review our website, update content and
+                functionality, and evaluate accessibility solutions to ensure an inclusive experience for all visitors.
+            </p>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

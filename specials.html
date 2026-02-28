@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specials | SuA K Glow Korean Med Spa</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'taupe': '#8F857B',
+                        'blue-gray': '#9DAFB6',
+                        'charcoal': '#404345',
+                        'off-white': '#F6F7F8',
+                        'warm-gold': '#AA987C',
+                        'near-black': '#131619',
+                        'light-gray': '#DFE0DD',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .heading-wide {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-weight: 300;
+            line-height: 1.1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-card {
+            background-color: white;
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+
+    <!-- Global Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Header (Empty spacer for sticky nav) -->
+    <section class="h-24 bg-off-white"></section>
+
+    <!-- Container for Dynamically Loaded Specials Content -->
+    <div id="specials-container"></div>
+
+    <!-- Brand CTA Section -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto animate-on-scroll fade-up">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow"
+                class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24 uppercase">Medical Aesthetics • Carrollton
+                HQ</p>
+            <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">K-Beauty doesn't chase trends.<br>It builds
+                <span class="text-warm-gold opacity-80">better skin.</span>
+            </h3>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="btn-primary">Start
+                Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Shared Scripts -->
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Load the Specials Content dynamically -->
+    <script src="specials.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof SPECIALS_HTML !== 'undefined') {
+                document.getElementById('specials-container').innerHTML = SPECIALS_HTML;
+                // Re-initialize any Lucide icons inside the dynamically loaded content
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+                // Trigger scroll animations specifically on newly injected elements
+                const newlyInjectedElements = document.querySelectorAll('#specials-container .animate-on-scroll');
+                const scrollObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+                newlyInjectedElements.forEach(el => scrollObserver.observe(el));
+            } else {
+                console.error('SPECIALS_HTML is not defined. Ensure specials.js is loaded.');
+            }
+        });
+    </script>
+</body>
+
+</html>

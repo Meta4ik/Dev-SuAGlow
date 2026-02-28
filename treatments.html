@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuA K-Glow | Korean Medical Aesthetics</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'taupe': '#8F857B',
+                        'blue-gray': '#9DAFB6',
+                        'charcoal': '#404345',
+                        'off-white': '#F6F7F8',
+                        'warm-gold': '#AA987C',
+                        'near-black': '#131619',
+                        'light-gray': '#DFE0DD',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .heading-wide {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-weight: 300;
+            line-height: 1.1;
+        }
+
+        .product-card {
+            background-color: white;
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.04);
+        }
+
+        .news-card {
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .news-card:hover {
+            border-color: #AA987C;
+            background: white;
+        }
+
+        .accent-text {
+            color: #AA987C;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" data-nav-theme="dark" class="relative min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/bg_hero.webp" class="w-full h-full object-cover" alt="Hero Background">
+            <div class="absolute inset-0 bg-[#F6F7F8]/40 backdrop-blur-[2px]"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6">
+            <div class="">
+                <span
+                    class="inline-block px-4 py-1.5 border border-[#AA987C]/30 text-[#AA987C] text-[10px] font-bold uppercase tracking-[0.4em] mb-8 rounded-full">Premier
+                    K-Beauty Destination</span>
+                <h1 class="heading-wide text-4xl md:text-7xl mb-10 text-near-black">Advanced<br>Treatments.</h1>
+                <p class="font-body text-charcoal/70 text-lg md:text-xl max-w-lg leading-relaxed">Curated Seoul-trained
+                    techniques for hydrated, glass-skin radiance.</p>
+            </div>
+
+            <div class="mt-8 animate-on-scroll fade-up delay-300">
+                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-primary">
+                    Schedule Your Glow
+                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
+                <div class="w-1 h-2 bg-white/80 rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" data-nav-theme="dark" class="py-24 md:py-32 bg-off-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- About SuA -->
+            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+                <div class="order-2 md:order-1 animate-on-scroll fade-right delay-200">
+                    <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">About Us</p>
+                    <h2 class="heading-wide text-3xl md:text-4xl text-near-black mb-6">The Art of Korean Beauty,
+                        Perfected</h2>
+                    <p class="font-body text-charcoal/80 leading-relaxed mb-6">
+                        At SuA, we believe true beauty shines when purity meets elegance. Our treatments are designed to
+                        help your skin glow naturally—radiant, refined, and timeless.
+                    </p>
+
+                    <div class="bg-white/50 rounded-xl p-6 mb-6 border border-taupe/20">
+                        <h3 class="font-heading text-lg text-near-black mb-4">The Meaning of SuA (水娥)</h3>
+                        <ul class="space-y-2 font-body text-charcoal/70">
+                            <li class="flex items-start gap-3"><span class="text-taupe mt-1">•</span><span>水(Su):
+                                    pure/water/flowing</span></li>
+                            <li class="flex items-start gap-3"><span class="text-taupe mt-1">•</span><span>娥(A):
+                                    elegant/graceful</span></li>
+                            <li class="flex items-start gap-3"><span class="text-taupe mt-1">=</span><span>pure, natural
+                                    beauty like flowing water</span></li>
+                        </ul>
+                    </div>
+
+                    <p class="font-heading text-base text-near-black/80 border-l-4 border-taupe pl-4">"피부가 수아하게 빛나다" =
+                        The skin glows with a pure, water-like radiance</p>
+                </div>
+
+                <div class="order-1 md:order-2 animate-on-scroll fade-left">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="assets/about-image.jpg" alt="SuA Treatment"
+                            class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-blue-gray/30 rounded-full blur-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botox Section -->
+    <section id="botox" data-nav-theme="dark" class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+                <div class="order-2 animate-on-scroll fade-left delay-200">
+                    <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">Aesthetic Treatments
+                    </p>
+                    <h2 class="heading-wide text-3xl md:text-4xl text-near-black mb-6">Botox Services</h2>
+                    <p class="font-body text-charcoal/70 leading-relaxed mb-8">
+                        Botox treatments at SuA K-Glow are tailored to address various aesthetic and medical concerns
+                        with precision and expertise.
+                    </p>
+
+                    <div class="space-y-4">
+                        <!-- Card 1 -->
+                        <div class="product-card border border-taupe/10 rounded-2xl p-6 flex items-start gap-5">
+                            <div class="p-3 bg-taupe/10 rounded-xl text-taupe"><i data-lucide="sparkles"
+                                    class="w-6 h-6"></i></div>
+                            <div>
+                                <h3 class="heading-wide text-lg text-near-black mb-1">Face</h3>
+                                <p class="font-body text-sm text-charcoal/70">Forehead lines, frown lines, crow's feet,
+                                    brow lift</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="product-card border border-taupe/10 rounded-2xl p-6 flex items-start gap-5">
+                            <div class="p-3 bg-taupe/10 rounded-xl text-taupe"><i data-lucide="heart"
+                                    class="w-6 h-6"></i></div>
+                            <div>
+                                <h3 class="heading-wide text-lg text-near-black mb-1">Body</h3>
+                                <p class="font-body text-sm text-charcoal/70">Excessive sweating (hyperhidrosis), muscle
+                                    contouring</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="product-card border border-taupe/10 rounded-2xl p-6 flex items-start gap-5">
+                            <div class="p-3 bg-taupe/10 rounded-xl text-taupe"><i data-lucide="star"
+                                    class="w-6 h-6"></i></div>
+                            <div>
+                                <h3 class="heading-wide text-lg text-near-black mb-1">Medical</h3>
+                                <p class="font-body text-sm text-charcoal/70">TMJ, migraines, muscle spasms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 animate-on-scroll fade-right">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="assets/botox-face.jpg" alt="Botox"
+                            class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skin Boosters Section -->
+    <section id="skinboosters" data-nav-theme="dark" class="py-24 md:py-32 bg-off-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-taupe/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-gray/20 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 animate-on-scroll fade-up">
+                <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">Advanced Treatments</p>
+                <h2 class="heading-wide text-3xl md:text-4xl text-near-black mb-6">Skin Boosters</h2>
+                <p class="font-body text-charcoal/70 max-w-2xl mx-auto">
+                    Our skin booster treatments are designed to rejuvenate and hydrate the skin, targeting areas such as
+                    the neck, hands, chest, and knees.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Rejuran -->
+                <div class="trigger-modal cursor-pointer product-card border border-taupe/10 group overflow-hidden rounded-2xl animate-on-scroll fade-up delay-100"
+                    data-modal-target="modal-rejuran">
+                    <div class="h-64 overflow-hidden bg-white flex items-center justify-center p-8">
+                        <img src="assets/rejuran-product.png"
+                            class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <h3
+                                    class="heading-wide text-lg text-near-black group-hover:text-taupe transition-colors">
+                                    Rejuran</h3>
+                                <p class="font-body text-xs tracking-wide text-charcoal/60 uppercase">Healer, I, S</p>
+                            </div>
+                            <span class="px-3 py-1 bg-taupe/10 text-taupe text-xs font-body rounded-full">95% DNA
+                                Match</span>
+                        </div>
+                        <p class="font-body text-sm text-charcoal/70 mb-4 line-clamp-2">Skin regeneration with salmon
+                            DNA (PN). Shares 95% similarity with human DNA.</p>
+                        <div class="flex items-center gap-2 text-taupe mt-4">
+                            <span class="font-body text-xs uppercase tracking-wide">Learn More</span>
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hydro Injection -->
+                <div class="trigger-modal cursor-pointer product-card border border-taupe/10 group overflow-hidden rounded-2xl animate-on-scroll fade-up delay-200"
+                    data-modal-target="modal-hydro">
+                    <div class="h-64 overflow-hidden bg-white flex items-center justify-center p-8">
+                        <img src="assets/byryzn-product.png"
+                            class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <h3
+                                    class="heading-wide text-lg text-near-black group-hover:text-taupe transition-colors">
+                                    Hydro Injection</h3>
+                                <p class="font-body text-xs tracking-wide text-charcoal/60 uppercase">BYRYZN - MoolGwang
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 bg-taupe/10 text-taupe text-xs font-body rounded-full">6+
+                                Months</span>
+                        </div>
+                        <p class="font-body text-sm text-charcoal/70 mb-4 line-clamp-2">Cross-linked HA technology that
+                            holds 1,000x its weight in water.</p>
+                        <div class="flex items-center gap-2 text-taupe mt-4">
+                            <span class="font-body text-xs uppercase tracking-wide">Learn More</span>
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Juvelook -->
+                <div class="trigger-modal cursor-pointer product-card border border-taupe/10 group overflow-hidden rounded-2xl animate-on-scroll fade-up delay-300"
+                    data-modal-target="modal-juvelook">
+                    <div class="h-64 overflow-hidden bg-white flex items-center justify-center p-8">
+                        <img src="assets/juvelook-bottles.png"
+                            class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <h3
+                                    class="heading-wide text-lg text-near-black group-hover:text-taupe transition-colors">
+                                    Juvelook Skin</h3>
+                                <p class="font-body text-xs tracking-wide text-charcoal/60 uppercase">PDLLA + HA</p>
+                            </div>
+                            <span class="px-3 py-1 bg-taupe/10 text-taupe text-xs font-body rounded-full">FDA
+                                Approved</span>
+                        </div>
+                        <p class="font-body text-sm text-charcoal/70 mb-4 line-clamp-2">High molecular PDLLA with
+                            hyaluronic acid stimulates natural collagen production.</p>
+                        <div class="flex items-center gap-2 text-taupe mt-4">
+                            <span class="font-body text-xs uppercase tracking-wide">Learn More</span>
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elravie -->
+                <div class="trigger-modal cursor-pointer product-card border border-taupe/10 group overflow-hidden rounded-2xl animate-on-scroll fade-up delay-400"
+                    data-modal-target="modal-elravie">
+                    <div class="h-64 overflow-hidden bg-white flex items-center justify-center p-8">
+                        <img src="assets/elravie-re2o-product.png"
+                            class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <h3
+                                    class="heading-wide text-lg text-near-black group-hover:text-taupe transition-colors">
+                                    Elravie Re2O</h3>
+                                <p class="font-body text-xs tracking-wide text-charcoal/60 uppercase">5th Generation ECM
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 bg-taupe/10 text-taupe text-xs font-body rounded-full">Premium
+                                ECM</span>
+                        </div>
+                        <p class="font-body text-sm text-charcoal/70 mb-4 line-clamp-2">Premium collagen skin booster
+                            made from finely ground hADM.</p>
+                        <div class="flex items-center gap-2 text-taupe mt-4">
+                            <span class="font-body text-xs uppercase tracking-wide">Learn More</span>
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Combos -->
+            <div class="mt-12 bg-white/50 rounded-2xl p-8 border border-taupe/20 animate-on-scroll fade-up delay-500">
+                <h3 class="font-heading text-xl text-near-black mb-4 text-center">Best Combo Procedures</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="px-4 py-2 bg-taupe/10 text-near-black font-body text-sm rounded-full">Reju Tox (Rejuran
+                        + Skinbooster)</span>
+                    <span class="px-4 py-2 bg-taupe/10 text-near-black font-body text-sm rounded-full">Rejuran Plus
+                        (Rejuran + Hydro + Booster)</span>
+                    <span class="px-4 py-2 bg-taupe/10 text-near-black font-body text-sm rounded-full">Rejuvelook
+                        (Rejuran + Juvelook Skin)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scar Treatment Section -->
+    <section id="scar" data-nav-theme="dark" class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+                <div class="animate-on-scroll fade-right">
+                    <div class="relative overflow-hidden rounded-2xl group w-full h-[640px] bg-near-black/5"
+                        id="scar-carousel-container">
+                        <div class="flex transition-transform duration-500 ease-in-out w-full h-full"
+                            id="scar-carousel-inner">
+                            <div class="w-full h-full shrink-0 relative">
+                                <img src="assets/suaglow_scar_tissue_before1.png" alt="Before View 1"
+                                    class="w-full h-full object-cover">
+                                <span
+                                    class="absolute top-3 left-3 bg-near-black/60 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded backdrop-blur-sm">Before
+                                    1</span>
+                            </div>
+                            <div class="w-full h-full shrink-0 relative">
+                                <img src="assets/suaglow_scar_tissue_before2.png" alt="Before View 2"
+                                    class="w-full h-full object-cover">
+                                <span
+                                    class="absolute top-3 left-3 bg-near-black/60 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded backdrop-blur-sm">Before
+                                    2</span>
+                            </div>
+                            <div class="w-full h-full shrink-0 relative flex items-center justify-center">
+                                <img src="assets/suaglow_scar_tissue_after.png" alt="After"
+                                    class="w-full h-full object-cover">
+                                <span
+                                    class="absolute top-3 left-3 bg-taupe/80 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded backdrop-blur-sm">After</span>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-between p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            <button id="scar-prev"
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-white/70 hover:bg-white text-near-black backdrop-blur shadow-sm transition-all focus:outline-none pointer-events-auto">
+                                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                            </button>
+                            <button id="scar-next"
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-white/70 hover:bg-white text-near-black backdrop-blur shadow-sm transition-all focus:outline-none pointer-events-auto">
+                                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2" id="scar-carousel-dots">
+                            <button class="w-2 h-2 rounded-full cursor-pointer transition-all bg-white w-4"
+                                data-index="0"></button>
+                            <button class="w-2 h-2 rounded-full cursor-pointer transition-all bg-white/50"
+                                data-index="1"></button>
+                            <button class="w-2 h-2 rounded-full cursor-pointer transition-all bg-white/50"
+                                data-index="2"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animate-on-scroll fade-left delay-200">
+                    <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">Specialized Care</p>
+                    <h2 class="heading-wide text-3xl md:text-4xl text-near-black mb-6">Scar Treatment</h2>
+                    <p class="font-body text-charcoal/70 leading-relaxed mb-8">
+                        At SuA, we approach each scar type with tailored treatment strategies combining medical and
+                        aesthetic approaches.
+                    </p>
+
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3 p-3 bg-off-white rounded-lg border border-taupe/20">
+                            <span
+                                class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body">1</span>
+                            <span class="font-body text-near-black">Steroid Injection</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-off-white rounded-lg border border-taupe/20">
+                            <span
+                                class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body">2</span>
+                            <span class="font-body text-near-black">Salmon DNA Injection + Botox Mix</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-off-white rounded-lg border border-taupe/20">
+                            <span
+                                class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body">3</span>
+                            <span class="font-body text-near-black">Salmon DNA Injection + Filler Mix</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-off-white rounded-lg border border-taupe/20">
+                            <span
+                                class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body">4</span>
+                            <span class="font-body text-near-black">Air Toxin (Exclusively at SuA!)</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-taupe/10 rounded-xl p-6 border border-taupe/30">
+                        <h3 class="font-heading text-lg text-near-black mb-2">What Does Air Toxin Do?</h3>
+                        <p class="font-body text-xs text-taupe mb-3 uppercase tracking-wide">Exclusively at SuA</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 font-body text-sm text-charcoal/70"><i
+                                    data-lucide="sparkles" class="w-4 h-4 text-taupe"></i>Reduces inflammation</li>
+                            <li class="flex items-center gap-2 font-body text-sm text-charcoal/70"><i
+                                    data-lucide="sparkles" class="w-4 h-4 text-taupe"></i>Relieves tension on wound
+                                edges</li>
+                            <li class="flex items-center gap-2 font-body text-sm text-charcoal/70"><i
+                                    data-lucide="sparkles" class="w-4 h-4 text-taupe"></i>Promotes new collagen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filler Section -->
+    <section id="filler" data-nav-theme="dark" class="py-24 md:py-32 bg-off-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+                <div class="order-2 md:order-1 animate-on-scroll fade-right">
+                    <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">Volume & Contour</p>
+                    <h2 class="heading-wide text-3xl md:text-4xl text-near-black mb-6">Bio Modulator & Filler</h2>
+                    <p class="font-body text-charcoal/70 leading-relaxed mb-8">
+                        Advanced volume restoration and facial contouring treatments.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                        <div class="product-card border border-taupe/10 rounded-2xl overflow-hidden shadow-sm">
+                            <div class="h-40 bg-white flex items-center justify-center p-6">
+                                <img src="assets/juvelook-bottles.png" alt="Juvelook"
+                                    class="h-full w-auto object-contain">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="heading-wide text-sm text-near-black mb-2">Juvelook Volume</h3>
+                                <p class="font-body text-xs text-charcoal/70 mb-2">Gradual collagen stimulator with
+                                    reduced nodule risk.</p>
+                                <span class="text-xs font-body text-taupe uppercase tracking-wide">Korean Special
+                                    Blend</span>
+                            </div>
+                        </div>
+                        <div class="product-card border border-taupe/10 rounded-2xl overflow-hidden shadow-sm">
+                            <div class="h-40 bg-white flex items-center justify-center p-6">
+                                <img src="assets/sculptra-particle.png" alt="Sculptra"
+                                    class="h-full w-auto object-contain">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="heading-wide text-sm text-near-black mb-2">Sculptra</h3>
+                                <p class="font-body text-xs text-charcoal/70 mb-2">Faster collagen production but higher
+                                    nodule risk.</p>
+                                <span class="text-xs font-body text-taupe uppercase tracking-wide">SuA Special
+                                    Recipe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 md:order-2 animate-on-scroll fade-left delay-200">
+                    <div class="relative overflow-hidden rounded-2xl mb-4">
+                        <img src="assets/juvelook-collagen-booster.png"
+                            class="w-full h-[280px] object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wellness Section -->
+    <section id="wellness" data-nav-theme="dark" class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll fade-up">
+                <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">Holistic Care</p>
+                <h2 class="heading-wide text-3xl md:text-4xl text-near-black mb-6">Wellness</h2>
+                <p class="font-body text-charcoal/70 max-w-2xl mx-auto">
+                    Comprehensive wellness programs designed to enhance your overall health.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div
+                    class="product-card border border-taupe/10 rounded-2xl overflow-hidden animate-on-scroll fade-up delay-100 shadow-sm">
+                    <div class="h-64 bg-gradient-to-br from-taupe/10 to-blue-gray/10 flex items-center justify-center">
+                        <i data-lucide="heart" class="w-20 h-20 text-taupe/40"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="heading-wide text-xl text-near-black mb-4">Diet Clinic</h3>
+                        <p class="font-body text-charcoal/70">Personalized weight management and nutritional counseling.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="product-card border border-taupe/10 rounded-2xl overflow-hidden animate-on-scroll fade-up delay-200 shadow-sm">
+                    <div class="h-64 overflow-hidden">
+                        <img src="assets/wellness-iv.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="heading-wide text-xl text-near-black mb-4">IV Therapy</h3>
+                        <p class="font-body text-charcoal/70">Intravenous nutrient therapy delivering essential
+                            vitamins.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand CTA Section -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto animate-on-scroll fade-up">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24 uppercase">Medical Aesthetics • Carrollton
+                HQ</p>
+            <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">K-Beauty doesn't chase trends.<br>It builds
+                <span class="text-warm-gold opacity-80">better skin.</span>
+            </h3>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="btn-primary">Start
+                Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Modals -->
+    <!-- Rejuran Modal -->
+    <dialog id="modal-rejuran" class="rounded-xl overflow-hidden glass-effect p-0 shadow-2xl">
+        <div class="bg-white p-8 max-w-2xl w-full relative">
+            <button class="close-modal absolute top-4 right-4 text-charcoal hover:text-taupe"><i data-lucide="x"
+                    class="w-6 h-6"></i></button>
+            <div class="mb-6">
+                <h3 class="font-heading text-2xl text-near-black">Rejuran</h3>
+                <p class="font-body text-sm text-charcoal/60 uppercase">Healer, I, S</p>
+            </div>
+            <div class="space-y-4">
+                <p class="font-body text-charcoal/70">Skin regeneration with salmon DNA (PN). Shares 95% similarity with
+                    human DNA.</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-3 bg-taupe/10 rounded">
+                        <p class="font-heading text-sm">Key Benefits</p>
+                        <p class="font-body text-xs mt-1">Increased skin density, collagen production, pore shrinking.
+                        </p>
+                    </div>
+                    <div class="p-3 bg-taupe/10 rounded">
+                        <p class="font-heading text-sm">Recovery</p>
+                        <p class="font-body text-xs mt-1">Minimal downtime. Results last 6-12 months.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Hydro Modal -->
+    <dialog id="modal-hydro" class="rounded-xl overflow-hidden glass-effect p-0 shadow-2xl">
+        <div class="bg-white p-8 max-w-2xl w-full relative">
+            <button class="close-modal absolute top-4 right-4 text-charcoal hover:text-taupe"><i data-lucide="x"
+                    class="w-6 h-6"></i></button>
+            <div class="mb-6">
+                <h3 class="font-heading text-2xl text-near-black">Hydro Injection</h3>
+                <p class="font-body text-sm text-charcoal/60 uppercase">MoolGwang</p>
+            </div>
+            <p class="font-body text-charcoal/70">Cross-linked HA technology for deep hydration.</p>
+        </div>
+    </dialog>
+
+    <!-- Juvelook Modal -->
+    <dialog id="modal-juvelook" class="rounded-xl overflow-hidden glass-effect p-0 shadow-2xl">
+        <div class="bg-white p-8 max-w-2xl w-full relative">
+            <button class="close-modal absolute top-4 right-4 text-charcoal hover:text-taupe"><i data-lucide="x"
+                    class="w-6 h-6"></i></button>
+            <h3 class="font-heading text-2xl text-near-black mb-4">Juvelook Skin</h3>
+            <p class="font-body text-charcoal/70">PDLLA + HA for natural collagen stimulation.</p>
+        </div>
+    </dialog>
+
+    <!-- Elravie Modal -->
+    <dialog id="modal-elravie" class="rounded-xl overflow-hidden glass-effect p-0 shadow-2xl">
+        <div class="bg-white p-8 max-w-2xl w-full relative">
+            <button class="close-modal absolute top-4 right-4 text-charcoal hover:text-taupe"><i data-lucide="x"
+                    class="w-6 h-6"></i></button>
+            <h3 class="font-heading text-2xl text-near-black mb-4">Elravie Re2O</h3>
+            <p class="font-body text-charcoal/70">Premium 5th gen ECM made from human dermal matrix.</p>
+        </div>
+    </dialog>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

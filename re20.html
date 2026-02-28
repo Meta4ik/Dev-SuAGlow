@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elravie Re2O | SuA K Glow Korean Med Spa</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'taupe': '#8F857B',
+                        'blue-gray': '#9DAFB6',
+                        'charcoal': '#404345',
+                        'off-white': '#F6F7F8',
+                        'warm-gold': '#AA987C',
+                        'near-black': '#131619',
+                        'light-gray': '#DFE0DD',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .heading-wide {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-weight: 300;
+            line-height: 1.1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" data-nav-theme="dark"
+        class="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-8 overflow-hidden pt-32">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[#F6F7F8]"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
+            <span
+                class="inline-block px-6 py-2 border border-[#AA987C]/30 text-[#AA987C] text-xs font-bold uppercase tracking-[0.5em] mb-8 rounded-full">ECM
+                Skin Booster</span>
+            <h1 class="heading-wide text-5xl md:text-7xl mb-8 leading-[1.05]">Elravie Re2O</h1>
+            <p
+                class="text-lg md:text-2xl text-[#404345]/70 max-w-3xl mx-auto mb-10 font-light tracking-wide leading-relaxed">
+                The ECM skin booster that started it all. Hydration, engineered.
+            </p>
+        </div>
+    </section>
+
+    <!-- Product Categorization Template (Reusable) -->
+    <section id="categorization" data-nav-theme="dark" class="py-12 bg-white border-y border-black/5">
+        <div class="max-w-6xl mx-auto px-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-black/5">
+                <div class="py-4 md:py-0 md:px-8 flex items-center gap-6 animate-on-scroll fade-up">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F6F7F8] flex items-center justify-center shrink-0 border border-black/5">
+                        <span class="text-3xl">🇰🇷</span>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe mb-1">Origin</p>
+                        <p class="font-heading text-sm tracking-widest uppercase">South Korea</p>
+                    </div>
+                </div>
+                <div class="py-4 md:py-0 md:px-8 flex items-center gap-6 animate-on-scroll fade-up delay-100">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F6F7F8] flex items-center justify-center shrink-0 border border-black/5">
+                        <i data-lucide="droplets" class="w-6 h-6 text-taupe"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe mb-1">Type</p>
+                        <p class="font-heading text-sm tracking-widest uppercase">ECM-Focused Hydration</p>
+                    </div>
+                </div>
+                <div class="py-4 md:py-0 md:px-8 flex items-center gap-6 animate-on-scroll fade-up delay-200">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F6F7F8] flex items-center justify-center shrink-0 border border-black/5">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-taupe"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe mb-1">Purpose</p>
+                        <p class="font-body text-xs text-charcoal/70 leading-relaxed">Restore hydration, elasticity, and
+                            skin resilience by supporting the skin's structural environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem & Solution -->
+    <section id="problem-solution" class="py-32 px-10 bg-[#Off-white]">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="animate-on-scroll fade-right">
+                <h2 class="heading-wide text-3xl mb-12">The Problem:<br />Hydration without Structure</h2>
+                <ul class="space-y-6 text-lg font-light leading-relaxed opacity-80 mb-12">
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Surface hydration slips out easily</li>
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Extracellular matrix framework weakens over time</li>
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Traditional boosters cause temporary puffiness, not health</li>
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Skin feels tight, dull, and unpredictable</li>
+                </ul>
+                <div class="p-8 border-l-4 border-taupe bg-white shadow-sm">
+                    <p class="heading-wide text-xs text-[#AA987C] mb-4">SuA Glow K-Beauty Translation</p>
+                    <p class="text-xl italic font-light">"Fix the foundation now, so you don't have to correct problems
+                        later. Structure first. Hydration follows."</p>
+                </div>
+            </div>
+            <div class="animate-on-scroll fade-left delay-200">
+                <div
+                    class="bg-white p-12 md:p-16 rounded-2xl shadow-soft border border-black/5 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-taupe/5 rounded-full blur-3xl -z-10 -translate-y-1/2 translate-x-1/2">
+                    </div>
+                    <h3 class="heading-wide text-2xl mb-8">The Solution: Elravie Re2O</h3>
+                    <p class="font-light text-lg opacity-80 mb-8 leading-relaxed">
+                        In K-Beauty, hydration isn't treated like a glow-up. It's treated like engineering. Because skin
+                        doesn't just need moisture, it needs a structure that knows how to hold it.
+                    </p>
+                    <ul class="space-y-4 text-sm uppercase tracking-[0.1em] font-bold opacity-70 mb-10">
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Hold onto hydration (without puffiness)</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Stay flexible and elastic</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Support collagen where it works best</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Reduce ongoing loss of moisture</li>
+                    </ul>
+                    <div class="pt-8 border-t border-black/10">
+                        <p class="heading-wide text-xs text-[#AA987C] mb-2">The Result</p>
+                        <p class="text-lg font-light">Skin that looks calmer, smoother, and more balanced—without
+                            changing facial shape or announcing that anything was done.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components -->
+    <section id="components" class="py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-10">
+            <div class="text-center md:text-left mb-16 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl md:text-4xl mb-6">Main Components of Elravie Re20</h2>
+                <p class="text-lg font-light opacity-70 max-w-3xl leading-relaxed">
+                    Elravie Re2O is developed from the same components skin relies on—collagen, elastin, hyaluronic
+                    acid, and key ECM elements—reassembled in the right proportions. It's not added hydration. It's
+                    hydration with structure behind it.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div
+                    class="p-10 border border-black/5 bg-[#F6F7F8] hover:border-[#AA987C]/30 transition-all animate-on-scroll fade-up">
+                    <h3 class="heading-wide text-sm mb-4">Extracellular Matrix Support</h3>
+                    <p class="text-sm opacity-60 leading-relaxed font-light">The framework that tells hydration where to
+                        stay, collagen how to behave, and elasticity when to show up.</p>
+                </div>
+                <div
+                    class="p-10 border border-black/5 bg-[#F6F7F8] hover:border-[#AA987C]/30 transition-all animate-on-scroll fade-up delay-100">
+                    <h3 class="heading-wide text-sm mb-4">Balanced Hydration Environment</h3>
+                    <p class="text-sm opacity-60 leading-relaxed font-light">Integrates into the dermal matrix to help
+                        skin hold onto hydration natively, solving tight, dry, and unpredictable behavior without
+                        puffiness.</p>
+                </div>
+            </div>
+
+            <!-- Notes for Photo Placeholder Example -->
+            <div
+                class="mt-16 bg-[#F6F7F8] aspect-video w-full rounded-2xl border border-black/5 flex items-center justify-center text-charcoal/30 flex-col animate-on-scroll fade-up p-10 text-center">
+                <i data-lucide="image" class="w-12 h-12 mb-4 opacity-50"></i>
+                <p class="text-sm uppercase tracking-[0.2em]">[Diagram of ECM & Hydration structures]</p>
+                <p class="text-xs opacity-60 mt-2">Placeholder for modern reference graphic</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="py-32 px-10 bg-[#F6F7F8]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl md:text-4xl mb-6">Same Skin. Different Strategies.</h2>
+                <p class="heading-wide text-xs text-[#8F857B] opacity-70 tracking-[0.3em]">How K-Beauty Clinics Think
+                    About Skin Quality.</p>
+            </div>
+
+            <div class="overflow-x-auto animate-on-scroll fade-up">
+                <table
+                    class="w-full min-w-[800px] bg-white border border-black/10 rounded-xl overflow-hidden shadow-sm">
+                    <thead>
+                        <tr class="bg-near-black text-white text-xs uppercase tracking-[0.2em] text-left">
+                            <th class="p-6 font-medium">Treatment</th>
+                            <th class="p-6 font-medium">What It Actually Does</th>
+                            <th class="p-6 font-medium">How Results Show Up</th>
+                            <th class="p-6 font-medium">K-Beauty Perspective</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm font-light divide-y divide-black/5">
+                        <tr class="bg-[#F6F7F8]">
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold text-warm-gold">
+                                Elravie Re2O</td>
+                            <td class="p-6 opacity-80">Stabilizes hydration & elasticity via ECM</td>
+                            <td class="p-6 opacity-80">Calmer, smoother skin with moisture retention</td>
+                            <td class="p-6 opacity-80">Hydration first. Fix foundation before anything else.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Juvelook®</td>
+                            <td class="p-6 opacity-80">Stimulates collagen for density and structure</td>
+                            <td class="p-6 opacity-80">Gradual firming and texture improvement</td>
+                            <td class="p-6 opacity-80">Prevention & maintenance. Build skin before collapse.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Juvelook
+                                Volume®</td>
+                            <td class="p-6 opacity-80">Collagen stimulation + structural reinforcement</td>
+                            <td class="p-6 opacity-80">Subtle support without visible volume</td>
+                            <td class="p-6 opacity-80">Early scaffolding. Support skin quietly.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Rejuran®</td>
+                            <td class="p-6 opacity-80">Promotes skin healing and repair (PN-based)</td>
+                            <td class="p-6 opacity-80">Improved recovery, hydration, texture</td>
+                            <td class="p-6 opacity-80">Repair stressed skin. Rehab mode.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Dermal Fillers
+                                (HA)</td>
+                            <td class="p-6 opacity-80">Add volume by occupying space</td>
+                            <td class="p-6 opacity-80">Immediate shape and contour</td>
+                            <td class="p-6 opacity-80">Use only when structure is already lost.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Tox</td>
+                            <td class="p-6 opacity-80">Reduce muscle movement</td>
+                            <td class="p-6 opacity-80">Fast wrinkle softening</td>
+                            <td class="p-6 opacity-80">Expression control, not skin quality.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-12 text-center text-sm font-light opacity-70 italic animate-on-scroll fade-up delay-200">
+                SuA Glow K-Beauty takeaway: Stable skin ages quietly. Sophia says "Great skin isn't layered randomly.
+                It's built in the right order."
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Koreans Love It -->
+    <section class="py-32 px-10 bg-white border-t border-black/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl">Why South Koreans Love Re2O</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-8 bg-[#F6F7F8] animate-on-scroll fade-up">
+                    <p class="font-light opacity-80 text-sm leading-relaxed">In Korea, dehydration isn't a glow problem.
+                        It's a structure problem. That's why skin clinics in Seoul use Re2O—not to make skin louder, but
+                        to make it behave better.</p>
+                </div>
+                <div class="p-8 bg-[#F6F7F8] animate-on-scroll fade-up delay-100">
+                    <p class="font-light opacity-80 text-sm leading-relaxed">Clinics rely on Re2O because it gets better
+                        with consistency—not exaggeration. Re2O keeps skin hydrated, flexible, and calm—without making a
+                        scene. Quiet skin is good skin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect at SuA Glow -->
+    <section id="faq" data-nav-theme="dark" class="py-32 px-10 bg-[#DFE0DD]">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="heading-wide text-center text-3xl mb-20">What to Expect at SuA Glow</h2>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 gap-6 text-xs uppercase tracking-[0.2em] font-bold opacity-80 mb-20">
+                <div class="bg-white p-8 animate-on-scroll fade-up text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Process Time</h4>
+                    <p>~60 Minutes</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-100 text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Recovery</h4>
+                    <p>Mild redness 24-72h</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-200 text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Frequency</h4>
+                    <p>Short series + maint.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-300 text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Results</h4>
+                    <p>Natural hydration boost</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-12 md:p-16 mb-20 animate-on-scroll fade-up shadow-sm">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden shrink-0 border border-black/10">
+                        <img src="assets/sophia-yang.webp"
+                            onerror="this.src='https://placehold.co/400x400/F6F7F8/404345?text=Sophia+Yang'"
+                            alt="Sophia Yang, PA-C" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <p class="font-heading uppercase tracking-[0.3em] text-[10px] text-taupe font-bold mb-2">Sophia
+                            Yang, PA-C</p>
+                        <p class="text-xs font-bold opacity-50 mb-6 tracking-widest uppercase">Seoul-Trained.
+                            Korean-Certified. No Translation Required.</p>
+                        <p class="text-lg font-light italic leading-relaxed opacity-80">"Real K-Beauty isn't loud. It's
+                            disciplined, intentional, and unmistakable when done right... K-Beauty isn't about doing
+                            everything. It's about doing the right thing."</p>
+                        <div
+                            class="mt-4 flex flex-wrap gap-2 text-[10px] uppercase font-bold tracking-[0.1em] text-warm-gold opacity-80">
+                            <span class="border border-warm-gold/30 px-3 py-1 rounded-full">Regeneration over
+                                exaggeration</span>
+                            <span class="border border-warm-gold/30 px-3 py-1 rounded-full">Precision over
+                                shortcuts</span>
+                            <span class="border border-warm-gold/30 px-3 py-1 rounded-full">Skin health over
+                                trends</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="heading-wide text-center text-2xl mb-12">Frequently Asked Questions</h3>
+            <div class="space-y-6 mb-12">
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Is Re2O safe?</h4>
+                    <p class="font-light opacity-70 text-sm">Yes. It's widely used internationally when administered
+                        correctly by trained medical professionals.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Who Is Re2O Best For?</h4>
+                    <p class="font-light opacity-70 text-sm">Re2O is ideal for skin that feels dehydrated, tight, dull,
+                        or less elastic—even if you already use good skincare. It's especially popular for early
+                        prevention and long-term skin stability.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Does Re2O add volume or
+                        change my face?</h4>
+                    <p class="font-light opacity-70 text-sm">No. Re2O does not add volume or alter facial shape. It
+                        improves hydration and elasticity without puffiness or filler effects.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">When will I see results
+                        and how long do they last?</h4>
+                    <p class="font-light opacity-70 text-sm">Skin often feels more hydrated and balanced within weeks.
+                        Results are cumulative. With proper maintenance, skin stays more hydrated, elastic, and
+                        resilient over time.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">How is Re2O different from
+                        regular HA skin boosters?</h4>
+                    <p class="font-light opacity-70 text-sm">Re2O supports the extracellular matrix (ECM), helping
+                        hydration stay where it belongs. Traditional HA boosters hydrate—but don't always help skin hold
+                        onto it.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Can Re2O be combined with
+                        other treatments?</h4>
+                    <p class="font-light opacity-70 text-sm">Yes. Re2O pairs exceptionally well with Juvelook, Rejuran,
+                        lasers, microneedling, and tox.</p>
+                </div>
+            </div>
+
+            <!-- Client Testimony -->
+            <div class="bg-white p-12 text-center animate-on-scroll fade-up shadow-sm">
+                <h4 class="heading-wide text-xs text-[#AA987C] mb-6">Client Experience</h4>
+                <p class="text-xl font-light italic leading-relaxed opacity-80">"Quietly essential. A little addictive
+                    (in a good way)."</p>
+                <div class="mt-8 flex justify-center gap-10 text-sm font-light opacity-70">
+                    <p><i data-lucide="check" class="w-4 h-4 inline-block text-warm-gold mr-2"></i> Softer, elastic skin
+                    </p>
+                    <p><i data-lucide="check" class="w-4 h-4 inline-block text-warm-gold mr-2"></i> Hydration lasts</p>
+                    <p><i data-lucide="check" class="w-4 h-4 inline-block text-warm-gold mr-2"></i> Skin feels calm</p>
+                </div>
+            </div>
+
+            <!-- Regulatory Note -->
+            <div
+                class="mt-12 text-center text-[10px] text-charcoal/50 uppercase tracking-widest px-8 max-w-4xl mx-auto">
+                Transparency, safety, and patient education matter at SuA Glow. Elravie Re2O is widely used in South
+                Korea and internationally by trained medical professionals. While Re2O is not FDA-approved for
+                injectable use in the U.S., it is administered globally under established medical protocols. As with any
+                advanced aesthetic treatment, proper patient selection, technique, and informed consent are essential.
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Brand Section (Formerly Footer) -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24">K-Beauty Medspa • Carrollton HQ</p>
+            <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">If you're ready for ECM-first hydration<br>
+                <span class="text-warm-gold opacity-80">let's get started.</span>
+            </h3>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="btn-primary">Book
+                Your Elravie Re20 Consultation</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

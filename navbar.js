@@ -187,7 +187,7 @@ const NAVBAR_HTML = `
             </div>
 
             <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                class="hidden sm:inline-flex items-center bg-taupe text-white px-8 py-3 rounded-full font-body font-bold text-[10px] tracking-[0.3em] uppercase hover:bg-near-black transition-all shadow-glow hover:shadow-none hover:-translate-y-0.5">
+                class="hidden sm:inline-flex btn-primary btn-sm">
                 Book Now
             </a>
             <!-- Mobile Menu Button -->
@@ -314,7 +314,7 @@ const NAVBAR_HTML = `
         <!-- Drawer Footer -->
         <div class="p-6 border-t border-off-white bg-off-white/50">
             <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                class="flex items-center justify-center w-full bg-taupe text-white py-4 md:py-5 rounded-full font-body font-bold text-[10px] tracking-[0.3em] uppercase hover:bg-near-black transition-all shadow-glow hover:shadow-none">
+                class="btn-primary btn-block">
                 Book Appointment
             </a>
         </div>

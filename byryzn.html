@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYRYZN® | SuA K Glow Korean Med Spa</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'taupe': '#8F857B',
+                        'blue-gray': '#9DAFB6',
+                        'charcoal': '#404345',
+                        'off-white': '#F6F7F8',
+                        'warm-gold': '#AA987C',
+                        'near-black': '#131619',
+                        'light-gray': '#DFE0DD',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .heading-wide {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-weight: 300;
+            line-height: 1.1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" data-nav-theme="dark"
+        class="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-8 overflow-hidden pt-32">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[#F6F7F8]"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
+            <span
+                class="inline-block px-6 py-2 border border-[#AA987C]/30 text-[#AA987C] text-xs font-bold uppercase tracking-[0.5em] mb-8 rounded-full">HA
+                Skin Booster</span>
+            <h1 class="heading-wide text-5xl md:text-7xl mb-8 leading-[1.05]">BYRYZN®</h1>
+            <p
+                class="text-lg md:text-2xl text-[#404345]/70 max-w-3xl mx-auto mb-10 font-light tracking-wide leading-relaxed">
+                The premium HA skin booster. Hydration done intelligently.
+            </p>
+        </div>
+    </section>
+
+    <!-- Product Categorization Template (Reusable) -->
+    <section id="categorization" data-nav-theme="dark" class="py-12 bg-white border-y border-black/5">
+        <div class="max-w-6xl mx-auto px-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-black/5">
+                <div class="py-4 md:py-0 md:px-8 flex items-center gap-6 animate-on-scroll fade-up">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F6F7F8] flex items-center justify-center shrink-0 border border-black/5">
+                        <span class="text-3xl">🇰🇷</span>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe mb-1">Origin</p>
+                        <p class="font-heading text-sm tracking-widest uppercase">South Korea</p>
+                    </div>
+                </div>
+                <div class="py-4 md:py-0 md:px-8 flex items-center gap-6 animate-on-scroll fade-up delay-100">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F6F7F8] flex items-center justify-center shrink-0 border border-black/5">
+                        <i data-lucide="droplets" class="w-6 h-6 text-taupe"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe mb-1">Type</p>
+                        <p class="font-heading text-sm tracking-widest uppercase">Stabilized HA Skin Booster</p>
+                    </div>
+                </div>
+                <div class="py-4 md:py-0 md:px-8 flex items-center gap-6 animate-on-scroll fade-up delay-200">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F6F7F8] flex items-center justify-center shrink-0 border border-black/5">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-taupe"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe mb-1">Purpose</p>
+                        <p class="font-body text-xs text-charcoal/70 leading-relaxed">Improve hydration, smoothness, and
+                            elasticity — without adding contour or bulk.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem & Solution -->
+    <section id="problem-solution" class="py-32 px-10 bg-[#Off-white]">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="animate-on-scroll fade-right">
+                <h2 class="heading-wide text-3xl mb-12">The Problem:<br />Hydration That Leaves Too Quickly</h2>
+                <ul class="space-y-6 text-lg font-light leading-relaxed opacity-80 mb-12">
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Traditional hyaluronic acid breaks down rapidly</li>
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Dehydration lines deepen and elasticity softens</li>
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Surface hydration flashes but fails to maintain structure</li>
+                    <li class="flex items-center gap-4"><i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0"></i>
+                        Skin loses its smooth, light-reflective finish</li>
+                </ul>
+                <div class="p-8 border-l-4 border-taupe bg-white shadow-sm">
+                    <p class="heading-wide text-xs text-[#AA987C] mb-4">SuA Glow K-Beauty Translation</p>
+                    <p class="text-xl italic font-light">"Hydration with discipline. Keep hydration where it belongs to
+                        naturally reflect light."</p>
+                </div>
+            </div>
+            <div class="animate-on-scroll fade-left delay-200">
+                <div
+                    class="bg-white p-12 md:p-16 rounded-2xl shadow-soft border border-black/5 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-taupe/5 rounded-full blur-3xl -z-10 -translate-y-1/2 translate-x-1/2">
+                    </div>
+                    <h3 class="heading-wide text-2xl mb-8">The Solution: BYRYZN®</h3>
+                    <p class="font-light text-lg opacity-80 mb-8 leading-relaxed">
+                        In K-Beauty, hydration isn't applied. It's engineered. BYRYZN is formulated with cross-linked
+                        hyaluronic acid—stabilizing the molecule so it doesn't disappear the moment it's injected.
+                    </p>
+                    <ul class="space-y-4 text-sm uppercase tracking-[0.1em] font-bold opacity-70 mb-10">
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Longer-lasting dermal hydration</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Improved elasticity without heaviness</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> Smoother texture and refined pores</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2"
+                                class="w-5 h-5 text-warm-gold"></i> A more balanced oil-moisture ratio</li>
+                    </ul>
+                    <div class="pt-8 border-t border-black/10">
+                        <p class="heading-wide text-xs text-[#AA987C] mb-2">The Result</p>
+                        <p class="text-lg font-light">Hydration that lingers in the dermis longer, resists breakdown,
+                            and
+                            behaves with intention.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus Area: Neck -->
+    <section id="neck-focus" class="py-32 px-10 bg-[#F6F7F8] border-y border-black/5">
+        <div class="max-w-4xl mx-auto text-center animate-on-scroll fade-up">
+            <h2 class="heading-wide text-3xl mb-6">Because The Neck Tells The Truth</h2>
+            <p class="text-lg font-light opacity-80 leading-relaxed mb-12">
+                In K-Beauty, the neck is never an afterthought. It's treated early, maintained consistently, and refined
+                with intention. The skin on the neck is thinner, moves constantly, and loses hydration faster than the
+                face. When moisture levels decline, horizontal neck lines become more visible, texture looks crepey, and
+                skin loses its smooth finish.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                <div class="bg-white p-6 border border-black/5 rounded">
+                    <h4 class="font-bold uppercase tracking-widest text-[#AA987C] mb-2 text-xs">Softens Lines</h4>
+                    <p class="opacity-70 font-light">Improves the moisture balance that makes horizontal lines appear
+                        softer and less defined.</p>
+                </div>
+                <div class="bg-white p-6 border border-black/5 rounded">
+                    <h4 class="font-bold uppercase tracking-widest text-[#AA987C] mb-2 text-xs">Refines Texture</h4>
+                    <p class="opacity-70 font-light">Addresses crepey texture and restores a hydrated, supple
+                        appearance.</p>
+                </div>
+                <div class="bg-white p-6 border border-black/5 rounded">
+                    <h4 class="font-bold uppercase tracking-widest text-[#AA987C] mb-2 text-xs">Natural Movement</h4>
+                    <p class="opacity-70 font-light">Enhances smoothness and reflectivity while maintaining natural
+                        expression.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components -->
+    <section id="components" class="py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-10">
+            <div class="text-center md:text-left mb-16 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl md:text-4xl mb-6">How BYRYZN® Works</h2>
+                <p class="text-lg font-light opacity-70 max-w-3xl leading-relaxed">
+                    BYRYZN works where hydration resides – within the dermis. It delivers cross-linked hyaluronic acid
+                    designed for stability within the skin. Instead of stimulating collagen or altering structure, it
+                    stabilizes moisture.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="p-10 border border-black/5 bg-[#F6F7F8] hover:border-[#AA987C]/30 transition-all animate-on-scroll fade-up border-t-2 border-t-[#AA987C]">
+                    <h3 class="heading-wide text-xs tracking-widest mb-4">Visibly Smoother Skin</h3>
+                    <p class="text-sm opacity-60 leading-relaxed font-light">Wrinkle improvement (주름 개선) by softening
+                        dehydration lines and refining texture.</p>
+                </div>
+                <div
+                    class="p-10 border border-black/5 bg-[#F6F7F8] hover:border-[#AA987C]/30 transition-all animate-on-scroll fade-up delay-100 border-t-2 border-t-[#AA987C]">
+                    <h3 class="heading-wide text-xs tracking-widest mb-4">Soft, Natural Radiance</h3>
+                    <p class="text-sm opacity-60 leading-relaxed font-light">Skin glow and radiance (피부 광채) that
+                        looks luminous, not shiny.</p>
+                </div>
+                <div
+                    class="p-10 border border-black/5 bg-[#F6F7F8] hover:border-[#AA987C]/30 transition-all animate-on-scroll fade-up delay-200 border-t-2 border-t-[#AA987C]">
+                    <h3 class="heading-wide text-xs tracking-widest mb-4">Deep Hydration</h3>
+                    <p class="text-sm opacity-60 leading-relaxed font-light">Increased hydration (수분 증가) that improves
+                        dermal retention, helping makeup apply effortlessly.</p>
+                </div>
+            </div>
+
+            <!-- Notes for Photo Placeholder Example -->
+            <div
+                class="mt-16 bg-[#F6F7F8] aspect-video w-full rounded-2xl border border-black/5 flex items-center justify-center text-charcoal/30 flex-col animate-on-scroll fade-up p-10 text-center">
+                <i data-lucide="image" class="w-12 h-12 mb-4 opacity-50"></i>
+                <p class="text-sm uppercase tracking-[0.2em]">[High-concentration hyaluronic acid drawing in moisture]
+                </p>
+                <p class="text-xs opacity-60 mt-2">Placeholder for downloaded graphic showing Korean translations</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="py-32 px-10 bg-[#F6F7F8]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl md:text-4xl mb-6">Same Skin. Different Strategies.</h2>
+                <p class="heading-wide text-xs text-[#8F857B] opacity-70 tracking-[0.3em]">How K-Beauty Clinics Think
+                    About Skin Quality.</p>
+            </div>
+
+            <div class="overflow-x-auto animate-on-scroll fade-up">
+                <table
+                    class="w-full min-w-[800px] bg-white border border-black/10 rounded-xl overflow-hidden shadow-sm">
+                    <thead>
+                        <tr class="bg-near-black text-white text-xs uppercase tracking-[0.2em] text-left">
+                            <th class="p-6 font-medium">Treatment</th>
+                            <th class="p-6 font-medium">What It Actually Does</th>
+                            <th class="p-6 font-medium">How Results Show Up</th>
+                            <th class="p-6 font-medium">K-Beauty Perspective</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm font-light divide-y divide-black/5">
+                        <tr class="bg-[#F6F7F8]">
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold text-warm-gold">
+                                BYRYZN®</td>
+                            <td class="p-6 opacity-80">Stabilized HA to improve dermal hydration retention</td>
+                            <td class="p-6 opacity-80">Smoother texture, refined glow, improved moisture balance</td>
+                            <td class="p-6 opacity-80">Hydration first. Maintain early.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Skinvive™</td>
+                            <td class="p-6 opacity-80">Cross-linked HA microdroplet delivery</td>
+                            <td class="p-6 opacity-80">Mid-face cheek smoothness focus</td>
+                            <td class="p-6 opacity-80">U.S. indication-specific hydration</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Elravie
+                                Re2O</td>
+                            <td class="p-6 opacity-80">Supports hydration stability and elasticity at the extracellular
+                                level</td>
+                            <td class="p-6 opacity-80">Calmer, more elastic, balanced skin with moisture control</td>
+                            <td class="p-6 opacity-80">Stabilize the foundation.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Juvelook®</td>
+                            <td class="p-6 opacity-80">Stimulates collagen production (PDLLA + HA carrier)</td>
+                            <td class="p-6 opacity-80">Gradual improvement in firmness and skin density</td>
+                            <td class="p-6 opacity-80">Prevention + maintenance. Build early.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Rejuran®</td>
+                            <td class="p-6 opacity-80">Promotes skin repair and cellular recovery (PN-based)</td>
+                            <td class="p-6 opacity-80">Improved recovery, smoother texture, enhanced resilience</td>
+                            <td class="p-6 opacity-80">Repair stressed skin.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-heading uppercase tracking-widest text-[10px] font-bold">Dermal Fillers
+                                (HA)</td>
+                            <td class="p-6 opacity-80">Add volume by occupying space</td>
+                            <td class="p-6 opacity-80">Immediate contour and shape change</td>
+                            <td class="p-6 opacity-80">Use when volume loss is already present.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-12 text-center text-sm font-light opacity-70 italic animate-on-scroll fade-up delay-200">
+                Because in K-Beauty, great skin isn't one treatment.
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Koreans Love It -->
+    <section class="py-32 px-10 bg-white border-t border-black/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl">Why South Koreans Love BYRYZN®</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-8 bg-[#F6F7F8] animate-on-scroll fade-up">
+                    <p class="font-light opacity-80 text-sm leading-relaxed">In Korea, dehydration isn't ignored until
+                        it becomes visible. It's managed early. Dermatology clinics in Seoul understand that when
+                        hydration declines, elasticity softens, texture becomes uneven, and radiance fades.</p>
+                </div>
+                <div class="p-8 bg-[#F6F7F8] animate-on-scroll fade-up delay-100">
+                    <p class="font-light opacity-80 text-sm leading-relaxed">Rather than waiting for these changes to
+                        settle in, they maintain moisture consistently and strategically. That's where BYRYZN fits. It's
+                        chosen not to change the face, but to refine how the skin behaves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect at SuA Glow -->
+    <section id="faq" data-nav-theme="dark" class="py-32 px-10 bg-[#DFE0DD]">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="heading-wide text-center text-3xl mb-20">What to Expect at SuA Glow</h2>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 gap-6 text-xs uppercase tracking-[0.2em] font-bold opacity-80 mb-20">
+                <div class="bg-white p-8 animate-on-scroll fade-up text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Process Time</h4>
+                    <p>~45-60 Minutes</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-100 text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Recovery</h4>
+                    <p>Minimal 24-72h</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-200 text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Frequency</h4>
+                    <p>Series + Maintenance</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up delay-300 text-center border-t-4 border-[#AA987C]">
+                    <h4 class="mb-3 text-[#AA987C]">Results</h4>
+                    <p>Smooth, Sustained Glow</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-12 md:p-16 mb-20 animate-on-scroll fade-up shadow-sm">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden shrink-0 border border-black/10">
+                        <img src="assets/sophia-yang.webp"
+                            onerror="this.src='https://placehold.co/400x400/F6F7F8/404345?text=Sophia+Yang'"
+                            alt="Sophia Yang, PA-C" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <p class="font-heading uppercase tracking-[0.3em] text-[10px] text-taupe font-bold mb-2">Sophia
+                            Yang, PA-C</p>
+                        <p class="text-xs font-bold opacity-50 mb-6 tracking-widest uppercase">The best K-Beauty
+                            provider in DFW. Seoul-Trained. Korean-Certified.</p>
+                        <p class="text-lg font-light italic leading-relaxed opacity-80">"Real K-Beauty isn't loud. It's
+                            disciplined, intentional, and unmistakable when done right."</p>
+                        <div
+                            class="mt-4 flex flex-wrap gap-2 text-[10px] uppercase font-bold tracking-[0.1em] text-warm-gold opacity-80">
+                            <span class="border border-warm-gold/30 px-3 py-1 rounded-full">Regeneration over
+                                exaggeration</span>
+                            <span class="border border-warm-gold/30 px-3 py-1 rounded-full">Precision over
+                                shortcuts</span>
+                            <span class="border border-warm-gold/30 px-3 py-1 rounded-full">Skin health over
+                                trends</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="heading-wide text-center text-2xl mb-12">Frequently Asked Questions</h3>
+            <div class="space-y-6 mb-12">
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Is BYRYZN safe?</h4>
+                    <p class="font-light opacity-70 text-sm">BYRYZN is widely used internationally when administered by
+                        trained medical professionals using appropriate technique and patient selection.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Who is BYRYZN best for?
+                    </h4>
+                    <p class="font-light opacity-70 text-sm">BYRYZN is ideal for skin that feels dehydrated, dull, or
+                        textured. It's especially suited for clients who want improved glow, smoothness, and hydration
+                        retention without changing facial shape.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Does BYRYZN add volume or
+                        change my face?</h4>
+                    <p class="font-light opacity-70 text-sm">No. BYRYZN does not contour or reshape the face. It
+                        enhances
+                        dermal hydration and skin quality without altering your natural features.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">How is BYRYZN different
+                        from traditional HA skin boosters?</h4>
+                    <p class="font-light opacity-70 text-sm">BYRYZN uses stabilized, cross-linked hyaluronic acid
+                        designed for longer dermal retention. It focuses on sustained hydration balance rather than
+                        temporary surface moisture.</p>
+                </div>
+                <div class="bg-white p-8 animate-on-scroll fade-up">
+                    <h4 class="font-heading uppercase tracking-widest text-xs font-bold mb-4">Can BYRYZN be combined
+                        with other treatments?</h4>
+                    <p class="font-light opacity-70 text-sm">Yes. BYRYZN pairs well with Juvelook, Re2O, Rejuran,
+                        lasers,
+                        microneedling, and neuromodulators as part of a comprehensive skin plan.</p>
+                </div>
+            </div>
+
+            <!-- Client Testimony -->
+            <div class="bg-white p-12 text-center animate-on-scroll fade-up shadow-sm">
+                <h4 class="heading-wide text-xs text-[#AA987C] mb-6">Client Experience</h4>
+                <p class="text-xl font-light italic leading-relaxed opacity-80">"Clients ask for BYRYZN to help their
+                    skin get back on track with hydration."</p>
+                <div class="mt-8 flex justify-center gap-10 text-sm font-light opacity-70 flex-wrap">
+                    <p><i data-lucide="check" class="w-4 h-4 inline-block text-warm-gold mr-2"></i> Deeply Hydrated</p>
+                    <p><i data-lucide="check" class="w-4 h-4 inline-block text-warm-gold mr-2"></i> Texture Smoother</p>
+                    <p><i data-lucide="check" class="w-4 h-4 inline-block text-warm-gold mr-2"></i> Luminous, Not Shiny
+                    </p>
+                    <p><i data-lucide="check" class="w-4 h-4 inline-block text-warm-gold mr-2"></i> Makeup Sits Better
+                    </p>
+                </div>
+            </div>
+
+            <!-- Regulatory Note -->
+            <div
+                class="mt-12 text-center text-[10px] text-charcoal/50 uppercase tracking-widest px-8 max-w-4xl mx-auto">
+                Transparency, safety, and patient education matter at SuA Glow. BYRYZN is widely used in South Korea and
+                internationally by trained medical professionals as part of a structural, ECM-focused dermatology
+                approach.
+                While BYRYZN is not FDA-approved for injectable use in the United States, it is administered globally
+                under
+                established medical protocols. As with any advanced aesthetic treatment, appropriate patient selection,
+                proper
+                technique, and informed consent are essential.
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Brand Section (Formerly Footer) -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24">K-Beauty Medspa • Carrollton HQ</p>
+            <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">If you're ready for BYRYZN and<br>
+                <span class="text-warm-gold opacity-80">Seoul-level skin that holds its ground, let's get
+                    started.</span>
+            </h3>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="btn-primary">Book
+                Your BYRYZN Consultation</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
