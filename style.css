@@ -318,27 +318,35 @@ html {
   position: absolute;
   top: 55%;
   left: 50%;
-  width: 150vw; 
+  width: 150vw;
   height: 150vw;
   margin-top: -75vw;
   margin-left: -75vw;
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.35; /* Slightly higher opacity since it's an outline */
-  -webkit-mask-image: radial-gradient(circle, transparent 0%, transparent 10%, black 35%, transparent 75%);
-  mask-image: radial-gradient(circle, transparent 0%, transparent 10%, black 35%, transparent 75%);
+  opacity: 0.8;
+  /* high opacity so the image pops fully through */
   background-image: url("assets/bg-rays@3x.webp");
   animation: rotateStarburst 180s linear infinite, fadeStarburst 6s ease-in-out infinite alternate;
-  animation: rotateStarburst 60s linear infinite, fadeStarburst 6s ease-in-out infinite alternate;
 }
 
 @keyframes rotateStarburst {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fadeStarburst {
-  0% { opacity: 0.15; }
-  100% { opacity: 0.35; }
+  0% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
 }
