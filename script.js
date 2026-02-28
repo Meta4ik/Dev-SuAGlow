@@ -1,165 +1,333 @@
 
-// Initialize Lucide Icons
-document.addEventListener('DOMContentLoaded', () => {
-  lucide.createIcons();
+// SuA Glow Core Interaction Script
 
-  // Mobile Menu
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuIcon = document.getElementById('menu-icon');
+/**
+ * Navigation Injection & Initialization
+ * Uses the cached NAVBAR_HTML string from navbar.js for instant, local loading
+ */
+function initNavigation() {
+  const navPlaceholder = document.getElementById('nav-placeholder');
+  if (!navPlaceholder) return;
 
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    // Toggle icon between Menu and X (simplified logic)
-    const isHidden = mobileMenu.classList.contains('hidden');
-    menuIcon.setAttribute('name', isHidden ? 'menu' : 'x');
-    lucide.createIcons();
-  });
+  // Use the pre-loaded string from navbar.js
+  if (typeof NAVBAR_HTML !== 'undefined') {
+    navPlaceholder.innerHTML = NAVBAR_HTML;
 
-  // Close mobile menu when clicking a link
-  document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      menuIcon.setAttribute('name', 'menu');
+    // Trigger icon creation for newly injected nav
+    if (window.lucide) {
       lucide.createIcons();
-    });
-  });
-
-  // Navbar Scroll and Smart Theme Effect
-  const navbar = document.getElementById('navbar');
-  const logoDesktop = document.getElementById('logo-desktop');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  // 1. Initial Scroll Effect (Background)
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('bg-off-white/95', 'backdrop-blur-md', 'shadow-soft', 'py-3');
-      navbar.classList.remove('bg-transparent', 'py-6');
-    } else {
-      navbar.classList.remove('bg-off-white/95', 'backdrop-blur-md', 'shadow-soft', 'py-3');
-      navbar.classList.add('bg-transparent', 'py-6');
     }
-  });
 
-  // 2. Smart Theme Switching (Text Color based on Sections)
-  const themeObserverOptions = {
-    threshold: 0,
-    rootMargin: '-1px 0px -99% 0px' // Only observe the very top of the viewport
-  };
+    // Initialize Nav-Dependent Components
+    initMobileDrawer();
+    initMobileAccordions();
+    initNavThemeLogic();
 
-  const themeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const theme = entry.target.getAttribute('data-nav-theme') || 'dark'; // 'light' means light text, 'dark' means dark text
+    // Smooth scroll for anchors
+    initAnchorScroll();
+  } else {
+    console.warn('NAVBAR_HTML is not defined. Ensure navbar.js is loaded.');
+  }
+}
 
-        if (theme === 'light') {
-          // Switch to Light Mode (White Text)
-          navLinks.forEach(link => { link.classList.remove('text-charcoal'); link.classList.add('text-white'); });
-          if (menuBtn) { menuBtn.classList.remove('text-charcoal'); menuBtn.classList.add('text-white'); }
-          if (logoDesktop) { logoDesktop.classList.add('brightness-0', 'invert'); }
+/**
+ * Footer Injection & Initialization
+ */
+function initFooter() {
+  const footerPlaceholder = document.getElementById('footer-placeholder');
+  if (!footerPlaceholder) return;
+
+  if (typeof FOOTER_HTML !== 'undefined') {
+    footerPlaceholder.innerHTML = FOOTER_HTML;
+
+    const financeBtn = document.getElementById('floating-finance-btn');
+
+    // Hide floating finance button if already on the financing page
+    if (window.location.pathname.includes('financing.html')) {
+      if (financeBtn) {
+        financeBtn.style.display = 'none';
+      }
+    } else if (financeBtn) {
+      // Fade in the finance button when the user starts scrolling
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 150) {
+          financeBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-10');
         } else {
-          // Switch to Dark Mode (Charcoal Text)
-          navLinks.forEach(link => { link.classList.remove('text-white'); link.classList.add('text-charcoal'); });
-          if (menuBtn) { menuBtn.classList.remove('text-white'); menuBtn.classList.add('text-charcoal'); }
-          if (logoDesktop) { logoDesktop.classList.remove('brightness-0', 'invert'); }
+          financeBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-10');
         }
+      }, { passive: true });
+
+      // Check initial state in case page is loaded already scrolled
+      if (window.scrollY > 150) {
+        financeBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-10');
+      }
+    }
+
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  } else {
+    console.warn('FOOTER_HTML is not defined. Ensure footer.js is loaded.');
+  }
+}
+
+/**
+ * Mobile Navigation Drawer Logic
+ */
+function initMobileDrawer() {
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  const drawerClose = document.getElementById('drawer-close');
+
+  if (menuBtn && mobileDrawer) {
+    menuBtn.addEventListener('click', () => {
+      mobileDrawer.classList.remove('hidden');
+      setTimeout(() => mobileDrawer.classList.add('open'), 10);
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  if (drawerClose && mobileDrawer) {
+    drawerClose.addEventListener('click', () => {
+      mobileDrawer.classList.remove('open');
+      setTimeout(() => mobileDrawer.classList.add('hidden'), 400);
+      document.body.style.overflow = '';
+    });
+  }
+}
+
+/**
+ * Mobile Accordion (Menu) Logic
+ */
+function initMobileAccordions() {
+  document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const content = trigger.nextElementSibling;
+      const icon = trigger.querySelector('[data-lucide]');
+
+      content.classList.toggle('hidden');
+      if (icon) {
+        const isHidden = content.classList.contains('hidden');
+        icon.setAttribute('data-lucide', isHidden ? 'plus' : 'minus');
+        lucide.createIcons();
       }
     });
-  }, themeObserverOptions);
+  });
+}
 
-  // Observe all sections and footer
-  document.querySelectorAll('section, footer, header').forEach(el => themeObserver.observe(el));
+/**
+ * Navbar Scroll and Smart Theme (Dark/Light) Switching
+ */
+function initNavThemeLogic() {
+  const navbar = document.getElementById('navbar');
+  if (!navbar) return;
 
-  // Intersection Observer for Animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+  // Scroll Background Transition - Only handles the white background/blur, no color edits
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('nav-scrolled');
+    } else {
+      navbar.classList.remove('nav-scrolled');
+    }
+  });
+}
 
-  const observer = new IntersectionObserver((entries) => {
+/**
+ * Initial Render & Animation Setup
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Kick off Nav & Footer Load
+  initNavigation();
+  initFooter();
+
+  // 2. Setup Reveal Animations
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        revealObserver.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-  document.querySelectorAll('.animate-on-scroll').forEach(el => {
-    observer.observe(el);
-  });
+  document.querySelectorAll('.animate-on-scroll').forEach(el => revealObserver.observe(el));
 
-  // Modals for Skin Boosters
+  // 3. Modal Init
+  initModals();
+
+  // 4. Contact Form Init
+  initContactForm();
+
+  // 5. Hero Video Scroll
+  initHeroVideoScroll();
+
+  // 6. Scar Carousel
+  initScarCarousel();
+});
+
+function initHeroVideoScroll() {
+  const video = document.getElementById('hero-scroll-video');
+  if (!video) return;
+
+  // If on mobile (<= 768px width), let the video autoplay continuously and bypass scrub logic entirely
+  if (window.innerWidth <= 768) {
+    video.autoplay = true;
+    video.play().catch(() => { });
+    return; // Early exit so we don't attach scroll listeners
+  }
+
+  // DESKTOP LOGIC:
+  // Force load for iOS/Desktop without the HTML autoplay attribute visual jump
+  const playPromise = video.play();
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      video.pause();
+    }).catch(() => {
+      video.pause();
+    });
+  }
+
+  const handleScrollAndScrub = () => {
+    // Force the first frame (iOS requires > 0 to render sometimes)
+    video.currentTime = 0.01;
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // Map the scroll distance to the video duration.
+          const maxScroll = window.innerHeight * 1.5;
+          let fraction = window.scrollY / maxScroll;
+          fraction = Math.max(0, Math.min(fraction, 1));
+
+          if (!isNaN(video.duration) && video.duration > 0) {
+            video.currentTime = video.duration * fraction;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  };
+
+  if (video.readyState >= 1) {
+    handleScrollAndScrub();
+  } else {
+    video.addEventListener('loadedmetadata', handleScrollAndScrub);
+  }
+}
+
+function initModals() {
   document.querySelectorAll('.trigger-modal').forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-      const modalId = trigger.dataset.modalTarget;
-      const dialog = document.getElementById(modalId);
+    trigger.addEventListener('click', () => {
+      const dialog = document.getElementById(trigger.dataset.modalTarget);
       if (dialog) {
         dialog.showModal();
         dialog.classList.remove('hidden');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
+        document.body.style.overflow = 'hidden';
       }
     });
   });
 
-  // Close Modal Buttons
-  document.querySelectorAll('.close-modal').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const dialog = btn.closest('dialog');
-      dialog.close();
-      dialog.classList.add('hidden');
-      document.body.style.overflow = ''; // Restore scrolling
-    });
-  });
-
-  // Close modal when clicking on backdrop
-  document.querySelectorAll('dialog').forEach(dialog => {
-    dialog.addEventListener('click', (e) => {
-      if (e.target === dialog) {
+  document.querySelectorAll('.close-modal, dialog').forEach(el => {
+    el.addEventListener('click', (e) => {
+      if (e.target.classList.contains('close-modal') || e.target.nodeName === 'DIALOG') {
+        const dialog = el.closest('dialog') || el;
         dialog.close();
         dialog.classList.add('hidden');
         document.body.style.overflow = '';
       }
     });
   });
+}
 
-});
+function initAnchorScroll() {
+  document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+}
 
-// Contact Form Handling
-const form = document.getElementById('contact-form');
-const formStatus = document.getElementById('form-status');
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  if (!form) return;
 
-if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const data = new FormData(form);
-    const action = form.action;
-
-    formStatus.classList.remove('hidden', 'text-green-500', 'text-red-500');
-    formStatus.classList.add('text-white');
-    formStatus.textContent = 'Sending...';
+    status.classList.remove('hidden', 'text-green-500', 'text-red-500');
+    status.classList.add('text-white');
+    status.textContent = 'Sending...';
 
     try {
-      const response = await fetch(action, {
-        method: 'POST',
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
+      const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
       if (response.ok) {
-        formStatus.classList.add('text-green-500');
-        formStatus.textContent = 'Thanks for your message! We will get back to you soon.';
+        status.classList.add('text-green-500');
+        status.textContent = 'Thanks! We will get back to you soon.';
         form.reset();
       } else {
-        const jsonData = await response.json();
-        formStatus.classList.add('text-red-500');
-        formStatus.textContent = jsonData.errors ? jsonData.errors.map(error => error.message).join(', ') : 'Oops! There was a problem submitting your form';
+        status.classList.add('text-red-500');
+        status.textContent = 'Submission error. Please try again.';
       }
     } catch (error) {
-      formStatus.classList.add('text-red-500');
-      formStatus.textContent = 'Oops! There was a problem submitting your form';
+      status.classList.add('text-red-500');
+      status.textContent = 'Network error. Please try again.';
     }
+  });
+}
+
+function initScarCarousel() {
+  const container = document.getElementById('scar-carousel-inner');
+  if (!container) return;
+
+  const prevBtn = document.getElementById('scar-prev');
+  const nextBtn = document.getElementById('scar-next');
+  const dotsContainer = document.getElementById('scar-carousel-dots');
+  const dots = dotsContainer ? dotsContainer.querySelectorAll('button') : [];
+
+  const totalSlides = 3;
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    container.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    dots.forEach((dot, index) => {
+      if (index === currentIndex) {
+        dot.classList.remove('bg-white/50');
+        dot.classList.add('bg-white', 'w-4');
+      } else {
+        dot.classList.remove('bg-white', 'w-4');
+        dot.classList.add('bg-white/50');
+      }
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    });
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', (e) => {
+      currentIndex = parseInt(e.target.dataset.index);
+      updateCarousel();
+    });
   });
 }
