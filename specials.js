@@ -1,7 +1,7 @@
 const SPECIALS_HTML = `
     <!-- Promotions / Signature Launch -->
     <section id="promotions" data-nav-theme="light" class="py-32 bg-off-white border-y border-charcoal/5 relative overflow-hidden">
-        <div class="starburst-container animate-on-scroll !duration-[2000ms] delay-500"><div class="sb-3"></div></div>
+        <div class="starburst-container"><div class="sb-3"></div></div>
         <div class="max-w-7xl mx-auto px-8 relative z-10">
             <div class="text-center mb-16 animate-on-scroll fade-up">
                 <span
