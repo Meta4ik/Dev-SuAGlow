@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
-<head>
-    <meta charset="UTF-8">
+<head>    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rejuran® Carrollton | SuA K Glow Korean Med Spa</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
         rel="stylesheet">
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'taupe': '#8F857B',
+                        'blue-gray': '#9DAFB6',
+                        'charcoal': '#404345',
+                        'off-white': '#F6F7F8',
+                        'warm-gold': '#AA987C',
+                        'near-black': '#131619',
+                        'light-gray': '#DFE0DD',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        :root {
-            --brand-taupe: #8F857B;
-            --brand-sage: #9DAFB6;
-            --brand-charcoal: #404345;
-            --brand-sky: #EAECED;
-            --brand-earth: #AA987C;
-            --brand-black: #131619;
-            --brand-grey: #DFE0DD;
-            --brand-off-white: #F6F7F8;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--brand-off-white);
-            color: var(--brand-charcoal);
-            font-weight: 300;
-            line-height: 1.7;
-        }
-
         .heading-wide {
             font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
             letter-spacing: 0.25em;
             font-weight: 300;
             line-height: 1.1;
-        }
-
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
         }
 
         .reveal {
@@ -68,101 +76,35 @@
             box-shadow: 0 40px 80px rgba(0, 0, 0, 0.04);
         }
 
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
         .news-card {
             border: 1px solid rgba(0, 0, 0, 0.05);
             transition: all 0.4s ease;
         }
 
         .news-card:hover {
-            border-color: var(--brand-earth);
+            border-color: #AA987C;
             background: white;
         }
 
         .accent-text {
-            color: var(--brand-earth);
+            color: #AA987C;
             font-weight: 400;
-        }
-
-        b,
-        strong {
-            font-weight: 500;
-        }
-
-        /* Specific Stitching Styles */
-        .stitched-section {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
         }
     </style>
 </head>
 
-<body class="antialiased">
+<body class="bg-off-white text-charcoal antialiased">
 
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
-        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center">
-                <img id="logo-desktop" src="assets/logo-main.webp" alt="SuA K-Glow"
-                    class="h-10 transition-all duration-300">
-            </a>
-
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex items-center gap-10">
-                <a href="#family"
-                    class="nav-link font-body text-xs uppercase tracking-[0.2em] text-charcoal hover:text-[#AA987C] transition-colors">Treatments</a>
-                <a href="#science-block"
-                    class="nav-link font-body text-xs uppercase tracking-[0.2em] text-charcoal hover:text-[#AA987C] transition-colors">Science
-                    & Effect</a>
-                <a href="#news"
-                    class="nav-link font-body text-xs uppercase tracking-[0.2em] text-charcoal hover:text-[#AA987C] transition-colors">In
-                    The News</a>
-                <a href="#faq"
-                    class="nav-link font-body text-xs uppercase tracking-[0.2em] text-charcoal hover:text-[#AA987C] transition-colors">Transparency</a>
-                <a href="#"
-                    class="bg-black text-white px-8 py-3 rounded-full hover:bg-[#AA987C] transition-all border border-black/5 text-xs uppercase tracking-[0.2em] font-bold">Book
-                    Consultation</a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="lg:hidden text-charcoal hover:text-[#AA987C] transition-colors">
-                <i data-lucide="menu" id="menu-icon" class="w-6 h-6 rotate-0"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu"
-            class="hidden absolute top-full left-0 right-0 bg-white shadow-lg py-12 border-t border-black/5 animate-fadeIn">
-            <div class="flex flex-col items-center gap-8">
-                <a href="#family"
-                    class="font-body text-sm uppercase tracking-[0.2em] text-charcoal hover:text-[#AA987C] transition-colors">Treatments</a>
-                <a href="#science-block"
-                    class="font-body text-sm uppercase tracking-[0.2em] text-charcoal hover:text-[#AA987C] transition-colors">Science
-                    & Effect</a>
-                <a href="#news"
-                    class="font-body text-sm uppercase tracking-[0.2em] text-charcoal hover:text-[#AA987C] transition-colors">In
-                    The News</a>
-                <a href="#faq"
-                    class="font-body text-sm uppercase tracking-[0.2em] text-charcoal hover:text-[#AA987C] transition-colors">Transparency</a>
-            </div>
-        </div>
-    </nav>
+    <div id="nav-placeholder"></div>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-8 overflow-hidden">
+    <section id="hero" data-nav-theme="dark"
+        class="relative min-h-screen flex flex-col items-center justify-center text-center px-8 overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="assets/bg_hero.webp" class="w-full h-full object-cover" alt="Hero Background">
-            <div class="absolute inset-0 bg-white/60 backdrop-blur-[1px]"></div>
+            <div class="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
         </div>
-        <div class="z-10 max-w-5xl reveal">
+        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
             <span
                 class="inline-block px-6 py-2 border border-[#AA987C]/30 text-[#AA987C] text-xs font-bold uppercase tracking-[0.5em] mb-12 rounded-full">Rejuran®
                 Carrollton Headquarters</span>
@@ -189,15 +131,15 @@
 
 
     <!-- Location Context -->
-    <section class="py-24 px-10 bg-white stitched-section">
+    <section id="location" data-nav-theme="dark" class="py-24 px-10 bg-white stitched-section">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row gap-20 items-start">
-                <div class="md:w-1/3 reveal">
+                <div class="md:w-1/3 animate-on-scroll fade-right">
                     <h2 class="heading-wide text-2xl mb-6">Rejuran® Near Me</h2>
                     <p class="text-xs uppercase tracking-[0.4em] text-[#AA987C] font-bold">Serving DFW Masterfully
                     </p>
                 </div>
-                <div class="md:w-2/3 reveal" style="transition-delay: 100ms;">
+                <div class="md:w-2/3 animate-on-scroll fade-left delay-100">
                     <p class="text-lg font-light leading-relaxed opacity-80 mb-10">
                         SuA Glow is located in <span class="font-medium text-black">Carrollton, TX</span>, quietly
                         serving skin obsessives from the entire DFW metroplex including:
@@ -218,16 +160,16 @@
     <div id="science-block" class="bg-[#F6F7F8]">
 
         <!-- Science Deep Dive -->
-        <section id="science" class="pt-32 pb-16 px-10">
+        <section id="science" data-nav-theme="dark" class="pt-32 pb-16 px-10">
             <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-20 reveal">
+                <div class="text-center mb-20 animate-on-scroll fade-up">
                     <h2 class="heading-wide text-3xl md:text-4xl mb-6">What Is Rejuran®?</h2>
                     <p class="heading-wide text-xs text-[#8F857B] opacity-70 tracking-[0.4em]">The Salmon DNA
                         Protocol</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                    <div class="space-y-10 reveal">
+                    <div class="space-y-10 animate-on-scroll fade-right">
                         <p class="text-xl font-light leading-relaxed">
                             Rejuran® is a Korean regenerative skin booster formulated with <strong>polynucleotides
                                 (PN)</strong>—biocompatible molecules derived from purified salmon DNA that support the
@@ -258,7 +200,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="relative reveal" style="transition-delay: 200ms;">
+                    <div class="relative animate-on-scroll fade-left delay-200">
                         <div class="absolute inset-0 bg-[#AA987C]/5 rounded-3xl -rotate-3 scale-105"></div>
                         <img src="https://suaglow.com/wp-content/uploads/2025/11/rejuran_healer-14.webp"
                             class="relative rounded-3xl shadow-xl object-cover aspect-square" alt="Science Portrait">
@@ -268,37 +210,37 @@
         </section>
 
         <!-- Effect Section (Stitched directly below) -->
-        <section id="effect" class="pb-32 pt-0 px-10">
+        <section id="effect" data-nav-theme="dark" class="pb-32 pt-0 px-10">
             <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20 reveal">
+                <div class="text-center mb-20 animate-on-scroll fade-up">
                     <h2 class="heading-wide text-3xl">The Rejuran Effect</h2>
                     <p class="text-xs uppercase tracking-[0.35em] mt-6 font-bold opacity-30 italic">Targeting the
                         dermis layer for true clinical health.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div
-                        class="p-10 border border-black/[0.05] bg-white hover:border-[#AA987C]/50 transition-all reveal">
+                        class="p-10 border border-black/[0.05] bg-white hover:border-[#AA987C]/50 transition-all animate-on-scroll fade-up">
                         <p class="heading-wide text-xs mb-8 text-[#AA987C] opacity-70">01</p>
                         <h3 class="heading-wide text-xs mb-6">Skin Regeneration</h3>
                         <p class="text-xs opacity-50 leading-relaxed font-light tracking-wide">Activates cellular repair
                             to revitalize aging and environmental damaged skin.</p>
                     </div>
-                    <div class="p-10 border border-black/[0.05] bg-white hover:border-[#AA987C]/50 transition-all reveal"
-                        style="transition-delay: 100ms;">
+                    <div
+                        class="p-10 border border-black/[0.05] bg-white hover:border-[#AA987C]/50 transition-all animate-on-scroll fade-up delay-100">
                         <p class="heading-wide text-xs mb-8 text-[#AA987C] opacity-70">02</p>
                         <h3 class="heading-wide text-xs mb-6">Fine Wrinkle Fix</h3>
                         <p class="text-xs opacity-50 leading-relaxed font-light tracking-wide">Restores the damaged
                             barrier, addressing lines around delicate facial areas.</p>
                     </div>
-                    <div class="p-10 border border-black/[0.05] bg-white hover:border-[#AA987C]/50 transition-all reveal"
-                        style="transition-delay: 200ms;">
+                    <div
+                        class="p-10 border border-black/[0.05] bg-white hover:border-[#AA987C]/50 transition-all animate-on-scroll fade-up delay-200">
                         <p class="heading-wide text-xs mb-8 text-[#AA987C] opacity-70">03</p>
                         <h3 class="heading-wide text-xs mb-6">Pore Reduction</h3>
                         <p class="text-xs opacity-50 leading-relaxed font-light tracking-wide">Thickens the dermal layer
                             to smooth out surface imperfections and stretched pores.</p>
                     </div>
-                    <div class="p-10 border border-black/[0.05] bg-white hover:border-[#AA987C]/50 transition-all reveal"
-                        style="transition-delay: 300ms;">
+                    <div
+                        class="p-10 border border-black/[0.05] bg-white hover:border-[#AA987C]/50 transition-all animate-on-scroll fade-up delay-300">
                         <p class="heading-wide text-xs mb-8 text-[#AA987C] opacity-70">04</p>
                         <h3 class="heading-wide text-xs mb-6">Collagen Support</h3>
                         <p class="text-xs opacity-50 leading-relaxed font-light tracking-wide">Promotes intrinsic
@@ -310,16 +252,17 @@
     </div>
 
     <!-- Product Family Section -->
-    <section id="family" data-nav-theme="light" class="py-32 px-10 bg-[#131619] text-white">
+    <section id="family" data-nav-theme="light" class="py-32 px-10 bg-near-black text-white">
         <div class="max-w-7xl mx-auto text-center">
-            <div class="mb-24 reveal">
+            <div class="mb-24 animate-on-scroll fade-up">
                 <h2 class="heading-wide text-3xl md:text-4xl mb-8">Meet the Rejuran® Family</h2>
                 <p class="text-xs uppercase tracking-[0.5em] opacity-40 font-bold">Intention-based dermal solutions.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
-                <div class="product-card bg-[#1E2124] p-12 md:p-16 border-t-4 border-[#AA987C] reveal">
+                <div
+                    class="product-card bg-charcoal/20 p-12 md:p-16 border-t-4 border-warm-gold animate-on-scroll fade-up">
                     <div class="mb-10 aspect-square overflow-hidden">
                         <img src="assets/korean_woman_rejuran_healer.png" alt="Rejuran Healer"
                             class="w-full h-full object-cover">
@@ -334,8 +277,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="product-card bg-[#1E2124] p-12 md:p-16 border-t-4 border-[#9DAFB6] reveal"
-                    style="transition-delay: 100ms;">
+                <div
+                    class="product-card bg-charcoal/20 p-12 md:p-16 border-t-4 border-blue-gray animate-on-scroll fade-up delay-100">
                     <div class="mb-10 aspect-square overflow-hidden">
                         <img src="assets/korean_woman_rejuran_i.png" alt="Rejuran I" class="w-full h-full object-cover">
                     </div>
@@ -349,8 +292,8 @@
                             you’re not."</p>
                     </div>
                 </div>
-                <div class="product-card bg-[#1E2124] p-12 md:p-16 border-t-4 border-[#8F857B] reveal"
-                    style="transition-delay: 200ms;">
+                <div
+                    class="product-card bg-charcoal/20 p-12 md:p-16 border-t-4 border-taupe animate-on-scroll fade-up delay-200">
                     <div class="mb-10 aspect-square overflow-hidden">
                         <img src="assets/korean_woman_rejuran_s.png" alt="Rejuran S" class="w-full h-full object-cover">
                     </div>
@@ -364,8 +307,8 @@
                             required."</p>
                     </div>
                 </div>
-                <div class="product-card bg-[#1E2124] p-12 md:p-16 border-t-4 border-[#00A99D] reveal"
-                    style="transition-delay: 300ms;">
+                <div
+                    class="product-card bg-charcoal/20 p-12 md:p-16 border-t-4 border-teal-500 animate-on-scroll fade-up delay-300">
                     <div class="mb-10 aspect-square overflow-hidden">
                         <img src="assets/korean_woman_tone_up_booster.png" alt="Tone-Up Booster"
                             class="w-full h-full object-cover">
@@ -385,21 +328,22 @@
     </section>
 
     <!-- Sophia Yang Bio -->
-    <section class="py-32 px-10 bg-white relative overflow-hidden">
+    <section id="sophia" data-nav-theme="dark" class="py-32 px-10 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-24">
-            <div class="lg:w-1/2 reveal">
-                <div class="aspect-[4/5] bg-[#F6F7F8] relative">
+            <div class="lg:w-1/2 animate-on-scroll fade-right">
+                <div class="aspect-[4/5] bg-off-white relative">
                     <img src="https://suaglow.com/wp-content/uploads/2025/11/sophia_2.png"
-                        class="w-full h-full object-cover grayscale brightness-90" alt="Sophia Yang Portrait">
-                    <div class="absolute bottom-10 right-10 bg-[#131619] text-white p-12 hidden xl:block shadow-2xl">
+                        class="w-full h-auto object-contain grayscale brightness-90" style="padding-top:20px;"
+                        alt="Sophia Yang Portrait">
+                    <div class="absolute bottom-10 right-10 bg-near-black text-white p-12 hidden xl:block shadow-2xl">
                         <p class="heading-wide text-xl mb-3 !font-900">Master Injector</p>
                         <p class="text-xs uppercase tracking-[0.5em] opacity-40">Certified in Seoul</p>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 reveal">
-                <h2 class="heading-wide text-4xl mb-14 leading-[1.15]">Meet Sophia Yang.<br><span
-                        class="text-[#AA987C] opacity-80">Korean Technique.<br>No Translation Required.</span></h2>
+            <div class="lg:w-1/2 animate-on-scroll fade-left">
+                <h2 class="heading-wide text-4xl mb-14 leading-[1.15]">Meet Sophia Yang, PA-C.<br><span
+                        class="text-warm-gold opacity-80">Korean Technique.<br>No Translation Required.</span></h2>
                 <div class="space-y-10 font-light text-lg leading-relaxed opacity-70 mb-16">
                     <p>Sophia is an authentically Korean master injector trained in the clinical aesthetic philosophy
                         where Rejuran originated.</p>
@@ -424,15 +368,15 @@
     </section>
 
     <!-- News Highlights -->
-    <section id="news" class="py-32 px-10 bg-[#F6F7F8]">
+    <section id="news" data-nav-theme="dark" class="py-32 px-10 bg-[#F6F7F8]">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-24 reveal">
+            <div class="text-center mb-24 animate-on-scroll fade-up">
                 <h2 class="heading-wide text-3xl">In The News</h2>
                 <p class="text-xs uppercase tracking-[0.4em] mt-6 opacity-40 font-bold italic">The global movement
                     for regenerative health.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="news-card p-12 reveal">
+                <div class="news-card p-12 animate-on-scroll fade-up">
                     <p class="heading-wide text-xs text-[#AA987C] mb-8 opacity-60">The Wall Street Journal</p>
                     <h4 class="text-base font-bold leading-snug mb-10 opacity-80 italic">"Women Are Flying to South
                         Korea in Droves for This Painful Beauty Injectable."</h4>
@@ -440,7 +384,7 @@
                         class="text-xs uppercase font-bold tracking-[0.25em] border-b border-black pb-2 hover:text-[#AA987C] hover:border-[#AA987C] transition-all">Full
                         Article</a>
                 </div>
-                <div class="news-card p-12 reveal" style="transition-delay: 100ms;">
+                <div class="news-card p-12 animate-on-scroll fade-up delay-100">
                     <p class="heading-wide text-xs text-[#AA987C] mb-8 opacity-60">Marie Claire</p>
                     <h4 class="text-base font-bold leading-snug mb-10 opacity-80 italic">"I Flew to Seoul to Try Salmon
                         Sperm Injections for My Skin. 700 shots later, results speak for themselves."</h4>
@@ -448,7 +392,7 @@
                         class="text-xs uppercase font-bold tracking-[0.25em] border-b border-black pb-2 hover:text-[#AA987C] hover:border-[#AA987C] transition-all">Full
                         Article</a>
                 </div>
-                <div class="news-card p-12 reveal" style="transition-delay: 200ms;">
+                <div class="news-card p-12 animate-on-scroll fade-up delay-200">
                     <p class="heading-wide text-xs text-[#AA987C] mb-8 opacity-60">Elle Australia</p>
                     <h4 class="text-base font-bold leading-snug mb-10 opacity-80 italic">"These Transformative K-Beauty
                         Treatments Have Finally Landed In Australia. Kim K is a fan."</h4>
@@ -461,11 +405,12 @@
     </section>
 
     <!-- Transparency & FAQ -->
-    <section id="faq" class="py-32 px-10 bg-[#DFE0DD]">
+    <section id="faq" data-nav-theme="dark" class="py-32 px-10 bg-[#DFE0DD]">
         <div class="max-w-4xl mx-auto">
             <h2 class="heading-wide text-center text-3xl mb-24">Transparency Matters</h2>
 
-            <div class="bg-white p-12 md:p-20 mb-20 reveal border-t-[10px] border-[#AA987C] shadow-sm">
+            <div
+                class="bg-white p-12 md:p-20 mb-20 animate-on-scroll fade-up border-t-[10px] border-[#AA987C] shadow-sm">
                 <h3 class="heading-wide text-xs mb-10 text-[#AA987C] opacity-80">Regulatory Disclosure</h3>
                 <div class="space-y-8 font-light text-base leading-relaxed opacity-60">
                     <p>Rejuran® injectable skin boosters are not currently FDA-approved for injection in the United
@@ -478,19 +423,19 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs uppercase tracking-[0.3em] font-bold opacity-70">
-                <div class="bg-white p-10 reveal">
+                <div class="bg-white p-10 animate-on-scroll fade-up">
                     <h4 class="mb-4 text-[#AA987C]">Process Time</h4>
                     <p>~60 Minutes</p>
                 </div>
-                <div class="bg-white p-10 reveal">
+                <div class="bg-white p-10 animate-on-scroll fade-up delay-100">
                     <h4 class="mb-4 text-[#AA987C]">Recovery</h4>
                     <p>24–72 Hours</p>
                 </div>
-                <div class="bg-white p-10 reveal">
+                <div class="bg-white p-10 animate-on-scroll fade-up delay-200">
                     <h4 class="mb-4 text-[#AA987C]">Frequency</h4>
                     <p>3–4 Sessions</p>
                 </div>
-                <div class="bg-white p-10 reveal">
+                <div class="bg-white p-10 animate-on-scroll fade-up delay-300">
                     <h4 class="mb-4 text-[#AA987C]">Expectation</h4>
                     <p>Cumulative Quality</p>
                 </div>
@@ -498,53 +443,24 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer data-nav-theme="light" class="bg-[#131619] text-white py-32 px-10 text-center">
+    <!-- Brand Section (Formerly Footer) -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
         <div class="max-w-4xl mx-auto">
             <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
-            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24">Medical Aesthetics • Carrollton HQ</p>
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24">K-Beauty Medspa • Carrollton HQ</p>
             <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">Rejuran doesn’t chase trends.<br>It builds
-                <span class="text-[#AA987C] opacity-80">better skin.</span>
+                <span class="text-warm-gold opacity-80">better skin.</span>
             </h3>
             <a href="#"
-                class="inline-block bg-[#AA987C] text-white px-20 py-7 font-bold uppercase tracking-[0.35em] text-xs rounded-full hover:bg-white hover:text-black transition-all shadow-2xl">Start
+                class="inline-block bg-taupe text-white px-12 md:px-16 py-5 md:py-6 font-body font-bold uppercase tracking-[0.35em] text-[10px] md:text-xs rounded-full hover:bg-near-black transition-all shadow-glow hover:shadow-none hover:-translate-y-1">Start
                 Your Journey</a>
-            <div
-                class="mt-40 pt-16 border-t border-white/[0.03] flex flex-col md:flex-row justify-between items-center gap-12 text-xs uppercase tracking-[0.3em] font-bold opacity-20">
-                <p>© 2026 SuA K Glow. Texas Certified Master Injections.</p>
-                <div class="flex gap-16">
-                    <a href="#" class="hover:opacity-100 transition-opacity">Privacy</a>
-                    <a href="#" class="hover:opacity-100 transition-opacity">Terms</a>
-                    <a href="#" class="hover:opacity-100 transition-opacity">Instagram</a>
-                </div>
-            </div>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
+    <div id="footer-placeholder"></div>
 
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const target = document.querySelector(targetId);
-                if (target) {
-                    const navHeight = 150;
-                    const bodyRect = document.body.getBoundingClientRect().top;
-                    const elementRect = target.getBoundingClientRect().top;
-                    const offset = (elementRect - bodyRect) - navHeight;
-                    window.scrollTo({ top: offset, behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
     <script src="script.js"></script>
 </body>
 
