@@ -377,12 +377,14 @@ html {
   text-align: center;
   white-space: nowrap;
 }
+
 @media (min-width: 768px) {
   .btn-primary:not(.btn-sm) {
     padding: 1.5rem 4rem;
     font-size: 0.75rem;
   }
 }
+
 .btn-primary:hover {
   background-color: #131619;
   box-shadow: none;
@@ -422,6 +424,7 @@ html {
   transition: all 0.3s ease;
   white-space: nowrap;
 }
+
 .btn-secondary:hover {
   background-color: #8F857B;
   color: #FFFFFF;
@@ -445,6 +448,7 @@ html {
   transition: all 0.3s ease;
   white-space: nowrap;
 }
+
 .btn-white:hover {
   background-color: #8F857B;
   color: #FFFFFF;
@@ -472,12 +476,14 @@ html {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   white-space: nowrap;
 }
+
 @media (min-width: 768px) {
   .btn-outline-white {
     padding: 1.5rem 4rem;
     font-size: 0.75rem;
   }
 }
+
 .btn-outline-white:hover {
   background-color: #FFFFFF;
   transform: translateY(-0.25rem);
@@ -531,6 +537,7 @@ html {
   transition: all 0.3s ease;
   outline: none;
 }
+
 .form-input:focus {
   border-color: #8F857B;
   box-shadow: 0 0 0 1px #8F857B;
@@ -549,4 +556,72 @@ html {
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   white-space: nowrap;
+}
+
+/* --- ANIMATIONS / EFFECTS --- */
+
+/* Glow Card Animated Border */
+@property --glow-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin-glow {
+  from {
+    --glow-angle: 0deg;
+  }
+
+  to {
+    --glow-angle: 360deg;
+  }
+}
+
+.glow-card {
+  position: relative;
+  background:
+    linear-gradient(#1a1c1e, #1a1c1e) padding-box,
+    conic-gradient(from var(--glow-angle), transparent 30%, var(--glow-color, #AA987C) 80%, transparent) border-box !important;
+  border: 2px solid transparent !important;
+  border-radius: 1rem;
+  animation: spin-glow 10s linear infinite;
+  overflow: visible !important;
+  z-index: 10;
+}
+
+/* Bright background variants using the glow-card padding-box explicitly to override dark default */
+.glow-card.bg-white {
+  background:
+    linear-gradient(#FFFFFF, #FFFFFF) padding-box,
+    conic-gradient(from var(--glow-angle), transparent 30%, var(--glow-color, #AA987C) 80%, transparent) border-box !important;
+}
+
+.glow-card.bg-\[\#F6F7F8\] {
+  background:
+    linear-gradient(#F6F7F8, #F6F7F8) padding-box,
+    conic-gradient(from var(--glow-angle), transparent 30%, var(--glow-color, #AA987C) 80%, transparent) border-box !important;
+}
+
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(from var(--glow-angle), transparent 30%, var(--glow-color, #AA987C) 80%, transparent);
+  filter: blur(15px);
+  opacity: 0.6;
+  animation: spin-glow 10s linear infinite;
+  pointer-events: none;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.glow-card:hover,
+.glow-card:hover::before {
+  animation-play-state: paused;
+}
+
+.glow-card:hover::before {
+  opacity: 1;
+  filter: blur(25px);
 }
