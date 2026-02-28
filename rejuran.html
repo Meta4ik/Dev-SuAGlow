@@ -131,6 +131,17 @@
             opacity: 0.6;
             animation: spin-glow 10s linear infinite;
             pointer-events: none;
+            transition: opacity 0.3s ease, filter 0.3s ease;
+        }
+
+        .glow-card:hover,
+        .glow-card:hover::before {
+            animation-play-state: paused;
+        }
+
+        .glow-card:hover::before {
+            opacity: 1;
+            filter: blur(25px);
         }
     </style>
 </head>
