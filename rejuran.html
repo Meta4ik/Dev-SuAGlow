@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
-<head>    <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rejuran® Carrollton | SuA K Glow Korean Med Spa</title>
     <link rel="icon" href="assets/favicon.png" type="image/png">
@@ -89,6 +90,47 @@
         .accent-text {
             color: #AA987C;
             font-weight: 400;
+        }
+
+        @property --glow-angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        @keyframes spin-glow {
+            from {
+                --glow-angle: 0deg;
+            }
+
+            to {
+                --glow-angle: 360deg;
+            }
+        }
+
+        .glow-card {
+            position: relative;
+            background:
+                linear-gradient(#1a1c1e, #1a1c1e) padding-box,
+                conic-gradient(from var(--glow-angle), transparent 30%, var(--glow-color) 80%, transparent) border-box !important;
+            border: 2px solid transparent !important;
+            border-radius: 1rem;
+            animation: spin-glow 4s linear infinite;
+            overflow: visible !important;
+            z-index: 10;
+        }
+
+        .glow-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: inherit;
+            background: conic-gradient(from var(--glow-angle), transparent 30%, var(--glow-color) 80%, transparent);
+            filter: blur(15px);
+            opacity: 0.6;
+            animation: spin-glow 4s linear infinite;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -261,8 +303,8 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
-                <div
-                    class="product-card bg-charcoal/20 p-12 md:p-16 border-t-4 border-warm-gold animate-on-scroll fade-up">
+                <div class="product-card glow-card p-12 md:p-16 animate-on-scroll fade-up"
+                    style="--glow-color: #AA987C;">
                     <div class="mb-10 aspect-square overflow-hidden">
                         <img src="assets/korean_woman_rejuran_healer.png" alt="Rejuran Healer"
                             class="w-full h-full object-cover">
@@ -277,8 +319,8 @@
                         </p>
                     </div>
                 </div>
-                <div
-                    class="product-card bg-charcoal/20 p-12 md:p-16 border-t-4 border-blue-gray animate-on-scroll fade-up delay-100">
+                <div class="product-card glow-card p-12 md:p-16 animate-on-scroll fade-up delay-100"
+                    style="--glow-color: #9DAFB6;">
                     <div class="mb-10 aspect-square overflow-hidden">
                         <img src="assets/korean_woman_rejuran_i.png" alt="Rejuran I" class="w-full h-full object-cover">
                     </div>
@@ -292,8 +334,8 @@
                             you’re not."</p>
                     </div>
                 </div>
-                <div
-                    class="product-card bg-charcoal/20 p-12 md:p-16 border-t-4 border-taupe animate-on-scroll fade-up delay-200">
+                <div class="product-card glow-card p-12 md:p-16 animate-on-scroll fade-up delay-200"
+                    style="--glow-color: #8F857B;">
                     <div class="mb-10 aspect-square overflow-hidden">
                         <img src="assets/korean_woman_rejuran_s.png" alt="Rejuran S" class="w-full h-full object-cover">
                     </div>
@@ -307,8 +349,8 @@
                             required."</p>
                     </div>
                 </div>
-                <div
-                    class="product-card bg-charcoal/20 p-12 md:p-16 border-t-4 border-teal-500 animate-on-scroll fade-up delay-300">
+                <div class="product-card glow-card p-12 md:p-16 animate-on-scroll fade-up delay-300"
+                    style="--glow-color: #14b8a6;">
                     <div class="mb-10 aspect-square overflow-hidden">
                         <img src="assets/korean_woman_tone_up_booster.png" alt="Tone-Up Booster"
                             class="w-full h-full object-cover">
@@ -451,8 +493,7 @@
             <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">Rejuran doesn’t chase trends.<br>It builds
                 <span class="text-warm-gold opacity-80">better skin.</span>
             </h3>
-            <a href="#"
-                class="btn-primary">Start
+            <a href="#" class="btn-primary">Start
                 Your Journey</a>
         </div>
     </section>
