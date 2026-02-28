@@ -97,52 +97,6 @@
             initial-value: 0deg;
             inherits: false;
         }
-
-        @keyframes spin-glow {
-            from {
-                --glow-angle: 0deg;
-            }
-
-            to {
-                --glow-angle: 360deg;
-            }
-        }
-
-        .glow-card {
-            position: relative;
-            background:
-                linear-gradient(#1a1c1e, #1a1c1e) padding-box,
-                conic-gradient(from var(--glow-angle), transparent 30%, var(--glow-color) 80%, transparent) border-box !important;
-            border: 2px solid transparent !important;
-            border-radius: 1rem;
-            animation: spin-glow 10s linear infinite;
-            overflow: visible !important;
-            z-index: 10;
-        }
-
-        .glow-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-            border-radius: inherit;
-            background: conic-gradient(from var(--glow-angle), transparent 30%, var(--glow-color) 80%, transparent);
-            filter: blur(15px);
-            opacity: 0.6;
-            animation: spin-glow 10s linear infinite;
-            pointer-events: none;
-            transition: opacity 0.3s ease, filter 0.3s ease;
-        }
-
-        .glow-card:hover,
-        .glow-card:hover::before {
-            animation-play-state: paused;
-        }
-
-        .glow-card:hover::before {
-            opacity: 1;
-            filter: blur(25px);
-        }
     </style>
 </head>
 
