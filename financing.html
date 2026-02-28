@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financing | SuA K Glow Korean Med Spa</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Cherry Widget Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@200..900&family=Slabo+27px:wght@200..900&family=Lato:wght@200..900&family=Raleway:wght@200..900&family=Montserrat:wght@200..900&family=Oswald:wght@200..900&family=Poppins:wght@200..900&family=Source+Sans+Pro:wght@200..900&family=PT+Sans:wght@200..900&family=Open+Sans:wght@200..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'taupe': '#8F857B',
+                        'blue-gray': '#9DAFB6',
+                        'charcoal': '#404345',
+                        'off-white': '#F6F7F8',
+                        'warm-gold': '#AA987C',
+                        'near-black': '#131619',
+                        'light-gray': '#DFE0DD',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .heading-wide {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-weight: 300;
+            line-height: 1.1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section id="page-hero" data-nav-theme="dark"
+        class="relative min-h-[40vh] flex flex-col items-center justify-center text-center px-8 overflow-hidden pt-32 pb-20">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/bg_hero.webp" class="w-full h-full object-cover" alt="Hero Background">
+            <div class="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
+            <span
+                class="inline-block px-6 py-2 border border-[#AA987C]/30 text-[#AA987C] text-xs font-bold uppercase tracking-[0.5em] mb-12 rounded-full">Flexible
+                Payment Options</span>
+            <h1 class="heading-wide text-4xl md:text-7xl mb-10 leading-[1.05]">Invest in Your<br><span
+                    class="text-[#AA987C]">Radiance.</span></h1>
+            <p
+                class="text-sm md:text-xl text-[#404345]/70 max-w-3xl mx-auto mb-14 font-light tracking-wide leading-relaxed">
+                We've partnered with Cherry to provide flexible payment plans, making your K-Beauty treatments more
+                accessible than ever.
+            </p>
+        </div>
+        <div class="absolute top-[10%] left-[-5%] w-[600px] h-[600px] bg-[#EAECED]/40 rounded-full blur-[140px] -z-10">
+        </div>
+        <div
+            class="absolute bottom-[-5%] right-[-5%] w-[700px] h-[700px] bg-[#DFE0DD]/30 rounded-full blur-[160px] -z-10">
+        </div>
+    </section>
+
+    <!-- Cherry Widget Section -->
+    <section id="financing-widget" data-nav-theme="dark" class="py-16 px-6 bg-white shrink-0 relative z-10">
+        <div class="max-w-7xl mx-auto min-h-[50vh]">
+            <!-- CHERRY WIDGET BEGIN -->
+            <script>
+                    (function (w, d, s, o, f, js, fjs) {
+                        w[o] = w[o] || function () {
+                            (w[o].q = w[o].q || []).push(arguments);
+                        };
+                        (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+                        js.id = o;
+                        js.src = f;
+                        js.async = 1;
+                        fjs.parentNode.insertBefore(js, fjs);
+                    })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
+                _hw("init", {
+                    debug: false,
+                    variables: {
+                        slug: 'sua-glow-pllc',
+                        name: 'SuA Glow PLLC',
+                        images: [26],
+                        customLogo: '',
+                        defaultPurchaseAmount: 750,
+                        customImage: '',
+                        imageCategory: 'medspa',
+                        language: 'en',
+                    },
+                    styles: {
+                        primaryColor: '#a8977b',
+                        secondaryColor: '#a8977b10',
+                        fontFamily: 'Poppins',
+                        headerFontFamily: 'Poppins',
+                    }
+                }, ['hero', 'calculator', 'howitworks', 'faq']);
+            </script>
+            <div id="all"></div>
+            <div id="hero"></div>
+            <div id="calculator"></div>
+            <div id="howitworks"></div>
+            <div id="testimony"></div>
+            <div id="faq"></div>
+            <!-- CHERRY WIDGET END -->
+        </div>
+    </section>
+
+    <!-- Brand Section -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24">Medical Aesthetics • Carrollton HQ</p>
+            <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">The K-Beauty Glow, <br>
+                <span class="text-warm-gold opacity-80">Now more accessible than ever.</span>
+            </h3>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="inline-block bg-taupe text-white px-20 py-7 font-body font-bold uppercase tracking-[0.35em] text-xs rounded-full hover:bg-white hover:text-black transition-all shadow-2xl">Book
+                Appointment</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

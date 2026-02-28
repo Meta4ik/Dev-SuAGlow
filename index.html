@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuA K-Glow | Korean Medical Aesthetics</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
         rel="stylesheet">
 
     <!-- Tailwind CSS -->
@@ -32,7 +34,7 @@
                         'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
                     },
                     fontFamily: {
-                        'heading': ['Poppins', 'sans-serif'],
+                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
                         'body': ['Poppins', 'sans-serif'],
                     }
                 }
@@ -41,611 +43,389 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=7">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="bg-off-white text-charcoal antialiased">
+<body class="bg-off-white text-charcoal antialiased home-page">
 
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
-        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="#" class="flex items-center">
-                <img id="logo-desktop" src="assets/logo-main.webp" alt="SuA K-Glow"
-                    class="h-12 brightness-0 invert transition-all duration-300">
-            </a>
-
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#about"
-                    class="nav-link font-body text-sm tracking-wide text-white hover:text-taupe transition-colors">About</a>
-                <a href="#botox"
-                    class="nav-link font-body text-sm tracking-wide text-white hover:text-taupe transition-colors">Botox</a>
-                <a href="#skinboosters"
-                    class="nav-link font-body text-sm tracking-wide text-white hover:text-taupe transition-colors">Skin
-                    Boosters</a>
-                <a href="#scar"
-                    class="nav-link font-body text-sm tracking-wide text-white hover:text-taupe transition-colors">Scar
-                    Treatment</a>
-                <a href="#filler"
-                    class="nav-link font-body text-sm tracking-wide text-white hover:text-taupe transition-colors">Filler</a>
-                <a href="#wellness"
-                    class="nav-link font-body text-sm tracking-wide text-white hover:text-taupe transition-colors">Wellness</a>
-                <a href="#contact"
-                    class="nav-link font-body text-sm tracking-wide text-white hover:text-taupe transition-colors">Contact</a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-white hover:text-taupe transition-colors">
-                <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu"
-            class="hidden absolute top-full left-0 right-0 bg-off-white/95 backdrop-blur-md shadow-lg py-6">
-            <div class="flex flex-col items-center gap-4">
-                <a href="#about"
-                    class="font-body text-sm tracking-wide text-charcoal hover:text-taupe transition-colors">About</a>
-                <a href="#botox"
-                    class="font-body text-sm tracking-wide text-charcoal hover:text-taupe transition-colors">Botox</a>
-                <a href="#skinboosters"
-                    class="font-body text-sm tracking-wide text-charcoal hover:text-taupe transition-colors">Skin
-                    Boosters</a>
-                <a href="#scar"
-                    class="font-body text-sm tracking-wide text-charcoal hover:text-taupe transition-colors">Scar
-                    Treatment</a>
-                <a href="#filler"
-                    class="font-body text-sm tracking-wide text-charcoal hover:text-taupe transition-colors">Filler</a>
-                <a href="#wellness"
-                    class="font-body text-sm tracking-wide text-charcoal hover:text-taupe transition-colors">Wellness</a>
-                <a href="#contact"
-                    class="font-body text-sm tracking-wide text-charcoal hover:text-taupe transition-colors">Contact</a>
-            </div>
-        </div>
-    </nav>
+    <div id="nav-placeholder"></div>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="assets/bg_hero.webp" class="w-full h-full object-cover" alt="Hero Background">
-            <div class="absolute inset-0 bg-[#F6F7F8]/40 backdrop-blur-[2px]"></div>
+    <section id="hero" data-nav-theme="dark" class="relative min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-near-black">
+            <video id="hero-scroll-video" src="assets/suaglow_hero_vid_v2.mp4"
+                class="absolute inset-0 w-full h-full object-cover" muted playsinline preload="auto" loop></video>
+            <div class="absolute inset-0 bg-gradient-to-b from-near-black/80 to-white/70"></div>
         </div>
 
-        <div class="relative z-10 w-full max-w-7xl mx-auto px-6">
-            <div class="mb-6 animate-on-scroll fade-up delay-200">
-                <div class="glass-effect rounded-lg px-8 py-6 inline-block">
-                    <p class="font-heading text-lg md:text-2xl text-charcoal leading-relaxed">"The skin glows with a
-                        pure,<br>water-like radiance"</p>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pt-20">
+            <div class="max-w-3xl animate-on-scroll fade-up">
+                <span
+                    class="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[10px] tracking-[0.3em] uppercase text-white/90 font-bold mb-8">Premier
+                    K-Beauty Destination</span>
+                <h1 class="heading-wide text-4xl md:text-6xl lg:text-7xl text-white mb-8 leading-[1.1]">
+                    The Art of <span class="text-blue-gray italic">Korean Beauty,</span><br>Perfected in Texas
+                </h1>
+                <p class="font-body text-lg md:text-xl text-white/80 mb-12 leading-relaxed max-w-2xl">
+                    SuA Glow Medspa brings the secrets of Korean beauty to Dallas—where science, precision, and elegance
+                    meet. We rejuvenate your skin from within for that effortless, glass-skin radiance.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                        class="inline-flex items-center justify-center gap-3 bg-taupe text-white px-10 py-5 rounded-[40px] font-body text-xs font-bold tracking-[0.2em] uppercase hover:bg-near-black transition-all shadow-xl hover:-translate-y-1">
+                        Schedule Your Glow
+                    </a>
+                    <a href="treatments.html"
+                        class="inline-flex items-center justify-center gap-3 bg-white/80 backdrop-blur-md text-charcoal px-10 py-5 rounded-[40px] font-body text-xs font-bold tracking-[0.2em] uppercase border border-charcoal/5 hover:bg-white transition-all shadow-lg hover:-translate-y-1">
+                        Explore Treatments
+                    </a>
                 </div>
-            </div>
-
-            <div class="mt-8 animate-on-scroll fade-up delay-300">
-                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 bg-taupe text-white px-8 py-4 rounded-[40px] font-body text-base tracking-wide hover:bg-warm-gold transition-colors shadow-lg">
-                    Schedule Your Glow
-                    <i data-lucide="external-link" class="w-5 h-5"></i>
-                </a>
             </div>
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
-                <div class="w-1 h-2 bg-white/80 rounded-full"></div>
-            </div>
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-30">
+            <span class="text-[9px] uppercase tracking-[0.4em] font-bold">Discover</span>
+            <div class="w-[1px] h-12 bg-charcoal/50"></div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 md:py-32 bg-off-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <!-- Sophia Yang -->
-            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center mb-20">
-                <div class="relative animate-on-scroll fade-right">
-                    <div class="relative overflow-hidden rounded-2xl">
-                        <img src="https://suaglow.com/wp-content/uploads/2025/11/sophia_2.png" alt="Sophia Yang"
-                            class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700">
+    <!-- Dynamically Loaded Specials Section -->
+    <div id="index-specials-container"></div>
+    <script src="specials.js?v=7"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof SPECIALS_HTML !== 'undefined') {
+                document.getElementById('index-specials-container').innerHTML = SPECIALS_HTML;
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+                const newEls = document.querySelectorAll('#index-specials-container .animate-on-scroll');
+                const obs = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+                newEls.forEach(el => obs.observe(el));
+            } else {
+                console.error('SPECIALS_HTML is not defined. Ensure specials.js is loaded.');
+            }
+        });
+    </script>
+
+    <!-- Sophia Yang Bio -->
+    <section id="sophia" data-nav-theme="dark" class="py-32 px-10 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-24">
+            <div class="lg:w-1/2 animate-on-scroll fade-right">
+                <div class="aspect-[4/5] bg-off-white relative">
+                    <img src="https://suaglow.com/wp-content/uploads/2025/11/sophia_2.png"
+                        class="w-full h-auto object-contain grayscale brightness-90" style="padding-top:20px;"
+                        alt="Sophia Yang Portrait">
+                    <div class="absolute bottom-10 right-10 bg-near-black text-white p-12 hidden xl:block shadow-2xl">
+                        <p class="heading-wide text-xl mb-3 !font-900">Master Injector</p>
+                        <p class="text-xs uppercase tracking-[0.5em] opacity-40">Certified in Seoul</p>
                     </div>
-                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-taupe/20 rounded-full blur-2xl"></div>
-                </div>
-                <div class="animate-on-scroll fade-left delay-200">
-                    <p class="font-body text-xs tracking-[0.2em] text-taupe mb-4 uppercase">Meet Sophia Yang, PA-C</p>
-                    <h2 class="font-heading text-3xl md:text-4xl text-near-black mb-6">Your Skin's New Favorite
-                        Architect</h2>
-                    <p class="font-body text-charcoal/80 leading-relaxed mb-6">
-                        Sophia Yang, PA-C brings Seoul's coveted K-Beauty secrets to Dallas with a signature style that
-                        blends precision, proportion, and whisper-soft luxury—not trends. As a Seoul-trained injector,
-                        she transforms advanced science into effortless glow, customizing every treatment to deliver
-                        hydrated, glass-skin radiance without heaviness or hype.
-                    </p>
-                    <p class="font-body text-charcoal/80 leading-relaxed mb-6">
-                        Her water-based rejuvenation method restores elasticity, balance, and that unmistakable Seoul
-                        dew from within—think skin-deep design, not frozen filler. At SuA Glow, she pairs expertise with
-                        modern Seoul sophistication to reveal the real secret behind the K-Beauty Glow: luminous
-                        confidence powered by hydration, harmony, and smart artistry.
-                    </p>
                 </div>
             </div>
-
-            <!-- About SuA -->
-            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-                <div class="order-2 md:order-1 animate-on-scroll fade-right delay-200">
-                    <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">About Us</p>
-                    <h2 class="font-heading text-3xl md:text-4xl text-near-black mb-6">The Art of Korean Beauty,
-                        Perfected in Texas</h2>
-                    <p class="font-body text-charcoal/80 leading-relaxed mb-6">
-                        At SuA, we believe true beauty shines when purity meets elegance. Our treatments are designed to
-                        help your skin glow naturally—radiant, refined, and timeless.
+            <div class="lg:w-1/2 animate-on-scroll fade-left">
+                <h2 class="heading-wide text-4xl mb-14 leading-[1.15]">Meet Sophia Yang, PA-C.<br><span
+                        class="text-warm-gold opacity-80">Korean Technique.<br>No Translation Required.</span></h2>
+                <div class="space-y-8 font-light text-lg leading-relaxed opacity-70 mb-16">
+                    <p>
+                        Sophia Yang, PA-C brings Seoul’s coveted K-Beauty secrets to Dallas with a signature style
+                        that blends precision, proportion, and whisper-soft luxury—not trends.
                     </p>
-
-                    <div class="bg-white/50 rounded-xl p-6 mb-6 border border-taupe/20">
-                        <h3 class="font-heading text-lg text-near-black mb-4">The Meaning of SuA (水娥)</h3>
-                        <ul class="space-y-2 font-body text-charcoal/70">
-                            <li class="flex items-start gap-3"><span class="text-taupe mt-1">•</span><span>水(Su):
-                                    pure/water/flowing</span></li>
-                            <li class="flex items-start gap-3"><span class="text-taupe mt-1">•</span><span>娥(A):
-                                    elegant/graceful</span></li>
-                            <li class="flex items-start gap-3"><span class="text-taupe mt-1">=</span><span>pure, natural
-                                    beauty like flowing water</span></li>
-                        </ul>
-                    </div>
-
-                    <p class="font-heading text-base text-near-black/80 border-l-4 border-taupe pl-4">"피부가 수아하게 빛나다" =
-                        The skin glows with a pure, water-like radiance</p>
-                </div>
-
-                <div class="order-1 md:order-2 animate-on-scroll fade-left">
-                    <div class="relative overflow-hidden rounded-2xl">
-                        <img src="assets/about-image.jpg" alt="SuA Treatment"
-                            class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700">
-                    </div>
-                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-blue-gray/30 rounded-full blur-xl"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Botox Section -->
-    <section id="botox" class="py-24 md:py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-                <div class="order-2 md:order-1 animate-on-scroll fade-right">
-                    <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">Aesthetic Treatments
+                    <p>
+                        As a Seoul-trained injector, she transforms advanced science into effortless glow,
+                        customizing every treatment to deliver hydrated, glass-skin radiance without heaviness or
+                        hype.
                     </p>
-                    <h2 class="font-heading text-3xl md:text-4xl text-near-black mb-6">Botox Services</h2>
-                    <p class="font-body text-charcoal/70 leading-relaxed mb-8">
-                        Botox treatments at SuA K-Glow are tailored to address various aesthetic and medical concerns
-                        with precision and expertise.
+                    <p>
+                        Her water-based rejuvenation method restores elasticity, balance, and that unmistakable
+                        Seoul dew from within—think skin-deep design, not frozen filler. At SuA Glow, she pairs
+                        expertise with modern Seoul sophistication to reveal the real secret behind the K-Beauty
+                        Glow: luminous confidence powered by hydration, harmony, and smart artistry.
                     </p>
-
-                    <div class="space-y-4">
-                        <!-- Card 1 -->
-                        <div
-                            class="bg-white border border-taupe/30 hover:border-taupe transition-all duration-500 hover:shadow-soft rounded-lg p-5 flex items-start gap-4">
-                            <div class="p-3 bg-taupe/10 rounded-lg text-taupe"><i data-lucide="sparkles"
-                                    class="w-6 h-6"></i></div>
-                            <div>
-                                <h3 class="font-heading text-lg text-near-black mb-1">Face</h3>
-                                <p class="font-body text-sm text-charcoal/70">Forehead lines, frown lines, crow's feet,
-                                    brow lift</p>
-                            </div>
-                        </div>
-                        <!-- Card 2 -->
-                        <div
-                            class="bg-white border border-taupe/30 hover:border-taupe transition-all duration-500 hover:shadow-soft rounded-lg p-5 flex items-start gap-4">
-                            <div class="p-3 bg-taupe/10 rounded-lg text-taupe"><i data-lucide="heart"
-                                    class="w-6 h-6"></i></div>
-                            <div>
-                                <h3 class="font-heading text-lg text-near-black mb-1">Body</h3>
-                                <p class="font-body text-sm text-charcoal/70">Excessive sweating (hyperhidrosis), muscle
-                                    contouring</p>
-                            </div>
-                        </div>
-                        <!-- Card 3 -->
-                        <div
-                            class="bg-white border border-taupe/30 hover:border-taupe transition-all duration-500 hover:shadow-soft rounded-lg p-5 flex items-start gap-4">
-                            <div class="p-3 bg-taupe/10 rounded-lg text-taupe"><i data-lucide="star"
-                                    class="w-6 h-6"></i></div>
-                            <div>
-                                <h3 class="font-heading text-lg text-near-black mb-1">Medical</h3>
-                                <p class="font-body text-sm text-charcoal/70">TMJ, migraines, muscle spasms</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
-                <div class="order-1 md:order-2 animate-on-scroll fade-left delay-200">
-                    <div class="relative overflow-hidden rounded-2xl">
-                        <img src="assets/botox-face.jpg" alt="Botox"
-                            class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-8 border border-black/5 bg-[#F6F7F8]">
+                        <h4 class="heading-wide text-xs mb-6 text-[#AA987C] opacity-70">Ethos</h4>
+                        <p class="text-xs font-bold uppercase tracking-[0.3em] opacity-40 leading-loose">•
+                            Regeneration > Drama<br>• Precision > Shortcuts<br>• Health > Trends</p>
+                    </div>
+                    <div class="p-8 border border-black/5 bg-[#F6F7F8]">
+                        <h4 class="heading-wide text-xs mb-6 text-[#AA987C] opacity-70">Heritage</h4>
+                        <p class="text-xs font-bold uppercase tracking-[0.3em] opacity-40 leading-loose">• Seoul
+                            Trained<br>• Original Protocol<br>• Authentic Master</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skin Boosters Section -->
-    <section id="skinboosters" class="py-24 md:py-32 bg-off-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-taupe/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-gray/20 rounded-full blur-3xl"></div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-16 animate-on-scroll fade-up">
-                <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">Advanced Treatments</p>
-                <h2 class="font-heading text-3xl md:text-4xl text-near-black mb-6">Skin Boosters</h2>
-                <p class="font-body text-charcoal/70 max-w-2xl mx-auto">
-                    Our skin booster treatments are designed to rejuvenate and hydrate the skin, targeting areas such as
-                    the neck, hands, chest, and knees.
+    <!-- Core Treatments Section -->
+    <section id="treatments" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-24">
+                <span
+                    class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">Signature
+                    Services</span>
+                <h2 class="heading-wide text-4xl md:text-5xl text-near-black mb-8 uppercase tracking-[0.15em]">Refined
+                    Results</h2>
+                <p class="font-body text-charcoal/60 max-w-2xl mx-auto leading-relaxed text-lg">
+                    Discover our most sought-after K-Beauty treatments, focused on hydration, skin quality, and natural
+                    rejuvenation.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Rejuran -->
-                <div class="trigger-modal cursor-pointer bg-white border border-taupe/30 hover:border-taupe hover:shadow-glow transition-all duration-500 group overflow-hidden rounded-lg animate-on-scroll fade-up delay-100"
-                    data-modal-target="modal-rejuran">
-                    <div class="h-48 overflow-hidden bg-white flex items-center justify-center p-4">
-                        <img src="assets/rejuran-product.png"
-                            class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Wrinkle Relaxers -->
+                <div class="product-card group">
+                    <div class="h-64 overflow-hidden bg-charcoal/5">
+                        <img src="assets/botox-face.jpg" alt="Wrinkle Relaxers"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <div>
-                                <h3
-                                    class="font-heading text-xl text-near-black group-hover:text-taupe transition-colors">
-                                    Rejuran</h3>
-                                <p class="font-body text-xs tracking-wide text-charcoal/60 uppercase">Healer, I, S</p>
-                            </div>
-                            <span class="px-3 py-1 bg-taupe/10 text-taupe text-xs font-body rounded-full">95% DNA
-                                Match</span>
-                        </div>
-                        <p class="font-body text-sm text-charcoal/70 mb-4 line-clamp-2">Skin regeneration with salmon
-                            DNA (PN). Shares 95% similarity with human DNA.</p>
-                        <div class="flex items-center gap-2 text-taupe mt-4">
-                            <span class="font-body text-xs uppercase tracking-wide">Learn More</span>
-                            <i data-lucide="arrow-right"
-                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </div>
+                    <div class="p-10 text-center">
+                        <h3 class="heading-wide text-lg mb-4">Wrinkle Relaxers</h3>
+                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed">Relax expression lines while
+                            maintaining natural facial movement and character.</p>
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all">Schedule
+                            Session</a>
                     </div>
                 </div>
 
-                <!-- Hydro Injection -->
-                <div class="trigger-modal cursor-pointer bg-white border border-taupe/30 hover:border-taupe hover:shadow-glow transition-all duration-500 group overflow-hidden rounded-lg animate-on-scroll fade-up delay-200"
-                    data-modal-target="modal-hydro">
-                    <div class="h-48 overflow-hidden bg-white flex items-center justify-center p-4">
-                        <img src="assets/byryzn-product.png"
-                            class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500">
+                <!-- Rejuran -->
+                <div class="product-card group">
+                    <div class="h-64 overflow-hidden bg-charcoal/5 flex items-center justify-center p-8">
+                        <img src="assets/rejuran-product.png" alt="Rejuran"
+                            class="max-h-full object-contain group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <div>
-                                <h3
-                                    class="font-heading text-xl text-near-black group-hover:text-taupe transition-colors">
-                                    Hydro Injection</h3>
-                                <p class="font-body text-xs tracking-wide text-charcoal/60 uppercase">BYRYZN - MoolGwang
-                                </p>
-                            </div>
-                            <span class="px-3 py-1 bg-taupe/10 text-taupe text-xs font-body rounded-full">6+
-                                Months</span>
-                        </div>
-                        <p class="font-body text-sm text-charcoal/70 mb-4 line-clamp-2">Cross-linked HA technology that
-                            holds 1,000x its weight in water.</p>
-                        <div class="flex items-center gap-2 text-taupe mt-4">
-                            <span class="font-body text-xs uppercase tracking-wide">Learn More</span>
-                            <i data-lucide="arrow-right"
-                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </div>
+                    <div class="p-10 text-center">
+                        <h3 class="heading-wide text-lg mb-4">Rejuran Healer</h3>
+                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed">The cornerstone of South
+                            Korean skin regeneration using pharmaceutical-grade PN DNA.</p>
+                        <a href="rejuran.html"
+                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all">Learn
+                            More</a>
+                    </div>
+                </div>
+
+                <!-- Skintox -->
+                <div class="product-card group">
+                    <div class="h-64 overflow-hidden bg-charcoal/5">
+                        <img src="assets/about-image.jpg" alt="Skintox"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-10 text-center">
+                        <h3 class="heading-wide text-lg mb-4">Skintox</h3>
+                        <h4 class="text-[9px] uppercase tracking-[0.2em] text-taupe mb-4 font-bold italic">Seoul Edition
+                        </h4>
+                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed">Micro-toxin treatment that
+                            improves skin quality, refines pores, and reduces oiliness.</p>
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all">Book
+                            Online</a>
                     </div>
                 </div>
 
                 <!-- Juvelook -->
-                <div class="trigger-modal cursor-pointer bg-white border border-taupe/30 hover:border-taupe hover:shadow-glow transition-all duration-500 group overflow-hidden rounded-lg animate-on-scroll fade-up delay-300"
-                    data-modal-target="modal-juvelook">
-                    <div class="h-48 overflow-hidden bg-white flex items-center justify-center p-4">
-                        <img src="assets/juvelook-bottles.png"
-                            class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500">
+                <div class="product-card group">
+                    <div class="h-64 overflow-hidden bg-charcoal/5 flex items-center justify-center p-8">
+                        <img src="assets/juvelook-bottles.png" alt="Juvelook"
+                            class="max-h-full object-contain group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <div>
-                                <h3
-                                    class="font-heading text-xl text-near-black group-hover:text-taupe transition-colors">
-                                    Juvelook Skin</h3>
-                                <p class="font-body text-xs tracking-wide text-charcoal/60 uppercase">PDLLA + HA</p>
-                            </div>
-                            <span class="px-3 py-1 bg-taupe/10 text-taupe text-xs font-body rounded-full">FDA
-                                Approved</span>
-                        </div>
-                        <p class="font-body text-sm text-charcoal/70 mb-4 line-clamp-2">High molecular PDLLA with
-                            hyaluronic acid stimulates natural collagen production.</p>
-                        <div class="flex items-center gap-2 text-taupe mt-4">
-                            <span class="font-body text-xs uppercase tracking-wide">Learn More</span>
-                            <i data-lucide="arrow-right"
-                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </div>
+                    <div class="p-10 text-center">
+                        <h3 class="heading-wide text-lg mb-4">Juvelook</h3>
+                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed">Advanced collagen stimulator
+                            blending PDLLA and HA for a natural, soft volume.</p>
+                        <a href="treatments.html#filler"
+                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all">Explore
+                            Filler</a>
                     </div>
                 </div>
 
-                <!-- Elravie -->
-                <div class="trigger-modal cursor-pointer bg-white border border-taupe/30 hover:border-taupe hover:shadow-glow transition-all duration-500 group overflow-hidden rounded-lg animate-on-scroll fade-up delay-400"
-                    data-modal-target="modal-elravie">
-                    <div class="h-48 overflow-hidden bg-white flex items-center justify-center p-4">
-                        <img src="assets/elravie-re2o-product.png"
-                            class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <div>
-                                <h3
-                                    class="font-heading text-xl text-near-black group-hover:text-taupe transition-colors">
-                                    Elravie Re2O</h3>
-                                <p class="font-body text-xs tracking-wide text-charcoal/60 uppercase">5th Generation ECM
-                                </p>
-                            </div>
-                            <span class="px-3 py-1 bg-taupe/10 text-taupe text-xs font-body rounded-full">Premium
-                                ECM</span>
-                        </div>
-                        <p class="font-body text-sm text-charcoal/70 mb-4 line-clamp-2">Premium collagen skin booster
-                            made from finely ground hADM.</p>
-                        <div class="flex items-center gap-2 text-taupe mt-4">
-                            <span class="font-body text-xs uppercase tracking-wide">Learn More</span>
-                            <i data-lucide="arrow-right"
-                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                <!-- Exosomes -->
+                <div class="product-card group">
+                    <div class="h-64 overflow-hidden bg-charcoal/5">
+                        <div class="w-full h-full bg-taupe/10 flex items-center justify-center">
+                            <i data-lucide="microscope" class="w-16 h-16 text-taupe/20"></i>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Best Combos -->
-            <div class="mt-12 bg-white/50 rounded-2xl p-8 border border-taupe/20 animate-on-scroll fade-up delay-500">
-                <h3 class="font-heading text-xl text-near-black mb-4 text-center">Best Combo Procedures</h3>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <span class="px-4 py-2 bg-taupe/10 text-near-black font-body text-sm rounded-full">Reju Tox (Rejuran
-                        + Skinbooster)</span>
-                    <span class="px-4 py-2 bg-taupe/10 text-near-black font-body text-sm rounded-full">Rejuran Plus
-                        (Rejuran + Hydro + Booster)</span>
-                    <span class="px-4 py-2 bg-taupe/10 text-near-black font-body text-sm rounded-full">Rejuvelook
-                        (Rejuran + Juvelook Skin)</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Scar Treatment Section -->
-    <section id="scar" class="py-24 md:py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-                <div class="animate-on-scroll fade-right">
-                    <div class="relative overflow-hidden rounded-2xl mb-4">
-                        <img src="assets/subcision-diagram.png" alt="Subcision"
-                            class="w-full h-[250px] object-cover hover:scale-105 transition-transform duration-700">
-                    </div>
-                    <div class="relative overflow-hidden rounded-2xl">
-                        <img src="assets/subcision-before-after.png" alt="Before/After"
-                            class="w-full h-[200px] object-cover hover:scale-105 transition-transform duration-700">
-                    </div>
-                </div>
-
-                <div class="animate-on-scroll fade-left delay-200">
-                    <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">Specialized Care</p>
-                    <h2 class="font-heading text-3xl md:text-4xl text-near-black mb-6">Scar Treatment</h2>
-                    <p class="font-body text-charcoal/70 leading-relaxed mb-8">
-                        At SuA, we approach each scar type with tailored treatment strategies combining medical and
-                        aesthetic approaches.
-                    </p>
-
-                    <div class="space-y-3 mb-8">
-                        <div class="flex items-center gap-3 p-3 bg-off-white rounded-lg border border-taupe/20">
-                            <span
-                                class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body">1</span>
-                            <span class="font-body text-near-black">Steroid Injection</span>
-                        </div>
-                        <div class="flex items-center gap-3 p-3 bg-off-white rounded-lg border border-taupe/20">
-                            <span
-                                class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body">2</span>
-                            <span class="font-body text-near-black">Salmon DNA Injection + Botox Mix</span>
-                        </div>
-                        <div class="flex items-center gap-3 p-3 bg-off-white rounded-lg border border-taupe/20">
-                            <span
-                                class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body">3</span>
-                            <span class="font-body text-near-black">Salmon DNA Injection + Filler Mix</span>
-                        </div>
-                        <div class="flex items-center gap-3 p-3 bg-off-white rounded-lg border border-taupe/20">
-                            <span
-                                class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body">4</span>
-                            <span class="font-body text-near-black">Air Toxin (Exclusively at SuA!)</span>
-                        </div>
-                    </div>
-
-                    <div class="bg-taupe/10 rounded-xl p-6 border border-taupe/30">
-                        <h3 class="font-heading text-lg text-near-black mb-2">What Does Air Toxin Do?</h3>
-                        <p class="font-body text-xs text-taupe mb-3 uppercase tracking-wide">Exclusively at SuA</p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center gap-2 font-body text-sm text-charcoal/70"><i
-                                    data-lucide="sparkles" class="w-4 h-4 text-taupe"></i>Reduces inflammation</li>
-                            <li class="flex items-center gap-2 font-body text-sm text-charcoal/70"><i
-                                    data-lucide="sparkles" class="w-4 h-4 text-taupe"></i>Relieves tension on wound
-                                edges</li>
-                            <li class="flex items-center gap-2 font-body text-sm text-charcoal/70"><i
-                                    data-lucide="sparkles" class="w-4 h-4 text-taupe"></i>Promotes new collagen</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Filler Section -->
-    <section id="filler" class="py-24 md:py-32 bg-off-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-                <div class="order-2 md:order-1 animate-on-scroll fade-right">
-                    <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">Volume & Contour</p>
-                    <h2 class="font-heading text-3xl md:text-4xl text-near-black mb-6">Bio Modulator & Filler</h2>
-                    <p class="font-body text-charcoal/70 leading-relaxed mb-8">
-                        Advanced volume restoration and facial contouring treatments.
-                    </p>
-
-                    <div class="grid sm:grid-cols-2 gap-4 mb-8">
-                        <div class="bg-white border border-taupe/30 rounded-lg overflow-hidden">
-                            <div class="h-32 bg-white flex items-center justify-center p-4">
-                                <img src="assets/juvelook-bottles.png" alt="Juvelook"
-                                    class="h-full w-auto object-contain">
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-heading text-base text-near-black mb-2">Juvelook Volume</h3>
-                                <p class="font-body text-xs text-charcoal/70 mb-2">Gradual collagen stimulator with
-                                    reduced nodule risk.</p>
-                                <span class="text-xs font-body text-taupe uppercase tracking-wide">Korean Special
-                                    Blend</span>
-                            </div>
-                        </div>
-                        <div class="bg-white border border-taupe/30 rounded-lg overflow-hidden">
-                            <div class="h-32 bg-white flex items-center justify-center p-4">
-                                <img src="assets/sculptra-particle.png" alt="Sculptra"
-                                    class="h-full w-auto object-contain">
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-heading text-base text-near-black mb-2">Sculptra</h3>
-                                <p class="font-body text-xs text-charcoal/70 mb-2">Faster collagen production but higher
-                                    nodule risk.</p>
-                                <span class="text-xs font-body text-taupe uppercase tracking-wide">SuA Special
-                                    Recipe</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="order-1 md:order-2 animate-on-scroll fade-left delay-200">
-                    <div class="relative overflow-hidden rounded-2xl mb-4">
-                        <img src="assets/juvelook-collagen-booster.png"
-                            class="w-full h-[280px] object-cover hover:scale-105 transition-transform duration-700">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Wellness Section -->
-    <section id="wellness" class="py-24 md:py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 animate-on-scroll fade-up">
-                <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">Holistic Care</p>
-                <h2 class="font-heading text-3xl md:text-4xl text-near-black mb-6">Wellness</h2>
-                <p class="font-body text-charcoal/70 max-w-2xl mx-auto">
-                    Comprehensive wellness programs designed to enhance your overall health.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div
-                    class="bg-white border border-taupe/30 rounded-lg overflow-hidden animate-on-scroll fade-up delay-100">
-                    <div class="h-48 bg-gradient-to-br from-taupe/20 to-blue-gray/30 flex items-center justify-center">
-                        <i data-lucide="heart" class="w-16 h-16 text-taupe/60"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-xl text-near-black mb-3">Diet Clinic</h3>
-                        <p class="font-body text-charcoal/70">Personalized weight management and nutritional counseling.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="bg-white border border-taupe/30 rounded-lg overflow-hidden animate-on-scroll fade-up delay-200">
-                    <div class="h-48 overflow-hidden">
-                        <img src="assets/wellness-iv.jpg" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-xl text-near-black mb-3">IV Therapy</h3>
-                        <p class="font-body text-charcoal/70">Intravenous nutrient therapy delivering essential
-                            vitamins.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 md:py-32 bg-near-black text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-20">
-                <div class="animate-on-scroll fade-right">
-                    <p class="font-body text-xs tracking-[0.2em] text-taupe mb-4 uppercase">Get In Touch</p>
-                    <h2 class="font-heading text-3xl md:text-4xl text-white mb-8">Contact Us</h2>
-                    <p class="font-body text-white/70 leading-relaxed mb-8">
-                        Ready to start your journey to radiant skin? Contact us today.
-                    </p>
-
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="p-3 bg-taupe/20 rounded-lg"><i data-lucide="map-pin"
-                                    class="w-5 h-5 text-taupe"></i></div>
-                            <div>
-                                <h4 class="font-heading text-base text-white mb-1">Visit Us</h4>
-                                <p class="font-body text-white/70">
-                                    4116 State Highway 121<br>
-                                    Suite 120, Office O<br>
-                                    Carrollton, TX 75010
-                                </p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="p-3 bg-taupe/20 rounded-lg"><i data-lucide="phone"
-                                    class="w-5 h-5 text-taupe"></i></div>
-                            <div>
-                                <h4 class="font-heading text-base text-white mb-1">Phone</h4>
-                                <a href="tel:972-665-8737"
-                                    class="font-body text-white/70 hover:text-taupe">972-665-8737</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pt-8">
+                    <div class="p-10 text-center">
+                        <h3 class="heading-wide text-lg mb-4">Exosomes</h3>
+                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed">Billions of signaling
+                            molecules to supercharge skin repair and cellular communication.</p>
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                            rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 bg-taupe text-white px-6 py-3 rounded-[40px] font-body text-sm tracking-wide hover:bg-warm-gold transition-colors">
-                            Book A Session <i data-lucide="external-link" class="w-4 h-4"></i>
-                        </a>
+                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all">View
+                            exosome facials</a>
                     </div>
                 </div>
 
-                <div class="animate-on-scroll fade-left delay-200">
-                    <form id="contact-form" class="space-y-6" action="https://formspree.io/f/mqkvernz" method="POST">
-                        <div>
-                            <label class="block font-body text-sm text-white/70 mb-2">Name</label>
-                            <input type="text" name="name" required placeholder="Your name"
-                                class="w-full p-2 bg-white/10 border border-white/20 text-white rounded bg-transparent focus:border-taupe focus:outline-none">
+                <!-- LDM Triple -->
+                <div class="product-card group">
+                    <div class="h-64 overflow-hidden bg-charcoal/5">
+                        <div class="w-full h-full bg-blue-gray/10 flex items-center justify-center">
+                            <i data-lucide="waves" class="w-16 h-16 text-blue-gray/30"></i>
                         </div>
-                        <div>
-                            <label class="block font-body text-sm text-white/70 mb-2">Email</label>
-                            <input type="email" name="email" required placeholder="your@email.com"
-                                class="w-full p-2 bg-white/10 border border-white/20 text-white rounded bg-transparent focus:border-taupe focus:outline-none">
-                        </div>
-                        <div>
-                            <label class="block font-body text-sm text-white/70 mb-2">Message</label>
-                            <textarea rows="4" name="message" required placeholder="How can we help?"
-                                class="w-full p-2 bg-white/10 border border-white/20 text-white rounded bg-transparent focus:border-taupe focus:outline-none"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-taupe text-white py-4 rounded-full font-body tracking-wide transition-colors">Send
-                            Message</button>
-                        <p id="form-status" class="hidden text-sm text-center mt-2"></p>
-                    </form>
+                    </div>
+                    <div class="p-10 text-center">
+                        <h3 class="heading-wide text-lg mb-4 uppercase">LDM Triple</h3>
+                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed">High-density ultrasound to
+                            calm inflammation and drive deep, long-lasting hydration.</p>
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all">Schedule
+                            appointment</a>
+                    </div>
                 </div>
+            </div>
+
+            <div class="mt-24 text-center">
+                <a href="treatments.html"
+                    class="inline-flex items-center gap-4 bg-near-black text-white px-12 py-6 rounded-full font-body text-xs font-bold tracking-[0.3em] uppercase hover:bg-taupe transition-all shadow-2xl">
+                    View Full Treatment Menu
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 bg-near-black border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-10 mb-4 mx-auto brightness-0 invert opacity-50">
-            <p class="font-body text-xs text-white/40">© 2025 SuA K-Glow. All rights reserved.</p>
+    <!-- Testimonials Section -->
+    <section class="py-32 bg-off-white overflow-hidden relative">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-taupe/[0.03] rounded-full blur-3xl z-0">
         </div>
-    </footer>
+        <div class="max-w-7xl mx-auto px-8 relative z-10">
+            <div class="text-center mb-20 animate-on-scroll fade-up">
+                <span
+                    class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">Client
+                    Experience</span>
+                <h2 class="heading-wide text-4xl md:text-5xl text-near-black mb-8 uppercase tracking-[0.15em]">Glow
+                    Stories</h2>
+                <div class="w-24 h-[1px] bg-taupe/30 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Quote 1 -->
+                <div class="animate-on-scroll fade-up">
+                    <div class="mb-6 flex items-center justify-between">
+                        <i data-lucide="quote" class="w-10 h-10 text-taupe/20"></i>
+                        <div class="flex gap-0.5 text-warm-gold">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="font-body text-charcoal/80 leading-relaxed italic mb-8">
+                        "I had an excellent experience with Sophia during my Juvelook skinbooster treatment... Sophia
+                        was incredibly gentle, patient, and attentive throughout the entire process, which made a big
+                        difference in comfort. Highly recommend!"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-taupe/10 flex items-center justify-center text-taupe text-xs font-bold uppercase tracking-widest">
+                            IK</div>
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.2em] font-bold text-near-black">IK</p>
+                            <p class="text-[10px] text-taupe/60 italic uppercase tracking-[0.1em]">Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote 2 -->
+                <div class="animate-on-scroll fade-up delay-100">
+                    <div class="mb-6 flex items-center justify-between">
+                        <i data-lucide="quote" class="w-10 h-10 text-taupe/20"></i>
+                        <div class="flex gap-0.5 text-warm-gold">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="font-body text-charcoal/80 leading-relaxed italic mb-8">
+                        "I’ve been to a few different med spas, but Sophia really stood out. You can tell she genuinely
+                        cares about her clients and takes pride in what she does... My skin has never looked better! I’m
+                        so happy I found her."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-taupe/10 flex items-center justify-center text-taupe text-xs font-bold uppercase tracking-widest">
+                            AL</div>
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.2em] font-bold text-near-black">A Lee</p>
+                            <p class="text-[10px] text-taupe/60 italic uppercase tracking-[0.1em]">Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote 3 -->
+                <div class="animate-on-scroll fade-up delay-200">
+                    <div class="mb-6 flex items-center justify-between">
+                        <i data-lucide="quote" class="w-10 h-10 text-taupe/20"></i>
+                        <div class="flex gap-0.5 text-warm-gold">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="font-body text-charcoal/80 leading-relaxed italic mb-8">
+                        "I recently had a Botox treatment at SuA Glow, and I’m very satisfied with the results. Sophia
+                        was professional, friendly, and made me feel comfortable... The outcome looks natural—not
+                        frozen! I would definitely recommend this clinic."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-taupe/10 flex items-center justify-center text-taupe text-xs font-bold uppercase tracking-widest">
+                            JL</div>
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.2em] font-bold text-near-black">Jung Lee</p>
+                            <p class="text-[10px] text-taupe/60 italic uppercase tracking-[0.1em]">Patient</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-24 text-center flex flex-col sm:flex-row items-center justify-center gap-8">
+                <a href="https://g.page/r/CZEBhKWJsRrYEAE/review" target="_blank"
+                    class="inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-bold text-charcoal/40 hover:text-warm-gold transition-colors">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i> Leave A Review
+                </a>
+                <span class="hidden sm:inline-block text-charcoal/20">|</span>
+                <a href="https://share.google/Wgr5BIBImj0rC7UkV" target="_blank"
+                    class="inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-bold text-charcoal/40 hover:text-taupe transition-colors">
+                    <i data-lucide="google" class="w-4 h-4"></i> View All Google Reviews
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand CTA Section -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto animate-on-scroll fade-up">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24 uppercase">K-Beauty Medspa • Carrollton
+                HQ</p>
+            <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">K-Beauty doesn't chase trends.<br>It builds
+                <span class="text-warm-gold opacity-80">better skin.</span>
+            </h3>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="inline-block bg-taupe text-white px-20 py-7 font-body font-bold uppercase tracking-[0.35em] text-xs rounded-full hover:bg-white hover:text-black transition-all shadow-2xl">Start
+                Your Journey</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
 
     <!-- Modals -->
     <!-- Rejuran Modal -->
@@ -708,6 +488,8 @@
         </div>
     </dialog>
 
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
     <script src="script.js"></script>
 </body>
 
