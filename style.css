@@ -27,6 +27,24 @@ h6,
   width: 8px;
 }
 
+/* Card Styling (Design System) */
+.product-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* shadow-soft */
+  transition: all 500ms ease;
+  border: 1px solid rgba(64, 67, 69, 0.05);
+  /* border-charcoal/5 */
+}
+
+.product-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  /* shadow-2xl */
+  transform: translateY(-0.5rem);
+}
+
 ::-webkit-scrollbar-track {
   background: #F6F7F8;
 }
