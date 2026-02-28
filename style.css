@@ -351,3 +351,10 @@ html {
     opacity: 0.15;
   }
 }
+
+/* Align starburst to top on mobile */
+@media (max-width: 768px) {
+  .starburst-container::before {
+    top: 20%;
+  }
+}
