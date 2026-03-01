@@ -636,9 +636,11 @@ html {
 }
 
 .glow-card:hover::before {
-    background: none;
-    opacity: 1;
-    filter: blur(25px);
+    background: radial-gradient(600px circle at 50% var(--mouse-y, 50%),
+            var(--glow-color, #AA987C),
+            transparent 40%);
+    opacity: 0.8;
+    filter: blur(40px);
 }
 
 /* Small product badge overlay */

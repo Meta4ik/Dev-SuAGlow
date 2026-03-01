@@ -163,6 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. Scar Carousel
   initScarCarousel();
+
+  // 7. Glow Card Tracking
+  initGlowCardTracking();
 });
 
 function initHeroVideoScroll() {
@@ -328,6 +331,19 @@ function initScarCarousel() {
     dot.addEventListener('click', (e) => {
       currentIndex = parseInt(e.target.dataset.index);
       updateCarousel();
+    });
+  });
+}
+
+function initGlowCardTracking() {
+  const cards = document.querySelectorAll('.glow-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      // Track vertical position only
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-y', `${y}px`);
     });
   });
 }
