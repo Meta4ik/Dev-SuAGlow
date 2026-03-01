@@ -86,9 +86,8 @@ const NAVBAR_HTML = `
                         <!-- Skin Boosters -->
                         <div>
                             <a href="skinboosters.html" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Skin Boosters</a>
-                            <ul class="space-y-1">
-                                <li><a href="skinboosters.html" class="dropdown-link !p-0 hover:!pl-2">Overview</a></li>
-                                <li><a href="rejuran.html" class="dropdown-link !p-0 hover:!pl-2">Rejuran</a></li>
+                             <ul class="space-y-1">
+                                 <li><a href="rejuran.html" class="dropdown-link !p-0 hover:!pl-2">Rejuran</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Tone Up</a></li>
                                 <li><a href="juvelook.html" class="dropdown-link !p-0 hover:!pl-2">Juvelook</a></li>
                                 <li><a href="re20.html" class="dropdown-link !p-0 hover:!pl-2">Elravie Re20</a></li>
@@ -254,7 +253,6 @@ const NAVBAR_HTML = `
                         <div>
                             <a href="skinboosters.html" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Skin Boosters</a>
                             <div class="flex flex-col gap-2 text-left">
-                                <a href="skinboosters.html" class="font-body text-sm text-charcoal/70">Overview</a>
                                 <a href="rejuran.html" class="font-body text-sm text-charcoal/70">Rejuran</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70">Tone Up</a>
                                 <a href="juvelook.html" class="font-body text-sm text-charcoal/70">Juvelook</a>
