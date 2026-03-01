@@ -341,8 +341,10 @@ function initGlowCardTracking() {
   cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
-      // Track vertical position only
+      // Track both X and Y positions
+      const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
       card.style.setProperty('--mouse-y', `${y}px`);
     });
   });
