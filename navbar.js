@@ -72,7 +72,7 @@ const NAVBAR_HTML = `
                     <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 text-left">
                         <!-- Injectables -->
                         <div>
-                            <span class="badge-standard mb-6 bg-off-white border-taupe/10">Injectables</span>
+                            <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Injectables</a>
                             <ul class="space-y-2">
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Cosmetic Tox: Face & Body</a>
                                 </li>
@@ -103,7 +103,7 @@ const NAVBAR_HTML = `
                         </div>
                         <!-- Signature & Exosome -->
                         <div>
-                            <span class="badge-standard mb-6 bg-off-white border-taupe/10">Signature & Exosome</span>
+                            <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Signature & Exosome</a>
                             <ul class="space-y-2">
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Sophia's Choice</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">One Day Glow</a></li>
@@ -114,7 +114,7 @@ const NAVBAR_HTML = `
                         </div>
                         <!-- LDM & More -->
                         <div>
-                            <span class="badge-standard mb-6 bg-off-white border-taupe/10">Precision Tech</span>
+                            <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Precision Tech</a>
                             <ul class="space-y-2">
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">LDM Ultrasound Facial</a>
                                 </li>
@@ -243,7 +243,7 @@ const NAVBAR_HTML = `
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-4 pl-4 mt-2">
                         <div>
-                            <span class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10">Injectables</span>
+                            <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Injectables</a>
                             <div class="flex flex-col gap-2 text-left">
                                 <a href="#" class="font-body text-sm text-charcoal/70">Cosmetic Tox: Face & Body</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70">Medical Tox: Scar, Sweat, Migraine</a>
@@ -267,7 +267,7 @@ const NAVBAR_HTML = `
                             </div>
                         </div>
                         <div>
-                            <span class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10">Signature & Exosome</span>
+                            <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Signature & Exosome</a>
                             <div class="flex flex-col gap-2 text-left">
                                 <a href="#" class="font-body text-sm text-charcoal/70">Sophia's Choice</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70">One Day Glow</a>
@@ -277,7 +277,7 @@ const NAVBAR_HTML = `
                             </div>
                         </div>
                         <div>
-                            <span class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10">Precision Tech</span>
+                            <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Precision Tech</a>
                             <div class="flex flex-col gap-2 text-left">
                                 <a href="#" class="font-body text-sm text-charcoal/70">LDM Ultrasound Facial</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70">LDM + Skin Booster</a>
