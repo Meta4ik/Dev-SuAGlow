@@ -14,36 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
         rel="stylesheet">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'taupe': '#8F857B',
-                        'blue-gray': '#9DAFB6',
-                        'charcoal': '#404345',
-                        'off-white': '#F6F7F8',
-                        'warm-gold': '#AA987C',
-                        'near-black': '#131619',
-                        'light-gray': '#DFE0DD',
-                    },
-                    boxShadow: {
-                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
-                        'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
-                    },
-                    fontFamily: {
-                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
-                        'body': ['Poppins', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=29">
+    <link rel="stylesheet" href="dist/output.css?v=30">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -59,6 +30,7 @@
         <div class="max-w-7xl mx-auto px-6 md:px-12">
 
             <header class="mb-20 text-center animate-on-scroll fade-up">
+                <img src="assets/favicon.png" alt="SuA Glow favicon" class="mx-auto mb-4 w-12 h-12">
                 <span class="badge-standard mb-6">SUA GLOW DESIGN SYSTEM</span>
                 <h1 class="font-heading text-4xl md:text-6xl text-near-black mb-6">Style Guide</h1>
                 <p class="font-body text-lg text-charcoal/70 max-w-2xl mx-auto">A reference collection of all visual
@@ -395,10 +367,57 @@
                             </div>
                         </div>
                     </div>
-            </div>
-            </section>
+                </section>
 
-        </div>
+                <!-- Panel Fade Gradients -->
+                <section class="animate-on-scroll fade-up">
+                    <h2 class="font-heading text-2xl md:text-3xl text-near-black mb-2 pb-4 border-b border-charcoal/10">
+                        Panel Fade Gradients</h2>
+                    <p class="text-sm text-charcoal/50 mb-10 font-mono">Used to tint card text panels with a soft
+                        warm-gold wash.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                        <!-- Horizontal -->
+                        <div>
+                            <p class="text-xs text-charcoal/50 font-mono mb-4">.panel-fade-h — horizontal (side-by-side
+                                card)</p>
+                            <div class="product-card flex flex-row overflow-hidden border border-charcoal/5">
+                                <div class="w-2/5 bg-light-gray flex items-center justify-center min-h-[180px]">
+                                    <i data-lucide="image" class="w-8 h-8 text-taupe/40"></i>
+                                </div>
+                                <div class="flex-1 p-8 panel-fade-h">
+                                    <p class="text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-2">Category
+                                    </p>
+                                    <h3 class="font-heading text-xl text-near-black mb-2">Card Title</h3>
+                                    <p class="text-sm text-charcoal/60 font-body">Text panel fades from white to a warm
+                                        taupe wash left to right.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vertical -->
+                        <div>
+                            <p class="text-xs text-charcoal/50 font-mono mb-4">.panel-fade-v — vertical (stacked card)
+                            </p>
+                            <div class="product-card overflow-hidden border border-charcoal/5">
+                                <div class="h-36 bg-light-gray flex items-center justify-center">
+                                    <i data-lucide="image" class="w-8 h-8 text-taupe/40"></i>
+                                </div>
+                                <div class="p-8 text-center panel-fade-v">
+                                    <p class="text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-2">Category
+                                    </p>
+                                    <h3 class="font-heading text-xl text-near-black mb-2">Card Title</h3>
+                                    <p class="text-sm text-charcoal/60 font-body">Text panel fades from white to a warm
+                                        taupe wash top to bottom.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
         </div>
     </main>
 

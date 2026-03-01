@@ -14,14 +14,14 @@ const SPECIALS_HTML = `
 
             <!-- Signature Launch Offer - Full Width -->
             <div
-                class="product-card group bg-white shadow-soft rounded-[20px] overflow-hidden mb-12 flex flex-col md:flex-row animate-on-scroll fade-up delay-100">
+            class="product-card group bg-white border-2 border-[#AA987C]/40 shadow-soft rounded-[20px] overflow-hidden mb-12 flex flex-col md:flex-row animate-on-scroll fade-up delay-100">
                 <div
                     class="md:w-[45%] h-80 md:h-auto overflow-hidden bg-charcoal/5 relative border-b md:border-b-0 md:border-r border-charcoal/5">
                     <img src="assets/specials/SuA Launch Special - LAUNCH OFFER.webp"
                         alt="Signature Launch Offer Lunar Glow"
                         class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
                 </div>
-                <div class="p-10 md:p-16 flex flex-col justify-center md:w-[55%]">
+                <div class="p-10 md:p-16 flex flex-col justify-center md:w-[55%] panel-fade-h">
                     <span
                         class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-4 italic">February
                         - March | Only 50 Spots</span>
@@ -30,7 +30,7 @@ const SPECIALS_HTML = `
                     <h4 class="heading-wide text-xl text-taupe tracking-[0.1em] mb-6">LUNAR GLOW</h4>
 
                     <div class="mb-8 flex items-end gap-3">
-                        <span class="font-body text-3xl font-bold text-near-black">$799</span>
+                        <span class="font-body text-4xl font-extrabold text-near-black tracking-tight">$799</span>
                         <span class="text-xs font-body text-charcoal/40 italic line-through mb-1">Regular $1400</span>
                     </div>
 
@@ -74,10 +74,10 @@ const SPECIALS_HTML = `
                         <img src="assets/specials/SuA Launch Special - ULTRASOUND.webp" alt="LDM Triple Ultrasound"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="p-10 text-center flex flex-col flex-1">
+                    <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
                         <h3 class="heading-wide text-lg mb-4 text-near-black">LDM Triple Ultrasound</h3>
                         <div class="mb-6 flex justify-center items-end gap-2">
-                            <span class="font-body text-xl font-bold text-near-black">$99</span>
+                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$99</span>
                             <span class="text-[10px] font-body text-charcoal/40 italic line-through mb-0.5">Regular
                                 $249</span>
                         </div>
@@ -96,10 +96,10 @@ const SPECIALS_HTML = `
                         <img src="assets/specials/SuA Launch Special - LIP PN.webp" alt="Rejuran Lip PN"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="p-10 text-center flex flex-col flex-1">
+                    <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
                         <h3 class="heading-wide text-lg mb-4 text-near-black">Rejuran® Lip PN Reset</h3>
                         <div class="mb-6 flex justify-center items-end gap-2">
-                            <span class="font-body text-xl font-bold text-near-black">$299</span>
+                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$299</span>
                             <span class="text-[10px] font-body text-charcoal/40 italic line-through mb-0.5">Regular
                                 $400</span>
                         </div>
@@ -120,10 +120,10 @@ const SPECIALS_HTML = `
                             alt="Byryzn HA Skinbooster Neck"
                             class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="p-10 text-center flex flex-col flex-1">
+                    <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
                         <h3 class="heading-wide text-lg mb-4 text-near-black">Byryzn™ HA Neck Refine</h3>
                         <div class="mb-6 flex justify-center items-end gap-2">
-                            <span class="font-body text-xl font-bold text-near-black">$299</span>
+                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$299</span>
                             <span class="text-[10px] font-body text-charcoal/40 italic line-through mb-0.5">Regular
                                 $400</span>
                         </div>
@@ -143,10 +143,10 @@ const SPECIALS_HTML = `
                         <img src="assets/specials/SuA Launch Special - age-smart.webp" alt="Neurotoxin Age-Smart"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="p-10 text-center flex flex-col flex-1">
+                    <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
                         <h3 class="heading-wide text-lg mb-4 text-near-black">Neurotoxin Age-Smart</h3>
                         <div class="mb-6 flex justify-center items-end gap-2">
-                            <span class="font-body text-xl font-bold text-near-black">$399</span>
+                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$399</span>
                             <span class="text-[10px] font-body text-charcoal/40 italic line-through mb-0.5">Regular
                                 $500</span>
                         </div>
@@ -166,10 +166,10 @@ const SPECIALS_HTML = `
                         <img src="assets/specials/SuA Launch Special - skin Reset.webp" alt="Skintox Skin Reset"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="p-10 text-center flex flex-col flex-1">
+                    <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
                         <h3 class="heading-wide text-lg mb-4 text-near-black">Skintox Skin Reset</h3>
                         <div class="mb-6 flex justify-center items-end gap-2">
-                            <span class="font-body text-xl font-bold text-near-black">$499</span>
+                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$499</span>
                             <span class="text-[10px] font-body text-charcoal/40 italic line-through mb-0.5">Regular
                                 $600</span>
                         </div>
@@ -188,10 +188,10 @@ const SPECIALS_HTML = `
                         <img src="assets/specials/SuA Launch Special - shoulder edit.webp" alt="Traptox Shoulder Edit"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="p-10 text-center flex flex-col flex-1">
+                    <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
                         <h3 class="heading-wide text-lg mb-4 text-near-black">Traptox Shoulder Edit</h3>
                         <div class="mb-6 flex justify-center items-end gap-2">
-                            <span class="font-body text-xl font-bold text-near-black">$599</span>
+                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$599</span>
                             <span class="text-[10px] font-body text-charcoal/40 italic line-through mb-0.5">Regular
                                 $900</span>
                         </div>

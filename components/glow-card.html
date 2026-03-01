@@ -1,0 +1,18 @@
+<template id="glow-card-template">
+    <article class="glow-card group relative overflow-hidden rounded-[20px] shadow-soft bg-white">
+        <div class="glow-card__image overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src=""
+                alt="">
+        </div>
+        <div class="glow-card__content p-8 text-center flex flex-col flex-1">
+            <h3 class="heading-wide text-lg mb-2 text-near-black"></h3>
+            <p class="font-body text-sm text-charcoal/60 mb-4"></p>
+            <div class="glow-card__price mb-4 flex justify-center items-end gap-2">
+                <span class="font-body text-xl font-bold text-near-black"></span>
+                <span class="text-xs font-body text-charcoal/40 italic line-through"></span>
+            </div>
+            <a class="inline-flex justify-center bg-near-black text-white px-8 py-3 rounded-[40px] text-xs font-bold uppercase hover:bg-taupe transition-colors"
+                href="#" target="_blank">Book</a>
+        </div>
+    </article>
+</template>

@@ -13,84 +13,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
         rel="stylesheet">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'taupe': '#8F857B',
-                        'blue-gray': '#9DAFB6',
-                        'charcoal': '#404345',
-                        'off-white': '#F6F7F8',
-                        'warm-gold': '#AA987C',
-                        'near-black': '#131619',
-                        'light-gray': '#DFE0DD',
-                    },
-                    boxShadow: {
-                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
-                        'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
-                    },
-                    fontFamily: {
-                        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
-                        'body': ['Poppins', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="dist/output.css?v=30">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Lucide Icons -->
+<!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        .heading-wide {
-            font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 0.25em;
-            font-weight: 300;
-            line-height: 1.1;
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .product-card {
-            background-color: white;
-            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.04);
-        }
-
-        .news-card {
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: all 0.4s ease;
-        }
-
-        .news-card:hover {
-            border-color: #AA987C;
-            background: white;
-        }
-
-        .accent-text {
-            color: #AA987C;
-            font-weight: 400;
-        }
-    </style>
 </head>
 
 <body class="bg-off-white text-charcoal antialiased">
