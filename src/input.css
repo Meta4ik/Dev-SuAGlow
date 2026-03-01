@@ -616,6 +616,25 @@ html {
         conic-gradient(from var(--glow-angle), transparent 30%, var(--glow-color, #AA987C) 80%, transparent) border-box !important;
 }
 
+.glow-card:hover {
+    animation: none;
+    background:
+        linear-gradient(#1a1c1e, #1a1c1e) padding-box,
+        var(--glow-color, #AA987C) border-box !important;
+}
+
+.glow-card.bg-white:hover {
+    background:
+        linear-gradient(#FFFFFF, #FFFFFF) padding-box,
+        var(--glow-color, #AA987C) border-box !important;
+}
+
+.glow-card.bg-\[\#F6F7F8\]:hover {
+    background:
+        linear-gradient(#F6F7F8, #F6F7F8) padding-box,
+        var(--glow-color, #AA987C) border-box !important;
+}
+
 .glow-card::before {
     content: "";
     position: absolute;
@@ -630,12 +649,8 @@ html {
     transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
-.glow-card:hover,
 .glow-card:hover::before {
     animation: none;
-}
-
-.glow-card:hover::before {
     background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
             var(--glow-color, #AA987C),
             transparent 40%);
