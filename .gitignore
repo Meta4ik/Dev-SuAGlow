@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build artifacts are committed (Vercel reads dist/output.css directly)
+# dist/   ← intentionally NOT ignored
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Temp
+/tmp/
+*.log
