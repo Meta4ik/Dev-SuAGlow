@@ -88,10 +88,17 @@ function initMobileDrawer() {
   }
 
   if (drawerClose && mobileDrawer) {
-    drawerClose.addEventListener('click', () => {
+    const closeDrawer = () => {
       mobileDrawer.classList.remove('open');
       setTimeout(() => mobileDrawer.classList.add('hidden'), 400);
       document.body.style.overflow = '';
+    };
+
+    drawerClose.addEventListener('click', closeDrawer);
+
+    // Close drawer when any link is clicked within it
+    mobileDrawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeDrawer);
     });
   }
 }
