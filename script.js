@@ -58,6 +58,34 @@ function initFooter() {
 }
 
 /**
+ * News Section Injection & Initialization
+ */
+function initNews() {
+  const newsPlaceholder = document.getElementById('news-placeholder');
+  if (!newsPlaceholder) return;
+
+  if (typeof NEWS_HTML !== 'undefined') {
+    newsPlaceholder.innerHTML = NEWS_HTML;
+
+    // Trigger animations for newly injected news cards
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    newsPlaceholder.querySelectorAll('.animate-on-scroll').forEach(el => revealObserver.observe(el));
+
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  }
+}
+
+/**
  * Mobile Navigation Drawer Logic
  */
 function initMobileDrawer() {
@@ -132,6 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Kick off Nav & Footer Load
   initNavigation();
   initFooter();
+  initNews();
 
   // 2. Setup Reveal Animations
   const revealObserver = new IntersectionObserver((entries) => {
