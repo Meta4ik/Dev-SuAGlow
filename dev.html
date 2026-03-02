@@ -91,7 +91,13 @@
 
 <body>
     <div class="dev-container">
-        <h1 class="heading">SuA Glow Dev Plan: Navigation Redesign</h1>
+        <div class="flex justify-between items-center mb-10 pb-6 border-b border-gray-100">
+            <h1 class="heading !mb-0 !border-0 !pb-0">SuA Glow Dev Plan</h1>
+            <a href="audit.html"
+                class="flex items-center gap-2 bg-[#AA987C] text-white px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-[#8F857B] transition-all shadow-md">
+                <i data-lucide="clipboard-list" class="w-4 h-4"></i> View Content Audit
+            </a>
+        </div>
 
         <p>This page documents the technical plan for restructuring the SuA Glow navigation system to align with the
             updated menu requirements (Feb 4, 2026). <strong>No code changes have been implemented yet.</strong></p>
@@ -168,12 +174,16 @@
             <li>Remove "Treatment Quiz" references throughout the site.</li>
         </ul>
 
-        <div class="section-title"><i data-lucide="clipboard-list"></i> 4. Audit & Quality Control</div>
-        <p>A comprehensive tracking of missing assets, broken links, and required pages:</p>
-        <ul style="padding-left: 20px;">
-            <li><a href="audit.html" class="text-taupe hover:underline font-bold">Content Audit & Gap Analysis Page</a>
-            </li>
-        </ul>
+        <div class="mt-12 p-8 bg-[#AA987C]/5 border border-[#AA987C]/20 rounded-2xl">
+            <div class="section-title !mt-0"><i data-lucide="clipboard-list"></i> 4. Audit & Quality Control</div>
+            <p>A comprehensive tracking of missing assets, broken links, and required pages:</p>
+            <div class="mt-6">
+                <a href="audit.html"
+                    class="inline-flex items-center gap-3 bg-white border-2 border-[#AA987C] text-[#AA987C] px-8 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-[#AA987C] hover:text-white transition-all shadow-sm">
+                    Open Content Audit & Gap Analysis <i data-lucide="external-link" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
 
         <div
             style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.8rem; opacity: 0.5; text-align: center;">
