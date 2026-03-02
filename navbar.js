@@ -37,9 +37,9 @@ const NAVBAR_HTML = `
     <!-- Main Nav -->
     <div class="max-w-[1440px] mx-auto px-4 md:px-12 py-4 md:py-6 flex items-center justify-between">
         <!-- Logo -->
-        <a href="index.html" class="flex items-center">
+        <a href="index.html" class="flex items-center p-4 md:p-0">
             <img id="logo-desktop" src="assets/logo-main.webp" alt="SuA K-Glow"
-                class="h-10 md:h-12 transition-all duration-300">
+                class="h-8 md:h-12 transition-all duration-300">
         </a>
 
         <!-- Desktop Menu -->
@@ -49,16 +49,16 @@ const NAVBAR_HTML = `
 
             <!-- About Dropdown -->
             <div class="nav-item-dropdown">
-                <a href="index.html#about"
+                <a href="about.html"
                     class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase flex items-center gap-1">
                     About <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="#" class="dropdown-link font-body">Our Story</a>
-                    <a href="#" class="dropdown-link font-body">What is K-Beauty</a>
-                    <a href="#" class="dropdown-link font-body">Meet Sophia</a>
-                    <a href="#" class="dropdown-link font-body">Medical Oversight & Safety</a>
-                    <a href="#" class="dropdown-link font-body">Why SuA Glow is Different</a>
+                    <a href="about.html#story" class="dropdown-link font-body">Our Story</a>
+                    <a href="about.html#k-beauty" class="dropdown-link font-body">What is K-Beauty</a>
+                    <a href="about.html#sophia" class="dropdown-link font-body">Meet Sophia</a>
+                    <a href="about.html#safety" class="dropdown-link font-body">Medical Oversight & Safety</a>
+                    <a href="about.html#difference" class="dropdown-link font-body">Why SuA Glow is Different</a>
                 </div>
             </div>
 
@@ -206,8 +206,8 @@ const NAVBAR_HTML = `
 <div id="mobile-drawer" class="fixed inset-0 z-[100] bg-white hidden">
     <div class="flex flex-col h-full text-left">
         <!-- Drawer Header -->
-        <div class="flex items-center justify-between p-6 border-b border-off-white">
-            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-8">
+        <div class="flex items-center justify-between p-8 border-b border-off-white">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-7">
             <button id="drawer-close" class="text-charcoal p-2">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
@@ -227,11 +227,12 @@ const NAVBAR_HTML = `
                         About <i data-lucide="plus" class="w-4 h-4"></i>
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-3 pl-4 mt-2">
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Our Story</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">What is K-Beauty</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Meet Sophia</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Medical Oversight & Safety</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Why SuA Glow is Different</a>
+                        <a href="about.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors font-semibold">Overview</a>
+                        <a href="about.html#story" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Our Story</a>
+                        <a href="about.html#k-beauty" class="font-body text-charcoal/70 hover:text-taupe transition-colors">What is K-Beauty</a>
+                        <a href="about.html#sophia" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Meet Sophia</a>
+                        <a href="about.html#safety" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Medical Oversight & Safety</a>
+                        <a href="about.html#difference" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Why SuA Glow is Different</a>
                     </div>
                 </div>
 
