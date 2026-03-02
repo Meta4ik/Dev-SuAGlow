@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuA Glow - Navigation Development Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@300;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dist/output.css?v=33">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #F6F7F8;
+            color: #404345;
+        }
+
+        .dev-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .heading {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            border-bottom: 2px solid #AA987C;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-weight: 700;
+            color: #AA987C;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+            display: flex;
+            items-center gap: 10px;
+        }
+
+        .grid-preview {
+            display: grid;
+            grid-template-cols: repeat(4, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+            font-size: 0.8rem;
+        }
+
+        .grid-col {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .grid-col h5 {
+            font-weight: 700;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 5px;
+        }
+
+        .grid-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .grid-col li {
+            margin-bottom: 5px;
+            opacity: 0.7;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dev-container">
+        <h1 class="heading">SuA Glow Dev Plan: Navigation Redesign</h1>
+
+        <p>This page documents the technical plan for restructuring the SuA Glow navigation system to align with the
+            updated menu requirements (Feb 4, 2026). <strong>No code changes have been implemented yet.</strong></p>
+
+        <div class="section-title"><i data-lucide="layout"></i> 1. Top-Level Hierarchy</div>
+        <p>The main menu will be expanded from the current 4 core items to 8 primary landing points:</p>
+        <ul style="padding-left: 20px; margin-top: 10px;">
+            <li><strong>About Us:</strong> Dropdown (Story, K-Beauty, Sophia, Safety, Difference)</li>
+            <li><strong>Treatments:</strong> 7-Section Mega Menu (See below)</li>
+            <li><strong>Wellness:</strong> Sub-menu (Medical Weight Loss, Peptides)</li>
+            <li><strong>Referral Program:</strong> Direct Link</li>
+            <li><strong>Promotions:</strong> Direct Link (Replacing "Specials")</li>
+            <li><strong>Media:</strong> Dropdown (Gallery, Reels, Press, Testimonials)</li>
+            <li><strong>Vlog:</strong> Direct Link</li>
+            <li><strong>Book Now:</strong> Consolidated utility menu</li>
+        </ul>
+
+        <div class="section-title"><i data-lucide="columns"></i> 2. Treatments Mega Menu (7 Sections)</div>
+        <p>Organized into a 4-column "Balanced Grid" to handle the high density of categories without overwhelming the
+            user:</p>
+
+        <div class="grid-preview">
+            <div class="grid-col">
+                <h5>1. Injectables & Signature</h5>
+                <ul>
+                    <li>Cosmetic Tox</li>
+                    <li>Medical Tox</li>
+                    <li>Dermal Fillers</li>
+                    <li>Sculptra</li>
+                    <li style="margin-top:10px; font-weight:700;">3. SuA Glow Signature</li>
+                    <li>One Day Glow</li>
+                    <li>Bridal Glow</li>
+                    <li>Sophia's Choice</li>
+                </ul>
+            </div>
+            <div class="grid-col">
+                <h5>2. Skin Boosters</h5>
+                <ul>
+                    <li>Rejuran / Tone Up</li>
+                    <li>Juvelook / Re20</li>
+                    <li>CellREDM / BYRYZN</li>
+                    <li>HiloWave / Skinvive</li>
+                    <li>Restylane Vital Light</li>
+                </ul>
+            </div>
+            <div class="grid-col">
+                <h5>4. Exosome & Ultrasound</h5>
+                <ul>
+                    <li>Exosome Facial</li>
+                    <li>Hair Restoration</li>
+                    <li style="margin-top:10px; font-weight:700;">6. LDM Ultrasound</li>
+                    <li>Lifting & Toning</li>
+                </ul>
+            </div>
+            <div class="grid-col">
+                <h5>5. K-Beauty Facials & Tech</h5>
+                <ul>
+                    <li>LDM Ultrasound Facial</li>
+                    <li>Skin Booster Facial</li>
+                    <li>Rejuran Tone-Up</li>
+                    <li>HA Glass Skin Facial</li>
+                    <li style="margin-top:10px; font-weight:700;">7. SkinPen</li>
+                    <li>Microneedling</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-title"><i data-lucide="smartphone"></i> 3. Technical Implementation Tasks</div>
+        <ul style="padding-left: 20px;">
+            <li>Update <code>navbar.js</code> to rebuild the <code>NAVBAR_HTML</code> constant.</li>
+            <li>Sync <code>navbar.html</code> with the new JS structure for static fallbacks.</li>
+            <li>Implement nested accordions in <code>mobile-drawer</code> to categorize the 7 treatment sections.</li>
+            <li>Consolidate "Contact Us" sub-items (Hours, Location, Phone) into the "Book Now" menu.</li>
+            <li>Remove "Treatment Quiz" references throughout the site.</li>
+        </ul>
+
+        <div
+            style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.8rem; opacity: 0.5; text-align: center;">
+            DEV_SITE VERSION 2.0 | ARCHITECTURE PLAN ONLY
+        </div>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
