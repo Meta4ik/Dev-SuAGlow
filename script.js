@@ -51,15 +51,15 @@ function initFooter() {
       // Fade in the finance button when the user starts scrolling
       window.addEventListener('scroll', () => {
         if (window.scrollY > 150) {
-          financeBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-10');
+          financeBtn.classList.remove('finance-btn-hidden');
         } else {
-          financeBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-10');
+          financeBtn.classList.add('finance-btn-hidden');
         }
       }, { passive: true });
 
       // Check initial state in case page is loaded already scrolled
       if (window.scrollY > 150) {
-        financeBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-10');
+        financeBtn.classList.remove('finance-btn-hidden');
       }
     }
 

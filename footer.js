@@ -70,13 +70,13 @@ const FOOTER_HTML = `
 </footer>
 
 <!-- Floating Financing Button -->
-<a id="floating-finance-btn" href="financing.html" class="opacity-0 translate-y-10 pointer-events-none fixed bottom-6 left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-auto md:right-8 z-[90] bg-[#A8977B] hover:bg-[#8F857B] transition-all duration-300 text-white pl-4 pr-5 py-3 rounded-[30px] shadow-2xl flex items-center gap-3 group hover:-translate-y-1 w-max max-w-[90vw]">
-    <div class="bg-white rounded-full flex items-center justify-center shrink-0 w-8 h-8 text-[#A8977B] group-hover:text-[#8F857B] transition-colors">
+<a id="floating-finance-btn" href="financing.html" class="finance-btn-hidden">
+    <div class="finance-btn-icon">
         <i data-lucide="percent" class="w-4 h-4 stroke-[3]"></i>
     </div>
-    <div class="text-left font-body">
-        <p class="font-bold text-sm md:text-base leading-[1.2] font-heading tracking-wide">Pay over time</p>
-        <p class="text-[11px] md:text-xs opacity-90 mt-0.5 whitespace-nowrap">No hard credit checks • 0% APR options</p>
+    <div class="finance-btn-text">
+        <p class="finance-btn-title">Pay over time</p>
+        <p class="finance-btn-subtitle">0% APR options</p>
     </div>
 </a>
 `;
