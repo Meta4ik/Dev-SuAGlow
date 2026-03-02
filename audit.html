@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuA Glow - Content Audit & Roadmap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@300;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dist/output.css?v=33">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #F6F7F8;
+            color: #404345;
+        }
+
+        .audit-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .heading {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            border-bottom: 2px solid #AA987C;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-weight: 700;
+            color: #AA987C;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 4px solid #AA987C;
+            padding-left: 15px;
+        }
+
+        .status-tag {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+
+        .status-missing {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .status-placeholder {
+            background: #fef9c3;
+            color: #854d0e;
+        }
+
+        .status-partial {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .audit-item {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .audit-item h4 {
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .audit-item ul {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+
+        .audit-item li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.8;
+        }
+
+        .audit-item li i {
+            color: #AA987C;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="audit-container">
+        <h1 class="heading">Content Audit & Gap Analysis</h1>
+
+        <p>This report identifies all missing pages, placeholder assets, and content voids based on the updated SuAGlow
+            Navigation structure. Use this as a punch-list for upcoming development phases.</p>
+
+        <!-- MISSING PAGES -->
+        <div class="section-title"><i data-lucide="file-plus"></i> 1. Missing Pages & Landing Sections</div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="audit-item">
+                <h4>Injectables <span class="status-tag status-missing">Missing</span></h4>
+                <ul>
+                    <li><i data-lucide="x-circle"></i> cosmetic-tox.html</li>
+                    <li><i data-lucide="x-circle"></i> medical-tox.html</li>
+                    <li><i data-lucide="x-circle"></i> dermal-fillers.html</li>
+                    <li><i data-lucide="x-circle"></i> sculptra.html</li>
+                </ul>
+            </div>
+            <div class="audit-item">
+                <h4>Signature & Exosome <span class="status-tag status-missing">Missing</span></h4>
+                <ul>
+                    <li><i data-lucide="x-circle"></i> sophia-choice.html</li>
+                    <li><i data-lucide="x-circle"></i> one-day-glow.html</li>
+                    <li><i data-lucide="x-circle"></i> bridal-glow.html</li>
+                    <li><i data-lucide="x-circle"></i> exosome-facial.html</li>
+                    <li><i data-lucide="x-circle"></i> hair-restoration.html</li>
+                </ul>
+            </div>
+            <div class="audit-item">
+                <h4>LDM & SkinPen <span class="status-tag status-partial">Partial</span></h4>
+                <ul>
+                    <li><i data-lucide="check-circle"></i> cellredm.html</li>
+                    <li><i data-lucide="check-circle"></i> hilowave.html</li>
+                    <li><i data-lucide="x-circle"></i> ldm-ultrasound-lifting.html</li>
+                    <li><i data-lucide="x-circle"></i> skin-pen.html</li>
+                </ul>
+            </div>
+            <div class="audit-item">
+                <h4>Global Utility <span class="status-tag status-missing">Missing</span></h4>
+                <ul>
+                    <li><i data-lucide="x-circle"></i> referral-program.html</li>
+                    <li><i data-lucide="x-circle"></i> vlog.html</li>
+                    <li><i data-lucide="x-circle"></i> media-press.html</li>
+                    <li><i data-lucide="x-circle"></i> patient-forms.html</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PLACEHOLDER ASSETS -->
+        <div class="section-title"><i data-lucide="image"></i> 2. Missing Assets & Placeholders</div>
+
+        <div class="audit-item">
+            <h4>About Us Page Assets <span class="status-tag status-placeholder">Action Needed</span></h4>
+            <ul>
+                <li><i data-lucide="alert-circle"></i> Hero Image (Placeholder currently)</li>
+                <li><i data-lucide="alert-circle"></i> Story Visual (Placeholder currently)</li>
+                <li><i data-lucide="alert-circle"></i> Clinical Oversight Visual (Placeholder currently)</li>
+            </ul>
+        </div>
+
+        <div class="audit-item">
+            <h4>Treatments Assets <span class="status-tag status-placeholder">Action Needed</span></h4>
+            <ul>
+                <li><i data-lucide="alert-circle"></i> Botox Face Hero Image (needs real asset)</li>
+                <li><i data-lucide="alert-circle"></i> Sculptra Product Image (needs high-res)</li>
+                <li><i data-lucide="alert-circle"></i> Wellness Hero/Background Visuals</li>
+            </ul>
+        </div>
+
+        <!-- LINK AUDIT -->
+        <div class="section-title"><i data-lucide="link-2"></i> 3. Dead Links & CTA Audit</div>
+
+        <div class="audit-item">
+            <h4>Global Nav CTAs <span class="status-tag status-placeholder">Fix Needed</span></h4>
+            <ul>
+                <li><i data-lucide="alert-triangle"></i> News highlight links in Rejuran page are all "#"</li>
+                <li><i data-lucide="alert-triangle"></i> Browser support links in Cookie Notice are all "#"</li>
+                <li><i data-lucide="alert-triangle"></i> "Start Your Journey" and "Book Now" buttons on several pages
+                    are still "#"</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; text-align: center;">
+            <a href="dev.html" class="text-taupe hover:underline text-xs flex items-center justify-center gap-2">
+                <i data-lucide="arrow-left" class="w-3 h-3"></i> Return to Dev Center
+            </a>
+        </div>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
