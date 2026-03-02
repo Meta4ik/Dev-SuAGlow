@@ -5,8 +5,8 @@ const NEWS_HTML = `
 <section id="news" data-nav-theme="dark" class="py-32 px-10 bg-[#F6F7F8]">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-24 animate-on-scroll fade-up">
-            <span class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">In The News</span>
-            <h2 class="heading-wide text-4xl md:text-5xl text-near-black mb-8 uppercase tracking-[0.15em]">Global Regenerative Health</h2>
+            <span class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">Global Regenerative Health</span>
+            <h2 class="heading-wide text-4xl md:text-5xl text-near-black mb-8 uppercase tracking-[0.15em]">In The News</h2>
             <div class="w-24 h-[1px] bg-taupe/30 mx-auto mb-10"></div>
             <p class="font-body text-charcoal/60 max-w-2xl mx-auto leading-relaxed text-lg">The global movement for skin longevity and regenerative beauty—as featured in world-leading publications.</p>
         </div>
