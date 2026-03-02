@@ -70,7 +70,7 @@ const FOOTER_HTML = `
 </footer>
 
 <!-- Floating Financing Button -->
-<a id="floating-finance-btn" href="financing.html" class="finance-btn-hidden">
+<a id="floating-finance-btn" href="financing.html">
     <div class="finance-btn-icon">
         <i data-lucide="percent" class="w-4 h-4 stroke-[3]"></i>
     </div>
