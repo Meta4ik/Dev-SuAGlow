@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
-<head>    <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CellREDM™ | SuA K Glow Korean Med Spa</title>
     <link rel="icon" href="assets/favicon.png" type="image/png">
@@ -15,7 +16,7 @@
 
     <link rel="stylesheet" href="dist/output.css?v=30">
 
-<!-- Lucide Icons -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
@@ -25,20 +26,25 @@
 
     <!-- Hero Section -->
     <section id="hero" data-nav-theme="dark"
-        class="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-8 overflow-hidden pt-32">
+        class="relative min-h-[80vh] flex flex-col items-center justify-center md:items-start md:text-left text-center px-8 overflow-hidden pt-32">
         <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-[#F6F7F8]"></div>
+            <img src="assets/cellredm.png" alt="CellREDM™ Hero Background"
+                class="absolute inset-0 w-full h-full object-cover object-center" />
+            <div
+                class="absolute inset-0 bg-white/70 md:bg-gradient-to-r md:from-white/90 md:via-white/40 md:to-transparent">
+            </div>
         </div>
-        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
-            <span
-                class="inline-block px-6 py-2 border border-[#AA987C]/30 text-[#AA987C] text-xs font-bold uppercase tracking-[0.5em] mb-8 rounded-full">ECM
-                Skin Booster</span>
-            <h1 class="heading-wide text-5xl md:text-7xl mb-8 leading-[1.05]">CellREDM™</h1>
-            <p
-                class="text-lg md:text-2xl text-[#404345]/70 max-w-3xl mx-auto mb-10 font-light tracking-wide leading-relaxed">
-                Extracellular matrix support in a syringe. Reinforces the skin's architecture, improves density, and
-                provides foundational hydration.
-            </p>
+        <div class="w-full max-w-7xl mx-auto relative z-10">
+            <div class="max-w-2xl animate-on-scroll fade-up delay-200 md:pl-12">
+                <span
+                    class="inline-block px-6 py-2 border border-[#AA987C]/30 text-[#AA987C] text-xs font-bold uppercase tracking-[0.5em] mb-8 rounded-full bg-white/50 backdrop-blur-sm">ECM
+                    Skin Booster</span>
+                <h1 class="heading-wide text-5xl md:text-7xl mb-8 leading-[1.05]">CellREDM™</h1>
+                <p class="text-lg md:text-2xl text-[#404345]/80 mb-10 font-light tracking-wide leading-relaxed">
+                    Extracellular matrix support in a syringe. Reinforces the skin's architecture, improves density, and
+                    provides foundational hydration.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -388,8 +394,7 @@
             <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">K-Beauty isn’t about doing everything.<br>
                 <span class="text-warm-gold opacity-80">It’s about doing the right thing.</span>
             </h3>
-            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                class="btn-primary">Book
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary">Book
                 Your CellREDM™ Consultation</a>
         </div>
     </section>
