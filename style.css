@@ -297,6 +297,8 @@ html {
 
 #navbar.nav-scrolled #logo-desktop {
   height: 2rem;
+  width: auto;
+  object-fit: contain;
 }
 
 #navbar.nav-scrolled #menu-btn {

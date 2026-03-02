@@ -39,7 +39,7 @@ const NAVBAR_HTML = `
         <!-- Logo -->
         <a href="index.html" class="flex items-center p-4 md:p-0">
             <img id="logo-desktop" src="assets/logo-main.webp" alt="SuA K-Glow"
-                class="h-8 md:h-12 transition-all duration-300">
+                class="h-8 md:h-12 w-auto object-contain transition-all duration-300">
         </a>
 
         <!-- Desktop Menu -->
@@ -207,7 +207,7 @@ const NAVBAR_HTML = `
     <div class="flex flex-col h-full text-left">
         <!-- Drawer Header -->
         <div class="flex items-center justify-between p-8 border-b border-off-white">
-            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-7">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-7 w-auto object-contain">
             <button id="drawer-close" class="text-charcoal p-2">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
