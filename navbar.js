@@ -93,7 +93,7 @@ const NAVBAR_HTML = `
                                 <li><a href="re20.html" class="dropdown-link !p-0 hover:!pl-2">Elravie Re20</a></li>
                                 <li><a href="cellredm.html" class="dropdown-link !p-0 hover:!pl-2">CellREDM</a></li>
                                 <li><a href="byryzn.html" class="dropdown-link !p-0 hover:!pl-2">BYRYZN</a></li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">HiloWave</a></li>
+                                <li><a href="hilowave.html" class="dropdown-link !p-0 hover:!pl-2">HiloWave</a></li>
                                 <li><a href="skinvive.html" class="dropdown-link !p-0 hover:!pl-2">Skinvive</a></li>
                                 <li><a href="#"
                                         class="dropdown-link !p-0 hover:!pl-2 font-semibold text-taupe text-xs">Treatment
@@ -259,7 +259,7 @@ const NAVBAR_HTML = `
                                 <a href="re20.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Elravie Re20</a>
                                 <a href="cellredm.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">CellREDM</a>
                                 <a href="byryzn.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">BYRYZN</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">HiloWave</a>
+                                <a href="hilowave.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">HiloWave</a>
                                 <a href="skinvive.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Skinvive</a>
                                 <a href="#" class="font-body text-sm text-taupe font-semibold hover:opacity-80 transition-opacity">Treatment Quiz</a>
                             </div>
