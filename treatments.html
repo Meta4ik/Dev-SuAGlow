@@ -113,30 +113,56 @@
                     </p>
 
                     <div class="space-y-4">
-                        <!-- Card 1 -->
+                        <!-- Card 1: Face -->
                         <div class="product-card border border-taupe/10 rounded-2xl p-6 flex items-start gap-5">
-                            <div class="p-3 bg-taupe/10 rounded-xl text-taupe"><i data-lucide="sparkles"
-                                    class="w-6 h-6"></i></div>
+                            <div class="p-3 bg-taupe/10 rounded-xl text-taupe shrink-0">
+                                <!-- Face icon: oval head with brows, eyes, forehead line, glabella point -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12" cy="13" rx="7" ry="8.5"/>
+                                    <line x1="9.5" y1="7" x2="14.5" y2="7" stroke-width="1.2" opacity="0.55"/>
+                                    <path d="M8.5 10.5 Q10 9.5 11.5 10.5" fill="none"/>
+                                    <path d="M12.5 10.5 Q14 9.5 15.5 10.5" fill="none"/>
+                                    <ellipse cx="10" cy="13" rx="1.5" ry="1" stroke-width="1.2"/>
+                                    <ellipse cx="14" cy="13" rx="1.5" ry="1" stroke-width="1.2"/>
+                                    <circle cx="12" cy="9" r="0.65" fill="currentColor" stroke="none" opacity="0.65"/>
+                                </svg>
+                            </div>
                             <div>
                                 <h3 class="heading-wide text-lg text-near-black mb-1">Face</h3>
                                 <p class="font-body text-sm text-charcoal/70">Forehead lines, frown lines, crow's feet,
                                     brow lift</p>
                             </div>
                         </div>
-                        <!-- Card 2 -->
+                        <!-- Card 2: Body -->
                         <div class="product-card border border-taupe/10 rounded-2xl p-6 flex items-start gap-5">
-                            <div class="p-3 bg-taupe/10 rounded-xl text-taupe"><i data-lucide="heart"
-                                    class="w-6 h-6"></i></div>
+                            <div class="p-3 bg-taupe/10 rounded-xl text-taupe shrink-0">
+                                <!-- Body icon: human figure with shoulders, waist, hips, legs; treatment dots at underarms -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="4" r="2"/>
+                                    <path d="M11 6 L7 9.5 L9.5 14.5 L8.5 16 L7.5 22 L16.5 22 L15.5 16 L14.5 14.5 L17 9.5 L13 6 Z"/>
+                                    <path d="M7 9.5 L5 15"/>
+                                    <path d="M17 9.5 L19 15"/>
+                                    <circle cx="7.5" cy="11.2" r="0.7" fill="currentColor" stroke="none" opacity="0.6"/>
+                                    <circle cx="16.5" cy="11.2" r="0.7" fill="currentColor" stroke="none" opacity="0.6"/>
+                                </svg>
+                            </div>
                             <div>
                                 <h3 class="heading-wide text-lg text-near-black mb-1">Body</h3>
                                 <p class="font-body text-sm text-charcoal/70">Excessive sweating (hyperhidrosis), muscle
                                     contouring</p>
                             </div>
                         </div>
-                        <!-- Card 3 -->
+                        <!-- Card 3: Medical -->
                         <div class="product-card border border-taupe/10 rounded-2xl p-6 flex items-start gap-5">
-                            <div class="p-3 bg-taupe/10 rounded-xl text-taupe"><i data-lucide="star"
-                                    class="w-6 h-6"></i></div>
+                            <div class="p-3 bg-taupe/10 rounded-xl text-taupe shrink-0">
+                                <!-- Medical icon: head outline with neural pulse line (migraines / TMJ) -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 19 L6 10 Q6 3 12 3 Q18 3 18 10 L18 19" fill="none"/>
+                                    <path d="M6 19 Q8 22 12 22 Q16 22 18 19" fill="none"/>
+                                    <line x1="9.5" y1="19" x2="14.5" y2="19" stroke-opacity="0.35"/>
+                                    <path d="M7.5 13 L9 13 L10 10.5 L12 15.5 L13.5 13 L15 13 L16.5 13" fill="none" stroke-width="1.4" opacity="0.8"/>
+                                </svg>
+                            </div>
                             <div>
                                 <h3 class="heading-wide text-lg text-near-black mb-1">Medical</h3>
                                 <p class="font-body text-sm text-charcoal/70">TMJ, migraines, muscle spasms</p>
@@ -304,56 +330,11 @@
     <!-- Scar Treatment Section -->
     <section id="scar" data-nav-theme="dark" class="py-24 md:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-                <div class="animate-on-scroll fade-right">
-                    <div class="relative overflow-hidden rounded-2xl group w-full h-[640px] bg-near-black/5"
-                        id="scar-carousel-container">
-                        <div class="flex transition-transform duration-500 ease-in-out w-full h-full"
-                            id="scar-carousel-inner">
-                            <div class="w-full h-full shrink-0 relative">
-                                <img src="assets/suaglow_scar_tissue_before1.png" alt="Before View 1"
-                                    class="w-full h-full object-cover">
-                                <span
-                                    class="absolute top-3 left-3 bg-near-black/60 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded backdrop-blur-sm">Before
-                                    1</span>
-                            </div>
-                            <div class="w-full h-full shrink-0 relative">
-                                <img src="assets/suaglow_scar_tissue_before2.png" alt="Before View 2"
-                                    class="w-full h-full object-cover">
-                                <span
-                                    class="absolute top-3 left-3 bg-near-black/60 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded backdrop-blur-sm">Before
-                                    2</span>
-                            </div>
-                            <div class="w-full h-full shrink-0 relative flex items-center justify-center">
-                                <img src="assets/suaglow_scar_tissue_after.png" alt="After"
-                                    class="w-full h-full object-cover">
-                                <span
-                                    class="absolute top-3 left-3 bg-taupe/80 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded backdrop-blur-sm">After</span>
-                            </div>
-                        </div>
-                        <div
-                            class="absolute inset-0 flex items-center justify-between p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                            <button id="scar-prev"
-                                class="w-8 h-8 flex items-center justify-center rounded-full bg-white/70 hover:bg-white text-near-black backdrop-blur shadow-sm transition-all focus:outline-none pointer-events-auto">
-                                <i data-lucide="chevron-left" class="w-5 h-5"></i>
-                            </button>
-                            <button id="scar-next"
-                                class="w-8 h-8 flex items-center justify-center rounded-full bg-white/70 hover:bg-white text-near-black backdrop-blur shadow-sm transition-all focus:outline-none pointer-events-auto">
-                                <i data-lucide="chevron-right" class="w-5 h-5"></i>
-                            </button>
-                        </div>
-                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2" id="scar-carousel-dots">
-                            <button class="w-2 h-2 rounded-full cursor-pointer transition-all bg-white w-4"
-                                data-index="0"></button>
-                            <button class="w-2 h-2 rounded-full cursor-pointer transition-all bg-white/50"
-                                data-index="1"></button>
-                            <button class="w-2 h-2 rounded-full cursor-pointer transition-all bg-white/50"
-                                data-index="2"></button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="animate-on-scroll fade-left delay-200">
+            <!-- Text content: two columns -->
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 mb-14">
+                <!-- Left: heading + description + treatment steps -->
+                <div class="animate-on-scroll fade-right">
                     <p class="font-body text-xs tracking-[0.2em] text-charcoal/60 mb-4 uppercase">Specialized Care</p>
                     <h2 class="heading-wide text-3xl md:text-4xl text-near-black mb-6">Scar Treatment</h2>
                     <p class="font-body text-charcoal/70 leading-relaxed mb-8">
@@ -361,44 +342,177 @@
                         aesthetic approaches.
                     </p>
 
-                    <div class="space-y-3 mb-8">
+                    <div class="space-y-3">
                         <div class="flex items-center gap-3 p-3 bg-off-white rounded-lg border border-taupe/20">
-                            <span
-                                class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body">1</span>
+                            <span class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body shrink-0">1</span>
                             <span class="font-body text-near-black">Steroid Injection</span>
                         </div>
                         <div class="flex items-center gap-3 p-3 bg-off-white rounded-lg border border-taupe/20">
-                            <span
-                                class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body">2</span>
+                            <span class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body shrink-0">2</span>
                             <span class="font-body text-near-black">Salmon DNA Injection + Botox Mix</span>
                         </div>
                         <div class="flex items-center gap-3 p-3 bg-off-white rounded-lg border border-taupe/20">
-                            <span
-                                class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body">3</span>
+                            <span class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body shrink-0">3</span>
                             <span class="font-body text-near-black">Salmon DNA Injection + Filler Mix</span>
                         </div>
                         <div class="flex items-center gap-3 p-3 bg-off-white rounded-lg border border-taupe/20">
-                            <span
-                                class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body">4</span>
+                            <span class="w-6 h-6 bg-taupe text-white rounded-full flex items-center justify-center text-xs font-body shrink-0">4</span>
                             <span class="font-body text-near-black">Air Toxin (Exclusively at SuA!)</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="bg-taupe/10 rounded-xl p-6 border border-taupe/30">
+                <!-- Right: Air Toxin callout -->
+                <div class="animate-on-scroll fade-left delay-200 flex items-start">
+                    <div class="bg-white rounded-xl p-8 border border-taupe/30 w-full">
+
+                        <!-- Air Toxin mechanism image -->
+                        <div class="mb-7 rounded-lg overflow-hidden">
+                            <img src="assets/air_toxin.jpg" alt="Air Toxin mechanism diagram" class="w-full h-auto object-contain">
+                        </div>
+
                         <h3 class="font-heading text-lg text-near-black mb-2">What Does Air Toxin Do?</h3>
-                        <p class="font-body text-xs text-taupe mb-3 uppercase tracking-wide">Exclusively at SuA</p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center gap-2 font-body text-sm text-charcoal/70"><i
-                                    data-lucide="sparkles" class="w-4 h-4 text-taupe"></i>Reduces inflammation</li>
-                            <li class="flex items-center gap-2 font-body text-sm text-charcoal/70"><i
-                                    data-lucide="sparkles" class="w-4 h-4 text-taupe"></i>Relieves tension on wound
-                                edges</li>
-                            <li class="flex items-center gap-2 font-body text-sm text-charcoal/70"><i
-                                    data-lucide="sparkles" class="w-4 h-4 text-taupe"></i>Promotes new collagen</li>
+                        <p class="font-body text-xs text-taupe mb-5 uppercase tracking-wide">Exclusively at SuA</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 font-body text-sm text-charcoal/70">
+                                <i data-lucide="sparkles" class="w-4 h-4 text-taupe shrink-0"></i>Reduces inflammation
+                            </li>
+                            <li class="flex items-center gap-3 font-body text-sm text-charcoal/70">
+                                <i data-lucide="sparkles" class="w-4 h-4 text-taupe shrink-0"></i>Relieves tension on wound edges
+                            </li>
+                            <li class="flex items-center gap-3 font-body text-sm text-charcoal/70">
+                                <i data-lucide="sparkles" class="w-4 h-4 text-taupe shrink-0"></i>Promotes new collagen
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
+
+            <!-- Full-width diagram SVG -->
+            <div class="animate-on-scroll fade-up delay-300">
+                <div class="rounded-2xl overflow-hidden border border-taupe/20 bg-off-white p-6 md:p-10">
+                    <svg viewBox="0 0 760 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+                        <defs>
+                            <clipPath id="sc1"><rect x="10" y="10" width="230" height="150" rx="8"/></clipPath>
+                            <clipPath id="sc2"><rect x="265" y="10" width="230" height="150" rx="8"/></clipPath>
+                            <clipPath id="sc3"><rect x="520" y="10" width="230" height="150" rx="8"/></clipPath>
+                        </defs>
+
+                        <!-- Background -->
+                        <rect width="760" height="220" rx="10" fill="#F6F7F8"/>
+
+                        <!-- ── PANEL 1: ELEVATED SCAR ── -->
+                        <rect x="10" y="10" width="230" height="150" rx="8" fill="white"/>
+                        <g clip-path="url(#sc1)">
+                            <!-- Dermis -->
+                            <rect x="10" y="88" width="230" height="72" fill="#DDB99A" fill-opacity="0.2"/>
+                            <!-- Skin fill with raised scar bump -->
+                            <path d="M10,88 L70,88 C86,88 97,84 125,55 C153,84 164,88 220,88 L240,88 L240,10 L10,10 Z" fill="#F5E1D0"/>
+                            <!-- Scar surface line -->
+                            <path d="M70,88 C86,88 97,84 125,55 C153,84 164,88 220,88" stroke="#E8C4A8" stroke-width="1.5" fill="none"/>
+                            <!-- Layer labels -->
+                            <text x="18" y="78" font-size="7.5" fill="#8F857B" font-family="Poppins,sans-serif" font-weight="600" opacity="0.65">Epidermis</text>
+                            <text x="18" y="112" font-size="7.5" fill="#8F857B" font-family="Poppins,sans-serif" font-weight="600" opacity="0.65">Dermis</text>
+                            <line x1="62" y1="14" x2="62" y2="154" stroke="#8F857B" stroke-width="0.5" stroke-dasharray="2,4" opacity="0.15"/>
+                            <!-- 5 fibrous bands -->
+                            <line x1="103" y1="88" x2="90"  y2="134" stroke="#C49B7A" stroke-width="2" stroke-dasharray="5,3" opacity="0.7"/>
+                            <line x1="114" y1="88" x2="107" y2="142" stroke="#C49B7A" stroke-width="2" stroke-dasharray="5,3" opacity="0.75"/>
+                            <line x1="125" y1="88" x2="125" y2="146" stroke="#C49B7A" stroke-width="2" stroke-dasharray="5,3" opacity="0.8"/>
+                            <line x1="136" y1="88" x2="143" y2="142" stroke="#C49B7A" stroke-width="2" stroke-dasharray="5,3" opacity="0.75"/>
+                            <line x1="147" y1="88" x2="160" y2="134" stroke="#C49B7A" stroke-width="2" stroke-dasharray="5,3" opacity="0.7"/>
+                            <!-- Tension arrow above scar peak -->
+                            <line x1="125" y1="55" x2="125" y2="38" stroke="#C49B7A" stroke-width="1.5" opacity="0.45"/>
+                            <polygon points="122,40 128,40 125,34" fill="#C49B7A" opacity="0.45"/>
+                            <!-- Band label -->
+                            <text x="168" y="130" font-size="7" fill="#C49B7A" font-family="Poppins,sans-serif" font-weight="600">FIBROUS</text>
+                            <text x="168" y="141" font-size="7" fill="#C49B7A" font-family="Poppins,sans-serif" font-weight="600">BANDS</text>
+                        </g>
+                        <text x="125" y="180" text-anchor="middle" font-size="8.5" font-weight="700" fill="#8F857B" font-family="Poppins,sans-serif" letter-spacing="2">ELEVATED SCAR</text>
+                        <text x="125" y="194" text-anchor="middle" font-size="7.5" fill="#404345" font-family="Poppins,sans-serif" fill-opacity="0.6">Fibrous bands tether scar tissue,</text>
+                        <text x="125" y="206" text-anchor="middle" font-size="7.5" fill="#404345" font-family="Poppins,sans-serif" fill-opacity="0.6">pulling it upward from beneath</text>
+
+                        <!-- Arrow 1 -->
+                        <line x1="245" y1="83" x2="259" y2="83" stroke="#AA987C" stroke-width="2"/>
+                        <polygon points="257,80 263,83 257,86" fill="#AA987C"/>
+
+                        <!-- ── PANEL 2: SUBCISION ── -->
+                        <rect x="265" y="10" width="230" height="150" rx="8" fill="white"/>
+                        <g clip-path="url(#sc2)">
+                            <!-- Dermis -->
+                            <rect x="265" y="88" width="230" height="72" fill="#DDB99A" fill-opacity="0.2"/>
+                            <!-- Same raised scar -->
+                            <path d="M265,88 L325,88 C341,88 352,84 380,55 C408,84 419,88 475,88 L495,88 L495,10 L265,10 Z" fill="#F5E1D0"/>
+                            <path d="M325,88 C341,88 352,84 380,55 C408,84 419,88 475,88" stroke="#E8C4A8" stroke-width="1.5" fill="none"/>
+                            <!-- Severed bands (faded, broken) -->
+                            <line x1="358" y1="88" x2="348" y2="120" stroke="#C49B7A" stroke-width="1" stroke-dasharray="3,6" opacity="0.25"/>
+                            <line x1="369" y1="88" x2="364" y2="126" stroke="#C49B7A" stroke-width="1" stroke-dasharray="3,6" opacity="0.2"/>
+                            <!-- X severance marks -->
+                            <line x1="345" y1="122" x2="353" y2="130" stroke="#C49B7A" stroke-width="1.5" opacity="0.5"/>
+                            <line x1="353" y1="122" x2="345" y2="130" stroke="#C49B7A" stroke-width="1.5" opacity="0.5"/>
+                            <line x1="361" y1="128" x2="369" y2="136" stroke="#C49B7A" stroke-width="1.5" opacity="0.45"/>
+                            <line x1="369" y1="128" x2="361" y2="136" stroke="#C49B7A" stroke-width="1.5" opacity="0.45"/>
+                            <!-- Remaining bands (fading) -->
+                            <line x1="380" y1="88" x2="380" y2="130" stroke="#C49B7A" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.3"/>
+                            <line x1="391" y1="88" x2="398" y2="126" stroke="#C49B7A" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.22"/>
+                            <!-- Nokor needle in dermis -->
+                            <rect x="438" y="91" width="57" height="6" rx="1" fill="#9DAFB6"/>
+                            <polygon points="438,90 438,98 429,94" fill="#9DAFB6"/>
+                            <line x1="472" y1="91" x2="472" y2="97" stroke="white" stroke-width="1.5" opacity="0.5"/>
+                            <line x1="482" y1="91" x2="482" y2="97" stroke="white" stroke-width="1.5" opacity="0.5"/>
+                            <!-- Sweep motion arcs -->
+                            <path d="M429,94 Q398,78 362,94" stroke="#9DAFB6" stroke-width="1" stroke-dasharray="4,3" fill="none" opacity="0.45"/>
+                            <path d="M429,94 Q398,110 362,94" stroke="#9DAFB6" stroke-width="1" stroke-dasharray="4,3" fill="none" opacity="0.45"/>
+                            <polygon points="364,91 358,94 364,97" fill="#9DAFB6" opacity="0.45"/>
+                            <!-- Blood / hematoma forming -->
+                            <circle cx="358" cy="108" r="2.5" fill="#AA987C" fill-opacity="0.28"/>
+                            <circle cx="369" cy="114" r="2"   fill="#AA987C" fill-opacity="0.22"/>
+                            <circle cx="350" cy="116" r="1.5" fill="#AA987C" fill-opacity="0.18"/>
+                        </g>
+                        <text x="380" y="180" text-anchor="middle" font-size="8.5" font-weight="700" fill="#8F857B" font-family="Poppins,sans-serif" letter-spacing="2">SUBCISION</text>
+                        <text x="380" y="194" text-anchor="middle" font-size="7.5" fill="#404345" font-family="Poppins,sans-serif" fill-opacity="0.6">Nokor needle sweeps beneath scar,</text>
+                        <text x="380" y="206" text-anchor="middle" font-size="7.5" fill="#404345" font-family="Poppins,sans-serif" fill-opacity="0.6">severing fibrous bands</text>
+
+                        <!-- Arrow 2 -->
+                        <line x1="500" y1="83" x2="514" y2="83" stroke="#AA987C" stroke-width="2"/>
+                        <polygon points="512,80 518,83 512,86" fill="#AA987C"/>
+
+                        <!-- ── PANEL 3: BAND RELEASE ── -->
+                        <rect x="520" y="10" width="230" height="150" rx="8" fill="white"/>
+                        <g clip-path="url(#sc3)">
+                            <!-- Dermis -->
+                            <rect x="520" y="88" width="230" height="72" fill="#DDB99A" fill-opacity="0.15"/>
+                            <!-- Flat smooth epidermis -->
+                            <rect x="520" y="10" width="230" height="78" fill="#F5E1D0"/>
+                            <line x1="520" y1="88" x2="750" y2="88" stroke="#E8C4A8" stroke-width="1.5"/>
+                            <!-- Glow on smooth skin surface -->
+                            <ellipse cx="635" cy="88" rx="65" ry="5" fill="#AA987C" fill-opacity="0.1"/>
+                            <!-- Released pocket / hematoma space -->
+                            <ellipse cx="635" cy="104" rx="60" ry="13" fill="#AA987C" fill-opacity="0.07" stroke="#AA987C" stroke-width="0.5" stroke-opacity="0.18"/>
+                            <!-- Hematoma fill dots -->
+                            <circle cx="596" cy="102" r="3"   fill="#AA987C" fill-opacity="0.22"/>
+                            <circle cx="610" cy="108" r="2.5" fill="#AA987C" fill-opacity="0.18"/>
+                            <circle cx="623" cy="100" r="2"   fill="#AA987C" fill-opacity="0.2"/>
+                            <circle cx="635" cy="107" r="3"   fill="#AA987C" fill-opacity="0.22"/>
+                            <circle cx="648" cy="100" r="2"   fill="#AA987C" fill-opacity="0.18"/>
+                            <circle cx="660" cy="107" r="2.5" fill="#AA987C" fill-opacity="0.16"/>
+                            <circle cx="673" cy="101" r="2"   fill="#AA987C" fill-opacity="0.13"/>
+                            <!-- Severed band stumps (very faint) -->
+                            <line x1="608" y1="88" x2="600" y2="112" stroke="#C49B7A" stroke-width="1" stroke-dasharray="2,7" opacity="0.15"/>
+                            <line x1="635" y1="88" x2="635" y2="114" stroke="#C49B7A" stroke-width="1" stroke-dasharray="2,7" opacity="0.12"/>
+                            <line x1="662" y1="88" x2="670" y2="112" stroke="#C49B7A" stroke-width="1" stroke-dasharray="2,7" opacity="0.1"/>
+                            <!-- Released space label -->
+                            <text x="635" y="122" text-anchor="middle" font-size="7" fill="#AA987C" font-family="Poppins,sans-serif" font-weight="600">RELEASED SPACE</text>
+                            <!-- New collagen fibres forming -->
+                            <path d="M542,132 Q554,128 566,132 Q578,136 590,132 Q602,128 614,132 Q626,136 638,132 Q650,128 662,132 Q674,136 686,132 Q698,128 710,132 Q720,136 728,132" stroke="#AA987C" stroke-width="1.5" fill="none" opacity="0.45"/>
+                            <path d="M546,143 Q558,139 570,143 Q582,147 594,143 Q606,139 618,143 Q630,147 642,143 Q654,139 666,143 Q678,147 690,143 Q702,139 714,143" stroke="#AA987C" stroke-width="1.5" fill="none" opacity="0.28"/>
+                        </g>
+                        <text x="635" y="180" text-anchor="middle" font-size="8.5" font-weight="700" fill="#8F857B" font-family="Poppins,sans-serif" letter-spacing="2">BAND RELEASE</text>
+                        <text x="635" y="194" text-anchor="middle" font-size="7.5" fill="#404345" font-family="Poppins,sans-serif" fill-opacity="0.6">Scar lifts as bands release, new</text>
+                        <text x="635" y="206" text-anchor="middle" font-size="7.5" fill="#404345" font-family="Poppins,sans-serif" fill-opacity="0.6">collagen fills the released space</text>
+                    </svg>
+                </div>
+            </div>
+
         </div>
     </section>
 

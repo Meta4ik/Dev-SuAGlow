@@ -256,7 +256,7 @@ function initModals() {
 
   document.querySelectorAll('.close-modal, dialog').forEach(el => {
     el.addEventListener('click', (e) => {
-      if (e.target.classList.contains('close-modal') || e.target.nodeName === 'DIALOG') {
+      if (e.target.closest('.close-modal') || e.target.nodeName === 'DIALOG') {
         const dialog = el.closest('dialog') || el;
         dialog.close();
         dialog.classList.add('hidden');
