@@ -180,9 +180,34 @@
                                 </div>
 
                                 <div class="mt-8 p-10 bg-near-black rounded-xl w-full flex flex-col items-start gap-4">
-                                    <p class="font-heading text-white mb-2 text-sm">On Dark Backgrounds</p>
-                                    <a href="#" class="btn-white">White Button</a>
-                                    <p class="text-xs text-charcoal/50 mt-3 font-mono text-white/70">.btn-white</p>
+                                    <p class="font-heading text-white mb-6 text-sm">On Dark Backgrounds</p>
+
+                                    <div class="space-y-10 w-full">
+                                        <div>
+                                            <a href="#" class="btn-white">White Button</a>
+                                            <p
+                                                class="text-[10px] text-white/40 mt-3 font-mono uppercase tracking-widest">
+                                                .btn-white</p>
+                                        </div>
+
+                                        <div class="h-[1px] bg-white/10 w-full"></div>
+
+                                        <div>
+                                            <a href="#" class="btn-outline-white">Outline White</a>
+                                            <p
+                                                class="text-[10px] text-white/40 mt-3 font-mono uppercase tracking-widest">
+                                                .btn-outline-white (Glass Hover)</p>
+                                        </div>
+
+                                        <div class="h-[1px] bg-white/10 w-full"></div>
+
+                                        <div>
+                                            <a href="#" class="btn-glass">Luxury Glass</a>
+                                            <p
+                                                class="text-[10px] text-white/40 mt-3 font-mono uppercase tracking-widest">
+                                                .btn-glass (Animated)</p>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -369,6 +394,32 @@
                     </div>
                 </section>
 
+                <!-- Global Components -->
+                <section class="animate-on-scroll fade-up">
+                    <h2 class="font-heading text-2xl md:text-3xl text-near-black mb-8 pb-4 border-b border-charcoal/10">
+                        Global Components</h2>
+                    <p class="text-sm text-charcoal/50 mb-10 font-mono">Reusable site sections maintained as shared
+                        modules.</p>
+
+                    <div class="space-y-12">
+                        <div class="p-10 bg-white rounded-2xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]">
+                            <h3 class="text-xs tracking-[0.3em] uppercase text-taupe font-bold mb-6 italic">Featured
+                                Section: In The News</h3>
+                            <p class="text-sm text-charcoal/70 mb-10 leading-relaxed">Displays editorial highlights from
+                                global publications. Uses the <code
+                                    class="bg-off-white px-2 py-1 rounded text-taupe font-mono text-xs">#news-placeholder</code>
+                                element for automated injection via <code
+                                    class="bg-off-white px-2 py-1 rounded text-taupe font-mono text-xs">news.js</code>.
+                            </p>
+
+                            <!-- Component Preview Container -->
+                            <div class="rounded-xl overflow-hidden border border-black/5 bg-off-white">
+                                <div id="news-placeholder"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Panel Fade Gradients -->
                 <section class="animate-on-scroll fade-up">
                     <h2 class="font-heading text-2xl md:text-3xl text-near-black mb-2 pb-4 border-b border-charcoal/10">
@@ -465,6 +516,7 @@
     <div id="footer-placeholder"></div>
 
     <script src="navbar.js?v=32"></script>
+    <script src="news.js?v=32"></script>
     <script src="footer.js?v=32"></script>
     <script src="script.js?v=32"></script>
 </body>

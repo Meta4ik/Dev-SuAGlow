@@ -59,7 +59,7 @@ const SPECIALS_HTML = `
                     </div>
 
                     <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                        class="inline-flex justify-center bg-near-black text-white px-10 py-4 rounded-[40px] font-body text-xs tracking-[0.2em] font-bold uppercase hover:bg-taupe transition-colors shadow-lg w-max">
+                        class="btn-primary w-max">
                         Book Lunar Glow
                     </a>
                 </div>
