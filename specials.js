@@ -58,7 +58,7 @@ const SPECIALS_HTML = `
                         </div>
                     </div>
 
-                    <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                    <a href="https://suaglow.myaestheticrecord.com/online-booking/promotions" target="_blank"
                         class="btn-primary w-max">
                         Book Lunar Glow
                     </a>
