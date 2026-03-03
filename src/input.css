@@ -920,18 +920,11 @@ html {
     margin-top: 1px;
 }
 
-/* Mobile: position center-bottom */
+/* Mobile: position bottom-right */
 @media (max-width: 767px) {
     #floating-finance-btn {
-        right: auto;
-        left: 50%;
-        margin-left: -22px;
-        /* half of 44px collapsed width */
-    }
-
-    #floating-finance-btn:hover {
-        margin-left: -100px;
-        /* half of 200px expanded width */
+        right: 1rem;
+        left: auto;
     }
 }
 
