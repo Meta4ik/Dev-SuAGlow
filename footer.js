@@ -34,7 +34,7 @@ const FOOTER_HTML = `
                     <li><a href="https://www.facebook.com/suaglowkbeauty" target="_blank" class="hover:text-taupe transition-colors flex items-center gap-2">
                         <i data-lucide="facebook" class="w-4 h-4 text-taupe"></i> Facebook</a>
                     </li>
-                    <li><a href="https://www.tiktok.com/@suaglowkbeauty" target="_blank" class="hover:text-taupe transition-colors flex items-center gap-2">
+                    <li><a href="https://www.tiktok.com/@suaglowkbeauty_" target="_blank" class="hover:text-taupe transition-colors flex items-center gap-2">
                         <svg class="w-4 h-4 text-taupe fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2A74.62,74.62,0,1,0,252.27,350V3.06h87.9c4.27,24,20.44,61.73,107.83,67Z"/></svg>
                         TikTok</a>
                     </li>

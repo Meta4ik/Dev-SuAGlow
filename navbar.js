@@ -20,7 +20,7 @@ const NAVBAR_HTML = `
                       <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                     </span>
                     <span class="text-white/90 normal-case text-[11px] font-medium tracking-[0.1em] transition-colors group-hover:text-white truncate">
-                        Check out our <span class="text-red-400 font-semibold">Lunar Launch Specials</span>
+                        Check out our <span class="text-red-400 font-semibold">Special Promotions</span>
                     </span>
                     <i data-lucide="arrow-right" class="w-3 h-3 text-red-500 group-hover:translate-x-1 transition-transform shrink-0"></i>
                 </a>
