@@ -58,6 +58,7 @@ h6,
 
 /* Card Styling (Design System) */
 .product-card {
+    position: relative;
     background-color: white;
     border-radius: 1rem;
     overflow: hidden;
@@ -798,27 +799,6 @@ html {
     filter: blur(40px);
 }
 
-/* Small product badge overlay */
-.product-card::after {
-    content: '';
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 40px;
-    height: 40px;
-    background: url('assets/product-badge.png') center/contain no-repeat;
-    animation: spin-badge 3s linear infinite;
-}
-
-@keyframes spin-badge {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 /* No-hover modifier — disables all hover states on product/glow cards */
 .no-hover.product-card:hover {
