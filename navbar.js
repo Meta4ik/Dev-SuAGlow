@@ -170,7 +170,7 @@ const NAVBAR_HTML = `
 
             <a href="financing.html"
                 class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase">Financing</a>
-            <a href="index.html#contact"
+            <a href="contact.html"
                 class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase">Contact Us</a>
         </div>
 
@@ -328,7 +328,7 @@ const NAVBAR_HTML = `
                 </div>
 
                 <a href="financing.html" class="font-heading text-lg text-near-black hover:text-taupe transition-colors">Financing</a>
-                <a href="index.html#contact" class="font-heading text-lg text-near-black hover:text-taupe transition-colors">Contact Us</a>
+                <a href="contact.html" class="font-heading text-lg text-near-black hover:text-taupe transition-colors">Contact Us</a>
                 <a href="style-guide.html" class="font-heading text-lg text-taupe flex items-center gap-2 mt-4 hover:opacity-80 transition-opacity"><i data-lucide="swatch-book" class="w-5 h-5"></i> Style Guide</a>
             </div>
         </div>
