@@ -72,7 +72,9 @@ const NAVBAR_HTML = `
                     <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 text-left">
                         <!-- Injectables -->
                         <div>
-                            <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Injectables</a>
+                            <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="syringe" class="w-3 h-3 mr-2"></i>Injectables
+                            </a>
                             <ul class="space-y-2">
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Cosmetic Tox: Face & Body</a>
                                 </li>
@@ -85,7 +87,9 @@ const NAVBAR_HTML = `
                         </div>
                         <!-- Skin Boosters -->
                         <div>
-                            <a href="skinboosters.html" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Skin Boosters</a>
+                            <a href="skinboosters.html" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="droplets" class="w-3 h-3 mr-2"></i>Skin Boosters
+                            </a>
                              <ul class="space-y-1">
                                  <li><a href="rejuran.html" class="dropdown-link !p-0 hover:!pl-2">Rejuran</a></li>
                                 <li><a href="rejuran-tone-up.html" class="dropdown-link !p-0 hover:!pl-2">Tone Up</a></li>
@@ -102,7 +106,9 @@ const NAVBAR_HTML = `
                         </div>
                         <!-- Signature & Exosome -->
                         <div>
-                            <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Signature & Exosome</a>
+                            <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="sparkles" class="w-3 h-3 mr-2"></i>Signature & Exosome
+                            </a>
                             <ul class="space-y-2">
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Sophia's Choice</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">One Day Glow</a></li>
@@ -113,7 +119,9 @@ const NAVBAR_HTML = `
                         </div>
                         <!-- LDM & More -->
                         <div>
-                            <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Precision Tech</a>
+                            <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="zap" class="w-3 h-3 mr-2"></i>Precision Tech
+                            </a>
                             <ul class="space-y-2">
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">LDM Ultrasound Facial</a>
                                 </li>
@@ -243,7 +251,9 @@ const NAVBAR_HTML = `
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-4 pl-4 mt-2">
                         <div>
-                            <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Injectables</a>
+                            <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="syringe" class="w-3 h-3 mr-2"></i>Injectables
+                            </a>
                             <div class="flex flex-col gap-2 text-left">
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Cosmetic Tox: Face & Body</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Medical Tox: Scar, Sweat, Migraine</a>
@@ -252,7 +262,9 @@ const NAVBAR_HTML = `
                             </div>
                         </div>
                         <div>
-                            <a href="skinboosters.html" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Skin Boosters</a>
+                            <a href="skinboosters.html" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="droplets" class="w-3 h-3 mr-2"></i>Skin Boosters
+                            </a>
                             <div class="flex flex-col gap-2 text-left">
                                 <a href="rejuran.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Rejuran</a>
                                 <a href="rejuran-tone-up.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Tone Up</a>
@@ -266,7 +278,9 @@ const NAVBAR_HTML = `
                             </div>
                         </div>
                         <div>
-                            <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Signature & Exosome</a>
+                            <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="sparkles" class="w-3 h-3 mr-2"></i>Signature & Exosome
+                            </a>
                             <div class="flex flex-col gap-2 text-left">
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Sophia's Choice</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">One Day Glow</a>
@@ -276,7 +290,9 @@ const NAVBAR_HTML = `
                             </div>
                         </div>
                         <div>
-                            <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">Precision Tech</a>
+                            <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="zap" class="w-3 h-3 mr-2"></i>Precision Tech
+                            </a>
                             <div class="flex flex-col gap-2 text-left">
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Ultrasound Facial</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM + Skin Booster</a>
