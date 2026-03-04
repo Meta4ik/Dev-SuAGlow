@@ -99,7 +99,7 @@
 
     <!-- ─── Hero ─── -->
     <section id="hero" data-nav-theme="dark"
-        class="relative min-h-[60vh] flex items-start justify-center text-center px-8 pt-[250px] overflow-hidden bg-near-black pb-32">
+        class="relative md:min-h-[60vh] flex items-start justify-center text-center px-8 pt-28 md:pt-[250px] overflow-hidden bg-near-black pb-8 md:pb-32">
         <div class="absolute inset-0 z-0 opacity-40">
             <div class="w-full h-full moving-gradient"></div>
         </div>
@@ -121,7 +121,7 @@
             <div class="grid md:grid-cols-2 gap-16 items-start">
 
                 <!-- Left: heading + text + buttons + map -->
-                <div class="animate-on-scroll fade-right">
+                <div class="animate-on-scroll fade-right md:order-1">
                     <span
                         class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">Ready
                         to Glow?</span>
@@ -156,7 +156,7 @@
                 </div>
 
                 <!-- Right: info cards -->
-                <div class="grid grid-cols-1 gap-4 animate-on-scroll fade-left">
+                <div class="grid grid-cols-1 gap-4 order-first md:order-2">
                     <div class="flex items-center gap-5 p-6 bg-off-white rounded-2xl border border-charcoal/5">
                         <div class="w-10 h-10 rounded-full bg-taupe/10 flex items-center justify-center shrink-0">
                             <i data-lucide="calendar-check" class="w-5 h-5 text-taupe"></i>
