@@ -188,6 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 7. Glow Card Tracking
   initGlowCardTracking();
+
+  // 8. Page Transitions
+  initPageTransitions();
 });
 
 function initHeroVideoScroll() {
@@ -369,5 +372,37 @@ function initGlowCardTracking() {
       card.style.setProperty('--mouse-x', `${x}px`);
       card.style.setProperty('--mouse-y', `${y}px`);
     });
+  });
+}
+
+function initPageTransitions() {
+  if ('startViewTransition' in document) return; // native API handles it
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.body.classList.add('page-entering');
+  document.body.addEventListener('animationend', () => {
+    document.body.classList.remove('page-entering');
+  }, { once: true });
+
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (!href) return;
+    if (
+      link.target === '_blank' ||
+      href.startsWith('http') ||
+      href.startsWith('mailto:') ||
+      href.startsWith('tel:') ||
+      href.startsWith('javascript:')
+    ) return;
+    if (href.startsWith('#')) return;
+    if (document.body.classList.contains('page-exiting')) {
+      e.preventDefault();
+      return;
+    }
+    e.preventDefault();
+    document.body.classList.add('page-exiting');
+    setTimeout(() => { window.location.href = href; }, 250);
   });
 }
