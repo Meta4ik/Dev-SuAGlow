@@ -138,21 +138,6 @@
                         <a href="tel:972-665-8737" class="btn-secondary">Call Us Instead</a>
                     </div>
 
-                    <!-- Map -->
-                    <div class="rounded-2xl overflow-hidden border border-charcoal/5 shadow-sm h-[280px]">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.2795693997314!2d-96.9324517!3d33.0227643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d14611a2aa39e01%3A0xd81ab189a5840191!2sSuA%20Glow!5e0!3m2!1sen!2sus!4v1772217097981!5m2!1sen!2sus"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="flex flex-wrap gap-5 mt-4 text-xs font-body text-charcoal/50">
-                        <span class="flex items-center gap-2"><i data-lucide="car" class="w-3.5 h-3.5 text-taupe"></i>
-                            Free parking</span>
-                        <span class="flex items-center gap-2"><i data-lucide="accessibility"
-                                class="w-3.5 h-3.5 text-taupe"></i> ADA accessible</span>
-                        <span class="flex items-center gap-2"><i data-lucide="building-2"
-                                class="w-3.5 h-3.5 text-taupe"></i> Suite 120, Office O</span>
-                    </div>
                 </div>
 
                 <!-- Right: info cards -->
@@ -197,13 +182,29 @@
                             class="w-10 h-10 rounded-full bg-taupe/10 flex items-center justify-center shrink-0 mt-0.5">
                             <i data-lucide="map-pin" class="w-5 h-5 text-taupe"></i>
                         </div>
-                        <div>
+                        <div class="flex-1">
                             <p class="font-bold text-sm text-near-black mb-1">Location</p>
                             <a href="https://www.google.com/maps/place/SuA+Glow/@33.0227643,-96.9350266,17z"
                                 target="_blank"
-                                class="text-sm text-taupe underline underline-offset-2 font-body leading-relaxed">
+                                class="text-sm text-taupe underline underline-offset-2 font-body leading-relaxed mb-6 block">
                                 4116 State Highway 121, Suite 120<br>Office O, Carrollton, TX 75010
                             </a>
+
+                            <!-- Map Inserted Here -->
+                            <div class="rounded-xl overflow-hidden border border-charcoal/5 shadow-sm h-[200px] mb-4">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.2795693997314!2d-96.9324517!3d33.0227643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d14611a2aa39e01%3A0xd81ab189a5840191!2sSuA%20Glow!5e0!3m2!1sen!2sus!4v1772217097981!5m2!1sen!2sus"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+
+                            <div
+                                class="flex flex-wrap gap-4 text-[10px] font-body text-charcoal/40 uppercase tracking-wider">
+                                <span class="flex items-center gap-1.5"><i data-lucide="car"
+                                        class="w-3 h-3 text-taupe"></i> Free parking</span>
+                                <span class="flex items-center gap-1.5"><i data-lucide="accessibility"
+                                        class="w-3 h-3 text-taupe"></i> ADA accessible</span>
+                            </div>
                         </div>
                     </div>
                 </div>
