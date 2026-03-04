@@ -105,7 +105,6 @@ const NAVBAR_HTML = `
                                 <i data-lucide="droplets" class="w-3 h-3 mr-2"></i>Skin Boosters
                             </a>
                             <ul class="space-y-1">
-                                <li><a href="skinboosters.html" class="dropdown-link !p-0 hover:!pl-2">Overview</a></li>
                                 <li><a href="rejuran.html" class="dropdown-link !p-0 hover:!pl-2">Rejuran</a></li>
                                 <li><a href="rejuran-tone-up.html" class="dropdown-link !p-0 hover:!pl-2">Tone Up</a></li>
                                 <li><a href="juvelook.html" class="dropdown-link !p-0 hover:!pl-2">Juvelook</a></li>
@@ -309,7 +308,6 @@ const NAVBAR_HTML = `
                                 <i data-lucide="droplets" class="w-3 h-3 mr-2"></i>Skin Boosters
                             </a>
                             <div class="flex flex-col gap-2 mt-2">
-                                <a href="skinboosters.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Overview</a>
                                 <a href="rejuran.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Rejuran</a>
                                 <a href="rejuran-tone-up.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Tone Up</a>
                                 <a href="juvelook.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Juvelook</a>
