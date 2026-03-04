@@ -376,7 +376,7 @@ function initGlowCardTracking() {
 }
 
 function initPageTransitions() {
-  if ('startViewTransition' in document) return; // native API handles it
+  if ('onpagereveal' in window) return; // cross-document View Transitions API handles it
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   document.body.classList.add('page-entering');
