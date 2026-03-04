@@ -127,9 +127,9 @@ const NAVBAR_HTML = `
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">One Day Glow</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Bridal Glow</a></li>
                             </ul>
-                            <div class="flex items-center gap-2 text-[10px] uppercase tracking-widest text-taupe font-semibold mb-3">
-                                <i data-lucide="layers" class="w-3 h-3"></i> Exosome
-                            </div>
+                            <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="layers" class="w-3 h-3 mr-2"></i> Exosome
+                            </a>
                             <ul class="space-y-2">
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Exosome Facial</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Hair Restoration</a></li>
@@ -334,9 +334,9 @@ const NAVBAR_HTML = `
 
                         <!-- Exosome -->
                         <div>
-                            <div class="flex items-center gap-2 text-[10px] uppercase tracking-widest text-taupe font-semibold mb-3">
-                                <i data-lucide="layers" class="w-3 h-3"></i> Exosome
-                            </div>
+                            <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="layers" class="w-3 h-3 mr-2"></i> Exosome
+                            </a>
                             <div class="flex flex-col gap-2">
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Exosome Facial</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Hair Restoration</a>
