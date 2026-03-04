@@ -25,7 +25,7 @@
             background: white;
             padding: 60px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .heading {
@@ -50,8 +50,15 @@
             padding-left: 14px;
         }
 
-        .section-title.green  { color: #166534; border-color: #166534; }
-        .section-title.orange { color: #92400e; border-color: #d97706; }
+        .section-title.green {
+            color: #166534;
+            border-color: #166534;
+        }
+
+        .section-title.orange {
+            color: #92400e;
+            border-color: #d97706;
+        }
 
         .status-tag {
             display: inline-block;
@@ -63,10 +70,26 @@
             margin-left: 8px;
             vertical-align: middle;
         }
-        .s-done    { background:#dcfce7; color:#166534; }
-        .s-missing { background:#fee2e2; color:#991b1b; }
-        .s-warn    { background:#fef9c3; color:#854d0e; }
-        .s-info    { background:#e0f2fe; color:#075985; }
+
+        .s-done {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .s-missing {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .s-warn {
+            background: #fef9c3;
+            color: #854d0e;
+        }
+
+        .s-info {
+            background: #e0f2fe;
+            color: #075985;
+        }
 
         .audit-item {
             background: #fdfdfd;
@@ -76,8 +99,15 @@
             margin-bottom: 14px;
         }
 
-        .audit-item.green  { border-color:#bbf7d0; background:#f0fdf4; }
-        .audit-item.orange { border-color:#fde68a; background:#fffbeb; }
+        .audit-item.green {
+            border-color: #bbf7d0;
+            background: #f0fdf4;
+        }
+
+        .audit-item.orange {
+            border-color: #fde68a;
+            background: #fffbeb;
+        }
 
         .audit-item h4 {
             font-weight: 700;
@@ -103,11 +133,26 @@
             line-height: 1.4;
         }
 
-        .audit-item li i { flex-shrink: 0; margin-top: 2px; }
-        .i-done   { color: #166534; }
-        .i-miss   { color: #dc2626; }
-        .i-warn   { color: #d97706; }
-        .i-info   { color: #0284c7; }
+        .audit-item li i {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .i-done {
+            color: #166534;
+        }
+
+        .i-miss {
+            color: #dc2626;
+        }
+
+        .i-warn {
+            color: #d97706;
+        }
+
+        .i-info {
+            color: #0284c7;
+        }
 
         code {
             background: #eee;
@@ -158,7 +203,8 @@
             </div>
         </div>
 
-        <p style="font-size:0.9rem; opacity:0.75;">Punch-list of missing pages, broken links, placeholder assets, and content gaps against the live <code>navbar.js</code> structure.</p>
+        <p style="font-size:0.9rem; opacity:0.75;">Punch-list of missing pages, broken links, placeholder assets, and
+            content gaps against the live <code>navbar.js</code> structure.</p>
 
         <!-- ── RECENTLY COMPLETED ──────────────────────────────── -->
         <div class="section-title green"><i data-lucide="check-circle-2"></i> Recently Completed</div>
@@ -169,27 +215,54 @@
                 <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>skinvive.html</code> — live</li>
                 <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>byryzn.html</code> — live</li>
                 <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>re20.html</code> — live</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>rejuran-tone-up.html</code> — live</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>contact.html</code> — full page with booking, map, hours, FAQ, schema</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Nav restructured to Feb 4 2026 spec — About, Treatments (7-section mega), Wellness, Referral, Media, Financing, Contact, Book Now</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Book Now → direct external booking link (dropdown removed)</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Promotions &amp; Vlog removed from nav items</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Treatment Quiz removed from nav entirely</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Topbar: "Special Promotions" → "Promotions" with tag icon badge + ping animation</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Scroll nav indicator: tag icon badge replacing plain dot</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Treatments col 3: "Signature &amp; Exosome" split into SuA Glow Signature + Exosome sub-sections</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Treatments col 4: "Precision Tech" replaced with LDM K-Beauty Treatments / LDM Ultrasound Treatment / SkinPen Microneedling</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Skin Boosters: Restylane Vital Light added; "Sophia's Choice" renamed "Get from Sophia"; Overview link removed from nav</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>referral.html</code> — Coming Soon page live (hero, teaser cards, notify section)</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Media dropdown: "Before &amp; After Gallery", "Patient Testimonials" label updates</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Mobile drawer: mirrors all desktop changes, 7-section Treatments accordion</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Footer TikTok handle corrected to @suaglowkbeauty_</li>
-                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>style-guide.html</code> — Utility Styles &amp; Custom Components sections added</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>rejuran-tone-up.html</code> — live
+                </li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>contact.html</code> — full page with
+                    booking, map, hours, FAQ, schema</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Nav restructured to Feb 4 2026 spec —
+                    About, Treatments (7-section mega), Wellness, Referral, Media, Financing, Contact, Book Now</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Book Now → direct external booking link
+                    (dropdown removed)</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Promotions &amp; Vlog removed from nav
+                    items</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Treatment Quiz removed from nav entirely
+                </li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Topbar: "Special Promotions" →
+                    "Promotions" with tag icon badge + ping animation</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Scroll nav indicator: tag icon badge
+                    replacing plain dot</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Treatments col 3: "Signature &amp;
+                    Exosome" split into SuA Glow Signature + Exosome sub-sections</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Treatments col 4: "Precision Tech"
+                    replaced with LDM K-Beauty Treatments / LDM Ultrasound Treatment / SkinPen Microneedling</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Skin Boosters: Restylane Vital Light
+                    added; "Sophia's Choice" renamed "Get from Sophia"; Overview link removed from nav</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>referral.html</code> — Coming Soon
+                    page live (hero, teaser cards, notify section)</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Media dropdown: "Before &amp; After
+                    Gallery", "Patient Testimonials" label updates</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Mobile drawer: mirrors all desktop
+                    changes, 7-section Treatments accordion</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Footer TikTok handle corrected to
+                    @suaglowkbeauty_</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>style-guide.html</code> — Utility
+                    Styles &amp; Custom Components sections added</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Mobile drawer: Promotions CTA added at top
+                    of mobile navigation</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Hero spacing: precise 250px top offset on
+                    all content pages (desktop)</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Hero sections: uniform
+                    <code>min-h-[50vh]</code> applied to all 12 content pages (excl. index, contact, financing)</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>contact.html</code>: hero height
+                    reduced, balanced padding, map moved into Location card, mobile pill badge position corrected</li>
+                <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>contact.html</code>: business hours
+                    updated — Mon–Fri 9:30 AM–5 PM, Sat 9:30 AM–12:30 PM, Sun Closed (Schema.org updated)</li>
             </ul>
         </div>
 
         <!-- ── MISSING PAGES ──────────────────────────────────── -->
-        <div class="section-title"><i data-lucide="file-plus"></i> 1. Missing Pages <span class="count-badge">24</span></div>
+        <div class="section-title"><i data-lucide="file-plus"></i> 1. Missing Pages <span class="count-badge">24</span>
+        </div>
 
         <div class="grid md:grid-cols-2 gap-5">
 
@@ -197,13 +270,18 @@
                 <h4>Injectables <span class="status-tag s-missing">4 pages missing</span></h4>
                 <ul>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>cosmetic-tox.html</code>
-                        <span class="sub-note">assets available: botox-face.jpg, injectaables.jpg</span></li>
+                        <span class="sub-note">assets available: botox-face.jpg, injectaables.jpg</span>
+                    </li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>medical-tox.html</code>
-                        <span class="sub-note">assets available: scar-treatment.jpg, suaglow_scar_tissue.png, subcision-*.png</span></li>
+                        <span class="sub-note">assets available: scar-treatment.jpg, suaglow_scar_tissue.png,
+                            subcision-*.png</span>
+                    </li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>dermal-fillers.html</code>
-                        <span class="sub-note">assets available: filler-profile.jpg</span></li>
+                        <span class="sub-note">assets available: filler-profile.jpg</span>
+                    </li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>sculptra.html</code>
-                        <span class="sub-note">assets available: sculptra-particle.png, sculptra-placeholder.jpg</span></li>
+                        <span class="sub-note">assets available: sculptra-particle.png, sculptra-placeholder.jpg</span>
+                    </li>
                 </ul>
             </div>
 
@@ -212,7 +290,8 @@
                 <ul>
                     <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>skinboosters.html</code> ✓</li>
                     <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>rejuran.html</code> ✓</li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>rejuran-tone-up.html</code> ✓</li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>rejuran-tone-up.html</code> ✓
+                    </li>
                     <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>juvelook.html</code> ✓</li>
                     <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>re20.html</code> ✓</li>
                     <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>cellredm.html</code> ✓</li>
@@ -220,7 +299,8 @@
                     <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>hilowave.html</code> ✓</li>
                     <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>skinvive.html</code> ✓</li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>restylane-vital-light.html</code>
-                        <span class="sub-note">no assets on hand</span></li>
+                        <span class="sub-note">no assets on hand</span>
+                    </li>
                 </ul>
             </div>
 
@@ -228,11 +308,14 @@
                 <h4>SuA Glow Signature <span class="status-tag s-missing">3 pages missing</span></h4>
                 <ul>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>get-from-sophia.html</code>
-                        <span class="sub-note">assets available: sophia-yang.jpg, portrait_*.png</span></li>
+                        <span class="sub-note">assets available: sophia-yang.jpg, portrait_*.png</span>
+                    </li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>one-day-glow.html</code>
-                        <span class="sub-note">no assets on hand</span></li>
+                        <span class="sub-note">no assets on hand</span>
+                    </li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>bridal-glow.html</code>
-                        <span class="sub-note">no assets on hand</span></li>
+                        <span class="sub-note">no assets on hand</span>
+                    </li>
                 </ul>
             </div>
 
@@ -240,9 +323,11 @@
                 <h4>Exosome <span class="status-tag s-missing">2 pages missing</span></h4>
                 <ul>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>exosome-facial.html</code>
-                        <span class="sub-note">no dedicated assets on hand</span></li>
+                        <span class="sub-note">no dedicated assets on hand</span>
+                    </li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>hair-restoration.html</code>
-                        <span class="sub-note">no assets on hand</span></li>
+                        <span class="sub-note">no assets on hand</span>
+                    </li>
                 </ul>
             </div>
 
@@ -250,14 +335,21 @@
                 <h4>LDM K-Beauty Treatments <span class="status-tag s-missing">7 pages missing</span></h4>
                 <ul>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>ldm-ultrasound-facial.html</code>
-                        <span class="sub-note">specials asset: SuA Launch Special - ULTRASOUND.webp</span></li>
-                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>ldm-skin-booster-facial.html</code></li>
-                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>post-procedure-recovery-ldm.html</code></li>
-                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>barrier-repair-hydration.html</code></li>
+                        <span class="sub-note">specials asset: SuA Launch Special - ULTRASOUND.webp</span>
+                    </li>
+                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>ldm-skin-booster-facial.html</code>
+                    </li>
+                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i>
+                        <code>post-procedure-recovery-ldm.html</code></li>
+                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>barrier-repair-hydration.html</code>
+                    </li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>rejuran-tone-up-facial.html</code>
-                        <span class="sub-note">distinct from rejuran-tone-up.html product page</span></li>
-                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>exosome-recovery-facial.html</code></li>
-                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>ha-glass-skin-facial.html</code></li>
+                        <span class="sub-note">distinct from rejuran-tone-up.html product page</span>
+                    </li>
+                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>exosome-recovery-facial.html</code>
+                    </li>
+                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>ha-glass-skin-facial.html</code>
+                    </li>
                 </ul>
             </div>
 
@@ -265,7 +357,8 @@
                 <h4>LDM Ultrasound Treatment <span class="status-tag s-missing">1 page missing</span></h4>
                 <ul>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>ldm-lifting-toning.html</code>
-                        <span class="sub-note">no assets on hand</span></li>
+                        <span class="sub-note">no assets on hand</span>
+                    </li>
                 </ul>
             </div>
 
@@ -273,7 +366,8 @@
                 <h4>SkinPen Microneedling <span class="status-tag s-missing">1 page missing</span></h4>
                 <ul>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>microneedling.html</code>
-                        <span class="sub-note">no assets on hand</span></li>
+                        <span class="sub-note">no assets on hand</span>
+                    </li>
                 </ul>
             </div>
 
@@ -281,9 +375,11 @@
                 <h4>Wellness <span class="status-tag s-missing">2 pages missing</span></h4>
                 <ul>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>medical-weight-loss.html</code>
-                        <span class="sub-note">assets available: wellness-iv.jpg</span></li>
+                        <span class="sub-note">assets available: wellness-iv.jpg</span>
+                    </li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>peptides.html</code>
-                        <span class="sub-note">no dedicated assets on hand</span></li>
+                        <span class="sub-note">no dedicated assets on hand</span>
+                    </li>
                 </ul>
             </div>
 
@@ -291,22 +387,30 @@
                 <h4>Media <span class="status-tag s-missing">4 pages missing</span></h4>
                 <ul>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>before-after.html</code>
-                        <span class="sub-note">assets available: rejuran-before-after.png, subcision-before-after.png, suaglow_scar_tissue_before1/2.png, suaglow_scar_tissue_after.png</span></li>
+                        <span class="sub-note">assets available: rejuran-before-after.png, subcision-before-after.png,
+                            suaglow_scar_tissue_before1/2.png, suaglow_scar_tissue_after.png</span>
+                    </li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>video-reels.html</code>
-                        <span class="sub-note">no thumbnails on hand</span></li>
+                        <span class="sub-note">no thumbnails on hand</span>
+                    </li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>press-features.html</code>
-                        <span class="sub-note">no press/media logos on hand</span></li>
+                        <span class="sub-note">no press/media logos on hand</span>
+                    </li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>testimonials.html</code>
-                        <span class="sub-note">no assets on hand</span></li>
+                        <span class="sub-note">no assets on hand</span>
+                    </li>
                 </ul>
             </div>
 
             <div class="audit-item">
                 <h4>Global Utility <span class="status-tag s-missing">2 pages missing</span></h4>
                 <ul>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>referral.html</code> — Coming Soon page live ✓</li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>referral.html</code> — Coming
+                        Soon page live ✓</li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> <code>patient-forms.html</code>
-                        <span class="sub-note">was in Book Now dropdown (removed); still needed as standalone page</span></li>
+                        <span class="sub-note">was in Book Now dropdown (removed); still needed as standalone
+                            page</span>
+                    </li>
                 </ul>
             </div>
 
@@ -320,30 +424,50 @@
             <div class="audit-item green">
                 <h4 style="color:#166534;">Assets on Hand (usable)</h4>
                 <ul>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Logos: <code>logo-main.webp</code>, <code>logo-horizontal.png</code>, <code>logo-vertical.png</code></li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Hero videos: <code>suaglow_hero_vid.mp4</code>, <code>suaglow_hero_vid_v2.mp4</code></li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Injectables: <code>botox-face.jpg</code>, <code>injectaables.jpg</code>, <code>filler-profile.jpg</code>, <code>sculptra-particle.png</code></li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Scar/Medical Tox: <code>scar-treatment.jpg</code>, <code>subcision-*.png</code>, <code>suaglow_scar_tissue*.png/webp</code></li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Sophia: <code>sophia-yang.jpg</code></li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Korean model portraits: <code>portrait_1–5_highres.png</code> + 3 diptych images</li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Wellness: <code>wellness-iv.jpg</code></li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Specials graphics: 7 <code>SuA Launch Special - *.webp</code> (age-smart, ULTRASOUND, LIP PN, Neck refine, shoulder, skin reset, launch offer)</li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Before &amp; After: <code>rejuran-before-after.png</code>, <code>subcision-before-after.png</code>, <code>suaglow_scar_tissue_before1/2.png</code>, <code>suaglow_scar_tissue_after.png</code></li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>assets/doc_images/</code> — 44 doc images (doc_img_1–22, image1–22)</li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>assets/skinvive/</code> — 12 product images</li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Logos: <code>logo-main.webp</code>,
+                        <code>logo-horizontal.png</code>, <code>logo-vertical.png</code></li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Hero videos:
+                        <code>suaglow_hero_vid.mp4</code>, <code>suaglow_hero_vid_v2.mp4</code></li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Injectables:
+                        <code>botox-face.jpg</code>, <code>injectaables.jpg</code>, <code>filler-profile.jpg</code>,
+                        <code>sculptra-particle.png</code></li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Scar/Medical Tox:
+                        <code>scar-treatment.jpg</code>, <code>subcision-*.png</code>,
+                        <code>suaglow_scar_tissue*.png/webp</code></li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Sophia: <code>sophia-yang.jpg</code>
+                    </li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Korean model portraits:
+                        <code>portrait_1–5_highres.png</code> + 3 diptych images</li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Wellness: <code>wellness-iv.jpg</code>
+                    </li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Specials graphics: 7
+                        <code>SuA Launch Special - *.webp</code> (age-smart, ULTRASOUND, LIP PN, Neck refine, shoulder,
+                        skin reset, launch offer)</li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Before &amp; After:
+                        <code>rejuran-before-after.png</code>, <code>subcision-before-after.png</code>,
+                        <code>suaglow_scar_tissue_before1/2.png</code>, <code>suaglow_scar_tissue_after.png</code></li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>assets/doc_images/</code> — 44
+                        doc images (doc_img_1–22, image1–22)</li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>assets/skinvive/</code> — 12
+                        product images</li>
                 </ul>
             </div>
 
             <div class="audit-item">
                 <h4>Assets Needed — Not on Hand <span class="status-tag s-missing">Action Required</span></h4>
                 <ul>
-                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> LDM device / treatment photos (hero + procedure)</li>
+                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> LDM device / treatment photos (hero +
+                        procedure)</li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> SkinPen / microneedling photos</li>
-                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> Exosome facial &amp; hair restoration photos</li>
-                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> Bridal Glow / One Day Glow lifestyle photos</li>
+                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> Exosome facial &amp; hair restoration
+                        photos</li>
+                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> Bridal Glow / One Day Glow lifestyle
+                        photos</li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> Peptides treatment photo</li>
-                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> Restylane Vital Light product / treatment photo</li>
-                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> Press / media outlet logos for press-features page</li>
+                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> Restylane Vital Light product / treatment
+                        photo</li>
+                    <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> Press / media outlet logos for
+                        press-features page</li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> Video reel thumbnails</li>
                     <li><i data-lucide="x-circle" class="i-miss w-4 h-4"></i> Referral program hero / illustration</li>
                 </ul>
@@ -352,25 +476,40 @@
             <div class="audit-item orange">
                 <h4 style="color:#92400e;">Orphaned Assets <span class="status-tag s-warn">No page linked</span></h4>
                 <ul>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>air_toxin.jpg</code> — unused</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>hydro-injection-placeholder.jpg</code> — unused</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>treatment-guideline.png</code> — unused</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>unnamed.jpg</code> — unused, unidentified</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>hero-bg.jpg</code> / <code>hero-bg-new.jpg</code> — check if superseded by <code>bg_hero.webp</code></li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>logo-horizontal.png</code> / <code>logo-vertical.png</code> — confirm usage vs <code>logo-main.webp</code></li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>art-of-korean.png</code> — not found in any current page</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>pdlla-clinical-anatomy.png</code>, <code>pdlla-mechanism.png</code> — verify used in juvelook.html</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>air_toxin.jpg</code> — unused
+                    </li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i>
+                        <code>hydro-injection-placeholder.jpg</code> — unused</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>treatment-guideline.png</code> —
+                        unused</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>unnamed.jpg</code> — unused,
+                        unidentified</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>hero-bg.jpg</code> /
+                        <code>hero-bg-new.jpg</code> — check if superseded by <code>bg_hero.webp</code></li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>logo-horizontal.png</code> /
+                        <code>logo-vertical.png</code> — confirm usage vs <code>logo-main.webp</code></li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>art-of-korean.png</code> — not
+                        found in any current page</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i>
+                        <code>pdlla-clinical-anatomy.png</code>, <code>pdlla-mechanism.png</code> — verify used in
+                        juvelook.html</li>
                 </ul>
             </div>
 
             <div class="audit-item orange">
-                <h4 style="color:#92400e;">Placeholder / Low-Quality Assets <span class="status-tag s-warn">Needs Real Photo</span></h4>
+                <h4 style="color:#92400e;">Placeholder / Low-Quality Assets <span class="status-tag s-warn">Needs Real
+                        Photo</span></h4>
                 <ul>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>sculptra-placeholder.jpg</code> — filename says placeholder, replace with real product shot</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>about-image.jpg</code> — generic; confirm this is the final about-page hero</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>skin-boosters-bg.jpg</code> — confirm quality meets production standard</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>hyaluronic-acid-structure.png</code> — scientific diagram, confirm correct branding</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>korean_woman_*.png</code> — 4 stock images in root; move to <code>korean-models/</code> to match structure</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>sculptra-placeholder.jpg</code>
+                        — filename says placeholder, replace with real product shot</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>about-image.jpg</code> —
+                        generic; confirm this is the final about-page hero</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>skin-boosters-bg.jpg</code> —
+                        confirm quality meets production standard</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i>
+                        <code>hyaluronic-acid-structure.png</code> — scientific diagram, confirm correct branding</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>korean_woman_*.png</code> — 4
+                        stock images in root; move to <code>korean-models/</code> to match structure</li>
                 </ul>
             </div>
 
@@ -384,21 +523,31 @@
             <div class="audit-item">
                 <h4>Nav — Injectables (all <code>#</code>) <span class="status-tag s-missing">Fix Needed</span></h4>
                 <ul>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Cosmetic Tox → <code>cosmetic-tox.html</code></li>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Medical Tox → <code>medical-tox.html</code></li>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Dermal Fillers → <code>dermal-fillers.html</code></li>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Sculptra → <code>sculptra.html</code></li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Cosmetic Tox →
+                        <code>cosmetic-tox.html</code></li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Medical Tox →
+                        <code>medical-tox.html</code></li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Dermal Fillers →
+                        <code>dermal-fillers.html</code></li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Sculptra →
+                        <code>sculptra.html</code></li>
                 </ul>
             </div>
 
             <div class="audit-item">
-                <h4>Nav — SuA Glow Signature / Exosome (all <code>#</code>) <span class="status-tag s-missing">Fix Needed</span></h4>
+                <h4>Nav — SuA Glow Signature / Exosome (all <code>#</code>) <span class="status-tag s-missing">Fix
+                        Needed</span></h4>
                 <ul>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Get from Sophia → <code>get-from-sophia.html</code></li>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> One Day Glow → <code>one-day-glow.html</code></li>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Bridal Glow → <code>bridal-glow.html</code></li>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Exosome Facial → <code>exosome-facial.html</code></li>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Hair Restoration → <code>hair-restoration.html</code></li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Get from Sophia →
+                        <code>get-from-sophia.html</code></li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> One Day Glow →
+                        <code>one-day-glow.html</code></li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Bridal Glow →
+                        <code>bridal-glow.html</code></li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Exosome Facial →
+                        <code>exosome-facial.html</code></li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Hair Restoration →
+                        <code>hair-restoration.html</code></li>
                 </ul>
             </div>
 
@@ -408,13 +557,16 @@
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> LDM Korean Ultrasound Facial</li>
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> LDM + Skin Booster Facial</li>
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Post-Procedure Recovery LDM</li>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Barrier Repair &amp; Hydration Therapy</li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Barrier Repair &amp; Hydration
+                        Therapy</li>
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Rejuran Tone-Up Facial</li>
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Exosome Recovery Facial</li>
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> HA Glass Skin Facial</li>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Lifting &amp; Toning (LDM Ultrasound)</li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Lifting &amp; Toning (LDM
+                        Ultrasound)</li>
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Microneedling (SkinPen)</li>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Restylane Vital Light (Skin Boosters)</li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Restylane Vital Light (Skin
+                        Boosters)</li>
                 </ul>
             </div>
 
@@ -423,30 +575,37 @@
                 <ul>
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Wellness: Medical Weight Loss</li>
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Wellness: Peptides</li>
-                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Media: Before &amp; After Gallery</li>
+                    <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Media: Before &amp; After Gallery
+                    </li>
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Media: Video Reels</li>
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Media: Press &amp; Features</li>
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Media parent link (href="#")</li>
                     <li><i data-lucide="alert-triangle" class="i-miss w-4 h-4"></i> Media: Patient Testimonials</li>
                     <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Book Now → external URL ✓</li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Referral → <code>referral.html</code> ✓ live</li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> Referral → <code>referral.html</code>
+                        ✓ live</li>
                 </ul>
             </div>
 
             <div class="audit-item">
                 <h4>Anchor Mismatches <span class="status-tag s-warn">Review</span></h4>
                 <ul>
-                    <li><i data-lucide="alert-triangle" class="i-warn w-4 h-4"></i> <code>index.html#wellness</code> — Wellness nav link targets this anchor; confirm section exists on homepage</li>
-                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> About dropdown anchors (#story, #k-beauty, #sophia, #safety, #difference) — verify all exist in <code>about.html</code></li>
+                    <li><i data-lucide="alert-triangle" class="i-warn w-4 h-4"></i> <code>index.html#wellness</code> —
+                        Wellness nav link targets this anchor; confirm section exists on homepage</li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> About dropdown anchors (#story,
+                        #k-beauty, #sophia, #safety, #difference) — verify all exist in <code>about.html</code></li>
                 </ul>
             </div>
 
             <div class="audit-item">
                 <h4>Page-Level Dead Links <span class="status-tag s-warn">Fix Needed</span></h4>
                 <ul>
-                    <li><i data-lucide="alert-triangle" class="i-warn w-4 h-4"></i> <code>rejuran.html</code> — news highlight links all <code>#</code></li>
-                    <li><i data-lucide="alert-triangle" class="i-warn w-4 h-4"></i> <code>cookie-notices-choices.html</code> — browser support links all <code>#</code></li>
-                    <li><i data-lucide="alert-triangle" class="i-warn w-4 h-4"></i> <code>contact.html</code> — hours (Mon–Fri 10–6, Sat 10–4, Sun closed) are placeholder — confirm actual hours</li>
+                    <li><i data-lucide="alert-triangle" class="i-warn w-4 h-4"></i> <code>rejuran.html</code> — news
+                        highlight links all <code>#</code></li>
+                    <li><i data-lucide="alert-triangle" class="i-warn w-4 h-4"></i>
+                        <code>cookie-notices-choices.html</code> — browser support links all <code>#</code></li>
+                    <li><i data-lucide="check-circle" class="i-done w-4 h-4"></i> <code>contact.html</code> hours —
+                        updated to Mon–Fri 9:30–5, Sat 9:30–12:30, Sun Closed ✓</li>
                 </ul>
             </div>
 
@@ -458,23 +617,33 @@
         <div class="grid md:grid-cols-2 gap-5">
 
             <div class="audit-item orange">
-                <h4 style="color:#92400e;">Specials / Promotions <span class="status-tag s-warn">Time-Sensitive</span></h4>
+                <h4 style="color:#92400e;">Specials / Promotions <span class="status-tag s-warn">Time-Sensitive</span>
+                </h4>
                 <ul>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>specials.js</code> heading still uses "Lunar Glow" branding — update when promo ends</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> "February – March | Only 50 Spots" copy — update when promotion changes</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> Book Lunar Glow / View All Promotions buttons point to <code>/online-booking/promotions</code> — confirm that URL exists</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> <code>specials.js</code> heading still
+                        uses "Lunar Glow" branding — update when promo ends</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> "February – March | Only 50 Spots"
+                        copy — update when promotion changes</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> Book Lunar Glow / View All Promotions
+                        buttons point to <code>/online-booking/promotions</code> — confirm that URL exists</li>
                 </ul>
             </div>
 
             <div class="audit-item orange">
                 <h4 style="color:#92400e;">Pages Needing Copy <span class="status-tag s-warn">Copy Required</span></h4>
                 <ul>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> All injectable pages (4) — clinical copy, pricing, FAQs</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> All LDM pages (7+2) — treatment descriptions, protocol, results</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> Signature &amp; Exosome pages (5) — story-driven copy needed</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> Wellness pages (2) — medical weight loss + peptides clinical copy</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> Referral program — rules, rewards, how-it-works copy</li>
-                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> Patient forms page — intake form copy / embed</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> All injectable pages (4) — clinical
+                        copy, pricing, FAQs</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> All LDM pages (7+2) — treatment
+                        descriptions, protocol, results</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> Signature &amp; Exosome pages (5) —
+                        story-driven copy needed</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> Wellness pages (2) — medical weight
+                        loss + peptides clinical copy</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> Referral program — rules, rewards,
+                        how-it-works copy</li>
+                    <li><i data-lucide="alert-circle" class="i-warn w-4 h-4"></i> Patient forms page — intake form copy
+                        / embed</li>
                 </ul>
             </div>
 
