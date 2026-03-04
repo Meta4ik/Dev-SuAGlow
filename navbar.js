@@ -128,7 +128,7 @@ const NAVBAR_HTML = `
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Bridal Glow</a></li>
                             </ul>
                             <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
-                                <i data-lucide="layers" class="w-3 h-3 mr-2"></i> Exosome
+                                <i data-lucide="microscope" class="w-3 h-3 mr-2"></i> Exosome
                             </a>
                             <ul class="space-y-2">
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Exosome Facial</a></li>
@@ -335,7 +335,7 @@ const NAVBAR_HTML = `
                         <!-- Exosome -->
                         <div>
                             <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
-                                <i data-lucide="layers" class="w-3 h-3 mr-2"></i> Exosome
+                                <i data-lucide="microscope" class="w-3 h-3 mr-2"></i> Exosome
                             </a>
                             <div class="flex flex-col gap-2">
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Exosome Facial</a>
