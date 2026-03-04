@@ -256,6 +256,20 @@ const NAVBAR_HTML = `
         <div class="flex-1 overflow-y-auto p-6">
             <div class="flex flex-col gap-6">
 
+                <!-- Promotions CTA -->
+                <a href="specials.html" class="group flex items-center gap-3 bg-red-950/10 px-5 py-3 rounded-2xl border border-red-500/20 hover:bg-red-950/20 hover:border-red-500/40 transition-all duration-300">
+                    <span class="relative flex h-5 w-5 shrink-0 items-center justify-center">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-5 w-5 bg-red-500 items-center justify-center">
+                            <i data-lucide="tag" class="w-2.5 h-2.5 text-white"></i>
+                        </span>
+                    </span>
+                    <span class="font-body text-sm text-charcoal/80 group-hover:text-charcoal transition-colors">
+                        Check out our <span class="text-red-500 font-semibold">Promotions</span>
+                    </span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 text-red-500 ml-auto group-hover:translate-x-1 transition-transform shrink-0"></i>
+                </a>
+
                 <!-- About -->
                 <div class="mobile-accordion">
                     <button
