@@ -13,18 +13,20 @@ const NAVBAR_HTML = `
             </div>
 
             <div class="flex items-center justify-center md:justify-end gap-6 flex-1 w-full md:w-auto pointer-events-none">
-                <!-- Lunar Launch Specials CTA -->
+                <!-- Promotions CTA -->
                 <a href="specials.html" class="pointer-events-auto group flex items-center justify-center gap-2.5 bg-red-950/40 px-5 py-1.5 rounded-full border border-red-500/30 hover:bg-red-900/60 hover:border-red-500/80 transition-all duration-300 shadow-[0_0_15px_rgba(239,68,68,0.15)] hover:shadow-[0_0_20px_rgba(239,68,68,0.3)] w-max max-w-[90vw]">
-                    <span class="relative flex h-2 w-2 shrink-0">
+                    <span class="relative flex h-5 w-5 shrink-0 items-center justify-center">
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                      <span class="relative inline-flex rounded-full h-5 w-5 bg-red-500 items-center justify-center">
+                        <i data-lucide="tag" class="w-2.5 h-2.5 text-white"></i>
+                      </span>
                     </span>
                     <span class="text-white/90 normal-case text-[11px] font-medium tracking-[0.1em] transition-colors group-hover:text-white truncate">
-                        Check out our <span class="text-red-400 font-semibold">Special Promotions</span>
+                        Check out our <span class="text-red-400 font-semibold">Promotions</span>
                     </span>
                     <i data-lucide="arrow-right" class="w-3 h-3 text-red-500 group-hover:translate-x-1 transition-transform shrink-0"></i>
                 </a>
-            
+
                 <div class="hidden md:flex items-center pointer-events-auto">
                     <a href="tel:972-665-8737" class="hover:text-white transition-colors flex items-center gap-2">
                         <i data-lucide="phone" class="w-3 h-3 text-taupe"></i> <span class="hidden lg:inline whitespace-nowrap">972-665-8737</span><span class="inline lg:hidden whitespace-nowrap">Call Us</span>
@@ -43,9 +45,7 @@ const NAVBAR_HTML = `
         </a>
 
         <!-- Desktop Menu -->
-        <div class="hidden lg:flex items-center gap-6 xl:gap-8">
-            <a href="index.html"
-                class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase">Home</a>
+        <div class="hidden lg:flex items-center gap-5 xl:gap-8">
 
             <!-- About Dropdown -->
             <div class="nav-item-dropdown">
@@ -57,7 +57,7 @@ const NAVBAR_HTML = `
                     <a href="about.html#story" class="dropdown-link font-body">Our Story</a>
                     <a href="about.html#k-beauty" class="dropdown-link font-body">What is K-Beauty</a>
                     <a href="about.html#sophia" class="dropdown-link font-body">Meet Sophia</a>
-                    <a href="about.html#safety" class="dropdown-link font-body">Medical Oversight & Safety</a>
+                    <a href="about.html#safety" class="dropdown-link font-body">Medical Oversight &amp; Safety</a>
                     <a href="about.html#difference" class="dropdown-link font-body">Why SuA Glow is Different</a>
                 </div>
             </div>
@@ -70,28 +70,43 @@ const NAVBAR_HTML = `
                 </a>
                 <div class="mega-menu p-10">
                     <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 text-left">
-                        <!-- Injectables -->
+
+                        <!-- Col 1: Injectables -->
                         <div>
                             <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
                                 <i data-lucide="syringe" class="w-3 h-3 mr-2"></i>Injectables
                             </a>
-                            <ul class="space-y-2">
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Cosmetic Tox: Face & Body</a>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2">
+                                        Cosmetic Tox
+                                        <span class="block text-[10px] text-charcoal/40 mt-0.5 font-normal">Face &amp; Body</span>
+                                    </a>
                                 </li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Medical Tox: Scar, Sweat,
-                                        Migraine</a></li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Dermal Fillers</a></li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Sculptra: Face & Body</a>
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2">
+                                        Medical Tox
+                                        <span class="block text-[10px] text-charcoal/40 mt-0.5 font-normal">Scar, Sweating, Migraine, etc</span>
+                                    </a>
                                 </li>
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2">
+                                        Dermal Fillers
+                                        <span class="block text-[10px] text-charcoal/40 mt-0.5 font-normal">Facial Contouring / Volume Restoration</span>
+                                    </a>
+                                </li>
+                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Sculptra</a></li>
                             </ul>
                         </div>
-                        <!-- Skin Boosters -->
+
+                        <!-- Col 2: Skin Boosters -->
                         <div>
                             <a href="skinboosters.html" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
                                 <i data-lucide="droplets" class="w-3 h-3 mr-2"></i>Skin Boosters
                             </a>
-                             <ul class="space-y-1">
-                                 <li><a href="rejuran.html" class="dropdown-link !p-0 hover:!pl-2">Rejuran</a></li>
+                            <ul class="space-y-1">
+                                <li><a href="skinboosters.html" class="dropdown-link !p-0 hover:!pl-2">Overview</a></li>
+                                <li><a href="rejuran.html" class="dropdown-link !p-0 hover:!pl-2">Rejuran</a></li>
                                 <li><a href="rejuran-tone-up.html" class="dropdown-link !p-0 hover:!pl-2">Tone Up</a></li>
                                 <li><a href="juvelook.html" class="dropdown-link !p-0 hover:!pl-2">Juvelook</a></li>
                                 <li><a href="re20.html" class="dropdown-link !p-0 hover:!pl-2">Elravie Re20</a></li>
@@ -99,45 +114,55 @@ const NAVBAR_HTML = `
                                 <li><a href="byryzn.html" class="dropdown-link !p-0 hover:!pl-2">BYRYZN</a></li>
                                 <li><a href="hilowave.html" class="dropdown-link !p-0 hover:!pl-2">HiloWave</a></li>
                                 <li><a href="skinvive.html" class="dropdown-link !p-0 hover:!pl-2">Skinvive</a></li>
-                                <li><a href="#"
-                                        class="dropdown-link !p-0 hover:!pl-2 font-semibold text-taupe text-xs">Treatment
-                                        Quiz</a></li>
+                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Restylane Vital Light</a></li>
                             </ul>
                         </div>
-                        <!-- Signature & Exosome -->
+
+                        <!-- Col 3: SuA Glow Signature + Exosome -->
                         <div>
                             <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
-                                <i data-lucide="sparkles" class="w-3 h-3 mr-2"></i>Signature & Exosome
+                                <i data-lucide="sparkles" class="w-3 h-3 mr-2"></i>SuA Glow Signature
                             </a>
-                            <ul class="space-y-2">
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Sophia's Choice</a></li>
+                            <ul class="space-y-2 mb-5">
+                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Get from Sophia</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">One Day Glow</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Bridal Glow</a></li>
+                            </ul>
+                            <div class="flex items-center gap-2 text-[10px] uppercase tracking-widest text-taupe font-semibold mb-3">
+                                <i data-lucide="layers" class="w-3 h-3"></i> Exosome
+                            </div>
+                            <ul class="space-y-2">
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Exosome Facial</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Hair Restoration</a></li>
                             </ul>
                         </div>
-                        <!-- LDM & More -->
+
+                        <!-- Col 4: LDM K-Beauty + LDM Ultrasound + SkinPen -->
                         <div>
                             <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
-                                <i data-lucide="zap" class="w-3 h-3 mr-2"></i>Precision Tech
+                                <i data-lucide="scan-face" class="w-3 h-3 mr-2"></i>LDM K-Beauty Treatments
                             </a>
-                            <ul class="space-y-2">
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">LDM Ultrasound Facial</a>
-                                </li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">LDM + Skin Booster</a></li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Barrier Repair Therapy</a>
-                                </li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">SkinPen Microneedling</a>
-                                </li>
+                            <ul class="space-y-1 mb-4">
+                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">LDM Korean Ultrasound Facial</a></li>
+                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">LDM + Skin Booster Facial</a></li>
+                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Post-Procedure Recovery LDM</a></li>
+                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Barrier Repair &amp; Hydration Therapy</a></li>
+                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Rejuran Tone-Up Facial</a></li>
+                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Exosome Recovery Facial</a></li>
+                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">HA Glass Skin Facial</a></li>
                             </ul>
-                            <div class="mt-6 p-4 bg-off-white rounded-lg border border-taupe/10">
-                                <p class="text-[10px] text-taupe uppercase tracking-widest mb-1">Featured</p>
-                                <p class="text-xs text-charcoal font-medium">Rejuran® DNA Healer</p>
-                                <a href="rejuran.html" class="text-[10px] text-taupe underline mt-1 inline-block">Learn
-                                    More</a>
+                            <div class="text-[10px] uppercase tracking-widest text-taupe font-semibold mb-3">LDM Ultrasound Treatment</div>
+                            <ul class="space-y-1 mb-4">
+                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Lifting &amp; Toning</a></li>
+                            </ul>
+                            <div class="flex items-center gap-2 text-[10px] uppercase tracking-widest text-taupe font-semibold mb-3">
+                                <i data-lucide="zap" class="w-3 h-3"></i> SkinPen Microneedling
                             </div>
+                            <ul class="space-y-1">
+                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Microneedling</a></li>
+                            </ul>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -150,9 +175,12 @@ const NAVBAR_HTML = `
                 </a>
                 <div class="dropdown-menu">
                     <a href="#" class="dropdown-link font-body">Medical Weight Loss</a>
-                    <a href="#" class="dropdown-link font-body">Peptide Therapy</a>
+                    <a href="#" class="dropdown-link font-body">Peptides</a>
                 </div>
             </div>
+
+            <a href="referral.html"
+                class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase">Referral</a>
 
             <!-- Media -->
             <div class="nav-item-dropdown">
@@ -161,17 +189,24 @@ const NAVBAR_HTML = `
                     Media <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </a>
                 <div class="dropdown-menu text-left">
-                    <a href="#" class="dropdown-link font-body">Before & After</a>
+                    <a href="#" class="dropdown-link font-body">Before &amp; After Gallery</a>
                     <a href="#" class="dropdown-link font-body">Video Reels</a>
-                    <a href="#" class="dropdown-link font-body">Press & Features</a>
-                    <a href="#" class="dropdown-link font-body">Testimonials</a>
+                    <a href="#" class="dropdown-link font-body">Press &amp; Features</a>
+                    <a href="#" class="dropdown-link font-body">Patient Testimonials</a>
                 </div>
             </div>
 
             <a href="financing.html"
                 class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase">Financing</a>
+
             <a href="contact.html"
-                class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase">Contact Us</a>
+                class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase">Contact</a>
+
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="font-body text-[13px] tracking-[0.1em] uppercase bg-taupe text-white px-4 py-2 rounded-full hover:bg-warm-gold transition-colors whitespace-nowrap">
+                Book Now
+            </a>
+
         </div>
 
         <!-- Nav Right -->
@@ -181,27 +216,25 @@ const NAVBAR_HTML = `
                 <i data-lucide="swatch-book" class="w-4 h-4"></i>
             </a>
 
-            <!-- Scroll Specials CTA - Hidden unless scrolled -->
+            <!-- Scroll Promotions CTA - Hidden unless scrolled -->
             <div class="relative items-center hidden sm:flex opacity-0 -translate-y-12 pointer-events-none group-[.nav-scrolled]/nav:opacity-100 group-[.nav-scrolled]/nav:translate-y-0 group-[.nav-scrolled]/nav:pointer-events-auto transition-all duration-[800ms] ease-out">
                 <a href="specials.html" class="flex items-center justify-center relative group w-8 h-8 rounded-full hover:bg-red-50 transition-colors">
-                    <!-- The red dot -->
-                    <span class="relative flex h-2.5 w-2.5 z-10">
+                    <!-- The promotions icon badge -->
+                    <span class="relative flex h-5 w-5 z-10 items-center justify-center">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                        <span class="relative inline-flex rounded-full h-5 w-5 bg-red-500 items-center justify-center">
+                            <i data-lucide="tag" class="w-2.5 h-2.5 text-white"></i>
+                        </span>
                     </span>
                     <!-- The expanding text on hover -->
                     <div class="absolute right-full mr-2 top-1/2 -translate-y-1/2 opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 bg-white shadow-soft border border-charcoal/5 px-5 py-2 rounded-full whitespace-nowrap">
                         <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-near-black flex items-center gap-2">
-                           Check out our <span class="text-red-500">Specials</span>
+                           Check out our <span class="text-red-500">Promotions</span>
                         </span>
                     </div>
                 </a>
             </div>
 
-            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                class="hidden sm:inline-flex btn-primary btn-sm">
-                Book Now
-            </a>
             <!-- Mobile Menu Button -->
             <button id="menu-btn" class="lg:hidden text-charcoal hover:text-taupe transition-colors">
                 <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
@@ -223,12 +256,8 @@ const NAVBAR_HTML = `
         <!-- Drawer Links -->
         <div class="flex-1 overflow-y-auto p-6">
             <div class="flex flex-col gap-6">
-                <a href="index.html" class="font-heading text-lg text-near-black hover:text-taupe transition-colors">Home</a>
-                <a href="specials.html" class="font-heading text-lg text-red-500 font-medium tracking-wide flex items-center gap-2 hover:text-red-600 transition-colors">
-                    <i data-lucide="sparkles" class="w-5 h-5"></i>
-                    Special Promotions
-                </a>
 
+                <!-- About -->
                 <div class="mobile-accordion">
                     <button
                         class="accordion-trigger flex items-center justify-between w-full font-heading text-lg text-near-black py-2 text-left hover:text-taupe transition-colors">
@@ -239,33 +268,48 @@ const NAVBAR_HTML = `
                         <a href="about.html#story" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Our Story</a>
                         <a href="about.html#k-beauty" class="font-body text-charcoal/70 hover:text-taupe transition-colors">What is K-Beauty</a>
                         <a href="about.html#sophia" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Meet Sophia</a>
-                        <a href="about.html#safety" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Medical Oversight & Safety</a>
+                        <a href="about.html#safety" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Medical Oversight &amp; Safety</a>
                         <a href="about.html#difference" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Why SuA Glow is Different</a>
                     </div>
                 </div>
 
+                <!-- Treatments -->
                 <div class="mobile-accordion">
                     <button
                         class="accordion-trigger flex items-center justify-between w-full font-heading text-lg text-near-black py-2 text-left hover:text-taupe transition-colors">
                         Treatments <i data-lucide="plus" class="w-4 h-4"></i>
                     </button>
-                    <div class="accordion-content hidden flex flex-col gap-4 pl-4 mt-2">
+                    <div class="accordion-content hidden flex flex-col gap-5 pl-4 mt-2">
+
+                        <!-- Injectables -->
                         <div>
                             <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
                                 <i data-lucide="syringe" class="w-3 h-3 mr-2"></i>Injectables
                             </a>
-                            <div class="flex flex-col gap-2 text-left">
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Cosmetic Tox: Face & Body</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Medical Tox: Scar, Sweat, Migraine</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Dermal Fillers</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Sculptra: Face & Body</a>
+                            <div class="flex flex-col gap-2 mt-2">
+                                <div>
+                                    <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Cosmetic Tox</a>
+                                    <span class="block text-[10px] text-charcoal/40">Face &amp; Body</span>
+                                </div>
+                                <div>
+                                    <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Medical Tox</a>
+                                    <span class="block text-[10px] text-charcoal/40">Scar, Sweating, Migraine, etc</span>
+                                </div>
+                                <div>
+                                    <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Dermal Fillers</a>
+                                    <span class="block text-[10px] text-charcoal/40">Facial Contouring / Volume Restoration</span>
+                                </div>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Sculptra</a>
                             </div>
                         </div>
+
+                        <!-- Skin Boosters -->
                         <div>
                             <a href="skinboosters.html" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
                                 <i data-lucide="droplets" class="w-3 h-3 mr-2"></i>Skin Boosters
                             </a>
-                            <div class="flex flex-col gap-2 text-left">
+                            <div class="flex flex-col gap-2 mt-2">
+                                <a href="skinboosters.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Overview</a>
                                 <a href="rejuran.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Rejuran</a>
                                 <a href="rejuran-tone-up.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Tone Up</a>
                                 <a href="juvelook.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Juvelook</a>
@@ -274,35 +318,71 @@ const NAVBAR_HTML = `
                                 <a href="byryzn.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">BYRYZN</a>
                                 <a href="hilowave.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">HiloWave</a>
                                 <a href="skinvive.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Skinvive</a>
-                                <a href="#" class="font-body text-sm text-taupe font-semibold hover:opacity-80 transition-opacity">Treatment Quiz</a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Restylane Vital Light</a>
                             </div>
                         </div>
+
+                        <!-- SuA Glow Signature -->
                         <div>
                             <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
-                                <i data-lucide="sparkles" class="w-3 h-3 mr-2"></i>Signature & Exosome
+                                <i data-lucide="sparkles" class="w-3 h-3 mr-2"></i>SuA Glow Signature
                             </a>
-                            <div class="flex flex-col gap-2 text-left">
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Sophia's Choice</a>
+                            <div class="flex flex-col gap-2 mt-2">
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Get from Sophia</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">One Day Glow</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Bridal Glow</a>
+                            </div>
+                        </div>
+
+                        <!-- Exosome -->
+                        <div>
+                            <div class="flex items-center gap-2 text-[10px] uppercase tracking-widest text-taupe font-semibold mb-3">
+                                <i data-lucide="layers" class="w-3 h-3"></i> Exosome
+                            </div>
+                            <div class="flex flex-col gap-2">
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Exosome Facial</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Hair Restoration</a>
                             </div>
                         </div>
+
+                        <!-- LDM K-Beauty Treatments -->
                         <div>
                             <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
-                                <i data-lucide="zap" class="w-3 h-3 mr-2"></i>Precision Tech
+                                <i data-lucide="scan-face" class="w-3 h-3 mr-2"></i>LDM K-Beauty Treatments
                             </a>
-                            <div class="flex flex-col gap-2 text-left">
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Ultrasound Facial</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM + Skin Booster</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Barrier Repair Therapy</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">SkinPen Microneedling</a>
+                            <div class="flex flex-col gap-2 mt-2">
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Korean Ultrasound Facial</a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM + Skin Booster Facial</a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Post-Procedure Recovery LDM</a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Barrier Repair &amp; Hydration Therapy</a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Rejuran Tone-Up Facial</a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Exosome Recovery Facial</a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">HA Glass Skin Facial</a>
                             </div>
                         </div>
+
+                        <!-- LDM Ultrasound Treatment -->
+                        <div>
+                            <div class="text-[10px] uppercase tracking-widest text-taupe font-semibold mb-3">LDM Ultrasound Treatment</div>
+                            <div class="flex flex-col gap-2">
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Lifting &amp; Toning</a>
+                            </div>
+                        </div>
+
+                        <!-- SkinPen Microneedling -->
+                        <div>
+                            <div class="flex items-center gap-2 text-[10px] uppercase tracking-widest text-taupe font-semibold mb-3">
+                                <i data-lucide="zap" class="w-3 h-3"></i> SkinPen Microneedling
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Microneedling</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
+                <!-- Wellness -->
                 <div class="mobile-accordion">
                     <button
                         class="accordion-trigger flex items-center justify-between w-full font-heading text-lg text-near-black py-2 text-left hover:text-taupe transition-colors">
@@ -310,26 +390,30 @@ const NAVBAR_HTML = `
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-3 pl-4 mt-2">
                         <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Medical Weight Loss</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Peptide Therapy</a>
+                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Peptides</a>
                     </div>
                 </div>
 
+                <a href="referral.html" class="font-heading text-lg text-near-black hover:text-taupe transition-colors">Referral Program</a>
+
+                <!-- Media -->
                 <div class="mobile-accordion">
                     <button
                         class="accordion-trigger flex items-center justify-between w-full font-heading text-lg text-near-black py-2 text-left hover:text-taupe transition-colors">
                         Media <i data-lucide="plus" class="w-4 h-4"></i>
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-3 pl-4 mt-2">
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Before & After</a>
+                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Before &amp; After Gallery</a>
                         <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Video Reels</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Press & Features</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Testimonials</a>
+                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Press &amp; Features</a>
+                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Patient Testimonials</a>
                     </div>
                 </div>
 
                 <a href="financing.html" class="font-heading text-lg text-near-black hover:text-taupe transition-colors">Financing</a>
-                <a href="contact.html" class="font-heading text-lg text-near-black hover:text-taupe transition-colors">Contact Us</a>
+                <a href="contact.html" class="font-heading text-lg text-near-black hover:text-taupe transition-colors">Contact</a>
                 <a href="style-guide.html" class="font-heading text-lg text-taupe flex items-center gap-2 mt-4 hover:opacity-80 transition-opacity"><i data-lucide="swatch-book" class="w-5 h-5"></i> Style Guide</a>
+
             </div>
         </div>
         <!-- Drawer Footer -->
