@@ -50,7 +50,7 @@ const NAVBAR_HTML = `
 
             <!-- Skin Health Mega Menu (formerly Treatments) -->
             <div class="nav-item-mega group">
-                <a href="treatments.html"
+                <a href="skin-health.html"
                     class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase flex items-center gap-1">
                     Skin Health <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </a>
