@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Stories | SuA K-Glow Korean Medical Aesthetics</title>
+    <meta name="description"
+        content="Read real patient testimonials from SuA K-Glow in Carrollton, TX. Discover what our patients say about Rejuran, Juvelook, SkinBoosters, and more.">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="dist/output.css?v=32">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Decorative large quote mark */
+        .quote-mark {
+            font-family: 'Georgia', serif;
+            font-size: 12rem;
+            line-height: 0.7;
+            color: rgba(170, 152, 124, 0.12);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        /* Star rating */
+        .stars {
+            color: #AA987C;
+            letter-spacing: 0.05em;
+        }
+
+        /* Filter pills */
+        .filter-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.4rem 1.1rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            border: 1.5px solid #DFE0DD;
+            color: #8F857B;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .filter-pill:hover {
+            border-color: #8F857B;
+            color: #404345;
+        }
+        .filter-pill.active {
+            background: #8F857B;
+            border-color: #8F857B;
+            color: #fff;
+        }
+
+        /* Testimonial card */
+        .tcard {
+            background: #fff;
+            border-radius: 1.25rem;
+            padding: 2rem 2rem 1.75rem;
+            box-shadow: 0 2px 16px rgba(64,67,69,0.06);
+            transition: box-shadow 0.25s ease, transform 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .tcard:hover {
+            box-shadow: 0 8px 36px rgba(64,67,69,0.1);
+            transform: translateY(-3px);
+        }
+        .tcard.featured {
+            background: #131619;
+            color: #fff;
+        }
+        .tcard.featured .tcard-quote {
+            color: rgba(255,255,255,0.85);
+        }
+        .tcard.featured .tcard-name {
+            color: #fff;
+        }
+        .tcard.featured .tcard-meta {
+            color: rgba(255,255,255,0.4);
+        }
+        .tcard.featured .stars {
+            color: #AA987C;
+        }
+        .tcard.featured .treatment-tag {
+            background: rgba(170,152,124,0.18);
+            color: #AA987C;
+            border-color: rgba(170,152,124,0.3);
+        }
+
+        .tcard-quote {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: #404345cc;
+            flex: 1;
+        }
+        .tcard-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #404345;
+        }
+        .tcard-meta {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.68rem;
+            color: #8F857B;
+            letter-spacing: 0.04em;
+        }
+
+        .treatment-tag {
+            display: inline-block;
+            padding: 0.2rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.62rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 1px solid #DFE0DD;
+            color: #8F857B;
+            background: #F6F7F8;
+        }
+
+        /* Platform badge */
+        .platform-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            border: 1.5px solid #DFE0DD;
+            background: #fff;
+            font-size: 0.72rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: #404345;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .platform-badge:hover {
+            border-color: #8F857B;
+            box-shadow: 0 4px 16px rgba(143,133,123,0.15);
+        }
+
+        /* Hidden cards */
+        .tcard-wrapper.hidden-card {
+            display: none;
+        }
+
+        /* Stats glow line */
+        .stat-divider {
+            width: 1px;
+            height: 2.5rem;
+            background: linear-gradient(to bottom, transparent, #DFE0DD, transparent);
+        }
+    </style>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+
+    <div id="nav-placeholder"></div>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="hero" data-nav-theme="dark"
+        class="relative min-h-[50vh] flex items-start justify-center text-center px-8 pt-[250px] overflow-hidden bg-near-black pb-32">
+
+        <!-- Subtle background texture -->
+        <div class="absolute inset-0 z-0 opacity-30"
+            style="background: radial-gradient(ellipse 80% 60% at 60% 50%, #AA987C22 0%, transparent 70%), radial-gradient(ellipse 40% 80% at 20% 30%, #9DAFB611 0%, transparent 60%);">
+        </div>
+
+        <!-- Large decorative quote -->
+        <div class="quote-mark absolute top-20 left-8 md:left-24 z-0 select-none" aria-hidden="true">"</div>
+
+        <div class="relative z-10 max-w-4xl text-center animate-on-scroll fade-up">
+            <span
+                class="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[10px] tracking-[0.3em] uppercase text-white/90 font-bold mb-8">
+                Real Patients. Real Glow.
+            </span>
+            <h1 class="heading-wide text-4xl md:text-6xl text-white mb-6 uppercase tracking-[0.12em] leading-[1.1]">
+                Patient<br><span class="text-warm-gold opacity-90">Stories</span>
+            </h1>
+            <p class="font-body text-lg md:text-xl text-white/60 max-w-xl mx-auto leading-relaxed">
+                Unfiltered voices from patients who experienced Korean medical aesthetics — and never looked back.
+            </p>
+
+            <!-- Aggregate rating -->
+            <div class="flex items-center justify-center gap-4 mt-10">
+                <div class="stars text-2xl">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="text-left">
+                    <div class="font-body text-white text-sm font-semibold">5.0 / 5.0</div>
+                    <div class="font-body text-white/40 text-[10px] tracking-[0.15em] uppercase">Google Reviews</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== STATS BAR ===================== -->
+    <section class="bg-white border-b border-light-gray">
+        <div class="max-w-5xl mx-auto px-8 py-10">
+            <div class="flex flex-wrap items-center justify-center gap-10 md:gap-0 md:divide-x divide-light-gray">
+                <div class="flex flex-col items-center gap-1 px-10">
+                    <span class="heading-wide text-3xl text-near-black">5.0</span>
+                    <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <span class="font-body text-[10px] tracking-[0.2em] uppercase text-taupe">Google Rating</span>
+                </div>
+                <div class="flex flex-col items-center gap-1 px-10">
+                    <span class="heading-wide text-3xl text-near-black">100+</span>
+                    <span class="font-body text-[10px] tracking-[0.2em] uppercase text-taupe mt-1">Verified Reviews</span>
+                </div>
+                <div class="flex flex-col items-center gap-1 px-10">
+                    <span class="heading-wide text-3xl text-near-black">98%</span>
+                    <span class="font-body text-[10px] tracking-[0.2em] uppercase text-taupe mt-1">Would Return</span>
+                </div>
+                <div class="flex flex-col items-center gap-1 px-10">
+                    <span class="heading-wide text-3xl text-near-black">5★</span>
+                    <span class="font-body text-[10px] tracking-[0.2em] uppercase text-taupe mt-1">Yelp Rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FEATURED TESTIMONIALS ===================== -->
+    <section class="py-24 bg-off-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-16 animate-on-scroll fade-up">
+                <span class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-4">Staff Picks</span>
+                <h2 class="heading-wide text-2xl md:text-3xl text-near-black uppercase tracking-[0.12em]">Featured Stories</h2>
+                <div class="w-16 h-[1px] bg-taupe/30 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Featured 1 (dark card) -->
+                <div class="tcard featured animate-on-scroll fade-up md:col-span-2">
+                    <div class="stars text-base">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="tcard-quote text-base md:text-lg leading-[1.8]">
+                        "I've tried every hydration treatment on the market — from HydraFacials to IV drips — and nothing has ever transformed my skin the way Rejuran did. After my second session, people at work started asking if I'd changed my diet or gotten more sleep. No. I just found Sophia. My skin has this lit-from-within quality that no topical product ever gave me."
+                    </p>
+                    <div class="flex items-end justify-between mt-2">
+                        <div>
+                            <div class="tcard-name">Jennifer M.</div>
+                            <div class="tcard-meta">Plano, TX &middot; March 2025</div>
+                        </div>
+                        <span class="treatment-tag">Rejuran Healer</span>
+                    </div>
+                </div>
+
+                <!-- Featured 2 -->
+                <div class="tcard featured animate-on-scroll fade-up delay-100">
+                    <div class="stars text-base">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="tcard-quote">
+                        "Sophia is a true artist. I came in with dull, dehydrated skin and left glowing. She explained every step, made me feel completely at ease, and the results were immediate. I've never felt so confident without makeup."
+                    </p>
+                    <div class="flex items-end justify-between mt-2">
+                        <div>
+                            <div class="tcard-name">Alyssa T.</div>
+                            <div class="tcard-meta">Frisco, TX &middot; Jan 2025</div>
+                        </div>
+                        <span class="treatment-tag">Juvelook</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ALL REVIEWS (Filterable) ===================== -->
+    <section class="pb-32 bg-off-white">
+        <div class="max-w-7xl mx-auto px-8">
+
+            <!-- Section header -->
+            <div class="text-center mb-12 animate-on-scroll fade-up">
+                <span class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-4">From Our Community</span>
+                <h2 class="heading-wide text-2xl md:text-3xl text-near-black uppercase tracking-[0.12em] mb-8">All Patient Reviews</h2>
+
+                <!-- Filter pills -->
+                <div class="flex flex-wrap items-center justify-center gap-2" id="filter-bar">
+                    <button class="filter-pill active" data-filter="all">All</button>
+                    <button class="filter-pill" data-filter="rejuran">Rejuran</button>
+                    <button class="filter-pill" data-filter="juvelook">Juvelook</button>
+                    <button class="filter-pill" data-filter="skinboosters">Skin Boosters</button>
+                    <button class="filter-pill" data-filter="skinvive">SkinVive</button>
+                    <button class="filter-pill" data-filter="cellredm">CellReDm</button>
+                    <button class="filter-pill" data-filter="byryzn">Byryzn</button>
+                    <button class="filter-pill" data-filter="experience">Experience</button>
+                </div>
+            </div>
+
+            <!-- Cards grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="reviews-grid">
+
+                <!-- Card 1 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up" data-treatment="rejuran">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">Rejuran</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "Three sessions of Rejuran Healer and my acne scars have softened dramatically. I used to cake on foundation to cover them — now I go bare-faced to brunch. Worth every penny and then some."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Rachel K.</div>
+                            <div class="tcard-meta">Dallas, TX &middot; Feb 2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up delay-100" data-treatment="juvelook">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">Juvelook</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "I was skeptical about PDLLA but Sophia walked me through the science patiently. Two months later, the collagen regeneration is visible — my skin is firmer, smoother, and my pores look smaller. I'm obsessed."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Michelle L.</div>
+                            <div class="tcard-meta">Richardson, TX &middot; Dec 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up delay-200" data-treatment="experience">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">Experience</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "The clinic is so calm and beautiful. Everything feels intentional — the music, the scent, the way Sophia explains what she's doing. I've been to many medspas but this is my home now."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Sarah B.</div>
+                            <div class="tcard-meta">Allen, TX &middot; Jan 2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up" data-treatment="skinboosters">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">Skin Boosters</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "I've struggled with dry, dull skin my whole life. After my first Skin Booster session I had the 'glass skin' everyone talks about on K-beauty YouTube. My husband noticed immediately. My husband never notices anything."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Priya N.</div>
+                            <div class="tcard-meta">McKinney, TX &middot; Mar 2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up delay-100" data-treatment="skinvive">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">SkinVive</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "SkinVive is now a permanent part of my skincare routine. The microinjections are practically painless the way Sophia does them. My cheeks have this natural, dewy bounce that photos don't even do justice."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Cassandra W.</div>
+                            <div class="tcard-meta">Carrollton, TX &middot; Feb 2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up delay-200" data-treatment="cellredm">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">CellReDm</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "I came in for CellReDm after seeing it on a K-beauty forum. Sophia knew exactly what my skin needed. The redness and inflammation I've dealt with for years has calmed significantly. This is real medicine."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Amy C.</div>
+                            <div class="tcard-meta">Lewisville, TX &middot; Nov 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up" data-treatment="byryzn">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">Byryzn</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "Byryzn was something I'd only read about in Korean beauty blogs. Getting it here in Texas from someone who actually trained in Seoul — that's what sets SuA K-Glow apart. Results are phenomenal."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Diana F.</div>
+                            <div class="tcard-meta">Denton, TX &middot; Jan 2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up delay-100" data-treatment="rejuran">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">Rejuran Tone Up</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "Rejuran Tone Up addressed the sun damage I've accumulated over years in Texas. Four weeks post-treatment my skin tone is genuinely more even. This is not a subtle result — it's dramatic and I love it."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Lauren H.</div>
+                            <div class="tcard-meta">Grapevine, TX &middot; Oct 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up delay-200" data-treatment="experience">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">Experience</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "Sophia never upsells or pushes you into anything. She assessed my skin and recommended exactly what I needed — nothing more. That honesty is rare and I trust her completely with my face."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Monica R.</div>
+                            <div class="tcard-meta">Irving, TX &middot; Dec 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up" data-treatment="skinboosters">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">Skin Boosters</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "As someone with Korean heritage I was excited to find authentic K-beauty treatments locally. SuA K-Glow delivers exactly that. The products and protocols feel exactly like what I've experienced in Seoul. Amazing."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Ji-Young P.</div>
+                            <div class="tcard-meta">Coppell, TX &middot; Feb 2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up delay-100" data-treatment="juvelook">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">Juvelook</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "I turn 42 this year and I genuinely look younger than I did at 38. Juvelook has restructured my skin — less crepiness under my eyes, better texture everywhere. I tell everyone about this place."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Tanya M.</div>
+                            <div class="tcard-meta">Flower Mound, TX &middot; Mar 2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up delay-200" data-treatment="skinvive">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">SkinVive</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "I got SkinVive before my wedding and people in every single photo asked me what skin prep I'd done. The answer was simple: SuA K-Glow. My skin photographer even commented on how beautifully it catches light."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Natalie G.</div>
+                            <div class="tcard-meta">Plano, TX &middot; Sep 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 13 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up" data-treatment="cellredm">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">CellReDm</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "My dermatologist had no more solutions for my sensitive, reactive skin. Sophia did. CellReDm has reinforced my skin barrier in ways I didn't think were possible anymore. I finally have skin I'm not at war with."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Stephanie O.</div>
+                            <div class="tcard-meta">Highland Village, TX &middot; Jan 2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 14 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up delay-100" data-treatment="byryzn">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">Byryzn</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "Byryzn was more comfortable than I expected and the afterglow is incredible. I've been back three times. Sophia remembers my skin history, my concerns, my goals. She treats you like a person, not a procedure."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Karen S.</div>
+                            <div class="tcard-meta">Addison, TX &middot; Feb 2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 15 -->
+                <div class="tcard-wrapper animate-on-scroll fade-up delay-200" data-treatment="rejuran">
+                    <div class="tcard">
+                        <div class="flex items-center justify-between">
+                            <div class="stars text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <span class="treatment-tag">Rejuran</span>
+                        </div>
+                        <p class="tcard-quote">
+                            "I drove 45 minutes each way for Rejuran and I would drive four hours. The improvement in my skin's elasticity and hydration is measurable. My skincare routine has actually gotten simpler because my base is so much better."
+                        </p>
+                        <div>
+                            <div class="tcard-name">Christine D.</div>
+                            <div class="tcard-meta">Fort Worth, TX &middot; Nov 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end grid -->
+
+            <!-- No results message (hidden by default) -->
+            <div id="no-results" class="hidden text-center py-16 text-taupe font-body text-sm tracking-wide">
+                No reviews found for this filter.
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===================== LEAVE A REVIEW ===================== -->
+    <section class="bg-white py-24 border-t border-light-gray">
+        <div class="max-w-4xl mx-auto px-8 text-center animate-on-scroll fade-up">
+            <span class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-4">Share Your Story</span>
+            <h2 class="heading-wide text-2xl md:text-3xl text-near-black uppercase tracking-[0.12em] mb-6">Been to SuA K-Glow?</h2>
+            <p class="font-body text-charcoal/60 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+                Your experience matters — both to us and to patients considering their first visit. We'd be honored to hear about your glow journey.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://www.google.com/maps/place/SuA+Glow/" target="_blank" class="platform-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    Review on Google
+                </a>
+                <a href="https://www.yelp.com/biz/sua-glow" target="_blank" class="platform-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF1A1A" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.621 5.367 11.988 11.988 11.988 6.62 0 11.987-5.367 11.987-11.988C24.004 5.367 18.637 0 12.017 0zM9.08 16.81l-2.42 1.4a.75.75 0 01-1.12-.67V9.77a.75.75 0 011.12-.67l2.42 1.4a.75.75 0 010 1.34v3.63a.75.75 0 010 1.34zm7.84-1.17l-2.42 1.4a.75.75 0 01-1.12-.67v-3.63a.75.75 0 010-1.34l2.42-1.4a.75.75 0 011.12.67v3.63a.75.75 0 010 1.34z"/>
+                    </svg>
+                    Review on Yelp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto animate-on-scroll fade-up">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24 uppercase">K-Beauty Medspa &bull; Carrollton HQ</p>
+            <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">
+                Ready to write your own<br><span class="text-warm-gold opacity-80">glow story?</span>
+            </h3>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary">
+                Book Your Session
+            </a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js?v=32"></script>
+    <script src="news.js?v=32"></script>
+    <script src="footer.js?v=32"></script>
+    <script src="script.js?v=32"></script>
+
+    <script>
+        // Filter logic
+        const filterBar = document.getElementById('filter-bar');
+        const cards = document.querySelectorAll('.tcard-wrapper');
+        const noResults = document.getElementById('no-results');
+
+        filterBar.addEventListener('click', function (e) {
+            const pill = e.target.closest('.filter-pill');
+            if (!pill) return;
+
+            // Update active pill
+            document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+
+            const filter = pill.dataset.filter;
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const treatment = card.dataset.treatment;
+                const matches = filter === 'all' || treatment === filter;
+                card.classList.toggle('hidden-card', !matches);
+                if (matches) visibleCount++;
+            });
+
+            noResults.classList.toggle('hidden', visibleCount > 0);
+        });
+    </script>
+</body>
+
+</html>

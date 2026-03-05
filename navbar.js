@@ -191,7 +191,7 @@ const NAVBAR_HTML = `
                     <a href="#" class="dropdown-link font-body">Before &amp; After Gallery</a>
                     <a href="#" class="dropdown-link font-body">Video Reels</a>
                     <a href="#" class="dropdown-link font-body">Press &amp; Features</a>
-                    <a href="#" class="dropdown-link font-body">Patient Testimonials</a>
+                    <a href="testimonials.html" class="dropdown-link font-body">Patient Testimonials</a>
                 </div>
             </div>
 
@@ -418,7 +418,7 @@ const NAVBAR_HTML = `
                         <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Before &amp; After Gallery</a>
                         <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Video Reels</a>
                         <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Press &amp; Features</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Patient Testimonials</a>
+                        <a href="testimonials.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Patient Testimonials</a>
                     </div>
                 </div>
 

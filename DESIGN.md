@@ -22,6 +22,40 @@ SuA Glow is a premium medical‑aesthetic brand that blends Korean‑beauty prec
   - `h3`: 1.5rem, weight 600
 - **Body Text:** 1rem, weight 400, line‑height 1.6, color `text-charcoal/70` on light backgrounds and `text-white/70` on dark backgrounds.
 
+## Page Templates
+
+### Standard Inner-Page Hero
+Every non-home page uses this hero pattern. Copy exactly — do not change padding, alignment, or structure.
+
+```html
+<section id="hero" data-nav-theme="dark"
+    class="relative min-h-[50vh] flex items-start justify-center text-center px-8 pt-[250px] overflow-hidden bg-near-black pb-32">
+    <div class="absolute inset-0 z-0 opacity-40">
+        <!-- Background: <img>, <video>, or gradient div -->
+    </div>
+    <div class="relative z-10 max-w-4xl animate-on-scroll fade-up">
+        <span class="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[10px] tracking-[0.3em] uppercase text-white/90 font-bold mb-8">
+            Eyebrow Label
+        </span>
+        <h1 class="heading-wide text-4xl md:text-6xl text-white mb-6 uppercase tracking-[0.15em]">
+            Page Title
+        </h1>
+        <p class="font-body text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+            Supporting subtitle text.
+        </p>
+    </div>
+</section>
+```
+
+**Key rules:**
+- `pt-[250px]` — accounts for fixed navbar height; do not reduce
+- `items-start` + `text-center` — content anchors to top, centered
+- `pb-32` — consistent bottom breathing room
+- Always set `data-nav-theme="dark"` so the navbar renders white text over the dark hero
+- Wrap background media in `absolute inset-0 z-0` with an opacity layer; content lives in `relative z-10`
+
+---
+
 ## Core Components
 ### Glow Card (`.glow-card`)
 - **Structure:** `<div class="product-card glow-card ...">`
