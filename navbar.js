@@ -198,15 +198,14 @@ const NAVBAR_HTML = `
             <a href="contact.html"
                 class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase">Contact</a>
 
-            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                class="font-body text-[13px] tracking-[0.1em] uppercase bg-taupe text-white px-4 py-2 rounded-full hover:bg-warm-gold transition-colors whitespace-nowrap">
-                Book Now
-            </a>
-
         </div>
 
         <!-- Nav Right -->
         <div class="flex items-center gap-4 md:gap-6">
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="hidden lg:inline-flex font-body text-[13px] tracking-[0.1em] uppercase bg-taupe text-white px-4 py-2 rounded-full hover:bg-warm-gold transition-colors whitespace-nowrap">
+                Book Now
+            </a>
             <!-- Style Guide Link -->
             <a href="style-guide.html" aria-label="Style Guide" class="text-charcoal hover:text-taupe transition-colors hidden sm:block">
                 <i data-lucide="swatch-book" class="w-4 h-4"></i>
