@@ -20,12 +20,12 @@ const NAVBAR_HTML = `
                     
                     <span class="relative flex h-5 w-5 shrink-0 items-center justify-center z-10">
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-40"></span>
-                      <i data-lucide="tag" class="w-3.5 h-3.5 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] relative z-10"></i>
+                      <i data-lucide="tag" class="w-3.5 h-3.5 text-amber-950 relative z-10"></i>
                     </span>
-                    <span class="text-white normal-case text-[11px] font-bold tracking-[0.1em] z-10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] truncate">
+                    <span class="text-amber-950 normal-case text-[11px] font-bold tracking-[0.1em] z-10 truncate">
                         Check out our Promotions
                     </span>
-                    <i data-lucide="arrow-right" class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform shrink-0 z-10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
+                    <i data-lucide="arrow-right" class="w-4 h-4 text-amber-950/80 group-hover:text-amber-950 group-hover:translate-x-1 transition-all shrink-0 z-10"></i>
                 </a>
 
                 <div class="hidden md:flex items-center pointer-events-auto">
@@ -223,13 +223,13 @@ const NAVBAR_HTML = `
                     
                     <span class="relative flex h-5 w-5 z-10 items-center justify-center">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-40"></span>
-                        <i data-lucide="tag" class="w-3.5 h-3.5 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
+                        <i data-lucide="tag" class="w-3.5 h-3.5 text-amber-950"></i>
                     </span>
                     <!-- The expanding text on hover -->
                     <div class="absolute right-full mr-2 top-1/2 -translate-y-1/2 opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 bg-gradient-to-b from-[#FFF2B2] via-[#DFAB22] to-[#B8860B] shadow-[0_4px_15px_rgba(223,171,34,0.4)] border-t border-t-white/80 border-b border-b-black/20 px-5 py-2 rounded-full whitespace-nowrap overflow-hidden z-20">
                         <span class="absolute top-[-10px] right-2 w-12 h-12 bg-white/60 blur-[6px] rounded-full pointer-events-none"></span>
                         <span class="absolute top-0 left-0 w-full h-[40%] bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></span>
-                        <span class="text-[10px] font-bold tracking-[0.1em] uppercase text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] flex items-center gap-2 relative z-10 p-0.5">
+                        <span class="text-[10px] font-bold tracking-[0.1em] uppercase text-amber-950 flex items-center gap-2 relative z-10 p-0.5">
                            Check out our Promotions
                         </span>
                     </div>
@@ -265,12 +265,12 @@ const NAVBAR_HTML = `
                     
                     <span class="relative flex h-5 w-5 shrink-0 items-center justify-center z-10">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-40"></span>
-                        <i data-lucide="tag" class="w-4 h-4 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] relative z-10"></i>
+                        <i data-lucide="tag" class="w-4 h-4 text-amber-950 relative z-10"></i>
                     </span>
-                    <span class="font-body text-sm font-bold z-10 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+                    <span class="font-body text-sm font-bold z-10 text-amber-950">
                         Check out our Promotions
                     </span>
-                    <i data-lucide="arrow-right" class="w-5 h-5 text-white ml-auto group-hover:translate-x-1 transition-transform shrink-0 z-10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
+                    <i data-lucide="arrow-right" class="w-5 h-5 text-amber-950/80 ml-auto group-hover:text-amber-950 group-hover:translate-x-1 transition-all shrink-0 z-10"></i>
                 </a>
 
                 <!-- About -->
