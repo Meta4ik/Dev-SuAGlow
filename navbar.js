@@ -203,7 +203,7 @@ const NAVBAR_HTML = `
         <!-- Nav Right -->
         <div class="flex items-center gap-4 md:gap-6">
             <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                class="hidden lg:inline-flex font-body text-[13px] tracking-[0.1em] uppercase bg-taupe text-white px-4 py-2 rounded-full hover:bg-warm-gold transition-colors whitespace-nowrap">
+                class="inline-flex font-body text-[11px] md:text-[13px] tracking-[0.1em] uppercase bg-taupe text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full hover:bg-warm-gold transition-colors whitespace-nowrap">
                 Book Now
             </a>
             <!-- Style Guide Link -->
