@@ -14,17 +14,18 @@ const NAVBAR_HTML = `
 
             <div class="flex items-center justify-center md:justify-end gap-6 flex-1 w-full md:w-auto pointer-events-none">
                 <!-- Promotions CTA -->
-                <a href="specials.html" class="pointer-events-auto group flex items-center justify-center gap-2.5 bg-red-950/40 px-5 py-1.5 rounded-full border border-red-500/30 hover:bg-red-900/60 hover:border-red-500/80 transition-all duration-300 shadow-[0_0_15px_rgba(239,68,68,0.15)] hover:shadow-[0_0_20px_rgba(239,68,68,0.3)] w-max max-w-[90vw]">
-                    <span class="relative flex h-5 w-5 shrink-0 items-center justify-center">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-5 w-5 bg-red-500 items-center justify-center">
-                        <i data-lucide="tag" class="w-2.5 h-2.5 text-white"></i>
-                      </span>
+                <a href="specials.html" class="pointer-events-auto group flex items-center justify-center gap-2 bg-gradient-to-b from-[#FFF2B2] via-[#DFAB22] to-[#B8860B] px-5 py-1.5 rounded-full border-t border-t-white/80 border-b border-b-black/20 hover:brightness-110 transition-all duration-300 shadow-[0_4px_15px_rgba(223,171,34,0.4)] hover:shadow-[0_6px_20px_rgba(223,171,34,0.6)] w-max max-w-[90vw] relative overflow-hidden">
+                    <span class="absolute top-[-10px] right-2 w-12 h-12 bg-white/60 blur-[6px] rounded-full"></span>
+                    <span class="absolute top-0 left-0 w-full h-[40%] bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></span>
+                    
+                    <span class="relative flex h-5 w-5 shrink-0 items-center justify-center z-10">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-40"></span>
+                      <i data-lucide="tag" class="w-3.5 h-3.5 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] relative z-10"></i>
                     </span>
-                    <span class="text-white/90 normal-case text-[11px] font-medium tracking-[0.1em] transition-colors group-hover:text-white truncate">
-                        Check out our <span class="text-red-400 font-semibold">Promotions</span>
+                    <span class="text-white normal-case text-[11px] font-bold tracking-[0.1em] z-10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] truncate">
+                        Check out our Promotions
                     </span>
-                    <i data-lucide="arrow-right" class="w-3 h-3 text-red-500 group-hover:translate-x-1 transition-transform shrink-0"></i>
+                    <i data-lucide="arrow-right" class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform shrink-0 z-10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
                 </a>
 
                 <div class="hidden md:flex items-center pointer-events-auto">
@@ -217,18 +218,19 @@ const NAVBAR_HTML = `
 
             <!-- Scroll Promotions CTA - Hidden unless scrolled -->
             <div class="relative items-center hidden sm:flex opacity-0 -translate-y-12 pointer-events-none group-[.nav-scrolled]/nav:opacity-100 group-[.nav-scrolled]/nav:translate-y-0 group-[.nav-scrolled]/nav:pointer-events-auto transition-all duration-[800ms] ease-out">
-                <a href="specials.html" class="flex items-center justify-center relative group w-8 h-8 rounded-full hover:bg-red-50 transition-colors">
-                    <!-- The promotions icon badge -->
+                <a href="specials.html" class="flex items-center justify-center relative group w-8 h-8 rounded-full hover:brightness-110 transition-all duration-300 bg-gradient-to-b from-[#FFF2B2] via-[#DFAB22] to-[#B8860B] border-t border-t-white/80 border-b border-b-black/20 shadow-[0_4px_10px_rgba(223,171,34,0.4)] overflow-visible">
+                    <span class="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent h-[40%] rounded-t-full pointer-events-none"></span>
+                    
                     <span class="relative flex h-5 w-5 z-10 items-center justify-center">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-5 w-5 bg-red-500 items-center justify-center">
-                            <i data-lucide="tag" class="w-2.5 h-2.5 text-white"></i>
-                        </span>
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-40"></span>
+                        <i data-lucide="tag" class="w-3.5 h-3.5 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
                     </span>
                     <!-- The expanding text on hover -->
-                    <div class="absolute right-full mr-2 top-1/2 -translate-y-1/2 opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 bg-white shadow-soft border border-charcoal/5 px-5 py-2 rounded-full whitespace-nowrap">
-                        <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-near-black flex items-center gap-2">
-                           Check out our <span class="text-red-500">Promotions</span>
+                    <div class="absolute right-full mr-2 top-1/2 -translate-y-1/2 opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 bg-gradient-to-b from-[#FFF2B2] via-[#DFAB22] to-[#B8860B] shadow-[0_4px_15px_rgba(223,171,34,0.4)] border-t border-t-white/80 border-b border-b-black/20 px-5 py-2 rounded-full whitespace-nowrap overflow-hidden z-20">
+                        <span class="absolute top-[-10px] right-2 w-12 h-12 bg-white/60 blur-[6px] rounded-full pointer-events-none"></span>
+                        <span class="absolute top-0 left-0 w-full h-[40%] bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></span>
+                        <span class="text-[10px] font-bold tracking-[0.1em] uppercase text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] flex items-center gap-2 relative z-10 p-0.5">
+                           Check out our Promotions
                         </span>
                     </div>
                 </a>
@@ -257,17 +259,18 @@ const NAVBAR_HTML = `
             <div class="flex flex-col gap-6">
 
                 <!-- Promotions CTA -->
-                <a href="specials.html" class="group flex items-center gap-3 bg-red-950/10 px-5 py-3 rounded-2xl border border-red-500/20 hover:bg-red-950/20 hover:border-red-500/40 transition-all duration-300">
-                    <span class="relative flex h-5 w-5 shrink-0 items-center justify-center">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-5 w-5 bg-red-500 items-center justify-center">
-                            <i data-lucide="tag" class="w-2.5 h-2.5 text-white"></i>
-                        </span>
+                <a href="specials.html" class="group flex items-center gap-3 bg-gradient-to-b from-[#FFF2B2] via-[#DFAB22] to-[#B8860B] px-5 py-3 rounded-xl border-t border-t-white/80 border-b border-b-black/20 hover:brightness-110 transition-all duration-300 shadow-[0_4px_15px_rgba(223,171,34,0.4)] relative overflow-hidden">
+                    <span class="absolute top-[-10px] right-2 w-16 h-16 bg-white/60 blur-[8px] rounded-full pointer-events-none"></span>
+                    <span class="absolute top-0 left-0 w-full h-[40%] bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></span>
+                    
+                    <span class="relative flex h-5 w-5 shrink-0 items-center justify-center z-10">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-40"></span>
+                        <i data-lucide="tag" class="w-4 h-4 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] relative z-10"></i>
                     </span>
-                    <span class="font-body text-sm text-charcoal/80 group-hover:text-charcoal transition-colors">
-                        Check out our <span class="text-red-500 font-semibold">Promotions</span>
+                    <span class="font-body text-sm font-bold z-10 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+                        Check out our Promotions
                     </span>
-                    <i data-lucide="arrow-right" class="w-4 h-4 text-red-500 ml-auto group-hover:translate-x-1 transition-transform shrink-0"></i>
+                    <i data-lucide="arrow-right" class="w-5 h-5 text-white ml-auto group-hover:translate-x-1 transition-transform shrink-0 z-10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
                 </a>
 
                 <!-- About -->
