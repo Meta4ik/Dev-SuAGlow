@@ -46,7 +46,7 @@ const NAVBAR_HTML = `
         </a>
 
         <!-- Desktop Menu -->
-        <div class="hidden lg:flex items-center justify-center flex-1 gap-5 xl:gap-8">
+        <div class="desktop-nav-menu lg:flex items-center justify-center flex-1 gap-5 xl:gap-8">
 
             <!-- Skin Health Mega Menu (formerly Treatments) -->
             <div class="nav-item-mega group">
