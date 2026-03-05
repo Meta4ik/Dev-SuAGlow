@@ -40,7 +40,7 @@ const NAVBAR_HTML = `
     <!-- Main Nav -->
     <div class="max-w-[1440px] mx-auto px-4 md:px-12 py-4 md:py-6 flex items-center justify-between">
         <!-- Logo -->
-        <a href="index.html" class="flex items-center p-4 md:p-0">
+        <a href="index.html" class="flex items-center p-4 md:p-0 shrink-0">
             <img id="logo-desktop" src="assets/logo-main.webp" alt="SuA K-Glow"
                 class="h-8 md:h-12 w-auto object-contain transition-all duration-300">
         </a>
