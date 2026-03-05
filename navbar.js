@@ -48,26 +48,11 @@ const NAVBAR_HTML = `
         <!-- Desktop Menu -->
         <div class="hidden lg:flex items-center gap-5 xl:gap-8">
 
-            <!-- About Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="about.html"
-                    class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase flex items-center gap-1">
-                    About <i data-lucide="chevron-down" class="w-3 h-3"></i>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="about.html#story" class="dropdown-link font-body">Our Story</a>
-                    <a href="about.html#k-beauty" class="dropdown-link font-body">What is K-Beauty</a>
-                    <a href="about.html#sophia" class="dropdown-link font-body">Meet Sophia</a>
-                    <a href="about.html#safety" class="dropdown-link font-body">Medical Oversight &amp; Safety</a>
-                    <a href="about.html#difference" class="dropdown-link font-body">Why SuA Glow is Different</a>
-                </div>
-            </div>
-
-            <!-- Treatments Mega Menu -->
+            <!-- Skin Health Mega Menu (formerly Treatments) -->
             <div class="nav-item-mega group">
                 <a href="treatments.html"
                     class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase flex items-center gap-1">
-                    Treatments <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                    Skin Health <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </a>
                 <div class="mega-menu p-10">
                     <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 text-left">
@@ -179,25 +164,36 @@ const NAVBAR_HTML = `
                 </div>
             </div>
 
-            <a href="referral.html"
-                class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase">Referral</a>
+            <!-- About Dropdown -->
+            <div class="nav-item-dropdown">
+                <a href="about.html"
+                    class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase flex items-center gap-1">
+                    About <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="about.html#story" class="dropdown-link font-body">Our Story</a>
+                    <a href="about.html#k-beauty" class="dropdown-link font-body">What is K-Beauty</a>
+                    <a href="about.html#sophia" class="dropdown-link font-body">Meet Sophia</a>
+                    <a href="about.html#safety" class="dropdown-link font-body">Medical Oversight &amp; Safety</a>
+                    <a href="about.html#difference" class="dropdown-link font-body">Why SuA Glow is Different</a>
+                </div>
+            </div>
 
-            <!-- Media -->
+            <!-- More Dropdown (Referral, Media, Financing) -->
             <div class="nav-item-dropdown">
                 <a href="#"
                     class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase flex items-center gap-1">
-                    Media <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                    More <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </a>
                 <div class="dropdown-menu text-left">
+                    <a href="referral.html" class="dropdown-link font-body">Referral Program</a>
                     <a href="#" class="dropdown-link font-body">Before &amp; After Gallery</a>
                     <a href="#" class="dropdown-link font-body">Video Reels</a>
                     <a href="#" class="dropdown-link font-body">Press &amp; Features</a>
                     <a href="testimonials.html" class="dropdown-link font-body">Patient Testimonials</a>
+                    <a href="financing.html" class="dropdown-link font-body">Financing</a>
                 </div>
             </div>
-
-            <a href="financing.html"
-                class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase">Financing</a>
 
             <a href="contact.html"
                 class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase">Contact</a>
@@ -273,27 +269,11 @@ const NAVBAR_HTML = `
                     <i data-lucide="arrow-right" class="w-5 h-5 text-amber-950/80 ml-auto group-hover:text-amber-950 group-hover:translate-x-1 transition-all shrink-0 z-10"></i>
                 </a>
 
-                <!-- About -->
+                <!-- Skin Health (formerly Treatments) -->
                 <div class="mobile-accordion">
                     <button
                         class="accordion-trigger flex items-center justify-between w-full font-heading text-lg text-near-black py-2 text-left hover:text-taupe transition-colors">
-                        About <i data-lucide="plus" class="w-4 h-4"></i>
-                    </button>
-                    <div class="accordion-content hidden flex flex-col gap-3 pl-4 mt-2">
-                        <a href="about.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors font-semibold">Overview</a>
-                        <a href="about.html#story" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Our Story</a>
-                        <a href="about.html#k-beauty" class="font-body text-charcoal/70 hover:text-taupe transition-colors">What is K-Beauty</a>
-                        <a href="about.html#sophia" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Meet Sophia</a>
-                        <a href="about.html#safety" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Medical Oversight &amp; Safety</a>
-                        <a href="about.html#difference" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Why SuA Glow is Different</a>
-                    </div>
-                </div>
-
-                <!-- Treatments -->
-                <div class="mobile-accordion">
-                    <button
-                        class="accordion-trigger flex items-center justify-between w-full font-heading text-lg text-near-black py-2 text-left hover:text-taupe transition-colors">
-                        Treatments <i data-lucide="plus" class="w-4 h-4"></i>
+                        Skin Health <i data-lucide="plus" class="w-4 h-4"></i>
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-5 pl-4 mt-2">
 
@@ -409,23 +389,38 @@ const NAVBAR_HTML = `
                     </div>
                 </div>
 
-                <a href="referral.html" class="font-heading text-lg text-near-black hover:text-taupe transition-colors">Referral Program</a>
-
-                <!-- Media -->
+                <!-- About -->
                 <div class="mobile-accordion">
                     <button
                         class="accordion-trigger flex items-center justify-between w-full font-heading text-lg text-near-black py-2 text-left hover:text-taupe transition-colors">
-                        Media <i data-lucide="plus" class="w-4 h-4"></i>
+                        About <i data-lucide="plus" class="w-4 h-4"></i>
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-3 pl-4 mt-2">
+                        <a href="about.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors font-semibold">Overview</a>
+                        <a href="about.html#story" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Our Story</a>
+                        <a href="about.html#k-beauty" class="font-body text-charcoal/70 hover:text-taupe transition-colors">What is K-Beauty</a>
+                        <a href="about.html#sophia" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Meet Sophia</a>
+                        <a href="about.html#safety" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Medical Oversight &amp; Safety</a>
+                        <a href="about.html#difference" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Why SuA Glow is Different</a>
+                    </div>
+                </div>
+
+                <!-- More (Referral, Media, Financing) -->
+                <div class="mobile-accordion">
+                    <button
+                        class="accordion-trigger flex items-center justify-between w-full font-heading text-lg text-near-black py-2 text-left hover:text-taupe transition-colors">
+                        More <i data-lucide="plus" class="w-4 h-4"></i>
+                    </button>
+                    <div class="accordion-content hidden flex flex-col gap-3 pl-4 mt-2">
+                        <a href="referral.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors font-semibold">Referral Program</a>
                         <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Before &amp; After Gallery</a>
                         <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Video Reels</a>
                         <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Press &amp; Features</a>
                         <a href="testimonials.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Patient Testimonials</a>
+                        <a href="financing.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Financing</a>
                     </div>
                 </div>
 
-                <a href="financing.html" class="font-heading text-lg text-near-black hover:text-taupe transition-colors">Financing</a>
                 <a href="contact.html" class="font-heading text-lg text-near-black hover:text-taupe transition-colors">Contact</a>
                 <a href="style-guide.html" class="font-heading text-lg text-taupe flex items-center gap-2 mt-4 hover:opacity-80 transition-opacity"><i data-lucide="swatch-book" class="w-5 h-5"></i> Style Guide</a>
 
