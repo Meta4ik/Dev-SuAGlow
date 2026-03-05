@@ -22,6 +22,7 @@ function initNavigation() {
     initMobileDrawer();
     initMobileAccordions();
     initNavThemeLogic();
+    initDesktopNavTransition();
 
     // Smooth scroll for anchors
     initAnchorScroll();
@@ -150,6 +151,64 @@ function initNavThemeLogic() {
     } else {
       navbar.classList.remove('nav-scrolled');
     }
+  });
+}
+
+/**
+ * Desktop Nav Breakpoint Animation
+ * Detects when crossing the lg (1024px) breakpoint and plays
+ * a staggered fade-out / fade-in animation on nav items.
+ */
+function initDesktopNavTransition() {
+  const menu = document.querySelector('.desktop-nav-menu');
+  if (!menu) return;
+
+  const mq = window.matchMedia('(min-width: 1024px)');
+  let wasDesktop = mq.matches;
+
+  // Set initial state without animation
+  if (!mq.matches) {
+    menu.classList.add('nav-collapsed');
+  }
+
+  mq.addEventListener('change', (e) => {
+    const items = menu.children;
+
+    if (!e.matches && wasDesktop) {
+      // Shrinking to mobile — play fade-out
+      menu.classList.add('nav-fading-out');
+      menu.classList.remove('nav-collapsed');
+
+      // Stagger each item (reverse order for fade-out)
+      const total = items.length;
+      Array.from(items).forEach((item, i) => {
+        item.style.transitionDelay = `${(total - 1 - i) * 40}ms`;
+      });
+
+      // After animation, collapse
+      setTimeout(() => {
+        menu.classList.remove('nav-fading-out');
+        menu.classList.add('nav-collapsed');
+        Array.from(items).forEach(item => item.style.transitionDelay = '');
+      }, 450);
+
+    } else if (e.matches && !wasDesktop) {
+      // Expanding to desktop — play fade-in
+      menu.classList.remove('nav-collapsed');
+      menu.classList.add('nav-fading-in');
+
+      // Stagger each item
+      Array.from(items).forEach((item, i) => {
+        item.style.transitionDelay = `${i * 60}ms`;
+      });
+
+      setTimeout(() => {
+        menu.classList.remove('nav-fading-in');
+        Array.from(items).forEach(item => item.style.transitionDelay = '');
+      }, 500);
+    }
+
+    wasDesktop = e.matches;
   });
 }
 
