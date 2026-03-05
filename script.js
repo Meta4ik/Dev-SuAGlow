@@ -163,7 +163,7 @@ function initDesktopNavTransition() {
   const menu = document.querySelector('.desktop-nav-menu');
   if (!menu) return;
 
-  const mq = window.matchMedia('(min-width: 1024px)');
+  const mq = window.matchMedia('(min-width: 1180px)');
   let wasDesktop = mq.matches;
 
   // Set initial state without animation

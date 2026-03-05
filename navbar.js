@@ -46,7 +46,7 @@ const NAVBAR_HTML = `
         </a>
 
         <!-- Desktop Menu -->
-        <div class="desktop-nav-menu lg:flex items-center justify-center flex-1 gap-5 xl:gap-8">
+        <div class="desktop-nav-menu min-[1180px]:flex items-center justify-center flex-1 gap-5 xl:gap-8">
 
             <!-- Skin Health Mega Menu (formerly Treatments) -->
             <div class="nav-item-mega group">
@@ -232,7 +232,7 @@ const NAVBAR_HTML = `
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="lg:hidden text-charcoal hover:text-taupe transition-colors">
+            <button id="menu-btn" class="min-[1180px]:hidden text-charcoal hover:text-taupe transition-colors">
                 <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
             </button>
         </div>
