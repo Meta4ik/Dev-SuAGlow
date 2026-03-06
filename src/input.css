@@ -391,11 +391,11 @@ html {
     filter: blur(4px);
 }
 
-/* Default visible state (desktop, no animation class) */
+/* Default visible state — NO transform so mega-menu positioning still works */
 .desktop-nav-menu:not(.nav-collapsed):not(.nav-fading-out):not(.nav-fading-in)>* {
     opacity: 1;
-    transform: translateY(0) scale(1) rotate(0deg);
-    filter: blur(0);
+    transform: none;
+    filter: none;
 }
 
 /* Starburst Effects */
