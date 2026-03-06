@@ -69,7 +69,9 @@ const NAVBAR_HTML = `
                                 <li><a href="re20.html" class="dropdown-link !p-0 hover:!pl-2">Elravie Re20</a></li>
                                 <li><a href="cellredm.html" class="dropdown-link !p-0 hover:!pl-2">CellREDM</a></li>
                                 <li><a href="byryzn.html" class="dropdown-link !p-0 hover:!pl-2">BYRYZN</a></li>
+                                <li><a href="byryzn-v2.html" class="dropdown-link !p-0 hover:!pl-2">BYRYZN <span class="text-[9px] text-warm-gold font-bold ml-1">v2</span></a></li>
                                 <li><a href="hilowave.html" class="dropdown-link !p-0 hover:!pl-2">Hilo Wave®</a></li>
+                                <li><a href="hilowave-v2.html" class="dropdown-link !p-0 hover:!pl-2">HILO WAVE® <span class="text-[9px] text-warm-gold font-bold ml-1">v2</span></a></li>
                                 <li><a href="skinvive.html" class="dropdown-link !p-0 hover:!pl-2">Skinvive</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Restylane Vital Light</a></li>
                             </ul>
@@ -289,7 +291,9 @@ const NAVBAR_HTML = `
                                 <a href="re20.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Elravie Re20</a>
                                 <a href="cellredm.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">CellREDM</a>
                                 <a href="byryzn.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">BYRYZN</a>
+                                <a href="byryzn-v2.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">BYRYZN <span class="text-[9px] text-warm-gold font-bold ml-1">v2</span></a>
                                 <a href="hilowave.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Hilo Wave®</a>
+                                <a href="hilowave-v2.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">HILO WAVE® <span class="text-[9px] text-warm-gold font-bold ml-1">v2</span></a>
                                 <a href="skinvive.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Skinvive</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Restylane Vital Light</a>
                             </div>

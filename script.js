@@ -59,6 +59,27 @@ function initFooter() {
 }
 
 /**
+ * Near Me Section Injection
+ * Uses the NEARME_HTML string from nearme.js
+ * The placeholder should have a data-product attribute for the product name
+ */
+function initNearMe() {
+  const placeholder = document.getElementById('nearme-placeholder');
+  if (!placeholder) return;
+
+  if (typeof NEARME_HTML !== 'undefined') {
+    placeholder.innerHTML = NEARME_HTML;
+
+    // Fill in the product name from the data attribute
+    const productName = placeholder.dataset.product || '';
+    const productEl = document.getElementById('nearme-product');
+    if (productEl) {
+      productEl.textContent = productName;
+    }
+  }
+}
+
+/**
  * News Section Injection & Initialization
  */
 function initNews() {
@@ -219,6 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Kick off Nav & Footer Load
   initNavigation();
   initFooter();
+  initNearMe();
   initNews();
 
   // 2. Setup Reveal Animations
