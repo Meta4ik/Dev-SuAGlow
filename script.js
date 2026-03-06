@@ -351,11 +351,23 @@ function initAnchorScroll() {
   document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
-      if (href.startsWith('#')) {
+
+      // Handle "#hash" as well as "currentpage.html#hash"
+      const isHashOnly = href.startsWith('#');
+      const isCurrentPageAnchor = href.includes('#') && window.location.pathname.endsWith(href.split('#')[0]);
+
+      if (isHashOnly || isCurrentPageAnchor) {
         e.preventDefault();
-        const target = document.querySelector(href);
+        const targetId = href.substring(href.indexOf('#'));
+        const target = document.querySelector(targetId);
         if (target) {
           target.scrollIntoView({ behavior: 'smooth' });
+          // Optionally update the URL hash without reloading
+          if (history.pushState) {
+            history.pushState(null, null, targetId);
+          } else {
+            window.location.hash = targetId;
+          }
         }
       }
     });

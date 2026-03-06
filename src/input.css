@@ -201,6 +201,7 @@ dialog::backdrop {
 /* Smooth Scroll */
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 120px;
 }
 
 /* Mega Menu & Dropdown Styles */

@@ -29,9 +29,9 @@
     <!-- Hero Section -->
     <section id="hero" data-nav-theme="dark"
         class="relative min-h-[50vh] flex items-start justify-center text-center px-8 pt-[250px] overflow-hidden bg-near-black pb-32">
-        <div class="absolute inset-0 z-0 opacity-40">
-            <!-- PLACEHOLDER FOR ABOUT HERO IMAGE -->
-            <div class="w-full h-full moving-gradient"></div>
+        <div class="absolute inset-0 z-0">
+            <img src="assets/about-image.jpg" class="w-full h-full object-cover opacity-40" alt="SuA Glow About Hero">
+            <div class="absolute inset-0 bg-gradient-to-b from-near-black/80 to-near-black/40 mix-blend-multiply"></div>
         </div>
         <div class="relative z-10 max-w-4xl animate-on-scroll fade-up">
             <span
@@ -50,9 +50,10 @@
         <div class="max-w-7xl mx-auto px-8">
             <div class="flex flex-col lg:flex-row items-center gap-20">
                 <div class="lg:w-1/2 animate-on-scroll fade-right">
-                    <span class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-4">The
+                    <span
+                        class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">The
                         Origin</span>
-                    <h2 class="heading-wide text-3xl md:text-4xl text-near-black mb-10 uppercase tracking-[0.1em]">Our
+                    <h2 class="heading-wide text-4xl md:text-5xl text-near-black mb-10 uppercase tracking-[0.15em]">Our
                         Story</h2>
                     <div class="space-y-6 font-body text-lg text-charcoal/70 leading-relaxed">
                         <p>
@@ -69,11 +70,10 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2 animate-on-scroll fade-left">
-                    <div class="aspect-video bg-off-white rounded-2xl overflow-hidden shadow-2xl relative">
-                        <!-- PLACEHOLDER FOR STORY IMAGE -->
-                        <div class="absolute inset-0 flex items-center justify-center text-taupe/20">
-                            <i data-lucide="image" class="w-20 h-20"></i>
-                        </div>
+                    <div
+                        class="aspect-[4/5] md:aspect-video bg-off-white rounded-2xl overflow-hidden shadow-2xl relative">
+                        <img src="assets/art-of-korean.png" alt="Art of Korean Beauty"
+                            class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -85,105 +85,270 @@
         <div class="max-w-7xl mx-auto px-8">
             <div class="text-center mb-24 animate-on-scroll fade-up">
                 <span
-                    class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-4">Philosophy</span>
-                <h2 class="heading-wide text-3xl md:text-4xl text-near-black mb-8 uppercase tracking-[0.1em]">What is
+                    class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">Philosophy</span>
+                <h2 class="heading-wide text-4xl md:text-5xl text-near-black mb-8 uppercase tracking-[0.15em]">What is
                     K-Beauty?</h2>
                 <div class="w-24 h-[1px] bg-taupe/30 mx-auto"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
                 <div
                     class="bg-white p-12 rounded-2xl shadow-soft hover:shadow-xl transition-all animate-on-scroll fade-up">
-                    <i data-lucide="shield-check" class="w-10 h-10 text-taupe mb-8"></i>
-                    <h3 class="heading-wide text-lg mb-6">Prevention First</h3>
-                    <p class="font-body text-charcoal/60 leading-relaxed">Rather than fixing damage later, Korean
-                        aesthetics focus on maintaining the skin barrier and preventing aging before it begins.</p>
+                    <i data-lucide="droplets" class="w-10 h-10 text-taupe mb-8"></i>
+                    <h3 class="heading-wide text-lg mb-6">Hydration Is Everything</h3>
+                    <p class="font-body text-charcoal/60 leading-relaxed">If there’s one secret behind Korean glass
+                        skin, it’s this: hydration drives skin health. Treatments often use Korean skin boosters,
+                        regenerative therapies, and advanced delivery techniques to hydrate the dermis—where real skin
+                        quality begins.</p>
                 </div>
                 <div
                     class="bg-white p-12 rounded-2xl shadow-soft hover:shadow-xl transition-all animate-on-scroll fade-up delay-100">
-                    <i data-lucide="droplets" class="w-10 h-10 text-taupe mb-8"></i>
-                    <h3 class="heading-wide text-lg mb-6">Hyper-Hydration</h3>
-                    <p class="font-body text-charcoal/60 leading-relaxed">The "Mool-Gwang" (water light) effect is
-                        achieved through deep dermal hydration, creating skin that catches light naturally.</p>
+                    <i data-lucide="sparkles" class="w-10 h-10 text-taupe mb-8"></i>
+                    <h3 class="heading-wide text-lg mb-6">Naturally Enhanced Takes Work</h3>
+                    <p class="font-body text-charcoal/60 leading-relaxed">In K-Beauty, natural beauty isn’t accidental,
+                        it’s intentional. The goal is refined, balanced skin that looks healthy and radiant. At SuA
+                        Glow, we respect every beauty choice—whether your goal is subtle enhancement or a little extra
+                        glow.</p>
                 </div>
                 <div
                     class="bg-white p-12 rounded-2xl shadow-soft hover:shadow-xl transition-all animate-on-scroll fade-up delay-200">
                     <i data-lucide="microscope" class="w-10 h-10 text-taupe mb-8"></i>
-                    <h3 class="heading-wide text-lg mb-6">Regenerative Tech</h3>
-                    <p class="font-body text-charcoal/60 leading-relaxed">Utilizing advanced bio-tech like Rejuran
-                        salmon DNA and Juvelook PDLLA to repair skin behavior at a cellular level.</p>
+                    <h3 class="heading-wide text-lg mb-6">Skin Quality Over Volume</h3>
+                    <p class="font-body text-charcoal/60 leading-relaxed">While many aesthetic treatments focus on
+                        adding volume, Korean dermatology emphasizes improving skin quality. Treatments such as skin
+                        boosters, micro-toxin techniques, and regenerative technologies like exosomes help refine
+                        texture, elasticity, and overall skin health.</p>
+                </div>
+                <div
+                    class="bg-white p-12 rounded-2xl shadow-soft hover:shadow-xl transition-all animate-on-scroll fade-up delay-300">
+                    <i data-lucide="shield-check" class="w-10 h-10 text-taupe mb-8"></i>
+                    <h3 class="heading-wide text-lg mb-6">Prevention Over Correction</h3>
+                    <p class="font-body text-charcoal/60 leading-relaxed">Korean dermatologist believes the best
+                        anti-aging strategy is starting before you need it. By supporting hydration, collagen
+                        production, and skin barrier health, patients maintain healthier skin over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Korean Skin Booster Treatments Section -->
+    <section id="skin-boosters-dfw" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="lg:w-1/2 animate-on-scroll fade-right">
+                    <span
+                        class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">Dallas-Fort
+                        Worth</span>
+                    <h2
+                        class="heading-wide text-4xl md:text-5xl text-near-black mb-10 uppercase tracking-[0.15em] leading-snug">
+                        Korean Skin Booster Treatments in DFW</h2>
+                    <div class="space-y-6 font-body text-lg text-charcoal/70 leading-relaxed">
+                        <p>
+                            SuA Glow specializes in Korean skin boosters, micro-toxin treatments, and regenerative skin
+                            therapies inspired by leading dermatology clinics in Seoul. These treatments are designed to
+                            improve hydration, elasticity, and overall skin quality.
+                        </p>
+                        <p>
+                            Patients throughout Dallas, Carrollton, Plano, Frisco, and the greater DFW metroplex visit
+                            SuA Glow to experience Korean skin health treatments without traveling internationally.
+                        </p>
+                        <h4 class="heading-wide text-2xl text-near-black mt-12 mb-6">What Is a Korean Skin Booster?</h4>
+                        <p>
+                            A Korean skin booster is a treatment designed to improve skin hydration, elasticity, and
+                            overall skin quality using injectable or advanced delivery techniques. These treatments help
+                            restore the smooth, hydrated “glass skin” glow Korean dermatology clinics are known for in
+                            Seoul.
+                        </p>
+                        <p>
+                            Many of the world’s most advanced skin boosters and regenerative treatments were developed
+                            in Seoul, South Korea, making it the global leader in aesthetic skin health innovation.
+                        </p>
+                        <div class="bg-off-white p-8 border-l-4 border-warm-gold mt-8">
+                            <h4 class="heading-wide text-lg text-near-black mb-4">THE RESULT</h4>
+                            <p class="mb-4 text-charcoal/80">Healthier, hydrated, resilient skin with the smooth,
+                                luminous glow Korean dermatology clinics are known for.</p>
+                            <p class="mb-4 text-charcoal/80">Because the glow everyone talks about in K-Beauty? It isn’t
+                                about makeup. It’s about skin health.</p>
+                            <p class="text-charcoal/80">And now you can experience Korean skin boosters and regenerative
+                                skin treatments in Dallas–Fort Worth—without flying to Seoul. <a
+                                    href="https://suaglow.myaestheticrecord.com/online-booking/"
+                                    class="text-taupe underline hover:text-warm-gold transition-colors"
+                                    target="_blank">Just book with us at SuA Glow.</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 animate-on-scroll fade-left">
+                    <div class="aspect-[4/5] bg-off-white rounded-2xl overflow-hidden shadow-2xl relative">
+                        <img src="assets/korean-models/portrait_2_highres.png" alt="Korean Skin Booster Treatment"
+                            class="w-full h-full object-cover">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Meet Sophia Section -->
-    <section id="sophia" class="py-32 bg-white overflow-hidden">
+    <section id="sophia" class="py-32 bg-off-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-8">
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-24">
+            <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start gap-24">
                 <div class="lg:w-1/2 animate-on-scroll fade-left">
                     <span
                         class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">The
                         Master Injector</span>
                     <h2 class="heading-wide text-4xl mb-14 leading-[1.15]">Meet Sophia Yang, PA-C.<br><span
-                            class="text-warm-gold opacity-80">Korean Technique.<br>No Translation Required.</span></h2>
-                    <div class="space-y-8 font-body text-lg text-charcoal/70 leading-relaxed">
+                            class="text-warm-gold opacity-80">Seoul-Trained Korean Medical Aesthetics Specialist.</span>
+                    </h2>
+                    <div class="space-y-8 font-light text-lg leading-relaxed opacity-70 mb-16">
                         <p>
-                            Sophia Yang, PA-C brings Seoul's coveted K-Beauty secrets to Dallas with a signature style
-                            that blends precision, proportion, and whisper-soft luxury—not trends.
+                            Sophia Yang is a Seoul-trained medical aesthetics provider specializing in Korean skin
+                            health treatments, bringing advanced K-Beauty techniques to patients across Dallas–Fort
+                            Worth. SuA Glow is a Korean medical aesthetics clinic in Dallas–Fort Worth specializing in
+                            skin boosters, micro-toxin treatments, and regenerative skin therapies inspired by leading
+                            dermatology clinics in Seoul.
                         </p>
                         <p>
-                            As a Seoul-trained injector, she transforms advanced science into effortless glow,
-                            customizing every treatment to deliver hydrated, glass-skin radiance without heaviness or
-                            hype.
+                            Sophia believes strongly in respecting everyone’s beauty choices. Her philosophy is simple:
+                            aesthetic treatments should support each patient’s personal goals, whether that means subtle
+                            refinement, improved skin health, or simply feeling more confident in your own skin.
+                        </p>
+                        <p>
+                            In Korea, aesthetic medicine focuses on skin quality, hydration, and long-term skin
+                            health—not dramatic changes. Korean dermatology clinics are known worldwide for their
+                            precision techniques designed to improve hydration, elasticity, and overall skin quality.
+                        </p>
+                        <p>
+                            Sophia trained in aesthetic techniques developed in Seoul’s leading dermatology clinics,
+                            where many of today’s most advanced skin boosters, micro-toxin treatments, and regenerative
+                            skin therapies originated.
+                        </p>
+                        <p>
+                            At SuA Glow, she combines K-Beauty philosophy with the latest innovations in Korean skin
+                            boosters, exosome-based regenerative treatments, and Seoul-inspired injection techniques to
+                            help patients achieve healthier, smoother, naturally radiant skin.
+                        </p>
+                        <p class="font-semibold text-warm-gold mt-4">
+                            Her approach is simple: precision technique, personalized care, and results that look
+                            naturally refreshed.
                         </p>
                     </div>
                 </div>
                 <div class="lg:w-1/2 animate-on-scroll fade-right">
                     <div class="relative">
-                        <div class="aspect-[4/5] bg-off-white rounded-2xl overflow-hidden shadow-2xl">
+                        <div class="aspect-[4/5] bg-white rounded-2xl overflow-hidden shadow-2xl">
                             <img src="https://suaglow.com/wp-content/uploads/2025/11/sophia_2.png"
                                 class="w-full h-full object-contain grayscale brightness-95" alt="Sophia Yang">
                         </div>
                         <div
                             class="absolute -bottom-8 -right-8 bg-near-black text-white p-10 hidden md:block shadow-2xl rounded-lg">
                             <p class="heading-wide text-lg mb-2">Seoul Trained</p>
-                            <p class="text-[10px] uppercase tracking-[0.3em] opacity-40">Original Protocol Master</p>
+                            <p class="text-xs uppercase tracking-[0.1em] opacity-80 mt-2 font-body font-semibold">Korean
+                                Medical Aesthetics<br>Specialist</p>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="mt-32 max-w-4xl mx-auto text-center animate-on-scroll fade-up">
+                <span
+                    class="inline-block px-4 py-1.5 bg-taupe/10 border border-taupe/20 rounded-full text-[10px] tracking-[0.3em] uppercase text-taupe font-bold mb-8">SEOUL
+                    TRAINED</span>
+                <h3 class="heading-wide text-3xl md:text-4xl text-near-black mb-8 uppercase tracking-[0.15em]">Advanced
+                    Korean Aesthetic Techniques</h3>
+                <p class="font-body text-lg text-charcoal/70 leading-relaxed mb-6">
+                    Sophia’s treatment protocols are inspired by leading dermatology clinics in Seoul, South Korea—the
+                    global center of innovation for skin boosters, regenerative skin therapies, and K-Beauty medical
+                    aesthetics.
+                </p>
+                <p class="font-body text-lg text-charcoal/70 leading-relaxed">
+                    Patients across Carrollton, Dallas, Plano, Frisco, and the greater Dallas–Fort Worth metroplex visit
+                    SuA Glow to experience Korean skin health treatments designed to improve hydration, elasticity, and
+                    overall skin quality.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Medical Oversight & Safety Section -->
     <section id="safety" class="py-32 bg-near-black text-white relative">
-        <div class="max-w-5xl mx-auto px-8 relative z-10 text-center">
-            <span class="inline-block text-[10px] tracking-[0.4em] text-warm-gold uppercase font-bold mb-8">Clinical
+        <div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
+            <span
+                class="inline-block text-[10px] tracking-[0.4em] text-warm-gold uppercase font-bold mb-6 italic">Clinical
                 Excellence</span>
-            <h2 class="heading-wide text-3xl md:text-5xl mb-12 uppercase tracking-[0.1em]">Medical Oversight & Safety
+            <h2 class="heading-wide text-4xl md:text-5xl mb-12 uppercase tracking-[0.15em]">Medical Oversight & Safety
             </h2>
             <div class="max-w-3xl mx-auto space-y-8 text-white/70 font-body text-lg leading-relaxed mb-16">
                 <p>
-                    At SuA K-Glow, your safety and clinical outcomes are our highest priorities. We operate under strict
-                    medical oversight, ensuring that every protocol is vetted for safety and effectiveness.
+                    At SuA Glow, your safety and clinical outcomes are our highest priorities. Every treatment is
+                    performed using carefully developed protocols designed to ensure consistency, safety, and effective
+                    results.
                 </p>
-                <div class="grid md:grid-cols-2 gap-8 text-left">
-                    <div class="bg-white/5 p-8 rounded-xl border border-white/10">
-                        <h4 class="heading-wide text-sm text-warm-gold mb-4">Board Certified Oversight</h4>
-                        <p class="text-sm">Continuous monitoring of all clinical procedures by board-certified medical
-                            professionals.</p>
-                    </div>
-                    <div class="bg-white/5 p-8 rounded-xl border border-white/10">
-                        <h4 class="heading-wide text-sm text-warm-gold mb-4">Authentic Products</h4>
-                        <p class="text-sm">We only utilize genuine, pharmaceutical-grade solutions from reputable global
-                            manufacturers.</p>
-                    </div>
+                <p>
+                    Our clinic combines physician oversight, advanced provider training, and globally sourced
+                    medical-grade products to deliver the highest standards of Korean medical aesthetics.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left mb-16">
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                    <i data-lucide="shield" class="w-8 h-8 text-warm-gold mb-6"></i>
+                    <h4 class="heading-wide text-sm text-white mb-4 uppercase tracking-wider">Physician-Led Medical
+                        Oversight</h4>
+                    <p class="text-sm text-white/70">All treatments at SuA Glow are performed under the supervision of
+                        Dr. Adam Yang, MD, providing board-certified medical oversight and ensuring that every procedure
+                        follows evidence-based clinical standards for safety and patient outcomes.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                    <i data-lucide="check-circle" class="w-8 h-8 text-warm-gold mb-6"></i>
+                    <h4 class="heading-wide text-sm text-white mb-4 uppercase tracking-wider">Authentic Global Products
+                    </h4>
+                    <p class="text-sm text-white/70">We utilize only genuine, pharmaceutical-grade solutions sourced
+                        from reputable manufacturers in South Korea, Europe, and the United States to ensure product
+                        quality and safety.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                    <i data-lucide="map-pin" class="w-8 h-8 text-warm-gold mb-6"></i>
+                    <h4 class="heading-wide text-sm text-white mb-4 uppercase tracking-wider">Seoul-Inspired protocols
+                    </h4>
+                    <p class="text-sm text-white/70">Our treatment techniques are inspired by leading dermatology
+                        clinics in Seoul, South Korea, the global center of innovation in skin boosters, regenerative
+                        therapies, and advanced skin health treatments.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                    <i data-lucide="graduation-cap" class="w-8 h-8 text-warm-gold mb-6"></i>
+                    <h4 class="heading-wide text-sm text-white mb-4 uppercase tracking-wider">Advanced Provider Training
+                    </h4>
+                    <p class="text-sm text-white/70">Our providers receive specialized training in K-Beauty aesthetic
+                        techniques, including precision injection methods and advanced skin booster protocols.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                    <i data-lucide="user-check" class="w-8 h-8 text-warm-gold mb-6"></i>
+                    <h4 class="heading-wide text-sm text-white mb-4 uppercase tracking-wider">Personalized Skin
+                        Consultations</h4>
+                    <p class="text-sm text-white/70">Every treatment begins with a comprehensive consultation to
+                        evaluate your skin condition and develop a customized plan designed to improve hydration,
+                        elasticity, and long-term skin health.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                    <i data-lucide="clipboard-list" class="w-8 h-8 text-warm-gold mb-6"></i>
+                    <h4 class="heading-wide text-sm text-white mb-4 uppercase tracking-wider">Evidence-Based Clinical
+                        Protocols</h4>
+                    <p class="text-sm text-white/70">All treatments follow clinically supported protocols designed to
+                        optimize safety, treatment consistency, and predictable outcomes.</p>
+                </div>
+                <div
+                    class="bg-white/5 p-8 rounded-xl border border-white/10 hover:bg-white/10 transition-colors lg:col-span-3">
+                    <i data-lucide="heart" class="w-8 h-8 text-warm-gold mb-6"></i>
+                    <h4 class="heading-wide text-sm text-white mb-4 uppercase tracking-wider">Skin Health First
+                        Philosophy</h4>
+                    <p class="text-sm text-white/70">Rather than temporary cosmetic fixes, SuA Glow prioritizes
+                        treatments that improve skin quality, hydration, and long-term skin resilience—the foundation of
+                        authentic K-Beauty results.</p>
                 </div>
             </div>
-            <!-- PLACEHOLDER FOR CLINICAL IMAGE -->
-            <div class="w-full h-64 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10">
-                <i data-lucide="stethoscope" class="w-16 h-16 text-white/10"></i>
+
+            <div class="w-full h-80 rounded-2xl overflow-hidden border border-white/10 relative">
+                <img src="assets/elravie-re2o-main.jpg" alt="Clinical Excellence"
+                    class="w-full h-full object-cover mix-blend-screen opacity-80">
             </div>
         </div>
     </section>
@@ -192,60 +357,84 @@
     <section id="difference" class="py-32 bg-white">
         <div class="max-w-7xl mx-auto px-8">
             <div class="text-center mb-24 animate-on-scroll fade-up">
-                <span class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-4">Our
-                    Edge</span>
-                <h2 class="heading-wide text-3xl md:text-4xl text-near-black mb-8 uppercase tracking-[0.1em]">Why SuA
+                <span class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">SUA
+                    GLOW: YOUR DESTINATION FOR K-BEAUTY MEDICAL AESTHETICS</span>
+                <h2 class="heading-wide text-4xl md:text-5xl text-near-black mb-8 uppercase tracking-[0.15em]">Why SuA
                     Glow is Different</h2>
                 <div class="w-24 h-[1px] bg-taupe/30 mx-auto"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-16">
-                <div class="flex gap-8 animate-on-scroll fade-right">
+            <div class="grid gap-20 max-w-5xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start animate-on-scroll fade-up">
                     <div
-                        class="flex-shrink-0 w-16 h-16 bg-taupe/10 rounded-full flex items-center justify-center text-taupe">
-                        <i data-lucide="sparkles" class="w-8 h-8"></i>
+                        class="flex-shrink-0 w-16 h-16 bg-taupe/10 rounded-full flex items-center justify-center text-taupe text-2xl font-bold font-[Montserrat] mt-1">
+                        1
                     </div>
                     <div>
-                        <h4 class="heading-wide text-lg mb-4">The "Glow" Protocol</h4>
-                        <p class="font-body text-charcoal/60 leading-relaxed">Unlike traditional medspas that focus on
-                            isolated symptoms, we treat the skin holistically, building its health from the inside out
-                            for a glow that persists long after the appointment.</p>
+                        <h4 class="heading-wide text-xl mb-4 text-near-black leading-tight">Authentic Korean Medical
+                            Aesthetics</h4>
+                        <p class="font-body text-charcoal/70 leading-relaxed text-lg">SuA Glow brings K-Beauty medical
+                            aesthetic techniques inspired by leading dermatology clinics in Seoul, South Korea to
+                            Dallas–Fort Worth. Our treatments reflect the philosophy used in Korean dermatology:
+                            improving skin health, hydration, and long-term skin quality.</p>
                     </div>
                 </div>
-                <div class="flex gap-8 animate-on-scroll fade-left">
+
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start animate-on-scroll fade-up delay-100">
                     <div
-                        class="flex-shrink-0 w-16 h-16 bg-taupe/10 rounded-full flex items-center justify-center text-taupe">
-                        <i data-lucide="languages" class="w-8 h-8"></i>
+                        class="flex-shrink-0 w-16 h-16 bg-taupe/10 rounded-full flex items-center justify-center text-taupe text-2xl font-bold font-[Montserrat] mt-1">
+                        2
                     </div>
                     <div>
-                        <h4 class="heading-wide text-lg mb-4">No Translation Required</h4>
-                        <p class="font-body text-charcoal/60 leading-relaxed">We bring original Korean aesthetic
-                            techniques directly to you, with deep understanding of both Asian and Western skin types and
-                            needs.</p>
+                        <h4 class="heading-wide text-xl mb-4 text-near-black leading-tight">Specialized in Korean Skin
+                            Boosters</h4>
+                        <p class="font-body text-charcoal/70 leading-relaxed text-lg">We focus on next-generation Korean
+                            skin boosters and regenerative skin treatments designed to improve hydration, elasticity,
+                            and overall skin quality. These treatments help create the smooth, luminous “glass skin”
+                            glow Korean dermatology clinics are known for.</p>
                     </div>
                 </div>
-                <div class="flex gap-8 animate-on-scroll fade-right delay-100">
+
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start animate-on-scroll fade-up delay-200">
                     <div
-                        class="flex-shrink-0 w-16 h-16 bg-taupe/10 rounded-full flex items-center justify-center text-taupe">
-                        <i data-lucide="heart" class="w-8 h-8"></i>
+                        class="flex-shrink-0 w-16 h-16 bg-taupe/10 rounded-full flex items-center justify-center text-taupe text-2xl font-bold font-[Montserrat] mt-1">
+                        3
                     </div>
                     <div>
-                        <h4 class="heading-wide text-lg mb-4">Relationship Focused</h4>
-                        <p class="font-body text-charcoal/60 leading-relaxed">We view skin as a lifelong journey. Our
-                            consultations are thorough, honest, and focused on your long-term aesthetic goals, not
-                            quick-fix sales.</p>
+                        <h4 class="heading-wide text-xl mb-4 text-near-black leading-tight">Physician-Led Medical
+                            Oversight</h4>
+                        <p class="font-body text-charcoal/70 leading-relaxed text-lg">SuA Glow operates under physician
+                            supervision, ensuring that all treatments follow carefully developed medical protocols
+                            designed for safety, effectiveness, and predictable outcomes.</p>
                     </div>
                 </div>
-                <div class="flex gap-8 animate-on-scroll fade-left delay-100">
+
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start animate-on-scroll fade-up delay-300">
                     <div
-                        class="flex-shrink-0 w-16 h-16 bg-taupe/10 rounded-full flex items-center justify-center text-taupe">
-                        <i data-lucide="zap" class="w-8 h-8"></i>
+                        class="flex-shrink-0 w-16 h-16 bg-taupe/10 rounded-full flex items-center justify-center text-taupe text-2xl font-bold font-[Montserrat] mt-1">
+                        4
                     </div>
                     <div>
-                        <h4 class="heading-wide text-lg mb-4">Precision Science</h4>
-                        <p class="font-body text-charcoal/60 leading-relaxed">We use the exact same clinical devices and
-                            serums found in high-end clinics in Gangnam, Seoul, ensuring you get the authentic
-                            experience.</p>
+                        <h4 class="heading-wide text-xl mb-4 text-near-black leading-tight">Personalized Skin Health
+                            Plans</h4>
+                        <p class="font-body text-charcoal/70 leading-relaxed text-lg">Every treatment begins with a
+                            detailed consultation to evaluate your skin condition, hydration levels, and aesthetic
+                            goals. Treatment plans are customized to support long-term skin health rather than temporary
+                            cosmetic fixes.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start animate-on-scroll fade-up delay-400">
+                    <div
+                        class="flex-shrink-0 w-16 h-16 bg-taupe/10 rounded-full flex items-center justify-center text-taupe text-2xl font-bold font-[Montserrat] mt-1">
+                        5
+                    </div>
+                    <div>
+                        <h4 class="heading-wide text-xl mb-4 text-near-black leading-tight">The K-Beauty Skin Health
+                            Philosophy</h4>
+                        <p class="font-body text-charcoal/70 leading-relaxed text-lg">Korean dermatology focuses on skin
+                            quality before structural change. Our treatments prioritize hydration, collagen support, and
+                            skin regeneration to create results that look naturally radiant—not overdone.</p>
                     </div>
                 </div>
             </div>
