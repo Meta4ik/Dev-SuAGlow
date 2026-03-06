@@ -269,6 +269,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 7. Glow Card Tracking
   initGlowCardTracking();
+
+  // 8. Story Carousel
+  initStoryCarousel();
 });
 
 function initHeroVideoScroll() {
@@ -465,3 +468,50 @@ function initGlowCardTracking() {
   });
 }
 
+function initStoryCarousel() {
+  const container = document.getElementById('story-carousel-inner');
+  if (!container) return;
+
+  const prevBtn = document.getElementById('story-prev');
+  const nextBtn = document.getElementById('story-next');
+  const dotsContainer = document.getElementById('story-carousel-dots');
+  const dots = dotsContainer ? dotsContainer.querySelectorAll('button') : [];
+
+  const totalSlides = 3;
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    container.style.transform = `translateX(-${currentIndex * (100 / 3)}%)`;
+
+    dots.forEach((dot, index) => {
+      if (index === currentIndex) {
+        dot.classList.remove('bg-white/60');
+        dot.classList.add('bg-white', 'ring-2', 'ring-white/20');
+      } else {
+        dot.classList.remove('bg-white', 'ring-2', 'ring-white/20');
+        dot.classList.add('bg-white/60');
+      }
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    });
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', (e) => {
+      currentIndex = parseInt(e.target.dataset.index);
+      updateCarousel();
+    });
+  });
+}

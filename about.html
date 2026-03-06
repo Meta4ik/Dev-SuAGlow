@@ -70,10 +70,51 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2 animate-on-scroll fade-left">
-                    <div
-                        class="aspect-[4/5] md:aspect-video bg-off-white rounded-2xl overflow-hidden shadow-2xl relative">
-                        <img src="assets/art-of-korean.png" alt="Art of Korean Beauty"
-                            class="w-full h-full object-cover">
+                    <div class="aspect-square bg-off-white rounded-2xl overflow-hidden shadow-2xl relative group">
+                        <!-- Carousel Wrapper -->
+                        <div id="story-carousel-inner"
+                            class="flex w-[300%] h-full transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                            <!-- Slide 1 -->
+                            <div class="w-1/3 h-full shrink-0 relative">
+                                <img src="assets/injectaables.jpg" alt="Injectables" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="w-1/3 h-full shrink-0 relative">
+                                <img src="assets/art-of-korean.png" alt="Art of Korean Beauty"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="w-1/3 h-full shrink-0 relative">
+                                <img src="assets/filler-profile.jpg" alt="Filler Profile"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <!-- Brand Styling Overlay -->
+                        <div
+                            class="absolute inset-0 z-10 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                        </div>
+
+                        <!-- Controls -->
+                        <button id="story-prev"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/80 hover:bg-white text-near-black rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 shadow-md z-20 hover:scale-105">
+                            <i data-lucide="chevron-left" class="w-5 h-5 -ml-0.5"></i>
+                        </button>
+                        <button id="story-next"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white text-near-black rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 shadow-md z-20 hover:scale-105 ring-1 ring-taupe/60 ring-offset-2 ring-offset-transparent">
+                            <i data-lucide="chevron-right" class="w-5 h-5 -mr-0.5"></i>
+                        </button>
+
+                        <!-- Indicators -->
+                        <div id="story-carousel-dots"
+                            class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+                            <button data-index="0"
+                                class="w-2 h-2 rounded-full bg-white transition-all duration-500 shadow-sm ring-2 ring-white/20"></button>
+                            <button data-index="1"
+                                class="w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-all duration-500 shadow-sm hover:ring-2 hover:ring-white/20"></button>
+                            <button data-index="2"
+                                class="w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-all duration-500 shadow-sm hover:ring-2 hover:ring-white/20"></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,12 +124,22 @@
     <!-- What is K-Beauty Section -->
     <section id="k-beauty" class="py-32 bg-off-white">
         <div class="max-w-7xl mx-auto px-8">
-            <div class="text-center mb-24 animate-on-scroll fade-up">
+            <div class="text-center mb-20 animate-on-scroll fade-up">
                 <span
                     class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">Philosophy</span>
                 <h2 class="heading-wide text-4xl md:text-5xl text-near-black mb-8 uppercase tracking-[0.15em]">What is
                     K-Beauty?</h2>
                 <div class="w-24 h-[1px] bg-taupe/30 mx-auto"></div>
+            </div>
+
+            <!-- Large K-Beauty Banner Image -->
+            <div
+                class="mb-24 animate-on-scroll fade-up rounded-[2rem] overflow-hidden shadow-2xl relative aspect-[5/4] md:aspect-[5/4] group w-full lg:w-11/12 mx-auto">
+                <div
+                    class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-1000 z-10 pointer-events-none">
+                </div>
+                <img src="assets/what_is_kbeauty.webp" alt="What is K-Beauty Philosophy"
+                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out">
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
@@ -134,53 +185,134 @@
     <!-- Korean Skin Booster Treatments Section -->
     <section id="skin-boosters-dfw" class="py-32 bg-white">
         <div class="max-w-7xl mx-auto px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-20">
-                <div class="lg:w-1/2 animate-on-scroll fade-right">
+            <div class="flex flex-col gap-24">
+                <div class="w-full animate-on-scroll fade-up">
                     <span
                         class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">Dallas-Fort
                         Worth</span>
                     <h2
                         class="heading-wide text-4xl md:text-5xl text-near-black mb-10 uppercase tracking-[0.15em] leading-snug">
                         Korean Skin Booster Treatments in DFW</h2>
-                    <div class="space-y-6 font-body text-lg text-charcoal/70 leading-relaxed">
-                        <p>
-                            SuA Glow specializes in Korean skin boosters, micro-toxin treatments, and regenerative skin
-                            therapies inspired by leading dermatology clinics in Seoul. These treatments are designed to
-                            improve hydration, elasticity, and overall skin quality.
-                        </p>
-                        <p>
-                            Patients throughout Dallas, Carrollton, Plano, Frisco, and the greater DFW metroplex visit
-                            SuA Glow to experience Korean skin health treatments without traveling internationally.
-                        </p>
-                        <h4 class="heading-wide text-2xl text-near-black mt-12 mb-6">What Is a Korean Skin Booster?</h4>
-                        <p>
-                            A Korean skin booster is a treatment designed to improve skin hydration, elasticity, and
-                            overall skin quality using injectable or advanced delivery techniques. These treatments help
-                            restore the smooth, hydrated “glass skin” glow Korean dermatology clinics are known for in
-                            Seoul.
-                        </p>
-                        <p>
-                            Many of the world’s most advanced skin boosters and regenerative treatments were developed
-                            in Seoul, South Korea, making it the global leader in aesthetic skin health innovation.
-                        </p>
-                        <div class="bg-off-white p-8 border-l-4 border-warm-gold mt-8">
-                            <h4 class="heading-wide text-lg text-near-black mb-4">THE RESULT</h4>
-                            <p class="mb-4 text-charcoal/80">Healthier, hydrated, resilient skin with the smooth,
-                                luminous glow Korean dermatology clinics are known for.</p>
-                            <p class="mb-4 text-charcoal/80">Because the glow everyone talks about in K-Beauty? It isn’t
-                                about makeup. It’s about skin health.</p>
-                            <p class="text-charcoal/80">And now you can experience Korean skin boosters and regenerative
-                                skin treatments in Dallas–Fort Worth—without flying to Seoul. <a
-                                    href="https://suaglow.myaestheticrecord.com/online-booking/"
-                                    class="text-taupe underline hover:text-warm-gold transition-colors"
-                                    target="_blank">Just book with us at SuA Glow.</a></p>
+                    <div class="grid lg:grid-cols-2 gap-12 font-body text-lg text-charcoal/70 leading-relaxed md:mt-12">
+                        <div class="space-y-6">
+                            <p>
+                                SuA Glow specializes in Korean skin boosters, micro-toxin treatments, and regenerative
+                                skin
+                                therapies inspired by leading dermatology clinics in Seoul. These treatments are
+                                designed to
+                                improve hydration, elasticity, and overall skin quality.
+                            </p>
+                            <p>
+                                Patients throughout Dallas, Carrollton, Plano, Frisco, and the greater DFW metroplex
+                                visit
+                                SuA Glow to experience Korean skin health treatments without traveling internationally.
+                            </p>
+                            <h4 class="heading-wide text-2xl text-near-black pt-8 mb-6">What Is a Korean Skin Booster?
+                            </h4>
+                            <p>
+                                A Korean skin booster is a treatment designed to improve skin hydration, elasticity, and
+                                overall skin quality using injectable or advanced delivery techniques. These treatments
+                                help
+                                restore the smooth, hydrated “glass skin” glow Korean dermatology clinics are known for
+                                in
+                                Seoul.
+                            </p>
+                            <p>
+                                Many of the world’s most advanced skin boosters and regenerative treatments were
+                                developed
+                                in Seoul, South Korea, making it the global leader in aesthetic skin health innovation.
+                            </p>
+                        </div>
+                        <div class="h-full flex flex-col justify-end lg:justify-start lg:pt-4">
+                            <div class="bg-off-white p-10 border-l-4 border-warm-gold lg:mt-32">
+                                <h4 class="heading-wide text-lg text-near-black mb-4">THE RESULT</h4>
+                                <p class="mb-4 text-charcoal/80">Healthier, hydrated, resilient skin with the smooth,
+                                    luminous glow Korean dermatology clinics are known for.</p>
+                                <p class="mb-4 text-charcoal/80">Because the glow everyone talks about in K-Beauty? It
+                                    isn’t
+                                    about makeup. It’s about skin health.</p>
+                                <p class="text-charcoal/80">And now you can experience Korean skin boosters and
+                                    regenerative
+                                    skin treatments in Dallas–Fort Worth—without flying to Seoul. <a
+                                        href="https://suaglow.myaestheticrecord.com/online-booking/"
+                                        class="text-taupe underline hover:text-warm-gold transition-colors"
+                                        target="_blank">Just book with us at SuA Glow.</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/2 animate-on-scroll fade-left">
-                    <div class="aspect-[4/5] bg-off-white rounded-2xl overflow-hidden shadow-2xl relative">
-                        <img src="assets/korean-models/portrait_2_highres.png" alt="Korean Skin Booster Treatment"
-                            class="w-full h-full object-cover">
+                <div class="w-full animate-on-scroll fade-up">
+                    <div class="bg-off-white rounded-[2rem] p-10 md:p-14 h-full shadow-xl border border-black/5">
+                        <div class="text-center mb-10">
+                            <span
+                                class="inline-block text-[10px] tracking-[0.3em] text-taupe uppercase font-bold mb-2">Our
+                                Key Formularies</span>
+                            <h3 class="heading-wide text-2xl text-near-black uppercase tracking-widest">Featured
+                                Boosters</h3>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-10">
+                            <!-- Elravie Re2O -->
+                            <a href="re20.html" class="flex flex-col items-center group">
+                                <div
+                                    class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-sm mb-4 overflow-hidden flex items-center justify-center border border-black/5 group-hover:shadow-md group-hover:border-warm-gold/40 transition-all duration-500 group-hover:-translate-y-1">
+                                    <img src="assets/elravie-re2o-product.png" alt="Elravie Re2O"
+                                        class="w-full h-full object-cover scale-[1.2]">
+                                </div>
+                                <span
+                                    class="font-heading text-[10px] uppercase font-bold tracking-[0.2em] text-charcoal/80 group-hover:text-warm-gold transition-colors text-center">Elravie
+                                    Re2O</span>
+                            </a>
+                            <!-- Rejuran -->
+                            <a href="rejuran.html" class="flex flex-col items-center group">
+                                <div
+                                    class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-sm mb-4 overflow-hidden flex items-center justify-center border border-black/5 group-hover:shadow-md group-hover:border-warm-gold/40 transition-all duration-500 group-hover:-translate-y-1">
+                                    <img src="assets/rejuran-product.png" alt="Rejuran"
+                                        class="w-full h-full object-cover scale-[1.3]">
+                                </div>
+                                <span
+                                    class="font-heading text-[10px] uppercase font-bold tracking-[0.2em] text-charcoal/80 group-hover:text-warm-gold transition-colors text-center">Rejuran</span>
+                            </a>
+                            <!-- Juvelook -->
+                            <a href="juvelook.html" class="flex flex-col items-center group">
+                                <div
+                                    class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-sm mb-4 overflow-hidden flex items-center justify-center border border-black/5 group-hover:shadow-md group-hover:border-warm-gold/40 transition-all duration-500 group-hover:-translate-y-1">
+                                    <img src="assets/juvelook-bottles.png" alt="Juvelook"
+                                        class="w-full h-full object-cover scale-[1.25]">
+                                </div>
+                                <span
+                                    class="font-heading text-[10px] uppercase font-bold tracking-[0.2em] text-charcoal/80 group-hover:text-warm-gold transition-colors text-center">Juvelook</span>
+                            </a>
+                            <!-- Skinvive -->
+                            <a href="skinvive.html" class="flex flex-col items-center group">
+                                <div
+                                    class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-sm mb-4 overflow-hidden flex items-center justify-center border border-black/5 group-hover:shadow-md group-hover:border-warm-gold/40 transition-all duration-500 group-hover:-translate-y-1">
+                                    <img src="assets/skinvive_product.webp" alt="Skinvive"
+                                        class="w-full h-full object-cover scale-[1.3]">
+                                </div>
+                                <span
+                                    class="font-heading text-[10px] uppercase font-bold tracking-[0.2em] text-charcoal/80 group-hover:text-warm-gold transition-colors text-center">Skinvive</span>
+                            </a>
+                            <!-- Cellrederm -->
+                            <a href="cellredm.html" class="flex flex-col items-center group">
+                                <div
+                                    class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-sm mb-4 overflow-hidden flex items-center justify-center border border-black/5 group-hover:shadow-md group-hover:border-warm-gold/40 transition-all duration-500 group-hover:-translate-y-1">
+                                    <img src="assets/cellredm_products.png" alt="Cellrederm"
+                                        class="w-full h-full object-cover scale-[1.15]">
+                                </div>
+                                <span
+                                    class="font-heading text-[10px] uppercase font-bold tracking-[0.2em] text-charcoal/80 group-hover:text-warm-gold transition-colors text-center">Cellrederm</span>
+                            </a>
+                            <!-- Byryzn -->
+                            <a href="byryzn.html" class="flex flex-col items-center group">
+                                <div
+                                    class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-sm mb-4 overflow-hidden flex items-center justify-center border border-black/5 group-hover:shadow-md group-hover:border-warm-gold/40 transition-all duration-500 group-hover:-translate-y-1">
+                                    <img src="assets/byryzn-product.png" alt="Byryzn"
+                                        class="w-full h-full object-cover scale-[1.2] mix-blend-multiply">
+                                </div>
+                                <span
+                                    class="font-heading text-[10px] uppercase font-bold tracking-[0.2em] text-charcoal/80 group-hover:text-warm-gold transition-colors text-center">Byryzn</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -346,10 +478,7 @@
                 </div>
             </div>
 
-            <div class="w-full h-80 rounded-2xl overflow-hidden border border-white/10 relative">
-                <img src="assets/elravie-re2o-main.jpg" alt="Clinical Excellence"
-                    class="w-full h-full object-cover mix-blend-screen opacity-80">
-            </div>
+
         </div>
     </section>
 
