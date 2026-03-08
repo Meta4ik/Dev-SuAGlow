@@ -357,8 +357,7 @@
                             Learn More</div>
                         <h4
                             class="slide-title font-heading tracking-widest uppercase text-xl text-white mb-2 whitespace-nowrap transform -rotate-90 group-hover:rotate-0 origin-left transition-all duration-500 will-change-transform">
-                            Elravie<span class="group-hover:hidden"><br> Re2O</span><span
-                                class="hidden group-hover:inline"> Re2O</span></h4>
+                            Elravie Re2O</h4>
                         <p
                             class="slide-desc font-body text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">
                             Deep hydration & glass skin glow with HA microspheres.</p>
@@ -498,7 +497,9 @@
             position: absolute;
             bottom: 40px;
             left: 50%;
-            transform: translateX(-50%) rotate(-90deg);
+            /* Use left center origin and fixed left pull to perfectly center it regardless of word length */
+            transform-origin: left center;
+            transform: translate(-14px, 0) rotate(-90deg);
             white-space: nowrap;
             letter-spacing: 0.15em;
         }
