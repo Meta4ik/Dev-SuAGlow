@@ -1895,11 +1895,6 @@ video {
   border-color: rgb(0 0 0 / 0.05);
 }
 
-.border-blue-gray {
-  --tw-border-opacity: 1;
-  border-color: rgb(157 175 182 / var(--tw-border-opacity, 1));
-}
-
 .border-charcoal\/10 {
   border-color: rgb(64 67 69 / 0.1);
 }
@@ -4748,14 +4743,6 @@ html {
 
 .group:hover .group-hover\:pointer-events-auto {
   pointer-events: auto;
-}
-
-.group:hover .group-hover\:inline {
-  display: inline;
-}
-
-.group:hover .group-hover\:hidden {
-  display: none;
 }
 
 .group:hover .group-hover\:-translate-y-1 {
