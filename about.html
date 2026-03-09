@@ -354,7 +354,7 @@
                     <div class="booster-slide-content p-6 flex flex-col justify-end h-full absolute inset-0">
                         <h4
                             class="slide-title font-heading tracking-widest uppercase text-xl text-white mb-2 whitespace-nowrap transform -rotate-90 group-hover:rotate-0 origin-left transition-all duration-500 will-change-transform">
-                            Elravie Re2O</h4>
+                            Elravie<br class="mobile-accordion-break"> Re2O</h4>
                         <p
                             class="slide-desc font-body text-white/60 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2 mb-4">
                             Deep hydration & glass skin glow with HA microspheres.</p>
@@ -563,6 +563,19 @@
                 font-size: 1rem;
                 bottom: 30px;
             }
+
+            .booster-slide.is-open .slide-title {
+                white-space: normal;
+                line-height: 1.2;
+            }
+
+            .booster-slide.is-open .mobile-accordion-break {
+                display: block;
+            }
+        }
+
+        .mobile-accordion-break {
+            display: none;
         }
     </style>
 
