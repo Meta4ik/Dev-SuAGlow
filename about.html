@@ -494,7 +494,8 @@
             cursor: pointer;
         }
 
-        .booster-slide:hover {
+        .booster-slide:hover,
+        .booster-slide.is-open {
             flex: 4 1 50%;
         }
 
@@ -509,7 +510,8 @@
             letter-spacing: 0.15em;
         }
 
-        .booster-slide:hover .slide-title {
+        .booster-slide:hover .slide-title,
+        .booster-slide.is-open .slide-title {
             position: relative;
             transform: none;
             left: auto;
@@ -520,8 +522,27 @@
             display: none;
         }
 
-        .booster-slide:hover .slide-desc {
+        .booster-slide:hover .slide-desc,
+        .booster-slide.is-open .slide-desc {
             display: block;
+        }
+
+        /* Mobile specific touch enhancements for the active state */
+        .booster-slide.is-open .opacity-50 {
+            opacity: 1 !important;
+        }
+
+        .booster-slide.is-open .bg-black\/60 {
+            background-color: transparent !important;
+        }
+
+        .booster-slide.is-open .booster-slide-cta {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        .booster-slide.is-open .booster-slide-content h4 {
+            transform: none !important;
         }
 
         @media (max-width: 768px) {
@@ -533,7 +554,8 @@
                 flex: 1 1 15%;
             }
 
-            .booster-slide:hover {
+            .booster-slide:hover,
+            .booster-slide.is-open {
                 flex: 5 1 60%;
             }
 
@@ -563,6 +585,19 @@
                     stagger: 0.1,
                     duration: 1,
                     ease: 'power3.out'
+                });
+
+                // Mobile Touch Support
+                slides.forEach(slide => {
+                    slide.addEventListener('click', function (e) {
+                        if (window.innerWidth <= 1024 || window.matchMedia("(pointer: coarse)").matches) {
+                            if (!this.classList.contains('is-open')) {
+                                e.preventDefault(); // Prevent navigating right away
+                                slides.forEach(s => s.classList.remove('is-open'));
+                                this.classList.add('is-open');
+                            }
+                        }
+                    });
                 });
             }
 
