@@ -305,15 +305,20 @@ html {
   color: #404345;
 }
 
-/* Home Page Specific Transparent Nav (Unscrolled) */
-.home-page #navbar:not(.nav-scrolled) .nav-link,
-.home-page #navbar:not(.nav-scrolled) #menu-btn {
+/* Dark Theme Nav (for pages with dark heroes) */
+#navbar.nav-dark-theme:not(.nav-scrolled) .nav-link,
+#navbar.nav-dark-theme:not(.nav-scrolled) #menu-btn {
   color: #ffffff;
 }
 
-.home-page #navbar:not(.nav-scrolled) .nav-link:hover,
-.home-page #navbar:not(.nav-scrolled) #menu-btn:hover {
-  color: #8F857B;
+/* SuA Glow Dark Theme - Full Color Logo (No Inversion) */
+#navbar.nav-dark-theme:not(.nav-scrolled) img {
+    filter: none !important;
+}
+
+#navbar.nav-dark-theme:not(.nav-scrolled) .nav-link:hover,
+#navbar.nav-dark-theme:not(.nav-scrolled) #menu-btn:hover {
+  color: #AA987C;
 }
 
 #navbar .nav-link {

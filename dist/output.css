@@ -1117,6 +1117,10 @@ video {
   height: 280px;
 }
 
+.h-\[2px\] {
+  height: 2px;
+}
+
 .h-\[40\%\] {
   height: 40%;
 }
@@ -1895,6 +1899,11 @@ video {
   border-color: rgb(0 0 0 / 0.05);
 }
 
+.border-blue-gray {
+  --tw-border-opacity: 1;
+  border-color: rgb(157 175 182 / var(--tw-border-opacity, 1));
+}
+
 .border-charcoal\/10 {
   border-color: rgb(64 67 69 / 0.1);
 }
@@ -2044,12 +2053,26 @@ video {
   background-color: rgb(246 247 248 / 0.5);
 }
 
+.bg-\[\#FCFBFA\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 251 250 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#Off-white\] {
   background-color: #Off-white;
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
 .bg-black\/10 {
   background-color: rgb(0 0 0 / 0.1);
+}
+
+.bg-black\/20 {
+  background-color: rgb(0 0 0 / 0.2);
 }
 
 .bg-black\/40 {
@@ -2084,6 +2107,10 @@ video {
 
 .bg-blue-gray\/30 {
   background-color: rgb(157 175 182 / 0.3);
+}
+
+.bg-blue-gray\/5 {
+  background-color: rgb(157 175 182 / 0.05);
 }
 
 .bg-charcoal {
@@ -2256,6 +2283,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-blue-gray\/20 {
+  --tw-gradient-from: rgb(157 175 182 / 0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(157 175 182 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-light-gray {
   --tw-gradient-from: #DFE0DD var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(223 224 221 / 0) var(--tw-gradient-to-position);
@@ -2286,6 +2319,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-taupe\/20 {
+  --tw-gradient-from: rgb(143 133 123 / 0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(143 133 123 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-warm-gold {
   --tw-gradient-from: #AA987C var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(170 152 124 / 0) var(--tw-gradient-to-position);
@@ -2308,6 +2347,21 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.4) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.via-blue-gray {
+  --tw-gradient-to: rgb(157 175 182 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #9DAFB6 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.via-charcoal {
+  --tw-gradient-to: rgb(64 67 69 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #404345 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.via-charcoal\/10 {
+  --tw-gradient-to: rgb(64 67 69 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(64 67 69 / 0.1) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .via-charcoal\/40 {
   --tw-gradient-to: rgb(64 67 69 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(64 67 69 / 0.4) var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -2316,6 +2370,11 @@ video {
 .via-warm-gold {
   --tw-gradient-to: rgb(170 152 124 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #AA987C var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.via-warm-gold\/10 {
+  --tw-gradient-to: rgb(170 152 124 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(170 152 124 / 0.1) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .to-\[\#B8860B\] {
@@ -2338,12 +2397,28 @@ video {
   --tw-gradient-to: #404345 var(--tw-gradient-to-position);
 }
 
+.to-charcoal\/10 {
+  --tw-gradient-to: rgb(64 67 69 / 0.1) var(--tw-gradient-to-position);
+}
+
+.to-charcoal\/60 {
+  --tw-gradient-to: rgb(64 67 69 / 0.6) var(--tw-gradient-to-position);
+}
+
 .to-near-black {
   --tw-gradient-to: #131619 var(--tw-gradient-to-position);
 }
 
+.to-near-black\/10 {
+  --tw-gradient-to: rgb(19 22 25 / 0.1) var(--tw-gradient-to-position);
+}
+
 .to-near-black\/40 {
   --tw-gradient-to: rgb(19 22 25 / 0.4) var(--tw-gradient-to-position);
+}
+
+.to-taupe\/40 {
+  --tw-gradient-to: rgb(143 133 123 / 0.4) var(--tw-gradient-to-position);
 }
 
 .to-transparent {
@@ -2601,6 +2676,10 @@ video {
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pb-40 {
+  padding-bottom: 10rem;
 }
 
 .pb-6 {
@@ -2971,8 +3050,16 @@ video {
   color: rgb(157 175 182 / var(--tw-text-opacity, 1));
 }
 
+.text-blue-gray\/20 {
+  color: rgb(157 175 182 / 0.2);
+}
+
 .text-blue-gray\/30 {
   color: rgb(157 175 182 / 0.3);
+}
+
+.text-blue-gray\/60 {
+  color: rgb(157 175 182 / 0.6);
 }
 
 .text-charcoal {
@@ -3065,6 +3152,10 @@ video {
 .text-warm-gold {
   --tw-text-opacity: 1;
   color: rgb(170 152 124 / var(--tw-text-opacity, 1));
+}
+
+.text-warm-gold\/60 {
+  color: rgb(170 152 124 / 0.6);
 }
 
 .text-warm-gold\/80 {
@@ -4609,6 +4700,10 @@ html {
   border-color: rgb(143 133 123 / 0.2);
 }
 
+.hover\:border-taupe\/30:hover {
+  border-color: rgb(143 133 123 / 0.3);
+}
+
 .hover\:border-taupe\/50:hover {
   border-color: rgb(143 133 123 / 0.5);
 }
@@ -4734,6 +4829,14 @@ html {
 .hover\:brightness-110:hover {
   --tw-brightness: brightness(1.1);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.group[open] .group-open\:inline {
+  display: inline;
+}
+
+.group[open] .group-open\:hidden {
+  display: none;
 }
 
 .group[open] .group-open\:rotate-45 {
@@ -5094,6 +5197,11 @@ html {
     padding-right: 3rem;
   }
 
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .md\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -5297,4 +5405,23 @@ html {
   .xl\:gap-8 {
     gap: 2rem;
   }
+}
+
+/* Custom Nav Dark Theme Overrides */
+#navbar.nav-dark-theme:not(.nav-scrolled) .nav-link {
+  color: #ffffff !important;
+}
+
+/* SuA Glow Dark Theme - Full Color Logo (No Inversion) */
+.nav-dark-theme img {
+    filter: none !important;
+}
+
+#navbar.nav-dark-theme:not(.nav-scrolled) #menu-btn {
+  color: #ffffff !important;
+}
+
+#navbar.nav-dark-theme:not(.nav-scrolled) .nav-link:hover,
+#navbar.nav-dark-theme:not(.nav-scrolled) #menu-btn:hover {
+  color: #AA987C !important;
 }

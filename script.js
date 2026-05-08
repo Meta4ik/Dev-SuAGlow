@@ -165,12 +165,22 @@ function initNavThemeLogic() {
   const navbar = document.getElementById('navbar');
   if (!navbar) return;
 
+  const hero = document.getElementById('hero');
+  const hasDarkTheme = hero && hero.dataset.navTheme === 'dark';
+
+  // Set initial theme
+  if (hasDarkTheme) {
+    navbar.classList.add('nav-dark-theme');
+  }
+
   // Scroll Background Transition - Only handles the white background/blur, no color edits
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       navbar.classList.add('nav-scrolled');
+      if (hasDarkTheme) navbar.classList.remove('nav-dark-theme');
     } else {
       navbar.classList.remove('nav-scrolled');
+      if (hasDarkTheme) navbar.classList.add('nav-dark-theme');
     }
   });
 }

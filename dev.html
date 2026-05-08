@@ -164,18 +164,25 @@
 
 <body>
     <div class="dev-container">
+        <!-- Dev Navigation -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+            <a href="index.html" class="flex items-center gap-2 bg-near-black text-white px-4 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-near-black/80 transition-all shadow-sm">
+                <i data-lucide="eye" class="w-3 h-3"></i> View Site
+            </a>
+            <div class="w-[1px] h-8 bg-gray-200 mx-2"></div>
+            <a href="style-guide.html" class="flex items-center gap-2 bg-near-black/5 text-charcoal/60 px-4 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-taupe hover:text-white transition-all">
+                <i data-lucide="palette" class="w-3 h-3"></i> Style Guide
+            </a>
+            <a href="sitemap.html" class="flex items-center gap-2 bg-near-black/5 text-charcoal/60 px-4 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-warm-gold hover:text-white transition-all">
+                <i data-lucide="list-tree" class="w-3 h-3"></i> Sitemap
+            </a>
+            <a href="audit.html" class="flex items-center gap-2 bg-near-black/5 text-charcoal/60 px-4 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-blue-gray hover:text-white transition-all">
+                <i data-lucide="clipboard-check" class="w-3 h-3"></i> Content Audit
+            </a>
+        </div>
+
         <div class="flex flex-wrap gap-4 justify-between items-center mb-10 pb-6 border-b border-gray-100">
             <h1 class="heading !mb-0 !border-0 !pb-0">SuA Glow Nav Reference</h1>
-            <div class="flex gap-3">
-                <a href="index.html"
-                    class="flex items-center gap-2 bg-[#131619] text-white px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-[#404345] transition-all shadow-md">
-                    <i data-lucide="eye" class="w-4 h-4"></i> View Site
-                </a>
-                <a href="audit.html"
-                    class="flex items-center gap-2 bg-[#AA987C] text-white px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-[#8F857B] transition-all shadow-md">
-                    <i data-lucide="clipboard-list" class="w-4 h-4"></i> Content Audit
-                </a>
-            </div>
         </div>
 
         <p style="font-size:0.9rem; opacity:0.7;">Live navigation structure as implemented in <code>navbar.js</code> —
