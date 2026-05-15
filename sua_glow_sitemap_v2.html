@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuA Glow Site Structure</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --taupe: #8F857B;
+            --warm-gold: #AA987C;
+            --charcoal: #404345;
+            --off-white: #F6F7F8;
+            --near-black: #131619;
+            --blue-gray: #9DAFB6;
+            --light-gray: #DFE0DD;
+            
+            --line-color: #DFE0DD;
+            --bg-page: #F6F7F8;
+            --font-main: 'Poppins', sans-serif;
+            --font-heading: 'Montserrat', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: var(--font-main); 
+            background: var(--bg-page); 
+            color: var(--charcoal);
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .header h1 {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-size: 1.2rem;
+            color: var(--taupe);
+            margin-bottom: 8px;
+        }
+        .header p {
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* Tree structure CSS */
+        .tree {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .tree ul {
+            padding-top: 30px; 
+            position: relative;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+        }
+        .tree li {
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 30px 10px 0 10px;
+            transition: all 0.5s;
+            flex: 1;
+        }
+
+        /* Connecting lines */
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute; top: 0; right: 50%;
+            border-top: 1.5px solid var(--line-color);
+            width: 50%; height: 30px;
+        }
+        .tree li::after {
+            right: auto; left: 50%;
+            border-left: 1.5px solid var(--line-color);
+        }
+
+        /* Remove lines from single children and edges */
+        .tree li:only-child::after, .tree li:only-child::before { display: none; }
+        .tree li:only-child { padding-top: 0; }
+        .tree li:first-child::before, .tree li:last-child::after { border: 0 none; }
+        .tree li:last-child::before {
+            border-right: 1.5px solid var(--line-color);
+            border-radius: 0 12px 0 0;
+        }
+        .tree li:first-child::after {
+            border-radius: 12px 0 0 0;
+        }
+
+        /* Downward lines from parent */
+        .tree ul ul::before {
+            content: '';
+            position: absolute; top: 0; left: 50%;
+            border-left: 1.5px solid var(--line-color);
+            width: 0; height: 30px;
+        }
+
+        /* Node Styling */
+        .node {
+            display: inline-block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: var(--near-black);
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 8px;
+            background: white;
+            border: 1px solid var(--light-gray);
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+            min-width: 140px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .node:hover {
+            border-color: var(--taupe);
+            color: var(--taupe);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        /* Colors for different tiers */
+        .node.root {
+            background: var(--near-black);
+            color: white;
+            border-color: var(--near-black);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 16px 32px;
+        }
+        .node.tier-1 {
+            background: #fff;
+            border-left: 4px solid var(--taupe);
+            font-weight: 600;
+        }
+        .node.tier-2 {
+            background: #fff;
+            font-size: 12px;
+            border-color: var(--warm-gold);
+            color: var(--warm-gold);
+            font-weight: 600;
+        }
+        .node.leaf {
+            background: transparent;
+            border: 1px dashed var(--blue-gray);
+            color: var(--charcoal);
+            font-size: 11px;
+            min-width: 100px;
+            padding: 8px 12px;
+            font-weight: 400;
+            opacity: 0.7;
+        }
+
+        /* Sub-items list (flat layout) */
+        .sub-items {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 15px;
+            align-items: center;
+        }
+        .sub-items::before {
+            content: '';
+            width: 1px;
+            height: 15px;
+            background: var(--line-color);
+            margin-bottom: 0;
+        }
+
+        .secondary-nav {
+            margin-top: 80px;
+            width: 100%;
+            border-top: 1px solid var(--line-color);
+            padding-top: 60px;
+        }
+
+        .legend {
+            margin-top: 100px;
+            display: flex;
+            gap: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.6;
+        }
+        .legend-item { display: flex; align-items: center; gap: 8px; }
+        .dot { width: 8px; height: 8px; border-radius: 2px; }
+
+        @media (max-width: 1200px) {
+            .tree li { padding: 30px 5px 0 5px; }
+            .node { min-width: 110px; font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>SuA Glow Structure</h1>
+        <p>Hierarchy & Navigation Mapping</p>
+    </div>
+
+    <div class="tree">
+        <ul>
+            <li>
+                <div class="node root">Homepage</div>
+                <ul>
+                    <!-- Skin Health Group -->
+                    <li>
+                        <div class="node tier-1">Skin Health</div>
+                        <ul>
+                            <!-- Skin Boosters -->
+                            <li>
+                                <div class="node tier-2">Skin Boosters</div>
+                                <div class="sub-items">
+                                    <div class="node leaf">Healing & Repair</div>
+                                    <div class="node leaf">Hydration & Glow</div>
+                                    <div class="node leaf">Collagen Stimulation</div>
+                                    <div class="node leaf">Dermal Matrix</div>
+                                </div>
+                            </li>
+
+                            <!-- Injectables -->
+                            <li>
+                                <div class="node tier-2">Injectables</div>
+                                <ul>
+                                    <li>
+                                        <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">Cosmetic Tox</div>
+                                        <ul>
+                                            <li>
+                                                <div class="node leaf" style="font-weight:600; opacity:1; border-style:solid;">Facial & Neck</div>
+                                                <div class="sub-items">
+                                                    <div class="node leaf">Bunny Lines (Nose Lines)</div>
+                                                    <div class="node leaf">Brow Lift (Chemical Brow Lift)</div>
+                                                    <div class="node leaf">Cheek Lift (Mouth pull-down)</div>
+                                                    <div class="node leaf">Glabellar Lines (Frown "11")</div>
+                                                    <div class="node leaf">Lateral Canthal Lines (Crow's Feet)</div>
+                                                    <div class="node leaf">Lip Flip (Subtle Outward Roll)</div>
+                                                    <div class="node leaf">Forehead Lines (Horizontal)</div>
+                                                    <div class="node leaf">Gummy Smile</div>
+                                                    <div class="node leaf">Marionette Lines</div>
+                                                    <div class="node leaf">Mentalis / "Pebble Chin"</div>
+                                                    <div class="node leaf">Masseter / Jaw Slimming</div>
+                                                    <div class="node leaf">Nasal Flare Reduction</div>
+                                                    <div class="node leaf">Perioral Lines (Smokers)</div>
+                                                    <div class="node leaf">Platysmal Bands (Vertical Neck)</div>
+                                                    <div class="node leaf">Horizontal Neck Lines</div>
+                                                    <div class="node leaf">Nefertiti Lift</div>
+                                                    <div class="node leaf">Décolletage Lines (Chest)</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="node leaf" style="font-weight:600; opacity:1; border-style:solid;">Body Contouring</div>
+                                                <div class="sub-items">
+                                                    <div class="node leaf">Calf Tox</div>
+                                                    <div class="node leaf">Trap Tox</div>
+                                                    <div class="node leaf">Deltoid Contouring</div>
+                                                    <div class="node leaf">Forearm Slimming</div>
+                                                    <div class="node leaf">Thigh Slimming</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">Medical Tox</div>
+                                        <div class="sub-items">
+                                            <div class="node leaf">Cervical Dystonia</div>
+                                            <div class="node leaf">Chronic Migraine & Headaches</div>
+                                            <div class="node leaf">Hyperhidrosis (Underarm)</div>
+                                            <div class="node leaf">Plantar Hyperhidrosis (Foot)</div>
+                                            <div class="node leaf">Palmar Hyperhidrosis (Hand)</div>
+                                            <div class="node leaf">TMJ / Bruxism</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">HA Fillers</div>
+                                        <div class="sub-items">
+                                            <div class="node leaf">Restylane Family (Galderma)</div>
+                                            <div class="node leaf" style="font-weight:600; opacity:1;">Facial Contouring & Volume</div>
+                                            <div class="node leaf">Forehead & Temples</div>
+                                            <div class="node leaf">Cheeks & Midface</div>
+                                            <div class="node leaf">Under-eye</div>
+                                            <div class="node leaf">Chin & Jawline</div>
+                                            <div class="node leaf">Nasolabial Folds</div>
+                                            <div class="node leaf">Tech-Neck</div>
+                                            <div class="node leaf">Décolletage Lines</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">Biostimulators</div>
+                                        <div class="sub-items">
+                                            <div class="node leaf">Sculptra</div>
+                                            <div class="node leaf">Radiesse</div>
+                                            <div class="node leaf">Juvelook Volume (Description)</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Scar Treatment -->
+                            <li>
+                                <div class="node tier-2">Scar Treatment</div>
+                                <div class="sub-items">
+                                    <div class="node leaf">Acne Scars</div>
+                                    <div class="node leaf">Surgical Scars</div>
+                                    <div class="node leaf">Stretch Marks</div>
+                                    <div class="node leaf">Keloid</div>
+                                </div>
+                            </li>
+
+                            <!-- Hair Loss -->
+                            <li>
+                                <div class="node tier-2">Hair Loss</div>
+                                <div class="sub-items">
+                                    <div class="node leaf">PRP</div>
+                                    <div class="node leaf">Exosome</div>
+                                    <div class="node leaf">Treatment Plan</div>
+                                </div>
+                            </li>
+
+                            <!-- Signature -->
+                            <li>
+                                <div class="node tier-2">SuA Glow Signature Treatment</div>
+                                <div class="sub-items">
+                                    <div class="node leaf">Personalized Skin Quality</div>
+                                    <div class="node leaf">One Day Glow</div>
+                                    <div class="node leaf">Bridal Glow</div>
+                                    <div class="node leaf">Man Up</div>
+                                    <div class="node leaf">Acne Treatment</div>
+                                </div>
+                            </li>
+
+                            <!-- Skin Rejuvenation -->
+                            <li>
+                                <div class="node tier-2">Skin Rejuvenation</div>
+                                <div class="sub-items">
+                                    <div class="node leaf">Oligio X RF Lifting</div>
+                                    <div class="node leaf">LDM Ultrasound</div>
+                                    <div class="node leaf">Microneedling</div>
+                                </div>
+                            </li>
+
+                            <!-- K-Beauty -->
+                            <li>
+                                <div class="node tier-2">K-Beauty Facials</div>
+                                <div class="sub-items">
+                                    <div class="node leaf">Water Droplet</div>
+                                    <div class="node leaf">Recovery & Repair</div>
+                                    <div class="node leaf">Glow & Hydration</div>
+                                    <div class="node leaf">Collagen Stimulation</div>
+                                    <div class="node leaf">Tone Up</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tree secondary-nav">
+        <div class="header">
+            <h1>Secondary Navigation</h1>
+        </div>
+        <ul>
+            <!-- Wellness -->
+            <li>
+                <div class="node tier-1" style="border-left-color: var(--blue-gray);">Wellness</div>
+                <div class="sub-items">
+                    <div class="node leaf">Medical Weight Loss</div>
+                    <div class="node leaf">Peptides</div>
+                    <div class="node leaf">Brightening IV</div>
+                </div>
+            </li>
+            <!-- Education -->
+            <li>
+                <div class="node tier-1" style="border-left-color: var(--blue-gray);">Education</div>
+                <div class="sub-items">
+                    <div class="node leaf">Skin Booster Details</div>
+                    <div class="node leaf">Our Story</div>
+                    <div class="node leaf">What is K-Beauty</div>
+                    <div class="node leaf">Safety Protocols</div>
+                </div>
+            </li>
+            <!-- More -->
+            <li>
+                <div class="node tier-1" style="border-left-color: var(--light-gray);">More</div>
+                <div class="sub-items">
+                    <div class="node leaf">Referral</div>
+                    <div class="node leaf">Before / After</div>
+                    <div class="node leaf">Press / Media</div>
+                    <div class="node leaf">Financing</div>
+                    <div class="node leaf">Blog / Vlog</div>
+                </div>
+            </li>
+            <!-- Contact -->
+            <li>
+                <div class="node tier-1" style="border-left-color: var(--warm-gold);">Contact</div>
+                <div class="sub-items">
+                    <div class="node leaf">Book Appointment</div>
+                    <div class="node leaf">Location & Hours</div>
+                    <div class="node leaf">Patient Forms</div>
+                </div>
+            </li>
+            <!-- Promotions -->
+            <li>
+                <div class="node tier-1" style="border-left-color: #F0997B;">Promotions</div>
+                <div class="sub-items">
+                    <div class="node leaf">CTA / Landing Page</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item"><div class="dot" style="background: var(--near-black);"></div> Root</div>
+        <div class="legend-item"><div class="dot" style="background: var(--taupe);"></div> Primary Nav</div>
+        <div class="legend-item"><div class="dot" style="background: var(--warm-gold);"></div> Sub-Categories</div>
+        <div class="legend-item"><div class="dot" style="border: 1px dashed var(--blue-gray);"></div> Final Pages</div>
+    </div>
+
+</body>
+</html>

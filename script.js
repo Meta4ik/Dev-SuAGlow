@@ -11,7 +11,16 @@ function initNavigation() {
 
   // Use the pre-loaded string from navbar.js
   if (typeof NAVBAR_HTML !== 'undefined') {
-    navPlaceholder.innerHTML = NAVBAR_HTML;
+    // Check if we are in a subfolder (e.g., education/)
+    const isSubfolder = window.location.pathname.includes('/education/');
+    let html = NAVBAR_HTML;
+    
+    if (isSubfolder) {
+      // Prepend ../ to links that don't already have it and aren't absolute/hash
+      html = html.replace(/(href|src)="(?!(http|https|\/|#|\.\.\/))([^"]+)"/g, '$1="../$3"');
+    }
+    
+    navPlaceholder.innerHTML = html;
 
     // Trigger icon creation for newly injected nav
     if (window.lucide) {
@@ -39,7 +48,14 @@ function initFooter() {
   if (!footerPlaceholder) return;
 
   if (typeof FOOTER_HTML !== 'undefined') {
-    footerPlaceholder.innerHTML = FOOTER_HTML;
+    const isSubfolder = window.location.pathname.includes('/education/');
+    let html = FOOTER_HTML;
+    
+    if (isSubfolder) {
+      html = html.replace(/(href|src)="(?!(http|https|\/|#|\.\.\/))([^"]+)"/g, '$1="../$3"');
+    }
+    
+    footerPlaceholder.innerHTML = html;
 
     const financeBtn = document.getElementById('floating-finance-btn');
 
