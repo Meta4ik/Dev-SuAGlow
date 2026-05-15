@@ -124,6 +124,36 @@ function initNews() {
 }
 
 /**
+ * Sophia Yang Bio Section Injection
+ */
+function initSophia() {
+  const placeholder = document.getElementById('sophia-placeholder');
+  if (!placeholder) return;
+
+  if (typeof SOPHIA_HTML !== 'undefined') {
+    const isSubfolder = window.location.pathname.includes('/education/');
+    let html = SOPHIA_HTML;
+    
+    if (isSubfolder) {
+      html = html.replace(/(href|src)="(?!(http|https|\/|#|\.\.\/))([^"]+)"/g, '$1="../$3"');
+    }
+    
+    placeholder.innerHTML = html;
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    placeholder.querySelectorAll('.animate-on-scroll').forEach(el => revealObserver.observe(el));
+  }
+}
+
+/**
  * Mobile Navigation Drawer Logic
  */
 function initMobileDrawer() {
@@ -268,6 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFooter();
   initNearMe();
   initNews();
+  initSophia();
 
   // 2. Setup Reveal Animations
   const revealObserver = new IntersectionObserver((entries) => {

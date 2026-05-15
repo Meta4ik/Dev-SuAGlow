@@ -42,7 +42,7 @@ const NAVBAR_HTML = `
         <!-- Logo -->
         <a href="index.html" class="flex items-center p-4 md:p-0 shrink-0">
             <img id="logo-desktop" src="assets/logo-main.webp" alt="SuA K-Glow"
-                class="h-8 md:h-12 w-auto object-contain transition-all duration-300">
+                class="logo-brand h-8 md:h-12 w-auto object-contain transition-all duration-300">
         </a>
 
         <!-- Desktop Menu -->
@@ -63,10 +63,10 @@ const NAVBAR_HTML = `
                                 <i data-lucide="droplets" class="w-3 h-3 mr-2"></i>Skin Quality Boosters
                             </a>
                             <ul class="space-y-1 mb-6">
-                                <li><a href="skin-quality-boosters.html" class="dropdown-link !p-0 hover:!pl-2">Healing Essence</a></li>
-                                <li><a href="skin-quality-boosters.html" class="dropdown-link !p-0 hover:!pl-2">Hydration & Glow</a></li>
-                                <li><a href="skin-quality-boosters.html" class="dropdown-link !p-0 hover:!pl-2">Collagen Stimulation</a></li>
-                                <li><a href="skin-quality-boosters.html" class="dropdown-link !p-0 hover:!pl-2">Dermal Matrix</a></li>
+                                <li><a href="skin-quality-boosters.html#healing-essence" class="dropdown-link !p-0 hover:!pl-2">Healing Essence</a></li>
+                                <li><a href="skin-quality-boosters.html#hydration-glow" class="dropdown-link !p-0 hover:!pl-2">Hydration & Glow</a></li>
+                                <li><a href="skin-quality-boosters.html#collagen-stimulation" class="dropdown-link !p-0 hover:!pl-2">Collagen Stimulation</a></li>
+                                <li><a href="skin-quality-boosters.html#dermal-matrix" class="dropdown-link !p-0 hover:!pl-2">Dermal Matrix</a></li>
                             </ul>
 
 
@@ -204,8 +204,6 @@ const NAVBAR_HTML = `
                 </a>
                 <div class="dropdown-menu text-left">
                     <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="dropdown-link font-body">Book Appointment</a>
-                    <a href="contact.html#location" class="dropdown-link font-body">Location &amp; Hours</a>
-                    <a href="tel:972-665-8737" class="dropdown-link font-body">Text / Call Us</a>
                     <a href="#" class="dropdown-link font-body">New Patient Forms</a>
                     <a href="specials.html" class="dropdown-link font-body">Promotions</a>
                 </div>
@@ -257,7 +255,7 @@ const NAVBAR_HTML = `
     <div class="flex flex-col h-full text-left">
         <!-- Drawer Header -->
         <div class="flex items-center justify-between p-8 border-b border-off-white">
-            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-7 w-auto object-contain">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="logo-brand h-7 w-auto object-contain">
             <button id="drawer-close" class="text-charcoal p-2">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
@@ -295,10 +293,10 @@ const NAVBAR_HTML = `
                                 <i data-lucide="droplets" class="w-3 h-3 mr-2"></i>Skin Quality Boosters
                             </a>
                             <div class="flex flex-col gap-2 mt-2">
-                                <a href="skin-quality-boosters.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Healing Essence</a>
-                                <a href="skin-quality-boosters.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Hydration & Glow</a>
-                                <a href="skin-quality-boosters.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Collagen Stimulation</a>
-                                <a href="skin-quality-boosters.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Dermal Matrix</a>
+                                <a href="skin-quality-boosters.html#healing-essence" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Healing Essence</a>
+                                <a href="skin-quality-boosters.html#hydration-glow" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Hydration & Glow</a>
+                                <a href="skin-quality-boosters.html#collagen-stimulation" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Collagen Stimulation</a>
+                                <a href="skin-quality-boosters.html#dermal-matrix" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Dermal Matrix</a>
                             </div>
                         </div>
 
@@ -433,8 +431,6 @@ const NAVBAR_HTML = `
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-3 pl-4 mt-2">
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="font-body text-charcoal/70 hover:text-taupe transition-colors font-semibold">Book Appointment</a>
-                        <a href="contact.html#location" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Location &amp; Hours</a>
-                        <a href="tel:972-665-8737" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Text / Call Us</a>
                         <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">New Patient Forms</a>
                         <a href="specials.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Promotions</a>
                     </div>

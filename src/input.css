@@ -311,8 +311,8 @@ html {
     color: #ffffff;
 }
 
-#navbar.nav-dark-theme:not(.nav-scrolled) img {
-    filter: brightness(0) invert(1);
+.logo-brand {
+    filter: none !important;
 }
 
 #navbar.nav-dark-theme:not(.nav-scrolled) .nav-link:hover,
