@@ -200,6 +200,12 @@
         .legend-item { display: flex; align-items: center; gap: 8px; }
         .dot { width: 8px; height: 8px; border-radius: 2px; }
 
+        .check-mark {
+            color: #22C55E;
+            margin-left: 4px;
+            font-weight: bold;
+        }
+
         @media (max-width: 1200px) {
             .tree li { padding: 30px 5px 0 5px; }
             .node { min-width: 110px; font-size: 11px; }
@@ -216,15 +222,15 @@
     <div class="tree">
         <ul>
             <li>
-                <div class="node root">Homepage</div>
+                <div class="node root">Homepage <span class="check-mark">✓</span></div>
                 <ul>
                     <!-- Skin Health Group -->
                     <li>
-                        <div class="node tier-1">Skin Health</div>
+                        <div class="node tier-1">Skin Health <span class="check-mark">✓</span></div>
                         <ul>
                             <!-- Skin Boosters -->
                             <li>
-                                <div class="node tier-2">Skin Boosters</div>
+                                <div class="node tier-2">Skin Boosters <span class="check-mark">✓</span></div>
                                 <div class="sub-items">
                                     <div class="node leaf">Healing & Repair</div>
                                     <div class="node leaf">Hydration & Glow</div>
@@ -238,73 +244,32 @@
                                 <div class="node tier-2">Injectables</div>
                                 <ul>
                                     <li>
-                                        <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">Cosmetic Tox</div>
-                                        <ul>
-                                            <li>
-                                                <div class="node leaf" style="font-weight:600; opacity:1; border-style:solid;">Facial & Neck</div>
-                                                <div class="sub-items">
-                                                    <div class="node leaf">Bunny Lines (Nose Lines)</div>
-                                                    <div class="node leaf">Brow Lift (Chemical Brow Lift)</div>
-                                                    <div class="node leaf">Cheek Lift (Mouth pull-down)</div>
-                                                    <div class="node leaf">Glabellar Lines (Frown "11")</div>
-                                                    <div class="node leaf">Lateral Canthal Lines (Crow's Feet)</div>
-                                                    <div class="node leaf">Lip Flip (Subtle Outward Roll)</div>
-                                                    <div class="node leaf">Forehead Lines (Horizontal)</div>
-                                                    <div class="node leaf">Gummy Smile</div>
-                                                    <div class="node leaf">Marionette Lines</div>
-                                                    <div class="node leaf">Mentalis / "Pebble Chin"</div>
-                                                    <div class="node leaf">Masseter / Jaw Slimming</div>
-                                                    <div class="node leaf">Nasal Flare Reduction</div>
-                                                    <div class="node leaf">Perioral Lines (Smokers)</div>
-                                                    <div class="node leaf">Platysmal Bands (Vertical Neck)</div>
-                                                    <div class="node leaf">Horizontal Neck Lines</div>
-                                                    <div class="node leaf">Nefertiti Lift</div>
-                                                    <div class="node leaf">Décolletage Lines (Chest)</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="node leaf" style="font-weight:600; opacity:1; border-style:solid;">Body Contouring</div>
-                                                <div class="sub-items">
-                                                    <div class="node leaf">Calf Tox</div>
-                                                    <div class="node leaf">Trap Tox</div>
-                                                    <div class="node leaf">Deltoid Contouring</div>
-                                                    <div class="node leaf">Forearm Slimming</div>
-                                                    <div class="node leaf">Thigh Slimming</div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                        <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">Cosmetic Tox <span class="check-mark">✓</span></div>
+                                        <div class="sub-items">
+                                            <div class="node leaf">Face & Neck Sections</div>
+                                            <div class="node leaf">Body Contouring Sections</div>
+                                            <div class="node leaf">SkinTox (Micro-dosing)</div>
+                                        </div>
                                     </li>
                                     <li>
-                                        <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">Medical Tox</div>
+                                        <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">Medical Tox <span class="check-mark">✓</span></div>
                                         <div class="sub-items">
-                                            <div class="node leaf">Cervical Dystonia</div>
-                                            <div class="node leaf">Chronic Migraine & Headaches</div>
-                                            <div class="node leaf">Hyperhidrosis (Underarm)</div>
-                                            <div class="node leaf">Plantar Hyperhidrosis (Foot)</div>
-                                            <div class="node leaf">Palmar Hyperhidrosis (Hand)</div>
-                                            <div class="node leaf">TMJ / Bruxism</div>
+                                            <div class="node leaf">Therapeutic (TMJ & Migraine)</div>
+                                            <div class="node leaf">Hyperhidrosis (Sweat Reduction)</div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">HA Fillers</div>
                                         <div class="sub-items">
-                                            <div class="node leaf">Restylane Family (Galderma)</div>
-                                            <div class="node leaf" style="font-weight:600; opacity:1;">Facial Contouring & Volume</div>
-                                            <div class="node leaf">Forehead & Temples</div>
-                                            <div class="node leaf">Cheeks & Midface</div>
-                                            <div class="node leaf">Under-eye</div>
-                                            <div class="node leaf">Chin & Jawline</div>
-                                            <div class="node leaf">Nasolabial Folds</div>
-                                            <div class="node leaf">Tech-Neck</div>
-                                            <div class="node leaf">Décolletage Lines</div>
+                                            <div class="node leaf">Restylane Family</div>
+                                            <div class="node leaf">Facial Contouring</div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">Biostimulators</div>
                                         <div class="sub-items">
-                                            <div class="node leaf">Sculptra</div>
-                                            <div class="node leaf">Radiesse</div>
-                                            <div class="node leaf">Juvelook Volume (Description)</div>
+                                            <div class="node leaf">Sculptra & Radiesse</div>
+                                            <div class="node leaf">Juvelook Volume</div>
                                         </div>
                                     </li>
                                 </ul>
@@ -387,28 +352,28 @@
             </li>
             <!-- Education -->
             <li>
-                <div class="node tier-1" style="border-left-color: var(--blue-gray);">Education</div>
+                <div class="node tier-1" style="border-left-color: var(--blue-gray);">Education <span class="check-mark">✓</span></div>
                 <div class="sub-items">
-                    <div class="node leaf">Skin Booster Details</div>
-                    <div class="node leaf">Our Story</div>
-                    <div class="node leaf">What is K-Beauty</div>
-                    <div class="node leaf">Safety Protocols</div>
+                    <div class="node leaf">Skin Booster Details <span class="check-mark">✓</span></div>
+                    <div class="node leaf">Our Story <span class="check-mark">✓</span></div>
+                    <div class="node leaf">What is K-Beauty <span class="check-mark">✓</span></div>
+                    <div class="node leaf">Safety Protocols <span class="check-mark">✓</span></div>
                 </div>
             </li>
             <!-- More -->
             <li>
                 <div class="node tier-1" style="border-left-color: var(--light-gray);">More</div>
                 <div class="sub-items">
-                    <div class="node leaf">Referral</div>
+                    <div class="node leaf">Referral <span class="check-mark">✓</span></div>
                     <div class="node leaf">Before / After</div>
                     <div class="node leaf">Press / Media</div>
-                    <div class="node leaf">Financing</div>
+                    <div class="node leaf">Financing <span class="check-mark">✓</span></div>
                     <div class="node leaf">Blog / Vlog</div>
                 </div>
             </li>
             <!-- Contact -->
             <li>
-                <div class="node tier-1" style="border-left-color: var(--warm-gold);">Contact</div>
+                <div class="node tier-1" style="border-left-color: var(--warm-gold);">Contact <span class="check-mark">✓</span></div>
                 <div class="sub-items">
                     <div class="node leaf">Book Appointment</div>
                     <div class="node leaf">Location & Hours</div>
@@ -417,9 +382,9 @@
             </li>
             <!-- Promotions -->
             <li>
-                <div class="node tier-1" style="border-left-color: #F0997B;">Promotions</div>
+                <div class="node tier-1" style="border-left-color: #F0997B;">Promotions <span class="check-mark">✓</span></div>
                 <div class="sub-items">
-                    <div class="node leaf">CTA / Landing Page</div>
+                    <div class="node leaf">CTA / Landing Page <span class="check-mark">✓</span></div>
                 </div>
             </li>
         </ul>
@@ -430,6 +395,7 @@
         <div class="legend-item"><div class="dot" style="background: var(--taupe);"></div> Primary Nav</div>
         <div class="legend-item"><div class="dot" style="background: var(--warm-gold);"></div> Sub-Categories</div>
         <div class="legend-item"><div class="dot" style="border: 1px dashed var(--blue-gray);"></div> Final Pages</div>
+        <div class="legend-item"><span class="check-mark">✓</span> Existing Page</div>
     </div>
 
 </body>
