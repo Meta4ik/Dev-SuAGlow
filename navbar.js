@@ -145,7 +145,7 @@ const NAVBAR_HTML = `
                             </a>
                             <ul class="space-y-1">
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Water Droplet Lifting</a></li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Salmon PN Facial</a></li>
+                                <li><a href="salmon-pn-facial.html" class="dropdown-link !p-0 hover:!pl-2">Salmon PN Facial</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Glow & Hydration</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Collagen Stimulation</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Tone Up</a></li>
@@ -375,7 +375,7 @@ const NAVBAR_HTML = `
                             </a>
                             <div class="flex flex-col gap-2 mt-2">
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Water Droplet Lifting</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Salmon PN Facial</a>
+                                <a href="salmon-pn-facial.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Salmon PN Facial</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Glow &amp; Hydration</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Collagen Stimulation</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Tone Up</a>
