@@ -106,7 +106,7 @@ const NAVBAR_HTML = `
                                 <li>
                                     <a href="radiesse.html" class="dropdown-link !p-0 hover:!pl-2">
                                         Biostimulators
-                                        <span class="block text-[10px] text-charcoal/40 mt-0.5 font-normal">Sculptra & Radiesse, Juvelook Volume</span>
+                                        <span class="block text-[10px] text-charcoal/40 mt-0.5 font-normal">Sculptra & Radiesse</span>
                                     </a>
                                 </li>
                             </ul>
@@ -331,7 +331,7 @@ const NAVBAR_HTML = `
                                 </div>
                                 <div>
                                     <a href="radiesse.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Biostimulators</a>
-                                    <span class="block text-[10px] text-charcoal/40">Sculptra & Radiesse, Juvelook Volume</span>
+                                    <span class="block text-[10px] text-charcoal/40">Sculptra & Radiesse</span>
                                 </div>
                             </div>
                         </div>
