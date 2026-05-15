@@ -131,7 +131,7 @@ const NAVBAR_HTML = `
                                 <li><a href="signature-treatment.html" class="dropdown-link !p-0 hover:!pl-2">Personalized Skin Quality</a></li>
                                 <li><a href="one-day-glow.html" class="dropdown-link !p-0 hover:!pl-2">One Day Glow</a></li>
                                 <li><a href="bridal-glow.html" class="dropdown-link !p-0 hover:!pl-2">Bridal Glow</a></li>
-                                <li><a href="seoul-man.html" class="dropdown-link !p-0 hover:!pl-2">Man Up</a></li>
+                                <li><a href="seoul-man.html" class="dropdown-link !p-0 hover:!pl-2">Seoul Man Treatment</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Acne Treatment</a></li>
                             </ul>
                         </div>
@@ -370,7 +370,7 @@ const NAVBAR_HTML = `
                                 <a href="signature-treatment.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Personalized Skin Quality</a>
                                 <a href="one-day-glow.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">One Day Glow</a>
                                 <a href="bridal-glow.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Bridal Glow</a>
-                                <a href="seoul-man.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Man Up</a>
+                                <a href="seoul-man.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Seoul Man Treatment</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Acne Treatment</a>
                             </div>
                         </div>
