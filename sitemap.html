@@ -3,440 +3,400 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitemap | SuA Glow - K-Beauty Medical Aesthetics</title>
-    <meta name="description" content="Complete sitemap for SuA Glow. Explore our full treatment architecture and navigation.">
-
-    <!-- Fonts -->
+    <title>SuA Glow Site Structure</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS -->
-    <link href="dist/output.css" rel="stylesheet">
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
-        /* ── Tree base ─────────────────────────────────────── */
-        .tree {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        :root {
+            --taupe: #8F857B;
+            --warm-gold: #AA987C;
+            --charcoal: #404345;
+            --off-white: #F6F7F8;
+            --near-black: #131619;
+            --blue-gray: #9DAFB6;
+            --light-gray: #DFE0DD;
+            
+            --line-color: #DFE0DD;
+            --bg-page: #F6F7F8;
+            --font-main: 'Poppins', sans-serif;
+            --font-heading: 'Montserrat', sans-serif;
         }
 
-        /* Every <li> that holds a sub-list draws the vertical trunk */
-        .tree li {
-            position: relative;
-            padding: 0 0 0 2.5rem; /* indent for branch arm */
-        }
-
-        /* Vertical trunk line running down through all siblings */
-        .tree li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background: #b9a89a; /* taupe-ish */
-        }
-
-        /* Last child stops the trunk at mid-row */
-        .tree li:last-child::before {
-            height: 2.1rem; /* stop at the elbow */
-        }
-
-        /* Horizontal arm connecting trunk to label */
-        .tree li::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 2rem; /* vertically centred on the row */
-            width: 2rem;
-            height: 1px;
-            background: #b9a89a;
-        }
-
-        /* Root item – no trunk or arm needed */
-        .tree > li::before,
-        .tree > li::after {
-            display: none;
-        }
-
-        /* ── Row label ─────────────────────────────────────── */
-        .tree-label {
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: var(--font-main); 
+            background: var(--bg-page); 
+            color: var(--charcoal);
+            padding: 40px 20px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 0.6rem;
-            padding: 0.55rem 0;
-            color: #3a3029;
-            text-decoration: none;
-            transition: color 0.2s;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.1rem;
-            line-height: 1.4;
         }
-        .tree-label:hover { color: #8b7355; }
 
-        /* Depth-1 labels (HOME, SKIN HEALTH, etc.) */
-        .tree > li > .tree-label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.75rem;
-            font-weight: 800;
-            letter-spacing: 0.05em;
-            color: #1a1612;
-            padding: 0.8rem 0 2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .header h1 {
+            font-family: var(--font-heading);
             text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-size: 1.2rem;
+            color: var(--taupe);
+            margin-bottom: 8px;
+        }
+        .header p {
+            font-size: 0.9rem;
+            opacity: 0.6;
         }
 
-        /* Depth-2 labels (Cosmetic Tox, HA Fillers…) */
-        .tree li li > .tree-label {
-            font-size: 1.15rem;
+        /* Tree structure CSS */
+        .tree {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .tree ul {
+            padding-top: 30px; 
+            position: relative;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+        }
+        .tree li {
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 30px 10px 0 10px;
+            transition: all 0.5s;
+            flex: 1;
+        }
+
+        /* Connecting lines */
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute; top: 0; right: 50%;
+            border-top: 1.5px solid var(--line-color);
+            width: 50%; height: 30px;
+        }
+        .tree li::after {
+            right: auto; left: 50%;
+            border-left: 1.5px solid var(--line-color);
+        }
+
+        /* Remove lines from single children and edges */
+        .tree li:only-child::after, .tree li:only-child::before { display: none; }
+        .tree li:only-child { padding-top: 0; }
+        .tree li:first-child::before, .tree li:last-child::after { border: 0 none; }
+        .tree li:last-child::before {
+            border-right: 1.5px solid var(--line-color);
+            border-radius: 0 12px 0 0;
+        }
+        .tree li:first-child::after {
+            border-radius: 12px 0 0 0;
+        }
+
+        /* Downward lines from parent */
+        .tree ul ul::before {
+            content: '';
+            position: absolute; top: 0; left: 50%;
+            border-left: 1.5px solid var(--line-color);
+            width: 0; height: 30px;
+        }
+
+        /* Node Styling */
+        .node {
+            display: inline-block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: var(--near-black);
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 8px;
+            background: white;
+            border: 1px solid var(--light-gray);
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+            min-width: 140px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .node:hover {
+            border-color: var(--taupe);
+            color: var(--taupe);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        /* Colors for different tiers */
+        .node.root {
+            background: var(--near-black);
+            color: white;
+            border-color: var(--near-black);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 16px 32px;
+        }
+        .node.tier-1 {
+            background: #fff;
+            border-left: 4px solid var(--taupe);
             font-weight: 600;
-            color: #3a3029;
-            padding: 0.6rem 0;
         }
-
-        /* Depth-3+ labels (individual treatments) */
-        .tree li li li > .tree-label {
-            font-size: 1rem;
+        .node.tier-2 {
+            background: #fff;
+            font-size: 12px;
+            border-color: var(--warm-gold);
+            color: var(--warm-gold);
+            font-weight: 600;
+        }
+        .node.leaf {
+            background: transparent;
+            border: 1px dashed var(--blue-gray);
+            color: var(--charcoal);
+            font-size: 11px;
+            min-width: 100px;
+            padding: 8px 12px;
             font-weight: 400;
-            color: #5c5046;
+            opacity: 0.7;
         }
 
-        /* Depth-4 labels */
-        .tree li li li li > .tree-label {
-            font-size: 0.95rem;
-            color: #7a6e66;
+        /* Sub-items list (flat layout) */
+        .sub-items {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 15px;
+            align-items: center;
+        }
+        .sub-items::before {
+            content: '';
+            width: 1px;
+            height: 15px;
+            background: var(--line-color);
+            margin-bottom: 0;
         }
 
-        /* spacing between top-level sections */
-        .tree > li {
-            padding-bottom: 3.5rem;
-        }
-        /* sub-level spacing */
-        .tree li li {
-            padding-bottom: 0.25rem;
+        .secondary-nav {
+            margin-top: 80px;
+            width: 100%;
+            border-top: 1px solid var(--line-color);
+            padding-top: 60px;
         }
 
-        .tree-icon {
-            color: #8b7355;
-            flex-shrink: 0;
-            width: 1.3rem;
-            height: 1.3rem;
+        .legend {
+            margin-top: 100px;
+            display: flex;
+            gap: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.6;
+        }
+        .legend-item { display: flex; align-items: center; gap: 8px; }
+        .dot { width: 8px; height: 8px; border-radius: 2px; }
+
+        .check-mark {
+            color: #22C55E;
+            margin-left: 4px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1200px) {
+            .tree li { padding: 30px 5px 0 5px; }
+            .node { min-width: 110px; font-size: 11px; }
         }
     </style>
 </head>
-<body class="bg-[#FCFBFA] font-body text-charcoal pt-32">
+<body>
 
-    <!-- Navbar -->
-    <div id="navbar-container"></div>
+    <div class="header">
+        <h1>SuA Glow Structure</h1>
+        <p>Hierarchy & Navigation Mapping</p>
+    </div>
 
-    <main>
-        <!-- Hero -->
-        <section class="py-20 text-center">
-            <!-- Dev Navigation -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <a href="dev.html" class="flex items-center gap-2 bg-near-black/5 text-charcoal/60 px-4 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-near-black hover:text-white transition-all">
-                    <i data-lucide="terminal" class="w-3 h-3"></i> Dev Portal
-                </a>
-                <a href="style-guide.html" class="flex items-center gap-2 bg-near-black/5 text-charcoal/60 px-4 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-taupe hover:text-white transition-all">
-                    <i data-lucide="palette" class="w-3 h-3"></i> Style Guide
-                </a>
-                <a href="audit.html" class="flex items-center gap-2 bg-near-black/5 text-charcoal/60 px-4 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-warm-gold hover:text-white transition-all">
-                    <i data-lucide="clipboard-check" class="w-3 h-3"></i> Content Audit
-                </a>
-            </div>
-
-            <div class="max-w-3xl mx-auto px-6">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-taupe/5 text-taupe text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">
-                    <i data-lucide="list-tree" class="w-3 h-3"></i> Site Architecture
-                </div>
-                <h1 class="heading-wide text-5xl md:text-6xl text-near-black mb-6 uppercase tracking-[0.1em]">
-                    Sitemap <span class="italic font-normal">Outline</span>
-                </h1>
-                <div class="w-20 h-[2px] bg-taupe/30 mx-auto rounded-full"></div>
-            </div>
-        </section>
-
-        <!-- Tree -->
-        <section class="pb-40">
-            <div class="max-w-3xl mx-auto px-6 md:px-16">
-
-                <ul class="tree">
-
-                    <!-- HOME -->
+    <div class="tree">
+        <ul>
+            <li>
+                <div class="node root">Homepage <span class="check-mark">✓</span></div>
+                <ul>
+                    <!-- Skin Health Group -->
                     <li>
-                        <a href="index.html" class="tree-label">
-                            <i data-lucide="home" class="tree-icon"></i> HOME
-                        </a>
-                        <ul class="tree">
-                            <li><a href="index.html#hero" class="tree-label">Hero / Homepage</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- SKIN HEALTH -->
-                    <li>
-                        <a href="skin-health.html" class="tree-label">
-                            <i data-lucide="sparkles" class="tree-icon"></i> SKIN HEALTH
-                        </a>
-                        <ul class="tree">
-                            <li><a href="education/skinboosters.html" class="tree-label">Skin Boosters</a></li>
-                            <li><a href="#" class="tree-label">Healing &amp; Repair</a></li>
-                            <li><a href="#" class="tree-label">Hydration &amp; Glow</a></li>
-                            <li><a href="#" class="tree-label">Collagen Stimulation</a></li>
-                            <li><a href="#" class="tree-label">Dermal Matrix</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- INJECTABLES -->
-                    <li>
-                        <div class="tree-label">
-                            <i data-lucide="syringe" class="tree-icon"></i> INJECTABLES
-                        </div>
-                        <ul class="tree">
-
-                            <!-- Cosmetic Tox -->
+                        <div class="node tier-1">Skin Health <span class="check-mark">✓</span></div>
+                        <ul>
+                            <!-- Skin Boosters -->
                             <li>
-                                <a href="cosmetic-tox.html" class="tree-label">Cosmetic Tox</a>
-                                <ul class="tree">
-                                    <li><span class="tree-label">Bunny Lines (Nose Lines)</span></li>
-                                    <li><span class="tree-label">Brow Lift (Chemical Brow Lift)</span></li>
-                                    <li><span class="tree-label">Cheek Lift</span></li>
-                                    <li><span class="tree-label">Glabellar Lines ("11" Lines)</span></li>
-                                    <li><span class="tree-label">Crow's Feet</span></li>
-                                    <li><span class="tree-label">Lip Flip</span></li>
-                                    <li><span class="tree-label">Forehead Lines</span></li>
-                                    <li><span class="tree-label">Gummy Smile</span></li>
-                                    <li><span class="tree-label">Marionette Lines</span></li>
-                                    <li><span class="tree-label">Mentalis / Pebble Chin</span></li>
-                                    <li><span class="tree-label">Masseter / Jaw Slimming</span></li>
-                                    <li><span class="tree-label">Nasal Flare Reduction</span></li>
-                                    <li><span class="tree-label">Perioral Lines</span></li>
-                                    <li><span class="tree-label">Platysmal Bands</span></li>
-                                    <li><span class="tree-label">Horizontal Neck Lines</span></li>
-                                    <li><span class="tree-label">Nefertiti Lift</span></li>
-                                    <li><span class="tree-label">Décolletage Lines</span></li>
-                                </ul>
+                                <div class="node tier-2">Skin Boosters <span class="check-mark">✓</span></div>
+                                <div class="sub-items">
+                                    <div class="node leaf">Healing & Repair</div>
+                                    <div class="node leaf">Hydration & Glow</div>
+                                    <div class="node leaf">Collagen Stimulation</div>
+                                    <div class="node leaf">Dermal Matrix</div>
+                                </div>
                             </li>
 
-                            <!-- Body Tox -->
+                            <!-- Injectables -->
                             <li>
-                                <span class="tree-label">Body Tox</span>
-                                <ul class="tree">
-                                    <li><span class="tree-label">Calf Tox</span></li>
-                                    <li><span class="tree-label">Trap Tox</span></li>
-                                    <li><span class="tree-label">Deltoid Contouring</span></li>
-                                    <li><span class="tree-label">Forearm Slimming</span></li>
-                                    <li><span class="tree-label">Thigh Slimming</span></li>
-                                </ul>
-                            </li>
-
-                            <!-- Medical Tox -->
-                            <li>
-                                <a href="medical-tox.html" class="tree-label">Medical Tox</a>
-                                <ul class="tree">
-                                    <li><span class="tree-label">Cervical Dystonia</span></li>
-                                    <li><span class="tree-label">Chronic Migraine &amp; Headaches</span></li>
-                                    <li><span class="tree-label">Hyperhidrosis</span></li>
-                                    <li><span class="tree-label">Plantar Hyperhidrosis</span></li>
-                                    <li><span class="tree-label">Palmar Hyperhidrosis</span></li>
-                                    <li><span class="tree-label">TMJ / Bruxism</span></li>
-                                </ul>
-                            </li>
-
-                            <!-- HA Fillers -->
-                            <li>
-                                <span class="tree-label">HA Fillers</span>
-                                <ul class="tree">
-                                    <li><span class="tree-label">Restylane Family (Galderma)</span></li>
+                                <div class="node tier-2">Injectables</div>
+                                <ul>
                                     <li>
-                                        <span class="tree-label">Facial Contouring &amp; Volume Restoration</span>
-                                        <ul class="tree">
-                                            <li><span class="tree-label">Forehead &amp; Temples</span></li>
-                                            <li><span class="tree-label">Cheeks &amp; Midface</span></li>
-                                            <li><span class="tree-label">Under-eye</span></li>
-                                            <li><span class="tree-label">Chin &amp; Jawline</span></li>
-                                            <li><span class="tree-label">Nasolabial Folds</span></li>
-                                            <li><span class="tree-label">Tech Neck</span></li>
-                                            <li><span class="tree-label">Décolletage Lines</span></li>
-                                        </ul>
+                                        <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">Cosmetic Tox <span class="check-mark">✓</span></div>
+                                        <div class="sub-items">
+                                            <div class="node leaf">Face & Neck Sections</div>
+                                            <div class="node leaf">Body Contouring Sections</div>
+                                            <div class="node leaf">SkinTox (Micro-dosing)</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">Medical Tox <span class="check-mark">✓</span></div>
+                                        <div class="sub-items">
+                                            <div class="node leaf">Therapeutic (TMJ & Migraine)</div>
+                                            <div class="node leaf">Hyperhidrosis (Sweat Reduction)</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">HA Fillers</div>
+                                        <div class="sub-items">
+                                            <div class="node leaf">Restylane Family</div>
+                                            <div class="node leaf">Facial Contouring</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="node tier-2" style="font-size:11px; min-width:120px; border-color:var(--blue-gray); color:var(--charcoal);">Biostimulators</div>
+                                        <div class="sub-items">
+                                            <div class="node leaf">Sculptra & Radiesse</div>
+                                            <div class="node leaf">Juvelook Volume</div>
+                                        </div>
                                     </li>
                                 </ul>
                             </li>
 
-                            <!-- Biostimulators -->
+                            <!-- Scar Treatment -->
                             <li>
-                                <span class="tree-label">Biostimulators</span>
-                                <ul class="tree">
-                                    <li><span class="tree-label">Sculptra</span></li>
-                                    <li><span class="tree-label">Radiesse</span></li>
-                                    <li><span class="tree-label">Juvelook Volume</span></li>
-                                </ul>
+                                <div class="node tier-2">Scar Treatment</div>
+                                <div class="sub-items">
+                                    <div class="node leaf">Acne Scars</div>
+                                    <div class="node leaf">Surgical Scars</div>
+                                    <div class="node leaf">Stretch Marks</div>
+                                    <div class="node leaf">Keloid</div>
+                                </div>
                             </li>
 
-                        </ul>
-                    </li>
-
-                    <!-- SCAR TREATMENT -->
-                    <li>
-                        <div class="tree-label">
-                            <i data-lucide="shield-plus" class="tree-icon"></i> SCAR TREATMENT
-                        </div>
-                        <ul class="tree">
-                            <li><a href="#" class="tree-label">Acne Scars</a></li>
-                            <li><a href="#" class="tree-label">Surgical &amp; Traumatic Scars</a></li>
-                            <li><a href="#" class="tree-label">Stretch Marks</a></li>
-                            <li><a href="#" class="tree-label">Treatment Modalities</a></li>
-                            <li><a href="#" class="tree-label">Keloid</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- SUA GLOW SIGNATURE -->
-                    <li>
-                        <div class="tree-label">
-                            <i data-lucide="sparkles" class="tree-icon"></i> SUA GLOW SIGNATURE TREATMENTS
-                        </div>
-                        <ul class="tree">
-                            <li><a href="#" class="tree-label">Personalized Skin Quality</a></li>
-                            <li><a href="#" class="tree-label">One Day Glow</a></li>
-                            <li><a href="#" class="tree-label">Bridal Glow</a></li>
-                            <li><a href="#" class="tree-label">Man Up Treatment</a></li>
-                            <li><a href="#" class="tree-label">Acne Treatment</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- SKIN REJUVENATION -->
-                    <li>
-                        <div class="tree-label">
-                            <i data-lucide="scan-face" class="tree-icon"></i> SKIN REJUVENATION
-                        </div>
-                        <ul class="tree">
-                            <li><a href="#" class="tree-label">Oligio X (RF Lifting &amp; Tightening)</a></li>
-                            <li><a href="#" class="tree-label">LDM (Ultrasound Treatment)</a></li>
-                            <li><a href="#" class="tree-label">SkinPen (Microneedling)</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- K-BEAUTY FACIALS -->
-                    <li>
-                        <div class="tree-label">
-                            <i data-lucide="smile" class="tree-icon"></i> K-BEAUTY FACIALS
-                        </div>
-                        <ul class="tree">
-                            <li><a href="#" class="tree-label">Water Droplet Facial</a></li>
-                            <li><a href="#" class="tree-label">Recovery &amp; Repair</a></li>
-                            <li><a href="#" class="tree-label">Glow &amp; Hydration</a></li>
-                            <li><a href="#" class="tree-label">Collagen Stimulation</a></li>
-                            <li><a href="#" class="tree-label">Tone Up Facial</a></li>
-                            <li><a href="#" class="tree-label">Exosome Facial</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- HAIR LOSS -->
-                    <li>
-                        <div class="tree-label">
-                            <i data-lucide="sprout" class="tree-icon"></i> HAIR LOSS
-                        </div>
-                        <ul class="tree">
-                            <li><a href="#" class="tree-label">Hair Loss Treatment</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- WELLNESS -->
-                    <li>
-                        <div class="tree-label">
-                            <i data-lucide="heart" class="tree-icon"></i> WELLNESS
-                        </div>
-                        <ul class="tree">
-                            <li><a href="#" class="tree-label">Medical Weight Loss</a></li>
-                            <li><a href="#" class="tree-label">Peptides</a></li>
-                            <li><a href="#" class="tree-label">Skin Brightening &amp; Detox IV</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- EDUCATION -->
-                    <li>
-                        <a href="about.html" class="tree-label">
-                            <i data-lucide="graduation-cap" class="tree-icon"></i> EDUCATION
-                        </a>
-                        <ul class="tree">
+                            <!-- Hair Loss -->
                             <li>
-                                <span class="tree-label">Skin Booster Detail Pages</span>
-                                <ul class="tree">
-                                    <li><a href="education/rejuran.html" class="tree-label">Rejuran</a></li>
-                                    <li><a href="education/rejuran-tone-up.html" class="tree-label">Tone Up</a></li>
-                                    <li><a href="education/juvelook.html" class="tree-label">Juvelook</a></li>
-                                    <li><a href="education/re20.html" class="tree-label">Elravie Re20</a></li>
-                                    <li><a href="education/cellredm.html" class="tree-label">CellREDM</a></li>
-                                    <li><a href="education/byryzn.html" class="tree-label">BYRYZN</a></li>
-                                    <li><a href="education/byryzn-v2.html" class="tree-label">BYRYZN v2</a></li>
-                                    <li><a href="education/hilowave.html" class="tree-label">Hilo Wave®</a></li>
-                                    <li><a href="education/hilowave-v2.html" class="tree-label">HILO WAVE® v2</a></li>
-                                    <li><a href="education/skinvive.html" class="tree-label">Skinvive</a></li>
-                                    <li><a href="#" class="tree-label">Restylane Vital Light</a></li>
-                                </ul>
+                                <div class="node tier-2">Hair Loss</div>
+                                <div class="sub-items">
+                                    <div class="node leaf">PRP</div>
+                                    <div class="node leaf">Exosome</div>
+                                    <div class="node leaf">Treatment Plan</div>
+                                </div>
                             </li>
-                            <li><a href="about.html#story" class="tree-label">Our Story</a></li>
-                            <li><a href="about.html#k-beauty" class="tree-label">What is K-Beauty</a></li>
-                            <li><a href="about.html#safety" class="tree-label">Medical Oversight &amp; Safety</a></li>
-                            <li><a href="about.html#difference" class="tree-label">Why SuA Glow is Different</a></li>
+
+                            <!-- Signature -->
+                            <li>
+                                <div class="node tier-2">SuA Glow Signature Treatment</div>
+                                <div class="sub-items">
+                                    <div class="node leaf">Personalized Skin Quality</div>
+                                    <div class="node leaf">One Day Glow</div>
+                                    <div class="node leaf">Bridal Glow</div>
+                                    <div class="node leaf">Man Up</div>
+                                    <div class="node leaf">Acne Treatment</div>
+                                </div>
+                            </li>
+
+                            <!-- Skin Rejuvenation -->
+                            <li>
+                                <div class="node tier-2">Skin Rejuvenation</div>
+                                <div class="sub-items">
+                                    <div class="node leaf">Oligio X RF Lifting</div>
+                                    <div class="node leaf">LDM Ultrasound</div>
+                                    <div class="node leaf">Microneedling</div>
+                                </div>
+                            </li>
+
+                            <!-- K-Beauty -->
+                            <li>
+                                <div class="node tier-2">K-Beauty Facials</div>
+                                <div class="sub-items">
+                                    <div class="node leaf">Water Droplet</div>
+                                    <div class="node leaf">Recovery & Repair</div>
+                                    <div class="node leaf">Glow & Hydration</div>
+                                    <div class="node leaf">Collagen Stimulation</div>
+                                    <div class="node leaf">Tone Up</div>
+                                </div>
+                            </li>
                         </ul>
                     </li>
-
-                    <!-- MORE -->
-                    <li>
-                        <div class="tree-label">
-                            <i data-lucide="more-horizontal" class="tree-icon"></i> MORE
-                        </div>
-                        <ul class="tree">
-                            <li><a href="referral.html" class="tree-label">Referral Program</a></li>
-                            <li><a href="#" class="tree-label">Before &amp; After</a></li>
-                            <li><a href="#" class="tree-label">Press / Media</a></li>
-                            <li><a href="testimonials.html" class="tree-label">Patient Testimony</a></li>
-                            <li><a href="financing.html" class="tree-label">Financing</a></li>
-                            <li><a href="#" class="tree-label">Vlog / Blog</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- CONTACT -->
-                    <li>
-                        <a href="contact.html" class="tree-label">
-                            <i data-lucide="phone" class="tree-icon"></i> CONTACT US
-                        </a>
-                        <ul class="tree">
-                            <li><a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="tree-label">Book Appointment</a></li>
-                            <li><a href="contact.html#location" class="tree-label">Location &amp; Hours</a></li>
-                            <li><a href="tel:972-665-8737" class="tree-label">Text / Call Us</a></li>
-                            <li><a href="#" class="tree-label">New Patient Forms</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- PROMOTIONS -->
-                    <li>
-                        <a href="specials.html" class="tree-label">
-                            <i data-lucide="tag" class="tree-icon"></i> PROMOTIONS
-                        </a>
-                        <ul class="tree">
-                            <li><a href="specials.html" class="tree-label">Promotional Landing Pages / CTA Buttons</a></li>
-                        </ul>
-                    </li>
-
                 </ul>
+            </li>
+        </ul>
+    </div>
 
-            </div>
-        </section>
-    </main>
+    <div class="tree secondary-nav">
+        <div class="header">
+            <h1>Secondary Navigation</h1>
+        </div>
+        <ul>
+            <!-- Wellness -->
+            <li>
+                <div class="node tier-1" style="border-left-color: var(--blue-gray);">Wellness</div>
+                <div class="sub-items">
+                    <div class="node leaf">Medical Weight Loss</div>
+                    <div class="node leaf">Peptides</div>
+                    <div class="node leaf">Brightening IV</div>
+                </div>
+            </li>
+            <!-- Education -->
+            <li>
+                <div class="node tier-1" style="border-left-color: var(--blue-gray);">Education <span class="check-mark">✓</span></div>
+                <div class="sub-items">
+                    <div class="node leaf">Skin Booster Details <span class="check-mark">✓</span></div>
+                    <div class="node leaf">Our Story <span class="check-mark">✓</span></div>
+                    <div class="node leaf">What is K-Beauty <span class="check-mark">✓</span></div>
+                    <div class="node leaf">Safety Protocols <span class="check-mark">✓</span></div>
+                </div>
+            </li>
+            <!-- More -->
+            <li>
+                <div class="node tier-1" style="border-left-color: var(--light-gray);">More</div>
+                <div class="sub-items">
+                    <div class="node leaf">Referral <span class="check-mark">✓</span></div>
+                    <div class="node leaf">Before / After</div>
+                    <div class="node leaf">Press / Media</div>
+                    <div class="node leaf">Financing <span class="check-mark">✓</span></div>
+                    <div class="node leaf">Blog / Vlog</div>
+                </div>
+            </li>
+            <!-- Contact -->
+            <li>
+                <div class="node tier-1" style="border-left-color: var(--warm-gold);">Contact <span class="check-mark">✓</span></div>
+                <div class="sub-items">
+                    <div class="node leaf">Book Appointment</div>
+                    <div class="node leaf">Location & Hours</div>
+                    <div class="node leaf">Patient Forms</div>
+                </div>
+            </li>
+            <!-- Promotions -->
+            <li>
+                <div class="node tier-1" style="border-left-color: #F0997B;">Promotions <span class="check-mark">✓</span></div>
+                <div class="sub-items">
+                    <div class="node leaf">CTA / Landing Page <span class="check-mark">✓</span></div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-    <!-- Footer -->
-    <div id="footer-container"></div>
+    <div class="legend">
+        <div class="legend-item"><div class="dot" style="background: var(--near-black);"></div> Root</div>
+        <div class="legend-item"><div class="dot" style="background: var(--taupe);"></div> Primary Nav</div>
+        <div class="legend-item"><div class="dot" style="background: var(--warm-gold);"></div> Sub-Categories</div>
+        <div class="legend-item"><div class="dot" style="border: 1px dashed var(--blue-gray);"></div> Final Pages</div>
+        <div class="legend-item"><span class="check-mark">✓</span> Existing Page</div>
+    </div>
 
-    <script src="navbar.js"></script>
-    <script src="footer.js"></script>
-    <script>lucide.createIcons();</script>
 </body>
 </html>
