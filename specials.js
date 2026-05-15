@@ -1,214 +1,119 @@
 const SPECIALS_HTML = `
-    <!-- Promotions / Signature Launch -->
+    <!-- May Specials Section -->
     <section id="promotions" data-nav-theme="light" class="py-32 bg-off-white border-y border-charcoal/5 relative overflow-hidden">
         <div class="starburst-container"><div class="sb-3"></div></div>
         <div class="max-w-7xl mx-auto px-8 relative z-10">
             <div class="text-center mb-16 animate-on-scroll fade-up">
                 <span
-                    class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">Limited
-                    Time</span>
-                <h2 class="heading-wide text-4xl md:text-5xl text-near-black mb-6 uppercase tracking-[0.15em]">Special
-                    Promotions</h2>
+                    class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">Limited Time | May 2026</span>
+                <h2 class="heading-wide text-4xl md:text-5xl text-near-black mb-4 uppercase tracking-[0.15em]">May Specials</h2>
+                <p class="font-body text-taupe italic tracking-widest opacity-80 uppercase text-[10px]">pure, water-like beauty</p>
                 <div class="w-24 h-[1px] bg-taupe/30 mx-auto mt-8"></div>
             </div>
 
-            <!-- Signature Launch Offer - Full Width -->
+            <!-- Featured Special: Oligio X - Full Width -->
             <div
-            class="product-card group bg-white border-2 border-[#AA987C]/40 shadow-soft rounded-[20px] overflow-hidden mb-12 flex flex-col md:flex-row animate-on-scroll fade-up delay-100">
+            class="product-card glow-card group bg-near-black text-white border-none shadow-soft rounded-[20px] overflow-hidden mb-12 flex flex-col md:flex-row animate-on-scroll fade-up delay-100"
+            style="--glow-color: #14b8a6;">
                 <div
-                    class="md:w-[45%] h-80 md:h-auto overflow-hidden bg-charcoal/5 relative border-b md:border-b-0 md:border-r border-charcoal/5">
-                    <img src="assets/specials/SuA Launch Special - LAUNCH OFFER.webp"
-                        alt="Signature Launch Offer Lunar Glow"
-                        class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                    class="md:w-[45%] h-80 md:h-auto overflow-hidden bg-charcoal/20 relative border-b md:border-b-0 md:border-r border-white/5 flex items-center justify-center p-8">
+                    <!-- Teal Glow Accents -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#14b8a6]/10 to-transparent"></div>
+                    <img src="assets/oligio_x_product.png"
+                        alt="Oligio X RF Skin Tightening"
+                        class="relative z-10 w-full h-full object-contain drop-shadow-[0_0_30px_rgba(20,184,166,0.3)] group-hover:scale-105 transition-transform duration-700">
                 </div>
-                <div class="p-10 md:p-16 flex flex-col justify-center md:w-[55%] panel-fade-h">
+                <div class="p-10 md:p-16 flex flex-col justify-center md:w-[55%] relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-transparent via-[#14b8a6]/5 to-transparent pointer-events-none"></div>
                     <span
-                        class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-4 italic">February
-                        - March | Only 50 Spots</span>
-                    <h3 class="heading-wide text-3xl md:text-4xl text-near-black mb-2 uppercase">Signature Launch Offer
-                    </h3>
-                    <h4 class="heading-wide text-xl text-taupe tracking-[0.1em] mb-6">LUNAR GLOW</h4>
-
-                    <div class="mb-8 flex items-end gap-3">
-                        <span class="font-body text-4xl font-extrabold text-near-black tracking-tight">$799</span>
-                        <span class="text-xs font-body text-charcoal/40 italic line-through mb-1">Regular $1400</span>
+                        class="inline-block text-[10px] tracking-[0.4em] text-[#14b8a6] uppercase font-bold mb-4 z-10">LIFTING & TIGHTENING</span>
+                    <h3 class="heading-wide text-3xl text-white mb-4 tracking-wider z-10">OLIGIO X RF TIGHTENING</h3>
+                    <div class="flex items-baseline gap-4 mb-6 z-10">
+                        <span class="font-heading text-4xl text-[#14b8a6]">$990</span>
+                        <span class="text-white/40 line-through text-lg font-body">$1,500 Value</span>
                     </div>
-
-                    <p class="font-body text-sm text-charcoal/70 leading-relaxed mb-8">
-                        The Lunar Glow is our limited-edition K-Beauty launch offer created to celebrate our grand
-                        opening!
-                        Choose from Rejuran® Healer, Juvelook® Skin, Juvelook® Volume, or HILO WAVE®.
+                    <p class="font-body text-white/70 text-sm leading-relaxed mb-8 z-10">
+                        Experience the gold standard in non-invasive lifting. Oligio X uses advanced RF energy to stimulate collagen and tighten skin for a defined, youthful contour with minimal discomfort.
                     </p>
-
-                    <div
-                        class="space-y-4 font-body text-sm text-charcoal/80 bg-off-white p-6 rounded-xl border border-charcoal/5 mb-10">
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-4 h-4 text-taupe mt-0.5 shrink-0"></i>
-                            <p><span class="font-bold text-near-black">Complimentary:</span> 10 units of Tox</p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check" class="w-4 h-4 text-taupe mt-0.5 shrink-0"></i>
-                            <p><span class="font-bold text-near-black">Complimentary:</span> Choose from Rejuran Lip or
-                                Byryzyn Neck Wrinkle Eraser</p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="ticket" class="w-4 h-4 text-taupe mt-0.5 shrink-0"></i>
-                            <p><span class="font-bold text-near-black">Lucky Draw:</span> Entered to win a Full Face
-                                Rejuran® Healer session!</p>
-                        </div>
+                    <div class="flex flex-wrap gap-4 mb-8 z-10">
+                        <span class="badge-standard border-[#14b8a6]/30 text-[#14b8a6] bg-[#14b8a6]/10">600 Shots</span>
+                        <span class="badge-standard border-[#14b8a6]/30 text-[#14b8a6] bg-[#14b8a6]/10">Full Face & Neck</span>
                     </div>
 
-                    <a href="https://suaglow.myaestheticrecord.com/online-booking/promotions" target="_blank"
-                        class="btn-primary w-max">
-                        Book Lunar Glow
+                    <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                        class="btn-primary w-max z-10">
+                        Book Treatment
                     </a>
                 </div>
             </div>
 
             <!-- Specials Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <!-- 1: Ultrasound -->
+                <!-- SkinPen Microneedling -->
                 <div
                     class="product-card group bg-white shadow-soft rounded-[20px] flex flex-col overflow-hidden animate-on-scroll fade-up delay-100">
                     <div class="h-64 overflow-hidden bg-charcoal/5">
-                        <img src="assets/specials/SuA Launch Special - ULTRASOUND.webp" alt="LDM Triple Ultrasound"
+                        <img src="assets/korean-models/portrait_2_highres.png" alt="SkinPen Microneedling Package"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
-                        <h3 class="heading-wide text-lg mb-4 text-near-black">LDM Triple Ultrasound</h3>
+                        <span class="text-[9px] tracking-[0.3em] text-taupe uppercase font-bold mb-4">3 Sessions Package</span>
+                        <h3 class="heading-wide text-lg mb-4 text-near-black">SkinPen Microneedling</h3>
                         <div class="mb-6 flex justify-center items-end gap-2">
-                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$99</span>
-                            <span class="text-[10px] font-body text-charcoal/40 italic line-through mb-0.5">Regular
-                                $249</span>
+                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$1199</span>
                         </div>
-                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed flex-1">Calms inflammation,
-                            drives deep hydration, and finishes with a subtle lift—no heat, no needles, no downtime.</p>
+                        <p class="font-body text-[11px] text-taupe mb-4 font-bold">(2 SkinPen + 1 K-Aesthetic MTS)</p>
+                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed flex-1">True skin rejuvenation with a 1:1 customized plan. Combining medical-grade microneedling with Korean aesthetic MTS.</p>
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all w-max mx-auto">Book
-                            Now</a>
+                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all w-max mx-auto">Book Now</a>
                     </div>
                 </div>
 
-                <!-- 2: Lip PN -->
+                <!-- Skin Regeneration Package -->
                 <div
                     class="product-card group bg-white shadow-soft rounded-[20px] flex flex-col overflow-hidden animate-on-scroll fade-up delay-200">
                     <div class="h-64 overflow-hidden bg-charcoal/5">
-                        <img src="assets/specials/SuA Launch Special - LIP PN.webp" alt="Rejuran Lip PN"
+                        <img src="assets/korean-models/portrait_3_highres.png" alt="Skin Regeneration Package"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
-                        <h3 class="heading-wide text-lg mb-4 text-near-black">Rejuran® Lip PN Reset</h3>
+                        <span class="text-[9px] tracking-[0.3em] text-taupe uppercase font-bold mb-4">2 Sessions Package</span>
+                        <h3 class="heading-wide text-lg mb-4 text-near-black">Skin Regeneration</h3>
                         <div class="mb-6 flex justify-center items-end gap-2">
-                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$299</span>
-                            <span class="text-[10px] font-body text-charcoal/40 italic line-through mb-0.5">Regular
-                                $400</span>
+                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$1299</span>
                         </div>
-                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed flex-1">Your lips don't need
-                            volume—they need repair. Powered by PN, Rejuran® restores hydration and strengthens from
-                            within.</p>
+                        <p class="font-body text-[11px] text-taupe mb-4 font-bold">HA + ECM Skin Boosters</p>
+                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed flex-1">Deep hydration and structural support. A synergistic blend of hyaluronic acid and extracellular matrix boosters.</p>
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all w-max mx-auto">Book
-                            Now</a>
+                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all w-max mx-auto">Book Now</a>
                     </div>
                 </div>
 
-                <!-- 3: Neck Refine -->
+                <!-- Total Brightening IV -->
                 <div
                     class="product-card group bg-white shadow-soft rounded-[20px] flex flex-col overflow-hidden animate-on-scroll fade-up delay-300">
                     <div class="h-64 overflow-hidden bg-charcoal/5 relative">
-                        <img src="assets/specials/SuA Launch Special - Neck refine.webp"
-                            alt="Byryzn HA Skinbooster Neck"
+                        <img src="assets/korean-models/portrait_4_highres.png"
+                            alt="Total Brightening IV Package"
                             class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
-                        <h3 class="heading-wide text-lg mb-4 text-near-black">Byryzn™ HA Neck Refine</h3>
+                        <span class="text-[9px] tracking-[0.3em] text-taupe uppercase font-bold mb-4">3 Sessions Package</span>
+                        <h3 class="heading-wide text-lg mb-4 text-near-black">Total Brightening IV</h3>
                         <div class="mb-6 flex justify-center items-end gap-2">
-                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$299</span>
-                            <span class="text-[10px] font-body text-charcoal/40 italic line-through mb-0.5">Regular
-                                $400</span>
+                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$209</span>
                         </div>
-                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed flex-1">Neck wrinkle eraser.
-                            Turn back the clock—without surgery or stiffness. Smooth the lines and restore hydration.
-                        </p>
+                        <p class="font-body text-[11px] text-taupe mb-4 font-bold">Glutathione Therapy</p>
+                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed flex-1">Brightening and antioxidant support. Detoxify and illuminate your complexion from the inside out.</p>
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all w-max mx-auto">Book
-                            Now</a>
-                    </div>
-                </div>
-
-                <!-- 4: Age-Smart -->
-                <div
-                    class="product-card group bg-white shadow-soft rounded-[20px] flex flex-col overflow-hidden animate-on-scroll fade-up delay-100">
-                    <div class="h-64 overflow-hidden bg-charcoal/5">
-                        <img src="assets/specials/SuA Launch Special - age-smart.webp" alt="Neurotoxin Age-Smart"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    </div>
-                    <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
-                        <h3 class="heading-wide text-lg mb-4 text-near-black">Neurotoxin Age-Smart</h3>
-                        <div class="mb-6 flex justify-center items-end gap-2">
-                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$399</span>
-                            <span class="text-[10px] font-body text-charcoal/40 italic line-through mb-0.5">Regular
-                                $500</span>
-                        </div>
-                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed flex-1">Designed for eyes that
-                            have changed with time, not trends. Gently lifts sagging lids for a natural, rested look.
-                        </p>
-                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all w-max mx-auto">Book
-                            Now</a>
-                    </div>
-                </div>
-
-                <!-- 5: Skin Reset -->
-                <div
-                    class="product-card group bg-white shadow-soft rounded-[20px] flex flex-col overflow-hidden animate-on-scroll fade-up delay-200">
-                    <div class="h-64 overflow-hidden bg-charcoal/5">
-                        <img src="assets/specials/SuA Launch Special - skin Reset.webp" alt="Skintox Skin Reset"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    </div>
-                    <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
-                        <h3 class="heading-wide text-lg mb-4 text-near-black">Skintox Skin Reset</h3>
-                        <div class="mb-6 flex justify-center items-end gap-2">
-                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$499</span>
-                            <span class="text-[10px] font-body text-charcoal/40 italic line-through mb-0.5">Regular
-                                $600</span>
-                        </div>
-                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed flex-1">Seoul Edition. No
-                            freezing. No overdoing. Just better skin. Fine lines relax. Pores refine. Glow shows up.</p>
-                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all w-max mx-auto">Book
-                            Now</a>
-                    </div>
-                </div>
-
-                <!-- 6: Shoulder Edit -->
-                <div
-                    class="product-card group bg-white shadow-soft rounded-[20px] flex flex-col overflow-hidden animate-on-scroll fade-up delay-300">
-                    <div class="h-64 overflow-hidden bg-charcoal/5">
-                        <img src="assets/specials/SuA Launch Special - shoulder edit.webp" alt="Traptox Shoulder Edit"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    </div>
-                    <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
-                        <h3 class="heading-wide text-lg mb-4 text-near-black">Traptox Shoulder Edit</h3>
-                        <div class="mb-6 flex justify-center items-end gap-2">
-                            <span class="font-body text-2xl font-extrabold text-near-black tracking-tight">$599</span>
-                            <span class="text-[10px] font-body text-charcoal/40 italic line-through mb-0.5">Regular
-                                $900</span>
-                        </div>
-                        <p class="font-body text-sm text-charcoal/60 mb-8 leading-relaxed flex-1">This K-Beauty favorite
-                            relaxes bulky trap muscles to refine your silhouette and soften tension in the face and
-                            neck.</p>
-                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all w-max mx-auto">Book
-                            Now</a>
+                            class="text-[10px] uppercase tracking-[0.3em] font-bold text-taupe border-b border-taupe/20 pb-1 hover:border-taupe transition-all w-max mx-auto">Book Now</a>
                     </div>
                 </div>
             </div>
 
             <div class="mt-16 text-center animate-on-scroll fade-up delay-100">
                 <a href="https://suaglow.myaestheticrecord.com/online-booking/promotions" target="_blank"
-                    class="inline-block border-b-2 border-taupe pb-2 text-xs uppercase tracking-[0.3em] font-bold hover:text-taupe transition-colors">View
-                    All Promotions</a>
+                    class="inline-block border-b-2 border-taupe pb-2 text-xs uppercase tracking-[0.3em] font-bold hover:text-taupe transition-colors">View All Promotions</a>
             </div>
         </div>
     </section>
