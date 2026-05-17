@@ -125,7 +125,14 @@ const NAVBAR_HTML = `
                                 <li><a href="one-day-glow.html" class="dropdown-link !p-0 hover:!pl-2">One Day Glow</a></li>
                                 <li><a href="bridal-glow.html" class="dropdown-link !p-0 hover:!pl-2">Bridal Glow</a></li>
                                 <li><a href="seoul-man.html" class="dropdown-link !p-0 hover:!pl-2">Seoul Man Treatment</a></li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Acne Treatment</a></li>
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
+                                        Acne Treatment
+                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                        </span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
 
@@ -136,19 +143,61 @@ const NAVBAR_HTML = `
                             </a>
                             <ul class="space-y-1 mb-6">
                                 <li><a href="oligio-x.html" class="dropdown-link !p-0 hover:!pl-2">Oligio X RF Lifting</a></li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">LDM Ultrasound</a></li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Microneedling</a></li>
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
+                                        LDM Ultrasound
+                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
+                                        Microneedling
+                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                        </span>
+                                    </a>
+                                </li>
                             </ul>
                             
                             <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
                                 <i data-lucide="smile" class="w-3 h-3 mr-2"></i>K-Beauty Facials
                             </a>
                             <ul class="space-y-1">
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Water Droplet Lifting</a></li>
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
+                                        Water Droplet Lifting
+                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                        </span>
+                                    </a>
+                                </li>
                                 <li><a href="salmon-pn-facial.html" class="dropdown-link !p-0 hover:!pl-2">Salmon PN Facial</a></li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Glow & Hydration</a></li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Collagen Stimulation</a></li>
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Tone Up</a></li>
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
+                                        Glow & Hydration
+                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
+                                        Collagen Stimulation
+                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
+                                        Tone Up
+                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                        </span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
 
@@ -335,7 +384,12 @@ const NAVBAR_HTML = `
                                 <a href="one-day-glow.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">One Day Glow</a>
                                 <a href="bridal-glow.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Bridal Glow</a>
                                 <a href="seoul-man.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Seoul Man Treatment</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Acne Treatment</a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
+                                    Acne Treatment
+                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                    </span>
+                                </a>
                             </div>
                         </div>
                         
@@ -346,8 +400,18 @@ const NAVBAR_HTML = `
                             </a>
                             <div class="flex flex-col gap-2 mt-2">
                                 <a href="oligio-x.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Oligio X RF Lifting</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Ultrasound</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Microneedling</a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
+                                    LDM Ultrasound
+                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                    </span>
+                                </a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
+                                    Microneedling
+                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                    </span>
+                                </a>
                             </div>
                         </div>
 
@@ -357,11 +421,31 @@ const NAVBAR_HTML = `
                                 <i data-lucide="smile" class="w-3 h-3 mr-2"></i>K-Beauty Facials
                             </a>
                             <div class="flex flex-col gap-2 mt-2">
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Water Droplet Lifting</a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
+                                    Water Droplet Lifting
+                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                    </span>
+                                </a>
                                 <a href="salmon-pn-facial.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Salmon PN Facial</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Glow &amp; Hydration</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Collagen Stimulation</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Tone Up</a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
+                                    Glow &amp; Hydration
+                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                    </span>
+                                </a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
+                                    Collagen Stimulation
+                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                    </span>
+                                </a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
+                                    Tone Up
+                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                    </span>
+                                </a>
                             </div>
                         </div>
 
