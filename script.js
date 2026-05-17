@@ -329,6 +329,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8. Story Carousel
   initStoryCarousel();
+
+  // 9. Cookie Consent Banner
+  initCookieConsent();
 });
 
 function initHeroVideoScroll() {
@@ -571,4 +574,69 @@ function initStoryCarousel() {
       updateCarousel();
     });
   });
+}
+
+/**
+ * Cookie Consent Banner Injection & Logic
+ */
+function initCookieConsent() {
+  if (localStorage.getItem('cookieConsent')) {
+    return;
+  }
+
+  const banner = document.createElement('div');
+  banner.id = 'cookie-consent-banner';
+  banner.className = 'fixed bottom-6 left-6 right-6 md:left-auto md:right-6 md:max-w-md bg-[#131619]/95 backdrop-blur-md border border-[#AA987C]/20 rounded-2xl p-6 md:p-8 text-white z-[9999] shadow-2xl transition-all duration-500 translate-y-12 opacity-0';
+  
+  banner.innerHTML = `
+    <div class="flex flex-col gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-[#AA987C]/10 flex items-center justify-center text-[#AA987C]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
+        </div>
+        <h5 class="heading-wide text-xs tracking-[0.2em] text-[#AA987C] uppercase font-semibold">This website uses cookies</h5>
+      </div>
+      <p class="text-xs text-white/70 font-light leading-relaxed">
+        We use cookies to personalize content, analyze our traffic, and provide you with a premium, seamless browsing experience. By clicking "Accept All", you consent to our use of cookies.
+      </p>
+      <div class="flex items-center justify-end gap-3 mt-2">
+        <button id="cookie-decline-btn" class="px-5 py-2 bg-transparent hover:bg-white/5 border border-white/10 hover:border-white/20 text-white/85 hover:text-white text-xs font-medium rounded-full tracking-wide transition-colors">
+          Decline
+        </button>
+        <button id="cookie-accept-btn" class="px-5 py-2 bg-[#AA987C] hover:bg-[#968469] text-white text-xs font-semibold rounded-full tracking-wide transition-colors shadow-sm">
+          Accept All
+        </button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(banner);
+
+  // Trigger smooth enter transition
+  setTimeout(() => {
+    banner.classList.remove('translate-y-12', 'opacity-0');
+  }, 100);
+
+  const acceptBtn = document.getElementById('cookie-accept-btn');
+  const declineBtn = document.getElementById('cookie-decline-btn');
+
+  function dismissBanner(consentType) {
+    localStorage.setItem('cookieConsent', consentType);
+    banner.classList.add('translate-y-12', 'opacity-0');
+    setTimeout(() => {
+      banner.remove();
+    }, 500);
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      dismissBanner('accepted');
+    });
+  }
+
+  if (declineBtn) {
+    declineBtn.addEventListener('click', () => {
+      dismissBanner('declined');
+    });
+  }
 }
