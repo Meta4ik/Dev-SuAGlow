@@ -169,16 +169,6 @@ const NAVBAR_HTML = `
                 </div>
             </div>
 
-            <!-- Education -->
-            <div class="nav-item-dropdown">
-                <a href="education/skinboosters.html"
-                    class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase flex items-center gap-1">
-                    Education <i data-lucide="chevron-down" class="w-3 h-3"></i>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="education/skinboosters.html" class="dropdown-link font-body">Skin Booster Details</a>
-                </div>
-            </div>
 
             <!-- More -->
             <div class="nav-item-dropdown">
@@ -391,16 +381,6 @@ const NAVBAR_HTML = `
                     </div>
                 </div>
 
-                <!-- Education -->
-                <div class="mobile-accordion">
-                    <button
-                        class="accordion-trigger flex items-center justify-between w-full font-heading text-lg text-near-black py-2 text-left hover:text-taupe transition-colors">
-                        Education <i data-lucide="plus" class="w-4 h-4"></i>
-                    </button>
-                    <div class="accordion-content hidden flex flex-col gap-3 pl-4 mt-2">
-                        <a href="education/skinboosters.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors font-semibold underline decoration-taupe/20">Skin Booster Details</a>
-                    </div>
-                </div>
 
                 <!-- More -->
                 <div class="mobile-accordion">
