@@ -170,11 +170,11 @@ const NAVBAR_HTML = `
             </div>
 
 
-            <!-- More -->
+            <!-- Resources -->
             <div class="nav-item-dropdown">
                 <a href="#"
                     class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase flex items-center gap-1">
-                    More <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                    Resources <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </a>
                 <div class="dropdown-menu text-left">
                     <a href="referral.html" class="dropdown-link font-body">Referral</a>
@@ -382,11 +382,11 @@ const NAVBAR_HTML = `
                 </div>
 
 
-                <!-- More -->
+                <!-- Resources -->
                 <div class="mobile-accordion">
                     <button
                         class="accordion-trigger flex items-center justify-between w-full font-heading text-lg text-near-black py-2 text-left hover:text-taupe transition-colors">
-                        More <i data-lucide="plus" class="w-4 h-4"></i>
+                        Resources <i data-lucide="plus" class="w-4 h-4"></i>
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-3 pl-4 mt-2">
                         <a href="referral.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors font-semibold">Referral</a>
