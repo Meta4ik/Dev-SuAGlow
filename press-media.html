@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press & Media | SuA K-Glow | Korean Medical Aesthetics</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="dist/output.css?v=38">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+
+    <!-- Global Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Header (Empty spacer for sticky nav) -->
+    <section class="h-24 bg-off-white"></section>
+
+    <!-- Container for Dynamically Loaded News Content -->
+    <div id="news-container"></div>
+
+    <!-- Brand CTA Section -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto animate-on-scroll fade-up">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow"
+                class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24 uppercase">K-Beauty Medspa • Carrollton HQ</p>
+            <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug">K-Beauty doesn't chase trends.<br>It builds
+                <span class="text-warm-gold opacity-80">better skin.</span>
+            </h3>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="btn-primary">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Shared Scripts -->
+    <script src="navbar.js?v=38"></script>
+    <script src="footer.js?v=38"></script>
+    <script src="script.js?v=38"></script>
+
+    <!-- Load the News Content dynamically -->
+    <script src="news.js?v=38"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof NEWS_HTML !== 'undefined') {
+                document.getElementById('news-container').innerHTML = NEWS_HTML;
+                // Re-initialize any Lucide icons inside the dynamically loaded content
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+                // Trigger scroll animations specifically on newly injected elements
+                const newlyInjectedElements = document.querySelectorAll('#news-container .animate-on-scroll');
+                const scrollObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+                newlyInjectedElements.forEach(el => scrollObserver.observe(el));
+            } else {
+                console.error('NEWS_HTML is not defined. Ensure news.js is loaded.');
+            }
+        });
+    </script>
+</body>
+
+</html>

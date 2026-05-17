@@ -188,11 +188,9 @@ const NAVBAR_HTML = `
                 </a>
                 <div class="dropdown-menu text-left">
                     <a href="referral.html" class="dropdown-link font-body">Referral</a>
-                    <a href="#" class="dropdown-link font-body">Before / After</a>
-                    <a href="#" class="dropdown-link font-body">Press / Media</a>
+                    <a href="press-media.html" class="dropdown-link font-body">Press / Media</a>
                     <a href="financing.html" class="dropdown-link font-body">Financing</a>
-                    <a href="#" class="dropdown-link font-body">Blog / Vlog</a>
-                    <a href="#" class="dropdown-link font-body">Shop Skincare</a>
+                    <a href="shop-skincare.html" class="dropdown-link font-body">Shop Skincare</a>
                 </div>
             </div>
 
@@ -217,10 +215,7 @@ const NAVBAR_HTML = `
                 class="inline-flex font-body text-[11px] md:text-[13px] tracking-[0.1em] uppercase bg-taupe text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full hover:bg-warm-gold transition-colors whitespace-nowrap">
                 Book Now
             </a>
-            <!-- Style Guide Link -->
-            <a href="style-guide.html" aria-label="Style Guide" class="text-charcoal hover:text-taupe transition-colors hidden sm:block">
-                <i data-lucide="swatch-book" class="w-4 h-4"></i>
-            </a>
+
 
             <!-- Scroll Promotions CTA - Hidden unless scrolled -->
             <div class="relative items-center hidden sm:flex opacity-0 -translate-y-12 pointer-events-none group-[.nav-scrolled]/nav:opacity-100 group-[.nav-scrolled]/nav:translate-y-0 group-[.nav-scrolled]/nav:pointer-events-auto transition-all duration-[800ms] ease-out">
@@ -415,11 +410,9 @@ const NAVBAR_HTML = `
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-3 pl-4 mt-2">
                         <a href="referral.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors font-semibold">Referral</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Before / After</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Press / Media</a>
+                        <a href="press-media.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Press / Media</a>
                         <a href="financing.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Financing</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Blog / Vlog</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Shop Skincare</a>
+                        <a href="shop-skincare.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Shop Skincare</a>
                     </div>
                 </div>
 
@@ -435,8 +428,6 @@ const NAVBAR_HTML = `
                         <a href="specials.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Promotions</a>
                     </div>
                 </div>
-
-                <a href="style-guide.html" class="font-heading text-lg text-taupe flex items-center gap-2 mt-4 hover:opacity-80 transition-opacity"><i data-lucide="swatch-book" class="w-5 h-5"></i> Style Guide</a>
 
             </div>
         </div>

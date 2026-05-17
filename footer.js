@@ -29,10 +29,10 @@ const FOOTER_HTML = `
                 <h4 class="heading-wide text-xs tracking-[0.3em] mb-6 opacity-40">Connect</h4>
                 <ul class="space-y-4 text-sm font-body text-white/70">
                     <li><a href="https://www.instagram.com/suaglowkbeauty" target="_blank" class="hover:text-taupe transition-colors flex items-center gap-2">
-                        <i data-lucide="instagram" class="w-4 h-4 text-taupe"></i> Instagram</a>
+                        <svg class="w-4 h-4 text-taupe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> Instagram</a>
                     </li>
                     <li><a href="https://www.facebook.com/suaglowkbeauty" target="_blank" class="hover:text-taupe transition-colors flex items-center gap-2">
-                        <i data-lucide="facebook" class="w-4 h-4 text-taupe"></i> Facebook</a>
+                        <svg class="w-4 h-4 text-taupe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg> Facebook</a>
                     </li>
                     <li><a href="https://www.tiktok.com/@suaglowkbeauty_" target="_blank" class="hover:text-taupe transition-colors flex items-center gap-2">
                         <svg class="w-4 h-4 text-taupe fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2A74.62,74.62,0,1,0,252.27,350V3.06h87.9c4.27,24,20.44,61.73,107.83,67Z"/></svg>
@@ -54,10 +54,15 @@ const FOOTER_HTML = `
             </div>
         </div>
         
+        <!-- Medical Disclaimer & Oversight Statement -->
+        <div class="pt-8 border-t border-white/[0.03] text-xs font-body text-white/45 leading-relaxed space-y-3 max-w-5xl mx-auto text-center mb-8">
+            <p>All medical aesthetic treatments are performed by Sophia Yang, PA-C, under the supervision and medical delegation of Dr. Adam Yang, MD.</p>
+            <p>At SuA Glow, our approach incorporates globally recognized aesthetic techniques, including those used in Korean dermatology, and is delivered in accordance with applicable regulations. Treatment plans and product details are personalized and reviewed during your consultation.</p>
+        </div>
+        
         <div class="pt-8 border-t border-white/[0.03] flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.3em] font-bold opacity-30">
             <div class="flex items-center gap-4">
-                <p>© 2026 SuA K Glow. Texas Certified Master Injections.</p>
-                <a href="dev.html" class="hover:opacity-100 transition-opacity"><i data-lucide="wrench" class="w-3 h-3"></i></a>
+                <p>© 2026 SuA K Glow.</p>
             </div>
             <div class="flex flex-wrap justify-center gap-4 md:gap-8">
                 <a href="privacy-policy.html" class="hover:opacity-100 transition-opacity">Privacy Policy</a>
