@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%" style="background-color: #F6F7F8; font-family: 'Poppins', sans-serif;">
+  <defs>
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E6E8E6" stroke-width="0.7" />
+      <circle cx="40" cy="40" r="1" fill="#DFE0DD" />
+    </pattern>
+
+    <!-- Linear Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#AA987C" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#8F857B" stop-opacity="0.95" />
+    </linearGradient>
+    
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9DAFB6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#404345" stop-opacity="0.9" />
+    </linearGradient>
+    
+    <radialGradient id="glowGold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#AA987C" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#AA987C" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#AA987C" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9DAFB6" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#9DAFB6" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#9DAFB6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Muscle Hatch Patterns -->
+    <pattern id="muscleHatch" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#AA987C" stroke-width="1.5" stroke-opacity="0.4" />
+    </pattern>
+    <pattern id="templeHatch" width="8" height="8" patternTransform="rotate(-30 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#9DAFB6" stroke-width="1.2" stroke-opacity="0.4" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="blurFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+    </filter>
+  </defs>
+
+  <!-- Background Grid & Circles -->
+  <rect width="100%" height="100%" fill="#F6F7F8" />
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  
+  <!-- Subtle Clinical Concentric Rings in BG -->
+  <circle cx="430" cy="380" r="280" fill="none" stroke="#DFE0DD" stroke-width="1" stroke-dasharray="4,8" />
+  <circle cx="430" cy="380" r="200" fill="none" stroke="#9DAFB6" stroke-width="0.5" stroke-opacity="0.5" />
+  <line x1="150" y1="380" x2="710" y2="380" stroke="#DFE0DD" stroke-width="1" stroke-dasharray="2,4" />
+  <line x1="430" y1="100" x2="430" y2="660" stroke="#DFE0DD" stroke-width="1" stroke-dasharray="2,4" />
+
+  <!-- ================= ANATOMICAL PROFILE SILHOUETTE ================= -->
+  <!-- Clean, elegant, premium line representing the side profile of female head facing right -->
+  <g id="anatomical-base" stroke="#404345" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Back of neck to shoulder -->
+    <path d="M 280,680 C 290,620 310,580 320,540" stroke-opacity="0.4" stroke-dasharray="3,3" />
+    <path d="M 320,540 C 330,490 325,450 320,400 C 315,350 320,280 350,220 C 380,160 430,120 500,120 C 560,120 600,150 615,190 C 625,215 623,240 620,265 C 618,278 625,288 632,295 C 640,302 638,308 628,312 C 618,316 626,324 630,332 C 634,340 628,344 618,346 C 608,348 616,356 618,364 C 620,372 612,376 605,378 C 598,380 606,392 608,402 C 610,412 598,420 585,425 C 550,455 515,480 505,580 C 500,630 520,660 550,680" stroke-opacity="0.8" />
+    <!-- Front Neck & Collarbone -->
+    <path d="M 505,580 L 515,610" stroke-opacity="0.4" stroke-dasharray="3,3" />
+  </g>
+
+  <!-- ================= HIGHLIGHTED MUSCLE GROUPS ================= -->
+  
+  <!-- 1. TEMPORALIS ZONE (Migraine & Tension Support) -->
+  <!-- Translucent Glowing Area -->
+  <circle cx="440" cy="240" r="85" fill="url(#glowBlue)" />
+  <!-- Fan-shaped Temporalis Muscle Shape with Hatching -->
+  <path d="M 390,270 C 370,220 380,160 430,150 C 480,140 510,180 510,230 C 510,260 480,290 460,295 C 445,300 420,300 410,290 Z" fill="url(#templeHatch)" stroke="#9DAFB6" stroke-width="1.5" stroke-opacity="0.7" />
+  
+  <!-- 2. MASSETER ZONE (TMJ & Jaw Clenching) -->
+  <!-- Translucent Glowing Area -->
+  <circle cx="485" cy="405" r="75" fill="url(#glowGold)" />
+  <!-- Masseter Muscle Shape with Hatching -->
+  <path d="M 455,345 L 515,355 C 520,385 525,415 510,455 L 460,435 C 450,405 450,375 455,345 Z" fill="url(#muscleHatch)" stroke="#AA987C" stroke-width="1.5" stroke-opacity="0.7" />
+
+  <!-- Injection Target Crosshairs & Points -->
+  <!-- Temporalis Targets (Blue-gray) -->
+  <g stroke="#9DAFB6" stroke-width="1" fill="none">
+    <circle cx="440" cy="210" r="5" fill="#9DAFB6" />
+    <circle cx="440" cy="210" r="10" stroke-dasharray="2,2" />
+    <circle cx="410" cy="235" r="5" fill="#9DAFB6" />
+    <circle cx="410" cy="235" r="10" stroke-dasharray="2,2" />
+    <circle cx="475" cy="225" r="5" fill="#9DAFB6" />
+    <circle cx="475" cy="225" r="10" stroke-dasharray="2,2" />
+  </g>
+  
+  <!-- Masseter Targets (Gold) -->
+  <g stroke="#AA987C" stroke-width="1" fill="none">
+    <circle cx="475" cy="385" r="6" fill="#AA987C" />
+    <circle cx="475" cy="385" r="12" stroke-dasharray="2,2" />
+    <circle cx="495" cy="410" r="6" fill="#AA987C" />
+    <circle cx="495" cy="410" r="12" stroke-dasharray="2,2" />
+    <circle cx="470" cy="420" r="6" fill="#AA987C" />
+    <circle cx="470" cy="420" r="12" stroke-dasharray="2,2" />
+  </g>
+
+  <!-- Ear Outline for Reference -->
+  <path d="M 405,310 C 390,310 380,325 385,345 C 390,365 405,370 410,360 C 412,355 410,340 405,310" stroke="#404345" stroke-width="1" stroke-opacity="0.4" fill="none" />
+
+  <!-- ================= CLINICAL ANNOTATIONS ================= -->
+  
+  <!-- Header Text inside SVG -->
+  <text x="50" y="80" font-family="'Montserrat', sans-serif" font-weight="800" font-size="18" fill="#404345" letter-spacing="4px">THERAPEUTIC TOX</text>
+  <text x="50" y="105" font-family="'Montserrat', sans-serif" font-weight="300" font-size="10" fill="#8F857B" letter-spacing="2px">CLINICAL TREATMENT ANATOMY MAP</text>
+  <line x1="50" y1="120" x2="260" y2="120" stroke="#AA987C" stroke-width="2" />
+
+  <!-- Label 1: Temporalis Zone -->
+  <g>
+    <!-- Pointer Line -->
+    <path d="M 440,210 L 260,210 L 200,240" stroke="#9DAFB6" stroke-width="1.2" fill="none" stroke-linecap="round" />
+    <circle cx="440" cy="210" r="3" fill="#9DAFB6" />
+    <!-- Callout Box -->
+    <rect x="20" y="225" width="180" height="95" rx="6" fill="#FFFFFF" stroke="#9DAFB6" stroke-opacity="0.5" stroke-width="1" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.03))" />
+    <text x="35" y="248" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11" fill="#404345" letter-spacing="1.5px">TEMPORALIS ZONE</text>
+    <text x="35" y="265" font-family="'Montserrat', sans-serif" font-weight="600" font-size="8" fill="#9DAFB6" letter-spacing="1px">MIGRAINE &amp; TENSION</text>
+    
+    <circle cx="35" cy="285" r="2.5" fill="#9DAFB6" />
+    <text x="45" y="288" font-size="9" font-weight="400" fill="#404345" fill-opacity="0.7">Targeted muscle relaxation</text>
+    <circle cx="35" cy="302" r="2.5" fill="#9DAFB6" />
+    <text x="45" y="305" font-size="9" font-weight="400" fill="#404345" fill-opacity="0.7">Reduces migraine patterns</text>
+  </g>
+
+  <!-- Label 2: Masseter Zone -->
+  <g>
+    <!-- Pointer Line -->
+    <path d="M 485,410 L 260,410 L 200,440" stroke="#AA987C" stroke-width="1.2" fill="none" stroke-linecap="round" />
+    <circle cx="485" cy="410" r="3" fill="#AA987C" />
+    <!-- Callout Box -->
+    <rect x="20" y="425" width="180" height="95" rx="6" fill="#FFFFFF" stroke="#AA987C" stroke-opacity="0.5" stroke-width="1" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.03))" />
+    <text x="35" y="448" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11" fill="#404345" letter-spacing="1.5px">MASSETER ZONE</text>
+    <text x="35" y="465" font-family="'Montserrat', sans-serif" font-weight="600" font-size="8" fill="#AA987C" letter-spacing="1px">TMJ &amp; BRUXISM RELIEF</text>
+    
+    <circle cx="35" cy="485" r="2.5" fill="#AA987C" />
+    <text x="45" y="488" font-size="9" font-weight="400" fill="#404345" fill-opacity="0.7">Relieves jaw clenching</text>
+    <circle cx="35" cy="502" r="2.5" fill="#AA987C" />
+    <text x="45" y="505" font-size="9" font-weight="400" fill="#404345" fill-opacity="0.7">Alleviates teeth grinding</text>
+  </g>
+
+  <!-- Label 3: Hyperhidrosis / Sweat gland general block reference (Inset card) -->
+  <g>
+    <!-- Callout Box -->
+    <rect x="20" y="600" width="180" height="95" rx="6" fill="#FFFFFF" stroke="#8F857B" stroke-opacity="0.4" stroke-width="1" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.03))" />
+    <text x="35" y="623" font-family="'Montserrat', sans-serif" font-weight="800" font-size="10" fill="#404345" letter-spacing="1px">HYPERHIDROSIS ZONE</text>
+    <text x="35" y="640" font-family="'Montserrat', sans-serif" font-weight="600" font-size="8" fill="#8F857B" letter-spacing="1px">SWEAT GLAND BLOCKING</text>
+    
+    <circle cx="35" cy="658" r="2.5" fill="#8F857B" />
+    <text x="45" y="661" font-size="9" font-weight="400" fill="#404345" fill-opacity="0.7">Targets underarms/palms</text>
+    <circle cx="35" cy="675" r="2.5" fill="#8F857B" />
+    <text x="45" y="678" font-size="9" font-weight="400" fill="#404345" fill-opacity="0.7">Reduces gland activity</text>
+  </g>
+
+  <!-- ================= SCIENTIFIC DATAPLANEL (Right Column Inset) ================= -->
+  <g transform="translate(560, 480)">
+    <!-- Panel Box -->
+    <rect x="0" y="0" width="210" height="210" rx="8" fill="#FFFFFF" stroke="#DFE0DD" stroke-width="1.5" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.02))" />
+    <rect x="0" y="0" width="210" height="35" rx="8" fill="#404345" />
+    <rect x="0" y="25" width="210" height="10" fill="#404345" /> <!-- seamless header -->
+    
+    <text x="15" y="22" font-family="'Montserrat', sans-serif" font-weight="800" font-size="10" fill="#FFFFFF" letter-spacing="2px">CLINICAL OVERVIEW</text>
+    
+    <!-- Info rows -->
+    <text x="15" y="60" font-family="'Montserrat', sans-serif" font-weight="800" font-size="8" fill="#8F857B" letter-spacing="1px">MECHANISM</text>
+    <text x="15" y="75" font-size="10" font-weight="500" fill="#404345">ACh Release Inhibition</text>
+    
+    <text x="15" y="105" font-family="'Montserrat', sans-serif" font-weight="800" font-size="8" fill="#8F857B" letter-spacing="1px">CLINICAL DEPTH</text>
+    <text x="15" y="120" font-size="10" font-weight="500" fill="#404345">Intramuscular &amp; Intradermal</text>
+    
+    <text x="15" y="150" font-family="'Montserrat', sans-serif" font-weight="800" font-size="8" fill="#8F857B" letter-spacing="1px">DOSING METRIC</text>
+    <text x="15" y="165" font-size="10" font-weight="500" fill="#404345">Conservative Dosing Units</text>
+    
+    <line x1="15" y1="185" x2="195" y2="185" stroke="#DFE0DD" stroke-width="1" />
+    <text x="15" y="200" font-size="9" font-weight="500" fill="#AA987C" letter-spacing="0.5px">★ High-Precision Assessment</text>
+  </g>
+
+  <!-- Technical compass / target cross in bottom right -->
+  <g transform="translate(710, 150)" stroke="#DFE0DD" stroke-width="1" fill="none" stroke-opacity="0.6">
+    <circle cx="0" cy="0" r="25" />
+    <line x1="-35" y1="0" x2="35" y2="0" />
+    <line x1="0" y1="-35" x2="0" y2="35" />
+    <path d="M -15,-15 L -20,-20 M 15,-15 L 20,-20 M -15,15 L -20,20 M 15,15 L 20,20" />
+  </g>
+</svg>

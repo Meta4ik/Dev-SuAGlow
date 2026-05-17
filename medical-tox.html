@@ -70,10 +70,175 @@
             </div>
             <div class="relative animate-on-scroll fade-left delay-200">
                 <div class="absolute inset-0 bg-blue-gray/5 rounded-3xl -rotate-3 scale-105"></div>
-                <div class="relative rounded-3xl shadow-xl overflow-hidden aspect-square">
-                    <img src="assets/medical_tox_model.png" alt="Medical Tox Therapeutic Assessment" class="w-full h-full object-cover">
-                    <!-- Subtle premium shadow overlay -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-near-black/25 via-transparent to-transparent"></div>
+                <div class="relative rounded-3xl shadow-xl overflow-hidden aspect-square border border-light-gray bg-white">
+                    <!-- Base Model Photo -->
+                    <img src="assets/medical_tox_model.png" alt="Medical Tox Therapeutic Assessment Map" class="w-full h-full object-cover">
+                    
+                    <!-- Clinical HUD SVG Overlay -->
+                    <svg viewBox="0 0 600 600" class="absolute inset-0 w-full h-full pointer-events-none z-10" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <!-- Glow effects -->
+                            <radialGradient id="targetGlowGold" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#AA987C" stop-opacity="0.6" />
+                                <stop offset="100%" stop-color="#AA987C" stop-opacity="0" />
+                            </radialGradient>
+                            <radialGradient id="targetGlowBlue" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#9DAFB6" stop-opacity="0.6" />
+                                <stop offset="100%" stop-color="#9DAFB6" stop-opacity="0" />
+                            </radialGradient>
+                            
+                            <!-- Style for animations -->
+                            <style>
+                                @keyframes pulse-effect {
+                                    0% { r: 5px; opacity: 1; stroke-width: 1px; }
+                                    50% { opacity: 0.6; stroke-width: 2px; }
+                                    100% { r: 25px; opacity: 0; stroke-width: 0.5px; }
+                                }
+                                .pulse-ring {
+                                    animation: pulse-effect 2.5s infinite ease-out;
+                                    transform-origin: center;
+                                }
+                                .pulse-ring-delayed {
+                                    animation: pulse-effect 2.5s infinite ease-out;
+                                    animation-delay: 1.25s;
+                                    transform-origin: center;
+                                }
+                                .hud-grid {
+                                    stroke: rgba(255, 255, 255, 0.15);
+                                }
+                                .hud-accent {
+                                    stroke: #AA987C;
+                                }
+                                .hud-blue {
+                                    stroke: #9DAFB6;
+                                }
+                                .hud-text-bold {
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-weight: 800;
+                                    fill: #FFFFFF;
+                                }
+                                .hud-text-sub {
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-weight: 500;
+                                    fill: rgba(255, 255, 255, 0.7);
+                                }
+                            </style>
+                        </defs>
+                        
+                        <!-- Semi-transparent clinical scan overlay (very subtle darken layer to pop text & dots) -->
+                        <rect width="600" height="600" fill="black" fill-opacity="0.1" />
+                        
+                        <!-- Technical circular radar/grid lines centered in the canvas -->
+                        <circle cx="300" cy="300" r="280" fill="none" stroke="white" stroke-width="0.5" stroke-opacity="0.1" />
+                        <circle cx="300" cy="300" r="200" fill="none" stroke="white" stroke-width="0.5" stroke-opacity="0.1" stroke-dasharray="3,6" />
+                        <line x1="300" y1="10" x2="300" y2="590" stroke="white" stroke-width="0.5" stroke-opacity="0.1" stroke-dasharray="2,4" />
+                        <line x1="10" y1="300" x2="590" y2="300" stroke="white" stroke-width="0.5" stroke-opacity="0.1" stroke-dasharray="2,4" />
+                        
+                        <!-- ================= ANATOMICAL OVERLAY MESH ================= -->
+                        <!-- Golden/Blue anatomical guidelines mapping on the model face coordinates -->
+                        <path d="M 170,60 L 230,280 L 320,290 L 400,280 L 430,60" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="0.75" />
+                        <path d="M 230,280 L 320,230 L 400,280" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="0.75" />
+                        <path d="M 170,60 C 210,180 320,200 320,230 C 320,200 430,180 430,60" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="0.75" stroke-dasharray="2,2" />
+                        
+                        <!-- ================= TREATMENT AREA: TEMPORALIS (MIGRAINES) ================= -->
+                        <!-- Screen Left Temporalis Target -->
+                        <g>
+                            <!-- Glow background -->
+                            <circle cx="170" cy="60" r="40" fill="url(#targetGlowBlue)" />
+                            <!-- Scanning target circles -->
+                            <circle cx="170" cy="60" r="8" fill="none" stroke="#9DAFB6" stroke-width="1.5" />
+                            <circle cx="170" cy="60" r="8" fill="#9DAFB6" fill-opacity="0.8" />
+                            <circle cx="170" cy="60" r="15" fill="none" stroke="#9DAFB6" class="pulse-ring" />
+                            <circle cx="170" cy="60" r="15" fill="none" stroke="#9DAFB6" class="pulse-ring-delayed" />
+                            <!-- Pointer line -->
+                            <path d="M 170,60 L 90,60 L 70,80" fill="none" stroke="#9DAFB6" stroke-width="1" />
+                            <circle cx="70" cy="80" r="2" fill="#9DAFB6" />
+                        </g>
+                        
+                        <!-- Screen Right Temporalis Target -->
+                        <g>
+                            <!-- Glow background -->
+                            <circle cx="430" cy="60" r="40" fill="url(#targetGlowBlue)" />
+                            <!-- Scanning target circles -->
+                            <circle cx="430" cy="60" r="8" fill="none" stroke="#9DAFB6" stroke-width="1.5" />
+                            <circle cx="430" cy="60" r="8" fill="#9DAFB6" fill-opacity="0.8" />
+                            <circle cx="430" cy="60" r="15" fill="none" stroke="#9DAFB6" class="pulse-ring" />
+                            <circle cx="430" cy="60" r="15" fill="none" stroke="#9DAFB6" class="pulse-ring-delayed" />
+                            <!-- Pointer line -->
+                            <path d="M 430,60 L 510,60 L 530,80" fill="none" stroke="#9DAFB6" stroke-width="1" />
+                            <circle cx="530" cy="80" r="2" fill="#9DAFB6" />
+                        </g>
+                        
+                        <!-- ================= TREATMENT AREA: MASSETER (TMJ/JAW) ================= -->
+                        <!-- Screen Left Masseter Target -->
+                        <g>
+                            <!-- Glow background -->
+                            <circle cx="230" cy="280" r="45" fill="url(#targetGlowGold)" />
+                            <!-- Scanning target circles -->
+                            <circle cx="230" cy="280" r="10" fill="none" stroke="#AA987C" stroke-width="2" />
+                            <circle cx="230" cy="280" r="10" fill="#AA987C" fill-opacity="0.8" />
+                            <circle cx="230" cy="280" r="18" fill="none" stroke="#AA987C" class="pulse-ring" />
+                            <circle cx="230" cy="280" r="18" fill="none" stroke="#AA987C" class="pulse-ring-delayed" />
+                            <!-- Pointer line -->
+                            <path d="M 230,280 L 110,280 L 80,310" fill="none" stroke="#AA987C" stroke-width="1" />
+                            <circle cx="80" cy="310" r="2" fill="#AA987C" />
+                        </g>
+                        
+                        <!-- Screen Right Masseter Target -->
+                        <g>
+                            <!-- Glow background -->
+                            <circle cx="400" cy="280" r="45" fill="url(#targetGlowGold)" />
+                            <!-- Scanning target circles -->
+                            <circle cx="400" cy="280" r="10" fill="none" stroke="#AA987C" stroke-width="2" />
+                            <circle cx="400" cy="280" r="10" fill="#AA987C" fill-opacity="0.8" />
+                            <circle cx="400" cy="280" r="18" fill="none" stroke="#AA987C" class="pulse-ring" />
+                            <circle cx="400" cy="280" r="18" fill="none" stroke="#AA987C" class="pulse-ring-delayed" />
+                            <!-- Pointer line -->
+                            <path d="M 400,280 L 490,280 L 520,310" fill="none" stroke="#AA987C" stroke-width="1" />
+                            <circle cx="520" cy="310" r="2" fill="#AA987C" />
+                        </g>
+                        
+                        <!-- ================= GLASSMORPHISM LABELS INSIDE HUD ================= -->
+                        <!-- Top Left HUD Box: Temporalis Migraine Relief -->
+                        <g transform="translate(20, 90)">
+                            <rect width="180" height="75" rx="6" fill="#131619" fill-opacity="0.65" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" style="backdrop-filter: blur(4px);" />
+                            <text x="12" y="24" class="hud-text-bold" font-size="9" letter-spacing="1px">TEMPORALIS ZONE</text>
+                            <text x="12" y="38" class="hud-text-sub" font-size="7" letter-spacing="0.5px">MIGRAINE &amp; HEADACHE</text>
+                            <circle cx="15" cy="54" r="2" fill="#9DAFB6" />
+                            <text x="22" y="57" fill="#FFFFFF" fill-opacity="0.8" font-size="7.5">Aches &amp; scalp tension release</text>
+                        </g>
+                        
+                        <!-- Top Right HUD Box: System Overview -->
+                        <g transform="translate(400, 90)">
+                            <rect width="180" height="75" rx="6" fill="#131619" fill-opacity="0.65" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" style="backdrop-filter: blur(4px);" />
+                            <text x="12" y="24" class="hud-text-bold" font-size="9" letter-spacing="1px">HUD DIAGNOSTICS</text>
+                            <text x="12" y="38" class="hud-text-sub" font-size="7" letter-spacing="0.5px">CLINICAL PARAMETERS</text>
+                            <circle cx="15" cy="54" r="2" fill="#AA987C" />
+                            <text x="22" y="57" fill="#FFFFFF" fill-opacity="0.8" font-size="7.5">Dose: Conservative / Precise</text>
+                        </g>
+
+                        <!-- Bottom Left HUD Box: Masseter Relief -->
+                        <g transform="translate(20, 320)">
+                            <rect width="180" height="75" rx="6" fill="#131619" fill-opacity="0.65" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" style="backdrop-filter: blur(4px);" />
+                            <text x="12" y="24" class="hud-text-bold" font-size="9" letter-spacing="1px">MASSETER ZONE</text>
+                            <text x="12" y="38" class="hud-text-sub" font-size="7" letter-spacing="0.5px">TMJ &amp; JAW CLENCHING</text>
+                            <circle cx="15" cy="54" r="2" fill="#AA987C" />
+                            <text x="22" y="57" fill="#FFFFFF" fill-opacity="0.8" font-size="7.5">Relaxes clenching &amp; grinding</text>
+                        </g>
+
+                        <!-- Bottom Right HUD Box: Hyperhidrosis / Muscle Specs -->
+                        <g transform="translate(400, 320)">
+                            <rect width="180" height="75" rx="6" fill="#131619" fill-opacity="0.65" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" style="backdrop-filter: blur(4px);" />
+                            <text x="12" y="24" class="hud-text-bold" font-size="9" letter-spacing="1px">CLINICAL DEPTH</text>
+                            <text x="12" y="38" class="hud-text-sub" font-size="7" letter-spacing="0.5px">INTRAMUSCULAR FOCUS</text>
+                            <circle cx="15" cy="54" r="2" fill="#9DAFB6" />
+                            <text x="22" y="57" fill="#FFFFFF" fill-opacity="0.8" font-size="7.5">Target: Deeper muscle fibers</text>
+                        </g>
+                        
+                        <!-- Subtle technical HUD framing around the border of the canvas -->
+                        <rect x="10" y="10" width="580" height="580" fill="none" stroke="white" stroke-opacity="0.1" stroke-width="1" />
+                        <path d="M 10,30 L 10,10 L 30,10 M 570,10 L 590,10 L 590,30 M 590,570 L 590,590 L 570,590 M 30,590 L 10,590 L 10,570" fill="none" stroke="#AA987C" stroke-width="1.5" stroke-opacity="0.6" />
+                    </svg>
                 </div>
             </div>
         </div>

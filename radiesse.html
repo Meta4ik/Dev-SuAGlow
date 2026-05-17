@@ -28,8 +28,8 @@
     <!-- Hero Section -->
     <section id="hero" data-nav-theme="dark" class="relative min-h-[60vh] flex flex-col items-center justify-start text-center px-8 pt-[250px] overflow-hidden pb-32">
         <div class="absolute inset-0 z-0">
-            <div class="w-full h-full bg-gradient-to-br from-near-black via-charcoal to-taupe/40"></div>
-            <div class="absolute inset-0 bg-black/30"></div>
+            <img src="https://radiesse.com/wp-content/uploads/2025/12/img-group.webp" alt="Radiesse Re-Awaken Skin From Within" class="w-full h-full object-cover opacity-25 object-[center_30%]">
+            <div class="absolute inset-0 bg-gradient-to-b from-near-black/95 via-near-black/80 to-near-black"></div>
             <!-- Abstract Glow Effect -->
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-taupe/10 blur-[120px] rounded-full animate-pulse"></div>
         </div>
@@ -79,13 +79,14 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Image Placeholder Area -->
+                    <!-- Main Radiesse Model Image -->
                     <div class="relative animate-on-scroll fade-left delay-200">
                         <div class="absolute inset-0 bg-taupe/5 rounded-3xl rotate-3 scale-105"></div>
-                        <div class="relative rounded-3xl shadow-xl overflow-hidden aspect-[4/5] bg-light-gray flex items-center justify-center group">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <i data-lucide="image" class="w-12 h-12 text-taupe/20"></i>
-                            <div class="absolute bottom-8 left-8 text-white opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                        <div class="relative rounded-3xl shadow-xl overflow-hidden aspect-[4/5] bg-white border border-light-gray group">
+                            <img src="https://radiesse.com/wp-content/uploads/2026/01/img-Kseniia-2-1024x1024.webp" alt="Radiesse Skin Tightening Target" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                            <div class="absolute bottom-8 left-8 text-white translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                                <span class="badge-glass mb-3 inline-block">Regenerative Treatment</span>
                                 <p class="heading-wide text-xs">Bio-Stimulator Focus</p>
                             </div>
                         </div>
@@ -217,9 +218,11 @@
             <!-- Image Area: Methodology -->
             <div class="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="order-2 lg:order-1 relative animate-on-scroll fade-right">
-                    <div class="aspect-video rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
-                        <i data-lucide="play-circle" class="w-12 h-12 text-white/10"></i>
-                        <span class="absolute bottom-6 right-6 text-[10px] uppercase tracking-widest opacity-30">Consultation Process</span>
+                    <div class="absolute inset-0 bg-warm-gold/5 rounded-2xl rotate-2 scale-105"></div>
+                    <div class="relative aspect-video rounded-2xl overflow-hidden bg-near-black/50 border border-white/10 group">
+                        <img src="https://radiesse.com/wp-content/uploads/2025/12/thinning-skin.webp" alt="Skin Matrix Regeneration Science" class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-all duration-700 ease-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-6 right-6 text-[10px] uppercase tracking-widest opacity-60 text-white font-bold">Regenerative Skin Science</span>
                     </div>
                 </div>
                 <div class="order-1 lg:order-2 space-y-8 animate-on-scroll fade-left">
@@ -227,6 +230,109 @@
                     <p class="text-sm font-light opacity-60 leading-relaxed">Korean aesthetic medicine has heavily shifted away from merely "filling" the face toward regenerating the face. Over-filling leads to unnatural puffiness. Regeneration leads to tighter, firmer, naturally younger-acting skin.</p>
                     <p class="text-sm font-light opacity-60 leading-relaxed">Radiesse is a powerful tool in this regenerative shift. It wakes up tired cells and asks them to rebuild the structural matrix of your skin.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Clinical Gallery -->
+    <section id="before-after-gallery" class="py-32 px-10 bg-off-white border-t border-black/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl md:text-4xl mb-6">Clinical Proof</h2>
+                <p class="heading-wide text-xs text-taupe opacity-70 tracking-[0.4em]">Real Radiesse Patient Outcomes</p>
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="flex justify-center flex-wrap gap-4 mb-16 animate-on-scroll fade-up">
+                <button onclick="switchPatient('jean')" id="btn-jean" class="px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-widest border transition-all duration-300 bg-taupe text-white border-taupe shadow-md">
+                    Jawline (Jean, 57)
+                </button>
+                <button onclick="switchPatient('glenys')" id="btn-glenys" class="px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-widest border transition-all duration-300 bg-white text-charcoal border-black/5 hover:border-taupe/30">
+                    Lower Face (Glenys, 41)
+                </button>
+                <button onclick="switchPatient('andrea')" id="btn-andrea" class="px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-widest border transition-all duration-300 bg-white text-charcoal border-black/5 hover:border-taupe/30">
+                    Hands (Andrea, 42)
+                </button>
+            </div>
+
+            <!-- Gallery Cards Container -->
+            <div class="relative bg-white border border-black/5 rounded-3xl p-8 md:p-12 shadow-sm animate-on-scroll fade-up">
+                
+                <!-- Patient: Jean (Jawline) -->
+                <div id="patient-jean" class="patient-card grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="relative rounded-2xl overflow-hidden border border-black/5 bg-light-gray shadow-sm group">
+                            <span class="absolute top-4 left-4 badge-glass text-[9px] bg-black/40 text-white z-10">Before</span>
+                            <img src="https://radiesse.com/wp-content/uploads/2025/12/jean-profile-before-1024x1024.webp" alt="Jean Jawline Before Treatment" class="w-full h-full object-cover aspect-square group-hover:scale-102 transition-transform duration-500">
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden border border-black/5 bg-light-gray shadow-sm group">
+                            <span class="absolute top-4 left-4 badge-glass text-[9px] bg-taupe text-white z-10">After 4 Weeks</span>
+                            <img src="https://radiesse.com/wp-content/uploads/2025/12/jean-profile-after-4wk-1024x1024.webp" alt="Jean Jawline After Treatment" class="w-full h-full object-cover aspect-square group-hover:scale-102 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <span class="badge-standard">Jawline Contouring</span>
+                        <h3 class="heading-wide text-2xl text-near-black">Deep Structural Support</h3>
+                        <p class="text-sm font-light opacity-60 leading-relaxed">Jean experienced significant improvement in skin laxity along her lower face and jawline. Injected with Radiesse (+) to lift and define, restoring crisp anatomical jaw contours without adding excessive midface projection.</p>
+                        <div class="pt-4 border-t border-off-white text-[11px] font-medium space-y-1 opacity-70">
+                            <p class="text-xs font-bold text-taupe uppercase tracking-wider mb-2">Treatment Profile</p>
+                            <p>&bull; Patient: Jean, Age 57</p>
+                            <p>&bull; Target: Lower Face Loss of Jawline Contour</p>
+                            <p>&bull; Outcome: 4 Weeks Post-Treatment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patient: Glenys (Lower Face) -->
+                <div id="patient-glenys" class="patient-card hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="relative rounded-2xl overflow-hidden border border-black/5 bg-light-gray shadow-sm group">
+                            <span class="absolute top-4 left-4 badge-glass text-[9px] bg-black/40 text-white z-10">Before</span>
+                            <img src="https://radiesse.com/wp-content/uploads/2025/12/glenys-threequarter-before-1024x1024.webp" alt="Glenys Lower Face Before" class="w-full h-full object-cover aspect-square group-hover:scale-102 transition-transform duration-500">
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden border border-black/5 bg-light-gray shadow-sm group">
+                            <span class="absolute top-4 left-4 badge-glass text-[9px] bg-taupe text-white z-10">After 4 Weeks</span>
+                            <img src="https://radiesse.com/wp-content/uploads/2025/12/glenys-threequarter-after-4wk-1024x1024.webp" alt="Glenys Lower Face After" class="w-full h-full object-cover aspect-square group-hover:scale-102 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <span class="badge-standard">Lower Face Lifting</span>
+                        <h3 class="heading-wide text-2xl text-near-black">Nasolabial & Cheek Restructuring</h3>
+                        <p class="text-sm font-light opacity-60 leading-relaxed">Glenys received hyper-dilute Radiesse in her cheeks and lower face. This treatment restored skin thickness and elastic snap, naturally lifting the downward descent of facial tissues and softening the nasolabial shadows.</p>
+                        <div class="pt-4 border-t border-off-white text-[11px] font-medium space-y-1 opacity-70">
+                            <p class="text-xs font-bold text-taupe uppercase tracking-wider mb-2">Treatment Profile</p>
+                            <p>&bull; Patient: Glenys, Age 41</p>
+                            <p>&bull; Target: Crepey Cheeks and Soft Volume Deficit</p>
+                            <p>&bull; Outcome: 4 Weeks Post-Treatment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patient: Andrea (Hands) -->
+                <div id="patient-andrea" class="patient-card hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="relative rounded-2xl overflow-hidden border border-black/5 bg-light-gray shadow-sm group">
+                            <span class="absolute top-4 left-4 badge-glass text-[9px] bg-black/40 text-white z-10">Before</span>
+                            <img src="https://radiesse.com/wp-content/uploads/2025/12/andrea-hands-before-1024x1022.webp" alt="Andrea Hands Before" class="w-full h-full object-cover aspect-square group-hover:scale-102 transition-transform duration-500">
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden border border-black/5 bg-light-gray shadow-sm group">
+                            <span class="absolute top-4 left-4 badge-glass text-[9px] bg-taupe text-white z-10">After 2 Weeks</span>
+                            <img src="https://radiesse.com/wp-content/uploads/2025/12/andrea-hands-after-1024x1022.webp" alt="Andrea Hands After" class="w-full h-full object-cover aspect-square group-hover:scale-102 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <span class="badge-standard">Hand Volume Correction</span>
+                        <h3 class="heading-wide text-2xl text-near-black">Dorsal Volume Restoration</h3>
+                        <p class="text-sm font-light opacity-60 leading-relaxed">Andrea's hands showed signs of skeletal aging with visible veins and tendons. Radiesse correction instantly filled the volume deficit while laying down a framework to grow collagen for a long-term smooth surface.</p>
+                        <div class="pt-4 border-t border-off-white text-[11px] font-medium space-y-1 opacity-70">
+                            <p class="text-xs font-bold text-taupe uppercase tracking-wider mb-2">Treatment Profile</p>
+                            <p>&bull; Patient: Andrea, Age 42</p>
+                            <p>&bull; Target: Prominent Veins and Skeletonized Appearance</p>
+                            <p>&bull; Outcome: 2 Weeks Post-Treatment</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -327,6 +433,24 @@
 
     <div id="footer-placeholder"></div>
 
+    <script>
+        function switchPatient(id) {
+            document.querySelectorAll('.patient-card').forEach(card => {
+                card.classList.add('hidden');
+            });
+            document.getElementById('patient-' + id).classList.remove('hidden');
+
+            const btnIds = ['jean', 'glenys', 'andrea'];
+            btnIds.forEach(pId => {
+                const btn = document.getElementById('btn-' + pId);
+                if (pId === id) {
+                    btn.className = "px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-widest border transition-all duration-300 bg-taupe text-white border-taupe shadow-md";
+                } else {
+                    btn.className = "px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-widest border transition-all duration-300 bg-white text-charcoal border-black/5 hover:border-taupe/30";
+                }
+            });
+        }
+    </script>
     <!-- Scripts -->
     <script src="nearme.js?v=36"></script>
     <script src="navbar.js?v=36"></script>

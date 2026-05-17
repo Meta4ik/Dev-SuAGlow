@@ -74,7 +74,7 @@ const NAVBAR_HTML = `
 
                         <!-- Col 2: Injectables & Scar Treatment -->
                         <div>
-                            <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                            <a href="injectables.html" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
                                 <i data-lucide="syringe" class="w-3 h-3 mr-2"></i>Injectables
                             </a>
                             <ul class="space-y-3 mb-6">
@@ -108,10 +108,10 @@ const NAVBAR_HTML = `
                                 <i data-lucide="shield-plus" class="w-3 h-3 mr-2"></i>Scar Treatment
                             </a>
                             <ul class="space-y-1">
-                                <li><a href="scar-treatment.html" class="dropdown-link !p-0 hover:!pl-2">Acne Scars</a></li>
-                                <li><a href="scar-treatment.html" class="dropdown-link !p-0 hover:!pl-2">Surgical Scars</a></li>
-                                <li><a href="scar-treatment.html" class="dropdown-link !p-0 hover:!pl-2">Stretch Marks</a></li>
-                                <li><a href="scar-treatment.html" class="dropdown-link !p-0 hover:!pl-2">Keloid</a></li>
+                                <li><a href="scar-treatment.html#acne-scars" class="dropdown-link !p-0 hover:!pl-2">Acne Scars</a></li>
+                                <li><a href="scar-treatment.html#surgical-scars" class="dropdown-link !p-0 hover:!pl-2">Surgical Scars</a></li>
+                                <li><a href="scar-treatment.html#stretch-marks" class="dropdown-link !p-0 hover:!pl-2">Stretch Marks</a></li>
+                                <li><a href="scar-treatment.html#keloid" class="dropdown-link !p-0 hover:!pl-2">Keloid</a></li>
                             </ul>
                         </div>
 
@@ -135,7 +135,7 @@ const NAVBAR_HTML = `
                                 <i data-lucide="scan-face" class="w-3 h-3 mr-2"></i>Skin Rejuvenation
                             </a>
                             <ul class="space-y-1 mb-6">
-                                <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Oligio X RF Lifting</a></li>
+                                <li><a href="oligio-x.html" class="dropdown-link !p-0 hover:!pl-2">Oligio X RF Lifting</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">LDM Ultrasound</a></li>
                                 <li><a href="#" class="dropdown-link !p-0 hover:!pl-2">Microneedling</a></li>
                             </ul>
@@ -192,7 +192,7 @@ const NAVBAR_HTML = `
                 </a>
                 <div class="dropdown-menu text-left">
                     <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="dropdown-link font-body">Book Appointment</a>
-                    <a href="#" class="dropdown-link font-body">New Patient Forms</a>
+                    <a href="https://suaglow.myaestheticrecord.com/register" target="_blank" class="dropdown-link font-body">New Patient Forms</a>
                     <a href="specials.html" class="dropdown-link font-body">Promotions</a>
                 </div>
             </div>
@@ -287,7 +287,7 @@ const NAVBAR_HTML = `
 
                         <!-- Injectables -->
                         <div>
-                            <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                            <a href="injectables.html" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
                                 <i data-lucide="syringe" class="w-3 h-3 mr-2"></i>Injectables
                             </a>
                             <div class="flex flex-col gap-2 mt-2">
@@ -316,10 +316,10 @@ const NAVBAR_HTML = `
                                 <i data-lucide="shield-plus" class="w-3 h-3 mr-2"></i>Scar Treatment
                             </a>
                             <div class="flex flex-col gap-2 mt-2">
-                                <a href="scar-treatment.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Acne Scars</a>
-                                <a href="scar-treatment.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Surgical Scars</a>
-                                <a href="scar-treatment.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Stretch Marks</a>
-                                <a href="scar-treatment.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Keloid</a>
+                                <a href="scar-treatment.html#acne-scars" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Acne Scars</a>
+                                <a href="scar-treatment.html#surgical-scars" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Surgical Scars</a>
+                                <a href="scar-treatment.html#stretch-marks" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Stretch Marks</a>
+                                <a href="scar-treatment.html#keloid" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Keloid</a>
                             </div>
                         </div>
                         
@@ -345,7 +345,7 @@ const NAVBAR_HTML = `
                                 <i data-lucide="scan-face" class="w-3 h-3 mr-2"></i>Skin Rejuvenation
                             </a>
                             <div class="flex flex-col gap-2 mt-2">
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Oligio X RF Lifting</a>
+                                <a href="oligio-x.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Oligio X RF Lifting</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Ultrasound</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Microneedling</a>
                             </div>
@@ -404,7 +404,7 @@ const NAVBAR_HTML = `
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-3 pl-4 mt-2">
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="font-body text-charcoal/70 hover:text-taupe transition-colors font-semibold">Book Appointment</a>
-                        <a href="#" class="font-body text-charcoal/70 hover:text-taupe transition-colors">New Patient Forms</a>
+                        <a href="https://suaglow.myaestheticrecord.com/register" target="_blank" class="font-body text-charcoal/70 hover:text-taupe transition-colors">New Patient Forms</a>
                         <a href="specials.html" class="font-body text-charcoal/70 hover:text-taupe transition-colors">Promotions</a>
                     </div>
                 </div>

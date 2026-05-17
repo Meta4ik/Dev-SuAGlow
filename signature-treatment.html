@@ -83,9 +83,9 @@
                     <div class="relative animate-on-scroll fade-left delay-200">
                         <div class="absolute inset-0 bg-taupe/5 rounded-3xl rotate-3 scale-105"></div>
                         <div class="relative rounded-3xl shadow-xl overflow-hidden aspect-[4/5] bg-light-gray flex items-center justify-center group">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <i data-lucide="image" class="w-12 h-12 text-taupe/20"></i>
-                            <div class="absolute bottom-8 left-8 text-white opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                            <img src="assets/signature_treatments_placeholder.png" alt="Signature Treatment" class="absolute inset-0 w-full h-full object-cover z-0">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+                            <div class="absolute bottom-8 left-8 text-white opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 z-20">
                                 <p class="heading-wide text-xs">Custom Aesthetic Planning</p>
                             </div>
                         </div>
@@ -214,20 +214,6 @@
                 </div>
             </div>
 
-            <!-- Image Area: Methodology -->
-            <div class="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="order-2 lg:order-1 relative animate-on-scroll fade-right">
-                    <div class="aspect-video rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
-                        <i data-lucide="play-circle" class="w-12 h-12 text-white/10"></i>
-                        <span class="absolute bottom-6 right-6 text-[10px] uppercase tracking-widest opacity-30">Consultation Process</span>
-                    </div>
-                </div>
-                <div class="order-1 lg:order-2 space-y-8 animate-on-scroll fade-left">
-                    <h3 class="heading-wide text-2xl text-warm-gold/80">The Korean Philosophy of Quiet Skin.</h3>
-                    <p class="text-sm font-light opacity-60 leading-relaxed">SkinTox is a Korean-inspired approach focused on skin refinement rather than dramatic facial freezing. By targeting pore appearance and balanced facial movement, the skin appears smoother without looking tight.</p>
-                    <p class="text-sm font-light opacity-60 leading-relaxed">In Korean aesthetics, the goal is often about "quiet skin" &mdash; not frozen skin. Because subtle movement is still beautiful.</p>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -286,7 +272,107 @@
         </div>
     </section>
 
+    <!-- Signature Treatments Directory -->
+    <section id="all-treatments" class="py-32 px-10 bg-off-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl md:text-4xl mb-6 text-near-black">Explore All Signature Treatments</h2>
+                <p class="text-xs uppercase tracking-[0.5em] opacity-40 font-bold">Each Program. Personalized for You.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- One Day Glow -->
+                <a href="one-day-glow.html" class="group block bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-black/5">
+                    <div class="aspect-[16/9] overflow-hidden relative">
+                        <img src="assets/korean-models/portrait_4_highres.png" alt="One Day Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-near-black/60 to-transparent"></div>
+                        <span class="absolute bottom-6 left-6 badge-glass text-white text-xs">Event Prep</span>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="heading-wide text-xl mb-4 text-near-black group-hover:text-taupe transition-colors">One Day Glow</h3>
+                        <p class="text-sm font-light opacity-60 leading-relaxed mb-6">Event-ready skin in a single session. A targeted Korean-inspired program focused on rapid skin luminosity, refined texture, and polished hydration before an important occasion.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="badge-standard text-xs">Rapid Luminosity</span>
+                            <span class="badge-standard text-xs">Texture Refinement</span>
+                            <span class="badge-standard text-xs">Same-Day Glow</span>
+                        </div>
+                        <span class="inline-flex items-center gap-2 heading-wide text-xs text-taupe group-hover:gap-4 transition-all duration-300">
+                            Explore One Day Glow <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Bridal Glow -->
+                <a href="bridal-glow.html" class="group block bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-black/5">
+                    <div class="aspect-[16/9] overflow-hidden relative">
+                        <img src="assets/signature_treatments_placeholder.png" alt="Bridal Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-near-black/60 to-transparent"></div>
+                        <span class="absolute bottom-6 left-6 badge-glass text-white text-xs">Bridal Prep</span>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="heading-wide text-xl mb-4 text-near-black group-hover:text-taupe transition-colors">Bridal Glow</h3>
+                        <p class="text-sm font-light opacity-60 leading-relaxed mb-6">A multi-phase bridal skin program built around your wedding timeline. Long-term skin preparation that ensures radiant, camera-ready skin on your most important day.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="badge-standard text-xs">Multi-Phase Prep</span>
+                            <span class="badge-standard text-xs">Collagen Support</span>
+                            <span class="badge-standard text-xs">Camera-Ready Skin</span>
+                        </div>
+                        <span class="inline-flex items-center gap-2 heading-wide text-xs text-taupe group-hover:gap-4 transition-all duration-300">
+                            Explore Bridal Glow <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Seoul Man Treatment -->
+                <a href="seoul-man.html" class="group block bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-black/5">
+                    <div class="aspect-[16/9] overflow-hidden relative">
+                        <img src="assets/seoul_man_hero.png" alt="Seoul Man Treatment" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-near-black/60 to-transparent"></div>
+                        <span class="absolute bottom-6 left-6 badge-glass text-white text-xs">Male Aesthetics</span>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="heading-wide text-xl mb-4 text-near-black group-hover:text-taupe transition-colors">Seoul Man Treatment</h3>
+                        <p class="text-sm font-light opacity-60 leading-relaxed mb-6">Korean-inspired male aesthetic refinement. Stronger jawlines, subtly refined skin, and a rested appearance — designed around male anatomy and masculine proportions.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="badge-standard text-xs">Jawline Definition</span>
+                            <span class="badge-standard text-xs">Skin Texture</span>
+                            <span class="badge-standard text-xs">Masculine Refinement</span>
+                        </div>
+                        <span class="inline-flex items-center gap-2 heading-wide text-xs text-taupe group-hover:gap-4 transition-all duration-300">
+                            Explore Seoul Man <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Acne Treatment — Coming Soon -->
+                <div class="group block bg-white rounded-3xl overflow-hidden shadow-sm border border-black/5 opacity-70">
+                    <div class="aspect-[16/9] overflow-hidden relative bg-light-gray flex items-center justify-center">
+                        <img src="assets/scar_treatment_placeholder.png" alt="Acne Treatment" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-near-black/70 to-transparent"></div>
+                        <span class="absolute top-6 right-6 badge-standard bg-warm-gold/20 text-warm-gold border-warm-gold/20 text-xs">Coming Soon</span>
+                        <span class="absolute bottom-6 left-6 badge-glass text-white text-xs">Acne &amp; Clarity</span>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="heading-wide text-xl mb-4 text-near-black">Acne Treatment</h3>
+                        <p class="text-sm font-light opacity-60 leading-relaxed mb-6">A specialized Korean-inspired program targeting active acne, congestion, and post-acne skin irregularities — built around your skin's inflammatory patterns and healing needs.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="badge-standard text-xs">Active Acne</span>
+                            <span class="badge-standard text-xs">Skin Clarity</span>
+                            <span class="badge-standard text-xs">Post-Acne Support</span>
+                        </div>
+                        <span class="inline-flex items-center gap-2 heading-wide text-xs text-charcoal/30">
+                            Page Coming Soon <i data-lucide="clock" class="w-3 h-3"></i>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
+
     <section id="faq" data-nav-theme="dark" class="py-32 px-10 bg-light-gray">
         <div class="max-w-4xl mx-auto">
             <h2 class="heading-wide text-center text-3xl mb-24 text-near-black">Signature Treatment FAQs</h2>
