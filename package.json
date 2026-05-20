@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "SuA K-Glow Med Spa — static site with Tailwind CSS CLI build",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "build": "node build-search-index.js && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
   "devDependencies": {

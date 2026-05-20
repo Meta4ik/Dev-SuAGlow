@@ -307,7 +307,9 @@ html {
 
 /* Dark Theme Nav (for pages with dark heroes) */
 #navbar.nav-dark-theme:not(.nav-scrolled) .nav-link,
-#navbar.nav-dark-theme:not(.nav-scrolled) #menu-btn {
+#navbar.nav-dark-theme:not(.nav-scrolled) #menu-btn,
+#navbar.nav-dark-theme:not(.nav-scrolled) #search-trigger,
+#navbar.nav-dark-theme:not(.nav-scrolled) #mobile-search-trigger {
     color: #ffffff;
 }
 
@@ -316,11 +318,15 @@ html {
 }
 
 #navbar.nav-dark-theme:not(.nav-scrolled) .nav-link:hover,
-#navbar.nav-dark-theme:not(.nav-scrolled) #menu-btn:hover {
+#navbar.nav-dark-theme:not(.nav-scrolled) #menu-btn:hover,
+#navbar.nav-dark-theme:not(.nav-scrolled) #search-trigger:hover,
+#navbar.nav-dark-theme:not(.nav-scrolled) #mobile-search-trigger:hover {
     color: #AA987C;
 }
 
-#navbar.nav-scrolled #menu-btn {
+#navbar.nav-scrolled #menu-btn,
+#navbar.nav-scrolled #search-trigger,
+#navbar.nav-scrolled #mobile-search-trigger {
     color: #404345;
 }
 
@@ -1054,4 +1060,77 @@ html {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* ================================================
+   Search Overlay & Highlight Styles
+   ================================================ */
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 99px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(170, 152, 124, 0.4);
+    border-radius: 99px;
+    transition: background-color 0.3s ease;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(170, 152, 124, 0.8);
+}
+
+/* Highlighted search match terms */
+mark.search-highlight {
+    background-color: rgba(170, 152, 124, 0.35);
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 2px;
+    padding: 0px 2px;
+}
+
+#search-overlay {
+    background-color: rgba(19, 22, 25, 0.96) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+}
+
+#search-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Search UI Elements Custom Styling */
+.search-input-container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.search-suggestion-tag {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.2s ease-in-out;
+}
+
+.search-suggestion-tag:hover {
+    background-color: rgba(170, 152, 124, 0.12);
+    border-color: rgba(170, 152, 124, 0.5);
+    color: #ffffff;
+}
+
+.search-results-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.search-result-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.2s ease-in-out;
+}
+
+.search-result-card:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(170, 152, 124, 0.3);
 }

@@ -1,0 +1,2075 @@
+// Auto-generated Search Index for SuA K-Glow. Do not edit directly.
+const SEARCH_INDEX = [
+  {
+    "url": "about.html#hero",
+    "title": "Our Story & Ethos",
+    "pageTitle": "About Us",
+    "category": "Spa Treatments",
+    "content": "The bridge between Seoul's precision and Texas's warmth. Discover the philosophy behind SuA K-Glow.",
+    "snippet": "The bridge between Seoul's precision and Texas's warmth. Discover the philosophy behind SuA K-Glow."
+  },
+  {
+    "url": "about.html#story",
+    "title": "Our Story",
+    "pageTitle": "About Us",
+    "category": "Spa Treatments",
+    "content": "SuA K-Glow was born from a vision to bring the authentic, results-driven philosophy of Korean medical aesthetics to the heart of Texas. Our founder recognized a gap in the market: the need for treatments that prioritize long-term skin health and regeneration over temporary fillers or aggressive drama. We don't just follow trends; we study the science of skin behavior. Every treatment at SuA K-Glow is rooted in the \"water-based\" rejuvenation methods popularized in Seoul, focusing on deep hydration, dermal repair, and the unmistakable \"glass skin\" glow.",
+    "snippet": "SuA K-Glow was born from a vision to bring the authentic, results-driven philosophy of Korean medical aesthetics to the heart of Texas. Our founder recognized a..."
+  },
+  {
+    "url": "about.html#k-beauty",
+    "title": "What is K-Beauty?",
+    "pageTitle": "About Us",
+    "category": "Spa Treatments",
+    "content": "If there’s one secret behind Korean glass skin, it’s this: hydration drives skin health. Treatments often use Korean skin boosters, regenerative therapies, and advanced delivery techniques to hydrate the dermis—where real skin quality begins. In K-Beauty, natural beauty isn’t accidental, it’s intentional. The goal is refined, balanced skin that looks healthy and radiant. At SuA Glow, we respect every beauty choice—whether your goal is subtle enhancement or a little extra glow. While many aesthetic treatments focus on adding volume, Korean dermatology emphasizes improving skin quality. Treatments such as skin boosters, micro-toxin techniques, and regenerative technologies like exosomes help refine texture, elasticity, and overall skin health. Korean dermatologist believes the best anti-aging strategy is starting before you need it. By supporting hydration, collagen production, and skin barrier health, patients maintain healthier skin over time.",
+    "snippet": "If there’s one secret behind Korean glass skin, it’s this: hydration drives skin health. Treatments often use Korean skin boosters, regenerative therapies, and ..."
+  },
+  {
+    "url": "about.html#skin-boosters-dfw",
+    "title": "Korean Skin Booster Treatments in DFW",
+    "pageTitle": "About Us",
+    "category": "Spa Treatments",
+    "content": "SuA Glow specializes in Korean skin boosters, micro-toxin treatments, and regenerative skin therapies inspired by leading dermatology clinics in Seoul. These treatments are designed to improve hydration, elasticity, and overall skin quality. Patients throughout Dallas, Carrollton, Plano, Frisco, and the greater DFW metroplex visit SuA Glow to experience Korean skin health treatments without traveling internationally. A Korean skin booster is a treatment designed to improve skin hydration, elasticity, and overall skin quality using injectable or advanced delivery techniques. These treatments help restore the smooth, hydrated “glass skin” glow Korean dermatology clinics are known for in Seoul. Many of the world’s most advanced skin boosters and regenerative treatments were developed in Seoul, South Korea, making it the global leader in aesthetic skin health innovation. Healthier, hydrated, resilient skin with the smooth, luminous glow Korean dermatology clinics are known for. Because the glow everyone talks about in K-Beauty? It isn’t about makeup. It’s about skin health. And now you can experience Korean skin boosters and regenerative skin treatments in Dallas–Fort Worth—without flying to Seoul. Just book with us at SuA Glow.",
+    "snippet": "SuA Glow specializes in Korean skin boosters, micro-toxin treatments, and regenerative skin therapies inspired by leading dermatology clinics in Seoul. These tr..."
+  },
+  {
+    "url": "about.html#safety",
+    "title": "Medical Oversight & Safety",
+    "pageTitle": "About Us",
+    "category": "Spa Treatments",
+    "content": "At SuA Glow, your safety and clinical outcomes are our highest priorities. Every treatment is performed using carefully developed protocols designed to ensure consistency, safety, and effective results. Our clinic combines physician oversight, advanced provider training, and globally sourced medical-grade products to deliver the highest standards of Korean medical aesthetics. All treatments at SuA Glow are performed under the supervision of Dr. Adam Yang, MD, providing board-certified medical oversight and ensuring that every procedure follows evidence-based clinical standards for safety and patient outcomes. We utilize only genuine, pharmaceutical-grade solutions sourced from reputable manufacturers in South Korea, Europe, and the United States to ensure product quality and safety. Our treatment techniques are inspired by leading dermatology clinics in Seoul, South Korea, the global center of innovation in skin boosters, regenerative therapies, and advanced skin health treatments. Our providers receive specialized training in K-Beauty aesthetic techniques, including precision injection methods and advanced skin booster protocols. Every treatment begins with a comprehensive consultation to evaluate your skin condition and develop a customized plan designed to improve hydration, elasticity, and long-term skin health. All treatments follow clinically supported protocols designed to optimize safety, treatment consistency, and predictable outcomes. Rather than temporary cosmetic fixes, SuA Glow prioritizes treatments that improve skin quality, hydration, and long-term skin resilience—the foundation of authentic K-Beauty results.",
+    "snippet": "At SuA Glow, your safety and clinical outcomes are our highest priorities. Every treatment is performed using carefully developed protocols designed to ensure c..."
+  },
+  {
+    "url": "about.html#difference",
+    "title": "Why SuA Glow is Different",
+    "pageTitle": "About Us",
+    "category": "Spa Treatments",
+    "content": "SuA Glow brings K-Beauty medical aesthetic techniques inspired by leading dermatology clinics in Seoul, South Korea to Dallas–Fort Worth. Our treatments reflect the philosophy used in Korean dermatology: improving skin health, hydration, and long-term skin quality. We focus on next-generation Korean skin boosters and regenerative skin treatments designed to improve hydration, elasticity, and overall skin quality. These treatments help create the smooth, luminous “glass skin” glow Korean dermatology clinics are known for. SuA Glow operates under physician supervision, ensuring that all treatments follow carefully developed medical protocols designed for safety, effectiveness, and predictable outcomes. Every treatment begins with a detailed consultation to evaluate your skin condition, hydration levels, and aesthetic goals. Treatment plans are customized to support long-term skin health rather than temporary cosmetic fixes. Korean dermatology focuses on skin quality before structural change. Our treatments prioritize hydration, collagen support, and skin regeneration to create results that look naturally radiant—not overdone.",
+    "snippet": "SuA Glow brings K-Beauty medical aesthetic techniques inspired by leading dermatology clinics in Seoul, South Korea to Dallas–Fort Worth. Our treatments reflect..."
+  },
+  {
+    "url": "about.html",
+    "title": "The secret to beautiful skin isscience, not secrets.",
+    "pageTitle": "About Us",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "accessibility-statement.html",
+    "title": "Our Commitment to Accessibility",
+    "pageTitle": "Accessibility Statement",
+    "category": "Spa Treatments",
+    "content": "Effective Date: January 2026 We strive to design, develop, and maintain our website in substantial conformance with the Web Content Accessibility Guidelines (WCAG) 2.1, Levels A and AA, as published by the World Wide Web Consortium (W3C). These guidelines help ensure that content is perceivable, operable, understandable, and robust for all users. We also endeavor to comply with applicable accessibility requirements under the Americans with Disabilities Act (ADA) and Section 508 of the Rehabilitation Act, as applicable to our operations. To support accessibility across our digital platforms, SuA Glow has implemented the following measures: Accessibility Training: Team members receive guidance on inclusive design and accessibility best practices. Ongoing Monitoring: We routinely review and test our website to identify and address accessibility issues in a timely manner. User Feedback: We encourage users to share accessibility feedback so we can continue to improve. Our ongoing accessibility efforts include, but are not limited to: Keyboard-accessible navigation Improved compatibility with screen readers and assistive technologies Adjustable text sizing for improved readability High-contrast color support Descriptive alternative (alt) text for images Closed captions for applicable video content Accessible online forms designed for assistive technology use While we strive to ensure full accessibility, some content or features may not yet fully conform to all accessibility standards. We are actively working to remediate such areas. If you encounter an accessibility barrier, we will make reasonable efforts to provide the requested information or service through alternative means. We welcome feedback regarding the accessibility of the SuA Glow website. If you experience difficulty accessing any part of our site or need assistance, please contact us and we will respond promptly. Privacy Officer SuA Glow Email: info@suaglow.com Phone: 972-665-8737 Address: 4116 State Highway 121, Suite 120, Office O, Carrollton, TX 75010 We will respond to accessibility inquiries within a reasonable timeframe and provide support in accessing the information requested. Accessibility is an ongoing effort at SuA Glow. We regularly review our website, update content and functionality, and evaluate accessibility solutions to ensure an inclusive experience for all visitors.",
+    "snippet": "Effective Date: January 2026 We strive to design, develop, and maintain our website in substantial conformance with the Web Content Accessibility Guidelines (WC..."
+  },
+  {
+    "url": "bridal-glow.html#hero",
+    "title": "BridalGlow",
+    "pageTitle": "Bridal Glow",
+    "category": "Bridal Glow",
+    "content": "Korean Bridal Skin Planning. Wedding skin is different, because wedding skin is photographed forever.",
+    "snippet": "Korean Bridal Skin Planning. Wedding skin is different, because wedding skin is photographed forever."
+  },
+  {
+    "url": "bridal-glow.html#what-is",
+    "title": "Personalized Wedding Skin Planning",
+    "pageTitle": "Bridal Glow",
+    "category": "Bridal Glow",
+    "content": "The Seoul Bridal Philosophy The close-up photos. The bridal suite lighting. The ceremony makeup. The HD cameras. At SuA Glow, Bridal Glow is a personalized Korean-inspired wedding skin preparation program designed to help brides look naturally radiant. Because in Seoul aesthetics, bridal beauty is not about looking dramatically different overnight. Bridal aesthetics is about looking healthy, balanced, hydrated, and elegant under lighting. • Timeline Planning • Texture Refinement • Subtle Enhancement • Smooth Makeup Canvas • Elegant Reflection • Confidence Bridal Skin Assessment",
+    "snippet": "The Seoul Bridal Philosophy The close-up photos. The bridal suite lighting. The ceremony makeup. The HD cameras. At SuA Glow, Bridal Glow is a personalized Kore..."
+  },
+  {
+    "url": "bridal-glow.html",
+    "title": "Medical Oversight",
+    "pageTitle": "Bridal Glow",
+    "category": "Bridal Glow",
+    "content": "All Bridal Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
+    "snippet": "All Bridal Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang i..."
+  },
+  {
+    "url": "bridal-glow.html#philosophies",
+    "title": "Four Pillars of Bridal Glow",
+    "pageTitle": "Bridal Glow",
+    "category": "Bridal Glow",
+    "content": "The Strategic K-Beauty Approach A customized 6-to-8 week program designed around your wedding date, allowing time for collagen remodeling and barrier recovery. Gradual Build Proper Healing No Last-Minute Panic Options like TrapTox for elegant shoulders and necklines, or CalfTox for lower leg contouring to match your dress style. Neckline Elegance Shoulder Contour Dress Specific Refinement focused on smooth makeup application and balancing facial movement without losing natural, joyful expressions. Polished Finish Pore Control Natural Joy Skin boosters and RF skin tightening like Oligio X to support collagen, ensuring your skin reflects light beautifully on HD cameras. HD Camera Ready Collagen Boost Luminous Glow",
+    "snippet": "The Strategic K-Beauty Approach A customized 6-to-8 week program designed around your wedding date, allowing time for collagen remodeling and barrier recovery. ..."
+  },
+  {
+    "url": "bridal-glow.html#treatment-benefits",
+    "title": "Targeted Bridal Skin Results",
+    "pageTitle": "Bridal Glow",
+    "category": "Bridal Glow",
+    "content": "Personalized For Your Wedding Refining texture so high-definition cameras capture your skin at its most elegant. Creating a smooth, hydrated canvas ensuring makeup sits beautifully without settling. Restoring inner luminosity through deep hydration for a \"Quiet Luxury\" glow. Using SkinTox to refine pores and texture while preserving your natural smile and joy. Body neuromodulators tailored to enhance the neckline and shoulders of your gown. Strategic timing ensures no last-minute recovery panic, just confidence. Modern Korean aesthetic philosophy emphasizes timing and layering rather than aggressive last-minute treatment. Collagen remodeling takes time. Hydration support builds gradually. At SuA Glow, Bridal Glow is intentionally structured around the countdown to the event. Because beautiful bridal skin is usually planned — not rushed.",
+    "snippet": "Personalized For Your Wedding Refining texture so high-definition cameras capture your skin at its most elegant. Creating a smooth, hydrated canvas ensuring mak..."
+  },
+  {
+    "url": "bridal-glow.html#why-sua",
+    "title": "The SuA Glow Bridal Philosophy",
+    "pageTitle": "Bridal Glow",
+    "category": "Bridal Glow",
+    "content": "Seoul Precision. Bridal Elegance. The goal is not to look dramatically different on your wedding day. The goal is \"your skin on its best behavior.\" No rushed wedding injectables. No \"we'll just do filler everywhere\" philosophy. No bridal regret energy. We focus on elegant, refined, healthy-looking skin that photographs beautifully. Introducing collagen support early, and hydration/glow-focus closer to the event. Evaluating your timeline, goals, and dress style to tailor every single treatment step. More aggressive treatment is not always smarter treatment before a wedding. We prioritize predictability.",
+    "snippet": "Seoul Precision. Bridal Elegance. The goal is not to look dramatically different on your wedding day. The goal is \"your skin on its best behavior.\" No rushed we..."
+  },
+  {
+    "url": "bridal-glow.html#expect",
+    "title": "The Bridal Journey",
+    "pageTitle": "Bridal Glow",
+    "category": "Bridal Glow",
+    "content": "Evaluation of your wedding timeline, skin texture, dress style, and photography considerations. Early treatments focusing on collagen remodeling, RF tightening (like Oligio X), and body tox balancing. SkinTox and hydration boosters introduced to perfect texture and lock in moisture. Elegant, radiant, flawless-under-makeup skin that photographs beautifully and naturally.",
+    "snippet": "Evaluation of your wedding timeline, skin texture, dress style, and photography considerations. Early treatments focusing on collagen remodeling, RF tightening ..."
+  },
+  {
+    "url": "bridal-glow.html#faq",
+    "title": "Bridal Glow FAQs",
+    "pageTitle": "Bridal Glow",
+    "category": "Bridal Glow",
+    "content": "Many patients begin bridal skin planning approximately 6–8 weeks before their event, depending on treatment goals and clinical assessment. Some collagen-support treatments may benefit from additional planning time. Modern Korean bridal aesthetics often prioritize healthy-looking skin, balanced facial movement, hydration-focused care, refined texture, and subtle facial harmony. The goal is polished, elegant skin that photographs beautifully and still looks like you. That is one of the most common reasons patients seek bridal skin prep. Hydration-focused and SkinTox-style approaches help support smoother makeup application, refined pores, and improved skin reflection. Because wedding makeup is only as smooth as the skin underneath it. Yes. Depending on anatomy, treatment goals, and clinical assessment, Bridal Glow planning may incorporate body-focused refinement approaches such as TrapTox-style shoulder and neckline balancing or CalfTox-style lower leg contour approaches, individualized based on your dress style.",
+    "snippet": "Many patients begin bridal skin planning approximately 6–8 weeks before their event, depending on treatment goals and clinical assessment. Some collagen-support..."
+  },
+  {
+    "url": "bridal-glow.html",
+    "title": "Refined movement.Controlled glow.Very Seoul.",
+    "pageTitle": "Bridal Glow",
+    "category": "Bridal Glow",
+    "content": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessment.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessme..."
+  },
+  {
+    "url": "contact.html#hero",
+    "title": "Contact & Visit Us",
+    "pageTitle": "Contact & Book",
+    "category": "Spa Treatments",
+    "content": "Book online anytime, call us directly, or stop by our studio in Carrollton. We're here to help you glow.",
+    "snippet": "Book online anytime, call us directly, or stop by our studio in Carrollton. We're here to help you glow."
+  },
+  {
+    "url": "contact.html",
+    "title": "Book YourAppointment",
+    "pageTitle": "Contact & Book",
+    "category": "Spa Treatments",
+    "content": "Schedule online 24/7 through our booking portal. Choose your treatment, pick a time, and we'll handle the rest. New patients welcome — no referral needed. Online Booking Available 24/7 at our booking portal Call or Text 972-665-8737 Hours Mon – Fri 9:30 AM – 5:00 PM Saturday 9:30 AM – 12:30 PM Sunday Closed Location",
+    "snippet": "Schedule online 24/7 through our booking portal. Choose your treatment, pick a time, and we'll handle the rest. New patients welcome — no referral needed. Onlin..."
+  },
+  {
+    "url": "contact.html",
+    "title": "SpecialPromotions",
+    "pageTitle": "Contact & Book",
+    "category": "Spa Treatments",
+    "content": "We regularly offer exclusive deals on our most popular K-Beauty treatments — from Rejuran Healer bundles to Skintox packages and seasonal launch offers. Check back often or ask us at your visit. Lunar Glow Package Signature launch offer · 50 spots Skintox Seoul Edition Pore refinement · natural glow LDM Ultrasound Package Deep hydration · inflammation calm",
+    "snippet": "We regularly offer exclusive deals on our most popular K-Beauty treatments — from Rejuran Healer bundles to Skintox packages and seasonal launch offers. Check b..."
+  },
+  {
+    "url": "contact.html",
+    "title": "What to Expectat Your First Visit",
+    "pageTitle": "Contact & Book",
+    "category": "Spa Treatments",
+    "content": "01 Sophia reviews your skin goals, concerns, and medical history to build your personalized K-Beauty plan. 02 A detailed assessment of your skin quality, texture, hydration, and structure guides the right protocol. 03 Precision K-Beauty treatment in a calm, clinical environment. Most sessions are 30–60 minutes. 04 You leave with a clear aftercare guide and follow-up schedule tailored to your skin's needs. • Arrive with clean skin — no heavy makeup • Avoid alcohol 24 hours prior to injectables • Stay well hydrated the day before • Avoid blood thinners (aspirin, fish oil) unless medically required • Let us know about any active skin conditions • Free parking is available in the shared lot • Consultations are included with all bookings • Financing available — as low as $99/month • Cancellations require 24-hour notice • We accept major credit cards and CareCredit",
+    "snippet": "01 Sophia reviews your skin goals, concerns, and medical history to build your personalized K-Beauty plan. 02 A detailed assessment of your skin quality, textur..."
+  },
+  {
+    "url": "contact.html",
+    "title": "Flexible Financing Available",
+    "pageTitle": "Contact & Book",
+    "category": "Spa Treatments",
+    "content": "Get the glow now, pay over time. We offer 0% APR financing options to make your treatments accessible — no need to wait.",
+    "snippet": "Get the glow now, pay over time. We offer 0% APR financing options to make your treatments accessible — no need to wait."
+  },
+  {
+    "url": "contact.html",
+    "title": "Follow the Glow",
+    "pageTitle": "Contact & Book",
+    "category": "Spa Treatments",
+    "content": "Behind-the-scenes, treatment reveals, tips from Sophia, and exclusive follower-only offers — all on social. Loved your visit? Leave us a Google review — it means the world.",
+    "snippet": "Behind-the-scenes, treatment reveals, tips from Sophia, and exclusive follower-only offers — all on social. Loved your visit? Leave us a Google review — it mean..."
+  },
+  {
+    "url": "contact.html",
+    "title": "Your glow is one appointment away.Let's make it happen.",
+    "pageTitle": "Contact & Book",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa · Carrollton HQ",
+    "snippet": "K-Beauty Medspa · Carrollton HQ"
+  },
+  {
+    "url": "cookie-notices-choices.html",
+    "title": "What Are Cookies?",
+    "pageTitle": "Cookie Notices & Choices",
+    "category": "Spa Treatments",
+    "content": "Effective Date: January 2026 SuA Glow (“we,” “us,” or “our”) uses cookies and similar technologies to enhance your browsing experience, understand how our website is used, and deliver relevant content. This Cookie Notice explains what cookies are, how we use them, and the choices available to you. Cookies are small text files placed on your device when you visit a website. They help recognize your device and store information about your preferences, settings, and usage patterns. Cookies may be: First-party cookies, set by our website Third-party cookies, set by external services we use (such as analytics or advertising providers) These cookies are required for the website to function properly and cannot be disabled. They support core functionality such as: Secure navigation Form submissions and appointment requests Website security and load balancing These cookies collect aggregated and anonymized information about how visitors use our website. They help us understand traffic patterns and improve site performance and usability. These cookies remember your preferences (such as language, accessibility settings, or region) to provide a more personalized experience. These cookies may be used to: Deliver relevant advertisements Measure marketing campaign effectiveness Limit how often you see certain ads These cookies may be set by us or by third-party advertising partners. We use cookies to: Ensure secure and reliable operation of our website Enhance user experience and remember preferences Monitor site traffic, usage trends, and performance Support marketing efforts and measure effectiveness You are in control of your cookie preferences. Where required by law (including in the EU and UK), we will request your consent before placing non-essential cookies. You may update or withdraw your consent at any time. Most browsers allow you to: View and delete stored cookies Block cookies from all or specific websites Receive alerts when cookies are being placed Please note that disabling certain cookies may affect website functionality. Some third-party services (such as analytics or advertising networks) provide their own opt-out mechanisms. These options may be available through those providers directly. You can find instructions for managing cookies in common browsers at the following resources: Google Chrome Support Mozilla Firefox Support Microsoft Edge Support Apple Safari Support We may update this Cookie Notice periodically for operational, legal, or regulatory reasons. Any changes will be posted on this page with a revised Effective Date. Privacy Officer SuA Glow Email: info@suaglow.com Phone: 972-665-8737 Address: 4116 State Highway 121, Suite 120, Office O, Carrollton, TX 75010",
+    "snippet": "Effective Date: January 2026 SuA Glow (“we,” “us,” or “our”) uses cookies and similar technologies to enhance your browsing experience, understand how our websi..."
+  },
+  {
+    "url": "cosmetic-tox.html#hero",
+    "title": "Cosmetic Tox& SkinTox",
+    "pageTitle": "Cosmetic Tox & SkinTox",
+    "category": "Cosmetic Tox",
+    "content": "Korean Aesthetic Neurotoxin & Skin-Quality Treatments. Precision-focused. Seoul-inspired. Naturally refined.",
+    "snippet": "Korean Aesthetic Neurotoxin & Skin-Quality Treatments. Precision-focused. Seoul-inspired. Naturally refined."
+  },
+  {
+    "url": "cosmetic-tox.html#what-is",
+    "title": "What Is Cosmetic Tox?",
+    "pageTitle": "Cosmetic Tox & SkinTox",
+    "category": "Cosmetic Tox",
+    "content": "Seoul-Inspired Neurotoxin Treatments Cosmetic Tox uses FDA-approved neuromodulators—Botox®, Xeomin®, Letybo®—to refine facial movement, soften lines, and improve contour balance. At SuA Glow, Cosmetic Tox follows a Seoul-inspired philosophy: subtle refinement over dramatic freezing. Conservative dosing. Facial harmony. Controlled glow. Patients visit from across Carrollton, Dallas, Plano, Frisco, McKinney, Irving, Coppell, Lewisville, Addison, Richardson, Grapevine, Southlake & Fort Worth.",
+    "snippet": "Seoul-Inspired Neurotoxin Treatments Cosmetic Tox uses FDA-approved neuromodulators—Botox®, Xeomin®, Letybo®—to refine facial movement, soften lines, and improv..."
+  },
+  {
+    "url": "cosmetic-tox.html",
+    "title": "Medical Oversight",
+    "pageTitle": "Cosmetic Tox & SkinTox",
+    "category": "Cosmetic Tox",
+    "content": "All Cosmetic Tox treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
+    "snippet": "All Cosmetic Tox treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam ..."
+  },
+  {
+    "url": "cosmetic-tox.html#skintox",
+    "title": "SkinTox",
+    "pageTitle": "Cosmetic Tox & SkinTox",
+    "category": "Cosmetic Tox",
+    "content": "Micro-Dosing for Glass Skin SkinTox is a Korean aesthetic micro-dosing technique using diluted neuromodulators injected superficially to improve skin texture and quality—without freezing muscle movement. The goal: smoother texture, softer pore appearance, refined glow, less makeup settling, polished skin finish. Many patients describe it as “filtered skin in real life.” Enlarged-looking pores Oily skin Fine superficial lines Rough texture Crepey skin appearance Full Face SkinTox Overall skin smoothness and “glass skin” appearance. Under-Eye SkinTox Soften fine lower-eye creasing and texture. Nose SkinTox Refine texture and excess shine around the nose. Lower Face SkinTox Targets movement-related texture around mouth and chin. Neck SkinTox Often paired with skin boosters for smoother neck texture.",
+    "snippet": "Micro-Dosing for Glass Skin SkinTox is a Korean aesthetic micro-dosing technique using diluted neuromodulators injected superficially to improve skin texture an..."
+  },
+  {
+    "url": "cosmetic-tox.html#treatment-areas",
+    "title": "Cosmetic Tox Treatment Areas",
+    "pageTitle": "Cosmetic Tox & SkinTox",
+    "category": "Cosmetic Tox",
+    "content": "Face • Neck • Chest • Body Softens horizontal forehead lines while maintaining natural movement. Reduces frown-line appearance between the brows. Smooths fine lines around the eyes. Refines nose wrinkling during expression. Creates a subtle lifted brow appearance. Enhances upper-lip balance with a subtle outward roll. Softens excessive upper-lip elevation while smiling. Improves chin dimpling and lower-face tension. Softens downward-pulling expression around the mouth. Slims lower-face contour. Popular in Korean facial balancing. Refines nostril flaring during expression. Smoker's lines around the mouth area. Softens visible vertical neck bands. Improves movement-related neck creasing. Refines jawline transition and softens neck tension. Softens chest wrinkles and repetitive movement lines. Relaxes trapezius muscles for softer shoulder contour, reduced upper-body tension, and elongated neck appearance. Targets enlarged calf muscle appearance for lower-leg contour refinement. Popular in Korean aesthetic clinics.",
+    "snippet": "Face • Neck • Chest • Body Softens horizontal forehead lines while maintaining natural movement. Reduces frown-line appearance between the brows. Smooths fine l..."
+  },
+  {
+    "url": "cosmetic-tox.html#why-sua",
+    "title": "Why SuA Glow for Cosmetic Tox",
+    "pageTitle": "Cosmetic Tox & SkinTox",
+    "category": "Cosmetic Tox",
+    "content": "K-Beauty as Practiced in Seoul — Not Just “Inspired” At SuA Glow, treatments are performed using a Seoul-inspired philosophy focused on refined movement, facial harmony, controlled glow, skin quality, and subtle, natural-looking results. Led by Sophia Yang, PA-C — Seoul-trained and Korean-certified — treatments prioritize balance over extremes. The goal is rarely to look dramatically different. The goal is to look rested, refined, quietly polished. Very Seoul. Movement looks more natural Refinement builds gradually over time They just notice you look good.",
+    "snippet": "K-Beauty as Practiced in Seoul — Not Just “Inspired” At SuA Glow, treatments are performed using a Seoul-inspired philosophy focused on refined movement, facial..."
+  },
+  {
+    "url": "cosmetic-tox.html#expect",
+    "title": "What to Expect",
+    "pageTitle": "Cosmetic Tox & SkinTox",
+    "category": "Cosmetic Tox",
+    "content": "Personalized assessment focused on facial balance, movement patterns, anatomy, and skin goals. Topical numbing 15–30 min. ~30–60 Minutes Mild redness, slight swelling, temporary injection marks. Typically resolves within hours to days. Gradual improvement. Full results in 1–2 weeks. Lasts ~3–4 months.",
+    "snippet": "Personalized assessment focused on facial balance, movement patterns, anatomy, and skin goals. Topical numbing 15–30 min. ~30–60 Minutes Mild redness, slight sw..."
+  },
+  {
+    "url": "cosmetic-tox.html#faq",
+    "title": "Frequently Asked Questions",
+    "pageTitle": "Cosmetic Tox & SkinTox",
+    "category": "Cosmetic Tox",
+    "content": "Our approach prioritizes natural-looking movement and balanced refinement rather than aggressive freezing. Most treatments last approximately 3–4 months depending on treatment area and muscle activity. Traditional tox primarily targets larger muscle movement. SkinTox focuses on skin refinement, texture appearance, and controlled glow using superficial micro-dosing techniques. Yes. Masseter tox for lower-face contour refinement is one of the most commonly requested Korean cosmetic tox treatments. TrapTox relaxes the trapezius muscles to soften shoulder contour and create a longer neck appearance. CalfTox uses neuromodulators to relax enlarged calf muscles in select patients seeking a softer, slimmer lower-leg contour appearance. Yes. SkinTox is frequently paired with Korean skin boosters, collagen-stimulating treatments, and skin regeneration treatments such as Oligio X.",
+    "snippet": "Our approach prioritizes natural-looking movement and balanced refinement rather than aggressive freezing. Most treatments last approximately 3–4 months dependi..."
+  },
+  {
+    "url": "cosmetic-tox.html",
+    "title": "Refined movement.Controlled glow.Very Seoul.",
+    "pageTitle": "Cosmetic Tox & SkinTox",
+    "category": "Cosmetic Tox",
+    "content": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under appropriate medical oversight and within the scope of practice permitted under Texas law. Results are individualized.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under appropriate medical oversight and within the scope of practice permitted under Te..."
+  },
+  {
+    "url": "dermal-filler.html#hero",
+    "title": "DermalFiller",
+    "pageTitle": "Korean Dermal Filler",
+    "category": "Dermal Filler",
+    "content": "Korean-inspired facial balancing. Restoring harmony and structure with subtlety. Never over-filled.",
+    "snippet": "Korean-inspired facial balancing. Restoring harmony and structure with subtlety. Never over-filled."
+  },
+  {
+    "url": "dermal-filler.html#what-is",
+    "title": "Subtle Facial Harmony",
+    "pageTitle": "Korean Dermal Filler",
+    "category": "Dermal Filler",
+    "content": "The Seoul Injectable Philosophy The goal of dermal filler should never be to look \"filled.\" The goal is to look restored, rested, and balanced. At SuA Glow, we utilize premium Hyaluronic Acid (HA) fillers to provide structural support, replenish lost volume, and refine facial contours. Following Korean aesthetic principles, we prioritize proportional harmony and natural movement, ensuring results integrate seamlessly with your unique anatomy. • Volume Loss • Facial Proportions • Deep Shadows • Structural Lift • Balanced Profile • Natural Rejuvenation Facial Balancing Focus",
+    "snippet": "The Seoul Injectable Philosophy The goal of dermal filler should never be to look \"filled.\" The goal is to look restored, rested, and balanced. At SuA Glow, we ..."
+  },
+  {
+    "url": "dermal-filler.html",
+    "title": "Medical Oversight",
+    "pageTitle": "Korean Dermal Filler",
+    "category": "Dermal Filler",
+    "content": "All Dermal Filler treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
+    "snippet": "All Dermal Filler treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam..."
+  },
+  {
+    "url": "dermal-filler.html#philosophies",
+    "title": "Four Pillars of Filler",
+    "pageTitle": "Korean Dermal Filler",
+    "category": "Dermal Filler",
+    "content": "The Strategic K-Beauty Approach We assess bone structure, fat pad migration, and muscle movement before a single injection is planned. Bone Structure Fat Pads Custom Assessment Selecting the exact thickness and flexibility of the filler product to match the specific tissue layer being injected. Tissue Match Product Selection Dynamic Flexibility Filler should move with your face. We prioritize techniques that allow the product to integrate smoothly into the tissue. Natural Movement No Lumps Invisible Edges More is not better. We focus on subtle enhancements that respect your natural features, avoiding over-filled or distorted looks. Subtle Volume Proportional Under-filling",
+    "snippet": "The Strategic K-Beauty Approach We assess bone structure, fat pad migration, and muscle movement before a single injection is planned. Bone Structure Fat Pads C..."
+  },
+  {
+    "url": "dermal-filler.html#treatment-benefits",
+    "title": "Targeted Filler Applications",
+    "pageTitle": "Korean Dermal Filler",
+    "category": "Dermal Filler",
+    "content": "Personalized For Your Anatomy Restoring lost structural support to lift the lower face and soften nasolabial shadows. Korean lip techniques focus on shape, hydration, and vertical proportion, not extreme volume. Elongating the facial profile and creating crisp, elegant distinction between the face and neck. Carefully filling deep hollows to reflect light and reduce the appearance of dark, tired circles. Softening deep lines around the mouth by addressing the root cause of volume loss above. Filling temporal hollowing to restore a youthful, smooth transition from the eyes to the hairline. Korean aesthetic medicine has shifted away from simply chasing wrinkles with filler. If you only fill the wrinkle, the face looks heavy. If you restore the structure, the wrinkle softens naturally. We use filler as architectural scaffolding. It supports the tissues, reflects light beautifully, and restores proportional harmony.",
+    "snippet": "Personalized For Your Anatomy Restoring lost structural support to lift the lower face and soften nasolabial shadows. Korean lip techniques focus on shape, hydr..."
+  },
+  {
+    "url": "dermal-filler.html#why-sua",
+    "title": "The SuA Glow Filler Philosophy",
+    "pageTitle": "Korean Dermal Filler",
+    "category": "Dermal Filler",
+    "content": "Seoul Precision. Natural Harmony. We believe that the best injectable work is undetectable. It elicits comments like \"You look so rested,\" not \"Who did your filler?\" Safety is our primary concern. We utilize ultrasound mapping when necessary, advanced cannula techniques to minimize bruising and vascular risks, and deep anatomical knowledge to deliver precise, predictable results. Extensive use of blunt-tipped cannulas where appropriate to enhance safety and reduce downtime. We strictly use HA fillers, meaning the treatment is fully reversible if needed. We prefer to under-fill initially and add more later. It is easier to add than to subtract.",
+    "snippet": "Seoul Precision. Natural Harmony. We believe that the best injectable work is undetectable. It elicits comments like \"You look so rested,\" not \"Who did your fil..."
+  },
+  {
+    "url": "dermal-filler.html#expect",
+    "title": "The Filler Journey",
+    "pageTitle": "Korean Dermal Filler",
+    "category": "Dermal Filler",
+    "content": "A detailed facial analysis mapping out volume loss and structural changes. Precise injection techniques prioritizing comfort (numbing cream used) and safety. Swelling and potential bruising are normal for 3-7 days depending on the area treated. Immediate structural improvement, with final integration and softening seen at 2 weeks.",
+    "snippet": "A detailed facial analysis mapping out volume loss and structural changes. Precise injection techniques prioritizing comfort (numbing cream used) and safety. Sw..."
+  },
+  {
+    "url": "dermal-filler.html#faq",
+    "title": "Dermal Filler FAQs",
+    "pageTitle": "Korean Dermal Filler",
+    "category": "Dermal Filler",
+    "content": "Longevity depends on the product used and the area injected. Highly mobile areas (like lips) may metabolize filler in 6-9 months, while structural fillers (like cheeks or jawline) can last 12-24 months. No. The \"duck\" look occurs from poor placement and over-filling. Our Korean-inspired lip technique focuses on enhancing the vertical height and natural shape of the lip, providing deep hydration and crisp borders, not forward protrusion. We prioritize your comfort. We use strong prescription-grade topical numbing cream, and most fillers contain lidocaine within the syringe to numb the area as the product is placed. Because we use exclusively Hyaluronic Acid (HA) fillers, the product is fully reversible. If necessary, we can inject an enzyme called hyaluronidase to safely and quickly dissolve the filler.",
+    "snippet": "Longevity depends on the product used and the area injected. Highly mobile areas (like lips) may metabolize filler in 6-9 months, while structural fillers (like..."
+  },
+  {
+    "url": "dermal-filler.html",
+    "title": "Refined movement.Controlled glow.Very Seoul.",
+    "pageTitle": "Korean Dermal Filler",
+    "category": "Dermal Filler",
+    "content": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessment.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessme..."
+  },
+  {
+    "url": "financing.html#page-hero",
+    "title": "Invest in YourRadiance.",
+    "pageTitle": "Financing",
+    "category": "Spa Treatments",
+    "content": "We've partnered with Cherry to provide flexible payment plans, making your K-Beauty treatments more accessible than ever.",
+    "snippet": "We've partnered with Cherry to provide flexible payment plans, making your K-Beauty treatments more accessible than ever."
+  },
+  {
+    "url": "financing.html",
+    "title": "The K-Beauty Glow, Now more accessible than ever.",
+    "pageTitle": "Financing",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "hippa-policy.html",
+    "title": "Uses and Disclosures of Protected Health Information",
+    "pageTitle": "HIPPA Policy",
+    "category": "Spa Treatments",
+    "content": "Effective Date: January 2026 SuA Glow (“we,” “us,” or “our”) is committed to protecting the privacy and security of your Protected Health Information (“PHI”). This Notice of Privacy Practices (“Notice”) describes how we may use and disclose your PHI, your rights regarding your PHI, and our legal obligations under the Health Insurance Portability and Accountability Act of 1996 (“HIPAA”). We are required by law to: Maintain the privacy of your PHI Provide you with this Notice Abide by the terms of this Notice We may use and disclose your PHI without your authorization for the following purposes: To provide, coordinate, or manage your healthcare and related services, including sharing information with healthcare providers, specialists, laboratories, pharmacies, or other entities involved in your care. To obtain payment for services provided, including billing, claims management, collections, and coordination with insurance companies or other payers. For operational activities necessary to run our practice, including quality assessment, credentialing, training, auditing, compliance reviews, and administrative functions. We may use or disclose your PHI without your written authorization in certain circumstances, including: Public health activities (e.g., reporting communicable diseases, adverse events, or recalls) Victims of abuse, neglect, or domestic violence, as required by law Health oversight activities, such as audits, investigations, inspections, or licensure actions Judicial and administrative proceedings, including court orders or subpoenas Law enforcement purposes, as permitted by law To prevent or lessen a serious threat to health or safety Specialized government functions, including military, national security, or correctional institutions Workers' compensation claims, as authorized by law Any other use or disclosure of your PHI not described in this Notice will be made only with your written authorization, which you may revoke in writing at any time, except where we have already relied on it. You have the following rights with respect to your PHI: You may inspect or request a copy of your medical records. Requests must be submitted in writing to our Privacy Officer. Reasonable, cost-based fees may apply. You may request restrictions on certain uses or disclosures of your PHI. While we are not required to agree, we will comply when feasible. If you pay out-of-pocket in full for a service, you may request that information not be shared with your health plan. If you believe your PHI is incorrect or incomplete, you may request an amendment. We may deny requests under certain conditions but will provide a written explanation. You may request a list of certain disclosures of your PHI made within the past six (6) years, excluding those related to treatment, payment, or healthcare operations. You may request that we communicate with you in a specific way or location (e.g., email only, mail only). We will accommodate reasonable requests. You may request a paper copy of this Notice at any time, even if you agreed to receive it electronically. Our Website, online forms, email communications, and messaging systems are not intended for emergency medical use. While we take reasonable measures to protect electronic communications, no online transmission can be guaranteed to be fully secure. Please do not submit highly sensitive medical information through website forms unless specifically instructed to do so by our staff. We may communicate with you via phone calls, text messages (SMS), email, or telehealth platforms regarding appointments, treatment coordination, billing, or practice operations. By providing your contact information, you acknowledge and consent to receive such communications. You may request alternative communication methods or opt out of non-essential communications at any time by contacting us. Standard messaging and data rates may apply. In the event of a breach of unsecured PHI, we will notify affected individuals as required by HIPAA and applicable state law. Notifications will include information about the nature of the breach, steps you should take to protect yourself, and actions we are taking to mitigate harm. We reserve the right to change this Notice at any time. Any changes will be posted on our Website and made available upon request. If you believe your privacy rights have been violated, you may file a complaint with us or with the Secretary of the U.S. Department of Health and Human Services. We will not retaliate against you for filing a complaint. HHS Complaint Portal: www.hhs.gov/hipaa/filing-a-complaint Privacy Officer SuA Glow Email: info@suaglow.com Phone: 972-665-8737 Address: 4116 State Highway 121, Suite 120, Office O, Carrollton, TX 75010",
+    "snippet": "Effective Date: January 2026 SuA Glow (“we,” “us,” or “our”) is committed to protecting the privacy and security of your Protected Health Information (“PHI”). T..."
+  },
+  {
+    "url": "index.html#hero",
+    "title": "The Art of Korean Beauty, Perfected in Texas",
+    "pageTitle": "SuA K-Glow",
+    "category": "Premier\n                    K-Beauty Destination",
+    "content": "SuA Glow Medspa brings the secrets of Korean beauty to Dallas where science, precision, and elegance meet. We rejuvenate your skin from within for that effortless, glass-skin radiance.",
+    "snippet": "SuA Glow Medspa brings the secrets of Korean beauty to Dallas where science, precision, and elegance meet. We rejuvenate your skin from within for that effortle..."
+  },
+  {
+    "url": "index.html#treatments",
+    "title": "Refined Results",
+    "pageTitle": "SuA K-Glow",
+    "category": "Premier\n                    K-Beauty Destination",
+    "content": "Discover our most sought-after K-Beauty treatments, focused on hydration, skin quality, and natural rejuvenation. Healing, hydration, and collagen support for true Korean Glass Skin. Cosmetic & Medical Tox, HA Fillers, and Biostimulators for balanced results. Advanced protocols for acne scars, surgical scars, stretch marks, and keloids. SuA Glow Signature, One Day Glow, and Bridal Glow for special occasions. Oligio X RF Lifting, LDM Ultrasound, and Microneedling for skin tightening. Water Droplet Lifting, Salmon PN Facial, and Glow & Hydration protocols.",
+    "snippet": "Discover our most sought-after K-Beauty treatments, focused on hydration, skin quality, and natural rejuvenation. Healing, hydration, and collagen support for t..."
+  },
+  {
+    "url": "index.html",
+    "title": "Glow Stories",
+    "pageTitle": "SuA K-Glow",
+    "category": "Premier\n                    K-Beauty Destination",
+    "content": "\"I had an excellent experience with Sophia during my Juvelook skinbooster treatment... Sophia was incredibly gentle, patient, and attentive throughout the entire process, which made a big difference in comfort. Highly recommend!\" IK Patient \"I’ve been to a few different med spas, but Sophia really stood out. You can tell she genuinely cares about her clients and takes pride in what she does... My skin has never looked better! I’m so happy I found her.\" A Lee Patient \"I recently had a Botox treatment at SuA Glow, and I’m very satisfied with the results. Sophia was professional, friendly, and made me feel comfortable... The outcome looks natural—not frozen! I would definitely recommend this clinic.\" Jung Lee Patient \"Excellent service & pain free botox. Highly recommended!!!\" H. Hawoon Kim Verified Google Review \"Trying out Xeomin for the first time today! Sophia was very sweet and explained to me very well about what I'm getting. The office is very clean and professional. Can't wait to come back for my new beauty routine.\" Karen Dang Verified Google Review \"I went to SuA Glow for a consultation with Sophia, and she was absolutely wonderful. She was very thorough in explaining which procedure would work best for my concerns and walked me through Juvelook in a thoughtful, detailed way.\" Erica Kim Verified Google Review",
+    "snippet": "\"I had an excellent experience with Sophia during my Juvelook skinbooster treatment... Sophia was incredibly gentle, patient, and attentive throughout the entir..."
+  },
+  {
+    "url": "index.html",
+    "title": "K-Beauty doesn't chase trends.It builds better skin.",
+    "pageTitle": "SuA K-Glow",
+    "category": "Premier\n                    K-Beauty Destination",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "injectables.html#hero",
+    "title": "InjectableTreatments",
+    "pageTitle": "Injectables",
+    "category": "Injectables",
+    "content": "Seoul-precision injectables. Neuromodulators, fillers, and biostimulators — each placed with clinical intention and Korean aesthetic philosophy.",
+    "snippet": "Seoul-precision injectables. Neuromodulators, fillers, and biostimulators — each placed with clinical intention and Korean aesthetic philosophy."
+  },
+  {
+    "url": "injectables.html#intro",
+    "title": "Precision is the point.",
+    "pageTitle": "Injectables",
+    "category": "Injectables",
+    "content": "In Korean aesthetic medicine, injectables are never a one-size-fits-all solution. They are clinical tools — applied with precision, purpose, and deep anatomical understanding to support each patient's unique structure and goals. At SuA Glow, every injectable treatment is performed by Sophia Yang, PA-C under appropriate medical oversight. We combine the precision of Seoul clinical techniques with individualized treatment planning — so results look natural, refined, and intentional. The goal is never \"more.\" It is always the right treatment, in the right place, at the right amount. Cosmetic Tox — SkinTox, face & neck, body contouring Medical Tox — TMJ, migraine, hyperhidrosis HA Fillers — Restylane family, facial contouring Biostimulators — Sculptra & Radiesse collagen support All treatments performed under clinical oversight by supervising physician Dr. Adam Yang in accordance with Texas law.",
+    "snippet": "In Korean aesthetic medicine, injectables are never a one-size-fits-all solution. They are clinical tools — applied with precision, purpose, and deep anatomical..."
+  },
+  {
+    "url": "injectables.html#cosmetic-tox",
+    "title": "Cosmetic Tox",
+    "pageTitle": "Injectables",
+    "category": "Injectables",
+    "content": "Neuromodulator treatments designed to soften expression lines, slim facial contours, lift the brow, and refine the neck — all calibrated to your anatomy. Korean-precision micro-dosing delivers a refreshed, natural look without the \"frozen\" appearance. At SuA Glow, Cosmetic Tox is never heavy-handed. Our placement philosophy emphasizes movement preservation, facial harmony, and subtle refinement.",
+    "snippet": "Neuromodulator treatments designed to soften expression lines, slim facial contours, lift the brow, and refine the neck — all calibrated to your anatomy. Korean..."
+  },
+  {
+    "url": "injectables.html#medical-tox",
+    "title": "Medical Tox",
+    "pageTitle": "Injectables",
+    "category": "Injectables",
+    "content": "Neuromodulators are not just cosmetic tools. At SuA Glow, Medical Tox protocols support patients experiencing TMJ-related jaw tension, chronic migraine patterns, and hyperhidrosis — addressing functional concerns with clinical precision. All Medical Tox treatments are conducted within an established clinical protocol under physician oversight, and are not intended to replace standard medical care.",
+    "snippet": "Neuromodulators are not just cosmetic tools. At SuA Glow, Medical Tox protocols support patients experiencing TMJ-related jaw tension, chronic migraine patterns..."
+  },
+  {
+    "url": "injectables.html#ha-fillers",
+    "title": "HA Fillers",
+    "pageTitle": "Injectables",
+    "category": "Injectables",
+    "content": "Hyaluronic acid fillers work with your tissue — adding structure where it has softened, restoring volume that time has reduced, and shaping contours with precision. The Restylane family of products offers a range of formulations suited to different areas and goals. Korean aesthetic philosophy favors facial contouring that preserves movement and natural expression — lifting without overcorrecting, and always considering the full facial landscape.",
+    "snippet": "Hyaluronic acid fillers work with your tissue — adding structure where it has softened, restoring volume that time has reduced, and shaping contours with precis..."
+  },
+  {
+    "url": "injectables.html#biostimulators",
+    "title": "Biostimulators",
+    "pageTitle": "Injectables",
+    "category": "Injectables",
+    "content": "Biostimulators don't add volume directly — they signal your body to rebuild its own collagen architecture. Sculptra (poly-L-lactic acid) and Radiesse (calcium hydroxylapatite) are the gold standards in long-term structural skin support and natural volumization. Results emerge gradually over 2–3 months as new collagen forms — a deeply Korean aesthetic principle: patience, precision, and skin that improves from within.",
+    "snippet": "Biostimulators don't add volume directly — they signal your body to rebuild its own collagen architecture. Sculptra (poly-L-lactic acid) and Radiesse (calcium h..."
+  },
+  {
+    "url": "injectables.html",
+    "title": "Not sure where to start?",
+    "pageTitle": "Injectables",
+    "category": "Injectables",
+    "content": "Every treatment at SuA Glow begins with a clinical consultation. Sophia will assess your skin, listen to your goals, and build a plan that makes sense for your anatomy — not a template.",
+    "snippet": "Every treatment at SuA Glow begins with a clinical consultation. Sophia will assess your skin, listen to your goals, and build a plan that makes sense for your ..."
+  },
+  {
+    "url": "medical-tox.html#hero",
+    "title": "Medical Tox",
+    "pageTitle": "Medical Tox",
+    "category": "Medical Tox",
+    "content": "TMJ, Hyperhidrosis & Therapeutic Botox Treatments Precision-focused neurotoxin treatments for functional relief. Individualized, thoughtful, Seoul-inspired care.",
+    "snippet": "TMJ, Hyperhidrosis & Therapeutic Botox Treatments Precision-focused neurotoxin treatments for functional relief. Individualized, thoughtful, Seoul-inspired care..."
+  },
+  {
+    "url": "medical-tox.html#what-is",
+    "title": "What Is Medical Tox?",
+    "pageTitle": "Medical Tox",
+    "category": "Medical Tox",
+    "content": "Therapeutic Neuromodulator Treatments Medical Tox refers to therapeutic neuromodulator treatments designed to temporarily relax targeted muscles or reduce overactive sweat gland activity. Common neuromodulators: Botox®, Xeomin®, Letybo®. At SuA Glow, Medical Tox supports concerns involving TMJ/jaw clenching, teeth grinding, chronic muscle tension, migraine-related tension patterns, and hyperhidrosis (excessive sweating). Individualized planning Thoughtful dosing Functional balance Patient comfort Natural movement Anatomy Muscle activity Symptom patterns Treatment goals Functional balance",
+    "snippet": "Therapeutic Neuromodulator Treatments Medical Tox refers to therapeutic neuromodulator treatments designed to temporarily relax targeted muscles or reduce overa..."
+  },
+  {
+    "url": "medical-tox.html",
+    "title": "Medical Oversight",
+    "pageTitle": "Medical Tox",
+    "category": "Medical Tox",
+    "content": "All Medical Tox treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
+    "snippet": "All Medical Tox treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Y..."
+  },
+  {
+    "url": "medical-tox.html#treatment-areas",
+    "title": "Medical Tox Treatment Areas",
+    "pageTitle": "Medical Tox",
+    "category": "Medical Tox",
+    "content": "Jaw Clenching & Teeth Grinding One of the most commonly requested Medical Tox treatments. Neuromodulators may help relax overactive jaw muscles associated with jaw clenching, teeth grinding, jaw tension, and facial tightness. Many patients seek treatment because they wake up with jaw soreness, grind teeth at night, experience chronic facial tension, or notice jaw muscle enlargement over time. Tension-Focused Muscle Relaxation Medical Tox may be used as part of a broader management approach for chronic migraine or tension-related headache patterns. Targeted areas may include: forehead, temples, scalp, neck, and upper shoulders. Medical Tox may help reduce excessive sweating by temporarily decreasing overactive sweat gland signaling. Targets excessive underarm sweating. The most commonly requested hyperhidrosis treatment. Targets excessive hand sweating. Common among professionals, public speakers, healthcare workers, and performers. Targets excessive foot sweating. Often requested for shoe discomfort and moisture-related irritation.",
+    "snippet": "Jaw Clenching & Teeth Grinding One of the most commonly requested Medical Tox treatments. Neuromodulators may help relax overactive jaw muscles associated with ..."
+  },
+  {
+    "url": "medical-tox.html#why-sua",
+    "title": "Why Patients Choose SuA Glow",
+    "pageTitle": "Medical Tox",
+    "category": "Medical Tox",
+    "content": "Precision-focused placement Conservative dosing Individualized planning Patient comfort Functional support",
+    "snippet": "Precision-focused placement Conservative dosing Individualized planning Patient comfort Functional support"
+  },
+  {
+    "url": "medical-tox.html#expect",
+    "title": "What to Expect",
+    "pageTitle": "Medical Tox",
+    "category": "Medical Tox",
+    "content": "Personalized assessment: symptoms, anatomy, muscle activity, movement patterns, treatment goals. Numbing applied 15–30 min. ~30–60 Minutes Mild redness, temporary swelling, soreness. Generally resolves within hours to days. Gradual improvement over days to two weeks. Maintenance may be recommended.",
+    "snippet": "Personalized assessment: symptoms, anatomy, muscle activity, movement patterns, treatment goals. Numbing applied 15–30 min. ~30–60 Minutes Mild redness, tempora..."
+  },
+  {
+    "url": "medical-tox.html#faq",
+    "title": "Frequently Asked Questions",
+    "pageTitle": "Medical Tox",
+    "category": "Medical Tox",
+    "content": "Both use neuromodulators, but Medical Tox focuses on functional concerns such as muscle tension, sweating, jaw clenching, and headache-related tension patterns. Some patients may notice softening of enlarged jaw muscles over time as muscle activity decreases. The goal is typically reduction — not complete elimination — of excessive sweating in targeted areas. Neuromodulators may help relax overactive jaw muscles associated with clenching and grinding in select patients. Most patients tolerate treatment well. Depending on the area, topical numbing may be used for comfort. Many patients notice early improvement within several days, with fuller results over approximately 1–2 weeks. Medical Tox may help reduce excessive sweating in areas such as the underarms, hands, and feet by temporarily decreasing overactive sweat gland signaling.",
+    "snippet": "Both use neuromodulators, but Medical Tox focuses on functional concerns such as muscle tension, sweating, jaw clenching, and headache-related tension patterns...."
+  },
+  {
+    "url": "medical-tox.html",
+    "title": "Precision matters.Because therapeutic treatmentsdeserve thoughtful care.",
+    "pageTitle": "Medical Tox",
+    "category": "Medical Tox",
+    "content": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under appropriate medical oversight and within the scope of practice permitted under Texas law. Results are individualized.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under appropriate medical oversight and within the scope of practice permitted under Te..."
+  },
+  {
+    "url": "navbar.html",
+    "title": "SuA Glow",
+    "pageTitle": "SuA Glow",
+    "category": "Spa Treatments",
+    "content": "Injectables Cosmetic Tox: Face & Body Medical Tox: Scar, Sweat, Migraine Dermal Fillers Sculptra: Face & Body Skin Boosters Overview Rejuran Tone Up Juvelook Elravie Re20 CellREDM BYRYZN Hilo Wave® Skinvive Treatment Quiz Signature & Exosome Sophia's Choice One Day Glow Bridal Glow Exosome Facial Hair Restoration Precision Tech LDM Ultrasound Facial LDM + Skin Booster Barrier Repair Therapy SkinPen Microneedling Featured Rejuran® DNA Healer Injectables Skin Boosters Signature & Exosome Precision Tech",
+    "snippet": "Injectables Cosmetic Tox: Face & Body Medical Tox: Scar, Sweat, Migraine Dermal Fillers Sculptra: Face & Body Skin Boosters Overview Rejuran Tone Up Juvelook El..."
+  },
+  {
+    "url": "oligio-x.html#hero",
+    "title": "Oligio XRF Lifting",
+    "pageTitle": "Oligio X RF Lifting",
+    "category": "Oligio X RF Lifting",
+    "content": "Monopolar radiofrequency skin tightening. Deep collagen remodeling. Lifting and contouring without surgery — using the clinically proven GXG dual-mode protocol.",
+    "snippet": "Monopolar radiofrequency skin tightening. Deep collagen remodeling. Lifting and contouring without surgery — using the clinically proven GXG dual-mode protocol."
+  },
+  {
+    "url": "oligio-x.html#what-is",
+    "title": "Skin tightening that works from within.",
+    "pageTitle": "Oligio X RF Lifting",
+    "category": "Oligio X RF Lifting",
+    "content": "Oligio X delivers monopolar radiofrequency energy at 6.78MHz directly into the dermis, generating controlled deep tissue heat (40–60°C). This triggers an immediate collagen contraction response followed by long-term neocollagenesis — new collagen production that continues improving skin quality for weeks after treatment. Unlike surface-level treatments, Oligio X targets the structural foundation of the skin. The result is genuine lifting, tightening, and wrinkle reduction — not surface shimmer. The Seoul standard for non-invasive lifting: precise energy, clinical protocol, measurable results. Oligio X Monopolar RF 400W Maximum System Output",
+    "snippet": "Oligio X delivers monopolar radiofrequency energy at 6.78MHz directly into the dermis, generating controlled deep tissue heat (40–60°C). This triggers an immedi..."
+  },
+  {
+    "url": "oligio-x.html",
+    "title": "Clinical Indications",
+    "pageTitle": "Oligio X RF Lifting",
+    "category": "Oligio X RF Lifting",
+    "content": "Lifting & Tightening Skin laxity & jowling Facial contouring Skin tightening Wrinkle Reduction Fine lines & rhytides Periorbital wrinkles Nasolabial folds (mild–moderate) Skin Rejuvenation Neocollagenesis & collagen remodeling Uneven skin tone & texture Enlarged pores Optimized 4.0cm² surface area with intensive multidirectional cooling for rapid, uniform full-face tightening. High-precision 0.25cm² contact tip specifically calibrated for delicate eyelid and under-eye wrinkle lifting. Oligio X utilizes dual-patented treatment tips engineered for precise energy coupling. By splitting delivery between facial contour rejuvenation and highly precise periorbital tissue tightening, patients receive targeted dermal therapy with maximized comfort and optimal anatomical coverage.",
+    "snippet": "Lifting & Tightening Skin laxity & jowling Facial contouring Skin tightening Wrinkle Reduction Fine lines & rhytides Periorbital wrinkles Nasolabial folds (mild..."
+  },
+  {
+    "url": "oligio-x.html#gxg-protocol",
+    "title": "The GXG Dual-Mode Protocol",
+    "pageTitle": "Oligio X RF Lifting",
+    "category": "Oligio X RF Lifting",
+    "content": "Three Steps. One Comprehensive Treatment. Step 01 — Pre-Heating G Mode gliding pre-heats the upper dermis, preparing the tissue and creating an even thermal baseline. 4.0–5.0 Lv • 100 shots Step 02 — Core-Heating Powerful X Mode stamping delivers intense heat, targeting lower dermis for concentrated tightening. 2.0–3.0 Lv • 70 shots Step 03 — Long-Lasting Final G Mode gliding seals in deep heat, prolonging thermal retention for optimal remodeling. 4.0–5.0 Lv • 130 shots Dual Mode dynamically combines superficial G Mode pre-heating and deep X Mode target heating. Standard full-face protocol: 300 shots per side • 600 shots total. Energy level and shot count are always adjusted based on patient feedback and tolerance.",
+    "snippet": "Three Steps. One Comprehensive Treatment. Step 01 — Pre-Heating G Mode gliding pre-heats the upper dermis, preparing the tissue and creating an even thermal bas..."
+  },
+  {
+    "url": "oligio-x.html#science",
+    "title": "How Monopolar RF Works",
+    "pageTitle": "Oligio X RF Lifting",
+    "category": "Oligio X RF Lifting",
+    "content": "The Science of Deep Tissue Remodeling Dermal Thermal Penetration Controlled 6.78MHz Energy targeting the Deep Dermis Step 01 High-frequency alternating current (6.78MHz) passes between the treatment tip and grounding pad, penetrating deep into dermal tissue. Step 02 Tissue molecules oscillate millions of times per second, converting electrical energy to localized deep heat (40–60°C) within the dermis. Step 03 Immediate collagen denaturation and fiber contraction creates an instant tightening response, stimulating fibroblast activity. Step 04 Natural wound healing triggers sustained dermal remodeling and new collagen synthesis — results continue improving over 2–4 weeks post-treatment.",
+    "snippet": "The Science of Deep Tissue Remodeling Dermal Thermal Penetration Controlled 6.78MHz Energy targeting the Deep Dermis Step 01 High-frequency alternating current ..."
+  },
+  {
+    "url": "oligio-x.html#device",
+    "title": "Premium Handpiece",
+    "pageTitle": "Oligio X RF Lifting",
+    "category": "Oligio X RF Lifting",
+    "content": "Ergonomic Oligio X handpiece featuring integrated shot triggers and status buttons. System Console Hover to inspect system details The Oligio X system delivers up to 400W of monopolar RF energy with real-time impedance feedback — ensuring consistent, calibrated power with every shot. An intensive 5-stage cooling system (pre, button, parallel, post cooling + continuous cooling) protects the skin surface while energy penetrates the dermis.",
+    "snippet": "Ergonomic Oligio X handpiece featuring integrated shot triggers and status buttons. System Console Hover to inspect system details The Oligio X system delivers ..."
+  },
+  {
+    "url": "oligio-x.html#clinical-cases",
+    "title": "Clinical Case Results",
+    "pageTitle": "Oligio X RF Lifting",
+    "category": "Oligio X RF Lifting",
+    "content": "Proven Lifting & Contouring Efficacy Visible jawline contouring and reduction of lower facial laxity observed immediately to 4 weeks post GXG dual-mode treatment. Significant skin tightening and definition improvement along the chin, neck and submental contours. Improvement in cheek projection and lifting of nasolabial creases driven by neocollagenesis remodeling.",
+    "snippet": "Proven Lifting & Contouring Efficacy Visible jawline contouring and reduction of lower facial laxity observed immediately to 4 weeks post GXG dual-mode treatmen..."
+  },
+  {
+    "url": "oligio-x.html",
+    "title": "Dermal Elasticity & K-Glow",
+    "pageTitle": "Oligio X RF Lifting",
+    "category": "Oligio X RF Lifting",
+    "content": "True anti-aging isn't just about freezing lines — it's about restoring the natural elasticity and radiance of your skin. By stimulating deep-level neocollagenesis, Oligio X physically thickens the dermal layer, leading to visible pore contraction, improved hydration, and a smooth, reflective K-Glow texture. Visible reduction in pore size and rough patches for glass-like smoothness. Increases structural support from within to bounce back against gravitational sagging.",
+    "snippet": "True anti-aging isn't just about freezing lines — it's about restoring the natural elasticity and radiance of your skin. By stimulating deep-level neocollagenes..."
+  },
+  {
+    "url": "oligio-x.html#candidates",
+    "title": "Who Is Oligio X For?",
+    "pageTitle": "Oligio X RF Lifting",
+    "category": "Oligio X RF Lifting",
+    "content": "Ideal Candidates Thin, lax skin with reduced elasticity that appears loose or drooping. Loss of jaw definition and sagging along the lower face and chin area. Periorbital lines, forehead creasing, and nasolabial folds (mild–moderate). Visible, enlarged pores and uneven skin texture seeking structural improvement.",
+    "snippet": "Ideal Candidates Thin, lax skin with reduced elasticity that appears loose or drooping. Loss of jaw definition and sagging along the lower face and chin area. P..."
+  },
+  {
+    "url": "oligio-x.html",
+    "title": "Medical Oversight",
+    "pageTitle": "Oligio X RF Lifting",
+    "category": "Oligio X RF Lifting",
+    "content": "All Oligio X RF Lifting treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
+    "snippet": "All Oligio X RF Lifting treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr..."
+  },
+  {
+    "url": "oligio-x.html#faq",
+    "title": "Oligio X FAQs",
+    "pageTitle": "Oligio X RF Lifting",
+    "category": "Oligio X RF Lifting",
+    "content": "Most patients experience a warming sensation during treatment. The GXG protocol is designed to maintain a manageable heat level — a 3 to 3.5 out of 10 discomfort rating is ideal for treatment efficacy. The built-in cooling system continuously protects the skin surface throughout the session. Some patients notice an immediate tightening effect. However, the most significant results — driven by new collagen formation — typically develop over 2 to 4 weeks post-treatment. Clinical studies have documented continued improvement at 4 and 24 weeks following treatment. Session recommendations are individualized based on skin condition, treatment goals, and clinical assessment. Some patients achieve their goals with a single session; others benefit from a series of treatments. Sophia will advise a personalized plan during your consultation. Oligio X is a non-invasive treatment. Most patients experience mild redness or warmth immediately after, which typically resolves within a few hours. There is no significant downtime, though individual responses may vary based on skin sensitivity and energy levels used. Yes. Oligio X may be incorporated into a comprehensive skin rejuvenation plan alongside other treatments such as the SuA Glow Signature Treatment, skin quality boosters, or injectables. Combination protocols are always personalized at SuA Glow based on individual skin assessment and goals.",
+    "snippet": "Most patients experience a warming sensation during treatment. The GXG protocol is designed to maintain a manageable heat level — a 3 to 3.5 out of 10 discomfor..."
+  },
+  {
+    "url": "oligio-x.html",
+    "title": "Lift from within.Remodel. Refine.Very Seoul.",
+    "pageTitle": "Oligio X RF Lifting",
+    "category": "Oligio X RF Lifting",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "one-day-glow.html#hero",
+    "title": "One DayGlow",
+    "pageTitle": "One Day Glow Treatment",
+    "category": "One Day Glow",
+    "content": "Korean Event-Ready Skin Treatments. Smooth, polished, camera-ready skin with minimal visible downtime.",
+    "snippet": "Korean Event-Ready Skin Treatments. Smooth, polished, camera-ready skin with minimal visible downtime."
+  },
+  {
+    "url": "one-day-glow.html#what-is",
+    "title": "Next-Day Skin Refinement",
+    "pageTitle": "One Day Glow Treatment",
+    "category": "One Day Glow",
+    "content": "The Seoul Event Prep Philosophy Some treatments are designed for long-term correction. One Day Glow is designed for tomorrow. First date. Media event. Photoshoot. Or simply: \"I need my skin to look refreshed and hydrated this week.\" At SuA Glow, the One Day Glow is a Korean-inspired event-prep skin treatment designed to help skin appear naturally radiant with minimal visible downtime. • Event Prep • Minimal Downtime • Polished Finish • Camera Ready • Hydrated Glow • Refined Pores Event Ready Polish",
+    "snippet": "The Seoul Event Prep Philosophy Some treatments are designed for long-term correction. One Day Glow is designed for tomorrow. First date. Media event. Photoshoo..."
+  },
+  {
+    "url": "one-day-glow.html",
+    "title": "Medical Oversight",
+    "pageTitle": "One Day Glow Treatment",
+    "category": "One Day Glow",
+    "content": "All One Day Glow Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
+    "snippet": "All One Day Glow Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam ..."
+  },
+  {
+    "url": "one-day-glow.html#philosophies",
+    "title": "Four Pillars of Event Skin",
+    "pageTitle": "One Day Glow Treatment",
+    "category": "One Day Glow",
+    "content": "The Strategic K-Beauty Approach Hydration-focused skin treatments designed to support a refreshed, glow-focused appearance with healthy reflection. Deep Moisture Skin Bounce Glass Skin Base Microdosing neuromodulator approaches focused on pore appearance, excessive shine, and a polished makeup finish. Pore Control Balanced Shine Smooth Canvas Strategic treatment selection customized to help reduce unnecessary visible treatment signs when timing matters most. Low Bruising Risk Quick Recovery Event Safe Improving how skin catches the light. The goal is skin that looks luxurious without trying too hard. Natural Glow Camera Friendly Luminous Finish",
+    "snippet": "The Strategic K-Beauty Approach Hydration-focused skin treatments designed to support a refreshed, glow-focused appearance with healthy reflection. Deep Moistur..."
+  },
+  {
+    "url": "one-day-glow.html#treatment-benefits",
+    "title": "Targeted Event Prep Results",
+    "pageTitle": "One Day Glow Treatment",
+    "category": "One Day Glow",
+    "content": "Personalized For Your Timeline Smoothing texture so high-definition cameras capture your skin at its best. Creating an ultra-smooth, hydrated canvas so makeup glides on and stays luminous. Restoring the inner light of the skin through deep-level hydration and nutrient delivery. Strategic treatments chosen specifically to minimize redness and ensure next-day readiness. Tightening the appearance of pores to create a more even, flawless surface. Erasing signs of fatigue so you look naturally refreshed and energized. More aggressive treatments are not always smarter treatment before an important event. Especially when patients want a glass skin-inspired glow with minimal visible downtime. Many Korean aesthetic clinics emphasize event-focused skin preparation because skin texture affects makeup appearance, and pores become more visible under lighting. The goal is polished skin — not recovery mode.",
+    "snippet": "Personalized For Your Timeline Smoothing texture so high-definition cameras capture your skin at its best. Creating an ultra-smooth, hydrated canvas so makeup g..."
+  },
+  {
+    "url": "one-day-glow.html#why-sua",
+    "title": "The SuA Glow Event Philosophy",
+    "pageTitle": "One Day Glow Treatment",
+    "category": "One Day Glow",
+    "content": "Seoul Precision. Event Ready. At SuA Glow, One Day Glow treatment planning prioritizes strategic treatment selection, hydration-focused refinement, and individualized event timing. Because healthy-looking skin often photographs best. We focus on subtle, camera-friendly skin improvement that leaves you looking like yourself, only more rested and radiant. We schedule and select treatments based precisely on your upcoming event timeline. Prioritizing modalities that deliver maximum glow with the lowest risk of visible downtime. Leveraging Korean water droplet facial techniques to plump and smooth the skin's surface.",
+    "snippet": "Seoul Precision. Event Ready. At SuA Glow, One Day Glow treatment planning prioritizes strategic treatment selection, hydration-focused refinement, and individu..."
+  },
+  {
+    "url": "one-day-glow.html#expect",
+    "title": "The Event Prep Journey",
+    "pageTitle": "One Day Glow Treatment",
+    "category": "One Day Glow",
+    "content": "Evaluation of your event timeline, skin texture, hydration, and makeup concerns. A customized plan utilizing SkinTox, hydration boosters, or water droplet techniques. Designed for minimal visible downtime, prioritizing a quick return to normal activities. Refreshed, polished, and naturally radiant skin ready for photography and lighting.",
+    "snippet": "Evaluation of your event timeline, skin texture, hydration, and makeup concerns. A customized plan utilizing SkinTox, hydration boosters, or water droplet techn..."
+  },
+  {
+    "url": "one-day-glow.html#faq",
+    "title": "Event Prep FAQs",
+    "pageTitle": "One Day Glow Treatment",
+    "category": "One Day Glow",
+    "content": "One Day Glow is a Korean-inspired event-prep skin treatment plan designed to help skin appear smoother, more hydrated, refreshed, and naturally radiant before an important event. Treatment plans are individualized based on skin condition, event timing, and treatment goals. That is one of the most common reasons patients seek the treatment. Hydration-focused and SkinTox-style approaches may help support smoother makeup application, healthier-looking skin texture, refined pore appearance, and improved skin reflection under lighting. For some patients, yes. Many Korean-inspired event skin treatments are designed around hydration support, texture refinement, and minimal visible downtime. At SuA Glow, event timing and treatment selection are customized carefully to help reduce unnecessary downtime before important occasions. That is not the goal. At SuA Glow, One Day Glow treatment prioritizes subtle refinement, balanced movement, natural-looking skin, and camera-friendly texture refinement. Because the best event skin often looks effortless.",
+    "snippet": "One Day Glow is a Korean-inspired event-prep skin treatment plan designed to help skin appear smoother, more hydrated, refreshed, and naturally radiant before a..."
+  },
+  {
+    "url": "one-day-glow.html",
+    "title": "Refined movement.Controlled glow.Very Seoul.",
+    "pageTitle": "One Day Glow Treatment",
+    "category": "One Day Glow",
+    "content": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessment.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessme..."
+  },
+  {
+    "url": "press-media.html",
+    "title": "K-Beauty doesn't chase trends.It builds better skin.",
+    "pageTitle": "Press & Media",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "privacy-policy.html",
+    "title": "1. Information We Collect",
+    "pageTitle": "Privacy Policy",
+    "category": "Spa Treatments",
+    "content": "Effective Date: January 2026 Welcome to SuA Glow (“we,” “us,” or “our”). Protecting your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit www.suaglow.com (the “Website”). By accessing or using our Website, you agree to the practices described in this Privacy Policy. We may collect personal information that you voluntarily provide to us, including but not limited to: Name Email address Phone number Other contact details. This information may be collected when you: Complete forms on our Website (e.g., booking consultations or submitting inquiries) Subscribe to communications or newsletters Communicate with us directly When you visit our Website, we may automatically collect certain technical information, including: IP address Browser type and version Operating system Device identifiers Website usage data (e.g., pages viewed, time spent, navigation patterns) This information is collected through cookies and similar tracking technologies. Cookies are small text files placed on your device when you visit a website. They help us recognize your browser and improve functionality, performance, and user experience. Essential Cookies – Necessary for core website functionality and security Analytical/Performance Cookies – Help us analyze website traffic and improve performance Functional Cookies – Remember user preferences and enhance browsing experience You may manage or disable cookies through your browser settings. Please note that disabling certain cookies may affect Website functionality. Where required by law (including in the EU and UK), we will request your explicit consent before placing non-essential cookies. We use collected information for purposes including: Operating, maintaining, and improving our Website Responding to inquiries and providing customer support Personalizing user experience Complying with legal and regulatory obligations We do not sell or rent your personal information. We may share limited information with: Trusted service providers who assist in operating our Website and delivering services (e.g., hosting providers, analytics platforms) Legal or regulatory authorities where disclosure is required by law All third parties are required to maintain the confidentiality and security of your information. We implement reasonable administrative, technical, and organizational safeguards to protect your information from unauthorized access, disclosure, alteration, or destruction. However, no online transmission or storage system can be guaranteed to be 100% secure. Depending on your jurisdiction, you may have rights under applicable privacy laws (including GDPR and CCPA), such as the right to: Access the personal information we hold about you Request correction or deletion of your information Opt out of certain data uses (e.g., marketing communications or cookies) Withdraw consent where previously provided To exercise these rights, please contact us using the Contact Us information below. We may update this Privacy Policy periodically. Any changes will be posted on this page with an updated \"Effective Date.\" We encourage you to review this Privacy Policy regularly. If you have questions or concerns about this Privacy Policy, please contact us: Email: info@suaglow.com Phone: 972-665-8737 Address: 4116 State Highway 121, Suite 120, Office O, Carrollton, TX 75010",
+    "snippet": "Effective Date: January 2026 Welcome to SuA Glow (“we,” “us,” or “our”). Protecting your privacy is important to us. This Privacy Policy explains how we collect..."
+  },
+  {
+    "url": "radiesse.html#hero",
+    "title": "RadiesseBio-Stimulator",
+    "pageTitle": "Radiesse Bio-Stimulator",
+    "category": "Radiesse",
+    "content": "Korean-inspired collagen induction. Deep structural support, skin tightening, and long-term tissue regeneration.",
+    "snippet": "Korean-inspired collagen induction. Deep structural support, skin tightening, and long-term tissue regeneration."
+  },
+  {
+    "url": "radiesse.html#what-is",
+    "title": "Regenerative Aesthetics",
+    "pageTitle": "Radiesse Bio-Stimulator",
+    "category": "Radiesse",
+    "content": "The Seoul Bio-Stimulation Philosophy Traditional fillers add volume. Bio-stimulators signal your body to rebuild its own structural foundation. At SuA Glow, we utilize Radiesse (Calcium Hydroxylapatite) conceptually as it's used in top Seoul clinics: not merely for filling lines, but hyper-diluted as a profound collagen and elastin stimulator. This approach tightens crepey skin, improves structural density, and provides long-lasting, natural rejuvenation. • Collagen Depletion • Skin Laxity • Crepey Texture • Skin Tightening • Restored Density • Endogenous Collagen Bio-Stimulator Focus",
+    "snippet": "The Seoul Bio-Stimulation Philosophy Traditional fillers add volume. Bio-stimulators signal your body to rebuild its own structural foundation. At SuA Glow, we ..."
+  },
+  {
+    "url": "radiesse.html",
+    "title": "Medical Oversight",
+    "pageTitle": "Radiesse Bio-Stimulator",
+    "category": "Radiesse",
+    "content": "All Radiesse Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
+    "snippet": "All Radiesse Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang..."
+  },
+  {
+    "url": "radiesse.html#philosophies",
+    "title": "Four Pillars of Radiesse",
+    "pageTitle": "Radiesse Bio-Stimulator",
+    "category": "Radiesse",
+    "content": "The Strategic K-Beauty Approach Radiesse physically stimulates fibroblasts to produce high-quality Type I and Type III collagen, the structural proteins of youth. Fibroblast Action Type I Collagen Endogenous Production When diluted, Radiesse spreads smoothly under the skin to act purely as a skin-tightening agent without adding unwanted bulk. No Bulking Smooth Wash Pure Tightening Unlike many other injectables, Radiesse is proven to stimulate elastin production, giving the skin back its \"snap\" and recoil. Skin Snap Recoil Restoration Firmness The bio-stimulatory effects continue for months, creating sustained structural improvements that last well beyond the initial product absorption. Sustained Results Progressive Fix True Remodeling",
+    "snippet": "The Strategic K-Beauty Approach Radiesse physically stimulates fibroblasts to produce high-quality Type I and Type III collagen, the structural proteins of yout..."
+  },
+  {
+    "url": "radiesse.html#treatment-benefits",
+    "title": "Targeted Radiesse Results",
+    "pageTitle": "Radiesse Bio-Stimulator",
+    "category": "Radiesse",
+    "content": "Personalized For Your Skin Smoothing \"tech neck\" lines and firming the delicate, often crepey skin of the anterior neck. Improving skin density along the lower face to create a sharper, tighter jawline contour. Restoring the structural net of the cheeks to prevent downward sagging and hollowing. Restoring lost volume to the backs of hands, hiding prominent veins and tendons. Thickening thin, papery skin across the face, decolletage, or body for a smoother texture. Because you are growing your own collagen, the results integrate seamlessly and naturally. Korean aesthetic medicine has heavily shifted away from merely \"filling\" the face toward regenerating the face. Over-filling leads to unnatural puffiness. Regeneration leads to tighter, firmer, naturally younger-acting skin. Radiesse is a powerful tool in this regenerative shift. It wakes up tired cells and asks them to rebuild the structural matrix of your skin.",
+    "snippet": "Personalized For Your Skin Smoothing \"tech neck\" lines and firming the delicate, often crepey skin of the anterior neck. Improving skin density along the lower ..."
+  },
+  {
+    "url": "radiesse.html#before-after-gallery",
+    "title": "Clinical Proof",
+    "pageTitle": "Radiesse Bio-Stimulator",
+    "category": "Radiesse",
+    "content": "Real Radiesse Patient Outcomes Jean experienced significant improvement in skin laxity along her lower face and jawline. Injected with Radiesse (+) to lift and define, restoring crisp anatomical jaw contours without adding excessive midface projection. Treatment Profile • Patient: Jean, Age 57 • Target: Lower Face Loss of Jawline Contour • Outcome: 4 Weeks Post-Treatment Glenys received hyper-dilute Radiesse in her cheeks and lower face. This treatment restored skin thickness and elastic snap, naturally lifting the downward descent of facial tissues and softening the nasolabial shadows. Treatment Profile • Patient: Glenys, Age 41 • Target: Crepey Cheeks and Soft Volume Deficit • Outcome: 4 Weeks Post-Treatment Andrea's hands showed signs of skeletal aging with visible veins and tendons. Radiesse correction instantly filled the volume deficit while laying down a framework to grow collagen for a long-term smooth surface. Treatment Profile • Patient: Andrea, Age 42 • Target: Prominent Veins and Skeletonized Appearance • Outcome: 2 Weeks Post-Treatment",
+    "snippet": "Real Radiesse Patient Outcomes Jean experienced significant improvement in skin laxity along her lower face and jawline. Injected with Radiesse (+) to lift and ..."
+  },
+  {
+    "url": "radiesse.html#why-sua",
+    "title": "The SuA Glow Regenerative Philosophy",
+    "pageTitle": "Radiesse Bio-Stimulator",
+    "category": "Radiesse",
+    "content": "Seoul Precision. Bio-Stimulation. We view Radiesse as an investment in your skin's future architecture. It is not an instant fix for a specific wrinkle; it is a global upgrade to skin quality. By carefully customizing the dilution ratios and utilizing advanced cannula techniques, we can deliver the collagen-stimulating power of Radiesse exactly where your skin needs structural tightening the most. Using blunt-tipped cannulas to ensure a smooth, even distribution of the product with minimal bruising. Tailoring the hyper-dilution mixture specifically for the thickness and needs of your face or neck. We educate our patients that the best results take 2-3 months to manifest as new collagen forms.",
+    "snippet": "Seoul Precision. Bio-Stimulation. We view Radiesse as an investment in your skin's future architecture. It is not an instant fix for a specific wrinkle; it is a..."
+  },
+  {
+    "url": "radiesse.html#expect",
+    "title": "The Bio-Stimulator Journey",
+    "pageTitle": "Radiesse Bio-Stimulator",
+    "category": "Radiesse",
+    "content": "Assessing skin laxity and determining if you need volume replacement (traditional filler) or tissue tightening (Radiesse). A quick, comfortable procedure using advanced cannula techniques to lay down the bio-stimulatory matrix. Initial carrier gel absorbs quickly. Over the next 4-12 weeks, your body begins to build new, dense collagen. Thicker, firmer, tighter skin with improved elasticity that looks entirely natural because it is your own tissue.",
+    "snippet": "Assessing skin laxity and determining if you need volume replacement (traditional filler) or tissue tightening (Radiesse). A quick, comfortable procedure using ..."
+  },
+  {
+    "url": "radiesse.html#faq",
+    "title": "Radiesse FAQs",
+    "pageTitle": "Radiesse Bio-Stimulator",
+    "category": "Radiesse",
+    "content": "Hyaluronic Acid (HA) fillers work by instantly plumping and hydrating a specific fold or hollow. Radiesse (Calcium Hydroxylapatite) is a bio-stimulator; it works by triggering your body's own cells to produce new collagen and elastin, creating a long-term structural tightening effect. When used conventionally, Radiesse provides rigid volume. When we \"hyper-dilute\" it with saline and lidocaine, it becomes a thin wash. This allows us to spread the collagen-stimulating particles over a wide area (like the neck or cheeks) to tighten crepey skin without adding any puffiness or volume. You may see a subtle initial improvement from the carrier gel, but true results take patience. Significant collagen production usually begins around 4 weeks and peaks at 3 months. Depending on the degree of skin laxity, most patients require 1 to 3 sessions spaced roughly 4 to 6 weeks apart to build the desired foundational matrix, followed by annual maintenance.",
+    "snippet": "Hyaluronic Acid (HA) fillers work by instantly plumping and hydrating a specific fold or hollow. Radiesse (Calcium Hydroxylapatite) is a bio-stimulator; it work..."
+  },
+  {
+    "url": "radiesse.html",
+    "title": "Refined movement.Controlled glow.Very Seoul.",
+    "pageTitle": "Radiesse Bio-Stimulator",
+    "category": "Radiesse",
+    "content": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessment.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessme..."
+  },
+  {
+    "url": "referral.html#hero",
+    "title": "ComingSoon",
+    "pageTitle": "Referral Program",
+    "category": "Spa Treatments",
+    "content": "We are building something special for the friends who share the glow. Our referral program rewards you every time someone you love discovers SuA K-Glow. Refer a Friend Share your experience and introduce a friend to Korean medical aesthetics. Earn Rewards Receive exclusive credits toward your next treatment when your referral books. Both of You Glow Your friend receives a welcome bonus on their first visit. Everyone wins.",
+    "snippet": "We are building something special for the friends who share the glow. Our referral program rewards you every time someone you love discovers SuA K-Glow. Refer a..."
+  },
+  {
+    "url": "referral.html",
+    "title": "Be the First to Know",
+    "pageTitle": "Referral Program",
+    "category": "Spa Treatments",
+    "content": "Stay in the Loop The referral program is launching soon. In the meantime, follow us on Instagram or reach out directly and we will add you to the list.",
+    "snippet": "Stay in the Loop The referral program is launching soon. In the meantime, follow us on Instagram or reach out directly and we will add you to the list."
+  },
+  {
+    "url": "salmon-pn-facial.html#hero",
+    "title": "Salmon PNFacial",
+    "pageTitle": "Salmon PN Facial",
+    "category": "Recovery & Repair",
+    "content": "Korean-inspired cellular support. Leveraging Polynucleotides to help repair the skin barrier and improve resilience.",
+    "snippet": "Korean-inspired cellular support. Leveraging Polynucleotides to help repair the skin barrier and improve resilience."
+  },
+  {
+    "url": "salmon-pn-facial.html#what-is",
+    "title": "Barrier Recovery & Repair",
+    "pageTitle": "Salmon PN Facial",
+    "category": "Recovery & Repair",
+    "content": "The Seoul Healing Philosophy Beautiful skin is, first and foremost, healthy skin with a strong barrier. At SuA Glow, the Salmon PN Facial is a Korean-inspired recovery treatment. Utilizing Polynucleotides (PN) derived from salmon DNA, this approach is designed to support the skin's natural healing environment, improve elasticity, and calm compromised barriers. • Barrier Repair • Skin Calming • Cellular Support • Enhanced Resilience • Improved Elasticity • Healthy Glow Cellular Recovery Focus",
+    "snippet": "The Seoul Healing Philosophy Beautiful skin is, first and foremost, healthy skin with a strong barrier. At SuA Glow, the Salmon PN Facial is a Korean-inspired r..."
+  },
+  {
+    "url": "salmon-pn-facial.html",
+    "title": "Medical Oversight",
+    "pageTitle": "Salmon PN Facial",
+    "category": "Recovery & Repair",
+    "content": "All treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
+    "snippet": "All treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accor..."
+  },
+  {
+    "url": "salmon-pn-facial.html#philosophies",
+    "title": "Four Pillars of PN Repair",
+    "pageTitle": "Salmon PN Facial",
+    "category": "Recovery & Repair",
+    "content": "The Strategic K-Beauty Approach Utilizing highly biocompatible DNA fragments from salmon to create an optimal environment for skin regeneration. Biocompatible DNA Fragments Optimal Environment Strengthening a compromised skin barrier, reducing sensitivity, and improving the skin's defense against stress. Thicker Barrier Reduced Sensitivity Defense System Supporting the extracellular matrix to visibly improve skin elasticity, firmness, and overall structural density. Firmness Boost Elasticity Structural Density Helping to soothe irritated skin and reduce visible redness associated with inflammation and barrier damage. Soothe Redness Calm Irritation Even Tone",
+    "snippet": "The Strategic K-Beauty Approach Utilizing highly biocompatible DNA fragments from salmon to create an optimal environment for skin regeneration. Biocompatible D..."
+  },
+  {
+    "url": "salmon-pn-facial.html#treatment-benefits",
+    "title": "Targeted Repair Results",
+    "pageTitle": "Salmon PN Facial",
+    "category": "Recovery & Repair",
+    "content": "Personalized For Recovery Thickening the skin barrier to protect against moisture loss and environmental damage. Restoring the skin's natural \"bounce\" by supporting collagen and elastin structures. Transforming dull, tired skin into a radiant, healthy-looking complexion from within. Significantly reducing visible redness and soothing hyper-reactive or sensitive skin. Smoothing rough patches and uneven surfaces for a more refined, polished look. Improving the skin's ability to hold onto hydration, preventing trans-epidermal water loss. Korean aesthetics is famous for its focus on skin healing and barrier support. Rather than constantly attacking the skin with harsh acids and lasers, the focus is on rebuilding. Polynucleotides (PN) are a cornerstone of this philosophy, providing the building blocks for the skin to repair itself. The result is healthier, stronger, more resilient skin.",
+    "snippet": "Personalized For Recovery Thickening the skin barrier to protect against moisture loss and environmental damage. Restoring the skin's natural \"bounce\" by suppor..."
+  },
+  {
+    "url": "salmon-pn-facial.html#why-sua",
+    "title": "The SuA Glow Repair Philosophy",
+    "pageTitle": "Salmon PN Facial",
+    "category": "Recovery & Repair",
+    "content": "Seoul Precision. Barrier Focused. At SuA Glow, we prioritize skin health above all else. If the barrier is compromised, the glow cannot exist. The Salmon PN Facial is designed for patients who have over-exfoliated, experienced environmental stress, or simply need to reset their skin’s foundation. Healthier skin is always the goal. We focus on repairing the foundation before introducing aggressive corrective treatments. Utilizing ingredients that closely mimic human DNA for optimal acceptance and healing. Building skin that can withstand daily stress and maintain a healthy appearance over time.",
+    "snippet": "Seoul Precision. Barrier Focused. At SuA Glow, we prioritize skin health above all else. If the barrier is compromised, the glow cannot exist. The Salmon PN Fac..."
+  },
+  {
+    "url": "salmon-pn-facial.html#expect",
+    "title": "The Repair Journey",
+    "pageTitle": "Salmon PN Facial",
+    "category": "Recovery & Repair",
+    "content": "Assessment of your skin barrier, redness, and signs of structural fatigue. A customized approach using Salmon PN to deliver targeted support to compromised areas. A brief period as the skin utilizes the polynucleotides to begin structural repair. Thicker, calmer, more elastic skin with a noticeably healthier foundation.",
+    "snippet": "Assessment of your skin barrier, redness, and signs of structural fatigue. A customized approach using Salmon PN to deliver targeted support to compromised area..."
+  },
+  {
+    "url": "salmon-pn-facial.html#faq",
+    "title": "Salmon PN FAQs",
+    "pageTitle": "Salmon PN Facial",
+    "category": "Recovery & Repair",
+    "content": "A Korean-inspired skin recovery treatment that utilizes Polynucleotides (PN) extracted from salmon DNA. It is designed to support the skin's natural healing environment, improve barrier function, and enhance elasticity. Salmon DNA is highly biocompatible with human DNA. The extracted polynucleotides are purified and used to create an optimal environment in the skin for cellular repair, collagen support, and barrier strengthening without adverse reactions. Rejuran is a specific brand of PN treatment famous in Korea. The Salmon PN Facial utilizes the same underlying science of polynucleotide-based skin healing to achieve similar goals of barrier repair and skin rejuvenation. This treatment is excellent for anyone with a compromised skin barrier, sensitive skin, excessive redness, thinning skin, or those looking to improve overall skin health and elasticity through a regenerative approach.",
+    "snippet": "A Korean-inspired skin recovery treatment that utilizes Polynucleotides (PN) extracted from salmon DNA. It is designed to support the skin's natural healing env..."
+  },
+  {
+    "url": "salmon-pn-facial.html",
+    "title": "Refined movement.Controlled glow.Very Seoul.",
+    "pageTitle": "Salmon PN Facial",
+    "category": "Recovery & Repair",
+    "content": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessment.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessme..."
+  },
+  {
+    "url": "scar-treatment.html#hero",
+    "title": "ScarTreatment",
+    "pageTitle": "Korean Scar Treatment",
+    "category": "Scar Treatment",
+    "content": "Korean-inspired structural remodeling. Multi-modality approaches to soften acne scars, refine texture, and restore skin confidence.",
+    "snippet": "Korean-inspired structural remodeling. Multi-modality approaches to soften acne scars, refine texture, and restore skin confidence."
+  },
+  {
+    "url": "scar-treatment.html#what-is",
+    "title": "Structural Texture Refinement",
+    "pageTitle": "Korean Scar Treatment",
+    "category": "Scar Treatment",
+    "content": "The Seoul Remodeling Philosophy Scars are not just surface-level concerns; they involve structural changes deep within the dermal matrix. At SuA Glow, Korean Scar Treatment utilizes a multi-modality approach. By combining specialized techniques like microneedling, structural subcision, and regenerative boosters (like PN or Exosomes), we aim to untether deep scars and stimulate new, healthy tissue growth for a smoother, more even surface. • Acne Scarring • Uneven Texture • Structural Damage • Smoother Surface • Collagen Remodeling • Softened Depressions Precision Skin Texture Focus",
+    "snippet": "The Seoul Remodeling Philosophy Scars are not just surface-level concerns; they involve structural changes deep within the dermal matrix. At SuA Glow, Korean Sc..."
+  },
+  {
+    "url": "scar-treatment.html",
+    "title": "Medical Oversight",
+    "pageTitle": "Korean Scar Treatment",
+    "category": "Scar Treatment",
+    "content": "All Scar Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
+    "snippet": "All Scar Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in ..."
+  },
+  {
+    "url": "scar-treatment.html#philosophies",
+    "title": "Four Pillars of Scar Refinement",
+    "pageTitle": "Korean Scar Treatment",
+    "category": "Scar Treatment",
+    "content": "The Strategic K-Beauty Approach Using advanced microneedling technologies to safely trigger the skin’s natural healing cascade and generate new, organized collagen. New Collagen Controlled Healing Tissue Renewal For deep rolling or tethered scars, subcision techniques are used to release the fibrous bands pulling the skin downward. Band Release Depression Lifting Structural Fix Integrating Polynucleotides (PN) or Exosomes to provide the biological building blocks necessary for faster, higher-quality tissue repair. Faster Healing DNA Support Regeneration Single treatments rarely cure severe scarring. We layer techniques specifically customized to your unique scar types and depths. Custom Planning Layered Focus Progressive Care",
+    "snippet": "The Strategic K-Beauty Approach Using advanced microneedling technologies to safely trigger the skin’s natural healing cascade and generate new, organized colla..."
+  },
+  {
+    "url": "scar-treatment.html#treatment-benefits",
+    "title": "Targeted Scar Results",
+    "pageTitle": "Korean Scar Treatment",
+    "category": "Scar Treatment",
+    "content": "Personalized For Your Skin Gradually softening the appearance of irregular, pitted, or raised skin texture. Helping tethered scars rise closer to the surrounding skin surface for an even plane. Addressing the post-inflammatory hyperpigmentation (PIH) often left behind by acne. Collagen induction naturally tightens the appearance of enlarged pores over time. Rebuilding the health of compromised skin to prevent further damage and inflammation. Achieving a smoother canvas so you feel confident wearing less makeup. In Korean aesthetics, severe scar treatment is rarely approached with a single, highly aggressive laser treatment that requires massive downtime. Instead, it is a layered process. By combining mechanical remodeling (like microneedling or subcision) with biological support (like PN or exosomes), the skin heals better, faster, and with higher quality collagen.",
+    "snippet": "Personalized For Your Skin Gradually softening the appearance of irregular, pitted, or raised skin texture. Helping tethered scars rise closer to the surroundin..."
+  },
+  {
+    "url": "scar-treatment.html#why-sua",
+    "title": "The SuA Glow Scar Philosophy",
+    "pageTitle": "Korean Scar Treatment",
+    "category": "Scar Treatment",
+    "content": "Seoul Precision. Structural Repair. Acne scars come in many forms—ice pick, boxcar, rolling, and tethered. One device cannot treat them all effectively. At SuA Glow, we visually map your scarring and customize a multi-modality treatment plan. We are honest about expectations: scar revision is a progressive journey, not an overnight fix, but significant improvement is highly achievable. We select the exact tool required for the exact depth and type of scar we are treating. We support every procedure with advanced biologicals to maximize your skin's healing response. A commitment to safe, consistent, and cumulative results over a carefully planned timeline.",
+    "snippet": "Seoul Precision. Structural Repair. Acne scars come in many forms—ice pick, boxcar, rolling, and tethered. One device cannot treat them all effectively. At SuA ..."
+  },
+  {
+    "url": "scar-treatment.html#expect",
+    "title": "The Scar Revision Journey",
+    "pageTitle": "Korean Scar Treatment",
+    "category": "Scar Treatment",
+    "content": "Thorough mapping of your scar types (rolling, boxcar, ice pick) to determine the necessary modalities. A customized protocol that may span several months, combining microneedling, subcision, or boosters. Expect redness and mild swelling post-treatment; biologicals help accelerate recovery significantly. A progressive softening of scar edges, lifted depressions, and a dramatically smoother overall texture.",
+    "snippet": "Thorough mapping of your scar types (rolling, boxcar, ice pick) to determine the necessary modalities. A customized protocol that may span several months, combi..."
+  },
+  {
+    "url": "scar-treatment.html#scar-types",
+    "title": "Scar Concerns We Address",
+    "pageTitle": "Korean Scar Treatment",
+    "category": "Scar Treatment",
+    "content": "Comprehensive Treatment Planning Pitted, rolling, boxcar, or ice pick scars resulting from breakouts. We use a layered approach of collagen remodeling, subcision, and hydration support to gently lift depressions and smooth uneven texture without excessive trauma. • Texture Refinement • Subcision & Lift • Pore Smoothing Scars resulting from surgical procedures or trauma. We focus on controlled collagen induction and breaking down fibrous tissue to soften the scar's appearance, reducing redness and blending it with surrounding healthy skin. • Fibrous Band Release • Tissue Blending • Pigment Correction Tears in the dermal matrix resulting from rapid stretching. Using targeted microneedling and advanced skin-quality boosters like Polynucleotides (PN), we stimulate new collagen to improve the texture and tone of stretch marks. • Matrix Repair • Tone Evening • Collagen Induction Overgrowths of scar tissue that rise above the skin surface. Treatment focuses on careful clinical assessment and specialized medical approaches to calm the active tissue and safely reduce its prominence. • Tissue Calming • Careful Assessment • Regulated Healing",
+    "snippet": "Comprehensive Treatment Planning Pitted, rolling, boxcar, or ice pick scars resulting from breakouts. We use a layered approach of collagen remodeling, subcisio..."
+  },
+  {
+    "url": "scar-treatment.html",
+    "title": "How K-Beauty Clinics in Seoul Approach Scars Differently",
+    "pageTitle": "Korean Scar Treatment",
+    "category": "Scar Treatment",
+    "content": "Many traditional scar treatments focus only on “aggressive resurfacing.” Korean aesthetic medicine often takes a more strategic approach: Treat the skin repeatedly. Treat the skin gently. Treat the skin intelligently. The focus is long-term skin quality improvement — not overly aggressive procedures that can increase inflammation, prolonged downtime, or pigment concerns. At SuA Glow, we prioritize skin healing behavior just as much as the scar itself. Because healthier skin often heals better. More aggressive treatment does not always mean better. Patients with Asian skin types and melanin-rich skin often require more thoughtful scar treatment planning due to increased risk of post-inflammatory hyperpigmentation (PIH), prolonged redness, and delayed barrier recovery. SuA Glow frequently treats patients with Asian skin types and melanin-rich skin using customized treatment approaches designed to support skin health while reducing unnecessary inflammation. Our philosophy prioritizes controlled collagen remodeling, hydration support, and gradual skin improvement over time. Microneedling remains one of the most widely used scar treatments globally for improving acne scar appearance, enlarged pores, and overall skin smoothness. At SuA Glow, Korean-inspired microneedling protocols focus on controlled precision rather than excessive trauma. Because more aggressive is not always better. Our scar treatment approach emphasizes customized depth strategies, gradual collagen remodeling, and combination skin-quality planning. Glass skin starts with texture.",
+    "snippet": "Many traditional scar treatments focus only on “aggressive resurfacing.” Korean aesthetic medicine often takes a more strategic approach: Treat the skin repeate..."
+  },
+  {
+    "url": "scar-treatment.html#faq",
+    "title": "Scar Treatment FAQs",
+    "pageTitle": "Korean Scar Treatment",
+    "category": "Scar Treatment",
+    "content": "Scar revision is a process that relies on your body's collagen production cycle. Most patients require a series of 3 to 6 sessions, spaced 4 to 6 weeks apart, depending on the severity and depth of the scarring. In aesthetics, the goal of scar revision is significant improvement, not total erasure. We aim to soften harsh edges, lift depressions, and blend the scarred area to closely match the surrounding healthy skin texture. Subcision is a minor procedural technique used for tethered or rolling scars. A micro-needle is used beneath the surface of the skin to gently break the fibrotic bands pulling the scar down, allowing the skin to lift and smooth out. We prioritize your comfort. A strong topical numbing cream is applied before treatment, and we utilize specialized techniques to ensure the process is as comfortable and tolerable as possible. Instead of focusing only on “stronger” treatments, Korean scar treatment philosophy prioritizes controlled collagen remodeling, hydration support, barrier health, and gradual texture refinement. The goal is improving how the skin heals over time, which is especially important for sensitive or melanin-rich skin. Scar improvement is usually gradual. Many collagen-focused treatments work over a period of time as the skin remodels and rebuilds support beneath the surface. Some patients notice early texture improvement within weeks, while deeper remodeling may continue over several months. Yes, texture-focused treatments may help improve the appearance of enlarged pores by supporting collagen remodeling and overall skin quality. More aggressive treatment is not always better. While stronger resurfacing lasers can improve some scars, overly aggressive treatment may also increase prolonged redness, pigmentation concerns, and barrier disruption. This is especially important for darker skin tones and patients prone to hyperpigmentation.",
+    "snippet": "Scar revision is a process that relies on your body's collagen production cycle. Most patients require a series of 3 to 6 sessions, spaced 4 to 6 weeks apart, d..."
+  },
+  {
+    "url": "scar-treatment.html",
+    "title": "Refined movement.Controlled glow.Very Seoul.",
+    "pageTitle": "Korean Scar Treatment",
+    "category": "Scar Treatment",
+    "content": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessment.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessme..."
+  },
+  {
+    "url": "seoul-man.html#hero",
+    "title": "Seoul ManTreatment",
+    "pageTitle": "Seoul Man Treatment",
+    "category": "Seoul Man",
+    "content": "Korean-inspired male aesthetic refinement. Stronger jawlines. Subtly refined skin. Looking sharp without looking \"done.\"",
+    "snippet": "Korean-inspired male aesthetic refinement. Stronger jawlines. Subtly refined skin. Looking sharp without looking \"done.\""
+  },
+  {
+    "url": "seoul-man.html#what-is",
+    "title": "Masculine Refinement",
+    "pageTitle": "Seoul Man Treatment",
+    "category": "Seoul Man",
+    "content": "The Seoul Male Aesthetic Men’s skin ages differently. Men’s facial structures balance differently. And men’s aesthetic goals are distinct. At SuA Glow, the Seoul Man Treatment is a customized Korean-inspired aesthetic program designed for male anatomy. The focus is on subtle enhancements — defining the jawline, reducing signs of fatigue, and refining skin texture so you look sharp, rested, and naturally confident. • Jawline Definition • Rested Appearance • Skin Texture • Masculine Contour • Subtle Refinement • Confident Look Masculine Aesthetic Assessment",
+    "snippet": "The Seoul Male Aesthetic Men’s skin ages differently. Men’s facial structures balance differently. And men’s aesthetic goals are distinct. At SuA Glow, the Seou..."
+  },
+  {
+    "url": "seoul-man.html",
+    "title": "Medical Oversight",
+    "pageTitle": "Seoul Man Treatment",
+    "category": "Seoul Man",
+    "content": "All Seoul Man Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
+    "snippet": "All Seoul Man Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yan..."
+  },
+  {
+    "url": "seoul-man.html#philosophies",
+    "title": "Four Pillars of Male Refinement",
+    "pageTitle": "Seoul Man Treatment",
+    "category": "Seoul Man",
+    "content": "The Strategic K-Beauty Approach Enhancing masculine facial architecture through strategic jawline definition and structural support where needed. Sharp Jawline Masculine Angles Facial Strength Men’s neuromodulator treatments (Brotox) designed to soften deep lines of stress and fatigue while preserving masculine expressions. Natural Movement Rested Look Subtle Control Addressing enlarged pores, uneven texture, and oil control. Healthy skin is the foundation of a polished, professional appearance. Pore Minimizing Oil Control Smooth Texture Men’s skin is naturally thicker and can become deeply dehydrated. Skin boosters replenish core moisture for a vibrant look. Deep Moisture Skin Vitality Healthy Resilience",
+    "snippet": "The Strategic K-Beauty Approach Enhancing masculine facial architecture through strategic jawline definition and structural support where needed. Sharp Jawline ..."
+  },
+  {
+    "url": "seoul-man.html#treatment-benefits",
+    "title": "Targeted Male Skin Results",
+    "pageTitle": "Seoul Man Treatment",
+    "category": "Seoul Man",
+    "content": "Personalized For Men Strategic contouring that respects and enhances male facial architecture. Improving skin behavior to naturally minimize the appearance of enlarged pores common in thicker male skin. Softening signs of fatigue and stress so you look naturally sharp and ready. Strengthening the skin against daily environmental damage and shaving irritation. Addressing rough patches and uneven tone for a polished, professional finish. Treatments designed to be virtually unnoticeable to others, leaving only the impression of vitality. Male aesthetics in Seoul is highly advanced, focusing on skin vitality, structural strength, and subtlety. It is never about looking feminized or \"over-injected.\" The goal is to enhance masculine features, reduce the visual impact of stress, and ensure skin looks healthy and refined. Sharp, rested, and confident.",
+    "snippet": "Personalized For Men Strategic contouring that respects and enhances male facial architecture. Improving skin behavior to naturally minimize the appearance of e..."
+  },
+  {
+    "url": "seoul-man.html#why-sua",
+    "title": "The SuA Glow Men's Philosophy",
+    "pageTitle": "Seoul Man Treatment",
+    "category": "Seoul Man",
+    "content": "Seoul Precision. Masculine Design. At SuA Glow, male treatment recommendations are individualized because men’s facial anatomy requires a fundamentally different approach than women’s. We prioritize subtle refinement, maintaining masculine angles, and improving overall skin health. The best compliment is \"You look great, did you go on vacation?\" Men require different dosing and placement for neuromodulators due to stronger muscle mass. Focusing on treatments that enhance jawlines and masculine contouring safely. Careful technique to ensure facial balancing remains strong and decidedly masculine.",
+    "snippet": "Seoul Precision. Masculine Design. At SuA Glow, male treatment recommendations are individualized because men’s facial anatomy requires a fundamentally differen..."
+  },
+  {
+    "url": "seoul-man.html#expect",
+    "title": "The Male Refinement Journey",
+    "pageTitle": "Seoul Man Treatment",
+    "category": "Seoul Man",
+    "content": "Personalized assessment of your facial structure, skin texture, and aesthetic goals. A customized combination of structural support, subtle line softening, and skin refinement. Variable based on selected treatments, but prioritized for a quick return to the office. A sharper, more rested, and more vital version of your natural self.",
+    "snippet": "Personalized assessment of your facial structure, skin texture, and aesthetic goals. A customized combination of structural support, subtle line softening, and ..."
+  },
+  {
+    "url": "seoul-man.html#faq",
+    "title": "Seoul Man FAQs",
+    "pageTitle": "Seoul Man Treatment",
+    "category": "Seoul Man",
+    "content": "The Seoul Man Treatment is a personalized Korean-inspired male aesthetic program. It focuses on enhancing masculine facial architecture (like jawlines), subtly softening signs of fatigue, and refining skin texture for a sharp, confident appearance. The goal is subtlety. At SuA Glow, we prioritize undetectable enhancements. We want you to look like you’ve been sleeping better, working out, and taking care of yourself—not like you’ve had treatments. Yes. Men typically have stronger facial muscles and require different dosing and placement strategies to avoid \"frozen\" looks and to preserve masculine eyebrow positioning and expressions. Yes. The skin refinement portion of the Seoul Man program focuses heavily on texture and hydration. By improving barrier health and deeply hydrating the skin, many men experience reduced irritation and a much smoother overall texture.",
+    "snippet": "The Seoul Man Treatment is a personalized Korean-inspired male aesthetic program. It focuses on enhancing masculine facial architecture (like jawlines), subtly ..."
+  },
+  {
+    "url": "seoul-man.html",
+    "title": "Refined movement.Controlled glow.Very Seoul.",
+    "pageTitle": "Seoul Man Treatment",
+    "category": "Seoul Man",
+    "content": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessment.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessme..."
+  },
+  {
+    "url": "shop-skincare-rejuran.html#page-hero",
+    "title": "Clinical SkincareCollection.",
+    "pageTitle": "Skincare & Products",
+    "category": "Cellular Regeneration",
+    "content": "Curated medical-grade lines chosen to prepare, protect, and amplify your clinical aesthetic treatments.Available exclusively at our Carrollton office.",
+    "snippet": "Curated medical-grade lines chosen to prepare, protect, and amplify your clinical aesthetic treatments.Available exclusively at our Carrollton office."
+  },
+  {
+    "url": "shop-skincare-rejuran.html",
+    "title": "Rejuran® Professional",
+    "pageTitle": "Skincare & Products",
+    "category": "Cellular Regeneration",
+    "content": "Featured Skincare Line Utilizing advanced Salmon DNA technology (c-PDRN/PN), the Rejuran® Professional Line accelerates skin healing, boosts collagen synthesis, and targets signs of environmental aging from deep within. A highly concentrated, premium regenerative formula designed to write a new story for compromised skin. Formulated with our highest concentration of Salmon DNA to rapidly restore damaged skin. Accelerates cellular regeneration and skin tissue repair Intensely rehydrates severely dry and parched skin Smoothes wrinkles and targets stubborn hyperpigmentation 2.0% Hydrolyzed DNA (PN): Highest grade salmon DNA to repair skin structure. Mannitol: A potent antioxidant to lock in moisture and protect from irritation. A targeted anti-aging essence formulated to reverse environmental damage and aging. Restores density, bounce, and skin barrier health in thin, fatigued skin. Stimulates robust collagen synthesis and elastic fibers Enhances cellular turnover and skin cell multiplication Optimizes sebum balance and improves overall skin texture 1.5% Hydrolyzed DNA (PDRN): Refined salmon DNA molecules to repair environmental damage. Sodium Chloride: Clinical solution matching physiological balance. A advanced dual-vial skin quality booster that deeply infuses dry, dull skin with pure hydration and nourishment. Rebalances the skin's micro-environment for a vibrant, lasting glow. Deeply rehydrates the dermal matrix for a natural plumping effect Protects skin cells against oxidative and environmental stress Rebuilds skin elasticity by feeding amino acids directly to fibroblasts Vial I (c-PDRN + Hyaluronic Acid): Powerful dermal regeneration combined with ultimate water-locking action. Vial II (Amino Acids): Glycine, L-Lysine, L-Leucine, L-Proline complex to build elastin. A highly active, skin-brightening multi-benefit booster. Dramatically reduces hyperpigmentation, halts melanin production, and restores radiant luminosity. Suppresses excessive melanin production to treat melasma and spots Brightens and evens out general skin tone and discolorations Strengthens the skin barrier and calms redness with Panthenol Vial I (c-PDRN + Hyaluronic Acid + Panthenol): Soothes redness while promoting cell turnover. Vial II (Whitening Complex): Gluthathione + Ascorbic Acid (Vitamin C) + Tranexamic Acid to halt hyperpigmentation.",
+    "snippet": "Featured Skincare Line Utilizing advanced Salmon DNA technology (c-PDRN/PN), the Rejuran® Professional Line accelerates skin healing, boosts collagen synthesis,..."
+  },
+  {
+    "url": "shop-skincare-rejuran.html",
+    "title": "Why Medical-Grade Matters",
+    "pageTitle": "Skincare & Products",
+    "category": "Cellular Regeneration",
+    "content": "Medical-grade skincare products contain higher concentrations of highly active ingredients (such as refined salmon DNA - c-PDRN) than typical over-the-counter retail products. Because these clinical formulations act directly on the skin's deeper structural layers, their use must be customized to your specific skin needs. To guarantee optimal safety and outstanding results, our professional lines are available exclusively under the clinical delegation of our board-certified specialist, Sophia Yang, PA-C, and our medical director, Dr. Adam Yang, MD. We do not sell these products online; each is personalized to you during your in-office consultation.",
+    "snippet": "Medical-grade skincare products contain higher concentrations of highly active ingredients (such as refined salmon DNA - c-PDRN) than typical over-the-counter r..."
+  },
+  {
+    "url": "shop-skincare-rejuran.html",
+    "title": "K-Beauty doesn't chase trends.It builds better skin.",
+    "pageTitle": "Skincare & Products",
+    "category": "Cellular Regeneration",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "shop-skincare.html#page-hero",
+    "title": "Clinical SkincareCollection.",
+    "pageTitle": "Skincare & Products",
+    "category": "Cellular Turnover",
+    "content": "Curated medical-grade lines chosen to prepare, protect, and amplify your clinical aesthetic treatments.Available exclusively at our Carrollton office.",
+    "snippet": "Curated medical-grade lines chosen to prepare, protect, and amplify your clinical aesthetic treatments.Available exclusively at our Carrollton office."
+  },
+  {
+    "url": "shop-skincare.html",
+    "title": "REJURAN® MEDI Line",
+    "pageTitle": "Skincare & Products",
+    "category": "Cellular Turnover",
+    "content": "Featured Skincare Line Developed by leading Korean skin and cosmetics experts, the REJURAN® MEDI Line utilizes the proprietary, patented skin-healing ingredient c-PDRN® (Hydrolyzed DNA) along with select organic raw materials. This revolutionary clinical line supports natural healing and skin turnover to minimize the appearance of environmental aging. This concentrated multitasking serum visibly addresses fine lines, loss of firmness and elasticity, and uneven texture. It encourages cellular turnover and hydrates from the inside out. Softens the appearance of fine lines and wrinkles Provides skin brightening benefits Encourages cellular turnover and hydration c-PDRN® (Hydrolyzed DNA): Patented marine DNA growth factor to increase cellular turnover. Organic Ingredients: More than 7 organic ingredients providing rich antioxidants. This soothing moisturizer combines proprietary c-PDRN® with nutrient-rich hydrators to protect while visibly reducing wrinkles, improving the look of elasticity, and keeping skin comfy. Deeply hydrates & protects the skin Supports skin's natural healing process Improves the appearance of dull, tired & saggy skin c-PDRN®: Marine growth factor targeting natural barrier function and elastic look. Nutrient-Rich Hydrators: Lightweight hydration for a flawless look and comfortable feel. This non-greasy, invisible sunscreen provides SPF 50+ protection against UVA/UVB rays. Infused with c-PDRN®, it supports the skin's recovery process to diminish signs of sun damage. Provides UVA/UVB SPF 50+ sun protection Water resistant up to 80 minutes Hydrates and supports natural skin healing c-PDRN® (Hydrolyzed DNA): Patented marine DNA growth factor supporting natural healing. Photostable SPF Filters: Highly protective and non-greasy formulation. This calming eye gel soothes and depuffs tired eyes while minimizing the appearance of fine lines, wrinkles, and dark circles. Scientifically formulated and safe for eyelid application. Soothes, depuffs & brightens the eye area Minimizes the appearance of lines & wrinkles Visibly diminishes the look of dark circles c-PDRN® (Hydrolyzed DNA): Nourishes and supports natural eye-area healing. Anti-Wrinkle Complex: Highly safe formulation clinically proven for eyelid skin. This rich, calming cream supports natural healing. Formulated with c-PDRN®, it offers powerful anti-aging benefits targeting lines, wrinkles, uneven tone, and post-procedure skin. Supports natural skin healing & regeneration Softens, nourishes & improves skin texture Provides needed support for post-procedure skin c-PDRN® (Hydrolyzed DNA): Refined salmon DNA complex to repair compromised skin layers. Calming Lipids: Rich organic lipids to soothe, protect, and comfort post-procedure skin.",
+    "snippet": "Featured Skincare Line Developed by leading Korean skin and cosmetics experts, the REJURAN® MEDI Line utilizes the proprietary, patented skin-healing ingredient..."
+  },
+  {
+    "url": "shop-skincare.html",
+    "title": "Why Medical-Grade Matters",
+    "pageTitle": "Skincare & Products",
+    "category": "Cellular Turnover",
+    "content": "Medical-grade skincare products contain higher concentrations of highly active ingredients (such as refined marine-based DNA - c-PDRN®) than typical over-the-counter retail products. Because these clinical formulations act directly on the skin's deeper structural layers, their use must be customized to your specific skin needs. To guarantee optimal safety and outstanding results, our professional lines are available exclusively under the clinical delegation of our board-certified specialist, Sophia Yang, PA-C, and our medical director, Dr. Adam Yang, MD. We do not sell these products online; each is personalized to you during your in-office consultation.",
+    "snippet": "Medical-grade skincare products contain higher concentrations of highly active ingredients (such as refined marine-based DNA - c-PDRN®) than typical over-the-co..."
+  },
+  {
+    "url": "shop-skincare.html",
+    "title": "K-Beauty doesn't chase trends.It builds better skin.",
+    "pageTitle": "Skincare & Products",
+    "category": "Cellular Turnover",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "signature-treatment.html#hero",
+    "title": "SignatureTreatment",
+    "pageTitle": "SuA Glow Signature Treatment",
+    "category": "SuA Glow Signature Treatment",
+    "content": "Personalized Korean-inspired aesthetic refinement. Quiet skin over frozen faces. Because your skin is unique.",
+    "snippet": "Personalized Korean-inspired aesthetic refinement. Quiet skin over frozen faces. Because your skin is unique."
+  },
+  {
+    "url": "signature-treatment.html#what-is",
+    "title": "Personalized Skin Quality",
+    "pageTitle": "SuA Glow Signature Treatment",
+    "category": "SuA Glow Signature Treatment",
+    "content": "The Seoul Skin Philosophy Not every patient needs the same treatment. And not every face should look treated. At SuA Glow, the Signature Treatment is a personalized Korean-inspired skin quality program. We design a plan around your skin condition, facial movement, texture concerns, hydration levels, and long-term skin goals. Because in Seoul aesthetics, the best results rarely come from a single syringe or trend. • Quiet Skin • Glass Skin Finish • Smooth Texture • Hydration Boost • Refined Pores • Subtle Balance Custom Aesthetic Planning",
+    "snippet": "The Seoul Skin Philosophy Not every patient needs the same treatment. And not every face should look treated. At SuA Glow, the Signature Treatment is a personal..."
+  },
+  {
+    "url": "signature-treatment.html",
+    "title": "Medical Oversight",
+    "pageTitle": "SuA Glow Signature Treatment",
+    "category": "SuA Glow Signature Treatment",
+    "content": "All Signature Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
+    "snippet": "All Signature Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yan..."
+  },
+  {
+    "url": "signature-treatment.html#philosophies",
+    "title": "Four Pillars of Signature Refinement",
+    "pageTitle": "SuA Glow Signature Treatment",
+    "category": "SuA Glow Signature Treatment",
+    "content": "The Strategic K-Beauty Approach Deep hydration-focused skin boosters provide the foundation for a healthy glow, creating the \"Glass Skin\" effect. Moisture Balance Skin Resilience Lasting Glow SkinTox-style micro-neuromodulator techniques preserve natural facial expressions while reducing excessive pull. Quiet Skin Pore Refinement Subtle Control Customized microneedling and skin-barrier support planning to smooth rough patches and uneven surfaces. Smooth Finish Even Reflection Polished Look Strategic layering and proportion balancing. Because subtle refinement is still beautiful. Proportions Natural Balance Bespoke Plan",
+    "snippet": "The Strategic K-Beauty Approach Deep hydration-focused skin boosters provide the foundation for a healthy glow, creating the \"Glass Skin\" effect. Moisture Balan..."
+  },
+  {
+    "url": "signature-treatment.html#treatment-benefits",
+    "title": "Signature Skin Quality Results",
+    "pageTitle": "SuA Glow Signature Treatment",
+    "category": "SuA Glow Signature Treatment",
+    "content": "Personalized For Your Skin Improving skin behavior to naturally minimize the appearance of enlarged pores. Softening rough patches and irregular surface texture for a polished finish. Restoring the inner light of the skin through deep-level hydration and balanced shine. Strengthening the skin's defense system against environmental stress and sensitivity. Supporting long-term structural integrity and elasticity of the dermal matrix. A “refreshed” look that prioritizes your natural facial harmony over dramatic change.",
+    "snippet": "Personalized For Your Skin Improving skin behavior to naturally minimize the appearance of enlarged pores. Softening rough patches and irregular surface texture..."
+  },
+  {
+    "url": "signature-treatment.html#why-sua",
+    "title": "The SuA Glow Signature Philosophy",
+    "pageTitle": "SuA Glow Signature Treatment",
+    "category": "SuA Glow Signature Treatment",
+    "content": "Seoul Precision. Skin Health Focused. At SuA Glow, treatment recommendations are individualized because not all skin behaves the same way. We prioritize skin refinement over excess, and balance over trends. No copy-and-paste protocols. No \"everyone gets the same face\" philosophy. Healthier-looking skin is built strategically—not aggressively. Evaluating skin texture, hydration levels, facial movement patterns, and treatment goals. Combining hydration, refinement, and collagen-support for a synergy seen in top Seoul clinics. Investing in your skin architecture for results that improve naturally over time.",
+    "snippet": "Seoul Precision. Skin Health Focused. At SuA Glow, treatment recommendations are individualized because not all skin behaves the same way. We prioritize skin re..."
+  },
+  {
+    "url": "signature-treatment.html#expect",
+    "title": "The Signature Journey",
+    "pageTitle": "SuA Glow Signature Treatment",
+    "category": "SuA Glow Signature Treatment",
+    "content": "Personalized assessment to identify your skin's current barrier health, hydration levels, and structural needs. A customized combination of SkinTox, boosters, and texture support tailored strictly to you. Variable based on selected treatments, but prioritized for minimal disruption. Gradual, long-term improvement in skin behavior and a refined, healthy appearance.",
+    "snippet": "Personalized assessment to identify your skin's current barrier health, hydration levels, and structural needs. A customized combination of SkinTox, boosters, a..."
+  },
+  {
+    "url": "signature-treatment.html#all-treatments",
+    "title": "Explore All Signature Treatments",
+    "pageTitle": "SuA Glow Signature Treatment",
+    "category": "SuA Glow Signature Treatment",
+    "content": "Each Program. Personalized for You. A specialized Korean-inspired program targeting active acne, congestion, and post-acne skin irregularities — built around your skin's inflammatory patterns and healing needs.",
+    "snippet": "Each Program. Personalized for You. A specialized Korean-inspired program targeting active acne, congestion, and post-acne skin irregularities — built around yo..."
+  },
+  {
+    "url": "signature-treatment.html#faq",
+    "title": "Signature Treatment FAQs",
+    "pageTitle": "SuA Glow Signature Treatment",
+    "category": "SuA Glow Signature Treatment",
+    "content": "The SuA Glow Signature Treatment is a personalized Korean-inspired skin quality treatment plan designed around each patient’s skin condition, texture concerns, hydration levels, and facial movement patterns. Treatment plans may combine multiple skin-quality-focused approaches to support healthier-looking, smoother, and more refined skin over time. SkinTox is a Korean-inspired microdosing neuromodulator technique focused on skin refinement rather than dramatic facial freezing. SkinTox-style approaches may help improve pore appearance, skin texture, excessive shine, overall skin smoothness, and subtle facial refinement. Unlike one-size-fits-all aesthetic treatments, the Signature Treatment is fully customized based on skin behavior, hydration, texture concerns, collagen quality, facial movement, and treatment goals. Because no two faces — or skin types — are exactly the same. Yes — for some patients, energy-based skin tightening treatments such as Oligio X may be incorporated into a personalized Signature Treatment plan depending on skin condition, treatment goals, anatomy, and clinical assessment. At SuA Glow, treatment planning is individualized because not every patient benefits from the same combination approach.",
+    "snippet": "The SuA Glow Signature Treatment is a personalized Korean-inspired skin quality treatment plan designed around each patient’s skin condition, texture concerns, ..."
+  },
+  {
+    "url": "signature-treatment.html",
+    "title": "Refined movement.Controlled glow.Very Seoul.",
+    "pageTitle": "SuA Glow Signature Treatment",
+    "category": "SuA Glow Signature Treatment",
+    "content": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessment.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessme..."
+  },
+  {
+    "url": "skin-health.html#hero",
+    "title": "SkinHealth",
+    "pageTitle": "Skin Health",
+    "category": "Skin Health",
+    "content": "Curated Seoul-trained techniques. Discover our holistic approach to hydrated, structurally sound, and radiant glass skin.",
+    "snippet": "Curated Seoul-trained techniques. Discover our holistic approach to hydrated, structurally sound, and radiant glass skin."
+  },
+  {
+    "url": "skin-health.html#skin-boosters",
+    "title": "Skin Quality Boosters",
+    "pageTitle": "Skin Health",
+    "category": "Skin Health",
+    "content": "Rather than simply treating surface symptoms, Skin Boosters target the dermal matrix itself. Using advanced injectables like Rejuran, Juvelook, and highly purified Hyaluronic Acid, we rebuild the skin's structural integrity from within for an unmistakable \"glass skin\" glow. • Rejuran (Healer, I, S) • Juvelook Skin & Elravie • MoolGwang Hydro Injection",
+    "snippet": "Rather than simply treating surface symptoms, Skin Boosters target the dermal matrix itself. Using advanced injectables like Rejuran, Juvelook, and highly purif..."
+  },
+  {
+    "url": "skin-health.html#injectables",
+    "title": "Injectables",
+    "pageTitle": "Skin Health",
+    "category": "Skin Health",
+    "content": "Following Korean aesthetic principles, our injectable treatments prioritize natural balance and structural support over dramatic alteration. From cosmetic tox to HA fillers and biostimulators like Radiesse, we restore harmony seamlessly. • Cosmetic & Medical Tox • HA Fillers (Restylane) • Biostimulators (Sculptra, Radiesse)",
+    "snippet": "Following Korean aesthetic principles, our injectable treatments prioritize natural balance and structural support over dramatic alteration. From cosmetic tox t..."
+  },
+  {
+    "url": "skin-health.html#scar-treatment",
+    "title": "Scar Treatment",
+    "pageTitle": "Skin Health",
+    "category": "Skin Health",
+    "content": "A multi-modality approach focusing on structural tissue remodeling. We combine customized techniques like subcision, micro-needling, and regenerative boosters to untether deep acne scars and refine uneven skin texture. • Acne & Surgical Scars • Deep Subcision • Post-Inflammatory Hyperpigmentation",
+    "snippet": "A multi-modality approach focusing on structural tissue remodeling. We combine customized techniques like subcision, micro-needling, and regenerative boosters t..."
+  },
+  {
+    "url": "skin-health.html#signature-treatments",
+    "title": "Signature Treatments",
+    "pageTitle": "Skin Health",
+    "category": "Skin Health",
+    "content": "Bespoke, multi-step protocols designed exclusively at SuA Glow. From our intensive Bridal Glow package to the tailored Seoul Man treatment, these are comprehensive journeys for ultimate skin transformation. • SuA Glow Signature • Bridal Glow & One Day Glow • Seoul Man Treatment",
+    "snippet": "Bespoke, multi-step protocols designed exclusively at SuA Glow. From our intensive Bridal Glow package to the tailored Seoul Man treatment, these are comprehens..."
+  },
+  {
+    "url": "skin-health.html#skin-rejuvenation",
+    "title": "Skin Rejuvenation",
+    "pageTitle": "Skin Health",
+    "category": "Skin Health",
+    "content": "Harnessing the power of advanced Korean devices like Oligio X RF Lifting and LDM Ultrasound, we offer non-invasive skin tightening, cellular level regeneration, and enhanced absorption of vital nutrients. • Oligio X RF Lifting • LDM Ultrasound • Advanced Microneedling",
+    "snippet": "Harnessing the power of advanced Korean devices like Oligio X RF Lifting and LDM Ultrasound, we offer non-invasive skin tightening, cellular level regeneration,..."
+  },
+  {
+    "url": "skin-health.html#k-beauty-facials",
+    "title": "K-Beauty Facials",
+    "pageTitle": "Skin Health",
+    "category": "Skin Health",
+    "content": "Traditional K-Beauty philosophies infused with medical-grade efficacy. Our signature facials, including the acclaimed Salmon PN Facial and Water Droplet Lifting, focus on deep hydration, skin barrier repair, and a luminous, dewy finish. • Salmon PN Facial • Water Droplet Lifting • Glow & Hydration Therapy",
+    "snippet": "Traditional K-Beauty philosophies infused with medical-grade efficacy. Our signature facials, including the acclaimed Salmon PN Facial and Water Droplet Lifting..."
+  },
+  {
+    "url": "skin-health.html",
+    "title": "K-Beauty doesn't chase trends.It builds better skin.",
+    "pageTitle": "Skin Health",
+    "category": "Skin Health",
+    "content": "Medical Aesthetics • Carrollton HQ",
+    "snippet": "Medical Aesthetics • Carrollton HQ"
+  },
+  {
+    "url": "skin-quality-boosters.html#hero",
+    "title": "Skin QualityBoosters",
+    "pageTitle": "Skin Quality Boosters",
+    "category": "Skin Quality Boosters",
+    "content": "Seoul-Level Skin Health. Engineered Beyond Basic “Glow.”",
+    "snippet": "Seoul-Level Skin Health. Engineered Beyond Basic “Glow.”"
+  },
+  {
+    "url": "skin-quality-boosters.html#what-are",
+    "title": "Glass skin was never just about the shine.",
+    "pageTitle": "Skin Quality Boosters",
+    "category": "Skin Quality Boosters",
+    "content": "In Korean aesthetics, truly healthy skin is built in layers: healing, hydration, collagen support, and structural skin quality. That is why modern Korean clinics moved beyond traditional fillers years ago. At SuA Glow Med Spa in Carrollton, our Skin Quality Booster approach focuses on improving how skin behaves — not simply how it looks under lighting. We think about smoother texture, refined pores, healthier bounce, stronger skin barrier, hydration retention, and collagen support. It’s the “you look refreshed” energy. This is the Seoul philosophy: healthy skin first. Glow follows naturally. Skin quality boosters are advanced injectable or infusion-based aesthetic treatments designed to improve hydration, elasticity, skin texture, collagen support, skin barrier function, dermal integrity, and overall skin appearance. Unlike traditional fillers that primarily create volume or contour, skin quality boosters focus on improving the skin itself. The Four Categories Healing & Repair Hydration & Glow Collagen Stimulation Dermal Matrix",
+    "snippet": "In Korean aesthetics, truly healthy skin is built in layers: healing, hydration, collagen support, and structural skin quality. That is why modern Korean clinic..."
+  },
+  {
+    "url": "skin-quality-boosters.html#healing-essence",
+    "title": "Healing Essence",
+    "pageTitle": "Skin Quality Boosters",
+    "category": "Skin Quality Boosters",
+    "content": "Some skin does not need “more.” It needs recovery. Healing-focused Korean skin boosters are designed to support compromised skin barriers, redness-prone skin, acne recovery, texture irregularities, stressed or sensitized skin, and post-procedure recovery. This category became globally popular through Korean regenerative aesthetic medicine, where the emphasis is often placed on skin health and restoration before aggressive cosmetic enhancement. “My skin looks healthier, my skin feels stronger, I look rested... Very Seoul. Very intentional.”",
+    "snippet": "Some skin does not need “more.” It needs recovery. Healing-focused Korean skin boosters are designed to support compromised skin barriers, redness-prone skin, a..."
+  },
+  {
+    "url": "skin-quality-boosters.html#hydration-glow",
+    "title": "Hydration & Glow",
+    "pageTitle": "Skin Quality Boosters",
+    "category": "Skin Quality Boosters",
+    "content": "Some people moisturize. Korean clinics engineer hydration. Hydration-focused skin boosters are designed to support long-lasting hydration, smoother texture, radiant skin appearance, elasticity, makeup performance, and crepey or dehydrated skin appearance. These treatments often utilize advanced hyaluronic acid technologies designed for refined hydration distribution rather than heavy facial contouring. Translation: dewiness without looking “filled.” • Dull skin & Dry Texas skin • Early fine lines & Tired skin • Event prep & Bridal glow",
+    "snippet": "Some people moisturize. Korean clinics engineer hydration. Hydration-focused skin boosters are designed to support long-lasting hydration, smoother texture, rad..."
+  },
+  {
+    "url": "skin-quality-boosters.html#collagen-stimulation",
+    "title": "Collagen Stimulation",
+    "pageTitle": "Skin Quality Boosters",
+    "category": "Skin Quality Boosters",
+    "content": "In modern Korean aesthetics, collagen support is treated like retirement investing. Small deposits now. Better structure later. Collagen-focused skin quality boosters are designed to support skin firmness, elasticity, structural support, fine lines, acne scar appearance, thinning skin appearance, and long-term skin quality maintenance. The Korean aesthetic philosophy typically prioritizes: • Restraint over exaggeration • Skin quality over overfilling • Balance over dramatic change",
+    "snippet": "In modern Korean aesthetics, collagen support is treated like retirement investing. Small deposits now. Better structure later. Collagen-focused skin quality bo..."
+  },
+  {
+    "url": "skin-quality-boosters.html#dermal-matrix",
+    "title": "Dermal Matrix",
+    "pageTitle": "Skin Quality Boosters",
+    "category": "Skin Quality Boosters",
+    "content": "This category is where Korean regenerative aesthetics becomes exceptionally advanced. Dermal matrix-focused boosters are designed to support the extracellular matrix (ECM) — the structural environment surrounding collagen, elastin, hydration, and skin integrity. Think of it as: the infrastructure beneath healthy-looking skin. In Korea, ECM-focused aesthetics have become increasingly popular because they align with a long-term skin health philosophy of not simply making skin appear tighter today but supporting healthier skin behavior over time. Very K-Beauty. Very skin-intelligent.",
+    "snippet": "This category is where Korean regenerative aesthetics becomes exceptionally advanced. Dermal matrix-focused boosters are designed to support the extracellular m..."
+  },
+  {
+    "url": "skin-quality-boosters.html",
+    "title": "Why Korean Skin Boosters Became So Popular",
+    "pageTitle": "Skin Quality Boosters",
+    "category": "Skin Quality Boosters",
+    "content": "Because many patients became tired of looking overfilled, chasing dramatic changes, \"frozen\" aesthetics, and temporary glow without skin improvement. The Korean aesthetic philosophy instead asks: \"What would happen if we improved the skin itself?\" That shift changed global aesthetics. The Result: • Healthier-looking skin & softer refinement • Natural luminosity & balanced facial harmony • Prevention-focused care You may be a candidate if you want to improve dull skin, dehydration, rough texture, enlarged pores, fine lines, crepey skin appearance, acne scar appearance, thin or fragile-looking skin, and skin elasticity. Popular across ages: • 20s: For prevention • 30s: For maintenance • 40s+: For structural support & restoration Why Global A-List Celebrities Became Obsessed with Skin Quality Treatments? Because Modern Luxury Skin Is Supposed to Look Like… Skin. The aesthetic world changed quietly. Modern beauty trends shifted toward something far more refined. Today, many Skin Devotees are obsessed with hydration, skin texture, collagen support, elasticity, refined glow, subtle rejuvenation, and camera-ready skin quality. This philosophy closely mirrors modern Korean aesthetic medicine. Translation: “Why does your skin look so good?”",
+    "snippet": "Because many patients became tired of looking overfilled, chasing dramatic changes, \"frozen\" aesthetics, and temporary glow without skin improvement. The Korean..."
+  },
+  {
+    "url": "skin-quality-boosters.html#consultation",
+    "title": "Seoul-Level Skin Strategy Starts Here",
+    "pageTitle": "Skin Quality Boosters",
+    "category": "Skin Quality Boosters",
+    "content": "Thoughtful. Strategic. Intentional. Every patient’s skin behaves differently. Consultations help patients understand which category of skin quality treatment may fit their goals, realistic expectations, treatment timing, layering strategies, and long-term maintenance planning. Because in K-Beauty: the consultation is part of the treatment philosophy. Your consultation may include discussion of current skin concerns, texture and hydration goals, skin sensitivity, prior treatments, lifestyle factors, recovery preferences, and long-term planning. No pressure. No “one-size-fits-all” approach. No chasing trends your skin may not actually need.",
+    "snippet": "Thoughtful. Strategic. Intentional. Every patient’s skin behaves differently. Consultations help patients understand which category of skin quality treatment ma..."
+  },
+  {
+    "url": "skin-quality-boosters.html#faq",
+    "title": "Frequently Asked Questions",
+    "pageTitle": "Skin Quality Boosters",
+    "category": "Skin Quality Boosters",
+    "content": "No. Traditional fillers primarily focus on adding volume or contour. Skin quality boosters are designed to support hydration, texture, collagen support, and overall skin appearance. Many Korean aesthetic clinics prioritize skin quality before considering larger volumizing treatments. Next generation skin boosters focus more heavily on skin health, hydration, collagen support, dermal quality, and subtle refinement. The philosophy is typically more preventative, layered, and skin-focused rather than dramatic transformation-focused. The goal is typically the opposite. Modern Korean aesthetic philosophy prioritizes natural-looking skin, refined texture, healthy glow, balanced appearance, and subtle enhancement. Most patients want compliments like \"You look refreshed,\" not \"What did you have done?\" Longevity depends on treatment category, skin condition, metabolism, lifestyle, and maintenance plan. Many patients complete an initial series followed by maintenance treatments over time. SuA Glow Med Spa in Carrollton provides Korean-inspired skin quality treatments for patients across Dallas, Plano, Frisco, Coppell, Irving, Southlake, McKinney, Grapevine, Addison, Richardson, and Fort Worth.",
+    "snippet": "No. Traditional fillers primarily focus on adding volume or contour. Skin quality boosters are designed to support hydration, texture, collagen support, and ove..."
+  },
+  {
+    "url": "skin-quality-boosters.html",
+    "title": "Better biology.Refined skin.Very Seoul.",
+    "pageTitle": "Skin Quality Boosters",
+    "category": "Skin Quality Boosters",
+    "content": "K-Beauty Medspa • Carrollton HQ Celebrity discussions are provided for educational and cultural context only. SuA Glow does not claim that any public figure received treatment at our clinic. Treatment recommendations at SuA Glow are individualized based on patient goals, anatomy, medical history, and clinical assessment pursuant to supervising physician-approved protocols and applicable Texas regulations.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ Celebrity discussions are provided for educational and cultural context only. SuA Glow does not claim that any public figure rec..."
+  },
+  {
+    "url": "specials.html",
+    "title": "K-Beauty doesn't chase trends.It builds better skin.",
+    "pageTitle": "Specials",
+    "category": "Spa Treatments",
+    "content": "Medical Aesthetics • Carrollton HQ",
+    "snippet": "Medical Aesthetics • Carrollton HQ"
+  },
+  {
+    "url": "testimonials.html#hero",
+    "title": "PatientStories",
+    "pageTitle": "Patient Stories",
+    "category": "Spa Treatments",
+    "content": "Unfiltered voices from patients who experienced Korean medical aesthetics — and never looked back.",
+    "snippet": "Unfiltered voices from patients who experienced Korean medical aesthetics — and never looked back."
+  },
+  {
+    "url": "testimonials.html",
+    "title": "Featured Stories",
+    "pageTitle": "Patient Stories",
+    "category": "Spa Treatments",
+    "content": "\"I've tried every hydration treatment on the market — from HydraFacials to IV drips — and nothing has ever transformed my skin the way Rejuran did. After my second session, people at work started asking if I'd changed my diet or gotten more sleep. No. I just found Sophia. My skin has this lit-from-within quality that no topical product ever gave me.\" \"Sophia is a true artist. I came in with dull, dehydrated skin and left glowing. She explained every step, made me feel completely at ease, and the results were immediate. I've never felt so confident without makeup.\"",
+    "snippet": "\"I've tried every hydration treatment on the market — from HydraFacials to IV drips — and nothing has ever transformed my skin the way Rejuran did. After my sec..."
+  },
+  {
+    "url": "testimonials.html",
+    "title": "All Patient Reviews",
+    "pageTitle": "Patient Stories",
+    "category": "Spa Treatments",
+    "content": "\"Three sessions of Rejuran Healer and my acne scars have softened dramatically. I used to cake on foundation to cover them — now I go bare-faced to brunch. Worth every penny and then some.\" \"I was skeptical about PDLLA but Sophia walked me through the science patiently. Two months later, the collagen regeneration is visible — my skin is firmer, smoother, and my pores look smaller. I'm obsessed.\" \"The clinic is so calm and beautiful. Everything feels intentional — the music, the scent, the way Sophia explains what she's doing. I've been to many medspas but this is my home now.\" \"I've struggled with dry, dull skin my whole life. After my first Skin Booster session I had the 'glass skin' everyone talks about on K-beauty YouTube. My husband noticed immediately. My husband never notices anything.\" \"SkinVive is now a permanent part of my skincare routine. The microinjections are practically painless the way Sophia does them. My cheeks have this natural, dewy bounce that photos don't even do justice.\" \"I came in for CellReDm after seeing it on a K-beauty forum. Sophia knew exactly what my skin needed. The redness and inflammation I've dealt with for years has calmed significantly. This is real medicine.\" \"Byryzn was something I'd only read about in Korean beauty blogs. Getting it here in Texas from someone who actually trained in Seoul — that's what sets SuA K-Glow apart. Results are phenomenal.\" \"Rejuran Tone Up addressed the sun damage I've accumulated over years in Texas. Four weeks post-treatment my skin tone is genuinely more even. This is not a subtle result — it's dramatic and I love it.\" \"Sophia never upsells or pushes you into anything. She assessed my skin and recommended exactly what I needed — nothing more. That honesty is rare and I trust her completely with my face.\" \"As someone with Korean heritage I was excited to find authentic K-beauty treatments locally. SuA K-Glow delivers exactly that. The products and protocols feel exactly like what I've experienced in Seoul. Amazing.\" \"I turn 42 this year and I genuinely look younger than I did at 38. Juvelook has restructured my skin — less crepiness under my eyes, better texture everywhere. I tell everyone about this place.\" \"I got SkinVive before my wedding and people in every single photo asked me what skin prep I'd done. The answer was simple: SuA K-Glow. My skin photographer even commented on how beautifully it catches light.\" \"My dermatologist had no more solutions for my sensitive, reactive skin. Sophia did. CellReDm has reinforced my skin barrier in ways I didn't think were possible anymore. I finally have skin I'm not at war with.\" \"Byryzn was more comfortable than I expected and the afterglow is incredible. I've been back three times. Sophia remembers my skin history, my concerns, my goals. She treats you like a person, not a procedure.\" \"I drove 45 minutes each way for Rejuran and I would drive four hours. The improvement in my skin's elasticity and hydration is measurable. My skincare routine has actually gotten simpler because my base is so much better.\"",
+    "snippet": "\"Three sessions of Rejuran Healer and my acne scars have softened dramatically. I used to cake on foundation to cover them — now I go bare-faced to brunch. Wort..."
+  },
+  {
+    "url": "testimonials.html",
+    "title": "Been to SuA K-Glow?",
+    "pageTitle": "Patient Stories",
+    "category": "Spa Treatments",
+    "content": "Your experience matters — both to us and to patients considering their first visit. We'd be honored to hear about your glow journey.",
+    "snippet": "Your experience matters — both to us and to patients considering their first visit. We'd be honored to hear about your glow journey."
+  },
+  {
+    "url": "testimonials.html",
+    "title": "Ready to write your ownglow story?",
+    "pageTitle": "Patient Stories",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "education/byryzn-v2.html#hero",
+    "title": "BYRYZN®",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "Stabilized HA skin booster. Hydration engineered to stay. K-Beauty precision from Sophia Yang, PA-C — Seoul-trained master injector at SuA Glow Med Spa.",
+    "snippet": "Stabilized HA skin booster. Hydration engineered to stay. K-Beauty precision from Sophia Yang, PA-C — Seoul-trained master injector at SuA Glow Med Spa."
+  },
+  {
+    "url": "education/byryzn-v2.html#categorization",
+    "title": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "Origin South Korea Type Stabilized HA Skin Booster Purpose Improve hydration, smoothness, and elasticity — without adding contour or bulk.",
+    "snippet": "Origin South Korea Type Stabilized HA Skin Booster Purpose Improve hydration, smoothness, and elasticity — without adding contour or bulk."
+  },
+  {
+    "url": "education/byryzn-v2.html#problem-solution",
+    "title": "The Problem:Hydration That Leaves Too Quickly",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "Traditional hyaluronic acid breaks down rapidly Dehydration lines deepen and elasticity softens Surface hydration flashes but fails to maintain structure Skin loses its smooth, light-reflective finish SuA Glow K-Beauty Translation \"Hydration with discipline. Keep hydration where it belongs to naturally reflect light.\" In K-Beauty, hydration isn't applied. It's engineered. BYRYZN uses cross-linked HA—stabilizing the molecule so it doesn't break down the moment it's injected. The result is moisture that lingers in the dermis, resists degradation, and behaves with intention. Longer-lasting dermal hydration Improved elasticity without heaviness Smoother texture and refined pores Softer fine lines caused by dryness A more balanced oil-moisture ratio The Result Hydration that lingers in the dermis longer, resists breakdown, and behaves with intention.",
+    "snippet": "Traditional hyaluronic acid breaks down rapidly Dehydration lines deepen and elasticity softens Surface hydration flashes but fails to maintain structure Skin l..."
+  },
+  {
+    "url": "education/byryzn-v2.html#what-is-byryzn",
+    "title": "What Is BYRYZN®?",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "Understanding the Treatment In Korea, BYRYZN is classified as a stabilized HA skin booster designed for dermal hydration and complexion refinement—not volume, not structure. Precision hydration, done with intention. In Seoul, skin is maintained early. People do not wait for dullness to settle in or dehydration lines to deepen. When moisture levels decline, elasticity softens, texture becomes uneven, and skin loses its smooth, light-reflective finish. That is where BYRYZN fits. BYRYZN delivers cross-linked hyaluronic acid engineered for greater stability within the dermis. Cross-linking helps the molecule resist rapid breakdown, allowing hydration to remain more consistent and longer lasting than traditional hyaluronic acid. Formulated with hyaluronic acid, it draws in a high amount of moisture to enhance hydration retention by up to 1.7 times. Its strong moisture-binding capacity helps replenish hydration from within, supporting a smoother, more balanced complexion. It stabilizes moisture within the skin and the result is clarity, softness, and quiet luminosity. BYRYZN Is Designed to Help Improve sustained dermal hydration Support elasticity through optimal moisture balance Smooth dehydration-related fine lines Refine surface texture Enhance luminosity naturally Improve softness and overall polish Support even light reflection It is designed to improve the appearance of fine lines, refine texture, and restore natural luminosity — without altering your natural features. BYRYZN Is A stabilized hyaluronic acid skin booster Designed to support sustained dermal hydration Focused on improving moisture balance and surface refinement Preventative, maintenance-driven, and long-term focused Subtle, cumulative, and consistency-based Built to improve how skin retains hydration and reflects light BYRYZN Is Not A collagen-stimulating biostimulator A dermal thickening or density-building treatment A facial contouring or reshaping injection A temporary, surface-only \"flash glow\" fix",
+    "snippet": "Understanding the Treatment In Korea, BYRYZN is classified as a stabilized HA skin booster designed for dermal hydration and complexion refinement—not volume, n..."
+  },
+  {
+    "url": "education/byryzn-v2.html#neck-focus",
+    "title": "Because The Neck Tells The Truth",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "In K-Beauty, the neck is never an afterthought. It's treated early, maintained consistently, and refined with intention. The skin on the neck is thinner, moves constantly, and loses hydration faster than the face. When moisture levels decline, horizontal neck lines become more visible, texture looks crepey, and skin loses its smooth finish. That's where BYRYZN excels. Formulated with stabilized, cross-linked hyaluronic acid, BYRYZN helps improve dermal hydration retention in this delicate area. Rather than masking lines, it improves the moisture balance that makes them appear softer and less defined. Why Patients Choose BYRYZN for the Neck Softens the appearance of horizontal neck lines by improving the moisture balance that makes them more defined. Improves crepey texture and restores a hydrated, supple appearance. Enhances smoothness and reflectivity while maintaining natural expression and movement. When the neck is hydrated, it looks smoother, more refined, and more aligned with the face.",
+    "snippet": "In K-Beauty, the neck is never an afterthought. It's treated early, maintained consistently, and refined with intention. The skin on the neck is thinner, moves ..."
+  },
+  {
+    "url": "education/byryzn-v2.html#components",
+    "title": "How BYRYZN® Works",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "BYRYZN works where hydration resides – within the dermis. When hydration declines, elasticity softens, fine lines become more noticeable, and skin loses its smooth, reflective finish — no matter how much topical skincare is applied. BYRYZN delivers cross-linked hyaluronic acid designed for stability within the skin. Wrinkle improvement (주름 개선) by softening dehydration lines and refining texture. Skin glow and radiance (피부 광채) that looks luminous, not shiny. Increased hydration (수분 증가) that improves dermal retention, helping makeup apply effortlessly. BYRYZN Helps Skin SuA Glow K-Beauty Translation Hydration first. Glass skin follows. Key Points",
+    "snippet": "BYRYZN works where hydration resides – within the dermis. When hydration declines, elasticity softens, fine lines become more noticeable, and skin loses its smo..."
+  },
+  {
+    "url": "education/byryzn-v2.html",
+    "title": "Why South Koreans Love BYRYZN®",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "In Korea, dehydration isn't ignored until it becomes visible. It's managed early. Dermatology clinics in Seoul understand that when hydration declines, elasticity softens, texture becomes uneven, and radiance fades. Rather than waiting for these changes to settle in, they maintain moisture consistently and strategically. That's where BYRYZN fits. It's chosen not to change the face, but to refine how the skin behaves. SuA Glow Selects BYRYZN Because It BYRYZN keeps skin hydrated, polished, and glowing.",
+    "snippet": "In Korea, dehydration isn't ignored until it becomes visible. It's managed early. Dermatology clinics in Seoul understand that when hydration declines, elastici..."
+  },
+  {
+    "url": "education/byryzn-v2.html",
+    "title": "Why Choose SuA Glow Med Spafor BYRYZN®?",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "Seoul Precision • Advanced HA Skin Booster Expert • Skin Health Focused BYRYZN may be appearing on more menus. Unfortunately, correct K-Beauty execution still isn't. At SuA Glow, BYRYZN is delivered the Seoul way — precisely, restrained, and maintenance-driven. Led by Sophia Yang, PA-C — Seoul-trained and Korean-certified — treatments focus on optimizing dermal hydration and skin refinement, not chasing trends. Hydration, practiced with discipline. That's the difference. Many clinics offer \"K-Beauty-inspired\" services. Very few are guided by someone trained within the culture and clinical system that created them. That's why results look natural. That's why glow builds gradually. That's why people notice — but can't quite say why. Subtle. Balanced. Maintained. That's real K-Beauty. K-Beauty as it's practiced in Seoul — not interpreted. Regeneration over exaggeration Precision over shortcuts Skin health over trends Serving: Carrollton • Dallas • Plano • Frisco • McKinney • Irving • Coppell • Lewisville • Addison • Richardson • Grapevine • Southlake • Fort Worth",
+    "snippet": "Seoul Precision • Advanced HA Skin Booster Expert • Skin Health Focused BYRYZN may be appearing on more menus. Unfortunately, correct K-Beauty execution still i..."
+  },
+  {
+    "url": "education/byryzn-v2.html",
+    "title": "Meet Sophia Yang, PA-C",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "Your Provider The best K-Beauty provider in DFW. Seoul-Trained. Korean-Certified. Sophia Yang, PA-C Seoul-trained. Korean-certified. No Translation Required. In Korea, skin boosters are not used for drama. They're used for skin behavior. Sophia applies that philosophy to every BYRYZN treatment—prioritizing structure, balance, and long-term skin health. \"Real K-Beauty isn't loud. It's disciplined, intentional, and unmistakable when done right.\"",
+    "snippet": "Your Provider The best K-Beauty provider in DFW. Seoul-Trained. Korean-Certified. Sophia Yang, PA-C Seoul-trained. Korean-certified. No Translation Required. In..."
+  },
+  {
+    "url": "education/byryzn-v2.html#experience",
+    "title": "What to Expect at SuA Glow",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "~45–60 Minutes Mild 24–72 Hours Series + Maintenance Smooth, Sustained Glow At SuA Glow in Carrollton, BYRYZN is administered using K-Beauty injection protocols developed in Seoul. Results build subtly as moisture retention improves and the complexion appears smoother, softer, and more balanced over time. BYRYZN does not stimulate collagen or alter facial structure. Its purpose is singular: improve how your skin holds moisture — and let the glow follow.",
+    "snippet": "~45–60 Minutes Mild 24–72 Hours Series + Maintenance Smooth, Sustained Glow At SuA Glow in Carrollton, BYRYZN is administered using K-Beauty injection protocols..."
+  },
+  {
+    "url": "education/byryzn-v2.html#comparison-breakdown",
+    "title": "BYRYZN® vs. Other Treatments",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "Here's how SuA Glow thinks about where BYRYZN fits. Fillers add volume and reshape contours; BYRYZN improves dermal hydration and surface refinement Fillers change silhouette; BYRYZN enhances skin quality Tox reduces muscle movement; BYRYZN improves moisture balance within the skin Tox smooths expression lines; BYRYZN smooths dehydration lines Same ingredient class, different aesthetic philosophy. Both use stabilized cross-linked HA to improve smoothness and moisture — the distinction is scope and approach. Skinvive: FDA-approved for mid-face cheek smoothness using Vycross® technology (U.S. indication-specific) BYRYZN: Broader full-face and neck hydration refinement; designed as a K-Beauty maintenance protocol BYRYZN emphasizes longer-lasting hydration, natural radiance, and dehydration line softening Rejuran focuses on repair and cellular recovery (PN-based) BYRYZN focuses on hydration retention and radiance Rejuran helps stressed skin recover; BYRYZN helps hydrated skin stay luminous — often layered together in Korean protocols Juvelook stimulates collagen; BYRYZN enhances hydration Juvelook builds density; BYRYZN improves glow Structure + hydration = balanced skin longevity ECM-based boosters focus on structural support and dermal environment optimization BYRYZN is a stabilized, cross-linked HA booster focused on hydration retention and skin polish Both work at the matrix level to reinforce elasticity and skin behavior SuA Glow K-Beauty takeaway: Stable skin ages quietly. \"Great skin isn't layered randomly. It's built in the right order.\" — Sophia Yang, PA-C",
+    "snippet": "Here's how SuA Glow thinks about where BYRYZN fits. Fillers add volume and reshape contours; BYRYZN improves dermal hydration and surface refinement Fillers cha..."
+  },
+  {
+    "url": "education/byryzn-v2.html#comparison",
+    "title": "Same Skin. Different Strategies.",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "How K-Beauty Clinics Think About Skin Quality.",
+    "snippet": "How K-Beauty Clinics Think About Skin Quality."
+  },
+  {
+    "url": "education/byryzn-v2.html#faq",
+    "title": "Frequently Asked Questions",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "BYRYZN is widely used internationally when administered by trained medical professionals using appropriate technique and patient selection. BYRYZN is ideal for skin that feels dehydrated, dull, or textured. It's especially suited for clients who want improved glow, smoothness, and hydration retention without changing facial shape. No. BYRYZN does not contour or reshape the face. It enhances dermal hydration and skin quality without altering your natural features. Most clients begin with a short series and transition to maintenance depending on their hydration levels and skin goals. Your plan is individualized. Skin often appears smoother and more luminous within a few weeks. Improvements build gradually as hydration stabilizes in the dermis. Results are cumulative. With maintenance, skin can remain more hydrated, polished, and balanced over time. Downtime is minimal. Mild redness, slight swelling, or small injection bumps may occur and typically resolve within a few days. BYRYZN uses stabilized, cross-linked hyaluronic acid designed for longer dermal retention. It focuses on sustained hydration balance rather than temporary surface moisture. Yes. BYRYZN pairs well with Juvelook, Re2O, Rejuran, lasers, microneedling, and neuromodulators as part of a comprehensive skin plan. BYRYZN is available at SuA Glow Med Spa in Carrollton, TX — conveniently located for clients throughout the DFW metroplex including Dallas, Plano, Frisco, McKinney, Irving, and Fort Worth. Call 972-665-8737 or book online to schedule your consultation with Sophia Yang, PA-C. Clients ask for BYRYZN to help their skin get back on track with hydration. What We Hear Most Deeply Hydrated & More Balanced Dryness and Tightness Improve Texture Smoother and Refined Fine Dehydration Lines Look Softer Luminous, Not Shiny Makeup Sits Better — or Becomes Optional BYRYZN has quickly become one of our most requested hydration-focused treatments — a long-term staple for clients who want skin that stays smooth, luminous, and effortlessly maintained. Transparency, safety, and patient education matter at SuA Glow. BYRYZN is widely used in South Korea and internationally by trained medical professionals. While not FDA-approved for injectable use in the United States, it is administered globally under established medical protocols by qualified clinicians. As with any advanced aesthetic treatment, appropriate patient selection, proper technique, and informed consent are essential. During your consultation, we review the purpose of treatment, available options, alternatives, expected outcomes, and potential risks—so you can make an informed decision about what is right for your skin.",
+    "snippet": "BYRYZN is widely used internationally when administered by trained medical professionals using appropriate technique and patient selection. BYRYZN is ideal for ..."
+  },
+  {
+    "url": "education/byryzn-v2.html",
+    "title": "If you're ready for BYRYZN and Seoul-level skin that holds its ground, let's get started.",
+    "pageTitle": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ K-Beauty isn't about doing everything. It's about doing the right thing.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ K-Beauty isn't about doing everything. It's about doing the right thing."
+  },
+  {
+    "url": "education/byryzn.html#hero",
+    "title": "BYRYZN®",
+    "pageTitle": "BYRYZN®",
+    "category": "Spa Treatments",
+    "content": "The premium HA skin booster. Hydration done intelligently.",
+    "snippet": "The premium HA skin booster. Hydration done intelligently."
+  },
+  {
+    "url": "education/byryzn.html#categorization",
+    "title": "BYRYZN®",
+    "pageTitle": "BYRYZN®",
+    "category": "Spa Treatments",
+    "content": "Origin South Korea Type Stabilized HA Skin Booster Purpose Improve hydration, smoothness, and elasticity — without adding contour or bulk.",
+    "snippet": "Origin South Korea Type Stabilized HA Skin Booster Purpose Improve hydration, smoothness, and elasticity — without adding contour or bulk."
+  },
+  {
+    "url": "education/byryzn.html#problem-solution",
+    "title": "The Problem:Hydration That Leaves Too Quickly",
+    "pageTitle": "BYRYZN®",
+    "category": "Spa Treatments",
+    "content": "Traditional hyaluronic acid breaks down rapidly Dehydration lines deepen and elasticity softens Surface hydration flashes but fails to maintain structure Skin loses its smooth, light-reflective finish SuA Glow K-Beauty Translation \"Hydration with discipline. Keep hydration where it belongs to naturally reflect light.\" In K-Beauty, hydration isn't applied. It's engineered. BYRYZN is formulated with cross-linked hyaluronic acid—stabilizing the molecule so it doesn't disappear the moment it's injected. Longer-lasting dermal hydration Improved elasticity without heaviness Smoother texture and refined pores A more balanced oil-moisture ratio The Result Hydration that lingers in the dermis longer, resists breakdown, and behaves with intention.",
+    "snippet": "Traditional hyaluronic acid breaks down rapidly Dehydration lines deepen and elasticity softens Surface hydration flashes but fails to maintain structure Skin l..."
+  },
+  {
+    "url": "education/byryzn.html#neck-focus",
+    "title": "Because The Neck Tells The Truth",
+    "pageTitle": "BYRYZN®",
+    "category": "Spa Treatments",
+    "content": "In K-Beauty, the neck is never an afterthought. It's treated early, maintained consistently, and refined with intention. The skin on the neck is thinner, moves constantly, and loses hydration faster than the face. When moisture levels decline, horizontal neck lines become more visible, texture looks crepey, and skin loses its smooth finish. Improves the moisture balance that makes horizontal lines appear softer and less defined. Addresses crepey texture and restores a hydrated, supple appearance. Enhances smoothness and reflectivity while maintaining natural expression.",
+    "snippet": "In K-Beauty, the neck is never an afterthought. It's treated early, maintained consistently, and refined with intention. The skin on the neck is thinner, moves ..."
+  },
+  {
+    "url": "education/byryzn.html#components",
+    "title": "How BYRYZN® Works",
+    "pageTitle": "BYRYZN®",
+    "category": "Spa Treatments",
+    "content": "BYRYZN works where hydration resides – within the dermis. It delivers cross-linked hyaluronic acid designed for stability within the skin. Instead of stimulating collagen or altering structure, it stabilizes moisture. Wrinkle improvement (주름 개선) by softening dehydration lines and refining texture. Skin glow and radiance (피부 광채) that looks luminous, not shiny. Increased hydration (수분 증가) that improves dermal retention, helping makeup apply effortlessly. [High-concentration hyaluronic acid drawing in moisture] Placeholder for downloaded graphic showing Korean translations",
+    "snippet": "BYRYZN works where hydration resides – within the dermis. It delivers cross-linked hyaluronic acid designed for stability within the skin. Instead of stimulatin..."
+  },
+  {
+    "url": "education/byryzn.html#comparison",
+    "title": "Same Skin. Different Strategies.",
+    "pageTitle": "BYRYZN®",
+    "category": "Spa Treatments",
+    "content": "How K-Beauty Clinics Think About Skin Quality.",
+    "snippet": "How K-Beauty Clinics Think About Skin Quality."
+  },
+  {
+    "url": "education/byryzn.html",
+    "title": "Why South Koreans Love BYRYZN®",
+    "pageTitle": "BYRYZN®",
+    "category": "Spa Treatments",
+    "content": "In Korea, dehydration isn't ignored until it becomes visible. It's managed early. Dermatology clinics in Seoul understand that when hydration declines, elasticity softens, texture becomes uneven, and radiance fades. Rather than waiting for these changes to settle in, they maintain moisture consistently and strategically. That's where BYRYZN fits. It's chosen not to change the face, but to refine how the skin behaves.",
+    "snippet": "In Korea, dehydration isn't ignored until it becomes visible. It's managed early. Dermatology clinics in Seoul understand that when hydration declines, elastici..."
+  },
+  {
+    "url": "education/byryzn.html#faq",
+    "title": "What to Expect at SuA Glow",
+    "pageTitle": "BYRYZN®",
+    "category": "Spa Treatments",
+    "content": "~45-60 Minutes Minimal 24-72h Series + Maintenance Smooth, Sustained Glow Sophia Yang, PA-C The best K-Beauty provider in DFW. Seoul-Trained. Korean-Certified. \"Real K-Beauty isn't loud. It's disciplined, intentional, and unmistakable when done right.\" BYRYZN is widely used internationally when administered by trained medical professionals using appropriate technique and patient selection. BYRYZN is ideal for skin that feels dehydrated, dull, or textured. It's especially suited for clients who want improved glow, smoothness, and hydration retention without changing facial shape. No. BYRYZN does not contour or reshape the face. It enhances dermal hydration and skin quality without altering your natural features. BYRYZN uses stabilized, cross-linked hyaluronic acid designed for longer dermal retention. It focuses on sustained hydration balance rather than temporary surface moisture. Yes. BYRYZN pairs well with Juvelook, Re2O, Rejuran, lasers, microneedling, and neuromodulators as part of a comprehensive skin plan. \"Clients ask for BYRYZN to help their skin get back on track with hydration.\" Deeply Hydrated Texture Smoother Luminous, Not Shiny Makeup Sits Better",
+    "snippet": "~45-60 Minutes Minimal 24-72h Series + Maintenance Smooth, Sustained Glow Sophia Yang, PA-C The best K-Beauty provider in DFW. Seoul-Trained. Korean-Certified. ..."
+  },
+  {
+    "url": "education/byryzn.html",
+    "title": "If you're ready for BYRYZN and Seoul-level skin that holds its ground, let's get started.",
+    "pageTitle": "BYRYZN®",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "education/cellredm.html#hero",
+    "title": "CellREDM™",
+    "pageTitle": "CellREDM™",
+    "category": "Spa Treatments",
+    "content": "Extracellular matrix support in a syringe. Reinforces the skin's architecture, improves density, and provides foundational hydration.",
+    "snippet": "Extracellular matrix support in a syringe. Reinforces the skin's architecture, improves density, and provides foundational hydration."
+  },
+  {
+    "url": "education/cellredm.html#categorization",
+    "title": "CellREDM™",
+    "pageTitle": "CellREDM™",
+    "category": "Spa Treatments",
+    "content": "Origin South Korea Type ECM-Focused Skin Booster Purpose Reinforces skin architecture, improves density, and provides foundational hydration.",
+    "snippet": "Origin South Korea Type ECM-Focused Skin Booster Purpose Reinforces skin architecture, improves density, and provides foundational hydration."
+  },
+  {
+    "url": "education/cellredm.html#problem-solution",
+    "title": "The Problem:When the ECM Weakens",
+    "pageTitle": "CellREDM™",
+    "category": "Spa Treatments",
+    "content": "Skin can thin Elasticity declines Hydration retention decreases Delicate areas, like under-eyes, appear more fragile K-Beauty Principle \"Prevention is always more elegant than repair.\" Designed to reinforce the extracellular matrix environment so skin can: Retain hydration more effectively Support elasticity Improve dermal density Maintain structural integrity over time The Result Skin that holds its ground—firmer, calmer, and architecturally intact.",
+    "snippet": "Skin can thin Elasticity declines Hydration retention decreases Delicate areas, like under-eyes, appear more fragile K-Beauty Principle \"Prevention is always mo..."
+  },
+  {
+    "url": "education/cellredm.html#components",
+    "title": "Main Components of CellREDM™",
+    "pageTitle": "CellREDM™",
+    "category": "Spa Treatments",
+    "content": "CellREDM™ is built around the architecture skin depends on to stay strong. At its core are refined extracellular matrix (ECM) components—designed to closely mirror the structural framework that supports collagen, elastin, and hydration within the dermis. Rather than simply adding moisture, CellREDM™ reinforces the environment where these elements function. Primary structural framework for skin thickness and integrity. Elastic support layer to maintain elasticity and flexibility (especially in delicate areas). Helps stabilize the interface between epidermis and dermis—critical for structural cohesion and skin resilience. Assists in moisture retention within the matrix, allowing hydration to remain balanced without creating volume distortion. The Key Difference Engineered for smooth integration into the dermis, allowing even dispersion and uniform structural reinforcement. [Diagram of ECM showing collagen/elastin fibers] Placeholder for graphic",
+    "snippet": "CellREDM™ is built around the architecture skin depends on to stay strong. At its core are refined extracellular matrix (ECM) components—designed to closely mir..."
+  },
+  {
+    "url": "education/cellredm.html#comparison",
+    "title": "CellREDM™ vs. Elravie Re2O",
+    "pageTitle": "CellREDM™",
+    "category": "Spa Treatments",
+    "content": "The Real Difference is Particle Precision. Both CellREDM™ and Elravie Re2O are ECM skin boosters designed to reinforce the skin’s structural environment. They support collagen, elasticity, and hydration at the matrix level. But the meaningful distinction comes down to particle refinement. Smaller particle size (~75μm) allows for more delicate, uniform placement in the skin. This makes CellREDM™ exceptionally well-suited for refining skin texture and treating areas where precision is paramount, such as the under-eye region or fine lines.",
+    "snippet": "The Real Difference is Particle Precision. Both CellREDM™ and Elravie Re2O are ECM skin boosters designed to reinforce the skin’s structural environment. They s..."
+  },
+  {
+    "url": "education/cellredm.html#vs-others",
+    "title": "How CellREDM™ Compares",
+    "pageTitle": "CellREDM™",
+    "category": "Spa Treatments",
+    "content": "vs. Dermal Fillers Fillers add volume to specific areas. CellREDM™ reinforces the dermal structure itself without changing your natural facial shape. vs. Tox Tox softens muscular movement. CellREDM™ strengthens the framework of the skin that Tox sits on. vs. Rejuran Rejuran focuses heavily on DNA repair and recovery (PN). CellREDM™ focuses on density and matrix reinforcement (ECM). vs. Juvelook Juvelook is a hybrid biostimulator that triggers new collagen. CellREDM™ reinforces the architecture where that collagen lives.",
+    "snippet": "vs. Dermal Fillers Fillers add volume to specific areas. CellREDM™ reinforces the dermal structure itself without changing your natural facial shape. vs. Tox To..."
+  },
+  {
+    "url": "education/cellredm.html#faq",
+    "title": "What to Expect at SuA Glow",
+    "pageTitle": "CellREDM™",
+    "category": "Spa Treatments",
+    "content": "~60 Minutes Minimal. Bumps 24-72h Short initial series + maint. Gradual density gain [Before and after skin density improvements] Placeholder for graphic specifically showing under-eye SuA Glow K-Beauty Takeaway \"Clients don’t call CellREDM™ dramatic. They call it solid. It strengthens quietly in the background, layers seamlessly with other treatments, and gets better with consistency.\" Yes. It is widely used internationally by aesthetic professionals and is known for its high safety profile and biocompatibility. It is ideal for anyone noting thinning or \"crepey\" skin, loss of resilience, or fragile areas like the under-eyes. No. It reinforces density rather than adding bulk. We typically recommend 3 sessions spaced 4 weeks apart, followed by maintenance. While hydration is often felt early, structural firming usually begins a few weeks after the first treatment. Yes, it pairs perfectly with Juvelook, Rejuran, or Microneedling.",
+    "snippet": "~60 Minutes Minimal. Bumps 24-72h Short initial series + maint. Gradual density gain [Before and after skin density improvements] Placeholder for graphic specif..."
+  },
+  {
+    "url": "education/cellredm.html",
+    "title": "CellREDM™",
+    "pageTitle": "CellREDM™",
+    "category": "Spa Treatments",
+    "content": "Awaiting Assets 1. Gallery Images pending research.2. Sophia to Identify: CellREDM™ Client Testimony.",
+    "snippet": "Awaiting Assets 1. Gallery Images pending research.2. Sophia to Identify: CellREDM™ Client Testimony."
+  },
+  {
+    "url": "education/cellredm.html",
+    "title": "K-Beauty isn’t about doing everything. It’s about doing the right thing.",
+    "pageTitle": "CellREDM™",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "education/hilowave-v2.html#hero",
+    "title": "HILO WAVE®Dual-HACross-LinkedSkin Booster",
+    "pageTitle": "HILO WAVE® Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "Next-Generation Hyaluronic Acid Hydration & Skin Renewal A next-generation dual-HA skin booster delivering deeper dermal hydration and longer-lasting results than traditional HA treatments—available at SuA Glow Med Spa in Carrollton, TX.",
+    "snippet": "Next-Generation Hyaluronic Acid Hydration & Skin Renewal A next-generation dual-HA skin booster delivering deeper dermal hydration and longer-lasting results th..."
+  },
+  {
+    "url": "education/hilowave-v2.html#categorization",
+    "title": "HILO WAVE® Skin Booster in Carrollton, TX",
+    "pageTitle": "HILO WAVE® Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "Origin South Korea Type Dual Cross-Linked HA Skin Booster Purpose Designed to restore dull, dehydrated, and aging skin. Technology Dual molecular weight HA in a cross-linked matrix delivers multi-layer hydration.",
+    "snippet": "Origin South Korea Type Dual Cross-Linked HA Skin Booster Purpose Designed to restore dull, dehydrated, and aging skin. Technology Dual molecular weight HA in a..."
+  },
+  {
+    "url": "education/hilowave-v2.html#problem-solution",
+    "title": "The Problem:Dehydrated, Dull Skin",
+    "pageTitle": "HILO WAVE® Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "Dry, flaky skin that struggles to stay hydrated Fine dehydration lines across the forehead and cheeks Loss of elasticity and skin \"bounce\" A complexion that looks dull even after moisturizing SuA Glow Insight Sophia Yang, PA-C | SuA Glow Master Injector Trained & Certified in Seoul — Serving Carrollton, Dallas & Fort Worth \"Real glow begins with deep hydration. Restore the skin barrier, and the glow follows.\" In Korean dermatology, healthy skin starts below the surface. HILO WAVE® uses dual molecular weight hyaluronic acid in a stabilized cross-linked matrix designed to hydrate multiple layers of the skin to help support elasticity, smoother texture, and natural radiance. Deep multi-layer hydration Gradual moisture release for longer-lasting hydration May help support collagen and elastin for improved skin elasticity Helps smooth skin texture and restore natural glow May help improve skin density and resilience The Result Skin that looks hydrated, smoother, and softly luminous—the signature skin quality often seen in leading Seoul dermatology clinics.",
+    "snippet": "Dry, flaky skin that struggles to stay hydrated Fine dehydration lines across the forehead and cheeks Loss of elasticity and skin \"bounce\" A complexion that loo..."
+  },
+  {
+    "url": "education/hilowave-v2.html#components",
+    "title": "Hydration Engineering",
+    "pageTitle": "HILO WAVE® Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "HILO WAVE® is not just hydration—it's precision skin hydration designed to improve skin quality, elasticity, and natural glow. Recommended For HILO WAVE® is ideal for patients who want to: How HILO WAVE® Works Dual molecular weight hyaluronic acid hydrates from the surface down to the dermis. Helps support collagen and elastin for firmer, more resilient skin. Smooths rough texture and refines the appearance of pores. The Result",
+    "snippet": "HILO WAVE® is not just hydration—it's precision skin hydration designed to improve skin quality, elasticity, and natural glow. Recommended For HILO WAVE® is ide..."
+  },
+  {
+    "url": "education/hilowave-v2.html",
+    "title": "The SuA Glow Difference",
+    "pageTitle": "HILO WAVE® Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "Why It Works Hydration That Goes Beyond the Surface Most treatments address surface dryness. HILO WAVE® works at the dermal level—restoring moisture from within to support elasticity, smooth texture, and that signature Korean glow. Because great skin shouldn't just look hydrated—it should be.",
+    "snippet": "Why It Works Hydration That Goes Beyond the Surface Most treatments address surface dryness. HILO WAVE® works at the dermal level—restoring moisture from within..."
+  },
+  {
+    "url": "education/hilowave-v2.html#faq",
+    "title": "The SuA Glow Approach",
+    "pageTitle": "HILO WAVE® Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "Seoul Hydration Technique At SuA Glow, HILO WAVE® is delivered using a K-Beauty–inspired injection method designed to restore hydration, support facial balance, and improve overall skin quality. Rather than treating only one area, the technique focuses on strategic facial zones where hydration and elasticity matter most. ~30 Minutes Minimal Downtime Seoul Technique Immediate Softness Step 1 Micro-injections are placed along key facial points including the cheekbone, nasolabial fold, lateral cheek, and areas beneath the cheekbone—to support natural facial balance while improving skin hydration and elasticity. Step 2 Using a specialized cannula distribution technique, HILO WAVE® is gently applied across the skin to create a smooth \"hydration wave\"—allowing the skin booster to disperse evenly throughout the dermis. Deeply hydrate multiple skin layers Support collagen and elastin for elasticity Smooth fine dehydration lines Improve skin texture and radiance Enhance subtle, natural volume Sophia's Choice \"HILO WAVE® is my 'emergency button' for tired skin. It doesn't just hydrate; it restores the skin's vitality so you leave looking like you've had 10 hours of sleep.\" HILO WAVE® can be delivered through several techniques depending on the treatment plan. At SuA Glow, we often combine it with ultrasound or microneedling technologies to ensure the most comfortable and effective delivery for your skin type. Absolutely. HILO WAVE® is one of our most popular \"Red Carpet\" treatments because it provides immediate luminosity with little to no downtime. Yes. Dehydrated skin often produces excess oil to compensate for a lack of water. By restoring hydration balance, HILO WAVE® can help calm oily or combination skin. Most patients notice improvements in hydration and skin quality for 3–6 months, depending on skin condition and treatment protocol. Many patients benefit from a series of 2–3 treatments spaced about 4 weeks apart, followed by periodic maintenance treatments. Most patients find the treatment very comfortable. We use techniques designed to minimize discomfort, and topical numbing can be applied if needed. Downtime is minimal. Some patients may experience mild redness or small injection marks that typically resolve within a day. HILO WAVE® can be used on the face, under-eye area, neck, and other areas where hydration and skin quality need improvement. HILO WAVE® is well suited for patients experiencing dehydration, fine lines from dryness, dull complexion, or reduced skin firmness. It's also popular as a \"glass skin\" maintenance treatment for patients who want to preserve results between other procedures. HILO WAVE® focuses on skin quality rather than structural volume. It improves hydration, elasticity, and radiance from within—creating natural-looking, healthy skin rather than altering facial shape. Many patients notice improved hydration and skin luminosity within a few days. Skin texture and elasticity may continue to improve over the following weeks as hydration and collagen support take effect. Yes. HILO WAVE® is often combined with treatments such as microneedling, ultrasound facials, or other skin boosters to enhance overall skin quality and hydration. HILO WAVE® is designed to support hydration and skin barrier health, which can make it suitable for many patients with sensitive or dehydrated skin. A consultation at SuA Glow helps determine the best treatment approach for your skin type. Skin boosters like HILO WAVE® are designed to improve skin hydration, elasticity, and overall skin quality. At SuA Glow, treatments are customized based on your skin type and goals to help restore natural glow and smooth texture. Dermal fillers are designed to add structure or volume, while skin boosters focus on improving skin quality from within. Treatments like HILO WAVE® hydrate multiple layers of the skin, helping improve elasticity, texture, and radiance without changing facial shape. At SuA Glow in Carrollton, HILO WAVE® is commonly used to address dehydration lines, dull or tired-looking skin, rough texture, loss of firmness, and an uneven complexion. Many clients from Dallas, Plano, and Frisco also travel to our Carrollton location specifically for this treatment. Skin boosters work across a wide age range. Younger patients use them to prevent early signs of dehydration and maintain a healthy glow, while older patients rely on them to restore lost moisture and firmness. At SuA Glow, your plan is always tailored to where your skin is now. SuA Glow in Carrollton offers K-Beauty inspired skin booster treatments designed to improve hydration, elasticity, and natural radiance for patients throughout Dallas–Fort Worth.",
+    "snippet": "Seoul Hydration Technique At SuA Glow, HILO WAVE® is delivered using a K-Beauty–inspired injection method designed to restore hydration, support facial balance,..."
+  },
+  {
+    "url": "education/hilowave-v2.html",
+    "title": "Ready to catch the wave? Your most hydrated skin is waiting.",
+    "pageTitle": "HILO WAVE® Skin Booster in Carrollton, TX",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "education/hilowave.html#hero",
+    "title": "Hilo Wave®Next-Gen Moisture",
+    "pageTitle": "Hilo Wave®",
+    "category": "Spa Treatments",
+    "content": "A breakthrough in deep-dermal hydration designed to restore skin's natural suppleness and immediate radiance.",
+    "snippet": "A breakthrough in deep-dermal hydration designed to restore skin's natural suppleness and immediate radiance."
+  },
+  {
+    "url": "education/hilowave.html#categorization",
+    "title": "Hilo Wave®",
+    "pageTitle": "Hilo Wave®",
+    "category": "Spa Treatments",
+    "content": "Technology Hilo-Delivery System Type Hydration Booster Purpose Fades fine lines, plumps the skin, and creates long-lasting dewiness.",
+    "snippet": "Technology Hilo-Delivery System Type Hydration Booster Purpose Fades fine lines, plumps the skin, and creates long-lasting dewiness."
+  },
+  {
+    "url": "education/hilowave.html#problem-solution",
+    "title": "The Problem:Static Dehydration",
+    "pageTitle": "Hilo Wave®",
+    "category": "Spa Treatments",
+    "content": "Dry, flaky patches that refuse to heal Fine dehydration lines across the forehead and cheeks Loss of elasticity and \"bounce\" in the skin A complexion that looks dull even after moisturizing K-Beauty Insight \"Dehydrated skin is vulnerable skin. Hilo Wave® restores the moisture barrier so your skin can finally breathe.\" Hilo Wave® uses a proprietary multi-weight hyaluronic acid matrix to target every layer of the dermis: Instant moisture-surge mechanics Sustained-release hydration pockets Strengthens the natural lipid barrier Smooths texture for effortless makeup application The Result Skin that looks and feels saturated with health—radiant, plump, and undeniably supple.",
+    "snippet": "Dry, flaky patches that refuse to heal Fine dehydration lines across the forehead and cheeks Loss of elasticity and \"bounce\" in the skin A complexion that looks..."
+  },
+  {
+    "url": "education/hilowave.html#components",
+    "title": "Hydration Engineering",
+    "pageTitle": "Hilo Wave®",
+    "category": "Spa Treatments",
+    "content": "Hilo Wave® is not just a serum; it's a precision-engineered delivery system for moisture. Varying molecular weights ensure hydration penetrates from the surface down to the deep dermis. Our proprietary technology that \"links\" moisture molecules to prevent evaporation and loss. Seals in the hydration by repairing the skin's natural \"mortar\" for a perfect barrier. The Key Difference Most boosters focus either on the surface glow or the deep health. Hilo Wave® uses its \"Wave\" technology to create a continuous channel of hydration, ensuring that the moisture we put into your skin actually stays there, creating a visible \"Mool Gwang\" (water glow) effect.",
+    "snippet": "Hilo Wave® is not just a serum; it's a precision-engineered delivery system for moisture. Varying molecular weights ensure hydration penetrates from the surface..."
+  },
+  {
+    "url": "education/hilowave.html#faq",
+    "title": "The SuA Glow Experience",
+    "pageTitle": "Hilo Wave®",
+    "category": "Spa Treatments",
+    "content": "~30 Minutes Zero Downtime Non-Invasive Option Immediate Softness Sophia's Choice \"Hilo Wave® is my 'emergency button' for tired skin. It doesn't just hydrate; it restores the skin's vitality so you leave looking like you've had 10 hours of sleep.\" Hilo Wave® can be delivered via various methods. At SuA Glow, we often combine it with our ultrasound or microneedling technologies to ensure the most comfortable and effective experience for your skin type. Absolutely. Hilo Wave® is one of our most popular \"Red Carpet\" treatments because it provides immediate luminosity with zero downtime or redness. Yes. Dehydrated skin often over-produces oil to compensate for a lack of water. By restoring the water balance, Hilo Wave® can actually help calm oily skin.",
+    "snippet": "~30 Minutes Zero Downtime Non-Invasive Option Immediate Softness Sophia's Choice \"Hilo Wave® is my 'emergency button' for tired skin. It doesn't just hydrate; i..."
+  },
+  {
+    "url": "education/hilowave.html",
+    "title": "Ready to catch the wave? Your most hydrated skin is waiting.",
+    "pageTitle": "Hilo Wave®",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "education/juvelook.html#hero",
+    "title": "Juvelook®",
+    "pageTitle": "Juvelook® & Juvelook Volume®",
+    "category": "Spa Treatments",
+    "content": "Collagen-Stimulating Advanced Skin Booster",
+    "snippet": "Collagen-Stimulating Advanced Skin Booster"
+  },
+  {
+    "url": "education/juvelook.html#categorization",
+    "title": "Juvelook® & Juvelook Volume®",
+    "pageTitle": "Juvelook® & Juvelook Volume®",
+    "category": "Spa Treatments",
+    "content": "Origin South Korea Type Collagen-Stimulating Skin Booster Purpose A biostimulatory skin booster that regenerates collagen and reinforces skin structure.",
+    "snippet": "Origin South Korea Type Collagen-Stimulating Skin Booster Purpose A biostimulatory skin booster that regenerates collagen and reinforces skin structure."
+  },
+  {
+    "url": "education/juvelook.html#problem-solution",
+    "title": "Natural Results.Collagen First.",
+    "pageTitle": "Juvelook® & Juvelook Volume®",
+    "category": "Spa Treatments",
+    "content": "Traditional fillers rely on instant volume Overcorrection creates a \"done\" look Sculptra runs higher risks of nodule formation Seoul-Level Strategy \"The goal isn't to look different. It's to age slower.\" Contains PDLLA (the collagen trigger) + Hyaluronic Acid (HA). It signals your skin to produce new collagen over time—strengthening structure instead of inflating space. The HA keeps skin hydrated and smoothly delivers the PDLLA. Regenerative and long-term focused Subtle, cumulative, and strategic Low risk profile for nodular complications The Result A gradual, biologic support that looks natural because it is natural.",
+    "snippet": "Traditional fillers rely on instant volume Overcorrection creates a \"done\" look Sculptra runs higher risks of nodule formation Seoul-Level Strategy \"The goal is..."
+  },
+  {
+    "url": "education/juvelook.html#volume-focus",
+    "title": "Juvelook Volume®",
+    "pageTitle": "Juvelook® & Juvelook Volume®",
+    "category": "Spa Treatments",
+    "content": "Juvelook Volume follows the same biology-first approach, with slightly enhanced structural support for areas that need reinforcement—without altering facial shape. It doesn't create volume the loud way. It builds natural-looking skin quality and lift in a K-Beauty way. Quietly supports areas prone to early structural collapse—without ever announcing that “something was done.” Instead of injecting bulk, it focuses on structure—helping skin stay firm, supported, and quietly resilient.",
+    "snippet": "Juvelook Volume follows the same biology-first approach, with slightly enhanced structural support for areas that need reinforcement—without altering facial sha..."
+  },
+  {
+    "url": "education/juvelook.html#components",
+    "title": "How It Works",
+    "pageTitle": "Juvelook® & Juvelook Volume®",
+    "category": "Spa Treatments",
+    "content": "By activating your skin's own collagen systems. The result is better structure now, so skin holds its ground later. The treatment works by promoting the growth of self-cells within the skin. Over the course of 2–3 weeks after the procedure, collagen regenerates gradually, leading to a noticeable improvement in the targeted areas. Improves skin density to address early skin laxity and signs of aging. Refines pores, surface texture, and smooths overall appearance. Improves acne scars and stretch marks using specialized techniques. Great results don't just come from great products alone, they come from expert diagnosis and precise technique. Our specialized subcision technique combined with Juvelook Skin delivers exceptional results for scar treatment, especially indented acne scars (or even stretch marks). SuA Glow's Juvelook Volume Mix is NOT the standard mix. We use a special, Seoul-trained secret blend that assists in the initial phase of collagen-driven volume while further reducing the risk of nodules.",
+    "snippet": "By activating your skin's own collagen systems. The result is better structure now, so skin holds its ground later. The treatment works by promoting the growth ..."
+  },
+  {
+    "url": "education/juvelook.html#comparison",
+    "title": "Same Skin. Different Strategies.",
+    "pageTitle": "Juvelook® & Juvelook Volume®",
+    "category": "Spa Treatments",
+    "content": "How K-Beauty Clinics Think About Skin Quality.",
+    "snippet": "How K-Beauty Clinics Think About Skin Quality."
+  },
+  {
+    "url": "education/juvelook.html",
+    "title": "Why South Koreans Love Juvelook",
+    "pageTitle": "Juvelook® & Juvelook Volume®",
+    "category": "Spa Treatments",
+    "content": "In Korea, skin care is preventive—not reactive. K-Beauty doesn't wait for sagging, thinning, or \"fix-me\" moments. It invests early in skin structure, so aging happens quietly. Instead of adding volume or chasing instant results, it focuses on collagen activation and dermal support, the kind that builds over time and holds its ground.",
+    "snippet": "In Korea, skin care is preventive—not reactive. K-Beauty doesn't wait for sagging, thinning, or \"fix-me\" moments. It invests early in skin structure, so aging h..."
+  },
+  {
+    "url": "education/juvelook.html#faq",
+    "title": "What to Expect at SuA Glow",
+    "pageTitle": "Juvelook® & Juvelook Volume®",
+    "category": "Spa Treatments",
+    "content": "~60 Minutes Mild Redness/Bumps (24-72h) Series (Spaced 3-4 Wks) Gradual, Natural, Cumulative Sophia Yang, PA-C The best K-Beauty provider in DFW. Seoul-Trained. Korean-Certified. \"Juvelook isn't interpreted. It's practiced the way it was meant to be. Regeneration over exaggeration.\" Yes. Juvelook is widely used internationally and well-tolerated when performed correctly. Juvelook is often layered into a broader skin strategy that may include lasers, microneedling, or other regenerative treatments. It becomes the foundation—the thing that quietly improves everything else. Yes. It pairs exceptionally well with other skin boosters, tox, and HA. \"Highly Rated. Quietly Essential. Absolutely Worth It.\" Feels Firmer & Denser Glow Builds & Stays Makeup Applies Better Ages Slower, Not Louder",
+    "snippet": "~60 Minutes Mild Redness/Bumps (24-72h) Series (Spaced 3-4 Wks) Gradual, Natural, Cumulative Sophia Yang, PA-C The best K-Beauty provider in DFW. Seoul-Trained...."
+  },
+  {
+    "url": "education/juvelook.html",
+    "title": "Juvelook builds better skin. If you're ready for collagen-first, Seoul-level skin regeneration, we're ready for you.",
+    "pageTitle": "Juvelook® & Juvelook Volume®",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "education/re20.html#hero",
+    "title": "Elravie Re2O",
+    "pageTitle": "Elravie Re2O",
+    "category": "Spa Treatments",
+    "content": "The ECM skin booster that started it all. Hydration, engineered for the ultimate K-Beauty glow.",
+    "snippet": "The ECM skin booster that started it all. Hydration, engineered for the ultimate K-Beauty glow."
+  },
+  {
+    "url": "education/re20.html#categorization",
+    "title": "Elravie Re2O",
+    "pageTitle": "Elravie Re2O",
+    "category": "Spa Treatments",
+    "content": "Origin South Korea Type ECM-Focused Hydration Purpose Restore hydration, elasticity, and skin resilience by supporting the skin's structural environment.",
+    "snippet": "Origin South Korea Type ECM-Focused Hydration Purpose Restore hydration, elasticity, and skin resilience by supporting the skin's structural environment."
+  },
+  {
+    "url": "education/re20.html#problem-solution",
+    "title": "The Problem:Hydration without Structure",
+    "pageTitle": "Elravie Re2O",
+    "category": "Spa Treatments",
+    "content": "Surface hydration slips out easily Extracellular matrix framework weakens over time Traditional boosters cause temporary puffiness, not health Skin feels tight, dull, and unpredictable SuA Glow K-Beauty Translation \"Fix the foundation now, so you don't have to correct problems later. Structure first. Hydration follows.\" In K-Beauty, hydration isn't treated like a glow-up. It's treated like engineering. Because skin doesn't just need moisture, it needs a structure that knows how to hold it. Hold onto hydration (without puffiness) Stay flexible and elastic Support collagen where it works best Reduce ongoing loss of moisture The Result Skin that looks calmer, smoother, and more balanced—without changing facial shape or announcing that anything was done.",
+    "snippet": "Surface hydration slips out easily Extracellular matrix framework weakens over time Traditional boosters cause temporary puffiness, not health Skin feels tight,..."
+  },
+  {
+    "url": "education/re20.html#components",
+    "title": "Main Components of Elravie Re2O",
+    "pageTitle": "Elravie Re2O",
+    "category": "Spa Treatments",
+    "content": "Scientific Composition Developed from the native components skin relies on—reassembled in the precise proportions of healthy, youthful tissue. The biological framework that tells hydration where to stay and collagen how to behave. Integrates into the dermal matrix to help skin hold onto moisture natively, without artificial puffiness. Primarily provides structural support to the dermis—the most abundant collagen in human skin. Provides skin elasticity and resilience, found alongside Type I in youthful tissue. The key building block of the basement membrane framework. Critical for structural integrity, working natively to maintain skin cohesion. Includes Elastin, GAGs, and minor collagen types for cell-linking and stability. Clinical Engineering By replicating the native environment, Re20 achieves superior bio-integration without an artificial look.",
+    "snippet": "Scientific Composition Developed from the native components skin relies on—reassembled in the precise proportions of healthy, youthful tissue. The biological fr..."
+  },
+  {
+    "url": "education/re20.html#comparison",
+    "title": "Same Skin. Different Strategies.",
+    "pageTitle": "Elravie Re2O",
+    "category": "Spa Treatments",
+    "content": "How K-Beauty Clinics Think About Skin Quality.",
+    "snippet": "How K-Beauty Clinics Think About Skin Quality."
+  },
+  {
+    "url": "education/re20.html",
+    "title": "Why South Koreans Love Re2O",
+    "pageTitle": "Elravie Re2O",
+    "category": "Spa Treatments",
+    "content": "In Korea, dehydration isn't a glow problem. It's a structure problem. That's why skin clinics in Seoul use Re2O—not to make skin louder, but to make it behave better. Clinics rely on Re2O because it gets better with consistency—not exaggeration. Re2O keeps skin hydrated, flexible, and calm—without making a scene. Quiet skin is good skin.",
+    "snippet": "In Korea, dehydration isn't a glow problem. It's a structure problem. That's why skin clinics in Seoul use Re2O—not to make skin louder, but to make it behave b..."
+  },
+  {
+    "url": "education/re20.html#faq",
+    "title": "What to Expect at SuA Glow",
+    "pageTitle": "Elravie Re2O",
+    "category": "Spa Treatments",
+    "content": "~60 Minutes Mild redness 24-72h Short series + maint. Natural hydration boost Sophia Yang, PA-C Seoul-Trained. Korean-Certified. No Translation Required. \"Real K-Beauty isn't loud. It's disciplined, intentional, and unmistakable when done right... K-Beauty isn't about doing everything. It's about doing the right thing.\" Yes. It's widely used internationally when administered correctly by trained medical professionals. Re2O is ideal for skin that feels dehydrated, tight, dull, or less elastic—even if you already use good skincare. It's especially popular for early prevention and long-term skin stability. No. Re2O does not add volume or alter facial shape. It improves hydration and elasticity without puffiness or filler effects. Skin often feels more hydrated and balanced within weeks. Results are cumulative. With proper maintenance, skin stays more hydrated, elastic, and resilient over time. Re2O supports the extracellular matrix (ECM), helping hydration stay where it belongs. Traditional HA boosters hydrate—but don't always help skin hold onto it. Yes. Re2O pairs exceptionally well with Juvelook, Rejuran, lasers, microneedling, and tox. \"Quietly essential. A little addictive (in a good way).\" Softer, elastic skin Hydration lasts Skin feels calm",
+    "snippet": "~60 Minutes Mild redness 24-72h Short series + maint. Natural hydration boost Sophia Yang, PA-C Seoul-Trained. Korean-Certified. No Translation Required. \"Real ..."
+  },
+  {
+    "url": "education/re20.html",
+    "title": "If you're ready for ECM-first hydration let's get started.",
+    "pageTitle": "Elravie Re2O",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "education/rejuran-tone-up.html#hero",
+    "title": "Rejuran®Tone Up Booster",
+    "pageTitle": "Rejuran® Tone Up Booster",
+    "category": "Spa Treatments",
+    "content": "The dual-action booster that rebuilds your skin barrier while delivering an unmistakable brightening effect.",
+    "snippet": "The dual-action booster that rebuilds your skin barrier while delivering an unmistakable brightening effect."
+  },
+  {
+    "url": "education/rejuran-tone-up.html#categorization",
+    "title": "Rejuran® Tone Up Booster",
+    "pageTitle": "Rejuran® Tone Up Booster",
+    "category": "Spa Treatments",
+    "content": "Origin South Korea Type Brightening Booster Purpose Fades pigmentation, evens skin tone, and restores cellular health.",
+    "snippet": "Origin South Korea Type Brightening Booster Purpose Fades pigmentation, evens skin tone, and restores cellular health."
+  },
+  {
+    "url": "education/rejuran-tone-up.html#problem-solution",
+    "title": "The Problem:Uneven Tone & Weak Skin",
+    "pageTitle": "Rejuran® Tone Up Booster",
+    "category": "Spa Treatments",
+    "content": "Dark spots and persistent hyperpigmentation Dull, \"tired-looking\" lackluster complexion Weakened skin barrier leading to sensitivity Large pores and uneven skin texture SuA Glow Perspective \"Brightening is only half the battle. To keep the glow, you must first repair the skin's foundation.\" Rejuran® Tone Up Booster leverages salmon DNA (c-PDRN) combined with powerful brightening agents to deliver a dual-action result: Inhibits melanin production (Brightening) Speeds up cellular repair (Regeneration) Provides deep, lasting hydration Tightens and refines pores The Result A visibly clearer, more luminous complexion that feels stronger and more resilient from within.",
+    "snippet": "Dark spots and persistent hyperpigmentation Dull, \"tired-looking\" lackluster complexion Weakened skin barrier leading to sensitivity Large pores and uneven skin..."
+  },
+  {
+    "url": "education/rejuran-tone-up.html#components",
+    "title": "The Power of 6 Ingredients",
+    "pageTitle": "Rejuran® Tone Up Booster",
+    "category": "Spa Treatments",
+    "content": "Rejuran® Tone Up Booster combines 6 high-concentration ingredients designed to work in synergy for maximum efficacy. The signature regenerative component that triggers deep skin repair and strengthens the barrier. A proven brightening agent that blocks the formation of melanin and fades persistent dark spots. The body's master antioxidant that delivers a bright, \"inner-light\" radiance to the skin. The Key Difference Most brightening products only treat the surface or inhibit pigment temporarily. Rejuran® Tone Up Booster uses c-PDRN to heal the skin cells themselves, ensuring that your new, bright skin is healthy and strong enough to maintain its glow without reverting to a dull state.",
+    "snippet": "Rejuran® Tone Up Booster combines 6 high-concentration ingredients designed to work in synergy for maximum efficacy. The signature regenerative component that t..."
+  },
+  {
+    "url": "education/rejuran-tone-up.html#vs-others",
+    "title": "How It Compares",
+    "pageTitle": "Rejuran® Tone Up Booster",
+    "category": "Spa Treatments",
+    "content": "vs. Topical Vitamin C Topical serums often oxidize and only reach the surface. Tone Up Booster is delivered directly into the skin, bypassing the barrier for 100% absorption. vs. Regular Rejuran Healer Rejuran Healer is focused purely on repair and healing. Tone Up Booster adds specific brightening agents (Tranexamic Acid and Glutathione) to the c-PDRN base. vs. Laser Toning Laser treatments break up pigment but can sometimes dry out the skin. Tone Up Booster provides the \"fuel\" for your skin to recover and brighten concurrently. vs. Traditional HA Boosters Standard HA boosters focus only on hydration (the water). Rejuran Tone Up provides hydration plus cellular repair and pigment control.",
+    "snippet": "vs. Topical Vitamin C Topical serums often oxidize and only reach the surface. Tone Up Booster is delivered directly into the skin, bypassing the barrier for 10..."
+  },
+  {
+    "url": "education/rejuran-tone-up.html#faq",
+    "title": "What to Expect at SuA Glow",
+    "pageTitle": "Rejuran® Tone Up Booster",
+    "category": "Spa Treatments",
+    "content": "~45 Minutes Minimal Downtime 3 Sessions Recommended Glowing, Even Tone Sophia's Expert Insight \"Tone Up Booster is a game-changer for clients who want that Korean glass-skin look but also need to strengthen their skin. It's truly a dual-benefit treatment that delivers luminosity without compromising on skin health.\" At SuA Glow, we use professional delivery systems (like microneedling or ultrasound) to ensure the booster penetrates deeply into the dermal layers where it can work most effectively. The procedure is well-tolerated. We apply a topical numbing cream beforehand to ensure your comfort throughout the session. Most clients notice an improvement in skin radiance and hydration within the first week. For pigmentation and texture, results become more prominent after the second or third session. Results typically last 4-6 months. We recommend a maintenance session every 3-4 months to keep your skin at its peak luminosity.",
+    "snippet": "~45 Minutes Minimal Downtime 3 Sessions Recommended Glowing, Even Tone Sophia's Expert Insight \"Tone Up Booster is a game-changer for clients who want that Kore..."
+  },
+  {
+    "url": "education/rejuran-tone-up.html",
+    "title": "Ready for your inner glow to surface? Let's create your Tone Up protocol.",
+    "pageTitle": "Rejuran® Tone Up Booster",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "education/rejuran.html#hero",
+    "title": "Glass Skin Secret.Now in Carrollton.",
+    "pageTitle": "Rejuran® Carrollton",
+    "category": "Spa Treatments",
+    "content": "No passport required for the K-Beauty Glow. Authentic Korean Skin Regeneration is now serving the entire Dallas–Fort Worth metroplex.",
+    "snippet": "No passport required for the K-Beauty Glow. Authentic Korean Skin Regeneration is now serving the entire Dallas–Fort Worth metroplex."
+  },
+  {
+    "url": "education/rejuran.html#science",
+    "title": "What Is Rejuran®?",
+    "pageTitle": "Rejuran® Carrollton",
+    "category": "Spa Treatments",
+    "content": "The Salmon DNA Protocol Rejuran® is a Korean regenerative skin booster formulated with polynucleotides (PN)—biocompatible molecules derived from purified salmon DNA that support the skin’s natural repair process. In Korean dermatology, PN is prized for its ability to repair damaged skin, improve elasticity, refine texture, and strengthen the skin barrier over time. Korea doesn’t ask, “How do we change the face?” It asks, “How do we make the skin behave better?” Skin healing Dermal regeneration Long-term health Dermal Filler Muscle Freeze Instant Volume",
+    "snippet": "The Salmon DNA Protocol Rejuran® is a Korean regenerative skin booster formulated with polynucleotides (PN)—biocompatible molecules derived from purified salmon..."
+  },
+  {
+    "url": "education/rejuran.html#effect",
+    "title": "The Rejuran Effect",
+    "pageTitle": "Rejuran® Carrollton",
+    "category": "Spa Treatments",
+    "content": "Targeting the dermis layer for true clinical health. 01 Activates cellular repair to revitalize aging and environmental damaged skin. 02 Restores the damaged barrier, addressing lines around delicate facial areas. 03 Thickens the dermal layer to smooth out surface imperfections and stretched pores. 04 Promotes intrinsic production of structural proteins for long-term resilience.",
+    "snippet": "Targeting the dermis layer for true clinical health. 01 Activates cellular repair to revitalize aging and environmental damaged skin. 02 Restores the damaged ba..."
+  },
+  {
+    "url": "education/rejuran.html#family",
+    "title": "Meet the Rejuran® Family",
+    "pageTitle": "Rejuran® Carrollton",
+    "category": "Spa Treatments",
+    "content": "Intention-based dermal solutions. The Reset Button. Improves overall DNA repair and skin vitality without changing facial structure. \"Your skin, but more cooperative.\" Eye Area Finesse. Targeted hydration using a softer formulation to improve delicate under-eye texture. \"You look well-rested. Even if you’re not.\" Structural Repair. Developed specifically for acne scarring and stubborn wounds through localized collagen promotion. \"Better skin terrain. No filter required.\" Glow With a Plan. Focuses on brightness and hydration, helping skin achieve a translucent \"Glass Skin\" quality. \"Clearer skin that knows how to catch the light.\"",
+    "snippet": "Intention-based dermal solutions. The Reset Button. Improves overall DNA repair and skin vitality without changing facial structure. \"Your skin, but more cooper..."
+  },
+  {
+    "url": "education/rejuran.html#sophia",
+    "title": "Meet Sophia Yang, PA-C.Korean Technique.No Translation Required.",
+    "pageTitle": "Rejuran® Carrollton",
+    "category": "Spa Treatments",
+    "content": "Master Injector Certified in Seoul Sophia is an authentically Korean master injector trained in the clinical aesthetic philosophy where Rejuran originated. In Korea, skin boosters are not injected for drama. They are injected for skin behavior. Sophia applies true protocols for depth, spacing, and product selection—details that determine real efficacy. • Regeneration > Drama• Precision > Shortcuts• Health > Trends • Seoul Trained• Original Protocol• Authentic Master",
+    "snippet": "Master Injector Certified in Seoul Sophia is an authentically Korean master injector trained in the clinical aesthetic philosophy where Rejuran originated. In K..."
+  },
+  {
+    "url": "education/rejuran.html#faq",
+    "title": "Transparency Matters",
+    "pageTitle": "Rejuran® Carrollton",
+    "category": "Spa Treatments",
+    "content": "Rejuran® injectable skin boosters are not currently FDA-approved for injection in the United States. They have, however, been extensively used in South Korea for years under established clinical protocols. At SuA Glow, we believe educated clients make confident decisions. We review all treatment purposes, alternatives, and risks during your private consultation to determine your ideal path. ~60 Minutes 24–72 Hours 3–4 Sessions Cumulative Quality",
+    "snippet": "Rejuran® injectable skin boosters are not currently FDA-approved for injection in the United States. They have, however, been extensively used in South Korea fo..."
+  },
+  {
+    "url": "education/rejuran.html",
+    "title": "Rejuran doesn’t chase trends.It builds better skin.",
+    "pageTitle": "Rejuran® Carrollton",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "education/skinboosters.html#hero",
+    "title": "Skin Boosters",
+    "pageTitle": "Skin Boosters",
+    "category": "OPTIMAL RESULTS",
+    "content": "Advanced treatments focused on structural hydration, collagen stimulation, and long-term skin health. Because in Korea, skincare isn't a trend. It's an investment in your foundation.",
+    "snippet": "Advanced treatments focused on structural hydration, collagen stimulation, and long-term skin health. Because in Korea, skincare isn't a trend. It's an investme..."
+  },
+  {
+    "url": "education/skinboosters.html",
+    "title": "Rejuran® Healer",
+    "pageTitle": "Skin Boosters",
+    "category": "OPTIMAL RESULTS",
+    "content": "Skin Repair The gold standard for skin repair. Salmon-derived Polynucleotides (PN) rebuild damaged skin structure and reduce inflammation. Rejuran® A specialized cocktail designed to dramatically even out skin tone and deliver a deeply radiant, Korean glass-skin glow. Collagen A biostimulatory booster that signals your skin to produce new collagen over time, acting as internal scaffolding. Hydration Stabilizes hydration at the extracellular matrix level, creating a calmer and more elastic skin environment. Density Reinforces the dermal environment using refined ECM components, focusing on skin thickness and density. Mool Gwang The premium HA skin booster for the dermis. Softens lines and delivers a quiet, sustained luminosity. Smoothing Next-generation hydration technology focused on immediate moisture restoration and suppleness. FDA Approved The first and only FDA-approved microdroplet injectable in the US to improve skin smoothness and glow. Our experts recommend these strategic pairings for a truly transformative Korean Glow. Rejuran® + Micro-Tox Combine deep repair with surface smoothing to erase fine lines while rebuilding density. Rejuran® + Hydro + Booster The ultimate hydration trifecta for intense repair, deep moisture, and an immediate dewy finish. Rejuran® + Juvelook Skin Cellular regeneration meets collagen stimulus. Ideal for thinning skin and targeted texture repair.",
+    "snippet": "Skin Repair The gold standard for skin repair. Salmon-derived Polynucleotides (PN) rebuild damaged skin structure and reduce inflammation. Rejuran® A specialize..."
+  },
+  {
+    "url": "education/skinboosters.html",
+    "title": "Not sure which booster is right for you? Our experts will diagnose and create your personalized K-Beauty protocol.",
+    "pageTitle": "Skin Boosters",
+    "category": "OPTIMAL RESULTS",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "education/skinvive.html#hero",
+    "title": "SKINVIVE™by JUVÉDERM®",
+    "pageTitle": "SKINVIVE™ by JUVÉDERM®",
+    "category": "Spa Treatments",
+    "content": "The first and only hyaluronic acid microdroplet injectable designed to improve cheek skin smoothness for a lasting glow.",
+    "snippet": "The first and only hyaluronic acid microdroplet injectable designed to improve cheek skin smoothness for a lasting glow."
+  },
+  {
+    "url": "education/skinvive.html#categorization",
+    "title": "SKINVIVE™ by JUVÉDERM®",
+    "pageTitle": "SKINVIVE™ by JUVÉDERM®",
+    "category": "Spa Treatments",
+    "content": "Manufacturer Allergan Aesthetics Type Microdroplet Injectable Purpose Boosts internal hydration for lasting skin smoothness and a glowing, healthy look.",
+    "snippet": "Manufacturer Allergan Aesthetics Type Microdroplet Injectable Purpose Boosts internal hydration for lasting skin smoothness and a glowing, healthy look."
+  },
+  {
+    "url": "education/skinvive.html#problem-solution",
+    "title": "The Problem:Depletion of Hydration",
+    "pageTitle": "SKINVIVE™ by JUVÉDERM®",
+    "category": "Spa Treatments",
+    "content": "Hyaluronic acid naturally decreases with age and sun exposure Skin loses its natural moisture-retaining ability Surface texture changes and deep dullness occur Topical creams and serums only hydrate the surface K-Beauty Hydration Philosophy \"True luminosity stems from deep, structural hydration, not just surface moisture.\" Designed to break the rules of your routine and hydrate from within: Replenishes deep hyaluronic acid Enhances smooth cheek texture Improves skin hydration and radiance Maintains your natural facial contours The Result A lasting, effortless glow that emanates from healthy, hydrated skin.",
+    "snippet": "Hyaluronic acid naturally decreases with age and sun exposure Skin loses its natural moisture-retaining ability Surface texture changes and deep dullness occur ..."
+  },
+  {
+    "url": "education/skinvive.html#components",
+    "title": "How SKINVIVE™ Works",
+    "pageTitle": "SKINVIVE™ by JUVÉDERM®",
+    "category": "Spa Treatments",
+    "content": "Unlike traditional fillers, SKINVIVE™ is engineered specifically for skin quality and hydration. Its unique formulation uses a microdroplet injection technique to disperse modified hyaluronic acid evenly across the dermal layer. A specialized, water-attracting HA molecule designed to disperse evenly, retaining deep moisture rather than creating volume. Formulated with a common pain reliever built right into the product to keep the fast microdroplet experience comfortable. FDA approved and clinically proven to safely and predictably improve skin across all skin types and tones. The Key Difference Instead of placing a bolus of gel for facial shaping, SKINVIVE™ is injected through a series of tiny intradermal microdroplets just below the skin. This allows the hyaluronic acid to hydrate from within, directly creating a wide area of smoothness without altering your face shape or structural volume. [Diagram of Skinvive Intradermal Microdroplets] Placeholder for graphic showing hydration within the dermal layer",
+    "snippet": "Unlike traditional fillers, SKINVIVE™ is engineered specifically for skin quality and hydration. Its unique formulation uses a microdroplet injection technique ..."
+  },
+  {
+    "url": "education/skinvive.html#vs-others",
+    "title": "How SKINVIVE™ Compares",
+    "pageTitle": "SKINVIVE™ by JUVÉDERM®",
+    "category": "Spa Treatments",
+    "content": "vs. Dermal Fillers Traditional HA fillers are structurally dense to add volume and shape to specific areas. SKINVIVE™ is a fluid microdroplet HA that hydrates to improve skin texture and smoothness without adding volume. vs. Topical Skincare While daily moisturizers treat the outermost barrier of your skin, SKINVIVE™ treats underneath the surface, locking in deep hydration for 6 months continuously. vs. Polynucleotides (Rejuran) Rejuran triggers long-term regenerative DNA repair within cells over time. SKINVIVE™ focuses directly on immediate, broad moisture retention and surface texture. vs. Liquid Tox Tox treatments target active muscle movements and dynamic lines. SKINVIVE™ focuses on the static, overall hydration and smoothness of the skin layer itself.",
+    "snippet": "vs. Dermal Fillers Traditional HA fillers are structurally dense to add volume and shape to specific areas. SKINVIVE™ is a fluid microdroplet HA that hydrates t..."
+  },
+  {
+    "url": "education/skinvive.html#faq",
+    "title": "What to Expect at SuA Glow",
+    "pageTitle": "SKINVIVE™ by JUVÉDERM®",
+    "category": "Spa Treatments",
+    "content": "~15 Minutes Minimal Downtime Lasts Up To 6 Months Glowing, Refreshed Skin [Before and after real results from Skinvive] Placeholder for graphic showing cheek smoothness improvements SuA Glow K-Beauty Takeaway \"At SuA Glow, we love SKINVIVE™ because it aligns perfectly with the K-Beauty philosophy: achieving stunning, hydrated glass skin from within, rather than trying to mask surface problems.\" SKINVIVE™ is the first and only hyaluronic acid microdroplet injectable indicated to improve skin smoothness of the cheeks and hydrate from within—without a series of treatments—for a glow that lasts through 6 months. Since it contains hyaluronic acid, it is technically part of the filler category. However, unlike traditional fillers that shape and build volume, SKINVIVE™'s modified HA is strictly designed to improve cheek smoothness and hydrate without changing your face shape. Treatment with SKINVIVE™ has minimal downtime. Many people refer to it as \"do-it-on-your-lunch-break\" convenient. You may experience temporary bumps, redness, or bruising at the micro-injection sites, which usually resolve quickly. Yes, SKINVIVE™ is FDA approved and clinically proven to safely improve skin quality across all skin types and tones. Results are proven to last up to 6 months. To maintain the continuous glow and smoothness, we recommend scheduling a treatment every 6 months. No, SKINVIVE™ works within your skin layer, while your daily topical creams protect the outer skin barrier. They work best in combination for comprehensive skin health.",
+    "snippet": "~15 Minutes Minimal Downtime Lasts Up To 6 Months Glowing, Refreshed Skin [Before and after real results from Skinvive] Placeholder for graphic showing cheek sm..."
+  },
+  {
+    "url": "education/skinvive.html",
+    "title": "SKINVIVE™ by JUVÉDERM®",
+    "pageTitle": "SKINVIVE™ by JUVÉDERM®",
+    "category": "Spa Treatments",
+    "content": "Awaiting Assets 1. Gallery Images pending research for Skinvive.2. Sophia to Identify: Proper Skinvive Diagrams.",
+    "snippet": "Awaiting Assets 1. Gallery Images pending research for Skinvive.2. Sophia to Identify: Proper Skinvive Diagrams."
+  },
+  {
+    "url": "education/skinvive.html",
+    "title": "K-Beauty isn’t about doing everything. It’s about doing the right thing.",
+    "pageTitle": "SKINVIVE™ by JUVÉDERM®",
+    "category": "Spa Treatments",
+    "content": "K-Beauty Medspa • Carrollton HQ",
+    "snippet": "K-Beauty Medspa • Carrollton HQ"
+  }
+];

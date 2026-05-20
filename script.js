@@ -32,6 +32,7 @@ function initNavigation() {
     initMobileAccordions();
     initNavThemeLogic();
     initDesktopNavTransition();
+    initSearch();
 
     // Smooth scroll for anchors
     initAnchorScroll();
@@ -639,4 +640,320 @@ function initCookieConsent() {
       dismissBanner('declined');
     });
   }
+}
+
+/**
+ * Full-Screen Search Feature Implementation
+ */
+function initSearch() {
+  const searchTrigger = document.getElementById('search-trigger');
+  const mobileSearchTrigger = document.getElementById('mobile-search-trigger');
+
+  const openSearch = (e) => {
+    if (e) e.preventDefault();
+    createSearchOverlay();
+    const overlay = document.getElementById('search-overlay');
+    const input = document.getElementById('search-input');
+    
+    if (overlay) {
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    setTimeout(() => {
+      if (input) input.focus();
+    }, 100);
+
+    ensureSearchIndexLoaded();
+  };
+
+  if (searchTrigger) {
+    searchTrigger.addEventListener('click', openSearch);
+  }
+  if (mobileSearchTrigger) {
+    mobileSearchTrigger.addEventListener('click', openSearch);
+  }
+}
+
+function ensureSearchIndexLoaded(callback) {
+  if (typeof SEARCH_INDEX !== 'undefined') {
+    if (callback) callback();
+    return;
+  }
+  
+  const isSubfolder = window.location.pathname.includes('/education/');
+  const indexPath = isSubfolder ? '../search-index.js' : 'search-index.js';
+  
+  const script = document.createElement('script');
+  script.src = indexPath;
+  script.onload = () => {
+    console.log('Search index loaded dynamically');
+    if (callback) callback();
+  };
+  script.onerror = () => {
+    console.error('Failed to load search index');
+  };
+  document.head.appendChild(script);
+}
+
+function createSearchOverlay() {
+  if (document.getElementById('search-overlay')) return;
+
+  const overlay = document.createElement('div');
+  overlay.id = 'search-overlay';
+  overlay.className = 'fixed inset-0 z-[200] opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col items-center justify-start pt-24 px-4 sm:px-6';
+
+  overlay.innerHTML = `
+    <!-- Close Button -->
+    <button id="search-close" class="absolute top-6 right-6 text-white/60 hover:text-white transition-colors p-2" aria-label="Close search">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+    
+    <div class="w-full max-w-2xl flex flex-col gap-6">
+      <!-- Search Input Container -->
+      <div class="relative w-full search-input-container pb-4 flex items-center gap-4">
+        <i data-lucide="search" class="w-6 h-6 text-[#AA987C]"></i>
+        <input type="text" id="search-input" placeholder="Search treatments, concerns..." class="bg-transparent border-none text-white text-xl sm:text-2xl font-light w-full focus:outline-none placeholder-white/30" autocomplete="off" />
+      </div>
+
+      <!-- Suggested Terms -->
+      <div id="search-suggestions" class="flex flex-wrap gap-2 text-xs">
+        <span class="text-white/40 uppercase tracking-widest mr-2 self-center font-body text-[10px]">Popular:</span>
+        <button class="suggestion-tag search-suggestion-tag px-3 py-1.5 rounded-full font-body">Oligio X</button>
+        <button class="suggestion-tag search-suggestion-tag px-3 py-1.5 rounded-full font-body">Skin Boosters</button>
+        <button class="suggestion-tag search-suggestion-tag px-3 py-1.5 rounded-full font-body">Botox</button>
+        <button class="suggestion-tag search-suggestion-tag px-3 py-1.5 rounded-full font-body">Salmon PN</button>
+        <button class="suggestion-tag search-suggestion-tag px-3 py-1.5 rounded-full font-body">Scar Treatment</button>
+      </div>
+
+      <!-- Results Panel -->
+      <div id="search-results-panel" class="hidden flex-col gap-4 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+        <div id="search-results-header" class="search-results-header text-[10px] uppercase tracking-widest text-[#AA987C] font-semibold pb-2 font-heading">Results (0)</div>
+        <div id="search-results-list" class="flex flex-col gap-4">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(overlay);
+
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+
+  const closeBtn = document.getElementById('search-close');
+  const input = document.getElementById('search-input');
+  const resultsPanel = document.getElementById('search-results-panel');
+  const resultsList = document.getElementById('search-results-list');
+  const resultsHeader = document.getElementById('search-results-header');
+  const suggestions = document.querySelectorAll('.suggestion-tag');
+
+  const closeOverlay = () => {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    input.value = '';
+    resultsPanel.classList.add('hidden');
+    resultsPanel.classList.remove('flex');
+    resultsList.innerHTML = '';
+  };
+
+  closeBtn.addEventListener('click', closeOverlay);
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) {
+      closeOverlay();
+    }
+  });
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      closeOverlay();
+    }
+  });
+
+  input.addEventListener('input', () => {
+    const val = input.value.trim();
+    if (val.length < 2) {
+      resultsPanel.classList.add('hidden');
+      resultsPanel.classList.remove('flex');
+      resultsList.innerHTML = '';
+      return;
+    }
+
+    ensureSearchIndexLoaded(() => {
+      const results = executeSearch(val);
+      renderResults(results, val);
+    });
+  });
+
+  suggestions.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const term = btn.textContent.trim();
+      input.value = term;
+      input.focus();
+      ensureSearchIndexLoaded(() => {
+        const results = executeSearch(term);
+        renderResults(results, term);
+      });
+    });
+  });
+
+  function renderResults(results, query) {
+    resultsPanel.classList.remove('hidden');
+    resultsPanel.classList.add('flex');
+    resultsHeader.textContent = `Results (${results.length})`;
+    resultsList.innerHTML = '';
+
+    if (results.length === 0) {
+      resultsList.innerHTML = `
+        <div class="text-white/40 text-sm font-light py-8 text-center font-body">
+          No matches found for "${query}". Try searching for popular treatments like Oligio, Skin Boosters, or Botox.
+        </div>
+      `;
+      return;
+    }
+
+    results.forEach(res => {
+      const link = document.createElement('a');
+      link.href = formatResultUrl(res.url);
+      link.className = 'group/res search-result-card flex flex-col gap-1 p-4 rounded-xl';
+      
+      const categoryHtml = res.category ? `<span class="text-[9px] uppercase tracking-widest text-[#AA987C] font-semibold">${res.category}</span>` : '';
+      const pageTitleHtml = res.pageTitle && res.pageTitle !== res.title ? `<span class="text-white/40 text-xs font-light ml-2">in ${res.pageTitle}</span>` : '';
+      
+      const dynSnippet = getDynamicSnippet(res.content, query);
+      const highlightedTitle = highlightText(res.title, query);
+      const highlightedSnippet = highlightText(dynSnippet, query);
+
+      link.innerHTML = `
+        <div class="flex items-baseline justify-between">
+          <div class="flex items-baseline flex-wrap">
+            <h4 class="text-white text-sm font-medium tracking-wide group-hover/res:text-[#AA987C] transition-colors font-body">${highlightedTitle}</h4>
+            ${pageTitleHtml}
+          </div>
+          ${categoryHtml}
+        </div>
+        <p class="text-xs text-white/50 leading-relaxed font-light font-body">${highlightedSnippet}</p>
+      `;
+
+      link.addEventListener('click', () => {
+        closeOverlay();
+      });
+
+      resultsList.appendChild(link);
+    });
+  }
+}
+
+function formatResultUrl(url) {
+  const isSubfolder = window.location.pathname.includes('/education/');
+  if (isSubfolder) {
+    if (url.startsWith('education/')) {
+      return url.substring(10);
+    } else {
+      return '../' + url;
+    }
+  } else {
+    return url;
+  }
+}
+
+function highlightText(text, query) {
+  if (!query) return text;
+  const terms = query.split(/\s+/).filter(t => t.length > 0);
+  if (terms.length === 0) return text;
+  
+  terms.sort((a, b) => b.length - a.length);
+
+  const escapedTerms = terms.map(t => t.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'));
+  const pattern = new RegExp(`(<[^>]+>)|(${escapedTerms.join('|')})`, 'gi');
+  
+  return text.replace(pattern, (match, p1, p2) => {
+    if (p1) {
+      return p1;
+    }
+    return `<mark class="search-highlight">${p2}</mark>`;
+  });
+}
+
+function getDynamicSnippet(content, query) {
+  const terms = query.toLowerCase().split(/\s+/).filter(t => t.length > 0);
+  if (terms.length === 0) {
+    return content.substring(0, 160) + (content.length > 160 ? '...' : '');
+  }
+  
+  let minIndex = -1;
+  terms.forEach(term => {
+    const idx = content.toLowerCase().indexOf(term);
+    if (idx !== -1 && (minIndex === -1 || idx < minIndex)) {
+      minIndex = idx;
+    }
+  });
+  
+  if (minIndex === -1) {
+    return content.substring(0, 160) + (content.length > 160 ? '...' : '');
+  }
+  
+  const start = Math.max(0, minIndex - 60);
+  const end = Math.min(content.length, minIndex + 100);
+  let snippet = content.substring(start, end);
+  
+  if (start > 0) {
+    snippet = '...' + snippet;
+  }
+  if (end < content.length) {
+    snippet = snippet + '...';
+  }
+  return snippet;
+}
+
+function executeSearch(query) {
+  if (!query) return [];
+  const terms = query.toLowerCase().split(/\s+/).filter(t => t.length > 0);
+  if (terms.length === 0) return [];
+  
+  const results = [];
+  
+  SEARCH_INDEX.forEach(entry => {
+    let score = 0;
+    const titleLower = entry.title.toLowerCase();
+    const pageTitleLower = entry.pageTitle.toLowerCase();
+    const contentLower = entry.content.toLowerCase();
+    const categoryLower = entry.category.toLowerCase();
+    
+    const allTermsMatch = terms.every(term => {
+      let termScore = 0;
+      if (titleLower.includes(term)) {
+        termScore += 10;
+        if (titleLower === term) termScore += 10;
+      }
+      if (pageTitleLower.includes(term)) {
+        termScore += 5;
+      }
+      if (categoryLower.includes(term)) {
+        termScore += 8;
+      }
+      if (contentLower.includes(term)) {
+        termScore += 2;
+        const matches = contentLower.match(new RegExp(term.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'));
+        if (matches) {
+          termScore += Math.min(matches.length * 0.5, 5);
+        }
+      }
+      
+      score += termScore;
+      return termScore > 0;
+    });
+    
+    if (allTermsMatch) {
+      results.push({
+        entry,
+        score
+      });
+    }
+  });
+  
+  results.sort((a, b) => b.score - a.score);
+  return results.map(r => r.entry);
 }
