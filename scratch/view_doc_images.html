@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc Images Grid</title>
+    <style>
+        body { font-family: sans-serif; background: #f3f4f6; margin: 20px; }
+        h1 { text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; }
+        img { max-width: 100%; height: auto; border-radius: 4px; display: block; margin: 0 auto 10px; max-height: 250px; object-fit: contain; }
+        .name { font-weight: bold; margin-bottom: 5px; }
+        .size { font-size: 12px; color: #666; }
+    </style>
+</head>
+<body>
+    <h1>Doc Images Gallery</h1>
+    <div class="grid">
+        <!-- Generate cards for all 22 images -->
+        <script>
+            const grid = document.querySelector('.grid');
+            for (let i = 1; i <= 22; i++) {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="name">doc_img_${i}.png</div>
+                    <img src="../assets/doc_images/doc_img_${i}.png" alt="doc_img_${i}">
+                `;
+                grid.appendChild(card);
+            }
+        </script>
+    </div>
+</body>
+</html>

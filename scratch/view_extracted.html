@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Extracted Images</title>
+    <style>
+        body { font-family: sans-serif; background: #1a1a1a; color: white; padding: 20px; }
+        .grid { display: grid; grid-template-cols: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: #2a2a2a; padding: 15px; border-radius: 8px; text-align: center; }
+        img { max-width: 100%; max-height: 250px; object-fit: contain; background: #333; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Extracted Oligio X Assets (&gt; 50KB)</h1>
+    <div id="gallery" class="grid"></div>
+
+    <script>
+        // List of files >50KB from list_dir output
+        const files = [
+            "img_p2_2.png", "img_p4_3.png", "img_p7_1.png", "img_p7_9.png", 
+            "img_p8_2.png", "img_p8_3.png", "img_p11_2.png", "img_p11_4.png", 
+            "img_p11_5.png", "img_p12_4.png", "img_p13_5.png", "img_p13_6.png", 
+            "img_p14_2.png", "img_p16_2.png", "img_p16_3.png", "img_p16_4.png",
+            "img_p21_3.png", "img_p21_6.png", "img_p21_7.png", "img_p22_5.png",
+            "img_p26_83.jpg", "img_p27_1.jpg", "img_p28_3.jpg", "img_p28_4.jpg",
+            "img_p29_2.jpg", "img_p29_3.jpg", "img_p30_2.jpg", "img_p30_3.jpg",
+            "img_p31_1.jpg", "img_p32_1.jpg", "img_p32_2.jpg", "img_p33_1.jpg",
+            "img_p34_3.jpg"
+        ];
+
+        const gallery = document.getElementById("gallery");
+        files.forEach(f => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `<h3>${f}</h3><img src="../assets/oligio-x/${f}" alt="${f}">`;
+            gallery.appendChild(card);
+        });
+    </script>
+</body>
+</html>
