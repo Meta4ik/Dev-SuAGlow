@@ -105,7 +105,8 @@ files.forEach(file => {
   }
 });
 
-// Also scrape subfolders if any (e.g. education/)
+// Also scrape subfolders if any (e.g. education/) - Disabled for now
+/*
 const eduPath = path.join(ROOT_DIR, 'education');
 if (fs.existsSync(eduPath) && fs.statSync(eduPath).isDirectory()) {
   const eduFiles = fs.readdirSync(eduPath);
@@ -115,6 +116,7 @@ if (fs.existsSync(eduPath) && fs.statSync(eduPath).isDirectory()) {
     }
   });
 }
+*/
 
 const outputPath = path.join(ROOT_DIR, 'search-index.js');
 const jsContent = `// Auto-generated Search Index for SuA K-Glow. Do not edit directly.

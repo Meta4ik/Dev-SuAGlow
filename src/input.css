@@ -1092,7 +1092,7 @@ mark.search-highlight {
 }
 
 #search-overlay {
-    background-color: rgba(19, 22, 25, 0.96) !important;
+    background-color: rgba(19, 22, 25, 0.75) !important;
     backdrop-filter: blur(16px) !important;
     -webkit-backdrop-filter: blur(16px) !important;
 }
