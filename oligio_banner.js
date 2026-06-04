@@ -15,7 +15,7 @@ const OLIGIO_BANNER_HTML = `
                 </span>
                 
                 <h2 class="heading-wide text-3xl md:text-5xl text-white leading-[1.1] font-light">
-                    First Med Spa to Offer<br>
+                    First DFW Med Spa to Offer<br>
                     <span class="text-[#AA987C] font-semibold">Oligio X RF Lifting</span>
                 </h2>
                 
