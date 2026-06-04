@@ -531,79 +531,47 @@ const SEARCH_INDEX = [
   {
     "url": "oligio-x.html#hero",
     "title": "Oligio XRF Lifting",
-    "pageTitle": "Oligio X RF Lifting",
+    "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
-    "content": "Monopolar radiofrequency skin tightening. Deep collagen remodeling. Lifting and contouring without surgery — using the clinically proven GXG dual-mode protocol.",
-    "snippet": "Monopolar radiofrequency skin tightening. Deep collagen remodeling. Lifting and contouring without surgery — using the clinically proven GXG dual-mode protocol."
+    "content": "FDA-Cleared Korean-Inspired Skin Tightening Without Surgery. Focused on collagen support, jawline contouring, and natural-looking rejuvenation. Patients across Dallas, Plano, Frisco, Coppell, Irving, Southlake, Grapevine, and the DFW metroplex visit SuA Glow for Korean-inspired RF skin tightening focused on natural-looking rejuvenation and skin health.",
+    "snippet": "FDA-Cleared Korean-Inspired Skin Tightening Without Surgery. Focused on collagen support, jawline contouring, and natural-looking rejuvenation. Patients across ..."
   },
   {
-    "url": "oligio-x.html#what-is",
-    "title": "Skin tightening that works from within.",
-    "pageTitle": "Oligio X RF Lifting",
+    "url": "oligio-x.html#philosophy",
+    "title": "Seoul-Level Skin Tightening.Without Looking “Done.”",
+    "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
-    "content": "Oligio X delivers monopolar radiofrequency energy at 6.78MHz directly into the dermis, generating controlled deep tissue heat (40–60°C). This triggers an immediate collagen contraction response followed by long-term neocollagenesis — new collagen production that continues improving skin quality for weeks after treatment. Unlike surface-level treatments, Oligio X targets the structural foundation of the skin. The result is genuine lifting, tightening, and wrinkle reduction — not surface shimmer. The Seoul standard for non-invasive lifting: precise energy, clinical protocol, measurable results. Oligio X Monopolar RF 400W Maximum System Output",
-    "snippet": "Oligio X delivers monopolar radiofrequency energy at 6.78MHz directly into the dermis, generating controlled deep tissue heat (40–60°C). This triggers an immedi..."
+    "content": "Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work done?” but rather “Why does her skin always look so healthy?” At SuA Glow Med Spa in Carrollton, Oligio X RF Lifting was selected because modern Korean skin tightening is no longer about aggressive pulling, frozen movement, or dramatic overcorrection. It is about supporting your skin's natural behavior and enhancing its structural density. Our Strategy for Skin Health Focuses on: Because in Seoul: tightening should still look like you. SuA Glow Carrollton Among the first in DFW to offer Oligio X",
+    "snippet": "Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work done?” but rather “Why does her skin always look so..."
   },
   {
-    "url": "oligio-x.html",
-    "title": "Clinical Indications",
-    "pageTitle": "Oligio X RF Lifting",
+    "url": "oligio-x.html#comparison",
+    "title": "Oligio X vs. Alternatives",
+    "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
-    "content": "Lifting & Tightening Skin laxity & jowling Facial contouring Skin tightening Wrinkle Reduction Fine lines & rhytides Periorbital wrinkles Nasolabial folds (mild–moderate) Skin Rejuvenation Neocollagenesis & collagen remodeling Uneven skin tone & texture Enlarged pores Optimized 4.0cm² surface area with intensive multidirectional cooling for rapid, uniform full-face tightening. High-precision 0.25cm² contact tip specifically calibrated for delicate eyelid and under-eye wrinkle lifting. Oligio X utilizes dual-patented treatment tips engineered for precise energy coupling. By splitting delivery between facial contour rejuvenation and highly precise periorbital tissue tightening, patients receive targeted dermal therapy with maximized comfort and optimal anatomical coverage.",
-    "snippet": "Lifting & Tightening Skin laxity & jowling Facial contouring Skin tightening Wrinkle Reduction Fine lines & rhytides Periorbital wrinkles Nasolabial folds (mild..."
-  },
-  {
-    "url": "oligio-x.html#gxg-protocol",
-    "title": "The GXG Dual-Mode Protocol",
-    "pageTitle": "Oligio X RF Lifting",
-    "category": "Oligio X RF Lifting",
-    "content": "Three Steps. One Comprehensive Treatment. Step 01 — Pre-Heating G Mode gliding pre-heats the upper dermis, preparing the tissue and creating an even thermal baseline. 4.0–5.0 Lv • 100 shots Step 02 — Core-Heating Powerful X Mode stamping delivers intense heat, targeting lower dermis for concentrated tightening. 2.0–3.0 Lv • 70 shots Step 03 — Long-Lasting Final G Mode gliding seals in deep heat, prolonging thermal retention for optimal remodeling. 4.0–5.0 Lv • 130 shots Dual Mode dynamically combines superficial G Mode pre-heating and deep X Mode target heating. Standard full-face protocol: 300 shots per side • 600 shots total. Energy level and shot count are always adjusted based on patient feedback and tolerance.",
-    "snippet": "Three Steps. One Comprehensive Treatment. Step 01 — Pre-Heating G Mode gliding pre-heats the upper dermis, preparing the tissue and creating an even thermal bas..."
-  },
-  {
-    "url": "oligio-x.html#science",
-    "title": "How Monopolar RF Works",
-    "pageTitle": "Oligio X RF Lifting",
-    "category": "Oligio X RF Lifting",
-    "content": "The Science of Deep Tissue Remodeling Dermal Thermal Penetration Controlled 6.78MHz Energy targeting the Deep Dermis Step 01 High-frequency alternating current (6.78MHz) passes between the treatment tip and grounding pad, penetrating deep into dermal tissue. Step 02 Tissue molecules oscillate millions of times per second, converting electrical energy to localized deep heat (40–60°C) within the dermis. Step 03 Immediate collagen denaturation and fiber contraction creates an instant tightening response, stimulating fibroblast activity. Step 04 Natural wound healing triggers sustained dermal remodeling and new collagen synthesis — results continue improving over 2–4 weeks post-treatment.",
-    "snippet": "The Science of Deep Tissue Remodeling Dermal Thermal Penetration Controlled 6.78MHz Energy targeting the Deep Dermis Step 01 High-frequency alternating current ..."
-  },
-  {
-    "url": "oligio-x.html#device",
-    "title": "Premium Handpiece",
-    "pageTitle": "Oligio X RF Lifting",
-    "category": "Oligio X RF Lifting",
-    "content": "Ergonomic Oligio X handpiece featuring integrated shot triggers and status buttons. System Console Hover to inspect system details The Oligio X system delivers up to 400W of monopolar RF energy with real-time impedance feedback — ensuring consistent, calibrated power with every shot. An intensive 5-stage cooling system (pre, button, parallel, post cooling + continuous cooling) protects the skin surface while energy penetrates the dermis.",
-    "snippet": "Ergonomic Oligio X handpiece featuring integrated shot triggers and status buttons. System Console Hover to inspect system details The Oligio X system delivers ..."
-  },
-  {
-    "url": "oligio-x.html#clinical-cases",
-    "title": "Clinical Case Results",
-    "pageTitle": "Oligio X RF Lifting",
-    "category": "Oligio X RF Lifting",
-    "content": "Proven Lifting & Contouring Efficacy Visible jawline contouring and reduction of lower facial laxity observed immediately to 4 weeks post GXG dual-mode treatment. Significant skin tightening and definition improvement along the chin, neck and submental contours. Improvement in cheek projection and lifting of nasolabial creases driven by neocollagenesis remodeling.",
-    "snippet": "Proven Lifting & Contouring Efficacy Visible jawline contouring and reduction of lower facial laxity observed immediately to 4 weeks post GXG dual-mode treatmen..."
+    "content": "How next-generation Korean RF lifting compares to traditional tightening and lifting modalities. The best treatment depends on your unique anatomy, skin quality, treatment goals, comfort preferences, and recovery expectations. A personal consultation helps determine which approach fits your needs best.",
+    "snippet": "How next-generation Korean RF lifting compares to traditional tightening and lifting modalities. The best treatment depends on your unique anatomy, skin quality..."
   },
   {
     "url": "oligio-x.html",
-    "title": "Dermal Elasticity & K-Glow",
-    "pageTitle": "Oligio X RF Lifting",
+    "title": "Maintenance Before Correction",
+    "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
-    "content": "True anti-aging isn't just about freezing lines — it's about restoring the natural elasticity and radiance of your skin. By stimulating deep-level neocollagenesis, Oligio X physically thickens the dermal layer, leading to visible pore contraction, improved hydration, and a smooth, reflective K-Glow texture. Visible reduction in pore size and rough patches for glass-like smoothness. Increases structural support from within to bounce back against gravitational sagging.",
-    "snippet": "True anti-aging isn't just about freezing lines — it's about restoring the natural elasticity and radiance of your skin. By stimulating deep-level neocollagenes..."
+    "content": "Korean beauty philosophy asks: “What if we supported the skin earlier instead of chasing dramatic fixes later?” This forward-looking mindset has made RF lifting one of Korea’s most popular non-surgical categories. Rather than stretching or altering natural lines, the goal is natural-looking restoration. You still look like yourself — just more rested, tighter, healthier, and subtly elevated. Jawline, cheeks, lower face, smile lines, neck, under chin, and facial contour zones. Jawline definition, skin firmness, lower-face contour, collagen support, and facial balance. Collagen Remodeling Nurturing natural, quietly expensive-looking skin",
+    "snippet": "Korean beauty philosophy asks: “What if we supported the skin earlier instead of chasing dramatic fixes later?” This forward-looking mindset has made RF lifting..."
   },
   {
-    "url": "oligio-x.html#candidates",
-    "title": "Who Is Oligio X For?",
-    "pageTitle": "Oligio X RF Lifting",
+    "url": "oligio-x.html",
+    "title": "What to Expect After Treatment",
+    "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
-    "content": "Ideal Candidates Thin, lax skin with reduced elasticity that appears loose or drooping. Loss of jaw definition and sagging along the lower face and chin area. Periorbital lines, forehead creasing, and nasolabial folds (mild–moderate). Visible, enlarged pores and uneven skin texture seeking structural improvement.",
-    "snippet": "Ideal Candidates Thin, lax skin with reduced elasticity that appears loose or drooping. Loss of jaw definition and sagging along the lower face and chin area. P..."
+    "content": "Mild redness, temporary warmth, slight swelling, or skin sensitivity. Most patients return to normal activities shortly afterward. Skin may gradually begin appearing firmer, smoother, tighter, and more refreshed. Collagen remodeling continues over time as skin quality and contour refinement gradually develop. Many patients pursue maintenance treatments depending on age, collagen quality, lifestyle, skin goals, and preventative aging strategy. Great for improving mild skin laxity, early facial sagging, jawline definition, skin firmness, fine lines, collagen support, preventative aging concerns, and overall skin quality. Popular among patients in their late 20s (prevention), 30s (maintenance), and 40s+ (contour and skin support). Pregnancy, implanted electronic devices, active skin infections, recent procedures, or certain medical conditions. Often combined with skin hydration, Korean skin boosters, LDM ultrasound facials, SkinTox, and glass skin protocols.",
+    "snippet": "Mild redness, temporary warmth, slight swelling, or skin sensitivity. Most patients return to normal activities shortly afterward. Skin may gradually begin appe..."
   },
   {
     "url": "oligio-x.html",
     "title": "Medical Oversight",
-    "pageTitle": "Oligio X RF Lifting",
+    "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
     "content": "All Oligio X RF Lifting treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
     "snippet": "All Oligio X RF Lifting treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr..."
@@ -611,15 +579,23 @@ const SEARCH_INDEX = [
   {
     "url": "oligio-x.html#faq",
     "title": "Oligio X FAQs",
-    "pageTitle": "Oligio X RF Lifting",
+    "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
-    "content": "Most patients experience a warming sensation during treatment. The GXG protocol is designed to maintain a manageable heat level — a 3 to 3.5 out of 10 discomfort rating is ideal for treatment efficacy. The built-in cooling system continuously protects the skin surface throughout the session. Some patients notice an immediate tightening effect. However, the most significant results — driven by new collagen formation — typically develop over 2 to 4 weeks post-treatment. Clinical studies have documented continued improvement at 4 and 24 weeks following treatment. Session recommendations are individualized based on skin condition, treatment goals, and clinical assessment. Some patients achieve their goals with a single session; others benefit from a series of treatments. Sophia will advise a personalized plan during your consultation. Oligio X is a non-invasive treatment. Most patients experience mild redness or warmth immediately after, which typically resolves within a few hours. There is no significant downtime, though individual responses may vary based on skin sensitivity and energy levels used. Yes. Oligio X may be incorporated into a comprehensive skin rejuvenation plan alongside other treatments such as the SuA Glow Signature Treatment, skin quality boosters, or injectables. Combination protocols are always personalized at SuA Glow based on individual skin assessment and goals.",
-    "snippet": "Most patients experience a warming sensation during treatment. The GXG protocol is designed to maintain a manageable heat level — a 3 to 3.5 out of 10 discomfor..."
+    "content": "Oligio X is an FDA-cleared monopolar radiofrequency skin tightening treatment designed to support collagen remodeling, skin firmness, contour refinement, and healthier-looking skin quality. Different RF technologies utilize different engineering approaches, comfort profiles, and treatment philosophies. The best option depends on anatomy, goals, skin quality, and provider assessment. Many patients researching RF skin tightening compare Oligio X and Thermage due to their radiofrequency-based collagen support approaches. Different technologies utilize different energy systems and treatment approaches. The best option depends on anatomy, skin quality, treatment goals, and provider assessment. Treatment recommendations vary depending on age, collagen quality, skin laxity, goals, and preventative aging strategy. Some patients pursue maintenance treatments over time. Treatment planning and energy delivery are customized carefully based on anatomy and goals. A consultation helps determine the appropriate approach for each patient. Oligio X may help support improved skin firmness and contour refinement in the lower face and jawline region. Treatment recommendations are individualized based on skin type, anatomy, and clinical assessment. Korean RF technologies are widely utilized across diverse skin types within Korean aesthetic medicine. Most patients experience minimal downtime with temporary redness, warmth, swelling, or sensitivity possible. Collagen remodeling develops gradually over time, with many patients noticing progressive improvement over several weeks to months. Yes. Combination treatment planning is commonly utilized within Korean-inspired aesthetic approaches depending on individual goals and skin quality strategy. Korean aesthetics strongly emphasize prevention, maintenance, collagen support, and natural-looking skin quality rather than dramatic cosmetic transformation. SuA Glow Med Spa in Carrollton offers Korean-inspired Oligio X RF lifting treatments for patients across Dallas, Plano, Frisco, Coppell, Irving, Southlake, Grapevine, Richardson, Addison, and Fort Worth.",
+    "snippet": "Oligio X is an FDA-cleared monopolar radiofrequency skin tightening treatment designed to support collagen remodeling, skin firmness, contour refinement, and he..."
+  },
+  {
+    "url": "oligio-x.html",
+    "title": "Oligio X RF Lifting Dallas",
+    "pageTitle": "Oligio X RF Lifting Dallas",
+    "category": "Oligio X RF Lifting",
+    "content": "Oligio X RF Lifting treatment recommendations at SuA Glow are individualized based on patient anatomy, skin condition, goals, medical history, and clinical assessment pursuant to supervising physician-approved protocols and applicable Texas regulations. Treatment results vary by individual. No outcome can be guaranteed.",
+    "snippet": "Oligio X RF Lifting treatment recommendations at SuA Glow are individualized based on patient anatomy, skin condition, goals, medical history, and clinical asse..."
   },
   {
     "url": "oligio-x.html",
     "title": "Lift from within.Remodel. Refine.Very Seoul.",
-    "pageTitle": "Oligio X RF Lifting",
+    "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
     "content": "K-Beauty Medspa • Carrollton HQ",
     "snippet": "K-Beauty Medspa • Carrollton HQ"

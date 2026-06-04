@@ -3,10 +3,7 @@ module.exports = {
     content: [
         './*.html',
         './components/**/*.html',
-        './navbar.js',
-        './footer.js',
-        './specials.js',
-        './script.js',
+        './*.js',
     ],
     theme: {
         extend: {

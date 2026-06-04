@@ -97,6 +97,36 @@ function initNearMe() {
 }
 
 /**
+ * Oligio X Banner Section Injection
+ */
+function initOligioBanner() {
+  const placeholder = document.getElementById('oligio-banner-placeholder');
+  if (!placeholder) return;
+
+  if (typeof OLIGIO_BANNER_HTML !== 'undefined') {
+    const isSubfolder = window.location.pathname.includes('/education/');
+    let html = OLIGIO_BANNER_HTML;
+    
+    if (isSubfolder) {
+      html = html.replace(/(href|src)="(?!(http|https|\/|#|\.\.\/))([^"]+)"/g, '$1="../$3"');
+    }
+    
+    placeholder.innerHTML = html;
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    placeholder.querySelectorAll('.animate-on-scroll').forEach(el => revealObserver.observe(el));
+  }
+}
+
+/**
  * News Section Injection & Initialization
  */
 function initNews() {
@@ -298,6 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initFooter();
   initNearMe();
+  initOligioBanner();
   initNews();
   initSophia();
 
