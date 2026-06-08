@@ -1134,3 +1134,55 @@ mark.search-highlight {
     background-color: rgba(255, 255, 255, 0.06);
     border-color: rgba(170, 152, 124, 0.3);
 }
+
+/* ================================================
+   Oligio X RF Wave Animation Styles
+   ================================================ */
+@keyframes rf-wave-flow-right {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -160;
+    }
+}
+
+@keyframes rf-wave-flow-left {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 160;
+    }
+}
+
+@keyframes rf-pulse {
+    0%, 100% {
+        opacity: 0.15;
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        opacity: 0.45;
+        transform: translateY(-8px) scale(1.015);
+    }
+}
+
+.rf-wave-1 {
+    stroke-dasharray: 40, 80;
+    animation: rf-wave-flow-right 28s linear infinite;
+}
+
+.rf-wave-2 {
+    stroke-dasharray: 60, 100;
+    animation: rf-wave-flow-left 36s linear infinite;
+}
+
+.rf-wave-3 {
+    stroke-dasharray: 80, 120;
+    animation: rf-wave-flow-right 42s linear infinite;
+}
+
+.rf-pulse-container {
+    animation: rf-pulse 8s ease-in-out infinite;
+    transform-origin: center;
+}
