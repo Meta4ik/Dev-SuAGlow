@@ -549,8 +549,8 @@ const SEARCH_INDEX = [
     "title": "Seoul-Level Skin Tightening.Without Looking “Done.”",
     "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
-    "content": "Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work done?” but rather “Why does her skin always look so healthy?” At SuA Glow Med Spa in Carrollton, Oligio X RF Lifting was selected because modern Korean skin tightening is no longer about aggressive pulling, frozen movement, or dramatic overcorrection. It is about supporting your skin's natural behavior and enhancing its structural density. Our Strategy for Skin Health Focuses on: Because in Seoul: tightening should still look like you. Seoul-Inspired Rejuvenation Natural-Looking K-Glow",
-    "snippet": "Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work done?” but rather “Why does her skin always look so..."
+    "content": "Seoul-Inspired Rejuvenation Natural-Looking K-Glow Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work done?” but rather “Why does her skin always look so healthy?” At SuA Glow Med Spa in Carrollton, Oligio X RF Lifting was selected because modern Korean skin tightening is no longer about aggressive pulling, frozen movement, or dramatic overcorrection. It is about supporting your skin's natural behavior and enhancing its structural density. Our Strategy for Skin Health Focuses on: Because in Seoul: tightening should still look like you.",
+    "snippet": "Seoul-Inspired Rejuvenation Natural-Looking K-Glow Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work ..."
   },
   {
     "url": "oligio-x.html#seoul-inspired",
@@ -605,8 +605,16 @@ const SEARCH_INDEX = [
     "title": "Seoul's Next Generation of Skin Tightening. Now in Dallas.",
     "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
-    "content": "SuA Glow is the first authorized Oligio X provider in Dallas-Fort Worth. As the evolution of Korea's popular Oligio RF platform, Oligio X introduces enhanced dual-mode technology designed to tailor energy delivery to your skin, anatomy, and aesthetic goals. By supporting collagen remodeling, elasticity, pore refinement, and natural-looking contour, Oligio X offers a more personalized approach to non-surgical skin tightening. Not more heat. Smarter energy. Oligio X Platform Authorized Provider • SuA Glow Carrollton",
+    "content": "SuA Glow is the first authorized Oligio X provider in Dallas-Fort Worth. As the evolution of Korea's popular Oligio RF platform, Oligio X introduces enhanced dual-mode technology designed to tailor energy delivery to your skin, anatomy, and aesthetic goals. By supporting collagen remodeling, elasticity, pore refinement, and natural-looking contour, Oligio X offers a more personalized approach to non-surgical skin tightening. Not more heat. Smarter energy. SuA K-Glow Medspa Carrollton HQ • Dallas-Fort Worth",
     "snippet": "SuA Glow is the first authorized Oligio X provider in Dallas-Fort Worth. As the evolution of Korea's popular Oligio RF platform, Oligio X introduces enhanced du..."
+  },
+  {
+    "url": "oligio-x.html#clinical-cases",
+    "title": "Clinical Case Results",
+    "pageTitle": "Oligio X RF Lifting Dallas",
+    "category": "Oligio X RF Lifting",
+    "content": "Proven Lifting & Contouring Efficacy Visible jawline contouring and reduction of lower facial laxity observed immediately to 4 weeks post GXG dual-mode treatment. Significant skin tightening and definition improvement along the chin, neck and submental contours. Improvement in cheek projection and lifting of nasolabial creases driven by neocollagenesis remodeling.",
+    "snippet": "Proven Lifting & Contouring Efficacy Visible jawline contouring and reduction of lower facial laxity observed immediately to 4 weeks post GXG dual-mode treatmen..."
   },
   {
     "url": "oligio-x.html",
@@ -618,10 +626,10 @@ const SEARCH_INDEX = [
   },
   {
     "url": "oligio-x.html",
-    "title": "Medical Oversight",
+    "title": "Oligio X RF Lifting Dallas",
     "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
-    "content": "All Oligio X RF Lifting treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
+    "content": "All Oligio X RF Lifting treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols. Sophia Yang, PA-C Master Practitioner Dr. Adam Yang Supervising Physician",
     "snippet": "All Oligio X RF Lifting treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr..."
   },
   {

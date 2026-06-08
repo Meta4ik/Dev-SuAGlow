@@ -121,7 +121,19 @@
     <section id="philosophy" class="py-24 px-10 bg-off-white">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-                <div class="lg:col-span-7 space-y-8 animate-on-scroll fade-right">
+                <!-- Image (Left) -->
+                <div class="lg:col-span-5 animate-on-scroll fade-right">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-white p-4 border border-light-gray/50">
+                        <img src="assets/oligio-x/philosophy-model.jpg" alt="Korean Skin Tightening Results" class="w-full h-auto object-cover rounded-2xl mx-auto max-h-[500px] brightness-95">
+                        <div class="absolute bottom-6 left-6 right-6 bg-near-black/75 backdrop-blur-md border border-white/10 p-4 rounded-xl text-center">
+                            <p class="heading-wide text-xs text-white uppercase tracking-widest">Seoul-Inspired Rejuvenation</p>
+                            <p class="text-[10px] text-white/60 font-light mt-1">Natural-Looking K-Glow</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content (Right) -->
+                <div class="lg:col-span-7 space-y-8 animate-on-scroll fade-left delay-200">
                     <span class="badge-glass text-taupe bg-taupe/10 border-taupe/20 inline-block">Korean Aesthetic Philosophy</span>
                     <h2 class="heading-wide text-3xl md:text-4xl text-near-black">Seoul-Level Skin Tightening.<br><span class="text-taupe italic text-2xl md:text-3xl font-light">Without Looking “Done.”</span></h2>
                     
@@ -148,15 +160,6 @@
                     <p class="text-base font-medium opacity-80 leading-relaxed italic text-taupe">
                         Because in Seoul: tightening should still look like you.
                     </p>
-                </div>
-                <div class="lg:col-span-5 animate-on-scroll fade-left delay-200">
-                    <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-near-black border border-white/10">
-                        <img src="assets/oligio-x/philosophy-model.jpg" alt="Korean Skin Tightening Results" class="w-full h-auto object-cover rounded-2xl mx-auto max-h-[500px] brightness-95">
-                        <div class="absolute bottom-6 left-6 right-6 bg-near-black/75 backdrop-blur-md border border-white/10 p-4 rounded-xl text-center">
-                            <p class="heading-wide text-xs text-white uppercase tracking-widest">Seoul-Inspired Rejuvenation</p>
-                            <p class="text-[10px] text-white/60 font-light mt-1">Natural-Looking K-Glow</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -280,16 +283,22 @@
     </section>
 
     <!-- Oligio vs Oligio X Comparison -->
-    <section id="oligio-comparison" class="py-24 px-10 bg-white border-t border-light-gray/20">
-        <div class="max-w-7xl mx-auto">
+    <section id="oligio-comparison" class="py-24 px-10 relative overflow-hidden bg-charcoal text-white border-t border-white/10">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/oligio-x/banner-device.png" alt="Oligio X Background" class="w-full h-full object-contain opacity-65">
+            <div class="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/10 to-charcoal/40"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-16 animate-on-scroll fade-up">
-                <span class="badge-glass text-taupe bg-taupe/10 border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">From Oligio to Oligio X</span>
-                <h2 class="heading-wide text-3xl md:text-5xl text-near-black leading-tight max-w-3xl mx-auto">How Oligio X is different from the original Oligio.</h2>
+                <span class="badge-glass text-warm-gold bg-warm-gold/10 border-warm-gold/20 mb-4 inline-block uppercase tracking-wider text-[10px]">From Oligio to Oligio X</span>
+                <h2 class="heading-wide text-3xl md:text-5xl text-white leading-tight max-w-3xl mx-auto">How Oligio X is different from the original Oligio.</h2>
             </div>
             
             <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 animate-on-scroll fade-up">
                 <!-- Card 1: Oligio -->
-                <div class="w-full lg:flex-1 bg-white p-8 md:p-10 rounded-[2.5rem] border border-light-gray/50 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="w-full lg:flex-1 bg-white p-8 md:p-10 rounded-[2.5rem] border border-light-gray/50 shadow-sm hover:shadow-md transition-all duration-300 text-near-black">
                     <h3 class="heading-wide text-2xl text-near-black mb-4">Oligio</h3>
                     <p class="text-sm font-light text-charcoal/80 mb-8 leading-relaxed">
                         Oligio was developed in South Korea as a monopolar RF treatment designed to support skin tightening and collagen renewal.
@@ -311,12 +320,12 @@
                 </div>
                 
                 <!-- Arrow Icon (points down on mobile, right on desktop) -->
-                <div class="flex items-center justify-center shrink-0 text-taupe/30 transform rotate-90 lg:rotate-0">
+                <div class="flex items-center justify-center shrink-0 text-white/30 transform rotate-90 lg:rotate-0">
                     <i data-lucide="arrow-right" class="w-8 h-8"></i>
                 </div>
                 
                 <!-- Card 2: Oligio X -->
-                <div class="w-full lg:flex-1 bg-off-white/60 p-8 md:p-10 rounded-[2.5rem] border border-light-gray/50 shadow-sm hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
+                <div class="w-full lg:flex-1 bg-white p-8 md:p-10 rounded-[2.5rem] border border-light-gray/50 shadow-sm hover:border-warm-gold/30 hover:shadow-md transition-all duration-300 text-near-black">
                     <h3 class="heading-wide text-2xl text-near-black mb-4">Oligio X</h3>
                     <p class="text-sm font-light text-charcoal/80 mb-8 leading-relaxed">
                         Oligio X builds upon the original platform with updated system design, enhanced customization, refined workflows, and increased power delivery.
@@ -751,14 +760,56 @@
                     </div>
                 </div>
                 <div class="lg:col-span-5 animate-on-scroll fade-left delay-200">
-                    <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-charcoal/30 p-4">
-                        <img src="assets/oligio-x/device-main.png" alt="Oligio X RF Device" class="w-full h-auto rounded-2xl mx-auto max-h-[500px]">
-                        <div class="absolute bottom-6 left-6 right-6 bg-near-black/80 backdrop-blur-md border border-white/10 p-4 rounded-xl text-center">
-                            <p class="heading-wide text-[10px] text-warm-gold uppercase tracking-widest">Oligio X Platform</p>
-                            <p class="text-[9px] text-white/50 font-light mt-1">Authorized Provider &bull; SuA Glow Carrollton</p>
+                    <div class="relative aspect-[579/1024] rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-charcoal/30">
+                        <img src="assets/oligio-x/sua-reception.png" alt="SuA K-Glow Reception Carrollton" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute bottom-6 left-6 right-6 bg-near-black/80 backdrop-blur-md border border-white/10 p-4 rounded-xl text-center z-10">
+                            <p class="heading-wide text-[10px] text-warm-gold uppercase tracking-widest">SuA K-Glow Medspa</p>
+                            <p class="text-[9px] text-white/50 font-light mt-1">Carrollton HQ &bull; Dallas-Fort Worth</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Before & After Cases -->
+    <section id="clinical-cases" class="py-24 px-10 bg-off-white border-t border-b border-light-gray/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 animate-on-scroll fade-up">
+                <h2 class="heading-wide text-3xl md:text-4xl mb-6 text-near-black">Clinical Case Results</h2>
+                <p class="heading-wide text-xs text-taupe opacity-70 tracking-[0.4em]">Proven Lifting &amp; Contouring Efficacy</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl border border-black/5 shadow-sm space-y-4 animate-on-scroll fade-up">
+                    <div class="relative overflow-hidden rounded-xl bg-near-black aspect-[4/3]">
+                        <img src="assets/oligio-x/clinical-case-1.jpg" alt="Clinical Case 1 - Full Face Lifting" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="heading-wide text-xs text-near-black">Case Study 01: Lower Face Rejuvenation</h4>
+                        <p class="text-[11px] font-light opacity-60 mt-2">Visible jawline contouring and reduction of lower facial laxity observed immediately to 4 weeks post GXG dual-mode treatment.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-black/5 shadow-sm space-y-4 animate-on-scroll fade-up delay-100">
+                    <div class="relative overflow-hidden rounded-xl bg-near-black aspect-[4/3]">
+                        <img src="assets/oligio-x/clinical-case-2.jpg" alt="Clinical Case 2 - Jawline Tightening" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="heading-wide text-xs text-near-black">Case Study 02: Neck &amp; Jowl Definition</h4>
+                        <p class="text-[11px] font-light opacity-60 mt-2">Significant skin tightening and definition improvement along the chin, neck and submental contours.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-black/5 shadow-sm space-y-4 animate-on-scroll fade-up delay-200">
+                    <div class="relative overflow-hidden rounded-xl bg-near-black aspect-[4/3]">
+                        <img src="assets/oligio-x/clinical-case-3.jpg" alt="Clinical Case 3 - Nasolabial Improvement" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="heading-wide text-xs text-near-black">Case Study 03: Cheek Volumization &amp; Lift</h4>
+                        <p class="text-[11px] font-light opacity-60 mt-2">Improvement in cheek projection and lifting of nasolabial creases driven by neocollagenesis remodeling.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-[10px] font-light opacity-50">
+                Photos courtesy of Wontech / Oligio X Clinical Studies. Individual patient results may vary.
             </div>
         </div>
     </section>
@@ -823,9 +874,50 @@
     <!-- Medical Oversight -->
     <section class="py-16 px-10 bg-off-white">
         <div class="max-w-4xl mx-auto">
-            <div class="bg-white p-10 md:p-14 border-l-4 border-taupe shadow-sm rounded-xl animate-on-scroll fade-up">
-                <h3 class="heading-wide text-xs mb-4 text-taupe">Medical Oversight</h3>
-                <p class="text-sm font-light opacity-70 leading-relaxed">All Oligio X RF Lifting treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.</p>
+            <div class="relative bg-white p-8 md:p-12 shadow-soft rounded-[2rem] border border-light-gray/40 overflow-hidden animate-on-scroll fade-up">
+                <!-- Background accent element -->
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-[#AA987C]/5 rounded-full blur-2xl"></div>
+                
+                <div class="flex flex-col md:flex-row items-start md:items-center gap-8 relative z-10">
+                    <!-- Icon Badge -->
+                    <div class="w-14 h-14 rounded-2xl bg-[#AA987C]/10 flex items-center justify-center shrink-0 border border-[#AA987C]/20">
+                        <i data-lucide="shield-check" class="w-7 h-7 text-warm-gold"></i>
+                    </div>
+                    
+                    <div class="space-y-4 flex-1">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#AA987C] bg-[#AA987C]/10 px-3 py-1 rounded-full border border-[#AA987C]/20">Medical Oversight</span>
+                            <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-charcoal/40 bg-charcoal/5 px-3 py-1 rounded-full">Texas Compliant</span>
+                        </div>
+                        
+                        <p class="text-sm md:text-base font-light text-charcoal/80 leading-relaxed">
+                            All Oligio X RF Lifting treatments at SuA Glow are performed by <strong class="font-medium text-near-black">Sophia Yang, PA-C</strong> under appropriate medical oversight and delegation by supervising physician <strong class="font-medium text-near-black">Dr. Adam Yang</strong> in accordance with Texas law and established clinical protocols.
+                        </p>
+                        
+                        <!-- Clinicians Info Cards -->
+                        <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3 bg-off-white/80 p-3.5 rounded-xl border border-light-gray/30">
+                                <div class="w-8 h-8 rounded-full bg-near-black/5 flex items-center justify-center shrink-0">
+                                    <i data-lucide="user" class="w-4 h-4 text-taupe"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[11px] font-semibold text-near-black leading-tight">Sophia Yang, PA-C</p>
+                                    <p class="text-[9px] uppercase tracking-wider text-taupe/80 font-medium mt-0.5">Master Practitioner</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-3 bg-off-white/80 p-3.5 rounded-xl border border-light-gray/30">
+                                <div class="w-8 h-8 rounded-full bg-near-black/5 flex items-center justify-center shrink-0">
+                                    <i data-lucide="user-check" class="w-4 h-4 text-taupe"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[11px] font-semibold text-near-black leading-tight">Dr. Adam Yang</p>
+                                    <p class="text-[9px] uppercase tracking-wider text-taupe/80 font-medium mt-0.5">Supervising Physician</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
