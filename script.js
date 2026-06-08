@@ -185,6 +185,36 @@ function initSophia() {
 }
 
 /**
+ * Medical Oversight Injection & Initialization
+ */
+function initOversight() {
+  const placeholder = document.getElementById('oversight-placeholder');
+  if (!placeholder) return;
+
+  if (typeof OVERSIGHT_HTML !== 'undefined') {
+    const treatmentName = placeholder.dataset.treatment || 'treatment';
+    let html = OVERSIGHT_HTML.replace('{treatment}', treatmentName);
+    
+    placeholder.innerHTML = html;
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    placeholder.querySelectorAll('.animate-on-scroll').forEach(el => revealObserver.observe(el));
+    
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  }
+}
+
+/**
  * Mobile Navigation Drawer Logic
  */
 function initMobileDrawer() {
@@ -331,6 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initOligioBanner();
   initNews();
   initSophia();
+  initOversight();
 
   // 2. Setup Reveal Animations
   const revealObserver = new IntersectionObserver((entries) => {

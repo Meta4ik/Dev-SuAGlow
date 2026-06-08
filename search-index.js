@@ -537,14 +537,6 @@ const SEARCH_INDEX = [
     "snippet": "The Seoul Skin Quality Philosophy Glass Skin starts with texture. Beautiful skin is about skin health first, not aggressive resurfacing. Korean aesthetics chang..."
   },
   {
-    "url": "microneedling.html",
-    "title": "Medical Oversight",
-    "pageTitle": "SkinPen Microneedling Dallas",
-    "category": "SkinPen Microneedling",
-    "content": "All SkinPen microneedling treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
-    "snippet": "All SkinPen microneedling treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician ..."
-  },
-  {
     "url": "microneedling.html#why-skinpen",
     "title": "Why FDA-Cleared Matters",
     "pageTitle": "SkinPen Microneedling Dallas",
@@ -687,14 +679,6 @@ const SEARCH_INDEX = [
     "category": "Oligio X RF Lifting",
     "content": "Mild redness, temporary warmth, slight swelling, or skin sensitivity. Most patients return to normal activities shortly afterward. Skin may gradually begin appearing firmer, smoother, tighter, and more refreshed. Collagen remodeling continues over time as skin quality and contour refinement gradually develop. Many patients pursue maintenance treatments depending on age, collagen quality, lifestyle, skin goals, and preventative aging strategy. Great for improving mild skin laxity, early facial sagging, jawline definition, skin firmness, fine lines, collagen support, preventative aging concerns, and overall skin quality. Popular among patients in their late 20s (prevention), 30s (maintenance), and 40s+ (contour and skin support). Pregnancy, implanted electronic devices, active skin infections, recent procedures, or certain medical conditions. Often combined with skin hydration, Korean skin boosters, LDM ultrasound facials, SkinTox, and glass skin protocols.",
     "snippet": "Mild redness, temporary warmth, slight swelling, or skin sensitivity. Most patients return to normal activities shortly afterward. Skin may gradually begin appe..."
-  },
-  {
-    "url": "oligio-x.html",
-    "title": "Oligio X RF Lifting Dallas",
-    "pageTitle": "Oligio X RF Lifting Dallas",
-    "category": "Oligio X RF Lifting",
-    "content": "All Oligio X RF Lifting treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols. Sophia Yang, PA-C Master Practitioner Dr. Adam Yang Supervising Physician",
-    "snippet": "All Oligio X RF Lifting treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr..."
   },
   {
     "url": "oligio-x.html#faq",
