@@ -1158,11 +1158,11 @@ mark.search-highlight {
 
 @keyframes rf-pulse {
     0%, 100% {
-        opacity: 0.15;
+        opacity: 0.45;
         transform: translateY(0) scale(1);
     }
     50% {
-        opacity: 0.45;
+        opacity: 0.85;
         transform: translateY(-8px) scale(1.015);
     }
 }
