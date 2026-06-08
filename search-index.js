@@ -537,20 +537,20 @@ const SEARCH_INDEX = [
     "snippet": "FDA-Cleared Korean-Inspired Skin Tightening Without Surgery. Focused on collagen support, jawline contouring, and natural-looking rejuvenation. Patients across ..."
   },
   {
-    "url": "oligio-x.html#philosophy",
-    "title": "Seoul-Level Skin Tightening.Without Looking “Done.”",
-    "pageTitle": "Oligio X RF Lifting Dallas",
-    "category": "Oligio X RF Lifting",
-    "content": "Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work done?” but rather “Why does her skin always look so healthy?” At SuA Glow Med Spa in Carrollton, Oligio X RF Lifting was selected because modern Korean skin tightening is no longer about aggressive pulling, frozen movement, or dramatic overcorrection. It is about supporting your skin's natural behavior and enhancing its structural density. Our Strategy for Skin Health Focuses on: Because in Seoul: tightening should still look like you. Oligio X Platform First Authorized Provider in DFW",
-    "snippet": "Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work done?” but rather “Why does her skin always look so..."
-  },
-  {
     "url": "oligio-x.html",
     "title": "Meet Oligio X.",
     "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
     "content": "The first authorized Oligio X provider in Dallas-Fort Worth, where advanced Korean RF technology meets Sophia Yang's Seoul-inspired technique for collagen support, skin quality, and long-term K-Glow. Beautiful skin doesn't need a passport anymore.",
     "snippet": "The first authorized Oligio X provider in Dallas-Fort Worth, where advanced Korean RF technology meets Sophia Yang's Seoul-inspired technique for collagen suppo..."
+  },
+  {
+    "url": "oligio-x.html#philosophy",
+    "title": "Seoul-Level Skin Tightening.Without Looking “Done.”",
+    "pageTitle": "Oligio X RF Lifting Dallas",
+    "category": "Oligio X RF Lifting",
+    "content": "Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work done?” but rather “Why does her skin always look so healthy?” At SuA Glow Med Spa in Carrollton, Oligio X RF Lifting was selected because modern Korean skin tightening is no longer about aggressive pulling, frozen movement, or dramatic overcorrection. It is about supporting your skin's natural behavior and enhancing its structural density. Our Strategy for Skin Health Focuses on: Because in Seoul: tightening should still look like you. Seoul-Inspired Rejuvenation Natural-Looking K-Glow",
+    "snippet": "Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work done?” but rather “Why does her skin always look so..."
   },
   {
     "url": "oligio-x.html#seoul-inspired",
