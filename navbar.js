@@ -151,14 +151,7 @@ const NAVBAR_HTML = `
                                         </span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
-                                        Microneedling
-                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
-                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                                        </span>
-                                    </a>
-                                </li>
+                                <li><a href="microneedling.html" class="dropdown-link !p-0 hover:!pl-2">Microneedling</a></li>
                             </ul>
                             
                             <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
@@ -416,12 +409,7 @@ const NAVBAR_HTML = `
                                         <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
                                     </span>
                                 </a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
-                                    Microneedling
-                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
-                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                                    </span>
-                                </a>
+                                <a href="microneedling.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Microneedling</a>
                             </div>
                         </div>
 
