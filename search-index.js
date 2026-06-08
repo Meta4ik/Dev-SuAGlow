@@ -573,8 +573,8 @@ const SEARCH_INDEX = [
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "SkinPen Microneedling Dallas",
     "category": "SkinPen Microneedling",
-    "content": "K-Beauty Medspa • Carrollton HQ 📍 4116 State Highway 121, Suite 120, Office O, Carrollton, TX 75010 (Between CVS and India Mart) 📞 Phone: 972-665-8737 Important Transparency Statement: SkinPen treatment recommendations at SuA Glow are individualized based on patient anatomy, skin condition, goals, medical history, and clinical assessment pursuant to supervising physician-approved protocols and applicable Texas regulations. Treatment results vary by individual. No outcome can be guaranteed.",
-    "snippet": "K-Beauty Medspa • Carrollton HQ 📍 4116 State Highway 121, Suite 120, Office O, Carrollton, TX 75010 (Between CVS and India Mart) 📞 Phone: 972-665-8737 Importa..."
+    "content": "K-Beauty Medspa • Carrollton HQ Important Transparency Statement: SkinPen treatment recommendations at SuA Glow are individualized based on patient anatomy, skin condition, goals, medical history, and clinical assessment pursuant to supervising physician-approved protocols and applicable Texas regulations. Treatment results vary by individual. No outcome can be guaranteed.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ Important Transparency Statement: SkinPen treatment recommendations at SuA Glow are individualized based on patient anatomy, ski..."
   },
   {
     "url": "navbar.html",
