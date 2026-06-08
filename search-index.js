@@ -530,7 +530,7 @@ const SEARCH_INDEX = [
   },
   {
     "url": "oligio-x.html#hero",
-    "title": "Oligio XRF Lifting",
+    "title": "RF Lifting",
     "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
     "content": "FDA-Cleared Korean-Inspired Skin Tightening Without Surgery. Focused on collagen support, jawline contouring, and natural-looking rejuvenation. Patients across Dallas, Plano, Frisco, Coppell, Irving, Southlake, Grapevine, and the DFW metroplex visit SuA Glow for Korean-inspired RF skin tightening focused on natural-looking rejuvenation and skin health.",
@@ -541,24 +541,72 @@ const SEARCH_INDEX = [
     "title": "Seoul-Level Skin Tightening.Without Looking “Done.”",
     "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
-    "content": "Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work done?” but rather “Why does her skin always look so healthy?” At SuA Glow Med Spa in Carrollton, Oligio X RF Lifting was selected because modern Korean skin tightening is no longer about aggressive pulling, frozen movement, or dramatic overcorrection. It is about supporting your skin's natural behavior and enhancing its structural density. Our Strategy for Skin Health Focuses on: Because in Seoul: tightening should still look like you. SuA Glow Carrollton Among the first in DFW to offer Oligio X",
+    "content": "Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work done?” but rather “Why does her skin always look so healthy?” At SuA Glow Med Spa in Carrollton, Oligio X RF Lifting was selected because modern Korean skin tightening is no longer about aggressive pulling, frozen movement, or dramatic overcorrection. It is about supporting your skin's natural behavior and enhancing its structural density. Our Strategy for Skin Health Focuses on: Because in Seoul: tightening should still look like you. Oligio X Platform First Authorized Provider in DFW",
     "snippet": "Korean aesthetics changed the conversation around aging. The goal is no longer “Can everyone tell I had work done?” but rather “Why does her skin always look so..."
   },
   {
-    "url": "oligio-x.html#comparison",
-    "title": "Oligio X vs. Alternatives",
+    "url": "oligio-x.html",
+    "title": "Meet Oligio X.",
     "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
-    "content": "How next-generation Korean RF lifting compares to traditional tightening and lifting modalities. The best treatment depends on your unique anatomy, skin quality, treatment goals, comfort preferences, and recovery expectations. A personal consultation helps determine which approach fits your needs best.",
-    "snippet": "How next-generation Korean RF lifting compares to traditional tightening and lifting modalities. The best treatment depends on your unique anatomy, skin quality..."
+    "content": "The first authorized Oligio X provider in Dallas-Fort Worth, where advanced Korean RF technology meets Sophia Yang's Seoul-inspired technique for collagen support, skin quality, and long-term K-Glow. Beautiful skin doesn't need a passport anymore.",
+    "snippet": "The first authorized Oligio X provider in Dallas-Fort Worth, where advanced Korean RF technology meets Sophia Yang's Seoul-inspired technique for collagen suppo..."
+  },
+  {
+    "url": "oligio-x.html#seoul-inspired",
+    "title": "Seoul-InspiredSkin Tightening,Refined for Natural K-Glow.",
+    "pageTitle": "Oligio X RF Lifting Dallas",
+    "category": "Oligio X RF Lifting",
+    "content": "Oligio X is a next-generation Korean radiofrequency treatment designed to support skin firmness, collagen renewal, jawline refinement, and long-term skin quality. Quick Facts 6.78MHz Monopolar RF Minimal Downtime Skin First Collagen Focus",
+    "snippet": "Oligio X is a next-generation Korean radiofrequency treatment designed to support skin firmness, collagen renewal, jawline refinement, and long-term skin qualit..."
   },
   {
     "url": "oligio-x.html",
-    "title": "Maintenance Before Correction",
+    "title": "Not all tightening treatments are designed around the same philosophy.",
     "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Oligio X RF Lifting",
-    "content": "Korean beauty philosophy asks: “What if we supported the skin earlier instead of chasing dramatic fixes later?” This forward-looking mindset has made RF lifting one of Korea’s most popular non-surgical categories. Rather than stretching or altering natural lines, the goal is natural-looking restoration. You still look like yourself — just more rested, tighter, healthier, and subtly elevated. Jawline, cheeks, lower face, smile lines, neck, under chin, and facial contour zones. Jawline definition, skin firmness, lower-face contour, collagen support, and facial balance. Collagen Remodeling Nurturing natural, quietly expensive-looking skin",
-    "snippet": "Korean beauty philosophy asks: “What if we supported the skin earlier instead of chasing dramatic fixes later?” This forward-looking mindset has made RF lifting..."
+    "content": "Thermage®, XERF®, Ultherapy®, Oligio, and Oligio X can all play a role in aesthetic treatment planning. At SuA Glow, we selected Oligio X because it aligns with our Seoul-inspired approach: skin quality first, collagen support second, and natural-looking refinement always.",
+    "snippet": "Thermage®, XERF®, Ultherapy®, Oligio, and Oligio X can all play a role in aesthetic treatment planning. At SuA Glow, we selected Oligio X because it aligns with..."
+  },
+  {
+    "url": "oligio-x.html#why-we-chose",
+    "title": "Why We Chose Oligio X",
+    "pageTitle": "Oligio X RF Lifting Dallas",
+    "category": "Oligio X RF Lifting",
+    "content": "The next-generation evolution of Korean monopolar RF technology, selected for its collagen-first philosophy and modern treatment experience. 6.78 MHz monopolar radiofrequency Up to 400W power delivery Enhanced treatment customization Refined treatment workflows Minimal downtime We did not choose Oligio X simply because it tightens skin. We chose it because it supports the type of result SuA Glow is known for: refreshed, balanced, collagen-supported, and natural-looking. Rather than focusing only on lift, our approach emphasizes firmness, elasticity, texture, contour, and long-term skin health.",
+    "snippet": "The next-generation evolution of Korean monopolar RF technology, selected for its collagen-first philosophy and modern treatment experience. 6.78 MHz monopolar ..."
+  },
+  {
+    "url": "oligio-x.html#oligio-comparison",
+    "title": "How Oligio X is different from the original Oligio.",
+    "pageTitle": "Oligio X RF Lifting Dallas",
+    "category": "Oligio X RF Lifting",
+    "content": "Oligio was developed in South Korea as a monopolar RF treatment designed to support skin tightening and collagen renewal. Original Korean RF platform Collagen-focused treatment philosophy Natural-looking rejuvenation approach Oligio X builds upon the original platform with updated system design, enhanced customization, refined workflows, and increased power delivery. Next-generation platform Enhanced treatment controls Updated workflow and user experience Up to 400W power delivery",
+    "snippet": "Oligio was developed in South Korea as a monopolar RF treatment designed to support skin tightening and collagen renewal. Original Korean RF platform Collagen-f..."
+  },
+  {
+    "url": "oligio-x.html#other-technologies",
+    "title": "Every device has strengths.We chose the one that fit our philosophy.",
+    "pageTitle": "Oligio X RF Lifting Dallas",
+    "category": "Oligio X RF Lifting",
+    "content": "Thermage® is one of the most recognized monopolar RF technologies for skin tightening and collagen support. Our View Thermage helped establish RF tightening globally. We selected Oligio X for its next-generation Korean platform and skin-quality-first treatment fit. XERF® uses multiple radiofrequency frequencies to support energy delivery at different tissue depths. Our View XERF is a different RF approach. We selected Oligio X because it aligned more closely with the patient experience and treatment style we wanted at SuA Glow. Ultherapy® uses focused ultrasound rather than radiofrequency and is often selected for deeper lifting support. Our View Ultherapy may fit deeper lift-focused plans. Our Oligio X approach focuses on skin quality, collagen support, contour refinement, and natural-looking rejuvenation. Every Oligio X treatment begins with a personalized assessment of your facial anatomy, skin quality, collagen health, degree of laxity, comfort preferences, and long-term goals.",
+    "snippet": "Thermage® is one of the most recognized monopolar RF technologies for skin tightening and collagen support. Our View Thermage helped establish RF tightening glo..."
+  },
+  {
+    "url": "oligio-x.html#treatment-zones",
+    "title": "One Device.Multiple Treatment Zones.",
+    "pageTitle": "Oligio X RF Lifting Dallas",
+    "category": "Oligio X RF Lifting",
+    "content": "Oligio X utilizes monopolar radiofrequency technology to support collagen remodeling across multiple areas of the face and neck. Treatment plans are customized to your anatomy, concerns, and long-term goals rather than following a one-size-fits-all approach. Support skin firmness and smooth the appearance of early skin laxity. Address crepey skin and support a refreshed, more awake appearance. Support collagen renewal and facial contour refinement. Improve skin firmness and support a smoother jaw-to-neck transition. Support upper-face firmness and natural-looking brow definition. Support collagen remodeling in areas prone to volume and elasticity changes. Help improve lower-face definition and facial contours. Support skin tightening and contour refinement beneath the jawline. Common Concerns We Address",
+    "snippet": "Oligio X utilizes monopolar radiofrequency technology to support collagen remodeling across multiple areas of the face and neck. Treatment plans are customized ..."
+  },
+  {
+    "url": "oligio-x.html",
+    "title": "Seoul's Next Generation of Skin Tightening. Now in Dallas.",
+    "pageTitle": "Oligio X RF Lifting Dallas",
+    "category": "Oligio X RF Lifting",
+    "content": "SuA Glow is the first authorized Oligio X provider in Dallas-Fort Worth. As the evolution of Korea's popular Oligio RF platform, Oligio X introduces enhanced dual-mode technology designed to tailor energy delivery to your skin, anatomy, and aesthetic goals. By supporting collagen remodeling, elasticity, pore refinement, and natural-looking contour, Oligio X offers a more personalized approach to non-surgical skin tightening. Not more heat. Smarter energy. Oligio X Platform Authorized Provider • SuA Glow Carrollton",
+    "snippet": "SuA Glow is the first authorized Oligio X provider in Dallas-Fort Worth. As the evolution of Korea's popular Oligio RF platform, Oligio X introduces enhanced du..."
   },
   {
     "url": "oligio-x.html",

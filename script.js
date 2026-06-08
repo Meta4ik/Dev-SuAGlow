@@ -11,8 +11,8 @@ function initNavigation() {
 
   // Use the pre-loaded string from navbar.js
   if (typeof NAVBAR_HTML !== 'undefined') {
-    // Check if we are in a subfolder (e.g., education/)
-    const isSubfolder = window.location.pathname.includes('/education/');
+    // Check if we are in a subfolder (e.g., education/ or dev-tools/)
+    const isSubfolder = window.location.pathname.includes('/education/') || window.location.pathname.includes('/dev-tools/');
     let html = NAVBAR_HTML;
     
     if (isSubfolder) {
@@ -49,7 +49,7 @@ function initFooter() {
   if (!footerPlaceholder) return;
 
   if (typeof FOOTER_HTML !== 'undefined') {
-    const isSubfolder = window.location.pathname.includes('/education/');
+    const isSubfolder = window.location.pathname.includes('/education/') || window.location.pathname.includes('/dev-tools/');
     let html = FOOTER_HTML;
     
     if (isSubfolder) {
@@ -104,7 +104,7 @@ function initOligioBanner() {
   if (!placeholder) return;
 
   if (typeof OLIGIO_BANNER_HTML !== 'undefined') {
-    const isSubfolder = window.location.pathname.includes('/education/');
+    const isSubfolder = window.location.pathname.includes('/education/') || window.location.pathname.includes('/dev-tools/');
     let html = OLIGIO_BANNER_HTML;
     
     if (isSubfolder) {
@@ -162,7 +162,7 @@ function initSophia() {
   if (!placeholder) return;
 
   if (typeof SOPHIA_HTML !== 'undefined') {
-    const isSubfolder = window.location.pathname.includes('/education/');
+    const isSubfolder = window.location.pathname.includes('/education/') || window.location.pathname.includes('/dev-tools/');
     let html = SOPHIA_HTML;
     
     if (isSubfolder) {
@@ -712,7 +712,7 @@ function ensureSearchIndexLoaded(callback) {
     return;
   }
   
-  const isSubfolder = window.location.pathname.includes('/education/');
+  const isSubfolder = window.location.pathname.includes('/education/') || window.location.pathname.includes('/dev-tools/');
   const indexPath = isSubfolder ? '../search-index.js' : 'search-index.js';
   
   const script = document.createElement('script');
@@ -878,9 +878,11 @@ function createSearchOverlay() {
 }
 
 function formatResultUrl(url) {
-  const isSubfolder = window.location.pathname.includes('/education/');
+  const isSubfolder = window.location.pathname.includes('/education/') || window.location.pathname.includes('/dev-tools/');
   if (isSubfolder) {
-    if (url.startsWith('education/')) {
+    if (window.location.pathname.includes('/education/') && url.startsWith('education/')) {
+      return url.substring(10);
+    } else if (window.location.pathname.includes('/dev-tools/') && url.startsWith('dev-tools/')) {
       return url.substring(10);
     } else {
       return '../' + url;
