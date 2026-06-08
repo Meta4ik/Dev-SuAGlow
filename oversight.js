@@ -25,9 +25,7 @@ const OVERSIGHT_HTML = `
                         <!-- Clinicians Info Cards -->
                         <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="flex items-center gap-3 bg-off-white/80 p-3.5 rounded-xl border border-light-gray/30">
-                                <div class="w-8 h-8 rounded-full bg-near-black/5 flex items-center justify-center shrink-0">
-                                    <i data-lucide="user" class="w-4 h-4 text-taupe"></i>
-                                </div>
+                                <img src="assets/sophia-yang.png" alt="Sophia Yang, PA-C" class="w-8 h-8 rounded-full object-cover shrink-0 border border-light-gray/40">
                                 <div>
                                     <p class="text-[11px] font-semibold text-near-black leading-tight">Sophia Yang, PA-C</p>
                                     <p class="text-[9px] uppercase tracking-wider text-taupe/80 font-medium mt-0.5">Master Practitioner</p>
@@ -35,9 +33,7 @@ const OVERSIGHT_HTML = `
                             </div>
                             
                             <div class="flex items-center gap-3 bg-off-white/80 p-3.5 rounded-xl border border-light-gray/30">
-                                <div class="w-8 h-8 rounded-full bg-near-black/5 flex items-center justify-center shrink-0">
-                                    <i data-lucide="user-check" class="w-4 h-4 text-taupe"></i>
-                                </div>
+                                <img src="assets/dr-adam-yang.png" alt="Dr. Adam Yang" class="w-8 h-8 rounded-full object-cover shrink-0 border border-light-gray/40">
                                 <div>
                                     <p class="text-[11px] font-semibold text-near-black leading-tight">Dr. Adam Yang</p>
                                     <p class="text-[9px] uppercase tracking-wider text-taupe/80 font-medium mt-0.5">Supervising Physician</p>
