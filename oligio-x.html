@@ -168,31 +168,78 @@
 
     <!-- 1. Seoul-Inspired Skin Tightening -->
     <section id="seoul-inspired" class="py-24 px-10 bg-off-white relative overflow-hidden">
-        <!-- Animated RF Wave Background -->
-        <div class="absolute inset-0 pointer-events-none overflow-hidden z-0 rf-pulse-container">
-            <svg class="absolute w-full h-full min-w-[1024px] left-1/2 -translate-x-1/2" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- RF Energy Wave Paths (curved waves propagating RF energy) -->
-                <path class="rf-wave-1" d="M -100,250 C 200,100 500,400 800,250 C 1100,100 1300,350 1600,250" stroke="url(#rf-wave-grad-1)" stroke-width="3.5" stroke-linecap="round"/>
-                <path class="rf-wave-2" d="M -100,350 C 250,500 550,200 850,350 C 1150,500 1350,250 1600,350" stroke="url(#rf-wave-grad-2)" stroke-width="2.5" stroke-linecap="round"/>
-                <path class="rf-wave-3" d="M -100,450 C 300,300 600,600 900,450 C 1200,300 1400,500 1600,450" stroke="url(#rf-wave-grad-1)" stroke-width="3.5" stroke-linecap="round"/>
-                
-                <defs>
-                    <linearGradient id="rf-wave-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#AA987C" stop-opacity="0" />
-                        <stop offset="15%" stop-color="#AA987C" stop-opacity="0.35" />
-                        <stop offset="50%" stop-color="#AA987C" stop-opacity="0.85" />
-                        <stop offset="85%" stop-color="#AA987C" stop-opacity="0.35" />
-                        <stop offset="100%" stop-color="#AA987C" stop-opacity="0" />
-                    </linearGradient>
-                    <linearGradient id="rf-wave-grad-2" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#AA987C" stop-opacity="0" />
-                        <stop offset="30%" stop-color="#AA987C" stop-opacity="0.25" />
-                        <stop offset="50%" stop-color="#D4AF37" stop-opacity="0.75" />
-                        <stop offset="70%" stop-color="#AA987C" stop-opacity="0.25" />
-                        <stop offset="100%" stop-color="#AA987C" stop-opacity="0" />
-                    </linearGradient>
-                </defs>
+        <!-- Animated RF Wave Background (High Density Vector Ribbon) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+            <svg id="rf-wave-mesh" class="absolute w-full h-full min-w-[1024px] left-1/2 -translate-x-1/2" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Paths will be injected dynamically here -->
             </svg>
+            <script>
+                (function() {
+                    const svg = document.getElementById('rf-wave-mesh');
+                    if (!svg) return;
+                    
+                    const numLines = 22;
+                    const width = 1440;
+                    
+                    // Generate Top Ribbon
+                    for (let i = 0; i < numLines; i++) {
+                        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                        // Tweak parameters slightly for each line to create the wavy ribbon effect
+                        const y0 = 30 + i * 5;
+                        const cp1x = 360 + i * 3;
+                        const cp1y = -30 + i * 7;
+                        const cp2x = 720 - i * 2;
+                        const cp2y = 210 - i * 2;
+                        const cp3x = 1080 + i * 4;
+                        const cp3y = 30 + i * 6;
+                        const xEnd = width;
+                        const yEnd = 50 + i * 5;
+                        
+                        const d = `M 0,${y0} C ${cp1x},${cp1y} ${cp2x},${cp2y} ${cp3x},${cp3y} ${xEnd},${yEnd}`;
+                        
+                        path.setAttribute('d', d);
+                        path.setAttribute('stroke', '#AA987C');
+                        path.setAttribute('stroke-width', '0.75');
+                        path.setAttribute('stroke-opacity', (0.04 + (i / numLines) * 0.12).toFixed(3));
+                        path.setAttribute('fill', 'none');
+                        
+                        // Alternate the drift animations
+                        if (i % 3 === 0) path.classList.add('rf-wave-1');
+                        else if (i % 3 === 1) path.classList.add('rf-wave-2');
+                        else path.classList.add('rf-wave-3');
+                        
+                        svg.appendChild(path);
+                    }
+                    
+                    // Generate Bottom Ribbon
+                    for (let i = 0; i < numLines; i++) {
+                        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                        const y0 = 770 - i * 5;
+                        const cp1x = 360 - i * 3;
+                        const cp1y = 800 - i * 7;
+                        const cp2x = 720 + i * 2;
+                        const cp2y = 590 + i * 2;
+                        const cp3x = 1080 - i * 4;
+                        const cp3y = 770 - i * 6;
+                        const xEnd = width;
+                        const yEnd = 750 - i * 5;
+                        
+                        const d = `M 0,${y0} C ${cp1x},${cp1y} ${cp2x},${cp2y} ${cp3x},${cp3y} ${xEnd},${yEnd}`;
+                        
+                        path.setAttribute('d', d);
+                        path.setAttribute('stroke', '#AA987C');
+                        path.setAttribute('stroke-width', '0.75');
+                        path.setAttribute('stroke-opacity', (0.04 + (i / numLines) * 0.12).toFixed(3));
+                        path.setAttribute('fill', 'none');
+                        
+                        if (i % 3 === 0) path.classList.add('rf-wave-3');
+                        else if (i % 3 === 1) path.classList.add('rf-wave-2');
+                        else path.classList.add('rf-wave-1');
+                        
+                        svg.appendChild(path);
+                    }
+                })();
+            </script>
         </div>
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">

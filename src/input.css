@@ -1138,51 +1138,60 @@ mark.search-highlight {
 /* ================================================
    Oligio X RF Wave Animation Styles
    ================================================ */
-@keyframes rf-wave-flow-right {
+@keyframes rf-wave-drift-1 {
     0% {
-        stroke-dashoffset: 0;
+        transform: translateY(0) scaleY(1);
     }
     100% {
-        stroke-dashoffset: -160;
+        transform: translateY(10px) scaleY(1.03);
     }
 }
 
-@keyframes rf-wave-flow-left {
+@keyframes rf-wave-drift-2 {
     0% {
-        stroke-dashoffset: 0;
+        transform: translateY(0) scaleY(1);
     }
     100% {
-        stroke-dashoffset: 160;
+        transform: translateY(-10px) scaleY(0.97);
     }
 }
 
-@keyframes rf-pulse {
-    0%, 100% {
-        opacity: 0.45;
-        transform: translateY(0) scale(1);
+@keyframes rf-wave-drift-3 {
+    0% {
+        transform: translateY(0) scaleY(1);
     }
-    50% {
-        opacity: 0.85;
-        transform: translateY(-8px) scale(1.015);
+    100% {
+        transform: translateY(6px) scaleY(1.02);
     }
 }
 
 .rf-wave-1 {
-    stroke-dasharray: 40, 80;
-    animation: rf-wave-flow-right 28s linear infinite;
+    transform-origin: center;
+    animation: rf-wave-drift-1 16s ease-in-out infinite alternate;
 }
 
 .rf-wave-2 {
-    stroke-dasharray: 60, 100;
-    animation: rf-wave-flow-left 36s linear infinite;
+    transform-origin: center;
+    animation: rf-wave-drift-2 20s ease-in-out infinite alternate;
 }
 
 .rf-wave-3 {
-    stroke-dasharray: 80, 120;
-    animation: rf-wave-flow-right 42s linear infinite;
+    transform-origin: center;
+    animation: rf-wave-drift-3 24s ease-in-out infinite alternate;
+}
+
+@keyframes rf-pulse {
+    0%, 100% {
+        opacity: 0.55;
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        opacity: 0.95;
+        transform: translateY(-4px) scale(1.008);
+    }
 }
 
 .rf-pulse-container {
-    animation: rf-pulse 8s ease-in-out infinite;
+    animation: rf-pulse 10s ease-in-out infinite;
     transform-origin: center;
 }
