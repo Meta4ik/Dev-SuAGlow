@@ -25,18 +25,18 @@ const OVERSIGHT_HTML = `
                         <!-- Clinicians Info Cards -->
                         <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="flex items-center gap-4 bg-off-white/80 p-4 rounded-xl border border-light-gray/30">
-                                <img src="assets/sophia-yang.png" alt="Sophia Yang, PA-C" class="w-12 h-12 rounded-full object-cover shrink-0 border border-light-gray/40 shadow-xs">
+                                <img src="assets/sophia-yang.png" alt="Sophia Yang, PA-C" class="w-16 h-16 rounded-full object-cover shrink-0 border border-light-gray/40 shadow-xs">
                                 <div>
-                                    <p class="text-[12px] font-semibold text-near-black leading-tight">Sophia Yang, PA-C</p>
-                                    <p class="text-[9px] uppercase tracking-wider text-taupe/90 font-medium mt-0.5">Seoul-Trained Medical Aesthetic Provider</p>
+                                    <p class="text-[13px] font-semibold text-near-black leading-tight">Sophia Yang, PA-C</p>
+                                    <p class="text-[9px] uppercase tracking-wider text-taupe/90 font-medium mt-1">Seoul-Trained Medical Aesthetic Provider</p>
                                 </div>
                             </div>
                             
                             <div class="flex items-center gap-4 bg-off-white/80 p-4 rounded-xl border border-light-gray/30">
-                                <img src="assets/dr-adam-yang.png" alt="Dr. Adam Yang" class="w-12 h-12 rounded-full object-cover shrink-0 border border-light-gray/40 shadow-xs">
+                                <img src="assets/dr-adam-yang.png" alt="Dr. Adam Yang" class="w-16 h-16 rounded-full object-cover shrink-0 border border-light-gray/40 shadow-xs">
                                 <div>
-                                    <p class="text-[12px] font-semibold text-near-black leading-tight">Dr. Adam Yang</p>
-                                    <p class="text-[9px] uppercase tracking-wider text-taupe/90 font-medium mt-0.5">Medical Director &amp; Supervising Physician</p>
+                                    <p class="text-[13px] font-semibold text-near-black leading-tight">Dr. Adam Yang</p>
+                                    <p class="text-[9px] uppercase tracking-wider text-taupe/90 font-medium mt-1">Medical Director &amp; Supervising Physician</p>
                                 </div>
                             </div>
                         </div>
