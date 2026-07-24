@@ -554,11 +554,11 @@ const SEARCH_INDEX = [
   },
   {
     "url": "microneedling.html#expect",
-    "title": "What to Expect After SkinPen®",
+    "title": "What you can expect",
     "pageTitle": "SkinPen Microneedling Dallas",
     "category": "SkinPen Microneedling",
-    "content": "The Microneedling Recovery Journey Expect temporary redness, mild warmth, tightness, or sensitivity. Most patients experience a temporary \"sunburn-like\" recovery for several days. Skin cells renew quickly. Your skin will gradually begin appearing smoother, brighter, more refined, and healthier. Collagen remodeling continues gradually over time. You will notice progressive improvements in skin quality, texture, and scars. Depending on scar severity and aesthetic goals, many patients pursue annual or seasonal maintenance for lasting skin longevity.",
-    "snippet": "The Microneedling Recovery Journey Expect temporary redness, mild warmth, tightness, or sensitivity. Most patients experience a temporary \"sunburn-like\" recover..."
+    "content": "Every step is guided by our K-beauty philosophy: protect the skin barrier, support healthy collagen, and reveal your natural glow. Skin that glows starts with healthy collagen. THE SUA GLOW SEOUL STANDARD Your provider will gently cleanse the skin. A topical anesthetic may be administered to ensure maximum comfort throughout the treatment. Once the numbing cream has taken effect, the provider will gently pass SkinPen over the treatment area. As the tiny needles create micro-channels in the skin, patients typically feel light pressure and a mild buzzing sensation, with minimal discomfort. The treatment lasts approximately 30 minutes. Most patients notice slight redness in the treated area, similar to a mild sunburn. Additional common treatment responses include dryness, tightness, and peeling. This is normal and should subside within 24 to 72 hours. Makeup and sunscreen can be applied 24 hours after treatment. Please see patient labeling for detailed safety information. 순하게, 확실하게. Gentle on skin. Effective on results. 검증된 기술. 안심되는 선택. FDA-cleared technology you can trust. 오늘의 케어가, 내일의 피부를 만들듭니다. Today's care supports tomorrow's skin.",
+    "snippet": "Every step is guided by our K-beauty philosophy: protect the skin barrier, support healthy collagen, and reveal your natural glow. Skin that glows starts with h..."
   },
   {
     "url": "microneedling.html#faq",
