@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/output.css?v=74">
+    <link rel="stylesheet" href="dist/output.css?v=75">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-off-white text-charcoal antialiased">
@@ -464,156 +464,243 @@
                 <!-- Central Portrait Visual -->
                 <div class="relative w-full lg:w-2/4 max-w-[400px] aspect-[4/5] flex justify-center items-center z-10">
                     <!-- Glow background -->
-                    <div class="absolute inset-0 bg-gradient-to-tr from-warm-gold/10 to-transparent blur-2xl rounded-full"></div>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-warm-gold/5 to-transparent blur-2xl rounded-full"></div>
                     
                     <div class="relative w-full h-full rounded-[2rem] overflow-hidden border border-light-gray/30 shadow-2xl bg-white">
-                        <!-- Base Grayscale Image -->
-                        <img src="assets/oligio-x/model-treatment-zones.png" alt="Oligio X Face Treatment Map" class="w-full h-full object-cover filter grayscale contrast-110 brightness-95">
-                        
-                        <!-- Top Color Image (Revealed on hover via clip-path circle) -->
-                        <img src="assets/oligio-x/model-treatment-zones.png" alt="Oligio X Face Treatment Map Color Reveal" id="color-overlay" class="absolute inset-0 w-full h-full object-cover contrast-[1.05] brightness-[1.02] transition-all duration-300 pointer-events-none" style="clip-path: circle(0px at 0px 0px);">
-
-                        <!-- SVG Map for Dot Markers & Target Rings -->
-                        <svg class="absolute inset-0 w-full h-full pointer-events-none z-20" viewBox="0 0 400 500" preserveAspectRatio="none">
-                            <defs>
-                                <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            
-                            <!-- Connection Lines (SVG Paths) -->
-                            <path id="line-forehead" d="M 50 100 L 120 100 L 180 125" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
-                            <path id="line-eye" d="M 50 180 L 110 180 L 170 160" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
-                            <path id="line-cheeks" d="M 50 260 L 115 260 L 175 215" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
-                            <path id="line-neck" d="M 50 420 L 130 420 L 195 350" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
-
-                            <path id="line-jawline" d="M 350 140 L 250 140 L 185 275" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
-                            <path id="line-perioral" d="M 350 260 L 230 260 L 165 255" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
-                            <path id="line-submental" d="M 350 380 L 240 380 L 180 300" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
-
-                            <!-- Interactive Target Dots on Model -->
-                            <g id="dot-forehead" class="transition-all duration-300">
-                                <circle cx="180" cy="125" r="8" fill="#AA987C" class="opacity-30" />
-                                <circle cx="180" cy="125" r="4" fill="#AA987C" />
-                            </g>
-                            <g id="dot-eye" class="transition-all duration-300">
-                                <circle cx="170" cy="160" r="8" fill="#AA987C" class="opacity-30" />
-                                <circle cx="170" cy="160" r="4" fill="#AA987C" />
-                            </g>
-                            <g id="dot-cheeks" class="transition-all duration-300">
-                                <circle cx="175" cy="215" r="8" fill="#AA987C" class="opacity-30" />
-                                <circle cx="175" cy="215" r="4" fill="#AA987C" />
-                            </g>
-                            <g id="dot-perioral" class="transition-all duration-300">
-                                <circle cx="165" cy="255" r="8" fill="#AA987C" class="opacity-30" />
-                                <circle cx="165" cy="255" r="4" fill="#AA987C" />
-                            </g>
-                            <g id="dot-jawline" class="transition-all duration-300">
-                                <circle cx="185" cy="275" r="8" fill="#AA987C" class="opacity-30" />
-                                <circle cx="185" cy="275" r="4" fill="#AA987C" />
-                            </g>
-                            <g id="dot-submental" class="transition-all duration-300">
-                                <circle cx="180" cy="300" r="8" fill="#AA987C" class="opacity-30" />
-                                <circle cx="180" cy="300" r="4" fill="#AA987C" />
-                            </g>
-                            <g id="dot-neck" class="transition-all duration-300">
-                                <circle cx="195" cy="350" r="8" fill="#AA987C" class="opacity-30" />
-                                <circle cx="195" cy="350" r="4" fill="#AA987C" />
-                            </g>
-                        </svg>
+                        <!-- Color image (bottom layer - revealed on hover) -->
+                        <img src="assets/oligio-x/model-treatment-zones.png" alt="Oligio X Face Treatment Map" class="w-full h-full object-cover contrast-[1.05] brightness-[1.02]">
+                        <!-- Grayscale overlay (top layer - masked on hover to reveal color circle) -->
+                        <img src="assets/oligio-x/model-treatment-zones.png" alt="" aria-hidden="true" id="model-grayscale" class="absolute inset-0 w-full h-full object-cover grayscale contrast-[1.05] brightness-95" style="-webkit-mask-image: none; mask-image: none; transition: mask-image 0.15s ease, -webkit-mask-image 0.15s ease;">
+                        <!-- Subtle overlay -->
+                        <div class="absolute inset-0 bg-near-black/5 mix-blend-multiply pointer-events-none"></div>
                     </div>
+
+                    <!-- Interactive SVG Layer for lines and dots -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- SVG Filters for Glow Effects -->
+                        <defs>
+                            <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feMerge>
+                                    <feMergeNode in="blur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- Lines connecting left cards to dots -->
+                        <path id="line-forehead" d="M 0 60 L 105 60 L 158 105" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line opacity-60 transition-all duration-300" />
+                        <path id="line-eye" d="M 0 190 L 100 190 L 155 144" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line opacity-60 transition-all duration-300" />
+                        <path id="line-cheeks" d="M 0 320 L 105 320 L 158 203" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line opacity-60 transition-all duration-300" />
+                        <path id="line-neck" d="M 0 450 L 130 450 L 187 330" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line opacity-60 transition-all duration-300" />
+
+                        <!-- Lines connecting right cards to dots -->
+                        <path id="line-brow" d="M 400 60 L 260 60 L 153 127" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line opacity-60 transition-all duration-300" />
+                        <path id="line-smile" d="M 400 190 L 245 190 L 131 227" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line opacity-60 transition-all duration-300" />
+                        <path id="line-jawline" d="M 400 320 L 295 320 L 199 266" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line opacity-60 transition-all duration-300" />
+                        <path id="line-chin" d="M 400 450 L 275 450 L 170 288" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line opacity-60 transition-all duration-300" />
+
+                        <!-- Interactive Dots -->
+                        <g id="dot-forehead" class="zone-dot transition-all duration-300">
+                            <circle cx="158" cy="105" r="8" fill="#ffffff" class="opacity-30" />
+                            <circle cx="158" cy="105" r="4" fill="#d4af37" />
+                        </g>
+                        <g id="dot-eye" class="zone-dot transition-all duration-300">
+                            <circle cx="155" cy="144" r="8" fill="#ffffff" class="opacity-30" />
+                            <circle cx="155" cy="144" r="4" fill="#d4af37" />
+                        </g>
+                        <g id="dot-cheeks" class="zone-dot transition-all duration-300">
+                            <circle cx="158" cy="203" r="8" fill="#ffffff" class="opacity-30" />
+                            <circle cx="158" cy="203" r="4" fill="#d4af37" />
+                        </g>
+                        <g id="dot-neck" class="zone-dot transition-all duration-300">
+                            <circle cx="187" cy="330" r="8" fill="#ffffff" class="opacity-30" />
+                            <circle cx="187" cy="330" r="4" fill="#d4af37" />
+                        </g>
+                        <g id="dot-brow" class="zone-dot transition-all duration-300">
+                            <circle cx="153" cy="127" r="8" fill="#ffffff" class="opacity-30" />
+                            <circle cx="153" cy="127" r="4" fill="#d4af37" />
+                        </g>
+                        <g id="dot-smile" class="zone-dot transition-all duration-300">
+                            <circle cx="131" cy="227" r="8" fill="#ffffff" class="opacity-30" />
+                            <circle cx="131" cy="227" r="4" fill="#d4af37" />
+                        </g>
+                        <g id="dot-jawline" class="zone-dot transition-all duration-300">
+                            <circle cx="199" cy="266" r="8" fill="#ffffff" class="opacity-30" />
+                            <circle cx="199" cy="266" r="4" fill="#d4af37" />
+                        </g>
+                        <g id="dot-chin" class="zone-dot transition-all duration-300">
+                            <circle cx="170" cy="288" r="8" fill="#ffffff" class="opacity-30" />
+                            <circle cx="170" cy="288" r="4" fill="#d4af37" />
+                        </g>
+                    </svg>
                 </div>
 
                 <!-- Right Side Labels (Desktop) -->
-                <div class="w-full lg:w-1/4 space-y-6 flex flex-col justify-around lg:h-[500px] z-20">
+                <div class="w-full lg:w-1/4 space-y-6 text-left flex flex-col justify-between lg:h-[500px] z-20">
+                    <!-- Brow Area -->
+                    <div data-zone="brow" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
+                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Brow Area</h4>
+                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Support upper-face firmness and natural-looking brow definition.</p>
+                    </div>
+                    <!-- Smile Lines -->
+                    <div data-zone="smile" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
+                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Smile Lines</h4>
+                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Support collagen remodeling in areas prone to volume and elasticity changes.</p>
+                    </div>
                     <!-- Jawline -->
                     <div data-zone="jawline" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
                         <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Jawline</h4>
-                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Refine lower facial definition and sharpen contour transitions.</p>
+                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Help improve lower-face definition and facial contours.</p>
                     </div>
-                    <!-- Perioral -->
-                    <div data-zone="perioral" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
-                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Perioral &amp; Smile Lines</h4>
-                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Smooth fine lines around the mouth and support cheek-to-lip harmony.</p>
+                    <!-- Under Chin -->
+                    <div data-zone="chin" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
+                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Under Chin</h4>
+                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Support skin tightening and contour refinement beneath the jawline.</p>
                     </div>
-                    <!-- Submental -->
-                    <div data-zone="submental" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
-                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Submental Area</h4>
-                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Tighten skin under the chin for a cleaner profile.</p>
-                    </div>
+                </div>
+            </div>
+
+            <!-- Common Concerns Grid -->
+            <div class="bg-off-white p-8 rounded-3xl border border-light-gray/60 max-w-4xl mx-auto text-center mt-20">
+                <p class="heading-wide text-xs text-near-black uppercase tracking-wider mb-6">Common Concerns We Address</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-4 py-2 bg-white rounded-full border border-light-gray/50 text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Early Skin Laxity</span>
+                    <span class="px-4 py-2 bg-white rounded-full border border-light-gray/50 text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Jawline Softening</span>
+                    <span class="px-4 py-2 bg-white rounded-full border border-light-gray/50 text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Lower-Face Heaviness</span>
+                    <span class="px-4 py-2 bg-white rounded-full border border-light-gray/50 text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Under-Chin Fullness</span>
+                    <span class="px-4 py-2 bg-white rounded-full border border-light-gray/50 text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Neck Aging Concerns</span>
+                    <span class="px-4 py-2 bg-white rounded-full border border-light-gray/50 text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Loss of Facial Definition</span>
+                    <span class="px-4 py-2 bg-white rounded-full border border-light-gray/50 text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Prevention-Focused Aging Care</span>
                 </div>
             </div>
         </div>
 
-        <!-- Inline Interactive Script for Zone Hovering & Circle Masking -->
+        <!-- Interactive Script for Treatment Zones -->
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                const zoneCards = document.querySelectorAll('.zone-card');
-                const overlay = document.getElementById('color-overlay');
+                const cards = document.querySelectorAll('.zone-card');
+                const grayscaleImg = document.getElementById('model-grayscale');
+
+                // Dot positions in SVG viewBox coords (400x500) → converted to %
+                const dotPositions = {
+                    forehead: { x: 158/400*100, y: 105/500*100 },
+                    eye:      { x: 155/400*100, y: 144/500*100 },
+                    cheeks:   { x: 158/400*100, y: 203/500*100 },
+                    neck:     { x: 187/400*100, y: 330/500*100 },
+                    brow:     { x: 153/400*100, y: 127/500*100 },
+                    smile:    { x: 131/400*100, y: 227/500*100 },
+                    jawline:  { x: 199/400*100, y: 266/500*100 },
+                    chin:     { x: 170/400*100, y: 288/500*100 },
+                };
                 
-                const coordinates = {
-                    forehead: { x: 180, y: 125, radius: 55 },
-                    eye: { x: 170, y: 160, radius: 45 },
-                    cheeks: { x: 175, y: 215, radius: 55 },
-                    perioral: { x: 165, y: 255, radius: 45 },
-                    jawline: { x: 185, y: 275, radius: 45 },
-                    submental: { x: 180, y: 300, radius: 45 },
-                    neck: { x: 195, y: 350, radius: 55 }
+                let revealAnim = {
+                    currentRadius: 0,
+                    targetRadius: 0,
+                    x: 0,
+                    y: 0,
+                    animating: false
                 };
 
-                zoneCards.forEach(card => {
+                function updateMask() {
+                    if (grayscaleImg) {
+                        if (revealAnim.currentRadius > 0.1) {
+                            const r = revealAnim.currentRadius;
+                            const mask = `radial-gradient(circle ${r}px at ${revealAnim.x}% ${revealAnim.y}%, transparent ${r}px, rgba(0,0,0,1) ${r + 2}px)`;
+                            grayscaleImg.style.webkitMaskImage = mask;
+                            grayscaleImg.style.maskImage = mask;
+                        } else {
+                            grayscaleImg.style.webkitMaskImage = 'none';
+                            grayscaleImg.style.maskImage = 'none';
+                        }
+                    }
+                }
+
+                function tickAnimation() {
+                    const diff = revealAnim.targetRadius - revealAnim.currentRadius;
+                    if (Math.abs(diff) < 0.1) {
+                        revealAnim.currentRadius = revealAnim.targetRadius;
+                        updateMask();
+                        revealAnim.animating = false;
+                    } else {
+                        revealAnim.currentRadius += diff * 0.18; // Easing speed
+                        updateMask();
+                        requestAnimationFrame(tickAnimation);
+                    }
+                }
+
+                function startRadiusAnimation(targetR, x, y) {
+                    revealAnim.targetRadius = targetR;
+                    if (x !== undefined && y !== undefined) {
+                        revealAnim.x = x;
+                        revealAnim.y = y;
+                    }
+                    if (!revealAnim.animating) {
+                        revealAnim.animating = true;
+                        requestAnimationFrame(tickAnimation);
+                    }
+                }
+                
+                cards.forEach(card => {
                     const zone = card.getAttribute('data-zone');
+                    const line = document.getElementById(`line-${zone}`);
+                    const dot = document.getElementById(`dot-${zone}`);
                     
                     card.addEventListener('mouseenter', () => {
-                        const coords = coordinates[zone];
-                        if (coords && overlay) {
-                            overlay.style.clipPath = `circle(${coords.radius}px at ${coords.x}px ${coords.y}px)`;
-                        }
-
-                        const line = document.getElementById(`line-${zone}`);
+                        resetAllZones();
+                        
+                        card.classList.add('border-warm-gold/50', 'bg-white', 'shadow-md');
+                        card.classList.remove('bg-white/40', 'border-transparent');
                         if (line) {
-                            line.classList.remove('opacity-0');
+                            line.classList.remove('opacity-60');
                             line.classList.add('opacity-100');
-                            line.setAttribute('stroke', '#C8AF8C');
-                            line.setAttribute('stroke-width', '2.5');
-                            line.removeAttribute('stroke-dasharray');
+                            line.setAttribute('stroke-width', '3');
+                            line.setAttribute('stroke-dasharray', 'none');
                         }
-
-                        const dot = document.getElementById(`dot-${zone}`);
                         if (dot) {
                             const outerCircle = dot.querySelector('circle:first-child');
                             const innerCircle = dot.querySelector('circle:last-child');
                             if (outerCircle) {
-                                outerCircle.setAttribute('r', '12');
+                                outerCircle.setAttribute('r', '14');
                                 outerCircle.classList.remove('opacity-30');
                                 outerCircle.classList.add('opacity-50', 'fill-warm-gold/20');
                             }
                             if (innerCircle) {
-                                innerCircle.setAttribute('r', '5');
+                                innerCircle.setAttribute('r', '6');
                                 innerCircle.setAttribute('filter', 'url(#glow-gold)');
                             }
                         }
-                    });
 
-                    card.addEventListener('mouseleave', () => {
-                        if (overlay) {
-                            overlay.style.clipPath = 'circle(0px at 0px 0px)';
+                        // Color reveal: animate mask circle to grow
+                        const pos = dotPositions[zone];
+                        if (pos && grayscaleImg) {
+                            startRadiusAnimation(55, pos.x, pos.y);
                         }
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        resetAllZones();
+                    });
+                });
 
-                        const line = document.getElementById(`line-${zone}`);
+                function resetAllZones() {
+                    // Smoothly animate color reveal to 0 radius
+                    startRadiusAnimation(0);
+
+                    cards.forEach(c => {
+                        const z = c.getAttribute('data-zone');
+                        c.classList.remove('border-warm-gold/50', 'bg-white', 'shadow-md');
+                        c.classList.add('bg-white/40', 'border-transparent');
+                        
+                        const line = document.getElementById(`line-${z}`);
                         if (line) {
-                            line.classList.add('opacity-0');
                             line.classList.remove('opacity-100');
-                            line.setAttribute('stroke', '#AA987C');
-                            line.setAttribute('stroke-width', '1.5');
+                            line.classList.add('opacity-60');
+                            line.setAttribute('stroke-width', '2');
                             line.setAttribute('stroke-dasharray', '3 3');
                         }
                         
-                        const dot = document.getElementById(`dot-${zone}`);
+                        const dot = document.getElementById(`dot-${z}`);
                         if (dot) {
                             const outerCircle = dot.querySelector('circle:first-child');
                             const innerCircle = dot.querySelector('circle:last-child');
@@ -628,7 +715,7 @@
                             }
                         }
                     });
-                });
+                }
             });
         </script>
     </section>
