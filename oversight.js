@@ -14,32 +14,37 @@ const OVERSIGHT_HTML = `
                     
                     <div class="space-y-4 flex-1">
                         <div class="flex flex-wrap items-center gap-3">
-                            <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#AA987C] bg-[#AA987C]/10 px-3 py-1 rounded-full border border-[#AA987C]/20">Medical Oversight</span>
+                            <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#AA987C] bg-[#AA987C]/10 px-3.5 py-1 rounded-full border border-[#AA987C]/20">Medical Expertise You Can Trust</span>
                             <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-charcoal/40 bg-charcoal/5 px-3 py-1 rounded-full">Texas Compliant</span>
                         </div>
                         
                         <p class="text-sm md:text-base font-light text-charcoal/80 leading-relaxed">
-                            All {treatment} treatments at SuA Glow are performed by <strong class="font-medium text-near-black">Sophia Yang, PA-C</strong> under appropriate medical oversight and delegation by supervising physician <strong class="font-medium text-near-black">Dr. Adam Yang</strong> in accordance with Texas law and established clinical protocols.
+                            Every {treatment} treatment is performed by <strong class="font-medium text-near-black">Sophia Yang, PA-C</strong>, under physician-delegated medical oversight from <strong class="font-medium text-near-black">Dr. Adam Yang, MD</strong>, following Texas regulations and established clinical protocols.
                         </p>
                         
                         <!-- Clinicians Info Cards -->
                         <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="flex items-center gap-3 bg-off-white/80 p-3.5 rounded-xl border border-light-gray/30">
-                                <img src="assets/sophia-yang.png" alt="Sophia Yang, PA-C" class="w-8 h-8 rounded-full object-cover shrink-0 border border-light-gray/40">
+                            <div class="flex items-center gap-4 bg-off-white/80 p-4 rounded-xl border border-light-gray/30">
+                                <img src="assets/sophia-yang.png" alt="Sophia Yang, PA-C" class="w-12 h-12 rounded-full object-cover shrink-0 border border-light-gray/40 shadow-xs">
                                 <div>
-                                    <p class="text-[11px] font-semibold text-near-black leading-tight">Sophia Yang, PA-C</p>
-                                    <p class="text-[9px] uppercase tracking-wider text-taupe/80 font-medium mt-0.5">Master Practitioner</p>
+                                    <p class="text-[12px] font-semibold text-near-black leading-tight">Sophia Yang, PA-C</p>
+                                    <p class="text-[9px] uppercase tracking-wider text-taupe/90 font-medium mt-0.5">Seoul-Trained Medical Aesthetic Provider</p>
                                 </div>
                             </div>
                             
-                            <div class="flex items-center gap-3 bg-off-white/80 p-3.5 rounded-xl border border-light-gray/30">
-                                <img src="assets/dr-adam-yang.png" alt="Dr. Adam Yang" class="w-8 h-8 rounded-full object-cover shrink-0 border border-light-gray/40">
+                            <div class="flex items-center gap-4 bg-off-white/80 p-4 rounded-xl border border-light-gray/30">
+                                <img src="assets/dr-adam-yang.png" alt="Dr. Adam Yang" class="w-12 h-12 rounded-full object-cover shrink-0 border border-light-gray/40 shadow-xs">
                                 <div>
-                                    <p class="text-[11px] font-semibold text-near-black leading-tight">Dr. Adam Yang</p>
-                                    <p class="text-[9px] uppercase tracking-wider text-taupe/80 font-medium mt-0.5">Supervising Physician</p>
+                                    <p class="text-[12px] font-semibold text-near-black leading-tight">Dr. Adam Yang</p>
+                                    <p class="text-[9px] uppercase tracking-wider text-taupe/90 font-medium mt-0.5">Medical Director &amp; Supervising Physician</p>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- After Provider Images -->
+                        <p class="text-xs md:text-sm font-light text-charcoal/75 leading-relaxed pt-3 border-t border-light-gray/30 mt-4">
+                            Every treatment plan is personalized to support healthy collagen, protect the skin barrier, and deliver natural-looking results.
+                        </p>
                     </div>
                 </div>
             </div>
