@@ -15,3 +15,7 @@ Thumbs.db
 # Temp
 /tmp/
 *.log
+
+# Backup directory
+bak/
+
