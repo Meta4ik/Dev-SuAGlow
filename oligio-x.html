@@ -9,72 +9,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/output.css?v=36">
+    <link rel="stylesheet" href="dist/output.css?v=63">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-off-white text-charcoal antialiased">
     <div id="nav-placeholder"></div>
 
-    <!-- Hero -->
-    <section id="hero" data-nav-theme="dark" class="relative min-h-[75vh] flex flex-col items-center justify-start text-center px-8 pt-[250px] overflow-hidden pb-32 bg-black">
-        <div class="absolute inset-0 z-0 bg-black flex justify-center">
-            <img src="assets/oligio-x/hero-bg-device.jpg" alt="Oligio X RF Lifting" class="h-full w-auto object-contain opacity-75">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-gray/10 blur-[140px] rounded-full animate-pulse"></div>
-        </div>
-        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
-            <span class="badge-glass mb-12">Skin Rejuvenation &rsaquo; Oligio X RF Lifting</span>
-            <h1 class="heading-wide mb-10 leading-none text-white flex flex-col items-center gap-4">
-                <img src="assets/oligio-x/oligio-x-logo.png" alt="Oligio X" class="h-12 md:h-20 w-auto object-contain mx-auto">
-                <span class="text-warm-gold text-xl md:text-3xl tracking-[0.3em] font-medium block mt-2">RF Lifting</span>
-            </h1>
-            <p class="text-sm md:text-xl text-white/70 max-w-3xl mx-auto mb-14 font-light tracking-wide leading-relaxed">
-                FDA-Cleared Korean-Inspired Skin Tightening Without Surgery. Focused on collagen support, jawline contouring, and natural-looking rejuvenation.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary">Book Consultation</a>
-                <a href="#philosophy" class="btn-outline-white">Explore the Philosophy</a>
-            </div>
-            <p class="text-[11px] text-white/40 mt-8 font-light max-w-2xl mx-auto leading-relaxed">
-                Patients across Dallas, Plano, Frisco, Coppell, Irving, Southlake, Grapevine, and the DFW metroplex visit SuA Glow for Korean-inspired RF skin tightening focused on natural-looking rejuvenation and skin health.
-            </p>
-        </div>
-    </section>
-
-    <div id="nearme-placeholder" data-product="Oligio X RF Lifting"></div>
-
-    <!-- Oligio X Premium Banner Component -->
-    <section class="py-24 px-8 md:px-16 bg-[#131619] text-white relative overflow-hidden">
-        <!-- Starburst & Subtle Glow Accents -->
-        <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#AA987C] blur-[150px] rounded-full"></div>
+    <!-- Hero (Meet Oligio X) -->
+    <section id="hero" data-nav-theme="dark" class="relative min-h-[75vh] flex items-center justify-center pt-[150px] pb-20 px-8 md:px-16 bg-[#131619] text-white overflow-hidden">
+        <!-- Background Image & Accents -->
+        <div class="absolute inset-0 z-0 bg-[#131619] flex justify-center pointer-events-none overflow-hidden">
+            <img src="assets/oligio-x/hero-bg-device.jpg" alt="Oligio X RF Lifting" class="h-full w-auto object-contain opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#131619]/70 via-[#131619]/40 to-[#131619]"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#AA987C] blur-[160px] rounded-full opacity-20"></div>
         </div>
         
-        <div class="max-w-7xl mx-auto relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div class="max-w-7xl mx-auto relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-28 items-center">
                 <!-- Text content column -->
                 <div class="lg:col-span-6 space-y-8 animate-on-scroll fade-right">
-                    <span class="inline-flex items-center px-4 py-1.5 border border-[#AA987C]/30 bg-[#AA987C]/10 text-[#AA987C] text-[10px] font-bold uppercase tracking-[0.2em] rounded-full">
-                        KOREAN TECHNOLOGY. SEOUL TECHNIQUE. FIRST TO OFFER OLIGIO X RF LIFTING
-                    </span>
-                    
-                    <h2 class="heading-wide text-3xl md:text-5xl text-white leading-[1.1] font-light">
-                        Meet Oligio X.
-                    </h2>
+                    <h1 class="heading-wide text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white whitespace-nowrap leading-[1.15] font-light">
+                        Meet Oligio <span class="text-[#00C2C2]">X</span>
+                    </h1>
                     
                     <p class="text-sm md:text-base font-light text-white/70 leading-relaxed max-w-xl">
-                        The first authorized Oligio X provider in Dallas-Fort Worth, where advanced Korean RF technology meets Sophia Yang's Seoul-inspired technique for collagen support, skin quality, and long-term K-Glow.
+                        Korean RF skin tightening designed to support collagen renewal, skin firmness, jawline definition, and natural-looking rejuvenation without surgery or extended downtime.
                     </p>
 
-                    <p class="text-base md:text-lg font-light italic text-[#AA987C]/95 leading-relaxed">
-                        Beautiful skin doesn't need a passport anymore.
+                    <p class="text-sm md:text-base font-light text-white/70 leading-relaxed max-w-xl">
+                        Exclusively available at SuA Glow, Dallas-Fort Worth's first authorized Oligio <span class="text-[#00C2C2]">X</span> provider.
                     </p>
                     
-                    <div class="pt-4 flex flex-col sm:flex-row items-start gap-4">
-                        <a href="oligio-x.html" class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300">
-                            Explore Oligio X
-                        </a>
-                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-secondary py-4 px-8 text-xs font-semibold tracking-widest border border-white/20 hover:border-white text-white rounded-full transition-all duration-300">
+                    <div class="pt-4">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300">
                             Book Consultation
                         </a>
                     </div>
@@ -84,7 +51,7 @@
                 <div class="lg:col-span-6 animate-on-scroll fade-left delay-100">
                     <div class="relative w-full h-[350px] sm:h-[450px] flex items-center justify-center">
                         <!-- Circular Badge -->
-                        <div class="absolute hidden md:flex items-center justify-center z-20 text-[#AA987C] animate-on-scroll fade-up delay-400"
+                        <div class="absolute hidden md:flex items-center justify-center z-20 text-[#AA987C] animate-on-scroll float-slow"
                             style="width: 140px; height: 140px; top: -20px; right: 26%; animation: float 6s ease-in-out infinite;">
                             <div class="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.15)] border border-white/10"></div>
                             <svg viewBox="0 0 100 100" class="relative z-10" style="width: 95%; height: 95%; animation: spin-badge 20s linear infinite;">
@@ -101,9 +68,9 @@
                             </div>
                         </div>
 
-                        <!-- Base: Model Portrait in Background -->
-                        <div class="absolute left-0 top-0 w-[70%] h-[85%] rounded-[24px] overflow-hidden shadow-2xl border border-white/10 group">
-                            <img src="assets/oligio-x/model-portrait.png" alt="Oligio X Patient Results" class="w-full h-full object-cover grayscale opacity-90 transition-transform duration-700 group-hover:scale-105">
+                        <!-- Base: Original Model Portrait in Background -->
+                        <div class="absolute left-0 top-0 w-[70%] h-[85%] rounded-[24px] overflow-hidden shadow-2xl border border-white/10 group bg-[#131619]">
+                            <img src="assets/oligio-x/model-portrait-canon.png" alt="Oligio X Patient Results" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         </div>
                         
@@ -124,7 +91,7 @@
                 <!-- Image (Left) -->
                 <div class="lg:col-span-5 animate-on-scroll fade-right">
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-white p-4 border border-light-gray/50">
-                        <img src="assets/oligio-x/philosophy-model.jpg" alt="Korean Skin Tightening Results" class="w-full h-auto object-cover rounded-2xl mx-auto max-h-[500px] brightness-95">
+                        <img src="assets/oligio-x/philosophy-model-younger.png" alt="Korean Skin Tightening Results" class="w-full h-auto object-cover rounded-2xl mx-auto max-h-[500px]">
                         <div class="absolute bottom-6 left-6 right-6 bg-near-black/75 backdrop-blur-md border border-white/10 p-4 rounded-xl text-center">
                             <p class="heading-wide text-xs text-white uppercase tracking-widest">Seoul-Inspired Rejuvenation</p>
                             <p class="text-[10px] text-white/60 font-light mt-1">Natural-Looking K-Glow</p>
@@ -134,7 +101,7 @@
 
                 <!-- Text Content (Right) -->
                 <div class="lg:col-span-7 space-y-8 animate-on-scroll fade-left delay-200">
-                    <span class="badge-glass text-taupe bg-taupe/10 border-taupe/20 inline-block">Korean Aesthetic Philosophy</span>
+                    <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block">Korean Aesthetic Philosophy</span>
                     <h2 class="heading-wide text-3xl md:text-4xl text-near-black">Seoul-Level Skin Tightening.<br><span class="text-taupe italic text-2xl md:text-3xl font-light">Without Looking “Done.”</span></h2>
                     
                     <p class="text-base font-light opacity-70 leading-relaxed">
@@ -165,19 +132,18 @@
         </div>
     </section>
 
-
     <!-- 1. Seoul-Inspired Skin Tightening -->
-    <section id="seoul-inspired" class="py-24 px-10 bg-off-white">
+    <section id="seoul-inspired" class="py-20 px-10 bg-white border-t border-b border-light-gray/40">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                 <!-- Left Content -->
                 <div class="lg:col-span-7 space-y-8 animate-on-scroll fade-right">
-                    <span class="badge-glass text-taupe bg-taupe/10 border-taupe/20 inline-block uppercase tracking-wider text-[10px]">Oligio X Dallas &bull; Korean RF Skin Tightening</span>
+                    <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">Oligio X Dallas &bull; Korean RF Skin Tightening</span>
                     <h2 class="heading-wide text-3xl md:text-5xl text-near-black leading-tight">
-                        Seoul-Inspired<br>Skin Tightening,<br>Refined for Natural K-Glow.
+                        Seoul-Inspired<br>Skin Tightening.
                     </h2>
                     <p class="text-base font-light text-charcoal/80 leading-relaxed max-w-xl">
-                        Oligio X is a next-generation Korean radiofrequency treatment designed to support skin firmness, collagen renewal, jawline refinement, and long-term skin quality.
+                        It's the subtle refinement that leaves people wondering why your skin always looks healthy, refreshed, and effortlessly radiant.
                     </p>
                     <div>
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary">Schedule Consultation</a>
@@ -193,17 +159,17 @@
                     <div class="space-y-4">
                         <p class="heading-wide text-[10px] text-taupe tracking-widest uppercase mb-2">Quick Facts</p>
                         <div class="grid grid-cols-3 gap-4">
-                            <div class="bg-white p-4 rounded-2xl border border-light-gray/50 shadow-sm text-center">
-                                <p class="text-sm font-semibold text-near-black mb-1">6.78MHz</p>
-                                <p class="text-[9px] uppercase tracking-wider text-taupe font-medium">Monopolar RF</p>
+                            <div class="bg-white p-4 rounded-2xl border border-light-gray/60 shadow-sm text-center">
+                                <p class="text-sm font-semibold text-near-black mb-1">Collagen</p>
+                                <p class="text-[9px] uppercase tracking-wider text-taupe font-medium">Support Focus</p>
                             </div>
-                            <div class="bg-white p-4 rounded-2xl border border-light-gray/50 shadow-sm text-center">
-                                <p class="text-sm font-semibold text-near-black mb-1">Minimal</p>
+                            <div class="bg-white p-4 rounded-2xl border border-light-gray/60 shadow-sm text-center">
+                                <p class="text-xs sm:text-sm font-semibold text-near-black mb-1 leading-tight">Minimal</p>
                                 <p class="text-[9px] uppercase tracking-wider text-taupe font-medium">Downtime</p>
                             </div>
-                            <div class="bg-white p-4 rounded-2xl border border-light-gray/50 shadow-sm text-center">
-                                <p class="text-sm font-semibold text-near-black mb-1">Skin First</p>
-                                <p class="text-[9px] uppercase tracking-wider text-taupe font-medium">Collagen Focus</p>
+                            <div class="bg-white p-4 rounded-2xl border border-light-gray/60 shadow-sm text-center">
+                                <p class="text-xs sm:text-sm font-semibold text-near-black mb-1 leading-tight">Natural</p>
+                                <p class="text-[9px] uppercase tracking-wider text-taupe font-medium">Looking Results</p>
                             </div>
                         </div>
                     </div>
@@ -212,8 +178,182 @@
         </div>
     </section>
 
+    <!-- 3. Other Technologies Comparison -->
+    <section id="other-technologies" class="py-20 px-10 bg-off-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 animate-on-scroll fade-up">
+                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">How Other Technologies Fit</span>
+                <h2 class="heading-wide text-3xl md:text-5xl text-near-black leading-tight max-w-4xl mx-auto">
+                    Every device has strengths.<br>We chose the one that fit our philosophy.
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 animate-on-scroll fade-up">
+                <!-- Card 1: Thermage -->
+                <div class="bg-white p-8 rounded-[2rem] border border-light-gray/60 shadow-sm flex flex-col justify-between hover:border-taupe/30 transition-all duration-300 min-h-[520px]">
+                    <div>
+                        <div class="mb-4">
+                            <span class="text-[9px] uppercase tracking-wider text-taupe font-semibold">Established RF Tightening</span>
+                            <h3 class="heading-wide text-xl text-near-black mt-1">Thermage®</h3>
+                        </div>
+                        <ul class="space-y-2 text-xs font-light text-charcoal/80 mb-4">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe/60"></i>
+                                <span>Monopolar RF Technology</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe/60"></i>
+                                <span>Long Clinical History</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe/60"></i>
+                                <span>Tightening &amp; Collagen Support</span>
+                            </li>
+                        </ul>
+
+                        <!-- Device Image -->
+                        <div class="my-4 h-48 relative flex items-center justify-center p-4 rounded-2xl bg-off-white/80 border border-light-gray/40 overflow-hidden group shadow-inner">
+                            <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at center, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.4) 40%, rgba(170, 152, 124, 0.25) 80%, rgba(170, 152, 124, 0.4) 100%);"></div>
+                            <img src="assets/devices/photo-894x496-thermage-system.png.webp" alt="Thermage System" class="relative z-10 max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-light-gray/40">
+                        <p class="text-[10px] uppercase tracking-wider text-taupe font-semibold mb-2">OUR PERSPECTIVE</p>
+                        <p class="text-xs font-light text-charcoal/60 leading-relaxed">
+                            Thermage helped establish RF skin tightening globally. We selected Oligio X because we wanted the latest evolution of Korean RF technology and a platform aligned with our Seoul-inspired treatment approach.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 2: XERF -->
+                <div class="bg-white p-8 rounded-[2rem] border border-light-gray/60 shadow-sm flex flex-col justify-between hover:border-taupe/30 transition-all duration-300 min-h-[520px]">
+                    <div>
+                        <div class="mb-4">
+                            <span class="text-[9px] uppercase tracking-wider text-taupe font-semibold">Multi-Frequency RF Technology</span>
+                            <h3 class="heading-wide text-xl text-near-black mt-1">XERF®</h3>
+                        </div>
+                        <ul class="space-y-2 text-xs font-light text-charcoal/80 mb-4">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe/60"></i>
+                                <span>Multiple RF Frequencies</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe/60"></i>
+                                <span>Multi-Depth Energy Delivery</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe/60"></i>
+                                <span>Collagen Remodeling Focus</span>
+                            </li>
+                        </ul>
+
+                        <!-- Device Image -->
+                        <div class="my-4 h-48 relative flex items-center justify-center p-4 rounded-2xl bg-off-white/80 border border-light-gray/40 overflow-hidden group shadow-inner">
+                            <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at center, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.4) 40%, rgba(170, 152, 124, 0.25) 80%, rgba(170, 152, 124, 0.4) 100%);"></div>
+                            <img src="assets/devices/xerf-body-left.png.webp" alt="XERF System" class="relative z-10 max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-light-gray/40">
+                        <p class="text-[10px] uppercase tracking-wider text-taupe font-semibold mb-2">OUR PERSPECTIVE</p>
+                        <p class="text-xs font-light text-charcoal/60 leading-relaxed">
+                            XERF utilizes a different RF approach designed to address multiple tissue depths. We selected Oligio X because it reflects the treatment philosophy, workflow, and patient experience we wanted to bring to SuA Glow.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 3: Ultherapy -->
+                <div class="bg-white p-8 rounded-[2rem] border border-light-gray/60 shadow-sm flex flex-col justify-between hover:border-taupe/30 transition-all duration-300 min-h-[520px]">
+                    <div>
+                        <div class="mb-4">
+                            <span class="text-[9px] uppercase tracking-wider text-taupe font-semibold">Focused Ultrasound Technology</span>
+                            <h3 class="heading-wide text-xl text-near-black mt-1">Ultherapy®</h3>
+                        </div>
+                        <ul class="space-y-2 text-xs font-light text-charcoal/80 mb-4">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe/60"></i>
+                                <span>Ultrasound-Based Energy</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe/60"></i>
+                                <span>Often Selected for Deeper Lifting</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe/60"></i>
+                                <span>Different Mechanism Than RF</span>
+                            </li>
+                        </ul>
+
+                        <!-- Device Image -->
+                        <div class="my-4 h-48 relative flex items-center justify-center p-4 rounded-2xl bg-off-white/80 border border-light-gray/40 overflow-hidden group shadow-inner">
+                            <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at center, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.4) 40%, rgba(170, 152, 124, 0.25) 80%, rgba(170, 152, 124, 0.4) 100%);"></div>
+                            <img src="assets/devices/hcp-machine-ultherapy-prime.webp" alt="Ultherapy System" class="relative z-10 max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-light-gray/40">
+                        <p class="text-[10px] uppercase tracking-wider text-taupe font-semibold mb-2">OUR PERSPECTIVE</p>
+                        <p class="text-xs font-light text-charcoal/60 leading-relaxed">
+                            Ultherapy is often considered when deeper lifting support is the primary goal. Our focus is often skin quality, collagen support, contour refinement, and natural-looking rejuvenation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Dark Banner (The SuA Glow Difference) -->
+            <div class="bg-near-black text-white p-10 md:p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden animate-on-scroll fade-up text-center space-y-6">
+                <span class="text-warm-gold text-[10px] font-semibold tracking-widest uppercase block">THE SUA GLOW DIFFERENCE</span>
+                <h3 class="heading-wide text-2xl md:text-3xl font-medium">Technology Matters.<br>Technique Matters More.</h3>
+                <p class="text-xs md:text-sm font-light text-white/70 max-w-3xl mx-auto leading-relaxed">
+                    Every treatment plan is customized based on:
+                </p>
+                <div class="flex flex-wrap justify-center gap-3 pt-2">
+                    <span class="px-4 py-2 bg-white/10 rounded-full border border-white/10 text-xs font-light text-white/90">Facial Anatomy</span>
+                    <span class="px-4 py-2 bg-white/10 rounded-full border border-white/10 text-xs font-light text-white/90">Skin Quality</span>
+                    <span class="px-4 py-2 bg-white/10 rounded-full border border-white/10 text-xs font-light text-white/90">Degree of Laxity</span>
+                    <span class="px-4 py-2 bg-white/10 rounded-full border border-white/10 text-xs font-light text-white/90">Collagen Health</span>
+                    <span class="px-4 py-2 bg-white/10 rounded-full border border-white/10 text-xs font-light text-white/90">Long-Term Goals</span>
+                </div>
+                <p class="text-xs md:text-sm font-medium text-warm-gold/90 max-w-3xl mx-auto leading-relaxed pt-2">
+                    The best technology is the one selected for your face—not someone else's.
+                </p>
+                <div class="pt-4">
+                    <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary inline-block bg-[#AA987C] hover:bg-white hover:text-black text-white font-semibold tracking-widest px-8 py-4 rounded-full transition-all duration-300 text-xs uppercase">
+                        Schedule Your Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="nearme-placeholder" data-product="Oligio X RF Lifting"></div>
+
+    <!-- Showcase Banner (Moved Hero) -->
+    <section id="showcase-banner" class="relative py-32 flex flex-col items-center justify-center text-center px-8 overflow-hidden bg-black border-t border-b border-white/10">
+        <div class="absolute inset-0 z-0 bg-black flex justify-center">
+            <img src="assets/oligio-x/hero-bg-device.jpg" alt="Oligio X RF Lifting" class="h-full w-auto object-contain opacity-75">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-gray/10 blur-[140px] rounded-full animate-pulse"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
+            <span class="badge-glass mb-12">Skin Rejuvenation &rsaquo; Oligio X RF Lifting</span>
+            <h3 class="heading-wide mb-10 leading-none text-white flex flex-col items-center gap-4">
+                <img src="assets/oligio-x/oligio-x-logo.png" alt="Oligio X" class="h-12 md:h-20 w-auto object-contain mx-auto">
+                <span class="text-warm-gold text-xl md:text-3xl tracking-[0.3em] font-medium block mt-2">RF Lifting</span>
+            </h3>
+            <p class="text-sm md:text-xl text-white/70 max-w-3xl mx-auto mb-14 font-light tracking-wide leading-relaxed">
+                FDA-Cleared Korean-Inspired Skin Tightening Without Surgery. Focused on collagen support, jawline contouring, and natural-looking rejuvenation.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary">Book Consultation</a>
+                <a href="#why-we-chose" class="btn-outline-white">Why Oligio X</a>
+            </div>
+            <p class="text-[11px] text-white/40 mt-8 font-light max-w-2xl mx-auto leading-relaxed">
+                Patients across Dallas, Plano, Frisco, Coppell, Irving, Southlake, Grapevine, and the DFW metroplex visit SuA Glow for Korean-inspired RF skin tightening focused on natural-looking rejuvenation and skin health.
+            </p>
+        </div>
+    </section>
+
     <!-- Transition Banner: Why Technology Choice Matters -->
-    <section class="py-20 px-10 bg-near-black text-white text-center relative overflow-hidden">
+    <section class="py-24 px-10 bg-near-black text-white text-center relative overflow-hidden">
         <div class="max-w-4xl mx-auto relative z-10 space-y-6 animate-on-scroll fade-up">
             <span class="text-warm-gold text-[10px] font-semibold tracking-widest uppercase block">Why Technology Choice Matters</span>
             <h3 class="heading-wide text-2xl md:text-4xl text-white font-medium">Not all tightening treatments are designed around the same philosophy.</h3>
@@ -227,8 +367,11 @@
     <section id="why-we-chose" class="py-24 px-10 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 animate-on-scroll fade-up">
-                <span class="badge-glass text-taupe bg-taupe/10 border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">Our Technology Of Choice</span>
+                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">SEOUL'S CHOICE FOR COLLAGEN-FIRST REJUVENATION</span>
                 <h2 class="heading-wide text-3xl md:text-5xl text-near-black leading-tight">Why We Chose Oligio X</h2>
+                <p class="text-sm font-light text-charcoal/80 max-w-3xl mx-auto mt-6 leading-relaxed">
+                    Not all skin tightening technologies are built around the same philosophy. At SuA Glow, we selected Oligio X because it aligns with our Seoul-inspired approach to skin quality, collagen support, prevention-focused aging care, and natural-looking refinement.
+                </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-on-scroll fade-up">
@@ -238,31 +381,35 @@
                         <div class="flex items-center gap-3 mb-6">
                             <span class="bg-near-black text-white text-[9px] font-semibold tracking-widest px-3 py-1 rounded-full uppercase">Featured Platform</span>
                         </div>
-                        <h3 class="heading-wide text-2xl md:text-3xl text-near-black mb-4">Oligio X</h3>
+                        <h3 class="heading-wide text-2xl md:text-3xl text-near-black mb-4">OLIGIO X</h3>
                         <p class="text-sm font-light text-charcoal/80 mb-8 leading-relaxed">
-                            The next-generation evolution of Korean monopolar RF technology, selected for its collagen-first philosophy and modern treatment experience.
+                            The next-generation evolution of Korean monopolar RF technology.
                         </p>
                         
                         <ul class="space-y-4 text-xs font-light text-charcoal/90">
                             <li class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
-                                <span>6.78 MHz monopolar radiofrequency</span>
+                                <span>Up to 400W Power Delivery</span>
                             </li>
                             <li class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
-                                <span>Up to 400W power delivery</span>
+                                <span>6.78 MHz Monopolar RF</span>
                             </li>
                             <li class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
-                                <span>Enhanced treatment customization</span>
+                                <span>Enhanced Treatment Customization</span>
                             </li>
                             <li class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
-                                <span>Refined treatment workflows</span>
+                                <span>Refined Treatment Workflow</span>
                             </li>
                             <li class="flex items-center gap-3">
                                 <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
-                                <span>Minimal downtime</span>
+                                <span>Minimal Downtime</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
+                                <span>Skin Quality + Collagen Support Focus</span>
                             </li>
                         </ul>
                     </div>
@@ -270,12 +417,9 @@
                 
                 <!-- Card 2: Our Perspective -->
                 <div class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-light-gray/60 shadow-sm flex flex-col justify-center space-y-6 hover:border-taupe/30 hover:shadow-md transition-all duration-300">
-                    <h3 class="heading-wide text-2xl md:text-3xl text-near-black">Our Perspective</h3>
+                    <h3 class="heading-wide text-2xl md:text-3xl text-near-black">WHY WE CHOSE IT</h3>
                     <p class="text-sm font-light text-charcoal/80 leading-relaxed">
-                        We did not choose Oligio X simply because it tightens skin. We chose it because it supports the type of result SuA Glow is known for: refreshed, balanced, collagen-supported, and natural-looking.
-                    </p>
-                    <p class="text-sm font-light text-charcoal/80 leading-relaxed">
-                        Rather than focusing only on lift, our approach emphasizes firmness, elasticity, texture, contour, and long-term skin health.
+                        While many technologies focus primarily on tightening or lifting, Oligio X aligns with our philosophy that healthy, collagen-rich skin creates the most natural-looking results.
                     </p>
                 </div>
             </div>
@@ -292,31 +436,17 @@
         
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-16 animate-on-scroll fade-up">
-                <span class="badge-glass text-warm-gold bg-warm-gold/10 border-warm-gold/20 mb-4 inline-block uppercase tracking-wider text-[10px]">From Oligio to Oligio X</span>
+                <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 mb-4 inline-block uppercase tracking-wider text-[10px]">FROM OLIGIO TO OLIGIO X</span>
                 <h2 class="heading-wide text-3xl md:text-5xl text-white leading-tight max-w-3xl mx-auto">How Oligio X is different from the original Oligio.</h2>
             </div>
             
             <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 animate-on-scroll fade-up">
                 <!-- Card 1: Oligio -->
-                <div class="w-full lg:flex-1 bg-white p-8 md:p-10 rounded-[2.5rem] border border-light-gray/50 shadow-sm hover:shadow-md transition-all duration-300 text-near-black">
+                <div class="w-full lg:flex-1 bg-white p-8 md:p-10 rounded-[2.5rem] border border-light-gray/50 shadow-sm hover:shadow-md transition-all duration-300 text-near-black flex flex-col justify-center min-h-[380px]">
                     <h3 class="heading-wide text-2xl text-near-black mb-4">Oligio</h3>
-                    <p class="text-sm font-light text-charcoal/80 mb-8 leading-relaxed">
-                        Oligio was developed in South Korea as a monopolar RF treatment designed to support skin tightening and collagen renewal.
+                    <p class="text-sm font-light text-charcoal/80 leading-relaxed">
+                        Oligio became one of South Korea's leading monopolar RF technologies by focusing on collagen support and natural-looking rejuvenation.
                     </p>
-                    <ul class="space-y-4 text-xs font-light text-charcoal/90">
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="w-4 h-4 text-taupe/60"></i>
-                            <span>Original Korean RF platform</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="w-4 h-4 text-taupe/60"></i>
-                            <span>Collagen-focused treatment philosophy</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="w-4 h-4 text-taupe/60"></i>
-                            <span>Natural-looking rejuvenation approach</span>
-                        </li>
-                    </ul>
                 </div>
                 
                 <!-- Arrow Icon (points down on mobile, right on desktop) -->
@@ -325,118 +455,101 @@
                 </div>
                 
                 <!-- Card 2: Oligio X -->
-                <div class="w-full lg:flex-1 bg-white p-8 md:p-10 rounded-[2.5rem] border border-light-gray/50 shadow-sm hover:border-warm-gold/30 hover:shadow-md transition-all duration-300 text-near-black">
-                    <h3 class="heading-wide text-2xl text-near-black mb-4">Oligio X</h3>
-                    <p class="text-sm font-light text-charcoal/80 mb-8 leading-relaxed">
-                        Oligio X builds upon the original platform with updated system design, enhanced customization, refined workflows, and increased power delivery.
-                    </p>
-                    <ul class="space-y-4 text-xs font-light text-charcoal/90">
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
-                            <span>Next-generation platform</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
-                            <span>Enhanced treatment controls</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
-                            <span>Updated workflow and user experience</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
-                            <span>Up to 400W power delivery</span>
-                        </li>
-                    </ul>
+                <div class="w-full lg:flex-1 bg-white p-8 md:p-10 rounded-[2.5rem] border border-light-gray/50 shadow-sm hover:border-warm-gold/30 hover:shadow-md transition-all duration-300 text-near-black min-h-[380px] flex flex-col justify-between">
+                    <div>
+                        <h3 class="heading-wide text-2xl text-near-black mb-4">Oligio X</h3>
+                        <p class="text-sm font-light text-charcoal/80 mb-6 leading-relaxed">
+                            Oligio X builds upon that foundation with:
+                        </p>
+                        <ul class="space-y-3 text-xs font-light text-charcoal/90 mb-6">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
+                                <span>Updated Platform Design</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
+                                <span>Enhanced Treatment Customization</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
+                                <span>Refined Treatment Workflows</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
+                                <span>Increased Power Delivery</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
+                                <span>Next-Generation User Experience</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-light-gray/40 text-xs font-medium text-taupe leading-relaxed">
+                        Same collagen-first philosophy. Next-generation technology.
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <!-- 3. Other Technologies Comparison -->
-    <section id="other-technologies" class="py-24 px-10 bg-off-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 animate-on-scroll fade-up">
-                <span class="badge-glass text-taupe bg-taupe/10 border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">How Other Technologies Fit</span>
-                <h2 class="heading-wide text-3xl md:text-5xl text-near-black leading-tight max-w-4xl mx-auto">
-                    Every device has strengths.<br>We chose the one that fit our philosophy.
-                </h2>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 animate-on-scroll fade-up">
-                <!-- Card 1: Thermage -->
-                <div class="bg-white p-8 rounded-[2rem] border border-light-gray/60 shadow-sm flex flex-col justify-between hover:border-taupe/30 transition-all duration-300">
-                    <div>
-                        <div class="mb-4">
-                            <span class="text-[9px] uppercase tracking-wider text-taupe font-semibold">Established RF Tightening</span>
-                            <h3 class="heading-wide text-xl text-near-black mt-1">Thermage®</h3>
-                        </div>
-                        <p class="text-xs font-light text-charcoal/80 mb-6 leading-relaxed">
-                            Thermage® is one of the most recognized monopolar RF technologies for skin tightening and collagen support.
-                        </p>
-                    </div>
-                    <div class="pt-6 border-t border-light-gray/40">
-                        <p class="text-[10px] uppercase tracking-wider text-taupe font-semibold mb-2">Our View</p>
-                        <p class="text-xs font-light text-charcoal/60 leading-relaxed">
-                            Thermage helped establish RF tightening globally. We selected Oligio X for its next-generation Korean platform and skin-quality-first treatment fit.
-                        </p>
-                    </div>
+
+
+    <!-- Alternatives & Philosophy Explanation Section -->
+    <section id="alternatives-philosophy" class="py-24 px-10 bg-off-white border-t border-b border-light-gray/40">
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-on-scroll fade-up">
+                <!-- Thermage -->
+                <div class="bg-white p-8 rounded-3xl border border-light-gray/50 shadow-sm space-y-4">
+                    <h3 class="heading-wide text-lg text-near-black font-semibold uppercase tracking-wider">What is Thermage®?</h3>
+                    <p class="text-sm font-light text-charcoal/80 leading-relaxed">
+                        Thermage® is a well-known monopolar radiofrequency treatment used for skin tightening and collagen support. It has been widely utilized for many years and remains one of the most recognized RF-based skin tightening treatments globally.
+                    </p>
                 </div>
-                
-                <!-- Card 2: XERF -->
-                <div class="bg-white p-8 rounded-[2rem] border border-light-gray/60 shadow-sm flex flex-col justify-between hover:border-taupe/30 transition-all duration-300">
-                    <div>
-                        <div class="mb-4">
-                            <span class="text-[9px] uppercase tracking-wider text-taupe font-semibold">Multi-Frequency RF</span>
-                            <h3 class="heading-wide text-xl text-near-black mt-1">XERF®</h3>
-                        </div>
-                        <p class="text-xs font-light text-charcoal/80 mb-6 leading-relaxed">
-                            XERF® uses multiple radiofrequency frequencies to support energy delivery at different tissue depths.
-                        </p>
-                    </div>
-                    <div class="pt-6 border-t border-light-gray/40">
-                        <p class="text-[10px] uppercase tracking-wider text-taupe font-semibold mb-2">Our View</p>
-                        <p class="text-xs font-light text-charcoal/60 leading-relaxed">
-                            XERF is a different RF approach. We selected Oligio X because it aligned more closely with the patient experience and treatment style we wanted at SuA Glow.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Card 3: Ultherapy -->
-                <div class="bg-white p-8 rounded-[2rem] border border-light-gray/60 shadow-sm flex flex-col justify-between hover:border-taupe/30 transition-all duration-300">
-                    <div>
-                        <div class="mb-4">
-                            <span class="text-[9px] uppercase tracking-wider text-taupe font-semibold">Focused Ultrasound</span>
-                            <h3 class="heading-wide text-xl text-near-black mt-1">Ultherapy®</h3>
-                        </div>
-                        <p class="text-xs font-light text-charcoal/80 mb-6 leading-relaxed">
-                            Ultherapy® uses focused ultrasound rather than radiofrequency and is often selected for deeper lifting support.
-                        </p>
-                    </div>
-                    <div class="pt-6 border-t border-light-gray/40">
-                        <p class="text-[10px] uppercase tracking-wider text-taupe font-semibold mb-2">Our View</p>
-                        <p class="text-xs font-light text-charcoal/60 leading-relaxed">
-                            Ultherapy may fit deeper lift-focused plans. Our Oligio X approach focuses on skin quality, collagen support, contour refinement, and natural-looking rejuvenation.
-                        </p>
-                    </div>
+                <!-- Ultherapy -->
+                <div class="bg-white p-8 rounded-3xl border border-light-gray/50 shadow-sm space-y-4">
+                    <h3 class="heading-wide text-lg text-near-black font-semibold uppercase tracking-wider">What is Ultherapy®?</h3>
+                    <p class="text-sm font-light text-charcoal/80 leading-relaxed">
+                        Ultherapy® uses focused ultrasound technology rather than radiofrequency. It is often selected when deeper tissue lifting is a primary treatment goal and may be considered as part of a comprehensive facial rejuvenation plan.
+                    </p>
                 </div>
             </div>
             
-            <!-- Bottom Dark Banner (The SuA Glow Difference) -->
-            <div class="bg-near-black text-white p-10 md:p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden animate-on-scroll fade-up text-center space-y-6">
-                <span class="text-warm-gold text-[10px] font-semibold tracking-widest uppercase block">The SuA Glow Difference</span>
-                <h3 class="heading-wide text-2xl md:text-3xl font-medium">Technology matters. Technique matters more.</h3>
-                <p class="text-xs md:text-sm font-light text-white/70 max-w-3xl mx-auto leading-relaxed">
-                    Every Oligio X treatment begins with a personalized assessment of your facial anatomy, skin quality, collagen health, degree of laxity, comfort preferences, and long-term goals.
+            <!-- Why SuA Glow Chose Oligio X -->
+            <div class="bg-white p-8 md:p-12 rounded-[2.5rem] border border-light-gray/50 shadow-sm space-y-6 animate-on-scroll fade-up">
+                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[9px]">Our Treatment Philosophy</span>
+                <h3 class="heading-wide text-2xl text-near-black font-semibold uppercase tracking-wider">Why SuA Glow Chose Oligio X</h3>
+                <p class="text-sm font-light text-charcoal/80 leading-relaxed">
+                    At SuA Glow, we selected Oligio X because it aligns with our Seoul-inspired philosophy of skin quality first.
                 </p>
-                <div class="flex flex-wrap justify-center gap-3 pt-4">
-                    <span class="px-4 py-2 bg-white/10 rounded-full border border-white/10 text-xs font-light text-white/90">Skin Quality</span>
-                    <span class="px-4 py-2 bg-white/10 rounded-full border border-white/10 text-xs font-light text-white/90">Collagen Support</span>
-                    <span class="px-4 py-2 bg-white/10 rounded-full border border-white/10 text-xs font-light text-white/90">Facial Balance</span>
-                    <span class="px-4 py-2 bg-white/10 rounded-full border border-white/10 text-xs font-light text-white/90">Jawline Refinement</span>
-                    <span class="px-4 py-2 bg-white/10 rounded-full border border-white/10 text-xs font-light text-white/90">Natural-Looking Results</span>
+                <div class="space-y-4">
+                    <p class="text-xs font-semibold text-taupe uppercase tracking-wider">Rather than focusing solely on lifting, our approach prioritizes:</p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-light text-charcoal/90">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
+                            <span>Collagen support</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
+                            <span>Skin firmness and elasticity</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
+                            <span>Facial contour refinement</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
+                            <span>Prevention-focused aging care</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-4 h-4 text-warm-gold"></i>
+                            <span>Natural-looking results</span>
+                        </li>
+                    </ul>
                 </div>
+                <p class="text-xs font-light text-charcoal/60 italic pt-6 border-t border-light-gray/30 leading-relaxed">
+                    Technology matters. Technique matters more. Every treatment plan is customized based on your facial anatomy, skin quality, and long-term goals.
+                </p>
             </div>
         </div>
     </section>
@@ -445,7 +558,7 @@
     <section id="treatment-zones" class="py-24 px-6 bg-off-white overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 animate-on-scroll fade-up">
-                <span class="badge-glass text-taupe bg-taupe/10 border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">Anatomy-First Customization</span>
+                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">Anatomy-First Customization</span>
                 <h2 class="heading-wide text-3xl md:text-5xl mb-6 text-near-black leading-tight">One Device.<br>Multiple Treatment Zones.</h2>
                 <p class="text-base font-light opacity-75 max-w-3xl mx-auto leading-relaxed">
                     Oligio X utilizes monopolar radiofrequency technology to support collagen remodeling across multiple areas of the face and neck. Treatment plans are customized to your anatomy, concerns, and long-term goals rather than following a one-size-fits-all approach.
@@ -743,7 +856,7 @@
         <div class="max-w-6xl mx-auto relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                 <div class="lg:col-span-7 space-y-8 animate-on-scroll fade-right">
-                    <span class="badge-glass text-warm-gold bg-warm-gold/10 border-warm-gold/20 inline-block uppercase tracking-wider text-[10px]">Seoul's Next Generation</span>
+                    <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 inline-block uppercase tracking-wider text-[10px]">Seoul's Next Generation</span>
                     <h2 class="heading-wide text-3xl md:text-5xl text-white leading-tight">Seoul's Next Generation of Skin Tightening. <span class="text-warm-gold">Now in Dallas.</span></h2>
                     
                     <p class="text-base font-light opacity-80 leading-relaxed text-white/80">
@@ -760,11 +873,11 @@
                     </div>
                 </div>
                 <div class="lg:col-span-5 animate-on-scroll fade-left delay-200">
-                    <div class="relative aspect-[579/1024] rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-charcoal/30">
-                        <img src="assets/oligio-x/sua-reception.png" alt="SuA K-Glow Reception Carrollton" class="absolute inset-0 w-full h-full object-cover">
-                        <div class="absolute bottom-6 left-6 right-6 bg-near-black/80 backdrop-blur-md border border-white/10 p-4 rounded-xl text-center z-10">
-                            <p class="heading-wide text-[10px] text-warm-gold uppercase tracking-widest">SuA K-Glow Medspa</p>
-                            <p class="text-[9px] text-white/50 font-light mt-1">Carrollton HQ &bull; Dallas-Fort Worth</p>
+                    <div class="relative aspect-[579/1024] rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-white flex items-center justify-center p-8">
+                        <img src="assets/oligio-x/device-main.png" alt="Oligio X RF Lifting Device" class="max-w-full max-h-full object-contain">
+                        <div class="absolute bottom-6 left-6 right-6 bg-near-black/85 backdrop-blur-md border border-white/10 p-4 rounded-xl text-center z-10">
+                            <p class="heading-wide text-[10px] text-warm-gold uppercase tracking-widest">Oligio X RF Platform</p>
+                            <p class="text-[9px] text-white/50 font-light mt-1">First authorized provider in DFW &bull; SuA Glow</p>
                         </div>
                     </div>
                 </div>
