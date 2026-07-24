@@ -605,8 +605,8 @@ const SEARCH_INDEX = [
     "title": "Seoul-InspiredSkin Tightening.",
     "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Korean Aesthetic Philosophy",
-    "content": "It's the subtle refinement that leaves people wondering why your skin always looks healthy, refreshed, and effortlessly radiant. Quick Facts Collagen Support Focus Minimal Downtime Natural Looking Results",
-    "snippet": "It's the subtle refinement that leaves people wondering why your skin always looks healthy, refreshed, and effortlessly radiant. Quick Facts Collagen Support Fo..."
+    "content": "It's the subtle refinement that leaves people wondering why your skin always looks healthy, refreshed, and effortlessly radiant. Not all skin tightening technologies are built around the same philosophy. At SuA Glow, we selected Oligio X because it aligns with our Seoul-inspired approach to skin quality, collagen support, prevention-focused aging care, and natural-looking refinement. Oligio X Platform Highlights: Quick Facts Collagen Support Focus Minimal Downtime Natural Looking Results",
+    "snippet": "It's the subtle refinement that leaves people wondering why your skin always looks healthy, refreshed, and effortlessly radiant. Not all skin tightening technol..."
   },
   {
     "url": "oligio-x.html#other-technologies",
@@ -631,14 +631,6 @@ const SEARCH_INDEX = [
     "category": "Korean Aesthetic Philosophy",
     "content": "Thermage®, XERF®, Ultherapy®, Oligio, and Oligio X can all play a role in aesthetic treatment planning. At SuA Glow, we selected Oligio X because it aligns with our Seoul-inspired approach: skin quality first, collagen support second, and natural-looking refinement always.",
     "snippet": "Thermage®, XERF®, Ultherapy®, Oligio, and Oligio X can all play a role in aesthetic treatment planning. At SuA Glow, we selected Oligio X because it aligns with..."
-  },
-  {
-    "url": "oligio-x.html#why-we-chose",
-    "title": "Why We Chose Oligio X",
-    "pageTitle": "Oligio X RF Lifting Dallas",
-    "category": "Korean Aesthetic Philosophy",
-    "content": "Not all skin tightening technologies are built around the same philosophy. At SuA Glow, we selected Oligio X because it aligns with our Seoul-inspired approach to skin quality, collagen support, prevention-focused aging care, and natural-looking refinement. The next-generation evolution of Korean monopolar RF technology. Up to 400W Power Delivery 6.78 MHz Monopolar RF Enhanced Treatment Customization Refined Treatment Workflow Minimal Downtime Skin Quality + Collagen Support Focus While many technologies focus primarily on tightening or lifting, Oligio X aligns with our philosophy that healthy, collagen-rich skin creates the most natural-looking results.",
-    "snippet": "Not all skin tightening technologies are built around the same philosophy. At SuA Glow, we selected Oligio X because it aligns with our Seoul-inspired approach ..."
   },
   {
     "url": "oligio-x.html#treatment-zones",
