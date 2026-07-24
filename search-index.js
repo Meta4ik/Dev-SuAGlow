@@ -665,14 +665,6 @@ const SEARCH_INDEX = [
     "snippet": "Oligio X utilizes monopolar radiofrequency technology to support collagen remodeling across multiple areas of the face and neck. Treatment plans are customized ..."
   },
   {
-    "url": "oligio-x.html",
-    "title": "Seoul's Next Generation of Skin Tightening. Now in Dallas.",
-    "pageTitle": "Oligio X RF Lifting Dallas",
-    "category": "Korean Aesthetic Philosophy",
-    "content": "SuA Glow is the first authorized Oligio X provider in Dallas-Fort Worth. As the evolution of Korea's popular Oligio RF platform, Oligio X introduces enhanced dual-mode technology designed to tailor energy delivery to your skin, anatomy, and aesthetic goals. By supporting collagen remodeling, elasticity, pore refinement, and natural-looking contour, Oligio X offers a more personalized approach to non-surgical skin tightening. Not more heat. Smarter energy. SuA Glow Med Spa • Carrollton First authorized Oligio X provider in DFW",
-    "snippet": "SuA Glow is the first authorized Oligio X provider in Dallas-Fort Worth. As the evolution of Korea's popular Oligio RF platform, Oligio X introduces enhanced du..."
-  },
-  {
     "url": "oligio-x.html#clinical-cases",
     "title": "Clinical Case Results",
     "pageTitle": "Oligio X RF Lifting Dallas",
@@ -703,6 +695,14 @@ const SEARCH_INDEX = [
     "category": "Korean Aesthetic Philosophy",
     "content": "Oligio X RF Lifting treatment recommendations at SuA Glow are individualized based on patient anatomy, skin condition, goals, medical history, and clinical assessment pursuant to supervising physician-approved protocols and applicable Texas regulations. Treatment results vary by individual. No outcome can be guaranteed.",
     "snippet": "Oligio X RF Lifting treatment recommendations at SuA Glow are individualized based on patient anatomy, skin condition, goals, medical history, and clinical asse..."
+  },
+  {
+    "url": "oligio-x.html",
+    "title": "Seoul's Next Generation of Skin Tightening. Now in Dallas.",
+    "pageTitle": "Oligio X RF Lifting Dallas",
+    "category": "Korean Aesthetic Philosophy",
+    "content": "SuA Glow is the first authorized Oligio X provider in Dallas-Fort Worth. As the evolution of Korea's popular Oligio RF platform, Oligio X introduces enhanced dual-mode technology designed to tailor energy delivery to your skin, anatomy, and aesthetic goals. By supporting collagen remodeling, elasticity, pore refinement, and natural-looking contour, Oligio X offers a more personalized approach to non-surgical skin tightening. Not more heat. Smarter energy. SuA Glow Med Spa • Carrollton First authorized Oligio X provider in DFW",
+    "snippet": "SuA Glow is the first authorized Oligio X provider in Dallas-Fort Worth. As the evolution of Korea's popular Oligio RF platform, Oligio X introduces enhanced du..."
   },
   {
     "url": "oligio-x.html",
