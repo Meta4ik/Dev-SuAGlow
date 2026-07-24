@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/output.css?v=69">
+    <link rel="stylesheet" href="dist/output.css?v=70">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-off-white text-charcoal antialiased">
@@ -424,6 +424,214 @@
         </div>
     </section>
 
+    <!-- One Device. Multiple Treatment Zones -->
+    <section id="treatment-zones" class="py-24 px-6 bg-off-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 animate-on-scroll fade-up">
+                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">Anatomy-First Customization</span>
+                <h2 class="heading-wide text-3xl md:text-5xl mb-6 text-near-black leading-tight">One Device.<br>Multiple Treatment Zones.</h2>
+                <p class="text-base font-light opacity-75 max-w-3xl mx-auto leading-relaxed">
+                    Oligio X utilizes monopolar radiofrequency technology to support collagen remodeling across multiple areas of the face and neck. Treatment plans are customized to your anatomy, concerns, and long-term goals rather than following a one-size-fits-all approach.
+                </p>
+            </div>
+
+            <!-- Interactive Map Container -->
+            <div class="relative flex flex-col lg:flex-row items-center justify-center gap-12 max-w-5xl mx-auto">
+                <!-- Left Side Labels (Desktop) -->
+                <div class="w-full lg:w-1/4 space-y-6 lg:text-right flex flex-col justify-between lg:h-[500px] z-20">
+                    <!-- Forehead -->
+                    <div data-zone="forehead" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
+                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Forehead</h4>
+                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Support skin firmness and smooth the appearance of early skin laxity.</p>
+                    </div>
+                    <!-- Eye Area -->
+                    <div data-zone="eye" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
+                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Eye Area</h4>
+                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Address crepey skin and support a refreshed, more awake appearance.</p>
+                    </div>
+                    <!-- Cheeks -->
+                    <div data-zone="cheeks" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
+                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Cheeks</h4>
+                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Support collagen renewal and facial contour refinement.</p>
+                    </div>
+                    <!-- Neck -->
+                    <div data-zone="neck" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
+                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Neck</h4>
+                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Improve skin firmness and support a smoother jaw-to-neck transition.</p>
+                    </div>
+                </div>
+
+                <!-- Central Portrait Visual -->
+                <div class="relative w-full lg:w-2/4 max-w-[400px] aspect-[4/5] flex justify-center items-center z-10">
+                    <!-- Glow background -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-warm-gold/5 to-transparent blur-2xl rounded-full"></div>
+                    
+                    <div class="relative w-full h-full rounded-[2rem] overflow-hidden border border-light-gray/30 shadow-2xl bg-white">
+                        <!-- Color image (bottom layer - revealed on hover) -->
+                        <img src="assets/oligio-x/model-treatment-zones.png" alt="Oligio X Face Treatment Map" class="w-full h-full object-cover contrast-[1.05] brightness-[1.02]">
+                        <!-- Grayscale overlay (top layer - masked on hover to reveal color circle) -->
+                        <img src="assets/oligio-x/model-treatment-zones.png" alt="Oligio X Face Treatment Map Grayscale" class="absolute inset-0 w-full h-full object-cover filter grayscale contrast-125 opacity-90 transition-all duration-500" style="clip-path: circle(0px at 0px 0px);" id="grayscale-overlay">
+
+                        <!-- SVG Map for Dot Markers & Target Rings -->
+                        <svg class="absolute inset-0 w-full h-full pointer-events-none z-20" viewBox="0 0 400 500" preserveAspectRatio="none">
+                            <defs>
+                                <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            
+                            <!-- Connection Lines (SVG Paths) -->
+                            <path id="line-forehead" d="M 100 100 L 200 120" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
+                            <path id="line-eye" d="M 100 200 L 240 215" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
+                            <path id="line-cheeks" d="M 100 300 L 255 285" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
+                            <path id="line-neck" d="M 100 400 L 200 420" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
+
+                            <path id="line-jawline" d="M 300 120 L 235 345" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
+                            <path id="line-perioral" d="M 300 240 L 200 325" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
+                            <path id="line-submental" d="M 300 360 L 200 395" stroke="#AA987C" stroke-width="1.5" stroke-dasharray="3 3" class="opacity-0 transition-opacity duration-300" />
+
+                            <!-- Interactive Target Dots on Model -->
+                            <g id="dot-forehead" class="transition-all duration-300">
+                                <circle cx="200" cy="120" r="8" fill="#AA987C" class="opacity-30" />
+                                <circle cx="200" cy="120" r="4" fill="#AA987C" />
+                            </g>
+                            <g id="dot-eye" class="transition-all duration-300">
+                                <circle cx="240" cy="215" r="8" fill="#AA987C" class="opacity-30" />
+                                <circle cx="240" cy="215" r="4" fill="#AA987C" />
+                            </g>
+                            <g id="dot-cheeks" class="transition-all duration-300">
+                                <circle cx="255" cy="285" r="8" fill="#AA987C" class="opacity-30" />
+                                <circle cx="255" cy="285" r="4" fill="#AA987C" />
+                            </g>
+                            <g id="dot-jawline" class="transition-all duration-300">
+                                <circle cx="235" cy="345" r="8" fill="#AA987C" class="opacity-30" />
+                                <circle cx="235" cy="345" r="4" fill="#AA987C" />
+                            </g>
+                            <g id="dot-perioral" class="transition-all duration-300">
+                                <circle cx="200" cy="325" r="8" fill="#AA987C" class="opacity-30" />
+                                <circle cx="200" cy="325" r="4" fill="#AA987C" />
+                            </g>
+                            <g id="dot-submental" class="transition-all duration-300">
+                                <circle cx="200" cy="395" r="8" fill="#AA987C" class="opacity-30" />
+                                <circle cx="200" cy="395" r="4" fill="#AA987C" />
+                            </g>
+                            <g id="dot-neck" class="transition-all duration-300">
+                                <circle cx="200" cy="420" r="8" fill="#AA987C" class="opacity-30" />
+                                <circle cx="200" cy="420" r="4" fill="#AA987C" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Right Side Labels (Desktop) -->
+                <div class="w-full lg:w-1/4 space-y-6 flex flex-col justify-around lg:h-[500px] z-20">
+                    <!-- Jawline -->
+                    <div data-zone="jawline" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
+                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Jawline</h4>
+                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Refine lower facial definition and sharpen contour transitions.</p>
+                    </div>
+                    <!-- Perioral -->
+                    <div data-zone="perioral" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
+                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Perioral &amp; Smile Lines</h4>
+                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Smooth fine lines around the mouth and support cheek-to-lip harmony.</p>
+                    </div>
+                    <!-- Submental -->
+                    <div data-zone="submental" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
+                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Submental Area</h4>
+                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Tighten skin under the chin for a cleaner profile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inline Interactive Script for Zone Hovering & Circle Masking -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const zoneCards = document.querySelectorAll('.zone-card');
+                const overlay = document.getElementById('grayscale-overlay');
+                
+                const coordinates = {
+                    forehead: { x: 200, y: 120, radius: 65 },
+                    eye: { x: 240, y: 215, radius: 50 },
+                    cheeks: { x: 255, y: 285, radius: 60 },
+                    jawline: { x: 235, y: 345, radius: 55 },
+                    perioral: { x: 200, y: 325, radius: 50 },
+                    submental: { x: 200, y: 395, radius: 55 },
+                    neck: { x: 200, y: 420, radius: 60 }
+                };
+
+                zoneCards.forEach(card => {
+                    const zone = card.getAttribute('data-zone');
+                    
+                    card.addEventListener('mouseenter', () => {
+                        const coords = coordinates[zone];
+                        if (coords && overlay) {
+                            overlay.style.clipPath = `circle(${coords.radius}px at ${coords.x}px ${coords.y}px)`;
+                        }
+
+                        const line = document.getElementById(`line-${zone}`);
+                        if (line) {
+                            line.classList.remove('opacity-0');
+                            line.classList.add('opacity-100');
+                            line.setAttribute('stroke', '#C8AF8C');
+                            line.setAttribute('stroke-width', '2.5');
+                            line.removeAttribute('stroke-dasharray');
+                        }
+
+                        const dot = document.getElementById(`dot-${zone}`);
+                        if (dot) {
+                            const outerCircle = dot.querySelector('circle:first-child');
+                            const innerCircle = dot.querySelector('circle:last-child');
+                            if (outerCircle) {
+                                outerCircle.setAttribute('r', '14');
+                                outerCircle.classList.remove('opacity-30');
+                                outerCircle.classList.add('opacity-50', 'fill-warm-gold/20');
+                            }
+                            if (innerCircle) {
+                                innerCircle.setAttribute('r', '6');
+                                innerCircle.setAttribute('filter', 'url(#glow-gold)');
+                            }
+                        }
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        if (overlay) {
+                            overlay.style.clipPath = 'circle(0px at 0px 0px)';
+                        }
+
+                        const line = document.getElementById(`line-${zone}`);
+                        if (line) {
+                            line.classList.add('opacity-0');
+                            line.classList.remove('opacity-100');
+                            line.setAttribute('stroke', '#AA987C');
+                            line.setAttribute('stroke-width', '1.5');
+                            line.setAttribute('stroke-dasharray', '3 3');
+                        }
+                        
+                        const dot = document.getElementById(`dot-${zone}`);
+                        if (dot) {
+                            const outerCircle = dot.querySelector('circle:first-child');
+                            const innerCircle = dot.querySelector('circle:last-child');
+                            if (outerCircle) {
+                                outerCircle.setAttribute('r', '8');
+                                outerCircle.classList.add('opacity-30');
+                                outerCircle.classList.remove('opacity-50', 'fill-warm-gold/20');
+                            }
+                            if (innerCircle) {
+                                innerCircle.setAttribute('r', '4');
+                                innerCircle.removeAttribute('filter');
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
+    </section>
+
     <!-- Oligio vs Oligio X Comparison -->
     <section id="oligio-comparison" class="py-24 px-10 relative overflow-hidden bg-charcoal text-white border-t border-white/10">
         <!-- Background Image -->
@@ -550,60 +758,6 @@
                 </p>
             </div>
         </div>
-    </section>
-
-    <!-- One Device. Multiple Treatment Zones -->
-    <section id="treatment-zones" class="py-24 px-6 bg-off-white overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 animate-on-scroll fade-up">
-                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">Anatomy-First Customization</span>
-                <h2 class="heading-wide text-3xl md:text-5xl mb-6 text-near-black leading-tight">One Device.<br>Multiple Treatment Zones.</h2>
-                <p class="text-base font-light opacity-75 max-w-3xl mx-auto leading-relaxed">
-                    Oligio X utilizes monopolar radiofrequency technology to support collagen remodeling across multiple areas of the face and neck. Treatment plans are customized to your anatomy, concerns, and long-term goals rather than following a one-size-fits-all approach.
-                </p>
-            </div>
-
-            <!-- Interactive Map Container -->
-            <div class="relative flex flex-col lg:flex-row items-center justify-center gap-12 max-w-5xl mx-auto">
-                <!-- Left Side Labels (Desktop) -->
-                <div class="w-full lg:w-1/4 space-y-6 lg:text-right flex flex-col justify-between lg:h-[500px] z-20">
-                    <!-- Forehead -->
-                    <div data-zone="forehead" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
-                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Forehead</h4>
-                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Support skin firmness and smooth the appearance of early skin laxity.</p>
-                    </div>
-                    <!-- Eye Area -->
-                    <div data-zone="eye" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
-                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Eye Area</h4>
-                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Address crepey skin and support a refreshed, more awake appearance.</p>
-                    </div>
-                    <!-- Cheeks -->
-                    <div data-zone="cheeks" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
-                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Cheeks</h4>
-                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Support collagen renewal and facial contour refinement.</p>
-                    </div>
-                    <!-- Neck -->
-                    <div data-zone="neck" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/40 hover:bg-white border border-transparent hover:border-warm-gold/30 hover:shadow-md transition-all duration-300">
-                        <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors">Neck</h4>
-                        <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Improve skin firmness and support a smoother jaw-to-neck transition.</p>
-                    </div>
-                </div>
-
-                <!-- Central Portrait Visual -->
-                <div class="relative w-full lg:w-2/4 max-w-[400px] aspect-[4/5] flex justify-center items-center z-10">
-                    <!-- Glow background -->
-                    <div class="absolute inset-0 bg-gradient-to-tr from-warm-gold/5 to-transparent blur-2xl rounded-full"></div>
-                    
-                    <div class="relative w-full h-full rounded-[2rem] overflow-hidden border border-light-gray/30 shadow-2xl bg-white">
-                        <!-- Color image (bottom layer - revealed on hover) -->
-                        <img src="assets/oligio-x/model-treatment-zones.png" alt="Oligio X Face Treatment Map" class="w-full h-full object-cover contrast-[1.05] brightness-[1.02]">
-                        <!-- Grayscale overlay (top layer - masked on hover to reveal color circle) -->
-                        <img src="assets/oligio-x/model-treatment-zones.png" alt="" aria-hidden="true" id="model-grayscale" class="absolute inset-0 w-full h-full object-cover grayscale contrast-[1.05] brightness-95" style="-webkit-mask-image: none; mask-image: none; transition: mask-image 0.15s ease, -webkit-mask-image 0.15s ease;">
-                        <!-- Subtle overlay -->
-                        <div class="absolute inset-0 bg-near-black/5 mix-blend-multiply pointer-events-none"></div>
-                    </div>
-
-                    <!-- Interactive SVG Layer for lines and dots -->
                     <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <!-- SVG Filters for Glow Effects -->
                         <defs>

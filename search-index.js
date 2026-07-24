@@ -641,6 +641,14 @@ const SEARCH_INDEX = [
     "snippet": "Not all skin tightening technologies are built around the same philosophy. At SuA Glow, we selected Oligio X because it aligns with our Seoul-inspired approach ..."
   },
   {
+    "url": "oligio-x.html#treatment-zones",
+    "title": "One Device.Multiple Treatment Zones.",
+    "pageTitle": "Oligio X RF Lifting Dallas",
+    "category": "Korean Aesthetic Philosophy",
+    "content": "Oligio X utilizes monopolar radiofrequency technology to support collagen remodeling across multiple areas of the face and neck. Treatment plans are customized to your anatomy, concerns, and long-term goals rather than following a one-size-fits-all approach. Support skin firmness and smooth the appearance of early skin laxity. Address crepey skin and support a refreshed, more awake appearance. Support collagen renewal and facial contour refinement. Improve skin firmness and support a smoother jaw-to-neck transition. Refine lower facial definition and sharpen contour transitions. Smooth fine lines around the mouth and support cheek-to-lip harmony. Tighten skin under the chin for a cleaner profile.",
+    "snippet": "Oligio X utilizes monopolar radiofrequency technology to support collagen remodeling across multiple areas of the face and neck. Treatment plans are customized ..."
+  },
+  {
     "url": "oligio-x.html#oligio-comparison",
     "title": "How Oligio X is different from the original Oligio.",
     "pageTitle": "Oligio X RF Lifting Dallas",
@@ -653,16 +661,8 @@ const SEARCH_INDEX = [
     "title": "What is Thermage®?",
     "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Korean Aesthetic Philosophy",
-    "content": "Thermage® is a well-known monopolar radiofrequency treatment used for skin tightening and collagen support. It has been widely utilized for many years and remains one of the most recognized RF-based skin tightening treatments globally. Ultherapy® uses focused ultrasound technology rather than radiofrequency. It is often selected when deeper tissue lifting is a primary treatment goal and may be considered as part of a comprehensive facial rejuvenation plan. At SuA Glow, we selected Oligio X because it aligns with our Seoul-inspired philosophy of skin quality first. Rather than focusing solely on lifting, our approach prioritizes: Collagen support Skin firmness and elasticity Facial contour refinement Prevention-focused aging care Natural-looking results Technology matters. Technique matters more. Every treatment plan is customized based on your facial anatomy, skin quality, and long-term goals.",
+    "content": "Thermage® is a well-known monopolar radiofrequency treatment used for skin tightening and collagen support. It has been widely utilized for many years and remains one of the most recognized RF-based skin tightening treatments globally. Ultherapy® uses focused ultrasound technology rather than radiofrequency. It is often selected when deeper tissue lifting is a primary treatment goal and may be considered as part of a comprehensive facial rejuvenation plan. At SuA Glow, we selected Oligio X because it aligns with our Seoul-inspired philosophy of skin quality first. Rather than focusing solely on lifting, our approach prioritizes: Collagen support Skin firmness and elasticity Facial contour refinement Prevention-focused aging care Natural-looking results Technology matters. Technique matters more. Every treatment plan is customized based on your facial anatomy, skin quality, and long-term goals. Support upper-face firmness and natural-looking brow definition. Support collagen remodeling in areas prone to volume and elasticity changes. Help improve lower-face definition and facial contours. Support skin tightening and contour refinement beneath the jawline. Common Concerns We Address",
     "snippet": "Thermage® is a well-known monopolar radiofrequency treatment used for skin tightening and collagen support. It has been widely utilized for many years and remai..."
-  },
-  {
-    "url": "oligio-x.html#treatment-zones",
-    "title": "One Device.Multiple Treatment Zones.",
-    "pageTitle": "Oligio X RF Lifting Dallas",
-    "category": "Korean Aesthetic Philosophy",
-    "content": "Oligio X utilizes monopolar radiofrequency technology to support collagen remodeling across multiple areas of the face and neck. Treatment plans are customized to your anatomy, concerns, and long-term goals rather than following a one-size-fits-all approach. Support skin firmness and smooth the appearance of early skin laxity. Address crepey skin and support a refreshed, more awake appearance. Support collagen renewal and facial contour refinement. Improve skin firmness and support a smoother jaw-to-neck transition. Support upper-face firmness and natural-looking brow definition. Support collagen remodeling in areas prone to volume and elasticity changes. Help improve lower-face definition and facial contours. Support skin tightening and contour refinement beneath the jawline. Common Concerns We Address",
-    "snippet": "Oligio X utilizes monopolar radiofrequency technology to support collagen remodeling across multiple areas of the face and neck. Treatment plans are customized ..."
   },
   {
     "url": "oligio-x.html",
