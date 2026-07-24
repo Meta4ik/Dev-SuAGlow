@@ -19,3 +19,6 @@ Thumbs.db
 # Backup directory
 bak/
 
+# Internal documentation & scratch updates
+kam_doc_updates/
+scratch/
