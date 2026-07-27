@@ -493,8 +493,8 @@ const SEARCH_INDEX = [
     "title": "Powered by Diasono 310",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
-    "content": "Delivers precise ultrasound wave frequencies to stimulate collagen, balance hydration, and calm cellular stress. Hydration-focused exfoliation that gently cleanses pores while infusing skin with essential moisture. Creates temporary micro-pathways in the skin barrier to enhance topical solution absorption and hydration longevity.",
-    "snippet": "Delivers precise ultrasound wave frequencies to stimulate collagen, balance hydration, and calm cellular stress. Hydration-focused exfoliation that gently clean..."
+    "content": "Diasono 310 Korean Ultrasound Intentionally selected for SuA Glow in Carrollton, TX, the Diasono 310 system represents Seoul's pinnacle non-invasive skin rejuvenation technology. Combining multi-frequency ultrasound, hydro peel exfoliation, and electroporation infusion, Diasono 310 delivers Quiet Luxury skin care focused on deep hydration, barrier restoration, and lasting glass skin radiance. Stimulates collagen renewal, balances moisture, and calms cellular stress. Gentle exfoliation that clears pores while drenching skin in essential moisture. Creates micro-pathways to maximize topical solution absorption and hydration.",
+    "snippet": "Diasono 310 Korean Ultrasound Intentionally selected for SuA Glow in Carrollton, TX, the Diasono 310 system represents Seoul's pinnacle non-invasive skin rejuve..."
   },
   {
     "url": "ldm-water-droplet-lifting.html#treatment-guide",
