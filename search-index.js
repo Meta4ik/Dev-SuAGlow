@@ -513,6 +513,14 @@ const SEARCH_INDEX = [
     "snippet": "The Korean Glass Skin LDM Facial is a Korean-inspired non-invasive multi-mode skin rejuvenation treatment focused on hydration-conscious rejuvenation, glow-focu..."
   },
   {
+    "url": "ldm-water-droplet-lifting.html",
+    "title": "Refined movement.Controlled glow.Very Seoul.",
+    "pageTitle": "Korean LDM Facial Dallas",
+    "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
+    "content": "K-Beauty Medspa • Carrollton HQ Korean Glass Skin LDM Facial treatment recommendations at SuA Glow are individualized based on patient goals, anatomy, medical history, and clinical assessment pursuant to supervising physician-approved protocols and applicable Texas regulations.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ Korean Glass Skin LDM Facial treatment recommendations at SuA Glow are individualized based on patient goals, anatomy, medical h..."
+  },
+  {
     "url": "medical-tox.html#hero",
     "title": "Medical Tox",
     "pageTitle": "Medical Tox",
