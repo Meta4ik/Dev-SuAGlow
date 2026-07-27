@@ -395,7 +395,118 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 9. Cookie Consent Banner
   initCookieConsent();
+
+  // 10. Hero Collage Movement Physics (Scroll Parallax & 3D Cursor Physics)
+  initHeroCollagePhysics();
 });
+
+/**
+ * Hero Collage Movement Physics (Scroll Parallax & 3D Cursor Depth Physics)
+ * Automatically discovers hero collage elements on any treatment page.
+ */
+function initHeroCollagePhysics() {
+  const hero = document.getElementById('hero');
+  if (!hero) return;
+
+  const collage = hero.querySelector('.relative.w-full.flex.items-center.justify-center') ||
+                  hero.querySelector('.lg\\:col-span-6 .relative') ||
+                  hero.querySelector('.lg\\:col-span-5 .relative');
+  if (!collage) return;
+
+  const children = Array.from(collage.children);
+  if (children.length < 2) return;
+
+  let badgeCard = null;
+  let modelCard = null;
+  let deviceCard = null;
+
+  children.forEach(child => {
+    if (child.querySelector('#textCircleBanner') || child.querySelector('path[d*="m -36"]') || child.classList.contains('float-slow')) {
+      badgeCard = child;
+    } else if (child.classList.contains('bg-white') || child.querySelector('img[src*="product"]') || child.querySelector('img[src*="device"]') || child.querySelector('img[src*="hero"]')) {
+      deviceCard = child;
+    } else if (child.querySelector('img[src*="model"]') || child.querySelector('img[src*="portrait"]') || child.classList.contains('bg-[#131619]')) {
+      modelCard = child;
+    }
+  });
+
+  if (!modelCard && children.length >= 2) {
+    modelCard = children.find(c => c !== badgeCard && !c.classList.contains('bg-white'));
+  }
+  if (!deviceCard && children.length >= 2) {
+    deviceCard = children.find(c => c !== badgeCard && c !== modelCard);
+  }
+
+  const bgGlow = hero.querySelector('.absolute.inset-0.z-0');
+
+  // Set smooth transition behavior
+  if (modelCard) modelCard.style.transition = 'transform 0.15s ease-out';
+  if (deviceCard) deviceCard.style.transition = 'transform 0.15s ease-out';
+  if (badgeCard) badgeCard.style.transition = 'transform 0.15s ease-out';
+
+  // 1. Scroll Parallax Physics
+  let ticking = false;
+  let currentScrollY = window.scrollY;
+
+  function updateScrollPhysics() {
+    currentScrollY = window.scrollY;
+    if (currentScrollY < window.innerHeight * 1.5) {
+      const modelY = currentScrollY * 0.12;
+      const deviceY = currentScrollY * -0.16;
+      const badgeY = currentScrollY * -0.24;
+      const bgY = currentScrollY * 0.28;
+
+      if (bgGlow) bgGlow.style.transform = `translate3d(0, ${bgY}px, 0)`;
+      if (modelCard) modelCard.style.transform = `translate3d(0, ${modelY}px, 0)`;
+      if (deviceCard) deviceCard.style.transform = `translate3d(0, ${deviceY}px, 0)`;
+      if (badgeCard) badgeCard.style.transform = `translate3d(0, ${badgeY}px, 0) rotate(${currentScrollY * 0.1}deg)`;
+    }
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPhysics);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  updateScrollPhysics();
+
+  // 2. Interactive Cursor Depth Physics
+  hero.addEventListener('mousemove', (e) => {
+    if (window.scrollY > window.innerHeight) return;
+    const rect = collage.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    const targetX = (e.clientX - centerX) / (rect.width / 2 || 1);
+    const targetY = (e.clientY - centerY) / (rect.height / 2 || 1);
+
+    const modelX = targetX * -12;
+    const modelY = (currentScrollY * 0.12) + (targetY * -12);
+    const deviceX = targetX * 18;
+    const deviceY = (currentScrollY * -0.16) + (targetY * 18);
+
+    if (modelCard) modelCard.style.transform = `translate3d(${modelX}px, ${modelY}px, 0)`;
+    if (deviceCard) deviceCard.style.transform = `translate3d(${deviceX}px, ${deviceY}px, 0)`;
+  });
+
+  hero.addEventListener('mouseleave', () => {
+    if (modelCard) {
+      modelCard.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+      modelCard.style.transform = `translate3d(0, ${currentScrollY * 0.12}px, 0)`;
+    }
+    if (deviceCard) {
+      deviceCard.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+      deviceCard.style.transform = `translate3d(0, ${currentScrollY * -0.16}px, 0)`;
+    }
+    setTimeout(() => {
+      if (modelCard) modelCard.style.transition = 'transform 0.15s ease-out';
+      if (deviceCard) deviceCard.style.transition = 'transform 0.15s ease-out';
+    }, 800);
+  });
+}
 
 function initHeroVideoScroll() {
   const video = document.getElementById('hero-scroll-video');

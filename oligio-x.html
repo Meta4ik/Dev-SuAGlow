@@ -18,7 +18,7 @@
     <!-- Hero (Meet Oligio X) -->
     <section id="hero" data-nav-theme="dark" class="relative min-h-[75vh] flex items-center justify-center pt-[150px] pb-20 px-8 md:px-16 bg-[#131619] text-white overflow-hidden">
         <!-- Background Image & Accents -->
-        <div id="hero-bg-parallax" class="absolute inset-0 z-0 bg-[#131619] flex justify-center pointer-events-none overflow-hidden transition-transform duration-75 ease-out">
+        <div class="absolute inset-0 z-0 bg-[#131619] flex justify-center pointer-events-none overflow-hidden">
             <img src="assets/oligio-x/hero-bg-device.jpg" alt="Oligio X RF Lifting" class="h-full w-auto object-contain opacity-40">
             <div class="absolute inset-0 bg-gradient-to-b from-[#131619]/70 via-[#131619]/40 to-[#131619]"></div>
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#AA987C] blur-[160px] rounded-full opacity-20"></div>
@@ -47,12 +47,12 @@
                     </div>
                 </div>
                 
-                <!-- Graphic collage column (Movement Physics Enabled) -->
+                <!-- Graphic collage column -->
                 <div class="lg:col-span-6 animate-on-scroll fade-left delay-100">
-                    <div id="hero-collage-container" class="relative w-full h-[350px] sm:h-[450px] flex items-center justify-center perspective-[1000px]">
+                    <div class="relative w-full h-[350px] sm:h-[450px] flex items-center justify-center">
                         <!-- Circular Badge -->
-                        <div id="hero-badge-card" class="absolute hidden md:flex items-center justify-center z-20 text-[#AA987C] opacity-0 transition-all duration-700 ease-out"
-                            style="width: 140px; height: 140px; top: -20px; right: 26%; transform: translate3d(0, -20px, 0) scale(0.9);">
+                        <div class="absolute hidden md:flex items-center justify-center z-20 text-[#AA987C] animate-on-scroll float-slow"
+                            style="width: 140px; height: 140px; top: -20px; right: 26%; animation: float 6s ease-in-out infinite;">
                             <div class="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.15)] border border-white/10"></div>
                             <svg viewBox="0 0 100 100" class="relative z-10" style="width: 95%; height: 95%; animation: spin-badge 20s linear infinite;">
                                 <path id="textCircleBanner" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="transparent" />
@@ -69,15 +69,13 @@
                         </div>
 
                         <!-- Base: Original Model Portrait in Background -->
-                        <div id="hero-model-card" class="absolute left-0 top-0 w-[70%] h-[85%] rounded-[24px] overflow-hidden shadow-2xl border border-white/10 group bg-[#131619] opacity-0 transition-all duration-700 ease-out z-0"
-                            style="transform: translate3d(-20px, 40px, 0) scale(0.95);">
+                        <div class="absolute left-0 top-0 w-[70%] h-[85%] rounded-[24px] overflow-hidden shadow-2xl border border-white/10 group bg-[#131619]">
                             <img src="assets/oligio-x/model-portrait-canon.png" alt="Oligio X Patient Results" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         </div>
                         
                         <!-- Midground: Oligio X Device Product Image -->
-                        <div id="hero-device-card" class="absolute right-0 bottom-4 w-[42%] h-[75%] rounded-[20px] overflow-hidden bg-white p-6 flex items-center justify-center shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-[#AA987C]/20 hover:translate-y-[-8px] opacity-0 transition-all duration-700 ease-out z-10"
-                            style="transform: translate3d(30px, -30px, 0) scale(0.92);">
+                        <div class="absolute right-0 bottom-4 w-[42%] h-[75%] rounded-[20px] overflow-hidden bg-white p-6 flex items-center justify-center shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-[#AA987C]/20 hover:translate-y-[-8px] transition-transform duration-500">
                             <img src="assets/oligio_x_product.png" alt="Oligio X RF Lifting Device" class="max-w-full max-h-full object-contain">
                         </div>
                     </div>
@@ -1184,97 +1182,9 @@
     <div id="footer-placeholder"></div>
     <script src="oligio_banner.js?v=36"></script>
     <script src="nearme.js?v=36"></script>
-    <!-- Movement Physics Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const heroContainer = document.getElementById('hero-collage-container');
-            const bgGlow = document.getElementById('hero-bg-parallax');
-            const modelCard = document.getElementById('hero-model-card');
-            const deviceCard = document.getElementById('hero-device-card');
-            const badgeCard = document.getElementById('hero-badge-card');
-
-            if (!modelCard || !deviceCard) return;
-
-            // 1. Load Physics
-            requestAnimationFrame(() => {
-                modelCard.style.opacity = '1';
-                modelCard.style.transform = 'translate3d(0, 0, 0) scale(1)';
-                
-                setTimeout(() => {
-                    deviceCard.style.opacity = '1';
-                    deviceCard.style.transform = 'translate3d(0, 0, 0) scale(1)';
-                }, 180);
-
-                if (badgeCard) {
-                    setTimeout(() => {
-                        badgeCard.style.opacity = '1';
-                        badgeCard.style.transform = 'translate3d(0, 0, 0) scale(1)';
-                    }, 360);
-                }
-            });
-
-            // 2. Scroll Physics
-            let ticking = false;
-            let currentScrollY = 0;
-
-            function updateScrollPhysics() {
-                const scrollY = window.scrollY;
-                if (scrollY < window.innerHeight * 1.5) {
-                    const modelY = scrollY * 0.14;
-                    const deviceY = scrollY * -0.18;
-                    const badgeY = scrollY * -0.28;
-                    const bgY = scrollY * 0.32;
-
-                    if (bgGlow) bgGlow.style.transform = `translate3d(0, ${bgY}px, 0)`;
-                    modelCard.style.transform = `translate3d(0, ${modelY}px, 0)`;
-                    deviceCard.style.transform = `translate3d(0, ${deviceY}px, 0)`;
-                    if (badgeCard) {
-                        badgeCard.style.transform = `translate3d(0, ${badgeY}px, 0) rotate(${scrollY * 0.12}deg)`;
-                    }
-                }
-                ticking = false;
-            }
-
-            window.addEventListener('scroll', () => {
-                currentScrollY = window.scrollY;
-                if (!ticking) {
-                    requestAnimationFrame(updateScrollPhysics);
-                    ticking = true;
-                }
-            }, { passive: true });
-
-            // 3. Cursor Physics
-            if (heroContainer && heroContainer.parentElement) {
-                heroContainer.parentElement.addEventListener('mousemove', (e) => {
-                    if (window.scrollY > window.innerHeight) return;
-                    const rect = heroContainer.getBoundingClientRect();
-                    const centerX = rect.left + rect.width / 2;
-                    const centerY = rect.top + rect.height / 2;
-                    
-                    const targetX = (e.clientX - centerX) / (rect.width / 2);
-                    const targetY = (e.clientY - centerY) / (rect.height / 2);
-
-                    const modelX = targetX * -14;
-                    const modelY = (currentScrollY * 0.14) + (targetY * -14);
-                    const deviceX = targetX * 22;
-                    const deviceY = (currentScrollY * -0.18) + (targetY * 22);
-
-                    modelCard.style.transform = `translate3d(${modelX}px, ${modelY}px, 0)`;
-                    deviceCard.style.transform = `translate3d(${deviceX}px, ${deviceY}px, 0)`;
-                });
-
-                heroContainer.parentElement.addEventListener('mouseleave', () => {
-                    modelCard.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-                    deviceCard.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-                    modelCard.style.transform = `translate3d(0, ${currentScrollY * 0.14}px, 0)`;
-                    deviceCard.style.transform = `translate3d(0, ${currentScrollY * -0.18}px, 0)`;
-                    setTimeout(() => {
-                        modelCard.style.transition = '';
-                        deviceCard.style.transition = '';
-                    }, 800);
-                });
-            }
-        });
-    </script>
+    <script src="navbar.js?v=36"></script>
+    <script src="footer.js?v=36"></script>
+    <script src="oversight.js?v=38"></script>
+    <script src="script.js?v=36"></script>
 </body>
 </html>
