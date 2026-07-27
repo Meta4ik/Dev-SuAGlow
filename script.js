@@ -444,7 +444,7 @@ function initHeroCollagePhysics() {
   if (deviceCard) deviceCard.style.transition = 'transform 0.15s ease-out';
   if (badgeCard) badgeCard.style.transition = 'transform 0.15s ease-out';
 
-  // 1. Scroll Parallax Physics
+  // Scroll Parallax Physics (Active on page scroll only)
   let ticking = false;
   let currentScrollY = window.scrollY;
 
@@ -472,40 +472,6 @@ function initHeroCollagePhysics() {
   }, { passive: true });
 
   updateScrollPhysics();
-
-  // 2. Interactive Cursor Depth Physics
-  hero.addEventListener('mousemove', (e) => {
-    if (window.scrollY > window.innerHeight) return;
-    const rect = collage.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-
-    const targetX = (e.clientX - centerX) / (rect.width / 2 || 1);
-    const targetY = (e.clientY - centerY) / (rect.height / 2 || 1);
-
-    const modelX = targetX * -12;
-    const modelY = (currentScrollY * 0.12) + (targetY * -12);
-    const deviceX = targetX * 18;
-    const deviceY = (currentScrollY * -0.16) + (targetY * 18);
-
-    if (modelCard) modelCard.style.transform = `translate3d(${modelX}px, ${modelY}px, 0)`;
-    if (deviceCard) deviceCard.style.transform = `translate3d(${deviceX}px, ${deviceY}px, 0)`;
-  });
-
-  hero.addEventListener('mouseleave', () => {
-    if (modelCard) {
-      modelCard.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-      modelCard.style.transform = `translate3d(0, ${currentScrollY * 0.12}px, 0)`;
-    }
-    if (deviceCard) {
-      deviceCard.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-      deviceCard.style.transform = `translate3d(0, ${currentScrollY * -0.16}px, 0)`;
-    }
-    setTimeout(() => {
-      if (modelCard) modelCard.style.transition = 'transform 0.15s ease-out';
-      if (deviceCard) deviceCard.style.transition = 'transform 0.15s ease-out';
-    }, 800);
-  });
 }
 
 function initHeroVideoScroll() {
