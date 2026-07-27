@@ -513,14 +513,6 @@ const SEARCH_INDEX = [
     "snippet": "The Korean Glass Skin LDM Facial is a Korean-inspired non-invasive multi-mode skin rejuvenation treatment focused on hydration-conscious rejuvenation, glow-focu..."
   },
   {
-    "url": "ldm-water-droplet-lifting.html",
-    "title": "Ready for Korean-Inspired Glass Skin Rejuvenation?",
-    "pageTitle": "Korean LDM Facial Dallas",
-    "category": "Korean Water Drop Lifting • Multi-Frequency Ultrasound",
-    "content": "Led by Sophia Yang, PA-C — Seoul-trained and Korean-certified — under supervising physician Dr. Adam Yang. Treatments prioritize healthier-looking skin behavior, refined texture, and subtle radiance. 📍 4116 State Highway 121, Suite 120, Office O, Carrollton, TX 75010 (Between CVS and India Mart) • 📞 972-665-8737",
-    "snippet": "Led by Sophia Yang, PA-C — Seoul-trained and Korean-certified — under supervising physician Dr. Adam Yang. Treatments prioritize healthier-looking skin behavior..."
-  },
-  {
     "url": "medical-tox.html#hero",
     "title": "Medical Tox",
     "pageTitle": "Medical Tox",
