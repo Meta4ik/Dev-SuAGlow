@@ -258,7 +258,7 @@ const SEARCH_INDEX = [
   },
   {
     "url": "cosmetic-tox.html#faq",
-    "title": "Frequently Asked Questions",
+    "title": "Cosmetic Tox FAQs",
     "pageTitle": "Cosmetic Tox & SkinTox",
     "category": "Cosmetic Tox",
     "content": "Our approach prioritizes natural-looking movement and balanced refinement rather than aggressive freezing. Most treatments last approximately 3–4 months depending on treatment area and muscle activity. Traditional tox primarily targets larger muscle movement. SkinTox focuses on skin refinement, texture appearance, and controlled glow using superficial micro-dosing techniques. Yes. Masseter tox for lower-face contour refinement is one of the most commonly requested Korean cosmetic tox treatments. TrapTox relaxes the trapezius muscles to soften shoulder contour and create a longer neck appearance. CalfTox uses neuromodulators to relax enlarged calf muscles in select patients seeking a softer, slimmer lower-leg contour appearance. Yes. SkinTox is frequently paired with Korean skin boosters, collagen-stimulating treatments, and skin regeneration treatments such as Oligio X.",
@@ -562,7 +562,7 @@ const SEARCH_INDEX = [
   },
   {
     "url": "medical-tox.html#faq",
-    "title": "Frequently Asked Questions",
+    "title": "Medical Tox FAQs",
     "pageTitle": "Medical Tox",
     "category": "Medical Tox",
     "content": "Both use neuromodulators, but Medical Tox focuses on functional concerns such as muscle tension, sweating, jaw clenching, and headache-related tension patterns. Some patients may notice softening of enlarged jaw muscles over time as muscle activity decreases. The goal is typically reduction — not complete elimination — of excessive sweating in targeted areas. Neuromodulators may help relax overactive jaw muscles associated with clenching and grinding in select patients. Most patients tolerate treatment well. Depending on the area, topical numbing may be used for comfort. Many patients notice early improvement within several days, with fuller results over approximately 1–2 weeks. Medical Tox may help reduce excessive sweating in areas such as the underarms, hands, and feet by temporarily decreasing overactive sweat gland signaling.",
@@ -1458,7 +1458,7 @@ const SEARCH_INDEX = [
   },
   {
     "url": "skin-quality-boosters.html#faq",
-    "title": "Frequently Asked Questions",
+    "title": "Skin Quality Boosters FAQs",
     "pageTitle": "Skin Quality Boosters",
     "category": "Skin Quality Boosters",
     "content": "No. Traditional fillers primarily focus on adding volume or contour. Skin quality boosters are designed to support hydration, texture, collagen support, and overall skin appearance. Many Korean aesthetic clinics prioritize skin quality before considering larger volumizing treatments. Next generation skin boosters focus more heavily on skin health, hydration, collagen support, dermal quality, and subtle refinement. The philosophy is typically more preventative, layered, and skin-focused rather than dramatic transformation-focused. The goal is typically the opposite. Modern Korean aesthetic philosophy prioritizes natural-looking skin, refined texture, healthy glow, balanced appearance, and subtle enhancement. Most patients want compliments like \"You look refreshed,\" not \"What did you have done?\" Longevity depends on treatment category, skin condition, metabolism, lifestyle, and maintenance plan. Many patients complete an initial series followed by maintenance treatments over time. SuA Glow Med Spa in Carrollton provides Korean-inspired skin quality treatments for patients across Dallas, Plano, Frisco, Coppell, Irving, Southlake, McKinney, Grapevine, Addison, Richardson, and Fort Worth.",
