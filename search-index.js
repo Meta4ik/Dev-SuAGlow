@@ -461,7 +461,7 @@ const SEARCH_INDEX = [
     "title": "Korean Glass Skin LDM Facial",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "Korean Water Drop Lifting • Multi-Frequency Ultrasound",
-    "content": "Korean-inspired non-invasive skin rejuvenation focused on deep hydration balance, barrier-conscious maintenance, pore refinement, and radiant glass skin quality. Powered by DIA SONO 310 Korean multi-frequency ultrasound & electroporation technology. In Seoul, healthy-looking hydrated skin is the ultimate luxury.",
+    "content": "Korean-inspired non-invasive skin rejuvenation focused on deep hydration balance, barrier-conscious maintenance, pore refinement, and radiant glass skin quality. Powered by Diasono 310 Korean multi-frequency ultrasound & electroporation technology. In Seoul, healthy-looking hydrated skin is the ultimate luxury.",
     "snippet": "Korean-inspired non-invasive skin rejuvenation focused on deep hydration balance, barrier-conscious maintenance, pore refinement, and radiant glass skin quality..."
   },
   {
@@ -490,7 +490,7 @@ const SEARCH_INDEX = [
   },
   {
     "url": "ldm-water-droplet-lifting.html#dia-sono-310",
-    "title": "Powered by DIA SONO 310",
+    "title": "Powered by Diasono 310",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "Korean Water Drop Lifting • Multi-Frequency Ultrasound",
     "content": "Delivers precise ultrasound wave frequencies to stimulate collagen, balance hydration, and calm cellular stress. Hydration-focused exfoliation that gently cleanses pores while infusing skin with essential moisture. Creates temporary micro-pathways in the skin barrier to enhance topical solution absorption and hydration longevity.",
