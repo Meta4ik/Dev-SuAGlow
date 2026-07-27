@@ -23,33 +23,84 @@
 <body class="bg-off-white text-charcoal antialiased">
     <div id="nav-placeholder"></div>
 
-    <!-- Hero Section -->
-    <section id="hero" data-nav-theme="dark" class="relative min-h-[70vh] flex flex-col items-center justify-start text-center px-8 pt-[250px] overflow-hidden pb-32 bg-black">
-        <div class="absolute inset-0 z-0 bg-black flex justify-center">
-            <img src="assets/microneedling-hero-bg.jpg" alt="SuA Glow Rejuvenation Models" class="w-full h-full object-cover opacity-45">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black"></div>
-            <!-- Abstract Glow Effect -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-taupe/10 blur-[120px] rounded-full animate-pulse"></div>
+    <!-- Hero (Meet SkinPen) -->
+    <section id="hero" data-nav-theme="dark" class="relative min-h-[75vh] flex items-center justify-center pt-[150px] pb-20 px-8 md:px-16 bg-[#131619] text-white overflow-hidden">
+        <!-- Background Image & Accents -->
+        <div class="absolute inset-0 z-0 bg-[#131619] flex justify-center pointer-events-none overflow-hidden">
+            <img src="assets/skinpen/hero-bg-device.png" alt="SkinPen Microneedling" class="h-full w-auto object-contain opacity-35">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#131619]/70 via-[#131619]/40 to-[#131619]"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#AA987C] blur-[160px] rounded-full opacity-20"></div>
         </div>
-        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
-            <span class="badge-glass mb-12">Skin Health &rsaquo; Skin Rejuvenation &rsaquo; SkinPen Microneedling</span>
-            <h1 class="heading-wide text-4xl md:text-7xl mb-10 leading-[1.05] text-white">SkinPen&reg;<br><span class="text-warm-gold">Microneedling</span></h1>
-            <p class="text-sm md:text-xl text-white/70 max-w-3xl mx-auto mb-14 font-light tracking-wide leading-relaxed">
-                FDA-Cleared Korean-Inspired Skin Renewal for Glass Skin, Acne Scars &amp; Texture Refinement.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary">Book Consultation</a>
-                <a href="#what-is" class="btn-outline-white">Explore the Philosophy</a>
+        
+        <div class="max-w-7xl mx-auto relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-28 items-center">
+                <div class="lg:col-span-6 space-y-8 animate-on-scroll fade-right">
+                    <h1 class="heading-wide text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-white leading-[1.15] font-light">
+                        SkinPen<sup>®</sup><br><span class="text-[#AA987C]">Microneedling</span>
+                    </h1>
+                    
+                    <p class="heading-wide text-sm md:text-base text-[#AA987C] tracking-wider font-medium">
+                        Elevated by Korean Expertise.
+                    </p>
+
+                    <p class="text-sm md:text-base font-light text-white/70 leading-relaxed max-w-xl">
+                        FDA-cleared medical microneedling designed to stimulate collagen renewal, remodel acne scars, refine pore structure, and support natural-looking glass skin rejuvenation without surgery or extended downtime.
+                    </p>
+
+                    <p class="text-sm md:text-base font-light text-white/70 leading-relaxed max-w-xl">
+                        Exclusively available at SuA Glow, Dallas-Fort Worth's premier authorized Korean aesthetic rejuvenation destination.
+                    </p>
+                    
+                    <div class="pt-4">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300">
+                            Book Consultation
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Graphic collage column -->
+                <div class="lg:col-span-6 animate-on-scroll fade-left delay-100">
+                    <div class="relative w-full h-[350px] sm:h-[450px] flex items-center justify-center">
+                        <!-- Circular Badge -->
+                        <div class="absolute hidden md:flex items-center justify-center z-20 text-[#AA987C] animate-on-scroll float-slow"
+                            style="width: 140px; height: 140px; top: -15px; left: 42%; animation: float 6s ease-in-out infinite;">
+                            <div class="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.15)] border border-white/10"></div>
+                            <svg viewBox="0 0 100 100" class="relative z-10" style="width: 95%; height: 95%; animation: spin-badge 20s linear infinite;">
+                                <path id="textCircleBanner" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="transparent" />
+                                <text font-family="Montserrat, sans-serif" font-size="7.9" font-weight="700" fill="currentColor" class="uppercase" letter-spacing="0.1em">
+                                    <textPath href="#textCircleBanner" startOffset="0%">
+                                        NOW AVAILABLE IN DFW • CARROLLTON, TX •
+                                    </textPath>
+                                </text>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center z-10">
+                                <!-- state of Texas -->
+                                <img src="assets/sua_texas.svg" alt="Texas" style="width: 32px; height: 32px; filter: brightness(0) invert(1); opacity: 0.85;">
+                            </div>
+                        </div>
+
+                        <!-- Midground: SkinPen Device Product Image (MOVED UP) -->
+                        <div class="absolute right-0 top-0 w-[44%] h-[78%] rounded-[20px] overflow-hidden bg-white p-6 flex items-center justify-center shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-[#AA987C]/20 hover:translate-y-[-8px] transition-transform duration-500 z-10">
+                            <img src="assets/skinpen_product.png" alt="SkinPen Precision Microneedling Device" class="max-w-full max-h-full object-contain">
+                        </div>
+
+                        <!-- Base: Model Portrait in Background (MOVED DOWN FURTHER) -->
+                        <div class="absolute left-0 bottom-0 w-[64%] h-[70%] rounded-[24px] overflow-hidden shadow-2xl border border-white/10 group bg-[#131619] z-0">
+                            <img src="assets/skinpen/model-portrait.png" alt="SkinPen Microneedling Patient Results" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <div id="nearme-placeholder" data-product="SkinPen Microneedling"></div>
 
-    <!-- Full-Width SkinPen Tool Banner -->
+    <!-- Full-Width Multicultural Models Banner -->
     <section class="w-full relative overflow-hidden animate-on-scroll fade-up">
         <div class="w-full aspect-[16/7] md:aspect-[21/8] max-h-[480px]">
-            <img src="assets/Skinpen-treatment-tool.avif" alt="SkinPen Precision Elite Treatment Tool" class="w-full h-full object-cover">
+            <img src="assets/microneedling-hero-bg.jpg" alt="SuA Glow Rejuvenation Models" class="w-full h-full object-cover object-center">
         </div>
     </section>
 
@@ -58,11 +109,11 @@
         <section id="what-is" data-nav-theme="dark" class="pt-32 pb-16 px-10">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-20 animate-on-scroll fade-up">
-                    <h2 class="heading-wide text-3xl md:text-4xl mb-6">Texture Refinement</h2>
-                    <p class="heading-wide text-xs text-taupe opacity-70 tracking-[0.4em]">The Seoul Skin Quality Philosophy</p>
+                    <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">The Seoul Skin Quality Philosophy</span>
+                    <h2 class="heading-wide text-3xl md:text-4xl">Texture Refinement</h2>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                    <div class="space-y-10 animate-on-scroll fade-right">
+                    <div class="space-y-8 animate-on-scroll fade-right">
                         <p class="text-xl font-light leading-relaxed">Glass Skin starts with texture. Beautiful skin is about skin health first, not aggressive resurfacing.</p>
                         <p class="text-base font-light opacity-65 leading-relaxed">
                             Korean aesthetics changed how patients think about skin rejuvenation. The goal is no longer: <em>“Can everyone tell I had treatment?”</em> but rather: <em>“How does her skin always look so smooth?”</em> 
@@ -70,28 +121,9 @@
                         <p class="text-base font-light opacity-65 leading-relaxed">
                             At SuA Glow Med Spa in Carrollton, SkinPen&reg; Microneedling was selected because modern skin rejuvenation focuses on collagen support, skin barrier respect, and gradual texture refinement. Our K-Glow approach helps skin appear smoother, brighter, and naturally radiant without looking artificial or overprocessed.
                         </p>
-                        <div class="grid grid-cols-2 gap-6 pt-6">
-                            <div class="space-y-2">
-                                <h4 class="heading-wide text-[10px] text-taupe tracking-widest uppercase">Target Focus</h4>
-                                <ul class="text-[11px] font-medium space-y-1 opacity-60">
-                                    <li>&bull; Acne Scarring &amp; Laxity</li>
-                                    <li>&bull; Enlarged Pores</li>
-                                    <li>&bull; Rough Texture &amp; Dullness</li>
-                                    <li>&bull; Barrier Health Maintenance</li>
-                                </ul>
-                            </div>
-                            <div class="space-y-2">
-                                <h4 class="heading-wide text-[10px] text-taupe tracking-widest uppercase">SkinPen Benefits</h4>
-                                <ul class="text-[11px] font-medium space-y-1 opacity-60">
-                                    <li>&bull; FDA-Cleared Safety</li>
-                                    <li>&bull; Collagen Induction Therapy</li>
-                                    <li>&bull; Glass Skin Texturizing</li>
-                                    <li>&bull; Minimal Healing Downtime</li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
-                    <!-- Model Image -->
+
+                    <!-- Model Image (Right of Glass Skin text) -->
                     <div class="relative animate-on-scroll fade-left delay-200">
                         <div class="absolute inset-0 bg-taupe/5 rounded-3xl rotate-3 scale-105"></div>
                         <div class="relative rounded-3xl shadow-2xl border border-light-gray/30 overflow-hidden aspect-[4/3] bg-light-gray group">
@@ -103,49 +135,220 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Target Skin Concerns & Korean Skin Goals Banner Card -->
+                <div class="mt-20 bg-white/95 rounded-3xl p-8 sm:p-10 lg:p-14 border border-light-gray/50 shadow-soft animate-on-scroll fade-up">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 divide-y lg:divide-y-0 lg:divide-x divide-light-gray/40">
+                        
+                        <!-- Left Column: TARGET SKIN CONCERNS -->
+                        <div class="lg:col-span-6 pt-6 lg:pt-0 lg:pr-8 space-y-10">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-[#AA987C]/10 flex items-center justify-center text-[#AA987C] border border-[#AA987C]/20">
+                                    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="9"/>
+                                        <path d="M9 10h.01M15 10h.01"/>
+                                        <path d="M9.5 15a3.5 3.5 0 0 0 5 0"/>
+                                    </svg>
+                                </div>
+                                <h3 class="heading-wide text-xs sm:text-sm font-bold text-near-black uppercase tracking-[0.2em]">TARGET SKIN CONCERNS</h3>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 text-center">
+                                <!-- 1: Acne Scars -->
+                                <div class="flex flex-col items-center space-y-3 group">
+                                    <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#AA987C]">
+                                        <svg class="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                            <circle cx="12" cy="12" r="2.5"/>
+                                            <circle cx="12" cy="4.5" r="1.2"/>
+                                            <circle cx="12" cy="19.5" r="1.2"/>
+                                            <circle cx="4.5" cy="12" r="1.2"/>
+                                            <circle cx="19.5" cy="12" r="1.2"/>
+                                            <circle cx="6.5" cy="6.5" r="1.2"/>
+                                            <circle cx="17.5" cy="17.5" r="1.2"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-charcoal/80 leading-tight">Acne<br>Scars</span>
+                                </div>
+
+                                <!-- 2: Enlarged Pores -->
+                                <div class="flex flex-col items-center space-y-3 group">
+                                    <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#AA987C]">
+                                        <svg class="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                            <path d="M12 2.5v3.5M12 18v3.5M2.5 12h3.5M18 12h3.5M6.5 6.5l2.5 2.5M15 15l2.5 2.5M6.5 17.5l2.5-2.5M15 9l2.5-2.5"/>
+                                            <circle cx="12" cy="12" r="3.5"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-charcoal/80 leading-tight">Enlarged<br>Pores</span>
+                                </div>
+
+                                <!-- 3: Rough Texture -->
+                                <div class="flex flex-col items-center space-y-3 group">
+                                    <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#AA987C]">
+                                        <svg class="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+                                            <path d="M2 9c2 0 3-2.5 5-2.5s3 2.5 5 2.5 3-2.5 5-2.5 3 2.5 5 2.5"/>
+                                            <path d="M2 15c2 0 3-2.5 5-2.5s3 2.5 5 2.5 3-2.5 5-2.5 3 2.5 5 2.5"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-charcoal/80 leading-tight">Rough<br>Texture</span>
+                                </div>
+
+                                <!-- 4: Early Fine Lines -->
+                                <div class="flex flex-col items-center space-y-3 group">
+                                    <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#AA987C]">
+                                        <svg class="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+                                            <path d="M2 12s3.5-7.5 10-7.5 10 7.5 10 7.5-3.5 7.5-10 7.5-10-7.5-10-7.5z"/>
+                                            <circle cx="12" cy="12" r="3.5"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-charcoal/80 leading-tight">Early Fine<br>Lines</span>
+                                </div>
+
+                                <!-- 5: Skin Laxity -->
+                                <div class="flex flex-col items-center space-y-3 group">
+                                    <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#AA987C]">
+                                        <svg class="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                            <!-- Top Arrow (Pointing UP) -->
+                                            <path d="M12 7.5V2M9.5 4.5L12 2l2.5 2.5"/>
+                                            <!-- Top Arc (Curving Downward) -->
+                                            <path d="M2 9.5c5 1.5 15 1.5 20 0"/>
+                                            <!-- Middle Wavy Layer -->
+                                            <path d="M2 13c2.5-1.5 3.5 1.5 6 0s3.5-1.5 6 0 3.5 1.5 6 0"/>
+                                            <!-- Bottom Arc (Curving Upward) -->
+                                            <path d="M2 16.5c5-1.5 15-1.5 20 0"/>
+                                            <!-- Bottom Arrow (Pointing DOWN) -->
+                                            <path d="M12 18.5v5.5M9.5 21.5L12 24l2.5-2.5"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-charcoal/80 leading-tight">Skin<br>Laxity</span>
+                                </div>
+
+                                <!-- 6: Dull Skin -->
+                                <div class="flex flex-col items-center space-y-3 group">
+                                    <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#AA987C]">
+                                        <svg class="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                            <path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-charcoal/80 leading-tight">Dull<br>Skin</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: KOREAN SKIN GOALS -->
+                        <div class="lg:col-span-6 pt-6 lg:pt-0 lg:pl-8 space-y-10">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-[#AA987C]/10 flex items-center justify-center text-[#AA987C] border border-[#AA987C]/20">
+                                    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+                                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 1.4 8.2-1.2 7.6-7.8 9.8-9.4 9.8z"/>
+                                        <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+                                    </svg>
+                                </div>
+                                <h3 class="heading-wide text-xs sm:text-sm font-bold text-near-black uppercase tracking-[0.2em]">KOREAN SKIN GOALS</h3>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 sm:grid-cols-5 gap-4 text-center">
+                                <!-- 1: Healthier Collagen -->
+                                <div class="flex flex-col items-center space-y-3 group">
+                                    <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#AA987C]">
+                                        <svg class="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                            <circle cx="12" cy="6.5" r="3.5"/>
+                                            <circle cx="6.5" cy="15.5" r="3.5"/>
+                                            <circle cx="17.5" cy="15.5" r="3.5"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-charcoal/80 leading-tight">Healthier<br>Collagen</span>
+                                </div>
+
+                                <!-- 2: Refined Texture -->
+                                <div class="flex flex-col items-center space-y-3 group">
+                                    <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#AA987C]">
+                                        <svg class="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+                                            <path d="M2 12c2 0 3-2.5 5-2.5s3 2.5 5 2.5 3-2.5 5-2.5 3 2.5 5 2.5"/>
+                                            <path d="M2 17c2 0 3-2.5 5-2.5s3 2.5 5 2.5 3-2.5 5-2.5 3 2.5 5 2.5"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-charcoal/80 leading-tight">Refined<br>Texture</span>
+                                </div>
+
+                                <!-- 3: Stronger Skin Barrier -->
+                                <div class="flex flex-col items-center space-y-3 group">
+                                    <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#AA987C]">
+                                        <svg class="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                            <path d="M9 12l2 2 4-4"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-charcoal/80 leading-tight">Stronger<br>Skin Barrier</span>
+                                </div>
+
+                                <!-- 4: Smooth Glass Skin -->
+                                <div class="flex flex-col items-center space-y-3 group">
+                                    <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#AA987C]">
+                                        <svg class="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-charcoal/80 leading-tight">Smooth<br>Glass Skin</span>
+                                </div>
+
+                                <!-- 5: Natural Radiance -->
+                                <div class="flex flex-col items-center space-y-3 group">
+                                    <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#AA987C]">
+                                        <svg class="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                            <path d="M12 3l2.5 5.5 5.5 2.5-5.5 2.5-2.5 5.5-2.5-5.5-5.5-2.5 5.5-2.5z"/>
+                                            <path d="M19 16l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-charcoal/80 leading-tight">Natural<br>Radiance</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
 
 
 
-        <!-- Dynamic Grid: FDA-Cleared vs SuA Glow Approach -->
+        <!-- Dynamic Grid: Why We Chose SkinPen vs The SuA Glow Difference -->
         <section id="why-skinpen" data-nav-theme="dark" class="pb-32 px-10">
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Column 1: Why FDA-Cleared Matters -->
-                    <div class="bg-white p-10 md:p-14 rounded-2xl border border-black/5 shadow-sm space-y-6 animate-on-scroll fade-right">
-                        <div class="w-12 h-12 rounded-full bg-warm-gold/10 flex items-center justify-center mb-4">
+                    <!-- Column 1: WHY WE CHOSE SKINPEN -->
+                    <div class="bg-white p-10 md:p-14 rounded-3xl border border-light-gray/40 shadow-soft space-y-6 animate-on-scroll fade-right">
+                        <div class="w-12 h-12 rounded-full bg-[#AA987C]/10 border border-[#AA987C]/20 flex items-center justify-center mb-4">
                             <i data-lucide="shield-check" class="w-6 h-6 text-warm-gold"></i>
                         </div>
-                        <h3 class="heading-wide text-lg text-near-black">Why FDA-Cleared Matters</h3>
-                        <p class="text-sm font-light opacity-70 leading-relaxed">
+                        <h3 class="heading-wide text-lg text-near-black uppercase tracking-wider">WHY WE CHOSE SKINPEN&reg;</h3>
+                        <p class="text-sm font-light text-charcoal/80 leading-relaxed">
                             Not all microneedling devices undergo the same regulatory review process. At SuA Glow, SkinPen&reg; was intentionally selected because FDA-cleared technology supports:
                         </p>
-                        <ul class="text-xs font-light opacity-80 space-y-2 pl-4 list-disc">
+                        <ul class="text-xs font-light text-charcoal/80 space-y-2 pl-4 list-disc">
                             <li>Consistency and safety-focused skin renewal</li>
                             <li>Controlled, precise treatment delivery</li>
                             <li>Predictable and reliable needle depth control</li>
                             <li>Skin integrity-focused rejuvenation</li>
                         </ul>
-                        <p class="text-xs italic opacity-60 text-taupe">Because healthier-looking skin should never come at the expense of skin health.</p>
+                        <p class="text-xs italic text-taupe/80 pt-2">Because healthier-looking skin should never come at the expense of skin health.</p>
                     </div>
 
-                    <!-- Column 2: K-Inspired Approach -->
-                    <div class="bg-white p-10 md:p-14 rounded-2xl border border-black/5 shadow-sm space-y-6 animate-on-scroll fade-left">
-                        <div class="w-12 h-12 rounded-full bg-taupe/10 flex items-center justify-center mb-4">
-                            <i data-lucide="sparkles" class="w-6 h-6 text-taupe"></i>
+                    <!-- Column 2: THE SUA GLOW DIFFERENCE -->
+                    <div class="bg-white p-10 md:p-14 rounded-3xl border border-light-gray/40 shadow-soft space-y-6 animate-on-scroll fade-left">
+                        <div class="w-12 h-12 rounded-full bg-[#AA987C]/10 border border-[#AA987C]/20 flex items-center justify-center mb-4">
+                            <i data-lucide="sparkles" class="w-6 h-6 text-warm-gold"></i>
                         </div>
-                        <h3 class="heading-wide text-lg text-near-black">Why SuA Glow Uses SkinPen&reg;</h3>
-                        <p class="text-sm font-light opacity-70 leading-relaxed">
-                            Modern Korean-inspired skin rejuvenation focuses less on aggressive trauma and more on gradual, sustainable refinement. SkinPen&reg; is integrated into our broader philosophy to support:
+                        <h3 class="heading-wide text-lg text-near-black uppercase tracking-wider">THE SUA GLOW DIFFERENCE</h3>
+                        <p class="text-sm font-light text-charcoal/80 leading-relaxed">
+                            The SuA Glow Seoul Standard elevates every SkinPen&reg; treatment. We combine FDA-cleared technology with Korean skin philosophy to support long-term results:
                         </p>
-                        <ul class="text-xs font-light opacity-80 space-y-2 pl-4 list-disc">
+                        <ul class="text-xs font-light text-charcoal/80 space-y-2 pl-4 list-disc">
                             <li>Intelligent, natural collagen support and remodeling</li>
                             <li>Acne scar and rolling/boxcar scar refinement</li>
                             <li>Respect for the skin barrier while calming inflammation</li>
                             <li>Glass skin texture quality and prevention-first aesthetics</li>
                         </ul>
-                        <p class="text-xs italic opacity-60 text-taupe">Because smoother skin without healthier skin is not true luxury.</p>
+                        <p class="text-xs italic text-taupe/80 pt-2">Because smoother skin without healthier skin is not true luxury.</p>
                     </div>
                 </div>
             </div>
@@ -157,7 +360,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <!-- Left: Text -->
                     <div class="space-y-8 animate-on-scroll fade-right">
-                        <span class="badge-glass">Acne Scar &amp; Skin Texture Focus</span>
+                        <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 mb-4 inline-block uppercase tracking-wider text-[10px]">Acne Scar &amp; Skin Texture Focus</span>
                         <h3 class="heading-wide text-2xl md:text-3xl text-warm-gold leading-tight">Why Korean Clinics Became Obsessed with Skin Texture</h3>
                         <p class="text-sm font-light opacity-70 leading-relaxed">
                             Korean beauty philosophy prioritizes skin quality before heavy correction. Rather than overprocessing the skin with aggressive treatments, the focus is on supporting skin density.
@@ -186,43 +389,29 @@
         </section>
 
         <!-- What You Can Expect Section (K-Beauty & SkinPen Treatment Journey) -->
-        <section id="expect" data-nav-theme="dark" class="py-24 lg:py-32 px-6 lg:px-12 bg-off-white/80 overflow-hidden">
-            <div class="max-w-7xl mx-auto space-y-16">
+        <section id="expect" data-nav-theme="dark" class="relative py-24 lg:py-32 px-6 lg:px-12 bg-off-white/80 overflow-hidden">
+            <div class="relative z-20 max-w-7xl mx-auto space-y-12 lg:space-y-16">
                 
                 <!-- Top Header Row -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     
                     <!-- Left Column: Title & Philosophy -->
-                    <div class="lg:col-span-7 space-y-6 animate-on-scroll fade-right">
-                        <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-taupe/80 block">KOREAN TECHNIQUE &nbsp;•&nbsp; FDA-CLEARED TECHNOLOGY &nbsp;•&nbsp; SKIN-FIRST PHILOSOPHY</span>
+                    <div class="lg:col-span-7 space-y-4 animate-on-scroll fade-right">
+                        <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">KOREAN TECHNIQUE &bull; FDA-CLEARED TECHNOLOGY &bull; SKIN-FIRST PHILOSOPHY</span>
                         
-                        <h2 class="heading-wide text-4xl sm:text-5xl lg:text-6xl text-near-black leading-tight">
-                            What you can <span class="font-serif italic font-normal text-warm-gold">expect</span>
+                        <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-near-black leading-tight">
+                            WHAT YOU CAN <span class="text-[#AA987C]">EXPECT</span>
                         </h2>
                         
-                        <div class="space-y-1 pt-2">
-                            <p class="text-sm sm:text-base font-light text-charcoal/80">Every step is guided by our K-beauty philosophy:</p>
-                            <p class="text-sm sm:text-base font-medium text-[#A68A56] leading-relaxed">
-                                protect the skin barrier, support healthy collagen, and reveal your natural glow.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Center Column: Quote Badge -->
-                    <div class="lg:col-span-3 bg-white/90 backdrop-blur-sm p-6 rounded-2xl border border-light-gray/40 shadow-soft space-y-3 animate-on-scroll fade-up">
-                        <span class="font-serif text-4xl text-warm-gold/50 block leading-none">“</span>
-                        <p class="text-sm font-light text-charcoal/90 leading-snug">
-                            Skin that glows starts with <strong class="font-semibold text-near-black">healthy collagen.</strong>
-                        </p>
-                        <p class="text-[9px] font-bold uppercase tracking-[0.25em] text-taupe/70 pt-2 border-t border-light-gray/30">
-                            THE SUA GLOW SEOUL STANDARD
+                        <p class="text-sm md:text-base font-light text-charcoal/70 leading-relaxed max-w-xl pt-1">
+                            Every step is guided by our K-beauty philosophy: protect the skin barrier, support healthy collagen, and reveal your natural glow.
                         </p>
                     </div>
 
-                    <!-- Right Column: Model Portrait Photo -->
-                    <div class="lg:col-span-2 hidden lg:block animate-on-scroll fade-left">
-                        <div class="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-md border border-light-gray/40">
-                            <img src="assets/skinpen_header_model.png" alt="SuA Glow Korean Skin Beauty Model" class="w-full h-full object-cover">
+                    <!-- Right Column: Transparent Model Portrait directly in the quote block area -->
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end animate-on-scroll fade-left">
+                        <div class="relative w-72 sm:w-80 lg:w-96 aspect-[4/5] flex items-center justify-center">
+                            <img src="assets/expect_model_bg_transparent.png" alt="SuA Glow Korean Skin Beauty Model" class="w-full h-full object-contain object-bottom filter drop-shadow-lg">
                         </div>
                     </div>
                 </div>
@@ -360,7 +549,10 @@
         <!-- FAQ Section -->
         <section id="faq" data-nav-theme="dark" class="py-32 px-10 bg-light-gray">
             <div class="max-w-4xl mx-auto">
-                <h2 class="heading-wide text-center text-3xl mb-24 text-near-black">SkinPen Microneedling FAQs</h2>
+                <div class="text-center mb-20">
+                    <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">Got Questions?</span>
+                    <h2 class="heading-wide text-3xl text-near-black">SkinPen Microneedling FAQs</h2>
+                </div>
                 <div class="space-y-4">
                     <details class="bg-white p-8 group border border-black/5 hover:border-taupe/30 transition-all rounded-xl">
                         <summary class="heading-wide text-xs cursor-pointer flex justify-between items-center">Does SkinPen&reg; work for acne scars? <i data-lucide="plus" class="w-4 h-4 text-taupe group-open:hidden"></i><i data-lucide="minus" class="w-4 h-4 text-taupe hidden group-open:inline"></i></summary>

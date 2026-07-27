@@ -524,47 +524,47 @@ const SEARCH_INDEX = [
     "url": "microneedling.html#hero",
     "title": "SkinPen®Microneedling",
     "pageTitle": "SkinPen Microneedling Dallas",
-    "category": "SkinPen Microneedling",
-    "content": "FDA-Cleared Korean-Inspired Skin Renewal for Glass Skin, Acne Scars & Texture Refinement.",
-    "snippet": "FDA-Cleared Korean-Inspired Skin Renewal for Glass Skin, Acne Scars & Texture Refinement."
+    "category": "The Seoul Skin Quality Philosophy",
+    "content": "Elevated by Korean Expertise. FDA-cleared medical microneedling designed to stimulate collagen renewal, remodel acne scars, refine pore structure, and support natural-looking glass skin rejuvenation without surgery or extended downtime. Exclusively available at SuA Glow, Dallas-Fort Worth's premier authorized Korean aesthetic rejuvenation destination.",
+    "snippet": "Elevated by Korean Expertise. FDA-cleared medical microneedling designed to stimulate collagen renewal, remodel acne scars, refine pore structure, and support n..."
   },
   {
     "url": "microneedling.html#what-is",
     "title": "Texture Refinement",
     "pageTitle": "SkinPen Microneedling Dallas",
-    "category": "SkinPen Microneedling",
-    "content": "The Seoul Skin Quality Philosophy Glass Skin starts with texture. Beautiful skin is about skin health first, not aggressive resurfacing. Korean aesthetics changed how patients think about skin rejuvenation. The goal is no longer: “Can everyone tell I had treatment?” but rather: “How does her skin always look so smooth?” At SuA Glow Med Spa in Carrollton, SkinPen® Microneedling was selected because modern skin rejuvenation focuses on collagen support, skin barrier respect, and gradual texture refinement. Our K-Glow approach helps skin appear smoother, brighter, and naturally radiant without looking artificial or overprocessed. • Acne Scarring & Laxity • Enlarged Pores • Rough Texture & Dullness • Barrier Health Maintenance • FDA-Cleared Safety • Collagen Induction Therapy • Glass Skin Texturizing • Minimal Healing Downtime Skin Texture Focus",
-    "snippet": "The Seoul Skin Quality Philosophy Glass Skin starts with texture. Beautiful skin is about skin health first, not aggressive resurfacing. Korean aesthetics chang..."
+    "category": "The Seoul Skin Quality Philosophy",
+    "content": "Glass Skin starts with texture. Beautiful skin is about skin health first, not aggressive resurfacing. Korean aesthetics changed how patients think about skin rejuvenation. The goal is no longer: “Can everyone tell I had treatment?” but rather: “How does her skin always look so smooth?” At SuA Glow Med Spa in Carrollton, SkinPen® Microneedling was selected because modern skin rejuvenation focuses on collagen support, skin barrier respect, and gradual texture refinement. Our K-Glow approach helps skin appear smoother, brighter, and naturally radiant without looking artificial or overprocessed. Skin Texture Focus",
+    "snippet": "Glass Skin starts with texture. Beautiful skin is about skin health first, not aggressive resurfacing. Korean aesthetics changed how patients think about skin r..."
   },
   {
     "url": "microneedling.html#why-skinpen",
-    "title": "Why FDA-Cleared Matters",
+    "title": "WHY WE CHOSE SKINPEN®",
     "pageTitle": "SkinPen Microneedling Dallas",
-    "category": "SkinPen Microneedling",
-    "content": "Not all microneedling devices undergo the same regulatory review process. At SuA Glow, SkinPen® was intentionally selected because FDA-cleared technology supports: Consistency and safety-focused skin renewal Controlled, precise treatment delivery Predictable and reliable needle depth control Skin integrity-focused rejuvenation Because healthier-looking skin should never come at the expense of skin health. Modern Korean-inspired skin rejuvenation focuses less on aggressive trauma and more on gradual, sustainable refinement. SkinPen® is integrated into our broader philosophy to support: Intelligent, natural collagen support and remodeling Acne scar and rolling/boxcar scar refinement Respect for the skin barrier while calming inflammation Glass skin texture quality and prevention-first aesthetics Because smoother skin without healthier skin is not true luxury.",
+    "category": "The Seoul Skin Quality Philosophy",
+    "content": "Not all microneedling devices undergo the same regulatory review process. At SuA Glow, SkinPen® was intentionally selected because FDA-cleared technology supports: Consistency and safety-focused skin renewal Controlled, precise treatment delivery Predictable and reliable needle depth control Skin integrity-focused rejuvenation Because healthier-looking skin should never come at the expense of skin health. The SuA Glow Seoul Standard elevates every SkinPen® treatment. We combine FDA-cleared technology with Korean skin philosophy to support long-term results: Intelligent, natural collagen support and remodeling Acne scar and rolling/boxcar scar refinement Respect for the skin barrier while calming inflammation Glass skin texture quality and prevention-first aesthetics Because smoother skin without healthier skin is not true luxury.",
     "snippet": "Not all microneedling devices undergo the same regulatory review process. At SuA Glow, SkinPen® was intentionally selected because FDA-cleared technology suppor..."
   },
   {
     "url": "microneedling.html#clinical-focus",
     "title": "Why Korean Clinics Became Obsessed with Skin Texture",
     "pageTitle": "SkinPen Microneedling Dallas",
-    "category": "SkinPen Microneedling",
+    "category": "The Seoul Skin Quality Philosophy",
     "content": "Korean beauty philosophy prioritizes skin quality before heavy correction. Rather than overprocessing the skin with aggressive treatments, the focus is on supporting skin density. SkinPen® microneedling helps support rolling scars, boxcar scars, uneven texture, and enlarged pores by stimulating collagen production. This results in \"quiet luxury\" skin that looks naturally radiant and filtered in real life—meaning you still look like yourself, just with less foundation dependence and improved skin confidence. Safe for Diverse Skin Types SkinPen microneedling is commonly utilized across diverse skin tones, including Asian and melanin-rich skin. Our PA-C Sophia Yang prioritizes skin safety, pigmentation risk mitigation, and barrier health over aggressive treatment intensity.",
     "snippet": "Korean beauty philosophy prioritizes skin quality before heavy correction. Rather than overprocessing the skin with aggressive treatments, the focus is on suppo..."
   },
   {
     "url": "microneedling.html#expect",
-    "title": "What you can expect",
+    "title": "WHAT YOU CAN EXPECT",
     "pageTitle": "SkinPen Microneedling Dallas",
-    "category": "SkinPen Microneedling",
-    "content": "Every step is guided by our K-beauty philosophy: protect the skin barrier, support healthy collagen, and reveal your natural glow. Skin that glows starts with healthy collagen. THE SUA GLOW SEOUL STANDARD Your provider will gently cleanse the skin. A topical anesthetic may be administered to ensure maximum comfort throughout the treatment. Once the numbing cream has taken effect, the provider will gently pass SkinPen over the treatment area. As the tiny needles create micro-channels in the skin, patients typically feel light pressure and a mild buzzing sensation, with minimal discomfort. The treatment lasts approximately 30 minutes. Most patients notice slight redness in the treated area, similar to a mild sunburn. Additional common treatment responses include dryness, tightness, and peeling. This is normal and should subside within 24 to 72 hours. Makeup and sunscreen can be applied 24 hours after treatment. Please see patient labeling for detailed safety information. 순하게, 확실하게. Gentle on skin. Effective on results. 검증된 기술. 안심되는 선택. FDA-cleared technology you can trust. 오늘의 케어가, 내일의 피부를 만들듭니다. Today's care supports tomorrow's skin.",
-    "snippet": "Every step is guided by our K-beauty philosophy: protect the skin barrier, support healthy collagen, and reveal your natural glow. Skin that glows starts with h..."
+    "category": "The Seoul Skin Quality Philosophy",
+    "content": "Every step is guided by our K-beauty philosophy: protect the skin barrier, support healthy collagen, and reveal your natural glow. Your provider will gently cleanse the skin. A topical anesthetic may be administered to ensure maximum comfort throughout the treatment. Once the numbing cream has taken effect, the provider will gently pass SkinPen over the treatment area. As the tiny needles create micro-channels in the skin, patients typically feel light pressure and a mild buzzing sensation, with minimal discomfort. The treatment lasts approximately 30 minutes. Most patients notice slight redness in the treated area, similar to a mild sunburn. Additional common treatment responses include dryness, tightness, and peeling. This is normal and should subside within 24 to 72 hours. Makeup and sunscreen can be applied 24 hours after treatment. Please see patient labeling for detailed safety information. 순하게, 확실하게. Gentle on skin. Effective on results. 검증된 기술. 안심되는 선택. FDA-cleared technology you can trust. 오늘의 케어가, 내일의 피부를 만들듭니다. Today's care supports tomorrow's skin.",
+    "snippet": "Every step is guided by our K-beauty philosophy: protect the skin barrier, support healthy collagen, and reveal your natural glow. Your provider will gently cle..."
   },
   {
     "url": "microneedling.html#faq",
     "title": "SkinPen Microneedling FAQs",
     "pageTitle": "SkinPen Microneedling Dallas",
-    "category": "SkinPen Microneedling",
+    "category": "The Seoul Skin Quality Philosophy",
     "content": "Yes. SkinPen microneedling may help support improvement in certain types of acne scars (including rolling and boxcar scars) through collagen remodeling and skin texture refinement. Individual outcomes depend on scar depth, inflammation history, and skin type. Treatment recommendations vary based on scar severity, collagen quality, and skin condition. Many patients pursue a series of 3 to 6 treatments spaced 4 weeks apart for progressive collagen support and texture refinement. Yes, SkinPen® is FDA-cleared to treat acne scars. By triggering your body's natural collagen remodeling response, it gradually fills and smooths out the depressions left by rolling and boxcar scars. Absolutely. Many patients seek SkinPen to soften the appearance of enlarged pores, rough texture, and post-acne irregularities. The result is a smoother-looking, more polished complexion where makeup sits significantly better. Most patients experience temporary redness, warmth, and tightness resembling a sunburn. This typically subsides within 24 to 72 hours depending on treatment depth, skin sensitivity, and following proper clinical aftercare. Yes. Unlike some heat-based treatments that carry risk of post-inflammatory hyperpigmentation (PIH), SkinPen microneedling uses mechanical energy, making it safe for diverse skin tones when evaluated and performed under proper medical protocols. SkinPen focus is mechanical micro-channeling for texture, pore refinement, and acne scars. RF Microneedling combines microneedling with radiofrequency energy for deeper skin tightening and structural tissue remodeling. We help determine the best match during your clinical assessment. Glass skin requires a smooth, light-reflective surface. Because \"glass skin starts with texture,\" SkinPen is frequently used as a foundation to refine pores and texture. At SuA Glow, it is often paired with LDM ultrasound facials or hydration boosters for maximum glow. Korean beauty philosophy emphasizes long-term prevention and skin barrier respect over aggressive resurfacing. Microneedling became popular because it triggers natural skin renewal, encouraging healthier-looking skin with minimal social downtime. Most patients find the treatment very manageable. We apply a medical-grade topical numbing cream before the procedure to ensure your comfort throughout the session.",
     "snippet": "Yes. SkinPen microneedling may help support improvement in certain types of acne scars (including rolling and boxcar scars) through collagen remodeling and skin..."
   },
@@ -572,7 +572,7 @@ const SEARCH_INDEX = [
     "url": "microneedling.html",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "SkinPen Microneedling Dallas",
-    "category": "SkinPen Microneedling",
+    "category": "The Seoul Skin Quality Philosophy",
     "content": "Important Transparency Statement: SkinPen treatment recommendations at SuA Glow are individualized based on patient anatomy, skin condition, goals, medical history, and clinical assessment pursuant to supervising physician-approved protocols and applicable Texas regulations. Treatment results vary by individual. No outcome can be guaranteed. K-Beauty Medspa • Carrollton HQ",
     "snippet": "Important Transparency Statement: SkinPen treatment recommendations at SuA Glow are individualized based on patient anatomy, skin condition, goals, medical hist..."
   },
@@ -681,8 +681,8 @@ const SEARCH_INDEX = [
     "snippet": "Proven Lifting & Contouring Efficacy Visible jawline contouring and reduction of lower facial laxity observed immediately to 4 weeks post GXG dual-mode treatmen..."
   },
   {
-    "url": "oligio-x.html",
-    "title": "What to Expect After Treatment",
+    "url": "oligio-x.html#post-treatment-guide",
+    "title": "WHAT TO EXPECT AFTER TREATMENT",
     "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Korean Aesthetic Philosophy",
     "content": "Mild redness, temporary warmth, slight swelling, or skin sensitivity. Most patients return to normal activities shortly afterward. Skin may gradually begin appearing firmer, smoother, tighter, and more refreshed. Collagen remodeling continues over time as skin quality and contour refinement gradually develop. Many patients pursue maintenance treatments depending on age, collagen quality, lifestyle, skin goals, and preventative aging strategy. Great for improving mild skin laxity, early facial sagging, jawline definition, skin firmness, fine lines, collagen support, preventative aging concerns, and overall skin quality. Popular among patients in their late 20s (prevention), 30s (maintenance), and 40s+ (contour and skin support). Pregnancy, implanted electronic devices, active skin infections, recent procedures, or certain medical conditions. Often combined with skin hydration, Korean skin boosters, LDM ultrasound facials, SkinTox, and glass skin protocols.",
