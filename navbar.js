@@ -188,30 +188,22 @@ const NAVBAR_HTML = `
                     class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase flex items-center gap-1">
                     Wellness <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </a>
-                <div class="dropdown-menu text-left w-80 p-6 space-y-4">
-                    <div>
-                        <a href="#" class="dropdown-link !p-0 hover:!pl-2">
-                            Weight Loss
-                            <span class="block text-[10px] text-charcoal/40 mt-0.5 font-normal">Korean Body Reset</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" class="dropdown-link !p-0 hover:!pl-2">
-                            Glow Infusion Therapy
-                            <span class="block text-[10px] text-charcoal/40 mt-0.5 font-normal">IV Infusions &bull; IV Push Therapy</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" class="dropdown-link !p-0 hover:!pl-2">
-                            Hormone &amp; Longevity Medicine
-                            <span class="block text-[10px] text-charcoal/40 mt-0.5 font-normal">Hormone Optimization &bull; Peptide Therapy &bull; Metabolic Wellness</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" class="dropdown-link !p-0 hover:!pl-2">
-                            Men's Testosterone Optimization
-                        </a>
-                    </div>
+                <div class="dropdown-menu text-left w-80 !p-3 space-y-1">
+                    <a href="#" class="dropdown-link rounded-lg py-3 px-4 hover:bg-off-white transition-all">
+                        <span class="block font-medium text-near-black">Weight Loss</span>
+                        <span class="block text-[10px] text-charcoal/50 mt-0.5 font-normal">Korean Body Reset</span>
+                    </a>
+                    <a href="#" class="dropdown-link rounded-lg py-3 px-4 hover:bg-off-white transition-all">
+                        <span class="block font-medium text-near-black">Glow Infusion Therapy</span>
+                        <span class="block text-[10px] text-charcoal/50 mt-0.5 font-normal">IV Infusions &bull; IV Push Therapy</span>
+                    </a>
+                    <a href="#" class="dropdown-link rounded-lg py-3 px-4 hover:bg-off-white transition-all">
+                        <span class="block font-medium text-near-black">Hormone &amp; Longevity Medicine</span>
+                        <span class="block text-[10px] text-charcoal/50 mt-0.5 font-normal leading-snug">Hormone Optimization &bull; Peptide Therapy &bull; Metabolic Wellness</span>
+                    </a>
+                    <a href="#" class="dropdown-link rounded-lg py-3 px-4 hover:bg-off-white transition-all">
+                        <span class="block font-medium text-near-black">Men's Testosterone Optimization</span>
+                    </a>
                 </div>
             </div>
 
