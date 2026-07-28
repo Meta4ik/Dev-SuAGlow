@@ -125,7 +125,7 @@ const NAVBAR_HTML = `
                                 <li>
                                     <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
                                         Korean Scalp & Hair Rejuvenation
-                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left shrink-0">
+                                        <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0 ml-1">
                                             <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
                                         </span>
                                     </a>
@@ -154,7 +154,7 @@ const NAVBAR_HTML = `
                                 <li>
                                     <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
                                         Glow & Hydration
-                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0 ml-1">
                                             <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
                                         </span>
                                     </a>
@@ -162,7 +162,7 @@ const NAVBAR_HTML = `
                                 <li>
                                     <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
                                         Collagen Stimulation
-                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0 ml-1">
                                             <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
                                         </span>
                                     </a>
@@ -170,7 +170,7 @@ const NAVBAR_HTML = `
                                 <li>
                                     <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
                                         Tone Up
-                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0 ml-1">
                                             <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
                                         </span>
                                     </a>
@@ -188,38 +188,38 @@ const NAVBAR_HTML = `
                     class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase flex items-center gap-1">
                     Wellness <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </a>
-                <div class="dropdown-menu text-left w-80 !p-4 space-y-3">
+                <div class="dropdown-menu text-left w-[460px] !p-6 space-y-4">
                     <div>
-                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-2">
-                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors">Weight Loss</span>
-                            <span class="font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
+                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Weight Loss</span>
+                            <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
                                 <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
                             </span>
                         </a>
                         <span class="block font-body text-[10px] text-charcoal/40 mt-0.5 font-normal">Korean Body Reset</span>
                     </div>
                     <div>
-                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-2">
-                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors">Glow Infusion Therapy</span>
-                            <span class="font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
+                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Glow Infusion Therapy</span>
+                            <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
                                 <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
                             </span>
                         </a>
                         <span class="block font-body text-[10px] text-charcoal/40 mt-0.5 font-normal">IV Infusions &bull; IV Push Therapy</span>
                     </div>
                     <div>
-                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-2">
-                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors">Hormone &amp; Longevity Medicine</span>
-                            <span class="font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
+                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Hormone &amp; Longevity Medicine</span>
+                            <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
                                 <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
                             </span>
                         </a>
-                        <span class="block font-body text-[10px] text-charcoal/40 mt-0.5 font-normal leading-snug">Hormone Optimization &bull; Peptide Therapy &bull; Metabolic Wellness</span>
+                        <span class="block font-body text-[10px] text-charcoal/40 mt-0.5 font-normal whitespace-nowrap">Hormone Optimization &bull; Peptide Therapy &bull; Metabolic Wellness</span>
                     </div>
                     <div>
-                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-2">
-                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors">Men's Testosterone Optimization</span>
-                            <span class="font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
+                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Men's Testosterone Optimization</span>
+                            <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
                                 <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
                             </span>
                         </a>
