@@ -458,17 +458,17 @@ const SEARCH_INDEX = [
   },
   {
     "url": "ldm-water-drop-lifting.html#hero",
-    "title": "Korean Glass Skin LDM Facial",
+    "title": "Korean LDM Water Drop Lifting",
     "pageTitle": "Korean LDM Facial Dallas",
-    "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
-    "content": "Korean-inspired non-invasive skin rejuvenation focused on deep hydration balance, barrier-conscious maintenance, pore refinement, and radiant glass skin quality. Powered by Diasono 310 Korean multi-frequency ultrasound & electroporation technology. In Seoul, healthy-looking hydrated skin is the ultimate luxury.",
-    "snippet": "Korean-inspired non-invasive skin rejuvenation focused on deep hydration balance, barrier-conscious maintenance, pore refinement, and radiant glass skin quality..."
+    "category": "AUTHENTIC KOREAN LDM WATER DROP FACIAL",
+    "content": "Premier Korean Glass Skin Facial Experience one of Korea's most sought-after facial treatments. Using advanced LDM multi-frequency ultrasound, Water Drop Lifting deeply hydrates the skin, strengthens the skin barrier, calms inflammation, refines pores, and restores luminous glass skin—without needles or downtime.",
+    "snippet": "Premier Korean Glass Skin Facial Experience one of Korea's most sought-after facial treatments. Using advanced LDM multi-frequency ultrasound, Water Drop Liftin..."
   },
   {
     "url": "ldm-water-drop-lifting.html#philosophy",
     "title": "Glass Skin Starts with Hydration",
     "pageTitle": "Korean LDM Facial Dallas",
-    "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
+    "category": "AUTHENTIC KOREAN LDM WATER DROP FACIAL",
     "content": "Seoul-Inspired Rejuvenation Glass Skin Starts with Hydration In Seoul, some of the most popular Korean skin rejuvenation treatments are commonly referred to as Water Drop Lifting, Korean LDM Facial Treatments, and Korean Glass Skin Facials. Why? Because healthy-looking, deeply hydrated skin reflects light differently. Modern Korean aesthetics has shifted away from aggressive overprocessing, excessive downtime, and harsh resurfacing toward hydration balance, skin barrier-conscious maintenance, smoother texture and tone, and refined pore appearance. Deep cellular hydration support that improves skin bounce and light reflection. Gentle multi-frequency ultrasound that calms redness and protects barrier health.",
     "snippet": "Seoul-Inspired Rejuvenation Glass Skin Starts with Hydration In Seoul, some of the most popular Korean skin rejuvenation treatments are commonly referred to as ..."
   },
@@ -476,7 +476,7 @@ const SEARCH_INDEX = [
     "url": "ldm-water-drop-lifting.html#water-drop-lifting",
     "title": "What Is Water Drop Lifting?",
     "pageTitle": "Korean LDM Facial Dallas",
-    "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
+    "category": "AUTHENTIC KOREAN LDM WATER DROP FACIAL",
     "content": "In Korean aesthetics, \"Water Drop Lifting\" describes hydration-focused skin rejuvenation approaches designed to reveal smoother texture, refined glow, and healthy elasticity without harsh downtime. Hydrated skin appears smoother, brighter, more refined, and naturally radiant. This \"water drop\" appearance became one of the defining inspirations behind modern Korean glass skin philosophy—creating quiet luxury skin that looks healthy even without foundation. Smoother-looking skin texture and refined pore structure Balanced hydration for natural radiance and skin bounce Brighter-looking skin tone and calm elasticity support Barrier-conscious rejuvenation with zero downtime Korean skin clinics realized that healthy-looking skin responds differently than stressed skin. That insight shifted Seoul aesthetics toward hydration-focused maintenance and barrier-conscious rejuvenation over aggressive overprocessing. Refined light reflection across smooth skin texture Refined pore appearance and balanced oil-water harmony Reduced dependence on heavy foundation or makeup Long-term prevention-focused skin management Diasono 310 combines DIACELL Peel keratin barrier reduction with 3/10MHz multi-frequency ultrasound to significantly increase penetration rates and activate extracellular matrix materials deep in the dermis.",
     "snippet": "In Korean aesthetics, \"Water Drop Lifting\" describes hydration-focused skin rejuvenation approaches designed to reveal smoother texture, refined glow, and healt..."
   },
@@ -484,7 +484,7 @@ const SEARCH_INDEX = [
     "url": "ldm-water-drop-lifting.html#treatment-modes",
     "title": "8 Specialized Treatment Modes",
     "pageTitle": "Korean LDM Facial Dallas",
-    "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
+    "category": "AUTHENTIC KOREAN LDM WATER DROP FACIAL",
     "content": "Unlike traditional facials that follow a one-size-fits-all approach, the Korean Glass Skin LDM Facial incorporates multi-frequency ultrasound, hydro peel, and electroporation into 8 targeted treatment modes tailored to your unique skin needs. Focused on acne-conscious skin rejuvenation, calming inflammation, and supporting healthier-looking skin behavior. Focused on subtle skin refinement, elasticity-conscious rejuvenation, and contour support. Focused on prevention-focused skin maintenance and long-term healthier-looking skin quality. Focused on refreshed-looking skin support, revitalizing dull complexions, and glow-focused maintenance. Focused on calming-conscious hydration support and skin comfort for sensitive or reactive skin. Focused on brighter-looking skin appearance, evening tone, and luminous glow refinement. Focused on recovery-conscious support following laser treatments, microneedling, or skin boosters. Focused on enhanced topical solution infusion support, hydro cleansing, and deep active delivery.",
     "snippet": "Unlike traditional facials that follow a one-size-fits-all approach, the Korean Glass Skin LDM Facial incorporates multi-frequency ultrasound, hydro peel, and e..."
   },
@@ -492,7 +492,7 @@ const SEARCH_INDEX = [
     "url": "ldm-water-drop-lifting.html#dia-sono-310",
     "title": "Powered by Diasono 310",
     "pageTitle": "Korean LDM Facial Dallas",
-    "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
+    "category": "AUTHENTIC KOREAN LDM WATER DROP FACIAL",
     "content": "AUTHORIZED K-BEAUTY SYSTEM Diasono 310 Korean Ultrasound Intentionally selected for SuA Glow in Carrollton, TX, the Diasono 310 system represents Seoul's pinnacle non-invasive skin rejuvenation technology. Combining multi-frequency ultrasound, hydro peel exfoliation, and electroporation infusion, Diasono 310 delivers Quiet Luxury skin care focused on deep hydration, barrier restoration, and lasting glass skin radiance. Stimulates collagen renewal, balances moisture, and calms cellular stress. Gentle exfoliation that clears pores while drenching skin in essential moisture. Creates micro-pathways to maximize topical solution absorption and hydration.",
     "snippet": "AUTHORIZED K-BEAUTY SYSTEM Diasono 310 Korean Ultrasound Intentionally selected for SuA Glow in Carrollton, TX, the Diasono 310 system represents Seoul's pinnac..."
   },
@@ -500,7 +500,7 @@ const SEARCH_INDEX = [
     "url": "ldm-water-drop-lifting.html#treatment-guide",
     "title": "What to Expect & Candidate Care",
     "pageTitle": "Korean LDM Facial Dallas",
-    "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
+    "category": "AUTHENTIC KOREAN LDM WATER DROP FACIAL",
     "content": "Designed for all skin types, including sensitive and melanin-rich skin, with zero downtime and immediate glass skin radiance. Immediate benefits & post-care Patients experience no downtime. You can immediately return to your daily activities with refreshed, calm, and hydrated skin. Notice temporary glow improvement, smoother texture, brighter tone, and refined pore appearance right after treatment. Helps soothe skin barrier irritation and supports long-term hydration retention when performed regularly. Dehydrated, dull, or rough-textured skin seeking immediate glow Sensitive, redness-prone, or barrier-compromised skin types Patients looking for non-invasive Korean glass skin maintenance Asian and melanin-rich skin types seeking zero pigmentation risk The Korean Glass Skin LDM Facial integrates seamlessly into combination plans: Skin Boosters & Salmon PN: Enhances hydration delivery and skin healing SkinPen Microneedling: Prepares or calms skin for optimal collagen renewal Oligio X RF Lifting: Complements non-surgical skin tightening with deep moisture",
     "snippet": "Designed for all skin types, including sensitive and melanin-rich skin, with zero downtime and immediate glass skin radiance. Immediate benefits & post-care Pat..."
   },
@@ -508,7 +508,7 @@ const SEARCH_INDEX = [
     "url": "ldm-water-drop-lifting.html#faq",
     "title": "Korean LDM Facial FAQs",
     "pageTitle": "Korean LDM Facial Dallas",
-    "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
+    "category": "AUTHENTIC KOREAN LDM WATER DROP FACIAL",
     "content": "The Korean Glass Skin LDM Facial is a Korean-inspired non-invasive multi-mode skin rejuvenation treatment focused on hydration-conscious rejuvenation, glow-focused maintenance, healthier-looking skin quality, texture and tone-focused refinement, refined pore appearance, and skin barrier support. Water Drop Lifting is a Korean-inspired hydration-focused skin rejuvenation concept focused on smoother-looking texture, balanced hydration, healthier-looking skin bounce, refined glow, brighter tone, and refined pore appearance. Korean aesthetics prioritizes healthier-looking skin quality, smoother texture, brighter tone, refined pore appearance, and prevention-focused maintenance because healthier-looking skin reduces the appearance of needing heavy makeup or aggressive correction. Korean LDM Facial treatments focus on multi-frequency ultrasound technology, hydration-conscious rejuvenation, skin barrier support, glow-focused maintenance, and personalized skin management strategies rather than aggressive overprocessing approaches. Many patients pursue Korean-inspired skin rejuvenation treatments as part of a broader \"glass skin\" strategy focused on smoother texture, balanced hydration, healthier skin bounce, refined glow, brighter tone, and subtle radiance. Electroporation-based skin rejuvenation technologies are commonly utilized to support enhanced topical solution infusion and hydration-focused skin maintenance without needle injections. Yes. Treatment recommendations are individualized based on skin condition and clinical assessment. Korean-inspired skin rejuvenation approaches prioritize gentler, hydration-conscious treatment planning suitable for sensitive skin. Many patients experience no downtime depending on individualized treatment planning and skin sensitivity. You can apply sunscreen or makeup and immediately return to your daily schedule. Korean beauty philosophy prioritizes hydration balance, skin barrier maintenance, subtle refinement, and long-term skin quality because healthier-looking skin is viewed as the true foundation of beauty. SuA Glow Med Spa in Carrollton offers Korean-inspired Glass Skin LDM Facial treatments for patients across Dallas, Plano, Frisco, Coppell, Irving, Southlake, Grapevine, Richardson, Addison, and Fort Worth.",
     "snippet": "The Korean Glass Skin LDM Facial is a Korean-inspired non-invasive multi-mode skin rejuvenation treatment focused on hydration-conscious rejuvenation, glow-focu..."
   },
@@ -516,7 +516,7 @@ const SEARCH_INDEX = [
     "url": "ldm-water-drop-lifting.html",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "Korean LDM Facial Dallas",
-    "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
+    "category": "AUTHENTIC KOREAN LDM WATER DROP FACIAL",
     "content": "K-Beauty Medspa • Carrollton HQ Korean Glass Skin LDM Facial treatment recommendations at SuA Glow are individualized based on patient goals, anatomy, medical history, and clinical assessment pursuant to supervising physician-approved protocols and applicable Texas regulations.",
     "snippet": "K-Beauty Medspa • Carrollton HQ Korean Glass Skin LDM Facial treatment recommendations at SuA Glow are individualized based on patient goals, anatomy, medical h..."
   },
