@@ -189,20 +189,40 @@ const NAVBAR_HTML = `
                     Wellness <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </a>
                 <div class="dropdown-menu text-left w-80 !p-3 space-y-1">
-                    <a href="#" class="dropdown-link rounded-lg py-3 px-4 hover:bg-off-white transition-all">
-                        <span class="block font-medium text-near-black">Weight Loss</span>
+                    <a href="#" class="dropdown-link rounded-lg py-3 px-4 hover:bg-off-white transition-all group">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="font-medium text-near-black">Weight Loss</span>
+                            <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                                <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                            </span>
+                        </div>
                         <span class="block text-[10px] text-charcoal/50 mt-0.5 font-normal">Korean Body Reset</span>
                     </a>
-                    <a href="#" class="dropdown-link rounded-lg py-3 px-4 hover:bg-off-white transition-all">
-                        <span class="block font-medium text-near-black">Glow Infusion Therapy</span>
+                    <a href="#" class="dropdown-link rounded-lg py-3 px-4 hover:bg-off-white transition-all group">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="font-medium text-near-black">Glow Infusion Therapy</span>
+                            <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                                <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                            </span>
+                        </div>
                         <span class="block text-[10px] text-charcoal/50 mt-0.5 font-normal">IV Infusions &bull; IV Push Therapy</span>
                     </a>
-                    <a href="#" class="dropdown-link rounded-lg py-3 px-4 hover:bg-off-white transition-all">
-                        <span class="block font-medium text-near-black">Hormone &amp; Longevity Medicine</span>
+                    <a href="#" class="dropdown-link rounded-lg py-3 px-4 hover:bg-off-white transition-all group">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="font-medium text-near-black">Hormone &amp; Longevity Medicine</span>
+                            <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                                <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                            </span>
+                        </div>
                         <span class="block text-[10px] text-charcoal/50 mt-0.5 font-normal leading-snug">Hormone Optimization &bull; Peptide Therapy &bull; Metabolic Wellness</span>
                     </a>
-                    <a href="#" class="dropdown-link rounded-lg py-3 px-4 hover:bg-off-white transition-all">
-                        <span class="block font-medium text-near-black">Men's Testosterone Optimization</span>
+                    <a href="#" class="dropdown-link rounded-lg py-3 px-4 hover:bg-off-white transition-all group">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="font-medium text-near-black">Men's Testosterone Optimization</span>
+                            <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                                <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                            </span>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -455,20 +475,41 @@ const NAVBAR_HTML = `
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-4 pl-4 mt-2">
                         <div>
-                            <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors font-semibold">Weight Loss</a>
+                            <div class="flex items-center justify-between gap-2">
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors font-semibold">Weight Loss</a>
+                                <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                                    <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                </span>
+                            </div>
                             <span class="block text-[10px] text-charcoal/40">Korean Body Reset</span>
                         </div>
                         <div>
-                            <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors font-semibold">Glow Infusion Therapy</a>
+                            <div class="flex items-center justify-between gap-2">
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors font-semibold">Glow Infusion Therapy</a>
+                                <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                                    <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                </span>
+                            </div>
                             <span class="block text-[10px] text-charcoal/40">IV Infusions &bull; IV Push Therapy</span>
                         </div>
                         <div>
-                            <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors font-semibold">Hormone &amp; Longevity Medicine</a>
+                            <div class="flex items-center justify-between gap-2">
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors font-semibold">Hormone &amp; Longevity Medicine</a>
+                                <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                                    <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                </span>
+                            </div>
                             <span class="block text-[10px] text-charcoal/40">Hormone Optimization &bull; Peptide Therapy &bull; Metabolic Wellness</span>
                         </div>
                         <div>
-                            <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors font-semibold">Men's Testosterone Optimization</a>
+                            <div class="flex items-center justify-between gap-2">
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors font-semibold">Men's Testosterone Optimization</a>
+                                <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                                    <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                </span>
+                            </div>
                         </div>
+                    </div>
                 </div>
 
                 <!-- Our Story -->
