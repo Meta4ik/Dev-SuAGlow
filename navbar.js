@@ -57,27 +57,35 @@ const NAVBAR_HTML = `
                 <div class="mega-menu p-10">
                     <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 text-left">
 
-                        <!-- Col 1: Skin Boosters & Hair Loss -->
+                        <!-- Col 1: Skin Booster & Scar Treatment -->
                         <div>
                             <a href="skin-quality-boosters.html" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
                                 <i data-lucide="droplets" class="w-3 h-3 mr-2"></i>Skin Quality Boosters
                             </a>
-                            <ul class="space-y-1 mb-6">
+                            <ul class="space-y-1 mb-8">
                                 <li><a href="skin-quality-boosters.html#healing-essence" class="dropdown-link !p-0 hover:!pl-2">Healing Essence</a></li>
                                 <li><a href="skin-quality-boosters.html#hydration-glow" class="dropdown-link !p-0 hover:!pl-2">Hydration & Glow</a></li>
                                 <li><a href="skin-quality-boosters.html#collagen-stimulation" class="dropdown-link !p-0 hover:!pl-2">Collagen Stimulation</a></li>
                                 <li><a href="skin-quality-boosters.html#dermal-matrix" class="dropdown-link !p-0 hover:!pl-2">Dermal Matrix</a></li>
                             </ul>
 
-
+                            <a href="scar-treatment.html" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="shield-plus" class="w-3 h-3 mr-2"></i>Scar Treatment
+                            </a>
+                            <ul class="space-y-1">
+                                <li><a href="scar-treatment.html#acne-scars" class="dropdown-link !p-0 hover:!pl-2">Acne Scars</a></li>
+                                <li><a href="scar-treatment.html#surgical-scars" class="dropdown-link !p-0 hover:!pl-2">Surgical Scars</a></li>
+                                <li><a href="scar-treatment.html#stretch-marks" class="dropdown-link !p-0 hover:!pl-2">Stretch Marks</a></li>
+                                <li><a href="scar-treatment.html#keloid" class="dropdown-link !p-0 hover:!pl-2">Keloid</a></li>
+                            </ul>
                         </div>
 
-                        <!-- Col 2: Injectables & Scar Treatment -->
+                        <!-- Col 2: Injectables -->
                         <div>
                             <a href="injectables.html" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
                                 <i data-lucide="syringe" class="w-3 h-3 mr-2"></i>Injectables
                             </a>
-                            <ul class="space-y-3 mb-6">
+                            <ul class="space-y-3">
                                 <li>
                                     <a href="cosmetic-tox.html" class="dropdown-link !p-0 hover:!pl-2">
                                         Cosmetic Tox
@@ -103,43 +111,40 @@ const NAVBAR_HTML = `
                                     </a>
                                 </li>
                             </ul>
-
-                            <a href="scar-treatment.html" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
-                                <i data-lucide="shield-plus" class="w-3 h-3 mr-2"></i>Scar Treatment
-                            </a>
-                            <ul class="space-y-1">
-                                <li><a href="scar-treatment.html#acne-scars" class="dropdown-link !p-0 hover:!pl-2">Acne Scars</a></li>
-                                <li><a href="scar-treatment.html#surgical-scars" class="dropdown-link !p-0 hover:!pl-2">Surgical Scars</a></li>
-                                <li><a href="scar-treatment.html#stretch-marks" class="dropdown-link !p-0 hover:!pl-2">Stretch Marks</a></li>
-                                <li><a href="scar-treatment.html#keloid" class="dropdown-link !p-0 hover:!pl-2">Keloid</a></li>
-                            </ul>
                         </div>
 
-                        <!-- Col 3: SuA Glow Signature -->
-                        <div>
-                            <a href="signature-treatment.html" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
-                                <i data-lucide="sparkles" class="w-3 h-3 mr-2"></i>Signature Treatments
-                            </a>
-                            <ul class="space-y-1 mb-5">
-                                <li><a href="signature-treatment.html" class="dropdown-link !p-0 hover:!pl-2">SuA Glow Signature Treatment</a></li>
-                                <li><a href="one-day-glow.html" class="dropdown-link !p-0 hover:!pl-2">One Day Glow</a></li>
-                                <li><a href="bridal-glow.html" class="dropdown-link !p-0 hover:!pl-2">Bridal Glow</a></li>
-                                <li><a href="seoul-man.html" class="dropdown-link !p-0 hover:!pl-2">Seoul Man Treatment</a></li>
-                                <li><a href="ldm-water-droplet-lifting.html" class="dropdown-link !p-0 hover:!pl-2">LDM Water Droplet Lifting</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Col 4: Skin Rejuvenation & K-Beauty Facials -->
+                        <!-- Col 3: Skin Rejuvenation -->
                         <div>
                             <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
                                 <i data-lucide="scan-face" class="w-3 h-3 mr-2"></i>Skin Rejuvenation
                             </a>
-                            <ul class="space-y-1 mb-6">
+                            <ul class="space-y-2">
                                 <li><a href="oligio-x.html" class="dropdown-link !p-0 hover:!pl-2">Oligio X RF Lifting</a></li>
                                 <li><a href="ldm-water-droplet-lifting.html" class="dropdown-link !p-0 hover:!pl-2">LDM Water Droplet Lifting</a></li>
                                 <li><a href="microneedling.html" class="dropdown-link !p-0 hover:!pl-2">Microneedling</a></li>
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
+                                        Korean Scalp & Hair Rejuvenation
+                                        <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left shrink-0">
+                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                        </span>
+                                    </a>
+                                </li>
                             </ul>
-                            
+                        </div>
+
+                        <!-- Col 4: Signature Treatments & K-Beauty Facials -->
+                        <div>
+                            <a href="signature-treatment.html" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="sparkles" class="w-3 h-3 mr-2"></i>Signature Treatments
+                            </a>
+                            <ul class="space-y-1 mb-6">
+                                <li><a href="signature-treatment.html" class="dropdown-link !p-0 hover:!pl-2">SuA Glow Signature Treatment</a></li>
+                                <li><a href="one-day-glow.html" class="dropdown-link !p-0 hover:!pl-2">One Day Glow</a></li>
+                                <li><a href="bridal-glow.html" class="dropdown-link !p-0 hover:!pl-2">Bridal Glow</a></li>
+                                <li><a href="seoul-man.html" class="dropdown-link !p-0 hover:!pl-2">Seoul Man Treatment</a></li>
+                            </ul>
+
                             <a href="#" class="badge-standard mb-6 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
                                 <i data-lucide="smile" class="w-3 h-3 mr-2"></i>K-Beauty Facials
                             </a>
@@ -173,6 +178,39 @@ const NAVBAR_HTML = `
                             </ul>
                         </div>
 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wellness -->
+            <div class="nav-item-dropdown">
+                <a href="#"
+                    class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase flex items-center gap-1">
+                    Wellness <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                </a>
+                <div class="dropdown-menu text-left w-80 p-6 space-y-4">
+                    <div>
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2">
+                            Weight Loss
+                            <span class="block text-[10px] text-charcoal/40 mt-0.5 font-normal">Korean Body Reset</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2">
+                            Glow Infusion Therapy
+                            <span class="block text-[10px] text-charcoal/40 mt-0.5 font-normal">IV Infusions &bull; IV Push Therapy</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2">
+                            Hormone &amp; Longevity Medicine
+                            <span class="block text-[10px] text-charcoal/40 mt-0.5 font-normal">Hormone Optimization &bull; Peptide Therapy &bull; Metabolic Wellness</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2">
+                            Men's Testosterone Optimization
+                        </a>
                     </div>
                 </div>
             </div>
@@ -316,6 +354,19 @@ const NAVBAR_HTML = `
                             </div>
                         </div>
 
+                        <!-- Scar Treatment -->
+                        <div>
+                            <a href="scar-treatment.html" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="shield-plus" class="w-3 h-3 mr-2"></i>Scar Treatment
+                            </a>
+                            <div class="flex flex-col gap-2 mt-2">
+                                <a href="scar-treatment.html#acne-scars" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Acne Scars</a>
+                                <a href="scar-treatment.html#surgical-scars" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Surgical Scars</a>
+                                <a href="scar-treatment.html#stretch-marks" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Stretch Marks</a>
+                                <a href="scar-treatment.html#keloid" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Keloid</a>
+                            </div>
+                        </div>
+
                         <!-- Injectables -->
                         <div>
                             <a href="injectables.html" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
@@ -341,40 +392,6 @@ const NAVBAR_HTML = `
                             </div>
                         </div>
 
-                        <!-- Scar Treatment -->
-                        <div>
-                            <a href="scar-treatment.html" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
-                                <i data-lucide="shield-plus" class="w-3 h-3 mr-2"></i>Scar Treatment
-                            </a>
-                            <div class="flex flex-col gap-2 mt-2">
-                                <a href="scar-treatment.html#acne-scars" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Acne Scars</a>
-                                <a href="scar-treatment.html#surgical-scars" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Surgical Scars</a>
-                                <a href="scar-treatment.html#stretch-marks" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Stretch Marks</a>
-                                <a href="scar-treatment.html#keloid" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Keloid</a>
-                            </div>
-                        </div>
-                        
-
-
-                        <!-- SuA Glow Signature -->
-                        <div>
-                            <a href="signature-treatment.html" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
-                                <i data-lucide="sparkles" class="w-3 h-3 mr-2"></i>Signature Treatments
-                            </a>
-                            <div class="flex flex-col gap-2 mt-2">
-                                <a href="signature-treatment.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">SuA Glow Signature Treatment</a>
-                                <a href="one-day-glow.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">One Day Glow</a>
-                                <a href="bridal-glow.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Bridal Glow</a>
-                                <a href="seoul-man.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Seoul Man Treatment</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
-                                    Acne Treatment
-                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
-                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                        
                         <!-- Skin Rejuvenation -->
                         <div>
                             <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
@@ -384,9 +401,28 @@ const NAVBAR_HTML = `
                                 <a href="oligio-x.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Oligio X RF Lifting</a>
                                 <a href="ldm-water-droplet-lifting.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Water Droplet Lifting</a>
                                 <a href="microneedling.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Microneedling</a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
+                                    Korean Scalp & Hair Rejuvenation
+                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                    </span>
+                                </a>
                             </div>
                         </div>
 
+                        <!-- Signature Treatments -->
+                        <div>
+                            <a href="signature-treatment.html" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
+                                <i data-lucide="sparkles" class="w-3 h-3 mr-2"></i>Signature Treatments
+                            </a>
+                            <div class="flex flex-col gap-2 mt-2">
+                                <a href="signature-treatment.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">SuA Glow Signature Treatment</a>
+                                <a href="one-day-glow.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">One Day Glow</a>
+                                <a href="bridal-glow.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Bridal Glow</a>
+                                <a href="seoul-man.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Seoul Man Treatment</a>
+                            </div>
+                        </div>
+                        
                         <!-- K-Beauty Facials -->
                         <div>
                             <a href="#" class="badge-standard !py-1 !px-3 mb-3 bg-off-white border-taupe/10 hover:bg-taupe hover:text-white transition-colors">
@@ -417,6 +453,30 @@ const NAVBAR_HTML = `
                         </div>
 
                     </div>
+                </div>
+
+                <!-- Wellness -->
+                <div class="mobile-accordion">
+                    <button
+                        class="accordion-trigger flex items-center justify-between w-full font-heading text-lg text-near-black py-2 text-left hover:text-taupe transition-colors">
+                        Wellness <i data-lucide="plus" class="w-4 h-4"></i>
+                    </button>
+                    <div class="accordion-content hidden flex flex-col gap-4 pl-4 mt-2">
+                        <div>
+                            <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors font-semibold">Weight Loss</a>
+                            <span class="block text-[10px] text-charcoal/40">Korean Body Reset</span>
+                        </div>
+                        <div>
+                            <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors font-semibold">Glow Infusion Therapy</a>
+                            <span class="block text-[10px] text-charcoal/40">IV Infusions &bull; IV Push Therapy</span>
+                        </div>
+                        <div>
+                            <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors font-semibold">Hormone &amp; Longevity Medicine</a>
+                            <span class="block text-[10px] text-charcoal/40">Hormone Optimization &bull; Peptide Therapy &bull; Metabolic Wellness</span>
+                        </div>
+                        <div>
+                            <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors font-semibold">Men's Testosterone Optimization</a>
+                        </div>
                 </div>
 
                 <!-- Our Story -->
