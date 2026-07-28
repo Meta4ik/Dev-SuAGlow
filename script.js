@@ -227,6 +227,7 @@ function initMobileDrawer() {
       mobileDrawer.classList.remove('hidden');
       setTimeout(() => mobileDrawer.classList.add('open'), 10);
       document.body.style.overflow = 'hidden';
+      menuBtn.setAttribute('aria-expanded', 'true');
     });
   }
 
@@ -235,6 +236,7 @@ function initMobileDrawer() {
       mobileDrawer.classList.remove('open');
       setTimeout(() => mobileDrawer.classList.add('hidden'), 400);
       document.body.style.overflow = '';
+      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
     };
 
     drawerClose.addEventListener('click', closeDrawer);
@@ -242,6 +244,13 @@ function initMobileDrawer() {
     // Close drawer when any link is clicked within it
     mobileDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', closeDrawer);
+    });
+
+    // Close drawer on Escape key press
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileDrawer.classList.contains('hidden')) {
+        closeDrawer();
+      }
     });
   }
 }

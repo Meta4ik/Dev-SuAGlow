@@ -304,30 +304,30 @@ const NAVBAR_HTML = `
             </div>
 
             <!-- Mobile Search Trigger -->
-            <button id="mobile-search-trigger" class="min-[1180px]:hidden text-charcoal hover:text-taupe transition-colors flex items-center justify-center p-2 mr-2" aria-label="Search site">
+            <button id="mobile-search-trigger" class="min-[1180px]:hidden text-charcoal hover:text-taupe transition-colors flex items-center justify-center p-2 min-w-[44px] min-h-[44px] mr-1 rounded-lg active:scale-95" aria-label="Search site">
                 <i data-lucide="search" class="w-6 h-6"></i>
             </button>
 
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="min-[1180px]:hidden text-charcoal hover:text-taupe transition-colors">
+            <!-- Mobile Menu Button (Accessible during scroll with 44px tap target) -->
+            <button id="menu-btn" class="min-[1180px]:hidden text-charcoal hover:text-taupe transition-colors p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center relative z-50 rounded-lg active:scale-95" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
                 <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
             </button>
         </div>
     </div>
 </nav>
 
-<!-- Mobile Drawer (Full Screen) -->
-<div id="mobile-drawer" class="fixed inset-0 z-[100] bg-white hidden">
+<!-- Mobile Drawer (Full Screen Accessible Overlay) -->
+<div id="mobile-drawer" class="fixed inset-0 z-[100] bg-white hidden" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
     <div class="flex flex-col h-full text-left">
         <!-- Drawer Header -->
-        <div class="flex items-center justify-between p-8 border-b border-off-white">
+        <div class="flex items-center justify-between p-6 md:p-8 border-b border-off-white">
             <img src="assets/logo-main.webp" alt="SuA K-Glow" class="logo-brand h-7 w-auto object-contain">
-            <button id="drawer-close" class="text-charcoal p-2">
+            <button id="drawer-close" class="text-charcoal p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-off-white transition-colors" aria-label="Close navigation menu">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
         </div>
         <!-- Drawer Links -->
-        <div class="flex-1 overflow-y-auto p-6">
+        <div class="flex-1 overflow-y-auto overscroll-contain p-6">
             <div class="flex flex-col gap-6">
 
                 <!-- Promotions CTA -->
