@@ -381,7 +381,7 @@ const SEARCH_INDEX = [
     "title": "Refined Results",
     "pageTitle": "SuA K-Glow",
     "category": "Premier\n                    K-Beauty Destination",
-    "content": "Discover our most sought-after K-Beauty treatments, focused on hydration, skin quality, and natural rejuvenation. Healing, hydration, and collagen support for true Korean Glass Skin. Cosmetic & Medical Tox, HA Fillers, and Biostimulators for balanced results. Advanced protocols for acne scars, surgical scars, stretch marks, and keloids. SuA Glow Signature, One Day Glow, and Bridal Glow for special occasions. Oligio X RF Lifting, LDM Ultrasound, and Microneedling for skin tightening. Water Droplet Lifting, Salmon PN Facial, and Glow & Hydration protocols.",
+    "content": "Discover our most sought-after K-Beauty treatments, focused on hydration, skin quality, and natural rejuvenation. Healing, hydration, and collagen support for true Korean Glass Skin. Cosmetic & Medical Tox, HA Fillers, and Biostimulators for balanced results. Advanced protocols for acne scars, surgical scars, stretch marks, and keloids. SuA Glow Signature, One Day Glow, and Bridal Glow for special occasions. Oligio X RF Lifting, LDM Ultrasound, and Microneedling for skin tightening. Water Drop Lifting, Salmon PN Facial, and Glow & Hydration protocols.",
     "snippet": "Discover our most sought-after K-Beauty treatments, focused on hydration, skin quality, and natural rejuvenation. Healing, hydration, and collagen support for t..."
   },
   {
@@ -477,7 +477,7 @@ const SEARCH_INDEX = [
     "title": "What Is Water Drop Lifting?",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
-    "content": "In Korean aesthetics, \"Water Drop Lifting\" describes hydration-focused skin rejuvenation approaches designed to reveal smoother texture, refined glow, and healthy elasticity without harsh downtime. Hydrated skin appears smoother, brighter, more refined, and naturally radiant. This \"water droplet\" appearance became one of the defining inspirations behind modern Korean glass skin philosophy—creating quiet luxury skin that looks healthy even without foundation. Smoother-looking skin texture and refined pore structure Balanced hydration for natural radiance and skin bounce Brighter-looking skin tone and calm elasticity support Barrier-conscious rejuvenation with zero downtime Korean skin clinics realized that healthy-looking skin responds differently than stressed skin. That insight shifted Seoul aesthetics toward hydration-focused maintenance and barrier-conscious rejuvenation over aggressive overprocessing. Refined light reflection across smooth skin texture Refined pore appearance and balanced oil-water harmony Reduced dependence on heavy foundation or makeup Long-term prevention-focused skin management Diasono 310 combines DIACELL Peel keratin barrier reduction with 3/10MHz multi-frequency ultrasound to significantly increase penetration rates and activate extracellular matrix materials deep in the dermis.",
+    "content": "In Korean aesthetics, \"Water Drop Lifting\" describes hydration-focused skin rejuvenation approaches designed to reveal smoother texture, refined glow, and healthy elasticity without harsh downtime. Hydrated skin appears smoother, brighter, more refined, and naturally radiant. This \"water drop\" appearance became one of the defining inspirations behind modern Korean glass skin philosophy—creating quiet luxury skin that looks healthy even without foundation. Smoother-looking skin texture and refined pore structure Balanced hydration for natural radiance and skin bounce Brighter-looking skin tone and calm elasticity support Barrier-conscious rejuvenation with zero downtime Korean skin clinics realized that healthy-looking skin responds differently than stressed skin. That insight shifted Seoul aesthetics toward hydration-focused maintenance and barrier-conscious rejuvenation over aggressive overprocessing. Refined light reflection across smooth skin texture Refined pore appearance and balanced oil-water harmony Reduced dependence on heavy foundation or makeup Long-term prevention-focused skin management Diasono 310 combines DIACELL Peel keratin barrier reduction with 3/10MHz multi-frequency ultrasound to significantly increase penetration rates and activate extracellular matrix materials deep in the dermis.",
     "snippet": "In Korean aesthetics, \"Water Drop Lifting\" describes hydration-focused skin rejuvenation approaches designed to reveal smoother texture, refined glow, and healt..."
   },
   {
@@ -821,7 +821,7 @@ const SEARCH_INDEX = [
     "title": "The SuA Glow Event Philosophy",
     "pageTitle": "One Day Glow Treatment",
     "category": "One Day Glow",
-    "content": "Seoul Precision. Event Ready. At SuA Glow, One Day Glow treatment planning prioritizes strategic treatment selection, hydration-focused refinement, and individualized event timing. Because healthy-looking skin often photographs best. We focus on subtle, camera-friendly skin improvement that leaves you looking like yourself, only more rested and radiant. We schedule and select treatments based precisely on your upcoming event timeline. Prioritizing modalities that deliver maximum glow with the lowest risk of visible downtime. Leveraging Korean water droplet facial techniques to plump and smooth the skin's surface.",
+    "content": "Seoul Precision. Event Ready. At SuA Glow, One Day Glow treatment planning prioritizes strategic treatment selection, hydration-focused refinement, and individualized event timing. Because healthy-looking skin often photographs best. We focus on subtle, camera-friendly skin improvement that leaves you looking like yourself, only more rested and radiant. We schedule and select treatments based precisely on your upcoming event timeline. Prioritizing modalities that deliver maximum glow with the lowest risk of visible downtime. Leveraging Korean water drop facial techniques to plump and smooth the skin's surface.",
     "snippet": "Seoul Precision. Event Ready. At SuA Glow, One Day Glow treatment planning prioritizes strategic treatment selection, hydration-focused refinement, and individu..."
   },
   {
@@ -829,8 +829,8 @@ const SEARCH_INDEX = [
     "title": "The Event Prep Journey",
     "pageTitle": "One Day Glow Treatment",
     "category": "One Day Glow",
-    "content": "Evaluation of your event timeline, skin texture, hydration, and makeup concerns. A customized plan utilizing SkinTox, hydration boosters, or water droplet techniques. Designed for minimal visible downtime, prioritizing a quick return to normal activities. Refreshed, polished, and naturally radiant skin ready for photography and lighting.",
-    "snippet": "Evaluation of your event timeline, skin texture, hydration, and makeup concerns. A customized plan utilizing SkinTox, hydration boosters, or water droplet techn..."
+    "content": "Evaluation of your event timeline, skin texture, hydration, and makeup concerns. A customized plan utilizing SkinTox, hydration boosters, or water drop techniques. Designed for minimal visible downtime, prioritizing a quick return to normal activities. Refreshed, polished, and naturally radiant skin ready for photography and lighting.",
+    "snippet": "Evaluation of your event timeline, skin texture, hydration, and makeup concerns. A customized plan utilizing SkinTox, hydration boosters, or water drop techniqu..."
   },
   {
     "url": "one-day-glow.html#faq",
@@ -1389,8 +1389,8 @@ const SEARCH_INDEX = [
     "title": "K-Beauty Facials",
     "pageTitle": "Skin Health",
     "category": "Skin Health",
-    "content": "Traditional K-Beauty philosophies infused with medical-grade efficacy. Our signature facials, including the acclaimed Salmon PN Facial and Water Droplet Lifting, focus on deep hydration, skin barrier repair, and a luminous, dewy finish. • Salmon PN Facial • Water Droplet Lifting • Glow & Hydration Therapy",
-    "snippet": "Traditional K-Beauty philosophies infused with medical-grade efficacy. Our signature facials, including the acclaimed Salmon PN Facial and Water Droplet Lifting..."
+    "content": "Traditional K-Beauty philosophies infused with medical-grade efficacy. Our signature facials, including the acclaimed Salmon PN Facial and Water Drop Lifting, focus on deep hydration, skin barrier repair, and a luminous, dewy finish. • Salmon PN Facial • Water Drop Lifting • Glow & Hydration Therapy",
+    "snippet": "Traditional K-Beauty philosophies infused with medical-grade efficacy. Our signature facials, including the acclaimed Salmon PN Facial and Water Drop Lifting, f..."
   },
   {
     "url": "skin-health.html",

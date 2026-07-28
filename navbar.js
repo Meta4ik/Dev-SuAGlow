@@ -120,7 +120,7 @@ const NAVBAR_HTML = `
                             </a>
                             <ul class="space-y-2">
                                 <li><a href="oligio-x.html" class="dropdown-link !p-0 hover:!pl-2">Oligio X RF Lifting</a></li>
-                                <li><a href="ldm-water-droplet-lifting.html" class="dropdown-link !p-0 hover:!pl-2">LDM Water Droplet Lifting</a></li>
+                                <li><a href="ldm-water-droplet-lifting.html" class="dropdown-link !p-0 hover:!pl-2">LDM Water Drop Lifting</a></li>
                                 <li><a href="microneedling.html" class="dropdown-link !p-0 hover:!pl-2">Microneedling</a></li>
                                 <li>
                                     <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
@@ -149,7 +149,7 @@ const NAVBAR_HTML = `
                                 <i data-lucide="smile" class="w-3 h-3 mr-2"></i>K-Beauty Facials
                             </a>
                             <ul class="space-y-1">
-                                <li><a href="ldm-water-droplet-lifting.html" class="dropdown-link !p-0 hover:!pl-2">LDM Water Droplet Lifting</a></li>
+                                <li><a href="ldm-water-droplet-lifting.html" class="dropdown-link !p-0 hover:!pl-2">LDM Water Drop Lifting</a></li>
                                 <li><a href="salmon-pn-facial.html" class="dropdown-link !p-0 hover:!pl-2">Salmon PN Facial</a></li>
                                 <li>
                                     <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
@@ -411,7 +411,7 @@ const NAVBAR_HTML = `
                             </a>
                             <div class="flex flex-col gap-2 mt-2">
                                 <a href="oligio-x.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Oligio X RF Lifting</a>
-                                <a href="ldm-water-droplet-lifting.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Water Droplet Lifting</a>
+                                <a href="ldm-water-droplet-lifting.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Water Drop Lifting</a>
                                 <a href="microneedling.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Microneedling</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
                                     Korean Scalp & Hair Rejuvenation
@@ -441,7 +441,7 @@ const NAVBAR_HTML = `
                                 <i data-lucide="smile" class="w-3 h-3 mr-2"></i>K-Beauty Facials
                             </a>
                             <div class="flex flex-col gap-2 mt-2">
-                                <a href="ldm-water-droplet-lifting.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Water Droplet Lifting</a>
+                                <a href="ldm-water-droplet-lifting.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Water Drop Lifting</a>
                                 <a href="salmon-pn-facial.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Salmon PN Facial</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
                                     Glow &amp; Hydration
