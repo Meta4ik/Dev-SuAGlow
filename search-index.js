@@ -466,11 +466,11 @@ const SEARCH_INDEX = [
   },
   {
     "url": "ldm-water-drop-lifting.html#philosophy",
-    "title": "Glass Skin Starts with Hydration",
+    "title": "Discover Why Korean Skin Always Looks Different",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "AUTHENTIC KOREAN LDM WATER DROP FACIAL",
-    "content": "Seoul-Inspired Rejuvenation Glass Skin Starts with Hydration In Seoul, some of the most popular Korean skin rejuvenation treatments are commonly referred to as Water Drop Lifting, Korean LDM Facial Treatments, and Korean Glass Skin Facials. Why? Because healthy-looking, deeply hydrated skin reflects light differently. Modern Korean aesthetics has shifted away from aggressive overprocessing, excessive downtime, and harsh resurfacing toward hydration balance, skin barrier-conscious maintenance, smoother texture and tone, and refined pore appearance. Deep cellular hydration support that improves skin bounce and light reflection. Gentle multi-frequency ultrasound that calms redness and protects barrier health.",
-    "snippet": "Seoul-Inspired Rejuvenation Glass Skin Starts with Hydration In Seoul, some of the most popular Korean skin rejuvenation treatments are commonly referred to as ..."
+    "content": "Seoul-Inspired Rejuvenation Glass Skin Starts with Hydration In Korea, beautiful skin isn't created with heavy makeup. It's created by keeping the skin deeply hydrated, calm, healthy, and resilient every single day. That's why Korean skin clinics have embraced LDM Water Drop Lifting—a physician-guided treatment that restores hydration, strengthens the skin barrier, calms visible redness, and reveals naturally luminous glass skin. Flood skin with lasting moisture for a fresh, radiant glow. Build stronger, more resilient skin that stays hydrated longer. Reveal smoother texture, refined pores, and naturally luminous skin.",
+    "snippet": "Seoul-Inspired Rejuvenation Glass Skin Starts with Hydration In Korea, beautiful skin isn't created with heavy makeup. It's created by keeping the skin deeply h..."
   },
   {
     "url": "ldm-water-drop-lifting.html#water-drop-lifting",
