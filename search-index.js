@@ -457,7 +457,7 @@ const SEARCH_INDEX = [
     "snippet": "Every treatment at SuA Glow begins with a clinical consultation. Sophia will assess your skin, listen to your goals, and build a plan that makes sense for your ..."
   },
   {
-    "url": "ldm-water-droplet-lifting.html#hero",
+    "url": "ldm-water-drop-lifting.html#hero",
     "title": "Korean Glass Skin LDM Facial",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
@@ -465,7 +465,7 @@ const SEARCH_INDEX = [
     "snippet": "Korean-inspired non-invasive skin rejuvenation focused on deep hydration balance, barrier-conscious maintenance, pore refinement, and radiant glass skin quality..."
   },
   {
-    "url": "ldm-water-droplet-lifting.html#philosophy",
+    "url": "ldm-water-drop-lifting.html#philosophy",
     "title": "Glass Skin Starts with Hydration",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
@@ -473,7 +473,7 @@ const SEARCH_INDEX = [
     "snippet": "Seoul-Inspired Rejuvenation Glass Skin Starts with Hydration In Seoul, some of the most popular Korean skin rejuvenation treatments are commonly referred to as ..."
   },
   {
-    "url": "ldm-water-droplet-lifting.html#water-drop-lifting",
+    "url": "ldm-water-drop-lifting.html#water-drop-lifting",
     "title": "What Is Water Drop Lifting?",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
@@ -481,7 +481,7 @@ const SEARCH_INDEX = [
     "snippet": "In Korean aesthetics, \"Water Drop Lifting\" describes hydration-focused skin rejuvenation approaches designed to reveal smoother texture, refined glow, and healt..."
   },
   {
-    "url": "ldm-water-droplet-lifting.html#treatment-modes",
+    "url": "ldm-water-drop-lifting.html#treatment-modes",
     "title": "8 Specialized Treatment Modes",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
@@ -489,7 +489,7 @@ const SEARCH_INDEX = [
     "snippet": "Unlike traditional facials that follow a one-size-fits-all approach, the Korean Glass Skin LDM Facial incorporates multi-frequency ultrasound, hydro peel, and e..."
   },
   {
-    "url": "ldm-water-droplet-lifting.html#dia-sono-310",
+    "url": "ldm-water-drop-lifting.html#dia-sono-310",
     "title": "Powered by Diasono 310",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
@@ -497,7 +497,7 @@ const SEARCH_INDEX = [
     "snippet": "AUTHORIZED K-BEAUTY SYSTEM Diasono 310 Korean Ultrasound Intentionally selected for SuA Glow in Carrollton, TX, the Diasono 310 system represents Seoul's pinnac..."
   },
   {
-    "url": "ldm-water-droplet-lifting.html#treatment-guide",
+    "url": "ldm-water-drop-lifting.html#treatment-guide",
     "title": "What to Expect & Candidate Care",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
@@ -505,7 +505,7 @@ const SEARCH_INDEX = [
     "snippet": "Designed for all skin types, including sensitive and melanin-rich skin, with zero downtime and immediate glass skin radiance. Immediate benefits & post-care Pat..."
   },
   {
-    "url": "ldm-water-droplet-lifting.html#faq",
+    "url": "ldm-water-drop-lifting.html#faq",
     "title": "Korean LDM Facial FAQs",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
@@ -513,7 +513,7 @@ const SEARCH_INDEX = [
     "snippet": "The Korean Glass Skin LDM Facial is a Korean-inspired non-invasive multi-mode skin rejuvenation treatment focused on hydration-conscious rejuvenation, glow-focu..."
   },
   {
-    "url": "ldm-water-droplet-lifting.html",
+    "url": "ldm-water-drop-lifting.html",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "K-BEAUTY REJUVENATION • DALLAS-FORT WORTH HQ",
