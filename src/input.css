@@ -1200,3 +1200,91 @@ mark.search-highlight {
     animation: rf-pulse 10s ease-in-out infinite;
     transform-origin: center;
 }
+
+/* DaisyUI Chat Component Styles */
+.chat {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.chat-header {
+    grid-row: 1;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-bottom: 0.35rem;
+}
+
+.chat-footer {
+    grid-row: 3;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    opacity: 0.5;
+}
+
+.chat-bubble {
+    position: relative;
+    grid-row: 2;
+    width: fit-content;
+    padding: 1.25rem 1.75rem;
+    border-radius: 1.5rem;
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.chat-bubble:before {
+    position: absolute;
+    bottom: 0;
+    height: 0.75rem;
+    width: 0.75rem;
+    background-color: inherit;
+    content: "";
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M0 0 L12 12 L0 12 Z'/></svg>");
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M0 0 L12 12 L0 12 Z'/></svg>");
+}
+
+.chat-start {
+    place-items: start;
+    grid-template-columns: auto 1fr;
+}
+
+.chat-start .chat-header,
+.chat-start .chat-footer,
+.chat-start .chat-bubble {
+    grid-column-start: 2;
+}
+
+.chat-start .chat-bubble {
+    border-bottom-left-radius: 0.25rem;
+}
+
+.chat-start .chat-bubble:before {
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M0 0 L12 0 L12 12 Z'/></svg>");
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M0 0 L12 0 L12 12 Z'/></svg>");
+    left: -0.75rem;
+}
+
+.chat-end {
+    place-items: end;
+    grid-template-columns: 1fr auto;
+}
+
+.chat-end .chat-header,
+.chat-end .chat-footer,
+.chat-end .chat-bubble {
+    grid-column-start: 1;
+}
+
+.chat-end .chat-bubble {
+    border-bottom-right-radius: 0.25rem;
+}
+
+.chat-end .chat-bubble:before {
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M12 0 L0 0 L0 12 Z'/></svg>");
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M12 0 L0 0 L0 12 Z'/></svg>");
+    right: -0.75rem;
+}
