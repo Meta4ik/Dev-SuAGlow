@@ -78,39 +78,133 @@
 
             <!-- How Do You Want to Feel? (3 Created Card Images Grid) -->
             <div class="space-y-8">
-                <!-- Korean Wellness Philosophy - DaisyUI Chat Component Structure -->
-                <div class="max-w-3xl mx-auto space-y-6 animate-on-scroll fade-up">
+                <!-- Korean Wellness Philosophy - Animated Conversation Texting Speech Bubbles -->
+                <div id="texting-chat-container" class="max-w-3xl mx-auto space-y-6 animate-on-scroll fade-up">
                     <div class="text-center">
                         <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 inline-block uppercase tracking-wider text-[10px]">THE KOREAN WELLNESS PHILOSOPHY</span>
                     </div>
                     
-                    <!-- Dialogue Conversation Container (Small Text & Question Inside Centered Speech Bubbles) -->
-                    <div class="flex flex-col items-center space-y-8 text-center">
+                    <!-- Dialogue Conversation Container (Animated Chat Bubbles) -->
+                    <div class="flex flex-col items-center space-y-8 text-center min-h-[300px] justify-center">
                         <!-- Chat Bubble 1: Traditional Clinics -->
-                        <div class="relative bg-white text-near-black shadow-soft p-6 sm:p-8 rounded-[32px] sm:rounded-[36px] rounded-bl-sm space-y-2 max-w-full">
+                        <div id="chat-bubble-1" class="relative bg-white text-near-black shadow-soft p-6 sm:p-8 rounded-[32px] sm:rounded-[36px] rounded-bl-sm space-y-2 max-w-full opacity-0 transform translate-y-4 scale-95 transition-all duration-500 ease-out">
                             <span class="text-xs uppercase tracking-widest font-bold text-charcoal/50 block">
                                 In many weight loss clinics, the conversation starts with:
                             </span>
-                            <p class="text-base sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug whitespace-nowrap">
-                                "How much weight do you want to lose?"
-                            </p>
+                            <!-- Typing Dots Indicator 1 -->
+                            <div id="typing-indicator-1" class="hidden flex items-center justify-center gap-1.5 py-3">
+                                <span class="w-2.5 h-2.5 rounded-full bg-charcoal/40 animate-bounce"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-charcoal/40 animate-bounce [animation-delay:0.2s]"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-charcoal/40 animate-bounce [animation-delay:0.4s]"></span>
+                            </div>
+                            <!-- Typed Text Target 1 -->
+                            <p id="chat-text-1" class="text-base sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug whitespace-nowrap min-h-[1.5em]"></p>
                             <!-- Speech Tail Pointer -->
                             <div class="absolute -bottom-2 left-8 w-5 h-5 bg-white -rotate-45 transform rounded-bl-sm shadow-sm"></div>
                         </div>
 
                         <!-- Chat Bubble 2: SuA Glow Philosophy -->
-                        <div class="relative bg-gradient-to-br from-[#AA987C]/20 via-white to-white text-near-black shadow-soft p-6 sm:p-8 rounded-[32px] sm:rounded-[36px] rounded-br-sm space-y-2 max-w-full">
+                        <div id="chat-bubble-2" class="relative bg-gradient-to-br from-[#AA987C]/20 via-white to-white text-near-black shadow-soft p-6 sm:p-8 rounded-[32px] sm:rounded-[36px] rounded-br-sm space-y-2 max-w-full opacity-0 transform translate-y-4 scale-95 transition-all duration-500 ease-out">
                             <span class="text-xs uppercase tracking-widest font-bold text-warm-gold block">
                                 At SuA Glow, we ask:
                             </span>
-                            <p class="text-base sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug whitespace-nowrap">
-                                "How do you want to <span class="text-[#AA987C] font-bold underline decoration-warm-gold/50 underline-offset-4">feel?</span>"
-                            </p>
+                            <!-- Typing Dots Indicator 2 -->
+                            <div id="typing-indicator-2" class="hidden flex items-center justify-center gap-1.5 py-3">
+                                <span class="w-2.5 h-2.5 rounded-full bg-warm-gold animate-bounce"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-warm-gold animate-bounce [animation-delay:0.2s]"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-warm-gold animate-bounce [animation-delay:0.4s]"></span>
+                            </div>
+                            <!-- Typed Text Target 2 -->
+                            <p id="chat-text-2" class="text-base sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug whitespace-nowrap min-h-[1.5em]"></p>
                             <!-- Speech Tail Pointer (Right Corner - Matching Screenshot) -->
                             <div class="absolute -bottom-2 right-8 w-5 h-5 bg-white rotate-45 transform rounded-br-sm shadow-sm"></div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Texting Animation Script -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const container = document.getElementById('texting-chat-container');
+                        if (!container) return;
+
+                        let animated = false;
+
+                        function startTextingAnimation() {
+                            if (animated) return;
+                            animated = true;
+
+                            const bubble1 = document.getElementById('chat-bubble-1');
+                            const bubble2 = document.getElementById('chat-bubble-2');
+                            const typing1 = document.getElementById('typing-indicator-1');
+                            const typing2 = document.getElementById('typing-indicator-2');
+                            const text1El = document.getElementById('chat-text-1');
+                            const text2El = document.getElementById('chat-text-2');
+
+                            const fullText1 = '"How much weight do you want to lose?"';
+
+                            // Step 1: Pop in Bubble 1 with typing indicator
+                            bubble1.classList.remove('opacity-0', 'translate-y-4', 'scale-95');
+                            bubble1.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+                            typing1.classList.remove('hidden');
+
+                            // After 700ms typing indicator, type out Text 1
+                            setTimeout(function() {
+                                typing1.classList.add('hidden');
+                                let idx1 = 0;
+                                const timer1 = setInterval(function() {
+                                    if (idx1 <= fullText1.length) {
+                                        text1El.textContent = fullText1.slice(0, idx1);
+                                        idx1++;
+                                    } else {
+                                        clearInterval(timer1);
+                                        // Step 2: Trigger Bubble 2 after short delay
+                                        setTimeout(startBubble2, 500);
+                                    }
+                                }, 35);
+                            }, 700);
+
+                            function startBubble2() {
+                                bubble2.classList.remove('opacity-0', 'translate-y-4', 'scale-95');
+                                bubble2.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+                                typing2.classList.remove('hidden');
+
+                                setTimeout(function() {
+                                    typing2.classList.add('hidden');
+                                    const fullText2 = '"How do you want to feel?"';
+                                    let idx2 = 0;
+                                    const timer2 = setInterval(function() {
+                                        if (idx2 <= fullText2.length) {
+                                            const current = fullText2.slice(0, idx2);
+                                            if (current.includes('feel?')) {
+                                                const parts = current.split('feel?');
+                                                text2El.innerHTML = parts[0] + '<span class="text-[#AA987C] font-bold underline decoration-warm-gold/50 underline-offset-4">feel?</span>' + (parts[1] || '');
+                                            } else {
+                                                text2El.textContent = current;
+                                            }
+                                            idx2++;
+                                        } else {
+                                            clearInterval(timer2);
+                                            text2El.innerHTML = '"How do you want to <span class="text-[#AA987C] font-bold underline decoration-warm-gold/50 underline-offset-4">feel?</span>"';
+                                        }
+                                    }, 40);
+                                }, 800);
+                            }
+                        }
+
+                        // Trigger on scroll into view
+                        const observer = new IntersectionObserver(function(entries) {
+                            entries.forEach(function(entry) {
+                                if (entry.isIntersecting) {
+                                    startTextingAnimation();
+                                    observer.unobserve(entry.target);
+                                }
+                            });
+                        }, { threshold: 0.2 });
+
+                        observer.observe(container);
+                    });
+                </script>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     
