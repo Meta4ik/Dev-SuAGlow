@@ -190,13 +190,10 @@ const NAVBAR_HTML = `
                 </a>
                 <div class="dropdown-menu text-left w-[460px] !p-6 space-y-4">
                     <div>
-                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
+                        <a href="medical-weight-loss-dallas.html" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
                             <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Medical Weight Loss</span>
-                            <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
-                                <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                            </span>
                         </a>
-                        <span class="block font-body text-[10px] text-charcoal/40 mt-0.5 font-normal">Korean Body Reset</span>
+                        <span class="block font-body text-[10px] text-charcoal/40 mt-0.5 font-normal">Compounded GLP-1 &bull; Korean Body Reset</span>
                     </div>
                     <div>
                         <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
@@ -476,12 +473,9 @@ const NAVBAR_HTML = `
                     <div class="accordion-content hidden flex flex-col gap-4 pl-4 mt-2">
                         <div>
                             <div class="flex items-center justify-between gap-2">
-                                <a href="#" class="font-body text-sm text-charcoal/80 hover:text-taupe transition-colors">Medical Weight Loss</a>
-                                <span class="font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
-                                    <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                                </span>
+                                <a href="medical-weight-loss-dallas.html" class="font-body text-sm text-charcoal/80 hover:text-taupe transition-colors">Medical Weight Loss</a>
                             </div>
-                            <span class="block font-body text-[10px] text-charcoal/40 mt-0.5">Korean Body Reset</span>
+                            <span class="block font-body text-[10px] text-charcoal/40 mt-0.5">Compounded GLP-1 &bull; Korean Body Reset</span>
                         </div>
                         <div>
                             <div class="flex items-center justify-between gap-2">
