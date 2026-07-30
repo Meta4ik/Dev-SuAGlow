@@ -498,11 +498,11 @@ const SEARCH_INDEX = [
   },
   {
     "url": "ldm-water-drop-lifting.html#dia-sono-310",
-    "title": "Powered by Diasono 310",
+    "title": "Powered by Korean Expertise",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "AUTHENTIC KOREAN LDM WATER DROP FACIAL",
-    "content": "AUTHORIZED K-BEAUTY SYSTEM Diasono 310 Korean Ultrasound Intentionally selected for SuA Glow in Carrollton, TX, the Diasono 310 system represents Seoul's pinnacle non-invasive skin rejuvenation technology. Combining multi-frequency ultrasound, hydro peel exfoliation, and electroporation infusion, Diasono 310 delivers Quiet Luxury skin care focused on deep hydration, barrier restoration, and lasting glass skin radiance. Stimulates collagen renewal, balances moisture, and calms cellular stress. Gentle exfoliation that clears pores while drenching skin in essential moisture. Creates micro-pathways to maximize topical solution absorption and hydration.",
-    "snippet": "AUTHORIZED K-BEAUTY SYSTEM Diasono 310 Korean Ultrasound Intentionally selected for SuA Glow in Carrollton, TX, the Diasono 310 system represents Seoul's pinnac..."
+    "content": "AUTHORIZED K-BEAUTY SYSTEM LDM Water Drop Lifting Korean Ultrasound Intentionally selected for SuA Glow in Carrollton, TX, the LDM Water Drop Lifting system represents Seoul's pinnacle non-invasive skin rejuvenation technology. Combining multi-frequency ultrasound, hydro peel exfoliation, and electroporation infusion, LDM Water Drop Lifting delivers Quiet Luxury skin care focused on deep hydration, barrier restoration, and lasting glass skin radiance. Stimulates collagen renewal, balances moisture, and calms cellular stress. Gentle exfoliation that clears pores while drenching skin in essential moisture. Creates micro-pathways to maximize topical solution absorption and hydration.",
+    "snippet": "AUTHORIZED K-BEAUTY SYSTEM LDM Water Drop Lifting Korean Ultrasound Intentionally selected for SuA Glow in Carrollton, TX, the LDM Water Drop Lifting system represents Seoul's pinnac..."
   },
   {
     "url": "ldm-water-drop-lifting.html#treatment-guide",
