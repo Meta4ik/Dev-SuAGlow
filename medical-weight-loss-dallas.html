@@ -17,7 +17,7 @@
     <div id="nav-placeholder"></div>
 
     <!-- A. Hero Section — Brand color gradient bg, LDM-matched text style -->
-    <section id="hero" data-nav-theme="dark" class="relative overflow-hidden text-white bg-[#131619]" style="min-height: 88vh;">
+    <section id="hero" data-nav-theme="dark" class="relative overflow-hidden text-white bg-[#131619] flex flex-col" style="min-height: 88vh;">
         <!-- Brand gradient background: Near Black → warm Taupe glow → Near Black -->
         <div class="absolute inset-0 z-0 pointer-events-none">
             <div class="absolute inset-0" style="background: linear-gradient(160deg, #131619 0%, #1a1511 45%, #131619 100%);"></div>
@@ -27,14 +27,12 @@
             <div class="absolute" style="bottom: 10%; right: 35%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(170,152,124,0.18) 0%, transparent 70%); filter: blur(90px);"></div>
         </div>
 
-        <!-- Full viewport split: text left 46%, image right 54% -->
-        <!-- Outer wrapper clears the nav bar height so centering is within the visible area -->
-        <div class="relative z-10 w-full flex flex-col" style="min-height: 88vh; padding-top: 102px; box-sizing: border-box;">
-            <div class="w-full flex flex-1 items-center" style="min-height: 0;">
+        <!-- Content row: nav clearance via padding-top, flex-1 fills remaining section height, items-center vertically centers the text column -->
+        <div class="relative z-10 w-full flex flex-1 items-center" style="padding: 102px 0 32px 0;">
 
                 <!-- LEFT TEXT COLUMN — vertically centered, left margin aligned with logo -->
-                <div class="flex-none flex flex-col justify-center text-left space-y-6 animate-on-scroll fade-right relative z-20"
-                     style="width: 46%; padding: 20px 4vw 20px 8vw;">
+                <div class="flex-none flex flex-col text-left space-y-6 animate-on-scroll fade-right relative z-20"
+                     style="width: 46%; padding: 0 4vw 0 8vw;">
 
                     <!-- Badge — matches LDM badge-glass style -->
                     <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 mb-2 inline-block uppercase tracking-wider text-[10px]" style="width: fit-content;">
@@ -80,9 +78,6 @@
                          alt="SuA Glow Korean Body Reset Couple"
                          class="absolute bottom-0 z-10 object-contain object-bottom"
                          style="right: -2vw; height: 105%; max-height: none; width: auto; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.45));">
-                </div>
-
-            </div>
         </div>
     </section>
 
