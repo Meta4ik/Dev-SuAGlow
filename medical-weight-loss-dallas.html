@@ -27,15 +27,15 @@
             <div class="absolute" style="bottom: 10%; right: 35%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(170,152,124,0.18) 0%, transparent 70%); filter: blur(90px);"></div>
         </div>
 
-        <!-- Standard Site Container: max-w-7xl mx-auto px-6 md:px-12 lg:px-16 -->
-        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10 w-full flex-1 flex items-center pt-[120px] pb-8 md:pb-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
+        <!-- Content row: nav clearance via padding-top, flex-1 fills remaining section height, items-center vertically centers the text column -->
+        <div class="relative z-10 w-full flex flex-1 items-center" style="padding: 102px 0 32px 0;">
 
-                <!-- LEFT TEXT COLUMN — 6 columns in max-w-7xl container, perfectly aligned with site margins -->
-                <div class="lg:col-span-6 space-y-6 text-left animate-on-scroll fade-right relative z-20">
+                <!-- LEFT TEXT COLUMN — vertically centered, left margin aligned with logo -->
+                <div class="flex-none flex flex-col text-left space-y-6 animate-on-scroll fade-right relative z-20"
+                     style="width: 46%; padding: 0 4vw 0 8vw;">
 
                     <!-- Badge — matches LDM badge-glass style -->
-                    <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 mb-2 inline-block uppercase tracking-wider text-[10px]">
+                    <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 mb-2 inline-block uppercase tracking-wider text-[10px]" style="width: fit-content;">
                         Korean Body Reset™
                     </span>
 
@@ -67,18 +67,17 @@
                     </div>
                 </div>
 
-                <!-- RIGHT IMAGE COLUMN — 6 columns in max-w-7xl container -->
-                <div class="lg:col-span-6 relative flex justify-center lg:justify-end items-end animate-on-scroll fade-left delay-100 min-h-[400px] lg:min-h-[500px]">
+                <!-- RIGHT IMAGE COLUMN — fills remaining width, image from top to bottom -->
+                <!-- self-stretch ensures the column expands to the full row height so the absolute image fills it -->
+                <div class="flex-1 relative self-stretch animate-on-scroll fade-left delay-100" style="min-height: calc(88vh - 102px);">
                     <!-- Warm glow behind couple (Taupe #8F857B) -->
                     <div class="absolute inset-0 pointer-events-none z-0"
-                         style="background: radial-gradient(ellipse at 50% 85%, rgba(143,133,123,0.15) 0%, transparent 60%);"></div>
-                    <!-- Couple image: bottom-anchored, scaled within site container -->
+                         style="background: radial-gradient(ellipse at 40% 85%, rgba(143,133,123,0.12) 0%, transparent 60%);"></div>
+                    <!-- Couple image: bottom-anchored, fills full column height -->
                     <img src="assets/body-reset-couple-waist-up-transparent.png"
                          alt="SuA Glow Korean Body Reset Couple"
-                         class="relative z-10 w-auto object-contain object-bottom max-h-[65vh] lg:max-h-[75vh] drop-shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
-                </div>
-
-            </div>
+                         class="absolute bottom-0 z-10 object-contain object-bottom"
+                         style="right: -2vw; height: 105%; max-height: none; width: auto; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.45));">
         </div>
     </section>
 
