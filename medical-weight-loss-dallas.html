@@ -17,44 +17,42 @@
     <div id="nav-placeholder"></div>
 
     <!-- A. Hero Section -->
-    <section id="hero" data-nav-theme="dark" class="relative min-h-[85vh] flex items-center justify-center pt-[160px] pb-0 px-6 md:px-12 lg:px-16 overflow-hidden">
-        <!-- Hero Background Image & Dark Backdrop Overlay -->
-        <div class="absolute inset-0 z-0 pointer-events-none bg-[#0B1728]">
-            <img src="assets/bg_hero.webp" class="w-full h-full object-cover opacity-45 mix-blend-overlay" alt="Hero Background">
-            <!-- Dark Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0B1728]/80 via-[#0B1728]/60 to-[#0B1728]"></div>
+    <section id="hero" data-nav-theme="light" class="relative min-h-[85vh] flex items-center justify-center pt-[160px] pb-0 px-6 md:px-12 lg:px-16 overflow-hidden">
+        <!-- Light Warm Beige Hero Background Image (Exact match to reference screenshot) -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <img src="assets/bg_hero.webp" class="w-full h-full object-cover" alt="Hero Background">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/70 via-white/30 to-transparent"></div>
         </div>
 
-        <!-- Ambient Blue/Gold Glow Accents matching reference layout -->
-        <div class="absolute top-[25%] left-[20%] w-[600px] h-[600px] bg-[#1E3A8A]/30 rounded-full blur-[160px] pointer-events-none"></div>
-        <div class="absolute bottom-[10%] right-[15%] w-[700px] h-[700px] bg-[#AA987C]/15 rounded-full blur-[180px] pointer-events-none"></div>
+        <!-- Soft Ambient Light Glow Accents -->
+        <div class="absolute top-[20%] left-[10%] w-[600px] h-[600px] bg-white/40 rounded-full blur-[140px] pointer-events-none"></div>
 
         <div class="max-w-[1440px] mx-auto relative z-10 w-full px-4 sm:px-8 md:px-12">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end min-h-[70vh]">
-                <!-- Left Text Column (Perfect spacing & placement matching reference screenshot) -->
-                <div class="lg:col-span-6 space-y-5 text-white text-center lg:text-left pb-10 md:pb-14 animate-on-scroll fade-right relative z-20">
-                    <span class="inline-block px-5 py-2 border border-white/20 text-[#AA987C] text-[10px] md:text-xs font-semibold uppercase tracking-[0.25em] rounded-full bg-white/5 backdrop-blur-md">
+                <!-- Left Text Column (High-Contrast Crisp Near-Black Typography) -->
+                <div class="lg:col-span-6 space-y-5 text-near-black text-center lg:text-left pb-10 md:pb-14 animate-on-scroll fade-right relative z-20">
+                    <span class="inline-block px-5 py-2 border border-[#AA987C]/30 text-[#AA987C] text-[10px] md:text-xs font-semibold uppercase tracking-[0.25em] rounded-full bg-white/60 backdrop-blur-md">
                         KOREAN BODY RESET™
                     </span>
                     
-                    <h1 class="heading-wide text-4xl sm:text-5xl lg:text-6xl text-white font-light leading-[1.08] tracking-[0.06em] uppercase [text-wrap:balance]">
+                    <h1 class="heading-wide text-4xl sm:text-5xl lg:text-6xl text-near-black font-light leading-[1.08] tracking-[0.06em] uppercase [text-wrap:balance]">
                         LOSE THE WEIGHT.<br>
                         <span class="text-[#AA987C]">KEEP THE GLOW.</span>
                     </h1>
 
-                    <p class="text-xs sm:text-sm font-medium text-[#AA987C]/90 tracking-[0.2em] uppercase font-body [text-wrap:balance]">
+                    <p class="text-xs sm:text-sm font-medium text-[#8A6A4D] tracking-[0.2em] uppercase font-body [text-wrap:balance]">
                         Physician-Guided Korean Medical Weight Management
                     </p>
                     
-                    <p class="text-sm md:text-base font-light text-white/80 leading-relaxed max-w-xl [text-wrap:balance]">
+                    <p class="text-sm md:text-base font-light text-charcoal/90 leading-relaxed max-w-xl [text-wrap:balance]">
                         Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, skin health, and long-term confidence.
                     </p>
                     
                     <div class="pt-2 flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center lg:justify-start">
-                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="w-full sm:w-auto py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black text-white rounded-full transition-all duration-300 shadow-lg uppercase text-center">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="w-full sm:w-auto py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-near-black hover:text-white text-white rounded-full transition-all duration-300 shadow-md uppercase text-center">
                             Book Your Body Reset Consultation
                         </a>
-                        <a href="#medications" class="w-full sm:w-auto py-4 px-8 text-xs font-semibold tracking-widest rounded-full transition-all duration-300 border border-white/30 hover:border-white text-white hover:text-black uppercase text-center bg-white/10 hover:bg-white backdrop-blur-sm">
+                        <a href="#medications" class="w-full sm:w-auto py-4 px-8 text-xs font-semibold tracking-widest rounded-full transition-all duration-300 border border-[#AA987C]/40 hover:border-[#AA987C] text-[#8A6A4D] hover:text-[#74563C] uppercase text-center bg-white/60 hover:bg-white backdrop-blur-sm">
                             See if You're a Candidate
                         </a>
                     </div>
