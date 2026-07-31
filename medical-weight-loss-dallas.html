@@ -17,64 +17,65 @@
     <div id="nav-placeholder"></div>
 
     <!-- A. Hero Section -->
-    <section id="hero" data-nav-theme="dark" class="relative min-h-[88vh] flex items-center justify-center pt-[140px] pb-16 md:pb-24 px-6 md:px-12 lg:px-16 overflow-hidden">
-        <!-- Hero Background Image & Backdrop Blur (Exact match from financing.html) -->
+    <section id="hero" data-nav-theme="dark" class="relative min-h-[88vh] flex items-center justify-center pt-[150px] pb-16 md:pb-24 px-6 md:px-12 lg:px-16 overflow-hidden">
+        <!-- Hero Background Image & Backdrop Blur -->
         <div class="absolute inset-0 z-0 pointer-events-none">
             <img src="assets/bg_hero.webp" class="w-full h-full object-cover" alt="Hero Background">
-            <div class="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
+            <!-- Top Gradient Overlay ensuring high contrast for header logo & navigation links -->
+            <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-white/40 to-white/30 backdrop-blur-[1px]"></div>
         </div>
 
-        <!-- Ambient Glow Accents (Exact match from financing.html) -->
+        <!-- Ambient Glow Accents -->
         <div class="absolute top-[10%] left-[-5%] w-[600px] h-[600px] bg-[#EAECED]/40 rounded-full blur-[140px] pointer-events-none"></div>
         <div class="absolute bottom-[-5%] right-[-5%] w-[700px] h-[700px] bg-[#DFE0DD]/30 rounded-full blur-[160px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto relative z-10 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                <!-- Left Text Column -->
+                <!-- Left Text Column (Oligio X Hero Typography Treatment) -->
                 <div class="lg:col-span-6 space-y-6 text-near-black text-center lg:text-left animate-on-scroll fade-right">
-                    <span class="inline-block px-6 py-2 border border-[#AA987C]/30 text-[#AA987C] text-xs font-bold uppercase tracking-[0.5em] rounded-full bg-white/40 backdrop-blur-sm">
+                    <span class="badge-glass !text-[#AA987C] !bg-[#AA987C]/10 !border-[#AA987C]/25 mb-2 inline-block uppercase tracking-wider text-[10px] md:text-xs font-semibold">
                         KOREAN BODY RESET™
                     </span>
                     
-                    <h1 class="heading-wide text-4xl sm:text-5xl lg:text-6xl text-near-black font-light leading-tight [text-wrap:balance]">
-                        Lose the Weight.<br>
-                        <span class="font-normal text-near-black">Keep the <span class="italic font-serif text-[#AA987C] font-normal">Glow.</span></span>
+                    <h1 class="heading-wide text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-near-black leading-[1.15] font-light [text-wrap:balance]">
+                        LOSE THE WEIGHT.<br>
+                        KEEP THE <span class="italic font-serif text-[#AA987C] font-normal">GLOW.</span>
                     </h1>
 
-                    <div class="space-y-3 max-w-xl mx-auto lg:mx-0">
-                        <p class="text-base sm:text-lg font-medium text-charcoal/90 tracking-wide font-body [text-wrap:balance]">
+                    <div class="space-y-4 max-w-xl mx-auto lg:mx-0">
+                        <p class="text-sm md:text-base font-light text-charcoal/90 leading-relaxed">
                             Physician-guided medical weight management inspired by Korean wellness.
                         </p>
 
-                        <p class="text-sm md:text-base font-light text-charcoal/75 leading-relaxed [text-wrap:balance]">
+                        <p class="text-sm md:text-base font-light text-charcoal/75 leading-relaxed">
                             Supporting healthy body composition, skin health, and long-term confidence.
                         </p>
                     </div>
                     
                     <div class="pt-4 flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center lg:justify-start">
-                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="w-full sm:w-auto py-4 px-8 text-xs font-semibold tracking-widest bg-[#9E7B5C] hover:bg-[#8A6A4D] text-white rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 uppercase text-center">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-near-black hover:text-white rounded-full transition-all duration-300 w-full sm:w-auto text-center">
                             Book Consultation
                         </a>
-                        <a href="#medications" class="w-full sm:w-auto py-4 px-8 text-xs font-semibold tracking-widest rounded-full transition-all duration-300 border border-[#AA987C]/50 hover:border-[#AA987C] text-[#8A6A4D] hover:text-[#74563C] uppercase text-center bg-white/40 backdrop-blur-sm">
+                        <a href="#medications" class="btn-outline-white py-4 px-8 text-xs font-semibold tracking-widest rounded-full transition-all duration-300 border border-[#AA987C]/50 hover:border-[#AA987C] text-[#8A6A4D] hover:text-[#74563C] uppercase text-center bg-white/50 backdrop-blur-sm w-full sm:w-auto">
                             See if You're a Candidate
                         </a>
                     </div>
                 </div>
                 
-                <!-- Right Couple Column (Waist-Up Transparent PNG Cutout on Soft Architectural Arch) -->
+                <!-- Right Couple Column (Animated Video Loop of Models Cutout on Soft Architectural Arch) -->
                 <div class="lg:col-span-6 relative flex justify-center lg:justify-end animate-on-scroll fade-left delay-100">
                     <div class="relative w-full max-w-[480px] h-[480px] sm:h-[540px] flex items-center justify-center">
                         <!-- Soft Light Architectural Arch Backdrop -->
                         <div class="absolute inset-x-6 bottom-0 top-8 rounded-t-full bg-gradient-to-b from-white/90 via-white/50 to-transparent border border-white/80 shadow-[0_15px_45px_rgba(170,152,124,0.15)] backdrop-blur-sm"></div>
                         <div class="absolute inset-x-10 bottom-0 top-12 rounded-t-full border border-[#AA987C]/20 pointer-events-none"></div>
 
-                        <!-- SuA Glow Subtle Wall Branding -->
+                        <!-- SuA Glow Subtle Wall Branding Accent -->
                         <div class="absolute top-20 text-center z-0 opacity-25">
                             <span class="font-serif tracking-widest text-2xl uppercase text-[#AA987C] font-light">SuA Glow</span>
                         </div>
 
-                        <!-- Isolated Transparent PNG Waist-Up Couple Cutout -->
-                        <img src="assets/body-reset-couple-waist-up-transparent.png" alt="SuA Glow Korean Body Reset Couple" class="relative z-10 max-h-full object-contain filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.12)] transform hover:scale-102 transition-transform duration-700">
+                        <!-- Animated WebP Video Loop of Korean Couple Cutout -->
+                        <img src="assets/body-reset-couple-animated.webp" alt="SuA Glow Korean Body Reset Couple Video Loop" class="relative z-10 max-h-full object-contain filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.12)] transform hover:scale-102 transition-transform duration-700">
                     </div>
                 </div>
             </div>
