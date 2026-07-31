@@ -16,69 +16,68 @@
 <body class="bg-off-white text-charcoal antialiased overflow-x-hidden w-full">
     <div id="nav-placeholder"></div>
 
-    <!-- A. Hero Section - Matches reference UI: text left, image fills right from top to bottom -->
-    <section id="hero" data-nav-theme="dark" class="relative overflow-hidden text-white" style="background-color: #0A192F; min-height: 88vh;">
-        <!-- Dark Deep Blue Background & subtle texture -->
-        <div class="absolute inset-0 z-0 pointer-events-none" style="background: linear-gradient(160deg, #0d1f3c 0%, #0A192F 50%, #091528 100%);">
-            <img src="assets/bg_hero.webp" class="w-full h-full object-cover opacity-20 mix-blend-soft-light" alt="">
-            <!-- Subtle blue radial glow center-right -->
-            <div class="absolute" style="top: 30%; right: 30%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(30,58,138,0.5) 0%, transparent 70%); filter: blur(80px);"></div>
+    <!-- A. Hero Section — Brand color gradient bg, LDM-matched text style -->
+    <section id="hero" data-nav-theme="dark" class="relative overflow-hidden text-white bg-[#131619]" style="min-height: 88vh;">
+        <!-- Brand gradient background: Near Black → warm Taupe glow → Near Black -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <div class="absolute inset-0" style="background: linear-gradient(160deg, #131619 0%, #1a1511 45%, #131619 100%);"></div>
+            <!-- Warm taupe/gold ambient glow (brand Taupe #8F857B) -->
+            <div class="absolute" style="top: 20%; left: 15%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(143,133,123,0.22) 0%, transparent 70%); filter: blur(100px);"></div>
+            <!-- Warm gold secondary glow center-right (brand Warm Gold #AA987C) -->
+            <div class="absolute" style="bottom: 10%; right: 35%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(170,152,124,0.18) 0%, transparent 70%); filter: blur(90px);"></div>
         </div>
 
-        <!-- Full viewport grid: text left 45%, image right 55% -->
-        <div class="relative z-10 w-full h-full" style="min-height: 88vh;">
-            <div class="w-full h-full flex items-stretch" style="min-height: 88vh;">
+        <!-- Full viewport split: text left 46%, image right 54% -->
+        <div class="relative z-10 w-full" style="min-height: 88vh;">
+            <div class="w-full flex items-stretch" style="min-height: 88vh;">
 
-                <!-- LEFT TEXT COLUMN - hard left, starts at top with pt for nav -->
-                <div class="flex-none flex flex-col justify-start text-left animate-on-scroll fade-right relative z-20"
-                     style="width: 46%; padding: 150px 0 60px 6vw;">
-                    
-                    <!-- Badge pill -->
-                    <span class="inline-block mb-6 px-4 py-1.5 border border-white/25 text-[#AA987C] text-[10px] font-semibold uppercase tracking-[0.22em] rounded-full bg-white/5 backdrop-blur-sm" style="width: fit-content;">
-                        KOREAN BODY RESET™
+                <!-- LEFT TEXT COLUMN — hard left, top-aligned, LDM text style -->
+                <div class="flex-none flex flex-col justify-start text-left space-y-6 animate-on-scroll fade-right relative z-20"
+                     style="width: 46%; padding: 148px 4vw 60px 6vw;">
+
+                    <!-- Badge — matches LDM badge-glass style -->
+                    <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 mb-2 inline-block uppercase tracking-wider text-[10px]" style="width: fit-content;">
+                        Korean Body Reset™
                     </span>
-                    
-                    <!-- Large title matching reference - white + gold lines -->
-                    <h1 class="heading-wide font-light uppercase mb-6" style="font-size: clamp(3rem, 5.5vw, 5.5rem); line-height: 1.06; letter-spacing: 0.05em; color: #ffffff;">
-                        LOSE THE WEIGHT.<br>
-                        <span style="color: #AA987C;">KEEP THE GLOW.</span>
+
+                    <!-- H1 — matches LDM: heading-wide, font-medium, leading-tight -->
+                    <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-white font-medium leading-tight [text-wrap:balance]">
+                        Lose The Weight. <span class="text-[#AA987C]">Keep The Glow.</span>
                     </h1>
 
-                    <!-- Gold subtitle -->
-                    <p class="font-body font-semibold uppercase mb-4" style="font-size: 0.7rem; letter-spacing: 0.22em; color: rgba(170,152,124,0.9);">
+                    <!-- Subtitle — matches LDM: text-warm-gold/90, tracking-wider, uppercase, font-body -->
+                    <p class="text-base sm:text-lg font-medium text-warm-gold/90 tracking-wider uppercase font-body [text-wrap:balance]">
                         Physician-Guided Korean Medical Weight Management
                     </p>
-                    
-                    <!-- Body copy -->
-                    <p class="font-light leading-relaxed mb-8" style="font-size: 0.95rem; color: rgba(255,255,255,0.8); max-width: 480px;">
+
+                    <!-- Body copy — matches LDM: text-sm md:text-base font-light text-white/80 -->
+                    <p class="text-sm md:text-base font-light text-white/80 leading-relaxed max-w-xl [text-wrap:balance]">
                         Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, skin health, and long-term confidence.
                     </p>
-                    
-                    <!-- CTAs -->
-                    <div class="flex flex-wrap gap-4">
+
+                    <!-- CTAs — matches LDM: pt-4 flex flex-wrap gap-4 items-center, btn-primary style -->
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                           class="uppercase text-white text-center transition-all duration-300"
-                           style="padding: 14px 32px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; background-color: #8A7B66; border-radius: 999px; box-shadow: 0 8px 30px rgba(0,0,0,0.35);">
+                           class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300">
                             Book Your Body Reset Consultation
                         </a>
                         <a href="#medications"
-                           class="uppercase text-white text-center transition-all duration-300 hover:bg-white hover:text-black"
-                           style="padding: 14px 28px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; border: 1px solid rgba(255,255,255,0.3); border-radius: 999px; background: rgba(255,255,255,0.08); backdrop-filter: blur(6px);">
+                           class="py-4 px-8 text-xs font-semibold tracking-widest rounded-full border border-white/30 hover:border-white text-white hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/5 uppercase">
                             See if You're a Candidate
                         </a>
                     </div>
                 </div>
 
-                <!-- RIGHT IMAGE COLUMN - fills remaining width, image from top to bottom -->
+                <!-- RIGHT IMAGE COLUMN — fills remaining width, image from top to bottom -->
                 <div class="flex-1 relative self-stretch animate-on-scroll fade-left delay-100" style="min-height: 88vh;">
-                    <!-- Soft inner glow behind the image -->
-                    <div class="absolute inset-0 pointer-events-none z-0" style="background: radial-gradient(ellipse at 40% 80%, rgba(255,255,255,0.08) 0%, transparent 65%);"></div>
-                    
-                    <!-- Couple image: positioned absolute, bottom-aligned, full height -->
+                    <!-- Warm glow behind couple (Taupe #8F857B) -->
+                    <div class="absolute inset-0 pointer-events-none z-0"
+                         style="background: radial-gradient(ellipse at 40% 85%, rgba(143,133,123,0.12) 0%, transparent 60%);"></div>
+                    <!-- Couple image: bottom-anchored, fills full column height -->
                     <img src="assets/body-reset-couple-waist-up-transparent.png"
                          alt="SuA Glow Korean Body Reset Couple"
                          class="absolute bottom-0 z-10 object-contain object-bottom"
-                         style="right: -2vw; height: 105%; max-height: none; width: auto; drop-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                         style="right: -2vw; height: 105%; max-height: none; width: auto; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.45));">
                 </div>
 
             </div>
