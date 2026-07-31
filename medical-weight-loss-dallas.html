@@ -17,60 +17,57 @@
     <div id="nav-placeholder"></div>
 
     <!-- A. Hero Section -->
-    <section id="hero" data-nav-theme="dark" class="relative min-h-[88vh] flex items-center justify-center pt-[140px] pb-0 px-6 md:px-12 lg:px-16 overflow-hidden">
+    <section id="hero" data-nav-theme="dark" class="relative min-h-[88vh] flex items-center justify-center pt-[150px] pb-0 px-6 md:px-12 lg:px-16 overflow-hidden">
         <!-- Hero Background Image & Dark Backdrop Overlay -->
-        <div class="absolute inset-0 z-0 pointer-events-none bg-[#131619]">
-            <img src="assets/bg_hero.webp" class="w-full h-full object-cover opacity-40 mix-blend-overlay" alt="Hero Background">
-            <!-- Rich Dark Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-b from-[#131619]/90 via-[#131619]/70 to-[#131619]"></div>
+        <div class="absolute inset-0 z-0 pointer-events-none bg-[#0B1728]">
+            <img src="assets/bg_hero.webp" class="w-full h-full object-cover opacity-45 mix-blend-overlay" alt="Hero Background">
+            <!-- Dark Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0B1728]/80 via-[#0B1728]/60 to-[#0B1728]"></div>
         </div>
 
-        <!-- Ambient Warm Gold Glow Accents -->
-        <div class="absolute top-[20%] left-[10%] w-[600px] h-[600px] bg-[#AA987C]/20 rounded-full blur-[160px] pointer-events-none"></div>
-        <div class="absolute bottom-[0%] right-[10%] w-[700px] h-[700px] bg-[#AA987C]/15 rounded-full blur-[180px] pointer-events-none"></div>
+        <!-- Ambient Blue/Gold Glow Accents matching reference layout -->
+        <div class="absolute top-[25%] left-[20%] w-[600px] h-[600px] bg-[#1E3A8A]/30 rounded-full blur-[160px] pointer-events-none"></div>
+        <div class="absolute bottom-[10%] right-[15%] w-[700px] h-[700px] bg-[#AA987C]/15 rounded-full blur-[180px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto relative z-10 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-end">
-                <!-- Left Text Column -->
+                <!-- Left Text Column (Exact placement & typography hierarchy matching reference UI screenshot) -->
                 <div class="lg:col-span-6 space-y-6 text-white text-center lg:text-left pb-16 md:pb-24 animate-on-scroll fade-right">
-                    <span class="badge-glass !text-[#AA987C] !bg-white/10 !border-white/20 mb-2 inline-block uppercase tracking-wider text-[10px] md:text-xs font-semibold">
+                    <span class="inline-block px-5 py-2 border border-white/20 text-[#AA987C] text-[10px] md:text-xs font-semibold uppercase tracking-[0.25em] rounded-full bg-white/5 backdrop-blur-md">
                         KOREAN BODY RESET™
                     </span>
                     
-                    <h1 class="heading-wide text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-[1.15] font-light [text-wrap:balance]">
+                    <h1 class="heading-wide text-4xl sm:text-5xl lg:text-6xl text-white font-light leading-[1.1] tracking-wider uppercase [text-wrap:balance]">
                         LOSE THE WEIGHT.<br>
-                        KEEP THE <span class="italic font-serif text-[#AA987C] font-normal">GLOW.</span>
+                        <span class="text-[#AA987C]">KEEP THE GLOW.</span>
                     </h1>
 
-                    <div class="space-y-4 max-w-xl mx-auto lg:mx-0">
-                        <p class="text-sm md:text-base font-light text-white/85 leading-relaxed">
-                            Physician-guided medical weight management inspired by Korean wellness.
-                        </p>
-
-                        <p class="text-sm md:text-base font-light text-white/70 leading-relaxed">
-                            Supporting healthy body composition, skin health, and long-term confidence.
-                        </p>
-                    </div>
+                    <p class="text-sm md:text-base font-medium text-[#AA987C]/90 tracking-widest uppercase font-body [text-wrap:balance]">
+                        Physician-Guided Korean Medical Weight Management
+                    </p>
+                    
+                    <p class="text-sm md:text-base font-light text-white/80 leading-relaxed max-w-xl [text-wrap:balance]">
+                        Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, skin health, and long-term confidence.
+                    </p>
                     
                     <div class="pt-4 flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center lg:justify-start">
-                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300 w-full sm:w-auto text-center">
-                            Book Consultation
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="w-full sm:w-auto py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black text-white rounded-full transition-all duration-300 shadow-lg uppercase text-center">
+                            Book Your Body Reset Consultation
                         </a>
-                        <a href="#medications" class="btn-outline-white py-4 px-8 text-xs font-semibold tracking-widest rounded-full transition-all duration-300 border border-white/30 hover:border-white text-white hover:text-black uppercase text-center bg-white/10 hover:bg-white backdrop-blur-sm w-full sm:w-auto">
+                        <a href="#medications" class="w-full sm:w-auto py-4 px-8 text-xs font-semibold tracking-widest rounded-full transition-all duration-300 border border-white/30 hover:border-white text-white hover:text-black uppercase text-center bg-white/10 hover:bg-white backdrop-blur-sm">
                             See if You're a Candidate
                         </a>
                     </div>
                 </div>
                 
-                <!-- Right Couple Column (Enlarged to reach the absolute top of the hero text block) -->
+                <!-- Right Couple Column (Exact placement & scaling matching reference UI screenshot) -->
                 <div class="lg:col-span-6 relative flex justify-center lg:justify-end items-end animate-on-scroll fade-left delay-100 self-end">
-                    <div class="relative w-full max-w-[680px] lg:max-w-[960px] h-[640px] sm:h-[800px] lg:h-[950px] flex items-end justify-center">
-                        <!-- Soft Lighter Radial Ambient Glow behind couple photo -->
-                        <div class="absolute inset-y-8 inset-x-4 bg-gradient-to-t from-white/30 via-white/15 to-transparent blur-[90px] rounded-full pointer-events-none z-0"></div>
-                        <div class="absolute bottom-0 w-[80%] h-[60%] bg-[#EAE4DC]/25 blur-[110px] rounded-full pointer-events-none z-0"></div>
+                    <div class="relative w-full max-w-[640px] lg:max-w-[880px] h-[600px] sm:h-[760px] lg:h-[900px] flex items-end justify-center">
+                        <!-- Soft Ambient Glow behind couple -->
+                        <div class="absolute inset-y-8 inset-x-4 bg-gradient-to-t from-white/20 via-white/10 to-transparent blur-[100px] rounded-full pointer-events-none z-0"></div>
 
-                        <!-- Prominent Large Cutout Image Filling Right Side to Top of Text -->
-                        <img src="assets/body-reset-couple-waist-up-transparent.png" alt="SuA Glow Korean Body Reset Couple" class="relative z-10 w-full h-full object-contain object-bottom drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] transform hover:scale-102 transition-transform duration-700">
+                        <!-- Prominent Couple Cutout sitting flush to bottom -->
+                        <img src="assets/body-reset-couple-waist-up-transparent.png" alt="SuA Glow Korean Body Reset Couple" class="relative z-10 w-full h-full object-contain object-bottom drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)] transform hover:scale-102 transition-transform duration-700">
                     </div>
                 </div>
             </div>
