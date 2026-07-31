@@ -28,12 +28,13 @@
         </div>
 
         <!-- Full viewport split: text left 46%, image right 54% -->
-        <div class="relative z-10 w-full" style="min-height: 88vh;">
-            <div class="w-full flex items-stretch" style="min-height: 88vh;">
+        <!-- Outer wrapper clears the nav bar height so centering is within the visible area -->
+        <div class="relative z-10 w-full flex flex-col" style="min-height: 88vh; padding-top: 102px; box-sizing: border-box;">
+            <div class="w-full flex flex-1 items-center" style="min-height: 0;">
 
-                <!-- LEFT TEXT COLUMN — hard left, top-aligned, LDM text style -->
-                <div class="flex-none flex flex-col justify-start text-left space-y-6 animate-on-scroll fade-right relative z-20"
-                     style="width: 46%; padding: 148px 4vw 60px 6vw;">
+                <!-- LEFT TEXT COLUMN — vertically centered, left margin aligned with logo -->
+                <div class="flex-none flex flex-col justify-center text-left space-y-6 animate-on-scroll fade-right relative z-20"
+                     style="width: 46%; padding: 20px 4vw 20px 8vw;">
 
                     <!-- Badge — matches LDM badge-glass style -->
                     <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 mb-2 inline-block uppercase tracking-wider text-[10px]" style="width: fit-content;">
@@ -69,7 +70,8 @@
                 </div>
 
                 <!-- RIGHT IMAGE COLUMN — fills remaining width, image from top to bottom -->
-                <div class="flex-1 relative self-stretch animate-on-scroll fade-left delay-100" style="min-height: 88vh;">
+                <!-- self-stretch ensures the column expands to the full row height so the absolute image fills it -->
+                <div class="flex-1 relative self-stretch animate-on-scroll fade-left delay-100" style="min-height: calc(88vh - 102px);">
                     <!-- Warm glow behind couple (Taupe #8F857B) -->
                     <div class="absolute inset-0 pointer-events-none z-0"
                          style="background: radial-gradient(ellipse at 40% 85%, rgba(143,133,123,0.12) 0%, transparent 60%);"></div>
