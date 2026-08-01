@@ -18,13 +18,12 @@
 
     <!-- A. Hero Section — Brand color gradient bg, LDM-matched text style -->
     <section id="hero" data-nav-theme="dark" class="relative overflow-hidden text-white bg-[#131619] flex flex-col" style="min-height: 88vh;">
-        <!-- Brand gradient background: Near Black → warm Taupe glow → Near Black -->
+        <!-- Hero Background — Matches injectables.html -->
         <div class="absolute inset-0 z-0 pointer-events-none">
-            <div class="absolute inset-0" style="background: linear-gradient(160deg, #131619 0%, #1a1511 45%, #131619 100%);"></div>
-            <!-- Warm taupe/gold ambient glow (brand Taupe #8F857B) -->
-            <div class="absolute" style="top: 20%; left: 15%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(143,133,123,0.22) 0%, transparent 70%); filter: blur(100px);"></div>
-            <!-- Warm gold secondary glow center-right (brand Warm Gold #AA987C) -->
-            <div class="absolute" style="bottom: 10%; right: 35%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(170,152,124,0.18) 0%, transparent 70%); filter: blur(90px);"></div>
+            <div class="w-full h-full bg-gradient-to-br from-near-black via-charcoal to-taupe/40"></div>
+            <div class="absolute inset-0 bg-black/40"></div>
+            <!-- Abstract Glow Effect -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-taupe/10 blur-[120px] rounded-full animate-pulse"></div>
         </div>
 
         <!-- Couple Image — Positioned relative to hero section root so photo extends up to header level matching ui layout reference -->
