@@ -501,8 +501,8 @@ const SEARCH_INDEX = [
     "title": "Powered by Korean Expertise",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "Ultrasound Premier Korean Glass Skin Lifting",
-    "content": "AUTHORIZED K-BEAUTY SYSTEM LDM Water Drop Lifting Korean Ultrasound Intentionally selected for SuA Glow in Carrollton, TX, the LDM Water Drop Lifting system represents Seoul's pinnacle non-invasive skin rejuvenation technology. Combining multi-frequency ultrasound, hydro peel exfoliation, and electroporation infusion, LDM Water Drop Lifting delivers Quiet Luxury skin care focused on deep hydration, barrier restoration, and lasting glass skin radiance. Stimulates collagen renewal, balances moisture, and calms cellular stress. Gentle exfoliation that clears pores while drenching skin in essential moisture. Creates micro-pathways to maximize topical solution absorption and hydration.",
-    "snippet": "AUTHORIZED K-BEAUTY SYSTEM LDM Water Drop Lifting Korean Ultrasound Intentionally selected for SuA Glow in Carrollton, TX, the LDM Water Drop Lifting system represents Seoul's pinnac..."
+    "content": "Ultrasound Premier Korean Glass Skin Lifting Intentionally selected for SuA Glow in Carrollton, TX, the LDM Water Drop Lifting system represents Seoul's pinnacle non-invasive skin rejuvenation technology. Combining multi-frequency ultrasound, hydro peel exfoliation, and electroporation infusion, LDM Water Drop Lifting delivers Quiet Luxury skin care focused on deep hydration, barrier restoration, and lasting glass skin radiance. Stimulates collagen renewal, balances moisture, and calms cellular stress. Gentle exfoliation that clears pores while drenching skin in essential moisture. Creates micro-pathways to maximize topical solution absorption and hydration.",
+    "snippet": "Ultrasound Premier Korean Glass Skin Lifting Intentionally selected for SuA Glow in Carrollton, TX, the LDM Water Drop Lifting system represents Seoul's pinnacl..."
   },
   {
     "url": "ldm-water-drop-lifting.html#treatment-guide",
@@ -594,17 +594,17 @@ const SEARCH_INDEX = [
   },
   {
     "url": "medical-weight-loss-dallas.html#hero",
-    "title": "Reset Your Body. Keep Your Glow.",
+    "title": "LOSE THE WEIGHT. KEEP THE GLOW.",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
-    "content": "Losing weight should never mean losing your confidence, or your skin quality. At SuA Glow, our Physician-Guided Body Reset was created for people who want more than another crash diet or trendy weight loss program. We combine personalized medical weight management with Korean-inspired wellness principles to help you pursue healthier body composition while supporting the skin, confidence, and lifestyle that come with it. Unlike many weight loss clinics that focus only on rapid weight reduction, our Korean Wellness Philosophy emphasizes long-term metabolic health, sustainable lifestyle changes, and helping you maintain healthy-looking skin throughout your journey.",
-    "snippet": "Losing weight should never mean losing your confidence, or your skin quality. At SuA Glow, our Physician-Guided Body Reset was created for people who want more ..."
+    "category": "Korean Body Reset™",
+    "content": "Physician-Guided Korean Medical Weight Management Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, skin health, and long-term confidence.",
+    "snippet": "Physician-Guided Korean Medical Weight Management Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, s..."
   },
   {
     "url": "medical-weight-loss-dallas.html#philosophy",
     "title": "Dallas Knows Weight Loss.K-Beauty Knows The Glow.",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
+    "category": "Korean Body Reset™",
     "content": "That's why patients across Carrollton, Plano, Frisco, Coppell, Irving, Lewisville, Farmers Branch, Addison, and the DFW Metroplex choose SuA Glow for physician-guided Body Reset care that goes beyond the scale. Restore cellular energy, support metabolic efficiency, and feel vibrant in your everyday routine. Feel empowered walking into any room with a healthy body composition and refreshed appearance. Maintain firm skin elasticity, natural volume, and a calm, radiant glow as your contours change. Not Smaller Stronger Not Thinner Healthier Not Perfection Balance Healthy Skin • Healthy Body • Healthy Confidence That's the glow we're after.",
     "snippet": "That's why patients across Carrollton, Plano, Frisco, Coppell, Irving, Lewisville, Farmers Branch, Addison, and the DFW Metroplex choose SuA Glow for physician-..."
   },
@@ -612,7 +612,7 @@ const SEARCH_INDEX = [
     "url": "medical-weight-loss-dallas.html#sua-glow-difference",
     "title": "The SuA Glow Difference",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
+    "category": "Korean Body Reset™",
     "content": "Personalized For Your Glow Personalized medical care designed around your body, not someone else's journey. Evidence-based medical weight management tailored to your individual needs. A philosophy that prioritizes healthy skin, balanced wellness, and sustainable confidence. Strategies focused on healthy body composition and preserving lean muscle during weight loss. Oligio X® skin tightening for face and body contours to support skin firmness as your body changes. Targeted nutraceuticals and wellness infusions to support hydration, nutrition, and overall vitality. Because the goal isn't simply to lose weight. It's to look refreshed, feel stronger, and glow with confidence.",
     "snippet": "Personalized For Your Glow Personalized medical care designed around your body, not someone else's journey. Evidence-based medical weight management tailored to..."
   },
@@ -620,7 +620,7 @@ const SEARCH_INDEX = [
     "url": "medical-weight-loss-dallas.html#what-is",
     "title": "What Is Medical Weight Loss?",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
+    "category": "Korean Body Reset™",
     "content": "Medical weight loss is a physician-guided approach that combines evidence-based medications, nutrition, lifestyle modifications, and ongoing medical monitoring to help patients achieve sustainable weight management. At SuA Glow, treatment may include compounded GLP medications such as semaglutide or tirzepatide when clinically appropriate, along with personalized guidance designed to support healthier metabolic function, appetite regulation, and long-term success.",
     "snippet": "Medical weight loss is a physician-guided approach that combines evidence-based medications, nutrition, lifestyle modifications, and ongoing medical monitoring ..."
   },
@@ -628,7 +628,7 @@ const SEARCH_INDEX = [
     "url": "medical-weight-loss-dallas.html#body-reset",
     "title": "Why We Call It a SuA Glow Body Reset",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
+    "category": "Korean Body Reset™",
     "content": "Traditional dieting often focuses on restriction. The Korean wellness philosophy focuses on restoring balance. We intentionally don't call this a \"weight loss program,\" because this is about so much more than weight. Rather than chasing quick fixes, our Body Reset Program is designed to help improve: Our physician-guided Body Reset is designed to support sustainable lifestyle changes while helping patients pursue healthier body composition through personalized medical care. Because we believe confidence isn't measured in pounds. It's measured in how you feel walking into a room.",
     "snippet": "Traditional dieting often focuses on restriction. The Korean wellness philosophy focuses on restoring balance. We intentionally don't call this a \"weight loss p..."
   },
@@ -636,7 +636,7 @@ const SEARCH_INDEX = [
     "url": "medical-weight-loss-dallas.html#skin-hair-integration",
     "title": "Why Skin & Hair Health Belongs in Every Weight Loss Conversation",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
+    "category": "Korean Body Reset™",
     "content": "Here's something many weight loss clinics rarely talk about. As your body changes, your skin changes, and your hair changes. Some patients notice changes in skin firmness or facial fullness during weight loss. Others notice hair loss as part of their medical weight loss program. Rapid weight loss may contribute to changes in skin firmness, facial volume, and hair density. That is why SuA Glow uniquely integrates Korean Skin and Hair Principles into your weight loss journey. Supportive Options Your Provider May Recommend: Oligio X RF skin tightening for face and body contours Hair loss therapies & scalp rejuvenation protocols Collagen-supportive therapies & biostimulator planning Hydration-focused facial treatments (Korean LDM Water Drop Lifting) Medical provider guided aesthetic planning throughout your transformation Because your transformation deserves to look as healthy as it feels. Preserving skin firmness, facial volume, and hair density throughout your transformation.",
     "snippet": "Here's something many weight loss clinics rarely talk about. As your body changes, your skin changes, and your hair changes. Some patients notice changes in ski..."
   },
@@ -644,7 +644,7 @@ const SEARCH_INDEX = [
     "url": "medical-weight-loss-dallas.html#medications",
     "title": "What Medications May Be Used?",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
+    "category": "Korean Body Reset™",
     "content": "When medically appropriate, treatment may include compounded GLP-1 medications (such as semaglutide or tirzepatide) prescribed after a comprehensive medical evaluation. These medications work by helping regulate appetite, promoting satiety, and supporting healthier eating behaviors as part of a complete weight management plan.",
     "snippet": "When medically appropriate, treatment may include compounded GLP-1 medications (such as semaglutide or tirzepatide) prescribed after a comprehensive medical eva..."
   },
@@ -652,7 +652,7 @@ const SEARCH_INDEX = [
     "url": "medical-weight-loss-dallas.html#candidate",
     "title": "Who Is a Candidate?",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
+    "category": "Korean Body Reset™",
     "content": "Eligibility is determined through an individualized medical evaluation. You may be a candidate if you are looking to:",
     "snippet": "Eligibility is determined through an individualized medical evaluation. You may be a candidate if you are looking to:"
   },
@@ -660,7 +660,7 @@ const SEARCH_INDEX = [
     "url": "medical-weight-loss-dallas.html#why-choose-us",
     "title": "Why Patients Choose SuA Glow",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
+    "category": "Korean Body Reset™",
     "content": "Our Body Reset Program is different because it combines medicine with aesthetics. Instead of asking: \"How much weight can we lose?\" We ask: \"How can we help you become healthier while protecting your confidence?\" Refreshed appearance without a gaunt or tired look. Nutraceutical and exercise strategies focused on body composition. Oligio X RF skin tightening and biostimulator planning. Targeted fat loss while maintaining healthy posture and tone. Korean LDM Water Drop Lifting and hydration support. Sustainable habit formation that lasts beyond treatment.",
     "snippet": "Our Body Reset Program is different because it combines medicine with aesthetics. Instead of asking: \"How much weight can we lose?\" We ask: \"How can we help you..."
   },
@@ -668,7 +668,7 @@ const SEARCH_INDEX = [
     "url": "medical-weight-loss-dallas.html#consultation-importance",
     "title": "Why Consultations Matter",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
+    "category": "Korean Body Reset™",
     "content": "Every body is different. During your consultation we evaluate: Because the best weight loss plan is the one built specifically for you.",
     "snippet": "Every body is different. During your consultation we evaluate: Because the best weight loss plan is the one built specifically for you."
   },
@@ -676,7 +676,7 @@ const SEARCH_INDEX = [
     "url": "medical-weight-loss-dallas.html#schedule",
     "title": "Schedule Your Body Reset Consultation",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
+    "category": "Korean Body Reset™",
     "content": "Ready to begin your Body Reset? Schedule your personalized medical weight loss consultation with SuA Glow to learn whether physician-guided GLP-1 therapy may be appropriate for your goals. Healthy body • Healthy skin • Confident glow. Important Transparency Statement Medical weight loss treatment recommendations are individualized based on each patient's medical history, clinical evaluation, treatment goals, and physician-approved protocols. Compounded medications are prescribed only when clinically appropriate. Results vary among individuals, and no specific outcome can be guaranteed.",
     "snippet": "Ready to begin your Body Reset? Schedule your personalized medical weight loss consultation with SuA Glow to learn whether physician-guided GLP-1 therapy may be..."
   },
@@ -684,7 +684,7 @@ const SEARCH_INDEX = [
     "url": "medical-weight-loss-dallas.html#faq",
     "title": "Medical Weight Loss FAQs",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
+    "category": "Korean Body Reset™",
     "content": "Physician-guided medical weight loss combines medical evaluation, evidence-based treatment options, nutrition, lifestyle guidance, and ongoing clinical monitoring to help patients pursue healthier, sustainable weight management. At SuA Glow, treatment plans are personalized based on your health history, goals, and clinical assessment. GLP-1 medications are prescription treatments that help regulate appetite and increase feelings of fullness. When prescribed as part of a comprehensive medical weight management program, they may help support healthy weight loss alongside nutrition and lifestyle changes. When clinically appropriate, your provider may discuss compounded GLP-1 treatment options prepared by a licensed compounding pharmacy. Medication recommendations depend on your medical history, current health status, and applicable regulations. One of the goals of the SuA Glow Body Reset is to support healthy body composition, not simply reduce the number on the scale. Your personalized treatment plan may include nutrition guidance, physical activity recommendations, and other strategies designed to help support lean muscle throughout your weight loss journey. Yes. As body weight changes, some individuals notice changes in skin firmness or facial fullness. That's why SuA Glow incorporates Korean-inspired skin health into our Body Reset philosophy. Depending on your personalized treatment plan, your provider may recommend Oligio X® skin tightening, collagen-supportive treatments, or other therapies to help support skin quality during weight loss. Eligibility depends on your medical history, current health, body mass index (BMI), weight-related health concerns, treatment goals, and a comprehensive medical evaluation. During your consultation, your provider will determine whether physician-guided medical weight management is appropriate for you. Every patient responds differently. Results depend on factors such as overall health, adherence to treatment, nutrition, physical activity, and individual response to therapy. Your provider will discuss realistic expectations and individualized goals during your consultation. The cost of physician-guided medical weight management varies depending on your personalized treatment plan, recommended medications, and follow-up care. During your consultation, we'll review your goals and develop a plan tailored to your needs. Because your transformation is about more than the scale. Many patients focus on losing weight, but they're equally concerned about maintaining healthy-looking skin, supporting collagen, and feeling confident throughout the process. That's why the SuA Glow Body Reset™ brings together physician-guided medical weight management, Korean-inspired wellness, Oligio X® skin tightening, nutraceutical support, and personalized lifestyle guidance into one comprehensive approach. Some patients choose to incorporate Oligio X® skin tightening into their personalized treatment plan to help support skin firmness as facial and body contours change during weight loss. Your provider will determine whether Oligio X is appropriate based on your goals and clinical assessment. Absolutely. Most patients who visit SuA Glow are looking for a non-surgical approach to healthier weight management. Our physician-guided SuA Glow Body Reset™ combines personalized medical care, lifestyle guidance, and, when medically appropriate, GLP-1 therapy to help support sustainable weight management without surgery. For some patients, physician-guided medical weight management may be an important part of an overall plan to address metabolic health, including insulin resistance. During your consultation, Sophia Yang, PA-C will review your medical history, health goals, and laboratory information to determine whether medical weight management may be appropriate for you. Every patient's journey is different. Some patients transition to long-term lifestyle strategies after treatment, while others may benefit from continued medical management based on their individual goals and clinical evaluation. At SuA Glow, we focus on building sustainable habits, not temporary results, so your confidence doesn't depend on a prescription alone. It can. As facial volume changes during weight loss, some individuals notice changes in skin firmness or facial contours. That's one reason SuA Glow takes a different approach. Unlike many traditional weight loss clinics, we combine physician-guided medical weight management with Korean-inspired skin health. Depending on your personalized treatment plan, your provider may recommend treatments such as Oligio X® skin tightening or other collagen-supportive therapies to help support skin quality as your body changes. While no treatment can completely prevent loose skin, several factors, including the rate of weight loss, age, genetics, and skin quality, may influence how your skin responds. At SuA Glow, we believe your skin deserves just as much attention as the number on the scale. Your personalized Body Reset plan may include physician-guided strategies to support healthy skin throughout your transformation, including nutrition guidance, targeted nutraceutical support, and, when appropriate, Oligio X® face and body skin tightening to help support skin firmness.",
     "snippet": "Physician-guided medical weight loss combines medical evaluation, evidence-based treatment options, nutrition, lifestyle guidance, and ongoing clinical monitori..."
   },
@@ -692,7 +692,7 @@ const SEARCH_INDEX = [
     "url": "medical-weight-loss-dallas.html",
     "title": "Reset your body.Keep your glow.Very Seoul.",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
-    "category": "PHYSICIAN-GUIDED BODY RESET • K-BEAUTY METABOLIC WELLNESS",
+    "category": "Korean Body Reset™",
     "content": "K-BEAUTY METABOLIC WELLNESS • CARROLLTON HQ",
     "snippet": "K-BEAUTY METABOLIC WELLNESS • CARROLLTON HQ"
   },
