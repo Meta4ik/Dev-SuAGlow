@@ -494,8 +494,45 @@
     </section>
 
     <!-- The SuA Glow Difference (Glow Cards Luxury Dark Section - Styled like Signature Skin Quality Results) -->
-    <section id="sua-glow-difference" data-nav-theme="light" class="py-32 px-6 md:px-12 lg:px-16 bg-near-black text-white">
-        <div class="max-w-7xl mx-auto space-y-16">
+    <section id="sua-glow-difference" data-nav-theme="light" class="py-32 px-6 md:px-12 lg:px-16 bg-near-black text-white relative overflow-hidden">
+        
+        <!-- Animated Large Yin Yang (Eum-Yang) Background Graphic -->
+        <div class="absolute top-1/2 left-1/2 pointer-events-none z-0 opacity-[0.07] sm:opacity-[0.11] w-[650px] h-[650px] sm:w-[900px] sm:h-[900px] lg:w-[1150px] lg:h-[1150px] animate-spin-slow">
+            <svg viewBox="0 0 200 200" class="w-full h-full filter drop-shadow-[0_0_60px_rgba(170,152,124,0.5)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="yin-yang-gold-grad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#AA987C" stop-opacity="0.95"/>
+                        <stop offset="50%" stop-color="#8F857B" stop-opacity="0.7"/>
+                        <stop offset="100%" stop-color="#AA987C" stop-opacity="0.95"/>
+                    </linearGradient>
+                    <radialGradient id="yin-yang-radial-glow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#AA987C" stop-opacity="0.35"/>
+                        <stop offset="100%" stop-color="#AA987C" stop-opacity="0"/>
+                    </radialGradient>
+                </defs>
+
+                <!-- Ambient Radial Glow Circle -->
+                <circle cx="100" cy="100" r="98" fill="url(#yin-yang-radial-glow)" />
+
+                <!-- Outer Golden Ring -->
+                <circle cx="100" cy="100" r="96" stroke="url(#yin-yang-gold-grad)" stroke-width="1.5" stroke-dasharray="6 3" />
+                <circle cx="100" cy="100" r="92" stroke="#AA987C" stroke-width="0.75" opacity="0.6" />
+
+                <!-- Yin Yang Primary S-Curve Half -->
+                <path d="M 100,8 A 92,92 0 0,1 100,192 A 46,46 0 0,1 100,100 A 46,46 0 0,0 100,8 Z" fill="url(#yin-yang-gold-grad)" />
+
+                <!-- Yin Yang Complementary Half Outline -->
+                <path d="M 100,8 A 92,92 0 0,0 100,192 A 46,46 0 0,0 100,100 A 46,46 0 0,1 100,8 Z" stroke="#AA987C" stroke-width="1" fill="none" opacity="0.4" />
+
+                <!-- Dots -->
+                <!-- Top Dot (in gold half) -->
+                <circle cx="100" cy="54" r="12" fill="#131619" stroke="#AA987C" stroke-width="1.5" />
+                <!-- Bottom Dot (in dark half) -->
+                <circle cx="100" cy="146" r="12" fill="url(#yin-yang-gold-grad)" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto space-y-16 relative z-10">
             <div class="text-center max-w-3xl mx-auto space-y-4 animate-on-scroll fade-up">
                 <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 inline-block uppercase tracking-wider text-[10px]">INTEGRATED METABOLIC &amp; AESTHETIC CARE</span>
                 <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-white [text-wrap:balance]">
