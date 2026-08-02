@@ -1098,42 +1098,46 @@ html {
 
 .yin-yang-loop-dot {
     opacity: 0;
+    stroke: none !important;
+    stroke-width: 0 !important;
     animation: loopDrawDot 8s ease-in-out infinite;
 }
 
 @keyframes loopDrawRing {
     0% {
         stroke-dashoffset: 600;
+        opacity: 0.9;
     }
-    35% {
+    35%, 75% {
         stroke-dashoffset: 0;
+        opacity: 0.9;
     }
-    75% {
-        stroke-dashoffset: 0;
-    }
-    92% {
+    92%, 100% {
         stroke-dashoffset: -600;
-    }
-    100% {
-        stroke-dashoffset: -600;
+        opacity: 0;
     }
 }
 
 @keyframes loopDrawScurve {
     0% {
         stroke-dashoffset: 320;
+        opacity: 1;
     }
     35% {
         stroke-dashoffset: 0;
+        opacity: 1;
     }
-    75% {
+    48% {
         stroke-dashoffset: 0;
+        opacity: 0.4;
     }
-    92% {
-        stroke-dashoffset: -320;
+    55%, 75% {
+        stroke-dashoffset: 0;
+        opacity: 0;
     }
-    100% {
+    92%, 100% {
         stroke-dashoffset: -320;
+        opacity: 0;
     }
 }
 
