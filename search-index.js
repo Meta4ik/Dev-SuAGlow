@@ -597,8 +597,8 @@ const SEARCH_INDEX = [
     "title": "LOSE THE WEIGHT. KEEP THE GLOW.",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
     "category": "Korean Body Reset™",
-    "content": "Physician-Guided Korean Medical Weight Management Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, skin health, and long-term confidence.",
-    "snippet": "Physician-Guided Korean Medical Weight Management Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, s..."
+    "content": "Physician-Guided KoreanMedical Weight Management Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, skin health, and long-term confidence.",
+    "snippet": "Physician-Guided KoreanMedical Weight Management Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, sk..."
   },
   {
     "url": "medical-weight-loss-dallas.html#philosophy",
