@@ -1135,16 +1135,12 @@ html {
         stroke-dashoffset: 0;
         opacity: 1;
     }
-    70% {
+    48% {
         stroke-dashoffset: 0;
-        opacity: 1;
+        opacity: 0;
     }
-    90% {
-        stroke-dashoffset: -320;
-        opacity: 1;
-    }
-    95%, 100% {
-        stroke-dashoffset: -320;
+    55%, 100% {
+        stroke-dashoffset: 0;
         opacity: 0;
     }
 }
@@ -1153,7 +1149,7 @@ html {
     0%, 30% {
         opacity: 0;
     }
-    45%, 68% {
+    45%, 70% {
         opacity: 1;
     }
     88%, 100% {
@@ -1165,7 +1161,7 @@ html {
     0%, 36% {
         opacity: 0;
     }
-    50%, 68% {
+    50%, 70% {
         opacity: 1;
     }
     88%, 100% {
