@@ -609,6 +609,14 @@ const SEARCH_INDEX = [
     "snippet": "That's why patients across Carrollton, Plano, Frisco, Coppell, Irving, Lewisville, Farmers Branch, Addison, and the DFW Metroplex choose SuA Glow for physician-..."
   },
   {
+    "url": "medical-weight-loss-dallas.html#body-reset-journey",
+    "title": "A Personalized Path to Your Best Self",
+    "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
+    "category": "Korean Body Reset™",
+    "content": "Comprehensive physician consultation A plan tailored to your health, goals, and lifestyle Medical weight management + Oligio X® + wellness support Maintain healthy habits, radiant skin, and lasting confidence",
+    "snippet": "Comprehensive physician consultation A plan tailored to your health, goals, and lifestyle Medical weight management + Oligio X® + wellness support Maintain heal..."
+  },
+  {
     "url": "medical-weight-loss-dallas.html#sua-glow-difference",
     "title": "The SuA Glow Difference",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
