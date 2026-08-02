@@ -514,21 +514,20 @@
                 <!-- Ambient Radial Glow Circle -->
                 <circle cx="100" cy="100" r="98" fill="url(#yin-yang-radial-glow)" />
 
-                <!-- Outer Golden Ring -->
-                <circle cx="100" cy="100" r="96" stroke="url(#yin-yang-gold-grad)" stroke-width="1.5" stroke-dasharray="6 3" />
-                <circle cx="100" cy="100" r="92" stroke="#AA987C" stroke-width="0.75" opacity="0.6" />
+                <!-- Outer Solid Golden Ring (Drawing Animation) -->
+                <circle cx="100" cy="100" r="92" stroke="url(#yin-yang-gold-grad)" stroke-width="1.5" fill="none" class="yin-yang-draw-ring" />
 
-                <!-- Yin Yang Primary S-Curve Half -->
-                <path d="M 100,8 A 92,92 0 0,1 100,192 A 46,46 0 0,1 100,100 A 46,46 0 0,0 100,8 Z" fill="url(#yin-yang-gold-grad)" />
+                <!-- Yin Yang Primary S-Curve Half (Self-Drawing Path) -->
+                <path d="M 100,8 A 92,92 0 0,1 100,192 A 46,46 0 0,1 100,100 A 46,46 0 0,0 100,8 Z" fill="url(#yin-yang-gold-grad)" stroke="#AA987C" stroke-width="1.2" class="yin-yang-draw-path" />
 
-                <!-- Yin Yang Complementary Half Outline -->
-                <path d="M 100,8 A 92,92 0 0,0 100,192 A 46,46 0 0,0 100,100 A 46,46 0 0,1 100,8 Z" stroke="#AA987C" stroke-width="1" fill="none" opacity="0.4" />
+                <!-- Yin Yang Complementary Half Outline (Self-Drawing Path) -->
+                <path d="M 100,8 A 92,92 0 0,0 100,192 A 46,46 0 0,0 100,100 A 46,46 0 0,1 100,8 Z" stroke="#AA987C" stroke-width="1" fill="none" class="yin-yang-draw-ring" opacity="0.6" />
 
-                <!-- Dots -->
+                <!-- Dots (Reveal Animation) -->
                 <!-- Top Dot (in gold half) -->
-                <circle cx="100" cy="54" r="12" fill="#131619" stroke="#AA987C" stroke-width="1.5" />
+                <circle cx="100" cy="54" r="12" fill="#131619" stroke="#AA987C" stroke-width="1.5" class="yin-yang-draw-dot" />
                 <!-- Bottom Dot (in dark half) -->
-                <circle cx="100" cy="146" r="12" fill="url(#yin-yang-gold-grad)" />
+                <circle cx="100" cy="146" r="12" fill="url(#yin-yang-gold-grad)" class="yin-yang-draw-dot" />
             </svg>
         </div>
 
