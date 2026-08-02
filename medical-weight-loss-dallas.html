@@ -514,18 +514,29 @@
                 <!-- Ambient Radial Glow Circle -->
                 <circle cx="100" cy="100" r="98" fill="url(#yin-yang-radial-glow)" />
 
-                <!-- Pure Yin Yang S-Curve (Outline-Free Seamless Redraw Loop) -->
+                <!-- Outer Edge Boundary Ring Stroke -->
+                <circle cx="100" cy="100" r="92" stroke="#AA987C" stroke-width="1.2" fill="none" class="yin-yang-loop-ring" />
+
+                <!-- Primary Gold Half (Gold Fill + Gold Outline) -->
                 <path d="M 100,8 A 92,92 0 0,1 100,192 A 46,46 0 0,1 100,100 A 46,46 0 0,0 100,8 Z" 
                       fill="url(#yin-yang-gold-grad)" 
-                      stroke="url(#yin-yang-gold-grad)" 
-                      stroke-width="0.5" 
+                      stroke="#AA987C" 
+                      stroke-width="1.2" 
                       class="yin-yang-loop-path" />
 
-                <!-- Dots (Outline-Free Seamless Redraw Loop) -->
-                <!-- Top Dot (in gold half) -->
-                <circle cx="100" cy="54" r="12" fill="#131619" stroke="none" class="yin-yang-loop-dot" />
-                <!-- Bottom Dot (in dark half) -->
-                <circle cx="100" cy="146" r="12" fill="url(#yin-yang-gold-grad)" stroke="none" class="yin-yang-loop-dot" />
+                <!-- Dark Half Boundary Outline (Dark Side Edge Definition) -->
+                <path d="M 100,8 A 92,92 0 0,0 100,192 A 46,46 0 0,0 100,100 A 46,46 0 0,1 100,8 Z" 
+                      fill="#131619" 
+                      fill-opacity="0.3" 
+                      stroke="#AA987C" 
+                      stroke-width="1.2" 
+                      class="yin-yang-loop-path-dark" />
+
+                <!-- Dots with Crisp Stroke Outlines -->
+                <!-- Top Dot (Dark eye in gold half) -->
+                <circle cx="100" cy="54" r="12" fill="#131619" stroke="#AA987C" stroke-width="1.2" class="yin-yang-loop-dot" />
+                <!-- Bottom Dot (Gold eye in dark half) -->
+                <circle cx="100" cy="146" r="12" fill="url(#yin-yang-gold-grad)" stroke="#AA987C" stroke-width="1.2" class="yin-yang-loop-dot" />
             </svg>
         </div>
 
