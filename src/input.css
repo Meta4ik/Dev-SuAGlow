@@ -1082,25 +1082,25 @@ html {
 .yin-yang-loop-ring {
     stroke-dasharray: 600;
     stroke-dashoffset: 600;
-    animation: loopDrawRing 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: loopDrawRing 16s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .yin-yang-loop-scurve {
     stroke-dasharray: 320;
     stroke-dashoffset: 320;
-    animation: loopDrawScurve 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: loopDrawScurve 16s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .yin-yang-loop-fills {
     opacity: 0;
-    animation: loopDrawFills 8s ease-in-out infinite;
+    animation: loopDrawFills 16s ease-in-out infinite;
 }
 
 .yin-yang-loop-dot {
     opacity: 0;
     stroke: none !important;
     stroke-width: 0 !important;
-    animation: loopDrawDot 8s ease-in-out infinite;
+    animation: loopDrawDot 16s ease-in-out infinite;
 }
 
 @keyframes loopDrawRing {
