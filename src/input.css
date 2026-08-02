@@ -1078,7 +1078,7 @@ html {
     }
 }
 
-/* Iconic Seamless Looping Redraw Animation for Outlined Yin Yang */
+/* Iconic Seamless Looping Redraw & Undraw Animation for Yin Yang */
 .yin-yang-loop-ring {
     stroke-dasharray: 600;
     stroke-dashoffset: 600;
@@ -1106,13 +1106,21 @@ html {
 @keyframes loopDrawRing {
     0% {
         stroke-dashoffset: 600;
-        opacity: 0.9;
+        opacity: 0.95;
     }
-    35%, 75% {
+    35% {
         stroke-dashoffset: 0;
-        opacity: 0.9;
+        opacity: 0.95;
     }
-    92%, 100% {
+    70% {
+        stroke-dashoffset: 0;
+        opacity: 0.95;
+    }
+    90% {
+        stroke-dashoffset: -600;
+        opacity: 0.95;
+    }
+    95%, 100% {
         stroke-dashoffset: -600;
         opacity: 0;
     }
@@ -1127,15 +1135,15 @@ html {
         stroke-dashoffset: 0;
         opacity: 1;
     }
-    48% {
+    70% {
         stroke-dashoffset: 0;
-        opacity: 0.4;
+        opacity: 1;
     }
-    55%, 75% {
-        stroke-dashoffset: 0;
-        opacity: 0;
+    90% {
+        stroke-dashoffset: -320;
+        opacity: 1;
     }
-    92%, 100% {
+    95%, 100% {
         stroke-dashoffset: -320;
         opacity: 0;
     }
@@ -1145,22 +1153,22 @@ html {
     0%, 30% {
         opacity: 0;
     }
-    48%, 75% {
+    45%, 68% {
         opacity: 1;
     }
-    90%, 100% {
+    88%, 100% {
         opacity: 0;
     }
 }
 
 @keyframes loopDrawDot {
-    0%, 40% {
+    0%, 36% {
         opacity: 0;
     }
-    55%, 75% {
+    50%, 68% {
         opacity: 1;
     }
-    90%, 100% {
+    88%, 100% {
         opacity: 0;
     }
 }
