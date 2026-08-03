@@ -505,25 +505,39 @@ function initHeroVideoScroll() {
     });
   }
 
+  let targetTime = 0;
+  let currentTime = 0;
+  let animFrameId = null;
+
+  const renderLoop = () => {
+    // Smooth linear interpolation (lerp factor 0.08 for fluid motion)
+    const diff = targetTime - currentTime;
+    if (Math.abs(diff) > 0.001) {
+      currentTime += diff * 0.08;
+      if (!isNaN(video.duration) && video.duration > 0) {
+        video.currentTime = Math.max(0, Math.min(currentTime, video.duration));
+      }
+    }
+    animFrameId = requestAnimationFrame(renderLoop);
+  };
+
   const handleScrollAndScrub = () => {
-    // Force the first frame (iOS requires > 0 to render sometimes)
     video.currentTime = 0.01;
+    currentTime = 0.01;
+    targetTime = 0.01;
 
-    let ticking = false;
+    // Start continuous smooth render loop
+    if (!animFrameId) {
+      animFrameId = requestAnimationFrame(renderLoop);
+    }
+
     window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          // Map the scroll distance to the video duration.
-          const maxScroll = window.innerHeight * 1.5;
-          let fraction = window.scrollY / maxScroll;
-          fraction = Math.max(0, Math.min(fraction, 1));
+      const maxScroll = window.innerHeight * 1.5;
+      let fraction = window.scrollY / maxScroll;
+      fraction = Math.max(0, Math.min(fraction, 1));
 
-          if (!isNaN(video.duration) && video.duration > 0) {
-            video.currentTime = video.duration * fraction;
-          }
-          ticking = false;
-        });
-        ticking = true;
+      if (!isNaN(video.duration) && video.duration > 0) {
+        targetTime = video.duration * fraction;
       }
     }, { passive: true });
   };
