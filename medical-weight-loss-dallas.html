@@ -10,39 +10,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/output.css?v=81">
+    <link rel="stylesheet" href="dist/output.css?v=82">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-off-white text-charcoal antialiased overflow-x-hidden w-full">
     <div id="nav-placeholder"></div>
 
     <!-- A. Hero Section — Brand color gradient bg, LDM-matched text style -->
-    <section id="hero" data-nav-theme="dark" class="relative overflow-hidden text-white bg-gradient-to-br from-near-black via-charcoal to-warm-gold/80 flex flex-col" style="min-height: 88vh;">
+    <section id="hero" data-nav-theme="dark" class="relative overflow-hidden text-white bg-gradient-to-br from-near-black via-charcoal to-warm-gold/80 flex flex-col justify-between" style="min-height: 92vh;">
         <!-- Hero Background Gradient Overlay -->
-        <div class="absolute inset-0 z-0 bg-gradient-to-br from-near-black via-charcoal/90 to-warm-gold/80 opacity-90 pointer-events-none"></div>
+        <div class="absolute inset-0 z-0 bg-gradient-to-b from-near-black via-near-black/90 to-charcoal/95 pointer-events-none"></div>
 
         <!-- Couple Image — Positioned responsively for desktop and mobile -->
-        <div class="absolute inset-x-0 bottom-0 pointer-events-none z-10 overflow-hidden h-[60%] lg:h-full top-auto lg:top-[60px]">
+        <div class="absolute inset-x-0 bottom-0 pointer-events-none z-10 overflow-hidden h-[45%] sm:h-[55%] lg:h-full top-auto lg:top-[60px]">
             <div class="max-w-[1440px] mx-auto px-4 md:px-12 w-full h-full relative flex justify-center lg:justify-end items-end">
                 <div class="relative h-full flex justify-center lg:justify-end items-end animate-on-scroll fade-left delay-100 w-full sm:w-[85%] lg:w-[75%] max-w-[1060px] lg:right-[-70px]">
                     <!-- Warm glow behind couple (Taupe #8F857B) -->
                     <div class="absolute inset-0 pointer-events-none z-0"
-                         style="background: radial-gradient(ellipse at 50% 85%, rgba(143,133,123,0.2) 0%, transparent 60%);"></div>
+                         style="background: radial-gradient(ellipse at 50% 85%, rgba(143,133,123,0.25) 0%, transparent 60%);"></div>
                     <!-- Couple image -->
                     <img src="assets/body-reset-couple-waist-up-transparent.png"
                          alt="SuA Glow Korean Body Reset Couple"
-                         class="relative z-10 object-contain object-bottom h-[105%] sm:h-[120%] lg:h-[130%] max-h-none w-auto opacity-40 sm:opacity-75 lg:opacity-100 transition-opacity duration-300"
+                         class="relative z-10 object-contain object-bottom h-full max-h-none w-auto opacity-30 sm:opacity-75 lg:opacity-100 transition-opacity duration-300"
                          style="filter: drop-shadow(0 20px 50px rgba(0,0,0,0.45));">
                 </div>
             </div>
         </div>
 
         <!-- Content row -->
-        <div class="relative z-20 w-full flex-1 flex items-center pt-24 pb-12 sm:pt-28 md:pt-[102px] md:pb-8">
+        <div class="relative z-20 w-full flex-1 flex items-start sm:items-center pt-28 pb-16 sm:pt-28 md:pt-[102px] md:pb-8">
             <div class="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-12 w-full flex items-center justify-between">
 
                 <!-- LEFT TEXT COLUMN -->
-                <div class="flex-none flex flex-col text-left space-y-5 animate-on-scroll fade-right relative z-20 w-full lg:w-[38%] max-w-xl lg:max-w-[430px]">
+                <div class="flex-none flex flex-col text-left space-y-4 sm:space-y-5 animate-on-scroll fade-right relative z-20 w-full lg:w-[42%] max-w-xl lg:max-w-[460px]">
 
                     <!-- Badge -->
                     <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 mb-1 inline-block uppercase tracking-wider text-[10px]" style="width: fit-content;">
@@ -50,15 +50,15 @@
                     </span>
 
                     <!-- H1 -->
-                    <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-white tracking-[0.16em] leading-[1.08] uppercase">
+                    <h1 class="heading-wide text-2xl sm:text-5xl lg:text-6xl text-white tracking-[0.14em] sm:tracking-[0.16em] leading-[1.1] uppercase">
                         <span class="!font-extralight block">LOSE THE</span>
-                        <span class="!font-medium text-white block tracking-[0.14em]">WEIGHT.</span>
+                        <span class="!font-medium text-white block tracking-[0.12em] sm:tracking-[0.14em]">WEIGHT.</span>
                         <span class="!font-extralight block">KEEP THE</span>
-                        <span class="text-warm-gold !font-extralight block tracking-[0.16em] [text-shadow:0_0_30px_rgba(170,152,124,0.85),0_0_60px_rgba(170,152,124,0.5)]">GLOW.</span>
+                        <span class="text-warm-gold !font-extralight block tracking-[0.14em] sm:tracking-[0.16em] [text-shadow:0_0_30px_rgba(170,152,124,0.85),0_0_60px_rgba(170,152,124,0.5)]">GLOW.</span>
                     </h1>
 
                     <!-- Subtitle -->
-                    <p class="text-xs sm:text-sm lg:text-base font-medium text-warm-gold/90 tracking-wider uppercase font-body leading-snug [text-wrap:balance]">
+                    <p class="text-[11px] sm:text-sm lg:text-base font-medium text-warm-gold/90 tracking-wider uppercase font-body leading-snug [text-wrap:balance]">
                         Physician-Guided Korean Medical Weight Management
                     </p>
 
@@ -68,13 +68,13 @@
                     </p>
 
                     <!-- CTAs -->
-                    <div class="pt-2 flex flex-col sm:flex-row lg:flex-col gap-3.5 items-stretch sm:items-start w-full sm:w-auto">
+                    <div class="pt-2 flex flex-col sm:flex-row lg:flex-col gap-3 items-stretch sm:items-start w-full sm:w-auto">
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                           class="btn-primary text-center">
+                           class="btn-primary text-center w-full sm:w-auto">
                             Book Your Body Reset Consultation
                         </a>
                         <a href="#medications"
-                           class="btn-outline-white text-center">
+                           class="btn-outline-white text-center w-full sm:w-auto">
                             See if You're a Candidate
                         </a>
                     </div>
@@ -1320,10 +1320,10 @@
     </section>
 
     <div id="footer-placeholder"></div>
-    <script src="nearme.js?v=37"></script>
-    <script src="navbar.js?v=37"></script>
-    <script src="footer.js?v=37"></script>
+    <script src="nearme.js?v=38"></script>
+    <script src="navbar.js?v=38"></script>
+    <script src="footer.js?v=38"></script>
     <script src="oversight.js?v=38"></script>
-    <script src="script.js?v=37"></script>
+    <script src="script.js?v=38"></script>
 </body>
 </html>
