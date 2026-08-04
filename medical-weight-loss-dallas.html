@@ -17,68 +17,64 @@
     <div id="nav-placeholder"></div>
 
     <!-- A. Hero Section — Brand color gradient bg, LDM-matched text style -->
-    <section id="hero" data-nav-theme="dark" class="relative overflow-hidden text-white bg-[#131619] flex flex-col" style="min-height: 88vh;">
-        <!-- Hero Background — Matches referral.html -->
-        <div class="absolute inset-0 z-0 opacity-40 pointer-events-none">
-            <div class="w-full h-full moving-gradient"></div>
-        </div>
+    <section id="hero" data-nav-theme="dark" class="relative overflow-hidden text-white bg-gradient-to-br from-near-black via-charcoal to-warm-gold/80 flex flex-col" style="min-height: 88vh;">
+        <!-- Hero Background Gradient Overlay -->
+        <div class="absolute inset-0 z-0 bg-gradient-to-br from-near-black via-charcoal/90 to-warm-gold/80 opacity-90 pointer-events-none"></div>
 
-        <!-- Couple Image — Increased size by 30% -->
-        <div class="absolute inset-x-0 top-[60px] bottom-0 pointer-events-none z-10">
-            <div class="max-w-[1440px] mx-auto px-4 md:px-12 w-full h-full relative flex justify-end items-end">
-                <div class="relative h-full flex justify-end items-end animate-on-scroll fade-left delay-100"
-                     style="width: 75%; max-width: 1060px; right: -70px;">
+        <!-- Couple Image — Positioned responsively for desktop and mobile -->
+        <div class="absolute inset-x-0 bottom-0 pointer-events-none z-10 overflow-hidden h-[60%] lg:h-full top-auto lg:top-[60px]">
+            <div class="max-w-[1440px] mx-auto px-4 md:px-12 w-full h-full relative flex justify-center lg:justify-end items-end">
+                <div class="relative h-full flex justify-center lg:justify-end items-end animate-on-scroll fade-left delay-100 w-full sm:w-[85%] lg:w-[75%] max-w-[1060px] lg:right-[-70px]">
                     <!-- Warm glow behind couple (Taupe #8F857B) -->
                     <div class="absolute inset-0 pointer-events-none z-0"
-                         style="background: radial-gradient(ellipse at 50% 85%, rgba(143,133,123,0.15) 0%, transparent 60%);"></div>
-                    <!-- Couple image: 30% larger (130% height) -->
+                         style="background: radial-gradient(ellipse at 50% 85%, rgba(143,133,123,0.2) 0%, transparent 60%);"></div>
+                    <!-- Couple image -->
                     <img src="assets/body-reset-couple-waist-up-transparent.png"
                          alt="SuA Glow Korean Body Reset Couple"
-                         class="relative z-10 object-contain object-bottom max-h-none w-auto"
-                         style="height: 130%; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.45));">
+                         class="relative z-10 object-contain object-bottom h-[105%] sm:h-[120%] lg:h-[130%] max-h-none w-auto opacity-40 sm:opacity-75 lg:opacity-100 transition-opacity duration-300"
+                         style="filter: drop-shadow(0 20px 50px rgba(0,0,0,0.45));">
                 </div>
             </div>
         </div>
 
-        <!-- Content row: text constrained to max-w-[1440px] mx-auto px-4 md:px-12 for logo margin alignment -->
-        <div class="relative z-20 w-full flex-1 flex items-center" style="padding-top: 102px; padding-bottom: 32px;">
-            <div class="max-w-[1440px] mx-auto px-4 md:px-12 w-full flex items-center justify-between">
+        <!-- Content row -->
+        <div class="relative z-20 w-full flex-1 flex items-center pt-24 pb-12 sm:pt-28 md:pt-[102px] md:pb-8">
+            <div class="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-12 w-full flex items-center justify-between">
 
-                <!-- LEFT TEXT COLUMN — 38% width, max 430px, vertically centered -->
-                <div class="flex-none flex flex-col text-left space-y-5 animate-on-scroll fade-right relative z-20"
-                     style="width: 38%; max-width: 430px;">
+                <!-- LEFT TEXT COLUMN -->
+                <div class="flex-none flex flex-col text-left space-y-5 animate-on-scroll fade-right relative z-20 w-full lg:w-[38%] max-w-xl lg:max-w-[430px]">
 
-                    <!-- Badge — matches LDM badge-glass style -->
+                    <!-- Badge -->
                     <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 mb-1 inline-block uppercase tracking-wider text-[10px]" style="width: fit-content;">
                         Korean Body Reset™
                     </span>
 
-                    <!-- H1 — 4 line stack: thin LOSE THE / medium WEIGHT. / thin KEEP THE / thin glowing GLOW. -->
+                    <!-- H1 -->
                     <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-white tracking-[0.16em] leading-[1.08] uppercase">
                         <span class="!font-extralight block">LOSE THE</span>
                         <span class="!font-medium text-white block tracking-[0.14em]">WEIGHT.</span>
                         <span class="!font-extralight block">KEEP THE</span>
-                        <span class="text-[#AA987C] !font-extralight block tracking-[0.16em] [text-shadow:0_0_30px_rgba(170,152,124,0.85),0_0_60px_rgba(170,152,124,0.5)]">GLOW.</span>
+                        <span class="text-warm-gold !font-extralight block tracking-[0.16em] [text-shadow:0_0_30px_rgba(170,152,124,0.85),0_0_60px_rgba(170,152,124,0.5)]">GLOW.</span>
                     </h1>
 
-                    <!-- Subtitle — wrapped so it stays clear of model -->
-                    <p class="text-xs sm:text-sm lg:text-base font-medium text-warm-gold/90 tracking-wider uppercase font-body leading-snug">
-                        Physician-Guided Korean<br>Medical Weight Management
+                    <!-- Subtitle -->
+                    <p class="text-xs sm:text-sm lg:text-base font-medium text-warm-gold/90 tracking-wider uppercase font-body leading-snug [text-wrap:balance]">
+                        Physician-Guided Korean Medical Weight Management
                     </p>
 
-                    <!-- Body copy — wrapped to max-w-sm -->
-                    <p class="text-xs md:text-sm font-light text-white/80 leading-relaxed max-w-sm">
+                    <!-- Body copy -->
+                    <p class="text-xs md:text-sm font-light text-white/90 sm:text-white/80 leading-relaxed max-w-sm">
                         Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, skin health, and long-term confidence.
                     </p>
 
-                    <!-- CTAs — stacked vertically so buttons stay clear of model -->
-                    <div class="pt-2 flex flex-col gap-3 items-start">
+                    <!-- CTAs -->
+                    <div class="pt-2 flex flex-col sm:flex-row lg:flex-col gap-3.5 items-stretch sm:items-start w-full sm:w-auto">
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                           class="btn-primary py-3.5 px-7 text-[11px] font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300 whitespace-nowrap">
+                           class="btn-primary text-center">
                             Book Your Body Reset Consultation
                         </a>
                         <a href="#medications"
-                           class="py-3.5 px-7 text-[11px] font-semibold tracking-widest rounded-full border border-white/30 hover:border-white text-white hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/5 uppercase whitespace-nowrap">
+                           class="btn-outline-white text-center">
                             See if You're a Candidate
                         </a>
                     </div>
@@ -96,7 +92,7 @@
             <div class="text-center max-w-3xl mx-auto space-y-4 animate-on-scroll fade-up">
                 <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">DFW METROPLEX WELLNESS CLINIC</span>
                 <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-near-black [text-wrap:balance]">
-                    Dallas Knows <span class="text-[#AA987C]">Weight Loss.</span><br>K-Beauty Knows <span class="text-[#AA987C]">The Glow.</span>
+                    Dallas Knows <span class="text-warm-gold">Weight Loss.</span><br>K-Beauty Knows <span class="text-warm-gold">The Glow.</span>
                 </h2>
                 <p class="text-sm font-light text-charcoal/80 leading-relaxed [text-wrap:balance]">
                     That's why patients across Carrollton, Plano, Frisco, Coppell, Irving, Lewisville, Farmers Branch, Addison, and the DFW Metroplex choose SuA Glow for physician-guided Body Reset care that goes beyond the&nbsp;scale.
@@ -112,10 +108,10 @@
                     </div>
                     
                     <!-- Dialogue Conversation Container (Animated Chat Bubbles) -->
-                    <div class="flex flex-col items-center space-y-8 text-center min-h-[300px] justify-center">
+                    <div class="flex flex-col items-center space-y-8 text-center min-h-[260px] justify-center">
                         <!-- Chat Bubble 1: Traditional Clinics -->
-                        <div id="chat-bubble-1" class="relative bg-white text-near-black shadow-soft p-6 sm:p-8 rounded-[32px] sm:rounded-[36px] rounded-bl-sm space-y-2 max-w-full opacity-0 transform translate-y-4 scale-95 transition-all duration-500 ease-out">
-                            <span class="text-xs uppercase tracking-widest font-bold text-charcoal/50 block">
+                        <div id="chat-bubble-1" class="relative bg-white text-near-black shadow-soft p-5 sm:p-8 rounded-[28px] sm:rounded-[36px] rounded-bl-sm space-y-2 max-w-full opacity-0 transform translate-y-4 scale-95 transition-all duration-500 ease-out">
+                            <span class="text-[11px] sm:text-xs uppercase tracking-widest font-bold text-charcoal/50 block">
                                 In many weight loss clinics, the conversation starts with:
                             </span>
                             <!-- Typing Dots Indicator 1 -->
@@ -125,14 +121,14 @@
                                 <span class="w-2.5 h-2.5 rounded-full bg-charcoal/40 animate-bounce [animation-delay:0.4s]"></span>
                             </div>
                             <!-- Typed Text Target 1 -->
-                            <p id="chat-text-1" class="text-base sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug whitespace-nowrap min-h-[1.5em]"></p>
+                            <p id="chat-text-1" class="text-sm sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug [text-wrap:balance] min-h-[1.5em]"></p>
                             <!-- Speech Tail Pointer -->
                             <div class="absolute -bottom-2 left-8 w-5 h-5 bg-white -rotate-45 transform rounded-bl-sm shadow-sm"></div>
                         </div>
 
                         <!-- Chat Bubble 2: SuA Glow Philosophy -->
-                        <div id="chat-bubble-2" class="relative bg-gradient-to-br from-[#AA987C]/20 via-white to-white text-near-black shadow-soft p-6 sm:p-8 rounded-[32px] sm:rounded-[36px] rounded-br-sm space-y-2 max-w-full opacity-0 transform translate-y-4 scale-95 transition-all duration-500 ease-out">
-                            <span class="text-xs uppercase tracking-widest font-bold text-warm-gold block">
+                        <div id="chat-bubble-2" class="relative bg-gradient-to-br from-warm-gold/20 via-white to-white text-near-black shadow-soft p-5 sm:p-8 rounded-[28px] sm:rounded-[36px] rounded-br-sm space-y-2 max-w-full opacity-0 transform translate-y-4 scale-95 transition-all duration-500 ease-out">
+                            <span class="text-[11px] sm:text-xs uppercase tracking-widest font-bold text-warm-gold block">
                                 At SuA Glow, we ask:
                             </span>
                             <!-- Typing Dots Indicator 2 -->
@@ -142,7 +138,7 @@
                                 <span class="w-2.5 h-2.5 rounded-full bg-warm-gold animate-bounce [animation-delay:0.4s]"></span>
                             </div>
                             <!-- Typed Text Target 2 -->
-                            <p id="chat-text-2" class="text-base sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug whitespace-nowrap min-h-[1.5em]"></p>
+                            <p id="chat-text-2" class="text-sm sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug [text-wrap:balance] min-h-[1.5em]"></p>
                             <!-- Speech Tail Pointer (Right Corner - Matching Screenshot) -->
                             <div class="absolute -bottom-2 right-8 w-5 h-5 bg-white rotate-45 transform rounded-br-sm shadow-sm"></div>
                         </div>
@@ -205,14 +201,14 @@
                                             const current = fullText2.slice(0, idx2);
                                             if (current.includes('feel?')) {
                                                 const parts = current.split('feel?');
-                                                text2El.innerHTML = parts[0] + '<span class="text-[#AA987C] font-bold underline decoration-warm-gold/50 underline-offset-4">feel?</span>' + (parts[1] || '');
+                                                text2El.innerHTML = parts[0] + '<span class="text-warm-gold font-bold underline decoration-warm-gold/50 underline-offset-4 animate-pulse">feel?</span>' + (parts[1] || '');
                                             } else {
                                                 text2El.textContent = current;
                                             }
                                             idx2++;
                                         } else {
                                             clearInterval(timer2);
-                                            text2El.innerHTML = '"How do you want to <span class="text-[#AA987C] font-bold underline decoration-warm-gold/50 underline-offset-4">feel?</span>"';
+                                            text2El.innerHTML = '"How do you want to <span class="text-warm-gold font-bold underline decoration-warm-gold/50 underline-offset-4 [text-shadow:0_0_15px_rgba(170,152,124,0.6)]">feel?</span>"';
                                         }
                                     }, 40);
                                 }, 800);
@@ -299,7 +295,7 @@
             <div class="bg-white rounded-3xl p-8 sm:p-12 border border-light-gray/50 shadow-soft text-center max-w-4xl mx-auto space-y-6">
                 <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">THE SUA GLOW PHILOSOPHY</span>
                 <h3 class="heading-wide text-2xl sm:text-3xl text-near-black [text-wrap:balance]">
-                    We don't believe in chasing trends. <span class="text-[#AA987C]">We believe in building confidence.</span>
+                    We don't believe in chasing trends. <span class="text-warm-gold">We believe in building confidence.</span>
                 </h3>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 text-center">
@@ -326,12 +322,12 @@
     </section>
 
     <!-- C. Your Body Reset Journey — 4-Step Interactive Timeline -->
-    <section id="body-reset-journey" class="py-24 px-6 md:px-12 lg:px-16 bg-[#FAF7F2] border-t border-b border-[#EBE5DB]">
+    <section id="body-reset-journey" class="py-24 px-6 md:px-12 lg:px-16 bg-off-white border-t border-b border-light-gray/60">
         <div class="max-w-7xl mx-auto space-y-16">
             
             <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto space-y-3 animate-on-scroll fade-up">
-                <span class="text-[#B37A5C] text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase block">YOUR BODY RESET JOURNEY</span>
+            <div class="text-center max-w-3xl mx-auto space-y-4 animate-on-scroll fade-up">
+                <span class="badge-standard">YOUR BODY RESET JOURNEY</span>
                 <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-near-black [text-wrap:balance]">
                     A Personalized Path to Your Best Self
                 </h2>
@@ -493,6 +489,104 @@
         </div>
     </section>
 
+    <!-- Which Reset Is Right For You? Section -->
+    <section id="which-reset-is-right-for-you" class="py-24 bg-off-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <span class="badge-standard">Customized Pathways</span>
+                <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-near-black [text-wrap:balance]">
+                    Which Reset Is Right For You?
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: BODY RESET -->
+                <div class="panel-fade-v rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-soft hover:shadow-glow transition-all duration-300 border border-light-gray/70 group">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-near-black/5">
+                            <img src="assets/reset_right_for_you_body.png" alt="Body Reset Medical Weight Loss" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 w-12 h-12 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-sm border border-light-gray/50">
+                                <svg class="w-6 h-6 text-warm-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="heading-wide text-lg text-near-black uppercase tracking-[0.15em] mb-1">
+                            BODY RESET™
+                        </h3>
+                        <p class="font-body text-xs text-taupe uppercase tracking-widest font-semibold mb-4">
+                            Medical Weight Loss
+                        </p>
+                        <hr class="border-light-gray w-12 mb-4">
+                        <p class="font-body text-sm text-charcoal/80 leading-relaxed mb-6">
+                            Healthy body.<br>Healthy confidence.
+                        </p>
+                    </div>
+                    <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="inline-flex items-center gap-2 font-heading text-xs uppercase tracking-[0.2em] font-bold text-warm-gold hover:text-near-black transition-colors">
+                        <span>LEARN MORE</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2: GLOW RESET -->
+                <div class="panel-fade-v rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-soft hover:shadow-glow transition-all duration-300 border border-light-gray/70 group">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-near-black/5">
+                            <img src="assets/reset_right_for_you_glow.png" alt="Glow Reset Oligio X Skin Tightening" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 w-12 h-12 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-sm border border-light-gray/50">
+                                <svg class="w-6 h-6 text-warm-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="heading-wide text-lg text-near-black uppercase tracking-[0.15em] mb-1">
+                            GLOW RESET™
+                        </h3>
+                        <p class="font-body text-xs text-taupe uppercase tracking-widest font-semibold mb-4">
+                            Oligio X® Skin Tightening
+                        </p>
+                        <hr class="border-light-gray w-12 mb-4">
+                        <p class="font-body text-sm text-charcoal/80 leading-relaxed mb-6">
+                            Protect your glow while<br>transforming your body.
+                        </p>
+                    </div>
+                    <a href="oligio-x.html" class="inline-flex items-center gap-2 font-heading text-xs uppercase tracking-[0.2em] font-bold text-warm-gold hover:text-near-black transition-colors">
+                        <span>LEARN MORE</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3: LONGEVITY RESET -->
+                <div class="panel-fade-v rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-soft hover:shadow-glow transition-all duration-300 border border-light-gray/70 group">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-near-black/5">
+                            <img src="assets/reset_right_for_you_longevity.png" alt="Longevity Reset Wellness & Longevity" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 w-12 h-12 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-sm border border-light-gray/50">
+                                <svg class="w-6 h-6 text-warm-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21V12.75m0 0C10.5 9 7.5 7.5 4.5 7.5M12 12.75c1.5-3.75 4.5-5.25 7.5-5.25"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="heading-wide text-lg text-near-black uppercase tracking-[0.15em] mb-1">
+                            LONGEVITY RESET™
+                        </h3>
+                        <p class="font-body text-xs text-taupe uppercase tracking-widest font-semibold mb-4">
+                            Wellness & Longevity
+                        </p>
+                        <hr class="border-light-gray w-12 mb-4">
+                        <p class="font-body text-sm text-charcoal/80 leading-relaxed mb-6">
+                            Hormones. Infusions.<br>Peptides. Optimize how<br>you feel—not just how you look.
+                        </p>
+                    </div>
+                    <a href="skin-health.html" class="inline-flex items-center gap-2 font-heading text-xs uppercase tracking-[0.2em] font-bold text-warm-gold hover:text-near-black transition-colors">
+                        <span>LEARN MORE</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- The SuA Glow Difference (Glow Cards Luxury Dark Section - Styled like Signature Skin Quality Results) -->
     <section id="sua-glow-difference" data-nav-theme="light" class="py-32 px-6 md:px-12 lg:px-16 bg-near-black text-white relative overflow-hidden">
         
@@ -544,52 +638,64 @@
             <div class="text-center max-w-3xl mx-auto space-y-4 animate-on-scroll fade-up">
                 <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 inline-block uppercase tracking-wider text-[10px]">INTEGRATED METABOLIC &amp; AESTHETIC CARE</span>
                 <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-white [text-wrap:balance]">
-                    The SuA Glow <span class="text-[#AA987C]">Difference</span>
+                    The SuA Glow <span class="text-warm-gold">Difference</span>
                 </h2>
                 <p class="text-xs uppercase tracking-[0.4em] opacity-40 font-bold">Personalized For Your Glow</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 1 -->
-                <div class="product-card glow-card p-10 animate-on-scroll fade-up" style="--glow-color: #8F857B;">
-                    <i data-lucide="stethoscope" class="w-5 h-5 text-taupe mb-6"></i>
-                    <h3 class="heading-wide text-xs mb-4 text-white uppercase tracking-widest font-bold [text-wrap:balance]">Physician-Guided Body Reset</h3>
-                    <p class="text-xs opacity-50 leading-relaxed font-light">Personalized medical care designed around your body, not someone else's journey.</p>
+                <div class="product-card glow-card p-10 animate-on-scroll fade-up !bg-near-black/80 !border-white/10 shadow-2xl hover:!border-warm-gold/50 transition-all duration-500" style="--glow-color: #8F857B;">
+                    <div class="w-12 h-12 rounded-2xl bg-taupe/15 flex items-center justify-center mb-6 border border-taupe/30">
+                        <i data-lucide="stethoscope" class="w-6 h-6 text-warm-gold"></i>
+                    </div>
+                    <h3 class="heading-wide text-sm mb-4 text-white uppercase tracking-widest font-bold [text-wrap:balance]">Physician-Guided Body Reset</h3>
+                    <p class="text-xs text-white/70 leading-relaxed font-light">Personalized medical care designed around your body, not someone else's journey.</p>
                 </div>
 
                 <!-- 2 -->
-                <div class="product-card glow-card p-10 animate-on-scroll fade-up delay-100" style="--glow-color: #AA987C;">
-                    <i data-lucide="pill" class="w-5 h-5 text-warm-gold mb-6"></i>
-                    <h3 class="heading-wide text-xs mb-4 text-white uppercase tracking-widest font-bold [text-wrap:balance]">GLP Therapy, When Appropriate</h3>
-                    <p class="text-xs opacity-50 leading-relaxed font-light">Evidence-based medical weight management tailored to your individual needs.</p>
+                <div class="product-card glow-card p-10 animate-on-scroll fade-up delay-100 !bg-near-black/80 !border-white/10 shadow-2xl hover:!border-warm-gold/50 transition-all duration-500" style="--glow-color: #AA987C;">
+                    <div class="w-12 h-12 rounded-2xl bg-warm-gold/15 flex items-center justify-center mb-6 border border-warm-gold/30">
+                        <i data-lucide="pill" class="w-6 h-6 text-warm-gold"></i>
+                    </div>
+                    <h3 class="heading-wide text-sm mb-4 text-white uppercase tracking-widest font-bold [text-wrap:balance]">GLP Therapy, When Appropriate</h3>
+                    <p class="text-xs text-white/70 leading-relaxed font-light">Evidence-based medical weight management tailored to your individual needs.</p>
                 </div>
 
                 <!-- 3 -->
-                <div class="product-card glow-card p-10 animate-on-scroll fade-up delay-200" style="--glow-color: #9DAFB6;">
-                    <i data-lucide="flower" class="w-5 h-5 text-blue-gray mb-6"></i>
-                    <h3 class="heading-wide text-xs mb-4 text-white uppercase tracking-widest font-bold [text-wrap:balance]">Inspired by Korean Wellness</h3>
-                    <p class="text-xs opacity-50 leading-relaxed font-light">A philosophy that prioritizes healthy skin, balanced wellness, and sustainable confidence.</p>
+                <div class="product-card glow-card p-10 animate-on-scroll fade-up delay-200 !bg-near-black/80 !border-white/10 shadow-2xl hover:!border-warm-gold/50 transition-all duration-500" style="--glow-color: #9DAFB6;">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-gray/15 flex items-center justify-center mb-6 border border-blue-gray/30">
+                        <i data-lucide="flower" class="w-6 h-6 text-blue-gray"></i>
+                    </div>
+                    <h3 class="heading-wide text-sm mb-4 text-white uppercase tracking-widest font-bold [text-wrap:balance]">Inspired by Korean Wellness</h3>
+                    <p class="text-xs text-white/70 leading-relaxed font-light">A philosophy that prioritizes healthy skin, balanced wellness, and sustainable confidence.</p>
                 </div>
 
                 <!-- 4 -->
-                <div class="product-card glow-card p-10 animate-on-scroll fade-up" style="--glow-color: #AA987C;">
-                    <i data-lucide="activity" class="w-5 h-5 text-warm-gold mb-6"></i>
-                    <h3 class="heading-wide text-xs mb-4 text-white uppercase tracking-widest font-bold [text-wrap:balance]">Support Beyond the Scale</h3>
-                    <p class="text-xs opacity-50 leading-relaxed font-light">Strategies focused on healthy body composition and preserving lean muscle during weight loss.</p>
+                <div class="product-card glow-card p-10 animate-on-scroll fade-up !bg-near-black/80 !border-white/10 shadow-2xl hover:!border-warm-gold/50 transition-all duration-500" style="--glow-color: #AA987C;">
+                    <div class="w-12 h-12 rounded-2xl bg-warm-gold/15 flex items-center justify-center mb-6 border border-warm-gold/30">
+                        <i data-lucide="activity" class="w-6 h-6 text-warm-gold"></i>
+                    </div>
+                    <h3 class="heading-wide text-sm mb-4 text-white uppercase tracking-widest font-bold [text-wrap:balance]">Support Beyond the Scale</h3>
+                    <p class="text-xs text-white/70 leading-relaxed font-light">Strategies focused on healthy body composition and preserving lean muscle during weight loss.</p>
                 </div>
 
                 <!-- 5 -->
-                <div class="product-card glow-card p-10 animate-on-scroll fade-up delay-100" style="--glow-color: #8F857B;">
-                    <i data-lucide="shield" class="w-5 h-5 text-taupe mb-6"></i>
-                    <h3 class="heading-wide text-xs mb-4 text-white uppercase tracking-widest font-bold [text-wrap:balance]">Protect Your Glow</h3>
-                    <p class="text-xs opacity-50 leading-relaxed font-light">Oligio X® skin tightening for face and body contours to support skin firmness as your body changes.</p>
+                <div class="product-card glow-card p-10 animate-on-scroll fade-up delay-100 !bg-near-black/80 !border-white/10 shadow-2xl hover:!border-warm-gold/50 transition-all duration-500" style="--glow-color: #8F857B;">
+                    <div class="w-12 h-12 rounded-2xl bg-taupe/15 flex items-center justify-center mb-6 border border-taupe/30">
+                        <i data-lucide="shield" class="w-6 h-6 text-warm-gold"></i>
+                    </div>
+                    <h3 class="heading-wide text-sm mb-4 text-white uppercase tracking-widest font-bold [text-wrap:balance]">Protect Your Glow</h3>
+                    <p class="text-xs text-white/70 leading-relaxed font-light">Oligio X® skin tightening for face and body contours to support skin firmness as your body changes.</p>
                 </div>
 
                 <!-- 6 -->
-                <div class="product-card glow-card p-10 animate-on-scroll fade-up delay-200" style="--glow-color: #9DAFB6;">
-                    <i data-lucide="droplet" class="w-5 h-5 text-blue-gray mb-6"></i>
-                    <h3 class="heading-wide text-xs mb-4 text-white uppercase tracking-widest font-bold [text-wrap:balance]">Nourish From Within</h3>
-                    <p class="text-xs opacity-50 leading-relaxed font-light">Targeted nutraceuticals and wellness infusions to support hydration, nutrition, and overall vitality.</p>
+                <div class="product-card glow-card p-10 animate-on-scroll fade-up delay-200 !bg-near-black/80 !border-white/10 shadow-2xl hover:!border-warm-gold/50 transition-all duration-500" style="--glow-color: #9DAFB6;">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-gray/15 flex items-center justify-center mb-6 border border-blue-gray/30">
+                        <i data-lucide="droplet" class="w-6 h-6 text-blue-gray"></i>
+                    </div>
+                    <h3 class="heading-wide text-sm mb-4 text-white uppercase tracking-widest font-bold [text-wrap:balance]">Nourish From Within</h3>
+                    <p class="text-xs text-white/70 leading-relaxed font-light">Targeted nutraceuticals and wellness infusions to support hydration, nutrition, and overall vitality.</p>
                 </div>
             </div>
 

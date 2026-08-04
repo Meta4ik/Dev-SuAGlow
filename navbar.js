@@ -269,11 +269,6 @@ const NAVBAR_HTML = `
 
         <!-- Nav Right -->
         <div class="flex items-center gap-4 md:gap-6">
-            <!-- Search Trigger -->
-            <button id="search-trigger" class="hidden min-[1180px]:flex text-charcoal hover:text-taupe transition-colors items-center justify-center p-2 mr-1" aria-label="Search site">
-                <i data-lucide="search" class="w-5 h-5"></i>
-            </button>
-
             <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
                 class="inline-flex font-body text-[11px] md:text-[13px] tracking-[0.1em] uppercase bg-taupe text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full hover:bg-warm-gold transition-colors whitespace-nowrap">
                 Book Now
@@ -299,11 +294,6 @@ const NAVBAR_HTML = `
                     </div>
                 </a>
             </div>
-
-            <!-- Mobile Search Trigger -->
-            <button id="mobile-search-trigger" class="min-[1180px]:hidden text-charcoal hover:text-taupe transition-colors flex items-center justify-center p-2 min-w-[44px] min-h-[44px] mr-1 rounded-lg active:scale-95" aria-label="Search site">
-                <i data-lucide="search" class="w-6 h-6"></i>
-            </button>
 
             <!-- Mobile Menu Button (Accessible during scroll with 44px tap target) -->
             <button id="menu-btn" class="min-[1180px]:hidden text-charcoal hover:text-taupe transition-colors p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center relative z-50 rounded-lg active:scale-95" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
