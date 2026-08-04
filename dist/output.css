@@ -656,11 +656,6 @@ video {
   inset: 1rem;
 }
 
-.inset-x-0 {
-  left: 0px;
-  right: 0px;
-}
-
 .-bottom-10 {
   bottom: -2.5rem;
 }
@@ -811,10 +806,6 @@ video {
 
 .top-\[10\%\] {
   top: 10%;
-}
-
-.top-auto {
-  top: auto;
 }
 
 .-z-10 {
@@ -1246,10 +1237,6 @@ video {
   height: 44px;
 }
 
-.h-\[45\%\] {
-  height: 45%;
-}
-
 .h-\[500px\] {
   height: 500px;
 }
@@ -1569,10 +1556,6 @@ video {
 
 .max-w-7xl {
   max-width: 80rem;
-}
-
-.max-w-\[1060px\] {
-  max-width: 1060px;
 }
 
 .max-w-\[1440px\] {
@@ -6288,10 +6271,6 @@ mark.search-highlight {
     height: 480px;
   }
 
-  .sm\:h-\[55\%\] {
-    height: 55%;
-  }
-
   .sm\:h-\[900px\] {
     height: 900px;
   }
@@ -6306,10 +6285,6 @@ mark.search-highlight {
 
   .sm\:w-80 {
     width: 20rem;
-  }
-
-  .sm\:w-\[85\%\] {
-    width: 85%;
   }
 
   .sm\:w-\[900px\] {
@@ -6350,10 +6325,6 @@ mark.search-highlight {
 
   .sm\:items-start {
     align-items: flex-start;
-  }
-
-  .sm\:items-center {
-    align-items: center;
   }
 
   .sm\:gap-3 {
@@ -6460,10 +6431,6 @@ mark.search-highlight {
 
   .sm\:text-white\/80 {
     color: rgb(255 255 255 / 0.8);
-  }
-
-  .sm\:opacity-75 {
-    opacity: 0.75;
   }
 
   .sm\:opacity-\[0\.14\] {
@@ -6805,14 +6772,6 @@ mark.search-highlight {
 }
 
 @media (min-width: 1024px) {
-  .lg\:right-\[-70px\] {
-    right: -70px;
-  }
-
-  .lg\:top-\[60px\] {
-    top: 60px;
-  }
-
   .lg\:order-1 {
     order: 1;
   }
@@ -6843,6 +6802,10 @@ mark.search-highlight {
 
   .lg\:col-start-2 {
     grid-column-start: 2;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
   }
 
   .lg\:mt-32 {
@@ -6877,8 +6840,8 @@ mark.search-highlight {
     height: 500px;
   }
 
-  .lg\:h-full {
-    height: 100%;
+  .lg\:h-\[650px\] {
+    height: 650px;
   }
 
   .lg\:min-h-full {
@@ -6913,8 +6876,8 @@ mark.search-highlight {
     width: 42%;
   }
 
-  .lg\:w-\[75\%\] {
-    width: 75%;
+  .lg\:w-\[58\%\] {
+    width: 58%;
   }
 
   .lg\:max-w-\[460px\] {
@@ -6964,6 +6927,14 @@ mark.search-highlight {
 
   .lg\:justify-end {
     justify-content: flex-end;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
+  .lg\:gap-0 {
+    gap: 0px;
   }
 
   .lg\:gap-12 {
@@ -7089,10 +7060,6 @@ mark.search-highlight {
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .lg\:opacity-100 {
-    opacity: 1;
   }
 }
 
