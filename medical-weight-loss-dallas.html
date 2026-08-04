@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/output.css?v=85">
+    <link rel="stylesheet" href="dist/output.css?v=86">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-off-white text-charcoal antialiased overflow-x-hidden w-full">
@@ -19,14 +19,30 @@
     <!-- A. Hero Section — Brand color gradient bg, LDM-matched text style -->
     <section id="hero" data-nav-theme="dark" class="relative overflow-hidden text-white bg-gradient-to-br from-near-black via-charcoal to-warm-gold/80 flex flex-col justify-between" style="min-height: 88vh;">
         <!-- Hero Background Gradient Overlay -->
-        <div class="absolute inset-0 z-0 bg-gradient-to-b from-near-black via-near-black/90 to-charcoal/95 pointer-events-none"></div>
+        <div class="absolute inset-0 z-0 bg-gradient-to-br from-near-black via-charcoal/90 to-warm-gold/80 opacity-90 pointer-events-none"></div>
+
+        <!-- Desktop Absolute Image — Positioned on bottom-right for desktop screens (lg:) -->
+        <div class="hidden lg:block absolute inset-x-0 bottom-0 pointer-events-none z-10 overflow-hidden h-full top-[60px]">
+            <div class="max-w-[1440px] mx-auto px-4 md:px-12 w-full h-full relative flex justify-end items-end">
+                <div class="relative h-full flex justify-end items-end animate-on-scroll fade-left delay-100 w-[75%] max-w-[1060px] right-[-70px]">
+                    <!-- Warm glow behind couple -->
+                    <div class="absolute inset-0 pointer-events-none z-0"
+                         style="background: radial-gradient(ellipse at 50% 85%, rgba(143,133,123,0.2) 0%, transparent 60%);"></div>
+                    <!-- Couple image -->
+                    <img src="assets/body-reset-couple-waist-up-transparent.png"
+                         alt="SuA Glow Korean Body Reset Couple"
+                         class="relative z-10 object-contain object-bottom h-[130%] max-h-none w-auto opacity-100 transition-opacity duration-300"
+                         style="filter: drop-shadow(0 20px 50px rgba(0,0,0,0.45));">
+                </div>
+            </div>
+        </div>
 
         <!-- Content & Image Row -->
         <div class="relative z-20 w-full flex-1 flex flex-col lg:flex-row items-center justify-between pt-36 pb-0 sm:pt-32 md:pt-[102px]">
             <div class="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-12 w-full flex-1 flex flex-col lg:flex-row items-center lg:justify-between gap-8 lg:gap-0">
 
                 <!-- LEFT TEXT COLUMN -->
-                <div class="flex-none flex flex-col text-left space-y-4 sm:space-y-5 animate-on-scroll fade-right relative z-20 w-full lg:w-[42%] max-w-xl lg:max-w-[460px]">
+                <div class="flex-none flex flex-col text-left space-y-4 sm:space-y-5 animate-on-scroll fade-right relative z-20 w-full lg:w-[38%] max-w-xl lg:max-w-[430px]">
 
                     <!-- Badge -->
                     <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 mb-1 inline-block uppercase tracking-wider text-[10px]" style="width: fit-content;">
@@ -34,7 +50,7 @@
                     </span>
 
                     <!-- H1 -->
-                    <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-white tracking-[0.14em] sm:tracking-[0.16em] leading-[1.1] uppercase">
+                    <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-white tracking-[0.14em] sm:tracking-[0.16em] leading-[1.08] uppercase">
                         <span class="!font-extralight block">LOSE THE</span>
                         <span class="!font-medium text-white block tracking-[0.12em] sm:tracking-[0.14em]">WEIGHT.</span>
                         <span class="!font-extralight block">KEEP THE</span>
@@ -64,8 +80,8 @@
                     </div>
                 </div>
 
-                <!-- RIGHT IMAGE COLUMN — Valigned to bottom of hero section -->
-                <div class="relative w-full lg:w-[58%] h-[340px] sm:h-[450px] lg:h-[650px] flex justify-center lg:justify-end items-end animate-on-scroll fade-left delay-100 mt-6 lg:mt-0 self-end">
+                <!-- MOBILE IMAGE COLUMN — Rendered inline below text only on mobile screens (lg:hidden) -->
+                <div class="lg:hidden relative w-full h-[340px] sm:h-[450px] flex justify-center items-end animate-on-scroll fade-left delay-100 mt-6 self-end">
                     <!-- Warm glow behind couple -->
                     <div class="absolute inset-0 pointer-events-none z-0"
                          style="background: radial-gradient(ellipse at 50% 100%, rgba(143,133,123,0.3) 0%, transparent 65%);"></div>
@@ -1332,10 +1348,10 @@
     </section>
 
     <div id="footer-placeholder"></div>
-    <script src="nearme.js?v=41"></script>
-    <script src="navbar.js?v=41"></script>
-    <script src="footer.js?v=41"></script>
-    <script src="oversight.js?v=41"></script>
-    <script src="script.js?v=41"></script>
+    <script src="nearme.js?v=42"></script>
+    <script src="navbar.js?v=42"></script>
+    <script src="footer.js?v=42"></script>
+    <script src="oversight.js?v=42"></script>
+    <script src="script.js?v=42"></script>
 </body>
 </html>
