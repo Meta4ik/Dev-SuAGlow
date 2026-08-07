@@ -28,6 +28,11 @@ function renderMonthlySpecials() {
                     <img src="${stepItem.image}" alt="${stepItem.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 </div>
 
+                <!-- Floating Step Number Badge Over All Layers (Highest Z-Index) -->
+                <div class="absolute top-2 left-2 md:top-2 md:left-2 w-10 h-10 md:w-11 md:h-11 rounded-full bg-near-black text-warm-gold font-heading text-base md:text-lg font-bold flex items-center justify-center shadow-xl border border-warm-gold/50 z-50 pointer-events-none">
+                    ${stepItem.step}
+                </div>
+
                 <!-- Center: Content Area (Full height flex column) -->
                 <div class="text-left flex flex-col justify-between h-full py-1 pr-0 md:pr-4">
                     <div>
@@ -52,7 +57,7 @@ function renderMonthlySpecials() {
                     <!-- Bottom Right Book Button -->
                     <div>
                         <a href="${stepItem.bookingUrl}" target="_blank" class="btn-primary text-xs py-3 px-6 inline-flex items-center justify-center gap-2 w-full md:w-auto shadow-md whitespace-nowrap">
-                            <span>Book Now</span>
+                            <span>Book Step ${stepItem.step}</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
                     </div>
@@ -99,24 +104,24 @@ function renderMonthlySpecials() {
     // --- VIEW 2: 4:5 Aspect Ratio Print Flyer Canvas (Matching Wireframe Layout) ---
     const flyerCardsHTML = featuredSteps.map((stepItem) => {
         return `
-            <div class="bg-white/95 rounded-[18px] border border-charcoal/15 p-4 pl-36 shadow-sm relative flex flex-row items-center gap-4 min-h-[132px] overflow-hidden group w-full max-w-[520px]">
+            <div class="bg-white/95 rounded-[18px] border border-charcoal/15 p-3.5 pl-32 shadow-sm relative flex flex-row items-center gap-4 min-h-[124px] overflow-hidden group w-full max-w-[520px]">
                 <!-- Product / Service Image (Left - Fills equal top, left & bottom margin) -->
-                <div class="absolute top-3.5 bottom-3.5 left-3.5 w-28 rounded-xl bg-off-white shrink-0 border border-charcoal/10 overflow-hidden">
+                <div class="absolute top-3 bottom-3 left-3 w-24 rounded-xl bg-off-white shrink-0 border border-charcoal/10 overflow-hidden">
                     <img src="${stepItem.image}" alt="${stepItem.title}" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Center Content: Benefit, Name, Product, Details -->
-                <div class="flex-1 pr-24 text-left py-0.5">
-                    <span class="text-[9px] tracking-[0.2em] font-bold text-warm-gold uppercase block mb-1">
+                <div class="flex-1 pr-20 text-left">
+                    <span class="text-[9px] tracking-[0.2em] font-bold text-warm-gold uppercase block mb-0.5">
                         ${stepItem.badge}
                     </span>
-                    <h3 class="font-heading text-base text-near-black font-bold tracking-wider leading-tight mb-0.5">
+                    <h3 class="font-heading text-base text-near-black font-bold tracking-wider leading-snug">
                         ${stepItem.title}
                     </h3>
-                    <p class="font-body text-[11px] font-semibold text-taupe tracking-wide mb-1.5">
+                    <p class="font-body text-[11px] font-semibold text-taupe tracking-wide mb-1">
                         ${stepItem.subtitle}
                     </p>
-                    <p class="font-body text-[10.5px] text-charcoal/75 leading-normal">
+                    <p class="font-body text-[10px] text-charcoal/70 leading-relaxed line-clamp-2">
                         ${stepItem.description}
                     </p>
                 </div>
@@ -126,7 +131,7 @@ function renderMonthlySpecials() {
                     <div class="font-body text-xl font-extrabold text-near-black tracking-tight leading-none">
                         ${stepItem.price}
                     </div>
-                    ${stepItem.priceDetail ? `<span class="text-[8.5px] font-bold text-taupe uppercase tracking-wider block mt-2">${stepItem.priceDetail}</span>` : ''}
+                    ${stepItem.priceDetail ? `<span class="text-[8px] font-bold text-taupe uppercase tracking-wider block mt-0.5">${stepItem.priceDetail}</span>` : ''}
                 </div>
             </div>
         `;
@@ -173,10 +178,10 @@ function renderMonthlySpecials() {
                     </div>
                 </div>
 
-                <!-- VIEW 1: Interactive Featured Offers View -->
+                <!-- VIEW 1: Interactive 3-Step Program View -->
                 <div id="specials-program-view" class="space-y-8 max-w-5xl mx-auto">
                     <div class="text-center mb-8">
-                        <p class="font-body text-xs text-charcoal/60 uppercase tracking-widest">Follow Seoul's seasonal reset for optimal results</p>
+                        <p class="font-body text-xs text-charcoal/60 uppercase tracking-widest">Follow Seoul's 3-step seasonal reset for optimal results</p>
                     </div>
                     ${webStepsHTML}
 
@@ -209,8 +214,8 @@ function renderMonthlySpecials() {
                                     ${meta.subtitle}
                                 </p>
                             </div>
-                            <div class="text-right flex items-center">
-                                <span class="text-[10px] font-heading tracking-[0.3em] font-extrabold text-warm-gold uppercase bg-near-black px-4 py-2.5 rounded-full border border-warm-gold/40 shadow-lg whitespace-nowrap inline-flex items-center justify-center leading-none">
+                            <div class="text-right">
+                                <span class="text-[10px] font-heading tracking-[0.3em] font-extrabold text-warm-gold uppercase bg-near-black px-4 py-2 rounded-full border border-warm-gold/40 shadow-lg whitespace-nowrap inline-block">
                                     ${meta.badge}
                                 </span>
                             </div>
@@ -222,20 +227,20 @@ function renderMonthlySpecials() {
                         </div>
 
                         <!-- Bottom Offers Box -->
-                        <div class="mt-4 bg-gradient-to-r from-near-black via-near-black/95 to-near-black text-white rounded-[20px] p-4 md:p-5 border border-warm-gold/40 shadow-xl flex flex-row items-center justify-between min-h-[76px]">
-                            <div class="w-1/2 pr-4 border-r border-white/20 text-left flex flex-col justify-center">
-                                <span class="text-[9px] tracking-[0.3em] text-warm-gold uppercase font-extrabold block mb-1 leading-none">
+                        <div class="mt-4 bg-gradient-to-r from-near-black via-near-black/95 to-near-black text-white rounded-[20px] p-4 border border-warm-gold/40 shadow-xl flex flex-row items-center justify-between">
+                            <div class="w-1/2 pr-4 border-r border-white/20 text-left">
+                                <span class="text-[9px] tracking-[0.3em] text-warm-gold uppercase font-extrabold block mb-0.5">
                                     LIMITED TIME
                                 </span>
-                                <h3 class="font-heading text-base md:text-lg text-white font-bold uppercase tracking-[0.12em] leading-tight">
+                                <h3 class="font-heading text-base md:text-lg text-white font-bold uppercase tracking-[0.12em]">
                                     ${meta.month.toUpperCase()} OFFERS
                                 </h3>
                             </div>
-                            <div class="w-1/2 pl-4 text-right flex flex-col justify-center items-end">
-                                <span class="font-heading text-2xl md:text-3xl text-warm-gold font-extrabold tracking-tight block leading-none mb-1">
+                            <div class="w-1/2 pl-4 text-right">
+                                <span class="font-heading text-2xl md:text-3xl text-warm-gold font-extrabold tracking-tight block">
                                     $100 OFF
                                 </span>
-                                <span class="text-[9.5px] text-white/90 font-body font-semibold block leading-tight">
+                                <span class="text-[9.5px] text-white/90 font-body font-semibold block mt-0.5">
                                     Toward Your Fall Skin Reset
                                 </span>
                             </div>
@@ -257,17 +262,17 @@ function renderMonthlySpecials() {
 
                         <!-- Footer Contact Info Bar -->
                         <div class="mt-2.5 bg-near-black text-white/90 py-2.5 px-6 rounded-xl text-[9px] md:text-[10px] flex flex-wrap items-center justify-between gap-3 text-center border border-warm-gold/20 shadow-md">
-                            <span class="font-body opacity-90 inline-flex items-center gap-1.5 leading-none">
-                                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-warm-gold shrink-0 self-center"></i>
-                                <span class="inline-block self-center">4116 State Highway 121, Suite 120, Carrollton, TX 75010</span>
+                            <span class="font-body opacity-90 inline-flex items-center gap-1.5">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
+                                4116 State Highway 121, Suite 120, Carrollton, TX 75010
                             </span>
-                            <a href="tel:9726658737" class="font-body font-bold text-warm-gold inline-flex items-center gap-1.5 hover:underline leading-none">
-                                <i data-lucide="phone" class="w-3.5 h-3.5 text-warm-gold shrink-0 self-center"></i>
-                                <span class="inline-block self-center">972-665-8737</span>
+                            <a href="tel:9726658737" class="font-body font-bold text-warm-gold inline-flex items-center gap-1.5 hover:underline">
+                                <i data-lucide="phone" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
+                                972-665-8737
                             </a>
-                            <a href="https://suaglow.com" target="_blank" class="font-body font-semibold inline-flex items-center gap-1.5 hover:text-warm-gold transition-colors leading-none">
-                                <i data-lucide="globe" class="w-3.5 h-3.5 text-warm-gold shrink-0 self-center"></i>
-                                <span class="inline-block self-center">suaglow.com</span>
+                            <a href="https://suaglow.com" target="_blank" class="font-body font-semibold inline-flex items-center gap-1.5 hover:text-warm-gold transition-colors">
+                                <i data-lucide="globe" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
+                                suaglow.com
                             </a>
                         </div>
                         </div>
@@ -333,45 +338,18 @@ function downloadFlyerImage() {
                     triggerFallbackDownload();
                     return;
                 }
-                
-                const file = new File([blob], 'SuA-Glow-Fall-Skin-Reset-Flyer.png', { type: 'image/png' });
+                const blobUrl = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
+                link.href = blobUrl;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
 
-                // Try Web Share API on supported devices (mobile/tablets)
-                if (navigator.canShare && navigator.canShare({ files: [file] })) {
-                    navigator.share({
-                        title: 'SuA K Glow Fall Skin Reset',
-                        text: 'Check out SuA K Glow Fall Skin Reset offers!',
-                        files: [file]
-                    }).catch(err => {
-                        console.log('Share dismissed or failed, triggering standard download:', err);
-                        const blobUrl = URL.createObjectURL(blob);
-                        const link = document.createElement('a');
-                        link.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
-                        link.href = blobUrl;
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                        setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
-                    }).finally(() => {
-                        if (downloadBtn) {
-                            downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share`;
-                            if (window.lucide) lucide.createIcons();
-                        }
-                    });
-                } else {
-                    const blobUrl = URL.createObjectURL(blob);
-                    const link = document.createElement('a');
-                    link.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
-                    link.href = blobUrl;
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
-
-                    if (downloadBtn) {
-                        downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share`;
-                        if (window.lucide) lucide.createIcons();
-                    }
+                if (downloadBtn) {
+                    downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share`;
+                    if (window.lucide) lucide.createIcons();
                 }
             }, 'image/png');
         }).catch(err => {
