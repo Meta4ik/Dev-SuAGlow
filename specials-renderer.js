@@ -22,7 +22,7 @@ function renderMonthlySpecials() {
         ).join(' ') : '';
 
         return `
-            <div class="bg-white rounded-[24px] border border-warm-gold/25 p-4 md:p-6 pl-4 md:pl-56 shadow-soft hover:shadow-2xl transition-all duration-500 flex flex-col md:grid md:grid-cols-[1fr_auto] items-stretch gap-6 md:gap-8 group animate-on-scroll fade-up relative min-h-[160px] overflow-hidden ${delayClass}" style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.92), rgba(250, 246, 240, 0.85)), url('assets/fall-leaves-bg.png'); background-size: cover; background-position: center;">
+            <div class="bg-white rounded-[24px] border border-warm-gold/30 p-4 md:p-6 pl-4 md:pl-56 shadow-soft hover:shadow-2xl transition-all duration-500 flex flex-col md:grid md:grid-cols-[1fr_auto] items-stretch gap-6 md:gap-8 group animate-on-scroll fade-up relative min-h-[160px] overflow-hidden ${delayClass}" style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.60) 55%, rgba(253, 248, 240, 0.15) 100%), url('assets/fall-leaves-bg.png'); background-size: cover; background-position: center;">
                 <!-- Left Image Container (Equal Top, Left & Bottom Margins) -->
                 <div class="w-full md:w-44 h-48 md:h-auto md:absolute md:top-4 md:bottom-4 md:left-4 rounded-[18px] overflow-hidden bg-off-white shrink-0 border border-charcoal/10 relative z-10">
                     <img src="${stepItem.image}" alt="${stepItem.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
