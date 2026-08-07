@@ -118,15 +118,17 @@
 
     <!-- Dynamically Loaded Specials Section -->
     <div id="index-specials-container"></div>
-    <script id="specials-script" src="specials.js?v=42"></script>
+    <script src="specials-data.js?v=44"></script>
+    <script src="specials-renderer.js?v=44"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            if (typeof SPECIALS_HTML !== 'undefined') {
-                document.getElementById('index-specials-container').innerHTML = SPECIALS_HTML;
+            const container = document.getElementById('index-specials-container');
+            if (container && typeof renderMonthlySpecials === 'function') {
+                container.innerHTML = renderMonthlySpecials();
                 if (window.lucide) {
                     lucide.createIcons();
                 }
-                const newEls = document.querySelectorAll('#index-specials-container .animate-on-scroll');
+                const newEls = container.querySelectorAll('.animate-on-scroll');
                 const obs = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
@@ -136,7 +138,7 @@
                 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
                 newEls.forEach(el => obs.observe(el));
             } else {
-                console.error('SPECIALS_HTML is not defined. Ensure specials.js is loaded.');
+                console.error('renderMonthlySpecials is not defined. Ensure specials-data.js and specials-renderer.js are loaded.');
             }
         });
     </script>
