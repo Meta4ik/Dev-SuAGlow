@@ -338,18 +338,45 @@ function downloadFlyerImage() {
                     triggerFallbackDownload();
                     return;
                 }
-                const blobUrl = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
-                link.href = blobUrl;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
 
-                if (downloadBtn) {
-                    downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share`;
-                    if (window.lucide) lucide.createIcons();
+                const file = new File([blob], 'SuA-Glow-Fall-Skin-Reset-Flyer.png', { type: 'image/png' });
+
+                // Trigger native iOS / mobile Share Drawer
+                if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                    navigator.share({
+                        title: 'SuA K Glow Fall Skin Reset',
+                        text: 'Check out SuA K Glow Fall Skin Reset offers!',
+                        files: [file]
+                    }).catch(err => {
+                        console.log('Share sheet dismissed or failed, fallback to download:', err);
+                        const blobUrl = URL.createObjectURL(blob);
+                        const link = document.createElement('a');
+                        link.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
+                        link.href = blobUrl;
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
+                    }).finally(() => {
+                        if (downloadBtn) {
+                            downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share`;
+                            if (window.lucide) lucide.createIcons();
+                        }
+                    });
+                } else {
+                    const blobUrl = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
+                    link.href = blobUrl;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
+
+                    if (downloadBtn) {
+                        downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share`;
+                        if (window.lucide) lucide.createIcons();
+                    }
                 }
             }, 'image/png');
         }).catch(err => {
