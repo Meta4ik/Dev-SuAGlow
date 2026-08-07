@@ -222,6 +222,8 @@ const NAVBAR_HTML = `
                         </a>
                     </div>
                 </div>
+            </div>
+
             <!-- Promos Gold Pill Badge -->
             <div class="nav-item">
                 <a href="specials.html"
