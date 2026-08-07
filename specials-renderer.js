@@ -193,7 +193,7 @@ function renderMonthlySpecials() {
                     </div>
                 </div>
 
-                <!-- VIEW 2: Static Composite Print & Share Flyer Image -->
+                <!-- VIEW 2: 4:5 Social Aspect Ratio Interactive Flyer View -->
                 <div id="specials-poster-view" class="hidden max-w-[800px] mx-auto animate-on-scroll fade-up">
                     <div class="text-center mb-6 print:hidden">
                         <button onclick="downloadFlyerImage()" id="download-flyer-btn" class="px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-warm-gold bg-near-black hover:bg-warm-gold hover:text-near-black border border-warm-gold/40 hover:border-warm-gold shadow-md inline-flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer z-20">
@@ -202,7 +202,83 @@ function renderMonthlySpecials() {
                     </div>
                     
                     <div class="w-full flex justify-center">
-                        <img id="flyer-card-element" src="assets/specials-flyer-composite.png" alt="SuA K Glow Fall Skin Reset Flyer" class="w-full max-w-[800px] h-auto rounded-[28px] shadow-2xl border border-charcoal/10 object-contain">
+                        <div id="flyer-card-element" class="w-full md:w-[800px] h-auto md:h-[1000px] bg-cover bg-center rounded-[28px] shadow-2xl border border-charcoal/10 p-6 md:p-10 flex flex-col justify-between relative overflow-hidden text-near-black print:shadow-none print:border-none print:m-0 print:p-8 print:w-full print:max-w-none" style="background-image: url('assets/specials-flyer-composite.png');">
+                            <!-- Protective Soft Gradient Overlay for Left Side Card/Text Readability -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent pointer-events-none z-0"></div>
+                            <div class="relative z-10 flex flex-col justify-between h-full space-y-6 md:space-y-0">
+                            <div class="flex flex-col sm:flex-row justify-between items-start gap-4 mb-4">
+                                <div class="text-left max-w-full md:max-w-[440px]">
+                                    <img src="assets/logo-main.png" alt="SuA K Glow" class="h-10 md:h-12 w-auto mb-4 md:mb-6 object-contain" onerror="this.onerror=null; this.src='assets/logo-main.webp';">
+                                    <h2 class="heading-wide text-xl sm:text-2xl md:text-3xl text-near-black uppercase tracking-[0.15em] leading-snug font-light max-w-full md:max-w-[420px]">
+                                        ${meta.title.replace(/FALL /i, 'FALL<br class="hidden md:inline">')}
+                                    </h2>
+                                    <p class="font-body text-xs md:text-sm text-taupe italic tracking-widest uppercase mt-1 opacity-80 max-w-full md:max-w-[360px]">
+                                        ${meta.subtitle}
+                                    </p>
+                                </div>
+                                <div class="text-left sm:text-right">
+                                    <span class="text-[10px] font-heading tracking-[0.3em] font-extrabold text-warm-gold uppercase bg-near-black px-4 py-2 rounded-full border border-warm-gold/40 shadow-lg whitespace-nowrap inline-block">
+                                        ${meta.badge}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Service Cards Wireframe Layout -->
+                            <div class="space-y-3.5 my-auto">
+                                ${flyerCardsHTML}
+                            </div>
+
+                            <!-- Bottom Offers Box -->
+                            <div class="mt-4 bg-gradient-to-r from-near-black via-near-black/95 to-near-black text-white rounded-[20px] p-4 border border-warm-gold/40 shadow-xl flex flex-row items-center justify-between gap-2">
+                                <div class="w-1/2 pr-2 sm:pr-4 border-r border-white/20 text-left">
+                                    <span class="text-[9px] tracking-[0.3em] text-warm-gold uppercase font-extrabold block mb-0.5">
+                                        LIMITED TIME
+                                    </span>
+                                    <h3 class="font-heading text-sm sm:text-base md:text-lg text-white font-bold uppercase tracking-[0.12em]">
+                                        ${meta.month.toUpperCase()} OFFERS
+                                    </h3>
+                                </div>
+                                <div class="w-1/2 pl-2 sm:pl-4 text-right">
+                                    <span class="font-heading text-xl sm:text-2xl md:text-3xl text-warm-gold font-extrabold tracking-tight block">
+                                        $100 OFF
+                                    </span>
+                                    <span class="text-[8.5px] sm:text-[9.5px] text-white/90 font-body font-semibold block mt-0.5">
+                                        Toward Your Fall Skin Reset
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Call To Action Text -->
+                            <div class="mt-4 text-center">
+                                <a href="${meta.bookingUrl}" target="_blank" class="heading-wide text-xs md:text-sm font-semibold tracking-[0.25em] text-near-black hover:text-warm-gold transition-colors uppercase border-b-2 border-warm-gold/40 pb-0.5 inline-block">
+                                    BOOK YOUR CONSULTATION TODAY.
+                                </a>
+                            </div>
+
+                            <!-- Brand Pillars Row -->
+                            <div class="mt-3 pt-2.5 border-t border-charcoal/10 text-center">
+                                <p class="font-heading text-[8px] md:text-[9px] tracking-[0.2em] font-semibold text-taupe uppercase">
+                                    KOREAN EXPERTISE • PHYSICIAN GUIDED CARE • CUSTOMIZED TREATMENT • HEALTHY SKIN. LASTING GLOW.
+                                </p>
+                            </div>
+
+                            <!-- Footer Contact Info Bar -->
+                            <div class="mt-2.5 bg-near-black text-white/90 py-2.5 px-4 md:px-6 rounded-xl text-[9px] md:text-[10px] flex flex-col sm:flex-row items-center justify-between gap-2 md:gap-3 text-center border border-warm-gold/20 shadow-md">
+                                <span class="font-body opacity-90 inline-flex items-center gap-1.5">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
+                                    4116 State Highway 121, Suite 120, Carrollton, TX 75010
+                                </span>
+                                <a href="tel:9726658737" class="font-body font-bold text-warm-gold inline-flex items-center gap-1.5 hover:underline">
+                                    <i data-lucide="phone" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
+                                    972-665-8737
+                                </a>
+                                <a href="https://suaglow.com" target="_blank" class="font-body font-semibold inline-flex items-center gap-1.5 hover:text-warm-gold transition-colors">
+                                    <i data-lucide="globe" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
+                                    suaglow.com
+                                </a>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
