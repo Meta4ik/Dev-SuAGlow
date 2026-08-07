@@ -134,7 +134,7 @@ function renderMonthlySpecials() {
 
     return `
         <!-- Main Campaign Header Section -->
-        <section id="promotions-hero" data-nav-theme="light" class="py-16 md:py-24 bg-off-white relative overflow-hidden">
+        <section id="promotions-hero" data-nav-theme="light" class="py-16 md:py-24 bg-off-white relative overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(to bottom, rgba(250, 248, 245, 0.88), rgba(250, 248, 245, 0.95)), url('assets/specials-flyer-model-bg.png');">
             <div class="starburst-container"><div class="sb-3"></div></div>
             <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
                 
