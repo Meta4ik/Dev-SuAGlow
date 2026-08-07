@@ -270,25 +270,7 @@ const NAVBAR_HTML = `
             </a>
 
 
-            <!-- Scroll Promotions CTA - Hidden unless scrolled -->
-            <div class="relative items-center hidden sm:flex opacity-0 -translate-y-12 pointer-events-none group-[.nav-scrolled]/nav:opacity-100 group-[.nav-scrolled]/nav:translate-y-0 group-[.nav-scrolled]/nav:pointer-events-auto transition-all duration-[800ms] ease-out">
-                <a href="specials.html" class="flex items-center justify-center relative group w-8 h-8 rounded-full hover:brightness-110 transition-all duration-300 bg-gradient-to-b from-[#FFF2B2] via-[#DFAB22] to-[#B8860B] border-t border-t-white/80 border-b border-b-black/20 shadow-[0_4px_10px_rgba(223,171,34,0.4)] overflow-visible">
-                    <span class="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent h-[40%] rounded-t-full pointer-events-none"></span>
-                    
-                    <span class="relative flex h-5 w-5 z-10 items-center justify-center">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-40"></span>
-                        <i data-lucide="tag" class="w-3.5 h-3.5 text-amber-950"></i>
-                    </span>
-                    <!-- The expanding text on hover -->
-                    <div class="absolute right-full mr-2 top-1/2 -translate-y-1/2 opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 bg-gradient-to-b from-[#FFF2B2] via-[#DFAB22] to-[#B8860B] shadow-[0_4px_15px_rgba(223,171,34,0.4)] border-t border-t-white/80 border-b border-b-black/20 px-5 py-2 rounded-full whitespace-nowrap overflow-hidden z-20">
-                        <span class="absolute top-[-10px] right-2 w-12 h-12 bg-white/60 blur-[6px] rounded-full pointer-events-none"></span>
-                        <span class="absolute top-0 left-0 w-full h-[40%] bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></span>
-                        <span class="text-[10px] font-bold tracking-[0.1em] uppercase text-amber-950 flex items-center gap-2 relative z-10 p-0.5">
-                           Check out our Promotions
-                        </span>
-                    </div>
-                </a>
-            </div>
+
 
             <!-- Mobile Menu Button (Accessible during scroll with 44px tap target) -->
             <button id="menu-btn" class="min-[1180px]:hidden text-charcoal hover:text-taupe transition-colors p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center relative z-50 rounded-lg active:scale-95" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
@@ -312,20 +294,7 @@ const NAVBAR_HTML = `
         <div class="flex-1 overflow-y-auto overscroll-contain p-6">
             <div class="flex flex-col gap-6">
 
-                <!-- Promotions CTA -->
-                <a href="specials.html" class="group flex items-center gap-3 bg-gradient-to-b from-[#FFF2B2] via-[#DFAB22] to-[#B8860B] px-5 py-3 rounded-xl border-t border-t-white/80 border-b border-b-black/20 hover:brightness-110 transition-all duration-300 shadow-[0_4px_15px_rgba(223,171,34,0.4)] relative overflow-hidden">
-                    <span class="absolute top-[-10px] right-2 w-16 h-16 bg-white/60 blur-[8px] rounded-full pointer-events-none"></span>
-                    <span class="absolute top-0 left-0 w-full h-[40%] bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></span>
-                    
-                    <span class="relative flex h-5 w-5 shrink-0 items-center justify-center z-10">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-40"></span>
-                        <i data-lucide="tag" class="w-4 h-4 text-amber-950 relative z-10"></i>
-                    </span>
-                    <span class="font-body text-sm font-bold z-10 text-amber-950">
-                        Check out our Promotions
-                    </span>
-                    <i data-lucide="arrow-right" class="w-5 h-5 text-amber-950/80 ml-auto group-hover:text-amber-950 group-hover:translate-x-1 transition-all shrink-0 z-10"></i>
-                </a>
+
 
                 <!-- Skin Health (formerly Treatments) -->
                 <div class="mobile-accordion">
