@@ -127,11 +127,11 @@ function renderMonthlySpecials() {
                 </div>
 
                 <!-- Lower Right Corner: Price -->
-                <div class="absolute bottom-3 right-4 text-right">
-                    <div class="font-body text-xl font-extrabold text-near-black tracking-tight leading-none">
+                <div class="absolute bottom-3.5 right-4 text-right">
+                    <div class="font-body text-xl font-extrabold text-near-black tracking-tight leading-none mb-1">
                         ${stepItem.price}
                     </div>
-                    ${stepItem.priceDetail ? `<span class="text-[8px] font-bold text-taupe uppercase tracking-wider block mt-0.5">${stepItem.priceDetail}</span>` : ''}
+                    ${stepItem.priceDetail ? `<span class="text-[8.5px] font-bold text-taupe uppercase tracking-wider block leading-none mt-1.5">${stepItem.priceDetail}</span>` : ''}
                 </div>
             </div>
         `;
@@ -214,8 +214,8 @@ function renderMonthlySpecials() {
                                     ${meta.subtitle}
                                 </p>
                             </div>
-                            <div class="text-right">
-                                <span class="text-[10px] font-heading tracking-[0.3em] font-extrabold text-warm-gold uppercase bg-near-black px-4 py-2 rounded-full border border-warm-gold/40 shadow-lg whitespace-nowrap inline-block">
+                            <div class="text-right flex items-center justify-end">
+                                <span class="text-[10px] font-heading tracking-[0.3em] font-extrabold text-warm-gold uppercase bg-near-black px-4 py-2.5 rounded-full border border-warm-gold/40 shadow-lg whitespace-nowrap inline-flex items-center justify-center leading-none">
                                     ${meta.badge}
                                 </span>
                             </div>
@@ -227,20 +227,20 @@ function renderMonthlySpecials() {
                         </div>
 
                         <!-- Bottom Offers Box -->
-                        <div class="mt-4 bg-gradient-to-r from-near-black via-near-black/95 to-near-black text-white rounded-[20px] p-4 border border-warm-gold/40 shadow-xl flex flex-row items-center justify-between">
-                            <div class="w-1/2 pr-4 border-r border-white/20 text-left">
-                                <span class="text-[9px] tracking-[0.3em] text-warm-gold uppercase font-extrabold block mb-0.5">
+                        <div class="mt-4 bg-gradient-to-r from-near-black via-near-black/95 to-near-black text-white rounded-[20px] p-4 md:p-5 border border-warm-gold/40 shadow-xl flex flex-row items-center justify-between min-h-[76px]">
+                            <div class="w-1/2 pr-4 border-r border-white/20 text-left flex flex-col justify-center my-auto">
+                                <span class="text-[9px] tracking-[0.3em] text-warm-gold uppercase font-extrabold block mb-1 leading-none">
                                     LIMITED TIME
                                 </span>
-                                <h3 class="font-heading text-base md:text-lg text-white font-bold uppercase tracking-[0.12em]">
+                                <h3 class="font-heading text-base md:text-lg text-white font-bold uppercase tracking-[0.12em] leading-tight">
                                     ${meta.month.toUpperCase()} OFFERS
                                 </h3>
                             </div>
-                            <div class="w-1/2 pl-4 text-right">
-                                <span class="font-heading text-2xl md:text-3xl text-warm-gold font-extrabold tracking-tight block">
+                            <div class="w-1/2 pl-4 text-right flex flex-col justify-center items-end my-auto">
+                                <span class="font-heading text-2xl md:text-3xl text-warm-gold font-extrabold tracking-tight block leading-none mb-1">
                                     $100 OFF
                                 </span>
-                                <span class="text-[9.5px] text-white/90 font-body font-semibold block mt-0.5">
+                                <span class="text-[9.5px] text-white/90 font-body font-semibold block leading-tight">
                                     Toward Your Fall Skin Reset
                                 </span>
                             </div>
@@ -262,17 +262,17 @@ function renderMonthlySpecials() {
 
                         <!-- Footer Contact Info Bar -->
                         <div class="mt-2.5 bg-near-black text-white/90 py-2.5 px-6 rounded-xl text-[9px] md:text-[10px] flex flex-wrap items-center justify-between gap-3 text-center border border-warm-gold/20 shadow-md">
-                            <span class="font-body opacity-90 inline-flex items-center gap-1.5">
-                                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
-                                4116 State Highway 121, Suite 120, Carrollton, TX 75010
+                            <span class="font-body opacity-90 inline-flex items-center gap-1.5 leading-none">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-warm-gold shrink-0 self-center"></i>
+                                <span class="inline-block self-center">4116 State Highway 121, Suite 120, Carrollton, TX 75010</span>
                             </span>
-                            <a href="tel:9726658737" class="font-body font-bold text-warm-gold inline-flex items-center gap-1.5 hover:underline">
-                                <i data-lucide="phone" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
-                                972-665-8737
+                            <a href="tel:9726658737" class="font-body font-bold text-warm-gold inline-flex items-center gap-1.5 hover:underline leading-none">
+                                <i data-lucide="phone" class="w-3.5 h-3.5 text-warm-gold shrink-0 self-center"></i>
+                                <span class="inline-block self-center">972-665-8737</span>
                             </a>
-                            <a href="https://suaglow.com" target="_blank" class="font-body font-semibold inline-flex items-center gap-1.5 hover:text-warm-gold transition-colors">
-                                <i data-lucide="globe" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
-                                suaglow.com
+                            <a href="https://suaglow.com" target="_blank" class="font-body font-semibold inline-flex items-center gap-1.5 hover:text-warm-gold transition-colors leading-none">
+                                <i data-lucide="globe" class="w-3.5 h-3.5 text-warm-gold shrink-0 self-center"></i>
+                                <span class="inline-block self-center">suaglow.com</span>
                             </a>
                         </div>
                         </div>
@@ -331,7 +331,9 @@ function downloadFlyerImage() {
             useCORS: true,
             allowTaint: true,
             logging: false,
-            backgroundColor: '#FAF8F5'
+            backgroundColor: '#FAF8F5',
+            scrollY: 0,
+            scrollX: 0
         }).then(canvas => {
             canvas.toBlob(blob => {
                 if (!blob) {
