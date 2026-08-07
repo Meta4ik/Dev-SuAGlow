@@ -210,7 +210,7 @@ function renderMonthlySpecials() {
                                 <div class="text-left max-w-full md:max-w-[440px]">
                                     <img src="assets/logo-main.png" alt="SuA K Glow" class="h-10 md:h-12 w-auto mb-4 md:mb-6 object-contain" onerror="this.onerror=null; this.src='assets/logo-main.webp';">
                                     <h2 class="heading-wide text-xl sm:text-2xl md:text-3xl text-near-black uppercase tracking-[0.15em] leading-snug font-light max-w-full md:max-w-[420px]">
-                                        ${meta.title.replace(/FALL /i, 'FALL<br class="hidden md:inline">')}
+                                        ${meta.title.replace(/FALL /i, 'FALL <br class="hidden md:inline">')}
                                     </h2>
                                     <p class="font-body text-xs md:text-sm text-taupe italic tracking-widest uppercase mt-1 opacity-80 max-w-full md:max-w-[360px]">
                                         ${meta.subtitle}
