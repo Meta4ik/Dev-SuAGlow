@@ -202,7 +202,7 @@ function renderMonthlySpecials() {
                     </div>
                     
                     <div class="w-full flex justify-center">
-                        <div id="flyer-card-element" class="w-full md:w-[800px] h-auto md:h-[1000px] bg-cover bg-center rounded-[28px] shadow-2xl border border-charcoal/10 p-6 md:p-10 flex flex-col justify-between relative overflow-hidden text-near-black print:shadow-none print:border-none print:m-0 print:p-8 print:w-full print:max-w-none" style="background-image: url('assets/specials-flyer-model-bg.png');">
+                        <div id="flyer-card-element" class="w-full md:w-[800px] h-auto md:h-[1000px] bg-cover bg-center rounded-[28px] shadow-2xl border border-charcoal/10 p-6 md:p-10 flex flex-col justify-between relative overflow-hidden text-near-black print:shadow-none print:border-none print:m-0 print:p-8 print:w-full print:max-w-none" style="background-image: url('assets/specials-flyer-composite.png');">
                             <!-- Protective Soft Gradient Overlay for Left Side Card/Text Readability -->
                             <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent pointer-events-none z-0"></div>
                             <div class="relative z-10 flex flex-col justify-between h-full space-y-6 md:space-y-0">
