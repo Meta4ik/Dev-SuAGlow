@@ -597,8 +597,8 @@ const SEARCH_INDEX = [
     "title": "LOSE THE WEIGHT. KEEP THE GLOW.",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
     "category": "Korean Body Reset™",
-    "content": "Physician-Guided KoreanMedical Weight Management Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, skin health, and long-term confidence.",
-    "snippet": "Physician-Guided KoreanMedical Weight Management Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, sk..."
+    "content": "Physician-Guided Korean Medical Weight Management Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, skin health, and long-term confidence.",
+    "snippet": "Physician-Guided Korean Medical Weight Management Physician-guided medical weight management inspired by Korean wellness. Supporting healthy body composition, s..."
   },
   {
     "url": "medical-weight-loss-dallas.html#philosophy",
@@ -615,6 +615,14 @@ const SEARCH_INDEX = [
     "category": "Korean Body Reset™",
     "content": "Comprehensive physician consultation A plan tailored to your health, goals, and lifestyle Medical weight management + Oligio X® + wellness support Maintain healthy habits, radiant skin, and lasting confidence",
     "snippet": "Comprehensive physician consultation A plan tailored to your health, goals, and lifestyle Medical weight management + Oligio X® + wellness support Maintain heal..."
+  },
+  {
+    "url": "medical-weight-loss-dallas.html#which-reset-is-right-for-you",
+    "title": "Which Reset Is Right For You?",
+    "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
+    "category": "Korean Body Reset™",
+    "content": "Medical Weight Loss Healthy body.Healthy confidence. Oligio X® Skin Tightening Protect your glow whiletransforming your body. Wellness & Longevity Hormones. Infusions.Peptides. Optimize howyou feel—not just how you look.",
+    "snippet": "Medical Weight Loss Healthy body.Healthy confidence. Oligio X® Skin Tightening Protect your glow whiletransforming your body. Wellness & Longevity Hormones. Inf..."
   },
   {
     "url": "medical-weight-loss-dallas.html#sua-glow-difference",

@@ -15,8 +15,10 @@
 
     <link rel="stylesheet" href="dist/output.css?v=42">
 
-<!-- Lucide Icons -->
+<!-- Lucide Icons & html2canvas -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.uk.js" onerror="var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';document.head.appendChild(s);"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 
 <body class="bg-off-white text-charcoal antialiased">
@@ -54,18 +56,22 @@
     <script src="footer.js?v=42"></script>
     <script src="script.js?v=42"></script>
 
-    <!-- Load the Specials Content dynamically -->
-    <script src="specials.js"></script>
+    <!-- Load the Specials Configuration & Renderer dynamically -->
+    <script src="specials-data.js?v=1"></script>
+    <script src="specials-renderer.js?v=1"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            if (typeof SPECIALS_HTML !== 'undefined') {
-                document.getElementById('specials-container').innerHTML = SPECIALS_HTML;
-                // Re-initialize any Lucide icons inside the dynamically loaded content
+            const container = document.getElementById('specials-container');
+            if (container && typeof renderMonthlySpecials === 'function') {
+                container.innerHTML = renderMonthlySpecials();
+                
+                // Re-initialize Lucide icons inside dynamically rendered content
                 if (window.lucide) {
                     lucide.createIcons();
                 }
-                // Trigger scroll animations specifically on newly injected elements
-                const newlyInjectedElements = document.querySelectorAll('#specials-container .animate-on-scroll');
+                
+                // Trigger scroll animations on injected elements
+                const newlyInjectedElements = container.querySelectorAll('.animate-on-scroll');
                 const scrollObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
@@ -78,7 +84,7 @@
                 });
                 newlyInjectedElements.forEach(el => scrollObserver.observe(el));
             } else {
-                console.error('SPECIALS_HTML is not defined. Ensure specials.js is loaded.');
+                console.error('renderMonthlySpecials is not defined. Ensure specials-data.js and specials-renderer.js are loaded.');
             }
         });
     </script>
