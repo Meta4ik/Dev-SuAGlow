@@ -210,8 +210,8 @@ function renderMonthlySpecials() {
                             <div class="flex justify-between items-start mb-4">
                                 <div class="text-left max-w-[440px]">
                                     <img src="assets/logo-main.png" alt="SuA K Glow" class="h-10 md:h-12 w-auto mb-6 object-contain" onerror="this.onerror=null; this.src='assets/logo-main.webp';">
-                                    <h2 class="heading-wide text-2xl md:text-3xl text-near-black uppercase tracking-[0.15em] leading-snug font-light max-w-[360px]">
-                                        ${meta.title}
+                                    <h2 class="heading-wide text-2xl md:text-3xl text-near-black uppercase tracking-[0.15em] leading-snug font-light max-w-[420px]">
+                                        ${meta.title.replace(/FALL /i, 'FALL<br>')}
                                     </h2>
                                     <p class="font-body text-xs md:text-sm text-taupe italic tracking-widest uppercase mt-1 opacity-80 max-w-[360px]">
                                         ${meta.subtitle}
