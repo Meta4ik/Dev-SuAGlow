@@ -370,11 +370,11 @@ const SEARCH_INDEX = [
   },
   {
     "url": "index.html#hero",
-    "title": "The Art of Korean Beauty, Perfected in Texas",
+    "title": "The Art of Korean Skincare in Dallas",
     "pageTitle": "SuA K-Glow",
-    "category": "Premier\n                    K-Beauty Destination",
-    "content": "SuA Glow Medspa brings the secrets of Korean beauty to Dallas where science, precision, and elegance meet. We rejuvenate your skin from within for that effortless, glass-skin radiance.",
-    "snippet": "SuA Glow Medspa brings the secrets of Korean beauty to Dallas where science, precision, and elegance meet. We rejuvenate your skin from within for that effortle..."
+    "category": "Premier K-Beauty Destination",
+    "content": "The Art of Korean Skincare in Dallas. Because beautiful skin begins with healthy skin. Advanced Korean technology. Personalized treatment plans. Physician-guided care.",
+    "snippet": "The Art of Korean Skincare in Dallas. Because beautiful skin begins with healthy skin..."
   },
   {
     "url": "index.html#treatments",
