@@ -104,34 +104,34 @@ function renderMonthlySpecials() {
     // --- VIEW 2: 4:5 Aspect Ratio Print Flyer Canvas (Matching Wireframe Layout) ---
     const flyerCardsHTML = featuredSteps.map((stepItem) => {
         return `
-            <div class="bg-white/95 rounded-[18px] border border-charcoal/15 p-3.5 pl-32 shadow-sm relative flex flex-row items-center gap-4 min-h-[124px] overflow-hidden group w-full max-w-[520px]">
+            <div class="bg-white/95 rounded-[14px] sm:rounded-[18px] border border-charcoal/15 p-2.5 sm:p-3.5 pl-24 sm:pl-32 shadow-sm relative flex flex-row items-center gap-3 sm:gap-4 min-h-[96px] sm:min-h-[124px] overflow-hidden group w-full max-w-[520px]">
                 <!-- Product / Service Image (Left - Fills equal top, left & bottom margin) -->
-                <div class="absolute top-3 bottom-3 left-3 w-24 rounded-xl bg-off-white shrink-0 border border-charcoal/10 overflow-hidden">
+                <div class="absolute top-2 bottom-2 left-2 sm:top-3 sm:bottom-3 sm:left-3 w-20 sm:w-24 rounded-lg sm:rounded-xl bg-off-white shrink-0 border border-charcoal/10 overflow-hidden">
                     <img src="${stepItem.image}" alt="${stepItem.title}" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Center Content: Benefit, Name, Product, Details -->
-                <div class="flex-1 pr-20 text-left">
-                    <span class="text-[9px] tracking-[0.2em] font-bold text-warm-gold uppercase block mb-0.5">
+                <div class="flex-1 pr-16 sm:pr-20 text-left">
+                    <span class="text-[8px] sm:text-[9px] tracking-[0.2em] font-bold text-warm-gold uppercase block mb-0.5">
                         ${stepItem.badge}
                     </span>
-                    <h3 class="font-heading text-base text-near-black font-bold tracking-wider leading-snug">
+                    <h3 class="font-heading text-xs sm:text-base text-near-black font-bold tracking-wider leading-snug">
                         ${stepItem.title}
                     </h3>
-                    <p class="font-body text-[11px] font-semibold text-taupe tracking-wide mb-1">
+                    <p class="font-body text-[9.5px] sm:text-[11px] font-semibold text-taupe tracking-wide mb-0.5 sm:mb-1">
                         ${stepItem.subtitle}
                     </p>
-                    <p class="font-body text-[10px] text-charcoal/70 leading-relaxed line-clamp-2">
+                    <p class="font-body text-[8.5px] sm:text-[10px] text-charcoal/70 leading-tight sm:leading-relaxed line-clamp-2">
                         ${stepItem.description}
                     </p>
                 </div>
 
                 <!-- Lower Right Corner: Price -->
-                <div class="absolute bottom-3 right-4 text-right">
-                    <div class="font-body text-xl font-extrabold text-near-black tracking-tight leading-none">
+                <div class="absolute bottom-2 right-3 sm:bottom-3 sm:right-4 text-right">
+                    <div class="font-body text-base sm:text-xl font-extrabold text-near-black tracking-tight leading-none">
                         ${stepItem.price}
                     </div>
-                    ${stepItem.priceDetail ? `<span class="text-[8px] font-bold text-taupe uppercase tracking-wider block mt-0.5">${stepItem.priceDetail}</span>` : ''}
+                    ${stepItem.priceDetail ? `<span class="text-[7px] sm:text-[8px] font-bold text-taupe uppercase tracking-wider block mt-0.5">${stepItem.priceDetail}</span>` : ''}
                 </div>
             </div>
         `;
