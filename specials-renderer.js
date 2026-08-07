@@ -193,8 +193,8 @@ function renderMonthlySpecials() {
                     </div>
                 </div>
 
-                <!-- VIEW 2: Print Flyer & Share View -->
-                <div id="specials-poster-view" class="hidden max-w-[1024px] mx-auto animate-on-scroll fade-up">
+                <!-- VIEW 2: 4:5 Social Aspect Ratio Flyer Canvas -->
+                <div id="specials-poster-view" class="hidden max-w-[800px] mx-auto animate-on-scroll fade-up">
                     <div class="text-center mb-6 print:hidden">
                         <button onclick="downloadFlyerImage()" id="download-flyer-btn" class="px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-warm-gold bg-near-black hover:bg-warm-gold hover:text-near-black border border-warm-gold/40 hover:border-warm-gold shadow-md inline-flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer z-20">
                             <i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share
@@ -202,7 +202,7 @@ function renderMonthlySpecials() {
                     </div>
                     
                     <div class="w-full flex justify-center">
-                        <div id="flyer-card-element" class="w-full md:w-[1024px] h-auto md:h-[1024px] bg-cover bg-center rounded-[28px] shadow-2xl border border-charcoal/10 p-6 md:p-12 flex flex-col justify-between relative overflow-hidden text-near-black print:shadow-none print:border-none print:m-0 print:p-8 print:w-full print:max-w-none" style="background-image: url('assets/specials-flyer-composite.png');">
+                        <div id="flyer-card-element" class="w-full md:w-[800px] h-auto md:h-[1000px] bg-cover bg-center rounded-[28px] shadow-2xl border border-charcoal/10 p-6 md:p-10 flex flex-col justify-between relative overflow-hidden text-near-black print:shadow-none print:border-none print:m-0 print:p-8 print:w-full print:max-w-none" style="background-image: url('assets/specials-flyer-composite.png');">
                             <!-- Protective Soft Gradient Overlay for Left Side Card/Text Readability -->
                             <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent pointer-events-none z-0"></div>
                             <div class="relative z-10 flex flex-col justify-between h-full space-y-6 md:space-y-0">
@@ -329,11 +329,11 @@ function downloadFlyerImage() {
 
     // Function to render canvas and trigger download
     const renderAndDownload = () => {
-        // Enforce 1024x1024 fixed canvas dimensions for retina html2canvas export
+        // Enforce 800x1000 fixed canvas dimensions for 4:5 social retina html2canvas export
         const isMobile = window.innerWidth < 768;
         if (isMobile) {
-            flyerElement.style.width = '1024px';
-            flyerElement.style.height = '1024px';
+            flyerElement.style.width = '800px';
+            flyerElement.style.height = '1000px';
         }
 
         html2canvas(flyerElement, {
