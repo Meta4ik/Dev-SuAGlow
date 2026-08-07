@@ -28,11 +28,6 @@ function renderMonthlySpecials() {
                     <img src="${stepItem.image}" alt="${stepItem.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 </div>
 
-                <!-- Floating Step Number Badge Over All Layers (Highest Z-Index) -->
-                <div class="absolute top-2 left-2 md:top-2 md:left-2 w-10 h-10 md:w-11 md:h-11 rounded-full bg-near-black text-warm-gold font-heading text-base md:text-lg font-bold flex items-center justify-center shadow-xl border border-warm-gold/50 z-50 pointer-events-none">
-                    ${stepItem.step}
-                </div>
-
                 <!-- Center: Content Area (Full height flex column) -->
                 <div class="text-left flex flex-col justify-between h-full py-1 pr-0 md:pr-4">
                     <div>
@@ -57,7 +52,7 @@ function renderMonthlySpecials() {
                     <!-- Bottom Right Book Button -->
                     <div>
                         <a href="${stepItem.bookingUrl}" target="_blank" class="btn-primary text-xs py-3 px-6 inline-flex items-center justify-center gap-2 w-full md:w-auto shadow-md whitespace-nowrap">
-                            <span>Book Step ${stepItem.step}</span>
+                            <span>Book Now</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
                     </div>
@@ -181,7 +176,7 @@ function renderMonthlySpecials() {
                 <!-- VIEW 1: Interactive 3-Step Program View -->
                 <div id="specials-program-view" class="space-y-8 max-w-5xl mx-auto">
                     <div class="text-center mb-8">
-                        <p class="font-body text-xs text-charcoal/60 uppercase tracking-widest">Follow Seoul's 3 Approaches for a seasonal reset for optimal results</p>
+                        <p class="font-body text-xs text-charcoal/60 uppercase tracking-widest">Inspired by Seoul's aesthetic protocols for seasonal skin & body renewal</p>
                     </div>
                     ${webStepsHTML}
 
