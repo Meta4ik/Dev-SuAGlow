@@ -28,11 +28,6 @@ function renderMonthlySpecials() {
                     <img src="${stepItem.image}" alt="${stepItem.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 </div>
 
-                <!-- Floating Step Number Badge Over All Layers (Highest Z-Index) -->
-                <div class="absolute top-2 left-2 md:top-2 md:left-2 w-10 h-10 md:w-11 md:h-11 rounded-full bg-near-black text-warm-gold font-heading text-base md:text-lg font-bold flex items-center justify-center shadow-xl border border-warm-gold/50 z-50 pointer-events-none">
-                    ${stepItem.step}
-                </div>
-
                 <!-- Center: Content Area (Full height flex column) -->
                 <div class="text-left flex flex-col justify-between h-full py-1 pr-0 md:pr-4">
                     <div>
@@ -57,7 +52,7 @@ function renderMonthlySpecials() {
                     <!-- Bottom Right Book Button -->
                     <div>
                         <a href="${stepItem.bookingUrl}" target="_blank" class="btn-primary text-xs py-3 px-6 inline-flex items-center justify-center gap-2 w-full md:w-auto shadow-md whitespace-nowrap">
-                            <span>Book Step ${stepItem.step}</span>
+                            <span>Book Now</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
                     </div>
@@ -104,34 +99,34 @@ function renderMonthlySpecials() {
     // --- VIEW 2: 4:5 Aspect Ratio Print Flyer Canvas (Matching Wireframe Layout) ---
     const flyerCardsHTML = featuredSteps.map((stepItem) => {
         return `
-            <div class="bg-white/95 rounded-[18px] border border-charcoal/15 p-3.5 pl-32 shadow-sm relative flex flex-row items-center gap-4 min-h-[124px] overflow-hidden group w-full max-w-[520px]">
+            <div class="bg-white/95 rounded-[18px] border border-charcoal/15 p-4 pl-36 shadow-sm relative flex flex-row items-center gap-4 min-h-[132px] overflow-hidden group w-full max-w-[520px]">
                 <!-- Product / Service Image (Left - Fills equal top, left & bottom margin) -->
-                <div class="absolute top-3 bottom-3 left-3 w-24 rounded-xl bg-off-white shrink-0 border border-charcoal/10 overflow-hidden">
+                <div class="absolute top-3.5 bottom-3.5 left-3.5 w-28 rounded-xl bg-off-white shrink-0 border border-charcoal/10 overflow-hidden">
                     <img src="${stepItem.image}" alt="${stepItem.title}" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Center Content: Benefit, Name, Product, Details -->
-                <div class="flex-1 pr-20 text-left">
-                    <span class="text-[9px] tracking-[0.2em] font-bold text-warm-gold uppercase block mb-0.5">
+                <div class="flex-1 pr-24 text-left py-0.5">
+                    <span class="text-[9px] tracking-[0.2em] font-bold text-warm-gold uppercase block mb-1">
                         ${stepItem.badge}
                     </span>
-                    <h3 class="font-heading text-base text-near-black font-bold tracking-wider leading-snug">
+                    <h3 class="font-heading text-base text-near-black font-bold tracking-wider leading-tight mb-0.5">
                         ${stepItem.title}
                     </h3>
-                    <p class="font-body text-[11px] font-semibold text-taupe tracking-wide mb-1">
+                    <p class="font-body text-[11px] font-semibold text-taupe tracking-wide mb-1.5">
                         ${stepItem.subtitle}
                     </p>
-                    <p class="font-body text-[10px] text-charcoal/70 leading-relaxed line-clamp-2">
+                    <p class="font-body text-[10.5px] text-charcoal/75 leading-normal">
                         ${stepItem.description}
                     </p>
                 </div>
 
                 <!-- Lower Right Corner: Price -->
-                <div class="absolute bottom-3 right-4 text-right">
+                <div class="absolute bottom-3.5 right-4 text-right">
                     <div class="font-body text-xl font-extrabold text-near-black tracking-tight leading-none">
                         ${stepItem.price}
                     </div>
-                    ${stepItem.priceDetail ? `<span class="text-[8px] font-bold text-taupe uppercase tracking-wider block mt-0.5">${stepItem.priceDetail}</span>` : ''}
+                    ${stepItem.priceDetail ? `<span class="text-[8.5px] font-bold text-taupe uppercase tracking-wider block mt-0.5">${stepItem.priceDetail}</span>` : ''}
                 </div>
             </div>
         `;
@@ -170,18 +165,18 @@ function renderMonthlySpecials() {
                 <div class="mb-12 text-center animate-on-scroll fade-up">
                     <div class="inline-flex p-1.5 bg-white rounded-full border border-charcoal/10 shadow-sm">
                         <button id="tab-program-btn" onclick="switchSpecialsTab('program')" class="px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 bg-near-black text-warm-gold shadow">
-                            3-Step Program
+                            Featured Offers
                         </button>
                         <button id="tab-poster-btn" onclick="switchSpecialsTab('poster')" class="px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 text-charcoal/60 hover:text-near-black">
-                            View 4:5 Print Flyer
+                            Share Flyer
                         </button>
                     </div>
                 </div>
 
-                <!-- VIEW 1: Interactive 3-Step Program View -->
+                <!-- VIEW 1: Interactive Featured Offers View -->
                 <div id="specials-program-view" class="space-y-8 max-w-5xl mx-auto">
                     <div class="text-center mb-8">
-                        <p class="font-body text-xs text-charcoal/60 uppercase tracking-widest">Follow Seoul's 3-step seasonal reset for optimal results</p>
+                        <p class="font-body text-xs text-charcoal/60 uppercase tracking-widest">Follow Seoul's seasonal reset for optimal results</p>
                     </div>
                     ${webStepsHTML}
 
@@ -196,8 +191,8 @@ function renderMonthlySpecials() {
                 <!-- VIEW 2: 4:5 Aspect Ratio Print Flyer Canvas -->
                 <div id="specials-poster-view" class="hidden max-w-[800px] mx-auto animate-on-scroll fade-up">
                     <div class="text-center mb-4 print:hidden">
-                        <button onclick="downloadFlyerImage()" id="download-flyer-btn" class="text-xs font-heading font-bold uppercase tracking-wider text-warm-gold hover:text-near-black bg-near-black px-6 py-2.5 rounded-full border border-warm-gold/40 shadow-md inline-flex items-center gap-2 transition-all">
-                            <i data-lucide="download" class="w-4 h-4"></i> Download Flyer Image (PNG)
+                        <button onclick="downloadFlyerImage()" id="download-flyer-btn" class="px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-warm-gold bg-near-black hover:bg-warm-gold hover:text-near-black border border-warm-gold/40 hover:border-warm-gold shadow-md inline-flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer z-20">
+                            <i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share
                         </button>
                     </div>
                     <div id="flyer-card-element" class="w-full aspect-[4/5] bg-cover bg-center rounded-[28px] shadow-2xl border border-charcoal/10 p-8 md:p-12 flex flex-col justify-between relative overflow-hidden text-near-black print:shadow-none print:border-none print:m-0 print:p-8 print:w-full print:max-w-none" style="background-image: url('assets/specials-flyer-composite.png');">
@@ -338,18 +333,45 @@ function downloadFlyerImage() {
                     triggerFallbackDownload();
                     return;
                 }
-                const blobUrl = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
-                link.href = blobUrl;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
+                
+                const file = new File([blob], 'SuA-Glow-Fall-Skin-Reset-Flyer.png', { type: 'image/png' });
 
-                if (downloadBtn) {
-                    downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Download Flyer Image (PNG)`;
-                    if (window.lucide) lucide.createIcons();
+                // Try Web Share API on supported devices (mobile/tablets)
+                if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                    navigator.share({
+                        title: 'SuA K Glow Fall Skin Reset',
+                        text: 'Check out SuA K Glow Fall Skin Reset offers!',
+                        files: [file]
+                    }).catch(err => {
+                        console.log('Share dismissed or failed, triggering standard download:', err);
+                        const blobUrl = URL.createObjectURL(blob);
+                        const link = document.createElement('a');
+                        link.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
+                        link.href = blobUrl;
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
+                    }).finally(() => {
+                        if (downloadBtn) {
+                            downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share`;
+                            if (window.lucide) lucide.createIcons();
+                        }
+                    });
+                } else {
+                    const blobUrl = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
+                    link.href = blobUrl;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
+
+                    if (downloadBtn) {
+                        downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share`;
+                        if (window.lucide) lucide.createIcons();
+                    }
                 }
             }, 'image/png');
         }).catch(err => {
@@ -368,7 +390,7 @@ function downloadFlyerImage() {
         document.body.removeChild(fallbackLink);
 
         if (downloadBtn) {
-            downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Download Flyer Image (PNG)`;
+            downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share`;
             if (window.lucide) lucide.createIcons();
         }
     };

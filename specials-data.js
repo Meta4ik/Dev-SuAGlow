@@ -34,12 +34,12 @@ const MONTHLY_SPECIALS_CONFIG = {
         {
             step: 2,
             badge: "BUILD COLLAGEN",
-            title: "Korean Collagen Reset",
+            title: "Korean Fall Body Reset",
             subtitle: "Radiesse® or Sculptra®",
             price: "$990",
             priceDetail: "2 Sessions",
             description: "Supports healthy collagen production and restores structural volume for long-lasting skin renewal.",
-            image: "assets/korean-models/portrait_3_highres.png",
+            image: "assets/korean_fall_body_reset_abs.png",
             tags: ["2 Sessions", "Radiesse® or Sculptra®", "Biostimulator"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
