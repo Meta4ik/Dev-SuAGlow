@@ -331,7 +331,7 @@ function downloadFlyerImage() {
         }
     };
 
-    fetch('assets/SuA-Glow-August-Specials.png?v=55')
+    fetch('assets/SuA-Glow-August-Specials.png?v=999')
         .then(res => res.blob())
         .then(blob => {
             const file = new File([blob], 'SuA-Glow-August-Specials.png', { type: 'image/png' });
