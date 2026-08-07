@@ -224,11 +224,10 @@ const NAVBAR_HTML = `
                 </div>
             </div>
 
-            <!-- Promos Gold Pill Badge -->
+            <!-- Promos Outlined Pill -->
             <div class="nav-item">
-                <a href="specials.html"
-                    class="inline-flex items-center justify-center font-heading text-[11px] font-extrabold tracking-[0.18em] text-near-black bg-gradient-to-r from-[#DFAB22] via-[#F5D87F] to-[#C89617] hover:from-[#C89617] hover:to-[#DFAB22] px-4 py-1.5 rounded-full shadow-[0_2px_12px_rgba(223,171,34,0.45)] border border-amber-200/80 transition-all duration-300 transform hover:scale-105 uppercase whitespace-nowrap">
-                    <i data-lucide="tag" class="w-3.5 h-3.5 mr-1.5 text-near-black shrink-0"></i> PROMOS
+                <a href="specials.html" class="nav-promos-pill">
+                    <i data-lucide="tag" class="w-3.5 h-3.5 mr-1.5 shrink-0"></i> PROMOS
                 </a>
             </div>
 
@@ -506,9 +505,8 @@ const NAVBAR_HTML = `
 
                 <!-- Promos Mobile Pill Button -->
                 <div class="py-2">
-                    <a href="specials.html"
-                        class="inline-flex items-center justify-center font-heading text-xs font-extrabold tracking-[0.18em] text-near-black bg-gradient-to-r from-[#DFAB22] via-[#F5D87F] to-[#C89617] hover:from-[#C89617] hover:to-[#DFAB22] px-5 py-2 rounded-full shadow-[0_2px_12px_rgba(223,171,34,0.45)] border border-amber-200/80 transition-all duration-300 uppercase whitespace-nowrap">
-                        <i data-lucide="tag" class="w-4 h-4 mr-2 text-near-black shrink-0"></i> PROMOS
+                    <a href="specials.html" class="nav-promos-pill">
+                        <i data-lucide="tag" class="w-3.5 h-3.5 mr-1.5 shrink-0"></i> PROMOS
                     </a>
                 </div>
 

@@ -340,6 +340,41 @@ html {
   width: 100%;
 }
 
+/* Outlined Promos Pill Button in Nav */
+.nav-promos-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0.35rem 1.15rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(64, 67, 69, 0.4);
+  color: #404345;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-promos-pill:hover {
+  background-color: rgba(64, 67, 69, 0.08);
+  border-color: #404345;
+}
+
+/* Dark Theme / Transparent Header Override */
+#navbar.nav-dark-theme:not(.nav-scrolled) .nav-promos-pill {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+}
+
+#navbar.nav-dark-theme:not(.nav-scrolled) .nav-promos-pill:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+}
+
 /* Responsive Mobile Drawer */
 #mobile-drawer {
   transform: translateX(100%);
