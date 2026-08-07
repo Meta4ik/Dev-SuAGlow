@@ -181,7 +181,7 @@ function renderMonthlySpecials() {
                 <!-- VIEW 1: Interactive 3-Step Program View -->
                 <div id="specials-program-view" class="space-y-8 max-w-5xl mx-auto">
                     <div class="text-center mb-8">
-                        <p class="font-body text-xs text-charcoal/60 uppercase tracking-widest">Follow Seoul's 3-step seasonal reset for optimal results</p>
+                        <p class="font-body text-xs text-charcoal/60 uppercase tracking-widest">Follow Seoul's 3 Approaches for a seasonal reset for optimal results</p>
                     </div>
                     ${webStepsHTML}
 
