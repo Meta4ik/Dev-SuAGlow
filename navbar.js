@@ -12,7 +12,22 @@ const NAVBAR_HTML = `
                 </a>
             </div>
 
-            <div class="flex items-center justify-center md:justify-end gap-6 flex-1 w-full md:w-auto">
+            <div class="flex items-center justify-center md:justify-end gap-6 flex-1 w-full md:w-auto pointer-events-none">
+                <!-- Promotions CTA -->
+                <a href="specials.html" class="pointer-events-auto group flex items-center justify-center gap-2 bg-gradient-to-b from-[#FFF2B2] via-[#DFAB22] to-[#B8860B] px-5 py-1.5 rounded-full border-t border-t-white/80 border-b border-b-black/20 hover:brightness-110 transition-all duration-300 shadow-[0_4px_15px_rgba(223,171,34,0.4)] hover:shadow-[0_6px_20px_rgba(223,171,34,0.6)] w-max max-w-[90vw] relative overflow-hidden">
+                    <span class="absolute top-[-10px] right-2 w-12 h-12 bg-white/60 blur-[6px] rounded-full pointer-events-none"></span>
+                    <span class="absolute top-0 left-0 w-full h-[40%] bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></span>
+                    
+                    <span class="relative flex h-5 w-5 shrink-0 items-center justify-center z-10">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-40"></span>
+                      <i data-lucide="tag" class="w-3.5 h-3.5 text-amber-950 relative z-10"></i>
+                    </span>
+                    <span class="text-amber-950 normal-case text-[11px] font-bold tracking-[0.1em] z-10 truncate">
+                        Check out our Promotions
+                    </span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 text-amber-950/80 group-hover:text-amber-950 group-hover:translate-x-1 transition-all shrink-0 z-10"></i>
+                </a>
+
                 <div class="hidden md:flex items-center pointer-events-auto">
                     <a href="tel:972-665-8737" class="hover:text-white transition-colors flex items-center gap-2">
                         <i data-lucide="phone" class="w-3 h-3 text-taupe"></i> <span class="hidden lg:inline whitespace-nowrap">972-665-8737</span><span class="inline lg:hidden whitespace-nowrap">Call Us</span>
