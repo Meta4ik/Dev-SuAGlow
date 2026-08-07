@@ -224,10 +224,13 @@ const NAVBAR_HTML = `
                 </div>
             </div>
 
-            <!-- Promos Outlined Pill -->
+            <!-- Promos Glossy Gold Pill Button -->
             <div class="nav-item">
-                <a href="specials.html" class="nav-promos-pill">
-                    <i data-lucide="tag" class="w-3.5 h-3.5 mr-1.5 shrink-0"></i> PROMOS
+                <a href="specials.html" class="group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-b from-[#FFF2B2] via-[#DFAB22] to-[#B8860B] px-4 py-1.5 rounded-full border-t border-t-white/80 border-b border-b-black/20 hover:brightness-110 transition-all duration-300 shadow-[0_4px_15px_rgba(223,171,34,0.4)] hover:shadow-[0_6px_20px_rgba(223,171,34,0.6)] overflow-hidden uppercase font-heading text-[11px] font-extrabold tracking-[0.15em] text-amber-950 whitespace-nowrap">
+                    <span class="absolute top-[-10px] right-2 w-12 h-12 bg-white/60 blur-[6px] rounded-full pointer-events-none"></span>
+                    <span class="absolute top-0 left-0 w-full h-[40%] bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></span>
+                    <i data-lucide="tag" class="w-3.5 h-3.5 text-amber-950 shrink-0 relative z-10"></i>
+                    <span class="relative z-10">PROMOS</span>
                 </a>
             </div>
 
@@ -503,10 +506,13 @@ const NAVBAR_HTML = `
                     </div>
                 </div>
 
-                <!-- Promos Mobile Pill Button -->
+                <!-- Promos Mobile Glossy Gold Pill Button -->
                 <div class="py-2">
-                    <a href="specials.html" class="nav-promos-pill">
-                        <i data-lucide="tag" class="w-3.5 h-3.5 mr-1.5 shrink-0"></i> PROMOS
+                    <a href="specials.html" class="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-b from-[#FFF2B2] via-[#DFAB22] to-[#B8860B] px-5 py-2 rounded-full border-t border-t-white/80 border-b border-b-black/20 hover:brightness-110 transition-all duration-300 shadow-[0_4px_15px_rgba(223,171,34,0.4)] overflow-hidden uppercase font-heading text-xs font-extrabold tracking-[0.15em] text-amber-950 whitespace-nowrap">
+                        <span class="absolute top-[-10px] right-2 w-12 h-12 bg-white/60 blur-[6px] rounded-full pointer-events-none"></span>
+                        <span class="absolute top-0 left-0 w-full h-[40%] bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></span>
+                        <i data-lucide="tag" class="w-4 h-4 text-amber-950 shrink-0 relative z-10"></i>
+                        <span class="relative z-10">PROMOS</span>
                     </a>
                 </div>
 
