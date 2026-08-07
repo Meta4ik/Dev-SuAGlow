@@ -315,7 +315,7 @@ function switchSpecialsTab(tab) {
     }
 }
 
-// Download / Share Flyer Image directly using assets/specials-flyer-composite.png
+// Download / Share Flyer Image directly using assets/SuA-Glow-August-Specials.png
 function downloadFlyerImage() {
     const downloadBtn = document.getElementById('download-flyer-btn');
 
@@ -331,15 +331,15 @@ function downloadFlyerImage() {
         }
     };
 
-    fetch('assets/specials-flyer-composite.png')
+    fetch('assets/SuA-Glow-August-Specials.png')
         .then(res => res.blob())
         .then(blob => {
-            const file = new File([blob], 'SuA-Glow-Fall-Skin-Reset-Flyer.png', { type: 'image/png' });
+            const file = new File([blob], 'SuA-Glow-August-Specials.png', { type: 'image/png' });
 
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
                 navigator.share({
-                    title: 'SuA K Glow Fall Skin Reset',
-                    text: 'Check out SuA K Glow Fall Skin Reset offers!',
+                    title: 'SuA K Glow August Specials',
+                    text: 'Check out SuA K Glow August Specials offers!',
                     files: [file]
                 }).catch(err => {
                     console.log('Share sheet dismissed or failed:', err);
@@ -353,8 +353,8 @@ function downloadFlyerImage() {
         .catch(err => {
             console.error('Error loading flyer image asset:', err);
             const fallbackLink = document.createElement('a');
-            fallbackLink.href = 'assets/specials-flyer-composite.png';
-            fallbackLink.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
+            fallbackLink.href = 'assets/SuA-Glow-August-Specials.png';
+            fallbackLink.download = 'SuA-Glow-August-Specials.png';
             fallbackLink.target = '_blank';
             document.body.appendChild(fallbackLink);
             fallbackLink.click();
@@ -366,7 +366,7 @@ function downloadFlyerImage() {
 function triggerDirectDownload(blob) {
     const blobUrl = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
+    link.download = 'SuA-Glow-August-Specials.png';
     link.href = blobUrl;
     document.body.appendChild(link);
     link.click();
