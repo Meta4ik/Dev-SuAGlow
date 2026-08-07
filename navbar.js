@@ -222,6 +222,12 @@ const NAVBAR_HTML = `
                         </a>
                     </div>
                 </div>
+            <!-- Promos Gold Pill Badge -->
+            <div class="nav-item">
+                <a href="specials.html"
+                    class="inline-flex items-center justify-center font-heading text-[11px] font-bold tracking-[0.15em] text-near-black bg-gradient-to-r from-[#DFAB22] via-[#F3D369] to-[#DFAB22] hover:brightness-110 px-4 py-1.5 rounded-full shadow-md border border-white/50 transition-all duration-300 transform hover:scale-105 uppercase whitespace-nowrap">
+                    <i data-lucide="tag" class="w-3.5 h-3.5 mr-1.5 text-near-black"></i> Promos
+                </a>
             </div>
 
             <!-- Our Story -->
@@ -494,6 +500,14 @@ const NAVBAR_HTML = `
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Promos Mobile Pill Button -->
+                <div class="py-2">
+                    <a href="specials.html"
+                        class="inline-flex items-center justify-center font-heading text-xs font-bold tracking-[0.15em] text-near-black bg-gradient-to-r from-[#DFAB22] via-[#F3D369] to-[#DFAB22] hover:brightness-110 px-5 py-2 rounded-full shadow-md border border-white/50 transition-all duration-300 uppercase whitespace-nowrap">
+                        <i data-lucide="tag" class="w-4 h-4 mr-2 text-near-black"></i> Promos
+                    </a>
                 </div>
 
                 <!-- Our Story -->
