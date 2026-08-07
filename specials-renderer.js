@@ -193,31 +193,30 @@ function renderMonthlySpecials() {
                     </div>
                 </div>
 
-                <!-- VIEW 2: 1:1 Aspect Ratio Flyer Canvas -->
+                <!-- VIEW 2: Print Flyer & Share View -->
                 <div id="specials-poster-view" class="hidden max-w-[1024px] mx-auto animate-on-scroll fade-up">
-                    <div class="text-center mb-4 print:hidden">
+                    <div class="text-center mb-6 print:hidden">
                         <button onclick="downloadFlyerImage()" id="download-flyer-btn" class="px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-warm-gold bg-near-black hover:bg-warm-gold hover:text-near-black border border-warm-gold/40 hover:border-warm-gold shadow-md inline-flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer z-20">
                             <i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share
                         </button>
                     </div>
                     
-                    <!-- Scaling Wrapper for Mobile Viewports -->
-                    <div id="flyer-scale-wrapper" class="w-full flex justify-center overflow-hidden">
-                        <div id="flyer-card-element" class="w-[1024px] h-[1024px] shrink-0 bg-cover bg-center rounded-[28px] shadow-2xl border border-charcoal/10 p-12 flex flex-col justify-between relative overflow-hidden text-near-black print:shadow-none print:border-none print:m-0 print:p-8 print:w-full print:max-w-none" style="background-image: url('assets/specials-flyer-composite.png');">
+                    <div class="w-full flex justify-center">
+                        <div id="flyer-card-element" class="w-full md:w-[1024px] h-auto md:h-[1024px] bg-cover bg-center rounded-[28px] shadow-2xl border border-charcoal/10 p-6 md:p-12 flex flex-col justify-between relative overflow-hidden text-near-black print:shadow-none print:border-none print:m-0 print:p-8 print:w-full print:max-w-none" style="background-image: url('assets/specials-flyer-composite.png');">
                             <!-- Protective Soft Gradient Overlay for Left Side Card/Text Readability -->
                             <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent pointer-events-none z-0"></div>
-                            <div class="relative z-10 flex flex-col justify-between h-full">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="text-left max-w-[440px]">
-                                    <img src="assets/logo-main.png" alt="SuA K Glow" class="h-10 md:h-12 w-auto mb-6 object-contain" onerror="this.onerror=null; this.src='assets/logo-main.webp';">
-                                    <h2 class="heading-wide text-2xl md:text-3xl text-near-black uppercase tracking-[0.15em] leading-snug font-light max-w-[420px]">
-                                        ${meta.title.replace(/FALL /i, 'FALL<br>')}
+                            <div class="relative z-10 flex flex-col justify-between h-full space-y-6 md:space-y-0">
+                            <div class="flex flex-col sm:flex-row justify-between items-start gap-4 mb-4">
+                                <div class="text-left max-w-full md:max-w-[440px]">
+                                    <img src="assets/logo-main.png" alt="SuA K Glow" class="h-10 md:h-12 w-auto mb-4 md:mb-6 object-contain" onerror="this.onerror=null; this.src='assets/logo-main.webp';">
+                                    <h2 class="heading-wide text-xl sm:text-2xl md:text-3xl text-near-black uppercase tracking-[0.15em] leading-snug font-light max-w-full md:max-w-[420px]">
+                                        ${meta.title.replace(/FALL /i, 'FALL<br class="hidden md:inline">')}
                                     </h2>
-                                    <p class="font-body text-xs md:text-sm text-taupe italic tracking-widest uppercase mt-1 opacity-80 max-w-[360px]">
+                                    <p class="font-body text-xs md:text-sm text-taupe italic tracking-widest uppercase mt-1 opacity-80 max-w-full md:max-w-[360px]">
                                         ${meta.subtitle}
                                     </p>
                                 </div>
-                                <div class="text-right">
+                                <div class="text-left sm:text-right">
                                     <span class="text-[10px] font-heading tracking-[0.3em] font-extrabold text-warm-gold uppercase bg-near-black px-4 py-2 rounded-full border border-warm-gold/40 shadow-lg whitespace-nowrap inline-block">
                                         ${meta.badge}
                                     </span>
@@ -230,20 +229,20 @@ function renderMonthlySpecials() {
                             </div>
 
                             <!-- Bottom Offers Box -->
-                            <div class="mt-4 bg-gradient-to-r from-near-black via-near-black/95 to-near-black text-white rounded-[20px] p-4 border border-warm-gold/40 shadow-xl flex flex-row items-center justify-between">
-                                <div class="w-1/2 pr-4 border-r border-white/20 text-left">
+                            <div class="mt-4 bg-gradient-to-r from-near-black via-near-black/95 to-near-black text-white rounded-[20px] p-4 border border-warm-gold/40 shadow-xl flex flex-row items-center justify-between gap-2">
+                                <div class="w-1/2 pr-2 sm:pr-4 border-r border-white/20 text-left">
                                     <span class="text-[9px] tracking-[0.3em] text-warm-gold uppercase font-extrabold block mb-0.5">
                                         LIMITED TIME
                                     </span>
-                                    <h3 class="font-heading text-base md:text-lg text-white font-bold uppercase tracking-[0.12em]">
+                                    <h3 class="font-heading text-sm sm:text-base md:text-lg text-white font-bold uppercase tracking-[0.12em]">
                                         ${meta.month.toUpperCase()} OFFERS
                                     </h3>
                                 </div>
-                                <div class="w-1/2 pl-4 text-right">
-                                    <span class="font-heading text-2xl md:text-3xl text-warm-gold font-extrabold tracking-tight block">
+                                <div class="w-1/2 pl-2 sm:pl-4 text-right">
+                                    <span class="font-heading text-xl sm:text-2xl md:text-3xl text-warm-gold font-extrabold tracking-tight block">
                                         $100 OFF
                                     </span>
-                                    <span class="text-[9.5px] text-white/90 font-body font-semibold block mt-0.5">
+                                    <span class="text-[8.5px] sm:text-[9.5px] text-white/90 font-body font-semibold block mt-0.5">
                                         Toward Your Fall Skin Reset
                                     </span>
                                 </div>
@@ -264,7 +263,7 @@ function renderMonthlySpecials() {
                             </div>
 
                             <!-- Footer Contact Info Bar -->
-                            <div class="mt-2.5 bg-near-black text-white/90 py-2.5 px-6 rounded-xl text-[9px] md:text-[10px] flex flex-wrap items-center justify-between gap-3 text-center border border-warm-gold/20 shadow-md">
+                            <div class="mt-2.5 bg-near-black text-white/90 py-2.5 px-4 md:px-6 rounded-xl text-[9px] md:text-[10px] flex flex-col sm:flex-row items-center justify-between gap-2 md:gap-3 text-center border border-warm-gold/20 shadow-md">
                                 <span class="font-body opacity-90 inline-flex items-center gap-1.5">
                                     <i data-lucide="map-pin" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
                                     4116 State Highway 121, Suite 120, Carrollton, TX 75010
@@ -292,32 +291,6 @@ function renderMonthlySpecials() {
     `;
 }
 
-// Scale Flyer Canvas proportionally for mobile screens so full desktop layout is shown
-function scaleFlyerCanvas() {
-    const wrapper = document.getElementById('flyer-scale-wrapper');
-    const card = document.getElementById('flyer-card-element');
-    if (!wrapper || !card) return;
-
-    const posterView = document.getElementById('specials-poster-view');
-    if (!posterView || posterView.classList.contains('hidden')) return;
-
-    const availableWidth = wrapper.clientWidth;
-    const targetWidth = 1024;
-    const targetHeight = 1024;
-
-    if (availableWidth > 0 && availableWidth < targetWidth) {
-        const scale = availableWidth / targetWidth;
-        card.style.transform = `scale(${scale})`;
-        card.style.transformOrigin = 'top center';
-        wrapper.style.height = `${targetHeight * scale}px`;
-    } else {
-        card.style.transform = 'none';
-        wrapper.style.height = 'auto';
-    }
-}
-
-window.addEventListener('resize', scaleFlyerCanvas);
-
 // Tab Switcher Helper Function
 function switchSpecialsTab(tab) {
     const programView = document.getElementById('specials-program-view');
@@ -335,7 +308,6 @@ function switchSpecialsTab(tab) {
         posterView.classList.remove('hidden');
         posterBtn.className = "px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 bg-near-black text-warm-gold shadow";
         programBtn.className = "px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 text-charcoal/60 hover:text-near-black";
-        setTimeout(scaleFlyerCanvas, 20);
     }
 
     if (window.lucide) {
@@ -357,9 +329,12 @@ function downloadFlyerImage() {
 
     // Function to render canvas and trigger download
     const renderAndDownload = () => {
-        const origTransform = flyerElement.style.transform;
-        const origOrigin = flyerElement.style.transformOrigin;
-        flyerElement.style.transform = 'none';
+        // Enforce 1024x1024 fixed canvas dimensions for retina html2canvas export
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+            flyerElement.style.width = '1024px';
+            flyerElement.style.height = '1024px';
+        }
 
         html2canvas(flyerElement, {
             scale: 2, // High resolution retina rendering
@@ -368,8 +343,11 @@ function downloadFlyerImage() {
             logging: false,
             backgroundColor: '#FAF8F5'
         }).then(canvas => {
-            flyerElement.style.transform = origTransform;
-            flyerElement.style.transformOrigin = origOrigin;
+            if (isMobile) {
+                flyerElement.style.width = '';
+                flyerElement.style.height = '';
+            }
+
             canvas.toBlob(blob => {
                 if (!blob) {
                     triggerFallbackDownload();
