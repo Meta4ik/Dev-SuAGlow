@@ -330,30 +330,47 @@ function downloadFlyerImage() {
             scale: 2, // High resolution retina rendering
             useCORS: true,
             allowTaint: true,
+            logging: false,
             backgroundColor: '#FAF8F5'
         }).then(canvas => {
-            const link = document.createElement('a');
-            link.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
-            link.href = canvas.toDataURL('image/png');
-            link.click();
+            canvas.toBlob(blob => {
+                if (!blob) {
+                    triggerFallbackDownload();
+                    return;
+                }
+                const blobUrl = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
+                link.href = blobUrl;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
 
-            if (downloadBtn) {
-                downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Download Flyer Image (PNG)`;
-                if (window.lucide) lucide.createIcons();
-            }
+                if (downloadBtn) {
+                    downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Download Flyer Image (PNG)`;
+                    if (window.lucide) lucide.createIcons();
+                }
+            }, 'image/png');
         }).catch(err => {
-            console.error('Error generating flyer image:', err);
-            // Fallback download if html2canvas meets CORS issue
-            const fallbackLink = document.createElement('a');
-            fallbackLink.href = 'assets/specials-flyer-composite.png';
-            fallbackLink.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
-            fallbackLink.click();
-
-            if (downloadBtn) {
-                downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Download Flyer Image (PNG)`;
-                if (window.lucide) lucide.createIcons();
-            }
+            console.error('Error generating flyer image canvas:', err);
+            triggerFallbackDownload();
         });
+    };
+
+    const triggerFallbackDownload = () => {
+        const fallbackLink = document.createElement('a');
+        fallbackLink.href = 'assets/specials-flyer-composite.png';
+        fallbackLink.download = 'SuA-Glow-Fall-Skin-Reset-Flyer.png';
+        fallbackLink.target = '_blank';
+        document.body.appendChild(fallbackLink);
+        fallbackLink.click();
+        document.body.removeChild(fallbackLink);
+
+        if (downloadBtn) {
+            downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Download Flyer Image (PNG)`;
+            if (window.lucide) lucide.createIcons();
+        }
     };
 
     if (typeof html2canvas === 'undefined') {
