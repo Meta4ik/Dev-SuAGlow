@@ -11,7 +11,7 @@ const MONTHLY_SPECIALS_CONFIG = {
         badge: "Limited Time | August Offers",
         title: "The Korean Fall Skin & Body Reset",
         subtitle: "Inspired by Seoul's approach to seasonal skin health",
-        offerCallout: "$100 TOWARD YOUR FALL SKIN & BODY RESET",
+        offerCallout: "$100 TOWARD YOUR KOREAN FALL SKIN & BODY RESET",
         flyerImage: "assets/korean_fall_skin_reset_august.jpg",
         bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
         terms: "*Offer valid for limited time during August. Cannot be combined with other promotional discounts."

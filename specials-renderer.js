@@ -238,7 +238,7 @@ function renderMonthlySpecials() {
                                         $100 OFF
                                     </span>
                                     <span class="text-[8.5px] sm:text-[9.5px] text-white/90 font-body font-semibold block mt-0.5">
-                                        Toward Your Fall Skin & Body Reset
+                                        Toward Your Korean Fall Skin & Body Reset
                                     </span>
                                 </div>
                             </div>
