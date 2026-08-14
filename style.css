@@ -216,7 +216,7 @@ html {
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 20px);
   left: 0;
   min-width: 220px;
   background: white;

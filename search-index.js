@@ -9,6 +9,14 @@ const SEARCH_INDEX = [
     "snippet": "The bridge between Seoul's precision and Texas's warmth. Discover the philosophy behind SuA K-Glow."
   },
   {
+    "url": "about.html",
+    "title": "Consultation",
+    "pageTitle": "About Us",
+    "category": "Spa Treatments",
+    "content": "More Dedicated Time. More Personalized Care. To ensure every consultation receives the attention and personalized guidance it deserves, we are updating our policy. Consultation Fee Includes dedicated time with your provider to discuss your goals & treatment options.",
+    "snippet": "More Dedicated Time. More Personalized Care. To ensure every consultation receives the attention and personalized guidance it deserves, we are updating our poli..."
+  },
+  {
     "url": "about.html#story",
     "title": "Our Story",
     "pageTitle": "About Us",
@@ -143,6 +151,14 @@ const SEARCH_INDEX = [
     "category": "Spa Treatments",
     "content": "Book online anytime, call us directly, or stop by our studio in Carrollton. We're here to help you glow.",
     "snippet": "Book online anytime, call us directly, or stop by our studio in Carrollton. We're here to help you glow."
+  },
+  {
+    "url": "contact.html",
+    "title": "Consultation",
+    "pageTitle": "Contact & Book",
+    "category": "Spa Treatments",
+    "content": "More Dedicated Time. More Personalized Care. To ensure every consultation receives the attention and personalized guidance it deserves, we are updating our policy. Consultation Fee Includes dedicated time with your provider to discuss your goals & treatment options.",
+    "snippet": "More Dedicated Time. More Personalized Care. To ensure every consultation receives the attention and personalized guidance it deserves, we are updating our poli..."
   },
   {
     "url": "contact.html",
@@ -370,11 +386,19 @@ const SEARCH_INDEX = [
   },
   {
     "url": "index.html#hero",
-    "title": "The Art of Korean Skincare in Dallas",
+    "title": "The Art of Korean Skincare in Dallas.",
     "pageTitle": "SuA K-Glow",
-    "category": "Premier K-Beauty Destination",
-    "content": "The Art of Korean Skincare in Dallas. Because beautiful skin begins with healthy skin. Advanced Korean technology. Personalized treatment plans. Physician-guided care.",
-    "snippet": "The Art of Korean Skincare in Dallas. Because beautiful skin begins with healthy skin..."
+    "category": "Premier\n                    K-Beauty Destination",
+    "content": "Because beautiful skin begins with healthy skin. SuA Glow Medspa brings the secrets of Korean beauty to Dallas where science, precision, and elegance meet. We rejuvenate your skin from within for that effortless, glass-skin radiance. Advanced Korean technology • Personalized treatment plans • Physician-guided care",
+    "snippet": "Because beautiful skin begins with healthy skin. SuA Glow Medspa brings the secrets of Korean beauty to Dallas where science, precision, and elegance meet. We r..."
+  },
+  {
+    "url": "index.html",
+    "title": "Consultation",
+    "pageTitle": "SuA K-Glow",
+    "category": "Premier\n                    K-Beauty Destination",
+    "content": "More Dedicated Time. More Personalized Care. To ensure every consultation receives the attention and personalized guidance it deserves, we are updating our policy. Consultation Fee Includes dedicated time with your provider to discuss your goals & treatment options.",
+    "snippet": "More Dedicated Time. More Personalized Care. To ensure every consultation receives the attention and personalized guidance it deserves, we are updating our poli..."
   },
   {
     "url": "index.html#treatments",
@@ -1509,7 +1533,7 @@ const SEARCH_INDEX = [
     "title": "Skin Rejuvenation",
     "pageTitle": "Skin Health",
     "category": "Skin Health",
-    "content": "Harnessing the power of advanced Korean devices like Oligio X RF Lifting and LDM Ultrasound, we offer non-invasive skin tightening, cellular level regeneration, and enhanced absorption of vital nutrients. • Oligio X RF Lifting • LDM Ultrasound • Advanced Microneedling",
+    "content": "Harnessing the power of advanced Korean devices like Oligio X RF Lifting and LDM Ultrasound, we offer non-invasive skin tightening, cellular level regeneration, and enhanced absorption of vital nutrients. • Oligio X RF Lifting • LDM Ultrasound • Advanced Microneedling • Needleless Infusion Therapy (DEP) • Picosecond Laser • Korean Scalp & Hair Rejuvenation",
     "snippet": "Harnessing the power of advanced Korean devices like Oligio X RF Lifting and LDM Ultrasound, we offer non-invasive skin tightening, cellular level regeneration,..."
   },
   {

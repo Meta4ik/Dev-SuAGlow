@@ -124,6 +124,22 @@ const NAVBAR_HTML = `
                                 <li><a href="microneedling.html" class="dropdown-link !p-0 hover:!pl-2">Microneedling</a></li>
                                 <li>
                                     <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
+                                        Needleless Infusion Therapy (DEP)
+                                        <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0 ml-1">
+                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
+                                        Picosecond Laser
+                                        <span class="inline-flex items-center font-mono text-[9px] font-semibold text-rose-700 bg-rose-50 border border-rose-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0 ml-1">
+                                            NEW
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
                                         Korean Scalp & Hair Rejuvenation
                                         <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0 ml-1">
                                             <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
@@ -197,21 +213,51 @@ const NAVBAR_HTML = `
                     </div>
                     <div>
                         <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
+                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Body Contouring</span>
+                            <span class="inline-flex items-center font-mono text-[9px] font-semibold text-rose-700 bg-rose-50 border border-rose-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">NEW</span>
+                        </a>
+                        <span class="block font-body text-[10px] text-charcoal/40 mt-0.5 font-normal">Oligio X Body &bull; EmSculpt</span>
+                    </div>
+                    <div>
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
+                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Peptides</span>
+                        </a>
+                        <span class="block font-body text-[10px] text-charcoal/40 mt-0.5 font-normal">Targeted Bio-Regenerative Peptides</span>
+                    </div>
+                    <div>
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
+                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Women's Hormone Balance</span>
+                            <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                                <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                            </span>
+                        </a>
+                        <span class="block font-body text-[10px] text-charcoal/40 mt-0.5 font-normal whitespace-nowrap">Hormone Optimization &bull; Metabolic Wellness</span>
+                    </div>
+                    <div>
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
+                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Pelvic Health</span>
+                            <span class="inline-flex items-center font-mono text-[9px] font-semibold text-rose-700 bg-rose-50 border border-rose-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">NEW</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
+                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Red Light Therapy</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
+                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Advanced Testing</span>
+                            <span class="inline-flex items-center font-mono text-[9px] font-semibold text-rose-700 bg-rose-50 border border-rose-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">NEW</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
                             <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Glow Infusion Therapy</span>
                             <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
                                 <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
                             </span>
                         </a>
                         <span class="block font-body text-[10px] text-charcoal/40 mt-0.5 font-normal">IV Infusions &bull; IV Push Therapy</span>
-                    </div>
-                    <div>
-                        <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
-                            <span class="font-body text-sm text-charcoal hover:text-taupe transition-colors whitespace-nowrap">Hormone &amp; Longevity Medicine</span>
-                            <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
-                                <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                            </span>
-                        </a>
-                        <span class="block font-body text-[10px] text-charcoal/40 mt-0.5 font-normal whitespace-nowrap">Hormone Optimization &bull; Peptide Therapy &bull; Metabolic Wellness</span>
                     </div>
                     <div>
                         <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-3">
@@ -380,6 +426,18 @@ const NAVBAR_HTML = `
                                 <a href="ldm-water-drop-lifting.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Water Drop Lifting</a>
                                 <a href="microneedling.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Microneedling</a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
+                                    Needleless Infusion Therapy (DEP)
+                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                    </span>
+                                </a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
+                                    Picosecond Laser
+                                    <span class="inline-flex items-center text-[9px] font-semibold text-rose-600/80 bg-rose-50 border border-rose-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
+                                        NEW
+                                    </span>
+                                </a>
+                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
                                     Korean Scalp & Hair Rejuvenation
                                     <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
                                         <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
@@ -448,21 +506,51 @@ const NAVBAR_HTML = `
                         </div>
                         <div>
                             <div class="flex items-center justify-between gap-2">
+                                <a href="#" class="font-body text-sm text-charcoal/80 hover:text-taupe transition-colors">Body Contouring</a>
+                                <span class="font-mono text-[9px] font-semibold text-rose-700 bg-rose-50 border border-rose-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">NEW</span>
+                            </div>
+                            <span class="block font-body text-[10px] text-charcoal/40 mt-0.5">Oligio X Body &bull; EmSculpt</span>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between gap-2">
+                                <a href="#" class="font-body text-sm text-charcoal/80 hover:text-taupe transition-colors">Peptides</a>
+                            </div>
+                            <span class="block font-body text-[10px] text-charcoal/40 mt-0.5">Targeted Bio-Regenerative Peptides</span>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between gap-2">
+                                <a href="#" class="font-body text-sm text-charcoal/80 hover:text-taupe transition-colors">Women's Hormone Balance</a>
+                                <span class="font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                                    <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                </span>
+                            </div>
+                            <span class="block font-body text-[10px] text-charcoal/40 mt-0.5">Hormone Optimization &bull; Metabolic Wellness</span>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between gap-2">
+                                <a href="#" class="font-body text-sm text-charcoal/80 hover:text-taupe transition-colors">Pelvic Health</a>
+                                <span class="font-mono text-[9px] font-semibold text-rose-700 bg-rose-50 border border-rose-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">NEW</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between gap-2">
+                                <a href="#" class="font-body text-sm text-charcoal/80 hover:text-taupe transition-colors">Red Light Therapy</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between gap-2">
+                                <a href="#" class="font-body text-sm text-charcoal/80 hover:text-taupe transition-colors">Advanced Testing</a>
+                                <span class="font-mono text-[9px] font-semibold text-rose-700 bg-rose-50 border border-rose-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">NEW</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between gap-2">
                                 <a href="#" class="font-body text-sm text-charcoal/80 hover:text-taupe transition-colors">Glow Infusion Therapy</a>
                                 <span class="font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
                                     <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
                                 </span>
                             </div>
                             <span class="block font-body text-[10px] text-charcoal/40 mt-0.5">IV Infusions &bull; IV Push Therapy</span>
-                        </div>
-                        <div>
-                            <div class="flex items-center justify-between gap-2">
-                                <a href="#" class="font-body text-sm text-charcoal/80 hover:text-taupe transition-colors">Hormone &amp; Longevity Medicine</a>
-                                <span class="font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
-                                    <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                                </span>
-                            </div>
-                            <span class="block font-body text-[10px] text-charcoal/40 mt-0.5">Hormone Optimization &bull; Peptide Therapy &bull; Metabolic Wellness</span>
                         </div>
                         <div>
                             <div class="flex items-center justify-between gap-2">
