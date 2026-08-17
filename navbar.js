@@ -123,11 +123,8 @@ const NAVBAR_HTML = `
                                 <li><a href="ldm-water-drop-lifting.html" class="dropdown-link !p-0 hover:!pl-2">LDM Water Drop Lifting</a></li>
                                 <li><a href="microneedling.html" class="dropdown-link !p-0 hover:!pl-2">Microneedling</a></li>
                                 <li>
-                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
+                                    <a href="needleless-infusion-therapy.html" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
                                         Needleless Infusion Therapy (DEP)
-                                        <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0 ml-1">
-                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                                        </span>
                                     </a>
                                 </li>
                                 <li>
@@ -437,11 +434,8 @@ const NAVBAR_HTML = `
                                 <a href="oligio-x.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Oligio X RF Lifting</a>
                                 <a href="ldm-water-drop-lifting.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Water Drop Lifting</a>
                                 <a href="microneedling.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Microneedling</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
+                                <a href="needleless-infusion-therapy.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
                                     Needleless Infusion Therapy (DEP)
-                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
-                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                                    </span>
                                 </a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
                                     Picosecond Laser
