@@ -124,7 +124,7 @@ const NAVBAR_HTML = `
                                 <li><a href="microneedling.html" class="dropdown-link !p-0 hover:!pl-2">Microneedling</a></li>
                                 <li>
                                     <a href="needleless-infusion-therapy.html" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
-                                        Needleless Infusion Therapy (DEP)
+                                        Needle-free Infusion Therapy
                                     </a>
                                 </li>
                                 <li>
@@ -435,7 +435,7 @@ const NAVBAR_HTML = `
                                 <a href="ldm-water-drop-lifting.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Water Drop Lifting</a>
                                 <a href="microneedling.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Microneedling</a>
                                 <a href="needleless-infusion-therapy.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
-                                    Needleless Infusion Therapy (DEP)
+                                    Needle-free Infusion Therapy
                                 </a>
                                 <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
                                     Picosecond Laser
