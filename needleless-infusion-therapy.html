@@ -22,28 +22,31 @@
     <div id="nav-placeholder"></div>
 
     <!-- Hero Section -->
-    <section id="hero" data-nav-theme="dark" class="relative min-h-[85vh] flex items-center justify-end pt-[150px] pb-20 px-8 md:px-16 bg-[#131619] text-white overflow-hidden">
+    <section id="hero" data-nav-theme="dark" class="relative min-h-[85vh] flex items-start md:items-center justify-end pt-[150px] pb-[300px] md:pb-20 px-8 md:px-16 bg-[#131619] text-white overflow-hidden">
         <!-- Full Size Background Image -->
         <div id="hero-bg-parallax" class="absolute inset-0 z-0 bg-[#0A1628] pointer-events-none overflow-hidden transition-transform duration-75 ease-out">
-            <img src="assets/SuA_Glow_DEP_Hero_Image_v2.png" alt="DEP Skin Infusion Treatment" class="w-full h-full object-cover object-center opacity-85">
-            <!-- Gradient to ensure text readability on the right side -->
-            <div class="absolute inset-0 bg-gradient-to-l from-[#131619]/90 via-[#131619]/50 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#131619] via-transparent to-transparent"></div>
+            <picture>
+                <source media="(min-width: 768px)" srcset="assets/SuA_Glow_DEP_Hero_Image_v2.png">
+                <img src="assets/mobile-dep-hero.png" alt="DEP Skin Infusion Treatment" class="w-full h-full object-cover object-[center_bottom] md:object-center opacity-85">
+            </picture>
+            <!-- Gradient to ensure text readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-[#131619] via-[#131619]/60 to-transparent md:hidden"></div>
+            <div class="absolute inset-0 hidden md:block bg-gradient-to-l from-[#131619]/90 via-[#131619]/50 to-transparent"></div>
         </div>
         
         <div class="max-w-7xl mx-auto relative z-10 w-full">
-            <div class="max-w-2xl ml-auto space-y-6 text-white text-right animate-on-scroll fade-left">
+            <div class="max-w-2xl ml-auto space-y-6 text-white text-center md:text-right animate-on-scroll fade-left">
                 <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 mb-2 inline-block uppercase tracking-wider text-[10px]">Needle-Free Skin Infusion &bull; Carrollton, TX</span>
                 
                 <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-white font-medium leading-tight [text-wrap:balance]">
                     Dallas' first FDA-cleared skin infusion for true <span class="text-[#AA987C] italic font-light">glass skin</span>
                 </h1>
                 
-                <p class="text-sm md:text-base font-light text-white/80 leading-relaxed max-w-xl ml-auto [text-wrap:balance]">
+                <p class="text-sm md:text-base font-light text-white/80 leading-relaxed max-w-xl mx-auto md:ml-auto md:mr-0 [text-wrap:balance]">
                     Healthy skin doesn't need more makeup. It needs the right ingredients, delivered beautifully — comfortably, precisely, and without a single needle.
                 </p>
                 
-                <div class="pt-4 flex flex-wrap gap-4 items-center justify-end">
+                <div class="pt-4 flex flex-wrap gap-4 items-center justify-center md:justify-end">
                     <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300">
                         Book Your DEP Consultation
                     </a>
@@ -53,7 +56,7 @@
                 </div>
                 
                 <!-- Trust Badges (Replaces the floating circle badge from the collage) -->
-                <div class="pt-8 flex items-center justify-end gap-6 text-[10px] uppercase tracking-widest font-bold text-warm-gold/80">
+                <div class="pt-8 flex flex-wrap items-center justify-center md:justify-end gap-4 md:gap-6 text-[10px] uppercase tracking-widest font-bold text-warm-gold/80">
                     <div class="flex items-center gap-2">
                         <i stroke-width="1" data-lucide="shield-check" class="w-8 h-8"></i>
                         <span>FDA Cleared</span>
@@ -77,7 +80,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-stretch">
                 <!-- Image (Left) -->
                 <div class="lg:col-span-5 animate-on-scroll fade-right h-full">
-                    <div class="relative h-full rounded-3xl overflow-hidden shadow-2xl bg-white p-4 border border-light-gray/50">
+                    <div class="relative h-64 sm:h-80 md:h-[400px] lg:h-full lg:min-h-[500px] rounded-3xl overflow-hidden shadow-2xl bg-white p-4 border border-light-gray/50">
                         <img src="assets/dep-image-1-new.jpg" alt="Korean model receiving a relaxing DEP facial treatment" class="w-full h-full object-cover rounded-2xl mx-auto">
                         <div class="absolute bottom-8 left-8 right-8 bg-near-black/75 backdrop-blur-md border border-white/10 p-4 rounded-xl text-center">
                             <p class="heading-wide text-xs text-white uppercase tracking-widest">Seoul-Inspired Rejuvenation</p>
@@ -171,7 +174,7 @@
                 <div class="lg:col-span-5 animate-on-scroll fade-right">
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-sky-100 group" style="background: radial-gradient(circle at center, #e0f2fe 0%, #38bdf8 60%, #0284c7 100%);">
                         <!-- DEP Device image provided by user -->
-                        <img src="assets/DEP-II-Device-Pic-06-copy-1.webp" alt="The DEP (DermoElectroPoration) system device" class="w-full h-auto object-cover rounded-3xl group-hover:scale-102 transition-transform duration-700">
+                        <img src="assets/DEP-II-Device-Pic-06-copy-1.webp" alt="The DEP (DermoElectroPoration) system device" class="w-full h-auto max-h-[350px] lg:max-h-none object-contain lg:object-cover rounded-3xl group-hover:scale-102 transition-transform duration-700">
                     </div>
                 </div>
 
@@ -334,8 +337,8 @@
                 <!-- Full Width Background Image -->
                 <div class="absolute inset-0 z-0 flex justify-end">
                     <!-- Gradient overlay so the text on the left is readable over the bg -->
-                    <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent z-10 w-full md:w-2/3"></div>
-                    <img src="assets/dep-more-than-treatment-bg.jpg" alt="Korean model with glass skin" class="w-full md:w-3/4 h-full object-cover object-right z-0 opacity-95">
+                    <div class="absolute inset-0 bg-white/85 sm:bg-white/75 md:bg-transparent md:bg-gradient-to-r md:from-white md:via-white/90 md:to-transparent z-10 w-full md:w-2/3"></div>
+                    <img src="assets/dep-more-than-treatment-bg.jpg" alt="Korean model with glass skin" class="w-full md:w-3/4 h-full object-cover object-[center_20%] md:object-right z-0 opacity-95">
                 </div>
 
                 <!-- Content (Left) -->
