@@ -508,6 +508,14 @@
             
 
 
+            <style>
+                /* Override card interior to fade to a dark tint instead of solid black */
+                #patient-experience .glow-card {
+                    background: linear-gradient(to bottom right, #1a1c1e 0%, #2a241b 100%) padding-box,
+                                conic-gradient(from var(--glow-angle), transparent 30%, var(--glow-color, #AA987C) 80%, transparent) border-box !important;
+                }
+            </style>
+
             <!-- Experience Glow Cards Grid -->
             <div class="grid grid-cols-2 md:grid-cols-5 gap-4 lg:gap-6">
                 <div class="product-card glow-card p-4 lg:p-6 text-center" style="--glow-color: #AA987C;">
