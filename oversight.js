@@ -1,6 +1,6 @@
 const OVERSIGHT_HTML = `
     <!-- Medical Oversight -->
-    <section class="py-16 px-10 bg-off-white">
+    <section class="py-16 px-10 bg-light-gray">
         <div class="max-w-4xl mx-auto">
             <div class="relative bg-white p-8 md:p-12 shadow-soft rounded-[2rem] border border-light-gray/40 overflow-hidden animate-on-scroll fade-up">
                 <!-- Background accent element -->
@@ -24,7 +24,7 @@ const OVERSIGHT_HTML = `
                         
                         <!-- Clinicians Info Cards -->
                         <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="flex items-center gap-4 bg-off-white/80 p-4 rounded-xl border border-light-gray/30">
+                            <div class="flex items-center gap-4 bg-light-gray/80 p-4 rounded-xl border border-light-gray/30">
                                 <img src="assets/sophia-yang.png" alt="Sophia Yang, PA-C" class="w-16 h-16 rounded-full object-cover shrink-0 border border-light-gray/40 shadow-xs">
                                 <div>
                                     <p class="text-[13px] font-semibold text-near-black leading-tight">Sophia Yang, PA-C</p>
@@ -32,7 +32,7 @@ const OVERSIGHT_HTML = `
                                 </div>
                             </div>
                             
-                            <div class="flex items-center gap-4 bg-off-white/80 p-4 rounded-xl border border-light-gray/30">
+                            <div class="flex items-center gap-4 bg-light-gray/80 p-4 rounded-xl border border-light-gray/30">
                                 <img src="assets/dr-adam-yang.png" alt="Dr. Adam Yang" class="w-16 h-16 rounded-full object-cover shrink-0 border border-light-gray/40 shadow-xs">
                                 <div>
                                     <p class="text-[13px] font-semibold text-near-black leading-tight">Dr. Adam Yang</p>
