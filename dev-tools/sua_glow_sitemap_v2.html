@@ -32,7 +32,41 @@
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            overflow-x: hidden;
+        }
+        .zoom-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+        .zoom-controls button {
+            padding: 8px 16px;
+            border: 1px solid var(--light-gray);
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: var(--font-main);
+            font-size: 14px;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .zoom-controls button:hover {
+            border-color: var(--taupe);
+            color: var(--taupe);
+        }
+        .tree-container {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding-bottom: 40px;
+            cursor: grab;
+        }
+        .tree-container:active {
+            cursor: grabbing;
         }
 
         .header {
@@ -54,10 +88,13 @@
 
         /* Tree structure CSS */
         .tree {
-            width: 100%;
+            width: max-content;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
+            transform-origin: top center;
+            transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
         }
         .tree ul {
             padding-top: 30px; 
@@ -216,10 +253,17 @@
 
     <div class="header">
         <h1>SuA Glow Structure</h1>
-        <p>Hierarchy & Navigation Mapping</p>
+        <p>Hierarchy & Navigation Mapping V2</p>
     </div>
 
-    <div class="tree">
+    <div class="zoom-controls">
+        <button id="zoomOut">- Zoom Out</button>
+        <button id="zoomReset">Reset</button>
+        <button id="zoomIn">+ Zoom In</button>
+    </div>
+
+    <div class="tree-container" id="treeContainer">
+        <div class="tree" id="treeElement">
         <ul>
             <li>
                 <div class="node root">Homepage <span class="check-mark">✓</span></div>
@@ -394,13 +438,70 @@
         </ul>
     </div>
 
-    <div class="legend">
+    </div>
+    </div> <!-- End tree-container -->
+
+    <div class="legend" style="justify-content: center; margin-bottom: 40px; margin-top: 40px;">
         <div class="legend-item"><div class="dot" style="background: var(--near-black);"></div> Root</div>
         <div class="legend-item"><div class="dot" style="background: var(--taupe);"></div> Primary Nav</div>
         <div class="legend-item"><div class="dot" style="background: var(--warm-gold);"></div> Sub-Categories</div>
         <div class="legend-item"><div class="dot" style="border: 1px dashed var(--blue-gray);"></div> Final Pages</div>
-        <div class="legend-item"><span class="check-mark">✓</span> Existing Page</div>
+        <div class="legend-item"><span class="check-mark">✓</span> Completed</div>
     </div>
 
+    <script>
+        const treeElement = document.getElementById('treeElement');
+        const treeContainer = document.getElementById('treeContainer');
+        let currentZoom = 1;
+        
+        document.getElementById('zoomIn').addEventListener('click', () => {
+            currentZoom = Math.min(currentZoom + 0.15, 2);
+            updateZoom();
+        });
+        
+        document.getElementById('zoomOut').addEventListener('click', () => {
+            currentZoom = Math.max(currentZoom - 0.15, 0.3);
+            updateZoom();
+        });
+        
+        document.getElementById('zoomReset').addEventListener('click', () => {
+            currentZoom = 1;
+            updateZoom();
+            treeContainer.scrollLeft = (treeContainer.scrollWidth - treeContainer.clientWidth) / 2;
+        });
+
+        function updateZoom() {
+            treeElement.style.transform = `scale(${currentZoom})`;
+        }
+
+        // Initialize scroll to center
+        window.addEventListener('load', () => {
+            treeContainer.scrollLeft = (treeContainer.scrollWidth - treeContainer.clientWidth) / 2;
+        });
+
+        // Simple click and drag to pan functionality
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        treeContainer.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - treeContainer.offsetLeft;
+            scrollLeft = treeContainer.scrollLeft;
+        });
+        treeContainer.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+        treeContainer.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+        treeContainer.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - treeContainer.offsetLeft;
+            const walk = (x - startX) * 2; // scroll-fast
+            treeContainer.scrollLeft = scrollLeft - walk;
+        });
+    </script>
 </body>
 </html>
