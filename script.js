@@ -58,7 +58,7 @@ function initFooter() {
     
     footerPlaceholder.innerHTML = html;
 
-    const financeBtn = document.getElementById('floating-finance-btn');
+    const financeBtn = document.getElementById('floating-pill-container');
 
     // Hide floating finance button if already on the financing page
     if (window.location.pathname.includes('financing.html')) {
@@ -371,6 +371,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNews();
   initSophia();
   initOversight();
+  initAccessibilityWidget();
 
   // 2. Setup Reveal Animations
   const revealObserver = new IntersectionObserver((entries) => {
@@ -1120,4 +1121,21 @@ function executeSearch(query) {
   
   results.sort((a, b) => b.score - a.score);
   return results.map(r => r.entry);
+}
+
+/**
+ * Accessibility Widget Integration
+ * Injects the UserWay ADA compliance widget onto the page
+ */
+function initAccessibilityWidget() {
+  // Check if we are in an iframe or similar environment where we don't want it, though usually fine
+  const script = document.createElement('script');
+  script.src = "https://cdn.userway.org/widget.js";
+  // Placeholder account - UserWay free widget
+  // The site owner should ideally claim this or update with their own token
+  script.setAttribute('data-account', 'p5G5u5U5A9'); 
+  // Position 3 = bottom left
+  script.setAttribute('data-position', '3'); 
+  script.async = true;
+  document.body.appendChild(script);
 }
