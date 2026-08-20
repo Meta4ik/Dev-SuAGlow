@@ -4,7 +4,10 @@
   "description": "SuA K-Glow Med Spa — static site with Tailwind CSS CLI build",
   "scripts": {
     "build": "node build-search-index.js && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "sync": "rsync -av --delete --exclude='.git' --exclude='node_modules' --exclude='src' --exclude='scratch' --exclude='dev-tools' --exclude='kam_doc_updates' . ../live-site/",
+    "deploy:vercel": "git add . && git commit -m \"Auto-deploy to Vercel via npm script\" && git push",
+    "deploy:ftp": "npm run sync && cd ../live-site && python3 ftp_upload.py"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
