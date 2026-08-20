@@ -1,12 +1,18 @@
 import ftplib
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 FTP_HOST = "suaglow.com"
-FTP_USER = os.getenv("FTP_USER")
-FTP_PASS = os.getenv("FTP_PASS")
+FTP_USER = ""
+FTP_PASS = ""
+
+with open(".env") as f:
+    for line in f:
+        line = line.strip()
+        if line.startswith('FTP_USER='):
+            FTP_USER = line.split('=', 1)[1]
+        elif line.startswith('FTP_PASS='):
+            FTP_PASS = line.split('=', 1)[1]
+
 REMOTE_DIR = "/public_html"
 
 print(f"Connecting to {FTP_HOST}...")
@@ -15,7 +21,7 @@ ftp.login(FTP_USER, FTP_PASS)
 ftp.cwd(REMOTE_DIR)
 
 # Exclude list
-EXCLUDE = {'.git', 'node_modules', 'src', 'scratch', 'dev-tools', 'kam_doc_updates', '.env', 'ftp_upload.py', 'package.json', 'package-lock.json', '.DS_Store', 'DEPLOYMENT.md', 'search-index.js', 'extract_logos.py'}
+EXCLUDE = {'.git', 'node_modules', 'src', 'scratch', 'dev-tools', 'kam_doc_updates', '.env', 'ftp_upload.py', 'package.json', 'package-lock.json', '.DS_Store', 'DEPLOYMENT.md', 'search-index.js', 'extract_logos.py', '.gitignore'}
 
 def upload_dir(local_dir, remote_dir):
     try:
