@@ -58,7 +58,7 @@ function initFooter() {
     
     footerPlaceholder.innerHTML = html;
 
-    const financeBtn = document.getElementById('floating-pill-container');
+    const financeBtn = document.getElementById('floating-finance-btn');
 
     // Hide floating finance button if already on the financing page
     if (window.location.pathname.includes('financing.html')) {
