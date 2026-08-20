@@ -289,6 +289,78 @@ const SEARCH_INDEX = [
     "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under appropriate medical oversight and within the scope of practice permitted under Te..."
   },
   {
+    "url": "dep.html#hero",
+    "title": "Dallas' first FDA-cleared skin infusion for true glass skin",
+    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "category": "Needle-Free Skin Infusion • Carrollton, TX",
+    "content": "Healthy skin doesn't need more makeup. It needs the right ingredients, delivered beautifully — comfortably, precisely, and without a single needle.",
+    "snippet": "Healthy skin doesn't need more makeup. It needs the right ingredients, delivered beautifully — comfortably, precisely, and without a single needle."
+  },
+  {
+    "url": "dep.html#philosophy",
+    "title": "Why DermoElectroPoration fits the K-Beauty philosophy",
+    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "category": "Needle-Free Skin Infusion • Carrollton, TX",
+    "content": "Seoul-Inspired Rejuvenation DermoElectroPoration Technology The heart of Korean beauty has never been about changing your features. It's about creating skin that looks so healthy, hydrated, and luminous that makeup becomes optional. That's why DermoElectroPoration has earned a place in the SuA Glow approach to skin health. Flood skin with lasting moisture for a fresh, radiant glow. Support a stronger, healthier skin barrier over time. Reveal natural glass skin radiance and smoother texture. Promote healthy-looking collagen and replenish skin.",
+    "snippet": "Seoul-Inspired Rejuvenation DermoElectroPoration Technology The heart of Korean beauty has never been about changing your features. It's about creating skin tha..."
+  },
+  {
+    "url": "dep.html#how-it-works",
+    "title": "What Is DEP?",
+    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "category": "Needle-Free Skin Infusion • Carrollton, TX",
+    "content": "DEP (DermoElectroPoration®) is an FDA-cleared transdermal infusion technology that uses precisely controlled electrical pulses to temporarily open microscopic channels within the skin. These microscopic channels allow high-performance skincare ingredients to travel significantly deeper than traditional topical application. Rather than sitting on the surface, ingredients are infused directly where they are needed most. Beautiful skin isn't about layering more skincare. It's about helping your skin receive the ingredients that matter most — comfortably, precisely, and without downtime. No needles No injections No bleeding No anesthesia No prolonged recovery",
+    "snippet": "DEP (DermoElectroPoration®) is an FDA-cleared transdermal infusion technology that uses precisely controlled electrical pulses to temporarily open microscopic c..."
+  },
+  {
+    "url": "dep.html",
+    "title": "What Can DEP Treat?",
+    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "category": "Needle-Free Skin Infusion • Carrollton, TX",
+    "content": "Restore moisture while improving softness, luminosity, and elasticity. Perfect for dry skin, dull complexions, and barrier repair. DEP helps optimize ingredient delivery to support healthier-looking collagen, improving fine lines, loss of firmness, and rough texture. Target uneven tone by delivering brightening formulations deeper into the skin. Ideal for sun damage and tired-looking skin. Healthy hair starts with a healthy scalp. Provider-selected formulations delivered comfortably, without needles for density support.",
+    "snippet": "Restore moisture while improving softness, luminosity, and elasticity. Perfect for dry skin, dull complexions, and barrier repair. DEP helps optimize ingredient..."
+  },
+  {
+    "url": "dep.html",
+    "title": "More than a treatment, part of a physician-guided plan",
+    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "category": "Needle-Free Skin Infusion • Carrollton, TX",
+    "content": "At SuA Glow, DermoElectroPoration® is an integral part of our physician guided approach to healthy, resilient skin. Rather than using the same formulation for every patient, we carefully select professional skincare ingredients designed to support hydration, radiance, skin barrier health, and long-term skin quality. Products are selected by your provider based on your skin assessment, treatment goals, and applicable clinical and regulatory considerations.",
+    "snippet": "At SuA Glow, DermoElectroPoration® is an integral part of our physician guided approach to healthy, resilient skin. Rather than using the same formulation for e..."
+  },
+  {
+    "url": "dep.html#patient-experience",
+    "title": "Why patients love DEP",
+    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "category": "Needle-Free Skin Infusion • Carrollton, TX",
+    "content": "Relaxing, with only mild tingling. Back to work or dinner right after. Ideal if you dislike injections. Every Fitzpatrick type, customized. Gradual improvement, not overnight change.",
+    "snippet": "Relaxing, with only mild tingling. Back to work or dinner right after. Ideal if you dislike injections. Every Fitzpatrick type, customized. Gradual improvement,..."
+  },
+  {
+    "url": "dep.html",
+    "title": "Why Dallas Patients Choose SuA Glow for DEP",
+    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "category": "Needle-Free Skin Infusion • Carrollton, TX",
+    "content": "While many clinics focus on treating wrinkles, we focus on improving the quality of your skin. Instead of performing the same treatment for every patient, we personalize every DEP infusion based on your skin condition, treatment history, and long-term goals. \"The goal isn't simply younger skin. It's healthier skin that glows with confidence.\" Seoul-inspired treatment philosophy Physician-guided care by Sophia Yang, PA-C Medical oversight by Dr. Adam Yang FDA-cleared transdermal technology Customized Korean treatment protocols Premium regenerative skincare technologies",
+    "snippet": "While many clinics focus on treating wrinkles, we focus on improving the quality of your skin. Instead of performing the same treatment for every patient, we pe..."
+  },
+  {
+    "url": "dep.html#faq",
+    "title": "DEP FAQs",
+    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "category": "Needle-Free Skin Infusion • Carrollton, TX",
+    "content": "Yes. DEP utilizes FDA-cleared technology for transdermal ingredient delivery. No. DEP delivers professional skincare ingredients without injections or needles. Most patients experience only mild tingling or warmth during treatment. Most appointments take approximately 30–45 minutes, depending on whether DEP is performed alone or combined with other treatments. Very little. Most patients return to normal activities immediately after treatment. Yes. DEP is frequently incorporated into customized treatment plans alongside Oligio X®, SkinPen®, Korean facials, Medical-grade skincare, and Hair restoration programs. Your provider will recommend the safest combination for your skin. Many patients notice improvements after one treatment, but a series of treatments often provides the best long-term skin health and maintenance.",
+    "snippet": "Yes. DEP utilizes FDA-cleared technology for transdermal ingredient delivery. No. DEP delivers professional skincare ingredients without injections or needles. ..."
+  },
+  {
+    "url": "dep.html",
+    "title": "Needle-free.Deep hydration.Very Seoul.",
+    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "category": "Needle-Free Skin Infusion • Carrollton, TX",
+    "content": "DEP treatment recommendations at SuA Glow are individualized based on patient goals, anatomy, medical history, and clinical assessment pursuant to supervising physician-approved protocols and applicable Texas regulations. K-Beauty Medspa • Carrollton HQ Whether you're looking to boost hydration, support collagen, enhance post-treatment recovery, or elevate your skincare routine, DEP offers a comfortable, needle-free way to deliver professional-grade ingredients where your skin needs them most. Book your personalized DEP consultation at SuA Glow today and discover how Korean skin infusion technology can help you achieve your healthiest, most radiant glow.",
+    "snippet": "DEP treatment recommendations at SuA Glow are individualized based on patient goals, anatomy, medical history, and clinical assessment pursuant to supervising p..."
+  },
+  {
     "url": "dermal-filler.html#hero",
     "title": "DermalFiller",
     "pageTitle": "Korean Dermal Filler",
@@ -803,74 +875,74 @@ const SEARCH_INDEX = [
   {
     "url": "needleless-infusion-therapy.html#hero",
     "title": "Dallas' first FDA-cleared skin infusion for true glass skin",
-    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "pageTitle": "Korean Needle-free Infusion",
     "category": "Needle-Free Skin Infusion • Carrollton, TX",
     "content": "Healthy skin doesn't need more makeup. It needs the right ingredients, delivered beautifully — comfortably, precisely, and without a single needle.",
     "snippet": "Healthy skin doesn't need more makeup. It needs the right ingredients, delivered beautifully — comfortably, precisely, and without a single needle."
   },
   {
     "url": "needleless-infusion-therapy.html#philosophy",
-    "title": "Why DermoElectroPoration fits the K-Beauty philosophy",
-    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "title": "Why Korean Needle-free Infusion fits the K-Beauty philosophy",
+    "pageTitle": "Korean Needle-free Infusion",
     "category": "Needle-Free Skin Infusion • Carrollton, TX",
-    "content": "Seoul-Inspired Rejuvenation DermoElectroPoration Technology The heart of Korean beauty has never been about changing your features. It's about creating skin that looks so healthy, hydrated, and luminous that makeup becomes optional. That's why DermoElectroPoration has earned a place in the SuA Glow approach to skin health. Flood skin with lasting moisture for a fresh, radiant glow. Support a stronger, healthier skin barrier over time. Reveal natural glass skin radiance and smoother texture. Promote healthy-looking collagen and replenish skin.",
-    "snippet": "Seoul-Inspired Rejuvenation DermoElectroPoration Technology The heart of Korean beauty has never been about changing your features. It's about creating skin tha..."
+    "content": "Seoul-Inspired Rejuvenation Korean Needle-free Infusion Technology The heart of Korean beauty has never been about changing your features. It's about creating skin that looks so healthy, hydrated, and luminous that makeup becomes optional. That's why Korean Needle-free Infusion has earned a place in the SuA Glow approach to skin health. Flood skin with lasting moisture for a fresh, radiant glow. Support a stronger, healthier skin barrier over time. Reveal natural glass skin radiance and smoother texture. Promote healthy-looking collagen and replenish skin.",
+    "snippet": "Seoul-Inspired Rejuvenation Korean Needle-free Infusion Technology The heart of Korean beauty has never been about changing your features. It's about creating s..."
   },
   {
     "url": "needleless-infusion-therapy.html#how-it-works",
-    "title": "What Is DEP?",
-    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "title": "What Is Korean Needle-free Infusion?",
+    "pageTitle": "Korean Needle-free Infusion",
     "category": "Needle-Free Skin Infusion • Carrollton, TX",
-    "content": "DEP (DermoElectroPoration®) is an FDA-cleared transdermal infusion technology that uses precisely controlled electrical pulses to temporarily open microscopic channels within the skin. These microscopic channels allow high-performance skincare ingredients to travel significantly deeper than traditional topical application. Rather than sitting on the surface, ingredients are infused directly where they are needed most. Beautiful skin isn't about layering more skincare. It's about helping your skin receive the ingredients that matter most — comfortably, precisely, and without downtime. No needles No injections No bleeding No anesthesia No prolonged recovery",
-    "snippet": "DEP (DermoElectroPoration®) is an FDA-cleared transdermal infusion technology that uses precisely controlled electrical pulses to temporarily open microscopic c..."
+    "content": "Korean Needle-free Infusion is an FDA-cleared transdermal infusion technology that uses precisely controlled electrical pulses to temporarily open microscopic channels within the skin. These microscopic channels allow high-performance skincare ingredients to travel significantly deeper than traditional topical application. Rather than sitting on the surface, ingredients are infused directly where they are needed most. Beautiful skin isn't about layering more skincare. It's about helping your skin receive the ingredients that matter most — comfortably, precisely, and without downtime. No needles No injections No bleeding No anesthesia No prolonged recovery",
+    "snippet": "Korean Needle-free Infusion is an FDA-cleared transdermal infusion technology that uses precisely controlled electrical pulses to temporarily open microscopic c..."
   },
   {
     "url": "needleless-infusion-therapy.html",
-    "title": "What Can DEP Treat?",
-    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "title": "What Does Your Skin Need Today?",
+    "pageTitle": "Korean Needle-free Infusion",
     "category": "Needle-Free Skin Infusion • Carrollton, TX",
-    "content": "Restore moisture while improving softness, luminosity, and elasticity. Perfect for dry skin, dull complexions, and barrier repair. DEP helps optimize ingredient delivery to support healthier-looking collagen, improving fine lines, loss of firmness, and rough texture. Target uneven tone by delivering brightening formulations deeper into the skin. Ideal for sun damage and tired-looking skin. Healthy hair starts with a healthy scalp. Provider-selected formulations delivered comfortably, without needles for density support.",
-    "snippet": "Restore moisture while improving softness, luminosity, and elasticity. Perfect for dry skin, dull complexions, and barrier repair. DEP helps optimize ingredient..."
+    "content": "In K-beauty, beautiful skin is personal. Your SuA Glow provider customizes your needle-free infusion with advanced delivery technology to target your unique skin goals—safely, comfortably, and effectively. With Skinboosters Deeply hydrate and plump skin from within for that signature Korean glow. Dewy, smooth, luminous. With Skintox Help soften expression lines and prevent future wrinkles for smoother, younger-looking skin. Spacer Support smoother, more refined-looking skin and improve the appearance of acne scars. Spacer Target dark spots and uneven tone for a brighter, more even, and radiant complexion. Hair Restoration Nourish the scalp and support healthier-looking hair with personalized, needle-free scalp infusion. Spacer Target areas of concern on the body with customized infusions to support smoother, firmer, more radiant skin. Every infusion is personalized today—and adjusted as your skin evolves. Start with a SuA Glow skin consultation.",
+    "snippet": "In K-beauty, beautiful skin is personal. Your SuA Glow provider customizes your needle-free infusion with advanced delivery technology to target your unique ski..."
   },
   {
     "url": "needleless-infusion-therapy.html",
     "title": "More than a treatment, part of a physician-guided plan",
-    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "pageTitle": "Korean Needle-free Infusion",
     "category": "Needle-Free Skin Infusion • Carrollton, TX",
-    "content": "At SuA Glow, DermoElectroPoration® is an integral part of our physician guided approach to healthy, resilient skin. Rather than using the same formulation for every patient, we carefully select professional skincare ingredients designed to support hydration, radiance, skin barrier health, and long-term skin quality. Products are selected by your provider based on your skin assessment, treatment goals, and applicable clinical and regulatory considerations.",
-    "snippet": "At SuA Glow, DermoElectroPoration® is an integral part of our physician guided approach to healthy, resilient skin. Rather than using the same formulation for e..."
+    "content": "At SuA Glow, Korean Needle-free Infusion is an integral part of our physician guided approach to healthy, resilient skin. Rather than using the same formulation for every patient, we carefully select professional skincare ingredients designed to support hydration, radiance, skin barrier health, and long-term skin quality. Products are selected by your provider based on your skin assessment, treatment goals, and applicable clinical and regulatory considerations.",
+    "snippet": "At SuA Glow, Korean Needle-free Infusion is an integral part of our physician guided approach to healthy, resilient skin. Rather than using the same formulation..."
   },
   {
     "url": "needleless-infusion-therapy.html#patient-experience",
-    "title": "Why patients love DEP",
-    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "title": "Why patients love Korean Needle-free Infusion",
+    "pageTitle": "Korean Needle-free Infusion",
     "category": "Needle-Free Skin Infusion • Carrollton, TX",
     "content": "Relaxing, with only mild tingling. Back to work or dinner right after. Ideal if you dislike injections. Every Fitzpatrick type, customized. Gradual improvement, not overnight change.",
     "snippet": "Relaxing, with only mild tingling. Back to work or dinner right after. Ideal if you dislike injections. Every Fitzpatrick type, customized. Gradual improvement,..."
   },
   {
     "url": "needleless-infusion-therapy.html",
-    "title": "Why Dallas Patients Choose SuA Glow for DEP",
-    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "title": "Why Dallas Patients Choose SuA Glow for Korean Needle-free Infusion",
+    "pageTitle": "Korean Needle-free Infusion",
     "category": "Needle-Free Skin Infusion • Carrollton, TX",
-    "content": "While many clinics focus on treating wrinkles, we focus on improving the quality of your skin. Instead of performing the same treatment for every patient, we personalize every DEP infusion based on your skin condition, treatment history, and long-term goals. \"The goal isn't simply younger skin. It's healthier skin that glows with confidence.\" Seoul-inspired treatment philosophy Physician-guided care by Sophia Yang, PA-C Medical oversight by Dr. Adam Yang FDA-cleared transdermal technology Customized Korean treatment protocols Premium regenerative skincare technologies",
+    "content": "While many clinics focus on treating wrinkles, we focus on improving the quality of your skin. Instead of performing the same treatment for every patient, we personalize every Korean Needle-free Infusion based on your skin condition, treatment history, and long-term goals. \"The goal isn't simply younger skin. It's healthier skin that glows with confidence.\" Seoul-inspired treatment philosophy Physician-guided care by Sophia Yang, PA-C Medical oversight by Dr. Adam Yang FDA-cleared transdermal technology Customized Korean treatment protocols Premium regenerative skincare technologies",
     "snippet": "While many clinics focus on treating wrinkles, we focus on improving the quality of your skin. Instead of performing the same treatment for every patient, we pe..."
   },
   {
     "url": "needleless-infusion-therapy.html#faq",
-    "title": "DEP FAQs",
-    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "title": "Korean Needle-free Infusion FAQs",
+    "pageTitle": "Korean Needle-free Infusion",
     "category": "Needle-Free Skin Infusion • Carrollton, TX",
-    "content": "Yes. DEP utilizes FDA-cleared technology for transdermal ingredient delivery. No. DEP delivers professional skincare ingredients without injections or needles. Most patients experience only mild tingling or warmth during treatment. Most appointments take approximately 30–45 minutes, depending on whether DEP is performed alone or combined with other treatments. Very little. Most patients return to normal activities immediately after treatment. Yes. DEP is frequently incorporated into customized treatment plans alongside Oligio X®, SkinPen®, Korean facials, Medical-grade skincare, and Hair restoration programs. Your provider will recommend the safest combination for your skin. Many patients notice improvements after one treatment, but a series of treatments often provides the best long-term skin health and maintenance.",
-    "snippet": "Yes. DEP utilizes FDA-cleared technology for transdermal ingredient delivery. No. DEP delivers professional skincare ingredients without injections or needles. ..."
+    "content": "Yes. Korean Needle-free Infusion utilizes FDA-cleared technology for transdermal ingredient delivery. No. Korean Needle-free Infusion delivers professional skincare ingredients without injections or needles. Most patients experience only mild tingling or warmth during treatment. Most appointments take approximately 30–45 minutes, depending on whether Korean Needle-free Infusion is performed alone or combined with other treatments. Very little. Most patients return to normal activities immediately after treatment. Yes. Korean Needle-free Infusion is frequently incorporated into customized treatment plans alongside Oligio X®, SkinPen®, Korean facials, Medical-grade skincare, and Hair restoration programs. Your provider will recommend the safest combination for your skin. Many patients notice improvements after one treatment, but a series of treatments often provides the best long-term skin health and maintenance.",
+    "snippet": "Yes. Korean Needle-free Infusion utilizes FDA-cleared technology for transdermal ingredient delivery. No. Korean Needle-free Infusion delivers professional skin..."
   },
   {
     "url": "needleless-infusion-therapy.html",
     "title": "Needle-free.Deep hydration.Very Seoul.",
-    "pageTitle": "Needle-Free Skin Infusion (DEP)",
+    "pageTitle": "Korean Needle-free Infusion",
     "category": "Needle-Free Skin Infusion • Carrollton, TX",
-    "content": "DEP treatment recommendations at SuA Glow are individualized based on patient goals, anatomy, medical history, and clinical assessment pursuant to supervising physician-approved protocols and applicable Texas regulations. K-Beauty Medspa • Carrollton HQ Whether you're looking to boost hydration, support collagen, enhance post-treatment recovery, or elevate your skincare routine, DEP offers a comfortable, needle-free way to deliver professional-grade ingredients where your skin needs them most. Book your personalized DEP consultation at SuA Glow today and discover how Korean skin infusion technology can help you achieve your healthiest, most radiant glow.",
-    "snippet": "DEP treatment recommendations at SuA Glow are individualized based on patient goals, anatomy, medical history, and clinical assessment pursuant to supervising p..."
+    "content": "Korean Needle-free Infusion treatment recommendations at SuA Glow are individualized based on patient goals, anatomy, medical history, and clinical assessment pursuant to supervising physician-approved protocols and applicable Texas regulations. K-Beauty Medspa • Carrollton HQ Whether you're looking to boost hydration, support collagen, enhance post-treatment recovery, or elevate your skincare routine, Korean Needle-free Infusion offers a comfortable, needle-free way to deliver professional-grade ingredients where your skin needs them most. Book your personalized Korean Needle-free Infusion consultation at SuA Glow today and discover how Korean skin infusion technology can help you achieve your healthiest, most radiant glow.",
+    "snippet": "Korean Needle-free Infusion treatment recommendations at SuA Glow are individualized based on patient goals, anatomy, medical history, and clinical assessment p..."
   },
   {
     "url": "oligio-x.html#hero",

@@ -959,7 +959,8 @@ html {
 #floating-finance-btn {
     position: fixed;
     bottom: 1.5rem;
-    right: 1.5rem;
+    left: 1.5rem;
+    right: auto;
     z-index: 900;
     display: flex;
     align-items: center;
@@ -1045,11 +1046,11 @@ html {
     margin-top: 1px;
 }
 
-/* Mobile: position bottom-right */
+/* Mobile: position bottom-left */
 @media (max-width: 767px) {
     #floating-finance-btn {
-        right: 1rem;
-        left: auto;
+        right: auto;
+        left: 1rem;
     }
 }
 
