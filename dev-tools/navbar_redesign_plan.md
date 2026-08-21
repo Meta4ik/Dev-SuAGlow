@@ -39,11 +39,11 @@ Instead of two separate menus, we combine **Skin Health** and **Wellness** into 
   * *Skin Quality Boosters*: Healing Essence, Hydration & Glow, Collagen Stimulation, Dermal Matrix
   * *Injectables*: Cosmetic Tox, Medical Tox, HA Fillers, Biostimulators
   * *Scar Treatment*: Acne Scars, Surgical Scars, Stretch Marks, Keloid
-* **Column 2: Skin Rejuvenation & Facials**
+* **Column 2: Skin Rejuvenation & K-Beauty Treatments**
   * *Skin Rejuvenation*: Oligio X RF Lifting, LDM Water Drop Lifting, Microneedling, Needle-free Infusion, Picosecond Laser, Korean Scalp & Hair
   * *Signature Treatments*: SuA Glow Signature, One Day Glow, Bridal Glow, Seoul Man
   * *K-Beauty Facials*: LDM Water Drop Lifting, Salmon PN Facial, Glow & Hydration, Collagen Stimulation, Tone Up
-* **Column 3: Wellness & Metabolism**
+* **Column 3: Wellness & Longevity Medicine**
   * Medical Weight Loss (Compounded GLP-1 & Korean Body Reset)
   * Body Contouring (Oligio X Body & EmSculpt)
   * Peptides (Targeted Bio-Regenerative Peptides)
