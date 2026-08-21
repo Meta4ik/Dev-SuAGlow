@@ -151,19 +151,36 @@
 
 
 
+        @keyframes textShimmerContinuous {
+            0% {
+                background-position: -200% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+
         .review-text-gradient {
-            background: linear-gradient(to right, #AA987C, #E6D5B8, #AA987C);
+            background: linear-gradient(to right, #AA987C 20%, #f2e3cc 50%, #AA987C 80%);
             background-size: 200% auto;
-            background-position: 0% center;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             color: transparent;
-            transition: background-position 1.5s ease-out;
+            animation: textShimmerContinuous 3s linear infinite;
+        }
+
+        @keyframes starColorShimmer {
+            0%, 100% { color: #AA987C; }
+            50% { color: #f2e3cc; }
         }
         
-        .review-card-wrapper:hover .review-text-gradient {
-            background-position: -200% center;
+        .shimmer-star {
+            animation: starColorShimmer 3s ease-in-out infinite;
+        }
+
+        .review-card-wrapper:hover .shimmer-star {
+            animation: none;
         }
 
         .animate-star {
@@ -265,11 +282,11 @@
 
                         <div class="flex flex-col z-10">
                             <div class="flex items-center gap-1">
-                                <span class="animate-star" style="animation-delay: 1.5s;"><i data-lucide="star" class="w-4 h-4 text-[#AA987C] group-hover:text-white transition-colors duration-300 fill-current stroke-current"></i></span>
-                                <span class="animate-star" style="animation-delay: 1.65s;"><i data-lucide="star" class="w-4 h-4 text-[#AA987C] group-hover:text-white transition-colors duration-300 fill-current stroke-current"></i></span>
-                                <span class="animate-star" style="animation-delay: 1.8s;"><i data-lucide="star" class="w-4 h-4 text-[#AA987C] group-hover:text-white transition-colors duration-300 fill-current stroke-current"></i></span>
-                                <span class="animate-star" style="animation-delay: 1.95s;"><i data-lucide="star" class="w-4 h-4 text-[#AA987C] group-hover:text-white transition-colors duration-300 fill-current stroke-current"></i></span>
-                                <span class="animate-star" style="animation-delay: 2.1s;"><i data-lucide="star" class="w-4 h-4 text-[#AA987C] group-hover:text-white transition-colors duration-300 fill-current stroke-current"></i></span>
+                                <span class="animate-star" style="animation-delay: 1.5s;"><i data-lucide="star" class="w-4 h-4 text-[#AA987C] group-hover:text-white transition-colors duration-300 fill-current stroke-current shimmer-star" style="animation-delay: 0s;"></i></span>
+                                <span class="animate-star" style="animation-delay: 1.65s;"><i data-lucide="star" class="w-4 h-4 text-[#AA987C] group-hover:text-white transition-colors duration-300 fill-current stroke-current shimmer-star" style="animation-delay: 0.2s;"></i></span>
+                                <span class="animate-star" style="animation-delay: 1.8s;"><i data-lucide="star" class="w-4 h-4 text-[#AA987C] group-hover:text-white transition-colors duration-300 fill-current stroke-current shimmer-star" style="animation-delay: 0.4s;"></i></span>
+                                <span class="animate-star" style="animation-delay: 1.95s;"><i data-lucide="star" class="w-4 h-4 text-[#AA987C] group-hover:text-white transition-colors duration-300 fill-current stroke-current shimmer-star" style="animation-delay: 0.6s;"></i></span>
+                                <span class="animate-star" style="animation-delay: 2.1s;"><i data-lucide="star" class="w-4 h-4 text-[#AA987C] group-hover:text-white transition-colors duration-300 fill-current stroke-current shimmer-star" style="animation-delay: 0.8s;"></i></span>
                             </div>
                             <span class="font-body text-sm md:text-base font-bold tracking-wide transition-all mt-0.5 animate-review-text review-text-gradient" style="animation-delay: 2.3s;">
                                 5.0 · 100+ reviews
