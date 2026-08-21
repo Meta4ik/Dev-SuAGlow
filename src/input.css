@@ -1405,10 +1405,20 @@ mark.search-highlight {
   100% { transform: translateX(-100%); }
 }
 
-.animate-marquee {
-  animation: marquee 60s linear infinite;
+@media (min-width: 768px) {
+  .animate-marquee {
+    animation: marquee 60s linear infinite;
+  }
+
+  .pause-on-hover:hover .animate-marquee {
+    animation-play-state: paused;
+  }
 }
 
-.pause-on-hover:hover .animate-marquee {
-  animation-play-state: paused;
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
