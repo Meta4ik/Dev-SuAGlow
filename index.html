@@ -828,6 +828,68 @@
     <script src="footer.js?v=43"></script>
     <script src="sophia.js?v=43"></script>
     <script src="script.js?v=43"></script>
-</body>
 
+    <script>
+        // Mobile Marquee Auto-Scroll & Touch Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const marqueeContainer = document.querySelector('.scrollbar-hide.pause-on-hover');
+            if (!marqueeContainer) return;
+
+            let isTouching = false;
+            let resumeTimeoutId = null;
+            let rAFId = null;
+            
+            const secondTrack = marqueeContainer.children[1];
+
+            function step() {
+                if (window.innerWidth < 768) {
+                    if (!isTouching) {
+                        // Ensure second track is visible for infinite scrolling
+                        if (secondTrack.classList.contains('hidden')) {
+                            secondTrack.classList.remove('hidden', 'md:flex');
+                            secondTrack.classList.add('flex');
+                        }
+                        marqueeContainer.scrollLeft += 1;
+                        
+                        // Infinite loop check - if we scrolled past the first track, reset
+                        if (marqueeContainer.scrollLeft >= marqueeContainer.scrollWidth / 2) {
+                            marqueeContainer.scrollLeft = 0;
+                        }
+                    }
+                } else {
+                    // Desktop: Reset second track classes for pure CSS animation
+                    if (!secondTrack.classList.contains('hidden')) {
+                        secondTrack.classList.add('hidden', 'md:flex');
+                        secondTrack.classList.remove('flex');
+                    }
+                }
+                rAFId = requestAnimationFrame(step);
+            }
+
+            marqueeContainer.addEventListener('touchstart', () => {
+                isTouching = true;
+                clearTimeout(resumeTimeoutId);
+            }, { passive: true });
+
+            marqueeContainer.addEventListener('touchend', () => {
+                resumeTimeoutId = setTimeout(() => {
+                    isTouching = false;
+                }, 1500); // Resume auto-scroll 1.5 seconds after touch ends
+            }, { passive: true });
+
+            // Handle manual touch scroll loop
+            marqueeContainer.addEventListener('scroll', () => {
+                if (isTouching && window.innerWidth < 768) {
+                    if (marqueeContainer.scrollLeft >= marqueeContainer.scrollWidth / 2) {
+                        marqueeContainer.scrollLeft = 0;
+                    } else if (marqueeContainer.scrollLeft <= 0) {
+                        marqueeContainer.scrollLeft = marqueeContainer.scrollWidth / 2;
+                    }
+                }
+            }, { passive: true });
+
+            rAFId = requestAnimationFrame(step);
+        });
+    </script>
+</body>
 </html>
