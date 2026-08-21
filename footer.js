@@ -62,7 +62,7 @@ const FOOTER_HTML = `
         
         <div class="pt-8 border-t border-white/[0.03] flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.3em] font-bold opacity-30">
             <div class="flex items-center gap-4">
-                <p>© 2026 SuA K Glow.</p>
+                <p>© 2026 SuA K Glow  |  Developed By <a href="mailto:kameron@m360health.com" class="hover:underline transition-all">Kameron Allen</a></p>
             </div>
             <div class="flex flex-wrap justify-center gap-4 md:gap-8">
                 <a href="privacy-policy.html" class="hover:opacity-100 transition-opacity">Privacy Policy</a>
