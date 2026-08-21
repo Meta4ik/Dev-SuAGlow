@@ -145,6 +145,78 @@ const SEARCH_INDEX = [
     "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessme..."
   },
   {
+    "url": "collagen-stimulation-facial.html#hero",
+    "title": "Korean Glass Skin Collagen & Structure Facial",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "Structure. Firmness. Future Skin. K-Beauty doesn't just treat the skin you have today. It invests in the skin you want tomorrow. At SuA Glow in Carrollton, near Dallas, our Korean-inspired collagen stimulation and skin-quality treatments focus on gradual, natural-looking improvement—not dramatic correction.",
+    "snippet": "Structure. Firmness. Future Skin. K-Beauty doesn't just treat the skin you have today. It invests in the skin you want tomorrow. At SuA Glow in Carrollton, near..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html#philosophy",
+    "title": "Why K-Beauty Thinks Beyond Volume",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "Gradual Improvement Not Dramatic Overfilling Not every sign of aging needs more filler. At SuA Glow, we often take a different approach—supporting skin quality, texture, firmness, and elasticity before considering traditional volume fillers. The goal is not a different face. It’s your skin made healthier, smoother, and firmer while still looking uniquely like you. Personalized Skin Focus:",
+    "snippet": "Gradual Improvement Not Dramatic Overfilling Not every sign of aging needs more filler. At SuA Glow, we often take a different approach—supporting skin quality,..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html",
+    "title": "Why Korean Aesthetics Invests in Collagen Early",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "K-Beauty isn't only about correcting what's visible today. It's also about supporting skin quality before structural changes become more noticeable. Firmness & elasticity Smoother, refined skin texture Healthy-looking skin quality Consistent long-term skin maintenance",
+    "snippet": "K-Beauty isn't only about correcting what's visible today. It's also about supporting skin quality before structural changes become more noticeable. Firmness & ..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html",
+    "title": "Build Your Collagen & Skin Quality Plan",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "No preset menu. No one-size-fits-all skin. Your personalized Korean-inspired treatment strategy may incorporate one or more of the following: For firmness, elasticity, texture, and gradual skin-quality support over time. Specifically targeted for texture refinement, collagen induction, and broader skin Laxity concerns. Needle-free ultrasound support for deep hydration, skin comfort, and healthy-looking bounce. Because collagen remodeling and hydration work better together as part of a complete skin quality strategy.",
+    "snippet": "No preset menu. No one-size-fits-all skin. Your personalized Korean-inspired treatment strategy may incorporate one or more of the following: For firmness, elas..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html",
+    "title": "Planning Your Bridal Glow?",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "Great skin doesn't start the week before the wedding. Collagen-focused skin planning is a long game, which is why we recommend starting your skin-quality strategy months before a wedding or major event. Think smoother texture, healthier-looking skin, and a natural radiance that doesn't depend on heavy coverage.",
+    "snippet": "Great skin doesn't start the week before the wedding. Collagen-focused skin planning is a long game, which is why we recommend starting your skin-quality strate..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html",
+    "title": "Why Korean Clinics Prefer Gradual Improvement Over Aggressive Correction",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "Modern Korean aesthetics prioritizes skin quality, prevention-focused planning, and natural-looking outcomes over dramatic transformation. The goal is optimization: skin that looks refreshed, healthier, and exceptionally well maintained. Skin Booster Structure Mockup Clinically Referenced Map Together, these treatments help support the Korean Glass Skin philosophy.",
+    "snippet": "Modern Korean aesthetics prioritizes skin quality, prevention-focused planning, and natural-looking outcomes over dramatic transformation. The goal is optimizat..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html",
+    "title": "Frequently Asked Questions",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "Collagen-focused treatments are skin quality strategies designed to support healthier-looking skin quality, texture refinement, elasticity-focused maintenance, and long-term skin support. Collagen-focused skin boosters are consultation-based skin quality strategies commonly discussed in modern Korean aesthetics and are often selected by patients seeking healthier-looking skin quality, smoother-looking texture, and elasticity-focused support. Traditional fillers are commonly discussed for facial contouring and volume support. Collagen-focused skin quality strategies are often selected by patients seeking healthier-looking skin quality, texture refinement, elasticity-focused support, and long-term skin maintenance. Patients commonly interested in collagen-focused treatment planning may include: women seeking long-term skin quality maintenance, men seeking subtle skin rejuvenation, patients concerned about acne scar appearance, patients focused on texture refinement, patients seeking elasticity-focused support, and patients interested in prevention-focused skin quality planning. The Korean Glass Skin PDRN Facial primarily focuses on skin quality and texture refinement, while the Korean Glass Skin Collagen & Structure Facial focuses more heavily on elasticity-focused support, firmness-focused maintenance, and long-term structural skin quality planning. Many patients pursue collagen-focused skin quality strategies as part of broader consultation-based treatment planning for texture refinement and acne scar appearance concerns. Yes. Korean-inspired consultation-based treatment planning may incorporate Korean Glass Skin LDM Facial treatments as part of broader skin quality, hydration-focused, and elasticity-focused strategies.",
+    "snippet": "Collagen-focused treatments are skin quality strategies designed to support healthier-looking skin quality, texture refinement, elasticity-focused maintenance, ..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html",
+    "title": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "Korean-inspired skin quality rejuvenation approaches discussed at SuA Glow reflect evolving global aesthetic practices and individualized consultation-based treatment planning. Specific treatment recommendations, product selection, regulatory status, risks, benefits, alternatives, and candidacy are reviewed during consultation pursuant to supervising physician-approved protocols and applicable Texas regulations. Treatment results vary by individual. No outcome can be guaranteed.",
+    "snippet": "Korean-inspired skin quality rejuvenation approaches discussed at SuA Glow reflect evolving global aesthetic practices and individualized consultation-based tre..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html",
+    "title": "Invest early.Maintain beautifully.Your skin, exceptionally well maintained.",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "K-Beauty Medspa • Carrollton HQ Ready for Your Glow? Call Us: 972-665-8737",
+    "snippet": "K-Beauty Medspa • Carrollton HQ Ready for Your Glow? Call Us: 972-665-8737"
+  },
+  {
     "url": "contact.html#hero",
     "title": "Contact & Visit Us",
     "pageTitle": "Contact & Book",
@@ -1823,5 +1895,77 @@ const SEARCH_INDEX = [
     "category": "Spa Treatments",
     "content": "K-Beauty Medspa • Carrollton HQ",
     "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "tone-up-facial.html#hero",
+    "title": "Korean Glass Skin Tone-Up Facial",
+    "pageTitle": "Korean Tone-Up Facial Dallas",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "Brighter. Luminous. Naturally Radiant. K-Beauty doesn't cover dull skin. It brings the glow back. At SuA Glow in Carrollton, near Dallas, our Korean-inspired Tone-Up Facial is designed around one of K-Beauty's most recognizable goals: Healthy-looking skin that glows in natural light.",
+    "snippet": "Brighter. Luminous. Naturally Radiant. K-Beauty doesn't cover dull skin. It brings the glow back. At SuA Glow in Carrollton, near Dallas, our Korean-inspired To..."
+  },
+  {
+    "url": "tone-up-facial.html#why-tone-up",
+    "title": "Why Tone-Up Is the Secret to Luminous Glass Skin",
+    "pageTitle": "Korean Tone-Up Facial Dallas",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "Rejuran® Tone-Up Booster Inspired by Korean Tone-Up skincare, the Korean Glass Skin Tone-Up Facial at SuA Glow is designed for dull, tired-looking skin that needs more brightness, clarity, and luminosity—without changing your natural skin color. K-Beauty Tone-Up isn't about making your skin lighter. It's about helping your complexion appear fresh, polished, even-looking, and naturally lit from within. When skin looks clearer, it reflects light more beautifully.",
+    "snippet": "Rejuran® Tone-Up Booster Inspired by Korean Tone-Up skincare, the Korean Glass Skin Tone-Up Facial at SuA Glow is designed for dull, tired-looking skin that nee..."
+  },
+  {
+    "url": "tone-up-facial.html",
+    "title": "Clarity Isn't a Moment. Maintain It.",
+    "pageTitle": "Korean Tone-Up Facial Dallas",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "K-Beauty isn't just about looking brighter for one day. It's about maintaining clarity, luminosity, and a fresh-looking complexion over time. Luminous skin shouldn't be saved for special occasions. The Tone-Up Philosophy: Support natural radiance. Optimize texture and tone. Keep the luminous skin bounce. Dull-looking skin Uneven-looking skin tone Rough-looking texture Dehydrated skin barrier Enlarged-looking pores",
+    "snippet": "K-Beauty isn't just about looking brighter for one day. It's about maintaining clarity, luminosity, and a fresh-looking complexion over time. Luminous skin shou..."
+  },
+  {
+    "url": "tone-up-facial.html",
+    "title": "How Does the Tone-Up Compare To Other Treatments?",
+    "pageTitle": "Korean Tone-Up Facial Dallas",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "The Korean Brightening Glass Skin Tone-Up Facial at SuA Glow may incorporate multiple skin quality protocols, including microneedling-assisted topical application, LDM facial support, and Rejuran® Healing Essence Tone-Up booster plans based on your skin behavior. Comparison Map Reference",
+    "snippet": "The Korean Brightening Glass Skin Tone-Up Facial at SuA Glow may incorporate multiple skin quality protocols, including microneedling-assisted topical applicati..."
+  },
+  {
+    "url": "tone-up-facial.html",
+    "title": "Hydration First.Glass Skin Follows.",
+    "pageTitle": "Korean Tone-Up Facial Dallas",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "Discover a personalized Korean-inspired hydration strategy designed around your skin. Whether your goal is deeper hydration, smoother-looking texture, natural radiance, or that signature dewy K-Beauty finish, we'll help determine the right approach during your consultation.",
+    "snippet": "Discover a personalized Korean-inspired hydration strategy designed around your skin. Whether your goal is deeper hydration, smoother-looking texture, natural r..."
+  },
+  {
+    "url": "tone-up-facial.html",
+    "title": "Korean Skin Quality Protocols in Action",
+    "pageTitle": "Korean Tone-Up Facial Dallas",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "Our customized Tone-Up treatments utilize advanced clinical protocols to ensure optimal delivery and a radiant glow. Below are referenced maps of our specialized skin booster structures. Skin Quality Map 1 Skin Quality Map 2 Booster Application 3 Booster Application 4",
+    "snippet": "Our customized Tone-Up treatments utilize advanced clinical protocols to ensure optimal delivery and a radiant glow. Below are referenced maps of our specialize..."
+  },
+  {
+    "url": "tone-up-facial.html",
+    "title": "Frequently Asked Questions",
+    "pageTitle": "Korean Tone-Up Facial Dallas",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "A Korean Tone-Up Facial is a Korean-inspired skin quality treatment focused on brighter-looking skin tone, hydration-conscious rejuvenation, glow-focused maintenance, and healthier-looking skin appearance. Rejuran® Healing Essence Tone-Up Booster is a Korean-inspired skin quality support strategy commonly discussed within consultation-based treatment planning focused on brighter-looking skin appearance, hydration support, and glow-focused maintenance. No. Korean Tone-Up treatments focus on healthier-looking skin quality, radiance, glow, and brighter-looking skin appearance rather than changing a person's natural skin color. Neither treatment is universally better. Korean Glass Skin PDRN Facial treatments are often selected by patients focused on hydration, texture, skin quality, and healthier-looking skin bounce. Korean Glass Skin Tone-Up Facial treatments are often selected by patients focused on radiance, glow, and brighter-looking skin tone. Many Korean clinics incorporate both. Yes. Many patients pursue Tone-Up treatments as part of a broader strategy focused on healthier-looking radiance, hydration support, glow-focused maintenance, and brighter-looking skin appearance. Treatment experiences vary depending on individualized treatment planning, skin sensitivity, and overall skin condition. Appropriate recommendations are determined during consultation.",
+    "snippet": "A Korean Tone-Up Facial is a Korean-inspired skin quality treatment focused on brighter-looking skin tone, hydration-conscious rejuvenation, glow-focused mainte..."
+  },
+  {
+    "url": "tone-up-facial.html",
+    "title": "Korean Tone-Up Facial Dallas",
+    "pageTitle": "Korean Tone-Up Facial Dallas",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "Korean-inspired skin quality rejuvenation approaches discussed at SuA Glow reflect evolving global aesthetic practices and individualized consultation-based treatment planning. Specific treatment recommendations, product selection, regulatory status, risks, benefits, alternatives, and candidacy are reviewed during consultation pursuant to supervising physician-approved protocols and applicable Texas regulations. Rejuran® Healing Essence Tone-Up products referenced within consultation-based treatment planning discussions are utilized solely as topical-use treatment strategies within the United States. Treatment results vary by individual. No outcome can be guaranteed.",
+    "snippet": "Korean-inspired skin quality rejuvenation approaches discussed at SuA Glow reflect evolving global aesthetic practices and individualized consultation-based tre..."
+  },
+  {
+    "url": "tone-up-facial.html",
+    "title": "Less Coverage.More Luminous Confidence.Luminous skin, naturally radiant.",
+    "pageTitle": "Korean Tone-Up Facial Dallas",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "K-Beauty Medspa • Carrollton HQ Ready for Your Glow? Call Us: 972-665-8737",
+    "snippet": "K-Beauty Medspa • Carrollton HQ Ready for Your Glow? Call Us: 972-665-8737"
   }
 ];
