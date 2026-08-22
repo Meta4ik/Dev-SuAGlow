@@ -7,21 +7,18 @@
     <meta name="description" content="Experience the Korean Glass Skin Tone-Up Facial at SuA Glow in Carrollton, TX. Korean-inspired brightening and hydration-focused skin rejuvenation designed to support glow, radiance, skin tone refinement, and healthier-looking skin quality.">
     <meta name="keywords" content="Korean Tone-Up Facial Dallas, Korean brightening facial Dallas, glass skin facial Dallas, Korean glow facial Dallas, hydration facial Dallas, uneven skin tone treatment Dallas, Korean skin booster Dallas, brightening facial Dallas, Korean facial Dallas, Korean radiance facial Dallas, Korean skin quality treatment Dallas, Rejuran Tone Up Booster">
     <link rel="icon" href="assets/favicon.png" type="image/png">
+    
+    <!-- Google Fonts aligned with Design System -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Alex+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="dist/output.css?v=43">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .font-serif-display {
-            font-family: 'Playfair Display', serif;
-        }
-        .font-script {
-            font-family: 'Alex Brush', cursive;
-        }
-        /* Custom styles for Tone-Up Mockup Recreations */
+        /* Theme Customizations for Rejuran Tone-Up Line */
         .glow-overlay {
-            background: radial-gradient(circle at 75% 40%, rgba(201, 176, 143, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+            background: radial-gradient(circle at 75% 40%, rgba(170, 152, 124, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
         }
         .text-rose-accent {
             color: #BA8781;
@@ -34,17 +31,17 @@
         }
     </style>
 </head>
-<body class="bg-[#FAF8F5] text-[#2C2623] antialiased">
+<body class="bg-[#FAF8F5] text-charcoal antialiased">
     <div id="nav-placeholder"></div>
 
     <!-- SECTION 1: HERO SECTION -->
-    <section id="hero" data-nav-theme="dark" class="relative min-h-screen bg-[#110F0E] text-white pt-28 pb-20 px-6 md:px-12 lg:px-24 flex items-center overflow-hidden">
+    <section id="hero" data-nav-theme="dark" class="relative min-h-screen bg-near-black text-white pt-28 pb-20 px-6 md:px-12 lg:px-24 flex items-center overflow-hidden">
         <!-- Background elements -->
         <div class="absolute inset-0 z-0 opacity-40 mix-blend-luminosity pointer-events-none">
             <img src="assets/tone-up/image1.jpeg" alt="Background Texture" class="w-full h-full object-cover object-right lg:object-center">
         </div>
-        <div class="absolute inset-0 z-0 bg-gradient-to-r from-[#110F0E] via-[#110F0E]/80 to-transparent lg:block hidden"></div>
-        <div class="absolute inset-0 z-0 bg-gradient-to-t from-[#110F0E] via-[#110F0E]/70 to-[#110F0E]/40 lg:hidden block"></div>
+        <div class="absolute inset-0 z-0 bg-gradient-to-r from-near-black via-near-black/80 to-transparent lg:block hidden"></div>
+        <div class="absolute inset-0 z-0 bg-gradient-to-t from-near-black via-near-black/70 to-near-black/40 lg:hidden block"></div>
         <div class="absolute inset-0 z-0 glow-overlay pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto relative z-10 w-full mt-8">
@@ -55,58 +52,58 @@
                     <!-- Badge -->
                     <div class="flex items-center gap-4 justify-center lg:justify-start">
                         <div class="h-[1px] w-8 bg-white/30 hidden lg:block"></div>
-                        <span class="text-xs uppercase tracking-[0.3em] font-semibold text-[#C9B08F]">
+                        <span class="text-xs uppercase tracking-[0.3em] font-semibold text-warm-gold">
                             K-BEAUTY &bull; TONE-UP &bull; RADIANCE
                         </span>
                         <div class="h-[1px] w-8 bg-white/30 hidden lg:block"></div>
                     </div>
 
-                    <!-- Main H1 Title -->
-                    <h1 class="font-serif-display text-4xl sm:text-6xl lg:text-[4.7rem] font-medium leading-[1.05] tracking-wide text-center lg:text-left">
+                    <!-- Main H1 Title (Aligned with style guide fonts) -->
+                    <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-white font-light leading-[1.1] [text-wrap:balance] text-center lg:text-left">
                         KOREAN <br class="hidden lg:block">
                         GLASS SKIN <br>
                         <span class="text-rose-accent">TONE-UP</span> FACIAL
                     </h1>
 
                     <!-- Subheading -->
-                    <h3 class="text-base sm:text-lg font-bold tracking-[0.2em] text-center lg:text-left">
-                        DULL SKIN? <span class="text-[#C9B08F]">TURN THE LIGHTS ON.</span>
+                    <h3 class="heading-wide text-xs sm:text-sm font-semibold tracking-[0.2em] text-center lg:text-left">
+                        DULL SKIN? <span class="text-warm-gold font-bold">TURN THE LIGHTS ON.</span>
                     </h3>
 
                     <!-- Paragraph description -->
-                    <p class="text-sm sm:text-base font-light text-white/80 leading-relaxed max-w-2xl text-center lg:text-left">
-                        Inspired by Korean Tone-Up skincare, SuA Glow's <span class="text-[#C9B08F] font-semibold">Rejuran® Healing Essence Tone-Up Facial</span> is designed for skin that looks dull, tired or uneven—and needs more clarity, luminosity and fresh-looking radiance.
+                    <p class="font-body text-sm sm:text-base font-light text-white/80 leading-relaxed max-w-2xl text-center lg:text-left">
+                        Inspired by Korean Tone-Up skincare, SuA Glow's <span class="text-warm-gold font-semibold">Rejuran® Healing Essence Tone-Up Facial</span> is designed for skin that looks dull, tired or uneven—and needs more clarity, luminosity and fresh-looking radiance.
                     </p>
 
                     <!-- Row of 5 Icons -->
                     <div class="grid grid-cols-5 gap-2 sm:gap-4 pt-4 border-t border-white/10 max-w-2xl">
                         <div class="text-center space-y-2">
                             <div class="h-10 w-10 mx-auto flex items-center justify-center rounded-full bg-white/5 border border-white/10">
-                                <i data-lucide="sparkles" class="w-5 h-5 text-[#C9B08F]"></i>
+                                <i data-lucide="sparkles" class="w-5 h-5 text-warm-gold"></i>
                             </div>
                             <p class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold text-white/90 leading-tight">Brighter-Looking Complexion</p>
                         </div>
                         <div class="text-center space-y-2">
                             <div class="h-10 w-10 mx-auto flex items-center justify-center rounded-full bg-white/5 border border-white/10">
-                                <i data-lucide="sun" class="w-5 h-5 text-[#C9B08F]"></i>
+                                <i data-lucide="sun" class="w-5 h-5 text-warm-gold"></i>
                             </div>
                             <p class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold text-white/90 leading-tight">More Luminous Skin</p>
                         </div>
                         <div class="text-center space-y-2">
                             <div class="h-10 w-10 mx-auto flex items-center justify-center rounded-full bg-white/5 border border-white/10">
-                                <i data-lucide="circle-dot" class="w-5 h-5 text-[#C9B08F]"></i>
+                                <i data-lucide="circle-dot" class="w-5 h-5 text-warm-gold"></i>
                             </div>
                             <p class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold text-white/90 leading-tight">Refined-Looking Tone</p>
                         </div>
                         <div class="text-center space-y-2">
                             <div class="h-10 w-10 mx-auto flex items-center justify-center rounded-full bg-white/5 border border-white/10">
-                                <i data-lucide="waves" class="w-5 h-5 text-[#C9B08F]"></i>
+                                <i data-lucide="waves" class="w-5 h-5 text-warm-gold"></i>
                             </div>
                             <p class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold text-white/90 leading-tight">Smoother-Looking Texture</p>
                         </div>
                         <div class="text-center space-y-2">
                             <div class="h-10 w-10 mx-auto flex items-center justify-center rounded-full bg-white/5 border border-white/10">
-                                <i data-lucide="sun-medium" class="w-5 h-5 text-[#C9B08F]"></i>
+                                <i data-lucide="sun-medium" class="w-5 h-5 text-warm-gold"></i>
                             </div>
                             <p class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold text-white/90 leading-tight">Fresh Glass Skin Radiance</p>
                         </div>
@@ -115,14 +112,14 @@
                     <!-- Accent Texts row -->
                     <div class="flex flex-col sm:flex-row items-center gap-6 pt-4 max-w-xl justify-center lg:justify-start">
                         <div class="text-center sm:text-left border-b sm:border-b-0 sm:border-r border-white/10 pb-4 sm:pb-0 sm:pr-6 shrink-0">
-                            <p class="font-script text-3xl sm:text-4xl text-[#C9B08F]">Not lighter.</p>
-                            <p class="font-serif-display text-xl sm:text-2xl text-white font-medium italic -mt-2">Brighter.</p>
+                            <p class="font-serif italic text-2xl sm:text-3xl text-warm-gold">Not lighter.</p>
+                            <p class="heading-wide text-xs sm:text-sm text-white font-semibold tracking-widest mt-1">Brighter.</p>
                         </div>
                         <div class="text-center sm:text-left space-y-1">
-                            <p class="text-sm font-light text-white/90 leading-snug">
-                                Not more makeup. <span class="text-rose-accent font-medium">More natural luminosity.</span>
+                            <p class="font-body text-sm font-light text-white/90 leading-snug">
+                                Not more makeup. <span class="text-rose-accent font-semibold">More natural luminosity.</span>
                             </p>
-                            <p class="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#C9B08F]">
+                            <p class="text-[9px] uppercase tracking-[0.2em] font-semibold text-warm-gold">
                                 THAT FRESH-FROM-SEOUL TONE-UP GLOW.
                             </p>
                         </div>
@@ -130,7 +127,7 @@
 
                     <!-- CTA Button -->
                     <div class="pt-4 text-center lg:text-left">
-                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="bg-rose-accent hover:bg-white hover:text-black transition-colors duration-300 text-white font-semibold text-xs tracking-widest uppercase py-4.5 px-10 rounded-full inline-flex items-center gap-2 shadow-lg">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary py-4 px-10 text-xs font-semibold tracking-widest bg-rose-accent hover:bg-white hover:text-black rounded-full transition-all duration-300 inline-flex items-center gap-2 shadow-lg">
                             Book Your Tone-Up <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
@@ -138,18 +135,17 @@
 
                 <!-- Right floating panel & Product images -->
                 <div class="lg:col-span-5 relative min-h-[500px] flex items-center justify-center lg:justify-end mt-12 lg:mt-0">
-                    <!-- Circular Seal (Floating Left) -->
-                    <div class="absolute -left-6 top-8 bg-[#1B1917]/90 backdrop-blur-sm border border-white/15 h-24 w-24 rounded-full p-1.5 flex items-center justify-center z-20 text-center animate-spin-slow">
-                        <div class="border border-[#C9B08F]/30 h-full w-full rounded-full flex flex-col items-center justify-center relative">
-                            <!-- Curved text SVG placeholder or simple text -->
-                            <span class="text-[7px] uppercase tracking-widest text-[#C9B08F] font-bold">KOREAN-INSPIRED</span>
-                            <i data-lucide="flower" class="w-4 h-4 text-[#C9B08F] my-0.5"></i>
-                            <span class="text-[7px] uppercase tracking-widest text-[#C9B08F] font-bold">PHYSICIAN GUIDED</span>
+                    <!-- Circular Seal (Floating Left - styled using design system parameters) -->
+                    <div class="absolute -left-6 top-8 bg-near-black/90 backdrop-blur-sm border border-white/15 h-24 w-24 rounded-full p-1.5 flex items-center justify-center z-20 text-center animate-spin-slow">
+                        <div class="border border-warm-gold/30 h-full w-full rounded-full flex flex-col items-center justify-center relative">
+                            <span class="text-[6px] uppercase tracking-widest text-warm-gold font-bold">KOREAN-INSPIRED</span>
+                            <i data-lucide="flower" class="w-3.5 h-3.5 text-warm-gold my-0.5"></i>
+                            <span class="text-[6px] uppercase tracking-widest text-warm-gold font-bold">PHYSICIAN GUIDED</span>
                         </div>
                     </div>
 
                     <!-- Translucent vertical card (Right) -->
-                    <div class="w-full sm:w-[320px] bg-white text-[#2C2623] p-6 rounded-3xl shadow-2xl space-y-6 border border-white/20 relative z-10">
+                    <div class="w-full sm:w-[320px] bg-white text-charcoal p-6 rounded-3xl shadow-soft space-y-6 border border-light-gray relative z-10">
                         <div class="space-y-4">
                             <!-- Feature 1 -->
                             <div class="flex gap-4">
@@ -157,7 +153,7 @@
                                     <i data-lucide="sparkle" class="w-4 h-4"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-xs uppercase tracking-widest font-bold text-[#C9B08F]">Tone</h4>
+                                    <h4 class="text-xs uppercase tracking-widest font-bold text-warm-gold">Tone</h4>
                                     <p class="text-xs text-charcoal/70 mt-0.5">Refine uneven-looking tone</p>
                                 </div>
                             </div>
@@ -167,7 +163,7 @@
                                     <i data-lucide="circle-dot" class="w-4 h-4"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-xs uppercase tracking-widest font-bold text-[#C9B08F]">Clarity</h4>
+                                    <h4 class="text-xs uppercase tracking-widest font-bold text-warm-gold">Clarity</h4>
                                     <p class="text-xs text-charcoal/70 mt-0.5">Refresh dull-looking skin</p>
                                 </div>
                             </div>
@@ -177,7 +173,7 @@
                                     <i data-lucide="sparkles" class="w-4 h-4"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-xs uppercase tracking-widest font-bold text-[#C9B08F]">Luminosity</h4>
+                                    <h4 class="text-xs uppercase tracking-widest font-bold text-warm-gold">Luminosity</h4>
                                     <p class="text-xs text-charcoal/70 mt-0.5">Enhance natural light reflection</p>
                                 </div>
                             </div>
@@ -187,14 +183,14 @@
                                     <i data-lucide="sun" class="w-4 h-4"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-xs uppercase tracking-widest font-bold text-[#C9B08F]">Radiance</h4>
+                                    <h4 class="text-xs uppercase tracking-widest font-bold text-warm-gold">Radiance</h4>
                                     <p class="text-xs text-charcoal/70 mt-0.5">Create the fresh Tone-Up finish</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Powered By footer in card -->
-                        <div class="pt-4 border-t border-light-gray/40">
+                        <div class="pt-4 border-t border-light-gray">
                             <p class="text-[9px] uppercase tracking-widest text-rose-accent font-bold">Powered By</p>
                             <h5 class="text-xs font-semibold mt-1">Rejuran® Healing Essence Tone-Up Booster</h5>
                             <p class="text-[10px] text-charcoal/60 leading-relaxed mt-1">
@@ -223,7 +219,7 @@
                 
                 <!-- Left Image Card -->
                 <div class="lg:col-span-5 relative group">
-                    <div class="rounded-3xl overflow-hidden shadow-2xl bg-off-white aspect-[4/5] relative border border-light-gray/40">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl bg-off-white aspect-[4/5] relative border border-light-gray">
                         <img src="assets/tone-up/image18.jpeg" alt="Korean Glass Skin Model" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         
                         <!-- Overlay rose banner -->
@@ -242,19 +238,19 @@
                 <div class="lg:col-span-7 space-y-8">
                     <!-- Badge -->
                     <div>
-                        <span class="inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-[#C9B08F] border border-[#C9B08F]/30 bg-[#C9B08F]/5 py-1.5 px-4 rounded-full">
+                        <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
                             THE K-BEAUTY APPROACH
                         </span>
                     </div>
 
                     <!-- Heading -->
-                    <h2 class="font-serif-display text-3xl sm:text-5xl text-[#2C2623] leading-tight tracking-wide">
+                    <h2 class="heading-wide text-2xl sm:text-4xl text-charcoal leading-tight tracking-wide">
                         KOREAN GLASS SKIN<br>
-                        <span class="text-rose-accent">TONE-UP</span> FACIAL
+                        <span class="text-rose-accent font-semibold">TONE-UP</span> FACIAL
                     </h2>
 
                     <!-- Subhead -->
-                    <p class="text-lg italic font-medium text-rose-accent font-serif-display">
+                    <p class="text-base font-serif italic text-rose-accent">
                         Not Lighter. Brighter. Reveal Your Natural Radiance.
                     </p>
 
@@ -264,20 +260,20 @@
                             Inspired by Korean Tone-Up skincare, this facial is designed to revive dull, tired-looking skin and bring out your most luminous, even-toned glow.
                         </p>
                         <p>
-                            At <span class="text-[#C9B08F] font-medium">SuA Glow</span>, we combine <span class="text-rose-accent font-medium">Rejuran® Healing Essence Tone-Up</span> with advanced Korean-inspired techniques and physician-guided care to help your skin look brighter, clearer and effortlessly radiant—in natural light.
+                            At <span class="text-warm-gold font-semibold">SuA Glow</span>, we combine <span class="text-rose-accent font-semibold">Rejuran® Healing Essence Tone-Up</span> with advanced Korean-inspired techniques and physician-guided care to help your skin look brighter, clearer and effortlessly radiant—in natural light.
                         </p>
                     </div>
 
                     <!-- Grid Card -->
-                    <div class="bg-[#FAF8F5] border border-light-gray/60 p-6 sm:p-8 rounded-3xl shadow-sm space-y-6">
-                        <h4 class="text-xs uppercase tracking-[0.2em] font-bold text-center text-[#2C2623] border-b border-light-gray/60 pb-3">
+                    <div class="bg-off-white border border-light-gray p-6 sm:p-8 rounded-3xl shadow-soft space-y-6">
+                        <h4 class="text-xs uppercase tracking-[0.2em] font-bold text-center text-charcoal border-b border-light-gray pb-3">
                             KOREAN-INSPIRED. PHYSICIAN-GUIDED. RESULTS YOU CAN SEE.
                         </h4>
                         
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
                             <!-- Feature 1 -->
                             <div class="flex gap-3">
-                                <div class="text-[#C9B08F] shrink-0 mt-0.5">
+                                <div class="text-warm-gold shrink-0 mt-0.5">
                                     <i data-lucide="sparkles" class="w-4 h-4"></i>
                                 </div>
                                 <div class="space-y-0.5">
@@ -287,7 +283,7 @@
                             </div>
                             <!-- Feature 2 -->
                             <div class="flex gap-3">
-                                <div class="text-[#C9B08F] shrink-0 mt-0.5">
+                                <div class="text-warm-gold shrink-0 mt-0.5">
                                     <i data-lucide="flower" class="w-4 h-4"></i>
                                 </div>
                                 <div class="space-y-0.5">
@@ -297,7 +293,7 @@
                             </div>
                             <!-- Feature 3 -->
                             <div class="flex gap-3">
-                                <div class="text-[#C9B08F] shrink-0 mt-0.5">
+                                <div class="text-warm-gold shrink-0 mt-0.5">
                                     <i data-lucide="sparkle" class="w-4 h-4"></i>
                                 </div>
                                 <div class="space-y-0.5">
@@ -307,7 +303,7 @@
                             </div>
                             <!-- Feature 4 -->
                             <div class="flex gap-3">
-                                <div class="text-[#C9B08F] shrink-0 mt-0.5">
+                                <div class="text-warm-gold shrink-0 mt-0.5">
                                     <i data-lucide="plus" class="w-4 h-4"></i>
                                 </div>
                                 <div class="space-y-0.5">
@@ -317,7 +313,7 @@
                             </div>
                             <!-- Feature 5 -->
                             <div class="flex gap-3">
-                                <div class="text-[#C9B08F] shrink-0 mt-0.5">
+                                <div class="text-warm-gold shrink-0 mt-0.5">
                                     <i data-lucide="waves" class="w-4 h-4"></i>
                                 </div>
                                 <div class="space-y-0.5">
@@ -327,7 +323,7 @@
                             </div>
                             <!-- Feature 6 -->
                             <div class="flex gap-3">
-                                <div class="text-[#C9B08F] shrink-0 mt-0.5">
+                                <div class="text-warm-gold shrink-0 mt-0.5">
                                     <i data-lucide="sun" class="w-4 h-4"></i>
                                 </div>
                                 <div class="space-y-0.5">
@@ -344,32 +340,32 @@
     </section>
 
     <!-- SECTION 3: COMPARISON TABLE SECTION -->
-    <section id="compare-treatments" class="py-24 px-6 md:px-12 lg:px-24 bg-[#FDFBF7] border-t border-b border-light-gray/30">
+    <section id="compare-treatments" class="py-24 px-6 md:px-12 lg:px-24 bg-[#FDFBF7] border-t border-b border-light-gray">
         <div class="max-w-7xl mx-auto">
             
             <!-- Header section with photo -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
                 <div class="lg:col-span-8 space-y-4">
-                    <span class="inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-[#C9B08F]">
+                    <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
                         THE K-BEAUTY APPROACH
                     </span>
-                    <h2 class="font-serif-display text-3xl sm:text-5xl text-[#2C2623] leading-tight tracking-wide [text-wrap:balance]">
+                    <h2 class="heading-wide text-2xl sm:text-4xl text-charcoal leading-tight tracking-wide [text-wrap:balance]">
                         How Does The Tone-Up Facial Compare <br class="hidden sm:block">
                         To Other Korean Glass Skin Treatments?
                     </h2>
-                    <p class="text-sm sm:text-base font-light text-charcoal/80 leading-relaxed max-w-2xl">
+                    <p class="font-body text-sm sm:text-base font-light text-charcoal/80 leading-relaxed max-w-2xl">
                         Think of these treatments as <span class="italic text-rose-accent">complementary</span> parts of the Korean Glass Skin journey.
                     </p>
                 </div>
                 <div class="lg:col-span-4 flex justify-center lg:justify-end">
-                    <div class="h-32 w-32 rounded-full overflow-hidden border border-light-gray/60 shadow-md">
+                    <div class="h-32 w-32 rounded-full overflow-hidden border border-light-gray shadow-soft">
                         <img src="assets/tone-up/image20.jpeg" alt="Korean skin treatment model" class="h-full w-full object-cover">
                     </div>
                 </div>
             </div>
 
             <!-- Comparison Table Rebuilt in Clean CSS Grid -->
-            <div class="overflow-x-auto rounded-3xl border border-light-gray/60 bg-white shadow-soft">
+            <div class="overflow-x-auto rounded-3xl border border-light-gray bg-white shadow-soft">
                 <div class="min-w-[800px]">
                     <!-- Table Header Row -->
                     <div class="grid grid-cols-12 bg-rose-accent text-white px-8 py-5 text-center text-xs uppercase tracking-widest font-bold">
@@ -386,8 +382,8 @@
 
                     <!-- Rows -->
                     <!-- Row 1: Tone Up Facial (Highlighted) -->
-                    <div class="grid grid-cols-12 px-8 py-7 bg-rose-accent/5 items-center border-b border-light-gray/30">
-                        <div class="col-span-3 text-[#2C2623] font-semibold text-sm flex items-center gap-3">
+                    <div class="grid grid-cols-12 px-8 py-7 bg-rose-accent/5 items-center border-b border-light-gray">
+                        <div class="col-span-3 text-charcoal font-semibold text-sm flex items-center gap-3">
                             <div class="h-8 w-8 rounded-full bg-rose-accent/15 flex items-center justify-center text-rose-accent">
                                 <i data-lucide="sun" class="w-4 h-4"></i>
                             </div>
@@ -404,15 +400,15 @@
                     </div>
 
                     <!-- Row 2: Hydration -->
-                    <div class="grid grid-cols-12 px-8 py-7 items-center border-b border-light-gray/30">
-                        <div class="col-span-3 text-[#2C2623] font-semibold text-sm flex items-center gap-3">
+                    <div class="grid grid-cols-12 px-8 py-7 items-center border-b border-light-gray">
+                        <div class="col-span-3 text-charcoal font-semibold text-sm flex items-center gap-3">
                             <div class="h-8 w-8 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
                                 <i data-lucide="droplet" class="w-4 h-4"></i>
                             </div>
                             More Hydration
                         </div>
                         <div class="col-span-4 text-center">
-                            <span class="inline-block border border-[#C9B08F]/20 bg-[#FAF8F5] px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold text-[#2C2623]">
+                            <span class="inline-block border border-light-gray bg-off-white px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold text-charcoal">
                                 <i data-lucide="droplet" class="w-3.5 h-3.5 inline mr-1 -mt-0.5 text-blue-500"></i> HYDRATION & GLOW
                             </span>
                         </div>
@@ -422,15 +418,15 @@
                     </div>
 
                     <!-- Row 3: PDRN -->
-                    <div class="grid grid-cols-12 px-8 py-7 items-center border-b border-light-gray/30">
-                        <div class="col-span-3 text-[#2C2623] font-semibold text-sm flex items-center gap-3">
+                    <div class="grid grid-cols-12 px-8 py-7 items-center border-b border-light-gray">
+                        <div class="col-span-3 text-charcoal font-semibold text-sm flex items-center gap-3">
                             <div class="h-8 w-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600">
                                 <i data-lucide="dna" class="w-4 h-4"></i>
                             </div>
                             More Skin Quality Support
                         </div>
                         <div class="col-span-4 text-center">
-                            <span class="inline-block border border-[#C9B08F]/20 bg-[#FAF8F5] px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold text-[#2C2623]">
+                            <span class="inline-block border border-light-gray bg-off-white px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold text-charcoal">
                                 <i data-lucide="circle-dot" class="w-3.5 h-3.5 inline mr-1 -mt-0.5 text-emerald-600"></i> PDRN
                             </span>
                         </div>
@@ -440,15 +436,15 @@
                     </div>
 
                     <!-- Row 4: Collagen -->
-                    <div class="grid grid-cols-12 px-8 py-7 items-center border-b border-light-gray/30">
-                        <div class="col-span-3 text-[#2C2623] font-semibold text-sm flex items-center gap-3">
+                    <div class="grid grid-cols-12 px-8 py-7 items-center border-b border-light-gray">
+                        <div class="col-span-3 text-charcoal font-semibold text-sm flex items-center gap-3">
                             <div class="h-8 w-8 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-600">
                                 <i data-lucide="atom" class="w-4 h-4"></i>
                             </div>
                             More Structure & Elasticity
                         </div>
                         <div class="col-span-4 text-center">
-                            <span class="inline-block border border-[#C9B08F]/20 bg-[#FAF8F5] px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold text-[#2C2623]">
+                            <span class="inline-block border border-light-gray bg-off-white px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold text-charcoal">
                                 <i data-lucide="atom" class="w-3.5 h-3.5 inline mr-1 -mt-0.5 text-amber-600"></i> COLLAGEN & STRUCTURE
                             </span>
                         </div>
@@ -459,14 +455,14 @@
 
                     <!-- Row 5: LDM -->
                     <div class="grid grid-cols-12 px-8 py-7 items-center">
-                        <div class="col-span-3 text-[#2C2623] font-semibold text-sm flex items-center gap-3">
+                        <div class="col-span-3 text-charcoal font-semibold text-sm flex items-center gap-3">
                             <div class="h-8 w-8 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-600">
                                 <i data-lucide="waves" class="w-4 h-4"></i>
                             </div>
                             More Skin Bounce
                         </div>
                         <div class="col-span-4 text-center">
-                            <span class="inline-block border border-[#C9B08F]/20 bg-[#FAF8F5] px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold text-[#2C2623]">
+                            <span class="inline-block border border-light-gray bg-off-white px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold text-charcoal">
                                 <i data-lucide="waves" class="w-3.5 h-3.5 inline mr-1 -mt-0.5 text-purple-600"></i> LDM
                             </span>
                         </div>
@@ -478,25 +474,25 @@
             </div>
 
             <!-- Table footer badge note -->
-            <div class="mt-8 border-t border-light-gray/40 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="mt-8 border-t border-light-gray pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center gap-4">
                     <div class="h-10 w-10 rounded-full bg-rose-accent/10 flex items-center justify-center text-rose-accent shrink-0">
                         <i data-lucide="flower" class="w-5 h-5"></i>
                     </div>
                     <p class="text-xs sm:text-sm font-light text-charcoal/70 max-w-xl">
-                        Your provider will recommend the <span class="italic text-rose-accent font-medium">best approach</span> based on your skin goals and unique needs.
+                        Your provider will recommend the <span class="italic text-rose-accent font-semibold">best approach</span> based on your skin goals and unique needs.
                     </p>
                 </div>
                 <div class="text-right">
-                    <p class="font-script text-3xl text-rose-accent">Your Skin,</p>
-                    <p class="font-serif-display text-xl text-[#2C2623] italic font-semibold -mt-2">Your Journey.</p>
+                    <p class="font-serif italic text-2xl text-rose-accent">Your Skin,</p>
+                    <p class="heading-wide text-xs text-charcoal tracking-widest font-semibold mt-1">Your Journey.</p>
                 </div>
             </div>
 
             <!-- Bottom Brand Stamp -->
             <div class="mt-16 text-center space-y-1">
-                <p class="font-serif-display text-2xl tracking-wider text-rose-accent font-medium">SuA</p>
-                <p class="text-[9px] uppercase tracking-[0.3em] text-[#C9B08F] font-bold">KOREAN-INSPIRED. RESULTS-FOCUSED.</p>
+                <p class="heading-wide text-base tracking-widest text-rose-accent font-semibold">SuA</p>
+                <p class="text-[9px] uppercase tracking-[0.3em] text-warm-gold font-bold">KOREAN-INSPIRED. RESULTS-FOCUSED.</p>
             </div>
 
         </div>
@@ -511,9 +507,9 @@
                 <div class="lg:col-span-7 space-y-8">
                     <!-- Title -->
                     <div class="space-y-2">
-                        <div class="flex items-center gap-2 text-rose-accent">
+                        <div class="flex items-center gap-3 text-rose-accent">
                             <i data-lucide="check-circle" class="w-6 h-6"></i>
-                            <h2 class="font-serif-display text-3xl sm:text-5xl text-[#2C2623] leading-tight tracking-wide">
+                            <h2 class="heading-wide text-2xl sm:text-4xl text-charcoal leading-tight tracking-wide">
                                 N. Transparency Matters
                             </h2>
                         </div>
@@ -563,7 +559,7 @@
                             <div class="h-10 w-10 rounded-full border border-red-200 bg-red-50 flex items-center justify-center text-red-600 shrink-0 mt-0.5 shadow-sm animate-pulse">
                                 <i data-lucide="alert-circle" class="w-5 h-5"></i>
                             </div>
-                            <p class="text-xs sm:text-sm font-medium text-red-600 leading-relaxed pt-1 italic">
+                            <p class="text-xs sm:text-sm font-semibold text-red-600 leading-relaxed pt-1 italic">
                                 Treatment results vary by individual. <span class="underline">No outcome can be guaranteed.</span>
                             </p>
                         </div>
@@ -572,15 +568,15 @@
 
                 <!-- Right Photo with floating Commitment Card -->
                 <div class="lg:col-span-5 relative">
-                    <div class="rounded-3xl overflow-hidden shadow-2xl bg-off-white aspect-[4/5] relative border border-light-gray/40">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl bg-off-white aspect-[4/5] relative border border-light-gray">
                         <img src="assets/tone-up/image12.jpeg" alt="Korean Model" class="w-full h-full object-cover">
                         
                         <!-- commitment absolute card -->
-                        <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 rounded-2xl border border-light-gray/40 text-center shadow-lg space-y-3">
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 rounded-2xl border border-light-gray text-center shadow-lg space-y-3">
                             <div class="h-8 w-8 mx-auto rounded-full bg-rose-accent/15 flex items-center justify-center text-rose-accent">
                                 <i data-lucide="flower" class="w-4.5 h-4.5"></i>
                             </div>
-                            <p class="text-xs text-[#2C2623] leading-relaxed font-light">
+                            <p class="text-xs text-charcoal leading-relaxed font-light">
                                 Our commitment is to <span class="font-semibold text-rose-accent">clear communication</span>, clinical integrity, and your long-term skin health and safety.
                             </p>
                         </div>
@@ -591,19 +587,19 @@
 
             <!-- Bottom Brand Stamp -->
             <div class="mt-16 text-center space-y-1">
-                <p class="font-serif-display text-2xl tracking-wider text-rose-accent font-medium">SuA</p>
+                <p class="heading-wide text-lg text-rose-accent font-semibold">SuA</p>
             </div>
         </div>
     </section>
 
     <!-- SECTION: Steps visual maps & Booster application from previous version (Preserved structure) -->
-    <section class="py-24 px-6 md:px-12 bg-white border-t border-light-gray/30">
+    <section class="py-24 px-6 md:px-12 bg-white border-t border-light-gray">
         <div class="max-w-7xl mx-auto space-y-16">
             <div class="text-center max-w-3xl mx-auto space-y-4">
-                <span class="inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-[#C9B08F]">
+                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
                     Step-by-Step Refinement
                 </span>
-                <h2 class="font-serif-display text-3xl sm:text-4xl text-[#2C2623] leading-tight tracking-wide">
+                <h2 class="heading-wide text-2xl sm:text-3xl text-charcoal leading-tight tracking-wide">
                     Korean Skin Quality Protocols in Action
                 </h2>
                 <p class="text-sm font-light text-charcoal/70 leading-relaxed">
@@ -613,103 +609,103 @@
 
             <!-- Steps Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-[#FAF8F5] p-4 rounded-2xl border border-light-gray/60 shadow-sm text-center">
-                    <p class="text-[10px] font-bold uppercase tracking-wider text-[#C9B08F] mb-3">Skin Quality Map 1</p>
+                <div class="bg-off-white p-4 rounded-2xl border border-light-gray shadow-soft text-center">
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-warm-gold mb-3">Skin Quality Map 1</p>
                     <img src="assets/tone-up/image8.jpeg" alt="Treatment Map 1" class="w-full h-40 object-cover rounded-xl shadow-xs">
                 </div>
-                <div class="bg-[#FAF8F5] p-4 rounded-2xl border border-light-gray/60 shadow-sm text-center">
-                    <p class="text-[10px] font-bold uppercase tracking-wider text-[#C9B08F] mb-3">Skin Quality Map 2</p>
+                <div class="bg-off-white p-4 rounded-2xl border border-light-gray shadow-soft text-center">
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-warm-gold mb-3">Skin Quality Map 2</p>
                     <img src="assets/tone-up/image9.jpeg" alt="Treatment Map 2" class="w-full h-40 object-cover rounded-xl shadow-xs">
                 </div>
-                <div class="bg-[#FAF8F5] p-4 rounded-2xl border border-light-gray/60 shadow-sm text-center">
-                    <p class="text-[10px] font-bold uppercase tracking-wider text-[#C9B08F] mb-3">Booster Application 3</p>
+                <div class="bg-off-white p-4 rounded-2xl border border-light-gray shadow-soft text-center">
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-warm-gold mb-3">Booster Application 3</p>
                     <img src="assets/tone-up/image10.png" alt="Treatment Map 3" class="w-full h-40 object-cover rounded-xl shadow-xs">
                 </div>
-                <div class="bg-[#FAF8F5] p-4 rounded-2xl border border-light-gray/60 shadow-sm text-center">
-                    <p class="text-[10px] font-bold uppercase tracking-wider text-[#C9B08F] mb-3">Booster Application 4</p>
+                <div class="bg-off-white p-4 rounded-2xl border border-light-gray shadow-soft text-center">
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-warm-gold mb-3">Booster Application 4</p>
                     <img src="assets/tone-up/image11.png" alt="Treatment Map 4" class="w-full h-40 object-cover rounded-xl shadow-xs">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ SECTION (Preserved & expanded from DOCX) -->
-    <section class="py-24 px-6 md:px-12 bg-[#FAF8F5] border-t border-b border-light-gray/40">
+    <!-- FAQ SECTION (Preserved & aligned with docx) -->
+    <section class="py-24 px-6 md:px-12 bg-off-white border-t border-b border-light-gray">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16 space-y-3">
-                <span class="inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-rose-accent">LEARN MORE</span>
-                <h2 class="font-serif-display text-3xl text-[#2C2623]">Frequently Asked Questions</h2>
+                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">LEARN MORE</span>
+                <h2 class="heading-wide text-2xl text-charcoal">Frequently Asked Questions</h2>
             </div>
             
             <div class="space-y-4">
                 <!-- Q1 -->
-                <details class="bg-white p-6 group border border-light-gray/60 hover:border-rose-accent/30 transition-all rounded-2xl shadow-sm">
-                    <summary class="font-serif-display text-sm sm:text-base cursor-pointer flex justify-between items-center text-[#2C2623] font-semibold tracking-wide uppercase">
+                <details class="bg-white p-6 group border border-light-gray hover:border-rose-accent/30 transition-all rounded-2xl shadow-soft">
+                    <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider">
                         What is a Korean Brightening Tone-Up Facial?
                         <i data-lucide="plus" class="w-4 h-4 text-rose-accent shrink-0 group-open:hidden"></i>
                         <i data-lucide="minus" class="w-4 h-4 text-rose-accent shrink-0 hidden group-open:inline"></i>
                     </summary>
-                    <p class="text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray/30">
+                    <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
                         A Korean Tone-Up Facial is a Korean-inspired skin quality treatment focused on brighter-looking skin tone, hydration-conscious rejuvenation, glow-focused maintenance, and healthier-looking skin appearance.
                     </p>
                 </details>
 
                 <!-- Q2 -->
-                <details class="bg-white p-6 group border border-light-gray/60 hover:border-rose-accent/30 transition-all rounded-2xl shadow-sm">
-                    <summary class="font-serif-display text-sm sm:text-base cursor-pointer flex justify-between items-center text-[#2C2623] font-semibold tracking-wide uppercase">
+                <details class="bg-white p-6 group border border-light-gray hover:border-rose-accent/30 transition-all rounded-2xl shadow-soft">
+                    <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider">
                         What is Rejuran Healing Essence Tone-Up Booster?
                         <i data-lucide="plus" class="w-4 h-4 text-rose-accent shrink-0 group-open:hidden"></i>
                         <i data-lucide="minus" class="w-4 h-4 text-rose-accent shrink-0 hidden group-open:inline"></i>
                     </summary>
-                    <p class="text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray/30">
+                    <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
                         Rejuran® Healing Essence Tone-Up Booster is a Korean-inspired skin quality support strategy commonly discussed within consultation-based treatment planning focused on brighter-looking skin appearance, hydration support, and glow-focused maintenance.
                     </p>
                 </details>
 
                 <!-- Q3 -->
-                <details class="bg-white p-6 group border border-light-gray/60 hover:border-rose-accent/30 transition-all rounded-2xl shadow-sm">
-                    <summary class="font-serif-display text-sm sm:text-base cursor-pointer flex justify-between items-center text-[#2C2623] font-semibold tracking-wide uppercase">
+                <details class="bg-white p-6 group border border-light-gray hover:border-rose-accent/30 transition-all rounded-2xl shadow-soft">
+                    <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider">
                         Is a Tone-Up Facial the same as skin whitening?
                         <i data-lucide="plus" class="w-4 h-4 text-rose-accent shrink-0 group-open:hidden"></i>
                         <i data-lucide="minus" class="w-4 h-4 text-rose-accent shrink-0 hidden group-open:inline"></i>
                     </summary>
-                    <p class="text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray/30">
+                    <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
                         No. Korean Tone-Up treatments focus on healthier-looking skin quality, radiance, glow, and brighter-looking skin appearance rather than changing a person's natural skin color.
                     </p>
                 </details>
 
                 <!-- Q4 -->
-                <details class="bg-white p-6 group border border-light-gray/60 hover:border-rose-accent/30 transition-all rounded-2xl shadow-sm">
-                    <summary class="font-serif-display text-sm sm:text-base cursor-pointer flex justify-between items-center text-[#2C2623] font-semibold tracking-wide uppercase">
+                <details class="bg-white p-6 group border border-light-gray hover:border-rose-accent/30 transition-all rounded-2xl shadow-soft">
+                    <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider">
                         Which is better: a PDRN Facial or a Brightening Tone-Up Facial?
                         <i data-lucide="plus" class="w-4 h-4 text-rose-accent shrink-0 group-open:hidden"></i>
                         <i data-lucide="minus" class="w-4 h-4 text-rose-accent shrink-0 hidden group-open:inline"></i>
                     </summary>
-                    <p class="text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray/30">
+                    <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
                         Neither treatment is universally better. Korean Glass Skin PDRN Facial treatments are often selected by patients focused on hydration, texture, skin quality, and healthier-looking skin bounce. Korean Glass Skin Tone-Up Facial treatments are often selected by patients focused on radiance, glow, and brighter-looking skin tone. Many Korean clinics incorporate both.
                     </p>
                 </details>
 
                 <!-- Q5 -->
-                <details class="bg-white p-6 group border border-light-gray/60 hover:border-rose-accent/30 transition-all rounded-2xl shadow-sm">
-                    <summary class="font-serif-display text-sm sm:text-base cursor-pointer flex justify-between items-center text-[#2C2623] font-semibold tracking-wide uppercase">
+                <details class="bg-white p-6 group border border-light-gray hover:border-rose-accent/30 transition-all rounded-2xl shadow-soft">
+                    <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider">
                         Can Brightening Tone-Up treatments help dull-looking skin?
                         <i data-lucide="plus" class="w-4 h-4 text-rose-accent shrink-0 group-open:hidden"></i>
                         <i data-lucide="minus" class="w-4 h-4 text-rose-accent shrink-0 hidden group-open:inline"></i>
                     </summary>
-                    <p class="text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray/30">
+                    <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
                         Yes. Many patients pursue Tone-Up treatments as part of a broader strategy focused on healthier-looking radiance, hydration support, glow-focused maintenance, and brighter-looking skin appearance.
                     </p>
                 </details>
 
                 <!-- Q6 -->
-                <details class="bg-white p-6 group border border-light-gray/60 hover:border-rose-accent/30 transition-all rounded-2xl shadow-sm">
-                    <summary class="font-serif-display text-sm sm:text-base cursor-pointer flex justify-between items-center text-[#2C2623] font-semibold tracking-wide uppercase">
+                <details class="bg-white p-6 group border border-light-gray hover:border-rose-accent/30 transition-all rounded-2xl shadow-soft">
+                    <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider">
                         Does a Korean Brightening Tone-Up Facial have downtime?
                         <i data-lucide="plus" class="w-4 h-4 text-rose-accent shrink-0 group-open:hidden"></i>
                         <i data-lucide="minus" class="w-4 h-4 text-rose-accent shrink-0 hidden group-open:inline"></i>
                     </summary>
-                    <p class="text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray/30">
+                    <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
                         Treatment experiences vary depending on individualized treatment planning, skin sensitivity, and overall skin condition. Appropriate recommendations are determined during consultation.
                     </p>
                 </details>
@@ -721,31 +717,31 @@
     <div id="nearme-placeholder" data-product="Korean Tone-Up Facial"></div>
 
     <!-- CTA & CONSULTATION SECTION -->
-    <section data-nav-theme="light" class="bg-[#110F0E] text-white py-32 px-6 md:px-12 text-center relative overflow-hidden">
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-6 md:px-12 text-center relative overflow-hidden">
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-rose-accent/10 blur-[100px] rounded-full"></div>
         <div class="relative z-10 max-w-4xl mx-auto space-y-10">
             <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-14 mx-auto brightness-0 invert opacity-70">
             <p class="text-[10px] tracking-[0.5em] uppercase opacity-30">K-Beauty Medspa &bull; Carrollton HQ</p>
             
             <div class="space-y-4">
-                <h3 class="font-serif-display text-3xl md:text-5xl leading-tight">
+                <h3 class="heading-wide text-2xl md:text-4xl leading-tight">
                     Less Coverage. <br>
                     More Luminous Confidence.
                 </h3>
-                <p class="font-script text-4xl text-[#C9B08F]">Luminous skin, naturally radiant.</p>
+                <p class="font-serif italic text-3xl text-warm-gold">Luminous skin, naturally radiant.</p>
             </div>
 
-            <p class="text-sm text-white/80 max-w-xl mx-auto font-light leading-relaxed">
+            <p class="font-body text-sm text-white/80 max-w-xl mx-auto font-light leading-relaxed">
                 Discover a personalized Korean-inspired hydration strategy designed around your skin. Whether your goal is deeper hydration, smoother-looking texture, natural radiance or that signature dewy K-Beauty finish, we'll help determine the right approach during your consultation.
             </p>
 
             <div class="space-y-6 pt-4">
-                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="bg-rose-accent hover:bg-white hover:text-black transition-colors duration-300 text-white font-semibold text-xs tracking-widest uppercase py-4.5 px-10 rounded-full inline-block shadow-lg">
+                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary py-4 px-10 text-xs font-semibold tracking-widest bg-rose-accent hover:bg-white hover:text-black rounded-full transition-all duration-300 inline-block shadow-lg">
                     Book Your Hydration &amp; Glow Consultation
                 </a>
                 
                 <p class="text-xs sm:text-sm text-white/60 tracking-wider uppercase">
-                    Ready for Your Glow? Call Us: <a href="tel:972-665-8737" class="text-[#C9B08F] font-bold hover:underline">972-665-8737</a>
+                    Ready for Your Glow? Call Us: <a href="tel:972-665-8737" class="text-warm-gold font-bold hover:underline">972-665-8737</a>
                 </p>
             </div>
         </div>
