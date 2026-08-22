@@ -222,7 +222,7 @@
     <section id="hero" data-nav-theme="dark" class="relative min-h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0 bg-near-black">
             <video id="hero-scroll-video" src="assets/suaglow_hero_vid_v2.mp4"
-                class="absolute inset-0 w-full h-full object-cover" muted playsinline preload="auto" loop></video>
+                class="absolute inset-0 w-full h-full object-cover" autoplay muted playsinline preload="auto" loop></video>
             <div class="absolute inset-0 bg-gradient-to-b from-near-black/80 to-white/70"></div>
         </div>
 
@@ -905,6 +905,16 @@
             }, { passive: true });
 
             rAFId = requestAnimationFrame(step);
+        });
+        
+        // Ensure hero video resumes playing when returning to tab
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') {
+                const video = document.getElementById('hero-scroll-video');
+                if (video && video.paused) {
+                    video.play().catch(e => console.error("Video auto-play failed on visibility change:", e));
+                }
+            }
         });
     </script>
 </body>
