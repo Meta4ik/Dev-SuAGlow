@@ -1,6 +1,7 @@
 
 // SuA Glow "In The News" Component
 const NEWS_HTML = `
+
 <!-- News Highlights -->
 <section id="news" data-nav-theme="dark" class="py-32 px-10 bg-[#F6F7F8]">
     <div class="max-w-7xl mx-auto">
