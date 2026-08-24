@@ -11,11 +11,11 @@ img = Image.open("assets/suaglow-s-logo.png").convert("L")
 alpha = ImageOps.invert(img)
 
 # Style guide colors
-# warm-gold: #AA987C (bg)
-# charcoal: #404345 (fg)
-fg_r, fg_g, fg_b = 64, 67, 69
+# off-white: #F6F7F8 (bg)
+# warm-gold: #AA987C (fg)
+fg_r, fg_g, fg_b = 170, 152, 124
 
-# Create solid charcoal image
+# Create solid warm-gold image
 fg_img = Image.new("RGBA", img.size, (fg_r, fg_g, fg_b, 255))
 # Apply the inverted grayscale as the alpha mask
 fg_img.putalpha(alpha)
@@ -25,8 +25,8 @@ buffered = BytesIO()
 fg_img.save(buffered, format="PNG")
 logo_data = base64.b64encode(buffered.getvalue()).decode('utf-8')
 
-bg_color = "#AA987C"
-fg_color = "#404345"
+bg_color = "#F6F7F8"
+fg_color = "#AA987C"
 
 width = 160
 height = 160
@@ -70,4 +70,4 @@ svg += f"""
 with open("assets/s-monogram-pattern.svg", "w") as f:
     f.write(svg)
 
-print("SVG pattern created successfully with proper alpha mask from grayscale!")
+print("SVG pattern created successfully with off-white and warm-gold!")
