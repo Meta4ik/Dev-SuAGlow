@@ -1,8 +1,21 @@
 import base64
+from io import BytesIO
+from PIL import Image
 
 # Read the S logo
-with open("assets/suaglow-s-logo.png", "rb") as f:
-    logo_data = base64.b64encode(f.read()).decode('utf-8')
+img = Image.open("assets/suaglow-s-logo.png").convert("RGBA")
+
+# Extract alpha
+r, g, b, a = img.split()
+
+# Create solid brown image #624A32 (RGB: 98, 74, 50)
+brown_img = Image.new("RGBA", img.size, (98, 74, 50, 255))
+brown_img.putalpha(a)
+
+# Save to base64
+buffered = BytesIO()
+brown_img.save(buffered, format="PNG")
+logo_data = base64.b64encode(buffered.getvalue()).decode('utf-8')
 
 bg_color = "#CAB291"
 fg_color = "#624A32"
@@ -28,8 +41,6 @@ for i in range(steps + 1):
             x = i * dx
             y = j * dy
             # Don't draw dots where the logo goes
-            # Logo is at (0,0), (width, 0), (0, height), (width, height), and (width/2, height/2)
-            # which is (0,0), (8,0), (0,8), (8,8) and (4,4)
             if (i, j) in [(0,0), (steps,0), (0,steps), (steps,steps), (steps//2, steps//2)]:
                 continue
             
@@ -39,7 +50,7 @@ svg += f"""
   </g>
 
   <!-- Logos -->
-  <g style="filter: brightness(0) saturate(100%) invert(29%) sepia(21%) saturate(1058%) hue-rotate(345deg) brightness(97%) contrast(87%);">
+  <g>
     <image href="data:image/png;base64,{logo_data}" x="{-25}" y="{-25}" width="50" height="50" opacity="0.9" />
     <image href="data:image/png;base64,{logo_data}" x="{width-25}" y="{-25}" width="50" height="50" opacity="0.9" />
     <image href="data:image/png;base64,{logo_data}" x="{-25}" y="{height-25}" width="50" height="50" opacity="0.9" />
@@ -51,4 +62,4 @@ svg += f"""
 with open("assets/s-monogram-pattern.svg", "w") as f:
     f.write(svg)
 
-print("SVG pattern created successfully!")
+print("SVG pattern created successfully with colored PIL image!")
