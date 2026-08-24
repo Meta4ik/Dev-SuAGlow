@@ -579,17 +579,36 @@
     <div id="news-placeholder"></div>
 
     <!-- Testimonials Section -->
-    <section class="py-32 bg-white overflow-hidden relative">
-        <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-taupe/[0.03] rounded-full blur-3xl z-0">
+    <section id="glow-stories" data-nav-theme="light" class="py-32 bg-near-black text-white overflow-hidden relative">
+        <!-- Animated Large Yin Yang (Eum-Yang) Background Graphic -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0 opacity-[0.09] sm:opacity-[0.14] w-[650px] h-[650px] sm:w-[900px] sm:h-[900px] lg:w-[1150px] lg:h-[1150px] animate-spin-slow">
+            <svg viewBox="0 0 200 200" class="w-full h-full filter drop-shadow-[0_0_60px_rgba(170,152,124,0.5)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="yin-yang-gold-grad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#AA987C" stop-opacity="0.95"/>
+                        <stop offset="50%" stop-color="#8F857B" stop-opacity="0.75"/>
+                        <stop offset="100%" stop-color="#AA987C" stop-opacity="0.95"/>
+                    </linearGradient>
+                    <radialGradient id="yin-yang-radial-glow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#AA987C" stop-opacity="0.35"/>
+                        <stop offset="100%" stop-color="#AA987C" stop-opacity="0"/>
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="100" r="98" fill="url(#yin-yang-radial-glow)" />
+                <circle cx="100" cy="100" r="92" stroke="#AA987C" stroke-width="1.8" fill="none" class="yin-yang-loop-ring" />
+                <path d="M 100,8 A 46,46 0 0,1 100,100 A 46,46 0 0,0 100,192" stroke="#AA987C" stroke-width="1.8" fill="none" class="yin-yang-loop-scurve" />
+                <g class="yin-yang-loop-fills">
+                    <path d="M 100,8 A 92,92 0 0,0 100,192 A 46,46 0 0,0 100,100 A 46,46 0 0,1 100,8 Z" fill="url(#yin-yang-gold-grad)" stroke="none" />
+                    <path d="M 100,8 A 92,92 0 0,1 100,192 A 46,46 0 0,0 100,100 A 46,46 0 0,1 100,8 Z" fill="#131619" fill-opacity="0.45" stroke="none" />
+                </g>
+                <circle cx="100" cy="54" r="14" fill="url(#yin-yang-gold-grad)" stroke="none" stroke-width="0" class="yin-yang-loop-dot" />
+                <circle cx="100" cy="146" r="14" fill="#131619" stroke="none" stroke-width="0" class="yin-yang-loop-dot" />
+            </svg>
         </div>
         <div class="max-w-7xl mx-auto px-8 relative z-10">
-            <div class="text-center mb-20 animate-on-scroll fade-up">
-                <span
-                    class="inline-block text-[10px] tracking-[0.4em] text-taupe uppercase font-bold mb-6 italic">Client
-                    Experience</span>
-                <h2 class="heading-wide text-4xl md:text-5xl text-near-black mb-8 uppercase tracking-[0.15em] [text-wrap:balance]">Glow
-                    Stories</h2>
+            <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll fade-up">
+                <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 inline-block uppercase tracking-wider text-[10px] mb-6">CLIENT EXPERIENCE</span>
+                <h2 class="heading-wide text-4xl md:text-5xl text-white mb-8 uppercase tracking-[0.15em] [text-wrap:balance]">Glow <span class="text-warm-gold">Stories</span></h2>
                 <div class="w-24 h-[1px] bg-taupe/30 mx-auto"></div>
             </div>
 

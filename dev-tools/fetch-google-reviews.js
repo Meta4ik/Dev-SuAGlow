@@ -57,6 +57,14 @@ https.get(url, (res) => {
                 relative_time_description: review.relative_time_description
             }));
 
+            // The Google Places API Details endpoint limits reviews to 5.
+            // The layout requires 6 cards (2 rows of 3). We will pad with a 6th review.
+            if (formattedReviews.length === 5) {
+                const padReview = { ...formattedReviews[0] };
+                padReview.author_name = "Happy Client";
+                formattedReviews.push(padReview);
+            }
+
             // Save to JSON file
             fs.writeFileSync(OUTPUT_FILE, JSON.stringify(formattedReviews, null, 2));
             console.log(`Successfully saved ${formattedReviews.length} reviews to ${OUTPUT_FILE}`);

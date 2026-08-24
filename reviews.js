@@ -42,23 +42,23 @@ function renderReviews(reviews, container) {
         }
 
         html += `
-            <div class="product-card glow-card p-8 bg-[#F6F7F8] animate-on-scroll fade-up ${delayClass}" style="--glow-color: #AA987C;">
+            <div class="product-card glow-card p-10 animate-on-scroll fade-up ${delayClass} !bg-near-black/80 !border-white/10 shadow-2xl hover:!border-warm-gold/50 transition-all duration-500" style="--glow-color: #AA987C;">
                 <div class="flex items-center gap-4 mb-6">
-                    <img src="${review.profile_photo_url}" alt="${review.author_name}" class="w-12 h-12 rounded-full object-cover">
+                    <img src="${review.profile_photo_url}" alt="${review.author_name}" class="w-12 h-12 rounded-full object-cover border border-white/10">
                     <div class="text-left">
-                        <h4 class="font-bold text-near-black text-sm">${review.author_name}</h4>
+                        <h4 class="font-bold text-white text-sm tracking-widest">${review.author_name}</h4>
                         <div class="flex items-center gap-1 mt-1">
                             ${starsHtml}
                         </div>
                     </div>
                     <div class="ml-auto">
-                        <i data-lucide="google" class="w-5 h-5 text-gray-400"></i>
+                        <i data-lucide="google" class="w-5 h-5 text-white/50"></i>
                     </div>
                 </div>
-                <p class="font-body text-charcoal/80 text-sm leading-relaxed text-left italic mb-6">
+                <p class="font-body text-white/70 text-sm leading-relaxed font-light text-left italic mb-6">
                     "${reviewText}"
                 </p>
-                <div class="mt-auto text-left text-[10px] text-taupe/60 font-bold uppercase tracking-[0.1em] italic">
+                <div class="mt-auto text-left text-[10px] text-warm-gold/80 font-bold uppercase tracking-[0.1em] italic">
                     ${review.relative_time_description}
                 </div>
             </div>
