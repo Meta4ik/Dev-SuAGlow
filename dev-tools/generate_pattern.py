@@ -1,24 +1,32 @@
 import base64
 from io import BytesIO
-from PIL import Image
+from PIL import Image, ImageOps
 
 # Read the S logo
-img = Image.open("assets/suaglow-s-logo.png").convert("RGBA")
+img = Image.open("assets/suaglow-s-logo.png").convert("L")
 
-# Extract alpha
-r, g, b, a = img.split()
+# Since the image is fully opaque (white background, darker logo)
+# we invert it so the logo is white (255) and background is black (0)
+# This will act as our alpha mask!
+alpha = ImageOps.invert(img)
 
-# Create solid brown image #624A32 (RGB: 98, 74, 50)
-brown_img = Image.new("RGBA", img.size, (98, 74, 50, 255))
-brown_img.putalpha(a)
+# Style guide colors
+# warm-gold: #AA987C (bg)
+# charcoal: #404345 (fg)
+fg_r, fg_g, fg_b = 64, 67, 69
+
+# Create solid charcoal image
+fg_img = Image.new("RGBA", img.size, (fg_r, fg_g, fg_b, 255))
+# Apply the inverted grayscale as the alpha mask
+fg_img.putalpha(alpha)
 
 # Save to base64
 buffered = BytesIO()
-brown_img.save(buffered, format="PNG")
+fg_img.save(buffered, format="PNG")
 logo_data = base64.b64encode(buffered.getvalue()).decode('utf-8')
 
-bg_color = "#CAB291"
-fg_color = "#624A32"
+bg_color = "#AA987C"
+fg_color = "#404345"
 
 width = 160
 height = 160
@@ -62,4 +70,4 @@ svg += f"""
 with open("assets/s-monogram-pattern.svg", "w") as f:
     f.write(svg)
 
-print("SVG pattern created successfully with colored PIL image!")
+print("SVG pattern created successfully with proper alpha mask from grayscale!")
