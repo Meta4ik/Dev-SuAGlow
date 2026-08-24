@@ -1898,33 +1898,57 @@ const SEARCH_INDEX = [
   },
   {
     "url": "tone-up-facial.html#hero",
-    "title": "KOREAN GLASS SKIN TONE-UP FACIAL",
+    "title": "Korean Glass Skin Tone-Up Facial",
     "pageTitle": "Korean Tone-Up Facial Dallas",
-    "category": "THE K-BEAUTY APPROACH",
-    "content": "Inspired by Korean Tone-Up skincare, SuA Glow's Rejuran® Healing Essence Tone-Up Facial is designed for skin that looks dull, tired or uneven—and needs more clarity, luminosity and fresh-looking radiance. Brighter-Looking Complexion More Luminous Skin Refined-Looking Tone Smoother-Looking Texture Fresh Glass Skin Radiance Not lighter. Brighter. Not more makeup. More natural luminosity. THAT FRESH-FROM-SEOUL TONE-UP GLOW. Refine uneven-looking tone Refresh dull-looking skin Enhance natural light reflection Create the fresh Tone-Up finish Powered By Rejuran® Healing Essence Tone-Up Booster Korean-inspired care for a clearer, brighter-looking, more radiant you.",
-    "snippet": "Inspired by Korean Tone-Up skincare, SuA Glow's Rejuran® Healing Essence Tone-Up Facial is designed for skin that looks dull, tired or uneven—and needs more cla..."
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "Brighter. Luminous. Naturally Radiant. K-Beauty doesn't cover dull skin.It brings the glow back. At SuA Glow in Carrollton, near Dallas, our Korean-inspired Tone-Up Facial is designed around one of K-Beauty's most recognizable goals: Healthy-looking skin that glows in natural light.",
+    "snippet": "Brighter. Luminous. Naturally Radiant. K-Beauty doesn't cover dull skin.It brings the glow back. At SuA Glow in Carrollton, near Dallas, our Korean-inspired Ton..."
   },
   {
     "url": "tone-up-facial.html#k-beauty-approach",
-    "title": "KOREAN GLASS SKIN TONE-UP FACIAL",
+    "title": "Korean Glass Skin Tone Up",
     "pageTitle": "Korean Tone-Up Facial Dallas",
-    "category": "THE K-BEAUTY APPROACH",
-    "content": "TONE-UP • RADIANCE • CLARITY Inspired by Seoul. Personalized for You. Not Lighter. Brighter. Reveal Your Natural Radiance. Inspired by Korean Tone-Up skincare, this facial is designed to revive dull, tired-looking skin and bring out your most luminous, even-toned glow. At SuA Glow, we combine Rejuran® Healing Essence Tone-Up with advanced Korean-inspired techniques and physician-guided care to help your skin look brighter, clearer and effortlessly radiant—in natural light. Brighten & Even Tone Refine dullness & unevenness Glow & Luminosity Boost natural radiance Smoother Texture Soft, polished-looking skin Targeted & Gentle Personalized to your skin Refined Pores Clearer-looking, more refined Healthy in Natural Light Look your best, every day",
-    "snippet": "TONE-UP • RADIANCE • CLARITY Inspired by Seoul. Personalized for You. Not Lighter. Brighter. Reveal Your Natural Radiance. Inspired by Korean Tone-Up skincare, ..."
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "TONE-UP • RADIANCE • CLARITY Inspired by Seoul. Personalized for You. It's brighter-looking, healthier-looking skin. Less coverage. More radiance. That effortless Korean Glass Skin glow. Refine dullness & unevenness Boost natural radiance Soft, polished-looking skin Personalized to your skin Clearer-looking, more refined Look your best, every day",
+    "snippet": "TONE-UP • RADIANCE • CLARITY Inspired by Seoul. Personalized for You. It's brighter-looking, healthier-looking skin. Less coverage. More radiance. That effortle..."
+  },
+  {
+    "url": "tone-up-facial.html#what-is-tone-up",
+    "title": "What Is a Korean Glass Skin Tone-Up Facial?",
+    "pageTitle": "Korean Tone-Up Facial Dallas",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "Inspired by Korean Tone-Up skincare, the Korean Glass Skin Tone-Up Facial at SuA Glow in Carrollton is designed for dull, tired-looking skin that needs more brightness, clarity and luminosity—without changing your natural skin color. Hydrated skin is only part of the Glass Skin story. When skin looks clearer, it reflects light more beautifully. K-Beauty Tone-Up isn't about making your skin lighter. It's about helping your complexion appear fresh, polished, even looking and naturally lit from within. That's what makes Tone-Up different. Not lighter. Brighter. That's the Korean Tone-Up glow. Brighter-looking complexion More luminous skin Refined-looking tone Smoother-looking texture Fresh radiance in natural light",
+    "snippet": "Inspired by Korean Tone-Up skincare, the Korean Glass Skin Tone-Up Facial at SuA Glow in Carrollton is designed for dull, tired-looking skin that needs more bri..."
+  },
+  {
+    "url": "tone-up-facial.html#obsessed-with-glow",
+    "title": "Why SuA Glow, a Modern Korean Medspa, is Obsessed with Glow",
+    "pageTitle": "Korean Tone-Up Facial Dallas",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "Radiance Isn't a Moment. Maintain It. K-Beauty isn't just about looking brighter for one day. It's about maintaining clarity, luminosity and a fresh-looking complexion over time. The goal isn't heavier coverage. It's skin that needs less of it. Bright & refreshed Clear & luminous More even looking Smooth & refined Radiant in natural light The philosophy is simple: Because luminous skin shouldn't be saved for special occasions. NATURAL LUMINOSITY Not more coverage. More natural luminosity.",
+    "snippet": "Radiance Isn't a Moment. Maintain It. K-Beauty isn't just about looking brighter for one day. It's about maintaining clarity, luminosity and a fresh-looking com..."
   },
   {
     "url": "tone-up-facial.html#compare-treatments",
     "title": "How Does The Tone-Up Facial Compare To Other Korean Glass Skin Treatments?",
     "pageTitle": "Korean Tone-Up Facial Dallas",
-    "category": "THE K-BEAUTY APPROACH",
-    "content": "Think of these treatments as complementary parts of the Korean Glass Skin journey. Your provider will recommend the best approach based on your skin goals and unique needs. Your Skin, Your Journey. SuA KOREAN-INSPIRED. RESULTS-FOCUSED.",
-    "snippet": "Think of these treatments as complementary parts of the Korean Glass Skin journey. Your provider will recommend the best approach based on your skin goals and u..."
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "Think of these treatments as complementary parts of the Korean Glass Skin journey. The Korean Brightening Glass Skin Tone-Up Facial at SuA Glow may incorporate: Korean-inspired skin quality protocols SkinPen® microneedling-assisted topical application strategies Mesotherapy-inspired topical delivery techniques Rejuran® Healing Essence Tone-Up consultation-based treatment planning Korean Glass Skin LDM Facial support hydration-focused rejuvenation strategies glow-focused maintenance plans Treatment strategies are individualized based on: skin sensitivity hydration balance texture concerns pore concerns skin tone concerns individualized skin behavior",
+    "snippet": "Think of these treatments as complementary parts of the Korean Glass Skin journey. The Korean Brightening Glass Skin Tone-Up Facial at SuA Glow may incorporate:..."
+  },
+  {
+    "url": "tone-up-facial.html#skin-concerns",
+    "title": "What Skin Concerns may Korean Brightening Glass Skin Tone-Up Facials Support?",
+    "pageTitle": "Korean Tone-Up Facial Dallas",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
+    "content": "Korean Brightening Glass Skin Tone-Up Facial treatments may help support: dull-looking skin uneven-looking skin tone rough-looking texture dehydrated-looking skin enlarged-looking pores glow-focused rejuvenation texture and tone-focused refinement healthier-looking skin quality brighter-looking skin radiance healthier-looking skin bounce Treatment recommendations are individualized based on: skin sensitivity hydration balance treatment goals skin condition individualized skin assessment Because healthier-looking skin is never one-size-fits-all.",
+    "snippet": "Korean Brightening Glass Skin Tone-Up Facial treatments may help support: dull-looking skin uneven-looking skin tone rough-looking texture dehydrated-looking sk..."
   },
   {
     "url": "tone-up-facial.html#transparency",
-    "title": "N. Transparency Matters",
+    "title": "Transparency Matters",
     "pageTitle": "Korean Tone-Up Facial Dallas",
-    "category": "THE K-BEAUTY APPROACH",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
     "content": "Korean-inspired skin quality rejuvenation approaches discussed at SuA Glow reflect evolving global aesthetic practices and individualized consultation-based treatment planning. Specific treatment recommendations, product selection, regulatory status, risks, benefits, alternatives, and candidacy are reviewed during consultation pursuant to supervising physician-approved protocols and applicable Texas regulations. Rejuran® Healing Essence Tone-Up products referenced within consultation-based treatment planning discussions are utilized solely as topical-use treatment strategies within the United States. Treatment recommendations at SuA Glow are individualized based on patient anatomy, skin condition, goals, medical history, and clinical assessment. Treatment results vary by individual. No outcome can be guaranteed. Our commitment is to clear communication, clinical integrity, and your long-term skin health and safety. SuA",
     "snippet": "Korean-inspired skin quality rejuvenation approaches discussed at SuA Glow reflect evolving global aesthetic practices and individualized consultation-based tre..."
   },
@@ -1932,7 +1956,7 @@ const SEARCH_INDEX = [
     "url": "tone-up-facial.html",
     "title": "Korean Skin Quality Protocols in Action",
     "pageTitle": "Korean Tone-Up Facial Dallas",
-    "category": "THE K-BEAUTY APPROACH",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
     "content": "Our customized Tone-Up treatments utilize advanced clinical protocols to ensure optimal delivery and a radiant glow. Below are referenced maps of our specialized skin booster structures. Skin Quality Map 1 Skin Quality Map 2 Booster Application 3 Booster Application 4",
     "snippet": "Our customized Tone-Up treatments utilize advanced clinical protocols to ensure optimal delivery and a radiant glow. Below are referenced maps of our specialize..."
   },
@@ -1940,7 +1964,7 @@ const SEARCH_INDEX = [
     "url": "tone-up-facial.html",
     "title": "Frequently Asked Questions",
     "pageTitle": "Korean Tone-Up Facial Dallas",
-    "category": "THE K-BEAUTY APPROACH",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
     "content": "A Korean Tone-Up Facial is a Korean-inspired skin quality treatment focused on brighter-looking skin tone, hydration-conscious rejuvenation, glow-focused maintenance, and healthier-looking skin appearance. Rejuran® Healing Essence Tone-Up Booster is a Korean-inspired skin quality support strategy commonly discussed within consultation-based treatment planning focused on brighter-looking skin appearance, hydration support, and glow-focused maintenance. No. Korean Tone-Up treatments focus on healthier-looking skin quality, radiance, glow, and brighter-looking skin appearance rather than changing a person's natural skin color. Neither treatment is universally better. Korean Glass Skin PDRN Facial treatments are often selected by patients focused on hydration, texture, skin quality, and healthier-looking skin bounce. Korean Glass Skin Tone-Up Facial treatments are often selected by patients focused on radiance, glow, and brighter-looking skin tone. Many Korean clinics incorporate both. Yes. Many patients pursue Tone-Up treatments as part of a broader strategy focused on healthier-looking radiance, hydration support, glow-focused maintenance, and brighter-looking skin appearance. Treatment experiences vary depending on individualized treatment planning, skin sensitivity, and overall skin condition. Appropriate recommendations are determined during consultation.",
     "snippet": "A Korean Tone-Up Facial is a Korean-inspired skin quality treatment focused on brighter-looking skin tone, hydration-conscious rejuvenation, glow-focused mainte..."
   },
@@ -1948,7 +1972,7 @@ const SEARCH_INDEX = [
     "url": "tone-up-facial.html",
     "title": "Less Coverage. More Luminous Confidence.",
     "pageTitle": "Korean Tone-Up Facial Dallas",
-    "category": "THE K-BEAUTY APPROACH",
+    "category": "K-BEAUTY • BRIGHTENING • RADIANCE",
     "content": "K-Beauty Medspa • Carrollton HQ Luminous skin, naturally radiant. Discover a personalized Korean-inspired hydration strategy designed around your skin. Whether your goal is deeper hydration, smoother-looking texture, natural radiance or that signature dewy K-Beauty finish, we'll help determine the right approach during your consultation. Ready for Your Glow? Call Us: 972-665-8737",
     "snippet": "K-Beauty Medspa • Carrollton HQ Luminous skin, naturally radiant. Discover a personalized Korean-inspired hydration strategy designed around your skin. Whether ..."
   }

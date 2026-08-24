@@ -429,11 +429,14 @@ function initHeroCollagePhysics() {
   let badgeCard = null;
   let modelCard = null;
   let deviceCard = null;
+  let glitterCard = null;
 
   children.forEach(child => {
-    if (child.querySelector('#textCircleBanner') || child.querySelector('path[d*="m -36"]') || child.classList.contains('float-slow')) {
+    if (child.querySelector('img[src*="glitter"]')) {
+      glitterCard = child;
+    } else if (child.querySelector('#textCircleBanner') || child.querySelector('path[d*="m -36"]') || (child.classList.contains('float-slow') && !child.querySelector('img[src*="rejuran"]'))) {
       badgeCard = child;
-    } else if (child.classList.contains('bg-white') || child.querySelector('img[src*="product"]') || child.querySelector('img[src*="device"]') || child.querySelector('img[src*="hero"]')) {
+    } else if (child.classList.contains('bg-white') || child.querySelector('img[src*="product"]') || child.querySelector('img[src*="device"]') || child.querySelector('img[src*="hero"]') || child.querySelector('img[src*="vials"]') || child.querySelector('img[src*="rejuran"]')) {
       deviceCard = child;
     } else if (child.querySelector('img[src*="model"]') || child.querySelector('img[src*="portrait"]') || child.classList.contains('bg-[#131619]')) {
       modelCard = child;
@@ -441,10 +444,10 @@ function initHeroCollagePhysics() {
   });
 
   if (!modelCard && children.length >= 2) {
-    modelCard = children.find(c => c !== badgeCard && !c.classList.contains('bg-white'));
+    modelCard = children.find(c => c !== badgeCard && c !== glitterCard && !c.classList.contains('bg-white'));
   }
   if (!deviceCard && children.length >= 2) {
-    deviceCard = children.find(c => c !== badgeCard && c !== modelCard);
+    deviceCard = children.find(c => c !== badgeCard && c !== modelCard && c !== glitterCard);
   }
 
   const bgGlow = hero.querySelector('.absolute.inset-0.z-0');
@@ -453,6 +456,7 @@ function initHeroCollagePhysics() {
   if (modelCard) modelCard.style.transition = 'transform 0.15s ease-out';
   if (deviceCard) deviceCard.style.transition = 'transform 0.15s ease-out';
   if (badgeCard) badgeCard.style.transition = 'transform 0.15s ease-out';
+  if (glitterCard) glitterCard.style.transition = 'transform 0.15s ease-out';
 
   // Scroll Parallax Physics (Active on page scroll only)
   let ticking = false;
@@ -465,11 +469,13 @@ function initHeroCollagePhysics() {
       const deviceY = currentScrollY * -0.16;
       const badgeY = currentScrollY * -0.24;
       const bgY = currentScrollY * 0.28;
+      const glitterY = currentScrollY * 0.06;
 
       if (bgGlow) bgGlow.style.transform = `translate3d(0, ${bgY}px, 0)`;
       if (modelCard) modelCard.style.transform = `translate3d(0, ${modelY}px, 0)`;
       if (deviceCard) deviceCard.style.transform = `translate3d(0, ${deviceY}px, 0)`;
       if (badgeCard) badgeCard.style.transform = `translate3d(0, ${badgeY}px, 0) rotate(${currentScrollY * 0.1}deg)`;
+      if (glitterCard) glitterCard.style.transform = `translate3d(0, ${glitterY}px, 0)`;
     }
     ticking = false;
   }

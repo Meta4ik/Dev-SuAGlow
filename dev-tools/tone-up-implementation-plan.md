@@ -1,74 +1,46 @@
-# Tone-Up Facial Page Implementation Plan
+# Tone-Up Layout Redesign Implementation Plan
 
-This plan details the process for completely rebuilding `tone-up-facial.html` to perfectly match the provided mockups from scratch using HTML and Tailwind CSS.
+This plan details the process for refactoring the `tone-up-facial.html` layout styles to match the structure and aesthetics of the `ldm-water-drop-lifting.html` page, as requested.
 
 ## User Review Required
 
 > [!WARNING]  
-> **Image Assets Mapping**: The mockups contain several high-quality model photos and the Rejuran Tone-up product box/vial. I will use existing images from `assets/tone-up/` or placeholders where the exact image is not definitively known. Please confirm if there are specific filenames I should map to each section, or if you will swap in the final assets later.
-> 
-> **Custom Icons**: The mockups contain numerous custom line-art icons (e.g. sun/radiance, droplet, DNA strand, molecule, waves). I will use Lucide icons as approximations to ensure it can be built immediately with native UI elements, unless you have SVG exports for these specific icons.
-
-## Open Questions
-1. **Navigation Menu**: Should the rebuilt page use the standard `id="nav-placeholder"` injection or should I implement any specific transparent-to-solid navbar behavior for this dark hero section?
-2. **Footer**: Should the standard footer be injected at the bottom?
+> **Structural Refactor**: This will significantly alter the layout of `tone-up-facial.html`. While the content and copy will remain the same, the container styles, grid layouts, animation classes (`animate-on-scroll`), and image treatments will be aligned to mirror the LDM page perfectly.
 
 ## Proposed Changes
 
-We will restructure `tone-up-facial.html` into four distinct sections as defined by the mockups. All text will be native HTML text (no text-in-images), and styling will utilize our Tailwind config (`dist/output.css`).
+We will refactor each section in `tone-up-facial.html` to adopt the layout styles of `ldm-water-drop-lifting.html`:
 
 ### `tone-up-facial.html`
 
 #### [MODIFY] tone-up-facial.html
-The file will be completely overhauled.
 
-**Section 1: Hero**
-- Background: Very dark charcoal/black (`#0A0A0A` approximation) with a subtle radial glow behind the model.
-- Left column:
-  - Top Badge: "K-BEAUTY • TONE-UP • RADIANCE" with lines on sides.
-  - H1: "KOREAN GLASS SKIN TONE-UP FACIAL" in primary serif font.
-  - Subhead: "DULL SKIN? TURN THE LIGHTS ON." in sans-serif uppercase.
-  - Description text.
-  - Features Grid: 5 columns with line-icons and uppercase labels.
-  - Script typography: "Not lighter. Brighter." (Using a cursive/handwritten font or italicized serif if custom font unavailable).
-  - CTA Button: Dusty rose background (`#BA8781` approximation) with arrow.
-- Center/Right:
-  - Background model image (will use `assets/tone-up/image1.jpeg` or similar).
-  - Floating Badge: Circular "KOREAN INSPIRED PHYSICIAN GUIDED".
-  - Floating Rejuran product image (absolute positioned over the bottom).
-  - Right Floating Panel: White translucent or solid card listing TONE, CLARITY, LUMINOSITY, RADIANCE and "POWERED BY Rejuran Healing Essence Tone-Up Booster".
+**Section 1: Hero (`#hero`)**
+- Implement the exact padding, margin, and grid structure from the LDM hero.
+- Adopt the same image shadow treatments (`shadow-[0_20px_50px_rgba(0,0,0,0.4)]`, `shadow-2xl`, `border border-white/10`) for the right-side collage.
+- Ensure `animate-on-scroll fade-right/fade-left` classes are applied to the text and image columns respectively.
 
-**Section 2: The K-Beauty Approach**
-- Background: Soft off-white/cream.
-- Left column: Large rounded model portrait (will use `assets/tone-up/image18.jpeg` or similar) with an overlapping bottom banner "TONE-UP • RADIANCE • CLARITY".
-- Right column:
-  - Pill Badge: "THE K-BEAUTY APPROACH".
-  - H2: "KOREAN GLASS SKIN TONE-UP FACIAL"
-  - Italic subhead: "Not Lighter. Brighter. Reveal Your Natural Radiance." in dusty rose.
-  - Description paragraphs with highlighted "SuA Glow" and "Rejuran".
-  - Card: "KOREAN-INSPIRED. PHYSICIAN-GUIDED. RESULTS YOU CAN SEE." containing a 2x3 grid of icons and feature texts (e.g. Brighten & Even Tone, Glow & Luminosity).
+**Section 2: The K-Beauty Approach (`#k-beauty-approach`)**
+- Refactor to match LDM's `#philosophy` section layout.
+- Wrap the image in the LDM specific container: `rounded-3xl overflow-hidden shadow-2xl bg-white p-4 border border-light-gray/50`.
+- Apply `animate-on-scroll fade-right` to the image column and `fade-left` to the text column.
 
-**Section 3: Comparison Table**
-- Layout: Top block contains text on the left (H2: "How Does The Tone-Up Facial Compare To Other Korean Glass Skin Treatments?") and a model image on the right.
-- Table: A CSS Grid or native `<table>` to recreate the comparison chart.
-  - Columns: "IF YOU WANT...", "RECOMMENDED TREATMENT", "FOCUS".
-  - The Tone-up row will be highlighted with a dusty rose background.
-  - Other rows (Hydration, PDRN, Collagen, LDM) will have distinct pastel icon backgrounds.
-- Footer block: Dusty rose bottom border with script text "Your Skin, Your Journey." and SuA Glow logo.
+**Section 3: What Is Tone Up (`#what-is-tone-up`)**
+- Refactor to match LDM's `#water-drop-lifting` section layout.
+- The top header will be centered using `text-center max-w-3xl mx-auto space-y-4 animate-on-scroll fade-up`.
+- The 2-column content will use `grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center`.
+- Reformat the "Think:" list to use the `ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-medium text-charcoal/80"` structure from LDM.
 
-**Section 4: Transparency Matters**
-- Background: Cream-to-rose subtle gradient.
-- Left column: "N. Transparency Matters" header followed by a vertical list of 5 disclaimer/regulatory points, each with a rounded icon badge.
-  - Final item emphasizes "Treatment results vary by individual. No outcome can be guaranteed." in red/rose italics.
-- Right column: Large model portrait with an overlapping white card: "Our commitment is to clear communication...".
+**Section 4: Comparison Table & Additional Content**
+- Ensure container widths (`max-w-7xl mx-auto`) and padding (`py-24 px-6 md:px-12`) exactly match the LDM container standards.
+- Add `animate-on-scroll` classes to blocks that lack them.
 
 ## Verification Plan
 
 ### Automated Tests
-- Build CSS using Tailwind (`npm run build:css` if applicable) to ensure all ad-hoc utility classes are generated.
+- Run `npm run build` to compile the Tailwind CSS with the newly applied classes.
 
 ### Manual Verification
 - Render the page locally in a browser.
-- Verify all text is selectable and correctly matches the copy in the mockups.
-- Verify responsive stacking (Grid/Flexbox layout adjustments) for mobile screens, ensuring the complex desktop layout degrades gracefully into a single column.
-- Visually compare the layout, spacing, colors, and typography hierarchy against the provided screenshots.
+- Verify scroll animations trigger correctly.
+- Verify the layout visually mimics the LDM page's structure and rhythm.
