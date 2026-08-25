@@ -135,11 +135,7 @@ function renderMonthlySpecials() {
     return `
         <!-- Main Campaign Header Section -->
         <section id="promotions-hero" data-nav-theme="light" class="py-16 md:py-24 bg-off-white relative overflow-hidden">
-            <!-- Taupe Floral Pattern Background at bottom -->
-            <div class="absolute bottom-0 left-0 right-0 h-[600px] z-0 opacity-40 pointer-events-none" style="background-image: url('assets/taupe-floral-pattern.jpg'); background-size: 250px; background-repeat: repeat; background-position: bottom center;"></div>
-            <!-- Fade to off-white at top of the pattern -->
-            <div class="absolute bottom-0 left-0 right-0 h-[600px] z-0 pointer-events-none bg-gradient-to-t from-transparent via-transparent to-off-white"></div>
-            <div class="starburst-container relative z-10"><div class="sb-3"></div></div>
+            <div class="starburst-container"><div class="sb-3"></div></div>
             <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
                 
                 <!-- Title Header -->
