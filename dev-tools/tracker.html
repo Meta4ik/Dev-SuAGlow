@@ -16,62 +16,88 @@
         .editable-select:focus { background-color: #fff; border-radius: 4px; box-shadow: 0 0 0 2px #cbd5e1; }
     </style>
 </head>
-<body class="text-slate-800 h-screen flex flex-col" x-data="trackerApp()">
+<body class="text-slate-800 h-screen flex flex-col bg-[#F8F9FA]" x-data="trackerApp()">
 
-    <!-- Header -->
-    <header class="bg-white border-b border-slate-200 shadow-sm px-6 py-4 flex flex-col md:flex-row md:items-center justify-between z-10 shrink-0 gap-4">
-        <div class="flex items-center gap-3">
-            <div class="w-auto h-8 flex items-center justify-center">
-                <img src="../assets/logo-main.webp" alt="SuA Glow" class="h-full w-auto object-contain brightness-0">
+    <!-- Password Overlay -->
+    <div x-show="!isAuthenticated" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900" x-transition.opacity.duration.500ms style="display: none;">
+        <div class="bg-white p-8 rounded-2xl shadow-xl max-w-sm w-full mx-4 text-center">
+            <div class="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="lock" class="w-8 h-8 text-slate-400"></i>
             </div>
-            <div>
-                <h1 class="text-lg font-bold leading-tight tracking-tight flex items-center gap-2">
-                    Project Progress Tracker
-                    <span x-show="loading" class="text-xs text-slate-400 font-normal flex items-center gap-1">
-                        <i data-lucide="loader-2" class="w-3 h-3 animate-spin"></i> Syncing...
-                    </span>
-                </h1>
-                <p class="text-[11px] text-slate-500 uppercase tracking-widest font-semibold mt-0.5">Internal Company Info • Confidential</p>
-            </div>
+            <h2 class="text-xl font-bold text-slate-800 mb-2">Restricted Access</h2>
+            <p class="text-sm text-slate-500 mb-6">Please enter the password to view this internal tracker.</p>
+            
+            <form @submit.prevent="checkPassword" class="space-y-4">
+                <div>
+                    <input type="password" x-model="passwordInput" placeholder="Enter password..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 text-center font-medium" autofocus>
+                </div>
+                <p x-show="passwordError" class="text-xs text-red-500 font-medium" x-transition style="display: none;">Incorrect password. Please try again.</p>
+                <button type="submit" class="w-full bg-slate-900 text-white font-bold py-3 rounded-lg hover:bg-slate-800 transition-colors">
+                    Access Tracker
+                </button>
+            </form>
         </div>
-        
-        <!-- Filters -->
-        <div class="flex gap-3 items-center">
-            <div class="relative">
-                <i data-lucide="list" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <select x-model="filters.status" class="pl-9 pr-8 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-900 appearance-none font-medium text-slate-700">
-                    <option value="">All Statuses</option>
-                    <option value="Open">Open</option>
-                    <option value="In Progress">In Progress</option>
-                    <option value="Pending Decision">Pending Decision</option>
-                    <option value="Resolved">Resolved</option>
-                </select>
-                <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
-            </div>
-            <div class="relative">
-                <i data-lucide="layout" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <select x-model="filters.area" class="pl-9 pr-8 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-900 appearance-none font-medium text-slate-700">
-                    <option value="">All Areas</option>
-                    <template x-for="area in uniqueAreas" :key="area">
-                        <option :value="area" x-text="area"></option>
-                    </template>
-                </select>
-                <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
-            </div>
-            <div class="relative">
-                <i data-lucide="user" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <select x-model="filters.assignee" class="pl-9 pr-8 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-900 appearance-none font-medium text-slate-700">
-                    <option value="">All Assignees</option>
-                    <template x-for="assignee in uniqueAssignees" :key="assignee">
-                        <option :value="assignee" x-text="assignee"></option>
-                    </template>
-                </select>
-                <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
-            </div>
-        </div>
-    </header>
+    </div>
 
-    <!-- Main Data Table -->
+    <!-- Main Content (Hidden until authenticated) -->
+    <div x-show="isAuthenticated" class="flex flex-col h-full w-full" style="display: none;">
+        <!-- Header -->
+        <header class="bg-white border-b border-slate-200 shadow-sm px-6 py-4 flex flex-col md:flex-row md:items-center justify-between z-10 shrink-0 gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-auto h-8 flex items-center justify-center">
+                    <img src="../assets/logo-main.webp" alt="SuA Glow" class="h-full w-auto object-contain brightness-0">
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight tracking-tight flex items-center gap-2">
+                        Project Progress Tracker
+                        <span x-show="loading" class="text-xs text-slate-400 font-normal flex items-center gap-1">
+                            <i data-lucide="loader-2" class="w-3 h-3 animate-spin"></i> Syncing...
+                        </span>
+                    </h1>
+                    <p class="text-[11px] text-slate-500 uppercase tracking-widest font-semibold mt-0.5">Internal Company Info • Confidential</p>
+                </div>
+            </div>
+            
+            <!-- Filters -->
+            <div class="flex gap-3 items-center">
+                <div class="relative">
+                    <i data-lucide="list" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <select x-model="filters.status" class="pl-9 pr-8 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-900 appearance-none font-medium text-slate-700">
+                        <option value="">All Statuses</option>
+                        <option value="Open">Open</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Pending Decision">Pending Decision</option>
+                        <option value="Resolved">Resolved</option>
+                    </select>
+                    <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
+                </div>
+                <div class="relative">
+                    <i data-lucide="layout" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <select x-model="filters.area" class="pl-9 pr-8 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-900 appearance-none font-medium text-slate-700">
+                        <option value="">All Areas</option>
+                        <template x-for="area in uniqueAreas" :key="area">
+                            <option :value="area" x-text="area"></option>
+                        </template>
+                    </select>
+                    <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
+                </div>
+                <div class="relative">
+                    <i data-lucide="user" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <select x-model="filters.assignee" class="pl-9 pr-8 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-900 appearance-none font-medium text-slate-700">
+                        <option value="">All Assignees</option>
+                        <template x-for="assignee in uniqueAssignees" :key="assignee">
+                            <option :value="assignee" x-text="assignee"></option>
+                        </template>
+                    </select>
+                    <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
+                </div>
+                <button @click="logout" class="ml-2 text-slate-400 hover:text-slate-700 transition-colors" title="Lock Tracker">
+                    <i data-lucide="lock" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Data Table -->
     <main class="flex-1 p-6 bg-slate-100/50 overflow-hidden">
         <div class="bg-white rounded-xl shadow-sm border border-slate-200 h-full flex flex-col overflow-hidden">
             <div class="overflow-x-auto flex-1 table-container">
@@ -165,6 +191,7 @@
             </div>
         </div>
     </main>
+    </div>
 
     <!-- Firebase SDK (Compat) -->
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
@@ -187,13 +214,42 @@
             Alpine.data('trackerApp', () => ({
                 items: [],
                 loading: true,
+                isAuthenticated: sessionStorage.getItem('trackerAuth') === 'true',
+                passwordInput: '',
+                passwordError: false,
                 filters: {
                     status: '',
                     area: '',
                     assignee: ''
                 },
                 
+                checkPassword() {
+                    // Simple hash-like check to avoid plaintext in obvious places (though it's still in the source)
+                    // The password is "Glow2026!"
+                    if (this.passwordInput === 'Glow2026!') {
+                        this.isAuthenticated = true;
+                        this.passwordError = false;
+                        sessionStorage.setItem('trackerAuth', 'true');
+                        // Initialize real-time updates after auth
+                        this.setupFirestore();
+                    } else {
+                        this.passwordError = true;
+                        this.passwordInput = '';
+                    }
+                },
+                
+                logout() {
+                    this.isAuthenticated = false;
+                    sessionStorage.removeItem('trackerAuth');
+                },
+
                 init() {
+                    if (this.isAuthenticated) {
+                        this.setupFirestore();
+                    }
+                },
+                
+                setupFirestore() {
                     // Listen to Firestore real-time updates
                     db.collection('tracker_items').onSnapshot((snapshot) => {
                         if (snapshot.empty && this.items.length === 0) {
