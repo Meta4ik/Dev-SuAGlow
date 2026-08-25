@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Progress Tracker | SuA Glow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; }
+        .kanban-col { min-width: 320px; max-width: 350px; }
+    </style>
+</head>
+<body class="text-slate-800 h-screen flex flex-col" x-data="trackerApp()">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 shadow-sm px-6 py-4 flex flex-col md:flex-row md:items-center justify-between z-10 shrink-0 gap-4">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white font-bold tracking-wider text-sm shadow-sm">
+                SG
+            </div>
+            <div>
+                <h1 class="text-lg font-bold leading-tight tracking-tight">Project Progress Tracker</h1>
+                <p class="text-[11px] text-slate-500 uppercase tracking-widest font-semibold mt-0.5">Internal Company Info • Confidential</p>
+            </div>
+        </div>
+        
+        <!-- Filters -->
+        <div class="flex gap-3 items-center">
+            <div class="relative">
+                <i data-lucide="layout" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <select x-model="filters.area" class="pl-9 pr-8 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-900 appearance-none font-medium text-slate-700">
+                    <option value="">All Areas</option>
+                    <template x-for="area in uniqueAreas" :key="area">
+                        <option :value="area" x-text="area"></option>
+                    </template>
+                </select>
+                <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
+            </div>
+            <div class="relative">
+                <i data-lucide="user" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <select x-model="filters.assignee" class="pl-9 pr-8 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-900 appearance-none font-medium text-slate-700">
+                    <option value="">All Assignees</option>
+                    <template x-for="assignee in uniqueAssignees" :key="assignee">
+                        <option :value="assignee" x-text="assignee"></option>
+                    </template>
+                </select>
+                <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Kanban Board -->
+    <main class="flex-1 overflow-x-auto p-6 bg-slate-100/50">
+        <div class="flex gap-6 h-full items-start">
+            
+            <template x-for="column in columns" :key="column.status">
+                <div class="kanban-col flex flex-col bg-slate-100 rounded-xl border border-slate-200/60 h-full max-h-full shrink-0 shadow-sm">
+                    <div class="p-4 border-b border-slate-200/60 flex justify-between items-center bg-slate-100 rounded-t-xl sticky top-0 z-10">
+                        <h2 class="font-bold text-xs uppercase tracking-wider flex items-center gap-2 text-slate-700">
+                            <span :class="column.colorClass" class="w-2 h-2 rounded-full shadow-sm"></span>
+                            <span x-text="column.status"></span>
+                        </h2>
+                        <span class="bg-white border border-slate-200 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm" x-text="filteredItems(column.status).length"></span>
+                    </div>
+                    
+                    <div class="p-3 overflow-y-auto flex-1 space-y-3">
+                        <template x-for="item in filteredItems(column.status)" :key="item.id">
+                            <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 hover:shadow-md transition-shadow hover:border-slate-300 relative group">
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="text-[9px] font-black px-2 py-1 rounded-md uppercase tracking-widest shadow-sm border" 
+                                          :class="{
+                                            'bg-red-50 text-red-700 border-red-100': item.priority === 'High',
+                                            'bg-amber-50 text-amber-700 border-amber-100': item.priority === 'Medium',
+                                            'bg-emerald-50 text-emerald-700 border-emerald-100': item.priority === 'Low',
+                                            'bg-slate-50 text-slate-600 border-slate-100': !item.priority || item.priority === 'nan'
+                                          }"
+                                          x-text="item.priority || 'No Prio'"></span>
+                                    <span class="text-[10px] text-slate-400 font-bold bg-slate-50 px-2 py-1 rounded-md border border-slate-100" x-text="'#' + item.id"></span>
+                                </div>
+                                
+                                <h3 class="font-bold text-sm mb-2 text-slate-800 leading-snug" x-text="item.topic"></h3>
+                                
+                                <div class="mb-4">
+                                    <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider block mb-1">Issue / Standard</span>
+                                    <p class="text-xs text-slate-600 leading-relaxed whitespace-pre-wrap" x-text="item.issue"></p>
+                                </div>
+                                
+                                <template x-if="item.action_needed && item.action_needed !== 'nan'">
+                                    <div class="mb-4 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                                        <span class="text-[9px] uppercase font-bold text-slate-500 tracking-wider block mb-1 flex items-center gap-1.5">
+                                            <i data-lucide="target" class="w-3 h-3"></i> Action Needed
+                                        </span>
+                                        <p class="text-xs text-slate-700 leading-relaxed whitespace-pre-wrap font-medium" x-text="item.action_needed"></p>
+                                    </div>
+                                </template>
+                                
+                                <template x-if="item.resolution && item.resolution !== 'nan'">
+                                    <div class="mb-4 bg-green-50 p-3 rounded-lg border border-green-100">
+                                        <span class="text-[9px] uppercase font-bold text-green-700 tracking-wider block mb-1 flex items-center gap-1.5">
+                                            <i data-lucide="check-circle-2" class="w-3 h-3"></i> Resolution
+                                        </span>
+                                        <p class="text-xs text-green-800 leading-relaxed whitespace-pre-wrap font-medium" x-text="item.resolution"></p>
+                                    </div>
+                                </template>
+                                
+                                <div class="flex items-center justify-between border-t border-slate-100 pt-4 mt-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-6 h-6 rounded-full bg-slate-200 flex items-center justify-center border border-slate-300">
+                                            <i data-lucide="user" class="w-3 h-3 text-slate-500"></i>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-700" x-text="item.assignee || 'Unassigned'"></span>
+                                    </div>
+                                    <span class="text-[9px] text-slate-500 font-bold tracking-wider uppercase" x-text="item.area"></span>
+                                </div>
+                            </div>
+                        </template>
+                        <template x-if="filteredItems(column.status).length === 0">
+                            <div class="text-center p-6 bg-white/50 rounded-xl border border-dashed border-slate-300 flex flex-col items-center justify-center h-32">
+                                <i data-lucide="inbox" class="w-6 h-6 text-slate-300 mb-2"></i>
+                                <span class="text-xs text-slate-400 font-medium tracking-wide">No items</span>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+            
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('trackerApp', () => ({
+                items: [],
+                filters: {
+                    area: '',
+                    assignee: ''
+                },
+                columns: [
+                    { status: 'Open', colorClass: 'bg-slate-400' },
+                    { status: 'In Progress', colorClass: 'bg-blue-500' },
+                    { status: 'Pending Decision', colorClass: 'bg-amber-400' },
+                    { status: 'Resolved', colorClass: 'bg-emerald-500' }
+                ],
+                
+                async init() {
+                    try {
+                        const response = await fetch('tracker-data.json');
+                        this.items = await response.json();
+                        setTimeout(() => lucide.createIcons(), 50);
+                    } catch (e) {
+                        console.error('Failed to load tracker data', e);
+                    }
+                },
+                
+                get uniqueAreas() {
+                    return [...new Set(this.items.map(i => i.area).filter(a => a && a !== 'nan'))].sort();
+                },
+                
+                get uniqueAssignees() {
+                    return [...new Set(this.items.map(i => i.assignee).filter(a => a && a !== 'nan'))].sort();
+                },
+                
+                filteredItems(status) {
+                    const filtered = this.items.filter(item => {
+                        let itemStatus = item.status && item.status !== 'nan' ? item.status.trim() : 'Open';
+                        
+                        // Handle "WIP" -> "In Progress" mapping based on the sheet data if necessary
+                        if (itemStatus.toLowerCase().includes('wip')) itemStatus = 'In Progress';
+                        if (itemStatus.toLowerCase().includes('open')) itemStatus = 'Open';
+                        
+                        const matchesStatus = itemStatus.toLowerCase() === status.toLowerCase();
+                        
+                        const matchesArea = this.filters.area === '' || item.area === this.filters.area;
+                        const matchesAssignee = this.filters.assignee === '' || item.assignee === this.filters.assignee;
+                        
+                        return matchesStatus && matchesArea && matchesAssignee;
+                    });
+                    
+                    // Call lucide.createIcons asynchronously after items render
+                    setTimeout(() => lucide.createIcons(), 10);
+                    
+                    return filtered;
+                }
+            }));
+        });
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
