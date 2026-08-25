@@ -49,9 +49,20 @@
                 <div class="lg:col-span-5 animate-on-scroll fade-left delay-100">
                     <div class="relative w-full h-[320px] sm:h-[420px] flex items-center justify-center">
                         <!-- Circular Badge -->
-                        <div class="absolute hidden md:flex items-center justify-center z-20 float-slow"
+                        <div class="absolute hidden md:flex items-center justify-center z-20 text-[#AA987C] float-slow"
                             style="width: 130px; height: 130px; top: -10px; right: 10%; animation: float 6s ease-in-out infinite;">
-                            <img src="assets/sua-circle-icon-taupe.png" alt="SuA Glow" class="w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.15)] border border-white/10"></div>
+                            <svg viewBox="0 0 100 100" class="relative z-10" style="width: 95%; height: 95%; animation: spin-badge 20s linear infinite;">
+                                <path id="textCircleBanner" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="transparent" />
+                                <text font-family="Montserrat, sans-serif" font-size="7.9" font-weight="700" fill="currentColor" class="uppercase" letter-spacing="0.1em">
+                                    <textPath href="#textCircleBanner" startOffset="0%">
+                                        COLLAGEN SUPPORT &bull; NATURAL REFINEMENT &bull;
+                                    </textPath>
+                                </text>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center z-10">
+                                <img src="assets/sua-circle-icon-taupe.png" alt="SuA Glow Logo" style="width: 50px; height: 50px; border-radius: 9999px; opacity: 0.95;">
+                            </div>
                         </div>
 
                         <!-- Main visual card -->
