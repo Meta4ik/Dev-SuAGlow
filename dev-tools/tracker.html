@@ -11,6 +11,9 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; }
         .table-container { max-height: calc(100vh - 80px); }
+        .editable-field:focus { outline: none; background-color: #fff; box-shadow: 0 0 0 2px #cbd5e1; border-radius: 4px; padding: 2px 4px; margin: -2px -4px; }
+        .editable-select { background-color: transparent; border: none; cursor: pointer; padding: 0; margin: 0; outline: none; font-family: inherit; font-size: inherit; font-weight: inherit; color: inherit; }
+        .editable-select:focus { background-color: #fff; border-radius: 4px; box-shadow: 0 0 0 2px #cbd5e1; }
     </style>
 </head>
 <body class="text-slate-800 h-screen flex flex-col" x-data="trackerApp()">
@@ -22,7 +25,12 @@
                 SG
             </div>
             <div>
-                <h1 class="text-lg font-bold leading-tight tracking-tight">Project Progress Tracker</h1>
+                <h1 class="text-lg font-bold leading-tight tracking-tight flex items-center gap-2">
+                    Project Progress Tracker
+                    <span x-show="loading" class="text-xs text-slate-400 font-normal flex items-center gap-1">
+                        <i data-lucide="loader-2" class="w-3 h-3 animate-spin"></i> Syncing...
+                    </span>
+                </h1>
                 <p class="text-[11px] text-slate-500 uppercase tracking-widest font-semibold mt-0.5">Internal Company Info • Confidential</p>
             </div>
         </div>
@@ -80,62 +88,65 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-100 bg-white">
-                        <template x-for="item in filteredItemsAll" :key="item.id">
+                        <template x-for="(item, index) in filteredItemsAll" :key="item.id">
                             <tr class="hover:bg-slate-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-slate-400 font-bold text-xs" x-text="'#' + item.id"></td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider"
+                                    <select x-model="item.status" @change="updateItem(item)" class="editable-select px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider"
                                           :class="{
-                                            'bg-slate-100 text-slate-600': getNormalizedStatus(item) === 'Open',
-                                            'bg-blue-50 text-blue-700': getNormalizedStatus(item) === 'In Progress',
-                                            'bg-amber-50 text-amber-700': getNormalizedStatus(item) === 'Pending Decision',
-                                            'bg-emerald-50 text-emerald-700': getNormalizedStatus(item) === 'Resolved'
-                                          }"
-                                          x-text="getNormalizedStatus(item)">
-                                    </span>
+                                            'bg-slate-100 text-slate-600': item.status === 'Open',
+                                            'bg-blue-50 text-blue-700': item.status === 'In Progress' || item.status === 'WIP',
+                                            'bg-amber-50 text-amber-700': item.status === 'Pending Decision',
+                                            'bg-emerald-50 text-emerald-700': item.status === 'Resolved'
+                                          }">
+                                        <option value="Open">OPEN</option>
+                                        <option value="In Progress">IN PROGRESS</option>
+                                        <option value="Pending Decision">PENDING</option>
+                                        <option value="Resolved">RESOLVED</option>
+                                    </select>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="text-[10px] font-black px-2 py-1 rounded-md uppercase tracking-widest border" 
+                                    <select x-model="item.priority" @change="updateItem(item)" class="editable-select text-[10px] font-black px-2 py-1 rounded-md uppercase tracking-widest border" 
                                           :class="{
                                             'bg-red-50 text-red-700 border-red-100': item.priority === 'High',
                                             'bg-amber-50 text-amber-700 border-amber-100': item.priority === 'Medium',
                                             'bg-emerald-50 text-emerald-700 border-emerald-100': item.priority === 'Low',
                                             'bg-slate-50 text-slate-500 border-slate-100': !item.priority || item.priority === 'nan'
-                                          }"
-                                          x-text="item.priority || '-'"></span>
+                                          }">
+                                          <option value="nan">-</option>
+                                          <option value="High">HIGH</option>
+                                          <option value="Medium">MEDIUM</option>
+                                          <option value="Low">LOW</option>
+                                    </select>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <h3 class="font-bold text-slate-800 mb-1" x-text="item.topic"></h3>
-                                    <p class="text-xs text-slate-500 line-clamp-3 whitespace-pre-wrap" x-text="item.issue"></p>
+                                    <div class="font-bold text-slate-800 mb-1 editable-field" contenteditable="true" @blur="item.topic = $event.target.innerText; updateItem(item)" x-text="item.topic"></div>
+                                    <div class="text-xs text-slate-500 whitespace-pre-wrap editable-field" contenteditable="true" @blur="item.issue = $event.target.innerText; updateItem(item)" x-text="item.issue"></div>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <template x-if="item.action_needed && item.action_needed !== 'nan'">
-                                        <div class="mb-2">
-                                            <span class="text-[9px] uppercase font-bold text-slate-400 block mb-0.5">Action Needed</span>
-                                            <p class="text-xs text-slate-700 whitespace-pre-wrap" x-text="item.action_needed"></p>
-                                        </div>
-                                    </template>
-                                    <template x-if="item.resolution && item.resolution !== 'nan'">
-                                        <div>
-                                            <span class="text-[9px] uppercase font-bold text-green-600 block mb-0.5">Resolution</span>
-                                            <p class="text-xs text-green-700 whitespace-pre-wrap font-medium" x-text="item.resolution"></p>
-                                        </div>
-                                    </template>
+                                    <div class="mb-2">
+                                        <span class="text-[9px] uppercase font-bold text-slate-400 block mb-0.5">Action Needed</span>
+                                        <div class="text-xs text-slate-700 whitespace-pre-wrap editable-field min-h-[1.5rem]" contenteditable="true" @blur="item.action_needed = $event.target.innerText; updateItem(item)" x-text="item.action_needed && item.action_needed !== 'nan' ? item.action_needed : ''"></div>
+                                    </div>
+                                    <div>
+                                        <span class="text-[9px] uppercase font-bold text-green-600 block mb-0.5">Resolution</span>
+                                        <div class="text-xs text-green-700 whitespace-pre-wrap font-medium editable-field min-h-[1.5rem]" contenteditable="true" @blur="item.resolution = $event.target.innerText; updateItem(item)" x-text="item.resolution && item.resolution !== 'nan' ? item.resolution : ''"></div>
+                                    </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center gap-2">
                                         <div class="w-6 h-6 rounded-full bg-slate-200 flex items-center justify-center border border-slate-300">
                                             <i data-lucide="user" class="w-3 h-3 text-slate-500"></i>
                                         </div>
-                                        <span class="text-xs font-bold text-slate-700" x-text="item.assignee || 'Unassigned'"></span>
+                                        <div class="text-xs font-bold text-slate-700 editable-field min-w-[3rem]" contenteditable="true" @blur="item.assignee = $event.target.innerText; updateItem(item)" x-text="item.assignee && item.assignee !== 'nan' ? item.assignee : ''"></div>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="text-[10px] text-slate-500 font-bold tracking-wider uppercase" x-text="item.area"></span>
+                                    <div class="text-[10px] text-slate-500 font-bold tracking-wider uppercase editable-field" contenteditable="true" @blur="item.area = $event.target.innerText; updateItem(item)" x-text="item.area && item.area !== 'nan' ? item.area : ''"></div>
                                 </td>
                             </tr>
                         </template>
-                        <template x-if="filteredItemsAll.length === 0">
+                        <template x-if="filteredItemsAll.length === 0 && !loading">
                             <tr>
                                 <td colspan="7" class="px-6 py-12 text-center text-slate-400">
                                     <div class="flex flex-col items-center justify-center">
@@ -155,23 +166,75 @@
         </div>
     </main>
 
-    <script>
+    <!-- Firebase SDK (Modular) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+        import { getFirestore, collection, onSnapshot, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            projectId: "suaglow-a70fc",
+            appId: "1:241093481778:web:6d859fd5b6132471ccb32b",
+            storageBucket: "suaglow-a70fc.firebasestorage.app",
+            apiKey: "AIzaSyAQ6d9613GUwBVsAFozZCeLXrnGGoOEeh0",
+            authDomain: "suaglow-a70fc.firebaseapp.com",
+            messagingSenderId: "241093481778"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
         document.addEventListener('alpine:init', () => {
             Alpine.data('trackerApp', () => ({
                 items: [],
+                loading: true,
                 filters: {
                     status: '',
                     area: '',
                     assignee: ''
                 },
                 
-                async init() {
+                init() {
+                    // Listen to Firestore real-time updates
+                    const colRef = collection(db, 'tracker_items');
+                    onSnapshot(colRef, (snapshot) => {
+                        const newItems = [];
+                        snapshot.forEach((doc) => {
+                            newItems.push({ id: doc.id, ...doc.data() });
+                        });
+                        
+                        // Sort by ID naturally
+                        this.items = newItems.sort((a, b) => parseInt(a.id) - parseInt(b.id));
+                        this.loading = false;
+                        
+                        setTimeout(() => lucide.createIcons(), 50);
+                    }, (error) => {
+                        console.error('Error fetching data from Firestore:', error);
+                        // Fallback to local JSON if Firestore isn't set up yet
+                        this.fetchFallbackData();
+                    });
+                },
+                
+                async fetchFallbackData() {
                     try {
                         const response = await fetch('tracker-data.json');
                         this.items = await response.json();
+                        this.loading = false;
                         setTimeout(() => lucide.createIcons(), 50);
                     } catch (e) {
-                        console.error('Failed to load tracker data', e);
+                        console.error('Failed to load fallback data', e);
+                    }
+                },
+                
+                async updateItem(item) {
+                    try {
+                        this.loading = true;
+                        const docRef = doc(db, 'tracker_items', item.id.toString());
+                        await setDoc(docRef, item, { merge: true });
+                    } catch (e) {
+                        console.error("Error updating document: ", e);
+                        alert("Failed to save changes. Make sure Firestore is enabled and rules allow writes.");
+                    } finally {
+                        this.loading = false;
                     }
                 },
                 
@@ -201,9 +264,7 @@
                         return matchesStatus && matchesArea && matchesAssignee;
                     });
                     
-                    // Call lucide.createIcons asynchronously after items render
                     setTimeout(() => lucide.createIcons(), 10);
-                    
                     return filtered;
                 }
             }));
