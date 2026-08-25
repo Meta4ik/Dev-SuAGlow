@@ -157,8 +157,8 @@ const SEARCH_INDEX = [
     "title": "Why K-Beauty Thinks Beyond Volume",
     "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
-    "content": "Gradual Improvement Not Dramatic Overfilling Not every sign of aging needs more filler. At SuA Glow, we often take a different approach—supporting skin quality, texture, firmness, and elasticity before considering traditional volume fillers. The goal is not a different face. It’s your skin made healthier, smoother, and firmer while still looking uniquely like you. Personalized Skin Focus:",
-    "snippet": "Gradual Improvement Not Dramatic Overfilling Not every sign of aging needs more filler. At SuA Glow, we often take a different approach—supporting skin quality,..."
+    "content": "Not every sign of aging needs more filler. At SuA Glow, we often take a different approach—supporting skin quality, texture, firmness, and elasticity before considering traditional volume fillers. The goal is not a different face. It’s your skin made healthier, smoother, and firmer while still looking uniquely like you. Personalized Skin Focus:",
+    "snippet": "Not every sign of aging needs more filler. At SuA Glow, we often take a different approach—supporting skin quality, texture, firmness, and elasticity before con..."
   },
   {
     "url": "collagen-stimulation-facial.html",
@@ -183,6 +183,14 @@ const SEARCH_INDEX = [
     "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
     "content": "Great skin doesn't start the week before the wedding. Collagen-focused skin planning is a long game, which is why we recommend starting your skin-quality strategy months before a wedding or major event. Think smoother texture, healthier-looking skin, and a natural radiance that doesn't depend on heavy coverage.",
     "snippet": "Great skin doesn't start the week before the wedding. Collagen-focused skin planning is a long game, which is why we recommend starting your skin-quality strate..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html",
+    "title": "Have a specific skin goal or big day ahead?",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "Personalized K-beauty solutions for every skin goal and every moment. Need a Glow—Fast? Perfect for when you want your skin looking refreshed, hydrated and luminous—without starting a long-term journey. Replenish & Radiate Deep hydration for dehydrated, dull or tired-looking skin. Restore moisture and bring back your glow. Hydrate & Lift Korean-favorite LDM therapy supports deep hydration, skin comfort and elasticity for healthy-looking, bouncy skin. Repair & Renew Salmon PN supports the appearance of smoother, healthier-looking, more resilient skin from within. Brighten & Even Tone Tone-Up treatments help improve dullness and uneven looking tone for a luminous, radiant finish. Simple. Strong. Refreshed. Designed for men's skin concerns—oil control, pores, texture and aging signs for a clean, healthy look. Your Best Skin for Your Big Day Great skin doesn't start the week before the wedding. Plan ahead with a personalized skin strategy built around your timeline. Smoother. More Even Skin Every scar is different. We evaluate your skin and history to recommend an approach for uneven texture and scars. At SuA Glow, we customize every plan to your skin, goals, and lifestyle. Korean-inspired care. Real results. You.",
+    "snippet": "Personalized K-beauty solutions for every skin goal and every moment. Need a Glow—Fast? Perfect for when you want your skin looking refreshed, hydrated and lumi..."
   },
   {
     "url": "collagen-stimulation-facial.html",
@@ -553,12 +561,20 @@ const SEARCH_INDEX = [
     "snippet": "Discover our most sought-after K-Beauty treatments, focused on hydration, skin quality, and natural rejuvenation. Healing, hydration, and collagen support for t..."
   },
   {
-    "url": "index.html",
+    "url": "index.html#glow-stories",
     "title": "Glow Stories",
     "pageTitle": "SuA K-Glow",
     "category": "Premier\n                    K-Beauty Destination",
     "content": "\"I had an excellent experience with Sophia during my Juvelook skinbooster treatment... Sophia was incredibly gentle, patient, and attentive throughout the entire process, which made a big difference in comfort. Highly recommend!\" IK Patient \"I’ve been to a few different med spas, but Sophia really stood out. You can tell she genuinely cares about her clients and takes pride in what she does... My skin has never looked better! I’m so happy I found her.\" A Lee Patient \"I recently had a Botox treatment at SuA Glow, and I’m very satisfied with the results. Sophia was professional, friendly, and made me feel comfortable... The outcome looks natural—not frozen! I would definitely recommend this clinic.\" Jung Lee Patient \"Excellent service & pain free botox. Highly recommended!!!\" H. Hawoon Kim Verified Google Review \"Trying out Xeomin for the first time today! Sophia was very sweet and explained to me very well about what I'm getting. The office is very clean and professional. Can't wait to come back for my new beauty routine.\" Karen Dang Verified Google Review \"I went to SuA Glow for a consultation with Sophia, and she was absolutely wonderful. She was very thorough in explaining which procedure would work best for my concerns and walked me through Juvelook in a thoughtful, detailed way.\" Erica Kim Verified Google Review",
     "snippet": "\"I had an excellent experience with Sophia during my Juvelook skinbooster treatment... Sophia was incredibly gentle, patient, and attentive throughout the entir..."
+  },
+  {
+    "url": "index.html",
+    "title": "Follow Our Glow",
+    "pageTitle": "SuA K-Glow",
+    "category": "Premier\n                    K-Beauty Destination",
+    "content": "Stay connected with us on Instagram for the latest K-Beauty transformations, skincare tips, and exclusive insights from our Carrollton clinic.",
+    "snippet": "Stay connected with us on Instagram for the latest K-Beauty transformations, skincare tips, and exclusive insights from our Carrollton clinic."
   },
   {
     "url": "index.html",
@@ -1703,6 +1719,14 @@ const SEARCH_INDEX = [
     "category": "SuA Glow Signature Treatment",
     "content": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessment.",
     "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessme..."
+  },
+  {
+    "url": "skin-goals-blocks.html",
+    "title": "Have a specific skin goal or big day ahead?",
+    "pageTitle": "SuA Glow",
+    "category": "Spa Treatments",
+    "content": "Personalized K-beauty solutions for every skin goal and every moment. Need a Glow—Fast? Perfect for when you want your skin looking refreshed, hydrated and luminous—without starting a long-term journey. Replenish & Radiate Deep hydration for dehydrated, dull or tired-looking skin. Restore moisture and bring back your glow. Hydrate & Lift Korean-favorite LDM therapy supports deep hydration, skin comfort and elasticity for healthy-looking, bouncy skin. Repair & Renew Salmon PN supports the appearance of smoother, healthier-looking, more resilient skin from within. Brighten & Even Tone Tone-Up treatments help improve dullness and uneven looking tone for a luminous, radiant finish. Simple. Strong. Refreshed. Designed for men's skin concerns—oil control, pores, texture and aging signs for a clean, healthy look. Your Best Skin for Your Big Day Great skin doesn't start the week before the wedding. Plan ahead with a personalized skin strategy built around your timeline. Smoother. More Even Skin Every scar is different. We evaluate your skin and history to recommend an approach for uneven texture and scars. At SuA Glow, we customize every plan to your skin, goals, and lifestyle. Korean-inspired care. Real results. You.",
+    "snippet": "Personalized K-beauty solutions for every skin goal and every moment. Need a Glow—Fast? Perfect for when you want your skin looking refreshed, hydrated and lumi..."
   },
   {
     "url": "skin-health.html#hero",
