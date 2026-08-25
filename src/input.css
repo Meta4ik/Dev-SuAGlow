@@ -588,6 +588,13 @@ html {
     overflow: hidden;
 }
 
+@media (min-width: 768px) {
+    .btn-secondary:not(.btn-sm) {
+        padding: 1.5rem 4rem;
+        font-size: 0.75rem;
+    }
+}
+
 .btn-secondary::after {
     content: '';
     position: absolute;
