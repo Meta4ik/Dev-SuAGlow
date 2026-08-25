@@ -166,11 +166,11 @@
         </div>
     </main>
 
-    <!-- Firebase SDK (Modular) -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-        import { getFirestore, collection, onSnapshot, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+    <!-- Firebase SDK (Compat) -->
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
 
+    <script>
         const firebaseConfig = {
             projectId: "suaglow-a70fc",
             appId: "1:241093481778:web:6d859fd5b6132471ccb32b",
@@ -180,8 +180,8 @@
             messagingSenderId: "241093481778"
         };
 
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
 
         document.addEventListener('alpine:init', () => {
             Alpine.data('trackerApp', () => ({
@@ -195,8 +195,7 @@
                 
                 init() {
                     // Listen to Firestore real-time updates
-                    const colRef = collection(db, 'tracker_items');
-                    onSnapshot(colRef, (snapshot) => {
+                    db.collection('tracker_items').onSnapshot((snapshot) => {
                         if (snapshot.empty && this.items.length === 0) {
                             // Firestore is empty, auto-seed from JSON if we haven't already
                             console.log("Firestore is empty. Auto-seeding from JSON...");
@@ -226,8 +225,7 @@
                         const data = await response.json();
                         for (const item of data) {
                             if (!item.id) continue;
-                            const docRef = doc(db, 'tracker_items', item.id.toString());
-                            await setDoc(docRef, item);
+                            await db.collection('tracker_items').doc(item.id.toString()).set(item);
                         }
                         console.log("Auto-seeding complete!");
                     } catch (e) {
@@ -249,8 +247,7 @@
                 async updateItem(item) {
                     try {
                         this.loading = true;
-                        const docRef = doc(db, 'tracker_items', item.id.toString());
-                        await setDoc(docRef, item, { merge: true });
+                        await db.collection('tracker_items').doc(item.id.toString()).set(item, { merge: true });
                     } catch (e) {
                         console.error("Error updating document: ", e);
                         alert("Failed to save changes. Make sure Firestore is enabled and rules allow writes.");
