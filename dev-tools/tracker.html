@@ -197,21 +197,42 @@
                     // Listen to Firestore real-time updates
                     const colRef = collection(db, 'tracker_items');
                     onSnapshot(colRef, (snapshot) => {
-                        const newItems = [];
-                        snapshot.forEach((doc) => {
-                            newItems.push({ id: doc.id, ...doc.data() });
-                        });
-                        
-                        // Sort by ID naturally
-                        this.items = newItems.sort((a, b) => parseInt(a.id) - parseInt(b.id));
-                        this.loading = false;
-                        
-                        setTimeout(() => lucide.createIcons(), 50);
+                        if (snapshot.empty && this.items.length === 0) {
+                            // Firestore is empty, auto-seed from JSON if we haven't already
+                            console.log("Firestore is empty. Auto-seeding from JSON...");
+                            this.seedFirestore();
+                        } else if (!snapshot.empty) {
+                            const newItems = [];
+                            snapshot.forEach((doc) => {
+                                newItems.push({ id: doc.id, ...doc.data() });
+                            });
+                            
+                            // Sort by ID naturally
+                            this.items = newItems.sort((a, b) => parseInt(a.id) - parseInt(b.id));
+                            this.loading = false;
+                            
+                            setTimeout(() => lucide.createIcons(), 50);
+                        }
                     }, (error) => {
                         console.error('Error fetching data from Firestore:', error);
                         // Fallback to local JSON if Firestore isn't set up yet
                         this.fetchFallbackData();
                     });
+                },
+                
+                async seedFirestore() {
+                    try {
+                        const response = await fetch('tracker-data.json');
+                        const data = await response.json();
+                        for (const item of data) {
+                            if (!item.id) continue;
+                            const docRef = doc(db, 'tracker_items', item.id.toString());
+                            await setDoc(docRef, item);
+                        }
+                        console.log("Auto-seeding complete!");
+                    } catch (e) {
+                        console.error("Failed to auto-seed", e);
+                    }
                 },
                 
                 async fetchFallbackData() {
