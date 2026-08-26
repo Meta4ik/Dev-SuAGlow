@@ -216,12 +216,22 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <input type="date" class="text-xs bg-transparent border-none text-emerald-600 font-medium outline-none w-full cursor-pointer p-1" 
-                                           x-model="item.dateOpened" @change="updateItem(item)">
+                                    <div class="relative group flex items-center min-h-[24px]">
+                                        <div x-show="!item.dateOpened" class="text-charcoal/40 group-hover:text-charcoal/70 transition-colors">
+                                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                                        </div>
+                                        <div x-show="item.dateOpened" class="text-xs text-emerald-600 font-medium" x-text="item.dateOpened"></div>
+                                        <input type="date" class="absolute inset-0 opacity-0 cursor-pointer w-full" x-model="item.dateOpened" @change="updateItem(item)">
+                                    </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <input type="date" class="text-xs bg-transparent border-none text-red-600 font-medium outline-none w-full cursor-pointer p-1" 
-                                           x-model="item.dateResolved" @change="updateItem(item)">
+                                    <div class="relative group flex items-center min-h-[24px]">
+                                        <div x-show="!item.dateResolved" class="text-charcoal/40 group-hover:text-charcoal/70 transition-colors">
+                                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                                        </div>
+                                        <div x-show="item.dateResolved" class="text-xs text-red-600 font-medium" x-text="item.dateResolved"></div>
+                                        <input type="date" class="absolute inset-0 opacity-0 cursor-pointer w-full" x-model="item.dateResolved" @change="updateItem(item)">
+                                    </div>
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="mb-2">
