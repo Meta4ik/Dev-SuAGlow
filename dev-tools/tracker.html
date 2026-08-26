@@ -143,15 +143,31 @@
                         <tr>
                             <th class="px-2 py-4 w-8"></th>
                             <th class="px-4 py-4 w-12 text-center">Done</th>
-                            <th class="px-6 py-4">ID</th>
-                            <th class="px-6 py-4">Status</th>
-                            <th class="px-6 py-4">Priority</th>
-                            <th class="px-6 py-4">Topic / Issue</th>
-                            <th class="px-6 py-4">Date Opened</th>
-                            <th class="px-6 py-4">Date Resolved</th>
+                            <th class="px-6 py-4 cursor-pointer hover:bg-slate-200 transition-colors select-none" @click="toggleSort('id')">
+                                <div class="flex items-center gap-1">ID <template x-if="sortBy === 'id'"><i :data-lucide="sortDesc ? 'chevron-down' : 'chevron-up'" class="w-3 h-3"></i></template></div>
+                            </th>
+                            <th class="px-6 py-4 cursor-pointer hover:bg-slate-200 transition-colors select-none" @click="toggleSort('status')">
+                                <div class="flex items-center gap-1">Status <template x-if="sortBy === 'status'"><i :data-lucide="sortDesc ? 'chevron-down' : 'chevron-up'" class="w-3 h-3"></i></template></div>
+                            </th>
+                            <th class="px-6 py-4 cursor-pointer hover:bg-slate-200 transition-colors select-none" @click="toggleSort('priority')">
+                                <div class="flex items-center gap-1">Priority <template x-if="sortBy === 'priority'"><i :data-lucide="sortDesc ? 'chevron-down' : 'chevron-up'" class="w-3 h-3"></i></template></div>
+                            </th>
+                            <th class="px-6 py-4 cursor-pointer hover:bg-slate-200 transition-colors select-none" @click="toggleSort('topic')">
+                                <div class="flex items-center gap-1">Topic / Issue <template x-if="sortBy === 'topic'"><i :data-lucide="sortDesc ? 'chevron-down' : 'chevron-up'" class="w-3 h-3"></i></template></div>
+                            </th>
+                            <th class="px-6 py-4 cursor-pointer hover:bg-slate-200 transition-colors select-none" @click="toggleSort('dateOpened')">
+                                <div class="flex items-center gap-1">Date Opened <template x-if="sortBy === 'dateOpened'"><i :data-lucide="sortDesc ? 'chevron-down' : 'chevron-up'" class="w-3 h-3"></i></template></div>
+                            </th>
+                            <th class="px-6 py-4 cursor-pointer hover:bg-slate-200 transition-colors select-none" @click="toggleSort('dateResolved')">
+                                <div class="flex items-center gap-1">Date Resolved <template x-if="sortBy === 'dateResolved'"><i :data-lucide="sortDesc ? 'chevron-down' : 'chevron-up'" class="w-3 h-3"></i></template></div>
+                            </th>
                             <th class="px-6 py-4 w-1/3">Resolution / Final Standard / Notes</th>
-                            <th class="px-6 py-4">Assignee</th>
-                            <th class="px-6 py-4">Area</th>
+                            <th class="px-6 py-4 cursor-pointer hover:bg-slate-200 transition-colors select-none" @click="toggleSort('assignee')">
+                                <div class="flex items-center gap-1">Assignee <template x-if="sortBy === 'assignee'"><i :data-lucide="sortDesc ? 'chevron-down' : 'chevron-up'" class="w-3 h-3"></i></template></div>
+                            </th>
+                            <th class="px-6 py-4 cursor-pointer hover:bg-slate-200 transition-colors select-none" @click="toggleSort('area')">
+                                <div class="flex items-center gap-1">Area <template x-if="sortBy === 'area'"><i :data-lucide="sortDesc ? 'chevron-down' : 'chevron-up'" class="w-3 h-3"></i></template></div>
+                            </th>
                         </tr>
                     </thead>
                     <tbody x-sort="handleSort" class="divide-y divide-slate-100 bg-white">
@@ -324,6 +340,8 @@
                     area: '',
                     assignee: ''
                 },
+                sortBy: '',
+                sortDesc: false,
                 fontSizeBase: parseInt(localStorage.getItem('trackerFontSize') || '16'),
                 undoStack: [],
                 cleanItemsMap: new Map(),
@@ -338,6 +356,21 @@
                         e.preventDefault();
                         this.undo();
                     }
+                },
+
+                toggleSort(col) {
+                    if (this.sortBy === col) {
+                        if (this.sortDesc) {
+                            this.sortBy = '';
+                            this.sortDesc = false;
+                        } else {
+                            this.sortDesc = true;
+                        }
+                    } else {
+                        this.sortBy = col;
+                        this.sortDesc = false;
+                    }
+                    setTimeout(() => lucide.createIcons(), 50);
                 },
                 
                 async undo() {
@@ -377,9 +410,9 @@
                 },
 
                 async handleSort(itemKey, position) {
-                    if (this.filters.status || this.filters.area || this.filters.assignee) {
+                    if (this.filters.status || this.filters.area || this.filters.assignee || this.sortBy) {
                         // Dragging while filtered is restricted to avoid messing up global order
-                        alert("Please clear all filters before reordering items.");
+                        alert("Please clear all filters and column sorts before manually reordering items.");
                         return;
                     }
 
@@ -591,15 +624,25 @@
                 },
                 
                 get filteredItemsAll() {
-                    const filtered = this.items.filter(item => {
-                        const itemStatus = this.getNormalizedStatus(item);
-                        
-                        const matchesStatus = this.filters.status === '' || itemStatus === this.filters.status;
-                        const matchesArea = this.filters.area === '' || item.area === this.filters.area;
-                        const matchesAssignee = this.filters.assignee === '' || item.assignee === this.filters.assignee;
-                        
-                        return matchesStatus && matchesArea && matchesAssignee;
+                    let filtered = this.items.filter(item => {
+                        const statusMatch = !this.filters.status || this.getNormalizedStatus(item) === this.filters.status;
+                        const areaMatch = !this.filters.area || item.area?.toLowerCase() === this.filters.area.toLowerCase();
+                        const assigneeMatch = !this.filters.assignee || item.assignee?.toLowerCase() === this.filters.assignee.toLowerCase();
+                        return statusMatch && areaMatch && assigneeMatch;
                     });
+
+                    if (this.sortBy) {
+                        filtered = filtered.sort((a, b) => {
+                            let valA = a[this.sortBy] || '';
+                            let valB = b[this.sortBy] || '';
+                            if (typeof valA === 'string') valA = valA.toLowerCase();
+                            if (typeof valB === 'string') valB = valB.toLowerCase();
+                            
+                            if (valA < valB) return this.sortDesc ? 1 : -1;
+                            if (valA > valB) return this.sortDesc ? -1 : 1;
+                            return 0;
+                        });
+                    }
                     
                     setTimeout(() => lucide.createIcons(), 10);
                     return filtered;
