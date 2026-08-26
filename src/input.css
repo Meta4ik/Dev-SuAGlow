@@ -17,6 +17,7 @@ html, body {
 
 body {
     font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.02em;
 }
 
 h1,
@@ -33,6 +34,7 @@ h6,
 
 .font-body {
     font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.02em;
 }
 
 /* Heading Wide — shared display heading style */
