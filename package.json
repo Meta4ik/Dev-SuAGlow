@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node build-search-index.js && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "sync": "rsync -av --delete --exclude='.git' --exclude='node_modules' --exclude='src' --exclude='scratch' --exclude='dev-tools' --exclude='kam_doc_updates' . ../live-site/",
+    "sync": "rsync -av --delete --exclude='.git' --exclude='node_modules' --exclude='src' --exclude='scratch' --exclude='dev-tools' --exclude='kam_doc_updates' --exclude='collagen-stimulation-facial.html' --exclude='tone-up-facial.html' . ../live-site/",
     "deploy:vercel": "git add . && git commit -m \"Auto-deploy to Vercel via npm script\" && git push",
     "deploy:ftp": "npm run sync && cd ../live-site && python3 ftp_upload.py"
   },
