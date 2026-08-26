@@ -5,11 +5,15 @@ This guide outlines the different types of content sections available across the
 Use this compendium as a menu of options when planning content for new pages or updating existing ones. By providing content that fits these structures, we can maintain consistency across the entire site.
 
 ## 1. Hero & Introductions
-The first impression of a page, typically containing a large headline, background image/video, and a call-to-action.
-* **`hero`**: Used on almost all main and treatment pages (*about, bridal-glow, contact, index, injectables, oligio-x, radiesse, testimonials, etc.*)
-* **`page-hero`**: Used on utility and legal pages (*privacy-policy, financing, accessibility-statement, cookie-notices-choices, shop-skincare*)
-* **`intro`**: A secondary introduction section (*injectables*)
-* **`showcase-banner`**: A highly visual product/treatment banner (*oligio-x*)
+The first impression of a page, typically containing a large headline, background image/video, and a call-to-action. There are several structural variations of heroes used:
+
+* **Video Background Hero**: Full-height (`min-h-screen`) hero featuring an autoplaying background video. (*index*)
+* **Standard Image Hero (Centered)**: Centered text overlaying a background image. (*about, cosmetic-tox, ldm-water-drop-lifting, microneedling, oligio-x, radiesse, seoul-man, skin-health*)
+* **Standard Image Hero (Left-Aligned)**: Left-aligned text overlaying a background image. (*dep, medical-weight-loss-dallas, needleless-infusion-therapy*)
+* **Solid/Gradient Background Hero**: Minimalist hero with no background image, just clean text on a solid or gradient background. (*bridal-glow, collagen-stimulation-facial, contact, dermal-filler, injectables, medical-tox, one-day-glow, referral, salmon-pn-facial, scar-treatment, signature-treatment, skin-quality-boosters, testimonials, tone-up-facial*)
+* **Split Layout Hero**: Half text, half image layout. (*shop-skincare*)
+* **Utility `page-hero`**: A simplified, shorter hero used exclusively for utility and legal pages (*accessibility-statement, coming-soon, cookie-notices-choices, financing, hippa-policy, privacy-policy, shop-skincare-rejuran*)
+* **`showcase-banner`**: A highly visual product/treatment banner that acts as a secondary hero (*oligio-x*)
 
 ## 2. Treatment Explanations & Overviews ("What Is It?")
 Sections designed to explain exactly what a treatment is, how it works, and the core technology behind it.
