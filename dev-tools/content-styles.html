@@ -7,99 +7,240 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Inter', system-ui, sans-serif; }
+        .wireframe-box { background-color: #f1f5f9; border: 2px dashed #cbd5e1; border-radius: 0.5rem; overflow: hidden; display: flex; flex-direction: column; }
+        .wf-img { background-color: #e2e8f0; }
+        .wf-text { background-color: #cbd5e1; border-radius: 9999px; height: 8px; margin-bottom: 6px; }
+        .wf-title { background-color: #94a3b8; border-radius: 9999px; height: 12px; margin-bottom: 12px; width: 60%; }
+        .wf-btn { background-color: #3b82f6; border-radius: 9999px; height: 16px; width: 60px; margin-top: 8px; }
     </style>
 </head>
 <body class="bg-slate-50 min-h-screen p-8 text-slate-800">
-    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm p-10 border border-slate-200">
+    <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-sm p-10 border border-slate-200">
         
-        <h1 class="text-3xl font-black text-slate-900 mb-6">SuA Glow: Master Content Section Compendium</h1>
+        <h1 class="text-4xl font-black text-slate-900 mb-6">SuA Glow: Master Content Section Compendium</h1>
         
         <p class="mb-4 text-slate-600 text-lg leading-relaxed">
-            This guide outlines the different types of content sections available across the SuA Glow website and lists the specific pages where each section type is currently used. 
+            This guide outlines the different types of content sections available across the SuA Glow website. 
         </p>
-        <p class="mb-8 text-slate-600 text-lg leading-relaxed">
-            Use this compendium as a menu of options when planning content for new pages or updating existing ones. By providing content that fits these structures, we can maintain consistency across the entire site.
+        <p class="mb-12 text-slate-600 text-lg leading-relaxed">
+            Use this compendium as a visual menu of options when planning content for new pages. Providing content that fits these structures helps maintain design consistency.
         </p>
 
         <!-- 1. Hero & Introductions -->
-        <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4 pb-2 border-b border-slate-200">1. Hero & Introductions</h2>
-        <p class="mb-4 text-slate-700">The first impression of a page, typically containing a large headline, background image/video, and a call-to-action. There are several structural variations of heroes used:</p>
-        <ul class="list-disc pl-6 space-y-3 mb-8">
-            <li><strong class="font-bold text-slate-900">Video Background Hero</strong>: Full-height (<code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">min-h-screen</code>) hero featuring an autoplaying background video. (<em class="text-slate-500"><a href="../index.html" class="text-blue-600 hover:underline font-medium">index</a></em>)</li>
-            <li><strong class="font-bold text-slate-900">Standard Image Hero (Centered)</strong>: Centered text overlaying a background image. (<em class="text-slate-500"><a href="../about.html" class="text-blue-600 hover:underline font-medium">about</a>, <a href="../cosmetic-tox.html" class="text-blue-600 hover:underline font-medium">cosmetic-tox</a>, <a href="../ldm-water-drop-lifting.html" class="text-blue-600 hover:underline font-medium">ldm-water-drop-lifting</a>, <a href="../microneedling.html" class="text-blue-600 hover:underline font-medium">microneedling</a>, <a href="../oligio-x.html" class="text-blue-600 hover:underline font-medium">oligio-x</a>, <a href="../radiesse.html" class="text-blue-600 hover:underline font-medium">radiesse</a>, <a href="../seoul-man.html" class="text-blue-600 hover:underline font-medium">seoul-man</a>, <a href="../skin-health.html" class="text-blue-600 hover:underline font-medium">skin-health</a></em>)</li>
-            <li><strong class="font-bold text-slate-900">Standard Image Hero (Left-Aligned)</strong>: Left-aligned text overlaying a background image. (<em class="text-slate-500"><a href="../dep.html" class="text-blue-600 hover:underline font-medium">dep</a>, <a href="../medical-weight-loss-dallas.html" class="text-blue-600 hover:underline font-medium">medical-weight-loss-dallas</a>, <a href="../needleless-infusion-therapy.html" class="text-blue-600 hover:underline font-medium">needleless-infusion-therapy</a></em>)</li>
-            <li><strong class="font-bold text-slate-900">Solid/Gradient Background Hero</strong>: Minimalist hero with no background image, just clean text on a solid or gradient background. (<em class="text-slate-500"><a href="../bridal-glow.html" class="text-blue-600 hover:underline font-medium">bridal-glow</a>, <a href="../collagen-stimulation-facial.html" class="text-blue-600 hover:underline font-medium">collagen-stimulation-facial</a>, <a href="../contact.html" class="text-blue-600 hover:underline font-medium">contact</a>, <a href="../dermal-filler.html" class="text-blue-600 hover:underline font-medium">dermal-filler</a>, <a href="../injectables.html" class="text-blue-600 hover:underline font-medium">injectables</a>, <a href="../medical-tox.html" class="text-blue-600 hover:underline font-medium">medical-tox</a>, <a href="../one-day-glow.html" class="text-blue-600 hover:underline font-medium">one-day-glow</a>, <a href="../referral.html" class="text-blue-600 hover:underline font-medium">referral</a>, <a href="../salmon-pn-facial.html" class="text-blue-600 hover:underline font-medium">salmon-pn-facial</a>, <a href="../scar-treatment.html" class="text-blue-600 hover:underline font-medium">scar-treatment</a>, <a href="../signature-treatment.html" class="text-blue-600 hover:underline font-medium">signature-treatment</a>, <a href="../skin-quality-boosters.html" class="text-blue-600 hover:underline font-medium">skin-quality-boosters</a>, <a href="../testimonials.html" class="text-blue-600 hover:underline font-medium">testimonials</a>, <a href="../tone-up-facial.html" class="text-blue-600 hover:underline font-medium">tone-up-facial</a></em>)</li>
-            <li><strong class="font-bold text-slate-900">Split Layout Hero</strong>: Half text, half image layout. (<em class="text-slate-500"><a href="../shop-skincare.html" class="text-blue-600 hover:underline font-medium">shop-skincare</a></em>)</li>
-            <li><strong class="font-bold text-slate-900">Utility <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">page-hero</code></strong>: A simplified, shorter hero used exclusively for utility and legal pages (<em class="text-slate-500"><a href="../accessibility-statement.html" class="text-blue-600 hover:underline font-medium">accessibility-statement</a>, <a href="../coming-soon.html" class="text-blue-600 hover:underline font-medium">coming-soon</a>, <a href="../cookie-notices-choices.html" class="text-blue-600 hover:underline font-medium">cookie-notices-choices</a>, <a href="../financing.html" class="text-blue-600 hover:underline font-medium">financing</a>, <a href="../hippa-policy.html" class="text-blue-600 hover:underline font-medium">hippa-policy</a>, <a href="../privacy-policy.html" class="text-blue-600 hover:underline font-medium">privacy-policy</a>, <a href="../shop-skincare-rejuran.html" class="text-blue-600 hover:underline font-medium">shop-skincare-rejuran</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">showcase-banner</code></strong>: A highly visual product/treatment banner that acts as a secondary hero (<em class="text-slate-500"><a href="../oligio-x.html" class="text-blue-600 hover:underline font-medium">oligio-x</a></em>)</li>
-        </ul>
+        <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-6 pb-2 border-b border-slate-200">1. Hero & Introductions</h2>
+        <p class="mb-8 text-slate-700">The first impression of a page, typically containing a large headline, background image/video, and a call-to-action.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Centered Hero -->
+            <div class="flex items-start gap-4">
+                <div class="w-32 h-24 shrink-0 wireframe-box relative items-center justify-center">
+                    <div class="absolute inset-0 wf-img opacity-50"></div>
+                    <div class="relative z-10 wf-title w-16 !mb-2"></div>
+                    <div class="relative z-10 wf-text w-20"></div>
+                    <div class="relative z-10 wf-btn !w-12 !h-3"></div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1">Standard Image Hero (Centered)</h3>
+                    <p class="text-sm text-slate-600 mb-2">Centered text overlaying a background image.</p>
+                    <p class="text-xs text-slate-400 font-mono">Pages: about, cosmetic-tox, microneedling, radiesse...</p>
+                </div>
+            </div>
+
+            <!-- Left Aligned Hero -->
+            <div class="flex items-start gap-4">
+                <div class="w-32 h-24 shrink-0 wireframe-box relative items-start justify-center p-3">
+                    <div class="absolute inset-0 wf-img opacity-50"></div>
+                    <div class="relative z-10 wf-title w-16 !mb-2"></div>
+                    <div class="relative z-10 wf-text w-16"></div>
+                    <div class="relative z-10 wf-text w-12"></div>
+                    <div class="relative z-10 wf-btn !w-10 !h-3"></div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1">Standard Image Hero (Left-Aligned)</h3>
+                    <p class="text-sm text-slate-600 mb-2">Left-aligned text overlaying a background image.</p>
+                    <p class="text-xs text-slate-400 font-mono">Pages: dep, medical-weight-loss...</p>
+                </div>
+            </div>
+
+            <!-- Split Hero -->
+            <div class="flex items-start gap-4">
+                <div class="w-32 h-24 shrink-0 wireframe-box flex-row">
+                    <div class="w-1/2 h-full p-2 flex flex-col justify-center bg-white">
+                        <div class="wf-title w-full !mb-2"></div>
+                        <div class="wf-text w-full"></div>
+                        <div class="wf-btn !w-8 !h-2"></div>
+                    </div>
+                    <div class="w-1/2 h-full wf-img"></div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1">Split Layout Hero</h3>
+                    <p class="text-sm text-slate-600 mb-2">Half text, half image layout.</p>
+                    <p class="text-xs text-slate-400 font-mono">Pages: shop-skincare</p>
+                </div>
+            </div>
+
+            <!-- Solid Background Hero -->
+            <div class="flex items-start gap-4">
+                <div class="w-32 h-24 shrink-0 wireframe-box bg-slate-100 items-center justify-center p-4 border-none">
+                    <div class="wf-title w-20 !mb-2"></div>
+                    <div class="wf-text w-24"></div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1">Solid/Gradient Hero</h3>
+                    <p class="text-sm text-slate-600 mb-2">Minimalist hero with no background image.</p>
+                    <p class="text-xs text-slate-400 font-mono">Pages: bridal-glow, dermal-filler...</p>
+                </div>
+            </div>
+        </div>
+
 
         <!-- 2. Treatment Explanations -->
-        <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4 pb-2 border-b border-slate-200">2. Treatment Explanations & Overviews ("What Is It?")</h2>
-        <p class="mb-4 text-slate-700">Sections designed to explain exactly what a treatment is, how it works, and the core technology behind it.</p>
-        <ul class="list-disc pl-6 space-y-3 mb-8">
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">what-is</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">what-are</code></strong>: The standard explanation block (<em class="text-slate-500"><a href="../bridal-glow.html" class="text-blue-600 hover:underline font-medium">bridal-glow</a>, <a href="../cosmetic-tox.html" class="text-blue-600 hover:underline font-medium">cosmetic-tox</a>, <a href="../dermal-filler.html" class="text-blue-600 hover:underline font-medium">dermal-filler</a>, <a href="../microneedling.html" class="text-blue-600 hover:underline font-medium">microneedling</a>, <a href="../radiesse.html" class="text-blue-600 hover:underline font-medium">radiesse</a>, <a href="../salmon-pn-facial.html" class="text-blue-600 hover:underline font-medium">salmon-pn-facial</a>, <a href="../signature-treatment.html" class="text-blue-600 hover:underline font-medium">signature-treatment</a>, etc.</em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">how-it-works</code></strong>: Technical breakdown of the process (<em class="text-slate-500"><a href="../dep.html" class="text-blue-600 hover:underline font-medium">dep</a>, <a href="../needleless-infusion-therapy.html" class="text-blue-600 hover:underline font-medium">needleless-infusion-therapy</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">treatment-modes</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">treatment-zones</code></strong>: Specific details on how a machine or treatment targets the skin (<em class="text-slate-500"><a href="../ldm-water-drop-lifting.html" class="text-blue-600 hover:underline font-medium">ldm-water-drop-lifting</a>, <a href="../oligio-x.html" class="text-blue-600 hover:underline font-medium">oligio-x</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">treatment-areas</code></strong>: Lists the specific areas of the body/face treated (<em class="text-slate-500"><a href="../cosmetic-tox.html" class="text-blue-600 hover:underline font-medium">cosmetic-tox</a>, <a href="../medical-tox.html" class="text-blue-600 hover:underline font-medium">medical-tox</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">scar-types</code></strong>: Specific breakdown of conditions treated (<em class="text-slate-500"><a href="../scar-treatment.html" class="text-blue-600 hover:underline font-medium">scar-treatment</a></em>)</li>
-        </ul>
+        <h2 class="text-2xl font-bold text-slate-900 mt-16 mb-6 pb-2 border-b border-slate-200">2. Treatment Explanations ("What Is It?")</h2>
+        <p class="mb-8 text-slate-700">Sections designed to explain exactly what a treatment is, how it works, and the core technology behind it.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- What is it -->
+            <div class="flex items-start gap-4">
+                <div class="w-32 h-24 shrink-0 wireframe-box p-3 bg-white flex flex-row gap-2">
+                    <div class="w-1/3 h-full wf-img rounded"></div>
+                    <div class="w-2/3 flex flex-col justify-center">
+                        <div class="wf-title w-full"></div>
+                        <div class="wf-text w-full"></div>
+                        <div class="wf-text w-5/6"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1">Standard Explanation (what-is)</h3>
+                    <p class="text-sm text-slate-600 mb-2">Text beside an explanatory image.</p>
+                    <p class="text-xs text-slate-400 font-mono">Pages: bridal-glow, cosmetic-tox...</p>
+                </div>
+            </div>
+
+            <!-- Treatment Areas -->
+            <div class="flex items-start gap-4">
+                <div class="w-32 h-24 shrink-0 wireframe-box p-2 bg-white flex flex-col items-center">
+                    <div class="wf-title w-16 mb-2"></div>
+                    <div class="flex gap-2 w-full justify-center">
+                        <div class="w-6 h-10 wf-img rounded-full"></div>
+                        <div class="w-6 h-10 wf-img rounded-full"></div>
+                        <div class="w-6 h-10 wf-img rounded-full"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1">Treatment Areas</h3>
+                    <p class="text-sm text-slate-600 mb-2">Visual breakdown of targetable areas.</p>
+                    <p class="text-xs text-slate-400 font-mono">Pages: cosmetic-tox, medical-tox...</p>
+                </div>
+            </div>
+        </div>
+
 
         <!-- 3. Benefits & Expectations -->
-        <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4 pb-2 border-b border-slate-200">3. Benefits, Expectations & Value Propositions</h2>
-        <p class="mb-4 text-slate-700">Sections focused on why the patient should choose this treatment and what they can expect from it.</p>
-        <ul class="list-disc pl-6 space-y-3 mb-8">
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">treatment-benefits</code></strong>: Bulleted or grid highlights of the treatment's upside (<em class="text-slate-500"><a href="../bridal-glow.html" class="text-blue-600 hover:underline font-medium">bridal-glow</a>, <a href="../dermal-filler.html" class="text-blue-600 hover:underline font-medium">dermal-filler</a>, <a href="../radiesse.html" class="text-blue-600 hover:underline font-medium">radiesse</a>, <a href="../salmon-pn-facial.html" class="text-blue-600 hover:underline font-medium">salmon-pn-facial</a>, <a href="../signature-treatment.html" class="text-blue-600 hover:underline font-medium">signature-treatment</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">expect</code></strong>: What the patient will experience during or after the treatment (<em class="text-slate-500"><a href="../bridal-glow.html" class="text-blue-600 hover:underline font-medium">bridal-glow</a>, <a href="../cosmetic-tox.html" class="text-blue-600 hover:underline font-medium">cosmetic-tox</a>, <a href="../dermal-filler.html" class="text-blue-600 hover:underline font-medium">dermal-filler</a>, <a href="../microneedling.html" class="text-blue-600 hover:underline font-medium">microneedling</a>, <a href="../radiesse.html" class="text-blue-600 hover:underline font-medium">radiesse</a>, <a href="../seoul-man.html" class="text-blue-600 hover:underline font-medium">seoul-man</a>, etc.</em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">why-sua</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">why-choose-us</code></strong>: Why the patient should choose SuA Glow over a competitor for this specific treatment (<em class="text-slate-500"><a href="../bridal-glow.html" class="text-blue-600 hover:underline font-medium">bridal-glow</a>, <a href="../cosmetic-tox.html" class="text-blue-600 hover:underline font-medium">cosmetic-tox</a>, <a href="../dermal-filler.html" class="text-blue-600 hover:underline font-medium">dermal-filler</a>, <a href="../radiesse.html" class="text-blue-600 hover:underline font-medium">radiesse</a>, <a href="../signature-treatment.html" class="text-blue-600 hover:underline font-medium">signature-treatment</a>, <a href="../medical-weight-loss-dallas.html" class="text-blue-600 hover:underline font-medium">medical-weight-loss-dallas</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">why-skinpen</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">why-we-chose</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">why-seoul-clinics</code></strong>: Justifying the specific technology chosen (<em class="text-slate-500"><a href="../microneedling.html" class="text-blue-600 hover:underline font-medium">microneedling</a>, <a href="../oligio-x.html" class="text-blue-600 hover:underline font-medium">oligio-x</a>, <a href="../ldm-water-drop-lifting.html" class="text-blue-600 hover:underline font-medium">ldm-water-drop-lifting</a></em>)</li>
-        </ul>
+        <h2 class="text-2xl font-bold text-slate-900 mt-16 mb-6 pb-2 border-b border-slate-200">3. Benefits, Expectations & Value Propositions</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Benefits Grid -->
+            <div class="flex items-start gap-4">
+                <div class="w-32 h-24 shrink-0 wireframe-box p-2 bg-white flex flex-col">
+                    <div class="wf-title w-12 mx-auto mb-2"></div>
+                    <div class="grid grid-cols-3 gap-1">
+                        <div class="bg-slate-100 p-1 rounded"><div class="w-3 h-3 bg-blue-300 rounded-full mb-1"></div><div class="wf-text !h-1"></div></div>
+                        <div class="bg-slate-100 p-1 rounded"><div class="w-3 h-3 bg-blue-300 rounded-full mb-1"></div><div class="wf-text !h-1"></div></div>
+                        <div class="bg-slate-100 p-1 rounded"><div class="w-3 h-3 bg-blue-300 rounded-full mb-1"></div><div class="wf-text !h-1"></div></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1">Benefits Grid</h3>
+                    <p class="text-sm text-slate-600 mb-2">Icon-driven grid highlighting key perks.</p>
+                    <p class="text-xs text-slate-400 font-mono">Pages: bridal-glow, dermal-filler...</p>
+                </div>
+            </div>
+
+            <!-- Expect / Timeline -->
+            <div class="flex items-start gap-4">
+                <div class="w-32 h-24 shrink-0 wireframe-box p-3 bg-white flex flex-col gap-2">
+                    <div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-slate-300 shrink-0"></div><div class="w-full wf-text !m-0"></div></div>
+                    <div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-slate-300 shrink-0"></div><div class="w-full wf-text !m-0"></div></div>
+                    <div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-slate-300 shrink-0"></div><div class="w-full wf-text !m-0"></div></div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1">Expectations / Timeline (expect)</h3>
+                    <p class="text-sm text-slate-600 mb-2">Step-by-step list of what the patient will experience.</p>
+                    <p class="text-xs text-slate-400 font-mono">Pages: microneedling, seoul-man...</p>
+                </div>
+            </div>
+        </div>
+
 
         <!-- 4. Social Proof -->
-        <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4 pb-2 border-b border-slate-200">4. Social Proof & Results</h2>
-        <p class="mb-4 text-slate-700">Sections that build trust through real patient results and testimonials.</p>
-        <ul class="list-disc pl-6 space-y-3 mb-8">
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">before-after-gallery</code></strong>: Visual grid of patient results (<em class="text-slate-500"><a href="../radiesse.html" class="text-blue-600 hover:underline font-medium">radiesse</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">glow-stories</code></strong>: Patient testimonials and reviews (<em class="text-slate-500"><a href="../index.html" class="text-blue-600 hover:underline font-medium">index</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">clinical-cases</code></strong>: Medical or scientific evidence of results (<em class="text-slate-500"><a href="../oligio-x.html" class="text-blue-600 hover:underline font-medium">oligio-x</a></em>)</li>
-        </ul>
+        <h2 class="text-2xl font-bold text-slate-900 mt-16 mb-6 pb-2 border-b border-slate-200">4. Social Proof & Results</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Gallery -->
+            <div class="flex items-start gap-4">
+                <div class="w-32 h-24 shrink-0 wireframe-box p-2 bg-white flex flex-col">
+                    <div class="grid grid-cols-2 gap-1 h-full">
+                        <div class="wf-img rounded"></div>
+                        <div class="wf-img rounded"></div>
+                        <div class="wf-img rounded"></div>
+                        <div class="wf-img rounded"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1">Before & After Gallery</h3>
+                    <p class="text-sm text-slate-600 mb-2">Visual grid of patient results.</p>
+                    <p class="text-xs text-slate-400 font-mono">Pages: radiesse</p>
+                </div>
+            </div>
 
-        <!-- 5. Guides -->
-        <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4 pb-2 border-b border-slate-200">5. Guides, FAQs & Next Steps</h2>
-        <p class="mb-4 text-slate-700">Actionable information for the patient.</p>
-        <ul class="list-disc pl-6 space-y-3 mb-8">
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">faq</code></strong>: Frequently asked questions accordion (<em class="text-slate-500">used across almost 20+ treatment pages including <a href="../bridal-glow.html" class="text-blue-600 hover:underline font-medium">bridal-glow</a>, <a href="../dep.html" class="text-blue-600 hover:underline font-medium">dep</a>, <a href="../oligio-x.html" class="text-blue-600 hover:underline font-medium">oligio-x</a>, <a href="../radiesse.html" class="text-blue-600 hover:underline font-medium">radiesse</a>, etc.</em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">post-treatment-guide</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">treatment-guide</code></strong>: Aftercare and maintenance instructions (<em class="text-slate-500"><a href="../oligio-x.html" class="text-blue-600 hover:underline font-medium">oligio-x</a>, <a href="../ldm-water-drop-lifting.html" class="text-blue-600 hover:underline font-medium">ldm-water-drop-lifting</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">schedule</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">consultation</code></strong>: Call-to-action blocks to book an appointment (<em class="text-slate-500"><a href="../medical-weight-loss-dallas.html" class="text-blue-600 hover:underline font-medium">medical-weight-loss-dallas</a>, <a href="../skin-quality-boosters.html" class="text-blue-600 hover:underline font-medium">skin-quality-boosters</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">financing-widget</code></strong>: Information on payment plans (<em class="text-slate-500"><a href="../financing.html" class="text-blue-600 hover:underline font-medium">financing</a></em>)</li>
-        </ul>
+            <!-- Testimonials -->
+            <div class="flex items-start gap-4">
+                <div class="w-32 h-24 shrink-0 wireframe-box p-3 bg-white flex items-center justify-center gap-2">
+                    <div class="w-16 h-12 bg-slate-100 rounded p-1 flex flex-col justify-between shrink-0">
+                        <div class="flex gap-0.5"><div class="w-1 h-1 bg-yellow-400 rounded-full"></div><div class="w-1 h-1 bg-yellow-400 rounded-full"></div><div class="w-1 h-1 bg-yellow-400 rounded-full"></div></div>
+                        <div class="wf-text !h-1 w-full"></div>
+                        <div class="wf-text !h-1 w-2/3"></div>
+                    </div>
+                    <div class="w-8 h-12 bg-slate-100 rounded p-1 opacity-50 overflow-hidden shrink-0">
+                        <div class="flex gap-0.5"><div class="w-1 h-1 bg-yellow-400 rounded-full"></div></div>
+                        <div class="wf-text !h-1 w-full"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1">Testimonials (glow-stories)</h3>
+                    <p class="text-sm text-slate-600 mb-2">Review cards/carousel.</p>
+                    <p class="text-xs text-slate-400 font-mono">Pages: index</p>
+                </div>
+            </div>
+        </div>
 
-        <!-- 6. Philosophy -->
-        <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4 pb-2 border-b border-slate-200">6. Philosophy & Brand Approach</h2>
-        <p class="mb-4 text-slate-700">Sections detailing the unique K-Beauty methodology and SuA Glow's ethos.</p>
-        <ul class="list-disc pl-6 space-y-3 mb-8">
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">philosophy</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">philosophies</code></strong>: The overarching approach to a treatment (<em class="text-slate-500"><a href="../bridal-glow.html" class="text-blue-600 hover:underline font-medium">bridal-glow</a>, <a href="../collagen-stimulation-facial.html" class="text-blue-600 hover:underline font-medium">collagen-stimulation-facial</a>, <a href="../dermal-filler.html" class="text-blue-600 hover:underline font-medium">dermal-filler</a>, <a href="../oligio-x.html" class="text-blue-600 hover:underline font-medium">oligio-x</a>, <a href="../signature-treatment.html" class="text-blue-600 hover:underline font-medium">signature-treatment</a>, etc.</em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">k-beauty</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">k-beauty-approach</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">seoul-inspired</code></strong>: Content linking the treatment to Korean beauty standards (<em class="text-slate-500"><a href="../about.html" class="text-blue-600 hover:underline font-medium">about</a>, <a href="../tone-up-facial.html" class="text-blue-600 hover:underline font-medium">tone-up-facial</a>, <a href="../oligio-x.html" class="text-blue-600 hover:underline font-medium">oligio-x</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">story</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">difference</code></strong>: Brand storytelling and unique differentiators (<em class="text-slate-500"><a href="../about.html" class="text-blue-600 hover:underline font-medium">about</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">transparency</code></strong>: Honest discussion about the treatment (<em class="text-slate-500"><a href="../tone-up-facial.html" class="text-blue-600 hover:underline font-medium">tone-up-facial</a></em>)</li>
-        </ul>
-
-        <!-- 7. Categorized Lists -->
-        <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4 pb-2 border-b border-slate-200">7. Categorized Lists & Hubs</h2>
-        <p class="mb-4 text-slate-700">Sections used on "Hub" pages to list multiple child treatments.</p>
-        <ul class="list-disc pl-6 space-y-3 mb-10">
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">treatments</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">all-treatments</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">signature-treatments</code></strong>: Grids linking out to individual treatment pages (<em class="text-slate-500"><a href="../index.html" class="text-blue-600 hover:underline font-medium">index</a>, <a href="../signature-treatment.html" class="text-blue-600 hover:underline font-medium">signature-treatment</a>, <a href="../skin-health.html" class="text-blue-600 hover:underline font-medium">skin-health</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">injectables</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">biostimulators</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">ha-fillers</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">skin-boosters</code></strong>: Category-specific hubs (<em class="text-slate-500"><a href="../skin-health.html" class="text-blue-600 hover:underline font-medium">skin-health</a>, <a href="../injectables.html" class="text-blue-600 hover:underline font-medium">injectables</a></em>)</li>
-            <li><strong class="font-bold text-slate-900"><code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">medical-tox</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">cosmetic-tox</code> / <code class="bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono">skintox</code></strong>: Toxin-specific category blocks (<em class="text-slate-500"><a href="../injectables.html" class="text-blue-600 hover:underline font-medium">injectables</a>, <a href="../cosmetic-tox.html" class="text-blue-600 hover:underline font-medium">cosmetic-tox</a></em>)</li>
-        </ul>
+        <!-- 5. FAQs -->
+        <h2 class="text-2xl font-bold text-slate-900 mt-16 mb-6 pb-2 border-b border-slate-200">5. Guides & FAQs</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- FAQ -->
+            <div class="flex items-start gap-4">
+                <div class="w-32 h-24 shrink-0 wireframe-box p-2 bg-white flex flex-col gap-1">
+                    <div class="wf-title w-12 mx-auto mb-1"></div>
+                    <div class="bg-slate-100 p-1.5 rounded flex justify-between items-center"><div class="wf-text !m-0 !h-1.5 w-2/3"></div><div class="w-2 h-2 bg-slate-300 rounded-full"></div></div>
+                    <div class="bg-slate-100 p-1.5 rounded flex justify-between items-center"><div class="wf-text !m-0 !h-1.5 w-1/2"></div><div class="w-2 h-2 bg-slate-300 rounded-full"></div></div>
+                    <div class="bg-slate-100 p-1.5 rounded flex justify-between items-center"><div class="wf-text !m-0 !h-1.5 w-3/4"></div><div class="w-2 h-2 bg-slate-300 rounded-full"></div></div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1">FAQ Accordion</h3>
+                    <p class="text-sm text-slate-600 mb-2">Collapsible list of questions and answers.</p>
+                    <p class="text-xs text-slate-400 font-mono">Pages: almost all treatment pages</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Tip Box -->
-        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl">
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl mt-16">
             <h3 class="font-bold text-blue-900 text-lg flex items-center gap-2 mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a5 5 0 0 0-5 5c0 2 1.5 3 2 5v3h6v-3c.5-2 2-3 2-5a5 5 0 0 0-5-5Z"/></svg>
-                Tip for Content Creators
+                Standard Flow Blueprint
             </h3>
-            <p class="text-blue-800 mb-3">When writing copy for a new treatment page, a standard flow usually consists of:</p>
+            <p class="text-blue-800 mb-3">When writing copy for a new treatment page, follow this flow:</p>
             <ol class="list-decimal pl-5 space-y-2 text-blue-900 font-medium">
                 <li><code class="bg-blue-200/50 text-blue-800 px-1.5 py-0.5 rounded text-sm font-mono font-normal">hero</code> (Hook & Intro)</li>
                 <li><code class="bg-blue-200/50 text-blue-800 px-1.5 py-0.5 rounded text-sm font-mono font-normal">what-is</code> (The Explanation)</li>
