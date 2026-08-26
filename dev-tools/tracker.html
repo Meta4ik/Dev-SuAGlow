@@ -170,9 +170,9 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody x-sort="handleSort" class="divide-y divide-slate-100 bg-white">
+                    <tbody x-sort="handleSort" class="divide-y divide-slate-300 bg-white border-b border-slate-300">
                         <template x-for="(item, index) in filteredItemsAll" :key="item.id">
-                            <tr class="transition-colors group hover:brightness-95" 
+                            <tr class="transition-colors group hover:brightness-95 border-b border-slate-300" 
                                 :class="item.status === 'Resolved' ? 'bg-off-white opacity-70' : (getAreaColor(item.area) || 'bg-white')"
                                 x-sort:item="item.id">
                                 <td class="px-2 py-4 text-center cursor-grab active:cursor-grabbing text-charcoal/20 hover:text-charcoal/60" x-sort:handle>
