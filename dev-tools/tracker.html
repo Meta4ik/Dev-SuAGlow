@@ -6,6 +6,7 @@
     <title>Internal Progress Tracker | SuA Glow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/sort@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap" rel="stylesheet">
     <script>
@@ -140,6 +141,7 @@
                 <table class="w-full text-left text-sm text-charcoal/80">
                     <thead class="bg-off-white text-xs uppercase text-charcoal/70 font-bold sticky top-0 z-10 border-b border-light-gray shadow-sm">
                         <tr>
+                            <th class="px-2 py-4 w-8"></th>
                             <th class="px-4 py-4 w-12 text-center">Done</th>
                             <th class="px-6 py-4">ID</th>
                             <th class="px-6 py-4">Status</th>
@@ -152,9 +154,14 @@
                             <th class="px-6 py-4">Area</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-slate-100 bg-white">
+                    <tbody x-sort="handleSort" class="divide-y divide-slate-100 bg-white">
                         <template x-for="(item, index) in filteredItemsAll" :key="item.id">
-                            <tr class="hover:bg-off-white transition-colors" :class="{'bg-off-white opacity-70': item.status === 'Resolved'}">
+                            <tr class="transition-colors group hover:brightness-95" 
+                                :class="item.status === 'Resolved' ? 'bg-off-white opacity-70' : (getAreaColor(item.area) || 'bg-white')"
+                                x-sort:item="item.id">
+                                <td class="px-2 py-4 text-center cursor-grab active:cursor-grabbing text-charcoal/20 hover:text-charcoal/60" x-sort:handle>
+                                    <i data-lucide="grip-vertical" class="w-4 h-4 mx-auto"></i>
+                                </td>
                                 <td class="px-4 py-4 whitespace-nowrap text-center">
                                     <input type="checkbox" 
                                            class="w-4 h-4 text-emerald-600 bg-white border-charcoal/20 rounded focus:ring-emerald-500 cursor-pointer shadow-sm"
@@ -269,7 +276,7 @@
                         </template>
                         <template x-if="filteredItemsAll.length === 0 && !loading">
                             <tr>
-                                <td colspan="7" class="px-6 py-12 text-center text-charcoal/50">
+                                <td colspan="11" class="px-6 py-12 text-center text-charcoal/50">
                                     <div class="flex flex-col items-center justify-center">
                                         <i data-lucide="inbox" class="w-8 h-8 mb-3 text-charcoal/40"></i>
                                         <p class="font-medium text-sm">No items found matching your filters.</p>
@@ -342,12 +349,67 @@
                             await db.collection('tracker_items').doc(action.id).set(action.previousData);
                         } else if (action.type === 'create') {
                             await db.collection('tracker_items').doc(action.id).delete();
+                        } else if (action.type === 'sort') {
+                            const batch = db.batch();
+                            action.previousOrders.forEach(po => {
+                                const ref = db.collection('tracker_items').doc(po.id.toString());
+                                batch.update(ref, { order: po.order });
+                            });
+                            await batch.commit();
                         }
                     } catch (e) {
                         console.error("Error undoing: ", e);
                         alert("Undo failed!");
                     } finally {
                         this.loading = false;
+                    }
+                },
+                
+                getAreaColor(area) {
+                    if (!area || area === 'nan') return '';
+                    const a = area.toLowerCase();
+                    if (a.includes('dev') || a.includes('code') || a.includes('tech')) return 'bg-blue-50/60';
+                    if (a.includes('design') || a.includes('ui') || a.includes('ux')) return 'bg-purple-50/60';
+                    if (a.includes('content') || a.includes('copy')) return 'bg-amber-50/60';
+                    if (a.includes('marketing') || a.includes('seo')) return 'bg-rose-50/60';
+                    if (a.includes('general')) return 'bg-slate-50/60';
+                    return '';
+                },
+
+                async handleSort(itemKey, position) {
+                    if (this.filters.status || this.filters.area || this.filters.assignee) {
+                        // Dragging while filtered is restricted to avoid messing up global order
+                        alert("Please clear all filters before reordering items.");
+                        return;
+                    }
+
+                    const currentIdx = this.items.findIndex(i => i.id === itemKey);
+                    if (currentIdx === -1) return;
+                    
+                    // Push current order state to undo stack
+                    this.undoStack.push({
+                        type: 'sort',
+                        previousOrders: this.items.map(i => ({ id: i.id, order: typeof i.order === 'number' ? i.order : parseInt(i.id) }))
+                    });
+                    if (this.undoStack.length > 20) this.undoStack.shift();
+                    
+                    const item = this.items.splice(currentIdx, 1)[0];
+                    this.items.splice(position, 0, item);
+                    
+                    try {
+                        const batch = db.batch();
+                        this.items.forEach((it, idx) => {
+                            it.order = idx;
+                            const ref = db.collection('tracker_items').doc(it.id.toString());
+                            batch.update(ref, { order: idx });
+                            // update clean map so standard edits don't roll back the sort
+                            const cleanItem = this.cleanItemsMap.get(it.id);
+                            if (cleanItem) cleanItem.order = idx;
+                        });
+                        await batch.commit();
+                    } catch(e) {
+                        console.error("Sorting error:", e);
+                        alert("Failed to save new order.");
                     }
                 },
                 
@@ -391,9 +453,9 @@
                 },
                 
                 async addNewItem() {
-                    const newId = Date.now().toString().slice(-6);
+                    const newId = Date.now().toString();
+                    const newOrder = this.items.length ? Math.max(...this.items.map(i => typeof i.order === 'number' ? i.order : parseInt(i.id))) + 1 : 0;
                     const newItem = {
-                        id: newId,
                         status: 'Open',
                         priority: 'Medium',
                         topic: 'New Task',
@@ -403,7 +465,8 @@
                         assignee: '',
                         area: 'General',
                         dateOpened: new Date().toISOString().split('T')[0],
-                        dateResolved: ''
+                        dateResolved: '',
+                        order: newOrder
                     };
                     try {
                         this.loading = true;
@@ -445,8 +508,12 @@
                                 this.cleanItemsMap.set(doc.id, JSON.parse(JSON.stringify(data)));
                             });
                             
-                            // Sort by ID naturally
-                            this.items = newItems.sort((a, b) => parseInt(a.id) - parseInt(b.id));
+                            // Sort by order if available, else fallback to ID
+                            this.items = newItems.sort((a, b) => {
+                                const orderA = typeof a.order === 'number' ? a.order : parseInt(a.id);
+                                const orderB = typeof b.order === 'number' ? b.order : parseInt(b.id);
+                                return orderA - orderB;
+                            });
                             this.loading = false;
                             
                             setTimeout(() => lucide.createIcons(), 50);
