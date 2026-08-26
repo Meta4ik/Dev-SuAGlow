@@ -94,6 +94,10 @@
                 <button @click="logout" class="ml-2 text-slate-400 hover:text-slate-700 transition-colors" title="Lock Tracker">
                     <i data-lucide="lock" class="w-4 h-4"></i>
                 </button>
+                <div class="w-px h-6 bg-slate-200 mx-2"></div>
+                <button @click="addNewItem" class="bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-sm hover:bg-slate-800 transition-colors flex items-center gap-2">
+                    <i data-lucide="plus" class="w-4 h-4"></i> New Item
+                </button>
             </div>
         </header>
 
@@ -104,6 +108,7 @@
                 <table class="w-full text-left text-sm text-slate-600">
                     <thead class="bg-slate-50 text-xs uppercase text-slate-500 font-bold sticky top-0 z-10 border-b border-slate-200 shadow-sm">
                         <tr>
+                            <th class="px-4 py-4 w-12 text-center">Done</th>
                             <th class="px-6 py-4">ID</th>
                             <th class="px-6 py-4">Status</th>
                             <th class="px-6 py-4">Priority</th>
@@ -115,7 +120,13 @@
                     </thead>
                     <tbody class="divide-y divide-slate-100 bg-white">
                         <template x-for="(item, index) in filteredItemsAll" :key="item.id">
-                            <tr class="hover:bg-slate-50 transition-colors">
+                            <tr class="hover:bg-slate-50 transition-colors" :class="{'bg-slate-50 opacity-70': item.status === 'Resolved'}">
+                                <td class="px-4 py-4 whitespace-nowrap text-center">
+                                    <input type="checkbox" 
+                                           class="w-4 h-4 text-emerald-600 bg-white border-slate-300 rounded focus:ring-emerald-500 cursor-pointer shadow-sm"
+                                           :checked="item.status === 'Resolved'"
+                                           @change="item.status = $event.target.checked ? 'Resolved' : 'Open'; updateItem(item)">
+                                </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-slate-400 font-bold text-xs" x-text="'#' + item.id"></td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <select x-model="item.status" @change="updateItem(item)" class="editable-select px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider"
@@ -146,8 +157,12 @@
                                     </select>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <div class="font-bold text-slate-800 mb-1 editable-field" contenteditable="true" @blur="item.topic = $event.target.innerText; updateItem(item)" x-text="item.topic"></div>
-                                    <div class="text-xs text-slate-500 whitespace-pre-wrap editable-field" contenteditable="true" @blur="item.issue = $event.target.innerText; updateItem(item)" x-text="item.issue"></div>
+                                    <div class="font-bold text-slate-800 mb-1 editable-field" 
+                                         :class="{'line-through text-slate-500': item.status === 'Resolved'}"
+                                         contenteditable="true" @blur="item.topic = $event.target.innerText; updateItem(item)" x-text="item.topic"></div>
+                                    <div class="text-xs text-slate-500 whitespace-pre-wrap editable-field" 
+                                         :class="{'line-through opacity-70': item.status === 'Resolved'}"
+                                         contenteditable="true" @blur="item.issue = $event.target.innerText; updateItem(item)" x-text="item.issue"></div>
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="mb-2">
@@ -241,6 +256,30 @@
                 logout() {
                     this.isAuthenticated = false;
                     sessionStorage.removeItem('trackerAuth');
+                },
+                
+                async addNewItem() {
+                    const newId = Date.now().toString().slice(-6);
+                    const newItem = {
+                        id: newId,
+                        status: 'Open',
+                        priority: 'Medium',
+                        topic: 'New Task',
+                        issue: '',
+                        action_needed: '',
+                        resolution: '',
+                        assignee: '',
+                        area: 'General'
+                    };
+                    try {
+                        this.loading = true;
+                        await db.collection('tracker_items').doc(newId).set(newItem);
+                    } catch (e) {
+                        console.error("Error creating document: ", e);
+                        alert("Failed to create new item.");
+                    } finally {
+                        this.loading = false;
+                    }
                 },
 
                 init() {
