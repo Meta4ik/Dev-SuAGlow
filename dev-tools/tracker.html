@@ -136,16 +136,39 @@
 
         <!-- Main Data Table -->
     <main class="flex-1 p-6 bg-light-gray/50 overflow-hidden flex flex-col">
-        <!-- Area Colors Legend -->
+        <!-- Area Colors Legend & Filter -->
         <div class="flex items-center gap-4 mb-4 flex-wrap shrink-0">
-            <span class="text-[10px] font-bold uppercase text-charcoal/40 tracking-wider mr-1">Area Colors:</span>
-            <span class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider"><span class="w-3 h-3 rounded-sm bg-blue-100 border border-blue-200"></span> Dev/Tech</span>
-            <span class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider"><span class="w-3 h-3 rounded-sm bg-purple-100 border border-purple-200"></span> Design/UI</span>
-            <span class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider"><span class="w-3 h-3 rounded-sm bg-amber-100 border border-amber-200"></span> Content</span>
-            <span class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider"><span class="w-3 h-3 rounded-sm bg-rose-100 border border-rose-200"></span> Marketing</span>
-            <span class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider"><span class="w-3 h-3 rounded-sm bg-emerald-100 border border-emerald-200"></span> Provider</span>
-            <span class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider"><span class="w-3 h-3 rounded-sm bg-orange-100 border border-orange-200"></span> Ops</span>
-            <span class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider"><span class="w-3 h-3 rounded-sm bg-slate-100 border border-slate-200"></span> General</span>
+            <span class="text-[10px] font-bold uppercase text-charcoal/40 tracking-wider mr-1">Filter by Area:</span>
+            
+            <label class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider cursor-pointer hover:text-charcoal/90 transition-colors">
+                <input type="checkbox" value="dev" x-model="activeLegendFilters" class="rounded border-charcoal/20 text-blue-500 focus:ring-blue-500">
+                <span class="w-3 h-3 rounded-sm bg-blue-100 border border-blue-200"></span> Dev/Tech
+            </label>
+            <label class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider cursor-pointer hover:text-charcoal/90 transition-colors">
+                <input type="checkbox" value="design" x-model="activeLegendFilters" class="rounded border-charcoal/20 text-purple-500 focus:ring-purple-500">
+                <span class="w-3 h-3 rounded-sm bg-purple-100 border border-purple-200"></span> Design/UI
+            </label>
+            <label class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider cursor-pointer hover:text-charcoal/90 transition-colors">
+                <input type="checkbox" value="content" x-model="activeLegendFilters" class="rounded border-charcoal/20 text-amber-500 focus:ring-amber-500">
+                <span class="w-3 h-3 rounded-sm bg-amber-100 border border-amber-200"></span> Content
+            </label>
+            <label class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider cursor-pointer hover:text-charcoal/90 transition-colors">
+                <input type="checkbox" value="marketing" x-model="activeLegendFilters" class="rounded border-charcoal/20 text-rose-500 focus:ring-rose-500">
+                <span class="w-3 h-3 rounded-sm bg-rose-100 border border-rose-200"></span> Marketing
+            </label>
+            <label class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider cursor-pointer hover:text-charcoal/90 transition-colors">
+                <input type="checkbox" value="provider" x-model="activeLegendFilters" class="rounded border-charcoal/20 text-emerald-500 focus:ring-emerald-500">
+                <span class="w-3 h-3 rounded-sm bg-emerald-100 border border-emerald-200"></span> Provider
+            </label>
+            <label class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider cursor-pointer hover:text-charcoal/90 transition-colors">
+                <input type="checkbox" value="ops" x-model="activeLegendFilters" class="rounded border-charcoal/20 text-orange-500 focus:ring-orange-500">
+                <span class="w-3 h-3 rounded-sm bg-orange-100 border border-orange-200"></span> Ops
+            </label>
+            <label class="flex items-center gap-1.5 text-[10px] font-bold uppercase text-charcoal/60 tracking-wider cursor-pointer hover:text-charcoal/90 transition-colors">
+                <input type="checkbox" value="general" x-model="activeLegendFilters" class="rounded border-charcoal/20 text-slate-500 focus:ring-slate-500">
+                <span class="w-3 h-3 rounded-sm bg-slate-100 border border-slate-200"></span> General
+            </label>
+            <button x-show="activeLegendFilters.length > 0" @click="activeLegendFilters = []" class="ml-2 text-[9px] uppercase tracking-wider font-bold text-red-500 hover:text-red-700">Clear</button>
         </div>
         
         <div class="bg-white rounded-xl shadow-sm border border-light-gray flex-1 flex flex-col overflow-hidden">
@@ -355,6 +378,7 @@
                 sortBy: '',
                 sortDesc: false,
                 fontSizeBase: parseInt(localStorage.getItem('trackerFontSize') || '16'),
+                activeLegendFilters: [],
                 undoStack: [],
                 cleanItemsMap: new Map(),
 
@@ -410,21 +434,36 @@
                     }
                 },
                 
-                getAreaColor(area) {
-                    if (!area || area === 'nan') return '';
+                getAreaType(area) {
+                    if (!area || area === 'nan') return 'other';
                     const a = area.toLowerCase();
-                    if (a.includes('dev') || a.includes('code') || a.includes('tech')) return 'bg-blue-50/60';
-                    if (a.includes('design') || a.includes('ui') || a.includes('ux')) return 'bg-purple-50/60';
-                    if (a.includes('content') || a.includes('copy')) return 'bg-amber-50/60';
-                    if (a.includes('marketing') || a.includes('seo')) return 'bg-rose-50/60';
-                    if (a.includes('provider')) return 'bg-emerald-50/60';
-                    if (a.includes('operations') || a.includes('ops')) return 'bg-orange-50/60';
-                    if (a.includes('general')) return 'bg-slate-50/60';
-                    return '';
+                    if (a.includes('dev') || a.includes('code') || a.includes('tech')) return 'dev';
+                    if (a.includes('design') || a.includes('ui') || a.includes('ux')) return 'design';
+                    if (a.includes('content') || a.includes('copy')) return 'content';
+                    if (a.includes('marketing') || a.includes('seo')) return 'marketing';
+                    if (a.includes('provider')) return 'provider';
+                    if (a.includes('operations') || a.includes('ops')) return 'ops';
+                    if (a.includes('general')) return 'general';
+                    return 'other';
+                },
+
+                getAreaColor(area) {
+                    const type = this.getAreaType(area);
+                    const colors = {
+                        'dev': 'bg-blue-50/60',
+                        'design': 'bg-purple-50/60',
+                        'content': 'bg-amber-50/60',
+                        'marketing': 'bg-rose-50/60',
+                        'provider': 'bg-emerald-50/60',
+                        'ops': 'bg-orange-50/60',
+                        'general': 'bg-slate-50/60',
+                        'other': ''
+                    };
+                    return colors[type] || '';
                 },
 
                 async handleSort(itemKey, position) {
-                    if (this.filters.status || this.filters.area || this.filters.assignee || this.sortBy) {
+                    if (this.filters.status || this.filters.area || this.filters.assignee || this.sortBy || this.activeLegendFilters.length > 0) {
                         // Dragging while filtered is restricted to avoid messing up global order
                         alert("Please clear all filters and column sorts before manually reordering items.");
                         return;
@@ -642,7 +681,13 @@
                         const statusMatch = !this.filters.status || this.getNormalizedStatus(item) === this.filters.status;
                         const areaMatch = !this.filters.area || item.area?.toLowerCase() === this.filters.area.toLowerCase();
                         const assigneeMatch = !this.filters.assignee || item.assignee?.toLowerCase() === this.filters.assignee.toLowerCase();
-                        return statusMatch && areaMatch && assigneeMatch;
+                        
+                        let legendMatch = true;
+                        if (this.activeLegendFilters.length > 0) {
+                            legendMatch = this.activeLegendFilters.includes(this.getAreaType(item.area));
+                        }
+
+                        return statusMatch && areaMatch && assigneeMatch && legendMatch;
                     });
 
                     if (this.sortBy) {
