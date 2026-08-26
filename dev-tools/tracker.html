@@ -184,7 +184,7 @@
                                            :checked="item.status === 'Resolved'"
                                            @change="item.status = $event.target.checked ? 'Resolved' : 'Open'; if(item.status === 'Resolved' && !item.dateResolved) { item.dateResolved = new Date().toISOString().split('T')[0]; } updateItem(item)">
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-charcoal/50 font-bold text-xs" x-text="'#' + item.id"></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-charcoal/50 font-bold text-xs" x-text="'#' + String(item.id).padStart(2, '0')"></td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <select x-model="item.status" @change="if(item.status === 'Resolved' && !item.dateResolved) { item.dateResolved = new Date().toISOString().split('T')[0]; } updateItem(item)" class="editable-select px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider"
                                           :class="{
@@ -633,10 +633,16 @@
 
                     if (this.sortBy) {
                         filtered = filtered.sort((a, b) => {
-                            let valA = a[this.sortBy] || '';
-                            let valB = b[this.sortBy] || '';
-                            if (typeof valA === 'string') valA = valA.toLowerCase();
-                            if (typeof valB === 'string') valB = valB.toLowerCase();
+                            let valA = a[this.sortBy] !== undefined ? a[this.sortBy] : '';
+                            let valB = b[this.sortBy] !== undefined ? b[this.sortBy] : '';
+                            
+                            if (this.sortBy === 'id') {
+                                valA = parseInt(valA) || 0;
+                                valB = parseInt(valB) || 0;
+                            } else {
+                                if (typeof valA === 'string') valA = valA.toLowerCase();
+                                if (typeof valB === 'string') valB = valB.toLowerCase();
+                            }
                             
                             if (valA < valB) return this.sortDesc ? 1 : -1;
                             if (valA > valB) return this.sortDesc ? -1 : 1;
