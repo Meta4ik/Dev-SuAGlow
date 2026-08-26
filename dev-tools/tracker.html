@@ -71,11 +71,12 @@
                     <img src="../assets/suaglow-s-logo.png" alt="SuA Glow" class="h-full w-full object-contain">
                 </div>
                 <div>
-                    <h1 class="text-lg font-bold leading-tight tracking-tight flex items-center gap-2 font-heading">
-                        Project Progress Tracker
-                        <span x-show="loading" class="text-xs text-charcoal/50 font-normal flex items-center gap-1">
-                            <i data-lucide="loader-2" class="w-3 h-3 animate-spin"></i> Syncing...
-                        </span>
+                    <h1 class="text-xl font-black tracking-tight text-charcoal flex items-center gap-2">
+                        <img src="../assets/suaglow-s-logo.png" alt="Sua Glow" class="h-6 object-contain opacity-90 pb-[4px]">
+                        Project Tracker
+                        <button @click="showChangelog = true" class="ml-2 bg-slate-100 hover:bg-slate-200 text-charcoal/70 px-2 py-0.5 rounded-md text-[10px] font-bold tracking-widest uppercase transition-colors flex items-center gap-1 shadow-sm border border-slate-200">
+                            v1.1.0 <i data-lucide="sparkles" class="w-3 h-3 text-blue-500"></i>
+                        </button>
                     </h1>
                     <p class="text-[11px] text-charcoal/70 uppercase tracking-widest font-semibold mt-0.5">Internal Company Info • Confidential</p>
                 </div>
@@ -346,6 +347,57 @@
             </div>
         </div>
     </main>
+    
+    <!-- Changelog Modal -->
+    <div x-show="showChangelog" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal/40 backdrop-blur-sm" x-transition.opacity style="display: none;">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg overflow-hidden flex flex-col" @click.away="showChangelog = false" x-transition.scale.origin.bottom>
+            <div class="p-6 border-b border-light-gray flex items-center justify-between bg-off-white">
+                <div>
+                    <h2 class="font-black text-xl text-near-black flex items-center gap-2"><i data-lucide="sparkles" class="w-5 h-5 text-blue-500"></i> What's New in v1.1.0</h2>
+                    <p class="text-xs text-charcoal/60 font-medium mt-1">August 2026 Update</p>
+                </div>
+                <button @click="showChangelog = false" class="text-charcoal/40 hover:text-charcoal/90 transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto max-h-[60vh] text-sm text-charcoal/80 space-y-5">
+                <div>
+                    <h3 class="font-bold text-near-black text-xs uppercase tracking-wider mb-2 text-blue-500">🎨 Visual & UI Polish</h3>
+                    <ul class="list-disc pl-5 space-y-1.5 marker:text-charcoal/30">
+                        <li><strong>Date Formatting:</strong> Clean M/D/Y format with stacking. Opened is green, Resolved is red. Empty dates show a calendar.</li>
+                        <li><strong>"Add Task" Pill:</strong> The new task button is now a neat, pill-shaped UI element.</li>
+                        <li><strong>Row Separators:</strong> Darkened horizontal lines for better definition.</li>
+                        <li><strong>Adjustable Columns:</strong> Added horizontal drag-to-resize handles on <em>Topic / Issue</em> and <em>Resolution</em> headers.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-near-black text-xs uppercase tracking-wider mb-2 text-purple-500">🗂️ Organization & Sorting</h3>
+                    <ul class="list-disc pl-5 space-y-1.5 marker:text-charcoal/30">
+                        <li><strong>Drag-and-Drop:</strong> Use the grip icon to manually rearrange rows.</li>
+                        <li><strong>Header Sorting:</strong> Click any header to instantly sort alphabetically or chronologically.</li>
+                        <li><strong>ID Formatting:</strong> Single-digit IDs now pad with a zero (e.g. <code>#02</code>) and sort correctly.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-near-black text-xs uppercase tracking-wider mb-2 text-rose-500">🏷️ Filtering</h3>
+                    <ul class="list-disc pl-5 space-y-1.5 marker:text-charcoal/30">
+                        <li><strong>Area Colors:</strong> Rows are color-coded based on Area (with new Provider/Ops colors).</li>
+                        <li><strong>Interactive Legend:</strong> The visual legend doubles as a multi-select checkbox filter.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-near-black text-xs uppercase tracking-wider mb-2 text-emerald-500">🛡️ Quality of Life</h3>
+                    <ul class="list-disc pl-5 space-y-1.5 marker:text-charcoal/30">
+                        <li><strong>Global Undo:</strong> Hit the Undo button (or <code>Cmd/Ctrl+Z</code>) to revert edits or sorts.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="p-4 border-t border-light-gray bg-off-white text-right">
+                <button @click="showChangelog = false" class="bg-slate-900 text-white px-6 py-2 rounded-lg text-sm font-bold shadow-sm hover:bg-slate-800 transition-colors">Got it, thanks!</button>
+            </div>
+        </div>
+    </div>
+    
     </div>
 
     <!-- Firebase SDK (Compat) -->
@@ -381,6 +433,7 @@
                 sortDesc: false,
                 fontSizeBase: parseInt(localStorage.getItem('trackerFontSize') || '16'),
                 activeLegendFilters: [],
+                showChangelog: false,
                 undoStack: [],
                 cleanItemsMap: new Map(),
 
