@@ -38,7 +38,7 @@
         .editable-select:focus { background-color: #fff; border-radius: 4px; box-shadow: 0 0 0 2px #cbd5e1; }
     </style>
 </head>
-<body class="text-near-black h-screen flex flex-col bg-off-white" x-data="trackerApp()">
+<body class="text-near-black h-screen flex flex-col bg-off-white" x-data="trackerApp()" @keydown.window="handleKeydown">
 
     <!-- Password Overlay -->
     <div x-show="!isAuthenticated" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900" x-transition.opacity.duration.500ms style="display: none;">
@@ -117,6 +117,11 @@
                     <button @click="changeFontSize(-1)" class="w-7 h-7 flex items-center justify-center text-charcoal/70 hover:bg-white hover:shadow-sm hover:text-near-black rounded transition-all font-bold text-sm" title="Decrease font size">A-</button>
                     <button @click="changeFontSize(1)" class="w-7 h-7 flex items-center justify-center text-charcoal/70 hover:bg-white hover:shadow-sm hover:text-near-black rounded transition-all font-bold text-sm" title="Increase font size">A+</button>
                 </div>
+                <template x-if="undoStack.length > 0">
+                    <button @click="undo()" class="bg-off-white border border-light-gray rounded-lg px-2.5 py-1.5 ml-1 text-charcoal/70 hover:bg-white hover:text-near-black transition-all shadow-sm flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider h-[36px]" title="Undo Last Change (Cmd+Z / Ctrl+Z)">
+                        <i data-lucide="undo-2" class="w-3.5 h-3.5"></i> Undo (<span x-text="undoStack.length"></span>)
+                    </button>
+                </template>
                 <div class="w-px h-6 bg-slate-200 mx-1"></div>
                 <button @click="logout" class="text-charcoal/50 hover:text-charcoal/90 transition-colors px-2" title="Lock Tracker">
                     <i data-lucide="lock" class="w-4 h-4"></i>
@@ -313,6 +318,38 @@
                     assignee: ''
                 },
                 fontSizeBase: parseInt(localStorage.getItem('trackerFontSize') || '16'),
+                undoStack: [],
+                cleanItemsMap: new Map(),
+
+                handleKeydown(e) {
+                    if ((e.ctrlKey || e.metaKey) && e.key === 'z') {
+                        // Let native undo work if user is actively focused on an input/contenteditable
+                        const active = document.activeElement;
+                        if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA' || active.isContentEditable)) {
+                            return;
+                        }
+                        e.preventDefault();
+                        this.undo();
+                    }
+                },
+                
+                async undo() {
+                    if (this.undoStack.length === 0) return;
+                    const action = this.undoStack.pop();
+                    try {
+                        this.loading = true;
+                        if (action.type === 'update') {
+                            await db.collection('tracker_items').doc(action.id).set(action.previousData);
+                        } else if (action.type === 'create') {
+                            await db.collection('tracker_items').doc(action.id).delete();
+                        }
+                    } catch (e) {
+                        console.error("Error undoing: ", e);
+                        alert("Undo failed!");
+                    } finally {
+                        this.loading = false;
+                    }
+                },
                 
                 changeFontSize(dir) {
                     if (dir > 0 && this.fontSizeBase < 24) this.fontSizeBase += 1;
@@ -371,6 +408,8 @@
                     try {
                         this.loading = true;
                         await db.collection('tracker_items').doc(newId).set(newItem);
+                        this.undoStack.push({ type: 'create', id: newId });
+                        if (this.undoStack.length > 20) this.undoStack.shift();
                     } catch (e) {
                         console.error("Error creating document: ", e);
                         alert("Failed to create new item.");
@@ -399,8 +438,11 @@
                             this.seedFirestore();
                         } else if (!snapshot.empty) {
                             const newItems = [];
+                            this.cleanItemsMap = new Map();
                             snapshot.forEach((doc) => {
-                                newItems.push({ id: doc.id, ...doc.data() });
+                                const data = { id: doc.id, ...doc.data() };
+                                newItems.push(data);
+                                this.cleanItemsMap.set(doc.id, JSON.parse(JSON.stringify(data)));
                             });
                             
                             // Sort by ID naturally
@@ -442,6 +484,19 @@
                 },
                 
                 async updateItem(item) {
+                    if (this.loading) return; // Basic debounce/prevent double saving
+
+                    // Push previous state to undo stack
+                    const originalState = this.cleanItemsMap.get(item.id);
+                    if (originalState) {
+                        this.undoStack.push({ 
+                            type: 'update', 
+                            id: item.id, 
+                            previousData: JSON.parse(JSON.stringify(originalState)) 
+                        });
+                        if (this.undoStack.length > 20) this.undoStack.shift();
+                    }
+
                     try {
                         this.loading = true;
                         await db.collection('tracker_items').doc(item.id.toString()).set(item, { merge: true });
