@@ -220,7 +220,10 @@
                                         <div x-show="!item.dateOpened" class="text-charcoal/40 group-hover:text-charcoal/70 transition-colors">
                                             <i data-lucide="calendar" class="w-4 h-4"></i>
                                         </div>
-                                        <div x-show="item.dateOpened" class="text-xs text-emerald-600 font-medium" x-text="item.dateOpened"></div>
+                                        <div x-show="item.dateOpened" class="flex flex-col items-center">
+                                            <span class="text-[9px] uppercase font-bold text-emerald-700/60 mb-0.5" x-text="formatDateObj(item.dateOpened) ? formatDateObj(item.dateOpened).dayName : ''"></span>
+                                            <span class="text-xs text-emerald-600 font-bold" x-text="formatDateObj(item.dateOpened) ? formatDateObj(item.dateOpened).formattedDate : ''"></span>
+                                        </div>
                                         <input type="date" class="absolute inset-0 opacity-0 cursor-pointer w-full" x-model="item.dateOpened" @change="updateItem(item)">
                                     </div>
                                 </td>
@@ -229,7 +232,10 @@
                                         <div x-show="!item.dateResolved" class="text-charcoal/40 group-hover:text-charcoal/70 transition-colors">
                                             <i data-lucide="calendar" class="w-4 h-4"></i>
                                         </div>
-                                        <div x-show="item.dateResolved" class="text-xs text-red-600 font-medium" x-text="item.dateResolved"></div>
+                                        <div x-show="item.dateResolved" class="flex flex-col items-center">
+                                            <span class="text-[9px] uppercase font-bold text-red-700/60 mb-0.5" x-text="formatDateObj(item.dateResolved) ? formatDateObj(item.dateResolved).dayName : ''"></span>
+                                            <span class="text-xs text-red-600 font-bold" x-text="formatDateObj(item.dateResolved) ? formatDateObj(item.dateResolved).formattedDate : ''"></span>
+                                        </div>
                                         <input type="date" class="absolute inset-0 opacity-0 cursor-pointer w-full" x-model="item.dateResolved" @change="updateItem(item)">
                                     </div>
                                 </td>
@@ -311,6 +317,20 @@
                 changeFontSize(dir) {
                     if (dir > 0 && this.fontSizeBase < 24) this.fontSizeBase += 1;
                     if (dir < 0 && this.fontSizeBase > 10) this.fontSizeBase -= 1;
+                },
+
+                formatDateObj(dateStr) {
+                    if (!dateStr || dateStr === 'nan') return null;
+                    const parts = dateStr.split('-');
+                    if (parts.length !== 3) return null;
+                    // Create date using local timezone to avoid off-by-one errors from UTC conversion
+                    const d = new Date(parts[0], parts[1] - 1, parts[2]);
+                    if (isNaN(d.getTime())) return null;
+                    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                    return {
+                        dayName: days[d.getDay()],
+                        formattedDate: `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}`
+                    };
                 },
                 
                 checkPassword() {
