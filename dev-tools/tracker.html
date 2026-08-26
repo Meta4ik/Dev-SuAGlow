@@ -113,10 +113,15 @@
                     </select>
                     <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-charcoal/50 pointer-events-none"></i>
                 </div>
-                <button @click="logout" class="ml-2 text-charcoal/50 hover:text-charcoal/90 transition-colors" title="Lock Tracker">
+                <div class="flex items-center gap-1 bg-off-white border border-light-gray rounded-lg p-1 ml-2">
+                    <button @click="changeFontSize(-1)" class="w-7 h-7 flex items-center justify-center text-charcoal/70 hover:bg-white hover:shadow-sm hover:text-near-black rounded transition-all font-bold text-sm" title="Decrease font size">A-</button>
+                    <button @click="changeFontSize(1)" class="w-7 h-7 flex items-center justify-center text-charcoal/70 hover:bg-white hover:shadow-sm hover:text-near-black rounded transition-all font-bold text-sm" title="Increase font size">A+</button>
+                </div>
+                <div class="w-px h-6 bg-slate-200 mx-1"></div>
+                <button @click="logout" class="text-charcoal/50 hover:text-charcoal/90 transition-colors px-2" title="Lock Tracker">
                     <i data-lucide="lock" class="w-4 h-4"></i>
                 </button>
-                <div class="w-px h-6 bg-slate-200 mx-2"></div>
+                <div class="w-px h-6 bg-slate-200 mx-1"></div>
                 <button @click="addNewItem" class="bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-sm hover:bg-slate-800 transition-colors flex items-center gap-2">
                     <i data-lucide="plus" class="w-4 h-4"></i> New Item
                 </button>
@@ -281,6 +286,12 @@
                     area: '',
                     assignee: ''
                 },
+                fontSizeBase: parseInt(localStorage.getItem('trackerFontSize') || '16'),
+                
+                changeFontSize(dir) {
+                    if (dir > 0 && this.fontSizeBase < 24) this.fontSizeBase += 1;
+                    if (dir < 0 && this.fontSizeBase > 10) this.fontSizeBase -= 1;
+                },
                 
                 checkPassword() {
                     // Simple hash-like check to avoid plaintext in obvious places (though it's still in the source)
@@ -327,6 +338,11 @@
                 },
 
                 init() {
+                    document.documentElement.style.fontSize = this.fontSizeBase + 'px';
+                    this.$watch('fontSizeBase', val => {
+                        document.documentElement.style.fontSize = val + 'px';
+                        localStorage.setItem('trackerFontSize', val);
+                    });
                     if (this.isAuthenticated) {
                         this.setupFirestore();
                     }
