@@ -1,0 +1,22 @@
+<!-- Section: Standard Centered Hero -->
+<section id="hero" data-nav-theme="dark" class="relative min-h-[60vh] flex flex-col items-center justify-start text-center px-8 pt-[250px] overflow-hidden pb-32">
+    <div class="absolute inset-0 z-0">
+        <div class="w-full h-full bg-gradient-to-br from-near-black via-charcoal to-taupe/40"></div>
+        <div class="absolute inset-0 bg-black/30"></div>
+        <!-- Abstract Glow Effect -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-taupe/10 blur-[120px] rounded-full animate-pulse"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
+        <span class="badge-glass mb-12">{{BADGE_TEXT}}</span>
+        <h1 class="heading-wide text-4xl md:text-7xl mb-10 leading-[1.05] text-white [text-wrap:balance]">
+            {{TITLE_MAIN}}<br><span class="text-warm-gold">{{TITLE_ACCENT}}</span>
+        </h1>
+        <p class="text-sm md:text-xl text-white/70 max-w-3xl mx-auto mb-14 font-light tracking-wide leading-relaxed [text-wrap:balance]">
+            {{DESCRIPTION}}
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <a href="{{PRIMARY_CTA_LINK}}" target="_blank" class="btn-primary">{{PRIMARY_CTA_TEXT}}</a>
+            <a href="{{SECONDARY_CTA_LINK}}" class="btn-outline-white">{{SECONDARY_CTA_TEXT}}</a>
+        </div>
+    </div>
+</section>

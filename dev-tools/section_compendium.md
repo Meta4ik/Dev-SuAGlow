@@ -4,6 +4,19 @@ This guide outlines the different types of content sections available across the
 
 Use this compendium as a menu of options when planning content for new pages or updating existing ones. By providing content that fits these structures, we can maintain consistency across the entire site.
 
+---
+
+**Tip for Content Creators:**
+When writing copy for a new treatment page, a standard flow usually consists of:
+1. `hero` (Hook & Intro)
+2. `what-is` (The Explanation)
+3. `treatment-benefits` (The Value)
+4. `expect` (The Experience)
+5. `why-sua` (The Differentiator)
+6. `faq` (The Reassurance)
+
+---
+
 ## 1. Hero & Introductions
 The first impression of a page, typically containing a large headline, background image/video, and a call-to-action. There are several structural variations of heroes used:
 
@@ -56,13 +69,4 @@ Sections used on "Hub" pages to list multiple child treatments.
 * **`injectables` / `biostimulators` / `ha-fillers` / `skin-boosters`**: Category-specific hubs (*[skin-health](../skin-health.html), [injectables](../injectables.html)*)
 * **`medical-tox` / `cosmetic-tox` / `skintox`**: Toxin-specific category blocks (*[injectables](../injectables.html), [cosmetic-tox](../cosmetic-tox.html)*)
 
----
 
-**Tip for Content Creators:**
-When writing copy for a new treatment page, a standard flow usually consists of:
-1. `hero` (Hook & Intro)
-2. `what-is` (The Explanation)
-3. `treatment-benefits` (The Value)
-4. `expect` (The Experience)
-5. `why-sua` (The Differentiator)
-6. `faq` (The Reassurance)

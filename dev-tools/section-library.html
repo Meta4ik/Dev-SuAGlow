@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuA Glow: Section Library & Flow Builder</title>
+    <link rel="icon" href="../assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../dist/output.css?v=43">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8F9FA;
+            color: #2D3134;
+        }
+
+        .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Custom Device Frames */
+        .preview-wrapper {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-left: auto;
+            margin-right: auto;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        .viewport-desktop {
+            width: 100%;
+        }
+
+        .viewport-tablet {
+            max-width: 768px;
+        }
+
+        .viewport-mobile {
+            max-width: 375px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: rgba(170, 152, 124, 0.3);
+            border-radius: 9999px;
+        }
+
+        /* Ensure all section previews in the library are always 100% visible and not hidden by scroll animations */
+        .animate-on-scroll {
+            opacity: 1 !important;
+            transform: none !important;
+            visibility: visible !important;
+        }
+
+        .animate-on-scroll.fade-up,
+        .animate-on-scroll.fade-left,
+        .animate-on-scroll.fade-right,
+        .animate-on-scroll.delay-100,
+        .animate-on-scroll.delay-200,
+        .animate-on-scroll.delay-300 {
+            opacity: 1 !important;
+            transform: none !important;
+            visibility: visible !important;
+        }
+
+        /* Toast notification */
+        #toast {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        #toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col antialiased selection:bg-[#AA987C] selection:text-white">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3">
+                <a href="dev.html" class="flex items-center gap-2 group">
+                    <img src="../assets/favicon.png" alt="SuA Glow" class="w-8 h-8 group-hover:rotate-12 transition-transform">
+                    <span class="font-heading font-black text-sm uppercase tracking-widest text-slate-900">SuA Glow</span>
+                </a>
+                <span class="text-slate-300">/</span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-[#AA987C] bg-[#AA987C]/10 px-2.5 py-1 rounded-full">
+                    Section Library & Flow Builder
+                </span>
+            </div>
+
+            <!-- Dev Navigation Links -->
+            <div class="flex items-center gap-2">
+                <a href="dev.html" class="px-3 py-1.5 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="terminal" class="w-3.5 h-3.5"></i> Dev Portal
+                </a>
+                <a href="content-styles.html" class="px-3 py-1.5 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="layout-template" class="w-3.5 h-3.5"></i> Compendium
+                </a>
+                <a href="style-guide.html" class="px-3 py-1.5 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="palette" class="w-3.5 h-3.5"></i> Style Guide
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-6 py-8">
+
+        <!-- Blueprint Hero Banner -->
+        <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-8 md:p-10 text-white shadow-xl mb-8 relative overflow-hidden">
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-[#AA987C]/20 rounded-full blur-3xl"></div>
+            <div class="relative z-10 space-y-4">
+                <div class="flex items-center gap-2 text-[#AA987C] text-xs font-bold uppercase tracking-widest">
+                    <i data-lucide="layers" class="w-4 h-4"></i> Interactive Section System
+                </div>
+                <h1 class="font-heading font-black text-2xl md:text-4xl text-white tracking-tight">
+                    Injectable Section Library & Page Builder
+                </h1>
+                <p class="text-slate-300 text-sm md:text-base font-light max-w-3xl leading-relaxed">
+                    A visual catalog of all SuA Glow layout sections. Preview rendered designs, test responsive viewports, customize props live, copy copy-pasteable HTML, or assemble complete treatment pages with 1 click.
+                </p>
+
+                <!-- Standard Flow Sequence Pill Track -->
+                <div class="pt-4 border-t border-slate-700/60 mt-6">
+                    <p class="text-xs font-bold uppercase tracking-wider text-[#AA987C] mb-3 flex items-center gap-2">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Standard Flow Blueprint Sequence:
+                    </p>
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="bg-white/10 hover:bg-white/20 border border-white/10 text-white text-xs px-3 py-1 rounded-full font-mono">1. Hero</span>
+                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i>
+                        <span class="bg-white/10 hover:bg-white/20 border border-white/10 text-white text-xs px-3 py-1 rounded-full font-mono">2. What-Is</span>
+                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i>
+                        <span class="bg-white/10 hover:bg-white/20 border border-white/10 text-white text-xs px-3 py-1 rounded-full font-mono">3. Benefits</span>
+                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i>
+                        <span class="bg-white/10 hover:bg-white/20 border border-white/10 text-white text-xs px-3 py-1 rounded-full font-mono">4. Expect</span>
+                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i>
+                        <span class="bg-white/10 hover:bg-white/20 border border-white/10 text-white text-xs px-3 py-1 rounded-full font-mono">5. Why-SuA</span>
+                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i>
+                        <span class="bg-white/10 hover:bg-white/20 border border-white/10 text-white text-xs px-3 py-1 rounded-full font-mono">6. Medical Oversight</span>
+                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i>
+                        <span class="bg-white/10 hover:bg-white/20 border border-white/10 text-white text-xs px-3 py-1 rounded-full font-mono">7. FAQ</span>
+                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i>
+                        <span class="bg-white/10 hover:bg-white/20 border border-white/10 text-white text-xs px-3 py-1 rounded-full font-mono">8. Booking CTA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls & Mode Selector -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-8 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+            
+            <!-- Tab Mode Buttons -->
+            <div class="flex items-center gap-2 p-1 bg-slate-100 rounded-xl">
+                <button id="tab-explorer-btn" class="px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all bg-white text-slate-900 shadow-xs flex items-center gap-2">
+                    <i data-lucide="grid" class="w-4 h-4 text-[#AA987C]"></i> Section Library
+                </button>
+                <button id="tab-builder-btn" class="px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all text-slate-600 hover:text-slate-900 flex items-center gap-2">
+                    <i data-lucide="wand-2" class="w-4 h-4 text-[#AA987C]"></i> Flow Page Builder
+                </button>
+            </div>
+
+            <!-- Viewport Resizer & Search -->
+            <div class="flex flex-wrap items-center gap-3">
+                
+                <!-- Search input -->
+                <div class="relative min-w-[240px]">
+                    <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" id="search-input" placeholder="Search section styles..." class="w-full pl-10 pr-4 py-2 rounded-xl text-xs bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#AA987C]/30 focus:border-[#AA987C]">
+                </div>
+
+                <!-- Viewport toggles -->
+                <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-xl">
+                    <button class="viewport-btn active p-2 rounded-lg text-slate-800 bg-white shadow-xs transition-all" data-viewport="desktop" title="Desktop View (100%)">
+                        <i data-lucide="monitor" class="w-4 h-4"></i>
+                    </button>
+                    <button class="viewport-btn p-2 rounded-lg text-slate-500 hover:text-slate-800 transition-all" data-viewport="tablet" title="Tablet View (768px)">
+                        <i data-lucide="tablet" class="w-4 h-4"></i>
+                    </button>
+                    <button class="viewport-btn p-2 rounded-lg text-slate-500 hover:text-slate-800 transition-all" data-viewport="mobile" title="Mobile View (375px)">
+                        <i data-lucide="smartphone" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= EXPLORER VIEW ================= -->
+        <div id="view-explorer" class="space-y-8">
+            
+            <!-- Category Filter Pills -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 custom-scrollbar" id="category-pills">
+                <!-- Injected via JS -->
+            </div>
+
+            <!-- Sections Showcase Grid -->
+            <div class="space-y-16" id="sections-container">
+                <!-- Injected via JS -->
+            </div>
+
+        </div>
+
+        <!-- ================= PAGE BUILDER VIEW ================= -->
+        <div id="view-builder" class="hidden space-y-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Builder Controls Sidebar -->
+                <div class="lg:col-span-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                    <div>
+                        <h2 class="font-heading text-lg font-bold text-slate-900 mb-1">Page Blueprint Builder</h2>
+                        <p class="text-xs text-slate-500 leading-relaxed">Select and sequence the sections you want to assemble into a new treatment page.</p>
+                    </div>
+
+                    <!-- Page Metadata -->
+                    <div class="space-y-3 pt-4 border-t border-slate-100">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-600">Page Title</label>
+                        <input type="text" id="builder-meta-title" value="Salmon PN Facial | SuA K Glow Med Spa" class="w-full px-3 py-2 rounded-lg text-xs bg-slate-50 border border-slate-200">
+                        
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 pt-2">Meta Description</label>
+                        <textarea id="builder-meta-desc" rows="2" class="w-full px-3 py-2 rounded-lg text-xs bg-slate-50 border border-slate-200">Korean-inspired cellular recovery and barrier repair treatment utilizing Polynucleotides.</textarea>
+                    </div>
+
+                    <!-- Section Checklists -->
+                    <div class="space-y-3 pt-4 border-t border-slate-100">
+                        <div class="flex items-center justify-between">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600">Active Sections</label>
+                            <button id="builder-reset-btn" class="text-[11px] text-[#AA987C] font-semibold hover:underline">Reset to Standard Flow</button>
+                        </div>
+
+                        <div class="space-y-2 max-h-96 overflow-y-auto custom-scrollbar pr-2" id="builder-sections-list">
+                            <!-- Injected via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Export Actions -->
+                    <div class="pt-4 border-t border-slate-100 space-y-3">
+                        <button id="builder-copy-page-btn" class="w-full py-3 px-4 rounded-xl bg-slate-900 text-white text-xs font-bold uppercase tracking-wider hover:bg-[#AA987C] transition-colors flex items-center justify-center gap-2 shadow-sm">
+                            <i data-lucide="copy" class="w-4 h-4"></i> Copy Full Page HTML
+                        </button>
+                        <button id="builder-download-btn" class="w-full py-2.5 px-4 rounded-xl border border-slate-300 text-slate-700 text-xs font-bold uppercase tracking-wider hover:bg-slate-50 transition-colors flex items-center justify-center gap-2">
+                            <i data-lucide="download" class="w-4 h-4"></i> Download .HTML File
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Live Generated Full Page Preview -->
+                <div class="lg:col-span-8 space-y-4">
+                    <div class="flex items-center justify-between bg-white px-6 py-3 rounded-2xl border border-slate-200">
+                        <span class="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-2">
+                            <i data-lucide="eye" class="w-4 h-4 text-[#AA987C]"></i> Full Page Preview
+                        </span>
+                        <span id="builder-count-badge" class="text-xs font-mono bg-slate-100 text-slate-700 px-2.5 py-1 rounded-full">
+                            8 Sections Active
+                        </span>
+                    </div>
+
+                    <div class="preview-wrapper viewport-desktop" id="builder-preview-wrapper">
+                        <div id="builder-live-preview-container" class="bg-off-white min-h-[600px]">
+                            <!-- Rendered page preview -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Customizer Modal Drawer -->
+    <div id="customizer-modal" class="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto custom-scrollbar relative">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                <div>
+                    <h3 class="font-heading font-bold text-lg text-slate-900" id="customizer-title">Customize Section</h3>
+                    <p class="text-xs text-slate-500">Edit props in real-time to preview customized variations.</p>
+                </div>
+                <button id="customizer-close-btn" class="p-2 text-slate-400 hover:text-slate-900 rounded-full hover:bg-slate-100">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div id="customizer-fields" class="space-y-4">
+                <!-- Dynamically populated fields -->
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-end gap-3">
+                <button id="customizer-cancel-btn" class="px-4 py-2 text-xs font-bold uppercase tracking-wider text-slate-600 hover:bg-slate-100 rounded-xl">Cancel</button>
+                <button id="customizer-apply-btn" class="px-6 py-2 text-xs font-bold uppercase tracking-wider bg-slate-900 text-white hover:bg-[#AA987C] rounded-xl">Apply & Update Preview</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Toast Notification -->
+    <div id="toast" class="fixed bottom-8 right-8 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 text-xs font-medium border border-slate-700">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+        <span id="toast-message">Snippet copied to clipboard!</span>
+    </div>
+
+    <!-- Script imports -->
+    <script type="module">
+        import { SECTION_LIBRARY, SECTION_CATEGORIES, STANDARD_FLOW_BLUEPRINT, renderSection, generatePageHtml } from '../components/section-library.js';
+
+        // State
+        let currentCategory = 'all';
+        let currentViewport = 'desktop';
+        let searchQuery = '';
+        let customizedProps = {};
+        let activeBuilderSections = [...STANDARD_FLOW_BLUEPRINT];
+
+        // Elements
+        const categoryPillsEl = document.getElementById('category-pills');
+        const sectionsContainerEl = document.getElementById('sections-container');
+        const searchInputEl = document.getElementById('search-input');
+        const tabExplorerBtn = document.getElementById('tab-explorer-btn');
+        const tabBuilderBtn = document.getElementById('tab-builder-btn');
+        const viewExplorer = document.getElementById('view-explorer');
+        const viewBuilder = document.getElementById('view-builder');
+        const builderSectionsListEl = document.getElementById('builder-sections-list');
+        const builderLivePreviewContainer = document.getElementById('builder-live-preview-container');
+        const builderCountBadge = document.getElementById('builder-count-badge');
+        const builderCopyPageBtn = document.getElementById('builder-copy-page-btn');
+        const builderDownloadBtn = document.getElementById('builder-download-btn');
+        const builderResetBtn = document.getElementById('builder-reset-btn');
+        const customizerModal = document.getElementById('customizer-modal');
+        const customizerCloseBtn = document.getElementById('customizer-close-btn');
+        const customizerCancelBtn = document.getElementById('customizer-cancel-btn');
+        const customizerApplyBtn = document.getElementById('customizer-apply-btn');
+        const customizerFieldsEl = document.getElementById('customizer-fields');
+        const customizerTitleEl = document.getElementById('customizer-title');
+        let editingSectionId = null;
+
+        // Init Categories
+        function initCategoryPills() {
+            categoryPillsEl.innerHTML = SECTION_CATEGORIES.map(cat => `
+                <button class="category-pill px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap transition-all ${cat.id === currentCategory ? 'bg-slate-900 text-white shadow-xs' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'}" data-category="${cat.id}">
+                    ${cat.label}
+                </button>
+            `).join('');
+
+            document.querySelectorAll('.category-pill').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    currentCategory = btn.dataset.category;
+                    initCategoryPills();
+                    renderExplorerSections();
+                });
+            });
+        }
+
+        // Render Explorer Sections
+        function renderExplorerSections() {
+            const sections = Object.values(SECTION_LIBRARY).filter(s => {
+                const matchesCategory = currentCategory === 'all' || s.category === currentCategory;
+                const matchesSearch = searchQuery === '' || 
+                    s.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                    s.id.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                    s.description.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            if (sections.length === 0) {
+                sectionsContainerEl.innerHTML = `
+                    <div class="text-center py-20 bg-white rounded-3xl border border-slate-200 p-8">
+                        <i data-lucide="inbox" class="w-10 h-10 text-slate-300 mx-auto mb-3"></i>
+                        <p class="text-slate-600 font-medium text-sm">No sections match your search or filter.</p>
+                        <button id="clear-search-btn" class="mt-3 text-xs text-[#AA987C] font-bold uppercase tracking-wider hover:underline">Reset Filters</button>
+                    </div>
+                `;
+                if (window.lucide) window.lucide.createIcons();
+                document.getElementById('clear-search-btn')?.addEventListener('click', () => {
+                    currentCategory = 'all';
+                    searchQuery = '';
+                    searchInputEl.value = '';
+                    initCategoryPills();
+                    renderExplorerSections();
+                });
+                return;
+            }
+
+            sectionsContainerEl.innerHTML = sections.map(sec => {
+                const props = customizedProps[sec.id] || sec.defaultProps;
+                const renderedHtml = sec.render(props, { assetPrefix: '../' });
+
+                return `
+                <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 shadow-sm space-y-6" id="section-card-${sec.id}">
+                    
+                    <!-- Section Meta Header -->
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="text-[10px] font-bold uppercase tracking-wider bg-[#AA987C]/10 text-[#AA987C] px-2.5 py-0.5 rounded-full font-mono">
+                                    ${sec.id}
+                                </span>
+                                <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">
+                                    Category: ${sec.category}
+                                </span>
+                            </div>
+                            <h2 class="font-heading font-bold text-xl text-slate-900">${sec.name}</h2>
+                            <p class="text-xs text-slate-500 font-light mt-0.5">${sec.description}</p>
+                        </div>
+
+                        <!-- Action buttons -->
+                        <div class="flex flex-wrap items-center gap-2">
+                            <button class="customize-btn px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors" data-id="${sec.id}">
+                                <i data-lucide="sliders" class="w-3.5 h-3.5 text-[#AA987C]"></i> Customize
+                            </button>
+                            <button class="copy-html-btn px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors" data-id="${sec.id}">
+                                <i data-lucide="code" class="w-3.5 h-3.5 text-[#AA987C]"></i> Copy HTML
+                            </button>
+                            <button class="copy-js-btn px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-[#AA987C] text-white text-xs font-semibold flex items-center gap-1.5 transition-colors" data-id="${sec.id}">
+                                <i data-lucide="terminal" class="w-3.5 h-3.5 text-white"></i> Copy JS
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Live Rendered Preview Frame -->
+                    <div class="preview-wrapper viewport-${currentViewport}">
+                        <div class="section-live-canvas overflow-hidden">
+                            ${renderedHtml}
+                        </div>
+                    </div>
+
+                </div>
+                `;
+            }).join('');
+
+            if (window.lucide) window.lucide.createIcons();
+            attachExplorerActionListeners();
+        }
+
+        // Attach action buttons
+        function attachExplorerActionListeners() {
+            document.querySelectorAll('.copy-html-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const id = btn.dataset.id;
+                    const props = customizedProps[id] || SECTION_LIBRARY[id].defaultProps;
+                    const html = SECTION_LIBRARY[id].render(props);
+                    navigator.clipboard.writeText(html.trim());
+                    showToast(`HTML for "${SECTION_LIBRARY[id].name}" copied!`);
+                });
+            });
+
+            document.querySelectorAll('.copy-js-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const id = btn.dataset.id;
+                    const props = customizedProps[id] || SECTION_LIBRARY[id].defaultProps;
+                    const code = `import { injectSection } from './components/section-library.js';\n\ninjectSection('#target-container', '${id}', ${JSON.stringify(props, null, 2)});`;
+                    navigator.clipboard.writeText(code);
+                    showToast(`JavaScript injection snippet copied!`);
+                });
+            });
+
+            document.querySelectorAll('.customize-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    openCustomizer(btn.dataset.id);
+                });
+            });
+        }
+
+        // Customizer Modal
+        function openCustomizer(id) {
+            editingSectionId = id;
+            const sec = SECTION_LIBRARY[id];
+            const props = { ...sec.defaultProps, ...(customizedProps[id] || {}) };
+            
+            customizerTitleEl.textContent = `Customize: ${sec.name}`;
+            
+            customizerFieldsEl.innerHTML = Object.entries(props).map(([key, val]) => {
+                if (typeof val === 'string') {
+                    const isLong = val.length > 50;
+                    return `
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">${key}</label>
+                            ${isLong ? `
+                                <textarea data-prop="${key}" class="w-full px-3 py-2 rounded-xl text-xs bg-slate-50 border border-slate-200" rows="3">${val}</textarea>
+                            ` : `
+                                <input type="text" data-prop="${key}" value="${val}" class="w-full px-3 py-2 rounded-xl text-xs bg-slate-50 border border-slate-200">
+                            `}
+                        </div>
+                    `;
+                }
+                return '';
+            }).join('');
+
+            customizerModal.classList.remove('hidden');
+        }
+
+        customizerCloseBtn.addEventListener('click', () => customizerModal.classList.add('hidden'));
+        customizerCancelBtn.addEventListener('click', () => customizerModal.classList.add('hidden'));
+
+        customizerApplyBtn.addEventListener('click', () => {
+            if (!editingSectionId) return;
+            const newProps = { ...(customizedProps[editingSectionId] || SECTION_LIBRARY[editingSectionId].defaultProps) };
+            
+            customizerFieldsEl.querySelectorAll('[data-prop]').forEach(field => {
+                const propName = field.dataset.prop;
+                newProps[propName] = field.value;
+            });
+
+            customizedProps[editingSectionId] = newProps;
+            customizerModal.classList.add('hidden');
+            renderExplorerSections();
+            renderBuilderPreview();
+            showToast(`Custom properties applied to ${SECTION_LIBRARY[editingSectionId].name}!`);
+        });
+
+        // Viewport Switcher
+        document.querySelectorAll('.viewport-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.viewport-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-white', 'text-slate-800', 'shadow-xs');
+                    b.classList.add('text-slate-500');
+                });
+                btn.classList.add('active', 'bg-white', 'text-slate-800', 'shadow-xs');
+                btn.classList.remove('text-slate-500');
+
+                currentViewport = btn.dataset.viewport;
+                document.querySelectorAll('.preview-wrapper').forEach(wrap => {
+                    wrap.className = `preview-wrapper viewport-${currentViewport}`;
+                });
+            });
+        });
+
+        // Search Input
+        searchInputEl.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderExplorerSections();
+        });
+
+        // Tabs Toggle
+        tabExplorerBtn.addEventListener('click', () => {
+            tabExplorerBtn.classList.add('bg-white', 'text-slate-900', 'shadow-xs');
+            tabExplorerBtn.classList.remove('text-slate-600');
+            tabBuilderBtn.classList.remove('bg-white', 'text-slate-900', 'shadow-xs');
+            tabBuilderBtn.classList.add('text-slate-600');
+            viewExplorer.classList.remove('hidden');
+            viewBuilder.classList.add('hidden');
+        });
+
+        tabBuilderBtn.addEventListener('click', () => {
+            tabBuilderBtn.classList.add('bg-white', 'text-slate-900', 'shadow-xs');
+            tabBuilderBtn.classList.remove('text-slate-600');
+            tabExplorerBtn.classList.remove('bg-white', 'text-slate-900', 'shadow-xs');
+            tabExplorerBtn.classList.add('text-slate-600');
+            viewExplorer.classList.add('hidden');
+            viewBuilder.classList.remove('hidden');
+            initBuilder();
+        });
+
+        // Builder View Init
+        function initBuilder() {
+            builderSectionsListEl.innerHTML = Object.values(SECTION_LIBRARY).map(s => {
+                const isChecked = activeBuilderSections.includes(s.id);
+                return `
+                    <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors text-xs">
+                        <input type="checkbox" value="${s.id}" class="builder-checkbox rounded text-[#AA987C] focus:ring-[#AA987C]" ${isChecked ? 'checked' : ''}>
+                        <div class="flex-1">
+                            <span class="font-bold text-slate-800 block">${s.name}</span>
+                            <span class="text-[10px] text-slate-400 font-mono">${s.id}</span>
+                        </div>
+                    </label>
+                `;
+            }).join('');
+
+            document.querySelectorAll('.builder-checkbox').forEach(cb => {
+                cb.addEventListener('change', () => {
+                    const id = cb.value;
+                    if (cb.checked) {
+                        if (!activeBuilderSections.includes(id)) activeBuilderSections.push(id);
+                    } else {
+                        activeBuilderSections = activeBuilderSections.filter(x => x !== id);
+                    }
+                    renderBuilderPreview();
+                });
+            });
+
+            renderBuilderPreview();
+        }
+
+        function renderBuilderPreview() {
+            builderCountBadge.textContent = `${activeBuilderSections.length} Sections Active`;
+            
+            const meta = {
+                title: document.getElementById('builder-meta-title')?.value,
+                description: document.getElementById('builder-meta-desc')?.value
+            };
+
+            builderLivePreviewContainer.innerHTML = activeBuilderSections.map(id => {
+                const props = customizedProps[id] || SECTION_LIBRARY[id]?.defaultProps || {};
+                return renderSection(id, props, { assetPrefix: '../' });
+            }).join('');
+
+            if (window.lucide) window.lucide.createIcons();
+        }
+
+        builderResetBtn.addEventListener('click', () => {
+            activeBuilderSections = [...STANDARD_FLOW_BLUEPRINT];
+            initBuilder();
+            showToast('Reset to Standard Flow sequence!');
+        });
+
+        builderCopyPageBtn.addEventListener('click', () => {
+            const meta = {
+                title: document.getElementById('builder-meta-title').value,
+                description: document.getElementById('builder-meta-desc').value
+            };
+            const fullHtml = generatePageHtml(activeBuilderSections, meta, customizedProps);
+            navigator.clipboard.writeText(fullHtml);
+            showToast('Complete page HTML copied to clipboard!');
+        });
+
+        builderDownloadBtn.addEventListener('click', () => {
+            const meta = {
+                title: document.getElementById('builder-meta-title').value,
+                description: document.getElementById('builder-meta-desc').value
+            };
+            const fullHtml = generatePageHtml(activeBuilderSections, meta, customizedProps);
+            const blob = new Blob([fullHtml], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'treatment-template.html';
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('Downloaded treatment-template.html!');
+        });
+
+        // Toast Helper
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        // Global image fallback handler to prevent any broken image icons
+        window.addEventListener('error', (e) => {
+            if (e.target && e.target.tagName === 'IMG') {
+                e.target.onerror = null;
+                // Graceful fallback to transparent or neutral placeholder
+                e.target.classList.add('bg-slate-200');
+                if (!e.target.src.includes('favicon.png')) {
+                    e.target.src = '../assets/favicon.png';
+                }
+            }
+        }, true);
+
+        // Initialize on load
+        initCategoryPills();
+        renderExplorerSections();
+    </script>
+
+</body>
+
+</html>

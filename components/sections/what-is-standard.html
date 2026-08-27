@@ -1,0 +1,40 @@
+<!-- Section: Standard Treatment Explanation (What Is It?) -->
+<section id="what-is" data-nav-theme="dark" class="py-32 px-10 bg-off-white">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20 animate-on-scroll fade-up">
+            <h2 class="heading-wide text-3xl md:text-4xl mb-6 [text-wrap:balance]">{{SECTION_TITLE}}</h2>
+            <p class="heading-wide text-xs text-taupe opacity-70 tracking-[0.4em] uppercase">{{SUBTITLE_PHILOSOPHY}}</p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="space-y-10 animate-on-scroll fade-right">
+                <p class="text-xl font-light leading-relaxed [text-wrap:balance]">{{LEAD_STATEMENT}}</p>
+                <p class="text-base font-light opacity-60 leading-relaxed">{{DETAILED_DESCRIPTION}}</p>
+                <div class="grid grid-cols-2 gap-6 pt-6">
+                    <div class="space-y-2">
+                        <h4 class="heading-wide text-[10px] text-taupe tracking-widest uppercase [text-wrap:balance]">{{COLUMN1_TITLE}}</h4>
+                        <ul class="text-[11px] font-medium space-y-1 opacity-60">
+                            {{COLUMN1_ITEMS}}
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="heading-wide text-[10px] text-taupe tracking-widest uppercase [text-wrap:balance]">{{COLUMN2_TITLE}}</h4>
+                        <ul class="text-[11px] font-medium space-y-1 opacity-60">
+                            {{COLUMN2_ITEMS}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Visual Media Card -->
+            <div class="relative animate-on-scroll fade-left delay-200">
+                <div class="absolute inset-0 bg-taupe/5 rounded-3xl rotate-3 scale-105"></div>
+                <div class="relative rounded-3xl shadow-xl overflow-hidden aspect-[4/5] bg-light-gray group">
+                    <img src="{{IMAGE_SRC}}" alt="{{IMAGE_ALT}}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="absolute bottom-8 left-8 text-white opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                        <p class="heading-wide text-xs">{{IMAGE_CAPTION}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

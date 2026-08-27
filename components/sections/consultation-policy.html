@@ -1,0 +1,35 @@
+<!-- Section: Consultation Policy Banner -->
+<section id="consultation-policy" class="py-16 px-8 md:px-12 bg-white">
+    <div class="max-w-6xl mx-auto">
+        <div class="bg-off-white border border-charcoal/10 rounded-3xl p-8 md:p-12 shadow-sm animate-on-scroll fade-up">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5 text-center lg:text-left border-b lg:border-b-0 lg:border-r border-charcoal/10 pb-6 lg:pb-0 lg:pr-6">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-warm-gold/10 rounded-full text-[10px] tracking-widest uppercase text-warm-gold font-bold mb-3">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> {{BADGE_TEXT}}
+                    </span>
+                    <h2 class="heading-wide text-2xl md:text-3xl text-near-black mb-2">{{TITLE}}</h2>
+                    <p class="text-xs md:text-sm text-charcoal/70 font-light leading-relaxed">{{DESCRIPTION}}</p>
+                </div>
+
+                <div class="lg:col-span-4 bg-white border border-charcoal/5 rounded-2xl p-6 text-center shadow-xs">
+                    <div class="w-10 h-10 rounded-full bg-warm-gold/10 text-warm-gold flex items-center justify-center mx-auto mb-2">
+                        <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                    </div>
+                    <p class="text-xs uppercase font-bold text-taupe mb-1">Consultation Fee</p>
+                    <p class="font-heading text-3xl font-bold text-warm-gold">{{FEE_AMOUNT}}</p>
+                    <p class="text-xs text-charcoal/60 mt-1">{{FEE_NOTE}}</p>
+                </div>
+
+                <div class="lg:col-span-3 flex flex-col gap-4">
+                    <div class="bg-warm-gold/10 rounded-2xl p-4 border border-warm-gold/20 text-xs text-near-black leading-snug">
+                        <strong class="font-semibold text-warm-gold block mb-1">Same-Day Application</strong>
+                        {{CREDIT_TEXT}}
+                    </div>
+                    <a href="{{CTA_LINK}}" target="_blank" class="btn-primary text-center text-xs py-3">
+                        {{CTA_TEXT}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

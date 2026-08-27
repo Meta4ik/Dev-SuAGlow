@@ -1,0 +1,26 @@
+<!-- Section: Oligio X Dedicated Hero -->
+<section id="oligio-hero" class="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 px-8 bg-off-white overflow-hidden">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        <div class="lg:col-span-7 space-y-8 animate-on-scroll fade-right">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-warm-gold/10 border border-warm-gold/20 text-warm-gold text-xs font-semibold uppercase tracking-wider">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> {{BADGE_TEXT}}
+            </div>
+            <h1 class="heading-wide text-4xl sm:text-6xl text-near-black font-light leading-[1.1] [text-wrap:balance]">
+                {{TITLE_LINE1}}<br><span class="font-normal text-warm-gold">{{TITLE_LINE2}}</span>
+            </h1>
+            <p class="text-base sm:text-lg text-charcoal/80 font-light max-w-xl leading-relaxed">
+                {{DESCRIPTION}}
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a href="{{PRIMARY_CTA_LINK}}" target="_blank" class="btn-primary">{{PRIMARY_CTA_TEXT}}</a>
+                <a href="{{SECONDARY_CTA_LINK}}" class="btn-outline">{{SECONDARY_CTA_TEXT}}</a>
+            </div>
+        </div>
+
+        <div class="lg:col-span-5 animate-on-scroll fade-left">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-light-gray/40 aspect-[4/5] bg-white">
+                <img src="{{IMAGE_SRC}}" alt="{{IMAGE_ALT}}" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+</section>

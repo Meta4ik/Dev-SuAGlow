@@ -1,0 +1,139 @@
+<!-- Section: Oligio X Treatment Zones Interactive Map -->
+<section id="treatment-zones" class="py-24 px-6 bg-off-white overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 animate-on-scroll fade-up">
+            <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">{{BADGE_TEXT}}</span>
+            <h2 class="heading-wide text-3xl md:text-5xl mb-6 text-near-black leading-tight [text-wrap:balance]">{{SECTION_TITLE}}</h2>
+            <p class="text-base font-light opacity-75 max-w-3xl mx-auto leading-relaxed [text-wrap:balance]">
+                {{SECTION_SUBTITLE}}
+            </p>
+        </div>
+
+        <!-- Interactive Map Container -->
+        <div class="relative flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-5xl mx-auto">
+            <!-- Central Portrait Visual (First on mobile, middle on desktop) -->
+            <div class="order-1 lg:order-2 relative w-full lg:w-2/4 max-w-[340px] sm:max-w-[400px] aspect-[4/5] flex justify-center items-center z-10">
+                <div class="absolute inset-0 bg-gradient-to-tr from-warm-gold/5 to-transparent blur-2xl rounded-full"></div>
+                
+                <div class="relative w-full h-full rounded-[2rem] overflow-hidden border border-light-gray/30 shadow-2xl bg-white">
+                    <img src="{{MODEL_IMAGE_SRC}}" alt="Oligio X Face Treatment Map" class="w-full h-full object-cover contrast-[1.05] brightness-[1.02]">
+                    <img src="{{MODEL_IMAGE_SRC}}" alt="" aria-hidden="true" id="model-grayscale" class="absolute inset-0 w-full h-full object-cover grayscale contrast-[1.05] brightness-95" style="-webkit-mask-image: none; mask-image: none; transition: mask-image 0.15s ease, -webkit-mask-image 0.15s ease;">
+                    <div class="absolute inset-0 bg-near-black/5 mix-blend-multiply pointer-events-none"></div>
+                </div>
+
+                <!-- Interactive SVG Layer for lines and dots -->
+                <svg class="absolute inset-0 w-full h-full pointer-events-none z-20" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- Desktop Lines connecting left cards to dots -->
+                    <path id="line-forehead" d="M 0 60 L 105 60 L 158 105" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line hidden lg:block opacity-60 transition-all duration-300" />
+                    <path id="line-eye" d="M 0 190 L 100 190 L 155 144" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line hidden lg:block opacity-60 transition-all duration-300" />
+                    <path id="line-cheeks" d="M 0 320 L 105 320 L 158 203" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line hidden lg:block opacity-60 transition-all duration-300" />
+                    <path id="line-neck" d="M 0 450 L 130 450 L 187 330" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line hidden lg:block opacity-60 transition-all duration-300" />
+
+                    <!-- Desktop Lines connecting right cards to dots -->
+                    <path id="line-brow" d="M 400 60 L 260 60 L 153 127" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line hidden lg:block opacity-60 transition-all duration-300" />
+                    <path id="line-smile" d="M 400 190 L 245 190 L 131 227" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line hidden lg:block opacity-60 transition-all duration-300" />
+                    <path id="line-jawline" d="M 400 320 L 295 320 L 199 266" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line hidden lg:block opacity-60 transition-all duration-300" />
+                    <path id="line-chin" d="M 400 450 L 275 450 L 170 288" stroke="#d4af37" stroke-width="2" stroke-dasharray="3 3" class="zone-line hidden lg:block opacity-60 transition-all duration-300" />
+
+                    <!-- Interactive Dots -->
+                    <g id="dot-forehead" data-zone="forehead" class="zone-dot pointer-events-auto cursor-pointer transition-all duration-300">
+                        <circle cx="158" cy="105" r="10" fill="#ffffff" class="opacity-30" />
+                        <circle cx="158" cy="105" r="5" fill="#d4af37" />
+                    </g>
+                    <g id="dot-eye" data-zone="eye" class="zone-dot pointer-events-auto cursor-pointer transition-all duration-300">
+                        <circle cx="155" cy="144" r="10" fill="#ffffff" class="opacity-30" />
+                        <circle cx="155" cy="144" r="5" fill="#d4af37" />
+                    </g>
+                    <g id="dot-cheeks" data-zone="cheeks" class="zone-dot pointer-events-auto cursor-pointer transition-all duration-300">
+                        <circle cx="158" cy="203" r="10" fill="#ffffff" class="opacity-30" />
+                        <circle cx="158" cy="203" r="5" fill="#d4af37" />
+                    </g>
+                    <g id="dot-neck" data-zone="neck" class="zone-dot pointer-events-auto cursor-pointer transition-all duration-300">
+                        <circle cx="187" cy="330" r="10" fill="#ffffff" class="opacity-30" />
+                        <circle cx="187" cy="330" r="5" fill="#d4af37" />
+                    </g>
+                    <g id="dot-brow" data-zone="brow" class="zone-dot pointer-events-auto cursor-pointer transition-all duration-300">
+                        <circle cx="153" cy="127" r="10" fill="#ffffff" class="opacity-30" />
+                        <circle cx="153" cy="127" r="5" fill="#d4af37" />
+                    </g>
+                    <g id="dot-smile" data-zone="smile" class="zone-dot pointer-events-auto cursor-pointer transition-all duration-300">
+                        <circle cx="131" cy="227" r="10" fill="#ffffff" class="opacity-30" />
+                        <circle cx="131" cy="227" r="5" fill="#d4af37" />
+                    </g>
+                    <g id="dot-jawline" data-zone="jawline" class="zone-dot pointer-events-auto cursor-pointer transition-all duration-300">
+                        <circle cx="199" cy="266" r="10" fill="#ffffff" class="opacity-30" />
+                        <circle cx="199" cy="266" r="5" fill="#d4af37" />
+                    </g>
+                    <g id="dot-chin" data-zone="chin" class="zone-dot pointer-events-auto cursor-pointer transition-all duration-300">
+                        <circle cx="170" cy="288" r="10" fill="#ffffff" class="opacity-30" />
+                        <circle cx="170" cy="288" r="5" fill="#d4af37" />
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Left Side Labels -->
+            <div class="order-2 lg:order-1 w-full lg:w-1/4 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-col gap-4 lg:gap-6 lg:text-right justify-between lg:h-[500px] z-20">
+                <div data-zone="forehead" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/60 hover:bg-white border border-light-gray/40 hover:border-warm-gold/50 hover:shadow-md transition-all duration-300">
+                    <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors [text-wrap:balance]">Forehead</h4>
+                    <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Support skin firmness and smooth the appearance of early skin laxity.</p>
+                </div>
+                <div data-zone="eye" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/60 hover:bg-white border border-light-gray/40 hover:border-warm-gold/50 hover:shadow-md transition-all duration-300">
+                    <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors [text-wrap:balance]">Eye Area</h4>
+                    <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Address crepey skin and support a refreshed, more awake appearance.</p>
+                </div>
+                <div data-zone="cheeks" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/60 hover:bg-white border border-light-gray/40 hover:border-warm-gold/50 hover:shadow-md transition-all duration-300">
+                    <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors [text-wrap:balance]">Cheeks</h4>
+                    <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Support collagen renewal and facial contour refinement.</p>
+                </div>
+                <div data-zone="neck" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/60 hover:bg-white border border-light-gray/40 hover:border-warm-gold/50 hover:shadow-md transition-all duration-300">
+                    <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors [text-wrap:balance]">Neck</h4>
+                    <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Improve skin firmness and support a smoother jaw-to-neck transition.</p>
+                </div>
+            </div>
+
+            <!-- Right Side Labels -->
+            <div class="order-3 w-full lg:w-1/4 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-col gap-4 lg:gap-6 text-left justify-between lg:h-[500px] z-20">
+                <div data-zone="brow" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/60 hover:bg-white border border-light-gray/40 hover:border-warm-gold/50 hover:shadow-md transition-all duration-300">
+                    <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors [text-wrap:balance]">Brow Area</h4>
+                    <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Support upper-face firmness and natural-looking brow definition.</p>
+                </div>
+                <div data-zone="smile" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/60 hover:bg-white border border-light-gray/40 hover:border-warm-gold/50 hover:shadow-md transition-all duration-300">
+                    <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors [text-wrap:balance]">Smile Lines</h4>
+                    <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Support collagen remodeling in areas prone to volume and elasticity changes.</p>
+                </div>
+                <div data-zone="jawline" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/60 hover:bg-white border border-light-gray/40 hover:border-warm-gold/50 hover:shadow-md transition-all duration-300">
+                    <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors [text-wrap:balance]">Jawline</h4>
+                    <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Help improve lower-face definition and facial contours.</p>
+                </div>
+                <div data-zone="chin" class="zone-card group cursor-pointer p-4 rounded-2xl bg-white/60 hover:bg-white border border-light-gray/40 hover:border-warm-gold/50 hover:shadow-md transition-all duration-300">
+                    <h4 class="heading-wide text-xs text-near-black font-semibold uppercase tracking-wider mb-1 group-hover:text-warm-gold transition-colors [text-wrap:balance]">Under Chin</h4>
+                    <p class="text-[11px] font-light text-charcoal/80 leading-relaxed">Support skin tightening and contour refinement beneath the jawline.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Common Concerns Grid -->
+        <div class="bg-off-white p-6 sm:p-8 rounded-3xl border border-light-gray/60 max-w-4xl mx-auto text-center mt-16 sm:mt-20">
+            <p class="heading-wide text-xs text-near-black uppercase tracking-wider mb-6">Common Concerns We Address</p>
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3">
+                <span class="px-3.5 py-1.5 sm:px-4 sm:py-2 bg-white rounded-full border border-light-gray/50 text-[11px] sm:text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Early Skin Laxity</span>
+                <span class="px-3.5 py-1.5 sm:px-4 sm:py-2 bg-white rounded-full border border-light-gray/50 text-[11px] sm:text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Jawline Softening</span>
+                <span class="px-3.5 py-1.5 sm:px-4 sm:py-2 bg-white rounded-full border border-light-gray/50 text-[11px] sm:text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Lower-Face Heaviness</span>
+                <span class="px-3.5 py-1.5 sm:px-4 sm:py-2 bg-white rounded-full border border-light-gray/50 text-[11px] sm:text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Under-Chin Fullness</span>
+                <span class="px-3.5 py-1.5 sm:px-4 sm:py-2 bg-white rounded-full border border-light-gray/50 text-[11px] sm:text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Neck Aging Concerns</span>
+                <span class="px-3.5 py-1.5 sm:px-4 sm:py-2 bg-white rounded-full border border-light-gray/50 text-[11px] sm:text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Loss of Facial Definition</span>
+                <span class="px-3.5 py-1.5 sm:px-4 sm:py-2 bg-white rounded-full border border-light-gray/50 text-[11px] sm:text-xs font-light text-charcoal shadow-sm hover:border-warm-gold/40 hover:text-near-black transition-all cursor-default">Prevention-Focused Aging Care</span>
+            </div>
+        </div>
+    </div>
+</section>
