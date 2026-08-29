@@ -21,7 +21,7 @@ ftp.login(FTP_USER, FTP_PASS)
 ftp.cwd(REMOTE_DIR)
 
 # Exclude list
-EXCLUDE = {'.git', 'node_modules', 'src', 'scratch', 'dev-tools', 'kam_doc_updates', '.env', 'ftp_upload.py', 'package.json', 'package-lock.json', '.DS_Store', 'DEPLOYMENT.md', 'search-index.js', 'extract_logos.py', '.gitignore', 'collagen-stimulation-facial.html', 'tone-up-facial.html'}
+EXCLUDE = {'.git', 'node_modules', 'src', 'scratch', 'dev-tools', 'kam_doc_updates', '.env', 'ftp_upload.py', 'package.json', 'package-lock.json', '.DS_Store', 'DEPLOYMENT.md', 'search-index.js', 'extract_logos.py', '.gitignore', 'collagen-stimulation-facial.html', 'tone-up-facial.html', 'iv-infusion-wellness-therapy.html'}
 
 def upload_dir(local_dir, remote_dir):
     try:
