@@ -29,11 +29,13 @@ function renderReviews(reviews, container) {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
     `;
 
-    reviews.forEach((review, index) => {
+    const latestReviews = reviews.slice(0, 9);
+
+    latestReviews.forEach((review, index) => {
         // Add staggered animation delay based on position
         const delayClass = index % 3 === 0 ? '' : (index % 3 === 1 ? 'delay-100' : 'delay-200');
         // Truncate long text if needed
-        const reviewText = review.text.length > 200 ? review.text.substring(0, 200) + '...' : review.text;
+        const reviewText = review.text.length > 220 ? review.text.substring(0, 220) + '...' : review.text;
         
         // Generate stars
         let starsHtml = '';
@@ -42,23 +44,25 @@ function renderReviews(reviews, container) {
         }
 
         html += `
-            <div class="product-card glow-card p-10 animate-on-scroll fade-up ${delayClass} !bg-near-black/80 !border-white/10 shadow-2xl hover:!border-warm-gold/50 transition-all duration-500" style="--glow-color: #AA987C;">
-                <div class="flex items-center gap-4 mb-6">
-                    <img src="${review.profile_photo_url}" alt="${review.author_name}" class="w-12 h-12 rounded-full object-cover border border-white/10" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(review.author_name)}&background=22252a&color=AA987C&bold=true';">
-                    <div class="text-left">
-                        <h4 class="font-bold text-white text-sm tracking-widest">${review.author_name}</h4>
-                        <div class="flex items-center gap-1 mt-1">
-                            ${starsHtml}
+            <div class="product-card glow-card p-10 animate-on-scroll fade-up ${delayClass} !bg-near-black/80 !border-white/10 shadow-2xl hover:!border-warm-gold/50 transition-all duration-500 flex flex-col justify-between" style="--glow-color: #AA987C;">
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="${review.profile_photo_url}" alt="${review.author_name}" class="w-12 h-12 rounded-full object-cover border border-white/10" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(review.author_name)}&background=22252a&color=AA987C&bold=true';">
+                        <div class="text-left">
+                            <h4 class="font-bold text-white text-sm tracking-widest">${review.author_name}</h4>
+                            <div class="flex items-center gap-1 mt-1">
+                                ${starsHtml}
+                            </div>
+                        </div>
+                        <div class="ml-auto">
+                            <i data-lucide="google" class="w-5 h-5 text-white/50"></i>
                         </div>
                     </div>
-                    <div class="ml-auto">
-                        <i data-lucide="google" class="w-5 h-5 text-white/50"></i>
-                    </div>
+                    <p class="font-body text-white/70 text-sm leading-relaxed font-light text-left italic mb-6">
+                        "${reviewText}"
+                    </p>
                 </div>
-                <p class="font-body text-white/70 text-sm leading-relaxed font-light text-left italic mb-6">
-                    "${reviewText}"
-                </p>
-                <div class="mt-auto text-left text-[10px] text-warm-gold/80 font-bold uppercase tracking-[0.1em] italic">
+                <div class="pt-4 border-t border-white/5 text-left text-[10px] text-warm-gold/80 font-bold uppercase tracking-[0.1em] italic">
                     ${review.relative_time_description}
                 </div>
             </div>
