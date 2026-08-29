@@ -1,79 +1,85 @@
 // fetch-google-reviews.js
 // 
-// INSTRUCTIONS:
-// 1. Run `npm install axios` (if not already installed)
-// 2. Set the variables below or pass them as environment variables
-// 3. Run with `node dev-tools/fetch-google-reviews.js`
-// 
-// This script fetches the top 5 most helpful reviews from Google Places API
-// and saves them to assets/data/google-reviews.json for the frontend to render.
+// This script fetches both newest and most helpful reviews from Google Places API,
+// deduplicates them, and saves them to assets/data/google-reviews.json for the frontend.
 
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-// Replace these with your actual credentials when ready
 const API_KEY = process.env.GOOGLE_PLACES_API_KEY || 'AIzaSyAj9QsAUWQ9M2hWg05WHfecsRq__tbk2pU';
 const PLACE_ID = process.env.GOOGLE_PLACE_ID || 'ChIJAZ6jKhphFI0RkQGEpYmxGtg';
 
-// Output path
 const OUTPUT_FILE = path.join(__dirname, '../assets/data/google-reviews.json');
 
-if (API_KEY === 'YOUR_API_KEY_HERE' || PLACE_ID === 'YOUR_PLACE_ID_HERE') {
-    console.error("ERROR: Please provide your Google API Key and Place ID in the script or as environment variables.");
-    process.exit(1);
+function fetchEndpoint(sort) {
+    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&reviews_sort=${sort}&key=${API_KEY}`;
+    return new Promise((resolve, reject) => {
+        https.get(url, (res) => {
+            let data = '';
+            res.on('data', chunk => data += chunk);
+            res.on('end', () => {
+                try {
+                    const parsed = JSON.parse(data);
+                    if (parsed.status === 'OK' && parsed.result && parsed.result.reviews) {
+                        resolve(parsed.result.reviews);
+                    } else {
+                        resolve([]);
+                    }
+                } catch (e) {
+                    reject(e);
+                }
+            });
+        }).on('error', reject);
+    });
 }
 
-// Google Places API Details endpoint
-const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&reviews_sort=most_relevant&key=${API_KEY}`;
+async function main() {
+    try {
+        console.log('Fetching newest and relevant reviews from Google API...');
+        const [newestReviews, relevantReviews] = await Promise.all([
+            fetchEndpoint('newest'),
+            fetchEndpoint('most_relevant')
+        ]);
 
-console.log('Fetching reviews from Google API...');
+        const reviewMap = new Map();
 
-https.get(url, (res) => {
-    let data = '';
-
-    res.on('data', (chunk) => {
-        data += chunk;
-    });
-
-    res.on('end', () => {
-        try {
-            const parsedData = JSON.parse(data);
-            
-            if (parsedData.status !== 'OK') {
-                console.error('Google API Error:', parsedData.error_message || parsedData.status);
-                return;
+        // Add newest first
+        newestReviews.forEach(r => {
+            const key = `${r.author_name}-${r.time}`;
+            if (!reviewMap.has(key)) {
+                reviewMap.set(key, r);
             }
+        });
 
-            const reviews = parsedData.result.reviews || [];
-            
-            // Format and clean up the data for our frontend
-            const formattedReviews = reviews.map(review => ({
-                author_name: review.author_name,
-                profile_photo_url: review.profile_photo_url,
-                rating: review.rating,
-                text: review.text,
-                time: review.time,
-                relative_time_description: review.relative_time_description
+        // Add most relevant
+        relevantReviews.forEach(r => {
+            const key = `${r.author_name}-${r.time}`;
+            if (!reviewMap.has(key)) {
+                reviewMap.set(key, r);
+            }
+        });
+
+        const allReviews = Array.from(reviewMap.values())
+            .sort((a, b) => (b.time || 0) - (a.time || 0))
+            .map(r => ({
+                author_name: r.author_name,
+                profile_photo_url: r.profile_photo_url,
+                rating: r.rating,
+                text: r.text,
+                time: r.time,
+                relative_time_description: r.relative_time_description
             }));
 
-            // The Google Places API Details endpoint limits reviews to 5.
-            // The layout requires 6 cards (2 rows of 3). We will pad with a 6th review.
-            if (formattedReviews.length === 5) {
-                const padReview = { ...formattedReviews[0] };
-                padReview.author_name = "Happy Client";
-                formattedReviews.push(padReview);
-            }
+        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allReviews, null, 2));
+        console.log(`Successfully saved ${allReviews.length} unique Google reviews to ${OUTPUT_FILE}`);
+        allReviews.forEach((r, idx) => {
+            console.log(`${idx + 1}. ${r.author_name} (${r.rating}★) - ${r.relative_time_description}`);
+        });
 
-            // Save to JSON file
-            fs.writeFileSync(OUTPUT_FILE, JSON.stringify(formattedReviews, null, 2));
-            console.log(`Successfully saved ${formattedReviews.length} reviews to ${OUTPUT_FILE}`);
+    } catch (error) {
+        console.error('Error fetching reviews:', error);
+    }
+}
 
-        } catch (e) {
-            console.error('Error parsing Google API response:', e.message);
-        }
-    });
-
-}).on('error', (e) => {
-    console.error('Failed to make request:', e.message);
-});
+main();
