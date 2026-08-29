@@ -642,6 +642,7 @@ html {
   animation: spin-glow 10s linear infinite;
   overflow: visible !important;
   z-index: 10;
+  transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
 }
 
 /* Bright background variants using the glow-card padding-box explicitly to override dark default */
@@ -657,6 +658,25 @@ html {
     conic-gradient(from var(--glow-angle), transparent 30%, var(--glow-color, #AA987C) 80%, transparent) border-box !important;
 }
 
+.glow-card:hover {
+  background:
+    linear-gradient(#1a1c1e, #1a1c1e) padding-box,
+    var(--glow-color, #AA987C) border-box !important;
+  box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.5), 0 0 30px -5px var(--glow-color, #AA987C);
+}
+
+.glow-card.bg-white:hover {
+  background:
+    linear-gradient(#FFFFFF, #FFFFFF) padding-box,
+    var(--glow-color, #AA987C) border-box !important;
+}
+
+.glow-card.bg-\[\#F6F7F8\]:hover {
+  background:
+    linear-gradient(#F6F7F8, #F6F7F8) padding-box,
+    var(--glow-color, #AA987C) border-box !important;
+}
+
 .glow-card::before {
   content: "";
   position: absolute;
@@ -668,18 +688,15 @@ html {
   opacity: 0.6;
   animation: spin-glow 10s linear infinite;
   pointer-events: none;
-  transition: opacity 0.3s ease, filter 0.3s ease;
-}
-
-.glow-card:hover {
-  animation-play-state: paused;
-  box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.5), 0 0 25px -5px var(--glow-color, #AA987C);
+  transition: opacity 0.35s ease, filter 0.35s ease, background 0.35s ease;
 }
 
 .glow-card:hover::before {
-  animation-play-state: paused;
-  opacity: 0.95;
-  filter: blur(24px);
+  background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+          var(--glow-color, #AA987C),
+          transparent 60%);
+  opacity: 0.85;
+  filter: blur(35px);
 }
 
 /* Small product badge overlay */

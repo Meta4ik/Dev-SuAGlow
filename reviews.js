@@ -84,6 +84,17 @@ function renderReviews(reviews, container) {
 
     container.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
+    // Bind mouse-tracking spotlight coordinates to newly rendered glow cards
+    container.querySelectorAll('.glow-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+
     // Re-initialize lucide icons for the newly added HTML
     if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
         lucide.createIcons();
