@@ -44,7 +44,7 @@ function renderReviews(reviews, container) {
         }
 
         html += `
-            <div class="product-card glow-card p-10 animate-on-scroll fade-up ${delayClass} !bg-near-black/80 !border-white/10 shadow-2xl hover:!border-warm-gold/50 transition-all duration-500 flex flex-col justify-between" style="--glow-color: #AA987C;">
+            <div class="product-card glow-card p-10 animate-on-scroll fade-up ${delayClass} shadow-2xl flex flex-col justify-between" style="--glow-color: #AA987C;">
                 <div>
                     <div class="flex items-center gap-4 mb-6">
                         <img src="${review.profile_photo_url}" alt="${review.author_name}" class="w-12 h-12 rounded-full object-cover border border-white/10" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(review.author_name)}&background=22252a&color=AA987C&bold=true';">

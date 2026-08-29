@@ -641,6 +641,126 @@ const SEARCH_INDEX = [
     "snippet": "Every treatment at SuA Glow begins with a clinical consultation. Sophia will assess your skin, listen to your goals, and build a plan that makes sense for your ..."
   },
   {
+    "url": "iv-infusion-wellness-therapy.html#hero",
+    "title": "IV Infusion &Wellness Therapy",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "K-Beauty taught us that glow is more than skin deep. Hydration. Lifestyle. Wellness. Repeat. At SuA Glow in Carrollton, our physician-guided approach brings this philosophy of inside-out with personalized IV infusion and IV push wellness therapies. PHYSICIAN-GUIDED MEDICAL OVERSIGHT PERSONALIZED INDIVIDUALIZED WELLNESS KOREAN-FOUNDED SEOUL-INSPIRED APPROACH",
+    "snippet": "K-Beauty taught us that glow is more than skin deep. Hydration. Lifestyle. Wellness. Repeat. At SuA Glow in Carrollton, our physician-guided approach brings thi..."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#medical-oversight",
+    "title": "IV Therapy Dallas & Carrollton",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "Every IV Infusion & Injectable Wellness therapy is administered by Sophia Yang, PA-C, under physician-delegated medical oversight from Dr. Adam Yang, MD, following Texas regulations and established clinical protocols. Sophia Yang, PA-C Seoul-Trained Aesthetic Provider Dr. Adam Yang, MD Medical Director & Supervising Physician",
+    "snippet": "Every IV Infusion & Injectable Wellness therapy is administered by Sophia Yang, PA-C, under physician-delegated medical oversight from Dr. Adam Yang, MD, follow..."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#quick-menu",
+    "title": "DIFFERENT THERAPIES.ONE SUA GLOW PHILOSOPHY.",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "Different therapies. Different routes. One SuA Glow approach: K-Beauty from the outside in. Wellness from the inside out.",
+    "snippet": "Different therapies. Different routes. One SuA Glow approach: K-Beauty from the outside in. Wellness from the inside out."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#what-is",
+    "title": "WHAT IS IV & INJECTABLEWELLNESS THERAPY?",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "IV and injectable wellness therapy uses intravenous (IV), intramuscular (IM), or subcutaneous (SQ) administration of selected ingredients based on an individualized medical assessment and treatment plan. At SuA Glow in Carrollton, TX, our Inside-Out Wellness collection includes IV infusions, IV pushes, and targeted wellness injections for appropriate candidates. Because we don't believe your wellness plan should begin with a menu. It should begin with one question: What is clinically appropriate for you? Administered intravenously over a prescribed period based on the selected therapy and individualized treatment plan. Administered directly through intravenous access over a shorter treatment period according to the prescribed protocol. Administered into muscle tissue according to the selected therapy and individualized treatment plan. Administered into the subcutaneous tissue beneath the skin according to the selected therapy and treatment plan.",
+    "snippet": "IV and injectable wellness therapy uses intravenous (IV), intramuscular (IM), or subcutaneous (SQ) administration of selected ingredients based on an individual..."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#glutathione",
+    "title": "Glutathione: Antioxidant Support",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "Glutathione is a naturally occurring antioxidant made by the body and found within cells. It plays a foundational role in the body's normal antioxidant defense systems, helping protect cells against oxidative stress. At SuA Glow, Glutathione is offered by IV Push for appropriate patients following individualized medical assessment. Antioxidant defense: Helps cells manage oxidative stress from environmental factors. Cellular functions: Participates in normal mitochondrial and tissue processes. Antioxidant recycling: Synergistically interacts with Vitamin C and E systems. Glutathione is widely discussed in K-Beauty in connection with skin radiance, but SuA Glow does not promise skin lightening or guaranteed cosmetic whitening. Outcomes depend on formulation, dose, frequency, and biological factors. We focus on authentic cellular biology—not unverified hype.",
+    "snippet": "Glutathione is a naturally occurring antioxidant made by the body and found within cells. It plays a foundational role in the body's normal antioxidant defense ..."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#nad",
+    "title": "NAD: Cellular Wellness",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "NAD (nicotinamide adenine dinucleotide) is an essential coenzyme found in all living cells. It plays a pivotal role in cellular metabolism, energy-production pathways, and enzymatic signaling. At SuA Glow, NAD is offered by IM or SQ injection for appropriate patients as part of a long-term cellular maintenance strategy. Cellular metabolism: Supports biochemical energy transfer within mitochondria. Enzyme cofactor: Essential partner for sirtuins and DNA-repair enzymes (PARPs). Cellular communication: Contributes to normal intracellular regulatory signaling. While NAD is frequently highlighted on social media for energy, longevity, and brain fog, SuA Glow does not market NAD as a magic anti-aging cure or quick fix. We discuss whether NAD has an appropriate clinical place within your broader lifestyle and health routine.",
+    "snippet": "NAD (nicotinamide adenine dinucleotide) is an essential coenzyme found in all living cells. It plays a pivotal role in cellular metabolism, energy-production pa..."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#lipo-mino",
+    "title": "Lipo-Mino Bundle: Active Wellness",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "Lipo-Mino is a compounded lipotropic wellness formulation containing nutrients involved in normal metabolic pathways (Methionine, Inositol, Choline, and B-complex). At SuA Glow, our bundle pairs Lipo-Mino with L-Carnitine administered via IM injection for appropriate patients pursuing active lifestyles. Lipotropic action: Nutrients that participate in the normal processing and transport of dietary lipids. L-Carnitine transport: Facilitates fatty acid transport into cellular mitochondria for ATP synthesis. Metabolic cofactors: Supports cellular energy generation alongside healthy nutrition. “Lipotropic” does not mean “magic fat burner.” An injection does not replace nutrition, exercise, sleep, or medically supervised weight management. In K-Beauty and at SuA Glow, there is no injection for skipping leg day.",
+    "snippet": "Lipo-Mino is a compounded lipotropic wellness formulation containing nutrients involved in normal metabolic pathways (Methionine, Inositol, Choline, and B-compl..."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#myers-cocktail",
+    "title": "Myers' Cocktail: IV Wellness",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "A Myers' Cocktail is a time-tested multi-ingredient IV infusion formulated with a balanced blend of essential vitamins, minerals, and electrolytes. At SuA Glow, Myers' Cocktail is offered by IV infusion in a relaxing clinical environment following individualized medical assessment. Your IV bag cannot fix your entire life or substitute for sleep and hydration habits. We review exact ingredients and dosages prior to infusion so you know what you are receiving, why it is considered, and realistic expectations.",
+    "snippet": "A Myers' Cocktail is a time-tested multi-ingredient IV infusion formulated with a balanced blend of essential vitamins, minerals, and electrolytes. At SuA Glow,..."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#immune-support",
+    "title": "Your Immune System Is Not a “Boost” Button.",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "The 7 Interconnected Pillars of Genuine Vitality Immune wellness is far bigger than one vitamin, injection, or IV bag. At SuA Glow, we think holistically about the 7 interconnected pillars of genuine vitality: What you put into your everyday routine establishes your cellular baseline. Daily water intake remains the foundational habit for radiant skin and cellular function. Your body repairs and synthesizes collagen primarily during deep restorative sleep. Consistent physical activity supports lymphatic drainage, circulation, and metabolic health. Chronic cortisol spikes impair immune signaling and compromise dermal barrier resilience. Health concerns deserve proper clinical evaluation rather than generic IV menus. When clinically appropriate, our curated therapies have a purposeful place alongside your healthy habits. Support thoughtfully. Personalize always.",
+    "snippet": "The 7 Interconnected Pillars of Genuine Vitality Immune wellness is far bigger than one vitamin, injection, or IV bag. At SuA Glow, we think holistically about ..."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#expect",
+    "title": "What to Expect During Your Visit",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "Your Glow Infusion Therapy appointment at SuA Glow in Carrollton, TX is personalized from intake through aftercare with zero guesswork. Your provider reviews your health history, goals, and medications to confirm clinical appropriateness before preparing your treatment. Whether an IV infusion in our serene lounge or a quick IV Push / IM injection, your treatment is administered with hospital-grade sterility. We provide clear aftercare instructions. Future treatment cadence is determined by clinical response—never automatic subscriptions.",
+    "snippet": "Your Glow Infusion Therapy appointment at SuA Glow in Carrollton, TX is personalized from intake through aftercare with zero guesswork. Your provider reviews yo..."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#why-sua",
+    "title": "Not an IV Bar.A Medically Guided Wellness Experience.",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "Dallas-Fort Worth has plenty of places to get an IV. So why SuA Glow? Because our Glow Infusion Therapy is rooted in the thoughtful, long-term philosophy of Korean medical aesthetics. We treat IV infusions and injections as medical procedures—not trendy checkout add-ons. You'll always receive individualized medical screening, pure pharmaceutical compounding, and uncompromised transparency. We pair advanced exterior aesthetic procedures (LDM, boosters, facials) with targeted internal cellular nourishment. Administered by Board-Certified PA Sophia Yang under Dr. Adam Yang MD delegation in full compliance with Texas laws. No mystery cocktails, no false promises, and no biohacking fairy dust. Genuine biology tailored to your body.",
+    "snippet": "Dallas-Fort Worth has plenty of places to get an IV. So why SuA Glow? Because our Glow Infusion Therapy is rooted in the thoughtful, long-term philosophy of Kor..."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#candidacy",
+    "title": "Is Inside-Out Wellness Right for You?",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "Medical wellness begins with careful screening. Here is our clinical checklist before starting your therapy. Seeking proactive antioxidant & cellular defense Complementing exterior aesthetic skincare treatments Pursuing active wellness alongside healthy nutrition Values medical screening over generic IV bar menus Active severe kidney, cardiac, or liver impairment Known hypersensitivity or allergy to formulation Pregnancy or nursing without specific obstetric clearance Expecting instant cures for chronic medical conditions Drink 16–20 oz of water prior to your appointment Have a light snack or meal 1–2 hours before arrival Bring a current list of daily medications & supplements Wear comfortable loose clothing with easy arm access",
+    "snippet": "Medical wellness begins with careful screening. Here is our clinical checklist before starting your therapy. Seeking proactive antioxidant & cellular defense Co..."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#faq",
+    "title": "IV Infusion & Glow Therapy FAQs",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "Clear, medically sound answers to help you navigate our wellness menu. IV therapy administers fluids and/or prescribed ingredients directly into a vein through intravenous access. Depending on the treatment, an IV formulation may contain fluids, vitamins, minerals, or other prescribed ingredients selected following an individualized medical assessment—medical first, glow second. The potential benefits of IV therapy depend on the specific formulation, ingredients, reason for treatment, and individual patient. At SuA Glow, we discuss what a specific formulation may reasonably offer rather than promise that every bag gives you energy, immunity, detoxification, and glass skin by dinner. There is no single “best” IV therapy for everyone. SuA Glow offers distinct wellness options: Antioxidant-focused (Glutathione IV Push), Cellular wellness (NAD IM/SQ), Active-lifestyle (Lipo-Mino Bundle IM), and Multi-nutrient (Myers' Cocktail IV). You don't need to self-prescribe—our clinical team will evaluate what is appropriate for you. IV therapy is a medical procedure and is not appropriate for everyone. Potential risks vary depending on the treatment and may include reactions related to IV access as well as risks associated with specific ingredients or medical history. That is why SuA Glow screens for candidacy and reviews potential risks, alternatives, and expectations prior to administration. Appointment times vary depending on the formulation and administration route. A full Myers' Cocktail IV infusion takes approximately 30 to 45 minutes, while an IV Push (Glutathione) or IM injection (NAD or Lipo-Mino) takes only a few minutes following your medical consultation. Frequency depends on the specific therapy, individual response, wellness goals, and clinical assessment. At SuA Glow, we never lock you into automatic weekly subscriptions. K-Beauty loves consistency, but medical wellness always requires clinical reasoning. No IV infusion can be promised to universally “boost” the immune system. Your immune system is complex and governed by sleep, nutrition, stress, and lifestyle. While essential vitamins support normal biological function, we approach immunity holistically rather than pretending there is an on/off boost switch. Glutathione is the body's primary intracellular antioxidant. While widely celebrated in Seoul and global K-Beauty for skin radiance, SuA Glow does not guarantee specific skin whitening or lightening results. We provide authentic antioxidant cellular support with realistic medical expectations. NAD (nicotinamide adenine dinucleotide) is a critical coenzyme involved in mitochondrial cellular energy production and metabolic pathways. At SuA Glow, NAD is administered by IM or SQ injection for appropriate patients focused on proactive, long-term cellular maintenance. SuA Glow offers personalized IV infusion, IV Push, IM, and SQ wellness therapies at our boutique medical spa in Carrollton, TX, conveniently located for clients across Dallas, Plano, Frisco, Addison, and the greater DFW metroplex.",
+    "snippet": "Clear, medically sound answers to help you navigate our wellness menu. IV therapy administers fluids and/or prescribed ingredients directly into a vein through ..."
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#location",
+    "title": "IV THERAPY &WELLNESS NEAR ME",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "SERVING DFW MASTERFULLY SuA Glow is located in Carrollton, TX, quietly serving skin obsessives from the entire DFW metroplex including:",
+    "snippet": "SERVING DFW MASTERFULLY SuA Glow is located in Carrollton, TX, quietly serving skin obsessives from the entire DFW metroplex including:"
+  },
+  {
+    "url": "iv-infusion-wellness-therapy.html#booking-cta",
+    "title": "Ready for Your Inside-OutGlow Infusion Experience?",
+    "pageTitle": "IV Therapy Dallas & Carrollton",
+    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
+    "content": "Book your consultation with Sophia Yang, PA-C at SuA Glow in Carrollton, TX. Personalized wellness therapies tailored to your unique biology.",
+    "snippet": "Book your consultation with Sophia Yang, PA-C at SuA Glow in Carrollton, TX. Personalized wellness therapies tailored to your unique biology."
+  },
+  {
     "url": "ldm-water-drop-lifting.html#hero",
     "title": "Korean LDM Water Drop Lifting",
     "pageTitle": "Korean LDM Facial Dallas",
