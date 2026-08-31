@@ -136,11 +136,8 @@ const NAVBAR_HTML = `
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
+                                    <a href="korean-scalp-hair-rejuvenation.html" class="dropdown-link !p-0 hover:!pl-2">
                                         Korean Scalp & Hair Rejuvenation
-                                        <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0 ml-1">
-                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                                        </span>
                                     </a>
                                 </li>
                             </ul>
@@ -165,11 +162,8 @@ const NAVBAR_HTML = `
                                 <li><a href="ldm-water-drop-lifting.html" class="dropdown-link !p-0 hover:!pl-2">LDM Water Drop Lifting</a></li>
                                 <li><a href="salmon-pn-facial.html" class="dropdown-link !p-0 hover:!pl-2">Salmon PN Facial</a></li>
                                 <li>
-                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center gap-1.5">
-                                        Glow & Hydration
-                                        <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0 ml-1">
-                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                                        </span>
+                                    <a href="glass-skin-hydration-glow.html" class="dropdown-link !p-0 hover:!pl-2">
+                                        Glass Skin Hydration &amp; Glow
                                     </a>
                                 </li>
                                  <li>
@@ -434,11 +428,8 @@ const NAVBAR_HTML = `
                                         <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
                                     </span>
                                 </a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
+                                <a href="korean-scalp-hair-rejuvenation.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">
                                     Korean Scalp & Hair Rejuvenation
-                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
-                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -464,11 +455,8 @@ const NAVBAR_HTML = `
                             <div class="flex flex-col gap-2 mt-2">
                                 <a href="ldm-water-drop-lifting.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">LDM Water Drop Lifting</a>
                                 <a href="salmon-pn-facial.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Salmon PN Facial</a>
-                                <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors flex items-center gap-1.5">
-                                    Glow &amp; Hydration
-                                    <span class="inline-flex items-center text-[9px] font-semibold text-amber-600/80 bg-amber-50 border border-amber-200/50 px-1.5 py-0.5 rounded-full tracking-wider uppercase scale-90 origin-left">
-                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
-                                    </span>
+                                <a href="glass-skin-hydration-glow.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">
+                                    Glass Skin Hydration &amp; Glow
                                 </a>
                                 <a href="collagen-stimulation-facial.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">
                                     Collagen Stimulation
