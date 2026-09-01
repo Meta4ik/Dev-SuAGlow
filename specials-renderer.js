@@ -23,7 +23,7 @@ function renderMonthlySpecials(customConfig) {
         ).join(' ') : '';
 
         return `
-            <div class="bg-white rounded-[24px] border border-warm-gold/30 p-4 md:p-6 pl-4 md:pl-56 shadow-soft hover:shadow-2xl transition-all duration-500 flex flex-col md:grid md:grid-cols-[1fr_auto] items-stretch gap-6 md:gap-8 group animate-on-scroll fade-up relative min-h-[160px] overflow-hidden ${delayClass}" style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.50) 55%, rgba(253, 248, 240, 0.10) 100%), url('${meta.cardBackground || 'assets/dallas_fall_card_bg.jpg'}'); background-size: cover; background-position: center;">
+            <div class="bg-white rounded-[24px] border border-warm-gold/30 p-4 md:p-6 pl-4 md:pl-56 shadow-soft hover:shadow-2xl transition-all duration-500 flex flex-col md:grid md:grid-cols-[1fr_auto] items-stretch gap-6 md:gap-8 group animate-on-scroll fade-up relative min-h-[160px] overflow-hidden ${delayClass}" style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.94) 50%, rgba(255, 255, 255, 0.70) 75%, rgba(255, 255, 255, 0.25) 100%), url('${meta.cardBackground || 'assets/dallas_fall_card_bg.jpg'}'); background-size: cover; background-position: right center;">
                 <!-- Left Image Container (Equal Top, Left & Bottom Margins) -->
                 <div class="w-full md:w-44 h-48 md:h-auto md:absolute md:top-4 md:bottom-4 md:left-4 rounded-[18px] overflow-hidden bg-off-white shrink-0 border border-charcoal/10 relative z-10">
                     <img src="${stepItem.image}" alt="${stepItem.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
@@ -43,7 +43,7 @@ function renderMonthlySpecials(customConfig) {
                 <!-- Right Column: Price Top + Book Button Bottom (Clean vertical separation) -->
                 <div class="flex flex-col justify-between items-center md:items-end h-full py-1 shrink-0 w-full md:w-auto border-t md:border-t-0 pt-4 md:pt-0 border-charcoal/5">
                     <!-- Top Right Price -->
-                    <div class="text-center md:text-right mb-4 md:mb-0">
+                    <div class="text-center md:text-right mb-4 md:mb-0 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/80 shadow-xs inline-block">
                         ${stepItem.price ? `
                             <span class="font-body text-2xl md:text-3xl font-extrabold text-near-black tracking-tight leading-none block">${stepItem.price}</span>
                             ${stepItem.priceDetail ? `<span class="block text-[10px] text-taupe font-bold tracking-wider uppercase mt-1">${stepItem.priceDetail}</span>` : ''}
