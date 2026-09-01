@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>September Specials | The SuA Glow September Edit | Carrollton Med Spa</title>
+    <meta name="description" content="Discover The SuA Glow September Edit with exclusive Korean aesthetic promotions on Seoul Glass Skin 360, Korean Scalp & Hair Reset, and Seoul Youth Sculpt.">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="dist/output.css?v=47">
+
+    <!-- Lucide Icons & html2canvas -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+
+    <!-- Global Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Header (Empty spacer for sticky nav) -->
+    <section class="h-24 bg-off-white"></section>
+
+    <!-- Container for Dynamically Loaded Specials Content -->
+    <div id="specials-container"></div>
+
+    <!-- Brand CTA Section -->
+    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto animate-on-scroll fade-up">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow"
+                class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24 uppercase">Medical Aesthetics • Carrollton HQ</p>
+            <h3 class="heading-wide text-2xl md:text-3xl mb-12 leading-snug [text-wrap:balance]">K-Beauty doesn't chase trends.<br>It builds
+                <span class="text-warm-gold opacity-80">better skin.</span>
+            </h3>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="btn-primary">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Shared Scripts -->
+    <script src="navbar.js?v=50"></script>
+    <script src="footer.js?v=50"></script>
+    <script src="script.js?v=50"></script>
+
+    <!-- Load the September Specials Configuration & Renderer dynamically -->
+    <script src="specials-september-data.js?v=50"></script>
+    <script src="specials-renderer.js?v=50"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('specials-container');
+            if (container && typeof renderMonthlySpecials === 'function' && typeof MONTHLY_SPECIALS_CONFIG_SEPTEMBER !== 'undefined') {
+                container.innerHTML = renderMonthlySpecials(MONTHLY_SPECIALS_CONFIG_SEPTEMBER);
+                
+                // Re-initialize Lucide icons inside dynamically rendered content
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+                
+                // Trigger scroll animations on injected elements
+                const newlyInjectedElements = container.querySelectorAll('.animate-on-scroll');
+                const scrollObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+                newlyInjectedElements.forEach(el => scrollObserver.observe(el));
+            } else {
+                console.error('renderMonthlySpecials or MONTHLY_SPECIALS_CONFIG_SEPTEMBER is not defined.');
+            }
+        });
+    </script>
+</body>
+
+</html>

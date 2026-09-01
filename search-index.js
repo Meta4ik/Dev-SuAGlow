@@ -2153,6 +2153,14 @@ const SEARCH_INDEX = [
     "snippet": "K-Beauty Medspa • Carrollton HQ Celebrity discussions are provided for educational and cultural context only. SuA Glow does not claim that any public figure rec..."
   },
   {
+    "url": "specials-september.html",
+    "title": "K-Beauty doesn't chase trends.It builds better skin.",
+    "pageTitle": "September Specials",
+    "category": "Spa Treatments",
+    "content": "Medical Aesthetics • Carrollton HQ",
+    "snippet": "Medical Aesthetics • Carrollton HQ"
+  },
+  {
     "url": "specials.html",
     "title": "K-Beauty doesn't chase trends.It builds better skin.",
     "pageTitle": "Specials",
