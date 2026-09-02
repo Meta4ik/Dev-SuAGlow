@@ -204,8 +204,8 @@ function renderMonthlySpecials(customConfig) {
                     </div>
                 </div>
 
-                <!-- View Switcher Tabs (3-Step Program vs 4:5 Print Flyer) -->
-                <div class="mb-12 text-center animate-on-scroll fade-up">
+                <!-- View Switcher Tabs (Desktop Only) -->
+                <div class="hidden md:block mb-12 text-center animate-on-scroll fade-up">
                     <div class="inline-flex p-1.5 bg-white rounded-full border border-charcoal/10 shadow-sm">
                         <button id="tab-program-btn" onclick="switchSpecialsTab('program')" class="px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 bg-near-black text-warm-gold shadow">
                             Featured Offers
@@ -214,6 +214,14 @@ function renderMonthlySpecials(customConfig) {
                             Share Flyer
                         </button>
                     </div>
+                </div>
+
+                <!-- Mobile View: Link to open Flyer in Lightbox with Share Button -->
+                <div class="block md:hidden mb-8 text-center animate-on-scroll fade-up">
+                    <button type="button" onclick="openFlyerLightbox()" class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-warm-gold bg-near-black hover:bg-warm-gold hover:text-near-black border border-warm-gold/40 shadow-md transition-all duration-300 cursor-pointer">
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        <span>Click to Download & Share Flyer</span>
+                    </button>
                 </div>
 
                 <!-- VIEW 1: Interactive 3-Step Program View -->
@@ -329,9 +337,88 @@ function renderMonthlySpecials(customConfig) {
                     ${meta.terms}
                 </div>
             </div>
+
+            <!-- Flyer Lightbox Modal (For Mobile & Quick Share) -->
+            <div id="specials-flyer-lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 sm:p-6 overflow-y-auto" onclick="if(event.target === this) closeFlyerLightbox();">
+                <div class="relative max-w-md w-full flex flex-col items-center text-center my-auto">
+                    <!-- Close Button -->
+                    <button type="button" onclick="closeFlyerLightbox()" class="absolute -top-12 right-0 z-20 text-white/80 hover:text-white bg-white/10 hover:bg-white/25 rounded-full p-2.5 transition-colors cursor-pointer border border-white/20 shadow-lg" aria-label="Close Lightbox">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+
+                    <!-- Flyer Image -->
+                    <div class="w-full overflow-hidden rounded-2xl shadow-2xl border border-white/20 bg-near-black mb-5">
+                        <img id="lightbox-flyer-img" src="${meta.downloadFlyerImage || 'assets/SuA-Glow-September-Specials.jpg'}" alt="SuA Glow September Specials Flyer" class="w-full h-auto max-h-[72vh] object-contain mx-auto block">
+                    </div>
+
+                    <!-- Action Button Below Flyer -->
+                    <div class="flex flex-wrap items-center justify-center gap-3 w-full">
+                        <button type="button" onclick="downloadFlyerImage()" id="lightbox-share-btn" class="btn-primary text-xs py-3.5 px-8 inline-flex items-center justify-center gap-2 shadow-xl cursor-pointer">
+                            <i data-lucide="share-2" class="w-4 h-4"></i>
+                            <span>Share Flyer</span>
+                        </button>
+                        <button type="button" onclick="triggerDirectDownloadFromUrl()" class="px-5 py-3 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white bg-white/15 hover:bg-white/25 border border-white/30 inline-flex items-center justify-center gap-2 transition-all cursor-pointer">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </section>
     `;
 }
+
+// Lightbox Open & Close Functions
+function openFlyerLightbox() {
+    const lightbox = document.getElementById('specials-flyer-lightbox');
+    if (lightbox) {
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    }
+}
+
+function closeFlyerLightbox() {
+    const lightbox = document.getElementById('specials-flyer-lightbox');
+    if (lightbox) {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+}
+
+function triggerDirectDownloadFromUrl() {
+    const config = window.__currentSpecialsConfig || {};
+    const meta = config.meta || {};
+    const flyerUrl = meta.downloadFlyerImage || 'assets/SuA-Glow-September-Specials.jpg';
+    const fileName = meta.month ? `SuA-Glow-${meta.month.replace(/\s+/g, '-')}-Specials.jpg` : 'SuA-Glow-September-Specials.jpg';
+
+    fetch(flyerUrl)
+        .then(res => res.blob())
+        .then(blob => {
+            triggerDirectDownload(blob, fileName);
+        })
+        .catch(err => {
+            console.error('Error in direct download:', err);
+            const link = document.createElement('a');
+            link.href = flyerUrl;
+            link.download = fileName;
+            link.target = '_blank';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+}
+
+// Close lightbox on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeFlyerLightbox();
+    }
+});
 
 // Tab Switcher Helper Function
 function switchSpecialsTab(tab) {
@@ -360,6 +447,7 @@ function switchSpecialsTab(tab) {
 // Download / Share Flyer Image directly
 function downloadFlyerImage() {
     const downloadBtn = document.getElementById('download-flyer-btn');
+    const lightboxShareBtn = document.getElementById('lightbox-share-btn');
     const config = window.__currentSpecialsConfig || {};
     const meta = config.meta || {};
     const flyerUrl = meta.downloadFlyerImage || 'assets/SuA-Glow-September-Specials.jpg';
@@ -367,14 +455,20 @@ function downloadFlyerImage() {
 
     if (downloadBtn) {
         downloadBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Preparing Image...`;
-        if (window.lucide) lucide.createIcons();
     }
+    if (lightboxShareBtn) {
+        lightboxShareBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Sharing...`;
+    }
+    if (window.lucide) lucide.createIcons();
 
     const resetBtn = () => {
         if (downloadBtn) {
             downloadBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share`;
-            if (window.lucide) lucide.createIcons();
         }
+        if (lightboxShareBtn) {
+            lightboxShareBtn.innerHTML = `<i data-lucide="share-2" class="w-4 h-4"></i> <span>Share Flyer</span>`;
+        }
+        if (window.lucide) lucide.createIcons();
     };
 
     fetch(flyerUrl)
