@@ -25,8 +25,8 @@ function renderMonthlySpecials(customConfig) {
 
         return `
             <div class="bg-white rounded-[24px] border border-warm-gold/30 p-4 md:p-6 pl-4 md:pl-56 shadow-soft hover:shadow-2xl transition-all duration-500 flex flex-col md:grid md:grid-cols-[1fr_auto] items-stretch gap-6 md:gap-8 group animate-on-scroll fade-up relative min-h-[160px] overflow-hidden ${delayClass}" style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.94) 50%, rgba(255, 255, 255, 0.70) 75%, rgba(255, 255, 255, 0.25) 100%), url('${meta.cardBackground || 'assets/dallas_fall_card_bg.jpg'}'); background-size: cover; background-position: right center;">
-                <!-- Left Image Container (Equal Top, Left & Bottom Margins) -->
-                <div class="w-full md:w-44 h-48 md:h-auto md:absolute md:top-4 md:bottom-4 md:left-4 rounded-[18px] overflow-hidden bg-off-white shrink-0 border border-charcoal/10 relative z-10">
+                <!-- Left Image Container (4:5 Aspect Ratio on Mobile to show full image) -->
+                <div class="w-full md:w-44 aspect-[4/5] md:aspect-auto h-auto md:h-auto md:absolute md:top-4 md:bottom-4 md:left-4 rounded-[18px] overflow-hidden bg-off-white shrink-0 border border-charcoal/10 relative z-10">
                     <img src="${stepItem.image}" alt="${stepItem.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 </div>
 
