@@ -12,6 +12,7 @@ function renderMonthlySpecials(customConfig) {
         console.error('MONTHLY_SPECIALS_CONFIG is not defined. Please include specials-data.js before specials-renderer.js or pass config to renderMonthlySpecials(config).');
         return '';
     }
+    window.__currentSpecialsConfig = config;
 
     const { meta, featuredSteps, additionalPromos, brandPillars } = config;
 
@@ -157,18 +158,22 @@ function renderMonthlySpecials(customConfig) {
                 
                 <!-- Title Header -->
                 <div class="text-center max-w-3xl mx-auto mb-12 animate-on-scroll fade-up">
-                    ${meta.pill ? `
+                    ${meta.pillImage ? `
+                        <div class="mb-5 flex justify-center">
+                            <img src="${meta.pillImage}" alt="Labor Day Glow Drop" class="h-16 sm:h-20 md:h-24 w-auto object-contain mx-auto filter drop-shadow-xs">
+                        </div>
+                    ` : (meta.pill ? `
                         <div class="mb-3">
                             <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.25em] uppercase bg-[#721c24]/10 text-[#8b2635] border border-[#721c24]/20 shadow-sm">
                                 <i data-lucide="sparkles" class="w-3 h-3 text-[#8b2635]"></i>
                                 ${meta.pill}
                             </span>
                         </div>
-                    ` : ''}
+                    ` : '')}
                     <span class="inline-block text-[10px] md:text-xs tracking-[0.4em] text-warm-gold uppercase font-bold mb-4 italic whitespace-nowrap">${meta.badge}</span>
                     <h1 class="heading-wide text-3xl md:text-5xl text-near-black mb-4 uppercase tracking-[0.15em] leading-tight">${meta.title}</h1>
                     <p class="font-body text-taupe italic tracking-widest opacity-90 uppercase text-xs md:text-sm mb-4">${meta.subtitle}</p>
-                    ${meta.tagline ? `<p class="font-body text-xs md:text-sm text-charcoal/70 max-w-xl mx-auto mb-6 leading-relaxed">${meta.tagline}</p>` : ''}
+                    ${meta.tagline ? `<p class="font-body text-xs md:text-sm text-charcoal/70 max-w-2xl md:max-w-3xl mx-auto mb-6 leading-relaxed [text-wrap:pretty]">${meta.tagline}</p>` : ''}
                     <div class="w-24 h-[1px] bg-warm-gold/40 mx-auto"></div>
                 </div>
 
@@ -176,13 +181,25 @@ function renderMonthlySpecials(customConfig) {
                 <div class="max-w-4xl mx-auto mb-12 animate-on-scroll fade-up">
                     <div class="bg-gradient-to-r from-near-black via-near-black/95 to-near-black text-white p-8 md:p-10 rounded-[28px] shadow-2xl border border-warm-gold/30 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left relative overflow-hidden">
                         <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-warm-gold/10 rounded-full blur-2xl"></div>
-                        <div class="z-10">
-                            <span class="text-[10px] uppercase tracking-[0.3em] text-warm-gold font-bold block mb-2">Exclusive Offer</span>
-                            <h2 class="font-heading text-xl md:text-3xl text-white font-bold tracking-wide leading-snug">${meta.offerCallout}</h2>
-                            <p class="font-body text-xs text-white/70 mt-2">Book your consultation during ${meta.month} to redeem.</p>
+                        <div class="z-10 max-w-2xl">
+                            <span class="text-[10px] uppercase tracking-[0.3em] text-warm-gold font-bold block mb-2">${meta.offerBadge || 'Exclusive September Offer'}</span>
+                            <h2 class="font-heading text-xl sm:text-2xl md:text-3xl text-white font-bold tracking-wide leading-tight">${meta.offerCallout}</h2>
+                            ${meta.offerTagline ? `
+                                <p class="font-heading text-xs sm:text-sm text-warm-gold font-bold tracking-widest uppercase mt-2.5">
+                                    ${meta.offerTagline}
+                                </p>
+                            ` : ''}
+                            <p class="font-body text-xs sm:text-sm text-white/80 mt-2 leading-relaxed">
+                                ${meta.offerSubtext || `Book your consultation during ${meta.month} to redeem.`}
+                            </p>
+                            ${meta.offerPillars ? `
+                                <p class="font-body text-[11px] text-white/60 tracking-wide mt-2 pt-2 border-t border-white/10">
+                                    ${meta.offerPillars}
+                                </p>
+                            ` : ''}
                         </div>
-                        <a href="${meta.bookingUrl}" target="_blank" class="btn-primary shrink-0 z-10 py-4 px-8 text-xs font-bold tracking-widest shadow-lg">
-                            Claim Offer Today
+                        <a href="${meta.offerCtaUrl || meta.bookingUrl}" ${meta.offerCtaUrl && meta.offerCtaUrl.startsWith('#') ? '' : 'target="_blank"'} class="btn-primary shrink-0 z-10 py-4 px-8 text-xs font-bold tracking-widest shadow-lg whitespace-nowrap">
+                            ${meta.offerCtaText || 'Claim Offer Today'}
                         </a>
                     </div>
                 </div>
@@ -340,9 +357,13 @@ function switchSpecialsTab(tab) {
     }
 }
 
-// Download / Share Flyer Image directly using assets/SuA-Glow-August-Specials.png
+// Download / Share Flyer Image directly
 function downloadFlyerImage() {
     const downloadBtn = document.getElementById('download-flyer-btn');
+    const config = window.__currentSpecialsConfig || {};
+    const meta = config.meta || {};
+    const flyerUrl = meta.downloadFlyerImage || 'assets/SuA-Glow-September-Specials.jpg';
+    const fileName = meta.month ? `SuA-Glow-${meta.month.replace(/\s+/g, '-')}-Specials.jpg` : 'SuA-Glow-September-Specials.jpg';
 
     if (downloadBtn) {
         downloadBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Preparing Image...`;
@@ -356,30 +377,31 @@ function downloadFlyerImage() {
         }
     };
 
-    fetch('assets/SuA-Glow-August-Specials.png?v=999')
+    fetch(flyerUrl)
         .then(res => res.blob())
         .then(blob => {
-            const file = new File([blob], 'SuA-Glow-August-Specials.png', { type: 'image/png' });
+            const mimeType = flyerUrl.endsWith('.png') ? 'image/png' : 'image/jpeg';
+            const file = new File([blob], fileName, { type: mimeType });
 
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
                 navigator.share({
-                    title: 'SuA K Glow August Specials',
-                    text: 'Check out SuA K Glow August Specials offers!',
+                    title: `SuA K Glow ${meta.month || 'September'} Specials`,
+                    text: `Check out SuA K Glow ${meta.month || 'September'} Specials offers!`,
                     files: [file]
                 }).catch(err => {
                     console.log('Share sheet dismissed or failed:', err);
-                    triggerDirectDownload(blob);
+                    triggerDirectDownload(blob, fileName);
                 }).finally(resetBtn);
             } else {
-                triggerDirectDownload(blob);
+                triggerDirectDownload(blob, fileName);
                 resetBtn();
             }
         })
         .catch(err => {
             console.error('Error loading flyer image asset:', err);
             const fallbackLink = document.createElement('a');
-            fallbackLink.href = 'assets/SuA-Glow-August-Specials.png';
-            fallbackLink.download = 'SuA-Glow-August-Specials.png';
+            fallbackLink.href = flyerUrl;
+            fallbackLink.download = fileName;
             fallbackLink.target = '_blank';
             document.body.appendChild(fallbackLink);
             fallbackLink.click();
@@ -388,10 +410,10 @@ function downloadFlyerImage() {
         });
 }
 
-function triggerDirectDownload(blob) {
+function triggerDirectDownload(blob, fileName = 'SuA-Glow-September-Specials.jpg') {
     const blobUrl = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.download = 'SuA-Glow-August-Specials.png';
+    link.download = fileName;
     link.href = blobUrl;
     document.body.appendChild(link);
     link.click();

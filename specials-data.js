@@ -1,98 +1,81 @@
 /**
  * SuA K Glow - Monthly Specials Data Configuration
  * ------------------------------------------------
- * To update specials for a new month, simply edit the values in this file!
+ * Dedicated configuration for the active Monthly Specials campaign.
  */
 
 const MONTHLY_SPECIALS_CONFIG = {
     // Campaign Overview Metadata
     meta: {
-        month: "August 2026",
-        badge: "Limited Time | August Offers",
-        title: "The Korean Fall Skin & Body Reset",
-        subtitle: "Inspired by Seoul's approach to seasonal skin health",
-        offerCallout: "$100 TOWARD YOUR KOREAN FALL SKIN & BODY RESET",
-        flyerImage: "assets/korean_fall_skin_reset_august.jpg",
+        month: "September 2026",
+        pill: "LABOR DAY GLOW DROP",
+        pillImage: "assets/labor_day_glow_drop_badge.png?v=57",
+        badge: "Limited Time | September Offers",
+        title: "The SuA Glow September Edit",
+        subtitle: "Seoul Style. Dallas Glow.",
+        tagline: "Dallas summer steal your glow? K-Beauty to the rescue. Your Seoul-style comeback starts at SuA Glow. Three September-only ways to firm, refine + reset.",
+        offerBadge: "LIMITED TIME · SEPTEMBER 2026",
+        offerCallout: "$100 OFF YOUR <span class=\"md:whitespace-nowrap\">SEOUL-STYLE COMEBACK</span>",
+        offerSubtext: "Book your consultation during September 2026 to redeem.",
+        offerPillars: "Korean-founded · Korean PA-C provider · Physician-guided",
+        offerCtaText: "Claim Your Offer",
+        offerCtaUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
+        flyerImage: "assets/september_flyer_bg_models.jpg?v=56",
+        downloadFlyerImage: "assets/SuA-Glow-September-Specials.jpg?v=80",
+        cardBackground: "assets/dallas_fall_card_bg.jpg?v=56",
         bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
-        terms: "*Offer valid for limited time during August. Cannot be combined with other promotional discounts."
+        terms: "*September promotional pricing. Consultation is required to determine candidacy. Individual results vary. Offers subject to availability."
     },
 
-    // 3-Step Program (Highlighted Cards matching the flyer steps 1, 2, 3)
+    // 3-Step Program (Highlighted Offers matching September Edit)
     featuredSteps: [
         {
             step: 1,
-            badge: "LIFT & TIGHTEN",
-            title: "Seoul Body Lift",
-            subtitle: "Oligio X® Body",
-            price: "$1,200",
-            priceDetail: "900 Shots",
-            description: "Supports firmer-looking skin and body contouring utilizing advanced targeted RF heating.",
-            image: "assets/oligio_x_product.png",
-            tags: ["900 Shots", "Firming", "Body Contouring"],
+            badge: "FIRM + CONTOUR + GLOW",
+            title: "Seoul Glass Skin 360",
+            subtitle: "Oligio X® 600 Shots + SkinTox",
+            price: "$1,599",
+            originalPrice: "$2,100",
+            priceDetail: "Regular Value $2,100",
+            description: "The Seoul-style pairing for firmer-looking, smoother, luminous skin. Oligio X targeted RF meets SkinTox for a Korean-inspired approach to skin firmness, refinement + glow.",
+            image: "assets/oligio_x_model_promo.jpg",
+            tags: ["Oligio X® 600 Shots", "SkinTox", "Firmness + Glow"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
         {
             step: 2,
-            badge: "BUILD COLLAGEN",
-            title: "Korean Fall Body Reset",
-            subtitle: "Radiesse® or Sculptra®",
-            price: "$990",
-            priceDetail: "2 Sessions",
-            description: "Supports healthy collagen production and restores structural volume for long-lasting skin renewal.",
-            image: "assets/korean_fall_body_reset_abs.png",
-            tags: ["2 Sessions", "Radiesse® or Sculptra®", "Biostimulator"],
+            badge: "SCALP + HAIR WELLNESS",
+            title: "Korean Scalp & Hair Reset",
+            subtitle: "Needle-Free · Peptides · Red Light",
+            price: "$3,600",
+            originalPrice: "$4,800",
+            priceDetail: "6-Session Program · $600<br>Session (Reg. $4,800)",
+            description: "Great hair requires more than a power wash at a scalp bar. Our 6-session Korean-inspired program combines needle-free scalp infusion, peptides + red light to support scalp hydration, balance and healthier-looking hair.",
+            image: "assets/dep_hair.jpg?v=75",
+            tags: ["6-Session Program", "Needle-Free Scalp Infusion", "Peptides & Red Light"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
         {
             step: 3,
-            badge: "DEEP HYDRATION",
-            title: "Glass Skin Infusion",
-            subtitle: "Needle-Free HA Skin Booster",
-            price: "$349",
-            priceDetail: "Full Treatment",
-            description: "Restore hydration for healthy-looking, luminous skin with zero downtime.",
-            image: "assets/korean-models/portrait_2_highres.png",
-            tags: ["Needle-Free", "HA Booster", "Luminous Glow"],
+            badge: "VOLUME + CONTOUR",
+            title: "Seoul Youth Sculpt",
+            subtitle: "RADIESSE® or HA · FACIAL VOLUME · NECK REFINEMENT",
+            price: "$990",
+            originalPrice: "$1,300",
+            priceDetail: "Regular Value $1,300",
+            description: "A Seoul-inspired pairing designed to support facial structure, restore the appearance of volume + refine the neck for a more balanced, refreshed look.",
+            image: "assets/reset_right_for_you_glow.png",
+            tags: ["RADIESSE® or HA", "Facial Volume", "Neck Refinement"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         }
     ],
 
-    // Additional Monthly Special Offers (Grid Section)
-    additionalPromos: [
-        {
-            badge: "LIP REPAIR",
-            title: "Rejuran® Lip PN Reset",
-            price: "$299",
-            originalPrice: "$400",
-            description: "Your lips don't need volume—they need repair. Powered by PN, Rejuran® restores deep hydration and strengthens lip tissue.",
-            image: "assets/specials/SuA Launch Special - LIP PN.webp",
-            bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
-        },
-        {
-            badge: "HYDRATION & LIFT",
-            title: "LDM Triple Ultrasound",
-            price: "$99",
-            originalPrice: "$249",
-            description: "Calms inflammation, drives deep hydration, and finishes with a subtle lift—no heat, no needles, no downtime.",
-            image: "assets/specials/SuA Launch Special - ULTRASOUND.webp",
-            bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
-        },
-        {
-            badge: "NECK SMOOTHING",
-            title: "Byryzn™ HA Neck Refine",
-            price: "$299",
-            originalPrice: "$400",
-            description: "Neck wrinkle eraser. Turn back the clock—without surgery or stiffness. Smooth lines and restore neck hydration.",
-            image: "assets/specials/SuA Launch Special - Neck refine.webp",
-            bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
-        }
-    ],
-
-    // Brand Pillars (Footer / Value props featured at bottom of poster)
+    // Additional Special Badges & Trust Pillars
     brandPillars: [
-        { icon: "award", title: "Korean Expertise", subtitle: "Seoul-proven protocols" },
-        { icon: "stethoscope", title: "Physician Guided", subtitle: "Expert medical care" },
-        { icon: "sparkles", title: "Customized Care", subtitle: "Tailored to your skin" },
-        { icon: "heart-pulse", title: "Healthy Skin", subtitle: "Lasting natural glow" }
+        { icon: "award", title: "KOREAN-FOUNDED", subtitle: "Authentic K-Beauty" },
+        { icon: "stethoscope", title: "PHYSICIAN-GUIDED", subtitle: "Dr. Adam Yang, MD" },
+        { icon: "user-check", title: "KOREAN PA-C PROVIDER", subtitle: "Sophia Yang, PA-C" },
+        { icon: "sparkles", title: "SEOUL-INSPIRED", subtitle: "Korean aesthetic approach" },
+        { icon: "map-pin", title: "DALLAS K-BEAUTY", subtitle: "Carrollton · DFW" }
     ]
 };
