@@ -9,7 +9,7 @@ const MONTHLY_SPECIALS_CONFIG = {
     meta: {
         month: "September 2026",
         pill: "LABOR DAY GLOW DROP",
-        pillImage: "assets/labor_day_glow_drop_badge.png?v=57",
+        pillImage: "assets/labor-day.png?v=90",
         badge: "Limited Time | September Offers",
         title: "The SuA Glow September Edit",
         subtitle: "Seoul Style. Dallas Glow.",
