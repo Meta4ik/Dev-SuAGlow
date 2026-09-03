@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Post Designs | SuA K Glow Med Spa</title>
-    <meta name="description" content="Instagram 4:5 post design concepts for SuA K Glow September promotions and special offers.">
+    <meta name="description" content="Instagram 4:5 post & carousel design studio for SuA K Glow September promotions.">
     <link rel="icon" href="assets/favicon.png" type="image/png">
 
     <!-- Google Fonts -->
@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS Output -->
-    <link rel="stylesheet" href="dist/output.css?v=95">
+    <link rel="stylesheet" href="dist/output.css?v=96">
 
     <!-- Lucide Icons & html2canvas -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -27,21 +27,28 @@
         /* 4:5 Ratio Instagram Canvas: 1080 x 1350 scale */
         .ig-post-canvas {
             width: 100%;
-            max-width: 540px;
+            max-width: 520px;
             aspect-ratio: 4 / 5;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
             background-color: #faf8f5;
         }
 
-        /* Glassmorphism Pill */
+        /* Frosted Glass Cards */
         .glass-pill {
             background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.85);
+        }
+
+        .glass-dark {
+            background: rgba(14, 15, 18, 0.78);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.14);
         }
     </style>
 </head>
@@ -49,7 +56,7 @@
 <body class="bg-[#121316] text-white min-h-screen antialiased font-body">
 
     <!-- Top Navigation Bar -->
-    <header class="border-b border-white/10 bg-black/40 backdrop-blur-md sticky top-0 z-40 px-6 py-4">
+    <header class="border-b border-white/10 bg-black/50 backdrop-blur-md sticky top-0 z-40 px-6 py-4">
         <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center gap-4">
                 <a href="specials-september.html" class="flex items-center gap-2 text-white/70 hover:text-white text-xs font-heading font-semibold uppercase tracking-wider transition-colors">
@@ -63,7 +70,7 @@
             <div class="flex items-center gap-3">
                 <button onclick="downloadActiveCanvas()" id="export-post-btn" class="btn-primary text-xs py-2 px-5 inline-flex items-center gap-2 shadow-lg cursor-pointer">
                     <i data-lucide="download" class="w-4 h-4"></i>
-                    <span>Download 4:5 Image (PNG)</span>
+                    <span id="export-btn-label">Download Active Slide (PNG)</span>
                 </button>
             </div>
         </div>
@@ -72,23 +79,20 @@
     <main class="max-w-6xl mx-auto px-6 py-10">
 
         <!-- Page Intro & Design Selector Tabs -->
-        <div class="text-center max-w-2xl mx-auto mb-10">
+        <div class="text-center max-w-2xl mx-auto mb-8">
             <span class="text-[10px] font-heading font-bold tracking-[0.3em] uppercase text-warm-gold block mb-2">Social Media Marketing Assets</span>
-            <h1 class="font-heading text-2xl md:text-3xl font-extrabold uppercase tracking-wide text-white mb-3">September Promo Instagram Posts</h1>
+            <h1 class="font-heading text-2xl md:text-3xl font-extrabold uppercase tracking-wide text-white mb-2">September Instagram Carousel Studio</h1>
             <p class="text-xs md:text-sm text-white/60 leading-relaxed">
                 Optimized 4:5 portrait aspect ratio (1080 × 1350 px) designed for high engagement in the Instagram feed, complete with copy-ready captions.
             </p>
 
-            <!-- Design Variant Tabs -->
-            <div class="mt-8 inline-flex p-1.5 bg-white/5 rounded-full border border-white/10 shadow-inner">
-                <button onclick="selectDesign('design-campaign')" id="tab-btn-campaign" class="tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider bg-warm-gold text-near-black shadow transition-all">
-                    1. Campaign Overview
+            <!-- Main Mode Tabs -->
+            <div class="mt-6 inline-flex p-1.5 bg-white/5 rounded-full border border-white/10 shadow-inner">
+                <button onclick="switchMode('carousel')" id="tab-btn-carousel" class="mode-tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider bg-warm-gold text-near-black shadow transition-all">
+                    1. 4-Slide Carousel (Cover + 3 Specials)
                 </button>
-                <button onclick="selectDesign('design-spotlight')" id="tab-btn-spotlight" class="tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">
-                    2. Oligio X Spotlight
-                </button>
-                <button onclick="selectDesign('design-editorial')" id="tab-btn-editorial" class="tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">
-                    3. Luxury Minimalist
+                <button onclick="switchMode('editorial')" id="tab-btn-editorial" class="mode-tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">
+                    2. Luxury Minimalist
                 </button>
             </div>
         </div>
@@ -98,216 +102,417 @@
             <!-- Left: 4:5 Instagram Preview Canvas Container -->
             <div class="lg:col-span-7 flex flex-col items-center justify-center">
                 
-                <!-- DESIGN 1: Campaign Overview (All 3 Glow Drops) -->
-                <div id="design-campaign" class="design-variant ig-post-canvas flex flex-col justify-between p-6 sm:p-7 relative text-near-black">
-                    <!-- Background Layer with Radiant Models + Dallas Skyline -->
-                    <div class="absolute inset-0 bg-cover bg-top z-0" style="background-image: url('assets/september_flyer_bg_models.jpg'); background-position: 85% top;"></div>
-                    <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/20 z-0"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-white/95 via-transparent to-white/60 z-0"></div>
-
-                    <!-- Top Bar: Logo & Badge -->
-                    <div class="relative z-10 flex items-center justify-between w-full">
-                        <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-7 sm:h-8 w-auto object-contain">
-                        <span class="text-[8.5px] font-heading font-extrabold uppercase tracking-[0.25em] bg-near-black text-warm-gold px-3 py-1.5 rounded-full border border-warm-gold/40 shadow-sm">
-                            LIMITED TIME · SEPT 2026
-                        </span>
-                    </div>
-
-                    <!-- Headline & Pitch Callout -->
-                    <div class="relative z-10 pt-2 pb-1 max-w-[380px]">
-                        <span class="text-[9px] font-heading font-extrabold tracking-[0.3em] uppercase text-warm-gold block mb-1">Authentic K-Beauty · Dallas HQ</span>
-                        <h2 class="font-heading text-2xl sm:text-[28px] font-black uppercase tracking-tight leading-[1.08] text-near-black mb-1">
-                            YOUR SEOUL-STYLE<br>
-                            <span class="text-warm-gold">COMEBACK</span>
-                        </h2>
-                        <p class="font-body text-[11px] font-medium text-charcoal/85 leading-snug">
-                            Three September-only ways to firm, refine + reset.
-                        </p>
-                    </div>
-
-                    <!-- 3 Large Prominent Treatment Cards -->
-                    <div class="relative z-10 space-y-2.5 my-auto">
-                        <!-- Step 1 -->
-                        <div class="glass-pill p-3 sm:p-3.5 rounded-2xl flex items-center justify-between gap-3.5 shadow-sm border border-white/90">
-                            <div class="flex items-center gap-3">
-                                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden bg-off-white border border-charcoal/10 shrink-0">
-                                    <img src="assets/oligio_x_model_promo.jpg" alt="Seoul Glass Skin 360" class="w-full h-full object-cover">
-                                </div>
-                                <div>
-                                    <span class="text-[8px] sm:text-[8.5px] uppercase font-bold tracking-widest text-warm-gold block mb-0.5">FIRM + CONTOUR + GLOW</span>
-                                    <h4 class="font-heading text-sm sm:text-base font-extrabold text-near-black leading-tight">Seoul Glass Skin 360</h4>
-                                    <p class="font-body text-[10px] sm:text-[10.5px] text-charcoal/70 leading-snug mt-0.5">Oligio X® 600 Shots + SkinTox</p>
-                                </div>
-                            </div>
-                            <div class="text-right shrink-0 pl-2">
-                                <span class="font-heading text-base sm:text-lg font-black text-near-black block leading-none">$1,599</span>
-                                <span class="text-[9px] text-charcoal/45 line-through block mt-1">Reg. $2,100</span>
-                            </div>
+                <!-- ======================================================== -->
+                <!-- MODE 1: 4-SLIDE INSTAGRAM CAROUSEL                       -->
+                <!-- ======================================================== -->
+                <div id="mode-carousel" class="w-full flex flex-col items-center">
+                    
+                    <!-- Slide Sub-Switcher Bar -->
+                    <div class="w-full max-w-[520px] flex items-center justify-between gap-2 mb-3 px-1">
+                        <div class="inline-flex bg-white/5 p-1 rounded-xl border border-white/10 text-[11px] font-heading font-bold uppercase tracking-wider">
+                            <button onclick="setCarouselSlide(1)" id="slide-pill-1" class="slide-pill px-3 py-1.5 rounded-lg bg-warm-gold text-near-black transition-all">
+                                1. Cover
+                            </button>
+                            <button onclick="setCarouselSlide(2)" id="slide-pill-2" class="slide-pill px-3 py-1.5 rounded-lg text-white/70 hover:text-white transition-all">
+                                2. Oligio X
+                            </button>
+                            <button onclick="setCarouselSlide(3)" id="slide-pill-3" class="slide-pill px-3 py-1.5 rounded-lg text-white/70 hover:text-white transition-all">
+                                3. Scalp Reset
+                            </button>
+                            <button onclick="setCarouselSlide(4)" id="slide-pill-4" class="slide-pill px-3 py-1.5 rounded-lg text-white/70 hover:text-white transition-all">
+                                4. Youth Sculpt
+                            </button>
                         </div>
 
-                        <!-- Step 2 -->
-                        <div class="glass-pill p-3 sm:p-3.5 rounded-2xl flex items-center justify-between gap-3.5 shadow-sm border border-white/90">
-                            <div class="flex items-center gap-3">
-                                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden bg-off-white border border-charcoal/10 shrink-0">
-                                    <img src="assets/dep_hair.jpg" alt="Korean Scalp & Hair Reset" class="w-full h-full object-cover">
-                                </div>
-                                <div>
-                                    <span class="text-[8px] sm:text-[8.5px] uppercase font-bold tracking-widest text-warm-gold block mb-0.5">SCALP + HAIR WELLNESS</span>
-                                    <h4 class="font-heading text-sm sm:text-base font-extrabold text-near-black leading-tight">Korean Scalp & Hair Reset</h4>
-                                    <p class="font-body text-[10px] sm:text-[10.5px] text-charcoal/70 leading-snug mt-0.5">Needle-Free Infusion · Peptides · Red Light</p>
-                                </div>
-                            </div>
-                            <div class="text-right shrink-0 pl-2">
-                                <span class="font-heading text-base sm:text-lg font-black text-near-black block leading-none">$3,600</span>
-                                <span class="text-[9px] text-charcoal/45 line-through block mt-1">Reg. $4,800</span>
-                            </div>
-                        </div>
-
-                        <!-- Step 3 -->
-                        <div class="glass-pill p-3 sm:p-3.5 rounded-2xl flex items-center justify-between gap-3.5 shadow-sm border border-white/90">
-                            <div class="flex items-center gap-3">
-                                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden bg-off-white border border-charcoal/10 shrink-0">
-                                    <img src="assets/reset_right_for_you_glow.png" alt="Seoul Youth Sculpt" class="w-full h-full object-cover">
-                                </div>
-                                <div>
-                                    <span class="text-[8px] sm:text-[8.5px] uppercase font-bold tracking-widest text-warm-gold block mb-0.5">VOLUME + CONTOUR</span>
-                                    <h4 class="font-heading text-sm sm:text-base font-extrabold text-near-black leading-tight">Seoul Youth Sculpt</h4>
-                                    <p class="font-body text-[10px] sm:text-[10.5px] text-charcoal/70 leading-snug mt-0.5">Radiesse® or HA · Facial Volume + Neck</p>
-                                </div>
-                            </div>
-                            <div class="text-right shrink-0 pl-2">
-                                <span class="font-heading text-base sm:text-lg font-black text-near-black block leading-none">$990</span>
-                                <span class="text-[9px] text-charcoal/45 line-through block mt-1">Reg. $1,300</span>
-                            </div>
+                        <div class="flex items-center gap-1.5">
+                            <button onclick="prevCarouselSlide()" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-colors" title="Previous Slide">
+                                <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                            </button>
+                            <span id="slide-counter-badge" class="text-xs font-heading font-bold text-white/70 px-2">1 / 4</span>
+                            <button onclick="nextCarouselSlide()" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-colors" title="Next Slide">
+                                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Footer Bar: Clean Instagram Handle, Location & CTA (No fake button) -->
-                    <div class="relative z-10 bg-near-black text-white px-4 py-3 rounded-2xl flex items-center justify-between shadow-lg">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="instagram" class="w-4 h-4 text-warm-gold"></i>
-                            <span class="text-[10px] font-heading font-bold tracking-wider text-white">@suaglowmedspa</span>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-[9.5px] font-heading font-extrabold uppercase tracking-widest text-warm-gold block">TAP LINK IN BIO TO BOOK</span>
-                            <span class="text-[8.5px] font-body text-white/60">Carrollton, TX · 972-665-8737</span>
-                        </div>
-                    </div>
-                </div>
+                    <!-- SLIDE 1: COVER IMAGE -->
+                    <!-- Background moved up so heads/faces are at top; title and services pushed down; swipe arrow in bottom box -->
+                    <div id="carousel-slide-1" class="carousel-slide ig-post-canvas flex flex-col justify-between p-6 sm:p-7 relative text-near-black">
+                        <!-- Background: Models shifted up so their heads/faces sit right at the top of the frame -->
+                        <div class="absolute inset-0 bg-cover z-0" style="background-image: url('assets/september_flyer_bg_models.jpg'); background-position: right -50px; background-color: #faf8f5;"></div>
+                        
+                        <!-- Lightened soft left-side gradient: keeps text crisp without overpowering the image -->
+                        <div class="absolute inset-y-0 left-0 w-[55%] bg-gradient-to-r from-white/85 via-white/55 to-transparent pointer-events-none z-0"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white/85 via-white/35 to-transparent pointer-events-none z-0"></div>
 
-                <!-- DESIGN 2: Oligio X Spotlight (Hero Treatment) -->
-                <div id="design-spotlight" class="design-variant ig-post-canvas hidden flex-col justify-between p-7 relative text-white bg-near-black">
-                    <!-- Background Model with Oligio Device -->
-                    <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('assets/oligio_x_model_promo.jpg'); background-position: center top;"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-near-black via-near-black/50 to-near-black/40 z-0"></div>
-
-                    <!-- Top Bar -->
-                    <div class="relative z-10 flex items-center justify-between w-full">
-                        <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-8 w-auto object-contain brightness-0 invert">
-                        <span class="text-[8.5px] font-heading font-bold uppercase tracking-[0.25em] bg-warm-gold/20 text-warm-gold px-3.5 py-1.5 rounded-full border border-warm-gold/40 backdrop-blur-md">
-                            SEPTEMBER GLOW DROP
-                        </span>
-                    </div>
-
-                    <!-- Center Badge -->
-                    <div class="relative z-10 my-auto text-center">
-                        <span class="inline-block px-3 py-1 rounded-full text-[9px] font-heading font-bold tracking-[0.3em] uppercase bg-white/10 text-white border border-white/20 backdrop-blur-md mb-3">
-                            K-BEAUTY FIRMING + GLOW
-                        </span>
-                        <h2 class="font-heading text-2xl sm:text-3xl font-black uppercase tracking-wider leading-tight text-white mb-2">
-                            SEOUL GLASS SKIN <span class="text-warm-gold">360</span>
-                        </h2>
-                        <p class="font-body text-xs text-white/80 max-w-[320px] mx-auto leading-relaxed">
-                            Oligio X® 600 Targeted RF Shots paired with SkinTox for firmer, refined, glass-like radiance.
-                        </p>
-                    </div>
-
-                    <!-- Bottom Pricing & Action Box -->
-                    <div class="relative z-10 bg-black/60 backdrop-blur-md border border-white/20 p-4 rounded-2xl">
-                        <div class="flex items-center justify-between mb-3 pb-3 border-b border-white/10">
-                            <div>
-                                <span class="text-[9px] uppercase font-bold tracking-widest text-warm-gold block">SEPTEMBER OFFER</span>
-                                <span class="font-heading text-2xl font-black text-white leading-none">$1,599</span>
-                            </div>
-                            <div class="text-right">
-                                <span class="text-[10px] text-white/50 line-through block">Value $2,100</span>
-                                <span class="text-[9px] font-bold text-warm-gold uppercase tracking-wider">Save $501</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between text-[8.5px] font-body text-white/70">
-                            <span>Physician-Guided · Sophia Yang, PA-C</span>
-                            <span class="font-heading font-bold uppercase tracking-wider text-warm-gold">Tap Link In Bio</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DESIGN 3: Luxury Minimalist Editorial -->
-                <div id="design-editorial" class="design-variant ig-post-canvas hidden flex-col justify-between p-8 relative text-near-black" style="background-color: #f7f4ef;">
-                    <div class="absolute inset-0 bg-[radial-gradient(#e5dec9_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
-
-                    <!-- Top Row -->
-                    <div class="relative z-10 flex items-center justify-between border-b border-charcoal/10 pb-4">
-                        <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-8 w-auto object-contain">
-                        <span class="text-[9px] font-heading font-bold tracking-[0.3em] uppercase text-taupe">Carrollton HQ</span>
-                    </div>
-
-                    <!-- Center Editorial Typography -->
-                    <div class="relative z-10 my-auto text-left py-6">
-                        <p class="text-[10px] font-heading font-extrabold uppercase tracking-[0.35em] text-warm-gold mb-3">
-                            The September Edit · 2026
-                        </p>
-                        <h2 class="font-heading text-2xl sm:text-3xl font-black uppercase tracking-tight leading-[1.15] text-near-black mb-4">
-                            K-BEAUTY DOESN’T<br>CHASE TRENDS.<br>
-                            <span class="italic font-light text-taupe">IT BUILDS BETTER SKIN.</span>
-                        </h2>
-                        <div class="w-16 h-[2px] bg-warm-gold mb-4"></div>
-                        <p class="font-body text-xs text-charcoal/70 leading-relaxed max-w-[340px]">
-                            Recover your post-summer glow with authentic Korean medical aesthetic protocols. Three curated promotions active this month only.
-                        </p>
-                    </div>
-
-                    <!-- Bottom 3 Pillars -->
-                    <div class="relative z-10 pt-4 border-t border-charcoal/10">
-                        <div class="grid grid-cols-3 gap-2 text-center mb-4">
-                            <div class="p-2 rounded-lg bg-white/70 border border-charcoal/5">
-                                <span class="font-heading text-[10px] font-bold block text-near-black">Glass Skin 360</span>
-                                <span class="text-[9px] text-warm-gold font-semibold">$1,599</span>
-                            </div>
-                            <div class="p-2 rounded-lg bg-white/70 border border-charcoal/5">
-                                <span class="font-heading text-[10px] font-bold block text-near-black">Scalp Reset</span>
-                                <span class="text-[9px] text-warm-gold font-semibold">$3,600</span>
-                            </div>
-                            <div class="p-2 rounded-lg bg-white/70 border border-charcoal/5">
-                                <span class="font-heading text-[10px] font-bold block text-near-black">Youth Sculpt</span>
-                                <span class="text-[9px] text-warm-gold font-semibold">$990</span>
-                            </div>
-                        </div>
-
-                        <div class="text-center">
-                            <span class="text-[9px] font-heading font-bold uppercase tracking-[0.25em] text-charcoal/80">
-                                Link in Bio to Claim September Specials
+                        <!-- Top Bar: Logo (Right side completely open for models' faces) -->
+                        <div class="relative z-10 flex items-center justify-between w-full">
+                            <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-7 sm:h-8 w-auto object-contain">
+                            <span class="text-[8.5px] font-heading font-extrabold uppercase tracking-[0.2em] bg-white/60 backdrop-blur-md text-charcoal px-2.5 py-1 rounded-full border border-charcoal/15">
+                                1 OF 4
                             </span>
+                        </div>
+
+                        <!-- Top flexible spacer: balances title evenly below logo -->
+                        <div class="flex-1 pointer-events-none min-h-[16px]"></div>
+
+                        <!-- Main Title Block: Positioned with Labor Day badge and 3-line headline -->
+                        <div class="relative z-10 max-w-[420px] py-0.5">
+                            <!-- Labor Day Image under logo and above main title -->
+                            <div class="mb-2">
+                                <img src="assets/labor-day.png?v=90" alt="Happy Labor Day" class="h-16 sm:h-20 w-auto object-contain filter drop-shadow-sm">
+                            </div>                            <span class="heading-wide text-[8.5px] sm:text-[9px] font-bold tracking-[0.3em] text-warm-gold uppercase block mb-1">
+                                Authentic K-Beauty · Dallas HQ
+                            </span>
+                            <h2 class="heading-wide text-2xl sm:text-[26px] font-light text-near-black uppercase tracking-[0.14em] leading-[1.08] mb-1">
+                                Your<br>
+                                Seoul-Style<br>
+                                <span class="text-warm-gold font-normal">Comeback</span>
+                            </h2>
+                            <p class="font-body text-[11px] font-semibold text-charcoal/90 tracking-normal leading-snug">
+                                Three September-only ways to firm, refine + reset.
+                            </p>
+                        </div>
+
+                        <!-- Bottom flexible spacer: equal height, balances title evenly above services -->
+                        <div class="flex-1 pointer-events-none min-h-[16px]"></div>
+
+                        <!-- 3 Service Cards: Styled with signature hero heading-wide typography -->
+                        <div class="relative z-10 space-y-2 mb-3">
+                            <!-- Step 1 -->
+                            <div class="glass-pill p-2.5 sm:p-3 rounded-xl flex items-center justify-between gap-3 shadow-xs border border-white/90">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-12 h-12 sm:w-13 sm:h-13 rounded-lg overflow-hidden bg-off-white border border-charcoal/10 shrink-0">
+                                        <img src="assets/oligio_x_model_promo.jpg" alt="Seoul Glass Skin 360" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <span class="font-heading text-[8px] uppercase font-extrabold tracking-[0.25em] text-warm-gold block">FIRM + CONTOUR + GLOW</span>
+                                        <h4 class="heading-wide text-xs sm:text-[13px] font-medium text-near-black uppercase tracking-[0.12em] leading-tight mt-0.5">Seoul Glass Skin 360</h4>
+                                        <p class="font-body text-[9.5px] font-medium text-charcoal/80 leading-tight mt-0.5">Oligio X® 600 Shots + SkinTox</p>
+                                    </div>
+                                </div>
+                                <div class="text-right shrink-0 pl-1">
+                                    <span class="heading-wide text-sm sm:text-base font-medium text-near-black block leading-none tracking-wider">$1,599</span>
+                                    <span class="text-[8.5px] text-charcoal/45 line-through block mt-0.5 font-light">Reg. $2,100</span>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="glass-pill p-2.5 sm:p-3 rounded-xl flex items-center justify-between gap-3 shadow-xs border border-white/90">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-12 h-12 sm:w-13 sm:h-13 rounded-lg overflow-hidden bg-off-white border border-charcoal/10 shrink-0">
+                                        <img src="assets/dep_hair.jpg" alt="Korean Scalp & Hair Reset" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <span class="font-heading text-[8px] uppercase font-extrabold tracking-[0.25em] text-warm-gold block">SCALP + HAIR WELLNESS</span>
+                                        <h4 class="heading-wide text-xs sm:text-[13px] font-medium text-near-black uppercase tracking-[0.12em] leading-tight mt-0.5">Korean Scalp & Hair Reset</h4>
+                                        <p class="font-body text-[9.5px] font-medium text-charcoal/80 leading-tight mt-0.5">Needle-Free · Peptides · Red Light</p>
+                                    </div>
+                                </div>
+                                <div class="text-right shrink-0 pl-1">
+                                    <span class="heading-wide text-sm sm:text-base font-medium text-near-black block leading-none tracking-wider">$3,600</span>
+                                    <span class="text-[8.5px] text-charcoal/45 line-through block mt-0.5 font-light">Reg. $4,800</span>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="glass-pill p-2.5 sm:p-3 rounded-xl flex items-center justify-between gap-3 shadow-xs border border-white/90">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-12 h-12 sm:w-13 sm:h-13 rounded-lg overflow-hidden bg-off-white border border-charcoal/10 shrink-0">
+                                        <img src="assets/reset_right_for_you_glow.png" alt="Seoul Youth Sculpt" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <span class="font-heading text-[8px] uppercase font-extrabold tracking-[0.25em] text-warm-gold block">VOLUME + CONTOUR</span>
+                                        <h4 class="heading-wide text-xs sm:text-[13px] font-medium text-near-black uppercase tracking-[0.12em] leading-tight mt-0.5">Seoul Youth Sculpt</h4>
+                                        <p class="font-body text-[9.5px] font-medium text-charcoal/80 leading-tight mt-0.5">Radiesse® or HA · Facial + Neck</p>
+                                    </div>
+                                </div>
+                                <div class="text-right shrink-0 pl-1">
+                                    <span class="heading-wide text-sm sm:text-base font-medium text-near-black block leading-none tracking-wider">$990</span>
+                                    <span class="text-[8.5px] text-charcoal/45 line-through block mt-0.5 font-light">Reg. $1,300</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer Bar: Clean Instagram Handle + Swipe Arrow for specials -->
+                        <div class="relative z-10 bg-near-black text-white px-4 py-2.5 rounded-2xl flex items-center justify-between shadow-lg">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="instagram" class="w-3.5 h-3.5 text-warm-gold"></i>
+                                <span class="text-[9.5px] font-heading font-bold tracking-wider text-white">@suaglowmedspa</span>
+                            </div>
+                            
+                            <!-- SWIPE ARROW TO SEE INDIVIDUAL SPECIALS -->
+                            <div class="flex items-center gap-1.5 bg-warm-gold text-near-black px-3.5 py-1.5 rounded-full font-heading font-extrabold text-[9px] uppercase tracking-wider shadow-sm">
+                                <span>SWIPE FOR SPECIALS</span>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2: Oligio X (Seoul Glass Skin 360) -->
+                    <div id="carousel-slide-2" class="carousel-slide ig-post-canvas hidden flex-col justify-between p-6 sm:p-7 relative text-white bg-near-black">
+                        <!-- High-res model with Oligio X device -->
+                        <div class="absolute inset-0 bg-cover z-0" style="background-image: url('assets/oligio_x_model_promo.jpg'); background-position: center 8%;"></div>
+                        
+                        <!-- Soft top gradient for logo legibility; bottom gradient for moved-down content -->
+                        <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/60 to-transparent z-0"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black via-black/85 to-transparent z-0"></div>
+
+                        <!-- Top Bar: Logo & Slide Number/Swipe Indicator -->
+                        <div class="relative z-10 flex items-center justify-between w-full">
+                            <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-7 sm:h-8 w-auto object-contain brightness-0 invert">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[8.5px] font-heading font-extrabold uppercase tracking-[0.2em] bg-white/15 backdrop-blur-md text-white px-2.5 py-1 rounded-full border border-white/20">
+                                    2 OF 4
+                                </span>
+                                <span class="text-[8.5px] font-heading font-extrabold uppercase tracking-[0.2em] bg-warm-gold/20 backdrop-blur-md text-warm-gold px-3 py-1 rounded-full border border-warm-gold/40 flex items-center gap-1">
+                                    <span>SWIPE</span>
+                                    <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Open middle area: Device & model face completely uncovered! -->
+                        <div class="flex-1 pointer-events-none min-h-[140px]"></div>
+
+                        <!-- MOVED DOWN: Lower Content & Pricing Card -->
+                        <div class="relative z-10 space-y-2.5">
+                            <!-- Title & Subtitle Badge -->
+                            <div class="text-left">
+                                <span class="inline-block px-3 py-1 rounded-full font-heading text-[8px] font-extrabold tracking-[0.25em] uppercase bg-warm-gold/20 text-warm-gold border border-warm-gold/40 backdrop-blur-md mb-1.5">
+                                    FIRM + CONTOUR + GLOW
+                                </span>
+                                <h2 class="heading-wide text-xl sm:text-2xl font-light text-white uppercase tracking-[0.12em] leading-[1.1] mb-1 whitespace-nowrap">
+                                    SEOUL GLASS SKIN <span class="text-warm-gold font-normal">360</span>
+                                </h2>
+                                <p class="font-body text-[11px] text-white/85 leading-snug">
+                                    Oligio X® 600 Targeted RF Shots paired with SkinTox for firmer, refined, glass-like radiance.
+                                </p>
+                            </div>
+
+                            <!-- Pricing & Details Box -->
+                            <div class="glass-dark p-3.5 rounded-2xl">
+                                <div class="flex items-center justify-between mb-2 pb-2 border-b border-white/10">
+                                    <div>
+                                        <span class="text-[8px] uppercase font-bold tracking-widest text-warm-gold block">SEPTEMBER OFFER</span>
+                                        <span class="font-heading text-2xl font-black text-white leading-none">$1,599</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-[10px] text-white/50 line-through block font-medium">Regular Value $2,100</span>
+                                        <span class="text-[9px] font-bold text-warm-gold uppercase tracking-wider">Save $501</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between text-[8.5px] font-body text-white/70">
+                                    <span>Physician-Guided · Sophia Yang, PA-C</span>
+                                    <span class="font-heading font-bold uppercase tracking-wider text-warm-gold">Link in Bio to Book</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3: Korean Scalp & Hair Reset -->
+                    <div id="carousel-slide-3" class="carousel-slide ig-post-canvas hidden flex-col justify-between p-6 sm:p-7 relative text-white bg-near-black">
+                        <!-- Model brushing hair centered -->
+                        <div class="absolute inset-0 bg-cover z-0" style="background-image: url('assets/dep_hair.jpg'); background-position: center 10%;"></div>
+                        
+                        <!-- Top & bottom gradients -->
+                        <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/60 to-transparent z-0"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black via-black/85 to-transparent z-0"></div>
+
+                        <!-- Top Bar -->
+                        <div class="relative z-10 flex items-center justify-between w-full">
+                            <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-7 sm:h-8 w-auto object-contain brightness-0 invert">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[8.5px] font-heading font-extrabold uppercase tracking-[0.2em] bg-white/15 backdrop-blur-md text-white px-2.5 py-1 rounded-full border border-white/20">
+                                    3 OF 4
+                                </span>
+                                <span class="text-[8.5px] font-heading font-extrabold uppercase tracking-[0.2em] bg-warm-gold/20 backdrop-blur-md text-warm-gold px-3 py-1 rounded-full border border-warm-gold/40 flex items-center gap-1">
+                                    <span>SWIPE</span>
+                                    <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Open middle area -->
+                        <div class="flex-1 pointer-events-none min-h-[140px]"></div>
+
+                        <!-- MOVED DOWN: Lower Content & Pricing Card -->
+                        <div class="relative z-10 space-y-2.5">
+                            <!-- Title & Subtitle Badge -->
+                            <div class="text-left">
+                                <span class="inline-block px-3 py-1 rounded-full font-heading text-[8px] font-extrabold tracking-[0.25em] uppercase bg-warm-gold/20 text-warm-gold border border-warm-gold/40 backdrop-blur-md mb-1.5">
+                                    SCALP + HAIR WELLNESS
+                                </span>
+                                <h2 class="heading-wide text-2xl sm:text-[26px] font-light text-white uppercase tracking-[0.14em] leading-[1.1] mb-1">
+                                    KOREAN SCALP &<br>
+                                    <span class="text-warm-gold font-normal">HAIR RESET</span>
+                                </h2>
+                                <p class="font-body text-[11px] text-white/85 leading-snug">
+                                    6-Session needle-free scalp infusion program with peptides and red light for fuller-looking, revitalized hair.
+                                </p>
+                            </div>
+
+                            <!-- Pricing & Details Box -->
+                            <div class="glass-dark p-3.5 rounded-2xl">
+                                <div class="flex items-center justify-between mb-2 pb-2 border-b border-white/10">
+                                    <div>
+                                        <span class="text-[8px] uppercase font-bold tracking-widest text-warm-gold block">6-SESSION PROGRAM</span>
+                                        <span class="font-heading text-2xl font-black text-white leading-none">$3,600</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-[10px] text-white/50 line-through block font-medium">Regular Value $4,800</span>
+                                        <span class="text-[9px] font-bold text-warm-gold uppercase tracking-wider">Save $1,200</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between text-[8.5px] font-body text-white/70">
+                                    <span>Needle-Free DEP · Peptides · Red Light</span>
+                                    <span class="font-heading font-bold uppercase tracking-wider text-warm-gold">Link in Bio to Book</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 4: Seoul Youth Sculpt -->
+                    <div id="carousel-slide-4" class="carousel-slide ig-post-canvas hidden flex-col justify-between p-6 sm:p-7 relative text-white bg-near-black">
+                        <!-- Model with jawline/cheek contour -->
+                        <div class="absolute inset-0 bg-cover z-0" style="background-image: url('assets/reset_right_for_you_glow.png'); background-position: center 15%;"></div>
+                        
+                        <!-- Top & bottom gradients -->
+                        <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/60 to-transparent z-0"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black via-black/85 to-transparent z-0"></div>
+
+                        <!-- Top Bar -->
+                        <div class="relative z-10 flex items-center justify-between w-full">
+                            <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-7 sm:h-8 w-auto object-contain brightness-0 invert">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[8.5px] font-heading font-extrabold uppercase tracking-[0.2em] bg-white/15 backdrop-blur-md text-white px-2.5 py-1 rounded-full border border-white/20">
+                                    4 OF 4
+                                </span>
+                                <span class="text-[8.5px] font-heading font-extrabold uppercase tracking-[0.2em] bg-warm-gold/20 backdrop-blur-md text-warm-gold px-3 py-1 rounded-full border border-warm-gold/40">
+                                    SEPTEMBER EDIT
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Open middle area -->
+                        <div class="flex-1 pointer-events-none min-h-[140px]"></div>
+
+                        <!-- MOVED DOWN: Lower Content & Pricing Card -->
+                        <div class="relative z-10 space-y-2.5">
+                            <!-- Title & Subtitle Badge -->
+                            <div class="text-left">
+                                <span class="inline-block px-3 py-1 rounded-full font-heading text-[8px] font-extrabold tracking-[0.25em] uppercase bg-warm-gold/20 text-warm-gold border border-warm-gold/40 backdrop-blur-md mb-1.5">
+                                    VOLUME + CONTOUR
+                                </span>
+                                <h2 class="heading-wide text-xl sm:text-2xl font-light text-white uppercase tracking-[0.12em] leading-[1.1] mb-1 whitespace-nowrap">
+                                    SEOUL YOUTH <span class="text-warm-gold font-normal">SCULPT</span>
+                                </h2>
+                                <p class="font-body text-[11px] text-white/85 leading-snug">
+                                    Radiesse® or HA volume contouring designed to support facial architecture and refine the neck.
+                                </p>
+                            </div>
+
+                            <!-- Pricing & Details Box -->
+                            <div class="glass-dark p-3.5 rounded-2xl">
+                                <div class="flex items-center justify-between mb-2 pb-2 border-b border-white/10">
+                                    <div>
+                                        <span class="text-[8px] uppercase font-bold tracking-widest text-warm-gold block">SEPTEMBER OFFER</span>
+                                        <span class="font-heading text-2xl font-black text-white leading-none">$990</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-[10px] text-white/50 line-through block font-medium">Regular Value $1,300</span>
+                                        <span class="text-[9px] font-bold text-warm-gold uppercase tracking-wider">Save $310</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between text-[8.5px] font-body text-white/70">
+                                    <span>Physician-Guided · Sophia Yang, PA-C</span>
+                                    <span class="font-heading font-bold uppercase tracking-wider text-warm-gold">Link in Bio to Book</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Action Bar -->
+                    <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+                        <button onclick="downloadActiveCanvas()" class="btn-primary text-xs py-2 px-5 inline-flex items-center gap-2 shadow-md cursor-pointer">
+                            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                            <span id="download-slide-btn-text">Download Slide 1 - Cover (PNG)</span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- ======================================================== -->
+                <!-- MODE 2: LUXURY EDITORIAL (MINIMALIST)                     -->
+                <!-- ======================================================== -->
+                <div id="mode-editorial" class="w-full hidden flex-col items-center">
+                    <div id="design-editorial" class="ig-post-canvas flex flex-col justify-between p-8 relative text-near-black" style="background-color: #f7f4ef;">
+                        <div class="absolute inset-0 bg-[radial-gradient(#e5dec9_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+
+                        <!-- Top Row -->
+                        <div class="relative z-10 flex items-center justify-between border-b border-charcoal/10 pb-4">
+                            <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-8 w-auto object-contain">
+                            <span class="text-[9px] font-heading font-bold tracking-[0.3em] uppercase text-taupe">Carrollton HQ</span>
+                        </div>
+
+                        <!-- Center Editorial Typography -->
+                        <div class="relative z-10 my-auto text-left py-6">
+                            <p class="text-[10px] font-heading font-extrabold uppercase tracking-[0.35em] text-warm-gold mb-3">
+                                The September Edit · 2026
+                            </p>
+                            <h2 class="font-heading text-2xl sm:text-3xl font-black uppercase tracking-tight leading-[1.15] text-near-black mb-4">
+                                K-BEAUTY DOESN’T<br>CHASE TRENDS.<br>
+                                <span class="italic font-light text-taupe">IT BUILDS BETTER SKIN.</span>
+                            </h2>
+                            <div class="w-16 h-[2px] bg-warm-gold mb-4"></div>
+                            <p class="font-body text-xs text-charcoal/70 leading-relaxed max-w-[340px]">
+                                Recover your post-summer glow with authentic Korean medical aesthetic protocols. Three curated promotions active this month only.
+                            </p>
+                        </div>
+
+                        <!-- Bottom 3 Pillars -->
+                        <div class="relative z-10 pt-4 border-t border-charcoal/10">
+                            <div class="grid grid-cols-3 gap-2 text-center mb-4">
+                                <div class="p-2 rounded-lg bg-white/70 border border-charcoal/5">
+                                    <span class="font-heading text-[10px] font-bold block text-near-black">Glass Skin 360</span>
+                                    <span class="text-[9px] text-warm-gold font-semibold">$1,599</span>
+                                </div>
+                                <div class="p-2 rounded-lg bg-white/70 border border-charcoal/5">
+                                    <span class="font-heading text-[10px] font-bold block text-near-black">Scalp Reset</span>
+                                    <span class="text-[9px] text-warm-gold font-semibold">$3,600</span>
+                                </div>
+                                <div class="p-2 rounded-lg bg-white/70 border border-charcoal/5">
+                                    <span class="font-heading text-[10px] font-bold block text-near-black">Youth Sculpt</span>
+                                    <span class="text-[9px] text-warm-gold font-semibold">$990</span>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <span class="text-[9px] font-heading font-bold uppercase tracking-[0.25em] text-charcoal/80">
+                                    Link in Bio to Claim September Specials
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <!-- Right: Instagram Caption & Social Copy Generator -->
+            <!-- Right: Instagram Caption & Carousel Posting Guide -->
             <div class="lg:col-span-5 space-y-6">
                 
                 <!-- Quick Instructions Box -->
                 <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
                     <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-warm-gold flex items-center gap-2 mb-2">
-                        <i data-lucide="instagram" class="w-4 h-4"></i>
-                        Instagram Feed Ready (4:5 Ratio)
+                        <i data-lucide="layers" class="w-4 h-4"></i>
+                        4-Slide Instagram Carousel
                     </h3>
                     <p class="text-xs text-white/70 leading-relaxed">
-                        1080 × 1350 is Instagram’s ideal portrait feed size because it takes up the maximum vertical screen real estate without cropping. Click below to export the high-res PNG image.
+                        Slide 1 serves as your high-converting cover post, followed by dedicated deep-dive slides for each of the three September aesthetic treatments.
                     </p>
                     <div class="mt-4 flex flex-wrap gap-2">
                         <button onclick="downloadActiveCanvas()" class="btn-primary text-xs py-2.5 px-5 inline-flex items-center gap-2 shadow-md cursor-pointer">
-                            <i data-lucide="download" class="w-4 h-4"></i> Export PNG Image
+                            <i data-lucide="download" class="w-4 h-4"></i> Export Active Slide
                         </button>
                     </div>
                 </div>
@@ -315,7 +520,7 @@
                 <!-- Ready-To-Copy Caption Card -->
                 <div class="p-6 rounded-2xl bg-white/5 border border-white/10 relative">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-[10px] font-heading font-bold uppercase tracking-widest text-warm-gold">Suggested Instagram Caption</span>
+                        <span class="text-[10px] font-heading font-bold uppercase tracking-widest text-warm-gold">Carousel Instagram Caption</span>
                         <button onclick="copyCaption()" id="copy-caption-btn" class="px-3 py-1 rounded-full text-[10px] font-heading font-bold uppercase tracking-wider bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all flex items-center gap-1.5 cursor-pointer">
                             <i data-lucide="copy" class="w-3 h-3"></i>
                             <span>Copy Caption</span>
@@ -323,30 +528,31 @@
                     </div>
 
                     <!-- Caption Content Box -->
-                    <div id="caption-text-block" class="bg-black/40 p-4 rounded-xl text-xs text-white/80 font-body whitespace-pre-line leading-relaxed max-h-[360px] overflow-y-auto border border-white/5">
+                    <div id="caption-text-block" class="bg-black/40 p-4 rounded-xl text-xs text-white/80 font-body whitespace-pre-line leading-relaxed max-h-[380px] overflow-y-auto border border-white/5">
 Dallas summer steal your glow? K-Beauty to the rescue. ✨
 
-Your Seoul-style comeback starts at SuA Glow this September. For a limited time, enjoy exclusive savings on three of our most requested Korean aesthetic treatments:
+Your Seoul-style comeback starts at SuA Glow this September. Swipe through to discover our three September-only aesthetic glow drops 👉
 
-1️⃣ SEOUL GLASS SKIN 360 | $1,599 (Reg. $2,100)
+Slide 1️⃣: The September Edit Overview
+Slide 2️⃣: SEOUL GLASS SKIN 360 | $1,599 (Reg. $2,100)
 Oligio X® 600 targeted RF shots paired with SkinTox for firmer-looking, smooth, radiant glass skin.
 
-2️⃣ KOREAN SCALP & HAIR RESET | $3,600 (Reg. $4,800)
-A 6-session needle-free scalp infusion program with peptides and red light to restore scalp hydration and healthier hair.
+Slide 3️⃣: KOREAN SCALP & HAIR RESET | $3,600 (Reg. $4,800)
+A 6-session needle-free scalp infusion program with peptides and red light to restore scalp hydration, balance, and healthier hair.
 
-3️⃣ SEOUL YOUTH SCULPT | $990 (Reg. $1,300)
+Slide 4️⃣: SEOUL YOUTH SCULPT | $990 (Reg. $1,300)
 Radiesse® or HA volume contouring designed to support facial architecture and refine the neck.
 
 🇰🇷 Authentic K-Beauty Medical Aesthetics
-👩‍⚕️ Physician-guided & Korean PA-C provider
+👩‍⚕️ Physician-guided · Sophia Yang, PA-C
 📍 Carrollton, TX (DFW)
 
-🔗 Tap the link in our bio or visit suaglow.com to claim your September offer before spots fill up!
+🔗 Tap the link in our bio to book your consultation or claim your offer!
 
 .
 .
 .
-#SuAGlow #KBeautyDallas #DallasMedSpa #CarrolltonTX #OligioX #GlassSkin #KoreanAesthetics #DallasAesthetics #SkinTox #KoreanScalpCare #RadiesseDallas #DFWMedSpa #GlowUp
+#SuAGlow #KBeautyDallas #DallasMedSpa #CarrolltonTX #OligioX #GlassSkin #KoreanAesthetics #DallasAesthetics #SkinTox #KoreanScalpCare #RadiesseDallas #DFWMedSpa #GlowUp #SkinRejuvenation
                     </div>
                 </div>
 
@@ -357,42 +563,117 @@ Radiesse® or HA volume contouring designed to support facial architecture and r
     </main>
 
     <script>
-        let currentActiveDesign = 'design-campaign';
+        let currentMode = 'carousel';
+        let currentCarouselSlide = 1;
 
-        function selectDesign(designId) {
-            currentActiveDesign = designId;
+        // Switch Top Modes (Carousel / Editorial)
+        function switchMode(mode) {
+            currentMode = mode;
 
-            // Toggle design canvases
-            document.querySelectorAll('.design-variant').forEach(el => {
-                if (el.id === designId) {
-                    el.classList.remove('hidden');
-                    el.classList.add('flex');
-                } else {
-                    el.classList.add('hidden');
-                    el.classList.remove('flex');
-                }
+            // Hide all mode containers
+            document.getElementById('mode-carousel').classList.add('hidden');
+            document.getElementById('mode-carousel').classList.remove('flex');
+            document.getElementById('mode-editorial').classList.add('hidden');
+            document.getElementById('mode-editorial').classList.remove('flex');
+
+            // Show selected mode
+            const selected = document.getElementById(`mode-${mode}`);
+            selected.classList.remove('hidden');
+            selected.classList.add('flex');
+
+            // Update Tab styles
+            document.querySelectorAll('.mode-tab-btn').forEach(btn => {
+                btn.className = "mode-tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all";
             });
 
-            // Update Tab button states
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.className = "tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all";
-            });
-
-            const activeBtn = document.getElementById(`tab-btn-${designId.replace('design-', '')}`);
-            if (activeBtn) {
-                activeBtn.className = "tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider bg-warm-gold text-near-black shadow transition-all";
+            const activeTab = document.getElementById(`tab-btn-${mode}`);
+            if (activeTab) {
+                activeTab.className = "mode-tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider bg-warm-gold text-near-black shadow transition-all";
             }
 
+            updateDownloadButtonLabel();
             if (window.lucide) lucide.createIcons();
+        }
+
+        // Switch Carousel Slides (1, 2, 3, 4)
+        function setCarouselSlide(slideNum) {
+            currentCarouselSlide = slideNum;
+
+            // Hide all slides
+            for (let i = 1; i <= 4; i++) {
+                const slide = document.getElementById(`carousel-slide-${i}`);
+                const pill = document.getElementById(`slide-pill-${i}`);
+                if (slide) {
+                    if (i === slideNum) {
+                        slide.classList.remove('hidden');
+                        slide.classList.add('flex');
+                    } else {
+                        slide.classList.add('hidden');
+                        slide.classList.remove('flex');
+                    }
+                }
+                if (pill) {
+                    if (i === slideNum) {
+                        pill.className = "slide-pill px-3 py-1.5 rounded-lg bg-warm-gold text-near-black transition-all";
+                    } else {
+                        pill.className = "slide-pill px-3 py-1.5 rounded-lg text-white/70 hover:text-white transition-all";
+                    }
+                }
+            }
+
+            const counter = document.getElementById('slide-counter-badge');
+            if (counter) counter.innerText = `${slideNum} / 4`;
+
+            updateDownloadButtonLabel();
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function nextCarouselSlide() {
+            let next = currentCarouselSlide + 1;
+            if (next > 4) next = 1;
+            setCarouselSlide(next);
+        }
+
+        function prevCarouselSlide() {
+            let prev = currentCarouselSlide - 1;
+            if (prev < 1) prev = 4;
+            setCarouselSlide(prev);
+        }
+
+        function updateDownloadButtonLabel() {
+            const label = document.getElementById('export-btn-label');
+            const subLabel = document.getElementById('download-slide-btn-text');
+
+            let text = "Download 4:5 Image (PNG)";
+            if (currentMode === 'carousel') {
+                const names = ["Cover", "Oligio X", "Scalp Reset", "Youth Sculpt"];
+                text = `Download Slide ${currentCarouselSlide} - ${names[currentCarouselSlide - 1]} (PNG)`;
+                if (subLabel) subLabel.innerText = `Download Slide ${currentCarouselSlide} - ${names[currentCarouselSlide - 1]} (PNG)`;
+            } else if (currentMode === 'editorial') {
+                text = "Download Luxury Minimalist (PNG)";
+            }
+
+            if (label) label.innerText = text;
+        }
+
+        // Get currently visible canvas element for export
+        function getActiveCanvasElement() {
+            if (currentMode === 'carousel') {
+                return document.getElementById(`carousel-slide-${currentCarouselSlide}`);
+            } else if (currentMode === 'editorial') {
+                return document.getElementById('design-editorial');
+            }
+            return null;
         }
 
         // Export 4:5 Canvas to High-Res Image using html2canvas
         function downloadActiveCanvas() {
-            const canvasElement = document.getElementById(currentActiveDesign);
+            const canvasElement = getActiveCanvasElement();
             const exportBtn = document.getElementById('export-post-btn');
 
             if (!canvasElement) return;
 
+            const originalBtnHtml = exportBtn ? exportBtn.innerHTML : '';
             if (exportBtn) {
                 exportBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Generating 4:5 Image...`;
                 if (window.lucide) lucide.createIcons();
@@ -406,17 +687,24 @@ Radiesse® or HA volume contouring designed to support facial architecture and r
                 logging: false
             }).then(canvas => {
                 const link = document.createElement('a');
-                link.download = `SuA-Glow-Instagram-Post-${currentActiveDesign}.png`;
+                let filename = 'SuA-Glow-Instagram-Post.png';
+                if (currentMode === 'carousel') {
+                    const names = ["Cover", "Oligio-X", "Scalp-Reset", "Youth-Sculpt"];
+                    filename = `SuA-Glow-Slide-${currentCarouselSlide}-${names[currentCarouselSlide - 1]}.png`;
+                } else {
+                    filename = `SuA-Glow-${currentMode}-Post.png`;
+                }
+                link.download = filename;
                 link.href = canvas.toDataURL('image/png');
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
             }).catch(err => {
                 console.error('Canvas export error:', err);
-                alert('Could not export canvas directly. Please take a screenshot or check browser permissions.');
+                alert('Could not export canvas directly. Please check browser permissions or take a screenshot.');
             }).finally(() => {
                 if (exportBtn) {
-                    exportBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Download 4:5 Image (PNG)`;
+                    exportBtn.innerHTML = originalBtnHtml;
                     if (window.lucide) lucide.createIcons();
                 }
             });
@@ -442,6 +730,7 @@ Radiesse® or HA volume contouring designed to support facial architecture and r
 
         document.addEventListener('DOMContentLoaded', () => {
             if (window.lucide) lucide.createIcons();
+            updateDownloadButtonLabel();
         });
     </script>
 </body>
