@@ -159,8 +159,8 @@ function renderMonthlySpecials(customConfig) {
                 <!-- Title Header -->
                 <div class="text-center max-w-3xl mx-auto mb-12 animate-on-scroll fade-up">
                     ${meta.pillImage ? `
-                        <div class="mb-5 flex justify-center">
-                            <img src="${meta.pillImage}" alt="Labor Day Glow Drop" class="h-16 sm:h-20 md:h-24 w-auto object-contain mx-auto filter drop-shadow-xs">
+                        <div class="mb-6 flex justify-center">
+                            <img src="${meta.pillImage}" alt="Labor Day Glow Drop" class="h-32 sm:h-40 md:h-48 w-auto max-w-full object-contain mx-auto filter drop-shadow-sm">
                         </div>
                     ` : (meta.pill ? `
                         <div class="mb-3">
