@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Post Designs | SuA K Glow Med Spa</title>
+    <meta name="description" content="Instagram 4:5 post design concepts for SuA K Glow September promotions and special offers.">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS Output -->
+    <link rel="stylesheet" href="dist/output.css?v=95">
+
+    <!-- Lucide Icons & html2canvas -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <style>
+        .font-heading { font-family: 'Montserrat', sans-serif; }
+        .font-body { font-family: 'Poppins', sans-serif; }
+        
+        /* 4:5 Ratio Instagram Canvas: 1080 x 1350 scale */
+        .ig-post-canvas {
+            width: 100%;
+            max-width: 540px;
+            aspect-ratio: 4 / 5;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            background-color: #faf8f5;
+        }
+
+        /* Glassmorphism Pill */
+        .glass-pill {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+
+<body class="bg-[#121316] text-white min-h-screen antialiased font-body">
+
+    <!-- Top Navigation Bar -->
+    <header class="border-b border-white/10 bg-black/40 backdrop-blur-md sticky top-0 z-40 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <a href="specials-september.html" class="flex items-center gap-2 text-white/70 hover:text-white text-xs font-heading font-semibold uppercase tracking-wider transition-colors">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <span>Back to Specials</span>
+                </a>
+                <span class="text-white/20">|</span>
+                <span class="text-xs font-heading font-bold uppercase tracking-widest text-warm-gold">Instagram Post Studio · 4:5 Feed Format</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button onclick="downloadActiveCanvas()" id="export-post-btn" class="btn-primary text-xs py-2 px-5 inline-flex items-center gap-2 shadow-lg cursor-pointer">
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                    <span>Download 4:5 Image (PNG)</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-10">
+
+        <!-- Page Intro & Design Selector Tabs -->
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-[10px] font-heading font-bold tracking-[0.3em] uppercase text-warm-gold block mb-2">Social Media Marketing Assets</span>
+            <h1 class="font-heading text-2xl md:text-3xl font-extrabold uppercase tracking-wide text-white mb-3">September Promo Instagram Posts</h1>
+            <p class="text-xs md:text-sm text-white/60 leading-relaxed">
+                Optimized 4:5 portrait aspect ratio (1080 × 1350 px) designed for high engagement in the Instagram feed, complete with copy-ready captions.
+            </p>
+
+            <!-- Design Variant Tabs -->
+            <div class="mt-8 inline-flex p-1.5 bg-white/5 rounded-full border border-white/10 shadow-inner">
+                <button onclick="selectDesign('design-campaign')" id="tab-btn-campaign" class="tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider bg-warm-gold text-near-black shadow transition-all">
+                    1. Campaign Overview
+                </button>
+                <button onclick="selectDesign('design-spotlight')" id="tab-btn-spotlight" class="tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">
+                    2. Oligio X Spotlight
+                </button>
+                <button onclick="selectDesign('design-editorial')" id="tab-btn-editorial" class="tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">
+                    3. Luxury Minimalist
+                </button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+            <!-- Left: 4:5 Instagram Preview Canvas Container -->
+            <div class="lg:col-span-7 flex flex-col items-center justify-center">
+                
+                <!-- DESIGN 1: Campaign Overview (All 3 Glow Drops) -->
+                <div id="design-campaign" class="design-variant ig-post-canvas flex flex-col justify-between p-6 sm:p-7 relative text-near-black">
+                    <!-- Background Layer with Radiant Models + Dallas Skyline -->
+                    <div class="absolute inset-0 bg-cover bg-top z-0" style="background-image: url('assets/september_flyer_bg_models.jpg'); background-position: 85% top;"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/20 z-0"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-white/95 via-transparent to-white/60 z-0"></div>
+
+                    <!-- Top Bar: Logo & Badge -->
+                    <div class="relative z-10 flex items-center justify-between w-full">
+                        <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-7 sm:h-8 w-auto object-contain">
+                        <span class="text-[8.5px] font-heading font-extrabold uppercase tracking-[0.25em] bg-near-black text-warm-gold px-3 py-1.5 rounded-full border border-warm-gold/40 shadow-sm">
+                            LIMITED TIME · SEPT 2026
+                        </span>
+                    </div>
+
+                    <!-- Headline & Pitch Callout -->
+                    <div class="relative z-10 my-auto py-2 max-w-[360px]">
+                        <span class="text-[9px] font-heading font-bold tracking-[0.3em] uppercase text-warm-gold block mb-1">Authentic K-Beauty · Dallas HQ</span>
+                        <h2 class="font-heading text-xl sm:text-2xl font-black uppercase tracking-wide leading-tight text-near-black mb-1">
+                            $100 OFF YOUR<br>
+                            <span class="text-warm-gold">SEOUL-STYLE COMEBACK</span>
+                        </h2>
+                        <p class="font-body text-[10.5px] text-charcoal/80 leading-snug">
+                            Dallas summer steal your glow? Three September-only ways to firm, refine + reset.
+                        </p>
+                    </div>
+
+                    <!-- 3 Treatment Mini-Cards -->
+                    <div class="relative z-10 space-y-2 mb-2">
+                        <!-- Step 1 -->
+                        <div class="glass-pill p-2.5 rounded-xl flex items-center justify-between gap-3 shadow-xs">
+                            <div class="flex items-center gap-2.5">
+                                <img src="assets/oligio_x_model_promo.jpg" alt="Seoul Glass Skin 360" class="w-10 h-10 rounded-lg object-cover border border-charcoal/10 shrink-0">
+                                <div>
+                                    <span class="text-[7.5px] uppercase font-bold tracking-wider text-warm-gold block">FIRM + CONTOUR + GLOW</span>
+                                    <h4 class="font-heading text-xs font-bold text-near-black leading-none">Seoul Glass Skin 360</h4>
+                                    <span class="font-body text-[9px] text-charcoal/70">Oligio X® 600 Shots + SkinTox</span>
+                                </div>
+                            </div>
+                            <div class="text-right shrink-0">
+                                <span class="font-heading text-xs font-extrabold text-near-black">$1,599</span>
+                                <span class="block text-[8px] text-charcoal/40 line-through">Reg. $2,100</span>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="glass-pill p-2.5 rounded-xl flex items-center justify-between gap-3 shadow-xs">
+                            <div class="flex items-center gap-2.5">
+                                <img src="assets/dep_hair.jpg" alt="Korean Scalp & Hair Reset" class="w-10 h-10 rounded-lg object-cover border border-charcoal/10 shrink-0">
+                                <div>
+                                    <span class="text-[7.5px] uppercase font-bold tracking-wider text-warm-gold block">SCALP + HAIR WELLNESS</span>
+                                    <h4 class="font-heading text-xs font-bold text-near-black leading-none">Korean Scalp & Hair Reset</h4>
+                                    <span class="font-body text-[9px] text-charcoal/70">Needle-Free · Peptides · Red Light</span>
+                                </div>
+                            </div>
+                            <div class="text-right shrink-0">
+                                <span class="font-heading text-xs font-extrabold text-near-black">$3,600</span>
+                                <span class="block text-[8px] text-charcoal/40 line-through">Reg. $4,800</span>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="glass-pill p-2.5 rounded-xl flex items-center justify-between gap-3 shadow-xs">
+                            <div class="flex items-center gap-2.5">
+                                <img src="assets/reset_right_for_you_glow.png" alt="Seoul Youth Sculpt" class="w-10 h-10 rounded-lg object-cover border border-charcoal/10 shrink-0">
+                                <div>
+                                    <span class="text-[7.5px] uppercase font-bold tracking-wider text-warm-gold block">VOLUME + CONTOUR</span>
+                                    <h4 class="font-heading text-xs font-bold text-near-black leading-none">Seoul Youth Sculpt</h4>
+                                    <span class="font-body text-[9px] text-charcoal/70">Radiesse® or HA · Facial + Neck</span>
+                                </div>
+                            </div>
+                            <div class="text-right shrink-0">
+                                <span class="font-heading text-xs font-extrabold text-near-black">$990</span>
+                                <span class="block text-[8px] text-charcoal/40 line-through">Reg. $1,300</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Bar: CTA & Location -->
+                    <div class="relative z-10 bg-near-black text-white p-2.5 rounded-xl flex items-center justify-between shadow-md">
+                        <div class="text-left pl-1">
+                            <span class="text-[9px] font-heading font-extrabold uppercase tracking-wider text-warm-gold block">BOOK CONSULTATION · TAP LINK IN BIO</span>
+                            <span class="text-[8px] font-body text-white/60">Carrollton, TX · 972-665-8737 · suaglow.com</span>
+                        </div>
+                        <span class="bg-warm-gold text-near-black text-[9px] font-heading font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg shrink-0">
+                            Book Now
+                        </span>
+                    </div>
+                </div>
+
+                <!-- DESIGN 2: Oligio X Spotlight (Hero Treatment) -->
+                <div id="design-spotlight" class="design-variant ig-post-canvas hidden flex-col justify-between p-7 relative text-white bg-near-black">
+                    <!-- Background Model with Oligio Device -->
+                    <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('assets/oligio_x_model_promo.jpg'); background-position: center top;"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-near-black via-near-black/50 to-near-black/40 z-0"></div>
+
+                    <!-- Top Bar -->
+                    <div class="relative z-10 flex items-center justify-between w-full">
+                        <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-8 w-auto object-contain brightness-0 invert">
+                        <span class="text-[8.5px] font-heading font-bold uppercase tracking-[0.25em] bg-warm-gold/20 text-warm-gold px-3.5 py-1.5 rounded-full border border-warm-gold/40 backdrop-blur-md">
+                            SEPTEMBER GLOW DROP
+                        </span>
+                    </div>
+
+                    <!-- Center Badge -->
+                    <div class="relative z-10 my-auto text-center">
+                        <span class="inline-block px-3 py-1 rounded-full text-[9px] font-heading font-bold tracking-[0.3em] uppercase bg-white/10 text-white border border-white/20 backdrop-blur-md mb-3">
+                            K-BEAUTY FIRMING + GLOW
+                        </span>
+                        <h2 class="font-heading text-2xl sm:text-3xl font-black uppercase tracking-wider leading-tight text-white mb-2">
+                            SEOUL GLASS SKIN <span class="text-warm-gold">360</span>
+                        </h2>
+                        <p class="font-body text-xs text-white/80 max-w-[320px] mx-auto leading-relaxed">
+                            Oligio X® 600 Targeted RF Shots paired with SkinTox for firmer, refined, glass-like radiance.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Pricing & Action Box -->
+                    <div class="relative z-10 bg-black/60 backdrop-blur-md border border-white/20 p-4 rounded-2xl">
+                        <div class="flex items-center justify-between mb-3 pb-3 border-b border-white/10">
+                            <div>
+                                <span class="text-[9px] uppercase font-bold tracking-widest text-warm-gold block">SEPTEMBER OFFER</span>
+                                <span class="font-heading text-2xl font-black text-white leading-none">$1,599</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-[10px] text-white/50 line-through block">Value $2,100</span>
+                                <span class="text-[9px] font-bold text-warm-gold uppercase tracking-wider">Save $501</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-[8.5px] font-body text-white/70">
+                            <span>Physician-Guided · Sophia Yang, PA-C</span>
+                            <span class="font-heading font-bold uppercase tracking-wider text-warm-gold">Tap Link In Bio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DESIGN 3: Luxury Minimalist Editorial -->
+                <div id="design-editorial" class="design-variant ig-post-canvas hidden flex-col justify-between p-8 relative text-near-black" style="background-color: #f7f4ef;">
+                    <div class="absolute inset-0 bg-[radial-gradient(#e5dec9_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+
+                    <!-- Top Row -->
+                    <div class="relative z-10 flex items-center justify-between border-b border-charcoal/10 pb-4">
+                        <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-8 w-auto object-contain">
+                        <span class="text-[9px] font-heading font-bold tracking-[0.3em] uppercase text-taupe">Carrollton HQ</span>
+                    </div>
+
+                    <!-- Center Editorial Typography -->
+                    <div class="relative z-10 my-auto text-left py-6">
+                        <p class="text-[10px] font-heading font-extrabold uppercase tracking-[0.35em] text-warm-gold mb-3">
+                            The September Edit · 2026
+                        </p>
+                        <h2 class="font-heading text-2xl sm:text-3xl font-black uppercase tracking-tight leading-[1.15] text-near-black mb-4">
+                            K-BEAUTY DOESN’T<br>CHASE TRENDS.<br>
+                            <span class="italic font-light text-taupe">IT BUILDS BETTER SKIN.</span>
+                        </h2>
+                        <div class="w-16 h-[2px] bg-warm-gold mb-4"></div>
+                        <p class="font-body text-xs text-charcoal/70 leading-relaxed max-w-[340px]">
+                            Recover your post-summer glow with authentic Korean medical aesthetic protocols. Three curated promotions active this month only.
+                        </p>
+                    </div>
+
+                    <!-- Bottom 3 Pillars -->
+                    <div class="relative z-10 pt-4 border-t border-charcoal/10">
+                        <div class="grid grid-cols-3 gap-2 text-center mb-4">
+                            <div class="p-2 rounded-lg bg-white/70 border border-charcoal/5">
+                                <span class="font-heading text-[10px] font-bold block text-near-black">Glass Skin 360</span>
+                                <span class="text-[9px] text-warm-gold font-semibold">$1,599</span>
+                            </div>
+                            <div class="p-2 rounded-lg bg-white/70 border border-charcoal/5">
+                                <span class="font-heading text-[10px] font-bold block text-near-black">Scalp Reset</span>
+                                <span class="text-[9px] text-warm-gold font-semibold">$3,600</span>
+                            </div>
+                            <div class="p-2 rounded-lg bg-white/70 border border-charcoal/5">
+                                <span class="font-heading text-[10px] font-bold block text-near-black">Youth Sculpt</span>
+                                <span class="text-[9px] text-warm-gold font-semibold">$990</span>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <span class="text-[9px] font-heading font-bold uppercase tracking-[0.25em] text-charcoal/80">
+                                Link in Bio to Claim September Specials
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right: Instagram Caption & Social Copy Generator -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <!-- Quick Instructions Box -->
+                <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+                    <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-warm-gold flex items-center gap-2 mb-2">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                        Instagram Feed Ready (4:5 Ratio)
+                    </h3>
+                    <p class="text-xs text-white/70 leading-relaxed">
+                        1080 × 1350 is Instagram’s ideal portrait feed size because it takes up the maximum vertical screen real estate without cropping. Click below to export the high-res PNG image.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <button onclick="downloadActiveCanvas()" class="btn-primary text-xs py-2.5 px-5 inline-flex items-center gap-2 shadow-md cursor-pointer">
+                            <i data-lucide="download" class="w-4 h-4"></i> Export PNG Image
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ready-To-Copy Caption Card -->
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 relative">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-[10px] font-heading font-bold uppercase tracking-widest text-warm-gold">Suggested Instagram Caption</span>
+                        <button onclick="copyCaption()" id="copy-caption-btn" class="px-3 py-1 rounded-full text-[10px] font-heading font-bold uppercase tracking-wider bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all flex items-center gap-1.5 cursor-pointer">
+                            <i data-lucide="copy" class="w-3 h-3"></i>
+                            <span>Copy Caption</span>
+                        </button>
+                    </div>
+
+                    <!-- Caption Content Box -->
+                    <div id="caption-text-block" class="bg-black/40 p-4 rounded-xl text-xs text-white/80 font-body whitespace-pre-line leading-relaxed max-h-[360px] overflow-y-auto border border-white/5">
+Dallas summer steal your glow? K-Beauty to the rescue. ✨
+
+Your Seoul-style comeback starts at SuA Glow this September. For a limited time, enjoy exclusive savings on three of our most requested Korean aesthetic treatments:
+
+1️⃣ SEOUL GLASS SKIN 360 | $1,599 (Reg. $2,100)
+Oligio X® 600 targeted RF shots paired with SkinTox for firmer-looking, smooth, radiant glass skin.
+
+2️⃣ KOREAN SCALP & HAIR RESET | $3,600 (Reg. $4,800)
+A 6-session needle-free scalp infusion program with peptides and red light to restore scalp hydration and healthier hair.
+
+3️⃣ SEOUL YOUTH SCULPT | $990 (Reg. $1,300)
+Radiesse® or HA volume contouring designed to support facial architecture and refine the neck.
+
+🇰🇷 Authentic K-Beauty Medical Aesthetics
+👩‍⚕️ Physician-guided & Korean PA-C provider
+📍 Carrollton, TX (DFW)
+
+🔗 Tap the link in our bio or visit suaglow.com to claim your September offer before spots fill up!
+
+.
+.
+.
+#SuAGlow #KBeautyDallas #DallasMedSpa #CarrolltonTX #OligioX #GlassSkin #KoreanAesthetics #DallasAesthetics #SkinTox #KoreanScalpCare #RadiesseDallas #DFWMedSpa #GlowUp
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        let currentActiveDesign = 'design-campaign';
+
+        function selectDesign(designId) {
+            currentActiveDesign = designId;
+
+            // Toggle design canvases
+            document.querySelectorAll('.design-variant').forEach(el => {
+                if (el.id === designId) {
+                    el.classList.remove('hidden');
+                    el.classList.add('flex');
+                } else {
+                    el.classList.add('hidden');
+                    el.classList.remove('flex');
+                }
+            });
+
+            // Update Tab button states
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all";
+            });
+
+            const activeBtn = document.getElementById(`tab-btn-${designId.replace('design-', '')}`);
+            if (activeBtn) {
+                activeBtn.className = "tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider bg-warm-gold text-near-black shadow transition-all";
+            }
+
+            if (window.lucide) lucide.createIcons();
+        }
+
+        // Export 4:5 Canvas to High-Res Image using html2canvas
+        function downloadActiveCanvas() {
+            const canvasElement = document.getElementById(currentActiveDesign);
+            const exportBtn = document.getElementById('export-post-btn');
+
+            if (!canvasElement) return;
+
+            if (exportBtn) {
+                exportBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Generating 4:5 Image...`;
+                if (window.lucide) lucide.createIcons();
+            }
+
+            html2canvas(canvasElement, {
+                scale: 2.5, // Crisp 2.5x upscale for 1080x1350 resolution
+                useCORS: true,
+                allowTaint: true,
+                backgroundColor: null,
+                logging: false
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = `SuA-Glow-Instagram-Post-${currentActiveDesign}.png`;
+                link.href = canvas.toDataURL('image/png');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }).catch(err => {
+                console.error('Canvas export error:', err);
+                alert('Could not export canvas directly. Please take a screenshot or check browser permissions.');
+            }).finally(() => {
+                if (exportBtn) {
+                    exportBtn.innerHTML = `<i data-lucide="download" class="w-4 h-4"></i> Download 4:5 Image (PNG)`;
+                    if (window.lucide) lucide.createIcons();
+                }
+            });
+        }
+
+        // Copy caption to clipboard
+        function copyCaption() {
+            const text = document.getElementById('caption-text-block').innerText;
+            const btn = document.getElementById('copy-caption-btn');
+
+            navigator.clipboard.writeText(text).then(() => {
+                if (btn) {
+                    btn.innerHTML = `<i data-lucide="check" class="w-3 h-3 text-green-400"></i> Copied!`;
+                    setTimeout(() => {
+                        btn.innerHTML = `<i data-lucide="copy" class="w-3 h-3"></i> Copy Caption`;
+                        if (window.lucide) lucide.createIcons();
+                    }, 2500);
+                }
+            }).catch(err => {
+                console.error('Clipboard copy failed:', err);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>
