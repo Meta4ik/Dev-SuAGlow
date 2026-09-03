@@ -83,18 +83,8 @@
             <span class="text-[10px] font-heading font-bold tracking-[0.3em] uppercase text-warm-gold block mb-2">Social Media Marketing Assets</span>
             <h1 class="font-heading text-2xl md:text-3xl font-extrabold uppercase tracking-wide text-white mb-2">September Instagram Carousel Studio</h1>
             <p class="text-xs md:text-sm text-white/60 leading-relaxed">
-                Optimized 4:5 portrait aspect ratio (1080 × 1350 px) designed for high engagement in the Instagram feed, complete with copy-ready captions.
+                Complete 4-slide carousel in 4:5 portrait format (1080 × 1350 px), optimized for Instagram feed engagement with ready-to-copy caption.
             </p>
-
-            <!-- Main Mode Tabs -->
-            <div class="mt-6 inline-flex p-1.5 bg-white/5 rounded-full border border-white/10 shadow-inner">
-                <button onclick="switchMode('carousel')" id="tab-btn-carousel" class="mode-tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider bg-warm-gold text-near-black shadow transition-all">
-                    1. 4-Slide Carousel (Cover + 3 Specials)
-                </button>
-                <button onclick="switchMode('editorial')" id="tab-btn-editorial" class="mode-tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">
-                    2. Luxury Minimalist
-                </button>
-            </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -442,59 +432,6 @@
 
                 </div>
 
-                <!-- ======================================================== -->
-                <!-- MODE 2: LUXURY EDITORIAL (MINIMALIST)                     -->
-                <!-- ======================================================== -->
-                <div id="mode-editorial" class="w-full hidden flex-col items-center">
-                    <div id="design-editorial" class="ig-post-canvas flex flex-col justify-between p-8 relative text-near-black" style="background-color: #f7f4ef;">
-                        <div class="absolute inset-0 bg-[radial-gradient(#e5dec9_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
-
-                        <!-- Top Row -->
-                        <div class="relative z-10 flex items-center justify-between border-b border-charcoal/10 pb-4">
-                            <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-8 w-auto object-contain">
-                            <span class="text-[9px] font-heading font-bold tracking-[0.3em] uppercase text-taupe">Carrollton HQ</span>
-                        </div>
-
-                        <!-- Center Editorial Typography -->
-                        <div class="relative z-10 my-auto text-left py-6">
-                            <p class="text-[10px] font-heading font-extrabold uppercase tracking-[0.35em] text-warm-gold mb-3">
-                                The September Edit · 2026
-                            </p>
-                            <h2 class="font-heading text-2xl sm:text-3xl font-black uppercase tracking-tight leading-[1.15] text-near-black mb-4">
-                                K-BEAUTY DOESN’T<br>CHASE TRENDS.<br>
-                                <span class="italic font-light text-taupe">IT BUILDS BETTER SKIN.</span>
-                            </h2>
-                            <div class="w-16 h-[2px] bg-warm-gold mb-4"></div>
-                            <p class="font-body text-xs text-charcoal/70 leading-relaxed max-w-[340px]">
-                                Recover your post-summer glow with authentic Korean medical aesthetic protocols. Three curated promotions active this month only.
-                            </p>
-                        </div>
-
-                        <!-- Bottom 3 Pillars -->
-                        <div class="relative z-10 pt-4 border-t border-charcoal/10">
-                            <div class="grid grid-cols-3 gap-2 text-center mb-4">
-                                <div class="p-2 rounded-lg bg-white/70 border border-charcoal/5">
-                                    <span class="font-heading text-[10px] font-bold block text-near-black">Glass Skin 360</span>
-                                    <span class="text-[9px] text-warm-gold font-semibold">$1,599</span>
-                                </div>
-                                <div class="p-2 rounded-lg bg-white/70 border border-charcoal/5">
-                                    <span class="font-heading text-[10px] font-bold block text-near-black">Scalp Reset</span>
-                                    <span class="text-[9px] text-warm-gold font-semibold">$3,600</span>
-                                </div>
-                                <div class="p-2 rounded-lg bg-white/70 border border-charcoal/5">
-                                    <span class="font-heading text-[10px] font-bold block text-near-black">Youth Sculpt</span>
-                                    <span class="text-[9px] text-warm-gold font-semibold">$990</span>
-                                </div>
-                            </div>
-
-                            <div class="text-center">
-                                <span class="text-[9px] font-heading font-bold uppercase tracking-[0.25em] text-charcoal/80">
-                                    Link in Bio to Claim September Specials
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
@@ -563,37 +500,7 @@ Radiesse® or HA volume contouring designed to support facial architecture and r
     </main>
 
     <script>
-        let currentMode = 'carousel';
         let currentCarouselSlide = 1;
-
-        // Switch Top Modes (Carousel / Editorial)
-        function switchMode(mode) {
-            currentMode = mode;
-
-            // Hide all mode containers
-            document.getElementById('mode-carousel').classList.add('hidden');
-            document.getElementById('mode-carousel').classList.remove('flex');
-            document.getElementById('mode-editorial').classList.add('hidden');
-            document.getElementById('mode-editorial').classList.remove('flex');
-
-            // Show selected mode
-            const selected = document.getElementById(`mode-${mode}`);
-            selected.classList.remove('hidden');
-            selected.classList.add('flex');
-
-            // Update Tab styles
-            document.querySelectorAll('.mode-tab-btn').forEach(btn => {
-                btn.className = "mode-tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all";
-            });
-
-            const activeTab = document.getElementById(`tab-btn-${mode}`);
-            if (activeTab) {
-                activeTab.className = "mode-tab-btn px-5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider bg-warm-gold text-near-black shadow transition-all";
-            }
-
-            updateDownloadButtonLabel();
-            if (window.lucide) lucide.createIcons();
-        }
 
         // Switch Carousel Slides (1, 2, 3, 4)
         function setCarouselSlide(slideNum) {
@@ -644,26 +551,15 @@ Radiesse® or HA volume contouring designed to support facial architecture and r
             const label = document.getElementById('export-btn-label');
             const subLabel = document.getElementById('download-slide-btn-text');
 
-            let text = "Download 4:5 Image (PNG)";
-            if (currentMode === 'carousel') {
-                const names = ["Cover", "Oligio X", "Scalp Reset", "Youth Sculpt"];
-                text = `Download Slide ${currentCarouselSlide} - ${names[currentCarouselSlide - 1]} (PNG)`;
-                if (subLabel) subLabel.innerText = `Download Slide ${currentCarouselSlide} - ${names[currentCarouselSlide - 1]} (PNG)`;
-            } else if (currentMode === 'editorial') {
-                text = "Download Luxury Minimalist (PNG)";
-            }
-
+            const names = ["Cover", "Oligio X", "Scalp Reset", "Youth Sculpt"];
+            const text = `Download Slide ${currentCarouselSlide} - ${names[currentCarouselSlide - 1]} (PNG)`;
+            if (subLabel) subLabel.innerText = text;
             if (label) label.innerText = text;
         }
 
         // Get currently visible canvas element for export
         function getActiveCanvasElement() {
-            if (currentMode === 'carousel') {
-                return document.getElementById(`carousel-slide-${currentCarouselSlide}`);
-            } else if (currentMode === 'editorial') {
-                return document.getElementById('design-editorial');
-            }
-            return null;
+            return document.getElementById(`carousel-slide-${currentCarouselSlide}`);
         }
 
         // Export 4:5 Canvas to High-Res Image using html2canvas
