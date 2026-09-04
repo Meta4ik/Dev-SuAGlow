@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Links & Hidden Pages Directory | SuA K-Glow</title>
+    <meta name="description" content="Internal directory of unlisted educational deep dives, campaign landing pages, standalone treatment variants, creative studios, and dev portals for SuA Glow.">
+    <link rel="icon" href="../assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../dist/output.css?v=47">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --taupe: #8F857B;
+            --warm-gold: #AA987C;
+            --charcoal: #404345;
+            --off-white: #F6F7F8;
+            --near-black: #131619;
+            --blue-gray: #9DAFB6;
+            --light-gray: #DFE0DD;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--off-white);
+            color: var(--charcoal);
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .filter-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 16px;
+            border-radius: 9999px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border: 1px solid #DFE0DD;
+            background: #FFFFFF;
+            color: #404345;
+            transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+            cursor: pointer;
+            user-select: none;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+
+        .filter-pill:hover {
+            border-color: #AA987C;
+            color: #AA987C;
+            transform: translateY(-1px);
+        }
+
+        .filter-pill.active {
+            background: #131619;
+            color: #FFFFFF;
+            border-color: #131619;
+            box-shadow: 0 4px 12px rgba(19, 22, 25, 0.15);
+        }
+
+        .filter-pill.active .count-pill {
+            background: rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+        }
+
+        .count-pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 1px 7px;
+            border-radius: 9999px;
+            background: #F1F2F4;
+            color: #64748B;
+            transition: all 0.2s;
+        }
+
+        .link-card {
+            transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+            position: relative;
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.08);
+            border-color: #AA987C80;
+        }
+
+        .toast-container {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            pointer-events: none;
+        }
+
+        .toast {
+            pointer-events: auto;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #131619;
+            color: #FFFFFF;
+            padding: 14px 22px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            border: 1px solid rgba(170, 152, 124, 0.3);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Top Navigation Header -->
+    <header class="bg-near-black border-b border-white/10 sticky top-0 z-40 backdrop-blur-md bg-opacity-95">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="../index.html" class="flex items-center group">
+                    <img src="../assets/logo-main.webp" alt="SuA K-Glow" class="h-8 md:h-10 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity">
+                </a>
+                <div class="h-6 w-[1px] bg-white/20 hidden sm:block"></div>
+                <div class="hidden sm:flex items-center gap-2">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-warm-gold/20 text-warm-gold border border-warm-gold/30">
+                        <i data-lucide="shield" class="w-3 h-3"></i> Internal Directory
+                    </span>
+                    <span class="text-xs text-white/50 tracking-wide font-medium">Confidential • For Team Use</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button id="copyPageUrlBtn" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-white/10 hover:bg-white/20 text-white border border-white/15 transition-all">
+                    <i data-lucide="share-2" class="w-3.5 h-3.5 text-warm-gold"></i>
+                    <span class="hidden md:inline">Share Directory URL</span>
+                    <span class="md:hidden">Share</span>
+                </button>
+
+                <button id="copyMarkdownBtn" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-warm-gold hover:bg-white text-near-black transition-all">
+                    <i data-lucide="clipboard-list" class="w-3.5 h-3.5"></i>
+                    <span class="hidden md:inline">Copy All as List</span>
+                    <span class="md:hidden">Copy List</span>
+                </button>
+
+                <a href="../index.html" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" title="Go to Main Website">
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Header -->
+    <section class="bg-near-black text-white pt-12 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <!-- Ambient Glow -->
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-warm-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-taupe/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="max-w-3xl">
+                <div class="flex items-center gap-2 text-warm-gold text-[11px] font-bold uppercase tracking-[0.25em] mb-4">
+                    <i data-lucide="compass" class="w-4 h-4"></i> Master Link Hub
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+                    Hidden & Unlisted <span class="text-warm-gold">Pages</span>
+                </h1>
+                <p class="text-sm sm:text-base text-white/70 font-light leading-relaxed max-w-2xl">
+                    A centralized reference of all educational skin booster deep dives, hidden promotional campaigns, standalone service variants, creative studios, and dev portals not listed in the public navigation bar.
+                </p>
+            </div>
+
+            <!-- Quick Metrics Row -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-white/10 max-w-4xl text-left">
+                <div>
+                    <div class="text-2xl sm:text-3xl font-bold font-heading text-white" id="statTotal">45</div>
+                    <div class="text-[11px] font-medium text-white/50 uppercase tracking-widest mt-0.5">Total Indexed Pages</div>
+                </div>
+                <div>
+                    <div class="text-2xl sm:text-3xl font-bold font-heading text-warm-gold" id="statEducation">11</div>
+                    <div class="text-[11px] font-medium text-white/50 uppercase tracking-widest mt-0.5">Education Deep Dives</div>
+                </div>
+                <div>
+                    <div class="text-2xl sm:text-3xl font-bold font-heading text-white" id="statServices">14</div>
+                    <div class="text-[11px] font-medium text-white/50 uppercase tracking-widest mt-0.5">Standalone Services</div>
+                </div>
+                <div>
+                    <div class="text-2xl sm:text-3xl font-bold font-heading text-warm-gold" id="statDev">10</div>
+                    <div class="text-[11px] font-medium text-white/50 uppercase tracking-widest mt-0.5">Dev & QA Portals</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full">
+
+        <!-- Search and Controls Bar -->
+        <div class="bg-white rounded-2xl p-4 sm:p-6 border border-light-gray shadow-sm mb-8">
+            <div class="flex flex-col lg:flex-row gap-4 justify-between items-stretch lg:items-center">
+                
+                <!-- Search Input -->
+                <div class="relative flex-1 max-w-2xl">
+                    <i data-lucide="search" class="w-4 h-4 text-charcoal/40 absolute left-4 top-1/2 -translate-y-1/2"></i>
+                    <input type="text" id="searchInput" placeholder="Search by title, booster, treatment, filename, or keyword (e.g., Rejuran, September, DEP, Audit)..." 
+                        class="w-full pl-11 pr-10 py-3 bg-off-white border border-light-gray rounded-xl text-sm font-body text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-warm-gold/50 focus:border-warm-gold transition-all">
+                    <button id="clearSearchBtn" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-charcoal/30 hover:text-charcoal hidden transition-colors" title="Clear search">
+                        <i data-lucide="x-circle" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Right controls: View toggle & Count badge -->
+                <div class="flex items-center justify-between sm:justify-end gap-4 shrink-0">
+                    <div class="text-xs text-charcoal/60 font-medium">
+                        Showing <span id="visibleCount" class="font-bold text-near-black">45</span> links
+                    </div>
+
+                    <!-- View Switcher -->
+                    <div class="flex items-center bg-off-white border border-light-gray p-1 rounded-xl">
+                        <button id="viewGridBtn" class="p-2 rounded-lg bg-white shadow-sm text-near-black transition-all" title="Grid View">
+                            <i data-lucide="grid" class="w-4 h-4"></i>
+                        </button>
+                        <button id="viewListBtn" class="p-2 rounded-lg text-charcoal/50 hover:text-near-black transition-all" title="Compact Table View">
+                            <i data-lucide="list" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Pills -->
+            <div class="flex flex-wrap gap-2 pt-4 mt-4 border-t border-light-gray/60" id="filterPillsContainer">
+                <button class="filter-pill active" data-category="all">
+                    <span>All Links</span>
+                    <span class="count-pill">45</span>
+                </button>
+                <button class="filter-pill" data-category="education">
+                    <i data-lucide="droplet" class="w-3 h-3 text-warm-gold"></i>
+                    <span>Education & Boosters</span>
+                    <span class="count-pill">11</span>
+                </button>
+                <button class="filter-pill" data-category="campaigns">
+                    <i data-lucide="sparkles" class="w-3 h-3 text-amber-600"></i>
+                    <span>Promos & Campaigns</span>
+                    <span class="count-pill">4</span>
+                </button>
+                <button class="filter-pill" data-category="services">
+                    <i data-lucide="zap" class="w-3 h-3 text-emerald-600"></i>
+                    <span>Standalone Treatments</span>
+                    <span class="count-pill">14</span>
+                </button>
+                <button class="filter-pill" data-category="dev">
+                    <i data-lucide="code-2" class="w-3 h-3 text-blue-600"></i>
+                    <span>Dev & QA Portals</span>
+                    <span class="count-pill">10</span>
+                </button>
+                <button class="filter-pill" data-category="creative">
+                    <i data-lucide="palette" class="w-3 h-3 text-pink-600"></i>
+                    <span>Creative & Media</span>
+                    <span class="count-pill">2</span>
+                </button>
+                <button class="filter-pill" data-category="legal">
+                    <i data-lucide="scale" class="w-3 h-3 text-slate-500"></i>
+                    <span>Policies & Compliance</span>
+                    <span class="count-pill">4</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Grid View Container -->
+        <div id="linksGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Rendered dynamically by JavaScript -->
+        </div>
+
+        <!-- Table View Container (Hidden by default) -->
+        <div id="linksTableContainer" class="bg-white rounded-2xl border border-light-gray shadow-sm overflow-hidden hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-off-white text-[11px] font-heading uppercase tracking-wider text-charcoal/70 border-b border-light-gray">
+                            <th class="py-4 px-6">Page Name & Path</th>
+                            <th class="py-4 px-6">Category</th>
+                            <th class="py-4 px-6">Description / Purpose</th>
+                            <th class="py-4 px-6 text-right">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="linksTableBody" class="divide-y divide-light-gray/60 text-xs font-body">
+                        <!-- Rendered dynamically by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden text-center py-20 bg-white rounded-2xl border border-dashed border-light-gray p-8">
+            <div class="w-14 h-14 rounded-full bg-off-white flex items-center justify-center mx-auto mb-4 text-charcoal/40">
+                <i data-lucide="search-x" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-base font-bold text-near-black mb-1 font-heading">No matching links found</h3>
+            <p class="text-xs text-charcoal/60 max-w-sm mx-auto mb-6">We couldn't find any pages matching your current search query or category filter.</p>
+            <button id="resetFiltersBtn" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-near-black text-white hover:bg-charcoal transition-all">
+                Reset All Filters
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-light-gray py-8 mt-16 text-center text-xs text-charcoal/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 SuA K-Glow • Internal Operational Tool</p>
+            <div class="flex items-center gap-6 text-[11px] font-medium">
+                <a href="../dev-tools/dev.html" class="hover:text-near-black transition-colors">Nav Reference</a>
+                <a href="../dev-tools/audit.html" class="hover:text-near-black transition-colors">Content Audit</a>
+                <a href="../dev-tools/tracker.html" class="hover:text-near-black transition-colors">Tracker</a>
+                <a href="../dev-tools/sitemap.html" class="hover:text-near-black transition-colors">Site Map</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Data & Scripts -->
+    <script>
+        // Complete Database of Hidden & Unlisted Links
+        const LINKS_DATA = [
+            // ── 1. Education & Skin Booster Deep Dives (Unlisted in main nav) ──
+            {
+                title: "Rejuran® Healer (Polynucleotide)",
+                path: "education/rejuran.html",
+                category: "education",
+                categoryLabel: "Education Deep Dive",
+                status: "Live Deep Dive",
+                icon: "sparkles",
+                desc: "The gold standard for skin repair. Salmon-derived Polynucleotides (c-PDRN/PN) rebuild damaged dermis, stimulate cellular renewal, and calm inflammation.",
+                tags: ["rejuran", "pn", "pdrn", "salmon", "dna", "skin booster", "healing", "acne scars", "korean"]
+            },
+            {
+                title: "Rejuran® Tone-Up Booster",
+                path: "education/rejuran-tone-up.html",
+                category: "education",
+                categoryLabel: "Education Deep Dive",
+                status: "Live Deep Dive",
+                icon: "sun",
+                desc: "Dual-vial skin booster combining PDRN with Glutathione, Tranexamic Acid, and Vitamin C for intensive pigmentation control and luminous tone.",
+                tags: ["rejuran", "tone up", "glutathione", "tranexamic", "brightening", "pigmentation", "melasma"]
+            },
+            {
+                title: "Juvelook® & Juvelook Volume®",
+                path: "education/juvelook.html",
+                category: "education",
+                categoryLabel: "Education Deep Dive",
+                status: "Live Deep Dive",
+                icon: "layers",
+                desc: "Hybrid bio-stimulatory skin booster blending micro-particles of Poly D,L-Lactic Acid (PDLLA) and uncrosslinked HA for sustained natural neocollagenesis.",
+                tags: ["juvelook", "pdlla", "poly lactic", "collagen", "biostimulator", "volume", "pores", "elasticity"]
+            },
+            {
+                title: "BYRYZN® HA Skin Booster (v2)",
+                path: "education/byryzn-v2.html",
+                category: "education",
+                categoryLabel: "Education Deep Dive",
+                status: "Live Deep Dive",
+                icon: "droplets",
+                desc: "Next-gen stabilized cross-linked hyaluronic acid micro-injections providing sustained deep dermal hydration, plumping, and glass skin finish.",
+                tags: ["byryzn", "ha", "hyaluronic", "cross-linked", "hydration", "plumping", "glass skin", "v2"]
+            },
+            {
+                title: "BYRYZN® HA Skin Booster (v1)",
+                path: "education/byryzn.html",
+                category: "education",
+                categoryLabel: "Education Deep Dive",
+                status: "Legacy Formulation",
+                icon: "droplet",
+                desc: "Original comprehensive educational page on BYRYZN cross-linked hyaluronic acid technology and clinical administration protocols.",
+                tags: ["byryzn", "ha", "hyaluronic", "skin booster", "v1", "legacy"]
+            },
+            {
+                title: "HILO WAVE® Dual-HA Booster (v2)",
+                path: "education/hilowave-v2.html",
+                category: "education",
+                categoryLabel: "Education Deep Dive",
+                status: "Live Deep Dive",
+                icon: "waves",
+                desc: "Texas-exclusive dual high/low molecular weight HA skin booster delivering multi-layer tissue saturation, elasticity, and long-lasting glow.",
+                tags: ["hilowave", "hilo wave", "dual ha", "molecular weight", "hydration", "dallas", "texas", "v2"]
+            },
+            {
+                title: "Hilo Wave® Skin Booster (v1)",
+                path: "education/hilowave.html",
+                category: "education",
+                categoryLabel: "Education Deep Dive",
+                status: "Original Page",
+                icon: "waves",
+                desc: "Original introduction to Hilo Wave high-concentration moisture restoration technology and dermal matrix hydration.",
+                tags: ["hilowave", "moisture", "ha", "skin booster", "v1"]
+            },
+            {
+                title: "CellREDM™ Exosome & Regenerative Therapy",
+                path: "education/cellredm.html",
+                category: "education",
+                categoryLabel: "Education Deep Dive",
+                status: "Live Deep Dive",
+                icon: "dna",
+                desc: "Cutting-edge bio-regenerative therapy targeting cellular repair, skin barrier rehabilitation, and intensive anti-aging cellular signaling.",
+                tags: ["cellredm", "exosome", "regenerative", "cell repair", "growth factors", "anti-aging"]
+            },
+            {
+                title: "Elravie Re2O (PN + HA)",
+                path: "education/re20.html",
+                category: "education",
+                categoryLabel: "Education Deep Dive",
+                status: "Live Deep Dive",
+                icon: "sparkle",
+                desc: "Premium Korean skin regenerative formula synchronizing polynucleotides (PN) and pure HA for rapid recovery and collagen revitalization.",
+                tags: ["re20", "elravie", "pn", "ha", "hyaluronic", "collagen", "korean"]
+            },
+            {
+                title: "SKINVIVE™ by JUVÉDERM®",
+                path: "education/skinvive.html",
+                category: "education",
+                categoryLabel: "Education Deep Dive",
+                status: "Live Deep Dive",
+                icon: "shield-check",
+                desc: "The first and only FDA-approved hyaluronic acid microdroplet injectable in the US to improve cheek skin smoothness and internal glow for up to 6 months.",
+                tags: ["skinvive", "juvederm", "allergan", "fda approved", "microdroplet", "smoothness", "glow"]
+            },
+            {
+                title: "Skin Boosters Master Educational Hub",
+                path: "education/skinboosters.html",
+                category: "education",
+                categoryLabel: "Educational Hub",
+                status: "Live Hub",
+                icon: "book-open",
+                desc: "The complete visual directory and educational overview comparing all Korean and Western skin boosters administered at SuA Glow.",
+                tags: ["skin boosters", "hub", "comparison", "overview", "matrix", "education"]
+            },
+
+            // ── 2. Campaigns, Promos & Skincare Shop ──
+            {
+                title: "The SuA Glow September Edit (Specials)",
+                path: "specials-september.html",
+                category: "campaigns",
+                categoryLabel: "Campaign Edit",
+                status: "Active Seasonal",
+                icon: "flame",
+                desc: "Interactive promotion cards showcasing Seoul Glass Skin 360, Korean Scalp & Hair Reset, and Seoul Youth Sculpt packages with screenshot export.",
+                tags: ["specials", "september", "promotions", "deals", "packages", "discounts", "screenshot"]
+            },
+            {
+                title: "Promotions & Seasonal Specials Landing",
+                path: "specials.html",
+                category: "campaigns",
+                categoryLabel: "Promotions Hub",
+                status: "Live Promo Page",
+                icon: "tag",
+                desc: "Main promotional hub detailing monthly specials, package savings, and immediate online booking vouchers.",
+                tags: ["promotions", "specials", "offers", "vouchers", "pricing"]
+            },
+            {
+                title: "Rejuran® Professional Skincare (In-Office)",
+                path: "shop-skincare-rejuran.html",
+                category: "campaigns",
+                categoryLabel: "Retail Boutique",
+                status: "In-Office Only",
+                icon: "shopping-bag",
+                desc: "Dedicated showcase of the medical-grade Rejuran Professional post-treatment home care line available exclusively in-clinic.",
+                tags: ["shop", "skincare", "rejuran", "c-pdrn", "retail", "products", "serum", "cream"]
+            },
+            {
+                title: "Clinical Skincare Collection Boutique",
+                path: "shop-skincare.html",
+                category: "campaigns",
+                categoryLabel: "Retail Boutique",
+                status: "In-Office Boutique",
+                icon: "package",
+                desc: "Full product catalogue of clinical and Korean medical-grade skincare lines curated by Sophia Yang, PA-C.",
+                tags: ["shop", "skincare", "boutique", "post-care", "sunscreen", "cleansers"]
+            },
+
+            // ── 3. Standalone Treatments & Hidden Page Variants ──
+            {
+                title: "Needle-Free Skin Infusion (DEP)",
+                path: "dep.html",
+                category: "services",
+                categoryLabel: "Standalone Landing",
+                status: "Standalone Page",
+                icon: "zap",
+                desc: "Dallas' first FDA-cleared needle-free DermoElectroPoration® (DEP) transdermal infusion page optimized for needle-phobic patients seeking glass skin.",
+                tags: ["dep", "needle-free", "dermoelectroporation", "infusion", "painless", "glass skin"]
+            },
+            {
+                title: "Korean Needle-Free Infusion Therapy",
+                path: "needleless-infusion-therapy.html",
+                category: "services",
+                categoryLabel: "Treatment Page",
+                status: "Site Version",
+                icon: "sparkles",
+                desc: "The full treatment deep dive with complete scientific explanations, treatment steps, candidate profiles, and clinical FAQs.",
+                tags: ["needleless", "needle-free", "infusion", "dep", "technology", "faq"]
+            },
+            {
+                title: "Patient Stories & Clinical Testimonials",
+                path: "testimonials.html",
+                category: "services",
+                categoryLabel: "Social Proof",
+                status: "Full Page",
+                icon: "message-square-quote",
+                desc: "Dedicated patient reviews, 5-star ratings, and feedback categorized by treatment (Rejuran, Juvelook, LDM, Botox).",
+                tags: ["testimonials", "reviews", "patient stories", "ratings", "social proof"]
+            },
+            {
+                title: "One Day Glow Treatment",
+                path: "one-day-glow.html",
+                category: "services",
+                categoryLabel: "Treatment Program",
+                status: "Signature Protocol",
+                icon: "clock",
+                desc: "Same-day red-carpet radiance treatment combining gentle exfoliation, light infusion, and instant luminosity with zero downtime.",
+                tags: ["one day glow", "express", "red carpet", "event prep", "instant glow"]
+            },
+            {
+                title: "Bridal Glow Wedding Package",
+                path: "bridal-glow.html",
+                category: "services",
+                categoryLabel: "Custom Package",
+                status: "Signature Protocol",
+                icon: "heart",
+                desc: "Custom multi-month bridal skin timeline engineered to peak skin texture, tone, and hydration precisely on wedding day.",
+                tags: ["bridal glow", "wedding", "bride", "groom", "timeline", "package"]
+            },
+            {
+                title: "Seoul Man Aesthetic Program",
+                path: "seoul-man.html",
+                category: "services",
+                categoryLabel: "Targeted Protocol",
+                status: "Signature Protocol",
+                icon: "user",
+                desc: "Aesthetic rejuvenation tailored to male facial anatomy, focusing on jawline definition, pore reduction, and natural vitality.",
+                tags: ["seoul man", "men", "mens aesthetics", "jawline", "subtle", "natural"]
+            },
+            {
+                title: "SuA Glow Signature Multi-Modality",
+                path: "signature-treatment.html",
+                category: "services",
+                categoryLabel: "Flagship Protocol",
+                status: "Signature Protocol",
+                icon: "award",
+                desc: "Sophia Yang's signature multi-modality protocol combining custom boosters, ultrasound lifting, and Korean infusion techniques.",
+                tags: ["signature", "flagship", "sophia yang", "multi-modality", "comprehensive"]
+            },
+            {
+                title: "Glass Skin Hydration & Glow Facial",
+                path: "glass-skin-hydration-glow.html",
+                category: "services",
+                categoryLabel: "K-Beauty Facial",
+                status: "Live Service",
+                icon: "gem",
+                desc: "Ultra-hydrating clinical facial protocol restoring epidermal lipids, moisture retention, and pore clarity for translucent glass skin.",
+                tags: ["glass skin", "hydration", "glow facial", "k-beauty", "facial"]
+            },
+            {
+                title: "Collagen Stimulation Facial",
+                path: "collagen-stimulation-facial.html",
+                category: "services",
+                categoryLabel: "K-Beauty Facial",
+                status: "Live Service",
+                icon: "activity",
+                desc: "Non-invasive collagen-activating facial utilizing targeted peptides, antioxidants, and cellular reactivation techniques.",
+                tags: ["collagen", "stimulation", "firming", "elasticity", "anti-aging facial"]
+            },
+            {
+                title: "Tone-Up Radiance Facial",
+                path: "tone-up-facial.html",
+                category: "services",
+                categoryLabel: "K-Beauty Facial",
+                status: "Live Service",
+                icon: "sun-medium",
+                desc: "Targeted brightening facial addressing dullness, post-acne dark marks, uneven skin tone, and UV damage.",
+                tags: ["tone up", "facial", "brightening", "radiance", "hyperpigmentation"]
+            },
+            {
+                title: "Salmon PN Regenerative Facial",
+                path: "salmon-pn-facial.html",
+                category: "services",
+                categoryLabel: "K-Beauty Facial",
+                status: "Live Service",
+                icon: "fish",
+                desc: "Clinical facial incorporating topical and transdermal polynucleotides for accelerated recovery, barrier reinforcement, and cellular calming.",
+                tags: ["salmon pn", "polynucleotide", "facial", "recovery", "soothing"]
+            },
+            {
+                title: "Korean Scalp & Hair Rejuvenation",
+                path: "korean-scalp-hair-rejuvenation.html",
+                category: "services",
+                categoryLabel: "Specialty Clinic",
+                status: "Live Service",
+                icon: "scissors",
+                desc: "Korean scalp head-spa and clinical follicle stimulation protocol for scalp detox, follicle nourishment, and hair vitality.",
+                tags: ["scalp", "hair", "hair restoration", "head spa", "korean scalp"]
+            },
+            {
+                title: "Glow Infusion & Wellness IV Therapy",
+                path: "iv-infusion-wellness-therapy.html",
+                category: "services",
+                categoryLabel: "Wellness Medicine",
+                status: "Live Service",
+                icon: "syringe",
+                desc: "Clinical IV vitamin hydration, high-dose Glutathione antioxidant drips, and push therapy for systemic beauty from within.",
+                tags: ["iv", "infusion", "wellness", "glutathione", "hydration drip", "vitamins"]
+            },
+            {
+                title: "Coming Soon Service Teaser",
+                path: "coming-soon.html",
+                category: "services",
+                categoryLabel: "Placeholder",
+                status: "Teaser Page",
+                icon: "timer",
+                desc: "Branded luxury placeholder page used for upcoming service announcements and beta client registrations.",
+                tags: ["coming soon", "teaser", "placeholder", "launch"]
+            },
+
+            // ── 4. Creative Studios & Internal Tools ──
+            {
+                title: "Instagram 4:5 Post & Carousel Studio",
+                path: "instagram-designs.html",
+                category: "creative",
+                categoryLabel: "Marketing Studio",
+                status: "Internal Studio",
+                icon: "instagram",
+                desc: "Interactive visual tool designed to preview, customize, and export brand-compliant 4:5 Instagram promotion carousels and posts.",
+                tags: ["instagram", "social media", "studio", "designs", "carousel", "marketing", "graphics"]
+            },
+            {
+                title: "Document & Treatment Spec Viewer",
+                path: "kam_doc_updates/doc_viewer.html",
+                category: "creative",
+                categoryLabel: "Internal Spec",
+                status: "Internal Viewer",
+                icon: "file-text",
+                desc: "Internal viewer utility for reviewing parsed treatment specifications, docx extracts, and content updates.",
+                tags: ["doc viewer", "spec", "docx", "internal", "updates"]
+            },
+
+            // ── 5. Dev, QA & Architectural Portals ──
+            {
+                title: "Internal Project Progress Tracker (v1.1.0)",
+                path: "dev-tools/tracker.html",
+                category: "dev",
+                categoryLabel: "Dev Tool",
+                status: "Protected Tracker",
+                icon: "check-square",
+                desc: "Internal task and milestone tracker with priority filtering, status flags, and development changelog.",
+                tags: ["tracker", "tasks", "roadmap", "progress", "internal", "milestones"]
+            },
+            {
+                title: "Content Audit & Roadmap Punch-List",
+                path: "dev-tools/audit.html",
+                category: "dev",
+                categoryLabel: "Dev Tool",
+                status: "Live Punch-List",
+                icon: "clipboard-check",
+                desc: "Live gap analysis and audit tracking completed pages, missing pages, asset inventories, and navigation alignment.",
+                tags: ["audit", "gap analysis", "missing pages", "roadmap", "punchlist"]
+            },
+            {
+                title: "Navigation Reference & Spec",
+                path: "dev-tools/dev.html",
+                category: "dev",
+                categoryLabel: "Dev Tool",
+                status: "Navigation Spec",
+                icon: "layout",
+                desc: "Complete visual hierarchy and layout reference documenting desktop nav, mega menus, mobile drawer, and topbar rules.",
+                tags: ["nav", "dev", "reference", "desktop nav", "mobile drawer", "hierarchy"]
+            },
+            {
+                title: "Interactive Visual Tree Sitemap (Pan & Zoom)",
+                path: "dev-tools/sitemap.html",
+                category: "dev",
+                categoryLabel: "Dev Tool",
+                status: "Interactive Graph",
+                icon: "git-branch",
+                desc: "Interactive tree chart node diagram with smooth zoom and pan controls mapping the entire page and menu hierarchy.",
+                tags: ["sitemap", "tree", "interactive", "graph", "hierarchy", "pan zoom"]
+            },
+            {
+                title: "Site Architecture Tree Sitemap (v2)",
+                path: "dev-tools/sua_glow_sitemap_v2.html",
+                category: "dev",
+                categoryLabel: "Dev Tool",
+                status: "Tree Diagram v2",
+                icon: "network",
+                desc: "Updated visual structure mapping treatments, wellness, secondary navigation, and planned future pages.",
+                tags: ["sitemap", "v2", "architecture", "structure", "tree"]
+            },
+            {
+                title: "Public Directory & Visual Sitemap",
+                path: "sitemap.html",
+                category: "dev",
+                categoryLabel: "Site Directory",
+                status: "Public Layout",
+                icon: "list-tree",
+                desc: "User-facing visual sitemap and directory providing structured links across treatments, shop, and resources.",
+                tags: ["sitemap", "directory", "public", "overview"]
+            },
+            {
+                title: "Section Library & UI Page Builder",
+                path: "dev-tools/section-library.html",
+                category: "dev",
+                categoryLabel: "Dev Tool",
+                status: "Component UI",
+                icon: "layers",
+                desc: "Modular UI library containing reusable section blocks (hero layouts, comparison tables, FAQ accordions, CTA banners).",
+                tags: ["section library", "components", "ui builder", "hero", "accordion"]
+            },
+            {
+                title: "Brand & Design Style Guide",
+                path: "dev-tools/style-guide.html",
+                category: "dev",
+                categoryLabel: "Dev Tool",
+                status: "Design System",
+                icon: "palette",
+                desc: "Official design tokens, typography scales, color palettes (taupe, warm gold, near-black), button variants, and badges.",
+                tags: ["style guide", "design system", "colors", "typography", "css tokens"]
+            },
+            {
+                title: "Master Content Section Compendium",
+                path: "dev-tools/content-styles.html",
+                category: "dev",
+                categoryLabel: "Dev Tool",
+                status: "Design Compendium",
+                icon: "layout-template",
+                desc: "Visual compendium displaying tested content formatting, typography styles, cards, and clinical section patterns.",
+                tags: ["content styles", "compendium", "typography", "formatting"]
+            },
+            {
+                title: "Medical & Legal Disclaimer Inventory",
+                path: "dev-tools/disclaimers.html",
+                category: "dev",
+                categoryLabel: "Compliance Tool",
+                status: "Legal Inventory",
+                icon: "alert-circle",
+                desc: "Master repository of all FDA product disclaimers, PA delegation statements, medical oversight copy, and fine print.",
+                tags: ["disclaimers", "medical oversight", "fda", "legal", "compliance", "fine print"]
+            },
+
+            // ── 6. Legal & Policy Pages ──
+            {
+                title: "Privacy Policy",
+                path: "privacy-policy.html",
+                category: "legal",
+                categoryLabel: "Compliance",
+                status: "Live Policy",
+                icon: "file-lock",
+                desc: "Comprehensive digital privacy notice outlining user data collection, security safeguards, and third-party disclosures.",
+                tags: ["privacy", "policy", "legal", "data"]
+            },
+            {
+                title: "HIPAA Patient Privacy Policy",
+                path: "hippa-policy.html",
+                category: "legal",
+                categoryLabel: "Compliance",
+                status: "Live Policy",
+                icon: "shield-alert",
+                desc: "Health Insurance Portability and Accountability Act (HIPAA) compliance statement regarding Protected Health Information (PHI).",
+                tags: ["hipaa", "hippa", "phi", "patient privacy", "medical records"]
+            },
+            {
+                title: "Accessibility (ADA) Statement",
+                path: "accessibility-statement.html",
+                category: "legal",
+                categoryLabel: "Compliance",
+                status: "Live Policy",
+                icon: "eye",
+                desc: "Commitment to digital accessibility following WCAG 2.1 AA standards for individuals with disabilities.",
+                tags: ["accessibility", "ada", "wcag", "compliance"]
+            },
+            {
+                title: "Cookie Notices & Tracking Choices",
+                path: "cookie-notices-choices.html",
+                category: "legal",
+                categoryLabel: "Compliance",
+                status: "Live Policy",
+                icon: "cookie",
+                desc: "Detailed breakdown of essential cookies, analytics trackers, and patient privacy control choices.",
+                tags: ["cookies", "tracking", "analytics", "choices"]
+            }
+        ];
+
+        // State Management
+        let currentCategory = 'all';
+        let searchQuery = '';
+        let viewMode = 'grid'; // 'grid' or 'list'
+
+        // DOM Elements
+        const linksGrid = document.getElementById('linksGrid');
+        const linksTableContainer = document.getElementById('linksTableContainer');
+        const linksTableBody = document.getElementById('linksTableBody');
+        const searchInput = document.getElementById('searchInput');
+        const clearSearchBtn = document.getElementById('clearSearchBtn');
+        const visibleCountEl = document.getElementById('visibleCount');
+        const emptyStateEl = document.getElementById('emptyState');
+        const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+        const viewGridBtn = document.getElementById('viewGridBtn');
+        const viewListBtn = document.getElementById('viewListBtn');
+        const copyPageUrlBtn = document.getElementById('copyPageUrlBtn');
+        const copyMarkdownBtn = document.getElementById('copyMarkdownBtn');
+        const toastContainer = document.getElementById('toastContainer');
+        const filterPills = document.querySelectorAll('.filter-pill');
+
+        // Helper: Generate Relative Link (from /internal/ to target)
+        function getRelativeHref(relativePath) {
+            return '../' + relativePath;
+        }
+
+        // Helper: Generate Clean Absolute URL (for clipboard sharing)
+        function getFullUrl(relativePath) {
+            return new URL('../' + relativePath, window.location.href).href;
+        }
+
+        // Show Toast Notification
+        function showToast(message, icon = 'check-circle-2') {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `
+                <i data-lucide="${icon}" class="w-4 h-4 text-warm-gold shrink-0"></i>
+                <span class="truncate">${message}</span>
+            `;
+            toastContainer.appendChild(toast);
+            lucide.createIcons();
+
+            // Trigger animation
+            requestAnimationFrame(() => {
+                toast.classList.add('show');
+            });
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 3000);
+        }
+
+        // Copy Text to Clipboard
+        function copyToClipboard(text, successMsg = 'Copied to clipboard!') {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast(successMsg);
+                }).catch(() => {
+                    fallbackCopy(text, successMsg);
+                });
+            } else {
+                fallbackCopy(text, successMsg);
+            }
+        }
+
+        function fallbackCopy(text, successMsg) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.opacity = '0';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast(successMsg);
+            } catch (err) {
+                showToast('Unable to copy', 'alert-circle');
+            }
+            document.body.removeChild(textArea);
+        }
+
+        // Category Color Badges
+        function getCategoryBadge(category) {
+            switch(category) {
+                case 'education':
+                    return '<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-warm-gold/15 text-warm-gold border border-warm-gold/25">Education</span>';
+                case 'campaigns':
+                    return '<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/15 text-amber-700 border border-amber-500/25">Promo & Shop</span>';
+                case 'services':
+                    return '<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/15 text-emerald-700 border border-emerald-500/25">Service</span>';
+                case 'dev':
+                    return '<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-500/15 text-blue-700 border border-blue-500/25">Dev Tool</span>';
+                case 'creative':
+                    return '<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-pink-500/15 text-pink-700 border border-pink-500/25">Studio</span>';
+                case 'legal':
+                    return '<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-500/15 text-slate-700 border border-slate-500/25">Compliance</span>';
+                default:
+                    return '<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-charcoal/10 text-charcoal border border-charcoal/20">Link</span>';
+            }
+        }
+
+        // Filter Logic
+        function getFilteredLinks() {
+            return LINKS_DATA.filter(item => {
+                const matchesCategory = (currentCategory === 'all') || (item.category === currentCategory);
+                if (!matchesCategory) return false;
+
+                if (!searchQuery) return true;
+
+                const q = searchQuery.toLowerCase();
+                return (
+                    item.title.toLowerCase().includes(q) ||
+                    item.path.toLowerCase().includes(q) ||
+                    item.desc.toLowerCase().includes(q) ||
+                    (item.tags && item.tags.some(t => t.toLowerCase().includes(q)))
+                );
+            });
+        }
+
+        // Render Links
+        function render() {
+            const filtered = getFilteredLinks();
+            visibleCountEl.textContent = filtered.length;
+
+            if (filtered.length === 0) {
+                linksGrid.classList.add('hidden');
+                linksTableContainer.classList.add('hidden');
+                emptyStateEl.classList.remove('hidden');
+                return;
+            }
+
+            emptyStateEl.classList.add('hidden');
+
+            if (viewMode === 'grid') {
+                linksGrid.classList.remove('hidden');
+                linksTableContainer.classList.add('hidden');
+                renderGrid(filtered);
+            } else {
+                linksGrid.classList.add('hidden');
+                linksTableContainer.classList.remove('hidden');
+                renderTable(filtered);
+            }
+
+            lucide.createIcons();
+        }
+
+        // Render Card Grid View
+        function renderGrid(items) {
+            linksGrid.innerHTML = items.map(item => {
+                const targetHref = getRelativeHref(item.path);
+                return `
+                    <div class="link-card bg-white rounded-2xl p-6 border border-light-gray flex flex-col justify-between" data-path="${item.path}">
+                        <div>
+                            <!-- Header / Category & Status -->
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                ${getCategoryBadge(item.category)}
+                                <span class="text-[10px] font-mono font-medium text-charcoal/50 bg-off-white px-2 py-0.5 rounded border border-light-gray/60">${item.status}</span>
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="text-base font-bold text-near-black font-heading mb-2 flex items-start gap-2.5">
+                                <span class="p-1.5 rounded-lg bg-off-white text-taupe shrink-0 mt-0.5">
+                                    <i data-lucide="${item.icon}" class="w-4 h-4"></i>
+                                </span>
+                                <span class="leading-snug">${item.title}</span>
+                            </h3>
+
+                            <!-- Description -->
+                            <p class="text-xs text-charcoal/70 font-light leading-relaxed mb-4">
+                                ${item.desc}
+                            </p>
+                        </div>
+
+                        <div>
+                            <!-- Path box -->
+                            <div class="bg-off-white px-3 py-1.5 rounded-lg border border-light-gray/80 text-[11px] font-mono text-charcoal/60 truncate mb-4 flex items-center justify-between">
+                                <span class="truncate">${item.path}</span>
+                                <i data-lucide="file" class="w-3 h-3 shrink-0 ml-2 opacity-40"></i>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="grid grid-cols-2 gap-2 pt-3 border-t border-light-gray/60">
+                                <a href="${targetHref}" target="_blank" class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-near-black hover:bg-taupe text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm">
+                                    <span>Open</span>
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+
+                                <button type="button" onclick="copyLinkAction('${item.path}', this)" class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-off-white hover:bg-light-gray/60 text-charcoal border border-light-gray text-xs font-semibold uppercase tracking-wider transition-colors">
+                                    <i data-lucide="copy" class="w-3.5 h-3.5 text-taupe"></i>
+                                    <span>Copy URL</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Render Table View
+        function renderTable(items) {
+            linksTableBody.innerHTML = items.map(item => {
+                const targetHref = getRelativeHref(item.path);
+                return `
+                    <tr class="hover:bg-off-white/60 transition-colors">
+                        <td class="py-3.5 px-6">
+                            <div class="font-bold text-near-black flex items-center gap-2">
+                                <i data-lucide="${item.icon}" class="w-3.5 h-3.5 text-taupe shrink-0"></i>
+                                <span>${item.title}</span>
+                            </div>
+                            <span class="font-mono text-[11px] text-charcoal/50 block mt-0.5">${item.path}</span>
+                        </td>
+                        <td class="py-3.5 px-6 whitespace-nowrap">
+                            ${getCategoryBadge(item.category)}
+                        </td>
+                        <td class="py-3.5 px-6 max-w-md text-charcoal/70 font-light leading-relaxed">
+                            ${item.desc}
+                        </td>
+                        <td class="py-3.5 px-6 text-right whitespace-nowrap">
+                            <div class="inline-flex items-center gap-2">
+                                <button type="button" onclick="copyLinkAction('${item.path}', this)" class="p-2 rounded-lg bg-off-white hover:bg-light-gray text-charcoal border border-light-gray transition-colors" title="Copy Link">
+                                    <i data-lucide="copy" class="w-3.5 h-3.5 text-taupe"></i>
+                                </button>
+                                <a href="${targetHref}" target="_blank" class="p-2 rounded-lg bg-near-black hover:bg-taupe text-white transition-colors" title="Open Page in New Tab">
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // Copy specific link button handler
+        window.copyLinkAction = function(relativePath, btnEl) {
+            const fullUrl = getFullUrl(relativePath);
+            copyToClipboard(fullUrl, `Copied: ${relativePath}`);
+
+            // Subtle button animation feedback
+            if (btnEl) {
+                const originalHtml = btnEl.innerHTML;
+                btnEl.classList.add('!bg-emerald-50', '!border-emerald-300', '!text-emerald-700');
+                btnEl.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i><span class="text-emerald-700 font-bold">Copied!</span>`;
+                lucide.createIcons();
+
+                setTimeout(() => {
+                    btnEl.classList.remove('!bg-emerald-50', '!border-emerald-300', '!text-emerald-700');
+                    btnEl.innerHTML = originalHtml;
+                    lucide.createIcons();
+                }, 1800);
+            }
+        };
+
+        // Event Listeners: Category Filter
+        filterPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                filterPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                currentCategory = pill.dataset.category;
+                render();
+            });
+        });
+
+        // Event Listeners: Search
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.trim();
+            if (searchQuery.length > 0) {
+                clearSearchBtn.classList.remove('hidden');
+            } else {
+                clearSearchBtn.classList.add('hidden');
+            }
+            render();
+        });
+
+        clearSearchBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            searchQuery = '';
+            clearSearchBtn.classList.add('hidden');
+            searchInput.focus();
+            render();
+        });
+
+        resetFiltersBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            searchQuery = '';
+            clearSearchBtn.classList.add('hidden');
+            currentCategory = 'all';
+            filterPills.forEach(p => p.classList.remove('active'));
+            document.querySelector('[data-category="all"]').classList.add('active');
+            render();
+        });
+
+        // Event Listeners: View Mode Switcher
+        viewGridBtn.addEventListener('click', () => {
+            viewMode = 'grid';
+            viewGridBtn.classList.add('bg-white', 'shadow-sm', 'text-near-black');
+            viewGridBtn.classList.remove('text-charcoal/50');
+            viewListBtn.classList.remove('bg-white', 'shadow-sm', 'text-near-black');
+            viewListBtn.classList.add('text-charcoal/50');
+            render();
+        });
+
+        viewListBtn.addEventListener('click', () => {
+            viewMode = 'list';
+            viewListBtn.classList.add('bg-white', 'shadow-sm', 'text-near-black');
+            viewListBtn.classList.remove('text-charcoal/50');
+            viewGridBtn.classList.remove('bg-white', 'shadow-sm', 'text-near-black');
+            viewGridBtn.classList.add('text-charcoal/50');
+            render();
+        });
+
+        // Top Action: Copy Current Page URL
+        copyPageUrlBtn.addEventListener('click', () => {
+            copyToClipboard(window.location.href, 'Directory URL copied to clipboard!');
+        });
+
+        // Top Action: Copy All as Formatted Markdown / Plain text list
+        copyMarkdownBtn.addEventListener('click', () => {
+            const filtered = getFilteredLinks();
+            if (filtered.length === 0) {
+                showToast('No links to copy', 'alert-circle');
+                return;
+            }
+
+            let markdown = `## SuA Glow — Internal & Hidden Links Directory\n\n`;
+            filtered.forEach(item => {
+                const fullUrl = getFullUrl(item.path);
+                markdown += `- **${item.title}** (${item.categoryLabel})\n  ${fullUrl}\n  _${item.desc}_\n\n`;
+            });
+
+            copyToClipboard(markdown, `Copied ${filtered.length} links as a formatted list!`);
+        });
+
+        // Keyboard Shortcut: Press '/' or 'Cmd+K' / 'Ctrl+K' to focus search
+        window.addEventListener('keydown', (e) => {
+            if ((e.key === '/' && document.activeElement !== searchInput) || ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k')) {
+                e.preventDefault();
+                searchInput.focus();
+                searchInput.select();
+            }
+        });
+
+        // Initial Render
+        document.addEventListener('DOMContentLoaded', () => {
+            render();
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
