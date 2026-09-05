@@ -28,7 +28,7 @@ h5,
 h6,
 .font-heading {
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
 }
 
@@ -41,7 +41,7 @@ h6,
 .heading-wide {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.12em;
     font-weight: 300;
     line-height: 1.1;
 }
