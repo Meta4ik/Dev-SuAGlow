@@ -1,0 +1,35 @@
+# Git & Agent metadata
+.git
+.github
+.agent
+
+# Node dependencies & source
+node_modules
+src
+
+# Scratch & Working directories
+scratch
+kam_doc_updates
+dev-tools
+internal
+bak
+*.bak
+
+# Scripts & Utility files
+*.py
+*.sh
+*.xlsx
+*.docx
+*.pdf
+*.md
+*.txt
+!sitemap.xml
+!robots.txt
+
+# OS & Config
+.DS_Store
+Thumbs.db
+.env
+.env.*
+package-lock.json
+tailwind.config.js

@@ -29,7 +29,7 @@ function renderReviews(reviews, container) {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
     `;
 
-    const latestReviews = reviews.slice(0, 9);
+    const latestReviews = reviews.filter(r => r.text && r.text.trim().length > 0).slice(0, 9);
 
     latestReviews.forEach((review, index) => {
         // Add staggered animation delay based on position
