@@ -3,9 +3,8 @@
 .github
 .agent
 
-# Node dependencies & source
+# Node dependencies
 node_modules
-src
 
 # Scratch & Working directories
 scratch
@@ -31,5 +30,3 @@ bak
 Thumbs.db
 .env
 .env.*
-package-lock.json
-tailwind.config.js
