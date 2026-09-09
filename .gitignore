@@ -23,3 +23,5 @@ bak/
 kam_doc_updates/
 scratch/
 .env
+.vercel
+.env*
