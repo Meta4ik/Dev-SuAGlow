@@ -128,11 +128,13 @@
                         <!-- Gradient Overlay for smooth text readability -->
                         <div class="absolute inset-0 bg-gradient-to-t from-[#121417] via-[#121417]/50 to-transparent pointer-events-none"></div>
                         
-                        <!-- Info pinned to the bottom of the whole frame -->
-                        <div class="relative z-10 p-6 sm:p-8 space-y-2">
-                            <span class="text-warm-gold text-[10px] font-heading font-semibold uppercase tracking-widest block">
-                                PERSONALIZED ASSESSMENT
-                            </span>
+                        <!-- Floating Pill Badge & Info pinned to the bottom -->
+                        <div class="relative z-10 p-6 sm:p-8 space-y-3">
+                            <div>
+                                <span class="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white font-body text-[11px] sm:text-xs uppercase tracking-widest font-semibold shadow-lg inline-flex items-center">
+                                    PERSONALIZED ASSESSMENT
+                                </span>
+                            </div>
                             <h4 class="heading-wide text-lg sm:text-xl text-white font-medium">START WITH THE SCALP.</h4>
                             <p class="text-xs sm:text-sm text-white/75 font-light leading-relaxed">
                                 Density. Scalp condition. History. Goals.
@@ -362,8 +364,12 @@
                         
                         <!-- Pinned content at bottom of photo -->
                         <div class="relative z-10 p-5 sm:p-6 text-white">
-                            <div class="p-5 bg-black/50 backdrop-blur-md rounded-2xl border border-white/20 text-white space-y-1 shadow-lg">
-                                <span class="text-xs uppercase font-heading font-semibold tracking-wider text-warm-gold block">SKIN-FIRST THINKING</span>
+                            <div class="p-5 bg-black/50 backdrop-blur-md rounded-2xl border border-white/20 text-white space-y-2.5 shadow-lg">
+                                <div>
+                                    <span class="px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white font-body text-[11px] sm:text-xs uppercase tracking-widest font-semibold shadow-lg inline-flex items-center">
+                                        SKIN-FIRST THINKING
+                                    </span>
+                                </div>
                                 <h4 class="font-heading text-base sm:text-lg font-medium text-white">START WITH THE SCALP.</h4>
                                 <p class="text-xs sm:text-sm text-white/85 font-light">Then build the plan.</p>
                             </div>
@@ -400,34 +406,41 @@
                 <!-- 3 Edgier Pillar Cards with SuA Glow Signature Background Styles (No Numbers) -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10 items-stretch">
                     <!-- Pillar 1: Prevention -->
-                    <div class="product-card glow-card p-8 rounded-3xl relative flex flex-col justify-between space-y-6 group h-full" style="--glow-color: #AA987C;">
+                    <div class="product-card glow-card p-6 sm:p-8 rounded-3xl relative flex flex-col justify-between space-y-6 group h-full" style="--glow-color: #AA987C;">
                         <!-- Clipped Luxury Background System -->
                         <div class="absolute inset-0 rounded-[inherit] overflow-hidden pointer-events-none select-none">
-                            <!-- Ambient Radial Light Pools -->
-                            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(170,152,124,0.18),transparent_65%)]"></div>
+                            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(170,152,124,0.15),transparent_65%)]"></div>
                             <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-warm-gold/10 rounded-full blur-2xl group-hover:bg-warm-gold/25 transition-all duration-500"></div>
-                            <!-- Subtle Texture Grid -->
                             <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500" style="background-image: radial-gradient(circle at 1px 1px, #AA987C 1px, transparent 0); background-size: 20px 20px;"></div>
-                            <!-- Typographic Luxury Watermark -->
-                            <span class="absolute -bottom-2 -right-1 font-heading font-thin text-5xl sm:text-6xl lg:text-7xl text-white/[0.08] group-hover:text-warm-gold/30 transition-all duration-500 uppercase tracking-widest pointer-events-none select-none">
-                                PREVENT
-                            </span>
                         </div>
 
-                        <div class="space-y-5 relative z-10">
-                            <!-- Top Header: Pill Badge (Left-Aligned) -->
-                            <div class="flex items-center justify-start">
-                                <span class="badge-glass !text-warm-gold !bg-warm-gold/15 !border-warm-gold/30 text-[9px] uppercase tracking-widest font-heading font-semibold">
+                        <div class="relative z-10 space-y-5">
+                            <!-- Top Centered Header Tag -->
+                            <div class="text-center">
+                                <span class="font-heading text-xs uppercase tracking-[0.25em] text-white/80 font-semibold block">
                                     PREVENTION
                                 </span>
+                                <span class="w-8 h-[1px] bg-warm-gold/50 mx-auto block mt-2"></span>
                             </div>
-                            <h3 class="heading-wide text-lg sm:text-xl font-bold text-white tracking-wide uppercase leading-snug">
-                                DON'T WAIT FOR THE SOS.
-                            </h3>
-                            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                                K-Beauty thinks ahead. Proactive conditioning and micro-nourishment before concerns take hold.
-                            </p>
+
+                            <!-- Circular Image -->
+                            <div class="flex items-center justify-center my-4">
+                                <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border border-warm-gold/50 p-1 shadow-[0_0_25px_rgba(170,152,124,0.25)] group-hover:border-warm-gold transition-all duration-500">
+                                    <img src="assets/kbeauty_pillar_prevention.jpg" alt="Botanical droplet for proactive scalp prevention" class="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-700">
+                                </div>
+                            </div>
+
+                            <!-- Content Area -->
+                            <div class="space-y-2 text-center">
+                                <h3 class="heading-wide text-lg sm:text-xl font-light text-white tracking-wide uppercase leading-snug">
+                                    DON'T WAIT <br><span class="text-warm-gold font-normal">FOR THE SOS.</span>
+                                </h3>
+                                <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                                    K-Beauty thinks ahead. Proactive conditioning and micro-nourishment before concerns take hold.
+                                </p>
+                            </div>
                         </div>
+
                         <div class="pt-4 border-t border-white/10 flex items-center justify-between text-[10px] sm:text-xs font-heading font-semibold uppercase tracking-widest text-warm-gold group-hover:translate-x-1 transition-transform relative z-10">
                             <span>THINK AHEAD</span>
                             <span>&rarr;</span>
@@ -435,34 +448,41 @@
                     </div>
 
                     <!-- Pillar 2: Layering -->
-                    <div class="product-card glow-card p-8 rounded-3xl relative flex flex-col justify-between space-y-6 group h-full" style="--glow-color: #9DAFB6;">
+                    <div class="product-card glow-card p-6 sm:p-8 rounded-3xl relative flex flex-col justify-between space-y-6 group h-full" style="--glow-color: #9DAFB6;">
                         <!-- Clipped Luxury Background System -->
                         <div class="absolute inset-0 rounded-[inherit] overflow-hidden pointer-events-none select-none">
-                            <!-- Ambient Radial Light Pools -->
-                            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(157,175,182,0.18),transparent_65%)]"></div>
+                            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(157,175,182,0.15),transparent_65%)]"></div>
                             <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-gray/10 rounded-full blur-2xl group-hover:bg-blue-gray/25 transition-all duration-500"></div>
-                            <!-- Subtle Texture Grid -->
                             <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500" style="background-image: radial-gradient(circle at 1px 1px, #9DAFB6 1px, transparent 0); background-size: 20px 20px;"></div>
-                            <!-- Typographic Luxury Watermark -->
-                            <span class="absolute -bottom-2 -right-1 font-heading font-thin text-5xl sm:text-6xl lg:text-7xl text-white/[0.08] group-hover:text-blue-gray/30 transition-all duration-500 uppercase tracking-widest pointer-events-none select-none">
-                                LAYERING
-                            </span>
                         </div>
 
-                        <div class="space-y-5 relative z-10">
-                            <!-- Top Header: Pill Badge (Left-Aligned) -->
-                            <div class="flex items-center justify-start">
-                                <span class="badge-glass !text-blue-gray !bg-blue-gray/15 !border-blue-gray/30 text-[9px] uppercase tracking-widest font-heading font-semibold">
+                        <div class="relative z-10 space-y-5">
+                            <!-- Top Centered Header Tag -->
+                            <div class="text-center">
+                                <span class="font-heading text-xs uppercase tracking-[0.25em] text-white/80 font-semibold block">
                                     LAYERING
                                 </span>
+                                <span class="w-8 h-[1px] bg-blue-gray/50 mx-auto block mt-2"></span>
                             </div>
-                            <h3 class="heading-wide text-lg sm:text-xl font-bold text-white tracking-wide uppercase leading-snug">
-                                ONE MIRACLE STEP? ANIYO.
-                            </h3>
-                            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                                Thoughtful care is personalized. We layer targeted scalp solutions in harmony with your biology.
-                            </p>
+
+                            <!-- Circular Image -->
+                            <div class="flex items-center justify-center my-4">
+                                <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border border-blue-gray/50 p-1 shadow-[0_0_25px_rgba(157,175,182,0.25)] group-hover:border-blue-gray transition-all duration-500">
+                                    <img src="assets/kbeauty_pillar_layering.jpg" alt="Layered serum and scalp solutions" class="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-700">
+                                </div>
+                            </div>
+
+                            <!-- Content Area -->
+                            <div class="space-y-2 text-center">
+                                <h3 class="heading-wide text-lg sm:text-xl font-light text-white tracking-wide uppercase leading-snug">
+                                    ONE MIRACLE <br>STEP? <span class="text-warm-gold font-normal">ANIYO.</span>
+                                </h3>
+                                <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                                    Thoughtful care is personalized. We layer targeted scalp solutions in harmony with your biology.
+                                </p>
+                            </div>
                         </div>
+
                         <div class="pt-4 border-t border-white/10 flex items-center justify-between text-[10px] sm:text-xs font-heading font-semibold uppercase tracking-widest text-blue-gray group-hover:translate-x-1 transition-transform relative z-10">
                             <span>LAYER SMARTER</span>
                             <span>&rarr;</span>
@@ -470,34 +490,41 @@
                     </div>
 
                     <!-- Pillar 3: Consistency -->
-                    <div class="product-card glow-card p-8 rounded-3xl relative flex flex-col justify-between space-y-6 group h-full" style="--glow-color: #8F857B;">
+                    <div class="product-card glow-card p-6 sm:p-8 rounded-3xl relative flex flex-col justify-between space-y-6 group h-full" style="--glow-color: #8F857B;">
                         <!-- Clipped Luxury Background System -->
                         <div class="absolute inset-0 rounded-[inherit] overflow-hidden pointer-events-none select-none">
-                            <!-- Ambient Radial Light Pools -->
-                            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(143,133,123,0.18),transparent_65%)]"></div>
+                            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(143,133,123,0.15),transparent_65%)]"></div>
                             <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-taupe/10 rounded-full blur-2xl group-hover:bg-taupe/25 transition-all duration-500"></div>
-                            <!-- Subtle Texture Grid -->
                             <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500" style="background-image: radial-gradient(circle at 1px 1px, #8F857B 1px, transparent 0); background-size: 20px 20px;"></div>
-                            <!-- Typographic Luxury Watermark -->
-                            <span class="absolute -bottom-2 -right-1 font-heading font-thin text-5xl sm:text-6xl lg:text-7xl text-white/[0.08] group-hover:text-taupe/30 transition-all duration-500 uppercase tracking-widest pointer-events-none select-none">
-                                ROUTINE
-                            </span>
                         </div>
 
-                        <div class="space-y-5 relative z-10">
-                            <!-- Top Header: Pill Badge (Left-Aligned) -->
-                            <div class="flex items-center justify-start">
-                                <span class="badge-glass !text-taupe !bg-taupe/15 !border-taupe/30 text-[9px] uppercase tracking-widest font-heading font-semibold">
+                        <div class="relative z-10 space-y-5">
+                            <!-- Top Centered Header Tag -->
+                            <div class="text-center">
+                                <span class="font-heading text-xs uppercase tracking-[0.25em] text-white/80 font-semibold block">
                                     CONSISTENCY
                                 </span>
+                                <span class="w-8 h-[1px] bg-taupe/50 mx-auto block mt-2"></span>
                             </div>
-                            <h3 class="heading-wide text-lg sm:text-xl font-bold text-white tracking-wide uppercase leading-snug">
-                                THE GLOW IS IN THE ROUTINE.
-                            </h3>
-                            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                                Thoughtful care doesn't end after one visit. Sustained hair vitality thrives on disciplined regimen.
-                            </p>
+
+                            <!-- Circular Image -->
+                            <div class="flex items-center justify-center my-4">
+                                <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border border-taupe/50 p-1 shadow-[0_0_25px_rgba(143,133,123,0.25)] group-hover:border-taupe transition-all duration-500">
+                                    <img src="assets/kbeauty_pillar_consistency.jpg" alt="Radiant healthy scalp and hair consistency" class="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-700">
+                                </div>
+                            </div>
+
+                            <!-- Content Area -->
+                            <div class="space-y-2 text-center">
+                                <h3 class="heading-wide text-lg sm:text-xl font-light text-white tracking-wide uppercase leading-snug">
+                                    THE GLOW IS IN <br><span class="text-warm-gold font-normal">THE ROUTINE.</span>
+                                </h3>
+                                <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                                    Thoughtful care doesn't end after one visit. Sustained hair vitality thrives on disciplined regimen.
+                                </p>
+                            </div>
                         </div>
+
                         <div class="pt-4 border-t border-white/10 flex items-center justify-between text-[10px] sm:text-xs font-heading font-semibold uppercase tracking-widest text-taupe group-hover:translate-x-1 transition-transform relative z-10">
                             <span>KEEP GOING</span>
                             <span>&rarr;</span>
@@ -505,12 +532,6 @@
                     </div>
                 </div>
 
-                <!-- Bottom Tagline Ribbon -->
-                <div class="text-center pt-2 relative z-10">
-                    <span class="inline-block px-5 py-2 rounded-full bg-white/[0.04] border border-white/10 text-white/70 font-heading text-[10px] uppercase tracking-[0.25em]">
-                        SKIN-FIRST &middot; SCALP-FIRST &middot; VERY K-BEAUTY
-                    </span>
-                </div>
             </div>
 
         </div>
@@ -555,7 +576,7 @@
                         
                         <!-- Floating Pill Badge -->
                         <div class="relative z-10 p-6 sm:p-8 flex items-center justify-between">
-                            <span class="px-5 py-2.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white font-heading text-xs uppercase tracking-widest font-semibold shadow-lg">
+                            <span class="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white font-body text-[11px] sm:text-xs uppercase tracking-widest font-semibold shadow-lg inline-flex items-center">
                                 TOPICAL CARE &middot; NEEDLE-FREE DELIVERY
                             </span>
                         </div>
@@ -566,31 +587,30 @@
                 <div class="lg:col-span-6 animate-on-scroll fade-left h-full">
                     <div class="bg-white/[0.04] backdrop-blur-xl rounded-3xl p-8 sm:p-10 lg:p-12 border border-white/15 shadow-2xl h-full flex flex-col justify-between space-y-8">
                         <div class="space-y-6">
-                            <div class="flex items-center gap-4 border-b border-white/10 pb-5">
-                                <div class="w-12 h-12 rounded-2xl bg-warm-gold/20 border border-warm-gold/30 flex items-center justify-center text-warm-gold shrink-0">
-                                    <i data-lucide="shield-plus" class="w-6 h-6"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-heading text-base sm:text-lg font-semibold uppercase tracking-wider text-white">REALISTIC EXPECTATIONS</h3>
-                                    <p class="text-xs text-white/50 uppercase tracking-widest font-heading">Medical Aesthetic Philosophy</p>
-                                </div>
+                            <div class="border-b border-white/10 pb-5 space-y-2">
+                                <h3 class="heading-wide text-2xl sm:text-3xl font-light text-warm-gold tracking-[0.15em] uppercase">
+                                    REALISTIC EXPECTATIONS
+                                </h3>
+                                <p class="text-sm sm:text-base text-white/75 font-light leading-relaxed">
+                                    Medical Aesthetic Philosophy
+                                </p>
                             </div>
 
                             <div class="space-y-6 text-sm font-light text-white/85 leading-relaxed">
                                 <div class="space-y-2">
-                                    <span class="text-warm-gold font-bold uppercase tracking-wider text-xs sm:text-sm block">
+                                    <h4 class="heading-wide text-2xl sm:text-3xl font-light text-warm-gold tracking-[0.15em] uppercase">
                                         WHAT IT IS
-                                    </span>
-                                    <p class="text-white/85 text-sm sm:text-base leading-relaxed">
+                                    </h4>
+                                    <p class="text-sm sm:text-base text-white/75 font-light leading-relaxed">
                                         Needle-free topical scalp care incorporated into a personalized aesthetic treatment plan.
                                     </p>
                                 </div>
                                 
-                                <div class="space-y-2 pt-4 border-t border-white/10">
-                                    <span class="text-white/60 font-bold uppercase tracking-wider text-xs sm:text-sm block">
+                                <div class="space-y-2 pt-6 border-t border-white/10">
+                                    <h4 class="heading-wide text-2xl sm:text-3xl font-light text-warm-gold tracking-[0.15em] uppercase">
                                         AND WHAT IT ISN'T
-                                    </span>
-                                    <p class="text-white/75 text-sm sm:text-base leading-relaxed">
+                                    </h4>
+                                    <p class="text-sm sm:text-base text-white/75 font-light leading-relaxed">
                                         A guaranteed hair-growth treatment or a replacement for medically indicated hair-loss evaluation or treatment.
                                     </p>
                                 </div>
@@ -605,133 +625,21 @@
 
             </div>
 
-            <!-- Large Interactive Background Protocol Bar: HYDRATE — INFUSE — SUPPORT -->
-            <div id="protocol-pillars-container" class="relative rounded-[2.5rem] bg-[#16191D]/80 backdrop-blur-xl border border-white/10 p-8 sm:p-12 overflow-hidden shadow-2xl animate-on-scroll fade-up">
-                
-                <!-- Massive Background Dynamic Interactive Watermark -->
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden transition-all duration-700">
-                    <span id="protocol-bg-watermark" class="font-heading font-thin text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] xl:text-[14rem] uppercase tracking-widest text-white/[0.06] transition-all duration-700 ease-out transform scale-100 whitespace-nowrap">
+            <!-- One Elegant Horizontal Line: HYDRATE — INFUSE — SUPPORT -->
+            <div class="pt-8 border-t border-white/10 animate-on-scroll fade-up">
+                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 md:gap-16 text-center py-4">
+                    <span class="font-heading text-lg sm:text-2xl lg:text-3xl font-light tracking-[0.25em] text-white uppercase hover:text-warm-gold transition-colors duration-300">
                         HYDRATE
                     </span>
+                    <span class="text-warm-gold font-light text-xl sm:text-2xl lg:text-3xl select-none">&mdash;</span>
+                    <span class="font-heading text-lg sm:text-2xl lg:text-3xl font-light tracking-[0.25em] text-white uppercase hover:text-warm-gold transition-colors duration-300">
+                        INFUSE
+                    </span>
+                    <span class="text-warm-gold font-light text-xl sm:text-2xl lg:text-3xl select-none">&mdash;</span>
+                    <span class="font-heading text-lg sm:text-2xl lg:text-3xl font-light tracking-[0.25em] text-white uppercase hover:text-warm-gold transition-colors duration-300">
+                        SUPPORT
+                    </span>
                 </div>
-
-                <!-- Ambient Radial Glow follow effect -->
-                <div id="protocol-bg-glow" class="absolute -inset-10 bg-radial-gradient from-warm-gold/15 via-transparent to-transparent opacity-30 blur-3xl pointer-events-none transition-all duration-700"></div>
-
-                <!-- Header / Category Tag -->
-                <div class="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
-                    <div>
-                        <span class="text-warm-gold text-[10px] font-heading font-semibold uppercase tracking-[0.25em] block mb-1">
-                            THE TREATMENT TRIFECTA
-                        </span>
-                        <h4 class="font-heading text-lg sm:text-xl text-white font-light tracking-wider">
-                            THREE PILLARS OF NEEDLE-FREE SCALP RESTORATION
-                        </h4>
-                    </div>
-                    <div class="flex items-center gap-2 text-xs font-heading font-semibold tracking-widest text-white/50">
-                        <span>HOVER EACH STAGE</span>
-                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-warm-gold"></i>
-                    </div>
-                </div>
-
-                <!-- 3 Interactive Pillars in Foreground Connected by Em-Dashes -->
-                <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-                    
-                    <!-- 01 HYDRATE -->
-                    <div class="protocol-tab group relative rounded-2xl p-6 sm:p-8 bg-white/[0.02] hover:bg-white/[0.06] border border-white/10 hover:border-warm-gold/40 transition-all duration-500 cursor-pointer flex flex-col justify-between space-y-4" data-word="HYDRATE" data-glow="#AA987C">
-                        <!-- Local subtle background watermark for mobile/static -->
-                        <div class="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none select-none">
-                            <span class="absolute -bottom-3 -right-2 font-heading font-thin text-5xl sm:text-6xl lg:text-7xl text-white/[0.05] group-hover:text-warm-gold/[0.25] transition-colors duration-500">
-                                01
-                            </span>
-                        </div>
-                        
-                        <div class="relative z-10 space-y-3">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] font-heading font-bold uppercase tracking-[0.25em] text-warm-gold">STAGE 01</span>
-                                <span class="w-2 h-2 rounded-full bg-warm-gold/40 group-hover:bg-warm-gold group-hover:shadow-[0_0_12px_#AA987C] transition-all duration-300"></span>
-                            </div>
-                            <h3 class="heading-wide text-2xl sm:text-3xl font-light text-white tracking-[0.2em] group-hover:text-warm-gold transition-colors duration-300">
-                                HYDRATE
-                            </h3>
-                            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                                Deep scalp conditioning and surface barrier reset to balance moisture, clear residue, and optimize skin receptivity.
-                            </p>
-                        </div>
-                        
-                        <div class="relative z-10 pt-4 border-t border-white/10 flex items-center justify-between text-[11px] uppercase tracking-wider text-warm-gold font-heading font-semibold">
-                            <span>BARRIER RESET</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300"></i>
-                        </div>
-                    </div>
-
-                    <!-- 02 INFUSE -->
-                    <div class="protocol-tab group relative rounded-2xl p-6 sm:p-8 bg-white/[0.02] hover:bg-white/[0.06] border border-white/10 hover:border-warm-gold/40 transition-all duration-500 cursor-pointer flex flex-col justify-between space-y-4" data-word="INFUSE" data-glow="#9DAFB6">
-                        <!-- Local subtle background watermark for mobile/static -->
-                        <div class="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none select-none">
-                            <span class="absolute -bottom-3 -right-2 font-heading font-thin text-5xl sm:text-6xl lg:text-7xl text-white/[0.05] group-hover:text-blue-gray/[0.25] transition-colors duration-500">
-                                02
-                            </span>
-                        </div>
-                        
-                        <div class="relative z-10 space-y-3">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] font-heading font-bold uppercase tracking-[0.25em] text-blue-gray">STAGE 02</span>
-                                <span class="w-2 h-2 rounded-full bg-blue-gray/40 group-hover:bg-blue-gray group-hover:shadow-[0_0_12px_#9DAFB6] transition-all duration-300"></span>
-                            </div>
-                            <h3 class="heading-wide text-2xl sm:text-3xl font-light text-white tracking-[0.2em] group-hover:text-blue-gray transition-colors duration-300">
-                                INFUSE
-                            </h3>
-                            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                                Needle-free Dermoelectroporation® (DEP) transdermally drives medical-grade exosomes, peptides, and active serums directly to the scalp.
-                            </p>
-                        </div>
-                        
-                        <div class="relative z-10 pt-4 border-t border-white/10 flex items-center justify-between text-[11px] uppercase tracking-wider text-blue-gray font-heading font-semibold">
-                            <span>DEP NEEDLE-FREE</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300"></i>
-                        </div>
-                    </div>
-
-                    <!-- 03 SUPPORT -->
-                    <div class="protocol-tab group relative rounded-2xl p-6 sm:p-8 bg-white/[0.02] hover:bg-white/[0.06] border border-white/10 hover:border-warm-gold/40 transition-all duration-500 cursor-pointer flex flex-col justify-between space-y-4" data-word="SUPPORT" data-glow="#8F857B">
-                        <!-- Local subtle background watermark for mobile/static -->
-                        <div class="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none select-none">
-                            <span class="absolute -bottom-3 -right-2 font-heading font-thin text-5xl sm:text-6xl lg:text-7xl text-white/[0.05] group-hover:text-taupe/[0.25] transition-colors duration-500">
-                                03
-                            </span>
-                        </div>
-                        
-                        <div class="relative z-10 space-y-3">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] font-heading font-bold uppercase tracking-[0.25em] text-taupe">STAGE 03</span>
-                                <span class="w-2 h-2 rounded-full bg-taupe/40 group-hover:bg-taupe group-hover:shadow-[0_0_12px_#8F857B] transition-all duration-300"></span>
-                            </div>
-                            <h3 class="heading-wide text-2xl sm:text-3xl font-light text-white tracking-[0.2em] group-hover:text-warm-gold transition-colors duration-300">
-                                SUPPORT
-                            </h3>
-                            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                                Sustained follicular health, ongoing personalized maintenance sessions, and density tracking designed to protect long-term results.
-                            </p>
-                        </div>
-                        
-                        <div class="relative z-10 pt-4 border-t border-white/10 flex items-center justify-between text-[11px] uppercase tracking-wider text-taupe font-heading font-semibold">
-                            <span>LONG-TERM DENSITY</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Footer Summary Line with Em-Dashes -->
-                <div class="relative z-10 mt-8 pt-6 border-t border-white/10 flex items-center justify-center gap-6 sm:gap-12 text-xs sm:text-sm font-heading font-semibold uppercase tracking-[0.3em] text-white/60">
-                    <span class="hover:text-warm-gold transition-colors cursor-pointer" onclick="document.querySelectorAll('.protocol-tab')[0].dispatchEvent(new MouseEvent('mouseenter'))">HYDRATE</span>
-                    <span class="text-warm-gold/40">&mdash;</span>
-                    <span class="hover:text-warm-gold transition-colors cursor-pointer" onclick="document.querySelectorAll('.protocol-tab')[1].dispatchEvent(new MouseEvent('mouseenter'))">INFUSE</span>
-                    <span class="text-warm-gold/40">&mdash;</span>
-                    <span class="hover:text-warm-gold transition-colors cursor-pointer" onclick="document.querySelectorAll('.protocol-tab')[2].dispatchEvent(new MouseEvent('mouseenter'))">SUPPORT</span>
-                </div>
-
             </div>
 
         </div>
@@ -841,109 +749,141 @@
             </div>
 
             <!-- Bottom Dark Block: Medical Safety & Triage -->
-            <div class="bg-[#121417] text-white p-8 sm:p-12 lg:p-14 rounded-[2.5rem] border border-white/10 shadow-2xl space-y-8 animate-on-scroll fade-up">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div class="relative bg-[#121417] text-white p-8 sm:p-12 lg:p-14 rounded-[2.5rem] border border-white/10 shadow-2xl overflow-hidden animate-on-scroll fade-up">
+                <!-- Subtle ambient background glow -->
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-warm-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
                     
                     <!-- Left Column -->
                     <div class="lg:col-span-6 space-y-6">
-                        <div class="space-y-3">
+                        <div class="space-y-4">
                             <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/25 inline-block uppercase tracking-wider text-[10px]">
                                 MEDICAL SAFETY + TRIAGE
                             </span>
                             <h2 class="heading-wide text-2xl sm:text-3xl lg:text-4xl text-white font-light leading-tight [text-wrap:balance]">
                                 WHEN IS AESTHETIC CARE <br><span class="text-warm-gold font-normal">NOT ENOUGH?</span>
                             </h2>
-                            <p class="text-xs sm:text-sm text-white/75 font-light leading-relaxed">
+                            <p class="text-sm sm:text-base text-white/80 font-light leading-relaxed">
                                 Hair thinning and shedding can have many causes. Sudden, significant, patchy, persistent or symptomatic changes may warrant medical or dermatologic evaluation before aesthetic scalp treatment.
                             </p>
                         </div>
 
-                        <div class="flex flex-wrap items-center gap-4 pt-2">
-                            <div class="p-3 px-4 rounded-xl bg-white/[0.05] border border-white/10 flex items-center gap-3">
+                        <div class="pt-1">
+                            <div class="inline-flex items-center gap-3 p-3 px-4 rounded-xl bg-white/[0.04] border border-white/10 shadow-sm">
                                 <span class="korean-quote-badge !bg-warm-gold/20 !border-warm-gold/30 !text-warm-gold text-[10px]">
                                     매우 중요해요
                                 </span>
-                                <span class="text-xs text-white/90 font-medium tracking-wide uppercase">THIS PART MATTERS.</span>
+                                <span class="text-xs text-white/90 font-heading font-medium tracking-widest uppercase">
+                                    THIS PART MATTERS.
+                                </span>
                             </div>
                         </div>
 
-                        <div class="pt-2 space-y-4">
-                            <div class="space-y-1">
-                                <h4 class="font-heading text-xs sm:text-sm font-bold tracking-wider uppercase text-white">
+                        <div class="pt-4 border-t border-white/10 space-y-5">
+                            <div class="space-y-1.5">
+                                <h3 class="heading-wide text-base sm:text-lg font-light tracking-wider uppercase text-white">
                                     KNOWING WHEN NOT TO TREAT
-                                </h4>
-                                <p class="text-[11px] text-warm-gold font-semibold uppercase tracking-widest">
+                                </h3>
+                                <p class="text-xs sm:text-sm text-warm-gold font-heading font-semibold uppercase tracking-widest">
                                     IS PART OF THOUGHTFUL CARE.
                                 </p>
                             </div>
                             
-                            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary py-3.5 px-8 text-xs font-semibold tracking-widest bg-warm-gold hover:bg-white hover:text-black rounded-full transition-all duration-300 shadow-md inline-flex items-center gap-2 uppercase">
-                                <span>START WITH A SCALP CONSULTATION</span>
-                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                            </a>
-                            <p class="text-[11px] text-white/50 italic">
-                                We'll help determine the appropriate next step.
-                            </p>
+                            <div class="space-y-2">
+                                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-warm-gold hover:bg-white hover:text-black rounded-full transition-all duration-300 shadow-md inline-flex items-center gap-2.5 uppercase">
+                                    <span>START WITH A SCALP CONSULTATION</span>
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                                <p class="text-xs text-white/50 font-light italic">
+                                    We'll help determine the appropriate next step.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Right Column: When We May Look Deeper Grid -->
+                    <!-- Right Column: When We May Look Deeper Grid (No Icons, Clear Typography) -->
                     <div class="lg:col-span-6 space-y-4">
-                        <div class="border-b border-white/10 pb-3">
-                            <h3 class="font-heading text-xs font-bold uppercase tracking-widest text-white">
-                                WHEN WE MAY LOOK DEEPER:
+                        <div class="border-b border-white/10 pb-4 flex items-center justify-between">
+                            <h3 class="heading-wide text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-white">
+                                WHEN WE MAY LOOK DEEPER
                             </h3>
+                            <span class="text-[10px] text-warm-gold uppercase tracking-widest font-heading font-medium">Triage Protocol</span>
                         </div>
 
                         <div class="space-y-3">
                             <!-- 1 Sudden Change -->
-                            <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 flex items-start gap-3.5 hover:border-warm-gold/30 transition-colors">
-                                <div class="w-8 h-8 rounded-full bg-warm-gold/15 flex items-center justify-center text-warm-gold shrink-0 mt-0.5">
-                                    <i data-lucide="zap" class="w-4 h-4"></i>
+                            <div class="product-card glow-card p-4 sm:p-5 rounded-2xl relative group overflow-hidden transition-all duration-300" style="--glow-color: #AA987C;">
+                                <div class="absolute inset-0 rounded-[inherit] overflow-hidden pointer-events-none select-none">
+                                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(170,152,124,0.15),transparent_65%)]"></div>
+                                    <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-warm-gold/10 rounded-full blur-xl group-hover:bg-warm-gold/25 transition-all duration-500"></div>
+                                    <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500" style="background-image: radial-gradient(circle at 1px 1px, #AA987C 1px, transparent 0); background-size: 20px 20px;"></div>
                                 </div>
-                                <div class="space-y-0.5">
-                                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">SUDDEN CHANGE</h4>
-                                    <p class="text-xs text-white/70 font-light">Rapid or significant thinning or shedding.</p>
+                                <div class="relative z-10 space-y-1">
+                                    <h4 class="heading-wide text-sm sm:text-base font-bold uppercase tracking-wider text-white">
+                                        SUDDEN CHANGE
+                                    </h4>
+                                    <p class="text-xs sm:text-sm text-white/75 font-light leading-relaxed">
+                                        Rapid or significant thinning or shedding.
+                                    </p>
                                 </div>
                             </div>
 
                             <!-- 2 Patchy or Persistent -->
-                            <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 flex items-start gap-3.5 hover:border-warm-gold/30 transition-colors">
-                                <div class="w-8 h-8 rounded-full bg-warm-gold/15 flex items-center justify-center text-warm-gold shrink-0 mt-0.5">
-                                    <i data-lucide="puzzle" class="w-4 h-4"></i>
+                            <div class="product-card glow-card p-4 sm:p-5 rounded-2xl relative group overflow-hidden transition-all duration-300" style="--glow-color: #8F857B;">
+                                <div class="absolute inset-0 rounded-[inherit] overflow-hidden pointer-events-none select-none">
+                                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(143,133,123,0.15),transparent_65%)]"></div>
+                                    <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-taupe/10 rounded-full blur-xl group-hover:bg-taupe/25 transition-all duration-500"></div>
+                                    <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500" style="background-image: radial-gradient(circle at 1px 1px, #8F857B 1px, transparent 0); background-size: 20px 20px;"></div>
                                 </div>
-                                <div class="space-y-0.5">
-                                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">PATCHY OR PERSISTENT</h4>
-                                    <p class="text-xs text-white/70 font-light">Changes that warrant a closer look.</p>
+                                <div class="relative z-10 space-y-1">
+                                    <h4 class="heading-wide text-sm sm:text-base font-bold uppercase tracking-wider text-white">
+                                        PATCHY OR PERSISTENT
+                                    </h4>
+                                    <p class="text-xs sm:text-sm text-white/75 font-light leading-relaxed">
+                                        Changes that warrant a closer look.
+                                    </p>
                                 </div>
                             </div>
 
                             <!-- 3 Scalp Symptoms -->
-                            <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 flex items-start gap-3.5 hover:border-warm-gold/30 transition-colors">
-                                <div class="w-8 h-8 rounded-full bg-warm-gold/15 flex items-center justify-center text-warm-gold shrink-0 mt-0.5">
-                                    <i data-lucide="microscope" class="w-4 h-4"></i>
+                            <div class="product-card glow-card p-4 sm:p-5 rounded-2xl relative group overflow-hidden transition-all duration-300" style="--glow-color: #9DAFB6;">
+                                <div class="absolute inset-0 rounded-[inherit] overflow-hidden pointer-events-none select-none">
+                                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(157,175,182,0.15),transparent_65%)]"></div>
+                                    <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-blue-gray/10 rounded-full blur-xl group-hover:bg-blue-gray/25 transition-all duration-500"></div>
+                                    <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500" style="background-image: radial-gradient(circle at 1px 1px, #9DAFB6 1px, transparent 0); background-size: 20px 20px;"></div>
                                 </div>
-                                <div class="space-y-0.5">
-                                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">SCALP SYMPTOMS</h4>
-                                    <p class="text-xs text-white/70 font-light">Irritation, discomfort or other scalp concerns.</p>
+                                <div class="relative z-10 space-y-1">
+                                    <h4 class="heading-wide text-sm sm:text-base font-bold uppercase tracking-wider text-white">
+                                        SCALP SYMPTOMS
+                                    </h4>
+                                    <p class="text-xs sm:text-sm text-white/75 font-light leading-relaxed">
+                                        Irritation, discomfort or other scalp concerns.
+                                    </p>
                                 </div>
                             </div>
 
                             <!-- 4 Health + History -->
-                            <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 flex items-start gap-3.5 hover:border-warm-gold/30 transition-colors">
-                                <div class="w-8 h-8 rounded-full bg-warm-gold/15 flex items-center justify-center text-warm-gold shrink-0 mt-0.5">
-                                    <i data-lucide="clipboard-list" class="w-4 h-4"></i>
+                            <div class="product-card glow-card p-4 sm:p-5 rounded-2xl relative group overflow-hidden transition-all duration-300" style="--glow-color: #AA987C;">
+                                <div class="absolute inset-0 rounded-[inherit] overflow-hidden pointer-events-none select-none">
+                                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(170,152,124,0.15),transparent_65%)]"></div>
+                                    <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-warm-gold/10 rounded-full blur-xl group-hover:bg-warm-gold/25 transition-all duration-500"></div>
+                                    <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500" style="background-image: radial-gradient(circle at 1px 1px, #AA987C 1px, transparent 0); background-size: 20px 20px;"></div>
                                 </div>
-                                <div class="space-y-0.5">
-                                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">HEALTH + HISTORY</h4>
-                                    <p class="text-xs text-white/70 font-light">Medication, nutritional, hormonal or other health factors.</p>
+                                <div class="relative z-10 space-y-1">
+                                    <h4 class="heading-wide text-sm sm:text-base font-bold uppercase tracking-wider text-white">
+                                        HEALTH + HISTORY
+                                    </h4>
+                                    <p class="text-xs sm:text-sm text-white/75 font-light leading-relaxed">
+                                        Medication, nutritional, hormonal or other health factors.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="p-3.5 rounded-xl bg-warm-gold/10 border border-warm-gold/25 text-[11px] text-white/80 font-light flex items-center gap-2.5">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-warm-gold shrink-0"></i>
-                            <span>Additional medical, laboratory or dermatologic evaluation may be recommended when clinically appropriate.</span>
+                        <!-- 5 Clinical Notice (No icon) -->
+                        <div class="p-4 sm:p-4.5 rounded-2xl bg-warm-gold/10 border border-warm-gold/25 text-xs sm:text-sm text-white/80 font-light leading-relaxed">
+                            Additional medical, laboratory or dermatologic evaluation may be recommended when clinically appropriate.
                         </div>
                     </div>
 
@@ -954,122 +894,128 @@
     </section>
 
     <!-- Section H: What to Expect At Your Scalp Appointment -->
-    <section id="process" data-nav-theme="dark" class="py-28 px-6 md:px-12 bg-off-white border-t border-light-gray/60">
-        <div class="max-w-7xl mx-auto space-y-12">
-            
-            <div class="bg-white rounded-[2.5rem] p-8 sm:p-12 lg:p-14 border border-light-gray/70 shadow-soft animate-on-scroll fade-up">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                    
-                    <!-- Left Photo (Reusing consultation photo) -->
-                    <div class="lg:col-span-5 h-full">
-                        <div class="relative rounded-3xl overflow-hidden shadow-lg border border-light-gray/60 aspect-[4/5] sm:aspect-square lg:aspect-[4/5] min-h-[380px] bg-charcoal/5 group">
-                            <img src="assets/scalp_analysis_consultation.jpg" alt="Clinical scalp analysis and consultation at SuA Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-5 left-5 right-5 text-white">
-                                <span class="text-[9px] font-heading font-semibold uppercase tracking-widest text-warm-gold bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-warm-gold/30 inline-block">
-                                    THE CONSULTATION &bull; VERY SEOUL
-                                </span>
-                            </div>
-                        </div>
+    <section id="process" data-nav-theme="dark" class="py-24 px-6 md:px-12 lg:px-16 bg-off-white/80 border-t border-light-gray/60">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative bg-white rounded-[2.5rem] shadow-soft overflow-hidden min-h-[640px] flex items-center border border-light-gray/50">
+                
+                <!-- Background Image (Right side with smooth fade to white on the left) -->
+                <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+                    <!-- Image container positioned on the right -->
+                    <div class="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-7/12 h-full">
+                        <img src="assets/scalp_analysis_consultation.jpg" alt="Clinical scalp analysis and consultation at SuA Glow" class="w-full h-full object-cover object-[center_20%] md:object-right" style="-webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, rgba(0,0,0,0.6) 28%, black 50%); mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, rgba(0,0,0,0.6) 28%, black 50%);">
+                        <!-- Gradient overlay across image to blend softly -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/30 to-transparent"></div>
+                    </div>
+                    <!-- Mobile / Tablet text readability shield -->
+                    <div class="absolute inset-0 bg-white/92 md:hidden z-10"></div>
+                </div>
+
+                <!-- Content Area (Left) -->
+                <div class="relative z-20 w-full max-w-2xl lg:max-w-3xl p-8 sm:p-12 md:p-14 lg:p-16 animate-on-scroll fade-right space-y-6">
+                    <div>
+                        <span class="badge-glass !text-warm-gold !bg-warm-gold/15 !border-warm-gold/30 mb-3 inline-block uppercase tracking-wider text-[10px]">
+                            THE EXPERIENCE
+                        </span>
+                        <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-near-black font-light leading-tight [text-wrap:balance]">
+                            WHAT TO EXPECT AT YOUR <br><span class="text-warm-gold font-normal">SCALP APPOINTMENT</span>
+                        </h2>
+                        <p class="text-xs sm:text-sm md:text-base font-light text-charcoal/75 leading-relaxed mt-3">
+                            Your Korean Scalp &amp; Hair Rejuvenation experience is personalized to your consultation, selected treatment plan and goals.
+                        </p>
                     </div>
 
-                    <!-- Right Process Side -->
-                    <div class="lg:col-span-7 space-y-8">
-                        <div>
-                            <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 mb-3 inline-block uppercase tracking-wider text-[10px]">
-                                THE EXPERIENCE
-                            </span>
-                            <h2 class="heading-wide text-2xl sm:text-3xl lg:text-4xl text-near-black font-light leading-tight [text-wrap:balance]">
-                                WHAT TO EXPECT AT YOUR <br><span class="text-warm-gold font-normal">SCALP APPOINTMENT</span>
-                            </h2>
-                            <p class="text-xs sm:text-sm font-light text-charcoal/70 leading-relaxed mt-2">
-                                Your Korean Scalp &amp; Hair Rejuvenation experience is personalized to your consultation, selected treatment plan and goals.
-                            </p>
-                        </div>
-
-                        <!-- 3 Step Flow -->
-                        <div class="space-y-4">
-                            <!-- 01 BEFORE -->
-                            <div class="p-5 sm:p-6 rounded-2xl bg-off-white/80 border border-light-gray/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-warm-gold/40 transition-colors">
-                                <div class="flex items-start gap-4">
-                                    <div class="w-10 h-10 rounded-full bg-warm-gold/15 text-warm-gold font-bold font-heading text-xs flex items-center justify-center shrink-0">
-                                        01
-                                    </div>
-                                    <div class="space-y-1">
+                    <!-- 3 Step Flow -->
+                    <div class="space-y-3.5 max-w-xl">
+                        <!-- 01 BEFORE -->
+                        <div class="p-4 sm:p-4.5 rounded-2xl bg-white/85 backdrop-blur-sm border border-light-gray/70 shadow-xs hover:border-warm-gold/40 transition-colors">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-full bg-warm-gold/15 text-warm-gold font-bold font-heading text-xs flex items-center justify-center shrink-0">
+                                    01
+                                </div>
+                                <div class="flex-1 space-y-0.5">
+                                    <div class="flex items-center justify-between gap-2">
                                         <div class="flex items-center gap-2">
                                             <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 text-[8px] uppercase tracking-widest font-heading font-semibold">BEFORE</span>
                                             <h3 class="font-heading font-bold text-xs sm:text-sm uppercase tracking-wider text-near-black">
                                                 START WITH YOUR SCALP.
                                             </h3>
                                         </div>
-                                        <p class="text-xs text-charcoal/75 font-light leading-relaxed">
-                                            We'll review your concerns, relevant history and goals before recommending your plan.
-                                        </p>
+                                        <span class="text-[9px] font-heading uppercase tracking-wider text-taupe font-semibold shrink-0 hidden sm:inline-block">
+                                            CONSULT &bull; ASSESS
+                                        </span>
                                     </div>
+                                    <p class="text-xs text-charcoal/75 font-light leading-relaxed">
+                                        We'll review your concerns, relevant history and goals before recommending your plan.
+                                    </p>
                                 </div>
-                                <span class="text-[9px] font-heading uppercase tracking-wider text-taupe font-semibold shrink-0">
-                                    CONSULT &bull; ASSESS
-                                </span>
                             </div>
+                        </div>
 
-                            <!-- 02 DURING -->
-                            <div class="p-5 sm:p-6 rounded-2xl bg-off-white/80 border border-light-gray/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-warm-gold/40 transition-colors">
-                                <div class="flex items-start gap-4">
-                                    <div class="w-10 h-10 rounded-full bg-warm-gold/15 text-warm-gold font-bold font-heading text-xs flex items-center justify-center shrink-0">
-                                        02
-                                    </div>
-                                    <div class="space-y-1">
+                        <!-- 02 DURING -->
+                        <div class="p-4 sm:p-4.5 rounded-2xl bg-white/85 backdrop-blur-sm border border-light-gray/70 shadow-xs hover:border-warm-gold/40 transition-colors">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-full bg-warm-gold/15 text-warm-gold font-bold font-heading text-xs flex items-center justify-center shrink-0">
+                                    02
+                                </div>
+                                <div class="flex-1 space-y-0.5">
+                                    <div class="flex items-center justify-between gap-2">
                                         <div class="flex items-center gap-2">
                                             <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 text-[8px] uppercase tracking-widest font-heading font-semibold">DURING</span>
                                             <h3 class="font-heading font-bold text-xs sm:text-sm uppercase tracking-wider text-near-black">
                                                 SETTLE IN. SCALP CARE STARTS.
                                             </h3>
                                         </div>
-                                        <p class="text-xs text-charcoal/75 font-light leading-relaxed">
-                                            Your personalized treatment plan is performed with care. Sensations and treatment time vary by treatment.
-                                        </p>
+                                        <span class="text-[9px] font-heading uppercase tracking-wider text-taupe font-semibold shrink-0 hidden sm:inline-block">
+                                            THOUGHTFUL CARE
+                                        </span>
                                     </div>
+                                    <p class="text-xs text-charcoal/75 font-light leading-relaxed">
+                                        Your personalized treatment plan is performed with care. Sensations and treatment time vary by treatment.
+                                    </p>
                                 </div>
-                                <span class="text-[9px] font-heading uppercase tracking-wider text-taupe font-semibold shrink-0">
-                                    THOUGHTFUL CARE
-                                </span>
                             </div>
+                        </div>
 
-                            <!-- 03 AFTER -->
-                            <div class="p-5 sm:p-6 rounded-2xl bg-off-white/80 border border-light-gray/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-warm-gold/40 transition-colors">
-                                <div class="flex items-start gap-4">
-                                    <div class="w-10 h-10 rounded-full bg-warm-gold/15 text-warm-gold font-bold font-heading text-xs flex items-center justify-center shrink-0">
-                                        03
-                                    </div>
-                                    <div class="space-y-1">
+                        <!-- 03 AFTER -->
+                        <div class="p-4 sm:p-4.5 rounded-2xl bg-white/85 backdrop-blur-sm border border-light-gray/70 shadow-xs hover:border-warm-gold/40 transition-colors">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-full bg-warm-gold/15 text-warm-gold font-bold font-heading text-xs flex items-center justify-center shrink-0">
+                                    03
+                                </div>
+                                <div class="flex-1 space-y-0.5">
+                                    <div class="flex items-center justify-between gap-2">
                                         <div class="flex items-center gap-2">
                                             <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 text-[8px] uppercase tracking-widest font-heading font-semibold">AFTER</span>
                                             <h3 class="font-heading font-bold text-xs sm:text-sm uppercase tracking-wider text-near-black">
                                                 BACK TO YOUR DAY.
                                             </h3>
                                         </div>
-                                        <p class="text-xs text-charcoal/75 font-light leading-relaxed">
-                                            You'll receive aftercare guidance and recommendations based on your treatment.
-                                        </p>
+                                        <span class="text-[9px] font-heading uppercase tracking-wider text-taupe font-semibold shrink-0 hidden sm:inline-block">
+                                            GLOW ON
+                                        </span>
                                     </div>
+                                    <p class="text-xs text-charcoal/75 font-light leading-relaxed">
+                                        You'll receive aftercare guidance and recommendations based on your treatment.
+                                    </p>
                                 </div>
-                                <span class="text-[9px] font-heading uppercase tracking-wider text-taupe font-semibold shrink-0">
-                                    GLOW ON
-                                </span>
                             </div>
                         </div>
-
                     </div>
+
+                    <!-- CTA Button -->
+                    <div class="pt-2">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-secondary">
+                            Consult With Our Experts
+                        </a>
+                    </div>
+
+                    <!-- Clinical Note / Quote -->
+                    <p class="text-[10px] font-light opacity-60 italic border-t border-light-gray/50 pt-3 max-w-xl">
+                        Treatment protocols are individualized by your provider based on clinical scalp assessment, history, and realistic wellness goals.
+                    </p>
                 </div>
-            </div>
 
-            <!-- Experience Footer Quote -->
-            <div class="max-w-3xl mx-auto p-6 rounded-2xl bg-white border border-light-gray/70 shadow-soft text-center space-y-2 animate-on-scroll fade-up">
-                <p class="text-xs md:text-sm font-light text-charcoal/80 italic leading-relaxed">
-                    “Every scalp. Every plan. Every step—thoughtful, individualized and guided by Korean dermatologic principles.”
-                </p>
             </div>
-
         </div>
     </section>
 
@@ -1081,21 +1027,27 @@
 
         <div class="max-w-7xl mx-auto relative z-10 space-y-16">
             
-            <!-- AI-Inspired Header Framed by Models -->
-            <div class="relative flex flex-col lg:flex-row items-center justify-between gap-8 animate-on-scroll fade-up">
+            <!-- Header Framed by Seamless Flowing Models -->
+            <div class="relative flex flex-col lg:flex-row items-center justify-between gap-6 min-h-[420px] lg:min-h-[480px] animate-on-scroll fade-up">
                 
-                <!-- Left Model Portrait (Female) -->
-                <div class="hidden lg:block lg:w-1/4 shrink-0">
-                    <div class="relative w-48 h-64 xl:w-56 xl:h-72 mx-auto rounded-[3rem] overflow-hidden shadow-2xl border-2 border-warm-gold/30 group">
-                        <img src="assets/korean_female_scalp_model.jpg" alt="Korean Aesthetic Scalp Care Female Model with healthy radiant hair" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                <!-- Left Model (Female) - Seamless Background Flow -->
+                <div class="hidden lg:block lg:w-[28%] xl:w-[31%] shrink-0 relative h-[420px] xl:h-[480px]">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <img src="assets/korean_female_seamless_model.jpg" alt="Korean Aesthetic Scalp Care Female Model with healthy radiant hair" class="w-full h-full object-cover object-[center_15%]" style="-webkit-mask-image: linear-gradient(to right, black 55%, transparent 100%), linear-gradient(to top, transparent 0%, black 25%); mask-image: linear-gradient(to right, black 55%, transparent 100%), linear-gradient(to top, transparent 0%, black 25%); -webkit-mask-composite: source-in; mask-composite: intersect;">
+                        <!-- Seamless soft blending gradient overlay matching section background #FBF9F5 -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#FBF9F5] pointer-events-none"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#FBF9F5] to-transparent pointer-events-none"></div>
+                    </div>
+                    <!-- Left Floating Caption -->
+                    <div class="hidden xl:block absolute left-0 top-1/3 -translate-y-1/2 text-[9px] font-heading font-semibold uppercase tracking-[0.25em] text-taupe/60 leading-relaxed text-left max-w-[95px] pointer-events-none">
+                        HEALTHY SCALP. CONFIDENT TOMORROWS.
                     </div>
                 </div>
 
                 <!-- Center Text Content -->
-                <div class="lg:w-1/2 text-center space-y-4">
+                <div class="w-full lg:w-[44%] xl:w-[38%] text-center space-y-5 z-10 py-4">
                     <span class="badge-glass !text-warm-gold !bg-warm-gold/15 !border-warm-gold/30 inline-block uppercase tracking-wider text-[10px]">
-                        WHAT MAKES IT K-BEAUTY?
+                        THE SUA GLOW DIFFERENCE
                     </span>
                     <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-near-black font-light leading-tight [text-wrap:balance]">
                         KOREAN-INSPIRED. <br>MEDICALLY GUIDED. <br><span class="text-warm-gold font-normal">VERY SUA GLOW.</span>
@@ -1103,13 +1055,26 @@
                     <p class="text-xs sm:text-sm md:text-base font-light text-charcoal/75 max-w-xl mx-auto leading-relaxed">
                         SuA Glow Med Spa in Carrollton, TX offers Korean-inspired scalp and hair rejuvenation combining individualized assessment, personalized aesthetic treatment planning, Needle-Free Scalp Infusion when appropriate, and medical oversight.
                     </p>
+                    <div class="flex items-center justify-center gap-3 sm:gap-5 pt-3 text-[9px] sm:text-[10px] font-heading font-semibold uppercase tracking-[0.2em] text-taupe/80">
+                        <span>SEOUL INFLUENCE</span>
+                        <span class="w-6 sm:w-10 h-px bg-light-gray/80"></span>
+                        <span>MEDICAL EXPERTISE</span>
+                        <span class="w-6 sm:w-10 h-px bg-light-gray/80"></span>
+                        <span>REAL CARE</span>
+                    </div>
                 </div>
 
-                <!-- Right Model Portrait (Male) -->
-                <div class="hidden lg:block lg:w-1/4 shrink-0">
-                    <div class="relative w-48 h-64 xl:w-56 xl:h-72 mx-auto rounded-[3rem] overflow-hidden shadow-2xl border-2 border-warm-gold/30 group">
-                        <img src="assets/korean_male_scalp_model.jpg" alt="Korean Scalp Rejuvenation Male Model with thick healthy hair" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                <!-- Right Model (Male) - Seamless Background Flow -->
+                <div class="hidden lg:block lg:w-[28%] xl:w-[31%] shrink-0 relative h-[420px] xl:h-[480px]">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <img src="assets/korean_male_seamless_model.jpg" alt="Korean Scalp Rejuvenation Male Model with thick healthy hair" class="w-full h-full object-cover object-[center_15%]" style="-webkit-mask-image: linear-gradient(to left, black 55%, transparent 100%), linear-gradient(to top, transparent 0%, black 25%); mask-image: linear-gradient(to left, black 55%, transparent 100%), linear-gradient(to top, transparent 0%, black 25%); -webkit-mask-composite: source-in; mask-composite: intersect;">
+                        <!-- Seamless soft blending gradient overlay matching section background #FBF9F5 -->
+                        <div class="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#FBF9F5] pointer-events-none"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#FBF9F5] to-transparent pointer-events-none"></div>
+                    </div>
+                    <!-- Right Floating Caption -->
+                    <div class="hidden xl:block absolute right-0 top-1/3 -translate-y-1/2 text-[9px] font-heading font-semibold uppercase tracking-[0.25em] text-taupe/60 leading-relaxed text-right max-w-[85px] pointer-events-none">
+                        SCALP CARE FOR EVERYONE.
                     </div>
                 </div>
 
@@ -1118,26 +1083,25 @@
             <!-- 4 Value Pillar Cards (Arch-Top AI-Inspired Design) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <!-- Card 1: Korean Aesthetics Expertise (Text-Only per instruction) -->
-                <div class="bg-white rounded-3xl p-7 border border-light-gray/80 shadow-soft hover:shadow-xl hover:border-warm-gold/40 transition-all flex flex-col justify-between space-y-6 group animate-on-scroll fade-up">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
-                            <div class="w-12 h-12 rounded-2xl bg-warm-gold/15 flex items-center justify-center text-warm-gold shadow-sm group-hover:bg-warm-gold group-hover:text-white transition-all">
-                                <i data-lucide="award" class="w-6 h-6"></i>
-                            </div>
-                            <span class="font-heading font-bold text-warm-gold text-xs tracking-wider">01</span>
-                        </div>
-                        <h3 class="heading-wide text-base font-bold text-near-black tracking-wide uppercase">
-                            Korean Aesthetics Expertise
-                        </h3>
-                        <p class="text-xs text-charcoal/75 font-light leading-relaxed">
-                            Led by Sophia Yang, PA-C &mdash; Seoul-trained and Korean-certified &mdash; treatment planning emphasizes thoughtful assessment, personalization, and realistic expectations.
-                        </p>
+                <!-- Card 1: Korean Aesthetics Expertise -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-soft hover:shadow-xl hover:border-warm-gold/40 transition-all flex flex-col justify-between group animate-on-scroll fade-up">
+                    <div class="aspect-[16/10] overflow-hidden bg-charcoal/5 relative">
+                        <img src="assets/korean_aesthetics_expertise.jpg" alt="Korean Aesthetics Expertise at SuA Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="pt-4 border-t border-light-gray/60">
-                        <span class="text-[10px] text-warm-gold font-heading font-semibold uppercase tracking-wider block">
-                            Seoul influence. Texas standards.
-                        </span>
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <h3 class="heading-wide text-base font-bold text-near-black tracking-wide uppercase">
+                                Korean Aesthetics Expertise
+                            </h3>
+                            <p class="text-xs text-charcoal/75 font-light leading-relaxed">
+                                Led by Sophia Yang, PA-C &mdash; Seoul-trained and Korean-certified &mdash; treatment planning emphasizes thoughtful assessment, personalization, and realistic expectations.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-light-gray/60">
+                            <span class="text-[10px] text-warm-gold font-heading font-semibold uppercase tracking-wider block">
+                                Seoul influence. Texas standards.
+                            </span>
+                        </div>
                     </div>
                 </div>
 
@@ -1145,9 +1109,6 @@
                 <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-soft hover:shadow-xl hover:border-warm-gold/40 transition-all flex flex-col justify-between group animate-on-scroll fade-up delay-100">
                     <div class="aspect-[16/10] overflow-hidden bg-charcoal/5 relative">
                         <img src="assets/scalp_concern_texture.jpg" alt="Personalized scalp evaluation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white font-heading font-bold text-[11px]">
-                            02
-                        </div>
                     </div>
                     <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
                         <div class="space-y-2">
@@ -1170,9 +1131,6 @@
                 <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-soft hover:shadow-xl hover:border-warm-gold/40 transition-all flex flex-col justify-between group animate-on-scroll fade-up delay-200">
                     <div class="aspect-[16/10] overflow-hidden bg-charcoal/5 relative">
                         <img src="assets/dep_scalp_man_treatment.jpg" alt="DEP needle-free scalp infusion handpiece" class="w-full h-full object-cover object-[center_35%] group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white font-heading font-bold text-[11px]">
-                            03
-                        </div>
                     </div>
                     <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
                         <div class="space-y-2">
@@ -1195,9 +1153,6 @@
                 <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-soft hover:shadow-xl hover:border-warm-gold/40 transition-all flex flex-col justify-between group animate-on-scroll fade-up delay-300">
                     <div class="aspect-[16/10] overflow-hidden bg-charcoal/5 relative">
                         <img src="assets/scalp_concern_hairline.jpg" alt="Clinical medical oversight at SuA Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white font-heading font-bold text-[11px]">
-                            04
-                        </div>
                     </div>
                     <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
                         <div class="space-y-2">
@@ -1436,69 +1391,6 @@
         if (window.lucide) {
             lucide.createIcons();
         }
-
-        // Interactive Protocol Pillars Background Watermark Switcher
-        (function() {
-            const container = document.getElementById('protocol-pillars-container');
-            const tabs = document.querySelectorAll('.protocol-tab');
-            const bgWatermark = document.getElementById('protocol-bg-watermark');
-            const bgGlow = document.getElementById('protocol-bg-glow');
-            if (!container || !tabs.length || !bgWatermark) return;
-
-            let activeWord = 'HYDRATE';
-            let activeColor = '#AA987C';
-
-            function updateStage(word, color, isHover = true) {
-                if (!word) return;
-                bgWatermark.style.opacity = '0';
-                bgWatermark.style.transform = 'scale(0.95)';
-                
-                setTimeout(() => {
-                    bgWatermark.textContent = word;
-                    bgWatermark.style.opacity = isHover ? '0.08' : '0.04';
-                    bgWatermark.style.color = color;
-                    bgWatermark.style.transform = isHover ? 'scale(1.05)' : 'scale(1)';
-                }, 150);
-
-                if (bgGlow) {
-                    bgGlow.style.background = `radial-gradient(circle at center, ${color}33 0%, transparent 65%)`;
-                    bgGlow.style.opacity = isHover ? '0.75' : '0.35';
-                }
-            }
-
-            tabs.forEach((tab, index) => {
-                const word = tab.getAttribute('data-word');
-                const color = tab.getAttribute('data-glow') || '#AA987C';
-
-                tab.addEventListener('mouseenter', () => {
-                    tabs.forEach(t => t.classList.remove('ring-1', 'ring-warm-gold/50', 'bg-white/[0.05]'));
-                    tab.classList.add('ring-1', 'ring-warm-gold/50', 'bg-white/[0.05]');
-                    updateStage(word, color, true);
-                });
-
-                tab.addEventListener('click', () => {
-                    activeWord = word;
-                    activeColor = color;
-                    tabs.forEach(t => t.classList.remove('ring-1', 'ring-warm-gold/50', 'bg-white/[0.05]'));
-                    tab.classList.add('ring-1', 'ring-warm-gold/50', 'bg-white/[0.05]');
-                    updateStage(word, color, true);
-                });
-            });
-
-            container.addEventListener('mouseleave', () => {
-                tabs.forEach(t => t.classList.remove('ring-1', 'ring-warm-gold/50', 'bg-white/[0.05]'));
-                updateStage(activeWord, activeColor, false);
-            });
-
-            // Subtle mouse tracking for ambient radial glow inside the container
-            container.addEventListener('mousemove', (e) => {
-                if (!bgGlow) return;
-                const rect = container.getBoundingClientRect();
-                const x = ((e.clientX - rect.left) / rect.width) * 100;
-                const y = ((e.clientY - rect.top) / rect.height) * 100;
-                bgGlow.style.background = `radial-gradient(circle at ${x}% ${y}%, ${activeColor}35 0%, transparent 60%)`;
-            });
-        })();
     </script>
 </body>
 </html>

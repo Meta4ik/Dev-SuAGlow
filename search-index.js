@@ -869,7 +869,7 @@ const SEARCH_INDEX = [
     "title": "SCALP INFUSION. MINUS THE NEEDLES",
     "pageTitle": "Korean Scalp & Hair Rejuvenation in Carrollton, TX",
     "category": "Korean Scalp & Hair Rejuvenation",
-    "content": "Advanced Korean-inspired topical scalp care & hair rejuvenation. Delivered without scalp injections. Medical Aesthetic Philosophy Needle-free topical scalp care incorporated into a personalized aesthetic treatment plan. A guaranteed hair-growth treatment or a replacement for medically indicated hair-loss evaluation or treatment. Deep scalp conditioning and surface barrier reset to balance moisture, clear residue, and optimize skin receptivity. Needle-free Dermoelectroporation® (DEP) transdermally drives medical-grade exosomes, peptides, and active serums directly to the scalp. Sustained follicular health, ongoing personalized maintenance sessions, and density tracking designed to protect long-term results.",
+    "content": "Advanced Korean-inspired topical scalp care & hair rejuvenation. Delivered without scalp injections. Medical Aesthetic Philosophy Needle-free topical scalp care incorporated into a personalized aesthetic treatment plan. A guaranteed hair-growth treatment or a replacement for medically indicated hair-loss evaluation or treatment.",
     "snippet": "Advanced Korean-inspired topical scalp care & hair rejuvenation. Delivered without scalp injections. Medical Aesthetic Philosophy Needle-free topical scalp care..."
   },
   {
@@ -885,7 +885,7 @@ const SEARCH_INDEX = [
     "title": "WHAT TO EXPECT AT YOUR SCALP APPOINTMENT",
     "pageTitle": "Korean Scalp & Hair Rejuvenation in Carrollton, TX",
     "category": "Korean Scalp & Hair Rejuvenation",
-    "content": "Your Korean Scalp & Hair Rejuvenation experience is personalized to your consultation, selected treatment plan and goals. We'll review your concerns, relevant history and goals before recommending your plan. Your personalized treatment plan is performed with care. Sensations and treatment time vary by treatment. You'll receive aftercare guidance and recommendations based on your treatment. “Every scalp. Every plan. Every step—thoughtful, individualized and guided by Korean dermatologic principles.”",
+    "content": "Your Korean Scalp & Hair Rejuvenation experience is personalized to your consultation, selected treatment plan and goals. We'll review your concerns, relevant history and goals before recommending your plan. Your personalized treatment plan is performed with care. Sensations and treatment time vary by treatment. You'll receive aftercare guidance and recommendations based on your treatment. Treatment protocols are individualized by your provider based on clinical scalp assessment, history, and realistic wellness goals.",
     "snippet": "Your Korean Scalp & Hair Rejuvenation experience is personalized to your consultation, selected treatment plan and goals. We'll review your concerns, relevant h..."
   },
   {
