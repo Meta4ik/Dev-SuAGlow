@@ -608,33 +608,31 @@
                         </div>
 
                         <!-- 4-Version RSA Rotator Controller -->
-                        <div class="p-4 sm:p-5 rounded-2xl bg-black/40 border border-white/15 text-white shadow-sm space-y-4">
-                            <!-- Header Info & Navigation Controls (Right where they were) -->
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/10">
-                                <div>
-                                    <div class="flex items-center gap-2">
-                                        <span class="px-2.5 py-0.5 rounded-md bg-[#E5B869] text-slate-900 text-[10.5px] font-bold uppercase tracking-wider">RSA Generator</span>
-                                        <span class="text-xs text-slate-300 font-medium">Dynamic Ad Rotations (4 Variations)</span>
-                                    </div>
-                                    <p class="text-xs text-slate-400 mt-1 leading-snug">
-                                        Google dynamically tests headline &amp; description pairings based on query intent:
-                                    </p>
+                        <div class="p-4 sm:p-5 rounded-2xl bg-[#121518] border border-white/15 text-white shadow-md space-y-4">
+                            <!-- Top Header: Title & Description (Full Width - No Crowding) -->
+                            <div class="space-y-1.5 pb-3 border-b border-white/10">
+                                <div class="flex items-center gap-2.5 flex-wrap">
+                                    <span class="px-2.5 py-1 rounded-md bg-[#E5B869] text-slate-900 text-xs font-bold uppercase tracking-wider">RSA Generator</span>
+                                    <span class="text-sm sm:text-base text-slate-100 font-semibold">Dynamic Ad Rotations (4 Variations)</span>
                                 </div>
+                                <p class="text-xs text-slate-400 leading-relaxed pt-0.5">
+                                    Google dynamically tests headline &amp; description pairings based on query intent:
+                                </p>
+                            </div>
 
-                                <!-- Back / Forth Arrow Buttons & Version Display -->
-                                <div class="flex items-center gap-2 shrink-0">
-                                    <button type="button" onclick="changeAdVersion('ag1', -1)" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-95 border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer group" title="Previous Ad Version">
-                                        <i data-lucide="arrow-left" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
-                                        <span>Back</span>
-                                    </button>
-                                    <div class="px-3.5 py-2 rounded-xl bg-black border border-white/20 font-mono text-xs sm:text-sm font-bold text-[#E5B869] text-center min-w-[90px]" id="ag1-version-indicator">
-                                        Ad 1 of 4
-                                    </div>
-                                    <button type="button" onclick="changeAdVersion('ag1', 1)" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-95 border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer group" title="Next Ad Version">
-                                        <span>Next</span>
-                                        <i data-lucide="arrow-right" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
-                                    </button>
+                            <!-- Dedicated Full-Width Row: Back / Next Controls -->
+                            <div class="flex items-center justify-between gap-3 pt-0.5">
+                                <button type="button" onclick="changeAdVersion('ag1', -1)" class="flex-1 py-2.5 px-4 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-[0.98] border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer group" title="Previous Ad Version">
+                                    <i data-lucide="arrow-left" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
+                                    <span>Back</span>
+                                </button>
+                                <div class="px-4 py-2.5 rounded-xl bg-black border border-white/20 font-mono text-xs sm:text-sm font-bold text-[#E5B869] text-center shrink-0 min-w-[95px]" id="ag1-version-indicator">
+                                    Ad 1 of 4
                                 </div>
+                                <button type="button" onclick="changeAdVersion('ag1', 1)" class="flex-1 py-2.5 px-4 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-[0.98] border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer group" title="Next Ad Version">
+                                    <span>Next</span>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
+                                </button>
                             </div>
 
                             <!-- The SINGLE Active Ad Card (Vertical Rows For All Information) -->
@@ -1117,33 +1115,31 @@
                         </div>
 
                         <!-- 4-Version RSA Rotator Controller (Ad Group 2) -->
-                        <div class="p-4 sm:p-5 rounded-2xl bg-black/40 border border-white/15 text-white shadow-sm space-y-4">
-                            <!-- Header Info & Navigation Controls (Right where they were) -->
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/10">
-                                <div>
-                                    <div class="flex items-center gap-2">
-                                        <span class="px-2.5 py-0.5 rounded-md bg-[#E5B869] text-slate-900 text-[10.5px] font-bold uppercase tracking-wider">RSA Generator</span>
-                                        <span class="text-xs text-slate-300 font-medium">4 Female Ad Rotations</span>
-                                    </div>
-                                    <p class="text-xs text-slate-400 mt-1 leading-snug">
-                                        Google dynamically tests headline &amp; description pairings for female search queries:
-                                    </p>
+                        <div class="p-4 sm:p-5 rounded-2xl bg-[#121518] border border-white/15 text-white shadow-md space-y-4">
+                            <!-- Top Header: Title & Description (Full Width - No Crowding) -->
+                            <div class="space-y-1.5 pb-3 border-b border-white/10">
+                                <div class="flex items-center gap-2.5 flex-wrap">
+                                    <span class="px-2.5 py-1 rounded-md bg-[#E5B869] text-slate-900 text-xs font-bold uppercase tracking-wider">RSA Generator</span>
+                                    <span class="text-sm sm:text-base text-slate-100 font-semibold">4 Female Ad Rotations</span>
                                 </div>
+                                <p class="text-xs text-slate-400 leading-relaxed pt-0.5">
+                                    Google dynamically tests headline &amp; description pairings for female search queries:
+                                </p>
+                            </div>
 
-                                <!-- Back / Forth Arrow Buttons & Version Display -->
-                                <div class="flex items-center gap-2 shrink-0">
-                                    <button type="button" onclick="changeAdVersion('ag2', -1)" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-95 border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer group" title="Previous Ad Version">
-                                        <i data-lucide="arrow-left" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
-                                        <span>Back</span>
-                                    </button>
-                                    <div class="px-3.5 py-2 rounded-xl bg-black border border-white/20 font-mono text-xs sm:text-sm font-bold text-[#E5B869] text-center min-w-[90px]" id="ag2-version-indicator">
-                                        Ad 1 of 4
-                                    </div>
-                                    <button type="button" onclick="changeAdVersion('ag2', 1)" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-95 border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer group" title="Next Ad Version">
-                                        <span>Next</span>
-                                        <i data-lucide="arrow-right" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
-                                    </button>
+                            <!-- Dedicated Full-Width Row: Back / Next Controls -->
+                            <div class="flex items-center justify-between gap-3 pt-0.5">
+                                <button type="button" onclick="changeAdVersion('ag2', -1)" class="flex-1 py-2.5 px-4 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-[0.98] border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer group" title="Previous Ad Version">
+                                    <i data-lucide="arrow-left" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
+                                    <span>Back</span>
+                                </button>
+                                <div class="px-4 py-2.5 rounded-xl bg-black border border-white/20 font-mono text-xs sm:text-sm font-bold text-[#E5B869] text-center shrink-0 min-w-[95px]" id="ag2-version-indicator">
+                                    Ad 1 of 4
                                 </div>
+                                <button type="button" onclick="changeAdVersion('ag2', 1)" class="flex-1 py-2.5 px-4 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-[0.98] border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer group" title="Next Ad Version">
+                                    <span>Next</span>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
+                                </button>
                             </div>
 
                             <!-- The SINGLE Active Ad Card (Vertical Rows For All Information) -->
@@ -1591,34 +1587,31 @@
                         </div>
 
                         <!-- 4-Version RSA Rotator Controller (Ad Group 3) -->
-                        <div class="p-4 sm:p-5 rounded-2xl bg-black/40 border border-white/15 text-white shadow-sm space-y-4">
-                            <!-- Header Info -->
-                            <!-- Header Info & Navigation Controls (Right where they were) -->
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/10">
-                                <div>
-                                    <div class="flex items-center gap-2">
-                                        <span class="px-2.5 py-0.5 rounded-md bg-[#E5B869] text-slate-900 text-[10.5px] font-bold uppercase tracking-wider">RSA Generator</span>
-                                        <span class="text-xs text-slate-300 font-medium">4 Male Ad Rotations</span>
-                                    </div>
-                                    <p class="text-xs text-slate-400 mt-1 leading-snug">
-                                        Google dynamically tests headline &amp; description pairings for male search queries:
-                                    </p>
+                        <div class="p-4 sm:p-5 rounded-2xl bg-[#121518] border border-white/15 text-white shadow-md space-y-4">
+                            <!-- Top Header: Title & Description (Full Width - No Crowding) -->
+                            <div class="space-y-1.5 pb-3 border-b border-white/10">
+                                <div class="flex items-center gap-2.5 flex-wrap">
+                                    <span class="px-2.5 py-1 rounded-md bg-[#E5B869] text-slate-900 text-xs font-bold uppercase tracking-wider">RSA Generator</span>
+                                    <span class="text-sm sm:text-base text-slate-100 font-semibold">4 Male Ad Rotations</span>
                                 </div>
+                                <p class="text-xs text-slate-400 leading-relaxed pt-0.5">
+                                    Google dynamically tests headline &amp; description pairings for male search queries:
+                                </p>
+                            </div>
 
-                                <!-- Back / Forth Arrow Buttons & Version Display -->
-                                <div class="flex items-center gap-2 shrink-0">
-                                    <button type="button" onclick="changeAdVersion('ag3', -1)" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-95 border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer group" title="Previous Ad Version">
-                                        <i data-lucide="arrow-left" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
-                                        <span>Back</span>
-                                    </button>
-                                    <div class="px-3.5 py-2 rounded-xl bg-black border border-white/20 font-mono text-xs sm:text-sm font-bold text-[#E5B869] text-center min-w-[90px]" id="ag3-version-indicator">
-                                        Ad 1 of 4
-                                    </div>
-                                    <button type="button" onclick="changeAdVersion('ag3', 1)" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-95 border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer group" title="Next Ad Version">
-                                        <span>Next</span>
-                                        <i data-lucide="arrow-right" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
-                                    </button>
+                            <!-- Dedicated Full-Width Row: Back / Next Controls -->
+                            <div class="flex items-center justify-between gap-3 pt-0.5">
+                                <button type="button" onclick="changeAdVersion('ag3', -1)" class="flex-1 py-2.5 px-4 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-[0.98] border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer group" title="Previous Ad Version">
+                                    <i data-lucide="arrow-left" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
+                                    <span>Back</span>
+                                </button>
+                                <div class="px-4 py-2.5 rounded-xl bg-black border border-white/20 font-mono text-xs sm:text-sm font-bold text-[#E5B869] text-center shrink-0 min-w-[95px]" id="ag3-version-indicator">
+                                    Ad 1 of 4
                                 </div>
+                                <button type="button" onclick="changeAdVersion('ag3', 1)" class="flex-1 py-2.5 px-4 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-[0.98] border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer group" title="Next Ad Version">
+                                    <span>Next</span>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
+                                </button>
                             </div>
 
                             <!-- The SINGLE Active Ad Card (Vertical Rows For All Information) -->
