@@ -387,6 +387,19 @@
             color: #FFFFFF;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 5px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.12);
+            border-radius: 9999px;
+        }
         /* Toast notification */
         #copyToast {
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -435,49 +448,124 @@
         </div>
     </header>
 
-    <!-- Sub-bar quick jump menu -->
-    <div class="bg-white border-b border-slate-200 sticky top-16 z-40 shadow-xs">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4 overflow-x-auto">
-            <div class="flex items-center gap-2.5 text-sm font-semibold text-slate-700 whitespace-nowrap">
-                <span class="uppercase tracking-wider text-xs text-slate-400 font-bold mr-1">Ad Groups:</span>
-                <a href="#ad-group-1" class="nav-pill px-3.5 py-1.5 rounded-full border border-slate-200 hover:border-slate-800 transition-colors inline-flex items-center gap-1.5">
-                    <svg class="w-3.5 h-3.5 text-rose-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M12 15v7"/><path d="M9 19h6"/></svg>
-                    <svg class="w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="14" r="6"/><path d="m14.2 9.8 6.8-6.8"/><path d="M16 3h5v5"/></svg>
-                    1. Combined / Hair Loss
-                </a>
-                <a href="#ad-group-2" class="nav-pill px-3.5 py-1.5 rounded-full border border-slate-200 hover:border-slate-800 transition-colors inline-flex items-center gap-1.5">
-                    <svg class="w-3.5 h-3.5 text-rose-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M12 15v7"/><path d="M9 19h6"/></svg>
-                    2. Female Thinning Care
-                </a>
-                <a href="#ad-group-3" class="nav-pill px-3.5 py-1.5 rounded-full border border-slate-200 hover:border-slate-800 transition-colors inline-flex items-center gap-1.5">
-                    <svg class="w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="14" r="6"/><path d="m14.2 9.8 6.8-6.8"/><path d="M16 3h5v5"/></svg>
-                    3. Male Hairline &amp; Crown
-                </a>
-                <a href="#client-strategy-blueprint" class="nav-pill px-3.5 py-1.5 rounded-full border border-[#AA987C]/60 text-[#AA987C] bg-[#AA987C]/5 hover:bg-[#AA987C] hover:text-white transition-colors">
-                    Client Strategy & Copy Blueprint
-                </a>
-                <a href="#head-spa-comparison" class="nav-pill px-3.5 py-1.5 rounded-full border border-indigo-200 text-indigo-700 hover:bg-indigo-600 hover:text-white transition-colors">
-                    Head Spa vs SuA Glow Matrix
-                </a>
-                <a href="#hair-images-gallery" class="nav-pill px-3.5 py-1.5 rounded-full border border-amber-300 text-amber-800 bg-amber-50/60 hover:bg-amber-600 hover:text-white transition-colors">
-                    Hair &amp; Scalp Images (1:1)
-                </a>
-                <a href="#negative-keywords" class="nav-pill px-3.5 py-1.5 rounded-full border border-rose-200 text-rose-700 hover:bg-rose-600 hover:text-white transition-colors">
-                    Negative Keywords (All)
-                </a>
-            </div>
-            <div class="hidden md:flex items-center gap-3 text-sm text-slate-600 whitespace-nowrap">
-                <span class="inline-flex items-center gap-1.5"><i data-lucide="map-pin" class="w-4 h-4 text-[#AA987C]"></i> Carrollton + DFW</span>
-                <span class="inline-flex items-center gap-1.5"><i data-lucide="dollar-sign" class="w-4 h-4 text-emerald-600"></i> $399 Korean Scalp Reset</span>
-            </div>
-        </div>
-    </div>
+    <!-- Main Studio Layout: Persistent Left Sidebar + Content Area -->
+    <div class="max-w-[1720px] mx-auto w-full px-4 sm:px-6 lg:px-8 py-7 flex flex-col lg:flex-row gap-8 items-start flex-grow">
 
-    <!-- Main Container -->
-    <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 space-y-14">
+        <!-- Persistent Left Sidebar Navigation -->
+        <aside class="w-full lg:w-64 xl:w-72 shrink-0 lg:sticky lg:top-20 z-30">
+            <div class="bg-white rounded-2xl border border-slate-200/90 shadow-md p-4 sm:p-5 space-y-5 lg:max-h-[calc(100vh-6.5rem)] lg:overflow-y-auto custom-scrollbar">
+                
+                <!-- Sidebar Header -->
+                <div class="pb-3 border-b border-slate-200">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Campaign Hub</span>
+                        </div>
+                        <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">Live Studio</span>
+                    </div>
+                    <h2 class="text-sm font-bold text-slate-900 mt-1">Campaign Navigation</h2>
+                </div>
 
-        <!-- Hero Overview Banner -->
-        <div class="bg-[#131619] rounded-2xl p-7 sm:p-10 text-white relative overflow-hidden shadow-xl">
+                <!-- Section: Core Ad Groups -->
+                <div class="space-y-1">
+                    <div class="text-[10.5px] uppercase font-bold tracking-wider text-slate-400 px-2.5 pb-1">
+                        Ad Groups
+                    </div>
+                    
+                    <a href="#campaign-overview" id="nav-overview" class="side-nav-link flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-all group">
+                        <div class="flex items-center gap-2.5">
+                            <i data-lucide="layout-dashboard" class="w-4 h-4 text-slate-400 group-hover:text-slate-800 transition-colors"></i>
+                            <span>Overview &amp; Metrics</span>
+                        </div>
+                    </a>
+
+                    <a href="#ad-group-1" id="nav-ad-group-1" class="side-nav-link flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-all group">
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <div class="flex items-center gap-0.5 shrink-0">
+                                <svg class="w-3.5 h-3.5 text-rose-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M12 15v7"/><path d="M9 19h6"/></svg>
+                                <svg class="w-3.5 h-3.5 text-sky-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="6"/><path d="m14.2 9.8 6.8-6.8"/><path d="M16 3h5v5"/></svg>
+                            </div>
+                            <span class="truncate">1. Combined / Hair Loss</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 font-bold shrink-0">4 Ads</span>
+                    </a>
+
+                    <a href="#ad-group-2" id="nav-ad-group-2" class="side-nav-link flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-all group">
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <svg class="w-3.5 h-3.5 text-rose-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M12 15v7"/><path d="M9 19h6"/></svg>
+                            <span class="truncate">2. Female Thinning Care</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 font-bold shrink-0">4 Ads</span>
+                    </a>
+
+                    <a href="#ad-group-3" id="nav-ad-group-3" class="side-nav-link flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-all group">
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <svg class="w-3.5 h-3.5 text-sky-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="6"/><path d="m14.2 9.8 6.8-6.8"/><path d="M16 3h5v5"/></svg>
+                            <span class="truncate">3. Male Hairline &amp; Crown</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 font-bold shrink-0">4 Ads</span>
+                    </a>
+                </div>
+
+                <!-- Section: Strategy & Creative -->
+                <div class="space-y-1 pt-2 border-t border-slate-200">
+                    <div class="text-[10.5px] uppercase font-bold tracking-wider text-slate-400 px-2.5 pb-1">
+                        Strategy &amp; Assets
+                    </div>
+
+                    <a href="#client-strategy-blueprint" id="nav-client-strategy-blueprint" class="side-nav-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-all group">
+                        <i data-lucide="file-text" class="w-4 h-4 text-[#AA987C] group-hover:scale-110 transition-transform"></i>
+                        <span class="truncate">Client Copy Blueprint</span>
+                    </a>
+
+                    <a href="#head-spa-comparison" id="nav-head-spa-comparison" class="side-nav-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-all group">
+                        <i data-lucide="split" class="w-4 h-4 text-indigo-500 group-hover:scale-110 transition-transform"></i>
+                        <span class="truncate">Head Spa vs SuA Glow</span>
+                    </a>
+
+                    <a href="#hair-images-gallery" id="nav-hair-images-gallery" class="side-nav-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-all group">
+                        <i data-lucide="image" class="w-4 h-4 text-amber-500 group-hover:scale-110 transition-transform"></i>
+                        <span class="truncate">Hair &amp; Scalp Images (1:1)</span>
+                    </a>
+
+                    <a href="#negative-keywords" id="nav-negative-keywords" class="side-nav-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-all group">
+                        <i data-lucide="shield-alert" class="w-4 h-4 text-rose-500 group-hover:scale-110 transition-transform"></i>
+                        <span class="truncate">Negative Keywords (22)</span>
+                    </a>
+                </div>
+
+                <!-- Campaign Quick Action & Metadata Card -->
+                <div class="pt-3 border-t border-slate-200 space-y-3">
+                    <button type="button" onclick="copyFullCampaignText()" class="w-full py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-[#AA987C] text-white hover:text-slate-950 text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer group">
+                        <i data-lucide="copy" class="w-3.5 h-3.5 text-[#AA987C] group-hover:text-slate-950 transition-colors"></i>
+                        <span>Copy All Blueprints</span>
+                    </button>
+
+                    <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 text-[11px] text-slate-600 space-y-1.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-400">Offer:</span>
+                            <span class="font-bold text-emerald-600">$399 Scalp Reset</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-400">Geo:</span>
+                            <span class="font-medium text-slate-800">Carrollton + DFW</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-400">Call:</span>
+                            <a href="tel:9726658737" class="font-mono font-bold text-slate-900 hover:text-[#AA987C]">972-665-8737</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 min-w-0 w-full space-y-14">
+
+            <!-- Hero Overview Banner -->
+            <div id="campaign-overview" class="bg-[#131619] rounded-2xl p-7 sm:p-10 text-white relative overflow-hidden shadow-xl scroll-mt-24">
             <div class="absolute -right-16 -top-16 w-80 h-80 bg-[#AA987C]/15 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute right-1/3 -bottom-16 w-72 h-72 bg-[#8F857B]/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -3004,7 +3092,8 @@
             </div>
         </section>
 
-    </main>
+        </main>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs sm:text-sm text-slate-600">
@@ -3415,6 +3504,46 @@ transplant, hair transplant, FUE, FUT, Turkey, wig, toupee, extensions, haircut,
                 showToast('All campaign text & blueprints copied!');
             });
         }
+
+        // ScrollSpy for Persistent Left Sidebar Navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.side-nav-link');
+            const sections = [
+                document.getElementById('campaign-overview'),
+                document.getElementById('ad-group-1'),
+                document.getElementById('ad-group-2'),
+                document.getElementById('ad-group-3'),
+                document.getElementById('client-strategy-blueprint'),
+                document.getElementById('head-spa-comparison'),
+                document.getElementById('hair-images-gallery'),
+                document.getElementById('negative-keywords')
+            ].filter(Boolean);
+
+            function updateActiveNav() {
+                let currentSection = '';
+                const scrollPos = window.scrollY + 220;
+
+                sections.forEach(section => {
+                    if (section.offsetTop <= scrollPos) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href').replace('#', '');
+                    if (href === currentSection) {
+                        link.classList.add('bg-slate-900', 'text-[#E5B869]', 'font-bold', 'shadow-xs');
+                        link.classList.remove('text-slate-700', 'hover:bg-slate-100');
+                    } else {
+                        link.classList.remove('bg-slate-900', 'text-[#E5B869]', 'font-bold', 'shadow-xs');
+                        link.classList.add('text-slate-700', 'hover:bg-slate-100');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveNav, { passive: true });
+            updateActiveNav();
+        });
     </script>
 </body>
 </html>
