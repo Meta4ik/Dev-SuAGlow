@@ -892,52 +892,64 @@
                         <!-- Visual Angle (Display / Performance Max Asset Brief) -->
                         <div class="rounded-xl bg-white border border-slate-200/90 p-5 space-y-3.5 text-slate-900 shadow-xs">
                             <div class="space-y-3 pb-3 border-b border-slate-200">
-                                <div class="w-12 h-12 rounded-2xl bg-[#AA987C]/15 text-[#AA987C] flex items-center justify-center border border-[#AA987C]/30 shadow-xs">
-                                    <i data-lucide="image" class="w-6 h-6"></i>
+                                <div class="flex items-center justify-between">
+                                    <div class="w-12 h-12 rounded-2xl bg-[#AA987C]/15 text-[#AA987C] flex items-center justify-center border border-[#AA987C]/30 shadow-xs">
+                                        <i data-lucide="image" class="w-6 h-6"></i>
+                                    </div>
+                                    <span id="ag1-visual-angle-pill" class="text-[10.5px] font-mono font-bold px-2.5 py-1 rounded bg-[#AA987C]/15 text-[#8F857B] border border-[#AA987C]/30">Angle 1 of 4: Value &amp; Intro Offer</span>
                                 </div>
-                                <div>
+                                <div class="flex items-center gap-2">
                                     <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200">Creative Brief</span>
+                                    <span class="text-[11px] font-mono text-slate-400">Dynamic Asset Pairing</span>
                                 </div>
                                 <h4 class="sua-subcard-title text-slate-900">Visual Angle (Display / PMax)</h4>
                             </div>
-                            <p class="text-sm sm:text-base text-slate-700 italic bg-slate-50 p-4 rounded-xl border border-slate-200 leading-relaxed">
-                                "Clean, macro-level cross-section graphic of a hair follicle showing the difference between surface washing and cellular scalp rejuvenation."
+
+                            <!-- Rotating PMax Asset Headline Callout -->
+                            <div class="flex items-center gap-2 text-xs bg-slate-50 px-3 py-2 rounded-xl border border-slate-200/80">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono shrink-0">PMax Headline:</span>
+                                <span id="ag1-pmax-headline" class="font-semibold text-slate-900 truncate">Korean Scalp Reset | $399 Introductory Treatment</span>
+                            </div>
+
+                            <!-- Rotating Creative Brief Paragraph -->
+                            <p id="ag1-visual-brief" class="text-sm sm:text-base text-slate-700 italic bg-slate-50/80 p-4 rounded-xl border border-slate-200 leading-relaxed transition-all">
+                                "Clean split focus of scalp parting and healthy hair follicles highlighting the complete $399 Korean Scalp Reset intro protocol."
                             </p>
 
                             <!-- Recommended Photographic Asset from Workspace -->
                             <div class="space-y-3 pt-1">
                                 <div class="space-y-1.5">
                                     <div class="aspect-[16/10] sm:aspect-[16/9] w-full rounded-xl overflow-hidden border border-white/15 bg-slate-950 relative group shadow-sm">
-                                        <img src="../../assets/unisex_scalp_couple.jpg" alt="Unisex Scalp Rejuvenation - Follicle & Density Focus" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                                        <img id="ag1-visual-primary-img" src="../../assets/unisex_scalp_couple.jpg" alt="Unisex Scalp Rejuvenation - Follicle & Density Focus" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                                         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-3">
                                             <div>
-                                                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#E5B869] text-slate-900 text-[10px] font-bold uppercase tracking-wider mb-1">Authentic Clinic Backdrop · Hair Focus</span>
-                                                <div class="text-xs sm:text-sm text-white font-semibold">Follicular Density &amp; Scalp Parting (Women &amp; Men)</div>
+                                                <span id="ag1-visual-primary-badge" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#E5B869] text-slate-900 text-[10px] font-bold uppercase tracking-wider mb-1">Authentic Clinic Backdrop · Hair Focus</span>
+                                                <div id="ag1-visual-primary-caption" class="text-xs sm:text-sm text-white font-semibold">Follicular Density &amp; Scalp Parting ($399 Reset)</div>
                                             </div>
                                             <span class="text-[10px] text-slate-300 font-mono hidden sm:inline-block">1:1 / Landscape Ready</span>
                                         </div>
                                     </div>
-                                    <div class="text-xs text-slate-400 font-mono truncate">unisex_scalp_couple.jpg</div>
+                                    <div id="ag1-visual-primary-filename" class="text-xs text-slate-400 font-mono truncate">unisex_scalp_couple.jpg</div>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-3">
                                     <div class="space-y-1.5">
                                         <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
-                                            <img src="../../assets/scalp_analysis_consultation.jpg" alt="Scalp Analysis Consultation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                            <img id="ag1-visual-thumb1-img" src="../../assets/scalp_analysis_consultation.jpg" alt="Scalp Analysis Consultation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
-                                                <span class="text-xs text-white font-medium">Cellular Scalp Diagnostics</span>
+                                                <span id="ag1-visual-thumb1-caption" class="text-xs text-white font-medium">Micro-Camera Scalp Diagnostics</span>
                                             </div>
                                         </div>
-                                        <div class="text-xs text-slate-400 font-mono truncate">scalp_analysis_consultation.jpg</div>
+                                        <div id="ag1-visual-thumb1-filename" class="text-xs text-slate-400 font-mono truncate">scalp_analysis_consultation.jpg</div>
                                     </div>
                                     <div class="space-y-1.5">
                                         <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
-                                            <img src="../../assets/dep_scalp_woman_treatment.jpg" alt="DEP Needle-Free Infusion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                            <img id="ag1-visual-thumb2-img" src="../../assets/dep_scalp_woman_treatment.jpg" alt="DEP Needle-Free Infusion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2">
-                                                <span class="text-[10px] text-white font-medium">Needle-Free Follicle Infusion</span>
+                                                <span id="ag1-visual-thumb2-caption" class="text-[10px] text-white font-medium">Needle-Free Transdermal Infusion</span>
                                             </div>
                                         </div>
-                                        <div class="text-[10.5px] text-slate-400 font-mono truncate">dep_scalp_woman_treatment.jpg</div>
+                                        <div id="ag1-visual-thumb2-filename" class="text-[10.5px] text-slate-400 font-mono truncate">dep_scalp_woman_treatment.jpg</div>
                                     </div>
                                 </div>
                             </div>
@@ -1398,37 +1410,65 @@
                         <!-- Visual Angle (Display / Performance Max Asset Brief) -->
                         <div class="rounded-xl bg-white border border-slate-200/90 p-5 space-y-3.5 text-slate-900 shadow-xs">
                             <div class="space-y-3 pb-3 border-b border-slate-200">
-                                <div class="w-12 h-12 rounded-2xl bg-rose-500/15 text-rose-600 flex items-center justify-center border border-rose-500/30 shadow-xs">
-                                    <i data-lucide="image" class="w-6 h-6"></i>
+                                <div class="flex items-center justify-between">
+                                    <div class="w-12 h-12 rounded-2xl bg-rose-500/15 text-rose-600 flex items-center justify-center border border-rose-500/30 shadow-xs">
+                                        <i data-lucide="image" class="w-6 h-6"></i>
+                                    </div>
+                                    <span id="ag2-visual-angle-pill" class="text-[10.5px] font-mono font-bold px-2.5 py-1 rounded bg-rose-500/15 text-rose-700 border border-rose-500/30">Angle 1 of 4: Widening Part</span>
                                 </div>
-                                <div>
+                                <div class="flex items-center gap-2">
                                     <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200">Creative Brief</span>
+                                    <span class="text-[11px] font-mono text-slate-400">Dynamic Asset Pairing</span>
                                 </div>
                                 <h4 class="sua-subcard-title text-slate-900">Visual Angle (Display / PMax)</h4>
                             </div>
-                            <p class="text-sm sm:text-base text-slate-700 italic bg-slate-50 p-4 rounded-xl border border-slate-200 leading-relaxed">
-                                "Top-down view of a female scalp showing a widening part, transitioning into a calming, clinical needle-free infusion treatment."
+
+                            <!-- Rotating PMax Asset Headline Callout -->
+                            <div class="flex items-center gap-2 text-xs bg-slate-50 px-3 py-2 rounded-xl border border-slate-200/80">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono shrink-0">PMax Headline:</span>
+                                <span id="ag2-pmax-headline" class="font-semibold text-slate-900 truncate">Widening Part? | Female Follicle Restoration</span>
+                            </div>
+
+                            <!-- Rotating Creative Brief Paragraph -->
+                            <p id="ag2-visual-brief" class="text-sm sm:text-base text-slate-700 italic bg-slate-50/80 p-4 rounded-xl border border-slate-200 leading-relaxed transition-all">
+                                "Macro top-down view of female scalp parting line illustrating early follicular spacing and hair miniaturization."
                             </p>
 
                             <!-- Recommended Photographic Asset from Workspace -->
-                            <div class="grid grid-cols-2 gap-3 pt-1">
+                            <div class="space-y-3 pt-1">
                                 <div class="space-y-1.5">
-                                    <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
-                                        <img src="../../assets/scalp_concern_texture.jpg" alt="Scalp Barrier & Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
-                                            <span class="text-xs text-white font-medium">Parting Density &amp; Hairline</span>
+                                    <div class="aspect-[16/10] sm:aspect-[16/9] w-full rounded-xl overflow-hidden border border-white/15 bg-slate-950 relative group shadow-sm">
+                                        <img id="ag2-visual-primary-img" src="../../assets/scalp_concern_parting.jpg" alt="Female Scalp Parting Line" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-3">
+                                            <div>
+                                                <span id="ag2-visual-primary-badge" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-rose-100 text-rose-800 text-[10px] font-bold uppercase tracking-wider mb-1">Authentic Scalp Analysis · Parting Focus</span>
+                                                <div id="ag2-visual-primary-caption" class="text-xs sm:text-sm text-white font-semibold">Female Scalp Parting Line &amp; Follicle Assessment</div>
+                                            </div>
+                                            <span class="text-[10px] text-slate-300 font-mono hidden sm:inline-block">1:1 / Landscape Ready</span>
                                         </div>
                                     </div>
-                                    <div class="text-xs text-slate-400 font-mono truncate">scalp_concern_texture.jpg</div>
+                                    <div id="ag2-visual-primary-filename" class="text-xs text-slate-400 font-mono truncate">scalp_concern_parting.jpg</div>
                                 </div>
-                                <div class="space-y-1.5">
-                                    <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
-                                        <img src="../../assets/dep_scalp_woman_treatment.jpg" alt="Clinical Scalp Infusion for Women" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
-                                            <span class="text-xs text-white font-medium">Calming Needle-Free Care</span>
+
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="space-y-1.5">
+                                        <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
+                                            <img id="ag2-visual-thumb1-img" src="../../assets/dep_scalp_woman_treatment.jpg" alt="Clinical Scalp Infusion for Women" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
+                                                <span id="ag2-visual-thumb1-caption" class="text-xs text-white font-medium">Targeted Parting Infusion</span>
+                                            </div>
                                         </div>
+                                        <div id="ag2-visual-thumb1-filename" class="text-xs text-slate-400 font-mono truncate">dep_scalp_woman_treatment.jpg</div>
                                     </div>
-                                    <div class="text-xs text-slate-400 font-mono truncate">dep_scalp_woman_treatment.jpg</div>
+                                    <div class="space-y-1.5">
+                                        <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
+                                            <img id="ag2-visual-thumb2-img" src="../../assets/scalp_concern_texture.jpg" alt="Scalp Barrier & Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2">
+                                                <span id="ag2-visual-thumb2-caption" class="text-[10px] text-white font-medium">Scalp Barrier &amp; Skin Texture</span>
+                                            </div>
+                                        </div>
+                                        <div id="ag2-visual-thumb2-filename" class="text-[10.5px] text-slate-400 font-mono truncate">scalp_concern_texture.jpg</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1870,37 +1910,65 @@
                         <!-- Visual Angle (Display / Performance Max Asset Brief) -->
                         <div class="rounded-xl bg-white border border-slate-200/90 p-5 space-y-3.5 text-slate-900 shadow-xs">
                             <div class="space-y-3 pb-3 border-b border-slate-200">
-                                <div class="w-12 h-12 rounded-2xl bg-indigo-500/15 text-indigo-600 flex items-center justify-center border border-indigo-500/30 shadow-xs">
-                                    <i data-lucide="image" class="w-6 h-6"></i>
+                                <div class="flex items-center justify-between">
+                                    <div class="w-12 h-12 rounded-2xl bg-indigo-500/15 text-indigo-600 flex items-center justify-center border border-indigo-500/30 shadow-xs">
+                                        <i data-lucide="image" class="w-6 h-6"></i>
+                                    </div>
+                                    <span id="ag3-visual-angle-pill" class="text-[10.5px] font-mono font-bold px-2.5 py-1 rounded bg-indigo-500/15 text-indigo-700 border border-indigo-500/30">Angle 1 of 4: Receding Hairline</span>
                                 </div>
-                                <div>
+                                <div class="flex items-center gap-2">
                                     <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200">Creative Brief</span>
+                                    <span class="text-[11px] font-mono text-slate-400">Dynamic Asset Pairing</span>
                                 </div>
                                 <h4 class="sua-subcard-title text-slate-900">Visual Angle (Display / PMax)</h4>
                             </div>
-                            <p class="text-sm sm:text-base text-slate-700 italic bg-slate-50 p-4 rounded-xl border border-slate-200 leading-relaxed">
-                                "Sleek, close-up shot of the clinical needle-free infusion device targeting the crown of a male scalp."
+
+                            <!-- Rotating PMax Asset Headline Callout -->
+                            <div class="flex items-center gap-2 text-xs bg-slate-50 px-3 py-2 rounded-xl border border-slate-200/80">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono shrink-0">PMax Headline:</span>
+                                <span id="ag3-pmax-headline" class="font-semibold text-slate-900 truncate">Hairline Receding? | Act Early with Korean Scalp Care</span>
+                            </div>
+
+                            <!-- Rotating Creative Brief Paragraph -->
+                            <p id="ag3-visual-brief" class="text-sm sm:text-base text-slate-700 italic bg-slate-50/80 p-4 rounded-xl border border-slate-200 leading-relaxed transition-all">
+                                "Close examination of frontal hairline recession (temple angles) demonstrating non-surgical preventive scalp support."
                             </p>
 
                             <!-- Recommended Photographic Asset from Workspace -->
-                            <div class="grid grid-cols-2 gap-3 pt-1">
+                            <div class="space-y-3 pt-1">
                                 <div class="space-y-1.5">
-                                    <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
-                                        <img src="../../assets/dep_scalp_man_treatment.jpg" alt="Clinical Needle-Free Male Scalp Treatment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
-                                            <span class="text-xs text-white font-medium">Device Targeting Male Crown</span>
+                                    <div class="aspect-[16/10] sm:aspect-[16/9] w-full rounded-xl overflow-hidden border border-white/15 bg-slate-950 relative group shadow-sm">
+                                        <img id="ag3-visual-primary-img" src="../../assets/scalp_concern_hairline.jpg" alt="Male Hairline Recession Pattern" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-3">
+                                            <div>
+                                                <span id="ag3-visual-primary-badge" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800 text-[10px] font-bold uppercase tracking-wider mb-1">Authentic Scalp Analysis · Hairline Focus</span>
+                                                <div id="ag3-visual-primary-caption" class="text-xs sm:text-sm text-white font-semibold">Male Frontal &amp; Temple Hairline Recession Pattern</div>
+                                            </div>
+                                            <span class="text-[10px] text-slate-300 font-mono hidden sm:inline-block">1:1 / Landscape Ready</span>
                                         </div>
                                     </div>
-                                    <div class="text-xs text-slate-400 font-mono truncate">dep_scalp_man_treatment.jpg</div>
+                                    <div id="ag3-visual-primary-filename" class="text-xs text-slate-400 font-mono truncate">scalp_concern_hairline.jpg</div>
                                 </div>
-                                <div class="space-y-1.5">
-                                    <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
-                                        <img src="../../assets/dep_hair_man.jpg" alt="Male Hair Density Consultation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
-                                            <span class="text-xs text-white font-medium">Non-Surgical Hairline Support</span>
+
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="space-y-1.5">
+                                        <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
+                                            <img id="ag3-visual-thumb1-img" src="../../assets/dep_scalp_man_treatment.jpg" alt="Clinical Needle-Free Male Scalp Treatment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
+                                                <span id="ag3-visual-thumb1-caption" class="text-xs text-white font-medium">Needle-Free Hairline Infusion</span>
+                                            </div>
                                         </div>
+                                        <div id="ag3-visual-thumb1-filename" class="text-xs text-slate-400 font-mono truncate">dep_scalp_man_treatment.jpg</div>
                                     </div>
-                                    <div class="text-xs text-slate-400 font-mono truncate">dep_hair_man.jpg</div>
+                                    <div class="space-y-1.5">
+                                        <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
+                                            <img id="ag3-visual-thumb2-img" src="../../assets/dep_hair_man.jpg" alt="Male Hair Density Consultation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2">
+                                                <span id="ag3-visual-thumb2-caption" class="text-[10px] text-white font-medium">Male Hair Density Consultation</span>
+                                            </div>
+                                        </div>
+                                        <div id="ag3-visual-thumb2-filename" class="text-[10.5px] text-slate-400 font-mono truncate">dep_hair_man.jpg</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -3253,7 +3321,7 @@
         // Initialize Lucide icons
         lucide.createIcons();
 
-        // 4 Dynamic Ad Versions per Ad Group (Responsive Search Ad Permutations)
+        // 4 Dynamic Ad Versions per Ad Group (Responsive Search Ad Permutations & Visual PMax Angles)
         const adGroupVersions = {
             ag1: [
                 {
@@ -3264,7 +3332,22 @@
                     description: "Concerned about thinning or shedding? Start your personalized scalp assessment today. Physician-guided, Seoul-inspired scalp and hair rejuvenation in Carrollton.",
                     callouts: ["✦ Korean-Founded", "✦ FDA-Cleared Tech", "✦ Medically Guided"],
                     pairedHeadlines: "H1 + H2 + Brand",
-                    pairedDesc: "D1 + D2"
+                    pairedDesc: "D1 + D2",
+                    visualAngle: {
+                        pill: "Angle 1 of 4: Value & Intro Offer",
+                        headline: "Korean Scalp Reset | $399 Introductory Treatment",
+                        brief: "\"Clean split focus of scalp parting and healthy hair follicles highlighting the complete $399 Korean Scalp Reset intro protocol.\"",
+                        primaryImg: "../../assets/unisex_scalp_couple.jpg",
+                        primaryBadge: "Authentic Clinic Backdrop · Hair Focus",
+                        primaryCaption: "Follicular Density & Scalp Parting ($399 Reset)",
+                        primaryFilename: "unisex_scalp_couple.jpg",
+                        thumb1Img: "../../assets/scalp_analysis_consultation.jpg",
+                        thumb1Caption: "Micro-Camera Scalp Diagnostics",
+                        thumb1Filename: "scalp_analysis_consultation.jpg",
+                        thumb2Img: "../../assets/dep_scalp_woman_treatment.jpg",
+                        thumb2Caption: "Needle-Free Transdermal Infusion",
+                        thumb2Filename: "dep_scalp_woman_treatment.jpg"
+                    }
                 },
                 {
                     versionNum: "2 of 4",
@@ -3274,7 +3357,22 @@
                     description: "Physician-guided, Seoul-inspired scalp and hair rejuvenation in Carrollton. Experience our $399 Korean Scalp Reset. Medically guided, FDA-cleared technology.",
                     callouts: ["✦ Carrollton Clinic", "✦ Physician-Guided", "✦ Non-Surgical"],
                     pairedHeadlines: "H3 + H6 + Brand",
-                    pairedDesc: "D2 + D3"
+                    pairedDesc: "D2 + D3",
+                    visualAngle: {
+                        pill: "Angle 2 of 4: Local Authority & Medical Care",
+                        headline: "Physician-Guided Scalp Care | Carrollton Medical Clinic",
+                        brief: "\"Physician-guided consultation room setting with high-magnification trichoscope screen examining follicular root health in Carrollton, TX.\"",
+                        primaryImg: "../../assets/scalp_analysis_consultation.jpg",
+                        primaryBadge: "Authentic Clinic Consultation · Scope Diagnostics",
+                        primaryCaption: "High-Magnification Trichoscopic Scalp Analysis",
+                        primaryFilename: "scalp_analysis_consultation.jpg",
+                        thumb1Img: "../../assets/unisex_scalp_couple.jpg",
+                        thumb1Caption: "Pre-Treatment Density Assessment",
+                        thumb1Filename: "unisex_scalp_couple.jpg",
+                        thumb2Img: "../../assets/dep_scalp_woman_treatment.jpg",
+                        thumb2Caption: "Clinical Protocol Administration",
+                        thumb2Filename: "dep_scalp_woman_treatment.jpg"
+                    }
                 },
                 {
                     versionNum: "3 of 4",
@@ -3284,7 +3382,22 @@
                     description: "Experience our $399 Korean Scalp Reset. Medically guided, FDA-cleared technology. Concerned about thinning or shedding? Start your personalized scalp assessment today.",
                     callouts: ["✦ Cellular Diagnostics", "✦ DEP Follicle Infusion", "✦ Real Results"],
                     pairedHeadlines: "H5 + H7 + H2",
-                    pairedDesc: "D3 + D1"
+                    pairedDesc: "D3 + D1",
+                    visualAngle: {
+                        pill: "Angle 3 of 4: Medical vs Head Spa Contrast",
+                        headline: "More Than a Head Spa | Cellular Follicle Rejuvenation",
+                        brief: "\"Cellular-level follicle contrast demonstrating medical transdermal delivery into the dermal layer vs superficial hair washing at a head spa.\"",
+                        primaryImg: "../../assets/dep_scalp_woman_treatment.jpg",
+                        primaryBadge: "Clinical Treatment Bed · Dermal Delivery",
+                        primaryCaption: "DEP Medical Transdermal Delivery (Sub-Dermal Active Infusion)",
+                        primaryFilename: "dep_scalp_woman_treatment.jpg",
+                        thumb1Img: "../../assets/unisex_scalp_couple.jpg",
+                        thumb1Caption: "Deep Root Follicle Support",
+                        thumb1Filename: "unisex_scalp_couple.jpg",
+                        thumb2Img: "../../assets/scalp_analysis_consultation.jpg",
+                        thumb2Caption: "Clinical Scalp Diagnostics",
+                        thumb2Filename: "scalp_analysis_consultation.jpg"
+                    }
                 },
                 {
                     versionNum: "4 of 4",
@@ -3294,7 +3407,22 @@
                     description: "Concerned about thinning or shedding? Start your personalized scalp assessment today. Experience our $399 Korean Scalp Reset. Medically guided, FDA-cleared technology.",
                     callouts: ["✦ Zero Needles", "✦ Transdermal DEP", "✦ No Downtime"],
                     pairedHeadlines: "H4 + H8 + Brand",
-                    pairedDesc: "D1 + D3"
+                    pairedDesc: "D1 + D3",
+                    visualAngle: {
+                        pill: "Angle 4 of 4: Needle-Free Transdermal Tech",
+                        headline: "Needle-Free Hair Rejuvenation | FDA-Cleared DEP Tech",
+                        brief: "\"Close-up macro demonstration of the FDA-cleared DEP handheld applicator delivering active peptides into follicles with zero needles or pain.\"",
+                        primaryImg: "../../assets/dep_scalp_woman_treatment.jpg",
+                        primaryBadge: "FDA-Cleared Technology · Needle-Free",
+                        primaryCaption: "Handheld DEP Applicator Delivering Actives Without Injections",
+                        primaryFilename: "dep_scalp_woman_treatment.jpg",
+                        thumb1Img: "../../assets/scalp_analysis_consultation.jpg",
+                        thumb1Caption: "Digital Follicle Mapping",
+                        thumb1Filename: "scalp_analysis_consultation.jpg",
+                        thumb2Img: "../../assets/unisex_scalp_couple.jpg",
+                        thumb2Caption: "Full Scalp Treatment Area",
+                        thumb2Filename: "unisex_scalp_couple.jpg"
+                    }
                 }
             ],
             ag2: [
@@ -3306,7 +3434,22 @@
                     description: "Target thinning where it starts with non-surgical cellular scalp reset for women. Physician-supervised Korean follicular protocols tailored for female hair wellness.",
                     callouts: ["✦ For Widening Parts", "✦ Non-Surgical DEP", "✦ Female Protocols"],
                     pairedHeadlines: "H1 + H6 + Brand",
-                    pairedDesc: "D1 + D2"
+                    pairedDesc: "D1 + D2",
+                    visualAngle: {
+                        pill: "Angle 1 of 4: Widening Part Detection",
+                        headline: "Widening Part? | Female Follicle Restoration",
+                        brief: "\"Macro top-down view of female scalp parting line illustrating early follicular spacing and hair miniaturization.\"",
+                        primaryImg: "../../assets/scalp_concern_parting.jpg",
+                        primaryBadge: "Authentic Scalp Analysis · Parting Focus",
+                        primaryCaption: "Female Scalp Parting Line & Hair Miniaturization Assessment",
+                        primaryFilename: "scalp_concern_parting.jpg",
+                        thumb1Img: "../../assets/dep_scalp_woman_treatment.jpg",
+                        thumb1Caption: "Targeted Parting Infusion",
+                        thumb1Filename: "dep_scalp_woman_treatment.jpg",
+                        thumb2Img: "../../assets/scalp_concern_texture.jpg",
+                        thumb2Caption: "Scalp Barrier & Skin Texture",
+                        thumb2Filename: "scalp_concern_texture.jpg"
+                    }
                 },
                 {
                     versionNum: "2 of 4",
@@ -3316,7 +3459,22 @@
                     description: "Physician-supervised Korean follicular protocols tailored for female hair wellness. Non-invasive transdermal infusion restores cellular vitality to sluggish follicles.",
                     callouts: ["✦ $399 Intro Reset", "✦ Korean Tech", "✦ Carrollton Clinic"],
                     pairedHeadlines: "H3 + H2 + Brand",
-                    pairedDesc: "D2 + D3"
+                    pairedDesc: "D2 + D3",
+                    visualAngle: {
+                        pill: "Angle 2 of 4: Female Scalp Reset ($399)",
+                        headline: "$399 Female Scalp Reset | Restorative Korean Protocol",
+                        brief: "\"Comfortable clinical suite environment showcasing a woman receiving the non-invasive Korean Scalp Reset treatment.\"",
+                        primaryImg: "../../assets/dep_scalp_woman_treatment.jpg",
+                        primaryBadge: "Authentic Treatment Suite · Female Care",
+                        primaryCaption: "Targeted Korean Scalp Reset for Women ($399)",
+                        primaryFilename: "dep_scalp_woman_treatment.jpg",
+                        thumb1Img: "../../assets/scalp_concern_parting.jpg",
+                        thumb1Caption: "Parting Line Targeting",
+                        thumb1Filename: "scalp_concern_parting.jpg",
+                        thumb2Img: "../../assets/scalp_concern_texture.jpg",
+                        thumb2Caption: "Healthy Follicular Environment",
+                        thumb2Filename: "scalp_concern_texture.jpg"
+                    }
                 },
                 {
                     versionNum: "3 of 4",
@@ -3326,7 +3484,22 @@
                     description: "Target thinning where it starts with non-surgical cellular scalp reset for women. Experience our $399 Female Scalp Reset in Carrollton.",
                     callouts: ["✦ Restorative Care", "✦ Scalp Diagnostics", "✦ FDA-Cleared"],
                     pairedHeadlines: "H4 + H5 + Brand",
-                    pairedDesc: "D1 + D4"
+                    pairedDesc: "D1 + D4",
+                    visualAngle: {
+                        pill: "Angle 3 of 4: Hairline & Parting Density",
+                        headline: "Restore Hairline & Parting Density | Women's Scalp Care",
+                        brief: "\"High-definition inspection of temporal hairline and frontal part density, focusing on cellular root activation.\"",
+                        primaryImg: "../../assets/scalp_concern_parting.jpg",
+                        primaryBadge: "Diagnostic Scope · Density Check",
+                        primaryCaption: "Frontal Parting & Temple Hairline Density Check",
+                        primaryFilename: "scalp_concern_parting.jpg",
+                        thumb1Img: "../../assets/dep_scalp_woman_treatment.jpg",
+                        thumb1Caption: "Cellular Peptide Delivery",
+                        thumb1Filename: "dep_scalp_woman_treatment.jpg",
+                        thumb2Img: "../../assets/scalp_concern_texture.jpg",
+                        thumb2Caption: "Micro-Circulation Support",
+                        thumb2Filename: "scalp_concern_texture.jpg"
+                    }
                 },
                 {
                     versionNum: "4 of 4",
@@ -3336,7 +3509,22 @@
                     description: "Non-invasive transdermal infusion restores cellular vitality to sluggish follicles. Physician-supervised Korean follicular protocols tailored for female hair wellness.",
                     callouts: ["✦ Pain-Free Delivery", "✦ Cellular Vitality", "✦ Medically Guided"],
                     pairedHeadlines: "H7 + H8 + Brand",
-                    pairedDesc: "D3 + D2"
+                    pairedDesc: "D3 + D2",
+                    visualAngle: {
+                        pill: "Angle 4 of 4: Needle-Free Clinical Infusion",
+                        headline: "Pain-Free Scalp Infusion | Zero Needles · Zero Downtime",
+                        brief: "\"Gentle glide of the DEP transdermal device along the female scalp line, emphasizing pain-free comfort and zero downtime.\"",
+                        primaryImg: "../../assets/dep_scalp_woman_treatment.jpg",
+                        primaryBadge: "DEP Transdermal · Zero Injections",
+                        primaryCaption: "Comfortable DEP Transdermal Applicator (Zero Injections)",
+                        primaryFilename: "dep_scalp_woman_treatment.jpg",
+                        thumb1Img: "../../assets/scalp_concern_parting.jpg",
+                        thumb1Caption: "Part Line Follicle Nutrition",
+                        thumb1Filename: "scalp_concern_parting.jpg",
+                        thumb2Img: "../../assets/scalp_concern_texture.jpg",
+                        thumb2Caption: "Surface Barrier Normalization",
+                        thumb2Filename: "scalp_concern_texture.jpg"
+                    }
                 }
             ],
             ag3: [
@@ -3348,7 +3536,22 @@
                     description: "Maintain hairline density & crown health with needle-free transdermal delivery. Clinical scalp rejuvenation engineered for male-pattern thinning in Carrollton.",
                     callouts: ["✦ Hairline Maintenance", "✦ Non-Surgical", "✦ Carrollton Clinic"],
                     pairedHeadlines: "H1 + H6 + Brand",
-                    pairedDesc: "D1 + D2"
+                    pairedDesc: "D1 + D2",
+                    visualAngle: {
+                        pill: "Angle 1 of 4: Receding Hairline Prevention",
+                        headline: "Hairline Receding? | Act Early with Korean Scalp Care",
+                        brief: "\"Close examination of frontal hairline recession (temple angles) demonstrating non-surgical preventive scalp support.\"",
+                        primaryImg: "../../assets/scalp_concern_hairline.jpg",
+                        primaryBadge: "Authentic Scalp Analysis · Hairline Focus",
+                        primaryCaption: "Male Frontal & Temple Hairline Recession Pattern",
+                        primaryFilename: "scalp_concern_hairline.jpg",
+                        thumb1Img: "../../assets/dep_scalp_man_treatment.jpg",
+                        thumb1Caption: "Needle-Free Hairline Infusion",
+                        thumb1Filename: "dep_scalp_man_treatment.jpg",
+                        thumb2Img: "../../assets/dep_hair_man.jpg",
+                        thumb2Caption: "Male Hair Density Consultation",
+                        thumb2Filename: "dep_hair_man.jpg"
+                    }
                 },
                 {
                     versionNum: "2 of 4",
@@ -3358,7 +3561,22 @@
                     description: "Clinical scalp rejuvenation engineered for male-pattern thinning in Carrollton. Non-surgical follicular stimulation targets DHT buildup & sluggish follicles.",
                     callouts: ["✦ $399 Special", "✦ Korean Technology", "✦ DHT Scalp Care"],
                     pairedHeadlines: "H3 + H2 + Brand",
-                    pairedDesc: "D2 + D3"
+                    pairedDesc: "D2 + D3",
+                    visualAngle: {
+                        pill: "Angle 2 of 4: Male Scalp Reset ($399)",
+                        headline: "Men's Hair Loss Dallas | $399 Korean Scalp Reset",
+                        brief: "\"Active clinical treatment on male patient in Carrollton, TX delivering Korean scalp rejuvenation for $399.\"",
+                        primaryImg: "../../assets/dep_scalp_man_treatment.jpg",
+                        primaryBadge: "Clinical Treatment Bed · Male Protocol",
+                        primaryCaption: "Clinical Scalp Infusion for Male Thinning ($399 Special)",
+                        primaryFilename: "dep_scalp_man_treatment.jpg",
+                        thumb1Img: "../../assets/scalp_concern_hairline.jpg",
+                        thumb1Caption: "Hairline Assessment",
+                        thumb1Filename: "scalp_concern_hairline.jpg",
+                        thumb2Img: "../../assets/dep_hair_man.jpg",
+                        thumb2Caption: "Crown & Temple Care",
+                        thumb2Filename: "dep_hair_man.jpg"
+                    }
                 },
                 {
                     versionNum: "3 of 4",
@@ -3368,7 +3586,22 @@
                     description: "Non-surgical follicular stimulation targets DHT buildup & sluggish follicles. Maintain hairline density & crown health with needle-free transdermal delivery.",
                     callouts: ["✦ Crown Revitalization", "✦ Transdermal DEP", "✦ Zero Needles"],
                     pairedHeadlines: "H4 + H5 + Brand",
-                    pairedDesc: "D3 + D1"
+                    pairedDesc: "D3 + D1",
+                    visualAngle: {
+                        pill: "Angle 3 of 4: Crown & Vertex Stimulation",
+                        headline: "Crown Thinning Care | Non-Surgical Follicle Stimulation",
+                        brief: "\"Overhead vertex angle targeting crown thinning, stimulating sluggish follicles to resist DHT-related miniaturization.\"",
+                        primaryImg: "../../assets/dep_scalp_man_treatment.jpg",
+                        primaryBadge: "Vertex Targeting · DHT Defense",
+                        primaryCaption: "Crown & Vertex Targeting via Transdermal DEP",
+                        primaryFilename: "dep_scalp_man_treatment.jpg",
+                        thumb1Img: "../../assets/dep_hair_man.jpg",
+                        thumb1Caption: "Non-Surgical Follicle Activation",
+                        thumb1Filename: "dep_hair_man.jpg",
+                        thumb2Img: "../../assets/scalp_concern_hairline.jpg",
+                        thumb2Caption: "Hairline Boundary Check",
+                        thumb2Filename: "scalp_concern_hairline.jpg"
+                    }
                 },
                 {
                     versionNum: "4 of 4",
@@ -3378,7 +3611,22 @@
                     description: "Maintain hairline density & crown health with needle-free transdermal delivery. Clinical scalp rejuvenation engineered for male-pattern thinning in Carrollton.",
                     callouts: ["✦ Medically Guided", "✦ Zero Downtime", "✦ Seoul Protocols"],
                     pairedHeadlines: "H7 + H8 + Brand",
-                    pairedDesc: "D1 + D2"
+                    pairedDesc: "D1 + D2",
+                    visualAngle: {
+                        pill: "Angle 4 of 4: Needle-Free Transdermal Care",
+                        headline: "Needle-Free Male Scalp Care | Carrollton Clinic",
+                        brief: "\"Sleek close-up of the medical-grade DEP applicator delivering active nutrients directly to male hair roots without surgery or needles.\"",
+                        primaryImg: "../../assets/dep_scalp_man_treatment.jpg",
+                        primaryBadge: "FDA-Cleared Technology · Zero Needles",
+                        primaryCaption: "Precision Needle-Free DEP Applicator for Men",
+                        primaryFilename: "dep_scalp_man_treatment.jpg",
+                        thumb1Img: "../../assets/dep_hair_man.jpg",
+                        thumb1Caption: "Physician-Guided Protocol",
+                        thumb1Filename: "dep_hair_man.jpg",
+                        thumb2Img: "../../assets/scalp_concern_hairline.jpg",
+                        thumb2Caption: "Recession Line Treatment",
+                        thumb2Filename: "scalp_concern_hairline.jpg"
+                    }
                 }
             ]
         };
@@ -3441,6 +3689,37 @@
 
             const cardPairing = document.getElementById(`${group}-card-pairing`);
             if (cardPairing) cardPairing.innerText = `${data.pairedHeadlines} | ${data.pairedDesc}`;
+
+            // Update Visual Angle (Display / Performance Max Asset Brief) elements
+            if (data.visualAngle) {
+                const vaPill = document.getElementById(`${group}-visual-angle-pill`);
+                const vaHeadline = document.getElementById(`${group}-pmax-headline`);
+                const vaBrief = document.getElementById(`${group}-visual-brief`);
+                const vaImg = document.getElementById(`${group}-visual-primary-img`);
+                const vaBadge = document.getElementById(`${group}-visual-primary-badge`);
+                const vaCaption = document.getElementById(`${group}-visual-primary-caption`);
+                const vaFilename = document.getElementById(`${group}-visual-primary-filename`);
+                const vaThumb1Img = document.getElementById(`${group}-visual-thumb1-img`);
+                const vaThumb1Caption = document.getElementById(`${group}-visual-thumb1-caption`);
+                const vaThumb1Filename = document.getElementById(`${group}-visual-thumb1-filename`);
+                const vaThumb2Img = document.getElementById(`${group}-visual-thumb2-img`);
+                const vaThumb2Caption = document.getElementById(`${group}-visual-thumb2-caption`);
+                const vaThumb2Filename = document.getElementById(`${group}-visual-thumb2-filename`);
+
+                if (vaPill) vaPill.innerText = data.visualAngle.pill;
+                if (vaHeadline) vaHeadline.innerText = data.visualAngle.headline;
+                if (vaBrief) vaBrief.innerText = data.visualAngle.brief;
+                if (vaImg && data.visualAngle.primaryImg) vaImg.src = data.visualAngle.primaryImg;
+                if (vaBadge && data.visualAngle.primaryBadge) vaBadge.innerText = data.visualAngle.primaryBadge;
+                if (vaCaption && data.visualAngle.primaryCaption) vaCaption.innerText = data.visualAngle.primaryCaption;
+                if (vaFilename && data.visualAngle.primaryFilename) vaFilename.innerText = data.visualAngle.primaryFilename;
+                if (vaThumb1Img && data.visualAngle.thumb1Img) vaThumb1Img.src = data.visualAngle.thumb1Img;
+                if (vaThumb1Caption && data.visualAngle.thumb1Caption) vaThumb1Caption.innerText = data.visualAngle.thumb1Caption;
+                if (vaThumb1Filename && data.visualAngle.thumb1Filename) vaThumb1Filename.innerText = data.visualAngle.thumb1Filename;
+                if (vaThumb2Img && data.visualAngle.thumb2Img) vaThumb2Img.src = data.visualAngle.thumb2Img;
+                if (vaThumb2Caption && data.visualAngle.thumb2Caption) vaThumb2Caption.innerText = data.visualAngle.thumb2Caption;
+                if (vaThumb2Filename && data.visualAngle.thumb2Filename) vaThumb2Filename.innerText = data.visualAngle.thumb2Filename;
+            }
         }
 
         function changeAdVersion(group, delta) {
