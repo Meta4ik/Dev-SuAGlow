@@ -462,6 +462,16 @@
 
             // ── 2. Campaigns, Promos & Skincare Shop ──
             {
+                title: "Google Ads: Korean Scalp & Hair Reset ($399)",
+                path: "internal/google-ads-scalp-reset.html",
+                category: "campaigns",
+                categoryLabel: "Ad Campaign Studio",
+                status: "Live Blueprint",
+                icon: "layout-template",
+                desc: "Complete Google Ads campaign staging portal: SERP mockups, exact match keywords, headlines, descriptions, extensions, and negatives across 3 ad groups.",
+                tags: ["google ads", "scalp reset", "campaign", "ad groups", "keywords", "headlines", "ppc", "serp"]
+            },
+            {
                 title: "The SuA Glow September Edit (Specials)",
                 path: "specials-september.html",
                 category: "campaigns",
@@ -834,11 +844,17 @@
 
         // Helper: Generate Relative Link (from /internal/ to target)
         function getRelativeHref(relativePath) {
+            if (relativePath.startsWith('internal/')) {
+                return relativePath.replace('internal/', '');
+            }
             return '../' + relativePath;
         }
 
         // Helper: Generate Clean Absolute URL (for clipboard sharing)
         function getFullUrl(relativePath) {
+            if (relativePath.startsWith('internal/')) {
+                return new URL(relativePath.replace('internal/', ''), window.location.href).href;
+            }
             return new URL('../' + relativePath, window.location.href).href;
         }
 
