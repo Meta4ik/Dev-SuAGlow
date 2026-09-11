@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Main Site Styles -->
-    <link rel="stylesheet" href="../../dist/output.css?v=88">
+    <link rel="stylesheet" href="../../dist/output.css?v=89">
 
     <!-- Developer Anti-Cache Script -->
     <script src="../../nocache.js"></script>
@@ -609,6 +609,7 @@
 
                         <!-- 4-Version RSA Rotator Controller -->
                         <div class="p-4 sm:p-5 rounded-2xl bg-black/40 border border-white/15 text-white shadow-sm space-y-4">
+                            <!-- Header Info & Navigation Controls (Right where they were) -->
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/10">
                                 <div>
                                     <div class="flex items-center gap-2">
@@ -616,11 +617,11 @@
                                         <span class="text-xs text-slate-300 font-medium">Dynamic Ad Rotations (4 Variations)</span>
                                     </div>
                                     <p class="text-xs text-slate-400 mt-1 leading-snug">
-                                        Google dynamically tests headline &amp; description pairings based on query intent. Select or cycle variations:
+                                        Google dynamically tests headline &amp; description pairings based on query intent:
                                     </p>
                                 </div>
 
-                                <!-- Large Back / Forth Arrow Buttons & Version Display -->
+                                <!-- Back / Forth Arrow Buttons & Version Display -->
                                 <div class="flex items-center gap-2 shrink-0">
                                     <button type="button" onclick="changeAdVersion('ag1', -1)" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-95 border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer group" title="Previous Ad Version">
                                         <i data-lucide="arrow-left" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
@@ -636,81 +637,36 @@
                                 </div>
                             </div>
 
-                            <!-- 4 Direct Version Selector Vertical Cards -->
-                            <div class="flex flex-col gap-2.5">
-                                <!-- Variation 1 -->
-                                <button type="button" onclick="setAdVersion('ag1', 0)" id="ag1-ver-btn-0" class="ag1-ver-btn p-3.5 sm:p-4 rounded-xl border border-[#E5B869] bg-[#E5B869]/15 text-white transition-all text-left shadow-xs ring-1 ring-[#E5B869] cursor-pointer group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="ver-badge px-2.5 py-0.5 rounded bg-[#E5B869] text-slate-950 text-[11px] font-mono font-bold shrink-0">VERSION 1</span>
-                                            <span class="text-sm font-semibold text-white">Value &amp; Introductory Price Offer</span>
-                                        </div>
-                                        <span class="ver-query text-xs font-mono text-amber-300 shrink-0">Query: "Korean scalp treatment"</span>
-                                    </div>
-                                    <div class="ver-subtext text-xs text-slate-300 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-                                        <span><strong class="text-slate-400">Headlines:</strong> Hair Loss? Think Scalp. | $399 Korean Scalp Reset | SuA Glow Med Spa</span>
-                                        <span class="text-slate-500">•</span>
-                                        <span><strong class="text-slate-400">Pairing:</strong> H1 + H2 + Brand | D1 + D2</span>
-                                    </div>
-                                </button>
-
-                                <!-- Variation 2 -->
-                                <button type="button" onclick="setAdVersion('ag1', 1)" id="ag1-ver-btn-1" class="ag1-ver-btn p-3.5 sm:p-4 rounded-xl border border-white/10 bg-black/40 hover:bg-white/5 text-slate-300 transition-all text-left cursor-pointer group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="ver-badge px-2.5 py-0.5 rounded bg-white/10 text-slate-400 text-[11px] font-mono font-bold shrink-0">VERSION 2</span>
-                                            <span class="text-sm font-semibold text-white">Local Authority &amp; Direct Hair Loss Intent</span>
-                                        </div>
-                                        <span class="ver-query text-xs font-mono text-slate-400 shrink-0">Query: "hair loss treatment near me"</span>
-                                    </div>
-                                    <div class="ver-subtext text-xs text-slate-400 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-                                        <span><strong class="text-slate-500">Headlines:</strong> Hair Loss Clinic Near Me | Scalp Rejuvenation Dallas | SuA Glow Med Spa</span>
-                                        <span class="text-slate-600">•</span>
-                                        <span><strong class="text-slate-500">Pairing:</strong> H3 + H4 + Brand | D1 + D2</span>
-                                    </div>
-                                </button>
-
-                                <!-- Variation 3 -->
-                                <button type="button" onclick="setAdVersion('ag1', 2)" id="ag1-ver-btn-2" class="ag1-ver-btn p-3.5 sm:p-4 rounded-xl border border-white/10 bg-black/40 hover:bg-white/5 text-slate-300 transition-all text-left cursor-pointer group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="ver-badge px-2.5 py-0.5 rounded bg-white/10 text-slate-400 text-[11px] font-mono font-bold shrink-0">VERSION 3</span>
-                                            <span class="text-sm font-semibold text-white">Head Spa Differentiation (Clinical vs Relaxing)</span>
-                                        </div>
-                                        <span class="ver-query text-xs font-mono text-slate-400 shrink-0">Query: "Korean head spa Dallas"</span>
-                                    </div>
-                                    <div class="ver-subtext text-xs text-slate-400 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-                                        <span><strong class="text-slate-500">Headlines:</strong> More Than a Head Spa | $399 Korean Scalp Reset | SuA Glow Med Spa</span>
-                                        <span class="text-slate-600">•</span>
-                                        <span><strong class="text-slate-500">Pairing:</strong> H5 + H2 + Brand | D3 + D1</span>
-                                    </div>
-                                </button>
-
-                                <!-- Variation 4 -->
-                                <button type="button" onclick="setAdVersion('ag1', 3)" id="ag1-ver-btn-3" class="ag1-ver-btn p-3.5 sm:p-4 rounded-xl border border-white/10 bg-black/40 hover:bg-white/5 text-slate-300 transition-all text-left cursor-pointer group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="ver-badge px-2.5 py-0.5 rounded bg-white/10 text-slate-400 text-[11px] font-mono font-bold shrink-0">VERSION 4</span>
-                                            <span class="text-sm font-semibold text-white">Needle-Free Follicle Infusion &amp; Science Focus</span>
-                                        </div>
-                                        <span class="ver-query text-xs font-mono text-slate-400 shrink-0">Query: "scalp treatment for hair loss"</span>
-                                    </div>
-                                    <div class="ver-subtext text-xs text-slate-400 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-                                        <span><strong class="text-slate-500">Headlines:</strong> Needle-Free Follicle Infusion | Medically Guided Scalp Care | SuA Glow Med Spa</span>
-                                        <span class="text-slate-600">•</span>
-                                        <span><strong class="text-slate-500">Pairing:</strong> H6 + H7 + Brand | D3 + D2</span>
-                                    </div>
-                                </button>
-                            </div>
-
-                            <!-- Active Combination Context Card -->
-                            <div class="p-3 rounded-xl bg-black/50 border border-white/10 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                                <div class="space-y-0.5">
-                                    <div class="text-slate-400 text-[11px]">Active Pairings: <span class="text-slate-200 font-mono font-medium" id="ag1-ver-paired">H1 + H2 + Brand | D1 + D2</span></div>
-                                    <div class="text-[#E5B869] font-semibold text-xs sm:text-sm" id="ag1-ver-name">Version 1: Value &amp; Introductory Price Offer</div>
+                            <!-- The SINGLE Active Ad Card (Vertical Rows For All Information) -->
+                            <div class="p-4 sm:p-5 rounded-2xl border border-[#E5B869] bg-gradient-to-b from-[#E5B869]/15 via-black/40 to-black/60 text-white shadow-md ring-1 ring-[#E5B869]/40 space-y-3">
+                                <!-- Row 1: Version Badge & Counter -->
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-0.5 rounded bg-[#E5B869] text-slate-950 text-xs font-mono font-bold" id="ag1-card-badge">VERSION 1</span>
+                                    <span class="text-xs font-mono text-slate-400" id="ag1-card-counter">Variation 1 of 4</span>
                                 </div>
-                                <div class="shrink-0 px-2.5 py-1 rounded bg-white/10 text-[11px] font-mono text-slate-300" id="ag1-ver-trigger">
-                                    Query: "Korean scalp treatment"
+
+                                <!-- Row 2: Title on its OWN LINE (Full Width) -->
+                                <div class="text-base sm:text-lg font-bold text-white tracking-tight leading-snug" id="ag1-card-title">
+                                    Value &amp; Introductory Price Offer
+                                </div>
+
+                                <!-- Row 3: Query on its OWN LINE below title -->
+                                <div class="text-xs font-mono text-amber-300 flex items-center gap-1.5" id="ag1-card-query">
+                                    <i data-lucide="search" class="w-3.5 h-3.5 text-amber-400"></i>
+                                    <span>Query: "Korean scalp treatment"</span>
+                                </div>
+
+                                <!-- Row 4: Headlines on their OWN LINE below query -->
+                                <div class="pt-2.5 border-t border-white/10 text-xs sm:text-sm space-y-1.5">
+                                    <div class="text-slate-300 leading-relaxed">
+                                        <span class="text-slate-400 font-semibold block sm:inline">Headlines:</span>
+                                        <span class="text-slate-100 font-medium" id="ag1-card-headlines">Hair Loss? Think Scalp. | $399 Korean Scalp Reset | SuA Glow Med Spa</span>
+                                    </div>
+                                    <!-- Row 5: Pairing info on its OWN LINE below headlines -->
+                                    <div class="text-xs text-slate-400 flex flex-wrap items-center gap-2">
+                                        <span class="text-slate-500 font-semibold">Active Pairing:</span>
+                                        <span class="text-[#E5B869] font-mono font-medium" id="ag1-card-pairing">H1 + H2 + Brand | D1 + D2</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1162,6 +1118,7 @@
 
                         <!-- 4-Version RSA Rotator Controller (Ad Group 2) -->
                         <div class="p-4 sm:p-5 rounded-2xl bg-black/40 border border-white/15 text-white shadow-sm space-y-4">
+                            <!-- Header Info & Navigation Controls (Right where they were) -->
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/10">
                                 <div>
                                     <div class="flex items-center gap-2">
@@ -1173,7 +1130,7 @@
                                     </p>
                                 </div>
 
-                                <!-- Large Back / Forth Arrow Buttons & Version Display -->
+                                <!-- Back / Forth Arrow Buttons & Version Display -->
                                 <div class="flex items-center gap-2 shrink-0">
                                     <button type="button" onclick="changeAdVersion('ag2', -1)" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-95 border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer group" title="Previous Ad Version">
                                         <i data-lucide="arrow-left" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
@@ -1189,81 +1146,36 @@
                                 </div>
                             </div>
 
-                            <!-- 4 Direct Version Selector Vertical Cards -->
-                            <div class="flex flex-col gap-2.5">
-                                <!-- Variation 1 -->
-                                <button type="button" onclick="setAdVersion('ag2', 0)" id="ag2-ver-btn-0" class="ag2-ver-btn p-3.5 sm:p-4 rounded-xl border border-[#E5B869] bg-[#E5B869]/15 text-white transition-all text-left shadow-xs ring-1 ring-[#E5B869] cursor-pointer group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="ver-badge px-2.5 py-0.5 rounded bg-[#E5B869] text-slate-950 text-[11px] font-mono font-bold shrink-0">VERSION 1</span>
-                                            <span class="text-sm font-semibold text-white">Widening Part &amp; Early Female Thinning</span>
-                                        </div>
-                                        <span class="ver-query text-xs font-mono text-amber-300 shrink-0">Query: "female hair loss treatment"</span>
-                                    </div>
-                                    <div class="ver-subtext text-xs text-slate-300 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-                                        <span><strong class="text-slate-400">Headlines:</strong> Widening Part? Don't Wait. | Female Hair Density Care | SuA Glow Med Spa</span>
-                                        <span class="text-slate-500">•</span>
-                                        <span><strong class="text-slate-400">Pairing:</strong> H1 + H6 + Brand | D1 + D2</span>
-                                    </div>
-                                </button>
-
-                                <!-- Variation 2 -->
-                                <button type="button" onclick="setAdVersion('ag2', 1)" id="ag2-ver-btn-1" class="ag2-ver-btn p-3.5 sm:p-4 rounded-xl border border-white/10 bg-black/40 hover:bg-white/5 text-slate-300 transition-all text-left cursor-pointer group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="ver-badge px-2.5 py-0.5 rounded bg-white/10 text-slate-400 text-[11px] font-mono font-bold shrink-0">VERSION 2</span>
-                                            <span class="text-sm font-semibold text-white">Female Intro Offer ($399 Scalp Reset)</span>
-                                        </div>
-                                        <span class="ver-query text-xs font-mono text-slate-400 shrink-0">Query: "female thinning hair treatment"</span>
-                                    </div>
-                                    <div class="ver-subtext text-xs text-slate-400 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-                                        <span><strong class="text-slate-500">Headlines:</strong> $399 Scalp &amp; Hair Reset | Treatment For Thinning Hair | SuA Glow Med Spa</span>
-                                        <span class="text-slate-600">•</span>
-                                        <span><strong class="text-slate-500">Pairing:</strong> H3 + H4 + Brand | D2 + D3</span>
-                                    </div>
-                                </button>
-
-                                <!-- Variation 3 -->
-                                <button type="button" onclick="setAdVersion('ag2', 2)" id="ag2-ver-btn-2" class="ag2-ver-btn p-3.5 sm:p-4 rounded-xl border border-white/10 bg-black/40 hover:bg-white/5 text-slate-300 transition-all text-left cursor-pointer group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="ver-badge px-2.5 py-0.5 rounded bg-white/10 text-slate-400 text-[11px] font-mono font-bold shrink-0">VERSION 3</span>
-                                            <span class="text-sm font-semibold text-white">Parting Density &amp; Hairline Restoration</span>
-                                        </div>
-                                        <span class="ver-query text-xs font-mono text-slate-400 shrink-0">Query: "thinning hair treatment near me"</span>
-                                    </div>
-                                    <div class="ver-subtext text-xs text-slate-400 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-                                        <span><strong class="text-slate-500">Headlines:</strong> Hairline &amp; Parting Density | Personalized Scalp Plan | SuA Glow Med Spa</span>
-                                        <span class="text-slate-600">•</span>
-                                        <span><strong class="text-slate-500">Pairing:</strong> H5 + H2 + Brand | D1 + D3</span>
-                                    </div>
-                                </button>
-
-                                <!-- Variation 4 -->
-                                <button type="button" onclick="setAdVersion('ag2', 3)" id="ag2-ver-btn-3" class="ag2-ver-btn p-3.5 sm:p-4 rounded-xl border border-white/10 bg-black/40 hover:bg-white/5 text-slate-300 transition-all text-left cursor-pointer group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="ver-badge px-2.5 py-0.5 rounded bg-white/10 text-slate-400 text-[11px] font-mono font-bold shrink-0">VERSION 4</span>
-                                            <span class="text-sm font-semibold text-white">Needle-Free Follicle Infusion for Women</span>
-                                        </div>
-                                        <span class="ver-query text-xs font-mono text-slate-400 shrink-0">Query: "needle-free scalp infusion women"</span>
-                                    </div>
-                                    <div class="ver-subtext text-xs text-slate-400 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-                                        <span><strong class="text-slate-500">Headlines:</strong> Needle-Free Scalp Infusion | Korean Cellular Scalp Reset | SuA Glow Med Spa</span>
-                                        <span class="text-slate-600">•</span>
-                                        <span><strong class="text-slate-500">Pairing:</strong> H5 + H1 + Brand | D3 + D1</span>
-                                    </div>
-                                </button>
-                            </div>
-
-                            <!-- Active Combination Context Card -->
-                            <div class="p-3 rounded-xl bg-black/50 border border-white/10 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                                <div class="space-y-0.5">
-                                    <div class="text-slate-400 text-[11px]">Active Pairings: <span class="text-slate-200 font-mono font-medium" id="ag2-ver-paired">H1 + H6 + Brand | D1 + D2</span></div>
-                                    <div class="text-[#E5B869] font-semibold text-xs sm:text-sm" id="ag2-ver-name">Version 1: Widening Part &amp; Early Female Thinning</div>
+                            <!-- The SINGLE Active Ad Card (Vertical Rows For All Information) -->
+                            <div class="p-4 sm:p-5 rounded-2xl border border-[#E5B869] bg-gradient-to-b from-[#E5B869]/15 via-black/40 to-black/60 text-white shadow-md ring-1 ring-[#E5B869]/40 space-y-3">
+                                <!-- Row 1: Version Badge & Counter -->
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-0.5 rounded bg-[#E5B869] text-slate-950 text-xs font-mono font-bold" id="ag2-card-badge">VERSION 1</span>
+                                    <span class="text-xs font-mono text-slate-400" id="ag2-card-counter">Variation 1 of 4</span>
                                 </div>
-                                <div class="shrink-0 px-2.5 py-1 rounded bg-white/10 text-[11px] font-mono text-slate-300" id="ag2-ver-trigger">
-                                    Query: "female hair loss treatment"
+
+                                <!-- Row 2: Title on its OWN LINE (Full Width) -->
+                                <div class="text-base sm:text-lg font-bold text-white tracking-tight leading-snug" id="ag2-card-title">
+                                    Widening Part &amp; Early Female Thinning
+                                </div>
+
+                                <!-- Row 3: Query on its OWN LINE below title -->
+                                <div class="text-xs font-mono text-amber-300 flex items-center gap-1.5" id="ag2-card-query">
+                                    <i data-lucide="search" class="w-3.5 h-3.5 text-amber-400"></i>
+                                    <span>Query: "female hair loss treatment"</span>
+                                </div>
+
+                                <!-- Row 4: Headlines on their OWN LINE below query -->
+                                <div class="pt-2.5 border-t border-white/10 text-xs sm:text-sm space-y-1.5">
+                                    <div class="text-slate-300 leading-relaxed">
+                                        <span class="text-slate-400 font-semibold block sm:inline">Headlines:</span>
+                                        <span class="text-slate-100 font-medium" id="ag2-card-headlines">Widening Part? Don't Wait. | Female Hair Density Care | SuA Glow Med Spa</span>
+                                    </div>
+                                    <!-- Row 5: Pairing info on its OWN LINE below headlines -->
+                                    <div class="text-xs text-slate-400 flex flex-wrap items-center gap-2">
+                                        <span class="text-slate-500 font-semibold">Active Pairing:</span>
+                                        <span class="text-[#E5B869] font-mono font-medium" id="ag2-card-pairing">H1 + H6 + Brand | D1 + D2</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1680,6 +1592,8 @@
 
                         <!-- 4-Version RSA Rotator Controller (Ad Group 3) -->
                         <div class="p-4 sm:p-5 rounded-2xl bg-black/40 border border-white/15 text-white shadow-sm space-y-4">
+                            <!-- Header Info -->
+                            <!-- Header Info & Navigation Controls (Right where they were) -->
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/10">
                                 <div>
                                     <div class="flex items-center gap-2">
@@ -1691,7 +1605,7 @@
                                     </p>
                                 </div>
 
-                                <!-- Large Back / Forth Arrow Buttons & Version Display -->
+                                <!-- Back / Forth Arrow Buttons & Version Display -->
                                 <div class="flex items-center gap-2 shrink-0">
                                     <button type="button" onclick="changeAdVersion('ag3', -1)" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-[#E5B869] hover:text-slate-950 active:scale-95 border border-white/20 text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer group" title="Previous Ad Version">
                                         <i data-lucide="arrow-left" class="w-4 h-4 text-[#E5B869] group-hover:text-slate-950 transition-colors"></i>
@@ -1707,81 +1621,36 @@
                                 </div>
                             </div>
 
-                            <!-- 4 Direct Version Selector Vertical Cards -->
-                            <div class="flex flex-col gap-2.5">
-                                <!-- Variation 1 -->
-                                <button type="button" onclick="setAdVersion('ag3', 0)" id="ag3-ver-btn-0" class="ag3-ver-btn p-3.5 sm:p-4 rounded-xl border border-[#E5B869] bg-[#E5B869]/15 text-white transition-all text-left shadow-xs ring-1 ring-[#E5B869] cursor-pointer group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="ver-badge px-2.5 py-0.5 rounded bg-[#E5B869] text-slate-950 text-[11px] font-mono font-bold shrink-0">VERSION 1</span>
-                                            <span class="text-sm font-semibold text-white">Receding Hairline Maintenance &amp; Prevention</span>
-                                        </div>
-                                        <span class="ver-query text-xs font-mono text-amber-300 shrink-0">Query: "hairline treatment men"</span>
-                                    </div>
-                                    <div class="ver-subtext text-xs text-slate-300 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-                                        <span><strong class="text-slate-400">Headlines:</strong> Hairline Receding? Act Early | Men's Scalp Density Reset | SuA Glow Med Spa</span>
-                                        <span class="text-slate-500">•</span>
-                                        <span><strong class="text-slate-400">Pairing:</strong> H1 + H6 + Brand | D1 + D2</span>
-                                    </div>
-                                </button>
-
-                                <!-- Variation 2 -->
-                                <button type="button" onclick="setAdVersion('ag3', 1)" id="ag3-ver-btn-1" class="ag3-ver-btn p-3.5 sm:p-4 rounded-xl border border-white/10 bg-black/40 hover:bg-white/5 text-slate-300 transition-all text-left cursor-pointer group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="ver-badge px-2.5 py-0.5 rounded bg-white/10 text-slate-400 text-[11px] font-mono font-bold shrink-0">VERSION 2</span>
-                                            <span class="text-sm font-semibold text-white">Male Value Offer &amp; Carrollton Clinic Intent</span>
-                                        </div>
-                                        <span class="ver-query text-xs font-mono text-slate-400 shrink-0">Query: "hair loss clinic Dallas men"</span>
-                                    </div>
-                                    <div class="ver-subtext text-xs text-slate-400 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-                                        <span><strong class="text-slate-500">Headlines:</strong> $399 Korean Scalp Reset | Male Hair Loss Care Dallas | SuA Glow Med Spa</span>
-                                        <span class="text-slate-600">•</span>
-                                        <span><strong class="text-slate-500">Pairing:</strong> H3 + H2 + Brand | D2 + D3</span>
-                                    </div>
-                                </button>
-
-                                <!-- Variation 3 -->
-                                <button type="button" onclick="setAdVersion('ag3', 2)" id="ag3-ver-btn-2" class="ag3-ver-btn p-3.5 sm:p-4 rounded-xl border border-white/10 bg-black/40 hover:bg-white/5 text-slate-300 transition-all text-left cursor-pointer group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="ver-badge px-2.5 py-0.5 rounded bg-white/10 text-slate-400 text-[11px] font-mono font-bold shrink-0">VERSION 3</span>
-                                            <span class="text-sm font-semibold text-white">Crown Thinning &amp; Follicular Stimulation</span>
-                                        </div>
-                                        <span class="ver-query text-xs font-mono text-slate-400 shrink-0">Query: "thinning crown treatment men"</span>
-                                    </div>
-                                    <div class="ver-subtext text-xs text-slate-400 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-                                        <span><strong class="text-slate-500">Headlines:</strong> Crown Density Care for Men | Non-Surgical Hair Care | SuA Glow Med Spa</span>
-                                        <span class="text-slate-600">•</span>
-                                        <span><strong class="text-slate-500">Pairing:</strong> H4 + H5 + Brand | D3 + D1</span>
-                                    </div>
-                                </button>
-
-                                <!-- Variation 4 -->
-                                <button type="button" onclick="setAdVersion('ag3', 3)" id="ag3-ver-btn-3" class="ag3-ver-btn p-3.5 sm:p-4 rounded-xl border border-white/10 bg-black/40 hover:bg-white/5 text-slate-300 transition-all text-left cursor-pointer group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="ver-badge px-2.5 py-0.5 rounded bg-white/10 text-slate-400 text-[11px] font-mono font-bold shrink-0">VERSION 4</span>
-                                            <span class="text-sm font-semibold text-white">Needle-Free Transdermal Follicle Care for Men</span>
-                                        </div>
-                                        <span class="ver-query text-xs font-mono text-slate-400 shrink-0">Query: "men's hair clinic near me"</span>
-                                    </div>
-                                    <div class="ver-subtext text-xs text-slate-400 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-                                        <span><strong class="text-slate-500">Headlines:</strong> Men's Follicle Infusion | Medically Guided Male Scalp Care | SuA Glow Med Spa</span>
-                                        <span class="text-slate-600">•</span>
-                                        <span><strong class="text-slate-500">Pairing:</strong> H7 + H8 + Brand | D1 + D2</span>
-                                    </div>
-                                </button>
-                            </div>
-
-                            <!-- Active Combination Context Card -->
-                            <div class="p-3 rounded-xl bg-black/50 border border-white/10 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                                <div class="space-y-0.5">
-                                    <div class="text-slate-400 text-[11px]">Active Pairings: <span class="text-slate-200 font-mono font-medium" id="ag3-ver-paired">H1 + H6 + Brand | D1 + D2</span></div>
-                                    <div class="text-[#E5B869] font-semibold text-xs sm:text-sm" id="ag3-ver-name">Version 1: Receding Hairline Maintenance &amp; Prevention</div>
+                            <!-- The SINGLE Active Ad Card (Vertical Rows For All Information) -->
+                            <div class="p-4 sm:p-5 rounded-2xl border border-[#E5B869] bg-gradient-to-b from-[#E5B869]/15 via-black/40 to-black/60 text-white shadow-md ring-1 ring-[#E5B869]/40 space-y-3">
+                                <!-- Row 1: Version Badge & Counter -->
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-0.5 rounded bg-[#E5B869] text-slate-950 text-xs font-mono font-bold" id="ag3-card-badge">VERSION 1</span>
+                                    <span class="text-xs font-mono text-slate-400" id="ag3-card-counter">Variation 1 of 4</span>
                                 </div>
-                                <div class="shrink-0 px-2.5 py-1 rounded bg-white/10 text-[11px] font-mono text-slate-300" id="ag3-ver-trigger">
-                                    Query: "hairline treatment men"
+
+                                <!-- Row 2: Title on its OWN LINE (Full Width) -->
+                                <div class="text-base sm:text-lg font-bold text-white tracking-tight leading-snug" id="ag3-card-title">
+                                    Receding Hairline Maintenance &amp; Prevention
+                                </div>
+
+                                <!-- Row 3: Query on its OWN LINE below title -->
+                                <div class="text-xs font-mono text-amber-300 flex items-center gap-1.5" id="ag3-card-query">
+                                    <i data-lucide="search" class="w-3.5 h-3.5 text-amber-400"></i>
+                                    <span>Query: "hairline treatment men"</span>
+                                </div>
+
+                                <!-- Row 4: Headlines on their OWN LINE below query -->
+                                <div class="pt-2.5 border-t border-white/10 text-xs sm:text-sm space-y-1.5">
+                                    <div class="text-slate-300 leading-relaxed">
+                                        <span class="text-slate-400 font-semibold block sm:inline">Headlines:</span>
+                                        <span class="text-slate-100 font-medium" id="ag3-card-headlines">Hairline Receding? Act Early | Men's Scalp Density Reset | SuA Glow Med Spa</span>
+                                    </div>
+                                    <!-- Row 5: Pairing info on its OWN LINE below headlines -->
+                                    <div class="text-xs text-slate-400 flex flex-wrap items-center gap-2">
+                                        <span class="text-slate-500 font-semibold">Active Pairing:</span>
+                                        <span class="text-[#E5B869] font-mono font-medium" id="ag3-card-pairing">H1 + H6 + Brand | D1 + D2</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -3337,35 +3206,27 @@
             const indicator = document.getElementById(`${group}-version-indicator`);
             if (indicator) indicator.innerText = `Ad ${index + 1} of 4`;
 
-            const nameEl = document.getElementById(`${group}-ver-name`);
-            if (nameEl) nameEl.innerText = `Version ${index + 1}: ${data.title}`;
+            // Update the single active variation card elements
+            const cardBadge = document.getElementById(`${group}-card-badge`);
+            if (cardBadge) cardBadge.innerText = `VERSION ${index + 1}`;
 
-            const pairedEl = document.getElementById(`${group}-ver-paired`);
-            if (pairedEl) pairedEl.innerText = `${data.pairedHeadlines} | ${data.pairedDesc}`;
+            const cardCounter = document.getElementById(`${group}-card-counter`);
+            if (cardCounter) cardCounter.innerText = `Variation ${index + 1} of 4`;
 
-            const triggerEl = document.getElementById(`${group}-ver-trigger`);
-            if (triggerEl) triggerEl.innerText = data.triggerQuery;
+            const cardTitle = document.getElementById(`${group}-card-title`);
+            if (cardTitle) cardTitle.innerText = data.title;
 
-            // Update selector button styles
-            for (let i = 0; i < 4; i++) {
-                const btn = document.getElementById(`${group}-ver-btn-${i}`);
-                if (btn) {
-                    const badge = btn.querySelector('.ver-badge');
-                    const queryText = btn.querySelector('.ver-query');
-                    const subText = btn.querySelector('.ver-subtext');
-                    if (i === index) {
-                        btn.className = `${group}-ver-btn p-3.5 sm:p-4 rounded-xl border border-[#E5B869] bg-[#E5B869]/15 text-white transition-all text-left shadow-xs ring-1 ring-[#E5B869] cursor-pointer group`;
-                        if (badge) badge.className = "ver-badge px-2.5 py-0.5 rounded bg-[#E5B869] text-slate-950 text-[11px] font-mono font-bold shrink-0";
-                        if (queryText) queryText.className = "ver-query text-xs font-mono text-amber-300 shrink-0";
-                        if (subText) subText.className = "ver-subtext text-xs text-slate-300 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1";
-                    } else {
-                        btn.className = `${group}-ver-btn p-3.5 sm:p-4 rounded-xl border border-white/10 bg-black/40 hover:bg-white/5 text-slate-300 transition-all text-left cursor-pointer group`;
-                        if (badge) badge.className = "ver-badge px-2.5 py-0.5 rounded bg-white/10 text-slate-400 text-[11px] font-mono font-bold shrink-0";
-                        if (queryText) queryText.className = "ver-query text-xs font-mono text-slate-400 shrink-0";
-                        if (subText) subText.className = "ver-subtext text-xs text-slate-400 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1";
-                    }
-                }
+            const cardQuery = document.getElementById(`${group}-card-query`);
+            if (cardQuery) {
+                cardQuery.innerHTML = `<i data-lucide="search" class="w-3.5 h-3.5 text-amber-400"></i><span>${data.triggerQuery}</span>`;
+                lucide.createIcons();
             }
+
+            const cardHeadlines = document.getElementById(`${group}-card-headlines`);
+            if (cardHeadlines) cardHeadlines.innerText = data.headlines;
+
+            const cardPairing = document.getElementById(`${group}-card-pairing`);
+            if (cardPairing) cardPairing.innerText = `${data.pairedHeadlines} | ${data.pairedDesc}`;
         }
 
         function changeAdVersion(group, delta) {
