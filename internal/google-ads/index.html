@@ -588,22 +588,22 @@
 
                 <!-- Left Column: Visual Ad Layout & Sample (What the User Sees) -->
                 <div class="lg:col-span-6 space-y-6">
-                    <div class="bg-[#121518] text-white rounded-2xl border border-white/12 p-6 sm:p-7 shadow-xl space-y-6">
-                        <div class="space-y-3.5 pb-4 border-b border-white/10">
-                            <div class="w-14 h-14 rounded-2xl bg-blue-500/15 text-blue-400 flex items-center justify-center border border-blue-500/30 shadow-xs">
+                    <div class="bg-[#ECEEF2] text-slate-900 rounded-2xl border border-slate-300/80 p-6 sm:p-7 shadow-md space-y-6">
+                        <div class="space-y-3.5 pb-4 border-b border-slate-300/80">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center border border-blue-500/25 shadow-xs">
                                 <i data-lucide="eye" class="w-7 h-7"></i>
                             </div>
                             <div>
-                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/10 text-slate-300 border border-white/15">Google Search SERP Previews</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 shadow-xs">Google Search SERP Previews</span>
                             </div>
-                            <h3 class="sua-card-title text-white">
+                            <h3 class="sua-card-title text-slate-900">
                                 Visual Ad Layout &amp; Sample (What the User Sees)
                             </h3>
                             <!-- Device Switcher Tabs -->
                             <div class="flex items-center gap-2 pt-1">
                                 <button type="button" onclick="setSerpView('ag1', 'all')" id="ag1-tab-all" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#E5B869] text-slate-950 font-bold transition-all inline-flex items-center gap-1.5 shadow-xs cursor-pointer">Both Views</button>
-                                <button type="button" onclick="setSerpView('ag1', 'desktop')" id="ag1-tab-desktop" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-slate-300 hover:bg-white/20 hover:text-white transition-all inline-flex items-center gap-1.5 cursor-pointer"><i data-lucide="monitor" class="w-3.5 h-3.5"></i> Desktop</button>
-                                <button type="button" onclick="setSerpView('ag1', 'mobile')" id="ag1-tab-mobile" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-slate-300 hover:bg-white/20 hover:text-white transition-all inline-flex items-center gap-1.5 cursor-pointer"><i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Mobile</button>
+                                <button type="button" onclick="setSerpView('ag1', 'desktop')" id="ag1-tab-desktop" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900 border border-slate-300/80 transition-all inline-flex items-center gap-1.5 cursor-pointer shadow-xs"><i data-lucide="monitor" class="w-3.5 h-3.5"></i> Desktop</button>
+                                <button type="button" onclick="setSerpView('ag1', 'mobile')" id="ag1-tab-mobile" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900 border border-slate-300/80 transition-all inline-flex items-center gap-1.5 cursor-pointer shadow-xs"><i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Mobile</button>
                             </div>
                         </div>
 
@@ -673,11 +673,11 @@
 
                         <!-- Desktop SERP Version -->
                         <div id="ag1-serp-desktop" class="space-y-2">
-                            <div class="flex items-center justify-between text-xs text-slate-400 font-medium px-1">
-                                <span class="inline-flex items-center gap-1.5 text-slate-200 font-semibold">
-                                    <i data-lucide="monitor" class="w-3.5 h-3.5 text-blue-400"></i> Desktop SERP Preview
+                            <div class="flex items-center justify-between text-xs text-slate-500 font-medium px-1">
+                                <span class="inline-flex items-center gap-1.5 text-slate-800 font-semibold">
+                                    <i data-lucide="monitor" class="w-3.5 h-3.5 text-blue-600"></i> Desktop SERP Preview
                                 </span>
-                                <span class="text-[11px] font-mono text-slate-400">Desktop Viewport</span>
+                                <span class="text-[11px] font-mono text-slate-600 bg-white px-2.5 py-0.5 rounded border border-slate-200 shadow-2xs">Desktop Viewport</span>
                             </div>
                             <div class="google-serp-card p-4 sm:p-5 border border-slate-100 space-y-3 shadow-lg">
                                 <!-- Top URL & Sponsored Line -->
@@ -719,11 +719,11 @@
 
                         <!-- Mobile SERP Version -->
                         <div id="ag1-serp-mobile" class="space-y-2">
-                            <div class="flex items-center justify-between text-xs text-slate-400 font-medium px-1">
-                                <span class="inline-flex items-center gap-1.5 text-slate-200 font-semibold">
-                                    <i data-lucide="smartphone" class="w-3.5 h-3.5 text-indigo-400"></i> Mobile SERP Preview
+                            <div class="flex items-center justify-between text-xs text-slate-500 font-medium px-1">
+                                <span class="inline-flex items-center gap-1.5 text-slate-800 font-semibold">
+                                    <i data-lucide="smartphone" class="w-3.5 h-3.5 text-indigo-600"></i> Mobile SERP Preview
                                 </span>
-                                <span class="text-[11px] font-mono text-slate-400">Mobile (60%+ Traffic)</span>
+                                <span class="text-[11px] font-mono text-slate-600 bg-white px-2.5 py-0.5 rounded border border-slate-200 shadow-2xs">Mobile (60%+ Traffic)</span>
                             </div>
                             <div class="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-xl space-y-3">
                                 <!-- Mobile Top Site Info & Sponsored -->
@@ -773,17 +773,17 @@
                         </div>
 
                         <!-- Visual Angle (Display / Performance Max Asset Brief) -->
-                        <div class="rounded-xl bg-[#181c22] border border-white/12 p-5 space-y-3.5 text-white shadow-xs">
-                            <div class="space-y-3 pb-3 border-b border-white/10">
-                                <div class="w-12 h-12 rounded-2xl bg-[#AA987C]/20 text-[#E5B869] flex items-center justify-center border border-[#AA987C]/40 shadow-xs">
+                        <div class="rounded-xl bg-white border border-slate-200/90 p-5 space-y-3.5 text-slate-900 shadow-xs">
+                            <div class="space-y-3 pb-3 border-b border-slate-200">
+                                <div class="w-12 h-12 rounded-2xl bg-[#AA987C]/15 text-[#AA987C] flex items-center justify-center border border-[#AA987C]/30 shadow-xs">
                                     <i data-lucide="image" class="w-6 h-6"></i>
                                 </div>
                                 <div>
-                                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-white/10 text-slate-300 border border-white/15">Creative Brief</span>
+                                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200">Creative Brief</span>
                                 </div>
-                                <h4 class="sua-subcard-title text-white">Visual Angle (Display / PMax)</h4>
+                                <h4 class="sua-subcard-title text-slate-900">Visual Angle (Display / PMax)</h4>
                             </div>
-                            <p class="text-sm sm:text-base text-slate-200 italic bg-black/60 p-4 rounded-xl border border-white/10 leading-relaxed">
+                            <p class="text-sm sm:text-base text-slate-700 italic bg-slate-50 p-4 rounded-xl border border-slate-200 leading-relaxed">
                                 "Clean, macro-level cross-section graphic of a hair follicle showing the difference between surface washing and cellular scalp rejuvenation."
                             </p>
 
@@ -1097,22 +1097,22 @@
 
                 <!-- Left Column: Visual Ad Layout & Sample -->
                 <div class="lg:col-span-6 space-y-6">
-                    <div class="bg-[#121518] text-white rounded-2xl border border-white/12 p-6 sm:p-7 shadow-xl space-y-6">
-                        <div class="space-y-3.5 pb-4 border-b border-white/10">
-                            <div class="w-14 h-14 rounded-2xl bg-rose-500/15 text-rose-400 flex items-center justify-center border border-rose-500/30 shadow-xs">
+                    <div class="bg-[#ECEEF2] text-slate-900 rounded-2xl border border-slate-300/80 p-6 sm:p-7 shadow-md space-y-6">
+                        <div class="space-y-3.5 pb-4 border-b border-slate-300/80">
+                            <div class="w-14 h-14 rounded-2xl bg-rose-500/10 text-rose-600 flex items-center justify-center border border-rose-500/25 shadow-xs">
                                 <i data-lucide="eye" class="w-7 h-7"></i>
                             </div>
                             <div>
-                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/10 text-slate-300 border border-white/15">Google Search SERP Previews</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 shadow-xs">Google Search SERP Previews</span>
                             </div>
-                            <h3 class="sua-card-title text-white">
+                            <h3 class="sua-card-title text-slate-900">
                                 Visual Ad Layout &amp; Sample (What the User Sees)
                             </h3>
                             <!-- Device Switcher Tabs -->
                             <div class="flex items-center gap-2 pt-1">
                                 <button type="button" onclick="setSerpView('ag2', 'all')" id="ag2-tab-all" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#E5B869] text-slate-950 font-bold transition-all inline-flex items-center gap-1.5 shadow-xs cursor-pointer">Both Views</button>
-                                <button type="button" onclick="setSerpView('ag2', 'desktop')" id="ag2-tab-desktop" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-slate-300 hover:bg-white/20 hover:text-white transition-all inline-flex items-center gap-1.5 cursor-pointer"><i data-lucide="monitor" class="w-3.5 h-3.5"></i> Desktop</button>
-                                <button type="button" onclick="setSerpView('ag2', 'mobile')" id="ag2-tab-mobile" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-slate-300 hover:bg-white/20 hover:text-white transition-all inline-flex items-center gap-1.5 cursor-pointer"><i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Mobile</button>
+                                <button type="button" onclick="setSerpView('ag2', 'desktop')" id="ag2-tab-desktop" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900 border border-slate-300/80 transition-all inline-flex items-center gap-1.5 cursor-pointer shadow-xs"><i data-lucide="monitor" class="w-3.5 h-3.5"></i> Desktop</button>
+                                <button type="button" onclick="setSerpView('ag2', 'mobile')" id="ag2-tab-mobile" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900 border border-slate-300/80 transition-all inline-flex items-center gap-1.5 cursor-pointer shadow-xs"><i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Mobile</button>
                             </div>
                         </div>
 
@@ -1182,11 +1182,11 @@
 
                         <!-- Desktop SERP Version -->
                         <div id="ag2-serp-desktop" class="space-y-2">
-                            <div class="flex items-center justify-between text-xs text-slate-400 font-medium px-1">
-                                <span class="inline-flex items-center gap-1.5 text-slate-200 font-semibold">
-                                    <i data-lucide="monitor" class="w-3.5 h-3.5 text-blue-400"></i> Desktop SERP Preview
+                            <div class="flex items-center justify-between text-xs text-slate-500 font-medium px-1">
+                                <span class="inline-flex items-center gap-1.5 text-slate-800 font-semibold">
+                                    <i data-lucide="monitor" class="w-3.5 h-3.5 text-blue-600"></i> Desktop SERP Preview
                                 </span>
-                                <span class="text-[11px] font-mono text-slate-400">Desktop Viewport</span>
+                                <span class="text-[11px] font-mono text-slate-600 bg-white px-2.5 py-0.5 rounded border border-slate-200 shadow-2xs">Desktop Viewport</span>
                             </div>
                             <div class="google-serp-card p-4 sm:p-5 border border-slate-100 space-y-3 shadow-lg">
                                 <div class="flex items-center justify-between">
@@ -1227,11 +1227,11 @@
 
                         <!-- Mobile SERP Version -->
                         <div id="ag2-serp-mobile" class="space-y-2">
-                            <div class="flex items-center justify-between text-xs text-slate-400 font-medium px-1">
-                                <span class="inline-flex items-center gap-1.5 text-slate-200 font-semibold">
-                                    <i data-lucide="smartphone" class="w-3.5 h-3.5 text-indigo-400"></i> Mobile SERP Preview
+                            <div class="flex items-center justify-between text-xs text-slate-500 font-medium px-1">
+                                <span class="inline-flex items-center gap-1.5 text-slate-800 font-semibold">
+                                    <i data-lucide="smartphone" class="w-3.5 h-3.5 text-indigo-600"></i> Mobile SERP Preview
                                 </span>
-                                <span class="text-[11px] font-mono text-slate-400">Mobile (60%+ Traffic)</span>
+                                <span class="text-[11px] font-mono text-slate-600 bg-white px-2.5 py-0.5 rounded border border-slate-200 shadow-2xs">Mobile (60%+ Traffic)</span>
                             </div>
                             <div class="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-xl space-y-3">
                                 <!-- Mobile Top Site Info & Sponsored -->
@@ -1281,17 +1281,17 @@
                         </div>
 
                         <!-- Visual Angle (Display / Performance Max Asset Brief) -->
-                        <div class="rounded-xl bg-[#181c22] border border-white/12 p-5 space-y-3.5 text-white shadow-xs">
-                            <div class="space-y-3 pb-3 border-b border-white/10">
-                                <div class="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-300 flex items-center justify-center border border-rose-500/40 shadow-xs">
+                        <div class="rounded-xl bg-white border border-slate-200/90 p-5 space-y-3.5 text-slate-900 shadow-xs">
+                            <div class="space-y-3 pb-3 border-b border-slate-200">
+                                <div class="w-12 h-12 rounded-2xl bg-rose-500/15 text-rose-600 flex items-center justify-center border border-rose-500/30 shadow-xs">
                                     <i data-lucide="image" class="w-6 h-6"></i>
                                 </div>
                                 <div>
-                                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-white/10 text-slate-300 border border-white/15">Creative Brief</span>
+                                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200">Creative Brief</span>
                                 </div>
-                                <h4 class="sua-subcard-title text-white">Visual Angle (Display / PMax)</h4>
+                                <h4 class="sua-subcard-title text-slate-900">Visual Angle (Display / PMax)</h4>
                             </div>
-                            <p class="text-sm sm:text-base text-slate-200 italic bg-black/60 p-4 rounded-xl border border-white/10 leading-relaxed">
+                            <p class="text-sm sm:text-base text-slate-700 italic bg-slate-50 p-4 rounded-xl border border-slate-200 leading-relaxed">
                                 "Top-down view of a female scalp showing a widening part, transitioning into a calming, clinical needle-free infusion treatment."
                             </p>
 
@@ -1571,22 +1571,22 @@
 
                 <!-- Left Column: Visual Ad Layout & Sample -->
                 <div class="lg:col-span-6 space-y-6">
-                    <div class="bg-[#121518] text-white rounded-2xl border border-white/12 p-6 sm:p-7 shadow-xl space-y-6">
-                        <div class="space-y-3.5 pb-4 border-b border-white/10">
-                            <div class="w-14 h-14 rounded-2xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center border border-indigo-500/30 shadow-xs">
+                    <div class="bg-[#ECEEF2] text-slate-900 rounded-2xl border border-slate-300/80 p-6 sm:p-7 shadow-md space-y-6">
+                        <div class="space-y-3.5 pb-4 border-b border-slate-300/80">
+                            <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center border border-indigo-500/25 shadow-xs">
                                 <i data-lucide="eye" class="w-7 h-7"></i>
                             </div>
                             <div>
-                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/10 text-slate-300 border border-white/15">Google Search SERP Previews</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 shadow-xs">Google Search SERP Previews</span>
                             </div>
-                            <h3 class="sua-card-title text-white">
+                            <h3 class="sua-card-title text-slate-900">
                                 Visual Ad Layout &amp; Sample (What the User Sees)
                             </h3>
                             <!-- Device Switcher Tabs -->
                             <div class="flex items-center gap-2 pt-1">
                                 <button type="button" onclick="setSerpView('ag3', 'all')" id="ag3-tab-all" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#E5B869] text-slate-950 font-bold transition-all inline-flex items-center gap-1.5 shadow-xs cursor-pointer">Both Views</button>
-                                <button type="button" onclick="setSerpView('ag3', 'desktop')" id="ag3-tab-desktop" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-slate-300 hover:bg-white/20 hover:text-white transition-all inline-flex items-center gap-1.5 cursor-pointer"><i data-lucide="monitor" class="w-3.5 h-3.5"></i> Desktop</button>
-                                <button type="button" onclick="setSerpView('ag3', 'mobile')" id="ag3-tab-mobile" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-slate-300 hover:bg-white/20 hover:text-white transition-all inline-flex items-center gap-1.5 cursor-pointer"><i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Mobile</button>
+                                <button type="button" onclick="setSerpView('ag3', 'desktop')" id="ag3-tab-desktop" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900 border border-slate-300/80 transition-all inline-flex items-center gap-1.5 cursor-pointer shadow-xs"><i data-lucide="monitor" class="w-3.5 h-3.5"></i> Desktop</button>
+                                <button type="button" onclick="setSerpView('ag3', 'mobile')" id="ag3-tab-mobile" class="serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900 border border-slate-300/80 transition-all inline-flex items-center gap-1.5 cursor-pointer shadow-xs"><i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Mobile</button>
                             </div>
                         </div>
 
@@ -1657,11 +1657,11 @@
 
                         <!-- Desktop SERP Version -->
                         <div id="ag3-serp-desktop" class="space-y-2">
-                            <div class="flex items-center justify-between text-xs text-slate-400 font-medium px-1">
-                                <span class="inline-flex items-center gap-1.5 text-slate-200 font-semibold">
-                                    <i data-lucide="monitor" class="w-3.5 h-3.5 text-blue-400"></i> Desktop SERP Preview
+                            <div class="flex items-center justify-between text-xs text-slate-500 font-medium px-1">
+                                <span class="inline-flex items-center gap-1.5 text-slate-800 font-semibold">
+                                    <i data-lucide="monitor" class="w-3.5 h-3.5 text-blue-600"></i> Desktop SERP Preview
                                 </span>
-                                <span class="text-[11px] font-mono text-slate-400">Desktop Viewport</span>
+                                <span class="text-[11px] font-mono text-slate-600 bg-white px-2.5 py-0.5 rounded border border-slate-200 shadow-2xs">Desktop Viewport</span>
                             </div>
                             <div class="google-serp-card p-4 sm:p-5 border border-slate-100 space-y-3 shadow-lg">
                                 <div class="flex items-center justify-between">
@@ -1702,11 +1702,11 @@
 
                         <!-- Mobile SERP Version -->
                         <div id="ag3-serp-mobile" class="space-y-2">
-                            <div class="flex items-center justify-between text-xs text-slate-400 font-medium px-1">
-                                <span class="inline-flex items-center gap-1.5 text-slate-200 font-semibold">
-                                    <i data-lucide="smartphone" class="w-3.5 h-3.5 text-indigo-400"></i> Mobile SERP Preview
+                            <div class="flex items-center justify-between text-xs text-slate-500 font-medium px-1">
+                                <span class="inline-flex items-center gap-1.5 text-slate-800 font-semibold">
+                                    <i data-lucide="smartphone" class="w-3.5 h-3.5 text-indigo-600"></i> Mobile SERP Preview
                                 </span>
-                                <span class="text-[11px] font-mono text-slate-400">Mobile (60%+ Traffic)</span>
+                                <span class="text-[11px] font-mono text-slate-600 bg-white px-2.5 py-0.5 rounded border border-slate-200 shadow-2xs">Mobile (60%+ Traffic)</span>
                             </div>
                             <div class="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-xl space-y-3">
                                 <!-- Mobile Top Site Info & Sponsored -->
@@ -1756,17 +1756,17 @@
                         </div>
 
                         <!-- Visual Angle (Display / Performance Max Asset Brief) -->
-                        <div class="rounded-xl bg-[#181c22] border border-white/12 p-5 space-y-3.5 text-white shadow-xs">
-                            <div class="space-y-3 pb-3 border-b border-white/10">
-                                <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center border border-indigo-500/40 shadow-xs">
+                        <div class="rounded-xl bg-white border border-slate-200/90 p-5 space-y-3.5 text-slate-900 shadow-xs">
+                            <div class="space-y-3 pb-3 border-b border-slate-200">
+                                <div class="w-12 h-12 rounded-2xl bg-indigo-500/15 text-indigo-600 flex items-center justify-center border border-indigo-500/30 shadow-xs">
                                     <i data-lucide="image" class="w-6 h-6"></i>
                                 </div>
                                 <div>
-                                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-white/10 text-slate-300 border border-white/15">Creative Brief</span>
+                                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200">Creative Brief</span>
                                 </div>
-                                <h4 class="sua-subcard-title text-white">Visual Angle (Display / PMax)</h4>
+                                <h4 class="sua-subcard-title text-slate-900">Visual Angle (Display / PMax)</h4>
                             </div>
-                            <p class="text-sm sm:text-base text-slate-200 italic bg-black/60 p-4 rounded-xl border border-white/10 leading-relaxed">
+                            <p class="text-sm sm:text-base text-slate-700 italic bg-slate-50 p-4 rounded-xl border border-slate-200 leading-relaxed">
                                 "Sleek, close-up shot of the clinical needle-free infusion device targeting the crown of a male scalp."
                             </p>
 
@@ -3255,7 +3255,7 @@
 
             [tabAll, tabDesktop, tabMobile].forEach(tab => {
                 if (!tab) return;
-                tab.className = "serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-slate-300 hover:bg-white/20 hover:text-white transition-all inline-flex items-center gap-1.5 cursor-pointer";
+                tab.className = "serp-tab px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900 border border-slate-300/80 transition-all inline-flex items-center gap-1.5 cursor-pointer shadow-xs";
             });
 
             if (mode === 'desktop') {
