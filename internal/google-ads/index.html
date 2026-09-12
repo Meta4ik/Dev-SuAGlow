@@ -405,14 +405,20 @@
         @media (min-width: 1024px) {
             .floating-sidebar {
                 position: fixed !important;
-                top: 5.25rem !important; /* 84px from top: clears 64px header + breathing space */
+                top: 5.25rem !important;
                 bottom: 1.5rem !important;
-                width: 18rem !important; /* 288px */
+                width: 18rem !important;
                 max-width: 18rem !important;
                 left: max(1.5rem, calc((100vw - 1720px) / 2 + 2rem)) !important;
                 z-index: 40 !important;
                 display: flex !important;
                 flex-direction: column !important;
+                transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            }
+
+            .floating-sidebar.sidebar-collapsed {
+                width: 3rem !important;
+                max-width: 3rem !important;
             }
 
             .floating-sidebar-card {
@@ -421,6 +427,24 @@
                 overflow-y: auto !important;
                 overscroll-behavior: contain !important;
                 box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04) !important;
+                transition: padding 0.3s ease !important;
+            }
+
+            .floating-sidebar.sidebar-collapsed .floating-sidebar-card {
+                overflow: hidden !important;
+                padding: 0.75rem 0.5rem !important;
+            }
+
+            .sidebar-inner-content {
+                transition: opacity 0.2s ease, visibility 0.2s ease;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .floating-sidebar.sidebar-collapsed .sidebar-inner-content {
+                opacity: 0 !important;
+                visibility: hidden !important;
+                pointer-events: none;
             }
 
             .floating-main-content {
@@ -428,6 +452,13 @@
                 width: calc(100% - 19.75rem) !important;
                 max-width: calc(100% - 19.75rem) !important;
                 flex: 1 1 auto !important;
+                transition: margin-left 0.3s cubic-bezier(0.16, 1, 0.3, 1), width 0.3s cubic-bezier(0.16, 1, 0.3, 1), max-width 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            }
+
+            .floating-main-content.content-expanded {
+                margin-left: 4.5rem !important;
+                width: calc(100% - 4.5rem) !important;
+                max-width: calc(100% - 4.5rem) !important;
             }
         }
 
@@ -483,9 +514,17 @@
     <div class="max-w-[1720px] mx-auto w-full px-4 sm:px-6 lg:px-8 py-7 flex flex-col lg:flex-row gap-8 items-start flex-grow">
 
         <!-- Persistent Floating Left Sidebar Navigation -->
-        <aside id="floating-sidebar" class="floating-sidebar w-full lg:w-72 shrink-0">
+        <aside id="floating-sidebar" class="floating-sidebar w-full lg:w-72 shrink-0 relative">
             <div class="floating-sidebar-card bg-white rounded-2xl border border-slate-200/90 shadow-xl p-4 sm:p-5 space-y-5 custom-scrollbar">
-                
+
+                <!-- Sidebar Toggle (desktop only) -->
+                <button type="button" id="sidebar-toggle-btn" onclick="toggleSidebar()"
+                    title="Collapse menu"
+                    class="hidden lg:flex absolute -right-3.5 top-4 z-50 w-7 h-7 rounded-full bg-white border border-slate-200 shadow-md items-center justify-center hover:bg-slate-50 transition-all cursor-pointer">
+                    <i data-lucide="chevron-left" id="sidebar-toggle-icon" class="w-3.5 h-3.5 text-slate-500 transition-transform duration-300"></i>
+                </button>
+
+                <div class="sidebar-inner-content space-y-5">
                 <!-- Sidebar Header -->
                 <div class="pb-3 border-b border-slate-200">
                     <div class="flex items-center justify-between">
@@ -594,11 +633,12 @@
                     </div>
                 </div>
 
+                </div><!-- end sidebar-inner-content -->
             </div>
         </aside>
 
         <!-- Main Content Area -->
-        <main class="floating-main-content flex-1 min-w-0 w-full space-y-14">
+        <main id="main-content-area" class="floating-main-content flex-1 min-w-0 w-full space-y-14">
 
             <!-- Hero Overview Banner -->
             <div id="campaign-overview" class="bg-[#131619] rounded-2xl p-7 sm:p-10 text-white relative overflow-hidden shadow-xl scroll-mt-24">
@@ -3211,10 +3251,30 @@
             </div>
         </section>
 
-        <!-- ========================================================================= -->
-        <!-- LAUNCH CHECKLIST -->
-        <!-- ========================================================================= -->
-        <section id="launch-checklist" class="scroll-mt-28 space-y-6 pt-6">
+            <!-- Footer (Inside Main Column) -->
+            <footer class="mt-16 pt-8 pb-4 border-t border-slate-200 text-center text-xs sm:text-sm text-slate-600">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <div>
+                        SuA Glow Internal • Google Ads Campaign Staging (<span class="text-[#AA987C] font-semibold">$399 Korean Scalp Reset</span>)
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <a href="../index.html" class="hover:text-slate-900 transition-colors font-medium">Internal Directory</a>
+                        <span>•</span>
+                        <a href="../../korean-scalp-hair-rejuvenation.html" target="_blank" class="hover:text-slate-900 transition-colors font-medium">Live Treatment Page</a>
+                        <span>•</span>
+                        <a href="tel:9726658737" class="hover:text-slate-900 transition-colors font-medium">972-665-8737</a>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- LAUNCH CHECKLIST — Full Width Below Main Layout -->
+    <!-- ========================================================================= -->
+    <div class="max-w-[1720px] mx-auto w-full px-4 sm:px-6 lg:px-8 pb-14">
+        <section id="launch-checklist" class="scroll-mt-24 space-y-6 pt-2">
             <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-xs space-y-8">
 
                 <!-- Header -->
@@ -3521,24 +3581,6 @@
 
             </div>
         </section>
-
-            <!-- Footer (Inside Main Column) -->
-            <footer class="mt-16 pt-8 pb-4 border-t border-slate-200 text-center text-xs sm:text-sm text-slate-600">
-                <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
-                    <div>
-                        SuA Glow Internal • Google Ads Campaign Staging (<span class="text-[#AA987C] font-semibold">$399 Korean Scalp Reset</span>)
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <a href="../index.html" class="hover:text-slate-900 transition-colors font-medium">Internal Directory</a>
-                        <span>•</span>
-                        <a href="../../korean-scalp-hair-rejuvenation.html" target="_blank" class="hover:text-slate-900 transition-colors font-medium">Live Treatment Page</a>
-                        <span>•</span>
-                        <a href="tel:9726658737" class="hover:text-slate-900 transition-colors font-medium">972-665-8737</a>
-                    </div>
-                </div>
-            </footer>
-
-        </main>
     </div>
 
     <!-- Mobile Floating Navigation Trigger (Bottom-Left) -->
@@ -3651,6 +3693,18 @@
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
+
+        // Sidebar Toggle
+        function toggleSidebar() {
+            const sidebar = document.getElementById('floating-sidebar');
+            const main = document.getElementById('main-content-area');
+            const icon = document.getElementById('sidebar-toggle-icon');
+            const btn = document.getElementById('sidebar-toggle-btn');
+            const collapsed = sidebar.classList.toggle('sidebar-collapsed');
+            main.classList.toggle('content-expanded', collapsed);
+            icon.style.transform = collapsed ? 'rotate(180deg)' : 'rotate(0deg)';
+            btn.title = collapsed ? 'Expand menu' : 'Collapse menu';
+        }
 
         // Launch Checklist Progress Tracker
         function updateProgress() {
