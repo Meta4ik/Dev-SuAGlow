@@ -3274,6 +3274,7 @@
     <!-- LAUNCH CHECKLIST — Full Width Below Main Layout -->
     <!-- ========================================================================= -->
     <div class="max-w-[1720px] mx-auto w-full px-4 sm:px-6 lg:px-8 pb-14">
+        <div class="lg:ml-[19.75rem] transition-all duration-300" id="checklist-offset-wrapper">
         <section id="launch-checklist" class="scroll-mt-24 space-y-6 pt-2">
             <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-xs space-y-8">
 
@@ -3581,6 +3582,7 @@
 
             </div>
         </section>
+        </div><!-- end checklist-offset-wrapper -->
     </div>
 
     <!-- Mobile Floating Navigation Trigger (Bottom-Left) -->
@@ -3700,8 +3702,12 @@
             const main = document.getElementById('main-content-area');
             const icon = document.getElementById('sidebar-toggle-icon');
             const btn = document.getElementById('sidebar-toggle-btn');
+            const checklistWrapper = document.getElementById('checklist-offset-wrapper');
             const collapsed = sidebar.classList.toggle('sidebar-collapsed');
             main.classList.toggle('content-expanded', collapsed);
+            if (checklistWrapper) {
+                checklistWrapper.style.marginLeft = collapsed ? '4.5rem' : '';
+            }
             icon.style.transform = collapsed ? 'rotate(180deg)' : 'rotate(0deg)';
             btn.title = collapsed ? 'Expand menu' : 'Collapse menu';
         }
