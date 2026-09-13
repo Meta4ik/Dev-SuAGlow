@@ -1,47 +1,101 @@
-# Walkthrough - Recreated Tone-Up Facial Hero Section
+# Walkthrough: SuA Glow Glass Skin Membership ($199/mo)
 
-Recreated the hero section of the Korean Glass Skin Tone-Up Facial page to match the premium dark-themed layout of the LDM Water Drop Lifting page.
+We implemented the complete **SuA Glow Glass Skin Membership** experience across the site based on Kameron Allen's draft email and attachment (`SuA Glow Membership August 28 2026.docx` / [kam_doc_updates/SuA Glow Membership August 28 2026.txt](file:///Users/mw/Sites/SuAGlow/dev-site/kam_doc_updates/SuA%20Glow%20Membership%20August%2028%202026.txt)).
 
-## Changes Made
+---
 
-### Tone-Up Facial Page
-- Modified [tone-up-facial.html](file:///Users/mw/Sites/SuAGlow/dev-site/tone-up-facial.html):
-  - Replaced the previous hero layout with the dark-themed, gold-accented LDM-style layout, featuring a pure premium horizontal teal-to-black gradient background matching the user reference but flipped (flowing right-to-left: `#009CA6` to `#050A0D`), with a subtle teal radial light glow.
-  - Applied the user-specified badge: `K-BEAUTY • BRIGHTENING • RADIANCE`.
-  - Applied the H1 title: `Korean Glass Skin Tone-Up Facial` (with `Tone-Up` and `Glass Skin` styled as `whitespace-nowrap` to prevent line breaks, and `Facial` placed on its own line below `Tone-Up` via a `<br>` tag).
-  - Applied the subheading: `Brighter. Luminous. Naturally Radiant.`.
-  - Added the italicized quote accent: `K-Beauty doesn't cover dull skin. It brings the glow back.` (using `font-body` Poppins italic for brand alignment, avoiding default browser serifs).
-  - Added the body description paragraph focusing on healthy-looking skin glowing in natural light.
-  - Styled the primary CTA button to match LDM gold booking styling.
-  - Recreated the graphic collage on the right side consisting of:
-    - A backdrop layer showing transparent gold glitter swirls (`assets/tone-up/glitter_swirls.png`) scaled at 1.35x (`transform: scale(1.35)` on the inner image), configured with a nested wrapper layout to allow simultaneous CSS floating animation and active JS scroll parallax physics without conflict.
-    - A floating, spinning circular badge banner stating "NOW AVAILABLE IN DFW • CARROLLTON, TX".
-    - A midground image containing the transparent-background floating vials (`assets/tone-up/rejuran_vials_floating.png`), styled with floating animations and dynamic dropshadows, replacing the white product card wrapper.
-    - A base background image showing the Korean woman model portrait (`assets/korean_woman_tone_up_booster.png`).
-- Modified [script.js](file:///Users/mw/Sites/SuAGlow/dev-site/script.js):
-  - Updated `initHeroCollagePhysics()` to explicitly detect the glitter swirls layer (`glitterCard`) and run parallax translation physics at `currentScrollY * 0.06`.
-  - Refined the device card detection to recognize the Rejuran vials correctly (checking for `vials` or `rejuran` in src) to ensure they translate at `currentScrollY * -0.16`.
-- Replaced the image card under the "K-Beauty Approach" section (Section 2) with the product packaging shot `assets/rejuran-tone-up-booster.webp`, using `object-cover` to fill the entire card dimensions.
-- Updated the "K-Beauty Approach" section title and text according to user specifications.
-- Added a new section right after the "K-Beauty Approach" titled "What Is a Korean Glass Skin Tone-Up Facial?" explaining the philosophy and benefits of the treatment. Upgraded it into a visually appealing 2-column layout with glassmorphism effects, a dedicated philosophy callout, and an interactive grid with micro-animations.
-- Added a dark-themed section right after that titled "Why SuA Glow is Obsessed with Glow", creating a beautiful visual rhythm and highlighting the importance of maintaining luminosity.
-- Added a new two-column list at the bottom of the "Compare Treatments" section detailing the exact protocols and individualization strategies used in the Tone-Up facial.
-- Removed all remaining instances of default browser serif typography (`font-serif` class) throughout `tone-up-facial.html` (specifically lines 152, 386, and 630), aligning them to `font-body` (`Poppins` italic).
+## 1. Dedicated Landing Page ([`memberships.html`](file:///Users/mw/Sites/SuAGlow/dev-site/memberships.html))
 
-## Structural Layout Redesign
-- Per the user's direction, completely refactored the layout structure of the non-hero sections in `tone-up-facial.html` to mirror the aesthetics of the `ldm-water-drop-lifting.html` page:
-  - **Hero**: Intentionally preserved the existing hero layout (dark theme, glitter parallax) based on the user's specific request to "keep hero".
-  - **The K-Beauty Approach**: Rewritten to map to LDM's `#philosophy` section (`bg-off-white`), featuring the specific image card wrapper (`rounded-3xl shadow-2xl p-4 bg-white`), `animate-on-scroll` grid structure, and the 6 feature blocks styled like LDM's icon cards. Kept the Rejuran product image here as requested, but set the grid to `items-stretch` so the image wrapper natively stretches to precisely match the height of the text content block next to it.
-  - **What Is Tone-Up**: Refactored to map to LDM's `#water-drop-lifting` editorial section. Moved the header to a centered max-width container at the top. Kept the "Think" bullet list but restructured it into LDM's `ul` format. Also updated the main visual to feature a specific Korean model photo (`assets/tone-up/generated-model.jpg`) and moved the image to the right side of the layout.
-  - **Obsessed with Glow**: Remapped from a dark theme to match LDM's `#why-seoul-clinics` light card layout. It now features the central `bg-white` card wrapped in a `bg-off-white/80` container, with the content cleanly split into text on the left and model image on the right.
-  - **Skin Concerns**: Added a brand new 2-column list section directly before "Transparency Matters", detailing the specific skin concerns the Tone-Up facial supports and outlining the individualized treatment recommendation protocol, using LDM's clean white grid layout.
-  - **Compare Treatments**: Ensured container padding, margins, and `animate-on-scroll` `fade-up`/`fade-left`/`fade-right` classes align consistently with LDM's layout conventions. Replaced the generic model profile photo in the section header with the SuAGlow "Circle S" logo for a stronger brand touchpoint.
-  - **Icon Refinement**: Scaled all Lucide icons across the page to be exactly twice as large visually (e.g., changing `w-4 h-4` to `w-8 h-8`) while halving their SVG stroke width (`stroke-width="1"`) to maintain the same delicate physical stroke thickness, ensuring a premium, lightweight aesthetic.
+Created a bespoke, responsive inner page strictly following [`DESIGN.md`](file:///Users/mw/Sites/SuAGlow/dev-site/DESIGN.md) guidelines:
+* **Inner Hero (`pt-[250px]`, `data-nav-theme="dark"`)**:
+  * **Authentic 16:9 Panoramic Office Hero ([`assets/sua_glow_office_hero_16x9.jpg`](file:///Users/mw/Sites/SuAGlow/dev-site/assets/sua_glow_office_hero_16x9.jpg))**: Ultra-high-resolution panoramic hero rendering generated directly from the user's authentic office photos. Captures the complete reception lounge, vertical blonde oak wood slats, 3D "SuA K-Glow" wall logo illuminated by brass downlights, white reception desk with green ivy, wall brochure rack, and illuminated oval art.
+  * Eyebrow pill: `THE SuA Glow GLASS SKIN METHOD™ · $199/MONTH`
+  * H1: `Korean Glass Skin Membership`
+  * Subtitle: *"K-Beauty Is All About the Layers. So Is Your Facial."*
+  * Lead description highlighting Carrollton & DFW coverage.
+  * Supervising Physician trust badge: `Adam Yang, MD`.
+  * CTAs: `JOIN THE GLASS SKIN CLUB` and `Explore the 5 Layers`.
+* **Quick Stats / Value Bar**:
+  * `$199/mo` • `5 Layers` • `20% Off Services & Skincare` • `Monthly Seoul Glow Drop`.
+* **The K-Beauty Philosophy ("Five Layers. One Ritual. Very K-Beauty.")**:
+  * **Authentic Clinic Photo ([`assets/sua_glow_reception_desk.jpg`](file:///Users/mw/Sites/SuAGlow/dev-site/assets/sua_glow_reception_desk.jpg))**: High-res vertical shot of the reception desk with Rejuran products, spotlights, and the signature wood slat wall.
+  * Editorial layout featuring the 4 core tenets:
+    * *Consistency over correction*
+    * *Skin quality over quick fixes*
+    * *Personalization*
+    * *Layers, layers, layers*
+* **The 5-Layer Alternating Patient Journey Timeline ("The SuA Glow Glass Skin Method™")**:
+  * Clean, high-legibility vertical timeline with central numbered badges (`01` through `05`) and connecting guide track:
+    1. **Layer 01 (Left):** Aquafacial (*Cleanse • Exfoliate • Hydrate* | Exfoliation · The Dewy Prep)
+    2. **Layer 02 (Right):** Needle-Free Infusion (*Infuse • Target • Glow* | Deep Infusion · The Skin Booster)
+    3. **Layer 03 (Left):** LDM Ultrasound (*Calm • Support • Refine* | Ultrasound · The Water Drop Lift)
+    4. **Layer 04 (Right):** Red Light Therapy (*Calm • Reset • Finish* | Phototherapy · The Red-Light Finish)
+    5. **Layer 05 (Left):** Glutathione IV Push* (*Antioxidant • Refresh • Glow Support* | Wellness · Glow From Within)
+  * **Centered Highlight Box:** *"Why Five Layers? / Synergy Over Single Solutions"* with gold CTA button.
+* **The Seoul Glow Drop Showcase**:
+  * Teaser card spotlighting rotating Korean skincare discoveries, sheet masks, and seasonal touches (*"What's dropping this month? You'll have to come in and see."*).
+* **Pricing & Inclusions Card**:
+  * Itemized checklist of everything included every month.
+  * 4 VIP Member Perks: 20% savings, priority booking, member event access, first access to new treatments.
+* **Clinical Oversight & Disclaimers**:
+  * Dr. Adam Yang, MD & clinical candidacy assessment disclosure.
+* **FAQ Accordion**:
+  * 3 collapsible questions covering inclusions, difference from regular facials, and location.
+* **Outro Section**:
+  * Call-to-action block with online booking integration.
 
-## Rebuilt Tailwind CSS
-- Ran `npm run build` to compile the CSS file, ensuring all newly added arbitrary Tailwind utility classes (like spacing, opacity, colors, border colors, and border widths) are outputted to `dist/output.css`.
+---
 
-## Local Verification
-- Started a local development server at `http://127.0.0.1:8081` so the page can be previewed.
-- Note: The browser subagent encountered an issue downloading the Playwright Mac ARM64 driver from the registry, which prevented automated screenshot capture.
-- **Action Required**: You can preview the page locally at [http://127.0.0.1:8081/tone-up-facial.html](http://127.0.0.1:8081/tone-up-facial.html) on your browser.
+## 2. Homepage Spotlight Section ([`index.html`](file:///Users/mw/Sites/SuAGlow/dev-site/index.html))
+
+* Added `#membership-spotlight` between `#treatments` and `#glow-stories`.
+* Features a dark luxury card with warm gold accents, mini badges for all 5 layers, VIP perk highlights, and direct CTAs to `memberships.html` and online booking.
+
+---
+
+## 3. Global Navigation & Footer Links
+
+* **[`navbar.js`](file:///Users/mw/Sites/SuAGlow/dev-site/navbar.js)**:
+  * Added `Memberships` to the desktop navigation bar right next to PROMOS.
+  * Added `Memberships` ($199/MO pill) to the mobile drawer.
+* **[`footer.js`](file:///Users/mw/Sites/SuAGlow/dev-site/footer.js)**:
+  * Added `Glass Skin Membership` under the Connect / Links section in the global footer.
+
+---
+
+## 4. Five Layers: Dark Abstract Graphic & High-Contrast Data Layout
+
+* **Dark Abstract Layers Background ([`assets/dark_abstract_layers_bg.jpg`](file:///Users/mw/Sites/SuAGlow/dev-site/assets/dark_abstract_layers_bg.jpg))**:
+  * Generated an ultra-high-end dark abstract background graphic featuring fluid, translucent organic ribbon waves representing skin depth and cellular layers, highlighted with delicate illuminated champagne gold (`#AA987C`) contours on deep obsidian/charcoal black (`#0B0D0F`).
+  * Rendered full-bleed across `#five-layers` with smooth edge gradients (`bg-gradient-to-b from-[#0B0D0F]/90 via-[#0B0D0F]/65 to-[#0B0D0F]/95`) and a central ambient radial gold glow (`bg-warm-gold/15 blur-[160px]`).
+* **High-Contrast Data Presentation**:
+  * **Illuminated Timeline Track**: Glowing vertical guide track (`from-warm-gold/40 via-warm-gold/20 to-warm-gold/40`) with illuminated gold step badges (`01`–`05` in `bg-warm-gold text-near-black shadow-[0_0_25px_rgba(170,152,124,0.5)] border-4 border-[#0B0D0F]`).
+  * **Sleek Dark Glass Cards (`bg-[#14181C]/90 backdrop-blur-xl border-white/10 hover:border-warm-gold/40 shadow-2xl`)**:
+    * Crystal-clear typography: Bright white titles (`text-white font-bold text-xl md:text-2xl`), high-contrast descriptions (`text-white/75 font-light text-xs md:text-sm`), gold eyebrow pills (`bg-warm-gold/15 text-warm-gold border border-warm-gold/30`), and gold action footers.
+    * Centered highlight card ("Why Five Layers? / Synergy Over Single Solutions") framed in rich dark gold accents.
+
+
+---
+
+## 5. Build & Verification
+
+* Executed `npm run build`:
+  * Regenerated search index with 291 entries.
+  * Compiled minified Tailwind CSS into `dist/output.css`.
+* Automated Node.js script verified:
+  * Zero missing images or assets across `memberships.html`.
+  * Zero missing scripts.
+* Updated issue tracker in [`dev-tools/tracker-data.json`](file:///Users/mw/Sites/SuAGlow/dev-site/dev-tools/tracker-data.json) (Item #3) to reflect implementation.
+
+---
+
+## 6. Vercel Accessibility & Developer Tools Link Resolution
+
+* **Enabled Vercel Deployment for `dev-tools/`**:
+  * Removed `dev-tools` from [`.vercelignore`](file:///Users/mw/Sites/SuAGlow/dev-site/.vercelignore), which had previously excluded the entire directory from Vercel deployments and caused 404 errors.
+  * Added `"cleanUrls": true` to [`vercel.json`](file:///Users/mw/Sites/SuAGlow/dev-site/vercel.json) to support both `/dev-tools/section-library` and `/dev-tools/section-library.html`.
+  * Created [`dev-tools/index.html`](file:///Users/mw/Sites/SuAGlow/dev-site/dev-tools/index.html) to automatically redirect `/dev-tools` or `/dev-tools/` directly to `section-library.html`.
+* **Zero Broken Links Across All `dev-tools/` Pages**:
+  * Fixed all relative links pointing to root files in [`dev-tools/audit.html`](file:///Users/mw/Sites/SuAGlow/dev-site/dev-tools/audit.html), [`dev-tools/dev.html`](file:///Users/mw/Sites/SuAGlow/dev-site/dev-tools/dev.html), [`dev-tools/disclaimers.html`](file:///Users/mw/Sites/SuAGlow/dev-site/dev-tools/disclaimers.html), [`dev-tools/sitemap.html`](file:///Users/mw/Sites/SuAGlow/dev-site/dev-tools/sitemap.html), [`dev-tools/style-guide.html`](file:///Users/mw/Sites/SuAGlow/dev-site/dev-tools/style-guide.html), and [`dev-tools/sua_glow_sitemap_v2.html`](file:///Users/mw/Sites/SuAGlow/dev-site/dev-tools/sua_glow_sitemap_v2.html).
+  * Upgraded the navigation headers in [`dev-tools/section-library.html`](file:///Users/mw/Sites/SuAGlow/dev-site/dev-tools/section-library.html), `dev.html`, and `audit.html` to include quick links to *View Live Site* (`../index.html`), *Tracker*, *Dev Portal*, *Compendium*, and *Style Guide*.
+  * Verified 0 broken links across all files in `dev-tools/`.

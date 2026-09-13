@@ -125,3 +125,65 @@ const SEARCH_INDEX = ${JSON.stringify(searchIndex, null, 2)};
 
 fs.writeFileSync(outputPath, jsContent, 'utf-8');
 console.log(`Generated search index with ${searchIndex.length} entries in ${outputPath}`);
+
+// Also auto-generate pages-directory.json for dev-tools
+function generatePagesDirectory() {
+  const ignored = ["node_modules", ".git", "dist", "scratch", "kam_doc_updates", "bak"];
+  function getCategory(filePath) {
+    if (filePath.startsWith("dev-tools/")) return "Dev Tools";
+    if (filePath.startsWith("components/")) return "Section Components";
+    if (filePath.startsWith("education/")) return "Education Hub";
+    if (filePath.startsWith("internal/")) return "Internal & Campaigns";
+    if (filePath.includes("policy") || filePath.includes("accessibility") || filePath.includes("cookie") || filePath.includes("hippa")) return "Legal & Compliance";
+    if (filePath.includes("tox") || filePath.includes("filler") || filePath.includes("radiesse") || filePath.includes("injectables")) return "Injectables";
+    if (["oligio-x.html", "dep.html", "needleless-infusion-therapy.html", "ldm-water-drop-lifting.html", "korean-scalp-hair-rejuvenation.html", "microneedling.html", "salmon-pn-facial.html", "tone-up-facial.html", "glass-skin-hydration-glow.html", "collagen-stimulation-facial.html", "bridal-glow.html", "one-day-glow.html", "seoul-man.html", "scar-treatment.html", "iv-infusion-wellness-therapy.html", "medical-weight-loss-dallas.html", "signature-treatment.html", "skin-health.html", "skin-quality-boosters.html"].includes(filePath)) return "Treatments & Modalities";
+    return "Core Pages";
+  }
+
+  function cleanTitle(rawTitle, filename) {
+    if (!rawTitle || rawTitle === filename) {
+      return filename.replace(".html", "").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+    }
+    let t = rawTitle.split("|")[0].trim();
+    t = t.replace(/SuA K-Glow/i, "").replace(/SuA Glow/i, "").replace(/Korean Med Spa/i, "").replace(/Korean Medical Aesthetics/i, "").trim();
+    t = t.replace(/^[-–—\s]+|[-–—\s]+$/g, "");
+    if (!t) return rawTitle.split("|")[0].trim();
+    return t;
+  }
+
+  function walk(dir, base = "") {
+    let list = [];
+    fs.readdirSync(dir).forEach(file => {
+      const full = path.join(dir, file);
+      const rel = path.join(base, file);
+      const stat = fs.statSync(full);
+      if (stat.isDirectory()) {
+        if (!ignored.includes(file)) list = list.concat(walk(full, rel));
+      } else if (file.endsWith(".html") && !file.startsWith("tmp_") && !file.startsWith("temp_")) {
+        const content = fs.readFileSync(full, "utf8");
+        const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
+        const rawTitle = titleMatch ? titleMatch[1].trim() : file;
+        list.push({
+          path: rel,
+          filename: file,
+          title: cleanTitle(rawTitle, file),
+          fullTitle: rawTitle,
+          category: getCategory(rel),
+          sizeKb: Math.round(stat.size / 1024)
+        });
+      }
+    });
+    return list;
+  }
+
+  const items = walk(ROOT_DIR);
+  const dirOut = path.join(ROOT_DIR, 'dev-tools', 'pages-directory.json');
+  fs.writeFileSync(dirOut, JSON.stringify(items, null, 2), 'utf-8');
+  console.log(`Generated dev-tools directory with ${items.length} pages in ${dirOut}`);
+}
+
+try {
+  generatePagesDirectory();
+} catch (e) {
+  console.warn('Could not generate pages directory:', e.message);
+}

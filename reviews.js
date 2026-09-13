@@ -1,19 +1,56 @@
 function initReviews() {
     const placeholder = document.getElementById('google-reviews-placeholder');
-    if (!placeholder) return;
+    const badgeElements = document.querySelectorAll('[data-google-badge-text], #google-reviews-badge-text, .review-text-gradient, [data-google-reviews-count], [data-google-rating]');
 
-    // Fetch the cached reviews
+    // Only proceed if there is a placeholder or badge element on the page
+    if (!placeholder && badgeElements.length === 0) return;
+
+    // Fetch the cached reviews & live metadata
     fetch('assets/data/google-reviews.json')
         .then(response => {
             if (!response.ok) throw new Error('Could not load reviews');
             return response.json();
         })
-        .then(reviews => {
-            renderReviews(reviews, placeholder);
+        .then(data => {
+            // Support both object and legacy array format
+            const reviews = Array.isArray(data) ? data : (data.reviews || []);
+            const rating = (data && data.rating) ? data.rating : '5.0';
+            const totalCount = (data && data.user_ratings_total) ? data.user_ratings_total : (reviews.length || 122);
+
+            // Dynamically update badges across the page
+            updateReviewBadges(rating, totalCount);
+
+            if (placeholder) {
+                renderReviews(reviews, placeholder);
+            }
         })
         .catch(error => {
             console.error('Error loading Google Reviews:', error);
         });
+}
+
+function updateReviewBadges(rating, totalCount) {
+    // 1. Badge text ("5.0 · 122 reviews")
+    const badgeTextEls = document.querySelectorAll('[data-google-badge-text], #google-reviews-badge-text, .review-text-gradient');
+    badgeTextEls.forEach(el => {
+        el.textContent = `${rating} · ${totalCount} reviews`;
+    });
+
+    // 2. Standalone review count numbers ("122")
+    const countEls = document.querySelectorAll('[data-google-reviews-count]');
+    countEls.forEach(el => {
+        el.textContent = `${totalCount}`;
+    });
+
+    // 3. Standalone rating display ("5.0")
+    const ratingEls = document.querySelectorAll('[data-google-rating]');
+    ratingEls.forEach(el => {
+        if (el.textContent.includes('/')) {
+            el.textContent = `${rating} / 5.0`;
+        } else {
+            el.textContent = `${rating}`;
+        }
+    });
 }
 
 if (document.readyState === 'loading') {

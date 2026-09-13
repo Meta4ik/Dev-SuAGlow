@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "SuA K-Glow Med Spa — static site with Tailwind CSS CLI build",
   "scripts": {
-    "build": "node build-search-index.js && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "build": "node dev-tools/fetch-google-reviews.js && node build-search-index.js && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "update:reviews": "node dev-tools/fetch-google-reviews.js",
     "sync": "rsync -av --delete --exclude='.git' --exclude='node_modules' --exclude='src' --exclude='scratch' --exclude='dev-tools' --exclude='kam_doc_updates' --exclude='instagram-designs.html' --exclude='collagen-stimulation-facial.html' --exclude='tone-up-facial.html' --exclude='iv-infusion-wellness-therapy.html' --exclude='collagen-stimulation' --exclude='tone-up' --exclude='assets/collagen-stimulation' --exclude='assets/tone-up' . ../live-site/",

@@ -1,0 +1,858 @@
+[
+  {
+    "path": "about.html",
+    "filename": "about.html",
+    "title": "About Us",
+    "fullTitle": "About Us | SuA K-Glow Korean Medical Aesthetics",
+    "category": "Core Pages",
+    "sizeKb": 34
+  },
+  {
+    "path": "accessibility-statement.html",
+    "filename": "accessibility-statement.html",
+    "title": "Accessibility Statement",
+    "fullTitle": "Accessibility Statement | SuA K Glow Korean Med Spa",
+    "category": "Legal & Compliance",
+    "sizeKb": 7
+  },
+  {
+    "path": "bridal-glow.html",
+    "filename": "bridal-glow.html",
+    "title": "Bridal Glow",
+    "fullTitle": "Bridal Glow | SuA K Glow Korean Med Spa Carrollton",
+    "category": "Treatments & Modalities",
+    "sizeKb": 29
+  },
+  {
+    "path": "collagen-stimulation-facial.html",
+    "filename": "collagen-stimulation-facial.html",
+    "title": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "fullTitle": "Collagen Stimulation & Acne Scar Treatment Dallas | Korean Skin Booster | SuA Glow",
+    "category": "Treatments & Modalities",
+    "sizeKb": 48
+  },
+  {
+    "path": "coming-soon.html",
+    "filename": "coming-soon.html",
+    "title": "Coming Soon",
+    "fullTitle": "Coming Soon | SuA K Glow Korean Med Spa",
+    "category": "Core Pages",
+    "sizeKb": 3
+  },
+  {
+    "path": "components/glow-card.html",
+    "filename": "glow-card.html",
+    "title": "Glow Card",
+    "fullTitle": "glow-card.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/before-after-gallery.html",
+    "filename": "before-after-gallery.html",
+    "title": "Before After Gallery",
+    "fullTitle": "before-after-gallery.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/body-reset-journey.html",
+    "filename": "body-reset-journey.html",
+    "title": "Body Reset Journey",
+    "fullTitle": "body-reset-journey.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/booster-matrix-ingredients.html",
+    "filename": "booster-matrix-ingredients.html",
+    "title": "Booster Matrix Ingredients",
+    "fullTitle": "booster-matrix-ingredients.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/candidate.html",
+    "filename": "candidate.html",
+    "title": "Candidate",
+    "fullTitle": "candidate.html",
+    "category": "Section Components",
+    "sizeKb": 2
+  },
+  {
+    "path": "components/sections/clinical-cases.html",
+    "filename": "clinical-cases.html",
+    "title": "Clinical Cases",
+    "fullTitle": "clinical-cases.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/compare-treatments.html",
+    "filename": "compare-treatments.html",
+    "title": "Compare Treatments",
+    "fullTitle": "compare-treatments.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/consultation-policy.html",
+    "filename": "consultation-policy.html",
+    "title": "Consultation Policy",
+    "fullTitle": "consultation-policy.html",
+    "category": "Section Components",
+    "sizeKb": 2
+  },
+  {
+    "path": "components/sections/cta-booking-banner.html",
+    "filename": "cta-booking-banner.html",
+    "title": "Cta Booking Banner",
+    "fullTitle": "cta-booking-banner.html",
+    "category": "Section Components",
+    "sizeKb": 2
+  },
+  {
+    "path": "components/sections/expect-timeline.html",
+    "filename": "expect-timeline.html",
+    "title": "Expect Timeline",
+    "fullTitle": "expect-timeline.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/faq-accordion.html",
+    "filename": "faq-accordion.html",
+    "title": "Faq Accordion",
+    "fullTitle": "faq-accordion.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/financing-widget.html",
+    "filename": "financing-widget.html",
+    "title": "Financing Widget",
+    "fullTitle": "financing-widget.html",
+    "category": "Section Components",
+    "sizeKb": 2
+  },
+  {
+    "path": "components/sections/hero-center.html",
+    "filename": "hero-center.html",
+    "title": "Hero Center",
+    "fullTitle": "hero-center.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/hero-left.html",
+    "filename": "hero-left.html",
+    "title": "Hero Left",
+    "fullTitle": "hero-left.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/hero-utility.html",
+    "filename": "hero-utility.html",
+    "title": "Hero Utility",
+    "fullTitle": "hero-utility.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/how-it-works.html",
+    "filename": "how-it-works.html",
+    "title": "How It Works",
+    "fullTitle": "how-it-works.html",
+    "category": "Section Components",
+    "sizeKb": 2
+  },
+  {
+    "path": "components/sections/ldm-modes-frequencies.html",
+    "filename": "ldm-modes-frequencies.html",
+    "title": "Ldm Modes Frequencies",
+    "fullTitle": "ldm-modes-frequencies.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/medical-oversight.html",
+    "filename": "medical-oversight.html",
+    "title": "Medical Oversight",
+    "fullTitle": "medical-oversight.html",
+    "category": "Section Components",
+    "sizeKb": 4
+  },
+  {
+    "path": "components/sections/oligio-alternatives-philosophy.html",
+    "filename": "oligio-alternatives-philosophy.html",
+    "title": "Oligio Alternatives Philosophy",
+    "fullTitle": "oligio-alternatives-philosophy.html",
+    "category": "Section Components",
+    "sizeKb": 2
+  },
+  {
+    "path": "components/sections/oligio-hero.html",
+    "filename": "oligio-hero.html",
+    "title": "Oligio Hero",
+    "fullTitle": "oligio-hero.html",
+    "category": "Section Components",
+    "sizeKb": 2
+  },
+  {
+    "path": "components/sections/oligio-timeline-candidates.html",
+    "filename": "oligio-timeline-candidates.html",
+    "title": "Oligio Timeline Candidates",
+    "fullTitle": "oligio-timeline-candidates.html",
+    "category": "Section Components",
+    "sizeKb": 9
+  },
+  {
+    "path": "components/sections/oligio-treatment-zones.html",
+    "filename": "oligio-treatment-zones.html",
+    "title": "Oligio Treatment Zones",
+    "fullTitle": "oligio-treatment-zones.html",
+    "category": "Section Components",
+    "sizeKb": 14
+  },
+  {
+    "path": "components/sections/oligio-vs-original.html",
+    "filename": "oligio-vs-original.html",
+    "title": "Oligio Vs Original",
+    "fullTitle": "oligio-vs-original.html",
+    "category": "Section Components",
+    "sizeKb": 2
+  },
+  {
+    "path": "components/sections/philosophy-block.html",
+    "filename": "philosophy-block.html",
+    "title": "Philosophy Block",
+    "fullTitle": "philosophy-block.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/safety.html",
+    "filename": "safety.html",
+    "title": "Safety",
+    "fullTitle": "safety.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/showcase-banner.html",
+    "filename": "showcase-banner.html",
+    "title": "Showcase Banner",
+    "fullTitle": "showcase-banner.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/skin-hair-integration.html",
+    "filename": "skin-hair-integration.html",
+    "title": "Skin Hair Integration",
+    "fullTitle": "skin-hair-integration.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/skintox.html",
+    "filename": "skintox.html",
+    "title": "Skintox",
+    "fullTitle": "skintox.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/story.html",
+    "filename": "story.html",
+    "title": "Story",
+    "fullTitle": "story.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/technology-comparison.html",
+    "filename": "technology-comparison.html",
+    "title": "Technology Comparison",
+    "fullTitle": "technology-comparison.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/testimonials-carousel.html",
+    "filename": "testimonials-carousel.html",
+    "title": "Testimonials Carousel",
+    "fullTitle": "testimonials-carousel.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/transparency.html",
+    "filename": "transparency.html",
+    "title": "Transparency",
+    "fullTitle": "transparency.html",
+    "category": "Section Components",
+    "sizeKb": 2
+  },
+  {
+    "path": "components/sections/treatment-areas.html",
+    "filename": "treatment-areas.html",
+    "title": "Treatment Areas",
+    "fullTitle": "treatment-areas.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/treatment-benefits.html",
+    "filename": "treatment-benefits.html",
+    "title": "Treatment Benefits",
+    "fullTitle": "treatment-benefits.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/treatment-hub-grid.html",
+    "filename": "treatment-hub-grid.html",
+    "title": "Treatment Hub Grid",
+    "fullTitle": "treatment-hub-grid.html",
+    "category": "Section Components",
+    "sizeKb": 1
+  },
+  {
+    "path": "components/sections/what-is-standard.html",
+    "filename": "what-is-standard.html",
+    "title": "What Is Standard",
+    "fullTitle": "what-is-standard.html",
+    "category": "Section Components",
+    "sizeKb": 3
+  },
+  {
+    "path": "components/sections/why-sua-glow-difference.html",
+    "filename": "why-sua-glow-difference.html",
+    "title": "Why Sua Glow Difference",
+    "fullTitle": "why-sua-glow-difference.html",
+    "category": "Section Components",
+    "sizeKb": 11
+  },
+  {
+    "path": "components/sections/why-sua.html",
+    "filename": "why-sua.html",
+    "title": "Why Sua",
+    "fullTitle": "why-sua.html",
+    "category": "Section Components",
+    "sizeKb": 2
+  },
+  {
+    "path": "contact.html",
+    "filename": "contact.html",
+    "title": "Contact & Book",
+    "fullTitle": "Contact & Book | SuA K-Glow Korean Medical Aesthetics – Carrollton, TX",
+    "category": "Core Pages",
+    "sizeKb": 40
+  },
+  {
+    "path": "cookie-notices-choices.html",
+    "filename": "cookie-notices-choices.html",
+    "title": "Cookie Notices & Choices",
+    "fullTitle": "Cookie Notices & Choices | SuA K Glow Korean Med Spa",
+    "category": "Legal & Compliance",
+    "sizeKb": 9
+  },
+  {
+    "path": "cosmetic-tox.html",
+    "filename": "cosmetic-tox.html",
+    "title": "Cosmetic Tox & SkinTox",
+    "fullTitle": "Cosmetic Tox & SkinTox | SuA K Glow Korean Med Spa Carrollton",
+    "category": "Injectables",
+    "sizeKb": 30
+  },
+  {
+    "path": "dep.html",
+    "filename": "dep.html",
+    "title": "Needle-Free Skin Infusion (DEP)",
+    "fullTitle": "Needle-Free Skin Infusion (DEP) | SuA K-Glow | Korean Medical Aesthetics",
+    "category": "Treatments & Modalities",
+    "sizeKb": 49
+  },
+  {
+    "path": "dermal-filler.html",
+    "filename": "dermal-filler.html",
+    "title": "Korean Dermal Filler",
+    "fullTitle": "Korean Dermal Filler | SuA K Glow Korean Med Spa Carrollton",
+    "category": "Injectables",
+    "sizeKb": 29
+  },
+  {
+    "path": "dev-tools/audit.html",
+    "filename": "audit.html",
+    "title": "Content Audit & Roadmap",
+    "fullTitle": "SuA Glow - Content Audit & Roadmap",
+    "category": "Dev Tools",
+    "sizeKb": 38
+  },
+  {
+    "path": "dev-tools/content-styles.html",
+    "filename": "content-styles.html",
+    "title": ": Master Content Section Compendium",
+    "fullTitle": "SuA Glow: Master Content Section Compendium",
+    "category": "Dev Tools",
+    "sizeKb": 55
+  },
+  {
+    "path": "dev-tools/dev.html",
+    "filename": "dev.html",
+    "title": "Navigation Reference",
+    "fullTitle": "SuA Glow - Navigation Reference",
+    "category": "Dev Tools",
+    "sizeKb": 17
+  },
+  {
+    "path": "dev-tools/disclaimers.html",
+    "filename": "disclaimers.html",
+    "title": "Disclaimer Inventory",
+    "fullTitle": "SuA Glow - Disclaimer Inventory",
+    "category": "Dev Tools",
+    "sizeKb": 9
+  },
+  {
+    "path": "dev-tools/index.html",
+    "filename": "index.html",
+    "title": ": Developer Tools & Page Directory",
+    "fullTitle": "SuA Glow: Developer Tools & Page Directory",
+    "category": "Dev Tools",
+    "sizeKb": 45
+  },
+  {
+    "path": "dev-tools/section-library.html",
+    "filename": "section-library.html",
+    "title": ": Section Library & Flow Builder",
+    "fullTitle": "SuA Glow: Section Library & Flow Builder",
+    "category": "Dev Tools",
+    "sizeKb": 36
+  },
+  {
+    "path": "dev-tools/sitemap.html",
+    "filename": "sitemap.html",
+    "title": "Site Structure",
+    "fullTitle": "SuA Glow Site Structure",
+    "category": "Dev Tools",
+    "sizeKb": 23
+  },
+  {
+    "path": "dev-tools/style-guide.html",
+    "filename": "style-guide.html",
+    "title": "Style Guide",
+    "fullTitle": "Style Guide | SuA K-Glow",
+    "category": "Dev Tools",
+    "sizeKb": 137
+  },
+  {
+    "path": "dev-tools/sua_glow_sitemap_v2.html",
+    "filename": "sua_glow_sitemap_v2.html",
+    "title": "Site Structure",
+    "fullTitle": "SuA Glow Site Structure",
+    "category": "Dev Tools",
+    "sizeKb": 20
+  },
+  {
+    "path": "dev-tools/tracker.html",
+    "filename": "tracker.html",
+    "title": "Internal Progress Tracker",
+    "fullTitle": "Internal Progress Tracker | SuA Glow",
+    "category": "Dev Tools",
+    "sizeKb": 56
+  },
+  {
+    "path": "education/byryzn-v2.html",
+    "filename": "byryzn-v2.html",
+    "title": "BYRYZN® HA Skin Booster in Carrollton, TX",
+    "fullTitle": "BYRYZN® HA Skin Booster in Carrollton, TX | SuA Glow Korean Med Spa Dallas–Fort Worth",
+    "category": "Education Hub",
+    "sizeKb": 62
+  },
+  {
+    "path": "education/byryzn.html",
+    "filename": "byryzn.html",
+    "title": "BYRYZN®",
+    "fullTitle": "BYRYZN® | SuA K Glow Korean Med Spa",
+    "category": "Education Hub",
+    "sizeKb": 28
+  },
+  {
+    "path": "education/cellredm.html",
+    "filename": "cellredm.html",
+    "title": "CellREDM™",
+    "fullTitle": "CellREDM™ | SuA K Glow Korean Med Spa",
+    "category": "Education Hub",
+    "sizeKb": 25
+  },
+  {
+    "path": "education/hilowave-v2.html",
+    "filename": "hilowave-v2.html",
+    "title": "HILO WAVE® Skin Booster in Carrollton, TX",
+    "fullTitle": "HILO WAVE® Skin Booster in Carrollton, TX | SuA Glow Korean Med Spa Dallas–Fort Worth",
+    "category": "Education Hub",
+    "sizeKb": 36
+  },
+  {
+    "path": "education/hilowave.html",
+    "filename": "hilowave.html",
+    "title": "Hilo Wave®",
+    "fullTitle": "Hilo Wave® | SuA K Glow Korean Med Spa",
+    "category": "Education Hub",
+    "sizeKb": 16
+  },
+  {
+    "path": "education/index.html",
+    "filename": "index.html",
+    "title": "Product Education Directory",
+    "fullTitle": "Product Education Directory | SuA K Glow",
+    "category": "Education Hub",
+    "sizeKb": 14
+  },
+  {
+    "path": "education/juvelook.html",
+    "filename": "juvelook.html",
+    "title": "Juvelook® & Juvelook Volume®",
+    "fullTitle": "Juvelook® & Juvelook Volume® | SuA K Glow Korean Med Spa",
+    "category": "Education Hub",
+    "sizeKb": 28
+  },
+  {
+    "path": "education/re20.html",
+    "filename": "re20.html",
+    "title": "Elravie Re2O",
+    "fullTitle": "Elravie Re2O | SuA K Glow Korean Med Spa",
+    "category": "Education Hub",
+    "sizeKb": 31
+  },
+  {
+    "path": "education/rejuran-tone-up.html",
+    "filename": "rejuran-tone-up.html",
+    "title": "Rejuran® Tone Up Booster",
+    "fullTitle": "Rejuran® Tone Up Booster | SuA K Glow Korean Med Spa",
+    "category": "Education Hub",
+    "sizeKb": 19
+  },
+  {
+    "path": "education/rejuran.html",
+    "filename": "rejuran.html",
+    "title": "Rejuran® Carrollton",
+    "fullTitle": "Rejuran® Carrollton | SuA K Glow Korean Med Spa",
+    "category": "Education Hub",
+    "sizeKb": 20
+  },
+  {
+    "path": "education/skinboosters.html",
+    "filename": "skinboosters.html",
+    "title": "Skin Boosters",
+    "fullTitle": "Skin Boosters | SuA K Glow Korean Med Spa",
+    "category": "Education Hub",
+    "sizeKb": 17
+  },
+  {
+    "path": "education/skinvive.html",
+    "filename": "skinvive.html",
+    "title": "SKINVIVE™ by JUVÉDERM®",
+    "fullTitle": "SKINVIVE™ by JUVÉDERM® | SuA K Glow Korean Med Spa",
+    "category": "Education Hub",
+    "sizeKb": 23
+  },
+  {
+    "path": "financing.html",
+    "filename": "financing.html",
+    "title": "Financing",
+    "fullTitle": "Financing | SuA K Glow Korean Med Spa",
+    "category": "Core Pages",
+    "sizeKb": 6
+  },
+  {
+    "path": "glass-skin-hydration-glow.html",
+    "filename": "glass-skin-hydration-glow.html",
+    "title": "Korean Hydration Facial Dallas",
+    "fullTitle": "Korean Hydration Facial Dallas | Glass Skin Treatment | Hydration Skin Booster | SuA Glow",
+    "category": "Treatments & Modalities",
+    "sizeKb": 49
+  },
+  {
+    "path": "hippa-policy.html",
+    "filename": "hippa-policy.html",
+    "title": "HIPPA Policy",
+    "fullTitle": "HIPPA Policy | SuA K Glow Korean Med Spa",
+    "category": "Legal & Compliance",
+    "sizeKb": 11
+  },
+  {
+    "path": "index.html",
+    "filename": "index.html",
+    "title": "SuA K-Glow",
+    "fullTitle": "SuA K-Glow | Korean Medical Aesthetics",
+    "category": "Core Pages",
+    "sizeKb": 66
+  },
+  {
+    "path": "injectables.html",
+    "filename": "injectables.html",
+    "title": "Injectables",
+    "fullTitle": "Injectables | SuA K Glow Korean Med Spa Carrollton",
+    "category": "Injectables",
+    "sizeKb": 18
+  },
+  {
+    "path": "instagram-designs.html",
+    "filename": "instagram-designs.html",
+    "title": "Instagram Post Designs",
+    "fullTitle": "Instagram Post Designs | SuA K Glow Med Spa",
+    "category": "Core Pages",
+    "sizeKb": 40
+  },
+  {
+    "path": "internal/google-ads/index.html",
+    "filename": "index.html",
+    "title": "Google Ads Campaign Hub: Korean Scalp & Hair Reset",
+    "fullTitle": "Google Ads Campaign Hub: Korean Scalp & Hair Reset | SuA Glow Internal",
+    "category": "Internal & Campaigns",
+    "sizeKb": 345
+  },
+  {
+    "path": "internal/index.html",
+    "filename": "index.html",
+    "title": "Internal Links & Hidden Pages Directory",
+    "fullTitle": "Internal Links & Hidden Pages Directory | SuA K-Glow",
+    "category": "Internal & Campaigns",
+    "sizeKb": 58
+  },
+  {
+    "path": "iv-infusion-wellness-therapy.html",
+    "filename": "iv-infusion-wellness-therapy.html",
+    "title": "IV Therapy Dallas & Carrollton",
+    "fullTitle": "IV Therapy Dallas & Carrollton | IV Infusion & Wellness | SuA Glow",
+    "category": "Treatments & Modalities",
+    "sizeKb": 101
+  },
+  {
+    "path": "korean-scalp-hair-rejuvenation.html",
+    "filename": "korean-scalp-hair-rejuvenation.html",
+    "title": "Korean Scalp & Hair Rejuvenation in Carrollton, TX",
+    "fullTitle": "Korean Scalp & Hair Rejuvenation in Carrollton, TX | SuA Glow",
+    "category": "Treatments & Modalities",
+    "sizeKb": 104
+  },
+  {
+    "path": "ldm-water-drop-lifting.html",
+    "filename": "ldm-water-drop-lifting.html",
+    "title": "Korean LDM Facial Dallas",
+    "fullTitle": "Korean LDM Facial Dallas | Water Drop Lifting Facial | SuA Glow",
+    "category": "Treatments & Modalities",
+    "sizeKb": 61
+  },
+  {
+    "path": "medical-tox.html",
+    "filename": "medical-tox.html",
+    "title": "Medical Tox",
+    "fullTitle": "Medical Tox | TMJ, Hyperhidrosis & Therapeutic Botox | SuA K Glow Carrollton",
+    "category": "Injectables",
+    "sizeKb": 33
+  },
+  {
+    "path": "medical-weight-loss-dallas.html",
+    "filename": "medical-weight-loss-dallas.html",
+    "title": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
+    "fullTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset | SuA Glow Body",
+    "category": "Treatments & Modalities",
+    "sizeKb": 104
+  },
+  {
+    "path": "memberships.html",
+    "filename": "memberships.html",
+    "title": "Korean Glass Skin Membership Dallas",
+    "fullTitle": "Korean Glass Skin Membership Dallas | SuA Glow",
+    "category": "Core Pages",
+    "sizeKb": 49
+  },
+  {
+    "path": "microneedling.html",
+    "filename": "microneedling.html",
+    "title": "SkinPen Microneedling Dallas",
+    "fullTitle": "SkinPen Microneedling Dallas | FDA-Cleared Acne Scar & Glass Skin Treatment | SuA Glow",
+    "category": "Treatments & Modalities",
+    "sizeKb": 56
+  },
+  {
+    "path": "navbar.html",
+    "filename": "navbar.html",
+    "title": "Navbar",
+    "fullTitle": "navbar.html",
+    "category": "Core Pages",
+    "sizeKb": 23
+  },
+  {
+    "path": "needleless-infusion-therapy.html",
+    "filename": "needleless-infusion-therapy.html",
+    "title": "Korean Needle-free Infusion",
+    "fullTitle": "Korean Needle-free Infusion | SuA K-Glow | Korean Medical Aesthetics",
+    "category": "Treatments & Modalities",
+    "sizeKb": 58
+  },
+  {
+    "path": "oligio-x.html",
+    "filename": "oligio-x.html",
+    "title": "Oligio X RF Lifting Dallas",
+    "fullTitle": "Oligio X RF Lifting Dallas | FDA-Cleared Korean Skin Tightening | SuA Glow",
+    "category": "Treatments & Modalities",
+    "sizeKb": 97
+  },
+  {
+    "path": "one-day-glow.html",
+    "filename": "one-day-glow.html",
+    "title": "One Day Glow Treatment",
+    "fullTitle": "One Day Glow Treatment | SuA K Glow Korean Med Spa Carrollton",
+    "category": "Treatments & Modalities",
+    "sizeKb": 28
+  },
+  {
+    "path": "press-media.html",
+    "filename": "press-media.html",
+    "title": "Press & Media",
+    "fullTitle": "Press & Media | SuA K-Glow | Korean Medical Aesthetics",
+    "category": "Core Pages",
+    "sizeKb": 3
+  },
+  {
+    "path": "privacy-policy.html",
+    "filename": "privacy-policy.html",
+    "title": "Privacy Policy",
+    "fullTitle": "Privacy Policy | SuA K Glow Korean Med Spa",
+    "category": "Legal & Compliance",
+    "sizeKb": 9
+  },
+  {
+    "path": "radiesse.html",
+    "filename": "radiesse.html",
+    "title": "Radiesse Bio-Stimulator",
+    "fullTitle": "Radiesse Bio-Stimulator | SuA K Glow Korean Med Spa Carrollton",
+    "category": "Injectables",
+    "sizeKb": 39
+  },
+  {
+    "path": "referral.html",
+    "filename": "referral.html",
+    "title": "Referral Program",
+    "fullTitle": "Referral Program | SuA K-Glow Korean Medical Aesthetics – Carrollton, TX",
+    "category": "Core Pages",
+    "sizeKb": 6
+  },
+  {
+    "path": "salmon-pn-facial.html",
+    "filename": "salmon-pn-facial.html",
+    "title": "Salmon PN Facial",
+    "fullTitle": "Salmon PN Facial | SuA K Glow Korean Med Spa Carrollton",
+    "category": "Treatments & Modalities",
+    "sizeKb": 28
+  },
+  {
+    "path": "scar-treatment.html",
+    "filename": "scar-treatment.html",
+    "title": "Korean Scar Treatment",
+    "fullTitle": "Korean Scar Treatment | SuA K Glow Korean Med Spa Carrollton",
+    "category": "Treatments & Modalities",
+    "sizeKb": 42
+  },
+  {
+    "path": "seoul-man.html",
+    "filename": "seoul-man.html",
+    "title": "Seoul Man Treatment",
+    "fullTitle": "Seoul Man Treatment | SuA K Glow Korean Med Spa Carrollton",
+    "category": "Treatments & Modalities",
+    "sizeKb": 28
+  },
+  {
+    "path": "shop-skincare-rejuran.html",
+    "filename": "shop-skincare-rejuran.html",
+    "title": "Skincare & Products",
+    "fullTitle": "Skincare & Products | SuA K-Glow | Carrollton, TX",
+    "category": "Core Pages",
+    "sizeKb": 21
+  },
+  {
+    "path": "shop-skincare.html",
+    "filename": "shop-skincare.html",
+    "title": "Skincare & Products",
+    "fullTitle": "Skincare & Products | SuA K-Glow | Carrollton, TX",
+    "category": "Core Pages",
+    "sizeKb": 25
+  },
+  {
+    "path": "signature-treatment.html",
+    "filename": "signature-treatment.html",
+    "title": "Signature Treatment",
+    "fullTitle": "SuA Glow Signature Treatment | SuA K Glow Korean Med Spa Carrollton",
+    "category": "Treatments & Modalities",
+    "sizeKb": 35
+  },
+  {
+    "path": "sitemap.html",
+    "filename": "sitemap.html",
+    "title": "Sitemap",
+    "fullTitle": "Sitemap | SuA K-Glow | Korean Medical Aesthetics",
+    "category": "Core Pages",
+    "sizeKb": 21
+  },
+  {
+    "path": "skin-goals-blocks.html",
+    "filename": "skin-goals-blocks.html",
+    "title": "Skin Goals Blocks",
+    "fullTitle": "skin-goals-blocks.html",
+    "category": "Core Pages",
+    "sizeKb": 12
+  },
+  {
+    "path": "skin-health.html",
+    "filename": "skin-health.html",
+    "title": "Skin Health",
+    "fullTitle": "Skin Health | SuA K-Glow | Korean Medical Aesthetics",
+    "category": "Treatments & Modalities",
+    "sizeKb": 17
+  },
+  {
+    "path": "skin-quality-boosters.html",
+    "filename": "skin-quality-boosters.html",
+    "title": "Skin Quality Boosters",
+    "fullTitle": "Skin Quality Boosters | SuA K Glow Korean Med Spa Carrollton",
+    "category": "Treatments & Modalities",
+    "sizeKb": 30
+  },
+  {
+    "path": "specials-september.html",
+    "filename": "specials-september.html",
+    "title": "September Specials",
+    "fullTitle": "September Specials | The SuA Glow September Edit | Carrollton Med Spa",
+    "category": "Core Pages",
+    "sizeKb": 4
+  },
+  {
+    "path": "specials.html",
+    "filename": "specials.html",
+    "title": "Specials",
+    "fullTitle": "Specials | SuA K Glow Korean Med Spa",
+    "category": "Core Pages",
+    "sizeKb": 4
+  },
+  {
+    "path": "testimonials.html",
+    "filename": "testimonials.html",
+    "title": "Patient Stories",
+    "fullTitle": "Patient Stories | SuA K-Glow Korean Medical Aesthetics",
+    "category": "Core Pages",
+    "sizeKb": 33
+  },
+  {
+    "path": "tone-up-facial.html",
+    "filename": "tone-up-facial.html",
+    "title": "Korean Tone-Up Facial Dallas",
+    "fullTitle": "Korean Tone-Up Facial Dallas | Brightening Facial | Korean Glass Skin Treatment | SuA Glow",
+    "category": "Treatments & Modalities",
+    "sizeKb": 63
+  }
+]

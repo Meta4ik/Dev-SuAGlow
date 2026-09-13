@@ -1,7 +1,7 @@
 // fetch-google-reviews.js
 // 
-// This script fetches both newest and most helpful reviews from Google Places API,
-// deduplicates them, and saves them to assets/data/google-reviews.json for the frontend.
+// Fetches overall rating, user_ratings_total, and newest/most helpful reviews from Google Places API.
+// Deduplicates reviews and saves the complete dataset to assets/data/google-reviews.json for dynamic frontend rendering.
 
 const fs = require('fs');
 const path = require('path');
@@ -13,38 +13,64 @@ const PLACE_ID = process.env.GOOGLE_PLACE_ID || 'ChIJAZ6jKhphFI0RkQGEpYmxGtg';
 const OUTPUT_FILE = path.join(__dirname, '../assets/data/google-reviews.json');
 
 function fetchEndpoint(sort) {
-    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&reviews_sort=${sort}&key=${API_KEY}`;
-    return new Promise((resolve, reject) => {
-        https.get(url, (res) => {
+    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=name,rating,user_ratings_total,reviews&reviews_sort=${sort}&key=${API_KEY}`;
+    return new Promise((resolve) => {
+        const req = https.get(url, { timeout: 8000 }, (res) => {
             let data = '';
             res.on('data', chunk => data += chunk);
             res.on('end', () => {
                 try {
                     const parsed = JSON.parse(data);
-                    if (parsed.status === 'OK' && parsed.result && parsed.result.reviews) {
-                        resolve(parsed.result.reviews);
+                    if (parsed.status === 'OK' && parsed.result) {
+                        resolve(parsed.result);
                     } else {
-                        resolve([]);
+                        console.warn(`[Google Places] Status: ${parsed.status}`, parsed.error_message || '');
+                        resolve(null);
                     }
                 } catch (e) {
-                    reject(e);
+                    console.warn('[Google Places] Parse error:', e.message);
+                    resolve(null);
                 }
             });
-        }).on('error', reject);
+        });
+
+        req.on('error', (err) => {
+            console.warn('[Google Places] Network error:', err.message);
+            resolve(null);
+        });
+
+        req.on('timeout', () => {
+            req.destroy();
+            console.warn('[Google Places] Request timed out.');
+            resolve(null);
+        });
     });
 }
 
 async function main() {
     try {
-        console.log('Fetching newest and relevant reviews from Google API...');
-        const [newestReviews, relevantReviews] = await Promise.all([
+        console.log('Fetching live Google Reviews & Rating metrics from Google Places API...');
+        const [newestResult, relevantResult] = await Promise.all([
             fetchEndpoint('newest'),
             fetchEndpoint('most_relevant')
         ]);
 
+        const baseResult = newestResult || relevantResult;
+
+        if (!baseResult) {
+            console.log('Could not retrieve new Google data. Retaining existing cache.');
+            return;
+        }
+
+        const rating = baseResult.rating || 5.0;
+        const totalReviews = baseResult.user_ratings_total || 122;
+
+        const newestReviews = newestResult?.reviews || [];
+        const relevantReviews = relevantResult?.reviews || [];
+
         const reviewMap = new Map();
 
-        // Add newest first
+        // Add newest reviews first
         newestReviews.forEach(r => {
             const key = `${r.author_name}-${r.time}`;
             if (!reviewMap.has(key)) {
@@ -52,7 +78,7 @@ async function main() {
             }
         });
 
-        // Add most relevant
+        // Add most relevant reviews
         relevantReviews.forEach(r => {
             const key = `${r.author_name}-${r.time}`;
             if (!reviewMap.has(key)) {
@@ -71,15 +97,27 @@ async function main() {
                 relative_time_description: r.relative_time_description
             }));
 
-        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allReviews, null, 2));
-        console.log(`Successfully saved ${allReviews.length} unique Google reviews to ${OUTPUT_FILE}`);
-        allReviews.forEach((r, idx) => {
-            console.log(`${idx + 1}. ${r.author_name} (${r.rating}★) - ${r.relative_time_description}`);
-        });
+        const outputData = {
+            place_name: baseResult.name || 'SuA Glow',
+            rating: Number(rating).toFixed(1),
+            user_ratings_total: totalReviews,
+            formatted_badge: `${Number(rating).toFixed(1)} · ${totalReviews} reviews`,
+            last_updated: new Date().toISOString(),
+            reviews: allReviews
+        };
+
+        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(outputData, null, 2));
+        console.log(`Successfully updated Google Reviews: Rating ${outputData.rating}★ | Total Reviews: ${outputData.user_ratings_total} (${allReviews.length} detailed reviews stored)`);
+        return outputData;
 
     } catch (error) {
-        console.error('Error fetching reviews:', error);
+        console.error('Error during Google Reviews fetch:', error);
     }
 }
 
-main();
+// Allow being called directly or as an imported module
+if (require.main === module) {
+    main();
+} else {
+    module.exports = main;
+}

@@ -274,6 +274,14 @@ const NAVBAR_HTML = `
                 </a>
             </div>
 
+            <!-- Memberships Link -->
+            <div class="nav-item">
+                <a href="memberships.html"
+                    class="nav-link font-body text-[13px] tracking-[0.1em] text-charcoal hover:text-taupe transition-colors uppercase whitespace-nowrap">
+                    Memberships
+                </a>
+            </div>
+
             <!-- Our Story -->
             <div class="nav-item-dropdown">
                 <a href="about.html"
@@ -558,6 +566,14 @@ const NAVBAR_HTML = `
                         <span class="absolute top-0 left-0 w-full h-[40%] bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></span>
                         <i data-lucide="tag" class="w-4 h-4 text-amber-950 shrink-0 relative z-10"></i>
                         <span class="relative z-10">PROMOS</span>
+                    </a>
+                </div>
+
+                <!-- Memberships Mobile Link -->
+                <div class="py-1">
+                    <a href="memberships.html" class="flex items-center justify-between font-heading text-lg text-near-black py-2 hover:text-taupe transition-colors">
+                        <span>Memberships</span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-warm-gold bg-warm-gold/10 border border-warm-gold/20 px-2.5 py-0.5 rounded-full">$199/MO</span>
                     </a>
                 </div>
 

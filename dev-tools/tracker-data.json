@@ -33,13 +33,13 @@
         "topic": "Membership",
         "type": "Status",
         "issue": "Completed draft of membership",
-        "action_needed": "Review with Sophia & Jasmine",
-        "assignee": "Kameron",
+        "action_needed": "Reviewed by Sophia; memberships.html landing page and homepage section implemented",
+        "assignee": "Marcus / Kameron",
         "priority": "High",
-        "status": "Open",
-        "date_opened": null,
+        "status": "In Progress",
+        "date_opened": "2026-08-28",
         "date_resolved": null,
-        "resolution": null
+        "resolution": "Created memberships.html landing page, added membership feature section to index.html, and wired navbar and footer links."
     },
     {
         "id": "4",
