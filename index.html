@@ -720,6 +720,27 @@
 
                     <!-- Right Column: Elevated VIP Perks & Pricing Card (5 cols) -->
                     <div class="lg:col-span-5 relative">
+                        <!-- Floating Circular Price Badge -->
+                        <div class="absolute -top-7 right-3 sm:-top-10 sm:-right-6 z-30 flex items-center justify-center text-warm-gold pointer-events-none w-[118px] h-[118px] sm:w-[140px] sm:h-[140px]"
+                            style="animation: float 6s ease-in-out infinite;">
+                            <!-- Frosted Glass Backing -->
+                            <div class="absolute inset-0 bg-[#16181B]/85 backdrop-blur-md rounded-full shadow-[0_15px_35px_rgba(0,0,0,0.55),0_0_25px_rgba(170,152,124,0.25)] border border-warm-gold/40"></div>
+                            <!-- Rotating Circular Text -->
+                            <svg viewBox="0 0 100 100" class="relative z-10 w-[95%] h-[95%]" style="animation: spin-badge 20s linear infinite;">
+                                <path id="textCirclePriceIndex" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="transparent" />
+                                <text font-family="Montserrat, sans-serif" font-size="7.4" font-weight="700" fill="currentColor" class="uppercase" letter-spacing="0.12em">
+                                    <textPath href="#textCirclePriceIndex" startOffset="0%">
+                                        • ALL-INCLUSIVE KOREAN RITUAL • VIP MEMBER •
+                                    </textPath>
+                                </text>
+                            </svg>
+                            <!-- Center Price -->
+                            <div class="absolute inset-0 flex flex-col items-center justify-center z-20 text-center leading-none">
+                                <span class="font-heading font-black text-2xl sm:text-3xl text-white tracking-tight leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">$199</span>
+                                <span class="text-[8px] sm:text-[9px] uppercase font-bold tracking-[0.24em] text-warm-gold mt-1 drop-shadow">/ MONTH</span>
+                            </div>
+                        </div>
+
                         <div class="relative bg-gradient-to-b from-[#24292E] via-[#1A1D20] to-[#121416] rounded-3xl p-7 sm:p-9 border-2 border-warm-gold/45 shadow-[0_25px_60px_rgba(0,0,0,0.6),0_0_40px_rgba(170,152,124,0.18)] text-left space-y-5">
                             <!-- SuA Glow Logo Header -->
                             <div class="flex items-center justify-center pb-3 border-b border-white/10">
@@ -737,18 +758,15 @@
                                 </span>
                             </div>
 
-                            <!-- Hero Price Block -->
-                            <div class="pt-1 pb-4 border-b border-white/10 space-y-2">
-                                <div class="flex items-baseline gap-2.5">
-                                    <span class="font-heading text-5xl sm:text-6xl font-black text-white tracking-tight leading-none">$199</span>
-                                    <div class="leading-none">
-                                        <span class="text-xs uppercase tracking-[0.2em] font-bold text-warm-gold block">/ MONTH</span>
-                                        <span class="text-[11px] text-white/40 block mt-1">All 5 Treatments Included</span>
-                                    </div>
+                            <!-- Inclusions & Value Comparison Block -->
+                            <div class="pt-1 pb-4 border-b border-white/10 flex items-center justify-between gap-3">
+                                <div>
+                                    <span class="text-xs uppercase tracking-[0.2em] font-bold text-warm-gold block">ALL 5 TREATMENTS INCLUDED</span>
+                                    <span class="text-[11px] text-white/60 block mt-0.5">Monthly provider-curated Korean skin ritual</span>
                                 </div>
-                                <div class="flex items-center gap-2 pt-1">
-                                    <span class="text-xs text-white/40 line-through">$450+ value</span>
-                                    <span class="text-[10px] font-bold uppercase tracking-wider text-warm-gold bg-warm-gold/15 border border-warm-gold/30 px-2 py-0.5 rounded-full">Save Over 55%</span>
+                                <div class="text-right shrink-0">
+                                    <span class="text-xs text-white/40 line-through block">$450+ value</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-warm-gold bg-warm-gold/15 border border-warm-gold/30 px-2.5 py-0.5 rounded-full inline-block mt-0.5">Save Over 55%</span>
                                 </div>
                             </div>
 
