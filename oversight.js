@@ -6,14 +6,8 @@ const OVERSIGHT_HTML = `
                 <!-- Background accent element -->
                 <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-[#AA987C]/5 rounded-full blur-2xl"></div>
                 
-                <div class="flex flex-col md:flex-row items-start md:items-center gap-8 relative z-10">
-                    <!-- Icon Badge -->
-                    <div class="w-14 h-14 rounded-2xl bg-[#AA987C]/10 flex items-center justify-center shrink-0 border border-[#AA987C]/20">
-                        <i data-lucide="shield-check" class="w-7 h-7 text-warm-gold"></i>
-                    </div>
-                    
-                    <div class="space-y-4 flex-1">
-                        <div class="flex flex-wrap items-center gap-3">
+                <div class="space-y-4 relative z-10">
+                    <div class="flex flex-wrap items-center gap-3">
                             <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#AA987C] bg-[#AA987C]/10 px-3.5 py-1 rounded-full border border-[#AA987C]/20">Medical Expertise You Can Trust</span>
                             <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-charcoal/40 bg-charcoal/5 px-3 py-1 rounded-full">Texas Compliant</span>
                         </div>
@@ -24,19 +18,19 @@ const OVERSIGHT_HTML = `
                         
                         <!-- Clinicians Info Cards -->
                         <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="flex items-center gap-4 p-4 rounded-xl border border-light-gray/30" style="background: radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(233,233,229,0.8) 100%);">
-                                <img src="assets/sophia-yang.png" alt="Sophia Yang, PA-C" class="w-16 h-16 rounded-full object-cover shrink-0 border border-light-gray/40 shadow-xs">
+                            <div class="flex items-center gap-4 sm:gap-5 p-4 sm:p-5 rounded-2xl border border-light-gray/30 shadow-xs" style="background: radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(233,233,229,0.8) 100%);">
+                                <img src="assets/sophia-yang.png" alt="Sophia Yang, PA-C" class="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover shrink-0 border-2 border-white shadow-md">
                                 <div>
-                                    <p class="text-[13px] font-semibold text-near-black leading-tight">Sophia Yang, PA-C</p>
-                                    <p class="text-[9px] uppercase tracking-wider text-taupe/90 font-medium mt-1">Seoul-Trained Medical Aesthetic Provider</p>
+                                    <p class="text-sm sm:text-base font-semibold text-near-black leading-tight">Sophia Yang, PA-C</p>
+                                    <p class="text-[10px] sm:text-[11px] uppercase tracking-wider text-taupe/90 font-medium mt-1.5">Seoul-Trained Medical Aesthetic Provider</p>
                                 </div>
                             </div>
                             
-                            <div class="flex items-center gap-4 p-4 rounded-xl border border-light-gray/30" style="background: radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(233,233,229,0.8) 100%);">
-                                <img src="assets/dr-adam-yang.png" alt="Dr. Adam Yang" class="w-16 h-16 rounded-full object-cover shrink-0 border border-light-gray/40 shadow-xs">
+                            <div class="flex items-center gap-4 sm:gap-5 p-4 sm:p-5 rounded-2xl border border-light-gray/30 shadow-xs" style="background: radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(233,233,229,0.8) 100%);">
+                                <img src="assets/dr-adam-yang.png" alt="Dr. Adam Yang" class="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover shrink-0 border-2 border-white shadow-md">
                                 <div>
-                                    <p class="text-[13px] font-semibold text-near-black leading-tight">Dr. Adam Yang</p>
-                                    <p class="text-[9px] uppercase tracking-wider text-taupe/90 font-medium mt-1">Medical Director &amp; Supervising Physician</p>
+                                    <p class="text-sm sm:text-base font-semibold text-near-black leading-tight">Dr. Adam Yang</p>
+                                    <p class="text-[10px] sm:text-[11px] uppercase tracking-wider text-taupe/90 font-medium mt-1.5">Medical Director &amp; Supervising Physician</p>
                                 </div>
                             </div>
                         </div>
@@ -48,6 +42,14 @@ const OVERSIGHT_HTML = `
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 `;
+
+// Auto-initialize if script.js already ran or DOM is loaded
+if (typeof initOversight === 'function') {
+    initOversight();
+} else if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(() => {
+        if (typeof initOversight === 'function') initOversight();
+    }, 10);
+}

@@ -3,9 +3,9 @@ const SOPHIA_HTML = `
     <section id="sophia" data-nav-theme="dark" class="py-32 px-10 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-24">
             <div class="lg:w-1/2 animate-on-scroll fade-right">
-                <div class="aspect-[4/5] bg-off-white relative">
+                <div class="aspect-[4/5] bg-off-white relative rounded-2xl overflow-hidden shadow-2xl">
                     <img src="OurTeam_no_bg.webp"
-                        class="w-full h-full object-contain grayscale brightness-90 pt-8"
+                        class="w-full h-full object-cover object-top"
                         alt="Sophia Yang Portrait">
                     <div class="absolute bottom-10 right-10 bg-near-black text-white p-12 hidden xl:block shadow-2xl">
                         <p class="heading-wide text-xl mb-3 !font-900">Sophia Yang, PA-C</p>

@@ -192,8 +192,13 @@ function initOversight() {
   if (!placeholder) return;
 
   if (typeof OVERSIGHT_HTML !== 'undefined') {
+    const isSubfolder = window.location.pathname.includes('/education/') || window.location.pathname.includes('/dev-tools/') || window.location.pathname.includes('/internal/');
     const treatmentName = placeholder.dataset.treatment || 'treatment';
     let html = OVERSIGHT_HTML.replace('{treatment}', treatmentName);
+    
+    if (isSubfolder) {
+      html = html.replace(/(href|src)="(?!(http|https|\/|#|\.\.\/))([^"]+)"/g, '$1="../$3"');
+    }
     
     placeholder.innerHTML = html;
 
