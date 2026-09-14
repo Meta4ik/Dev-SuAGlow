@@ -23,9 +23,8 @@ module.exports = {
                 'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
             },
             fontFamily: {
-                'heading': ['var(--font-heading, Montserrat)', 'Montserrat', 'Poppins', 'sans-serif'],
+                'heading': ['Montserrat', 'Poppins', 'sans-serif'],
                 'body': ['Poppins', 'sans-serif'],
-                'instrument': ['"Instrument Sans"', 'sans-serif'],
             },
         },
     },
