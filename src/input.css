@@ -7,15 +7,15 @@
    SuA Glow Design System
    All custom styles — previously in style.css
    ================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
 /* Dynamic Heading Font Variables for A/B Testing */
 :root {
     --font-heading: 'Montserrat', sans-serif;
 }
 
-html.font-jost {
-    --font-heading: 'Jost', sans-serif;
+html.font-instrument {
+    --font-heading: 'Instrument Sans', sans-serif;
 }
 
 /* Base Styles */
@@ -55,21 +55,21 @@ h6,
     line-height: 1.1;
 }
 
-/* Specific class-based overrides when Jost A/B test is active */
-html.font-jost h1,
-html.font-jost h2,
-html.font-jost h3,
-html.font-jost h4,
-html.font-jost h5,
-html.font-jost h6,
-html.font-jost .font-heading,
-html.font-jost .heading-wide,
-html.font-jost [style*="Montserrat"] {
-    font-family: 'Jost', sans-serif !important;
+/* Specific class-based overrides when Instrument Sans A/B test is active */
+html.font-instrument h1,
+html.font-instrument h2,
+html.font-instrument h3,
+html.font-instrument h4,
+html.font-instrument h5,
+html.font-instrument h6,
+html.font-instrument .font-heading,
+html.font-instrument .heading-wide,
+html.font-instrument [style*="Montserrat"] {
+    font-family: 'Instrument Sans', sans-serif !important;
 }
 
-html.font-jost svg text {
-    font-family: 'Jost', sans-serif !important;
+html.font-instrument svg text {
+    font-family: 'Instrument Sans', sans-serif !important;
 }
 
 /* Reveal Animation — scroll-triggered fade-in */
