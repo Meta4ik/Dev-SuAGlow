@@ -25,7 +25,7 @@ module.exports = {
             fontFamily: {
                 'heading': ['var(--font-heading, Montserrat)', 'Montserrat', 'Poppins', 'sans-serif'],
                 'body': ['Poppins', 'sans-serif'],
-                'urbanist': ['Urbanist', 'sans-serif'],
+                'cormorant': ['"Cormorant Garamond"', 'Garamond', 'Georgia', 'serif'],
             },
         },
     },

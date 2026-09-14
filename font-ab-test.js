@@ -1,21 +1,27 @@
 /**
- * SuA Glow Typography A/B Testing Widget (Montserrat vs. Urbanist)
- * Allows real-time switching between Montserrat and Urbanist heading fonts.
+ * SuA Glow Typography A/B Testing Widget (Montserrat vs. Cormorant Garamond)
+ * Allows real-time switching between Montserrat and Cormorant Garamond heading fonts.
  * Persists user preference in localStorage across all pages.
  */
 (function () {
     // 1. Instant execution to prevent font flicker before DOM loads
     const STORAGE_KEY = 'suaglow_heading_font';
-    const savedFont = localStorage.getItem(STORAGE_KEY) || 'montserrat';
+    let savedFont = localStorage.getItem(STORAGE_KEY) || 'montserrat';
+    // Graceful migration if previously set to urbanist
     if (savedFont === 'urbanist') {
-        document.documentElement.classList.add('font-urbanist');
-    } else {
-        document.documentElement.classList.remove('font-urbanist');
+        savedFont = 'cormorant';
+        localStorage.setItem(STORAGE_KEY, 'cormorant');
     }
 
-    // Ensure Google Font preconnect and Urbanist font stylesheet are loaded
+    if (savedFont === 'cormorant') {
+        document.documentElement.classList.add('font-cormorant');
+    } else {
+        document.documentElement.classList.remove('font-cormorant');
+    }
+
+    // Ensure Google Font preconnect and Cormorant Garamond font stylesheet are loaded
     function ensureFontLoaded() {
-        if (!document.getElementById('urbanist-font-link')) {
+        if (!document.getElementById('cormorant-font-link')) {
             const preconnect1 = document.createElement('link');
             preconnect1.rel = 'preconnect';
             preconnect1.href = 'https://fonts.googleapis.com';
@@ -28,9 +34,9 @@
             document.head.appendChild(preconnect2);
 
             const fontLink = document.createElement('link');
-            fontLink.id = 'urbanist-font-link';
+            fontLink.id = 'cormorant-font-link';
             fontLink.rel = 'stylesheet';
-            fontLink.href = 'https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap';
+            fontLink.href = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap';
             document.head.appendChild(fontLink);
         }
     }
@@ -41,7 +47,7 @@
 
         ensureFontLoaded();
 
-        const currentFont = localStorage.getItem(STORAGE_KEY) || 'montserrat';
+        const currentFont = localStorage.getItem(STORAGE_KEY) === 'cormorant' ? 'cormorant' : 'montserrat';
 
         const widget = document.createElement('div');
         widget.id = 'font-ab-widget-container';
@@ -54,7 +60,7 @@
             <div id="font-ab-card" class="bg-[#121518]/95 backdrop-blur-xl border border-warm-gold/45 rounded-full p-1.5 sm:p-2 shadow-[0_12px_35px_rgba(0,0,0,0.65),0_0_25px_rgba(170,152,124,0.25)] flex items-center gap-2 transition-all duration-300">
                 <!-- A/B Badge & Icon -->
                 <div class="flex items-center gap-1.5 pl-2.5 pr-1 py-1">
-                    <span class="w-2 h-2 rounded-full ${currentFont === 'urbanist' ? 'bg-[#AA987C]' : 'bg-white/40'} animate-pulse"></span>
+                    <span class="w-2 h-2 rounded-full ${currentFont === 'cormorant' ? 'bg-[#AA987C]' : 'bg-white/40'} animate-pulse"></span>
                     <span class="text-[9px] font-heading font-black tracking-widest text-warm-gold uppercase whitespace-nowrap">A/B FONT</span>
                 </div>
 
@@ -64,9 +70,9 @@
                         class="px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 whitespace-nowrap ${currentFont === 'montserrat' ? 'bg-warm-gold text-near-black shadow-md font-bold' : 'text-white/60 hover:text-white'}">
                         Montserrat
                     </button>
-                    <button id="btn-font-urbanist" type="button" 
-                        class="px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 whitespace-nowrap ${currentFont === 'urbanist' ? 'bg-warm-gold text-near-black shadow-md font-bold' : 'text-white/60 hover:text-white'}">
-                        Urbanist
+                    <button id="btn-font-cormorant" type="button" 
+                        class="px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 whitespace-nowrap ${currentFont === 'cormorant' ? 'bg-warm-gold text-near-black shadow-md font-bold' : 'text-white/60 hover:text-white'}">
+                        Cormorant Garamond
                     </button>
                 </div>
 
@@ -84,7 +90,7 @@
             <button id="btn-font-minimized-trigger" type="button" title="Open Font A/B Test (Press Alt+F to toggle)" aria-label="Open Font A/B Test"
                 class="hidden w-12 h-12 rounded-full bg-[#121518]/95 backdrop-blur-xl border-2 border-warm-gold/60 text-warm-gold shadow-[0_8px_25px_rgba(0,0,0,0.6),0_0_20px_rgba(170,152,124,0.3)] hover:scale-105 active:scale-95 flex flex-col items-center justify-center transition-all duration-300">
                 <span class="text-xs font-heading font-black tracking-tight leading-none text-white">Aa</span>
-                <span class="text-[7px] font-bold tracking-widest uppercase text-warm-gold mt-0.5 leading-none" id="mini-font-indicator">${currentFont === 'urbanist' ? 'URB' : 'MON'}</span>
+                <span class="text-[7px] font-bold tracking-widest uppercase text-warm-gold mt-0.5 leading-none" id="mini-font-indicator">${currentFont === 'cormorant' ? 'COR' : 'MON'}</span>
             </button>
 
             <!-- Floating Feedback Toast -->
@@ -99,7 +105,7 @@
         const card = document.getElementById('font-ab-card');
         const miniBtn = document.getElementById('btn-font-minimized-trigger');
         const btnMont = document.getElementById('btn-font-montserrat');
-        const btnUrb = document.getElementById('btn-font-urbanist');
+        const btnCor = document.getElementById('btn-font-cormorant');
         const miniIndicator = document.getElementById('mini-font-indicator');
         const toast = document.getElementById('font-ab-toast');
         const minimizeBtn = document.getElementById('btn-font-minimize');
@@ -115,27 +121,27 @@
         }
 
         function setFont(font) {
-            if (font === 'urbanist') {
-                document.documentElement.classList.add('font-urbanist');
-                localStorage.setItem(STORAGE_KEY, 'urbanist');
+            if (font === 'cormorant') {
+                document.documentElement.classList.add('font-cormorant');
+                localStorage.setItem(STORAGE_KEY, 'cormorant');
 
-                btnUrb.className = 'px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 whitespace-nowrap bg-warm-gold text-near-black shadow-md font-bold';
+                btnCor.className = 'px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 whitespace-nowrap bg-warm-gold text-near-black shadow-md font-bold';
                 btnMont.className = 'px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 whitespace-nowrap text-white/60 hover:text-white';
-                miniIndicator.textContent = 'URB';
-                showToast('Headings: Urbanist');
+                miniIndicator.textContent = 'COR';
+                showToast('Headings: Cormorant Garamond');
             } else {
-                document.documentElement.classList.remove('font-urbanist');
+                document.documentElement.classList.remove('font-cormorant');
                 localStorage.setItem(STORAGE_KEY, 'montserrat');
 
                 btnMont.className = 'px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 whitespace-nowrap bg-warm-gold text-near-black shadow-md font-bold';
-                btnUrb.className = 'px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 whitespace-nowrap text-white/60 hover:text-white';
+                btnCor.className = 'px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 whitespace-nowrap text-white/60 hover:text-white';
                 miniIndicator.textContent = 'MON';
                 showToast('Headings: Montserrat');
             }
         }
 
         btnMont.addEventListener('click', () => setFont('montserrat'));
-        btnUrb.addEventListener('click', () => setFont('urbanist'));
+        btnCor.addEventListener('click', () => setFont('cormorant'));
 
         // Minimize / Expand
         minimizeBtn.addEventListener('click', () => {
@@ -152,8 +158,8 @@
         window.addEventListener('keydown', (e) => {
             if (e.altKey && (e.key === 'f' || e.key === 'F')) {
                 e.preventDefault();
-                const current = localStorage.getItem(STORAGE_KEY) || 'montserrat';
-                setFont(current === 'urbanist' ? 'montserrat' : 'urbanist');
+                const current = localStorage.getItem(STORAGE_KEY) === 'cormorant' ? 'cormorant' : 'montserrat';
+                setFont(current === 'cormorant' ? 'montserrat' : 'cormorant');
             }
         });
     }

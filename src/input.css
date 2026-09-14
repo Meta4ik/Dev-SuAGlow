@@ -7,15 +7,15 @@
    SuA Glow Design System
    All custom styles — previously in style.css
    ================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* Dynamic Heading Font Variables for A/B Testing */
 :root {
     --font-heading: 'Montserrat', sans-serif;
 }
 
-html.font-urbanist {
-    --font-heading: 'Urbanist', sans-serif;
+html.font-cormorant {
+    --font-heading: 'Cormorant Garamond', 'Garamond', Georgia, serif;
 }
 
 /* Base Styles */
@@ -55,21 +55,21 @@ h6,
     line-height: 1.1;
 }
 
-/* Specific class-based overrides when Urbanist A/B test is active */
-html.font-urbanist h1,
-html.font-urbanist h2,
-html.font-urbanist h3,
-html.font-urbanist h4,
-html.font-urbanist h5,
-html.font-urbanist h6,
-html.font-urbanist .font-heading,
-html.font-urbanist .heading-wide,
-html.font-urbanist [style*="Montserrat"] {
-    font-family: 'Urbanist', sans-serif !important;
+/* Specific class-based overrides when Cormorant Garamond A/B test is active */
+html.font-cormorant h1,
+html.font-cormorant h2,
+html.font-cormorant h3,
+html.font-cormorant h4,
+html.font-cormorant h5,
+html.font-cormorant h6,
+html.font-cormorant .font-heading,
+html.font-cormorant .heading-wide,
+html.font-cormorant [style*="Montserrat"] {
+    font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif !important;
 }
 
-html.font-urbanist svg text {
-    font-family: 'Urbanist', sans-serif !important;
+html.font-cormorant svg text {
+    font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif !important;
 }
 
 /* Reveal Animation — scroll-triggered fade-in */
