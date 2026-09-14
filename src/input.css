@@ -7,7 +7,16 @@
    SuA Glow Design System
    All custom styles — previously in style.css
    ================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Dynamic Heading Font Variables for A/B Testing */
+:root {
+    --font-heading: 'Montserrat', sans-serif;
+}
+
+html.font-urbanist {
+    --font-heading: 'Urbanist', sans-serif;
+}
 
 /* Base Styles */
 html, body {
@@ -27,7 +36,7 @@ h4,
 h5,
 h6,
 .font-heading {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-heading, 'Montserrat', sans-serif);
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
@@ -39,11 +48,28 @@ h6,
 
 /* Heading Wide — shared display heading style */
 .heading-wide {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-heading, 'Montserrat', sans-serif);
     text-transform: uppercase;
     letter-spacing: 0.12em;
     font-weight: 300;
     line-height: 1.1;
+}
+
+/* Specific class-based overrides when Urbanist A/B test is active */
+html.font-urbanist h1,
+html.font-urbanist h2,
+html.font-urbanist h3,
+html.font-urbanist h4,
+html.font-urbanist h5,
+html.font-urbanist h6,
+html.font-urbanist .font-heading,
+html.font-urbanist .heading-wide,
+html.font-urbanist [style*="Montserrat"] {
+    font-family: 'Urbanist', sans-serif !important;
+}
+
+html.font-urbanist svg text {
+    font-family: 'Urbanist', sans-serif !important;
 }
 
 /* Reveal Animation — scroll-triggered fade-in */
