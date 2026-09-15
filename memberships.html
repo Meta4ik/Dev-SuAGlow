@@ -605,13 +605,12 @@
 
                 <!-- Right: Luxury Black Card with Korean Model Backdrop -->
                 <div class="lg:col-span-5 relative rounded-[2rem] overflow-hidden bg-[#111315] shadow-2xl border border-charcoal/15 flex flex-col justify-between p-7 sm:p-9 md:p-10 text-white min-h-[580px]">
-                    <!-- Background Model Portrait (Positioned strictly in the right open blank area) -->
-                    <div class="absolute top-0 right-0 bottom-0 w-[55%] sm:w-[50%] z-0 pointer-events-none overflow-hidden">
+                    <!-- Background Model Portrait (Exact placement matching reference: face on far right, orchids bottom right, dark negative space on left) -->
+                    <div class="absolute inset-0 z-0 pointer-events-none">
                         <img src="assets/vip_korean_model_glass_skin.jpg" alt="Korean Glass Skin Model SuA Glow"
-                            class="w-full h-full object-cover object-center">
-                        <!-- Smooth fade from the black card background into the image -->
-                        <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#111315] to-transparent"></div>
-                        <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#111315] via-[#111315]/40 to-transparent"></div>
+                            class="w-full h-full object-cover object-right">
+                        <!-- Subtle gradient on left to guarantee crisp text contrast -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-[#111315]/95 via-[#111315]/50 via-48% to-transparent"></div>
                     </div>
 
                     <!-- Foreground Content (Constrained to left half so it never overlaps the woman) -->
