@@ -7576,6 +7576,22 @@ video {
    All custom styles — previously in style.css
    ================================================ */
 
+/* Google Sans Flex mapping for bold and heavy Montserrat weights */
+
+@font-face {
+  font-family: 'Montserrat';
+
+  font-style: normal;
+
+  font-weight: 600 900;
+
+  font-stretch: 100%;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/googlesansflex/v22/t5sEIQcYNIWbFgDgAAzZ34auoVyXkJCOvp3SFWJbN5hF8Ju1x6sKCyp0l9sI40swNJwInycYAJzz0m7kJ4qFQOJBOjLvDSndo0SKMpKSTzwliVdHAy4bxTDHg_ugnAakp8ubq8BIo1pdkkXZj4j1dsKOB1ivGQ.woff2') format('woff2');
+}
+
 /* Base Styles */
 
 html, body {
@@ -7600,12 +7616,36 @@ h6,
   text-transform: uppercase;
 }
 
+/* All bold or heavy Montserrat elements explicitly use Google Sans Flex */
+
+.font-heading.font-semibold,
+.font-heading.font-bold,
+.font-heading.font-extrabold,
+.font-heading.font-black,
+.font-heading.\!font-900,
+.font-bold.font-heading,
+.font-semibold.font-heading,
+.font-extrabold.font-heading,
+.font-black.font-heading,
+.heading-wide.font-bold,
+.heading-wide.font-extrabold,
+.heading-wide.font-black,
+.heading-wide.\!font-900,
+h1:not(.font-light):not(.font-thin):not(.heading-wide),
+h2:not(.font-light):not(.font-thin):not(.heading-wide),
+h3:not(.font-light):not(.font-thin):not(.heading-wide),
+h4:not(.font-light):not(.font-thin):not(.heading-wide),
+h5:not(.font-light):not(.font-thin):not(.heading-wide),
+h6:not(.font-light):not(.font-thin):not(.heading-wide) {
+  font-family: 'Google Sans Flex', 'Montserrat', sans-serif;
+}
+
 .font-body {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.02em;
 }
 
-/* Heading Wide — shared display heading style */
+/* Heading Wide — shared display heading style (keeps light 300 Montserrat aesthetic) */
 
 .heading-wide {
   font-family: 'Montserrat', sans-serif;
