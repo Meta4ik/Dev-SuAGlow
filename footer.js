@@ -76,15 +76,4 @@ const FOOTER_HTML = `
         </div>
     </div>
 </footer>
-
-<!-- Floating Financing Button -->
-<a id="floating-finance-btn" href="financing.html">
-    <div class="finance-btn-icon">
-        <i data-lucide="percent" class="w-4 h-4 stroke-[3]"></i>
-    </div>
-    <div class="finance-btn-text">
-        <p class="finance-btn-title">Pay over time</p>
-        <p class="finance-btn-subtitle">0% APR options</p>
-    </div>
-</a>
 `;

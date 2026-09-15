@@ -58,15 +58,6 @@ function initFooter() {
     
     footerPlaceholder.innerHTML = html;
 
-    const financeBtn = document.getElementById('floating-finance-btn');
-
-    // Hide floating finance button if already on the financing page
-    if (window.location.pathname.includes('financing.html')) {
-      if (financeBtn) {
-        financeBtn.style.display = 'none';
-      }
-    }
-
     if (window.lucide) {
       lucide.createIcons();
     }
@@ -377,6 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSophia();
   initOversight();
   initAccessibilityWidget();
+  initFloatingActionBar();
 
   // 2. Setup Reveal Animations
   const revealObserver = new IntersectionObserver((entries) => {
@@ -1150,3 +1142,196 @@ function initAccessibilityWidget() {
   script.async = true;
   document.body.appendChild(script);
 }
+
+/**
+ * Floating Quick-Action Bar Integration
+ * Centered bottom pill widget matching exact A/B test luxury styling
+ * Houses 1-click Book Appointment and Financing actions
+ */
+function initFloatingActionBar() {
+  if (document.getElementById('floating-action-dock')) return;
+
+  const isSubfolder = window.location.pathname.includes('/education/') || 
+                      window.location.pathname.includes('/dev-tools/') || 
+                      window.location.pathname.includes('/internal/');
+  const financingUrl = isSubfolder ? '../financing.html' : 'financing.html';
+  const bookingUrl = 'https://suaglow.myaestheticrecord.com/online-booking/';
+
+  const dock = document.createElement('div');
+  dock.id = 'floating-action-dock';
+  dock.className = 'fixed bottom-5 left-1/2 -translate-x-1/2 sm:bottom-6 z-[9990] font-body select-none transition-all duration-300 pointer-events-auto';
+  dock.setAttribute('role', 'region');
+  dock.setAttribute('aria-label', 'Quick Actions Navigation');
+
+  dock.innerHTML = `
+    <!-- Vertical Cherry Financing Popup (Light Theme) -->
+    <div id="cherry-finance-popup" style="background-color: #FFFFFF !important; border: 1px solid rgba(170, 152, 124, 0.45) !important; color: #131619 !important;"
+      class="absolute bottom-[calc(100%+14px)] left-1/2 -translate-x-1/2 w-[300px] sm:w-[330px] rounded-2xl p-5 shadow-[0_20px_50px_rgba(0,0,0,0.18),0_0_35px_rgba(170,152,124,0.15)] transition-all duration-300 transform opacity-0 translate-y-3 pointer-events-none scale-95 origin-bottom">
+      <div class="flex items-center justify-between pb-3" style="border-bottom: 1px solid rgba(0, 0, 0, 0.08);">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0"
+            style="background-color: rgba(170, 152, 124, 0.15); border: 1px solid #AA987C; color: #8F857B;">
+            %
+          </div>
+          <div>
+            <h4 class="font-heading text-xs font-black tracking-widest uppercase" style="color: #131619 !important;">Cherry Financing</h4>
+            <p class="text-[10px] font-bold uppercase tracking-wider mt-0.5" style="color: #8F857B !important;">0% APR Options Available</p>
+          </div>
+        </div>
+        <button id="cherry-popup-close" type="button" aria-label="Close financing details"
+          class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-black/5 transition-colors"
+          style="color: #64748B;">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <p class="text-xs font-normal leading-relaxed my-3.5" style="color: #404345 !important;">
+        Split your Korean skincare and aesthetic treatments into manageable monthly payments. Fast approval with no hard credit check.
+      </p>
+
+      <div class="grid grid-cols-2 gap-2 mb-4 text-[10px]">
+        <div class="rounded-xl p-2.5 text-center" style="background-color: #F8F9FA; border: 1px solid rgba(170, 152, 124, 0.3);">
+          <span class="block font-black text-xs uppercase" style="color: #8F857B !important;">0% APR</span>
+          <span class="text-[9px] uppercase font-semibold tracking-wider" style="color: #64748B !important;">Promo Options</span>
+        </div>
+        <div class="rounded-xl p-2.5 text-center" style="background-color: #F8F9FA; border: 1px solid rgba(170, 152, 124, 0.3);">
+          <span class="block font-black text-xs uppercase" style="color: #8F857B !important;">60 Seconds</span>
+          <span class="text-[9px] uppercase font-semibold tracking-wider" style="color: #64748B !important;">Instant Decision</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-2.5">
+        <a href="${financingUrl}"
+          style="background-color: #8F857B !important; color: #FFFFFF !important; font-weight: 700 !important;"
+          class="w-full py-2.5 px-4 rounded-full text-[11px] tracking-wider uppercase transition-all duration-200 text-center shadow-md hover:brightness-105 active:scale-95 flex items-center justify-center gap-1.5">
+          <span>Payment Plans &amp; Calculator</span>
+          <svg class="w-3.5 h-3.5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="https://pay.withcherry.com/sua-glow-pllc" target="_blank" rel="noopener noreferrer"
+          style="background-color: #F8F9FA !important; border: 1px solid rgba(170, 152, 124, 0.35) !important; color: #131619 !important; font-weight: 600 !important;"
+          class="w-full py-2 px-4 rounded-full text-[10px] tracking-wider uppercase transition-all duration-200 text-center hover:!bg-[#F1F5F9] flex items-center justify-center gap-1.5">
+          <span>Apply with Cherry</span>
+          <svg class="w-3.5 h-3.5" style="color: #8F857B;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Clean Floating Dock Card (Light Theme) -->
+    <div id="floating-action-card" style="background-color: #FFFFFF !important; border: 1px solid rgba(170, 152, 124, 0.4) !important;"
+      class="rounded-full p-1.5 sm:p-2 shadow-[0_12px_35px_rgba(0,0,0,0.16),0_0_25px_rgba(170,152,124,0.15)] flex items-center gap-2 transition-all duration-300">
+      <!-- Cherry Percentage Button -->
+      <button id="floating-cherry-btn" type="button" aria-expanded="false" aria-controls="cherry-finance-popup" title="Cherry Financing (0% APR options)"
+        style="background-color: #F6F7F8; border: 1px solid rgba(170, 152, 124, 0.45); color: #8F857B;"
+        class="w-8 h-8 sm:w-9 sm:h-9 rounded-full hover:!bg-[#8F857B] hover:!text-white flex items-center justify-center font-black text-xs sm:text-sm tracking-tighter transition-all duration-200 shadow-sm active:scale-95 group relative">
+        <span class="group-hover:scale-110 transition-transform font-bold leading-none">%</span>
+      </button>
+
+      <!-- Book Appointment CTA Button -->
+      <a href="${bookingUrl}" target="_blank" rel="noopener noreferrer" id="floating-book-btn"
+        style="background-color: #8F857B !important; color: #FFFFFF !important; font-weight: 700 !important;"
+        class="px-4 sm:px-5 py-2 rounded-full text-[10px] sm:text-[11px] tracking-wider uppercase transition-all duration-200 whitespace-nowrap shadow-md hover:brightness-105 active:scale-95 flex items-center gap-2">
+        <svg class="w-3.5 h-3.5 stroke-[2.2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>Book Appointment</span>
+      </a>
+
+      <!-- Minimize Toggle Button -->
+      <button id="floating-action-minimize" type="button" title="Minimize Quick Actions" aria-label="Minimize"
+        style="color: #64748B;"
+        class="w-6 h-6 rounded-full flex items-center justify-center hover:!text-black hover:bg-black/5 transition-colors mr-0.5">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Minimized Trigger Button (Light Theme) -->
+    <button id="floating-action-minimized-trigger" type="button" title="Open Quick Actions" aria-label="Open Quick Actions"
+      style="background-color: #FFFFFF !important; border: 2px solid rgba(170, 152, 124, 0.6) !important; color: #131619 !important;"
+      class="hidden h-10 px-4 rounded-full shadow-[0_8px_25px_rgba(0,0,0,0.15),0_0_20px_rgba(170,152,124,0.2)] hover:scale-105 active:scale-95 flex items-center gap-2 transition-all duration-300">
+      <span class="w-2 h-2 rounded-full bg-warm-gold animate-pulse"></span>
+      <span class="text-[10px] sm:text-xs font-heading font-black tracking-widest uppercase" style="color: #131619 !important;">Book &bull; Finance</span>
+    </button>
+  `;
+
+  document.body.appendChild(dock);
+
+  const card = document.getElementById('floating-action-card');
+  const miniTrigger = document.getElementById('floating-action-minimized-trigger');
+  const minimizeBtn = document.getElementById('floating-action-minimize');
+  const cherryBtn = document.getElementById('floating-cherry-btn');
+  const popup = document.getElementById('cherry-finance-popup');
+  const popupClose = document.getElementById('cherry-popup-close');
+
+  const STORAGE_KEY = 'suaglow_quick_dock_minimized';
+
+  // Restore minimized state if previously chosen in this session
+  if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
+    card.classList.add('hidden');
+    miniTrigger.classList.remove('hidden');
+  }
+
+  function togglePopup(show) {
+    const isCurrentlyOpen = popup.classList.contains('pointer-events-auto');
+    const shouldOpen = typeof show === 'boolean' ? show : !isCurrentlyOpen;
+
+    if (shouldOpen) {
+      popup.classList.remove('opacity-0', 'translate-y-3', 'pointer-events-none', 'scale-95');
+      popup.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto', 'scale-100');
+      cherryBtn.setAttribute('aria-expanded', 'true');
+      cherryBtn.style.backgroundColor = '#8F857B';
+      cherryBtn.style.color = '#FFFFFF';
+    } else {
+      popup.classList.add('opacity-0', 'translate-y-3', 'pointer-events-none', 'scale-95');
+      popup.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto', 'scale-100');
+      cherryBtn.setAttribute('aria-expanded', 'false');
+      cherryBtn.style.backgroundColor = '#F6F7F8';
+      cherryBtn.style.color = '#8F857B';
+    }
+  }
+
+  cherryBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    togglePopup();
+  });
+
+  popupClose.addEventListener('click', (e) => {
+    e.stopPropagation();
+    togglePopup(false);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!dock.contains(e.target)) {
+      togglePopup(false);
+    }
+  });
+
+  minimizeBtn.addEventListener('click', () => {
+    togglePopup(false);
+    card.classList.add('hidden');
+    miniTrigger.classList.remove('hidden');
+    sessionStorage.setItem(STORAGE_KEY, 'true');
+  });
+
+  miniTrigger.addEventListener('click', () => {
+    miniTrigger.classList.add('hidden');
+    card.classList.remove('hidden');
+    sessionStorage.removeItem(STORAGE_KEY);
+  });
+}
+
