@@ -256,9 +256,9 @@
                         <span class="font-heading text-xs sm:text-sm uppercase font-bold tracking-[0.25em] text-white/90">CONDITION</span>
                     </div>
                     <!-- Photo Window (Positioned on Left Immediately After Number) -->
-                    <div class="w-full md:w-56 lg:w-64 xl:w-72 relative overflow-hidden shrink-0 aspect-[16/10] md:aspect-auto min-h-[160px] md:min-h-0 bg-[#0E1114] border-b md:border-b-0 md:border-r border-white/10 flex items-center justify-center p-3">
-                        <img src="assets/diasono_310_hero.png" alt="Diasono 310 Korean LDM Ultrasound System at SuA Glow"
-                            class="w-full h-full max-h-[155px] object-contain object-center group-hover:scale-105 transition-transform duration-500 drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]">
+                    <div class="w-full md:w-56 lg:w-64 xl:w-72 relative overflow-hidden shrink-0 aspect-[16/10] md:aspect-auto min-h-[160px] md:min-h-0 bg-black/40 border-b md:border-b-0 md:border-r border-white/10">
+                        <img src="assets/ldm_treatment_face_close_zoom.jpg" alt="LDM Water Drop Lifting Treatment at SuA Glow"
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-transparent via-transparent to-[#14181C]/40 pointer-events-none"></div>
                     </div>
                     <!-- Content Block -->
@@ -605,17 +605,17 @@
 
                 <!-- Right: Luxury Black Card with Korean Model Backdrop -->
                 <div class="lg:col-span-5 relative rounded-[2rem] overflow-hidden bg-[#111315] shadow-2xl border border-charcoal/15 flex flex-col justify-between p-7 sm:p-9 md:p-10 text-white min-h-[580px]">
-                    <!-- Background Model Portrait -->
-                    <div class="absolute inset-0 z-0 pointer-events-none">
+                    <!-- Background Model Portrait (Positioned strictly in the right open blank area) -->
+                    <div class="absolute top-0 right-0 bottom-0 w-[55%] sm:w-[50%] z-0 pointer-events-none overflow-hidden">
                         <img src="assets/vip_korean_model_glass_skin.jpg" alt="Korean Glass Skin Model SuA Glow"
-                            class="w-full h-full object-cover object-[85%_center]">
-                        <!-- Dark overlay on left to fade out hair and ensure crisp typography readability -->
-                        <div class="absolute inset-0 bg-gradient-to-r from-[#111315] via-[#111315]/80 via-50% to-transparent"></div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#111315]/90 via-transparent to-[#111315]/30"></div>
+                            class="w-full h-full object-cover object-center">
+                        <!-- Smooth fade from the black card background into the image -->
+                        <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#111315] to-transparent"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#111315] via-[#111315]/40 to-transparent"></div>
                     </div>
 
-                    <!-- Foreground Content -->
-                    <div class="relative z-10">
+                    <!-- Foreground Content (Constrained to left half so it never overlaps the woman) -->
+                    <div class="relative z-10 max-w-[240px] sm:max-w-[270px]">
                         <!-- SuA Glow Logo Header -->
                         <div>
                             <h3 class="font-heading font-light text-xl tracking-[0.18em] text-white">
@@ -667,7 +667,7 @@
                     </div>
 
                     <!-- Bottom CTA & Terms -->
-                    <div class="relative z-10 pt-6">
+                    <div class="relative z-10 pt-6 max-w-[260px] sm:max-w-[280px]">
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
                             class="bg-[#D1BFA5] hover:bg-[#c4b195] text-near-black font-body font-bold text-xs uppercase tracking-[0.18em] py-3.5 px-6 rounded-full w-full text-center transition-all duration-300 block shadow-md">
                             JOIN THE GLASS SKIN CLUB &rarr;
