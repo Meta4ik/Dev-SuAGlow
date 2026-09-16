@@ -1859,16 +1859,16 @@ export const SECTION_LIBRARY = {
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative bg-[#F6F3EE] rounded-[1.75rem] md:rounded-[2rem] overflow-hidden border border-[#E8DFC8]/60 shadow-soft w-full min-h-[380px] lg:h-[400px] flex items-center">
             
-            <!-- Model Image on Right: Exact same size as target graphic + left edge fade -->
-            <div class="absolute inset-y-0 right-0 w-full sm:w-[58%] lg:w-[56%] z-0 pointer-events-none overflow-hidden">
+            <!-- Model Image on Right: Increased size by 33% + left edge fade -->
+            <div class="absolute inset-y-0 right-0 w-full sm:w-[60%] lg:w-[58%] z-0 pointer-events-none overflow-hidden">
                 <img src="${p.imageSrc}" 
                      alt="SuA Glow Personalized Aesthetic Consultation" 
-                     class="w-full h-full object-cover object-[center_top] sm:object-[center_10%] lg:object-[center_12%]">
+                     class="w-full h-full object-cover object-[center_top] sm:object-[center_10%] lg:object-[center_12%] transform scale-[1.33] origin-[70%_25%] sm:origin-[72%_center]">
                 
                 <!-- Seamless Soft Fade on Left Edge of Model -->
-                <div class="absolute inset-y-0 left-0 w-20 sm:w-32 lg:w-40 bg-gradient-to-r from-[#F6F3EE] via-[#F6F3EE]/60 to-transparent pointer-events-none"></div>
+                <div class="absolute inset-y-0 left-0 w-24 sm:w-36 lg:w-44 bg-gradient-to-r from-[#F6F3EE] via-[#F6F3EE]/70 to-transparent pointer-events-none z-10"></div>
                 <!-- Mobile Bottom/Top Blend -->
-                <div class="absolute inset-0 bg-gradient-to-t from-[#F6F3EE]/90 via-transparent to-transparent sm:hidden pointer-events-none"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#F6F3EE]/90 via-transparent to-transparent sm:hidden pointer-events-none z-10"></div>
             </div>
 
             <!-- Left Content Area: 1:1 matching exact typography, spacing, and placement -->
