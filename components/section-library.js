@@ -1880,9 +1880,9 @@ export const SECTION_LIBRARY = {
                         ${p.badgeText}
                     </span>
                     
-                    <!-- Headline: Exact same font, size, and spacing as the September Edit -->
+                    <!-- Headline: Exact 2 lines with September Edit typography -->
                     <h2 class="heading-wide text-2xl sm:text-3xl lg:text-[38px] xl:text-[42px] text-near-black uppercase tracking-[0.15em] leading-tight font-light">
-                        ${p.title}
+                        <span class="whitespace-nowrap">Every Glow</span><br><span class="whitespace-nowrap">Begins with a Plan</span>
                     </h2>
                     
                     <!-- Description paragraph -->
@@ -1892,15 +1892,15 @@ export const SECTION_LIBRARY = {
                     
                     <!-- $50 Consultation Fee Pill Box -->
                     <div class="inline-flex items-center gap-4 sm:gap-5 bg-[#EDE7DF] border border-[#E2DBD1]/80 px-5 py-3 rounded-2xl shadow-xs w-fit">
-                        <div class="flex items-baseline gap-2.5">
+                        <div class="flex items-center gap-2.5">
                             <span class="text-3xl sm:text-[34px] font-bold text-[#1B1E21] tracking-tight leading-none">${p.feeAmount}</span>
                             <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-[#635A50] leading-none">${p.feeLabel}</span>
                         </div>
                         
-                        <div class="w-px h-7 bg-[#D5CCC0]"></div>
+                        <div class="w-px h-8 bg-[#D5CCC0]"></div>
                         
-                        <div class="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.1em] text-[#786F64] leading-[1.25] max-w-[110px]">
-                            ${p.creditText}
+                        <div class="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.1em] text-[#786F64] leading-[1.2]">
+                            Applied to<br>Same-Day<br>Treatment
                         </div>
                     </div>
                     
