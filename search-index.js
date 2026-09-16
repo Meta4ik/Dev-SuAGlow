@@ -10,7 +10,7 @@ const SEARCH_INDEX = [
   },
   {
     "url": "about.html#consultation-policy",
-    "title": "Every GlowBegins with a Plan",
+    "title": "Every Glow Begins with a Plan",
     "pageTitle": "About Us",
     "category": "Spa Treatments",
     "content": "Enjoy dedicated one-on-one time with your provider to discuss your skin, goals and personalized treatment options.",
@@ -226,7 +226,7 @@ const SEARCH_INDEX = [
   },
   {
     "url": "contact.html#consultation-policy",
-    "title": "Every GlowBegins with a Plan",
+    "title": "Every Glow Begins with a Plan",
     "pageTitle": "Contact & Book",
     "category": "Spa Treatments",
     "content": "Enjoy dedicated one-on-one time with your provider to discuss your skin, goals and personalized treatment options.",
@@ -586,7 +586,7 @@ const SEARCH_INDEX = [
   },
   {
     "url": "index.html#consultation-policy",
-    "title": "Every GlowBegins with a Plan",
+    "title": "Every Glow Begins with a Plan",
     "pageTitle": "SuA K-Glow",
     "category": "Premier\n                    K-Beauty Destination",
     "content": "Enjoy dedicated one-on-one time with your provider to discuss your skin, goals and personalized treatment options.",
