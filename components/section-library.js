@@ -1859,39 +1859,58 @@ export const SECTION_LIBRARY = {
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative bg-[#F6F3EE] rounded-[1.75rem] md:rounded-[2rem] overflow-hidden border border-[#E8DFC8]/60 shadow-soft w-full min-h-[380px] lg:h-[400px] flex items-center">
             
-            <!-- Model Image on Right: Increased size by 33% + left edge fade -->
-            <div class="absolute inset-y-0 right-0 w-full sm:w-[60%] lg:w-[58%] z-0 pointer-events-none overflow-hidden">
+            <!-- Model Image on Right: Responsive framing (Mobile 1:1 sample & Desktop 1:1) -->
+            <div class="absolute inset-y-0 right-0 w-[62%] sm:w-[58%] lg:w-[58%] z-0 pointer-events-none overflow-hidden">
                 <img src="${p.imageSrc}" 
                      alt="SuA Glow Personalized Aesthetic Consultation" 
-                     class="w-full h-full object-cover object-[center_top] sm:object-[center_10%] lg:object-[center_12%] transform scale-[1.33] origin-[70%_25%] sm:origin-[72%_center]">
+                     class="w-full h-full object-cover object-[78%_top] sm:object-[center_10%] lg:object-[center_12%] transform scale-[1.25] sm:scale-[1.33] origin-[70%_20%] sm:origin-[72%_center]">
                 
                 <!-- Seamless Soft Fade on Left Edge of Model -->
-                <div class="absolute inset-y-0 left-0 w-24 sm:w-36 lg:w-44 bg-gradient-to-r from-[#F6F3EE] via-[#F6F3EE]/70 to-transparent pointer-events-none z-10"></div>
-                <!-- Mobile Bottom/Top Blend -->
-                <div class="absolute inset-0 bg-gradient-to-t from-[#F6F3EE]/90 via-transparent to-transparent sm:hidden pointer-events-none z-10"></div>
+                <div class="absolute inset-y-0 left-0 w-20 sm:w-36 lg:w-44 bg-gradient-to-r from-[#F6F3EE] via-[#F6F3EE]/70 to-transparent pointer-events-none z-10"></div>
+                <!-- Mobile Background Blend for Bottom area -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#F6F3EE] via-transparent to-transparent md:hidden pointer-events-none z-10 h-1/3 bottom-0 top-auto"></div>
             </div>
 
-            <!-- Left Content Area: 1:1 matching exact typography, spacing, and placement -->
-            <div class="relative z-10 w-full lg:w-[56%] h-full flex flex-col justify-between p-6 sm:p-8 md:p-10 lg:p-11">
+            <!-- Left Content Area: Responsive Switching (Mobile Sample vs Desktop 1:1) -->
+            <div class="relative z-10 w-full lg:w-[56%] h-full flex flex-col justify-between p-5 sm:p-8 md:p-10 lg:p-11">
                 
                 <div class="space-y-3 sm:space-y-4 max-w-lg">
                     <!-- Top Tagline -->
-                    <span class="inline-block text-[10.5px] sm:text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[#9C8C7C]">
+                    <span class="inline-block text-[10px] sm:text-[11.5px] font-semibold uppercase tracking-[0.2em] md:tracking-[0.22em] text-[#9C8C7C]">
                         ${p.badgeText}
                     </span>
                     
-                    <!-- Headline: Exact 2 lines with September Edit typography -->
-                    <h2 class="heading-wide text-2xl sm:text-3xl lg:text-[38px] xl:text-[42px] text-near-black uppercase tracking-[0.15em] leading-tight font-light">
-                        <span class="whitespace-nowrap">Every Glow</span><br><span class="whitespace-nowrap">Begins with a Plan</span>
+                    <!-- Headline: Desktop (2 lines) / Mobile Sample (3 lines) -->
+                    <h2 class="heading-wide text-2xl sm:text-3xl lg:text-[38px] xl:text-[42px] text-near-black uppercase tracking-[0.14em] md:tracking-[0.15em] leading-[1.12] md:leading-tight font-light">
+                        <!-- Mobile 3-line heading matching mobile sample -->
+                        <span class="block md:hidden">
+                            <span class="whitespace-nowrap">Every Glow</span><br>
+                            <span class="whitespace-nowrap">Begins</span><br>
+                            <span class="whitespace-nowrap">With a Plan</span>
+                        </span>
+                        <!-- Desktop 2-line heading -->
+                        <span class="hidden md:inline">
+                            <span class="whitespace-nowrap">Every Glow</span><br><span class="whitespace-nowrap">Begins with a Plan</span>
+                        </span>
                     </h2>
                     
                     <!-- Description paragraph -->
-                    <p class="font-body text-xs sm:text-[13.5px] text-[#696259] font-light leading-relaxed max-w-[390px]">
+                    <p class="font-body text-[11px] sm:text-[13.5px] text-[#696259] font-light leading-relaxed max-w-[270px] sm:max-w-[390px] uppercase md:normal-case tracking-wider md:tracking-normal">
                         ${p.description}
                     </p>
                     
-                    <!-- $50 Consultation Fee Pill Box -->
-                    <div class="inline-flex items-center gap-4 sm:gap-5 bg-[#EDE7DF] border border-[#E2DBD1]/80 px-5 py-3 rounded-2xl shadow-xs w-fit">
+                    <!-- $50 Consultation Fee: Mobile Stacked Card (matching mobile sample) -->
+                    <div class="flex md:hidden flex-col gap-1.5 bg-[#EDE7DF] border border-[#E2DBD1]/80 p-3.5 rounded-2xl shadow-xs w-fit max-w-[200px]">
+                        <span class="text-3xl font-bold text-[#1B1E21] tracking-tight leading-none">${p.feeAmount}</span>
+                        <span class="text-[9px] font-bold uppercase tracking-[0.14em] text-[#635A50] leading-none mt-0.5">${p.feeLabel}</span>
+                        <div class="w-full h-px bg-[#D5CCC0] my-1"></div>
+                        <div class="text-[8.5px] font-bold uppercase tracking-[0.1em] text-[#786F64] leading-[1.25]">
+                            ${p.creditText}
+                        </div>
+                    </div>
+
+                    <!-- $50 Consultation Fee: Desktop Horizontal Pill Box (1:1 with desktop target) -->
+                    <div class="hidden md:inline-flex items-center gap-4 sm:gap-5 bg-[#EDE7DF] border border-[#E2DBD1]/80 px-5 py-3 rounded-2xl shadow-xs w-fit">
                         <div class="flex items-center gap-2.5">
                             <span class="text-3xl sm:text-[34px] font-bold text-[#1B1E21] tracking-tight leading-none">${p.feeAmount}</span>
                             <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-[#635A50] leading-none">${p.feeLabel}</span>
@@ -1907,7 +1926,7 @@ export const SECTION_LIBRARY = {
                     <!-- CTA Button -->
                     <div class="pt-1">
                         <a href="${p.ctaLink}" target="_blank"
-                           class="inline-flex items-center justify-center gap-3 bg-[#1B1E21] hover:bg-[#2C2E30] text-white px-7 sm:px-8 py-3.5 rounded-full text-xs font-semibold tracking-[0.14em] uppercase transition-all duration-300 shadow-sm hover:scale-[1.02] active:scale-[0.98]">
+                           class="inline-flex items-center justify-center gap-3 bg-[#1B1E21] hover:bg-[#2C2E30] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-[11px] sm:text-xs font-semibold tracking-[0.14em] uppercase transition-all duration-300 shadow-sm hover:scale-[1.02] active:scale-[0.98] w-fit">
                             <span>${p.ctaText}</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -1915,8 +1934,8 @@ export const SECTION_LIBRARY = {
                 </div>
                 
                 <!-- Bottom Tagline & Horizontal Rule -->
-                <div class="pt-6 sm:pt-7 flex items-center gap-3 w-full">
-                    <span class="text-[9.5px] sm:text-[10px] font-bold tracking-[0.2em] text-[#8E8072] uppercase whitespace-nowrap">
+                <div class="pt-5 sm:pt-7 flex items-center gap-3 w-full">
+                    <span class="text-[8.5px] sm:text-[10px] font-bold tracking-[0.18em] sm:tracking-[0.2em] text-[#8E8072] uppercase whitespace-nowrap">
                         ${p.tagline}
                     </span>
                     <div class="flex-1 h-px bg-[#D6CDC2]"></div>
