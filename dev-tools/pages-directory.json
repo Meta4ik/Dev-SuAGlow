@@ -320,6 +320,14 @@
     "sizeKb": 1
   },
   {
+    "path": "components/sections/vip-membership-card.html",
+    "filename": "vip-membership-card.html",
+    "title": "Vip Membership Card",
+    "fullTitle": "vip-membership-card.html",
+    "category": "Section Components",
+    "sizeKb": 12
+  },
+  {
     "path": "components/sections/what-is-standard.html",
     "filename": "what-is-standard.html",
     "title": "What Is Standard",
@@ -446,6 +454,14 @@
     "fullTitle": "everything-included-original-backup.html",
     "category": "Dev Tools",
     "sizeKb": 14
+  },
+  {
+    "path": "dev-tools/snippets/homepage-5-layers-original-backup.html",
+    "filename": "homepage-5-layers-original-backup.html",
+    "title": "Homepage 5 Layers Original Backup",
+    "fullTitle": "homepage-5-layers-original-backup.html",
+    "category": "Dev Tools",
+    "sizeKb": 26
   },
   {
     "path": "dev-tools/style-guide.html",
@@ -597,7 +613,7 @@
     "title": "SuA K-Glow",
     "fullTitle": "SuA K-Glow | Korean Medical Aesthetics",
     "category": "Core Pages",
-    "sizeKb": 88
+    "sizeKb": 74
   },
   {
     "path": "injectables.html",

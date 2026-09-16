@@ -602,11 +602,11 @@ const SEARCH_INDEX = [
   },
   {
     "url": "index.html#membership-spotlight",
-    "title": "Five Layers. One Ritual.",
+    "title": "EVERYTHING INCLUDED. $199/MONTH.",
     "pageTitle": "SuA K-Glow",
     "category": "Premier\n                    K-Beauty Destination",
-    "content": "Instead of asking one treatment to do everything, the SuA Glow Glass Skin Method™ layers five complementary treatments into one consistent monthly Korean ritual in Carrollton. A Little Seoul. Every Month. Monthly provider-curated Korean skin ritual 20% savings on eligible injectables, boosters & clinical skincare Priority VIP booking for peak weekend and evening appointments Member-only event access and complimentary 1-on-1 skin consultations First access to newly imported Korean devices & protocols",
-    "snippet": "Instead of asking one treatment to do everything, the SuA Glow Glass Skin Method™ layers five complementary treatments into one consistent monthly Korean ritual..."
+    "content": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift. Hydrate. Refine. Soothe. Restore. Glow. Inner wellness. Outer glow. A rotating K-Beauty discovery — from curated skincare extras, masks and ampoules to seasonal finishing touches. WHAT'S DROPPING THIS MONTH? YOU'LL HAVE TO COME IN AND SEE. MORE THAN A MEMBERSHIP. A SKIN RITUAL. 20% savings on eligible treatments + skincare Priority booking Member-only access to new treatments First look at exclusive events CANCEL ANYTIME · NO LONG-TERM COMMITMENT KOREAN-INSPIRED · PROVIDER-CURATED · GLASS SKIN OBSESSED",
+    "snippet": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift...."
   },
   {
     "url": "index.html#glow-stories",
