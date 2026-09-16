@@ -340,36 +340,40 @@
         </div>
     </section>
 
-    <!-- ─── Visual Comparison: Reference Design Graphic vs Live HTML ─── -->
-    <section class="pt-8 pb-3 bg-[#FAF8F5] border-b border-[#E8DFC8]/40">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between mb-3">
-                <div class="flex items-center gap-2">
-                    <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-                    <span class="text-xs font-bold uppercase tracking-wider text-charcoal/70">Original Reference Mockup (Target Graphic)</span>
-                </div>
-                <span class="text-[11px] text-taupe font-medium">Desktop & Mobile Mockups</span>
-            </div>
+    <!-- ─── Visual Comparison: Reference Design Graphics vs Live HTML ─── -->
+    <section class="pt-8 pb-4 bg-[#FAF8F5] border-b border-[#E8DFC8]/40">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
             
-            <!-- Reference Mockup Images (Desktop & Mobile) -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
-                <div class="md:col-span-8 bg-white rounded-2xl p-2 border border-charcoal/10 shadow-xs">
-                    <p class="text-[10px] font-bold uppercase tracking-wider text-taupe mb-1 px-1">Desktop Graphic Reference</p>
-                    <img src="assets/consultation-policy-reference-desktop.png" 
-                         alt="Reference Graphic - Desktop" 
-                         class="w-full h-auto rounded-xl border border-charcoal/5">
+            <!-- 1. Desktop Reference Mockup (By Itself) -->
+            <div class="bg-white rounded-2xl p-4 border border-charcoal/10 shadow-xs">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center gap-2">
+                        <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-charcoal/80">Desktop Graphic Reference (Target)</span>
+                    </div>
                 </div>
-                <div class="md:col-span-4 bg-white rounded-2xl p-2 border border-charcoal/10 shadow-xs">
-                    <p class="text-[10px] font-bold uppercase tracking-wider text-taupe mb-1 px-1">Mobile Graphic Reference</p>
-                    <img src="assets/consultation-policy-reference-mobile.png" 
-                         alt="Reference Graphic - Mobile" 
-                         class="w-full h-auto rounded-xl border border-charcoal/5">
-                </div>
+                <img src="assets/consultation-policy-reference-desktop.png" 
+                     alt="Reference Graphic - Desktop" 
+                     class="w-full h-auto rounded-xl border border-charcoal/5">
             </div>
 
-            <div class="flex items-center gap-2 mt-6 mb-2">
+            <!-- 2. Mobile Reference Mockup (By Itself) -->
+            <div class="bg-white rounded-2xl p-4 border border-charcoal/10 shadow-xs max-w-md">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center gap-2">
+                        <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-charcoal/80">Mobile Graphic Reference (Target)</span>
+                    </div>
+                </div>
+                <img src="assets/consultation-policy-reference-mobile.png" 
+                     alt="Reference Graphic - Mobile" 
+                     class="w-full h-auto rounded-xl border border-charcoal/5">
+            </div>
+
+            <!-- Live HTML Indicator -->
+            <div class="flex items-center gap-2 pt-2">
                 <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                <span class="text-xs font-bold uppercase tracking-wider text-charcoal/70">Live HTML Recreation Below</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-charcoal/80">Live HTML Recreation (Below)</span>
             </div>
         </div>
     </section>

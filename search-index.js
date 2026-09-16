@@ -585,14 +585,6 @@ const SEARCH_INDEX = [
     "snippet": "Because beautiful skin begins with healthy skin. SuA Glow Medspa brings the secrets of Korean beauty to Dallas where science, precision, and elegance meet. We r..."
   },
   {
-    "url": "index.html",
-    "title": "SuA K-Glow",
-    "pageTitle": "SuA K-Glow",
-    "category": "Premier\n                    K-Beauty Destination",
-    "content": "Desktop Graphic Reference Mobile Graphic Reference",
-    "snippet": "Desktop Graphic Reference Mobile Graphic Reference"
-  },
-  {
     "url": "index.html#consultation-policy",
     "title": "Every Glow Begins with a Plan",
     "pageTitle": "SuA K-Glow",
