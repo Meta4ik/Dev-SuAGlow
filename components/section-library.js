@@ -1841,48 +1841,85 @@ export const SECTION_LIBRARY = {
         id: 'consultation-policy',
         name: 'Consultation Policy & Fee Card',
         category: 'philosophy',
-        description: 'Dedicated consultation policy card detailing the $50 fee credit toward same-day treatments.',
+        description: 'Dedicated consultation policy banner detailing the $50 fee credit toward same-day treatments.',
         defaultProps: {
-            badgeText: 'SuA Glow · Policy Update',
-            title: 'Consultation Policy',
-            description: 'To ensure every consultation receives the dedicated time, clinical mapping, and personalized care it deserves, we maintain a transparent policy.',
+            badgeText: 'Personalized Consultations',
+            title: 'Every Glow Begins with a Plan',
+            description: 'Enjoy dedicated one-on-one time with your provider to discuss your skin, goals and personalized treatment options.',
             feeAmount: '$50',
-            feeNote: 'Includes dedicated time with your Board-Certified PA.',
-            creditText: 'Same-day treatment applies your $50 fee directly toward your service!',
-            ctaText: 'Book Consultation',
-            ctaLink: 'https://suaglow.myaestheticrecord.com/online-booking/'
+            feeLabel: 'Consultation Fee',
+            creditText: 'Applied to Same-Day Treatment',
+            ctaText: 'Book Your Consultation',
+            ctaLink: 'https://suaglow.myaestheticrecord.com/online-booking/',
+            tagline: 'More insight. A more radiant you.',
+            imageSrc: 'assets/consultation_policy_bg.jpg'
         },
         render: (p = {}) => `
-<section id="consultation-policy" class="py-16 px-8 md:px-12 bg-white">
-    <div class="max-w-6xl mx-auto">
-        <div class="bg-off-white border border-charcoal/10 rounded-3xl p-8 md:p-12 shadow-sm animate-on-scroll fade-up">
-            <div class="grid lg:grid-cols-12 gap-8 items-center">
-                <div class="lg:col-span-5 text-center lg:text-left border-b lg:border-b-0 lg:border-r border-charcoal/10 pb-6 lg:pb-0 lg:pr-6">
-                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-warm-gold/10 rounded-full text-[10px] tracking-widest uppercase text-warm-gold font-bold mb-3">
-                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> ${p.badgeText}
-                    </span>
-                    <h2 class="heading-wide text-2xl md:text-3xl text-near-black mb-2">${p.title}</h2>
-                    <p class="text-xs md:text-sm text-charcoal/70 font-light leading-relaxed">${p.description}</p>
-                </div>
-
-                <div class="lg:col-span-4 bg-white border border-charcoal/5 rounded-2xl p-6 text-center shadow-xs">
-                    <div class="w-10 h-10 rounded-full bg-warm-gold/10 text-warm-gold flex items-center justify-center mx-auto mb-2">
-                        <i data-lucide="calendar-check" class="w-5 h-5"></i>
+<section id="consultation-policy" class="py-12 md:py-16 bg-white relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative bg-[#F7F4EE] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border border-[#E8DFC8]/60 shadow-soft animate-on-scroll fade-up">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[460px] lg:min-h-[500px]">
+                
+                <!-- Left Content Area -->
+                <div class="lg:col-span-7 flex flex-col justify-between p-7 sm:p-10 md:p-12 z-10">
+                    <div class="space-y-4 sm:space-y-5 max-w-lg">
+                        <span class="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.25em] text-[#9E8A73]">
+                            ${p.badgeText}
+                        </span>
+                        
+                        <h2 class="heading-wide text-3xl sm:text-4xl md:text-[44px] leading-[1.12] text-[#1A1C1E] font-normal tracking-tight [text-wrap:balance]">
+                            ${p.title}
+                        </h2>
+                        
+                        <p class="font-body text-xs sm:text-sm text-[#5C564E] font-light leading-relaxed">
+                            ${p.description}
+                        </p>
+                        
+                        <!-- $50 Consultation Fee Pill / Card -->
+                        <div class="inline-flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#EFE8DF] border border-[#E0D7CB] px-5 sm:px-6 py-3.5 sm:py-4 rounded-2xl w-full sm:w-auto shadow-xs">
+                            <div class="flex items-baseline gap-2.5">
+                                <span class="text-3xl sm:text-4xl font-bold text-[#1A1C1E] tracking-tight leading-none">${p.feeAmount}</span>
+                                <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#635C54]">${p.feeLabel}</span>
+                            </div>
+                            
+                            <div class="hidden sm:block w-px h-7 bg-[#D6CDC2]"></div>
+                            <div class="block sm:hidden w-full h-px bg-[#D6CDC2]"></div>
+                            
+                            <div class="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-[#756C62] leading-tight sm:max-w-[125px]">
+                                ${p.creditText}
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Button -->
+                        <div class="pt-2">
+                            <a href="${p.ctaLink}" target="_blank"
+                               class="inline-flex items-center justify-center gap-3 bg-[#1A1C1E] hover:bg-[#2C2E30] text-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 shadow-sm hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto text-center">
+                                <span>${p.ctaText}</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
                     </div>
-                    <p class="text-xs uppercase font-bold text-taupe mb-1">Consultation Fee</p>
-                    <p class="font-heading text-3xl font-bold text-warm-gold">${p.feeAmount}</p>
-                    <p class="text-xs text-charcoal/60 mt-1">${p.feeNote}</p>
-                </div>
-
-                <div class="lg:col-span-3 flex flex-col gap-4">
-                    <div class="bg-warm-gold/10 rounded-2xl p-4 border border-warm-gold/20 text-xs text-near-black leading-snug">
-                        <strong class="font-semibold text-warm-gold block mb-1">Same-Day Application</strong>
-                        ${p.creditText}
+                    
+                    <!-- Bottom Tagline & Horizontal Rule -->
+                    <div class="pt-8 sm:pt-10 flex items-center gap-4">
+                        <span class="text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-[#8C7E6F] uppercase whitespace-nowrap">
+                            ${p.tagline}
+                        </span>
+                        <div class="flex-1 h-px bg-[#D6CDC2]"></div>
                     </div>
-                    <a href="${p.ctaLink}" target="_blank" class="btn-primary text-center text-xs py-3">
-                        ${p.ctaText}
-                    </a>
                 </div>
+                
+                <!-- Right Model Column -->
+                <div class="lg:col-span-5 relative min-h-[320px] sm:min-h-[380px] lg:min-h-full">
+                    <img src="${p.imageSrc}" 
+                         alt="SuA Glow Personalized Aesthetic Consultation" 
+                         class="absolute inset-0 w-full h-full object-cover object-[center_top] lg:object-center">
+                    
+                    <!-- Seamless Gradient Overlay: Fades into #F7F4EE seamlessly on desktop & mobile -->
+                    <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#F7F4EE] via-[#F7F4EE]/40 to-transparent lg:w-3/5 pointer-events-none"></div>
+                </div>
+                
             </div>
         </div>
     </div>

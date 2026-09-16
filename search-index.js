@@ -9,12 +9,12 @@ const SEARCH_INDEX = [
     "snippet": "The bridge between Seoul's precision and Texas's warmth. Discover the philosophy behind SuA K-Glow."
   },
   {
-    "url": "about.html",
-    "title": "Consultation",
+    "url": "about.html#consultation-policy",
+    "title": "Every Glow Begins with a Plan",
     "pageTitle": "About Us",
     "category": "Spa Treatments",
-    "content": "More Dedicated Time. More Personalized Care. To ensure every consultation receives the attention and personalized guidance it deserves, we are updating our policy. Consultation Fee Includes dedicated time with your provider to discuss your goals & treatment options.",
-    "snippet": "More Dedicated Time. More Personalized Care. To ensure every consultation receives the attention and personalized guidance it deserves, we are updating our poli..."
+    "content": "Enjoy dedicated one-on-one time with your provider to discuss your skin, goals and personalized treatment options.",
+    "snippet": "Enjoy dedicated one-on-one time with your provider to discuss your skin, goals and personalized treatment options."
   },
   {
     "url": "about.html#story",
@@ -225,12 +225,12 @@ const SEARCH_INDEX = [
     "snippet": "Book online anytime, call us directly, or stop by our studio in Carrollton. We're here to help you glow."
   },
   {
-    "url": "contact.html",
-    "title": "Consultation",
+    "url": "contact.html#consultation-policy",
+    "title": "Every Glow Begins with a Plan",
     "pageTitle": "Contact & Book",
     "category": "Spa Treatments",
-    "content": "More Dedicated Time. More Personalized Care. To ensure every consultation receives the attention and personalized guidance it deserves, we are updating our policy. Consultation Fee Includes dedicated time with your provider to discuss your goals & treatment options.",
-    "snippet": "More Dedicated Time. More Personalized Care. To ensure every consultation receives the attention and personalized guidance it deserves, we are updating our poli..."
+    "content": "Enjoy dedicated one-on-one time with your provider to discuss your skin, goals and personalized treatment options.",
+    "snippet": "Enjoy dedicated one-on-one time with your provider to discuss your skin, goals and personalized treatment options."
   },
   {
     "url": "contact.html",
@@ -585,12 +585,12 @@ const SEARCH_INDEX = [
     "snippet": "Because beautiful skin begins with healthy skin. SuA Glow Medspa brings the secrets of Korean beauty to Dallas where science, precision, and elegance meet. We r..."
   },
   {
-    "url": "index.html",
-    "title": "Consultation",
+    "url": "index.html#consultation-policy",
+    "title": "Every Glow Begins with a Plan",
     "pageTitle": "SuA K-Glow",
     "category": "Premier\n                    K-Beauty Destination",
-    "content": "More Dedicated Time. More Personalized Care. To ensure every consultation receives the attention and personalized guidance it deserves, we are updating our policy. Consultation Fee Includes dedicated time with your provider to discuss your goals & treatment options.",
-    "snippet": "More Dedicated Time. More Personalized Care. To ensure every consultation receives the attention and personalized guidance it deserves, we are updating our poli..."
+    "content": "Enjoy dedicated one-on-one time with your provider to discuss your skin, goals and personalized treatment options.",
+    "snippet": "Enjoy dedicated one-on-one time with your provider to discuss your skin, goals and personalized treatment options."
   },
   {
     "url": "index.html#treatments",
