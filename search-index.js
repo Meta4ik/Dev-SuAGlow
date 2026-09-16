@@ -89,14 +89,6 @@ const SEARCH_INDEX = [
     "snippet": "The Seoul Bridal Philosophy The close-up photos. The bridal suite lighting. The ceremony makeup. The HD cameras. At SuA Glow, Bridal Glow is a personalized Kore..."
   },
   {
-    "url": "bridal-glow.html",
-    "title": "Medical Oversight",
-    "pageTitle": "Bridal Glow",
-    "category": "Bridal Glow",
-    "content": "All Bridal Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
-    "snippet": "All Bridal Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang i..."
-  },
-  {
     "url": "bridal-glow.html#philosophies",
     "title": "Four Pillars of Bridal Glow",
     "pageTitle": "Bridal Glow",
@@ -313,14 +305,6 @@ const SEARCH_INDEX = [
     "snippet": "Seoul-Inspired Neurotoxin Treatments Cosmetic Tox uses FDA-approved neuromodulators—Botox®, Xeomin®, Letybo®—to refine facial movement, soften lines, and improv..."
   },
   {
-    "url": "cosmetic-tox.html",
-    "title": "Medical Oversight",
-    "pageTitle": "Cosmetic Tox & SkinTox",
-    "category": "Cosmetic Tox",
-    "content": "All Cosmetic Tox treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
-    "snippet": "All Cosmetic Tox treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam ..."
-  },
-  {
     "url": "cosmetic-tox.html#skintox",
     "title": "SkinTox",
     "pageTitle": "Cosmetic Tox & SkinTox",
@@ -455,14 +439,6 @@ const SEARCH_INDEX = [
     "category": "Dermal Filler",
     "content": "The Seoul Injectable Philosophy The goal of dermal filler should never be to look \"filled.\" The goal is to look restored, rested, and balanced. At SuA Glow, we utilize premium Hyaluronic Acid (HA) fillers to provide structural support, replenish lost volume, and refine facial contours. Following Korean aesthetic principles, we prioritize proportional harmony and natural movement, ensuring results integrate seamlessly with your unique anatomy. • Volume Loss • Facial Proportions • Deep Shadows • Structural Lift • Balanced Profile • Natural Rejuvenation Facial Balancing Focus",
     "snippet": "The Seoul Injectable Philosophy The goal of dermal filler should never be to look \"filled.\" The goal is to look restored, rested, and balanced. At SuA Glow, we ..."
-  },
-  {
-    "url": "dermal-filler.html",
-    "title": "Medical Oversight",
-    "pageTitle": "Korean Dermal Filler",
-    "category": "Dermal Filler",
-    "content": "All Dermal Filler treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
-    "snippet": "All Dermal Filler treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam..."
   },
   {
     "url": "dermal-filler.html#philosophies",
@@ -727,14 +703,6 @@ const SEARCH_INDEX = [
     "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
     "content": "K-Beauty taught us that glow is more than skin deep. Hydration. Lifestyle. Wellness. Repeat. At SuA Glow in Carrollton, our physician-guided approach brings this philosophy of inside-out with personalized IV infusion and IV push wellness therapies. PHYSICIAN-GUIDED MEDICAL OVERSIGHT PERSONALIZED INDIVIDUALIZED WELLNESS KOREAN-FOUNDED SEOUL-INSPIRED APPROACH",
     "snippet": "K-Beauty taught us that glow is more than skin deep. Hydration. Lifestyle. Wellness. Repeat. At SuA Glow in Carrollton, our physician-guided approach brings thi..."
-  },
-  {
-    "url": "iv-infusion-wellness-therapy.html#medical-oversight",
-    "title": "IV Therapy Dallas & Carrollton",
-    "pageTitle": "IV Therapy Dallas & Carrollton",
-    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
-    "content": "Every IV Infusion & Injectable Wellness therapy is administered by Sophia Yang, PA-C, under physician-delegated medical oversight from Dr. Adam Yang, MD, following Texas regulations and established clinical protocols. Sophia Yang, PA-C Seoul-Trained Aesthetic Provider Dr. Adam Yang, MD Medical Director & Supervising Physician",
-    "snippet": "Every IV Infusion & Injectable Wellness therapy is administered by Sophia Yang, PA-C, under physician-delegated medical oversight from Dr. Adam Yang, MD, follow..."
   },
   {
     "url": "iv-infusion-wellness-therapy.html#quick-menu",
@@ -1181,56 +1149,40 @@ const SEARCH_INDEX = [
     "title": "Korean Glass Skin Membership",
     "pageTitle": "Korean Glass Skin Membership Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "K-Beauty Is All About the Layers. So Is Your Facial. A provider-curated monthly skin ritual at SuA Glow in Carrollton, serving Dallas–Fort Worth. Five complementary layers engineered into one monthly ritual to cultivate translucent, deeply hydrated glass skin.",
-    "snippet": "K-Beauty Is All About the Layers. So Is Your Facial. A provider-curated monthly skin ritual at SuA Glow in Carrollton, serving Dallas–Fort Worth. Five complemen..."
-  },
-  {
-    "url": "memberships.html",
-    "title": "Glass Skin Is a Practice, Not a Quick Fix.",
-    "pageTitle": "Korean Glass Skin Membership Dallas",
-    "category": "QUESTIONS & ANSWERS",
-    "content": "Glass Skin isn't created with one random facial. It's built through consistent, layered, personalized skin care. Every month, SuA Glow layers five complementary treatments into one provider-curated Korean Glass Skin Ritual — then personalizes your Skin Booster Edit around what your skin needs right now. Instead of asking one machine to do everything, our multi-modal approach nurtures each layer of the skin barrier. Sustained barrier vitality yields resilient, long-term radiance. Deep cellular hydration and collagen support over surface illusions. Skin booster actives selected monthly based on your present barrier state. Exfoliate, infuse, lift, calm, and nourish from inside out. Very K-Beauty.",
-    "snippet": "Glass Skin isn't created with one random facial. It's built through consistent, layered, personalized skin care. Every month, SuA Glow layers five complementary..."
+    "content": "K-Beauty Is All About The Layers. So Is Your Facial. Five curated layers. One monthly Korean skin ritual. Designed in Carrollton for your Dallas glow.",
+    "snippet": "K-Beauty Is All About The Layers. So Is Your Facial. Five curated layers. One monthly Korean skin ritual. Designed in Carrollton for your Dallas glow."
   },
   {
     "url": "memberships.html#five-layers",
-    "title": "Five Layers. One Ritual.",
+    "title": "5 Layers. One Korean Skin Ritual.",
     "pageTitle": "Korean Glass Skin Membership Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "Instead of asking one treatment to do everything, the SuA Glow Glass Skin Method™ layers five complementary treatments into one consistent monthly Korean ritual. Our liquid microdermabrasion step gently cleanses pores, lifts dead surface cells, and infuses multi-phase hydration to create an immaculate, receptive canvas for the layers that follow. A targeted topical Skin Booster Infusion is customized around your current skin goals. Utilizing advanced transdermal pulsed delivery, medical-grade actives penetrate deeply without needles, pain, or puncturing the skin. Our premier Korean-inspired ultrasound layer complements the ritual. Multi-frequency micro-massaging waves stimulate cellular matrix enzymes (MMPs and HSPs), soothe inflammation, tighten tissue, and lock in glass hydration. Settle in. Therapeutic red light completes your facial as a gentle, deeply relaxing finishing step. Calms surface erythema, energizes mitochondrial ATP synthesis, and seals the restorative benefits. Your monthly wellness layer, included when medically appropriate following individual assessment. Known as the body's \"master antioxidant,\" glutathione aids cellular detoxification and whole-body vitality. Instead of asking one treatment to do everything, the SuA Glow Glass Skin Method™ layers complementary treatments into one monthly Korean-inspired ritual. Each step elevates the absorption, longevity, and radiance of the next.",
-    "snippet": "Instead of asking one treatment to do everything, the SuA Glow Glass Skin Method™ layers five complementary treatments into one consistent monthly Korean ritual..."
+    "content": "다섯 단계 · 하나의 루틴 Instead of asking one treatment to do everything, the SuA Glow Glass Skin Method™ layers five complementary treatments into one cohesive monthly Korean ritual. Our liquid microdermabrasion step gently clarifies pores, lifts dead surface cells, and infuses multi-phase hydration to create an immaculate, receptive canvas. Medical-grade active ingredients infused deeply via our FDA-cleared DEP pulsed system without needles, pain, or puncturing the skin barrier. The Korean clinic favorite. Multi-frequency ultrasound waves micro-massage cells, stimulate collagen enzymes, calm tissue, and lock in deep translucent hydration. Settle under our medical-grade Celluma phototherapy arch. Soothing red wavelengths reduce surface erythema, recharge mitochondrial vitality, and seal in the glow. Your monthly wellness layer, administered when medically appropriate following clinical assessment. The body's master antioxidant promotes cellular recovery and whole-body radiance. 아름다움은 루틴이다 — Skin is a Ritual. SEOUL-INSPIRED · PHYSICIAN-GUIDED · CARROLLTON, TX",
+    "snippet": "다섯 단계 · 하나의 루틴 Instead of asking one treatment to do everything, the SuA Glow Glass Skin Method™ layers five complementary treatments into one cohesive monthly ..."
   },
   {
     "url": "memberships.html",
-    "title": "A Little Seoul. Every Month.",
+    "title": "Glass Skin Is A Practice, Not A Quick Fix.",
     "pageTitle": "Korean Glass Skin Membership Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "Every Glass Skin Ritual comes with a rotating K-Beauty extra — from authentic Korean skincare discoveries, specialty sheet masks, and ampoules to seasonal finishing touches direct from Seoul. \"What's dropping this month? You'll have to come in and see.\"",
-    "snippet": "Every Glass Skin Ritual comes with a rotating K-Beauty extra — from authentic Korean skincare discoveries, specialty sheet masks, and ampoules to seasonal finis..."
+    "content": "Glass skin isn't created with one random facial. It's built through consistent, layered, personalized skin care. Every month, SuA Glow layers five complementary treatments into one provider-curated Korean Glass Skin Ritual — then personalizes your Skin Booster Edit around what your skin needs right now. Instead of asking one machine to do everything, our multi-modal approach nurtures each layer of the skin barrier. A monthly ritual for long-term radiance. Skin-first. Always. Your Skin Booster Edit evolves with your skin. Five complementary steps. One ritual. SEOUL PHILOSOPHYDALLAS ADDRESS. VERY K-BEAUTY. SUA GLOWCARROLLTON, TX",
+    "snippet": "Glass skin isn't created with one random facial. It's built through consistent, layered, personalized skin care. Every month, SuA Glow layers five complementary..."
   },
   {
     "url": "memberships.html",
-    "title": "Everything Included. $199/Month.",
+    "title": "EVERYTHING INCLUDED. $199/MONTH.",
     "pageTitle": "Korean Glass Skin Membership Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "This isn't another medspa membership. It's your monthly Korean Glass Skin Ritual. Engineered for complete barrier restoration AquaFacial Liquid Microdermabrasion Pore vacuum extraction, surface exfoliation, and intense hydration bath Pore vacuum extraction, surface exfoliation, and intense hydration bath Needle-Free Topical Skin Booster Infusion Targeted active ingredients infused deeply into the dermis without needles Targeted active ingredients infused deeply into the dermis without needles LDM Multi-Frequency Ultrasound Signature Korean Water Drop Lifting wave technology for barrier defense and tone Signature Korean Water Drop Lifting wave technology for barrier defense and tone Medical-Grade Red Light Therapy Soothing finishing treatment to stimulate cellular recovery and calm redness Soothing finishing treatment to stimulate cellular recovery and calm redness Glutathione IV Push* Master antioxidant wellness infusion (*included when medically appropriate) Master antioxidant wellness infusion (*included when medically appropriate) The Seoul Glow Drop Bonus Discovery A Little Seoul. Every Month. Rotating K-Beauty extras, masks & seasonal finishing touches. A Little Seoul. Every Month. Rotating K-Beauty extras, masks & seasonal finishing touches. Monthly provider-curated Korean skin ritual 20% savings on eligible treatments + skincare Priority booking for preferred appointment times Member-only event access & private consultations First access to new Korean-inspired treatments Cancel anytime • No long-term lock-in",
-    "snippet": "This isn't another medspa membership. It's your monthly Korean Glass Skin Ritual. Engineered for complete barrier restoration AquaFacial Liquid Microdermabrasio..."
-  },
-  {
-    "url": "memberships.html",
-    "title": "Korean Glass Skin Membership Dallas",
-    "pageTitle": "Korean Glass Skin Membership Dallas",
-    "category": "QUESTIONS & ANSWERS",
-    "content": "Treatment selection and sequencing are individualized based on skin condition, goals, medical history, candidacy and clinical assessment. Topical infusion ingredients are selected as appropriate for the individual. Glutathione IV Push is provided only when medically appropriate following assessment. Membership benefits and savings apply to eligible services and may be subject to exclusions. Results vary.",
-    "snippet": "Treatment selection and sequencing are individualized based on skin condition, goals, medical history, candidacy and clinical assessment. Topical infusion ingre..."
+    "content": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift. Hydrate. Refine. Soothe. Restore. Glow. Inner wellness. Outer glow. A rotating K-Beauty discovery — from curated skincare extras, masks and ampoules to seasonal finishing touches. WHAT'S DROPPING THIS MONTH? YOU'LL HAVE TO COME IN AND SEE. MEDICAL AESTHETICS MORE THAN A MEMBERSHIP. A SKIN RITUAL. 20% savings on eligible treatments + skincare Priority booking Member-only access to new treatments First look at exclusive events CANCEL ANYTIME · NO LONG-TERM COMMITMENT KOREAN-INSPIRED · PROVIDER-CURATED · GLASS SKIN OBSESSED",
+    "snippet": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift...."
   },
   {
     "url": "memberships.html#faq",
     "title": "Korean Glass Skin Membership FAQs",
     "pageTitle": "Korean Glass Skin Membership Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. One monthly five-layer ritual featuring AquaFacial liquid microdermabrasion, Needle-Free Topical Skin Booster Infusion, LDM multi-frequency ultrasound, medical-grade red light therapy, and a glutathione IV push when medically appropriate. Members also receive the rotating monthly Seoul Glow Drop gift and full VIP perks (20% savings on eligible services and retail skincare, priority booking, and member-exclusive events). Rather than relying on a single treatment modality, the SuA Glow Glass Skin Method™ layers five clinically proven, complementary skin treatments into one cohesive Korean-inspired monthly ritual. Each step is personalized around what your skin barrier requires at that moment, optimizing long-term skin health, cellular hydration, elasticity, and luminous radiance without downtime. None. The entire five-layer ritual is non-invasive, needle-free, and deeply relaxing. Most patients describe it as soothing, gentle, and refreshing. You can immediately return to work, events, or social gatherings with an instant, luminous glass skin glow. As an active Glass Skin Member, you receive a 20% discount on all professional retail skincare brands (such as medical-grade Korean sunscreens, ampoules, and post-treatment serums) as well as eligible add-on aesthetic services and boosters booked at SuA Glow. Yes. Our membership is designed to provide sustainable, stress-free barrier health without lock-in friction. You can easily manage, pause, or cancel your monthly membership with simple advance notice prior to your next billing cycle. The membership is available exclusively at SuA Glow in Carrollton, Texas (4116 State Highway 121, Suite 120, Office O), conveniently serving patients across Dallas, Plano, Frisco, Coppell, Southlake, Grapevine, Addison, and the broader DFW metroplex.",
-    "snippet": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. One monthly five-layer ritual featuring AquaFacial liquid..."
+    "content": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. Your $199 monthly membership includes one provider-curated 5-Layer Korean Glass Skin Ritual featuring AquaFacial, Needle-Free Skin Booster Infusion, LDM Water Drop Lifting, LED Red Light Therapy, and a Glutathione IV Push when medically appropriate. Members also receive the rotating Seoul Glow Drop, 20% savings on eligible services and skincare, priority booking, and member-only perks. K-Beauty is all about the layers. So is your facial. Rather than relying on one treatment, the SuA Glow Glass Skin Method™ brings five complementary layers together in one Korean-inspired monthly ritual. The method combines consistent skin care, medical aesthetic technology, and provider-guided personalization rather than a one-and-done approach. The membership is designed for adults who want a consistent, skin-first approach to hydration, radiance, texture, and overall skin quality. Your provider evaluates your skin, goals, medical history, and treatment candidacy to determine whether the ritual—and each included layer—is appropriate for you. Yes. The five-layer framework provides the foundation, while your Skin Booster Edit can be personalized around what your skin needs right now. Your monthly focus may include DEWY for hydration, TONE-UP for radiance, CALM for barrier support, or SMOOTH for texture, based on provider assessment and individual candidacy. The membership is designed around one Glass Skin Ritual each month. That's intentional: the SuA Glow philosophy emphasizes consistent, layered skin care rather than chasing one-time quick fixes. Your provider may modify or defer individual treatments when clinically appropriate. Yes. Your membership is $199 per month and includes your monthly 5-Layer Glass Skin Ritual plus eligible member benefits. There is no separate charge for each of the five included layers. Optional treatments, upgrades, products, or services outside the membership are additional. The facial and device-based layers are designed to be gentle, with little to no expected downtime for most appropriate candidates. The Glutathione IV Push involves IV administration and is included only when medically appropriate. Individual experiences, treatment recommendations, and responses vary. Active Glass Skin Members receive 20% savings on eligible treatments and professional skincare at SuA Glow. Eligibility and exclusions may vary by service, product, promotion, or treatment plan. Complete benefit details are provided in the membership terms. Yes. The Glass Skin Membership is designed without a long-term membership commitment. Pauses, cancellations, and other membership changes are subject to the notice requirements and terms outlined in your membership agreement. The Korean Glass Skin Membership is available exclusively at SuA Glow Medical Aesthetics in Carrollton, Texas, serving Dallas–Fort Worth and surrounding communities including Plano, Frisco, Coppell, Addison, Grapevine, and Southlake. The Seoul Glow Drop is your rotating K-Beauty discovery included with the Glass Skin Membership. Selections may include curated skincare extras, masks, ampoules, or seasonal finishing touches, with the featured discovery changing periodically. What's dropping next? You'll have to come in and see.",
+    "snippet": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. Your $199 monthly membership includes one provider-curate..."
   },
   {
     "url": "memberships.html",
@@ -1521,14 +1473,6 @@ const SEARCH_INDEX = [
     "snippet": "The Seoul Event Prep Philosophy Some treatments are designed for long-term correction. One Day Glow is designed for tomorrow. First date. Media event. Photoshoo..."
   },
   {
-    "url": "one-day-glow.html",
-    "title": "Medical Oversight",
-    "pageTitle": "One Day Glow Treatment",
-    "category": "One Day Glow",
-    "content": "All One Day Glow Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
-    "snippet": "All One Day Glow Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam ..."
-  },
-  {
     "url": "one-day-glow.html#philosophies",
     "title": "Four Pillars of Event Skin",
     "pageTitle": "One Day Glow Treatment",
@@ -1607,14 +1551,6 @@ const SEARCH_INDEX = [
     "category": "Radiesse",
     "content": "The Seoul Bio-Stimulation Philosophy Traditional fillers add volume. Bio-stimulators signal your body to rebuild its own structural foundation. At SuA Glow, we utilize Radiesse (Calcium Hydroxylapatite) conceptually as it's used in top Seoul clinics: not merely for filling lines, but hyper-diluted as a profound collagen and elastin stimulator. This approach tightens crepey skin, improves structural density, and provides long-lasting, natural rejuvenation. • Collagen Depletion • Skin Laxity • Crepey Texture • Skin Tightening • Restored Density • Endogenous Collagen Bio-Stimulator Focus",
     "snippet": "The Seoul Bio-Stimulation Philosophy Traditional fillers add volume. Bio-stimulators signal your body to rebuild its own structural foundation. At SuA Glow, we ..."
-  },
-  {
-    "url": "radiesse.html",
-    "title": "Medical Oversight",
-    "pageTitle": "Radiesse Bio-Stimulator",
-    "category": "Radiesse",
-    "content": "All Radiesse Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
-    "snippet": "All Radiesse Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang..."
   },
   {
     "url": "radiesse.html#philosophies",
@@ -1705,14 +1641,6 @@ const SEARCH_INDEX = [
     "snippet": "The Seoul Healing Philosophy Beautiful skin is, first and foremost, healthy skin with a strong barrier. At SuA Glow, the Salmon PN Facial is a Korean-inspired r..."
   },
   {
-    "url": "salmon-pn-facial.html",
-    "title": "Medical Oversight",
-    "pageTitle": "Salmon PN Facial",
-    "category": "Recovery & Repair",
-    "content": "All treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
-    "snippet": "All treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accor..."
-  },
-  {
     "url": "salmon-pn-facial.html#philosophies",
     "title": "Four Pillars of PN Repair",
     "pageTitle": "Salmon PN Facial",
@@ -1775,14 +1703,6 @@ const SEARCH_INDEX = [
     "category": "Scar Treatment",
     "content": "The Seoul Remodeling Philosophy Scars are not just surface-level concerns; they involve structural changes deep within the dermal matrix. At SuA Glow, Korean Scar Treatment utilizes a multi-modality approach. By combining specialized techniques like microneedling, structural subcision, and regenerative boosters (like PN or Exosomes), we aim to untether deep scars and stimulate new, healthy tissue growth for a smoother, more even surface. • Acne Scarring • Uneven Texture • Structural Damage • Smoother Surface • Collagen Remodeling • Softened Depressions Precision Skin Texture Focus",
     "snippet": "The Seoul Remodeling Philosophy Scars are not just surface-level concerns; they involve structural changes deep within the dermal matrix. At SuA Glow, Korean Sc..."
-  },
-  {
-    "url": "scar-treatment.html",
-    "title": "Medical Oversight",
-    "pageTitle": "Korean Scar Treatment",
-    "category": "Scar Treatment",
-    "content": "All Scar Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
-    "snippet": "All Scar Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in ..."
   },
   {
     "url": "scar-treatment.html#philosophies",
@@ -1863,14 +1783,6 @@ const SEARCH_INDEX = [
     "category": "Seoul Man",
     "content": "The Seoul Male Aesthetic Men’s skin ages differently. Men’s facial structures balance differently. And men’s aesthetic goals are distinct. At SuA Glow, the Seoul Man Treatment is a customized Korean-inspired aesthetic program designed for male anatomy. The focus is on subtle enhancements — defining the jawline, reducing signs of fatigue, and refining skin texture so you look sharp, rested, and naturally confident. • Jawline Definition • Rested Appearance • Skin Texture • Masculine Contour • Subtle Refinement • Confident Look Masculine Aesthetic Assessment",
     "snippet": "The Seoul Male Aesthetic Men’s skin ages differently. Men’s facial structures balance differently. And men’s aesthetic goals are distinct. At SuA Glow, the Seou..."
-  },
-  {
-    "url": "seoul-man.html",
-    "title": "Medical Oversight",
-    "pageTitle": "Seoul Man Treatment",
-    "category": "Seoul Man",
-    "content": "All Seoul Man Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
-    "snippet": "All Seoul Man Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yan..."
   },
   {
     "url": "seoul-man.html#philosophies",
@@ -1999,14 +1911,6 @@ const SEARCH_INDEX = [
     "category": "SuA Glow Signature Treatment",
     "content": "The Seoul Skin Philosophy Not every patient needs the same treatment. And not every face should look treated. At SuA Glow, the Signature Treatment is a personalized Korean-inspired skin quality program. We design a plan around your skin condition, facial movement, texture concerns, hydration levels, and long-term skin goals. Because in Seoul aesthetics, the best results rarely come from a single syringe or trend. • Quiet Skin • Glass Skin Finish • Smooth Texture • Hydration Boost • Refined Pores • Subtle Balance Custom Aesthetic Planning",
     "snippet": "The Seoul Skin Philosophy Not every patient needs the same treatment. And not every face should look treated. At SuA Glow, the Signature Treatment is a personal..."
-  },
-  {
-    "url": "signature-treatment.html",
-    "title": "Medical Oversight",
-    "pageTitle": "SuA Glow Signature Treatment",
-    "category": "SuA Glow Signature Treatment",
-    "content": "All Signature Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yang in accordance with Texas law and established clinical protocols.",
-    "snippet": "All Signature Treatments at SuA Glow are performed by Sophia Yang, PA-C under appropriate medical oversight and delegation by supervising physician Dr. Adam Yan..."
   },
   {
     "url": "signature-treatment.html#philosophies",

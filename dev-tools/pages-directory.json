@@ -21,7 +21,7 @@
     "title": "Bridal Glow",
     "fullTitle": "Bridal Glow | SuA K Glow Korean Med Spa Carrollton",
     "category": "Treatments & Modalities",
-    "sizeKb": 29
+    "sizeKb": 28
   },
   {
     "path": "collagen-stimulation-facial.html",
@@ -365,7 +365,7 @@
     "title": "Cosmetic Tox & SkinTox",
     "fullTitle": "Cosmetic Tox & SkinTox | SuA K Glow Korean Med Spa Carrollton",
     "category": "Injectables",
-    "sizeKb": 31
+    "sizeKb": 30
   },
   {
     "path": "dep.html",
@@ -381,7 +381,7 @@
     "title": "Korean Dermal Filler",
     "fullTitle": "Korean Dermal Filler | SuA K Glow Korean Med Spa Carrollton",
     "category": "Injectables",
-    "sizeKb": 29
+    "sizeKb": 28
   },
   {
     "path": "dev-tools/audit.html",
@@ -438,6 +438,14 @@
     "fullTitle": "SuA Glow Site Structure",
     "category": "Dev Tools",
     "sizeKb": 23
+  },
+  {
+    "path": "dev-tools/snippets/everything-included-original-backup.html",
+    "filename": "everything-included-original-backup.html",
+    "title": "Everything Included Original Backup",
+    "fullTitle": "everything-included-original-backup.html",
+    "category": "Dev Tools",
+    "sizeKb": 14
   },
   {
     "path": "dev-tools/style-guide.html",
@@ -629,7 +637,7 @@
     "title": "IV Therapy Dallas & Carrollton",
     "fullTitle": "IV Therapy Dallas & Carrollton | IV Infusion & Wellness | SuA Glow",
     "category": "Treatments & Modalities",
-    "sizeKb": 100
+    "sizeKb": 97
   },
   {
     "path": "korean-scalp-hair-rejuvenation.html",
@@ -669,7 +677,7 @@
     "title": "Korean Glass Skin Membership Dallas",
     "fullTitle": "Korean Glass Skin Membership Dallas | SuA Glow",
     "category": "Core Pages",
-    "sizeKb": 63
+    "sizeKb": 66
   },
   {
     "path": "microneedling.html",
@@ -749,7 +757,7 @@
     "title": "Salmon PN Facial",
     "fullTitle": "Salmon PN Facial | SuA K Glow Korean Med Spa Carrollton",
     "category": "Treatments & Modalities",
-    "sizeKb": 29
+    "sizeKb": 28
   },
   {
     "path": "scar-treatment.html",
@@ -757,7 +765,7 @@
     "title": "Korean Scar Treatment",
     "fullTitle": "Korean Scar Treatment | SuA K Glow Korean Med Spa Carrollton",
     "category": "Treatments & Modalities",
-    "sizeKb": 42
+    "sizeKb": 41
   },
   {
     "path": "seoul-man.html",
