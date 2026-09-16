@@ -7,9 +7,52 @@ const OVERSIGHT_HTML = `
                 <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-[#AA987C]/5 rounded-full blur-2xl pointer-events-none"></div>
                 
                 <div class="space-y-4 relative z-10">
-                    <div class="flex flex-wrap items-center gap-3">
+                    <div class="flex items-center justify-between gap-4">
                         <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#AA987C] bg-[#AA987C]/10 px-3.5 py-1 rounded-full border border-[#AA987C]/20">Medical Expertise You Can Trust</span>
-                        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-charcoal/40 bg-charcoal/5 px-3 py-1 rounded-full">Texas Compliant</span>
+                        
+                        <!-- Texas Compliant Circular Seal -->
+                        <div class="shrink-0 group relative cursor-default" title="Texas Compliant Medical Practice">
+                            <svg class="w-12 h-12 sm:w-14 sm:h-14 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <path id="txSealPath" d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" />
+                                    <linearGradient id="txGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#C5A880" />
+                                        <stop offset="50%" stop-color="#AA987C" />
+                                        <stop offset="100%" stop-color="#8F857B" />
+                                    </linearGradient>
+                                    <radialGradient id="txSealBg" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" stop-color="#FFFFFF" />
+                                        <stop offset="80%" stop-color="#FAF8F5" />
+                                        <stop offset="100%" stop-color="#EAE5DC" />
+                                    </radialGradient>
+                                </defs>
+
+                                <!-- Base Circle -->
+                                <circle cx="60" cy="60" r="56" fill="url(#txSealBg)" stroke="#AA987C" stroke-width="1.5" />
+                                
+                                <!-- Inner Beaded / Dashed Ring -->
+                                <circle cx="60" cy="60" r="50.5" fill="none" stroke="#AA987C" stroke-width="0.75" stroke-dasharray="2.5 2" opacity="0.65" />
+                                
+                                <!-- Inner Map Circle -->
+                                <circle cx="60" cy="60" r="34" fill="#F4F1EC" stroke="#AA987C" stroke-width="0.75" opacity="0.5" />
+
+                                <!-- Circular Text -->
+                                <text font-family="'Montserrat', 'Poppins', sans-serif" font-size="7.5" font-weight="700" letter-spacing="0.14em" fill="#6E6254">
+                                    <textPath href="#txSealPath" startOffset="50%" text-anchor="middle">
+                                        ★ TEXAS COMPLIANT ★ CLINICAL OVERSIGHT
+                                    </textPath>
+                                </text>
+
+                                <!-- Texas State Map Silhouette -->
+                                <g transform="translate(60, 60) scale(0.65) translate(-50, -50)">
+                                    <path d="M 27 15 L 49 15 L 49 30 L 63 30 Q 66 32 70 34 L 75 38 L 76 43 L 75 54 L 80 58 L 84 63 L 80 67 L 76 72 L 72 76 L 68 81 L 64 85 L 61 88 Q 57 90 53 91 Q 48 88 47 84 L 45 80 L 41 81 L 37 79 L 32 74 L 29 69 L 25 67 L 22 62 L 19 57 L 17 52 L 13 47 L 7 43 L 9 41 L 15 44 L 21 44 L 26 42 L 27 39 Z" 
+                                          fill="url(#txGoldGrad)" />
+                                    <!-- Lone Star at Dallas / North Texas -->
+                                    <polygon points="55,34.5 56.2,37.5 59.5,37.5 56.8,39.5 57.8,42.5 55,40.5 52.2,42.5 53.2,39.5 50.5,37.5 53.8,37.5" 
+                                             fill="#FFFFFF" />
+                                </g>
+                            </svg>
+                        </div>
                     </div>
                     
                     <p class="text-sm md:text-base font-light text-charcoal/80 leading-relaxed">
