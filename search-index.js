@@ -1173,7 +1173,7 @@ const SEARCH_INDEX = [
     "title": "EVERYTHING INCLUDED. $199/MONTH.",
     "pageTitle": "Korean Glass Skin Membership Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift. Hydrate. Refine. Soothe. Restore. Glow. Inner wellness. Outer glow. A rotating K-Beauty discovery — from curated skincare extras, masks and ampoules to seasonal finishing touches. WHAT'S DROPPING THIS MONTH? YOU'LL HAVE TO COME IN AND SEE. MEDICAL AESTHETICS MORE THAN A MEMBERSHIP. A SKIN RITUAL. 20% savings on eligible treatments + skincare Priority booking Member-only access to new treatments First look at exclusive events CANCEL ANYTIME · NO LONG-TERM COMMITMENT KOREAN-INSPIRED · PROVIDER-CURATED · GLASS SKIN OBSESSED",
+    "content": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift. Hydrate. Refine. Soothe. Restore. Glow. Inner wellness. Outer glow. A rotating K-Beauty discovery — from curated skincare extras, masks and ampoules to seasonal finishing touches. WHAT'S DROPPING THIS MONTH? YOU'LL HAVE TO COME IN AND SEE. MORE THAN A MEMBERSHIP. A SKIN RITUAL. 20% savings on eligible treatments + skincare Priority booking Member-only access to new treatments First look at exclusive events CANCEL ANYTIME · NO LONG-TERM COMMITMENT KOREAN-INSPIRED · PROVIDER-CURATED · GLASS SKIN OBSESSED",
     "snippet": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift...."
   },
   {
