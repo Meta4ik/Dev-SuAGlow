@@ -53,7 +53,7 @@ function renderMonthlySpecials(customConfig) {
 
                     <!-- Bottom Right Book Button -->
                     <div>
-                        <a href="${stepItem.bookingUrl}" target="_blank" class="btn-primary text-xs py-3 px-6 inline-flex items-center justify-center gap-2 w-full md:w-auto shadow-md whitespace-nowrap">
+                        <a href="${stepItem.bookingUrl}" target="_blank" class="btn-primary btn-sm inline-flex items-center justify-center gap-2 w-full md:w-auto">
                             <span>Book Now</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -198,7 +198,7 @@ function renderMonthlySpecials(customConfig) {
                                 </p>
                             ` : ''}
                         </div>
-                        <a href="${meta.offerCtaUrl || meta.bookingUrl}" ${meta.offerCtaUrl && meta.offerCtaUrl.startsWith('#') ? '' : 'target="_blank"'} class="btn-primary shrink-0 z-10 py-4 px-8 text-xs font-bold tracking-widest shadow-lg whitespace-nowrap">
+                        <a href="${meta.offerCtaUrl || meta.bookingUrl}" ${meta.offerCtaUrl && meta.offerCtaUrl.startsWith('#') ? '' : 'target="_blank"'} class="btn-primary shrink-0 z-10 whitespace-nowrap">
                             ${meta.offerCtaText || 'Claim Offer Today'}
                         </a>
                     </div>

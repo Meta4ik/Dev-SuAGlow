@@ -24,10 +24,10 @@ const OLIGIO_BANNER_HTML = `
                 </p>
                 
                 <div class="pt-4 flex flex-col sm:flex-row items-start gap-4">
-                    <a href="oligio-x.html" class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300">
+                    <a href="oligio-x.html" class="btn-primary">
                         Explore Oligio X
                     </a>
-                    <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-secondary py-4 px-8 text-xs font-semibold tracking-widest border border-white/20 hover:border-white text-white rounded-full transition-all duration-300">
+                    <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-outline-white">
                         Book Consultation
                     </a>
                 </div>

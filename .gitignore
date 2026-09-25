@@ -25,3 +25,7 @@ scratch/
 .env
 .vercel
 .env*
+.agents/
+.agent/
+**/.*agent*
+dev-tools/get_refresh_token.js

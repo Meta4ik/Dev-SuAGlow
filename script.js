@@ -68,19 +68,46 @@ function initFooter() {
 
 /**
  * Near Me Section Injection
- * Uses the NEARME_HTML string from nearme.js
- * The placeholder should have a data-product attribute for the product name
+ * Uses the NEARME_HTML string from nearme.js or footer.js
+ * Automatically positions the Near Me section directly above the footer on each page
  */
 function initNearMe() {
-  const placeholder = document.getElementById('nearme-placeholder');
+  const footerPlaceholder = document.getElementById('footer-placeholder');
+  let placeholder = document.getElementById('nearme-placeholder');
+  const finalCta = document.getElementById('final-consultation-cta') || 
+                   document.querySelector('.final-consultation-cta');
+  
+  const targetElement = finalCta || footerPlaceholder;
+
+  // If nearme-placeholder exists elsewhere in the DOM, move it directly above final CTA or footer
+  if (placeholder && targetElement && placeholder.nextElementSibling !== targetElement) {
+    targetElement.parentNode.insertBefore(placeholder, targetElement);
+  }
+
+  // If no nearme-placeholder exists on the page, dynamically create it directly above targetElement
+  if (!placeholder && targetElement) {
+    placeholder = document.createElement('div');
+    placeholder.id = 'nearme-placeholder';
+    targetElement.parentNode.insertBefore(placeholder, targetElement);
+  }
+
   if (!placeholder) return;
 
   if (typeof NEARME_HTML !== 'undefined') {
     placeholder.innerHTML = NEARME_HTML;
 
-    // Fill in the product name from the data attribute
-    const productName = placeholder.dataset.product || '';
-    const productEl = document.getElementById('nearme-product');
+    // Fill in product name from data-product attribute or determine from page title
+    let productName = placeholder.dataset.product || '';
+    if (!productName) {
+      const pageTitle = document.title ? document.title.split('|')[0].split('—')[0].split('–')[0].trim() : '';
+      if (pageTitle && !pageTitle.toLowerCase().includes('home') && !pageTitle.toLowerCase().includes('sua glow') && !pageTitle.toLowerCase().includes('sua k-glow')) {
+        productName = pageTitle;
+      } else {
+        productName = 'SuA Glow';
+      }
+    }
+
+    const productEl = placeholder.querySelector('#nearme-product');
     if (productEl) {
       productEl.textContent = productName;
     }

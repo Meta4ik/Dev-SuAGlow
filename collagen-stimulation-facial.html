@@ -10,51 +10,147 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/output.css?v=43">
+    <link rel="stylesheet" href="dist/output.css?v=45">
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Schema.org FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a collagen stimulation treatment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Collagen-focused treatments are skin quality strategies designed to support healthier-looking skin quality, texture refinement, elasticity-focused maintenance, and long-term skin support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a collagen skin booster?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Collagen-focused skin boosters are consultation-based skin quality strategies commonly discussed in modern Korean aesthetics and are often selected by patients seeking healthier-looking skin quality, smoother-looking texture, and elasticity-focused support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is a collagen-focused treatment different from filler?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traditional fillers are commonly discussed for facial contouring and volume support. Collagen-focused skin quality strategies are often selected by patients seeking healthier-looking skin quality, texture refinement, elasticity-focused support, and long-term skin maintenance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is a good candidate for collagen-focused skin quality treatments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Patients commonly interested in collagen-focused treatment planning may include: women seeking long-term skin quality maintenance, men seeking subtle skin rejuvenation, patients concerned about acne scar appearance, patients focused on texture refinement, patients seeking elasticity-focused support, and patients interested in prevention-focused skin quality planning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a Collagen & Structure Facial and a PDRN Facial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Korean Glass Skin PDRN Facial primarily focuses on skin quality and texture refinement, while the Korean Glass Skin Collagen & Structure Facial focuses more heavily on elasticity-focused support, firmness-focused maintenance, and long-term structural skin quality planning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can collagen-focused treatments help acne scar appearance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many patients pursue collagen-focused skin quality strategies as part of broader consultation-based treatment planning for texture refinement and acne scar appearance concerns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can collagen-focused treatments be combined with LDM facials?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Korean-inspired consultation-based treatment planning may incorporate Korean Glass Skin LDM Facial treatments as part of broader skin quality, hydration-focused, and elasticity-focused strategies."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="bg-off-white text-charcoal antialiased">
     <div id="nav-placeholder"></div>
 
-    <!-- Hero Section -->
-    <section id="hero" data-nav-theme="dark" class="relative min-h-[75vh] flex items-center justify-center pt-[150px] pb-20 px-8 md:px-16 bg-[#131619] text-white overflow-hidden">
+    <!-- MODULE 01: HERO (REQUIRED) -->
+    <section id="hero" data-nav-theme="dark" class="relative min-h-[82vh] flex items-center justify-center pt-[145px] pb-20 px-6 sm:px-8 md:px-16 bg-[#131619] text-white overflow-hidden">
         <div class="absolute inset-0 z-0 bg-[#131619] flex justify-center pointer-events-none overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#131619]/70 via-[#131619]/40 to-[#131619]"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#AA987C] blur-[160px] rounded-full opacity-20"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#131619]/80 via-[#131619]/50 to-[#131619]"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] bg-[#AA987C] blur-[160px] rounded-full opacity-20"></div>
         </div>
         
         <div class="max-w-7xl mx-auto relative z-10 w-full">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+            <!-- Breadcrumb Navigation -->
+            <nav class="mb-6 flex items-center gap-2 text-xs text-white/50 animate-on-scroll fade-down" aria-label="Breadcrumb">
+                <a href="index.html" class="hover:text-warm-gold transition-colors">Home</a>
+                <span>/</span>
+                <a href="skin-health.html" class="hover:text-warm-gold transition-colors">Skin Health</a>
+                <span>/</span>
+                <span class="text-warm-gold">Korean Glass Skin Structure &amp; Skin Quality Facial</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
                 <div class="lg:col-span-7 space-y-6 animate-on-scroll fade-right">
+                    <!-- Eyebrow Pill Header -->
                     <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 mb-2 inline-block uppercase tracking-wider text-[10px]">
                         K-BEAUTY &bull; COLLAGEN &bull; SKIN QUALITY
                     </span>
+                    
                     <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-white font-medium leading-tight [text-wrap:balance]">
-                        Korean Glass Skin <span class="text-[#AA987C]">Collagen &amp; Structure</span> Facial
+                        Korean Glass Skin <span class="text-[#AA987C]">Structure &amp; Skin Quality</span> Facial
                     </h1>
+                    
                     <p class="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-warm-gold/90 font-body">
-                        Structure. Firmness. Future Skin.
+                        Skin Quality. Structure. Long-Term Support.
                     </p>
+                    
                     <p class="text-sm md:text-base font-light text-white/80 leading-relaxed max-w-xl [text-wrap:balance]">
                         K-Beauty doesn't just treat the skin you have today. It invests in the skin you want tomorrow. At SuA Glow in Carrollton, near Dallas, our Korean-inspired collagen stimulation and skin-quality treatments focus on gradual, natural-looking improvement—not dramatic correction.
                     </p>
-                    <div class="pt-4">
-                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300">
-                            Book Consultation
+
+                    <!-- Core Value Pills -->
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] text-white/80">
+                            <i data-lucide="check" class="w-3 h-3 text-warm-gold"></i> Collagen Support
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] text-white/80">
+                            <i data-lucide="check" class="w-3 h-3 text-warm-gold"></i> Smoother-Looking Texture
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] text-white/80">
+                            <i data-lucide="check" class="w-3 h-3 text-warm-gold"></i> Firmness &amp; Elasticity
+                        </span>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap items-center gap-4">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" rel="noopener noreferrer" class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300 shadow-lg hover:shadow-warm-gold/20">
+                            Book Consultation &rarr;
+                        </a>
+                        <a href="#glance" class="btn-outline text-xs px-6 py-4 tracking-widest uppercase rounded-full border border-white/20 text-white/80 hover:bg-white/10 hover:text-white transition-all duration-300">
+                            Explore Details
                         </a>
                     </div>
                 </div>
 
-                <!-- Right Graphic collage column -->
+                <!-- Right Graphic Collage Column -->
                 <div class="lg:col-span-5 animate-on-scroll fade-left delay-100">
-                    <div class="relative w-full h-[320px] sm:h-[420px] flex items-center justify-center">
+                    <div class="relative w-full h-[350px] sm:h-[450px] flex items-center justify-center">
                         <!-- Circular Badge -->
                         <div class="absolute hidden md:flex items-center justify-center z-20 text-[#AA987C] float-slow"
-                            style="width: 130px; height: 130px; top: -10px; right: 10%; animation: float 6s ease-in-out infinite;">
+                            style="width: 130px; height: 130px; top: -10px; right: 8%; animation: float 6s ease-in-out infinite;">
                             <div class="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.15)] border border-white/10"></div>
                             <svg viewBox="0 0 100 100" class="relative z-10" style="width: 95%; height: 95%; animation: spin-badge 20s linear infinite;">
                                 <path id="textCircleBanner" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="transparent" />
-                                <text font-family="Montserrat, sans-serif" font-size="7.9" font-weight="700" fill="currentColor" class="uppercase" letter-spacing="0.1em">
+                                <text font-family="Montserrat, sans-serif" font-size="7.5" font-weight="700" fill="currentColor" class="uppercase" letter-spacing="0.1em">
                                     <textPath href="#textCircleBanner" startOffset="0%">
                                         COLLAGEN SUPPORT &bull; NATURAL REFINEMENT &bull;
                                     </textPath>
@@ -66,32 +162,171 @@
                         </div>
 
                         <!-- Main visual card -->
-                        <div class="absolute left-0 bottom-0 w-[80%] h-[90%] rounded-[24px] overflow-hidden shadow-2xl border border-white/10 group bg-[#131619] z-0">
-                            <img src="assets/collagen-stimulation/collagen-hero.jpg" alt="Collagen Rejuvenation Model" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute left-0 bottom-0 w-[88%] h-[94%] rounded-[24px] overflow-hidden shadow-2xl border border-white/10 group bg-[#131619] z-0">
+                            <img src="assets/collagen-stimulation/collagen-hero.jpg" alt="Korean Collagen Skin Booster Treatment" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 p-3.5 bg-black/40 backdrop-blur-md rounded-xl border border-white/10 text-white">
+                                <p class="text-[10px] uppercase tracking-wider text-warm-gold font-semibold">The Seoul Principle</p>
+                                <p class="text-xs font-light text-white/90">"Small deposits now. Potential benefits later."</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Medical Oversight Section (Placed prominently near top as requested) -->
+    <!-- MODULE 02: PHYSICIAN-GUIDED CARE / MD DELEGATION -->
     <div id="oversight-placeholder" data-treatment="Korean Collagen &amp; Structure"></div>
 
-    <!-- Section: Why K-Beauty Thinks Beyond Volume -->
-    <section id="philosophy" class="py-24 px-6 md:px-12 bg-off-white">
+    <!-- SECTION: WHAT IS A KOREAN COLLAGEN FACIAL? (PROPOSED LAYOUT REF 3) -->
+    <section class="py-24 px-6 md:px-12 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-                <!-- Left Column (Image) -->
-                <div class="lg:col-span-6 animate-on-scroll fade-right">
-                    <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-white p-2 border border-light-gray/50">
-                        <img src="assets/collagen-stimulation/younger-older-skin-diagram.jpg" alt="Korean Collagen Skin Booster Results" class="w-full h-auto object-cover rounded-2xl mx-auto">
+                <!-- Left Column (4 Circular Process Nodes & CTA Card) -->
+                <div class="lg:col-span-7 space-y-8 animate-on-scroll fade-right">
+                    <div>
+                        <!-- Eyebrow -->
+                        <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px] mb-3">
+                            What Is A Korean Collagen Facial?
+                        </span>
+                        <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-near-black leading-tight [text-wrap:balance]">
+                            SKIN QUALITY <span class="text-[#AA987C]">GOES DEEPER</span>
+                        </h2>
+                        <p class="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-taupe mt-1 mb-4">
+                            The Korean Collagen Facial
+                        </p>
+                        <p class="text-sm md:text-base font-light text-charcoal/80 leading-relaxed [text-wrap:balance]">
+                            A Korean collagen facial is a customized, multi-step treatment that works beneath the surface to support collagen, strengthen skin quality, and enhance your natural glow—using advanced Korean techniques, skin boosters, and complementary technologies.
+                        </p>
+                    </div>
+
+                    <!-- 4 Circular Process Nodes (Reference 3) -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+                        <!-- Node 1 -->
+                        <div class="bg-off-white p-4 rounded-2xl border border-light-gray/60 text-center space-y-2 hover:border-taupe/40 transition-colors">
+                            <div class="w-12 h-12 rounded-full bg-[#AA987C]/10 flex items-center justify-center text-[#AA987C] mx-auto">
+                                <i data-lucide="droplets" class="w-6 h-6"></i>
+                            </div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-near-black">01 Infuse</p>
+                            <p class="text-[11px] text-charcoal/70 font-light leading-tight">Nourishing bio-actives to the skin</p>
+                        </div>
+
+                        <!-- Node 2 -->
+                        <div class="bg-off-white p-4 rounded-2xl border border-light-gray/60 text-center space-y-2 hover:border-taupe/40 transition-colors">
+                            <div class="w-12 h-12 rounded-full bg-warm-gold/15 flex items-center justify-center text-warm-gold mx-auto">
+                                <i data-lucide="sparkles" class="w-6 h-6"></i>
+                            </div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-near-black">02 Activate</p>
+                            <p class="text-[11px] text-charcoal/70 font-light leading-tight">Prompts natural collagen synthesis</p>
+                        </div>
+
+                        <!-- Node 3 -->
+                        <div class="bg-off-white p-4 rounded-2xl border border-light-gray/60 text-center space-y-2 hover:border-taupe/40 transition-colors">
+                            <div class="w-12 h-12 rounded-full bg-[#AA987C]/10 flex items-center justify-center text-[#AA987C] mx-auto">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-near-black">03 Deliver</p>
+                            <p class="text-[11px] text-charcoal/70 font-light leading-tight">SkinPen or Needle-Free DEP</p>
+                        </div>
+
+                        <!-- Node 4 -->
+                        <div class="bg-off-white p-4 rounded-2xl border border-light-gray/60 text-center space-y-2 hover:border-taupe/40 transition-colors">
+                            <div class="w-12 h-12 rounded-full bg-warm-gold/15 flex items-center justify-center text-warm-gold mx-auto">
+                                <i data-lucide="sun" class="w-6 h-6"></i>
+                            </div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-near-black">04 Reveal</p>
+                            <p class="text-[11px] text-charcoal/70 font-light leading-tight">Smoother, radiant glass skin</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating White Banner Card (Reference 3) -->
+                    <div class="bg-off-white p-5 rounded-2xl border border-light-gray/70 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="space-y-1">
+                            <p class="text-xs font-bold uppercase tracking-wider text-near-black">MORE THAN A FACIAL</p>
+                            <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                                It's a Korean approach to skin longevity—combining advanced ingredients, technologies, and expert clinical care.
+                            </p>
+                        </div>
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" rel="noopener noreferrer" class="btn-primary shrink-0 py-3 px-6 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-black text-white rounded-full transition-all">
+                            Book Consultation &rarr;
+                        </a>
                     </div>
                 </div>
 
-                <!-- Right Column (Text Content) -->
-                <div class="lg:col-span-6 space-y-6 animate-on-scroll fade-left">
+                <!-- Right Column (Portrait Visual) -->
+                <div class="lg:col-span-5 animate-on-scroll fade-left delay-100">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-white p-2 border border-light-gray/50 group">
+                        <img src="assets/collagen-stimulation/younger-older-skin-diagram.jpg" alt="Korean Collagen Skin Quality Diagram" class="w-full h-auto object-cover rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULE 03: TREATMENT AT A GLANCE (REQUIRED) -->
+    <section id="glance" class="py-20 px-6 md:px-12 bg-off-white border-y border-light-gray/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-12 animate-on-scroll fade-up">
+                <!-- Eyebrow -->
+                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
+                    Quick Summary
+                </span>
+                <h2 class="heading-wide text-2xl sm:text-4xl text-near-black [text-wrap:balance]">
+                    Treatment at a Glance
+                </h2>
+                <p class="text-xs sm:text-sm font-light text-charcoal/70">
+                    What should you know before you book your collagen appointment?
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 animate-on-scroll fade-up">
+                <!-- Metric 1 -->
+                <div class="bg-white p-5 rounded-2xl border border-light-gray/60 text-center space-y-2 shadow-sm hover:border-taupe/40 transition-colors">
+                    <i data-lucide="clock" class="w-5 h-5 text-taupe mx-auto"></i>
+                    <p class="text-[11px] uppercase tracking-wider text-charcoal/50 font-semibold">Duration</p>
+                    <p class="text-xs font-semibold text-near-black">60–75 Min</p>
+                </div>
+                <!-- Metric 2 -->
+                <div class="bg-white p-5 rounded-2xl border border-light-gray/60 text-center space-y-2 shadow-sm hover:border-taupe/40 transition-colors">
+                    <i data-lucide="smile" class="w-5 h-5 text-taupe mx-auto"></i>
+                    <p class="text-[11px] uppercase tracking-wider text-charcoal/50 font-semibold">Comfort</p>
+                    <p class="text-xs font-semibold text-near-black">High (Numbing)</p>
+                </div>
+                <!-- Metric 3 -->
+                <div class="bg-white p-5 rounded-2xl border border-light-gray/60 text-center space-y-2 shadow-sm hover:border-taupe/40 transition-colors">
+                    <i data-lucide="calendar" class="w-5 h-5 text-taupe mx-auto"></i>
+                    <p class="text-[11px] uppercase tracking-wider text-charcoal/50 font-semibold">Downtime</p>
+                    <p class="text-xs font-semibold text-near-black">Minimal (12–24h)</p>
+                </div>
+                <!-- Metric 4 -->
+                <div class="bg-white p-5 rounded-2xl border border-light-gray/60 text-center space-y-2 shadow-sm hover:border-taupe/40 transition-colors">
+                    <i data-lucide="repeat" class="w-5 h-5 text-taupe mx-auto"></i>
+                    <p class="text-[11px] uppercase tracking-wider text-charcoal/50 font-semibold">Ideal Series</p>
+                    <p class="text-xs font-semibold text-near-black">3 Sessions</p>
+                </div>
+                <!-- Metric 5 -->
+                <div class="bg-white p-5 rounded-2xl border border-light-gray/60 text-center space-y-2 shadow-sm hover:border-taupe/40 transition-colors">
+                    <i data-lucide="target" class="w-5 h-5 text-taupe mx-auto"></i>
+                    <p class="text-[11px] uppercase tracking-wider text-charcoal/50 font-semibold">Target</p>
+                    <p class="text-xs font-semibold text-near-black">Texture &amp; Elasticity</p>
+                </div>
+                <!-- Metric 6 -->
+                <div class="bg-white p-5 rounded-2xl border border-light-gray/60 text-center space-y-2 shadow-sm hover:border-taupe/40 transition-colors">
+                    <i data-lucide="shield" class="w-5 h-5 text-taupe mx-auto"></i>
+                    <p class="text-[11px] uppercase tracking-wider text-charcoal/50 font-semibold">Longevity</p>
+                    <p class="text-xs font-semibold text-near-black">6–12+ Months</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULE 04: PHILOSOPHY & WHY BEYOND VOLUME (REQUIRED) -->
+    <section id="philosophy" class="py-24 px-6 md:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <!-- Left Column -->
+                <div class="lg:col-span-6 space-y-6 animate-on-scroll fade-right">
+                    <!-- Eyebrow -->
                     <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
                         Skin Quality First. Always.
                     </span>
@@ -99,19 +334,39 @@
                         Why K-Beauty Thinks Beyond Volume
                     </h2>
                     <p class="text-sm md:text-base font-light text-charcoal/80 leading-relaxed">
-                        Not every sign of aging needs more filler. At SuA Glow, we often take a different approach—supporting skin quality, texture, firmness, and elasticity before considering traditional volume fillers.
+                        Not every sign of aging needs more filler. At SuA Glow, your modern Korean medical aesthetics clinic in Carrollton, we often take a different approach—supporting skin quality, texture, firmness, and elasticity before adding facial volume.
                     </p>
                     <p class="text-sm font-light text-charcoal/70 leading-relaxed">
-                        The goal is not a different face. It’s your skin made healthier, smoother, and firmer while still looking uniquely like you.
+                        The goal? Not a different face. Just healthier, smoother, firmer skin that still looks completely like you.
                     </p>
 
-                    <div class="bg-white p-6 rounded-2xl border border-light-gray/50 space-y-4">
+                    <div class="bg-off-white p-6 rounded-2xl border border-light-gray/50 space-y-4">
                         <p class="heading-wide text-[10px] text-[#AA987C] tracking-widest uppercase font-bold">Personalized Skin Focus:</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-light text-charcoal/80">
                             <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-warm-gold flex-shrink-0"></i>Collagen support</div>
                             <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-warm-gold flex-shrink-0"></i>Smoother-looking texture</div>
                             <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-warm-gold flex-shrink-0"></i>Firmness &amp; elasticity</div>
-                            <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-warm-gold flex-shrink-0"></i>Healthier skin quality</div>
+                            <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-warm-gold flex-shrink-0"></i>Healthier-looking skin quality</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column (Image Reference 5 Layout Elements) -->
+                <div class="lg:col-span-6 animate-on-scroll fade-left delay-100">
+                    <div class="bg-off-white p-8 rounded-3xl border border-light-gray/60 space-y-6 shadow-sm">
+                        <!-- Eyebrow -->
+                        <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
+                            Long-Term Skin Strategy
+                        </span>
+                        <h3 class="heading-wide text-2xl md:text-3xl text-near-black">
+                            WHY K-BEAUTY THINKS ABOUT <span class="text-[#AA987C]">COLLAGEN EARLY</span>
+                        </h3>
+                        <p class="text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed">
+                            The Korean skin-first approach isn't only about correcting what's visible today. It's about supporting skin quality over time with treatments selected for your skin, age, and goals.
+                        </p>
+                        <div class="bg-white p-5 rounded-2xl border-l-4 border-[#AA987C] space-y-1">
+                            <p class="text-xs font-bold tracking-wider text-near-black uppercase">Support Early. Improve Gradually. Maintain Intentionally.</p>
+                            <p class="text-[11px] text-charcoal/60 italic">Because better skin is a long-term strategy.</p>
                         </div>
                     </div>
                 </div>
@@ -119,32 +374,474 @@
         </div>
     </section>
 
-    <!-- Section: Why Korean Aesthetics Invests in Collagen Early -->
-    <section class="py-20 px-10 bg-white border-t border-b border-light-gray/40">
-        <div class="max-w-7xl mx-auto">
+    <!-- MODULE 07: ANALYSIS + CONSULTATION / AURA 3D (REQUIRED) -->
+    <section id="analysis-aura" class="py-24 px-6 md:px-12 bg-[#131619] text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#AA987C]/10 blur-[140px] rounded-full pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                 <div class="lg:col-span-7 space-y-6 animate-on-scroll fade-right">
-                    <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
-                        Long-Term skin investment
+                    <!-- Eyebrow -->
+                    <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 inline-block uppercase tracking-wider text-[10px]">
+                        Consultation Story &bull; Diagnostic Precision
                     </span>
-                    <h2 class="heading-wide text-3xl md:text-5xl text-near-black leading-tight [text-wrap:balance]">
-                        Why Korean Aesthetics Invests in Collagen Early
+                    <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-white leading-tight [text-wrap:balance]">
+                        How We Decide What's Right for You: <span class="text-[#AA987C]">Aura 3D Skin Analysis</span>
                     </h2>
-                    <p class="text-base font-light text-charcoal/80 leading-relaxed">
-                        K-Beauty isn't only about correcting what's visible today. It's also about supporting skin quality before structural changes become more noticeable. 
+                    <p class="text-sm md:text-base font-light text-white/80 leading-relaxed [text-wrap:balance]">
+                        We never guess what your skin needs. In Korean aesthetic medicine, every successful treatment begins with objective diagnostic imagery.
                     </p>
-                    <div class="border-l-2 border-[#AA987C] pl-4 italic text-taupe font-light">
-                        "Support early. Improve gradually. Maintain consistently. Because great skin is a long game."
+                    <p class="text-xs sm:text-sm font-light text-white/70 leading-relaxed">
+                        During your initial consultation at SuA Glow in Carrollton, our advanced <strong>Aura Skin Analysis</strong> evaluates sub-surface dermal layers to quantify:
+                    </p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                        <div class="p-3 bg-white/5 border border-white/10 rounded-xl text-center">
+                            <p class="text-xs font-semibold text-warm-gold">Dermal Elasticity</p>
+                            <p class="text-[10px] text-white/50">Structural integrity</p>
+                        </div>
+                        <div class="p-3 bg-white/5 border border-white/10 rounded-xl text-center">
+                            <p class="text-xs font-semibold text-warm-gold">Sub-Surface Texture</p>
+                            <p class="text-[10px] text-white/50">Acne scar depths</p>
+                        </div>
+                        <div class="p-3 bg-white/5 border border-white/10 rounded-xl text-center">
+                            <p class="text-xs font-semibold text-warm-gold">Deep Moisture</p>
+                            <p class="text-[10px] text-white/50">Hydration levels</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <p class="text-xs text-white/60 italic">
+                            *This diagnostic baseline allows Sophia Yang, PA-C and our clinical team to customize your exact collagen booster concentration and combination plan.
+                        </p>
                     </div>
                 </div>
-                <div class="lg:col-span-5 space-y-4 animate-on-scroll fade-left">
-                    <div class="bg-off-white p-6 rounded-2xl border border-light-gray/60 space-y-3">
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-near-black">Collagen-Focused support may help:</h4>
-                        <ul class="space-y-2 text-xs font-light text-charcoal/80">
-                            <li class="flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i> Firmness &amp; elasticity</li>
-                            <li class="flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i> Smoother, refined skin texture</li>
-                            <li class="flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i> Healthy-looking skin quality</li>
-                            <li class="flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i> Consistent long-term skin maintenance</li>
+
+                <div class="lg:col-span-5 animate-on-scroll fade-left delay-100">
+                    <div class="bg-white/5 p-6 sm:p-8 rounded-3xl border border-white/10 backdrop-blur-md space-y-6">
+                        <div class="flex items-center gap-3 border-b border-white/10 pb-4">
+                            <i data-lucide="scan-face" class="w-6 h-6 text-warm-gold"></i>
+                            <div>
+                                <h4 class="text-sm font-bold uppercase tracking-wider text-white">Objective Skin Mapping</h4>
+                                <p class="text-[11px] text-white/60">Aura Multi-Spectral Diagnostic</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-white/80 font-light leading-relaxed">
+                            Rather than choosing a treatment from an arbitrary menu, your Aura scan reveals whether your skin will benefit most from collagen induction, deep hydration, barrier repair, or a layered combination approach.
+                        </p>
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" rel="noopener noreferrer" class="btn-primary w-full py-3.5 text-center text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300 block">
+                            Schedule Aura Scan + Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULE 08: 4-STEP PERSONALIZED COLLAGEN PATHWAY (PROPOSED LAYOUT REF 2) -->
+    <section class="py-24 px-6 md:px-12 bg-off-white">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-3 animate-on-scroll fade-up">
+                <!-- Eyebrow -->
+                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
+                    Personalized Collagen Strategy
+                </span>
+                <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-near-black leading-tight [text-wrap:balance]">
+                    WHICH COLLAGEN TREATMENT<br><span class="text-[#AA987C]">IS RIGHT FOR YOUR SKIN?</span>
+                </h2>
+                <p class="text-xs sm:text-sm font-light text-charcoal/70 leading-relaxed [text-wrap:balance]">
+                    Collagen treatment isn't one-size-fits-all. At SuA Glow, we start with your skin—then select the treatment approach, delivery method, and complementary layers based on your concerns, goals, and skin quality.
+                </p>
+            </div>
+
+            <!-- 4-Card Horizontal Stepper (Reference 2) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-on-scroll fade-up">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-light-gray/60 shadow-sm flex flex-col justify-between hover:border-taupe/40 transition-all group">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-light-gray/40 pb-3">
+                            <span class="text-xs font-bold text-[#AA987C] uppercase tracking-widest">01 SELECT</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-charcoal/30 group-hover:text-warm-gold transition-colors"></i>
+                        </div>
+                        <h3 class="heading-wide text-sm font-bold text-near-black uppercase">What Does Your Skin Need?</h3>
+                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                            Firmness? Texture? Elasticity? Hydration? Early laxity? We start with your specific skin concern.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-light-gray/60 shadow-sm flex flex-col justify-between hover:border-taupe/40 transition-all group">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-light-gray/40 pb-3">
+                            <span class="text-xs font-bold text-[#AA987C] uppercase tracking-widest">02 TREAT</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-charcoal/30 group-hover:text-warm-gold transition-colors"></i>
+                        </div>
+                        <h3 class="heading-wide text-sm font-bold text-near-black uppercase">Choose The Collagen Approach</h3>
+                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                            Your plan may include collagen-stimulating treatments, SkinPen®, energy-based technology, or skin-quality boosters.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-light-gray/60 shadow-sm flex flex-col justify-between hover:border-taupe/40 transition-all group">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-light-gray/40 pb-3">
+                            <span class="text-xs font-bold text-[#AA987C] uppercase tracking-widest">03 LAYER</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-charcoal/30 group-hover:text-warm-gold transition-colors"></i>
+                        </div>
+                        <h3 class="heading-wide text-sm font-bold text-near-black uppercase">Add Korean Skin Support</h3>
+                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                            Korean LDM ultrasound, hydration, and complementary treatments are layered to optimize cellular results.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-3xl border border-light-gray/60 shadow-sm flex flex-col justify-between hover:border-taupe/40 transition-all group">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-light-gray/40 pb-3">
+                            <span class="text-xs font-bold text-[#AA987C] uppercase tracking-widest">04 MAINTAIN</span>
+                            <i data-lucide="check-circle" class="w-4 h-4 text-warm-gold"></i>
+                        </div>
+                        <h3 class="heading-wide text-sm font-bold text-near-black uppercase">Build Skin Over Time</h3>
+                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                            Collagen-focused care is gradual and evolves based on your personal response, lifestyle, and goals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stepper Summary Bar -->
+            <div class="text-center py-3 px-6 bg-white rounded-full border border-light-gray/60 max-w-2xl mx-auto shadow-sm">
+                <p class="text-[11px] font-semibold tracking-wider text-charcoal/80 uppercase">
+                    YOUR SKIN &rarr; YOUR CONCERN &rarr; YOUR TREATMENT &rarr; YOUR PLAN
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULE 09: PLAN BUILDER: "BUILD THE COLLAGEN. CUSTOMIZE THE GLOW." (EXACT REFERENCE LAYOUT) -->
+    <!-- SECTION: TREATMENT PLAN BUILDER: "BUILD THE COLLAGEN. CUSTOMIZE THE GLOW." -->
+    <section id="plan-builder" class="py-20 md:py-28 px-6 md:px-12 bg-[#DFD7CB] overflow-hidden border-t border-b border-[#CFBEAB] relative">
+        <div class="max-w-7xl xl:max-w-[1360px] mx-auto space-y-10 sm:space-y-12 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto space-y-3 animate-on-scroll fade-up">
+                <span class="inline-block px-5 py-1.5 rounded-full bg-[#D1C5B5] text-[#4E3E2E] border border-[#BCAD9B] text-[11px] font-bold tracking-[0.22em] uppercase shadow-xs">
+                    BUILD YOUR TREATMENT PLAN
+                </span>
+                <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-[#1E1E1E] leading-tight font-normal [text-wrap:balance]">
+                    BUILD THE COLLAGEN.<br><span class="text-[#7A644D]">CUSTOMIZE THE GLOW.</span>
+                </h2>
+                <p class="text-xs sm:text-sm font-light text-[#4A443C] leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
+                    Start with collagen support. Layer additional K-Beauty treatments based on what your skin needs.
+                </p>
+            </div>
+
+            <!-- Custom Plan Builder Grid (Exact Parity with Mockup) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-0 items-stretch animate-on-scroll fade-up">
+                
+                <!-- Left Hero Box: Collagen Stimulation (Foundation Card) - 5 Cols on Desktop -->
+                <div class="lg:col-span-5 relative rounded-[24px] sm:rounded-[28px] overflow-hidden bg-white border border-[#D8C9B9] shadow-[0_12px_40px_rgba(0,0,0,0.06)] flex flex-col justify-between p-7 sm:p-9 lg:p-8 xl:p-11 min-h-[460px] sm:min-h-[500px] lg:min-h-[520px] xl:min-h-[560px] h-full group">
+                    <!-- Right Half Background Image with Smooth Gradient Mask -->
+                    <div class="absolute right-0 top-0 bottom-0 pointer-events-none overflow-hidden z-0" style="width: 48%; padding-right: 0;">
+                        <img src="assets/treatment-plan/collagen-hero.jpg" alt="Collagen Stimulation Foundation Graphic" class="w-full h-full object-cover object-right opacity-95 transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0" style="background: linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.98) 10%, rgba(255,255,255,0.55) 40%, rgba(255,255,255,0.05) 75%, transparent 100%);"></div>
+                    </div>
+
+                    <!-- Top Left Pill Badge -->
+                    <div class="relative z-10">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-[#8D7460] text-white text-[11px] font-semibold uppercase tracking-wider shadow-xs">
+                            START HERE
+                        </span>
+                    </div>
+
+                    <!-- Text Content (Left aligned, relative z-10) -->
+                    <div class="relative z-10 space-y-3.5 max-w-[280px] sm:max-w-[340px] lg:max-w-[370px] my-auto pt-4">
+                        <p class="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#9A8B7B] font-semibold">
+                            THE FOUNDATION
+                        </p>
+                        <h3 class="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-normal text-[#1E1E1E] tracking-tight uppercase leading-[1.12]">
+                            COLLAGEN<br>STIMULATION
+                        </h3>
+                        <p class="text-xs sm:text-[13px] uppercase tracking-[0.22em] text-[#847768] font-semibold">
+                            BUILD + SUPPORT
+                        </p>
+
+                        <!-- Subtle Divider Line -->
+                        <div class="w-14 h-[2px] bg-[#C8BCAB] my-4 sm:my-5"></div>
+
+                        <p class="text-xs sm:text-sm lg:text-[15px] text-[#5C564E] font-light leading-relaxed">
+                            Support firmer, smoother, healthier-looking skin.
+                        </p>
+                    </div>
+
+                    <!-- Subtle bottom spacing -->
+                    <div class="relative z-10"></div>
+                </div>
+
+                <!-- Center Divider Column with Vertical Line & Circular Plus (Desktop) -->
+                <div class="hidden lg:flex lg:col-span-1 items-center justify-center relative self-stretch">
+                    <!-- Continuous Crisp Vertical Line that Fades to 0% at the Top and Bottom Ends -->
+                    <div style="position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); width: 1.5px; background: linear-gradient(180deg, transparent 0%, rgba(142, 121, 96, 0.25) 15%, #8E7960 40%, #8E7960 60%, rgba(142, 121, 96, 0.25) 85%, transparent 100%); z-index: 1;"></div>
+                    <!-- Circular Plus Badge on top of line: Filled with exact section background color #DFD7CB & clean border -->
+                    <div class="w-9 h-9 rounded-full flex items-center justify-center font-normal text-base relative shadow-xs transition-transform duration-300 hover:scale-105" style="background-color: #DFD7CB; border: 1.5px solid #8E7960; color: #5A4937; z-index: 2;">
+                        +
+                    </div>
+                </div>
+
+                <!-- Mobile Plus Divider -->
+                <div class="flex lg:hidden items-center justify-center relative my-4 w-full">
+                    <!-- Horizontal Line that Fades to 0% at Both Ends -->
+                    <div style="position: absolute; left: 1rem; right: 1rem; top: 50%; transform: translateY(-50%); height: 1.5px; background: linear-gradient(90deg, transparent 0%, rgba(142, 121, 96, 0.25) 20%, #8E7960 45%, #8E7960 55%, rgba(142, 121, 96, 0.25) 80%, transparent 100%); z-index: 1;"></div>
+                    <!-- Circular Plus Badge: Filled with exact section background color #DFD7CB -->
+                    <div class="w-9 h-9 rounded-full flex items-center justify-center font-normal text-base relative shadow-xs" style="background-color: #DFD7CB; border: 1.5px solid #8E7960; color: #5A4937; z-index: 2;">
+                        +
+                    </div>
+                </div>
+
+                <!-- Right Column: 2x2 Layering Grid (6 Cols on Desktop) -->
+                <div class="lg:col-span-6 flex flex-col justify-between space-y-4 sm:space-y-5 min-w-0">
+                    
+                    <!-- Section Subheading with Distinct Fading Horizontal Lines on Each Side -->
+                    <div class="flex items-center gap-3 sm:gap-4 w-full py-1">
+                        <div style="flex: 1 1 0%; height: 1.5px; background: linear-gradient(90deg, transparent 0%, rgba(142, 121, 96, 0.25) 40%, #8E7960 100%);"></div>
+                        <span class="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-[#4A3B2C] px-1 whitespace-nowrap">
+                            THEN LAYER FOR YOUR SKIN
+                        </span>
+                        <div style="flex: 1 1 0%; height: 1.5px; background: linear-gradient(90deg, #8E7960 0%, rgba(142, 121, 96, 0.25) 60%, transparent 100%);"></div>
+                    </div>
+
+                    <!-- 2x2 Cards Grid (Golden Ratio Cards: 1.618 : 1) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-3.5 xl:gap-5 flex-1 min-w-0">
+                        
+                        <!-- Card 1: Tone Up -->
+                        <div class="group relative rounded-[20px] sm:rounded-[22px] overflow-hidden bg-white border border-[#D8C9B9] shadow-[0_6px_20px_rgba(0,0,0,0.04)] hover:border-[#8E7960] hover:shadow-lg transition-all duration-300 p-5 sm:p-6 lg:p-5 xl:p-7 flex flex-col justify-between min-w-0 min-h-0 w-full" style="aspect-ratio: 1.618 / 1;">
+                            <!-- Right Background Image with Enhanced Gradient Revealing More Visual Details -->
+                            <div class="absolute right-0 top-0 bottom-0 pointer-events-none overflow-hidden z-0" style="width: 44%; padding-right: 8px;">
+                                <img src="assets/treatment-plan/tone-up-swatch.jpg" alt="Tone Up Brightening Swatch" class="w-full h-full object-cover object-center opacity-95 transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-0" style="background: linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.98) 12%, rgba(255,255,255,0.55) 42%, rgba(255,255,255,0.05) 75%, transparent 100%);"></div>
+                            </div>
+
+                            <!-- Text Content -->
+                            <div class="relative z-10 flex flex-col justify-between h-full max-w-[55%] sm:max-w-[54%] xl:max-w-[55%]">
+                                <div class="space-y-1 sm:space-y-1.5">
+                                    <h4 class="text-xs sm:text-sm lg:text-[15px] xl:text-[16px] font-normal text-[#1E1E1E] uppercase tracking-wider leading-snug">
+                                        TONE UP
+                                    </h4>
+                                    <p class="text-[9px] sm:text-[10px] xl:text-[11px] uppercase tracking-[0.22em] text-[#8D8275] font-semibold">
+                                        BRIGHTEN + EVEN
+                                    </p>
+                                </div>
+                                <div class="pt-2 sm:pt-3">
+                                    <p class="text-[11px] sm:text-xs xl:text-[13px] text-[#5C564E] font-light leading-relaxed">
+                                        Support a clearer, more even-looking complexion.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Glow + Hydration -->
+                        <div class="group relative rounded-[20px] sm:rounded-[22px] overflow-hidden bg-white border border-[#D8C9B9] shadow-[0_6px_20px_rgba(0,0,0,0.04)] hover:border-[#8E7960] hover:shadow-lg transition-all duration-300 p-5 sm:p-6 lg:p-5 xl:p-7 flex flex-col justify-between min-w-0 min-h-0 w-full" style="aspect-ratio: 1.618 / 1;">
+                            <!-- Right Background Image with Enhanced Gradient Revealing More Visual Details -->
+                            <div class="absolute right-0 top-0 bottom-0 pointer-events-none overflow-hidden z-0" style="width: 44%; padding-right: 8px;">
+                                <img src="assets/treatment-plan/hydration-dew.jpg" alt="Glow and Hydration Dew" class="w-full h-full object-cover object-center opacity-95 transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-0" style="background: linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.98) 12%, rgba(255,255,255,0.55) 42%, rgba(255,255,255,0.05) 75%, transparent 100%);"></div>
+                            </div>
+
+                            <!-- Text Content -->
+                            <div class="relative z-10 flex flex-col justify-between h-full max-w-[55%] sm:max-w-[54%] xl:max-w-[55%]">
+                                <div class="space-y-1 sm:space-y-1.5">
+                                    <h4 class="text-xs sm:text-sm lg:text-[15px] xl:text-[16px] font-normal text-[#1E1E1E] uppercase tracking-wider leading-snug">
+                                        GLOW + HYDRATION
+                                    </h4>
+                                    <p class="text-[9px] sm:text-[10px] xl:text-[11px] uppercase tracking-[0.22em] text-[#8D8275] font-semibold">
+                                        DEW + PLUMP
+                                    </p>
+                                </div>
+                                <div class="pt-2 sm:pt-3">
+                                    <p class="text-[11px] sm:text-xs xl:text-[13px] text-[#5C564E] font-light leading-relaxed">
+                                        Add deep hydration for dewy, refreshed skin.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Korean LDM (Using Ultrasound Infusion Probe) -->
+                        <div class="group relative rounded-[20px] sm:rounded-[22px] overflow-hidden bg-white border border-[#D8C9B9] shadow-[0_6px_20px_rgba(0,0,0,0.04)] hover:border-[#8E7960] hover:shadow-lg transition-all duration-300 p-5 sm:p-6 lg:p-5 xl:p-7 flex flex-col justify-between min-w-0 min-h-0 w-full" style="aspect-ratio: 1.618 / 1;">
+                            <!-- Right Background Image with Enhanced Gradient Revealing More Visual Details -->
+                            <div class="absolute right-0 top-0 bottom-0 pointer-events-none overflow-hidden z-0" style="width: 48%; padding-right: 4px;">
+                                <img src="assets/treatment-plan/ldm-probe.png" alt="LDM Ultrasound Probe Graphic" class="w-full h-full object-cover object-center opacity-95 transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-0" style="background: linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.98) 12%, rgba(255,255,255,0.55) 42%, rgba(255,255,255,0.05) 75%, transparent 100%);"></div>
+                            </div>
+
+                            <!-- Text Content -->
+                            <div class="relative z-10 flex flex-col justify-between h-full max-w-[55%] sm:max-w-[54%] xl:max-w-[55%]">
+                                <div class="space-y-1 sm:space-y-1.5">
+                                    <h4 class="text-xs sm:text-sm lg:text-[15px] xl:text-[16px] font-normal text-[#1E1E1E] uppercase tracking-wider leading-snug">
+                                        KOREAN LDM
+                                    </h4>
+                                    <p class="text-[9px] sm:text-[10px] xl:text-[11px] uppercase tracking-[0.22em] text-[#8D8275] font-semibold">
+                                        CALM + SUPPORT
+                                    </p>
+                                </div>
+                                <div class="pt-2 sm:pt-3">
+                                    <p class="text-[11px] sm:text-xs xl:text-[13px] text-[#5C564E] font-light leading-relaxed">
+                                        Soothe, hydrate, and support overall skin quality.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Rejuran / Salmon PN -->
+                        <div class="group relative rounded-[20px] sm:rounded-[22px] overflow-hidden bg-white border border-[#D8C9B9] shadow-[0_6px_20px_rgba(0,0,0,0.04)] hover:border-[#8E7960] hover:shadow-lg transition-all duration-300 p-5 sm:p-6 lg:p-5 xl:p-7 flex flex-col justify-between min-w-0 min-h-0 w-full" style="aspect-ratio: 1.618 / 1;">
+                            <!-- Right Background Image with Enhanced Gradient Revealing More Visual Details -->
+                            <div class="absolute right-0 top-0 bottom-0 pointer-events-none overflow-hidden z-0" style="width: 44%; padding-right: 8px;">
+                                <img src="assets/treatment-plan/rejuran-dropper.jpg" alt="Rejuran Salmon PN Dropper" class="w-full h-full object-cover object-center opacity-95 transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-0" style="background: linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.98) 12%, rgba(255,255,255,0.55) 42%, rgba(255,255,255,0.05) 75%, transparent 100%);"></div>
+                            </div>
+
+                            <!-- Text Content -->
+                            <div class="relative z-10 flex flex-col justify-between h-full max-w-[55%] sm:max-w-[54%] xl:max-w-[55%]">
+                                <div class="space-y-1 sm:space-y-1.5">
+                                    <h4 class="text-xs sm:text-sm lg:text-[15px] xl:text-[16px] font-normal text-[#1E1E1E] uppercase tracking-wider leading-snug">
+                                        REJURAN / SALMON PN
+                                    </h4>
+                                    <p class="text-[9px] sm:text-[10px] xl:text-[11px] uppercase tracking-[0.22em] text-[#8D8275] font-semibold">
+                                        RENEW + REFINE
+                                    </p>
+                                </div>
+                                <div class="pt-2 sm:pt-3">
+                                    <p class="text-[11px] sm:text-xs xl:text-[13px] text-[#5C564E] font-light leading-relaxed">
+                                        Add topical Korean PN skin care to support smoother, healthier-looking skin.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Step Indicator & Pathway -->
+            <div class="pt-4 space-y-4 animate-on-scroll fade-up">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-center">
+                    
+                    <!-- Step 1 -->
+                    <div class="flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-white border border-[#C5B7A0] text-[#705B43] text-xs font-bold flex items-center justify-center shadow-xs">1</span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-[#1B1D1F]">
+                            START &rarr; <span class="text-[#705B43]">COLLAGEN</span>
+                        </span>
+                    </div>
+
+                    <!-- Connecting Line Divider -->
+                    <div class="hidden sm:block w-24 md:w-32 h-px bg-[#C5B7A0]"></div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-white border border-[#C5B7A0] text-[#705B43] text-xs font-bold flex items-center justify-center shadow-xs">2</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-charcoal/90">
+                            THEN LAYER &rarr; <span class="font-normal text-charcoal/80">TONE &bull; HYDRATION &bull; LDM &bull; SKIN QUALITY</span>
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- Footer Note -->
+                <p class="text-[11px] uppercase tracking-[0.2em] text-charcoal/70 font-medium text-center">
+                    YOUR PROVIDER BUILDS THE COMBINATION AROUND YOUR SKIN — NOT A PRESET PACKAGE.
+                </p>
+                <div class="w-16 h-0.5 bg-[#C5B7A0] mx-auto"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BRIDAL MILESTONE PLANNING SUB-SECTION -->
+    <section class="py-20 px-6 md:px-12 bg-off-white border-t border-b border-light-gray/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-3xl border border-light-gray/60 p-8 sm:p-12 shadow-sm animate-on-scroll fade-up">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <!-- Eyebrow -->
+                        <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
+                            Milestone Planning
+                        </span>
+                        <h2 class="heading-wide text-2xl sm:text-4xl text-near-black leading-tight [text-wrap:balance]">
+                            Planning Your Bridal Glow?
+                        </h2>
+                        <p class="text-xs sm:text-sm font-medium text-[#AA987C] uppercase tracking-wider">
+                            Start early. Glow effortlessly.
+                        </p>
+                        <p class="text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed">
+                            Great skin doesn't start the week before the wedding. Collagen-focused skin planning is a long game, which is why we recommend starting your skin-quality strategy months before a wedding or major event.
+                        </p>
+                        <p class="text-xs text-charcoal/60 leading-relaxed">
+                            Think smoother texture, healthier-looking skin, and a natural radiance that doesn't depend on heavy coverage.
+                        </p>
+                        <div class="pt-2 flex flex-wrap gap-3">
+                            <a href="scar-treatment.html" class="btn-outline text-xs px-5 py-3 tracking-widest uppercase rounded-full border border-charcoal/20 hover:bg-charcoal hover:text-white transition-all duration-300">
+                                Explore Acne Scar Treatments
+                            </a>
+                            <a href="bridal-glow.html" class="btn-outline text-xs px-5 py-3 tracking-widest uppercase rounded-full border border-charcoal/20 hover:bg-charcoal hover:text-white transition-all duration-300">
+                                Explore Bridal &amp; Event Glow
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <div class="relative rounded-2xl overflow-hidden shadow-lg border border-light-gray/50">
+                            <img src="assets/bridal_timeline.png" alt="Bridal Skin Planning Timeline" class="w-full h-auto object-cover rounded-xl mx-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULE 10: WHO IT'S FOR (REQUIRED) -->
+    <section id="who-its-for" class="py-24 px-6 md:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5 space-y-6 animate-on-scroll fade-right">
+                    <!-- Eyebrow -->
+                    <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
+                        Candidacy
+                    </span>
+                    <h2 class="heading-wide text-3xl sm:text-4xl text-near-black [text-wrap:balance]">
+                        Is This Treatment Right for You?
+                    </h2>
+                    <p class="text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed">
+                        Collagen-focused skin planning is designed for individuals seeking natural dermal reinforcement rather than heavy volumization.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 animate-on-scroll fade-left">
+                    <!-- Good Candidate Card -->
+                    <div class="bg-off-white p-6 sm:p-8 rounded-3xl border border-light-gray/60 space-y-4 shadow-sm">
+                        <div class="flex items-center gap-2 text-near-black font-semibold text-sm">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-warm-gold"></i>
+                            <span>Ideal Candidates:</span>
+                        </div>
+                        <ul class="space-y-2.5 text-xs font-light text-charcoal/80">
+                            <li class="flex items-start gap-2">&bull; <span>Women seeking proactive, long-term skin quality maintenance</span></li>
+                            <li class="flex items-start gap-2">&bull; <span>Men seeking subtle, natural skin refinement without downtime</span></li>
+                            <li class="flex items-start gap-2">&bull; <span>Patients concerned about acne scar appearance and uneven texture</span></li>
+                            <li class="flex items-start gap-2">&bull; <span>Individuals experiencing early loss of dermal bounce and firmness</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- When to Consult Card -->
+                    <div class="bg-off-white p-6 sm:p-8 rounded-3xl border border-light-gray/60 space-y-4 shadow-sm">
+                        <div class="flex items-center gap-2 text-near-black font-semibold text-sm">
+                            <i data-lucide="help-circle" class="w-5 h-5 text-taupe"></i>
+                            <span>Consider Alternatives If:</span>
+                        </div>
+                        <ul class="space-y-2.5 text-xs font-light text-charcoal/80">
+                            <li class="flex items-start gap-2">&bull; <span>You desire immediate instant volume (HA filler may be more appropriate)</span></li>
+                            <li class="flex items-start gap-2">&bull; <span>Active severe cystic acne breakouts requiring medical dermatology clearance</span></li>
+                            <li class="flex items-start gap-2">&bull; <span>Pregnancy or nursing (contraindicated for certain bio-stimulators)</span></li>
                         </ul>
                     </div>
                 </div>
@@ -152,358 +849,92 @@
         </div>
     </section>
 
-    <!-- Section: Build Your Collagen & Skin Quality Plan -->
-    <section class="py-24 px-6 md:px-12 bg-off-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 animate-on-scroll fade-up">
-                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
-                    Tailored Treatment Strategies
-                </span>
-                <h2 class="heading-wide text-3xl sm:text-4xl lg:text-5xl text-near-black [text-wrap:balance]">
-                    Build Your Collagen &amp; <span class="text-[#AA987C]">Skin Quality Plan</span>
-                </h2>
-                <p class="text-sm font-light text-charcoal/70 leading-relaxed">
-                    No preset menu. No one-size-fits-all skin. Your personalized Korean-inspired treatment strategy may incorporate one or more of the following:
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-on-scroll fade-up">
-                <!-- Card 1 -->
-                <div class="bg-white p-6 rounded-2xl border border-light-gray/60 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="w-10 h-10 rounded-full bg-warm-gold/10 flex items-center justify-center text-warm-gold mb-4">
-                            <i data-lucide="sparkles" class="w-5 h-5"></i>
-                        </div>
-                        <h3 class="heading-wide text-sm font-bold text-near-black mb-2">Collagen Skin Boosters</h3>
-                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
-                            For firmness, elasticity, texture, and gradual skin-quality support over time.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-white p-6 rounded-2xl border border-light-gray/60 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="w-10 h-10 rounded-full bg-warm-gold/10 flex items-center justify-center text-warm-gold mb-4">
-                            <i data-lucide="grid" class="w-5 h-5"></i>
-                        </div>
-                        <h3 class="heading-wide text-sm font-bold text-near-black mb-2">SkinPen® Microneedling</h3>
-                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
-                            Specifically targeted for texture refinement, collagen induction, and broader skin Laxity concerns.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-white p-6 rounded-2xl border border-light-gray/60 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="w-10 h-10 rounded-full bg-warm-gold/10 flex items-center justify-center text-warm-gold mb-4">
-                            <i data-lucide="activity" class="w-5 h-5"></i>
-                        </div>
-                        <h3 class="heading-wide text-sm font-bold text-near-black mb-2">Korean LDM Facial</h3>
-                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
-                            Needle-free ultrasound support for deep hydration, skin comfort, and healthy-looking bounce.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="bg-white p-6 rounded-2xl border border-light-gray/60 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="w-10 h-10 rounded-full bg-warm-gold/10 flex items-center justify-center text-warm-gold mb-4">
-                            <i data-lucide="droplet" class="w-5 h-5"></i>
-                        </div>
-                        <h3 class="heading-wide text-sm font-bold text-near-black mb-2">Hydration &amp; Glow</h3>
-                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
-                            Because collagen remodeling and hydration work better together as part of a complete skin quality strategy.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bridal Timeline & Event Section -->
-    <section class="py-24 px-6 md:px-12 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-                <!-- Text (Left) -->
-                <div class="lg:col-span-7 space-y-6 animate-on-scroll fade-right">
-                    <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
-                        Milestone Planning
-                    </span>
-                    <h2 class="heading-wide text-3xl md:text-5xl text-near-black leading-tight [text-wrap:balance]">
-                        Planning Your Bridal Glow?
-                    </h2>
-                    <p class="text-sm md:text-base font-light text-charcoal/80 leading-relaxed">
-                        Great skin doesn't start the week before the wedding. Collagen-focused skin planning is a long game, which is why we recommend starting your skin-quality strategy months before a wedding or major event.
-                    </p>
-                    <p class="text-xs md:text-sm text-charcoal/60 leading-relaxed">
-                        Think smoother texture, healthier-looking skin, and a natural radiance that doesn't depend on heavy coverage.
-                    </p>
-                    <div class="pt-4 flex flex-wrap gap-4">
-                        <a href="scar-treatment.html" class="btn-outline text-xs px-6 py-3 tracking-widest uppercase rounded-full border border-charcoal/20 hover:bg-charcoal hover:text-white transition-all duration-300">
-                            Explore Acne Scar Treatments
-                        </a>
-                        <a href="one-day-glow.html" class="btn-outline text-xs px-6 py-3 tracking-widest uppercase rounded-full border border-charcoal/20 hover:bg-charcoal hover:text-white transition-all duration-300">
-                            Explore Bridal &amp; Event Glow
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Image (Right) -->
-                <div class="lg:col-span-5 animate-on-scroll fade-left delay-200">
-                    <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-white p-4 border border-light-gray/50">
-                        <img src="assets/bridal_timeline.png" alt="Bridal Skin Planning" class="w-full h-auto object-cover rounded-2xl mx-auto">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skin Goals & Big Day Section -->
-    <section class="py-24 bg-off-white border-y border-light-gray/40">
-        <div class="max-w-[1600px] mx-auto px-6 md:px-12">
-            <!-- Header -->
-            <div class="text-center mb-16 space-y-4">
-                <h2 class="font-heading text-3xl md:text-5xl text-near-black tracking-wide uppercase [text-wrap:balance]">
-                    Have a specific skin goal or big day ahead?
-                </h2>
-                <p class="font-body text-lg md:text-xl text-charcoal/80 font-light">
-                    Personalized K-beauty solutions for every skin goal and every moment.
-                </p>
-            </div>
-
-            <!-- Cards Container -->
-            <div class="flex overflow-x-auto snap-x snap-mandatory pb-8 gap-4 hide-scrollbar">
-                
-                <!-- Card 1: ONE DAY GLOW -->
-                <div class="snap-start shrink-0 w-[280px] bg-white rounded-xl border border-taupe/20 overflow-hidden flex flex-col shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="p-6 text-center flex-grow flex flex-col items-center">
-                        <i data-lucide="zap" class="w-8 h-8 text-taupe mb-4"></i>
-                        <h3 class="font-heading text-lg text-near-black uppercase tracking-wider mb-2">One Day Glow</h3>
-                        <p class="text-xs text-taupe italic mb-6">Need a Glow—Fast?</p>
-                    </div>
-                    <div class="w-full h-[180px] bg-off-white flex items-center justify-center border-y border-light-gray/30">
-                        <span class="text-xs text-charcoal/40 uppercase tracking-widest">Image Area</span>
-                    </div>
-                    <div class="p-6 text-center flex-grow">
-                        <p class="text-xs text-charcoal/80 leading-relaxed font-light">
-                            Perfect for when you want your skin looking refreshed, hydrated and luminous—without starting a long-term journey.
-                        </p>
-                    </div>
-                    <a href="one-day-glow.html" class="block w-full py-4 text-center bg-taupe text-white text-xs font-bold tracking-widest uppercase hover:bg-charcoal transition-colors">
-                        Explore One Day Glow &rarr;
-                    </a>
-                </div>
-
-                <!-- Card 2: GLOW & HYDRATION -->
-                <div class="snap-start shrink-0 w-[280px] bg-white rounded-xl border border-taupe/20 overflow-hidden flex flex-col shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="p-6 text-center flex-grow flex flex-col items-center">
-                        <i data-lucide="droplet" class="w-8 h-8 text-taupe mb-4"></i>
-                        <h3 class="font-heading text-lg text-near-black uppercase tracking-wider mb-2">Glow & Hydration</h3>
-                        <p class="text-xs text-taupe italic mb-6">Replenish & Radiate</p>
-                    </div>
-                    <div class="w-full h-[180px] bg-off-white flex items-center justify-center border-y border-light-gray/30">
-                        <span class="text-xs text-charcoal/40 uppercase tracking-widest">Image Area</span>
-                    </div>
-                    <div class="p-6 text-center flex-grow">
-                        <p class="text-xs text-charcoal/80 leading-relaxed font-light">
-                            Deep hydration for dehydrated, dull or tired-looking skin. Restore moisture and bring back your glow.
-                        </p>
-                    </div>
-                    <a href="#" class="block w-full py-4 text-center bg-taupe text-white text-xs font-bold tracking-widest uppercase hover:bg-charcoal transition-colors">
-                        Explore Glow & Hydration &rarr;
-                    </a>
-                </div>
-
-                <!-- Card 3: LDM WATER DROP LIFTING -->
-                <div class="snap-start shrink-0 w-[280px] bg-white rounded-xl border border-taupe/20 overflow-hidden flex flex-col shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="p-6 text-center flex-grow flex flex-col items-center">
-                        <i data-lucide="aperture" class="w-8 h-8 text-taupe mb-4"></i>
-                        <h3 class="font-heading text-lg text-near-black uppercase tracking-wider mb-2">LDM Water Drop Lifting</h3>
-                        <p class="text-xs text-taupe italic mb-6">Hydrate & Lift</p>
-                    </div>
-                    <div class="w-full h-[180px] bg-off-white flex items-center justify-center border-y border-light-gray/30">
-                        <span class="text-xs text-charcoal/40 uppercase tracking-widest">Image Area</span>
-                    </div>
-                    <div class="p-6 text-center flex-grow">
-                        <p class="text-xs text-charcoal/80 leading-relaxed font-light">
-                            Korean-favorite LDM therapy supports deep hydration, skin comfort and elasticity for healthy-looking, bouncy skin.
-                        </p>
-                    </div>
-                    <a href="ldm-water-drop-lifting.html" class="block w-full py-4 text-center bg-taupe text-white text-xs font-bold tracking-widest uppercase hover:bg-charcoal transition-colors">
-                        Explore LDM Water Drop Lifting &rarr;
-                    </a>
-                </div>
-
-                <!-- Card 4: SALMON PN -->
-                <div class="snap-start shrink-0 w-[280px] bg-white rounded-xl border border-taupe/20 overflow-hidden flex flex-col shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="p-6 text-center flex-grow flex flex-col items-center">
-                        <i data-lucide="dna" class="w-8 h-8 text-taupe mb-4"></i>
-                        <h3 class="font-heading text-lg text-near-black uppercase tracking-wider mb-2">Salmon PN</h3>
-                        <p class="text-xs text-taupe italic mb-6">Repair & Renew</p>
-                    </div>
-                    <div class="w-full h-[180px] bg-off-white flex items-center justify-center border-y border-light-gray/30">
-                        <span class="text-xs text-charcoal/40 uppercase tracking-widest">Image Area</span>
-                    </div>
-                    <div class="p-6 text-center flex-grow">
-                        <p class="text-xs text-charcoal/80 leading-relaxed font-light">
-                            Salmon PN supports the appearance of smoother, healthier-looking, more resilient skin from within.
-                        </p>
-                    </div>
-                    <a href="#" class="block w-full py-4 text-center bg-taupe text-white text-xs font-bold tracking-widest uppercase hover:bg-charcoal transition-colors">
-                        Explore Salmon PN &rarr;
-                    </a>
-                </div>
-
-                <!-- Card 5: TONE UP -->
-                <div class="snap-start shrink-0 w-[280px] bg-white rounded-xl border border-taupe/20 overflow-hidden flex flex-col shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="p-6 text-center flex-grow flex flex-col items-center">
-                        <i data-lucide="sparkles" class="w-8 h-8 text-taupe mb-4"></i>
-                        <h3 class="font-heading text-lg text-near-black uppercase tracking-wider mb-2">Tone Up</h3>
-                        <p class="text-xs text-taupe italic mb-6">Brighten & Even Tone</p>
-                    </div>
-                    <div class="w-full h-[180px] bg-off-white flex items-center justify-center border-y border-light-gray/30">
-                        <span class="text-xs text-charcoal/40 uppercase tracking-widest">Image Area</span>
-                    </div>
-                    <div class="p-6 text-center flex-grow">
-                        <p class="text-xs text-charcoal/80 leading-relaxed font-light">
-                            Tone-Up treatments help improve dullness and uneven looking tone for a luminous, radiant finish.
-                        </p>
-                    </div>
-                    <a href="tone-up-facial.html" class="block w-full py-4 text-center bg-taupe text-white text-xs font-bold tracking-widest uppercase hover:bg-charcoal transition-colors">
-                        Explore Tone Up &rarr;
-                    </a>
-                </div>
-
-                <!-- Card 6: SEOUL MAN -->
-                <div class="snap-start shrink-0 w-[280px] bg-white rounded-xl border border-taupe/20 overflow-hidden flex flex-col shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="p-6 text-center flex-grow flex flex-col items-center">
-                        <i data-lucide="user" class="w-8 h-8 text-taupe mb-4"></i>
-                        <h3 class="font-heading text-lg text-near-black uppercase tracking-wider mb-2">Seoul Man</h3>
-                        <p class="text-xs text-taupe italic mb-6">Simple. Strong. Refreshed.</p>
-                    </div>
-                    <div class="w-full h-[180px] bg-off-white flex items-center justify-center border-y border-light-gray/30">
-                        <span class="text-xs text-charcoal/40 uppercase tracking-widest">Image Area</span>
-                    </div>
-                    <div class="p-6 text-center flex-grow">
-                        <p class="text-xs text-charcoal/80 leading-relaxed font-light">
-                            Designed for men's skin concerns—oil control, pores, texture and aging signs for a clean, healthy look.
-                        </p>
-                    </div>
-                    <a href="#" class="block w-full py-4 text-center bg-taupe text-white text-xs font-bold tracking-widest uppercase hover:bg-charcoal transition-colors">
-                        Explore Seoul Man &rarr;
-                    </a>
-                </div>
-
-                <!-- Card 7: BRIDAL GLOW -->
-                <div class="snap-start shrink-0 w-[280px] bg-white rounded-xl border border-taupe/20 overflow-hidden flex flex-col shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="p-6 text-center flex-grow flex flex-col items-center">
-                        <i data-lucide="gem" class="w-8 h-8 text-taupe mb-4"></i>
-                        <h3 class="font-heading text-lg text-near-black uppercase tracking-wider mb-2">Bridal Glow</h3>
-                        <p class="text-xs text-taupe italic mb-6">Your Best Skin for Your Big Day</p>
-                    </div>
-                    <div class="w-full h-[180px] bg-off-white flex items-center justify-center border-y border-light-gray/30">
-                        <span class="text-xs text-charcoal/40 uppercase tracking-widest">Image Area</span>
-                    </div>
-                    <div class="p-6 text-center flex-grow">
-                        <p class="text-xs text-charcoal/80 leading-relaxed font-light">
-                            Great skin doesn't start the week before the wedding. Plan ahead with a personalized skin strategy built around your timeline.
-                        </p>
-                    </div>
-                    <a href="bridal-glow.html" class="block w-full py-4 text-center bg-taupe text-white text-xs font-bold tracking-widest uppercase hover:bg-charcoal transition-colors">
-                        Explore Bridal Glow &rarr;
-                    </a>
-                </div>
-
-                <!-- Card 8: SCAR & TEXTURE -->
-                <div class="snap-start shrink-0 w-[280px] bg-white rounded-xl border border-taupe/20 overflow-hidden flex flex-col shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div class="p-6 text-center flex-grow flex flex-col items-center">
-                        <i data-lucide="shield" class="w-8 h-8 text-taupe mb-4"></i>
-                        <h3 class="font-heading text-lg text-near-black uppercase tracking-wider mb-2">Scar & Texture</h3>
-                        <p class="text-xs text-taupe italic mb-6">Smoother. More Even Skin</p>
-                    </div>
-                    <div class="w-full h-[180px] bg-off-white flex items-center justify-center border-y border-light-gray/30">
-                        <span class="text-xs text-charcoal/40 uppercase tracking-widest">Image Area</span>
-                    </div>
-                    <div class="p-6 text-center flex-grow">
-                        <p class="text-xs text-charcoal/80 leading-relaxed font-light">
-                            Every scar is different. We evaluate your skin and history to recommend an approach for uneven texture and scars.
-                        </p>
-                    </div>
-                    <a href="scar-treatment.html" class="block w-full py-4 text-center bg-taupe text-white text-xs font-bold tracking-widest uppercase hover:bg-charcoal transition-colors">
-                        Explore Scar & Texture &rarr;
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- Footer -->
-            <div class="text-center mt-12">
-                <p class="font-body text-charcoal/80 text-lg mb-2">
-                    At SuA Glow, we customize every plan to your skin, goals, and lifestyle.
-                </p>
-                <p class="font-heading text-taupe text-2xl">
-                    Korean-inspired care. Real results. <span class="italic font-serif">You.</span>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hide scrollbar styling for this section -->
-    <style>
-    .hide-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
-    .hide-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-    </style>
-
-    <section class="py-24 px-6 md:px-12 bg-off-white border-t border-b border-light-gray/40">
+    <!-- MODULE 11: RESULTS + WHAT TO EXPECT (REQUIRED) -->
+    <section id="results" class="py-24 px-6 md:px-12 bg-off-white">
         <div class="max-w-7xl mx-auto space-y-16">
-            <div class="text-center max-w-3xl mx-auto space-y-4">
+            <div class="text-center max-w-3xl mx-auto space-y-4 animate-on-scroll fade-up">
+                <!-- Eyebrow -->
+                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
+                    Expected Timeline
+                </span>
+                <h2 class="heading-wide text-3xl sm:text-4xl text-near-black [text-wrap:balance]">
+                    When Will You See Results—and What Should You Expect?
+                </h2>
+                <p class="text-xs sm:text-sm font-light text-charcoal/70 leading-relaxed">
+                    Because collagen remodeling is a biological process, results develop progressively over 2 to 3 months.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll fade-up">
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-light-gray/60 space-y-3 shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-[#AA987C]">Days 1–3</p>
+                    <h3 class="heading-wide text-sm font-semibold text-near-black">Immediate Hydration &amp; Rest</h3>
+                    <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                        Mild post-treatment redness subsides within 12–24 hours. Skin feels deeply hydrated from accompanying hyaluronic and ultrasound layers.
+                    </p>
+                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-light-gray/60 space-y-3 shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-[#AA987C]">Weeks 2–4</p>
+                    <h3 class="heading-wide text-sm font-semibold text-near-black">Texture Refinement</h3>
+                    <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                        Surface skin becomes noticeably smoother and makeup applies with greater ease as initial neocollagenesis begins.
+                    </p>
+                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-light-gray/60 space-y-3 shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-[#AA987C]">Months 2–3</p>
+                    <h3 class="heading-wide text-sm font-semibold text-near-black">Structural Firmness</h3>
+                    <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                        Peak collagen density develops. Acne scars soften, pores appear refined, and overall skin elasticity reflects natural resilience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULE 12: WHY SUA GLOW & THE SEOUL STANDARD (REQUIRED) -->
+    <section id="why-sua-glow" class="py-24 px-6 md:px-12 bg-white border-t border-b border-light-gray/40">
+        <div class="max-w-7xl mx-auto space-y-16">
+            <div class="text-center max-w-3xl mx-auto space-y-4 animate-on-scroll fade-up">
+                <!-- Eyebrow -->
                 <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
                     The SuA Glow Seoul Standard™
                 </span>
                 <h2 class="heading-wide text-3xl md:text-4xl text-near-black [text-wrap:balance]">
                     Why Korean Clinics Prefer Gradual Improvement Over Aggressive Correction
                 </h2>
-                <p class="text-sm font-light text-charcoal/70 leading-relaxed">
+                <p class="text-xs sm:text-sm font-light text-charcoal/70 leading-relaxed">
                     Modern Korean aesthetics prioritizes skin quality, prevention-focused planning, and natural-looking outcomes over dramatic transformation. The goal is optimization: skin that looks refreshed, healthier, and exceptionally well maintained.
                 </p>
             </div>
 
-            <!-- Comparison Images collage -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white p-4 rounded-3xl border border-light-gray/60 shadow-sm text-center">
-                    <p class="text-xs font-semibold text-near-black mb-3 uppercase tracking-wider text-taupe">Skin Booster Structure Mockup</p>
+            <!-- Comparison Images Collage -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-on-scroll fade-up">
+                <div class="bg-off-white p-4 rounded-3xl border border-light-gray/60 shadow-sm text-center">
+                    <p class="text-xs font-semibold text-near-black mb-3 uppercase tracking-wider text-taupe">Skin Booster Structure Diagram</p>
                     <img src="assets/collagen-stimulation/image5.png" alt="Skin Booster Comparison Map 1" class="w-full h-auto rounded-2xl">
                 </div>
-                <div class="bg-white p-4 rounded-3xl border border-light-gray/60 shadow-sm text-center">
-                    <p class="text-xs font-semibold text-near-black mb-3 uppercase tracking-wider text-taupe">Clinically Referenced Map</p>
+                <div class="bg-off-white p-4 rounded-3xl border border-light-gray/60 shadow-sm text-center">
+                    <p class="text-xs font-semibold text-near-black mb-3 uppercase tracking-wider text-taupe">Clinically Referenced Dermal Map</p>
                     <img src="assets/collagen-stimulation/image6.png" alt="Skin Booster Comparison Map 2" class="w-full h-auto rounded-2xl">
                 </div>
             </div>
 
             <!-- Full Treatment Comparison Table -->
-            <div class="bg-white rounded-3xl border border-light-gray/60 shadow-sm overflow-hidden max-w-5xl mx-auto">
-                <div class="p-6 border-b border-light-gray/40 bg-light-gray/30">
+            <div class="bg-off-white rounded-3xl border border-light-gray/60 shadow-sm overflow-hidden max-w-5xl mx-auto animate-on-scroll fade-up">
+                <div class="p-6 border-b border-light-gray/40 bg-white">
                     <h3 class="heading-wide text-base font-bold text-near-black uppercase tracking-wider">Full Treatment Comparison</h3>
                     <p class="text-xs text-charcoal/60 font-light mt-1">Together, these treatments help support the Korean Glass Skin philosophy.</p>
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-xs text-charcoal/80 min-w-[600px]">
                         <thead>
-                            <tr class="bg-light-gray/20 text-near-black font-semibold border-b border-light-gray/40">
+                            <tr class="bg-light-gray/30 text-near-black font-semibold border-b border-light-gray/40">
                                 <th class="p-5">Treatment</th>
                                 <th class="p-5">Primary Focus</th>
                                 <th class="p-5">Best Known For</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-light-gray/30 font-light">
+                        <tbody class="divide-y divide-light-gray/30 font-light bg-white">
                             <tr>
                                 <td class="p-5 font-semibold text-near-black">Korean Glass Skin LDM Facial</td>
                                 <td class="p-5">Hydration + Skin Bounce</td>
@@ -524,7 +955,7 @@
                                 <td class="p-5">Brightness &amp; Radiance</td>
                                 <td class="p-5">More radiant-looking skin tone</td>
                             </tr>
-                            <tr class="bg-warm-gold/5">
+                            <tr class="bg-warm-gold/10">
                                 <td class="p-5 font-semibold text-near-black">Korean Glass Skin Collagen &amp; Structure Facial</td>
                                 <td class="p-5 font-semibold text-[#AA987C]">Structure &amp; Elasticity</td>
                                 <td class="p-5">Long-term skin quality support</td>
@@ -536,16 +967,40 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-24 px-6 md:px-12 bg-white">
+    <!-- MODULE 13: CLINICAL TRANSPARENCY STATEMENT (REQUIRED) -->
+    <section id="transparency" class="py-16 px-6 md:px-12 bg-off-white">
         <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 mb-4 inline-block uppercase tracking-wider text-[10px]">Learn More</span>
-                <h2 class="heading-wide text-3xl text-near-black">Frequently Asked Questions</h2>
+            <div class="bg-warm-gold/5 border border-warm-gold/20 rounded-3xl p-8 sm:p-10 space-y-4">
+                <div class="flex items-center gap-3 text-taupe font-semibold text-sm uppercase tracking-wider">
+                    <i data-lucide="info" class="w-5 h-5 text-warm-gold"></i>
+                    <span>Clinical Transparency &bull; What You Should Know</span>
+                </div>
+                <div class="space-y-3 text-xs text-charcoal/80 font-light leading-relaxed">
+                    <p>
+                        Korean-inspired skin quality rejuvenation approaches discussed at SuA Glow reflect evolving global aesthetic practices and individualized consultation-based treatment planning. Specific treatment recommendations, product selection, regulatory status, risks, benefits, alternatives, and candidacy are reviewed during consultation pursuant to supervising physician-approved protocols and applicable Texas regulations.
+                    </p>
+                    <p>
+                        <strong>Biological Expectations:</strong> Collagen stimulation is an endogenous regenerative response; individual neocollagenesis rates vary based on age, lifestyle, metabolism, and skin health. No specific outcome is guaranteed, and a series of 3 initial sessions followed by maintenance is typically recommended for optimal long-term support.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULE 14: FAQ (REQUIRED) -->
+    <section id="faq" class="py-24 px-6 md:px-12 bg-white border-t border-light-gray/40">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 animate-on-scroll fade-up">
+                <!-- Eyebrow -->
+                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 mb-3 inline-block uppercase tracking-wider text-[10px]">
+                    Questions &amp; Answers
+                </span>
+                <h2 class="heading-wide text-3xl sm:text-4xl text-near-black">Frequently Asked Questions</h2>
             </div>
             
-            <div class="space-y-4">
-                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl">
+            <div class="space-y-4 animate-on-scroll fade-up">
+                <!-- FAQ 1 -->
+                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl shadow-sm">
                     <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-near-black font-semibold uppercase tracking-wider">
                         What is a collagen stimulation treatment?
                         <i data-lucide="plus" class="w-4 h-4 text-taupe shrink-0 group-open:hidden"></i>
@@ -556,7 +1011,8 @@
                     </p>
                 </details>
 
-                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl">
+                <!-- FAQ 2 -->
+                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl shadow-sm">
                     <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-near-black font-semibold uppercase tracking-wider">
                         What is a collagen skin booster?
                         <i data-lucide="plus" class="w-4 h-4 text-taupe shrink-0 group-open:hidden"></i>
@@ -567,7 +1023,8 @@
                     </p>
                 </details>
 
-                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl">
+                <!-- FAQ 3 -->
+                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl shadow-sm">
                     <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-near-black font-semibold uppercase tracking-wider">
                         How is a collagen-focused treatment different from filler?
                         <i data-lucide="plus" class="w-4 h-4 text-taupe shrink-0 group-open:hidden"></i>
@@ -578,7 +1035,8 @@
                     </p>
                 </details>
 
-                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl">
+                <!-- FAQ 4 -->
+                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl shadow-sm">
                     <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-near-black font-semibold uppercase tracking-wider">
                         Who is a good candidate for collagen-focused skin quality treatments?
                         <i data-lucide="plus" class="w-4 h-4 text-taupe shrink-0 group-open:hidden"></i>
@@ -589,7 +1047,8 @@
                     </p>
                 </details>
 
-                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl">
+                <!-- FAQ 5 -->
+                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl shadow-sm">
                     <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-near-black font-semibold uppercase tracking-wider">
                         What is the difference between a Collagen &amp; Structure Facial and a PDRN Facial?
                         <i data-lucide="plus" class="w-4 h-4 text-taupe shrink-0 group-open:hidden"></i>
@@ -600,7 +1059,8 @@
                     </p>
                 </details>
 
-                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl">
+                <!-- FAQ 6 -->
+                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl shadow-sm">
                     <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-near-black font-semibold uppercase tracking-wider">
                         Can collagen-focused treatments help acne scar appearance?
                         <i data-lucide="plus" class="w-4 h-4 text-taupe shrink-0 group-open:hidden"></i>
@@ -611,7 +1071,8 @@
                     </p>
                 </details>
 
-                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl">
+                <!-- FAQ 7 -->
+                <details class="bg-off-white p-6 group border border-light-gray/60 hover:border-taupe/30 transition-all rounded-2xl shadow-sm">
                     <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-near-black font-semibold uppercase tracking-wider">
                         Can collagen-focused treatments be combined with LDM facials?
                         <i data-lucide="plus" class="w-4 h-4 text-taupe shrink-0 group-open:hidden"></i>
@@ -625,35 +1086,48 @@
         </div>
     </section>
 
-    <!-- Transparency Statement -->
-    <section class="py-12 px-10 bg-off-white border-t border-light-gray/30 text-center text-xs opacity-50 font-light leading-relaxed">
-        <div class="max-w-4xl mx-auto text-[10px]">
-            <p>Korean-inspired skin quality rejuvenation approaches discussed at SuA Glow reflect evolving global aesthetic practices and individualized consultation-based treatment planning. Specific treatment recommendations, product selection, regulatory status, risks, benefits, alternatives, and candidacy are reviewed during consultation pursuant to supervising physician-approved protocols and applicable Texas regulations. Treatment results vary by individual. No outcome can be guaranteed.</p>
-        </div>
-    </section>
-
+    <!-- MODULE 15: STANDARDIZED FINAL CONVERSION SECTION (REQUIRED) -->
     <div id="nearme-placeholder" data-product="Collagen Stimulation &amp; Skin Booster"></div>
 
-    <!-- CTA Section -->
-    <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center relative overflow-hidden">
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-taupe/10 blur-[100px] rounded-full"></div>
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <img src="assets/logo-main.webp" alt="SuA K-Glow" class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
-            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-12">K-Beauty Medspa &bull; Carrollton HQ</p>
-            <h3 class="heading-wide text-2xl md:text-4xl mb-12 leading-tight [text-wrap:balance]">Invest early.<br>Maintain beautifully.<br><span class="text-warm-gold opacity-80 italic">Your skin, exceptionally well maintained.</span></h3>
-            <div class="space-y-4">
-                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-primary inline-block">Book Your Collagen Consultation</a>
-                <p class="text-sm text-white/50 tracking-widest uppercase pt-4">Ready for Your Glow? Call Us: <a href="tel:972-665-8737" class="text-warm-gold font-bold hover:underline">972-665-8737</a></p>
+    <section id="book-consultation" class="py-24 bg-[#131619] text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-[#131619] flex justify-center pointer-events-none">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#AA987C] blur-[180px] rounded-full opacity-15"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 space-y-6 animate-on-scroll fade-up">
+            <!-- Eyebrow -->
+            <p class="text-xs uppercase tracking-[0.25em] text-[#AA987C] font-semibold">YOUR NEXT STEP</p>
+            <h2 class="heading-wide text-3xl sm:text-5xl font-medium tracking-tight text-white leading-tight">
+                READY TO BUILD<br><span class="text-[#AA987C]">YOUR TREATMENT PLAN?</span>
+            </h2>
+            <p class="text-sm sm:text-base text-white/70 max-w-2xl mx-auto leading-relaxed font-light">
+                Start with a personalized consultation at SuA Glow in Carrollton. We’ll evaluate your concerns, goals, medical history, and appropriate treatment options to develop an individualized plan for you.
+            </p>
+            
+            <div class="pt-4">
+                <div class="inline-block bg-white/5 border border-white/10 rounded-2xl px-6 py-4 mb-6">
+                    <p class="text-[11px] uppercase tracking-wider text-warm-gold font-medium">NEW PATIENTS</p>
+                    <p class="text-sm font-semibold text-white">Consultation + Aura Skin Analysis</p>
+                </div>
+                <div>
+                    <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" rel="noopener noreferrer" class="btn-primary py-4 px-10 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300 inline-flex items-center gap-2 shadow-lg">
+                        <span>BOOK YOUR CONSULTATION</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
             </div>
+            
+            <p class="text-[11px] uppercase tracking-[0.2em] text-white/40 pt-4">
+                CARROLLTON, TX &bull; SERVING DALLAS–FORT WORTH
+            </p>
         </div>
     </section>
 
     <div id="footer-placeholder"></div>
 
-    <script src="nearme.js?v=43"></script>
-    <script src="navbar.js?v=43"></script>
-    <script src="footer.js?v=43"></script>
-    <script src="oversight.js?v=43"></script>
-    <script src="script.js?v=43"></script>
+    <script src="nearme.js?v=45"></script>
+    <script src="navbar.js?v=45"></script>
+    <script src="footer.js?v=45"></script>
+    <script src="oversight.js?v=45"></script>
+    <script src="script.js?v=45"></script>
 </body>
 </html>

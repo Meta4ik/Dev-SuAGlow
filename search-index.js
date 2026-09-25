@@ -57,7 +57,7 @@ const SEARCH_INDEX = [
     "snippet": "SuA Glow brings K-Beauty medical aesthetic techniques inspired by leading dermatology clinics in Seoul, South Korea to Dallas–Fort Worth. Our treatments reflect..."
   },
   {
-    "url": "about.html",
+    "url": "about.html#final-consultation-cta",
     "title": "The secret to beautiful skin isscience, not secrets.",
     "pageTitle": "About Us",
     "category": "Spa Treatments",
@@ -129,7 +129,7 @@ const SEARCH_INDEX = [
     "snippet": "Many patients begin bridal skin planning approximately 6–8 weeks before their event, depending on treatment goals and clinical assessment. Some collagen-support..."
   },
   {
-    "url": "bridal-glow.html",
+    "url": "bridal-glow.html#final-consultation-cta",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "Bridal Glow",
     "category": "Bridal Glow",
@@ -138,62 +138,110 @@ const SEARCH_INDEX = [
   },
   {
     "url": "collagen-stimulation-facial.html#hero",
-    "title": "Korean Glass Skin Collagen & Structure Facial",
+    "title": "Korean Glass Skin Structure & Skin Quality Facial",
     "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
-    "content": "Structure. Firmness. Future Skin. K-Beauty doesn't just treat the skin you have today. It invests in the skin you want tomorrow. At SuA Glow in Carrollton, near Dallas, our Korean-inspired collagen stimulation and skin-quality treatments focus on gradual, natural-looking improvement—not dramatic correction.",
-    "snippet": "Structure. Firmness. Future Skin. K-Beauty doesn't just treat the skin you have today. It invests in the skin you want tomorrow. At SuA Glow in Carrollton, near..."
+    "content": "Skin Quality. Structure. Long-Term Support. K-Beauty doesn't just treat the skin you have today. It invests in the skin you want tomorrow. At SuA Glow in Carrollton, near Dallas, our Korean-inspired collagen stimulation and skin-quality treatments focus on gradual, natural-looking improvement—not dramatic correction. The Seoul Principle \"Small deposits now. Potential benefits later.\"",
+    "snippet": "Skin Quality. Structure. Long-Term Support. K-Beauty doesn't just treat the skin you have today. It invests in the skin you want tomorrow. At SuA Glow in Carrol..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html",
+    "title": "Supervised by Medical Director Dr. Adam Yang",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "Every treatment protocol is established in strict accordance with Texas medical board delegation guidelines.",
+    "snippet": "Every treatment protocol is established in strict accordance with Texas medical board delegation guidelines."
+  },
+  {
+    "url": "collagen-stimulation-facial.html",
+    "title": "SKIN QUALITY GOES DEEPER",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "The Korean Collagen Facial A Korean collagen facial is a customized, multi-step treatment that works beneath the surface to support collagen, strengthen skin quality, and enhance your natural glow—using advanced Korean techniques, skin boosters, and complementary technologies. 01 Infuse Nourishing bio-actives to the skin 02 Activate Prompts natural collagen synthesis 03 Deliver SkinPen or Needle-Free DEP 04 Reveal Smoother, radiant glass skin MORE THAN A FACIAL It's a Korean approach to skin longevity—combining advanced ingredients, technologies, and expert clinical care.",
+    "snippet": "The Korean Collagen Facial A Korean collagen facial is a customized, multi-step treatment that works beneath the surface to support collagen, strengthen skin qu..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html#glance",
+    "title": "Treatment at a Glance",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "What should you know before you book your collagen appointment? Duration 60–75 Min Comfort High (Numbing) Downtime Minimal (12–24h) Ideal Series 3 Sessions Target Texture & Elasticity Longevity 6–12+ Months",
+    "snippet": "What should you know before you book your collagen appointment? Duration 60–75 Min Comfort High (Numbing) Downtime Minimal (12–24h) Ideal Series 3 Sessions Targ..."
   },
   {
     "url": "collagen-stimulation-facial.html#philosophy",
     "title": "Why K-Beauty Thinks Beyond Volume",
     "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
-    "content": "Not every sign of aging needs more filler. At SuA Glow, we often take a different approach—supporting skin quality, texture, firmness, and elasticity before considering traditional volume fillers. The goal is not a different face. It’s your skin made healthier, smoother, and firmer while still looking uniquely like you. Personalized Skin Focus:",
-    "snippet": "Not every sign of aging needs more filler. At SuA Glow, we often take a different approach—supporting skin quality, texture, firmness, and elasticity before con..."
+    "content": "Not every sign of aging needs more filler. At SuA Glow, your modern Korean medical aesthetics clinic in Carrollton, we often take a different approach—supporting skin quality, texture, firmness, and elasticity before adding facial volume. The goal? Not a different face. Just healthier, smoother, firmer skin that still looks completely like you. Personalized Skin Focus: The Korean skin-first approach isn't only about correcting what's visible today. It's about supporting skin quality over time with treatments selected for your skin, age, and goals. Support Early. Improve Gradually. Maintain Intentionally. Because better skin is a long-term strategy.",
+    "snippet": "Not every sign of aging needs more filler. At SuA Glow, your modern Korean medical aesthetics clinic in Carrollton, we often take a different approach—supportin..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html#analysis-aura",
+    "title": "How We Decide What's Right for You: Aura 3D Skin Analysis",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "We never guess what your skin needs. In Korean aesthetic medicine, every successful treatment begins with objective diagnostic imagery. During your initial consultation at SuA Glow in Carrollton, our advanced Aura Skin Analysis evaluates sub-surface dermal layers to quantify: Dermal Elasticity Structural integrity Sub-Surface Texture Acne scar depths Deep Moisture Hydration levels *This diagnostic baseline allows Sophia Yang, PA-C and our clinical team to customize your exact collagen booster concentration and combination plan. Aura Multi-Spectral Diagnostic Rather than choosing a treatment from an arbitrary menu, your Aura scan reveals whether your skin will benefit most from collagen induction, deep hydration, barrier repair, or a layered combination approach.",
+    "snippet": "We never guess what your skin needs. In Korean aesthetic medicine, every successful treatment begins with objective diagnostic imagery. During your initial cons..."
   },
   {
     "url": "collagen-stimulation-facial.html",
-    "title": "Why Korean Aesthetics Invests in Collagen Early",
+    "title": "WHICH COLLAGEN TREATMENTIS RIGHT FOR YOUR SKIN?",
     "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
-    "content": "K-Beauty isn't only about correcting what's visible today. It's also about supporting skin quality before structural changes become more noticeable. Firmness & elasticity Smoother, refined skin texture Healthy-looking skin quality Consistent long-term skin maintenance",
-    "snippet": "K-Beauty isn't only about correcting what's visible today. It's also about supporting skin quality before structural changes become more noticeable. Firmness & ..."
+    "content": "Collagen treatment isn't one-size-fits-all. At SuA Glow, we start with your skin—then select the treatment approach, delivery method, and complementary layers based on your concerns, goals, and skin quality. Firmness? Texture? Elasticity? Hydration? Early laxity? We start with your specific skin concern. Your plan may include collagen-stimulating treatments, SkinPen®, energy-based technology, or skin-quality boosters. Korean LDM ultrasound, hydration, and complementary treatments are layered to optimize cellular results. Collagen-focused care is gradual and evolves based on your personal response, lifestyle, and goals. YOUR SKIN → YOUR CONCERN → YOUR TREATMENT → YOUR PLAN",
+    "snippet": "Collagen treatment isn't one-size-fits-all. At SuA Glow, we start with your skin—then select the treatment approach, delivery method, and complementary layers b..."
   },
   {
-    "url": "collagen-stimulation-facial.html",
-    "title": "Build Your Collagen & Skin Quality Plan",
+    "url": "collagen-stimulation-facial.html#plan-builder",
+    "title": "BUILD THE COLLAGEN.CUSTOMIZE THE GLOW.",
     "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
-    "content": "No preset menu. No one-size-fits-all skin. Your personalized Korean-inspired treatment strategy may incorporate one or more of the following: For firmness, elasticity, texture, and gradual skin-quality support over time. Specifically targeted for texture refinement, collagen induction, and broader skin Laxity concerns. Needle-free ultrasound support for deep hydration, skin comfort, and healthy-looking bounce. Because collagen remodeling and hydration work better together as part of a complete skin quality strategy.",
-    "snippet": "No preset menu. No one-size-fits-all skin. Your personalized Korean-inspired treatment strategy may incorporate one or more of the following: For firmness, elas..."
+    "content": "Start with collagen support. Layer additional K-Beauty treatments based on what your skin needs. Build + Support Support firmer, smoother, healthier-looking skin over time. The structural foundation of the Glass Skin method. \"One foundation. Different skin goals.\" —— THEN LAYER FOR YOUR SKIN —— Brighten + Even Support a clearer, more luminous, and even-looking skin tone. Dew + Plump Add deep moisture for a dewy, refreshed, and healthy-looking finish. Calm + Support Ultrasound wave therapy to soothe, hydrate, and support resilience. Renew + Refine Polynucleotide cellular care to renew texture and strengthen barrier. (1) START → COLLAGEN ••• (2) THEN LAYER → TONE • HYDRATION • LDM • SKIN QUALITY YOUR PROVIDER BUILDS THE COMBINATION AROUND YOUR SKIN — NOT A PRESET PACKAGE.",
+    "snippet": "Start with collagen support. Layer additional K-Beauty treatments based on what your skin needs. Build + Support Support firmer, smoother, healthier-looking ski..."
   },
   {
     "url": "collagen-stimulation-facial.html",
     "title": "Planning Your Bridal Glow?",
     "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
-    "content": "Great skin doesn't start the week before the wedding. Collagen-focused skin planning is a long game, which is why we recommend starting your skin-quality strategy months before a wedding or major event. Think smoother texture, healthier-looking skin, and a natural radiance that doesn't depend on heavy coverage.",
-    "snippet": "Great skin doesn't start the week before the wedding. Collagen-focused skin planning is a long game, which is why we recommend starting your skin-quality strate..."
+    "content": "Start early. Glow effortlessly. Great skin doesn't start the week before the wedding. Collagen-focused skin planning is a long game, which is why we recommend starting your skin-quality strategy months before a wedding or major event. Think smoother texture, healthier-looking skin, and a natural radiance that doesn't depend on heavy coverage.",
+    "snippet": "Start early. Glow effortlessly. Great skin doesn't start the week before the wedding. Collagen-focused skin planning is a long game, which is why we recommend s..."
   },
   {
-    "url": "collagen-stimulation-facial.html",
-    "title": "Have a specific skin goal or big day ahead?",
+    "url": "collagen-stimulation-facial.html#who-its-for",
+    "title": "Is This Treatment Right for You?",
     "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
-    "content": "Personalized K-beauty solutions for every skin goal and every moment. Need a Glow—Fast? Perfect for when you want your skin looking refreshed, hydrated and luminous—without starting a long-term journey. Replenish & Radiate Deep hydration for dehydrated, dull or tired-looking skin. Restore moisture and bring back your glow. Hydrate & Lift Korean-favorite LDM therapy supports deep hydration, skin comfort and elasticity for healthy-looking, bouncy skin. Repair & Renew Salmon PN supports the appearance of smoother, healthier-looking, more resilient skin from within. Brighten & Even Tone Tone-Up treatments help improve dullness and uneven looking tone for a luminous, radiant finish. Simple. Strong. Refreshed. Designed for men's skin concerns—oil control, pores, texture and aging signs for a clean, healthy look. Your Best Skin for Your Big Day Great skin doesn't start the week before the wedding. Plan ahead with a personalized skin strategy built around your timeline. Smoother. More Even Skin Every scar is different. We evaluate your skin and history to recommend an approach for uneven texture and scars. At SuA Glow, we customize every plan to your skin, goals, and lifestyle. Korean-inspired care. Real results. You.",
-    "snippet": "Personalized K-beauty solutions for every skin goal and every moment. Need a Glow—Fast? Perfect for when you want your skin looking refreshed, hydrated and lumi..."
+    "content": "Collagen-focused skin planning is designed for individuals seeking natural dermal reinforcement rather than heavy volumization. • Women seeking proactive, long-term skin quality maintenance • Men seeking subtle, natural skin refinement without downtime • Patients concerned about acne scar appearance and uneven texture • Individuals experiencing early loss of dermal bounce and firmness • You desire immediate instant volume (HA filler may be more appropriate) • Active severe cystic acne breakouts requiring medical dermatology clearance • Pregnancy or nursing (contraindicated for certain bio-stimulators)",
+    "snippet": "Collagen-focused skin planning is designed for individuals seeking natural dermal reinforcement rather than heavy volumization. • Women seeking proactive, long-..."
   },
   {
-    "url": "collagen-stimulation-facial.html",
+    "url": "collagen-stimulation-facial.html#results",
+    "title": "When Will You See Results—and What Should You Expect?",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "Because collagen remodeling is a biological process, results develop progressively over 2 to 3 months. Days 1–3 Mild post-treatment redness subsides within 12–24 hours. Skin feels deeply hydrated from accompanying hyaluronic and ultrasound layers. Weeks 2–4 Surface skin becomes noticeably smoother and makeup applies with greater ease as initial neocollagenesis begins. Months 2–3 Peak collagen density develops. Acne scars soften, pores appear refined, and overall skin elasticity reflects natural resilience.",
+    "snippet": "Because collagen remodeling is a biological process, results develop progressively over 2 to 3 months. Days 1–3 Mild post-treatment redness subsides within 12–2..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html#why-sua-glow",
     "title": "Why Korean Clinics Prefer Gradual Improvement Over Aggressive Correction",
     "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
-    "content": "Modern Korean aesthetics prioritizes skin quality, prevention-focused planning, and natural-looking outcomes over dramatic transformation. The goal is optimization: skin that looks refreshed, healthier, and exceptionally well maintained. Skin Booster Structure Mockup Clinically Referenced Map Together, these treatments help support the Korean Glass Skin philosophy.",
+    "content": "Modern Korean aesthetics prioritizes skin quality, prevention-focused planning, and natural-looking outcomes over dramatic transformation. The goal is optimization: skin that looks refreshed, healthier, and exceptionally well maintained. Skin Booster Structure Diagram Clinically Referenced Dermal Map Together, these treatments help support the Korean Glass Skin philosophy.",
     "snippet": "Modern Korean aesthetics prioritizes skin quality, prevention-focused planning, and natural-looking outcomes over dramatic transformation. The goal is optimizat..."
   },
   {
-    "url": "collagen-stimulation-facial.html",
+    "url": "collagen-stimulation-facial.html#transparency",
+    "title": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
+    "content": "Korean-inspired skin quality rejuvenation approaches discussed at SuA Glow reflect evolving global aesthetic practices and individualized consultation-based treatment planning. Specific treatment recommendations, product selection, regulatory status, risks, benefits, alternatives, and candidacy are reviewed during consultation pursuant to supervising physician-approved protocols and applicable Texas regulations. Biological Expectations: Collagen stimulation is an endogenous regenerative response; individual neocollagenesis rates vary based on age, lifestyle, metabolism, and skin health. No specific outcome is guaranteed, and a series of 3 initial sessions followed by maintenance is typically recommended for optimal long-term support.",
+    "snippet": "Korean-inspired skin quality rejuvenation approaches discussed at SuA Glow reflect evolving global aesthetic practices and individualized consultation-based tre..."
+  },
+  {
+    "url": "collagen-stimulation-facial.html#faq",
     "title": "Frequently Asked Questions",
     "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
@@ -201,20 +249,12 @@ const SEARCH_INDEX = [
     "snippet": "Collagen-focused treatments are skin quality strategies designed to support healthier-looking skin quality, texture refinement, elasticity-focused maintenance, ..."
   },
   {
-    "url": "collagen-stimulation-facial.html",
-    "title": "Collagen Stimulation & Acne Scar Treatment Dallas",
+    "url": "collagen-stimulation-facial.html#book-consultation",
+    "title": "READY TO BUILDYOUR TREATMENT PLAN?",
     "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
-    "content": "Korean-inspired skin quality rejuvenation approaches discussed at SuA Glow reflect evolving global aesthetic practices and individualized consultation-based treatment planning. Specific treatment recommendations, product selection, regulatory status, risks, benefits, alternatives, and candidacy are reviewed during consultation pursuant to supervising physician-approved protocols and applicable Texas regulations. Treatment results vary by individual. No outcome can be guaranteed.",
-    "snippet": "Korean-inspired skin quality rejuvenation approaches discussed at SuA Glow reflect evolving global aesthetic practices and individualized consultation-based tre..."
-  },
-  {
-    "url": "collagen-stimulation-facial.html",
-    "title": "Invest early.Maintain beautifully.Your skin, exceptionally well maintained.",
-    "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
-    "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
-    "content": "K-Beauty Medspa • Carrollton HQ Ready for Your Glow? Call Us: 972-665-8737",
-    "snippet": "K-Beauty Medspa • Carrollton HQ Ready for Your Glow? Call Us: 972-665-8737"
+    "content": "YOUR NEXT STEP Start with a personalized consultation at SuA Glow in Carrollton. We’ll evaluate your concerns, goals, medical history, and appropriate treatment options to develop an individualized plan for you. NEW PATIENTS Consultation + Aura Skin Analysis CARROLLTON, TX • SERVING DALLAS–FORT WORTH",
+    "snippet": "YOUR NEXT STEP Start with a personalized consultation at SuA Glow in Carrollton. We’ll evaluate your concerns, goals, medical history, and appropriate treatment..."
   },
   {
     "url": "contact.html#hero",
@@ -273,7 +313,7 @@ const SEARCH_INDEX = [
     "snippet": "Behind-the-scenes, treatment reveals, tips from Sophia, and exclusive follower-only offers — all on social. Loved your visit? Leave us a Google review — it mean..."
   },
   {
-    "url": "contact.html",
+    "url": "contact.html#final-consultation-cta",
     "title": "Your glow is one appointment away.Let's make it happen.",
     "pageTitle": "Contact & Book",
     "category": "Spa Treatments",
@@ -345,7 +385,7 @@ const SEARCH_INDEX = [
     "snippet": "Our approach prioritizes natural-looking movement and balanced refinement rather than aggressive freezing. Most treatments last approximately 3–4 months dependi..."
   },
   {
-    "url": "cosmetic-tox.html",
+    "url": "cosmetic-tox.html#final-consultation-cta",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "Cosmetic Tox & SkinTox",
     "category": "Cosmetic Tox",
@@ -417,7 +457,7 @@ const SEARCH_INDEX = [
     "snippet": "Yes. DEP utilizes FDA-cleared technology for transdermal ingredient delivery. No. DEP delivers professional skincare ingredients without injections or needles. ..."
   },
   {
-    "url": "dep.html",
+    "url": "dep.html#final-consultation-cta",
     "title": "Needle-free.Deep hydration.Very Seoul.",
     "pageTitle": "Needle-Free Skin Infusion (DEP)",
     "category": "Needle-Free Skin Infusion • Carrollton, TX",
@@ -481,7 +521,7 @@ const SEARCH_INDEX = [
     "snippet": "Longevity depends on the product used and the area injected. Highly mobile areas (like lips) may metabolize filler in 6-9 months, while structural fillers (like..."
   },
   {
-    "url": "dermal-filler.html",
+    "url": "dermal-filler.html#final-consultation-cta",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "Korean Dermal Filler",
     "category": "Dermal Filler",
@@ -497,7 +537,7 @@ const SEARCH_INDEX = [
     "snippet": "We've partnered with Cherry to provide flexible payment plans, making your K-Beauty treatments more accessible than ever."
   },
   {
-    "url": "financing.html",
+    "url": "financing.html#final-consultation-cta",
     "title": "The K-Beauty Glow, Now more accessible than ever.",
     "pageTitle": "Financing",
     "category": "Spa Treatments",
@@ -561,7 +601,7 @@ const SEARCH_INDEX = [
     "snippet": "Everything you need to know about Korean glass skin hydration. A Korean Glass Skin Hydration & Glow Facial is a hydration-focused skin quality treatment designe..."
   },
   {
-    "url": "glass-skin-hydration-glow.html",
+    "url": "glass-skin-hydration-glow.html#final-consultation-cta",
     "title": "Ready For Deep Hydration & Korean Glass Skin?",
     "pageTitle": "Korean Hydration Facial Dallas",
     "category": "Hydration & Glow",
@@ -625,7 +665,7 @@ const SEARCH_INDEX = [
     "snippet": "Stay connected with us on Instagram for the latest K-Beauty transformations, skincare tips, and exclusive insights from our Carrollton clinic."
   },
   {
-    "url": "index.html",
+    "url": "index.html#final-consultation-cta",
     "title": "K-Beauty doesn't chase trends.It builds better skin.",
     "pageTitle": "SuA K-Glow",
     "category": "Premier\n                    K-Beauty Destination",
@@ -681,7 +721,7 @@ const SEARCH_INDEX = [
     "snippet": "Biostimulators don't add volume directly — they signal your body to rebuild its own collagen architecture. Sculptra (poly-L-lactic acid) and Radiesse (calcium h..."
   },
   {
-    "url": "injectables.html",
+    "url": "injectables.html#final-consultation-cta",
     "title": "Not sure where to start?",
     "pageTitle": "Injectables",
     "category": "Injectables",
@@ -793,15 +833,7 @@ const SEARCH_INDEX = [
     "snippet": "Clear, medically sound answers to help you navigate our wellness menu. IV therapy administers fluids and/or prescribed ingredients directly into a vein through ..."
   },
   {
-    "url": "iv-infusion-wellness-therapy.html#location",
-    "title": "IV THERAPY &WELLNESS NEAR ME",
-    "pageTitle": "IV Therapy Dallas & Carrollton",
-    "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
-    "content": "SERVING DFW MASTERFULLY SuA Glow is located in Carrollton, TX, quietly serving skin obsessives from the entire DFW metroplex including:",
-    "snippet": "SERVING DFW MASTERFULLY SuA Glow is located in Carrollton, TX, quietly serving skin obsessives from the entire DFW metroplex including:"
-  },
-  {
-    "url": "iv-infusion-wellness-therapy.html#booking-cta",
+    "url": "iv-infusion-wellness-therapy.html#booking-cta final-consultation-cta",
     "title": "Ready for Your Inside-OutGlow Infusion Experience?",
     "pageTitle": "IV Therapy Dallas & Carrollton",
     "category": "IV THERAPY & INSIDE-OUT WELLNESS • CARROLLTON, TX",
@@ -881,7 +913,7 @@ const SEARCH_INDEX = [
     "snippet": "You Have Scalp Questions. We Have Seoul-Level Answers. Korean Scalp & Hair Rejuvenation at SuA Glow is a personalized medical-aesthetic approach to scalp health..."
   },
   {
-    "url": "korean-scalp-hair-rejuvenation.html",
+    "url": "korean-scalp-hair-rejuvenation.html#final-consultation-cta",
     "title": "Less Guesswork. More Scalp Strategy.",
     "pageTitle": "Korean Scalp & Hair Rejuvenation in Carrollton, TX",
     "category": "Korean Scalp & Hair Rejuvenation",
@@ -953,7 +985,7 @@ const SEARCH_INDEX = [
     "snippet": "The Korean Glass Skin LDM Facial is a Korean-inspired non-invasive multi-mode skin rejuvenation treatment focused on hydration-conscious rejuvenation, glow-focu..."
   },
   {
-    "url": "ldm-water-drop-lifting.html",
+    "url": "ldm-water-drop-lifting.html#final-consultation-cta",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "Korean LDM Facial Dallas",
     "category": "Ultrasound Premier Korean Glass Skin Lifting",
@@ -1017,7 +1049,7 @@ const SEARCH_INDEX = [
     "snippet": "Both use neuromodulators, but Medical Tox focuses on functional concerns such as muscle tension, sweating, jaw clenching, and headache-related tension patterns...."
   },
   {
-    "url": "medical-tox.html",
+    "url": "medical-tox.html#final-consultation-cta",
     "title": "Precision matters.Because therapeutic treatmentsdeserve thoughtful care.",
     "pageTitle": "Medical Tox",
     "category": "Medical Tox",
@@ -1137,7 +1169,7 @@ const SEARCH_INDEX = [
     "snippet": "Physician-guided medical weight loss combines medical evaluation, evidence-based treatment options, nutrition, lifestyle guidance, and ongoing clinical monitori..."
   },
   {
-    "url": "medical-weight-loss-dallas.html",
+    "url": "medical-weight-loss-dallas.html#final-consultation-cta",
     "title": "Reset your body.Keep your glow.Very Seoul.",
     "pageTitle": "Medical Weight Loss Dallas, Compounded GLP-1 Body Reset",
     "category": "Korean Body Reset™",
@@ -1181,11 +1213,11 @@ const SEARCH_INDEX = [
     "title": "Korean Glass Skin Membership FAQs",
     "pageTitle": "Korean Glass Skin Membership Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. Your $199 monthly membership includes one provider-curated 5-Layer Korean Glass Skin Ritual featuring AquaFacial, Needle-Free Skin Booster Infusion, LDM Water Drop Lifting, LED Red Light Therapy, and a Glutathione IV Push when medically appropriate. Members also receive the rotating Seoul Glow Drop, 20% savings on eligible services and skincare, priority booking, and member-only perks. K-Beauty is all about the layers. So is your facial. Rather than relying on one treatment, the SuA Glow Glass Skin Method™ brings five complementary layers together in one Korean-inspired monthly ritual. The method combines consistent skin care, medical aesthetic technology, and provider-guided personalization rather than a one-and-done approach. The membership is designed for adults who want a consistent, skin-first approach to hydration, radiance, texture, and overall skin quality. Your provider evaluates your skin, goals, medical history, and treatment candidacy to determine whether the ritual—and each included layer—is appropriate for you. Yes. The five-layer framework provides the foundation, while your Skin Booster Edit can be personalized around what your skin needs right now. Your monthly focus may include DEWY for hydration, TONE-UP for radiance, CALM for barrier support, or SMOOTH for texture, based on provider assessment and individual candidacy. The membership is designed around one Glass Skin Ritual each month. That's intentional: the SuA Glow philosophy emphasizes consistent, layered skin care rather than chasing one-time quick fixes. Your provider may modify or defer individual treatments when clinically appropriate. Yes. Your membership is $199 per month and includes your monthly 5-Layer Glass Skin Ritual plus eligible member benefits. There is no separate charge for each of the five included layers. Optional treatments, upgrades, products, or services outside the membership are additional. The facial and device-based layers are designed to be gentle, with little to no expected downtime for most appropriate candidates. The Glutathione IV Push involves IV administration and is included only when medically appropriate. Individual experiences, treatment recommendations, and responses vary. Active Glass Skin Members receive 20% savings on eligible treatments and professional skincare at SuA Glow. Eligibility and exclusions may vary by service, product, promotion, or treatment plan. Complete benefit details are provided in the membership terms. Yes. The Glass Skin Membership is designed without a long-term membership commitment. Pauses, cancellations, and other membership changes are subject to the notice requirements and terms outlined in your membership agreement. The Korean Glass Skin Membership is available exclusively at SuA Glow Medical Aesthetics in Carrollton, Texas, serving Dallas–Fort Worth and surrounding communities including Plano, Frisco, Coppell, Addison, Grapevine, and Southlake. The Seoul Glow Drop is your rotating K-Beauty discovery included with the Glass Skin Membership. Selections may include curated skincare extras, masks, ampoules, or seasonal finishing touches, with the featured discovery changing periodically. What's dropping next? You'll have to come in and see.",
+    "content": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. Your $199 monthly membership includes one provider-curated 5-Layer Korean Glass Skin Ritual featuring AquaFacial, Needle-Free Skin Booster Infusion, LDM Water Drop Lifting, LED Red Light Therapy, and a Glutathione IV Push when medically appropriate. Members also receive the rotating Seoul Glow Drop, 20% savings on eligible services and skincare, priority booking, and member-only perks. K-Beauty is all about the layers. So is your facial. Rather than relying on one treatment, the SuA Glow Glass Skin Method™ brings five complementary layers together in one Korean-inspired monthly ritual. The method combines consistent skin care, medical aesthetic technology, and provider-guided personalization rather than a one-and-done approach. The membership is designed for adults who want a consistent, skin-first approach to hydration, radiance, texture, and overall skin quality. Your provider evaluates your skin, goals, medical history, and treatment candidacy to determine whether the ritual—and each included layer—is appropriate for you. Yes. The five-layer framework provides the foundation, while your Skin Booster Edit can be personalized around what your skin needs right now. Your monthly focus may include DEWY for hydration, TONE-UP for radiance, CALM for barrier support, or SMOOTH for texture, based on provider assessment and individual candidacy. The membership is designed around one Glass Skin Ritual each month. That's intentional: the SuA Glow philosophy emphasizes consistent, layered skin care rather than chasing one-time quick fixes. Your provider may modify or defer individual treatments when clinically appropriate. Yes. Your membership is $199 per month and includes your monthly 5-Layer Glass Skin Ritual plus eligible member benefits. There is no separate charge for each of the five included layers. Optional treatments, upgrades, products, or services outside the membership are additional. The facial and device-based layers are designed to be gentle, with little to no expected downtime for most appropriate candidates. The Glutathione IV Push involves IV administration and is included only when medically appropriate. Individual experiences, treatment recommendations, and responses vary. Active Glass Skin Members receive 20% savings on eligible treatments and professional skincare at SuA Glow. Eligibility and exclusions may vary by service, product, promotion, or treatment plan. Complete benefit details are provided in the membership terms. Yes. The Glass Skin Membership is designed without a long-term membership commitment. Pauses, cancellations, and other membership changes are subject to the notice requirements and terms outlined in your membership agreement. The Korean Glass Skin Membership is available exclusively at SuA Glow Medical Aesthetics in Carrollton, Texas, serving Dallas–Fort Worth and surrounding communities including Plano, Frisco, Coppell, Addison, Grapevine, and Southlake. The Seoul Drop is your rotating K-Beauty discovery included with the Glass Skin Membership. Selections may include curated skincare extras, masks, ampoules, or seasonal finishing touches, with the featured discovery changing periodically. What's dropping next? You'll have to come in and see.",
     "snippet": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. Your $199 monthly membership includes one provider-curate..."
   },
   {
-    "url": "memberships.html",
+    "url": "memberships.html#final-consultation-cta",
     "title": "Five layers. One ritual.Very K-Beauty.",
     "pageTitle": "Korean Glass Skin Membership Dallas",
     "category": "QUESTIONS & ANSWERS",
@@ -1241,7 +1273,7 @@ const SEARCH_INDEX = [
     "snippet": "Yes. SkinPen microneedling may help support improvement in certain types of acne scars (including rolling and boxcar scars) through collagen remodeling and skin..."
   },
   {
-    "url": "microneedling.html",
+    "url": "microneedling.html#final-consultation-cta",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "SkinPen Microneedling Dallas",
     "category": "The Seoul Skin Quality Philosophy",
@@ -1321,7 +1353,7 @@ const SEARCH_INDEX = [
     "snippet": "Yes. Korean Needle-free Infusion utilizes FDA-cleared technology for transdermal ingredient delivery. No. Korean Needle-free Infusion delivers professional skin..."
   },
   {
-    "url": "needleless-infusion-therapy.html",
+    "url": "needleless-infusion-therapy.html#final-consultation-cta",
     "title": "Needle-free.Deep hydration.Very Seoul.",
     "pageTitle": "Korean Needle-free Infusion",
     "category": "Needle-Free Skin Infusion • Carrollton, TX",
@@ -1449,7 +1481,7 @@ const SEARCH_INDEX = [
     "snippet": "Oligio X RF Lifting treatment recommendations at SuA Glow are individualized based on patient anatomy, skin condition, goals, medical history, and clinical asse..."
   },
   {
-    "url": "oligio-x.html",
+    "url": "oligio-x.html#final-consultation-cta",
     "title": "Lift from within.Remodel. Refine.Very Seoul.",
     "pageTitle": "Oligio X RF Lifting Dallas",
     "category": "Korean Aesthetic Philosophy",
@@ -1513,7 +1545,7 @@ const SEARCH_INDEX = [
     "snippet": "One Day Glow is a Korean-inspired event-prep skin treatment plan designed to help skin appear smoother, more hydrated, refreshed, and naturally radiant before a..."
   },
   {
-    "url": "one-day-glow.html",
+    "url": "one-day-glow.html#final-consultation-cta",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "One Day Glow Treatment",
     "category": "One Day Glow",
@@ -1521,7 +1553,7 @@ const SEARCH_INDEX = [
     "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SuA Glow are performed under medical oversight. Results are individualized based on patient goals and assessme..."
   },
   {
-    "url": "press-media.html",
+    "url": "press-media.html#final-consultation-cta",
     "title": "K-Beauty doesn't chase trends.It builds better skin.",
     "pageTitle": "Press & Media",
     "category": "Spa Treatments",
@@ -1601,7 +1633,7 @@ const SEARCH_INDEX = [
     "snippet": "Hyaluronic Acid (HA) fillers work by instantly plumping and hydrating a specific fold or hollow. Radiesse (Calcium Hydroxylapatite) is a bio-stimulator; it work..."
   },
   {
-    "url": "radiesse.html",
+    "url": "radiesse.html#final-consultation-cta",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "Radiesse Bio-Stimulator",
     "category": "Radiesse",
@@ -1681,7 +1713,7 @@ const SEARCH_INDEX = [
     "snippet": "A Korean-inspired skin recovery treatment that utilizes Polynucleotides (PN) extracted from salmon DNA. It is designed to support the skin's natural healing env..."
   },
   {
-    "url": "salmon-pn-facial.html",
+    "url": "salmon-pn-facial.html#final-consultation-cta",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "Salmon PN Facial",
     "category": "Recovery & Repair",
@@ -1761,7 +1793,7 @@ const SEARCH_INDEX = [
     "snippet": "Scar revision is a process that relies on your body's collagen production cycle. Most patients require a series of 3 to 6 sessions, spaced 4 to 6 weeks apart, d..."
   },
   {
-    "url": "scar-treatment.html",
+    "url": "scar-treatment.html#final-consultation-cta",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "Korean Scar Treatment",
     "category": "Scar Treatment",
@@ -1825,7 +1857,7 @@ const SEARCH_INDEX = [
     "snippet": "The Seoul Man Treatment is a personalized Korean-inspired male aesthetic program. It focuses on enhancing masculine facial architecture (like jawlines), subtly ..."
   },
   {
-    "url": "seoul-man.html",
+    "url": "seoul-man.html#final-consultation-cta",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "Seoul Man Treatment",
     "category": "Seoul Man",
@@ -1857,7 +1889,7 @@ const SEARCH_INDEX = [
     "snippet": "Medical-grade skincare products contain higher concentrations of highly active ingredients (such as refined salmon DNA - c-PDRN) than typical over-the-counter r..."
   },
   {
-    "url": "shop-skincare-rejuran.html",
+    "url": "shop-skincare-rejuran.html#final-consultation-cta",
     "title": "K-Beauty doesn't chase trends.It builds better skin.",
     "pageTitle": "Skincare & Products",
     "category": "Cellular Regeneration",
@@ -1889,7 +1921,7 @@ const SEARCH_INDEX = [
     "snippet": "Medical-grade skincare products contain higher concentrations of highly active ingredients (such as refined marine-based DNA - c-PDRN®) than typical over-the-co..."
   },
   {
-    "url": "shop-skincare.html",
+    "url": "shop-skincare.html#final-consultation-cta",
     "title": "K-Beauty doesn't chase trends.It builds better skin.",
     "pageTitle": "Skincare & Products",
     "category": "Cellular Turnover",
@@ -1961,7 +1993,7 @@ const SEARCH_INDEX = [
     "snippet": "The SuA Glow Signature Treatment is a personalized Korean-inspired skin quality treatment plan designed around each patient’s skin condition, texture concerns, ..."
   },
   {
-    "url": "signature-treatment.html",
+    "url": "signature-treatment.html#final-consultation-cta",
     "title": "Refined movement.Controlled glow.Very Seoul.",
     "pageTitle": "SuA Glow Signature Treatment",
     "category": "SuA Glow Signature Treatment",
@@ -2033,7 +2065,7 @@ const SEARCH_INDEX = [
     "snippet": "Traditional K-Beauty philosophies infused with medical-grade efficacy. Our signature facials, including the acclaimed Salmon PN Facial and Water Drop Lifting, f..."
   },
   {
-    "url": "skin-health.html",
+    "url": "skin-health.html#final-consultation-cta",
     "title": "K-Beauty doesn't chase trends.It builds better skin.",
     "pageTitle": "Skin Health",
     "category": "Skin Health",
@@ -2113,7 +2145,7 @@ const SEARCH_INDEX = [
     "snippet": "No. Traditional fillers primarily focus on adding volume or contour. Skin quality boosters are designed to support hydration, texture, collagen support, and ove..."
   },
   {
-    "url": "skin-quality-boosters.html",
+    "url": "skin-quality-boosters.html#final-consultation-cta",
     "title": "Better biology.Refined skin.Very Seoul.",
     "pageTitle": "Skin Quality Boosters",
     "category": "Skin Quality Boosters",
@@ -2121,7 +2153,7 @@ const SEARCH_INDEX = [
     "snippet": "K-Beauty Medspa • Carrollton HQ Celebrity discussions are provided for educational and cultural context only. SuA Glow does not claim that any public figure rec..."
   },
   {
-    "url": "specials-september.html",
+    "url": "specials-september.html#final-consultation-cta",
     "title": "K-Beauty doesn't chase trends.It builds better skin.",
     "pageTitle": "September Specials",
     "category": "Spa Treatments",
@@ -2129,7 +2161,7 @@ const SEARCH_INDEX = [
     "snippet": "Medical Aesthetics • Carrollton HQ"
   },
   {
-    "url": "specials.html",
+    "url": "specials.html#final-consultation-cta",
     "title": "K-Beauty doesn't chase trends.It builds better skin.",
     "pageTitle": "Specials",
     "category": "Spa Treatments",
@@ -2169,12 +2201,20 @@ const SEARCH_INDEX = [
     "snippet": "Your experience matters — both to us and to patients considering their first visit. We'd be honored to hear about your glow journey."
   },
   {
-    "url": "testimonials.html",
+    "url": "testimonials.html#final-consultation-cta",
     "title": "Ready to write your ownglow story?",
     "pageTitle": "Patient Stories",
     "category": "Spa Treatments",
     "content": "K-Beauty Medspa • Carrollton HQ",
     "snippet": "K-Beauty Medspa • Carrollton HQ"
+  },
+  {
+    "url": "thank-you.html",
+    "title": "Thank You",
+    "pageTitle": "Thank You",
+    "category": "Spa Treatments",
+    "content": "Thank You for Connecting With Us We have received your details. A member of our clinical team will review your inquiry and reach out within 24 business hours. Want Immediate Appointment Booking? You can view live availability and secure your consultation spot online 24/7.",
+    "snippet": "Thank You for Connecting With Us We have received your details. A member of our clinical team will review your inquiry and reach out within 24 business hours. W..."
   },
   {
     "url": "tone-up-facial.html#hero",
@@ -2233,7 +2273,7 @@ const SEARCH_INDEX = [
     "snippet": "A Korean Tone-Up Facial is a Korean-inspired skin quality treatment focused on brighter-looking skin tone, hydration-conscious rejuvenation, glow-focused mainte..."
   },
   {
-    "url": "tone-up-facial.html",
+    "url": "tone-up-facial.html#final-consultation-cta",
     "title": "Less Coverage. More Luminous Confidence.",
     "pageTitle": "Korean Tone-Up Facial Dallas",
     "category": "K-BEAUTY • BRIGHTENING • RADIANCE",

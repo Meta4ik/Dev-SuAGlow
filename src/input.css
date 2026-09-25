@@ -534,36 +534,89 @@ html {
     animation-delay: -10s;
 }
 
-/* --- SEMANTIC DESIGN SYSTEM --- */
+/* --- SEMANTIC DESIGN SYSTEM: BUTTONS --- */
 
-/* Primary Button */
-.btn-primary {
+/* Base Button Properties */
+.btn-primary,
+.btn-secondary,
+.btn-dark,
+.btn-champagne,
+.btn-white,
+.btn-outline-white,
+.btn-glass {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    background-color: #8F857B;
-    color: #FFFFFF;
-    padding: 1.25rem 3rem;
+    gap: 0.625rem;
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.35em;
-    font-size: 10px;
     border-radius: 9999px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 0 30px rgba(143, 133, 123, 0.2);
-    text-align: center;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
     overflow: hidden;
 }
 
+/* Size: Large (Default Standalone Conversion CTAs) */
+.btn-primary:not(.btn-sm),
+.btn-secondary:not(.btn-sm),
+.btn-dark:not(.btn-sm),
+.btn-champagne:not(.btn-sm),
+.btn-white:not(.btn-sm),
+.btn-outline-white:not(.btn-sm),
+.btn-glass:not(.btn-sm),
+.btn-lg {
+    padding: 0.875rem 2rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.20em;
+}
+
 @media (min-width: 768px) {
-    .btn-primary:not(.btn-sm) {
-        padding: 1.5rem 4rem;
-        font-size: 0.75rem;
+    .btn-primary:not(.btn-sm),
+    .btn-secondary:not(.btn-sm),
+    .btn-dark:not(.btn-sm),
+    .btn-champagne:not(.btn-sm),
+    .btn-white:not(.btn-sm),
+    .btn-outline-white:not(.btn-sm),
+    .btn-glass:not(.btn-sm),
+    .btn-lg {
+        padding: 1rem 2.5rem;
+        font-size: 0.8125rem;
+        letter-spacing: 0.22em;
     }
+}
+
+/* Size: Small (In-Card CTAs & Secondary Units) */
+.btn-sm {
+    padding: 0.625rem 1.35rem !important;
+    font-size: 0.6875rem !important;
+    letter-spacing: 0.16em !important;
+    gap: 0.5rem !important;
+}
+
+@media (min-width: 768px) {
+    .btn-sm {
+        padding: 0.75rem 1.625rem !important;
+        font-size: 0.75rem !important;
+        letter-spacing: 0.18em !important;
+    }
+}
+
+/* Modifier: Full Width Block */
+.btn-block {
+    display: flex !important;
+    width: 100% !important;
+}
+
+/* 1. Primary Button: Signature Warm Taupe Gold */
+.btn-primary {
+    background-color: #AA987C;
+    color: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(170, 152, 124, 0.25);
 }
 
 .btn-primary::after {
@@ -573,17 +626,14 @@ html {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(255, 255, 255, 0.2),
-            transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .btn-primary:hover {
-    background-color: #AA987C;
-    box-shadow: 0 10px 40px rgba(170, 152, 124, 0.4);
-    transform: translateY(-0.25rem);
+    background-color: #948267;
+    box-shadow: 0 8px 30px rgba(170, 152, 124, 0.40);
+    transform: translateY(-2px);
     color: #FFFFFF;
 }
 
@@ -591,122 +641,82 @@ html {
     left: 100%;
 }
 
-/* Modifier: Small Button */
-.btn-sm {
-    padding: 0.75rem 2rem !important;
-    letter-spacing: 0.3em;
-    font-size: 10px !important;
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(170, 152, 124, 0.2);
 }
 
-@media (min-width: 768px) {
-    .btn-sm {
-        padding: 0.875rem 2.25rem !important;
-        font-size: 11px !important;
-    }
-}
-
-/* Modifier: Block Button */
-.btn-block {
-    display: flex;
-    width: 100%;
-    padding: 1.25rem 0;
-}
-
-/* Secondary Button (Outline) */
+/* 2. Secondary Button: Refined Taupe Outline */
 .btn-secondary {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    border: 1px solid #8F857B;
-    color: #8F857B;
-    padding: 1.25rem 3rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.35em;
-    font-size: 10px;
-    border-radius: 9999px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-@media (min-width: 768px) {
-    .btn-secondary:not(.btn-sm) {
-        padding: 1.5rem 4rem;
-        font-size: 0.75rem;
-    }
-}
-
-.btn-secondary::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(143, 133, 123, 0.1),
-            transparent);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1.5px solid #AA987C;
+    color: #AA987C;
+    background-color: transparent;
 }
 
 .btn-secondary:hover {
-    background-color: #8F857B;
+    background-color: #AA987C;
     color: #FFFFFF;
-    transform: translateY(-0.25rem);
+    box-shadow: 0 8px 30px rgba(170, 152, 124, 0.35);
+    transform: translateY(-2px);
 }
 
-.btn-secondary:hover::after {
-    left: 100%;
+.btn-secondary:active {
+    transform: translateY(0);
 }
 
-/* White Button */
-.btn-white {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    background-color: #FFFFFF;
-    color: #131619;
-    padding: 1.25rem 3rem;
-    font-family: 'Poppins', sans-serif;
+/* 3. Dark Button: High Contrast Charcoal */
+.btn-dark {
+    background-color: #1B1E21;
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(27, 30, 33, 0.2);
+}
+
+.btn-dark:hover {
+    background-color: #AA987C;
+    color: #FFFFFF;
+    box-shadow: 0 8px 25px rgba(170, 152, 124, 0.35);
+    transform: translateY(-2px);
+}
+
+.btn-dark:active {
+    transform: translateY(0);
+}
+
+/* 4. Champagne Button: Luminous Gold for Dark Backgrounds */
+.btn-champagne {
+    background-color: #D1BFA5;
+    color: #111315;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.35em;
-    font-size: 10px;
-    border-radius: 9999px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    white-space: nowrap;
-    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(209, 191, 165, 0.25);
 }
 
-.btn-white::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(143, 133, 123, 0.15),
-            transparent);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+.btn-champagne:hover {
+    background-color: #C4B195;
+    color: #111315;
+    box-shadow: 0 8px 25px rgba(209, 191, 165, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-champagne:active {
+    transform: translateY(0);
+}
+
+/* 5. White Button */
+.btn-white {
+    background-color: #FFFFFF;
+    color: #111315;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .btn-white:hover {
-    background-color: #8F857B;
+    background-color: #AA987C;
     color: #FFFFFF;
-    transform: translateY(-0.25rem);
+    box-shadow: 0 8px 25px rgba(170, 152, 124, 0.35);
+    transform: translateY(-2px);
 }
 
-.btn-white:hover::after {
-    left: 100%;
+.btn-white:active {
+    transform: translateY(0);
 }
 
 /* Hero Outline White (Glass Effect) */

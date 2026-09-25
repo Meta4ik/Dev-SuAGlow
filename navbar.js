@@ -167,13 +167,19 @@ const NAVBAR_HTML = `
                                     </a>
                                 </li>
                                  <li>
-                                    <a href="collagen-stimulation-facial.html" class="dropdown-link !p-0 hover:!pl-2">
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-1.5">
                                         Collagen Stimulation
+                                        <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0 ml-1">
+                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="tone-up-facial.html" class="dropdown-link !p-0 hover:!pl-2">
+                                    <a href="#" class="dropdown-link !p-0 hover:!pl-2 flex items-center justify-between gap-1.5">
                                         Tone Up
+                                        <span class="inline-flex items-center font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0 ml-1">
+                                            <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                        </span>
                                     </a>
                                 </li>
                             </ul>
@@ -466,12 +472,18 @@ const NAVBAR_HTML = `
                                 <a href="glass-skin-hydration-glow.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">
                                     Glass Skin Hydration &amp; Glow
                                 </a>
-                                <a href="collagen-stimulation-facial.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">
-                                    Collagen Stimulation
-                                </a>
-                                <a href="tone-up-facial.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">
-                                    Tone Up
-                                </a>
+                                <div class="flex items-center justify-between gap-2">
+                                    <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Collagen Stimulation</a>
+                                    <span class="font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                    </span>
+                                </div>
+                                <div class="flex items-center justify-between gap-2">
+                                    <a href="#" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors">Tone Up</a>
+                                    <span class="font-mono text-[9px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-2 py-0.5 rounded-full tracking-wider uppercase shrink-0">
+                                        <i data-lucide="hard-hat" class="w-2.5 h-2.5 mr-0.5"></i>Soon
+                                    </span>
+                                </div>
                             </div>
                         </div>
 

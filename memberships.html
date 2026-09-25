@@ -42,6 +42,14 @@
         .step-num-glow {
             text-shadow: 0 0 20px rgba(170, 152, 124, 0.4);
         }
+
+        /* Scoped Navbar Logo contrast boost for Memberships Hero */
+        #navbar.nav-dark-theme:not(.nav-scrolled) .logo-brand,
+        #navbar.nav-dark-theme:not(.nav-scrolled) #logo-desktop {
+            filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6)) !important;
+            opacity: 0.95;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
     </style>
 </head>
 
@@ -50,15 +58,22 @@
 
     <!-- Hero Section (Strictly following DESIGN.md Standard Inner-Page Hero pattern) -->
     <section id="hero" data-nav-theme="dark"
-        class="relative min-h-[55vh] flex items-start justify-center text-center px-6 sm:px-8 pt-[250px] overflow-hidden bg-near-black pb-28 sm:pb-32">
-        <div class="absolute inset-0 z-0 opacity-50 pointer-events-none">
-            <img src="assets/sua_glow_office_hero_16x9.jpg" alt="SuA Glow Reception Lounge in Carrollton"
-                class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000">
-            <div class="absolute inset-0 bg-gradient-to-b from-near-black/80 via-near-black/60 to-near-black"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-warm-gold/20 blur-[150px] rounded-full"></div>
+        class="relative min-h-[1360px] lg:min-h-[1440px] flex items-start justify-center text-center px-6 sm:px-8 pt-[780px] sm:pt-[840px] md:pt-[900px] lg:pt-[940px] overflow-hidden bg-near-black pb-28 sm:pb-36">
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <!-- Background Image: Radiant and bright on top, anchored to top -->
+            <div class="absolute top-0 inset-x-0 h-[880px] sm:h-[960px] md:h-[1020px] overflow-hidden">
+                <img src="assets/diverse_models_candid_laughing.jpg" alt="SuA Glow Korean Glass Skin Community - Inclusive Care & Diverse Skin Tones"
+                    class="w-full h-full object-cover object-[center_top]">
+                <!-- Graded Overlay: Crystal clear & bright across faces, softly grading to deep dark at bottom of frame -->
+                <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent via-22% via-near-black/75 via-75% to-near-black"></div>
+            </div>
+            <!-- Solid deep dark canvas where text and CTAs sit with 100% crystal clear legibility -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-52% via-near-black/95 via-68% to-near-black to-80%"></div>
+            <div class="absolute bottom-0 inset-x-0 h-64 bg-near-black"></div>
+            <div class="absolute top-[960px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-warm-gold/15 blur-[160px] rounded-full pointer-events-none"></div>
         </div>
 
-        <div class="relative z-10 max-w-4xl mx-auto animate-on-scroll fade-up">
+        <div class="relative z-10 max-w-4xl mx-auto">
             <!-- Floating Circular Price Badge (Desktop Hero - Signature Frosted Glass Style) -->
             <div class="absolute hidden xl:flex items-center justify-center z-20 text-[#AA987C] pointer-events-none float-slow"
                 style="width: 140px; height: 140px; top: -10px; right: -80px; animation: float 6s ease-in-out infinite;">
@@ -78,8 +93,7 @@
             </div>
 
             <span
-                class="inline-flex items-center justify-center leading-none gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[10px] sm:text-xs tracking-[0.25em] uppercase text-warm-gold font-semibold mb-6">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
+                class="inline-flex items-center justify-center leading-none px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[10px] sm:text-xs tracking-[0.25em] uppercase text-warm-gold font-semibold mb-6">
                 <span class="pt-[1px]">THE SUA GLOW GLASS SKIN METHOD™</span>
             </span>
 
@@ -110,41 +124,73 @@
         </div>
     </section>
 
-    <!-- Quick Stats / Highlights Bar -->
-    <section class="bg-white border-b border-charcoal/10 py-8 md:py-10 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
-            <div class="border-r border-charcoal/10 last:border-r-0 px-2">
-                <span class="block font-heading font-light text-3xl sm:text-4xl lg:text-5xl text-near-black tracking-[0.06em] uppercase leading-none mb-2">
-                    $199<span class="text-sm sm:text-base font-light text-taupe lowercase">/mo</span>
-                </span>
-                <span class="block font-body text-xs sm:text-[13px] md:text-sm font-semibold uppercase tracking-[0.14em] text-charcoal/80">
+    <!-- Quick Stats / Highlights Bar (Recreated matching reference design) -->
+    <section class="bg-[#FAF8F5] border-y border-[#EAE5DF] py-12 lg:py-16 px-4 sm:px-6 relative z-20">
+        <div class="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
+            
+            <!-- Col 1: $199/mo -->
+            <div class="relative flex flex-col items-center justify-center text-center px-4 lg:border-r lg:border-[#E8E2D9] group">
+                <!-- Soft Circular Halo -->
+                <div class="absolute -top-3 w-20 h-20 rounded-full bg-gradient-to-t from-[#E8DDD1]/45 to-transparent pointer-events-none -z-0"></div>
+                
+                <div class="relative z-10 flex items-baseline justify-center leading-none">
+                    <span class="font-heading font-light text-5xl sm:text-6xl text-[#1B1E21] tracking-tight leading-none">$199</span>
+                    <span class="font-heading font-normal text-2xl sm:text-3xl text-[#AA987C] ml-1 lowercase leading-none">/mo</span>
+                </div>
+                <span class="block font-body text-[11px] sm:text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[#8C847A] mt-3.5">
                     One All-Inclusive Price
                 </span>
             </div>
-            <div class="border-r border-charcoal/10 last:border-r-0 px-2">
-                <span class="block font-heading font-light text-3xl sm:text-4xl lg:text-5xl text-warm-gold tracking-[0.06em] uppercase leading-none mb-2">
-                    5 Layers
-                </span>
-                <span class="block font-body text-xs sm:text-[13px] md:text-sm font-semibold uppercase tracking-[0.14em] text-charcoal/80">
+
+            <!-- Col 2: 5 LAYERS -->
+            <div class="relative flex flex-col items-center justify-center text-center px-4 lg:border-r lg:border-[#E8E2D9] group">
+                <!-- 5 Concentric Arches Graphic -->
+                <div class="absolute -top-7 w-28 h-20 pointer-events-none -z-0 flex items-end justify-center">
+                    <svg viewBox="0 0 120 70" class="w-full h-full text-[#AA987C]/30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 10 70 A 50 50 0 0 1 110 70" stroke="currentColor" stroke-width="1.2" stroke-dasharray="0" opacity="0.25" />
+                        <path d="M 22 70 A 38 38 0 0 1 98 70" stroke="currentColor" stroke-width="1.2" opacity="0.4" />
+                        <path d="M 34 70 A 26 26 0 0 1 86 70" stroke="currentColor" stroke-width="1.2" opacity="0.55" />
+                        <path d="M 46 70 A 14 14 0 0 1 74 70" stroke="currentColor" stroke-width="1.2" opacity="0.7" />
+                        <path d="M 54 70 A 6 6 0 0 1 66 70" stroke="currentColor" stroke-width="1.2" opacity="0.85" />
+                    </svg>
+                </div>
+
+                <div class="relative z-10 flex items-baseline justify-center leading-none">
+                    <span class="font-heading font-light text-5xl sm:text-6xl text-[#AA987C] tracking-tight leading-none">5</span>
+                    <span class="font-heading font-light text-3xl sm:text-4xl text-[#AA987C] uppercase tracking-[0.14em] ml-2.5 leading-none">Layers</span>
+                </div>
+                <span class="block font-body text-[11px] sm:text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[#8C847A] mt-3.5">
                     One Synergistic Ritual
                 </span>
             </div>
-            <div class="border-r border-charcoal/10 last:border-r-0 px-2">
-                <span class="block font-heading font-light text-3xl sm:text-4xl lg:text-5xl text-near-black tracking-[0.06em] uppercase leading-none mb-2">
-                    20% Off
-                </span>
-                <span class="block font-body text-xs sm:text-[13px] md:text-sm font-semibold uppercase tracking-[0.14em] text-charcoal/80">
+
+            <!-- Col 3: 20% OFF -->
+            <div class="relative flex flex-col items-center justify-center text-center px-4 lg:border-r lg:border-[#E8E2D9] group">
+                <!-- Soft Circular Halo -->
+                <div class="absolute -top-3 w-20 h-20 rounded-full bg-gradient-to-t from-[#E8DDD1]/45 to-transparent pointer-events-none -z-0"></div>
+
+                <div class="relative z-10 flex items-baseline justify-center leading-none">
+                    <span class="font-heading font-light text-5xl sm:text-6xl text-[#1B1E21] tracking-tight leading-none">20%</span>
+                    <span class="font-heading font-light text-3xl sm:text-4xl text-[#1B1E21] uppercase tracking-[0.12em] ml-2.5 leading-none">Off</span>
+                </div>
+                <span class="block font-body text-[11px] sm:text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[#8C847A] mt-3.5">
                     Services &amp; Skincare
                 </span>
             </div>
-            <div class="px-2">
-                <span class="block font-heading font-light text-3xl sm:text-4xl lg:text-5xl text-warm-gold tracking-[0.06em] uppercase leading-none mb-2">
-                    Seoul Drop
-                </span>
-                <span class="block font-body text-xs sm:text-[13px] md:text-sm font-semibold uppercase tracking-[0.14em] text-charcoal/80">
+
+            <!-- Col 4: SEOUL DROP (Official Brand Logo) -->
+            <div class="relative flex flex-col items-center justify-center text-center px-4 group">
+                <!-- Soft Circular Halo -->
+                <div class="absolute -top-3 w-20 h-20 rounded-full bg-gradient-to-t from-[#E8DDD1]/45 to-transparent pointer-events-none -z-0"></div>
+
+                <div class="relative z-10 flex items-center justify-center h-[52px] sm:h-[60px]">
+                    <img src="assets/seoul%20drop%20logo.svg" alt="Seoul Drop" class="h-[44px] sm:h-[50px] w-auto object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105" />
+                </div>
+                <span class="block font-body text-[11px] sm:text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[#8C847A] mt-3.5">
                     Monthly K-Beauty Discovery
                 </span>
             </div>
+
         </div>
     </section>
 
@@ -479,6 +525,9 @@
 
     <!-- Pricing Card & Inclusions Section (Exact Replica of VIP Membership Graphic) -->
     <section class="py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-[#F9F7F2] relative overflow-hidden">
+        <!-- S Monogram Repeating Background Pattern Overlay (Subtle 30% Luxury Fade) -->
+        <div class="absolute inset-0 pointer-events-none mix-blend-multiply opacity-30" style="background-image: url('assets/s-monogram-pattern.svg'); background-repeat: repeat; background-size: 240px 240px; -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.60) 40%, rgba(0, 0, 0, 0.15) 70%, rgba(0, 0, 0, 0) 100%); mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.60) 40%, rgba(0, 0, 0, 0.15) 70%, rgba(0, 0, 0, 0) 100%);"></div>
+
         <!-- Subtle Ambient Warm Glow Background -->
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-taupe/10 rounded-full blur-[140px] pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-warm-gold/10 rounded-full blur-[140px] pointer-events-none"></div>
@@ -486,14 +535,14 @@
         <div class="max-w-6xl mx-auto relative z-10">
             <!-- Header (VIP Skincare Membership, Everything Included. $199/Month.) -->
             <div class="text-center max-w-3xl mx-auto mb-14 md:mb-16">
-                <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.28em] font-semibold text-charcoal/60 mb-3 inline-block">
+                <span class="text-xs sm:text-[13px] uppercase tracking-[0.28em] font-semibold text-charcoal/60 mb-3 inline-block">
                     VIP SKINCARE MEMBERSHIP
                 </span>
                 <h2 class="font-heading text-3xl sm:text-5xl md:text-[54px] text-near-black leading-tight uppercase tracking-wide">
                     EVERYTHING INCLUDED.<br>
                     <span class="italic font-light text-taupe block mt-1">$199/MONTH.</span>
                 </h2>
-                <p class="font-body text-xs sm:text-sm text-charcoal/70 tracking-wide mt-3">
+                <p class="font-body text-sm sm:text-base text-charcoal/75 tracking-wide mt-3">
                     Five layers. Member perks. A little Seoul every month.
                 </p>
             </div>
@@ -506,15 +555,15 @@
                         <!-- Header Inside Left Card -->
                         <div class="flex items-start justify-between pb-6 mb-6 border-b border-charcoal/10">
                             <div>
-                                <h3 class="font-heading font-bold text-xs sm:text-sm uppercase tracking-wider text-near-black">
+                                <h3 class="font-heading font-bold text-sm sm:text-base uppercase tracking-wider text-near-black">
                                     YOUR MONTHLY 5-LAYER RITUAL
                                 </h3>
-                                <p class="font-body text-xs text-charcoal/60 mt-1">
+                                <p class="font-body text-xs sm:text-sm text-charcoal/65 mt-1">
                                     Korean skincare. Medical technology. Real results.
                                 </p>
                             </div>
                             <div class="text-right">
-                                <span class="font-heading text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-charcoal/40 font-semibold leading-tight block">
+                                <span class="font-heading text-[10px] sm:text-xs uppercase tracking-[0.2em] text-charcoal/45 font-semibold leading-tight block">
                                     ONCE A MONTH<br>ALL FOR YOU.
                                 </span>
                             </div>
@@ -524,81 +573,91 @@
                         <div class="space-y-5">
                             <!-- Step 01 -->
                             <div class="flex items-center">
-                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-12 sm:w-14">01</span>
-                                <span class="h-8 w-px bg-charcoal/15 mx-3 sm:mx-4 shrink-0"></span>
+                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-11 sm:w-12">01</span>
+                                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border border-charcoal/10 shadow-sm mx-3 sm:mx-4 bg-[#F5F2ED]">
+                                    <img src="assets/aquafacial_water_splash.jpg" alt="Aquafacial" class="w-full h-full object-cover">
+                                </div>
                                 <div>
-                                    <h4 class="font-heading font-bold text-xs sm:text-[13px] uppercase tracking-wider text-near-black leading-snug">
+                                    <h4 class="font-heading font-bold text-sm sm:text-[15px] uppercase tracking-wider text-near-black leading-snug">
                                         AQUAFACIAL
                                     </h4>
-                                    <p class="font-body text-xs text-charcoal/65 mt-0.5">Cleanse and refresh.</p>
+                                    <p class="font-body text-xs sm:text-sm text-charcoal/70 mt-0.5">Cleanse and refresh.</p>
                                 </div>
                             </div>
 
                             <!-- Step 02 -->
                             <div class="flex items-center">
-                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-12 sm:w-14">02</span>
-                                <span class="h-8 w-px bg-charcoal/15 mx-3 sm:mx-4 shrink-0"></span>
+                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-11 sm:w-12">02</span>
+                                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border border-charcoal/10 shadow-sm mx-3 sm:mx-4 bg-[#F5F2ED]">
+                                    <img src="assets/dep_wand_infusion_droplet.jpg" alt="Needle-Free Skin Booster Infusion" class="w-full h-full object-cover">
+                                </div>
                                 <div>
-                                    <h4 class="font-heading font-bold text-xs sm:text-[13px] uppercase tracking-wider text-near-black leading-snug">
+                                    <h4 class="font-heading font-bold text-sm sm:text-[15px] uppercase tracking-wider text-near-black leading-snug">
                                         NEEDLE-FREE SKIN BOOSTER INFUSION
                                     </h4>
-                                    <p class="font-body text-xs text-charcoal/65 mt-0.5">Personalized for your skin.</p>
+                                    <p class="font-body text-xs sm:text-sm text-charcoal/70 mt-0.5">Personalized for your skin.</p>
                                 </div>
                             </div>
 
                             <!-- Step 03 -->
                             <div class="flex items-center">
-                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-12 sm:w-14">03</span>
-                                <span class="h-8 w-px bg-charcoal/15 mx-3 sm:mx-4 shrink-0"></span>
+                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-11 sm:w-12">03</span>
+                                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border border-charcoal/10 shadow-sm mx-3 sm:mx-4 bg-[#F5F2ED]">
+                                    <img src="assets/ldm_treatment_face_close_zoom.jpg" alt="LDM Water Drop Lifting" class="w-full h-full object-cover">
+                                </div>
                                 <div>
-                                    <h4 class="font-heading font-bold text-xs sm:text-[13px] uppercase tracking-wider text-near-black leading-snug">
+                                    <h4 class="font-heading font-bold text-sm sm:text-[15px] uppercase tracking-wider text-near-black leading-snug">
                                         LDM WATER DROP LIFTING
                                     </h4>
-                                    <p class="font-body text-xs text-charcoal/65 mt-0.5">Lift. Hydrate. Refine.</p>
+                                    <p class="font-body text-xs sm:text-sm text-charcoal/70 mt-0.5">Lift. Hydrate. Refine.</p>
                                 </div>
                             </div>
 
                             <!-- Step 04 -->
                             <div class="flex items-center">
-                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-12 sm:w-14">04</span>
-                                <span class="h-8 w-px bg-charcoal/15 mx-3 sm:mx-4 shrink-0"></span>
+                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-11 sm:w-12">04</span>
+                                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border border-charcoal/10 shadow-sm mx-3 sm:mx-4 bg-[#F5F2ED]">
+                                    <img src="assets/celluma-led-red-light.jpg" alt="LED Red Light Therapy" class="w-full h-full object-cover">
+                                </div>
                                 <div>
-                                    <h4 class="font-heading font-bold text-xs sm:text-[13px] uppercase tracking-wider text-near-black leading-snug">
+                                    <h4 class="font-heading font-bold text-sm sm:text-[15px] uppercase tracking-wider text-near-black leading-snug">
                                         LED RED LIGHT THERAPY
                                     </h4>
-                                    <p class="font-body text-xs text-charcoal/65 mt-0.5">Soothe. Restore. Glow.</p>
+                                    <p class="font-body text-xs sm:text-sm text-charcoal/70 mt-0.5">Soothe. Restore. Glow.</p>
                                 </div>
                             </div>
 
                             <!-- Step 05 -->
                             <div class="flex items-center">
-                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-12 sm:w-14">05</span>
-                                <span class="h-8 w-px bg-charcoal/15 mx-3 sm:mx-4 shrink-0"></span>
+                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-11 sm:w-12">05</span>
+                                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border border-charcoal/10 shadow-sm mx-3 sm:mx-4 bg-[#F5F2ED]">
+                                    <img src="assets/glutathione_iv_wellness_drip.jpg" alt="Glutathione IV Push" class="w-full h-full object-cover">
+                                </div>
                                 <div>
-                                    <h4 class="font-heading font-bold text-xs sm:text-[13px] uppercase tracking-wider text-near-black leading-snug">
+                                    <h4 class="font-heading font-bold text-sm sm:text-[15px] uppercase tracking-wider text-near-black leading-snug">
                                         GLUTATHIONE IV PUSH
                                     </h4>
-                                    <p class="font-body text-xs text-charcoal/65 mt-0.5">Inner wellness. Outer glow.</p>
+                                    <p class="font-body text-xs sm:text-sm text-charcoal/70 mt-0.5">Inner wellness. Outer glow.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Integrated Seoul Glow Drop (Soft Warm Beige Box) -->
-                        <div class="mt-8 bg-[#F5F2ED] rounded-2xl p-5 sm:p-6 border border-charcoal/5 text-left space-y-2">
-                            <div class="flex items-center justify-between">
-                                <span class="font-heading text-xs uppercase tracking-[0.2em] font-bold text-near-black">
-                                    THE SEOUL GLOW DROP
-                                </span>
-                                <span class="font-heading text-[9px] uppercase tracking-[0.22em] text-charcoal/45 font-semibold">
-                                    A MONTHLY SURPRISE
-                                </span>
+                        <!-- Integrated Seoul Drop (Soft Warm Beige Box) -->
+                        <div class="mt-8 bg-[#F5F2ED] rounded-2xl p-5 sm:p-6 border border-charcoal/5 text-left flex items-center gap-5 sm:gap-6">
+                            <img src="assets/seoul%20drop%20logo.svg" alt="Seoul Drop Logo" class="h-16 sm:h-20 md:h-[84px] w-auto object-contain shrink-0 self-center">
+                            <div class="space-y-1.5 flex-1 min-w-0">
+                                <div class="flex items-center justify-between gap-2">
+                                    <span class="font-heading text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-[#AA987C] font-semibold">
+                                        A MONTHLY SURPRISE
+                                    </span>
+                                </div>
+                                <p class="font-body text-xs sm:text-sm text-charcoal/75 leading-relaxed">
+                                    A rotating K-Beauty discovery — from curated skincare extras, masks and ampoules to seasonal finishing touches.
+                                </p>
+                                <p class="font-body text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-charcoal/50 italic pt-0.5 block">
+                                    WHAT'S DROPPING THIS MONTH? YOU'LL HAVE TO COME IN AND SEE.
+                                </p>
                             </div>
-                            <p class="font-body text-xs text-charcoal/75 leading-relaxed">
-                                A rotating K-Beauty discovery — from curated skincare extras, masks and ampoules to seasonal finishing touches.
-                            </p>
-                            <p class="font-body text-[10px] uppercase tracking-[0.2em] text-charcoal/50 italic pt-1 block">
-                                WHAT'S DROPPING THIS MONTH? YOU'LL HAVE TO COME IN AND SEE.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -614,21 +673,18 @@
                     </div>
 
                     <!-- Foreground Content (Constrained to left half so it never overlaps the woman) -->
-                    <div class="relative z-10 max-w-[240px] sm:max-w-[270px]">
+                    <div class="relative z-10 max-w-[260px] sm:max-w-[290px]">
                         <!-- SuA Glow Circle Logo Header -->
-                        <div class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center">
+                        <div class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center mb-5">
                             <img src="assets/suaglow-s-logo.png" alt="SuA Glow Circle Logo" class="w-full h-full object-contain rounded-full">
                         </div>
 
-                        <!-- Thin Vertical Accent Line -->
-                        <div class="w-px h-6 bg-white/25 my-5"></div>
-
                         <!-- Tagline -->
                         <div class="space-y-0.5">
-                            <p class="font-body text-[10px] tracking-[0.22em] text-white/60 uppercase font-medium">
+                            <p class="font-body text-xs sm:text-[13px] tracking-[0.22em] text-white/70 uppercase font-medium">
                                 MORE THAN A MEMBERSHIP.
                             </p>
-                            <p class="font-body text-[10px] tracking-[0.22em] text-white/60 uppercase font-medium">
+                            <p class="font-body text-xs sm:text-[13px] tracking-[0.22em] text-white/70 uppercase font-medium">
                                 A SKIN RITUAL.
                             </p>
                         </div>
@@ -638,7 +694,7 @@
                             <span class="font-heading font-light text-5xl sm:text-6xl text-white tracking-tight leading-none">
                                 $199
                             </span>
-                            <span class="font-body text-[11px] sm:text-xs tracking-[0.3em] text-white/70 uppercase mt-2 block font-light">
+                            <span class="font-body text-xs sm:text-sm tracking-[0.28em] text-white/75 uppercase mt-2 block font-light">
                                 / MONTH
                             </span>
                         </div>
@@ -648,10 +704,10 @@
 
                         <!-- Member Perks List (Exact bulletless copy from image) -->
                         <div>
-                            <h4 class="font-heading text-[10px] uppercase tracking-[0.25em] text-white/60 font-bold mb-3">
+                            <h4 class="font-heading text-xs sm:text-[13px] uppercase tracking-[0.22em] text-white/70 font-bold mb-3.5">
                                 MEMBER PERKS
                             </h4>
-                            <ul class="space-y-2 text-xs text-white/80 font-body leading-relaxed">
+                            <ul class="space-y-2.5 text-xs sm:text-[13px] text-white/90 font-body leading-relaxed">
                                 <li>20% savings on eligible treatments + skincare</li>
                                 <li>Priority booking</li>
                                 <li>Member-only access to new treatments</li>
@@ -661,12 +717,12 @@
                     </div>
 
                     <!-- Bottom CTA & Terms -->
-                    <div class="relative z-10 pt-6 max-w-[260px] sm:max-w-[280px]">
+                    <div class="relative z-10 pt-6 max-w-[280px] sm:max-w-[310px]">
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                            class="bg-[#D1BFA5] hover:bg-[#c4b195] text-near-black font-body font-bold text-xs uppercase tracking-[0.18em] py-3.5 px-6 rounded-full w-full text-center transition-all duration-300 block shadow-md">
+                            class="btn-primary btn-block text-xs sm:text-sm py-4">
                             JOIN THE GLASS SKIN CLUB &rarr;
                         </a>
-                        <p class="font-body text-[9px] uppercase tracking-[0.22em] text-white/50 text-center mt-3 block">
+                        <p class="font-body text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-white/60 text-center mt-3 block">
                             CANCEL ANYTIME · NO LONG-TERM COMMITMENT
                         </p>
                     </div>
@@ -675,7 +731,7 @@
 
             <!-- Bottom Sub-line matching replica -->
             <div class="text-center mt-12">
-                <p class="font-body text-[10px] sm:text-xs uppercase tracking-[0.25em] text-charcoal/40 font-medium">
+                <p class="font-body text-xs sm:text-sm uppercase tracking-[0.25em] text-charcoal/45 font-medium">
                     KOREAN-INSPIRED · PROVIDER-CURATED · GLASS SKIN OBSESSED
                 </p>
             </div>
@@ -831,12 +887,15 @@
                 <!-- Q11 -->
                 <details class="bg-white p-6 sm:p-8 group border border-light-gray hover:border-taupe/30 transition-all rounded-2xl shadow-soft">
                     <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider list-none marker:hidden [&::-webkit-details-marker]:hidden">
-                        <span>11. What is the Seoul Glow Drop?</span>
+                        <span class="flex items-center gap-2.5">
+                            <img src="assets/seoul%20drop%20logo.svg" alt="Seoul Drop Logo" class="h-5 w-auto object-contain inline-block" />
+                            <span>11. What is the Seoul Drop?</span>
+                        </span>
                         <i data-lucide="plus" class="w-5 h-5 text-taupe shrink-0 group-open:hidden"></i>
                         <i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0 hidden group-open:inline"></i>
                     </summary>
                     <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
-                        The Seoul Glow Drop is your rotating K-Beauty discovery included with the Glass Skin Membership.<br><br>
+                        The <strong>Seoul Drop</strong> is your rotating K-Beauty discovery included with the Glass Skin Membership.<br><br>
                         Selections may include curated skincare extras, masks, ampoules, or seasonal finishing touches, with the featured discovery changing periodically.<br><br>
                         <em>What's dropping next? You'll have to come in and see.</em>
                     </p>
@@ -846,7 +905,9 @@
     </section>
 
     <!-- Outro / Consultation CTA Section (Standard SuA Glow Luxury Outro) -->
-    <section data-nav-theme="light" class="bg-near-black text-white py-24 md:py-32 px-6 md:px-12 lg:px-16 text-center relative overflow-hidden">
+    <div id="nearme-placeholder" data-product="Korean Glass Skin Membership"></div>
+
+    <section id="final-consultation-cta" data-nav-theme="light" class="bg-near-black text-white py-24 md:py-32 px-6 md:px-12 lg:px-16 text-center relative overflow-hidden">
         <!-- Abstract Background Glow -->
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-taupe/10 blur-[100px] rounded-full pointer-events-none"></div>
 
@@ -872,7 +933,6 @@
         </div>
     </section>
 
-    <div id="nearme-placeholder" data-product="Korean Glass Skin Membership"></div>
     <div id="footer-placeholder"></div>
 
     <script src="oversight.js?v=48"></script>

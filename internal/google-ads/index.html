@@ -626,11 +626,22 @@
                 </div>
 
                 <!-- Campaign Quick Action & Metadata Card -->
-                <div class="pt-3 border-t border-slate-200 space-y-3">
+                <div class="pt-3 border-t border-slate-200 space-y-2.5">
                     <button type="button" onclick="copyFullCampaignText()" class="w-full py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-[#AA987C] text-white hover:text-slate-950 text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer group">
                         <i data-lucide="copy" class="w-3.5 h-3.5 text-[#AA987C] group-hover:text-slate-950 transition-colors"></i>
                         <span>Copy All Blueprints</span>
                     </button>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="google_ads_campaign_import.csv" download="google_ads_campaign_import.csv" class="py-2 px-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-semibold flex items-center justify-center gap-1.5 transition-colors text-center">
+                            <i data-lucide="download" class="w-3 h-3 text-slate-600"></i>
+                            <span>Ads CSV</span>
+                        </a>
+                        <a href="google_ads_locations_import.csv" download="google_ads_locations_import.csv" class="py-2 px-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-semibold flex items-center justify-center gap-1.5 transition-colors text-center">
+                            <i data-lucide="map-pin" class="w-3 h-3 text-slate-600"></i>
+                            <span>Geo CSV</span>
+                        </a>
+                    </div>
 
                     <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 text-[11px] text-slate-600 space-y-1.5">
                         <div class="flex items-center justify-between">
@@ -639,7 +650,7 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <span class="text-slate-400">Geo:</span>
-                            <span class="font-medium text-slate-800">Carrollton + DFW</span>
+                            <span class="font-semibold text-slate-900">Carrollton &amp; DFW, TX</span>
                         </div>
                         <div class="flex items-center justify-between">
                             <span class="text-slate-400">Call:</span>
@@ -715,8 +726,12 @@
                             <span class="font-bold text-rose-400 text-base">22 Waste-Prevention Terms</span>
                         </div>
                         <div class="flex items-center justify-between text-slate-300 text-sm">
+                            <span>Geo-Targeting</span>
+                            <span class="font-bold text-amber-300 text-xs">Carrollton &amp; DFW (No Intl)</span>
+                        </div>
+                        <div class="flex items-center justify-between text-slate-300 text-sm">
                             <span>Target Conversion Landing</span>
-                            <a href="../../korean-scalp-hair-rejuvenation.html" target="_blank" class="text-[#AA987C] hover:underline font-mono font-medium">/scalp-reset</a>
+                            <a href="../../korean-scalp-hair-rejuvenation.html" target="_blank" class="text-[#AA987C] hover:underline font-mono font-medium">suaglow.com/korean-scalp-hair-rejuvenation.html</a>
                         </div>
                     </div>
                     <div class="pt-2.5 border-t border-white/10 text-xs text-slate-400 leading-normal italic">
@@ -865,7 +880,7 @@
                                         <span class="text-slate-300 text-xs">•</span>
                                         <div class="google-ad-url">
                                             <span class="font-medium text-slate-800">SuA Glow Med Spa</span>
-                                            <span class="text-slate-400">https://suaglow.com/scalp-reset</span>
+                                            <span class="text-slate-400">https://suaglow.com/korean-scalp-hair-rejuvenation.html</span>
                                         </div>
                                     </div>
                                     <i data-lucide="more-vertical" class="w-4 h-4 text-slate-400"></i>
@@ -915,7 +930,7 @@
                                                 <span class="font-semibold text-xs text-slate-900 font-google">SuA Glow Med Spa</span>
                                                 <span class="text-[10px] font-bold text-slate-500 uppercase">Sponsored</span>
                                             </div>
-                                            <div class="text-[11px] text-slate-500 font-google">suaglow.com › scalp-reset</div>
+                                            <div class="text-[11px] text-slate-500 font-google">suaglow.com › korean-scalp-hair-rejuvenation</div>
                                         </div>
                                     </div>
                                     <i data-lucide="more-vertical" class="w-4 h-4 text-slate-400"></i>
@@ -983,37 +998,37 @@
                             <!-- Recommended Photographic Asset from Workspace -->
                             <div class="space-y-3 pt-1">
                                 <div class="space-y-1.5">
-                                    <div class="aspect-[16/10] sm:aspect-[16/9] w-full rounded-xl overflow-hidden border border-white/15 bg-slate-950 relative group shadow-sm">
-                                        <img id="ag1-visual-primary-img" src="../../assets/unisex_scalp_couple.jpg" alt="Unisex Scalp Rejuvenation - Follicle & Density Focus" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                                    <div class="aspect-[16/10] sm:aspect-[16/9] w-full rounded-xl overflow-hidden border border-[#AA987C]/40 bg-slate-950 relative group shadow-sm">
+                                        <img id="ag1-visual-primary-img" src="../../assets/google-ads-sua/hair/BA Hiar Loss 1 Curly Hair.png" alt="Clinical Hair Loss Before & After Density" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                                         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-3">
                                             <div>
-                                                <span id="ag1-visual-primary-badge" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#E5B869] text-slate-900 text-[10px] font-bold uppercase tracking-wider mb-1">Authentic Clinic Backdrop · Hair Focus</span>
-                                                <div id="ag1-visual-primary-caption" class="text-xs sm:text-sm text-white font-semibold">Follicular Density &amp; Scalp Parting ($399 Reset)</div>
+                                                <span id="ag1-visual-primary-badge" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#E5B869] text-slate-900 text-[10px] font-bold uppercase tracking-wider mb-1">Clinical Results · Hair &amp; Scalp</span>
+                                                <div id="ag1-visual-primary-caption" class="text-xs sm:text-sm text-white font-semibold">Follicular Density Restoration ($399 Reset)</div>
                                             </div>
                                             <span class="text-[10px] text-slate-300 font-mono hidden sm:inline-block">1:1 / Landscape Ready</span>
                                         </div>
                                     </div>
-                                    <div id="ag1-visual-primary-filename" class="text-xs text-slate-400 font-mono truncate">unisex_scalp_couple.jpg</div>
+                                    <div id="ag1-visual-primary-filename" class="text-xs text-slate-400 font-mono truncate">BA Hiar Loss 1 Curly Hair.png</div>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-3">
                                     <div class="space-y-1.5">
                                         <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
-                                            <img id="ag1-visual-thumb1-img" src="../../assets/scalp_analysis_consultation.jpg" alt="Scalp Analysis Consultation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                            <img id="ag1-visual-thumb1-img" src="../../assets/google-ads-sua/hair/BA Side Profile.png" alt="Side Profile Hair Loss Density" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
-                                                <span id="ag1-visual-thumb1-caption" class="text-xs text-white font-medium">Micro-Camera Scalp Diagnostics</span>
+                                                <span id="ag1-visual-thumb1-caption" class="text-xs text-white font-medium">Side Profile Scalp Density</span>
                                             </div>
                                         </div>
-                                        <div id="ag1-visual-thumb1-filename" class="text-xs text-slate-400 font-mono truncate">scalp_analysis_consultation.jpg</div>
+                                        <div id="ag1-visual-thumb1-filename" class="text-xs text-slate-400 font-mono truncate">BA Side Profile.png</div>
                                     </div>
                                     <div class="space-y-1.5">
                                         <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
-                                            <img id="ag1-visual-thumb2-img" src="../../assets/dep_scalp_woman_treatment.jpg" alt="DEP Needle-Free Infusion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                            <img id="ag1-visual-thumb2-img" src="../../assets/google-ads-sua/hair/Caucasian Hair Loss.png" alt="Caucasian Hair Loss & Scalp Density" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2">
-                                                <span id="ag1-visual-thumb2-caption" class="text-[10px] text-white font-medium">Needle-Free Transdermal Infusion</span>
+                                                <span id="ag1-visual-thumb2-caption" class="text-[10px] text-white font-medium">Hair Loss &amp; Parting Assessment</span>
                                             </div>
                                         </div>
-                                        <div id="ag1-visual-thumb2-filename" class="text-[10.5px] text-slate-400 font-mono truncate">dep_scalp_woman_treatment.jpg</div>
+                                        <div id="ag1-visual-thumb2-filename" class="text-[10.5px] text-slate-400 font-mono truncate">Caucasian Hair Loss.png</div>
                                     </div>
                                 </div>
                             </div>
@@ -1055,7 +1070,7 @@
                                 </div>
                                 <div>
                                     <span class="text-slate-400 font-medium block text-xs uppercase tracking-wide mb-1">Destination URL:</span>
-                                    <div class="p-2 bg-black rounded-lg border border-white/15 font-mono text-[#E5B869] font-semibold text-xs select-all">https://suaglow.com/scalp-reset</div>
+                                    <div class="p-2 bg-black rounded-lg border border-white/15 font-mono text-[#E5B869] font-semibold text-xs select-all">https://suaglow.com/korean-scalp-hair-rejuvenation.html</div>
                                 </div>
                             </div>
                         </div>
@@ -1388,7 +1403,7 @@
                                         <span class="text-slate-300 text-xs">•</span>
                                         <div class="google-ad-url">
                                             <span class="font-medium text-slate-800">SuA Glow Med Spa</span>
-                                            <span class="text-slate-400">https://suaglow.com/female-scalp-care</span>
+                                            <span class="text-slate-400">https://suaglow.com/korean-scalp-hair-rejuvenation.html</span>
                                         </div>
                                     </div>
                                     <i data-lucide="more-vertical" class="w-4 h-4 text-slate-400"></i>
@@ -1438,7 +1453,7 @@
                                                 <span class="font-semibold text-xs text-slate-900 font-google">SuA Glow Med Spa</span>
                                                 <span class="text-[10px] font-bold text-slate-500 uppercase">Sponsored</span>
                                             </div>
-                                            <div class="text-[11px] text-slate-500 font-google">suaglow.com › female-scalp-care</div>
+                                            <div class="text-[11px] text-slate-500 font-google">suaglow.com › korean-scalp-hair-rejuvenation</div>
                                         </div>
                                     </div>
                                     <i data-lucide="more-vertical" class="w-4 h-4 text-slate-400"></i>
@@ -1506,37 +1521,37 @@
                             <!-- Recommended Photographic Asset from Workspace -->
                             <div class="space-y-3 pt-1">
                                 <div class="space-y-1.5">
-                                    <div class="aspect-[16/10] sm:aspect-[16/9] w-full rounded-xl overflow-hidden border border-white/15 bg-slate-950 relative group shadow-sm">
-                                        <img id="ag2-visual-primary-img" src="../../assets/scalp_concern_parting.jpg" alt="Female Scalp Parting Line" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <div class="aspect-[16/10] sm:aspect-[16/9] w-full rounded-xl overflow-hidden border border-rose-400/40 bg-slate-950 relative group shadow-sm">
+                                        <img id="ag2-visual-primary-img" src="../../assets/google-ads-sua/hair/Asian woman mature hair loss.png" alt="Female Scalp Thinning & Parting" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                                         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-3">
                                             <div>
                                                 <span id="ag2-visual-primary-badge" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-rose-100 text-rose-800 text-[10px] font-bold uppercase tracking-wider mb-1">Authentic Scalp Analysis · Parting Focus</span>
-                                                <div id="ag2-visual-primary-caption" class="text-xs sm:text-sm text-white font-semibold">Female Scalp Parting Line &amp; Follicle Assessment</div>
+                                                <div id="ag2-visual-primary-caption" class="text-xs sm:text-sm text-white font-semibold">Female Scalp Parting &amp; Hair Density Concern</div>
                                             </div>
                                             <span class="text-[10px] text-slate-300 font-mono hidden sm:inline-block">1:1 / Landscape Ready</span>
                                         </div>
                                     </div>
-                                    <div id="ag2-visual-primary-filename" class="text-xs text-slate-400 font-mono truncate">scalp_concern_parting.jpg</div>
+                                    <div id="ag2-visual-primary-filename" class="text-xs text-slate-400 font-mono truncate">Asian woman mature hair loss.png</div>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-3">
                                     <div class="space-y-1.5">
                                         <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
-                                            <img id="ag2-visual-thumb1-img" src="../../assets/dep_scalp_woman_treatment.jpg" alt="Clinical Scalp Infusion for Women" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                            <img id="ag2-visual-thumb1-img" src="../../assets/google-ads-sua/hair/Woman Blonde Asian Hair Loss seen on brush.png" alt="Hair Loss Seen on Brush" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
-                                                <span id="ag2-visual-thumb1-caption" class="text-xs text-white font-medium">Targeted Parting Infusion</span>
+                                                <span id="ag2-visual-thumb1-caption" class="text-xs text-white font-medium">Excess Shedding on Brush</span>
                                             </div>
                                         </div>
-                                        <div id="ag2-visual-thumb1-filename" class="text-xs text-slate-400 font-mono truncate">dep_scalp_woman_treatment.jpg</div>
+                                        <div id="ag2-visual-thumb1-filename" class="text-xs text-slate-400 font-mono truncate">Woman Blonde Asian Hair Loss seen on brush.png</div>
                                     </div>
                                     <div class="space-y-1.5">
                                         <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
-                                            <img id="ag2-visual-thumb2-img" src="../../assets/scalp_concern_texture.jpg" alt="Scalp Barrier & Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                            <img id="ag2-visual-thumb2-img" src="../../assets/google-ads-sua/hair/Hair Loss of Top.png" alt="Top-Down Scalp Parting Assessment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2">
-                                                <span id="ag2-visual-thumb2-caption" class="text-[10px] text-white font-medium">Scalp Barrier &amp; Skin Texture</span>
+                                                <span id="ag2-visual-thumb2-caption" class="text-[10px] text-white font-medium">Crown &amp; Parting Thinning</span>
                                             </div>
                                         </div>
-                                        <div id="ag2-visual-thumb2-filename" class="text-[10.5px] text-slate-400 font-mono truncate">scalp_concern_texture.jpg</div>
+                                        <div id="ag2-visual-thumb2-filename" class="text-[10.5px] text-slate-400 font-mono truncate">Hair Loss of Top.png</div>
                                     </div>
                                 </div>
                             </div>
@@ -1578,7 +1593,7 @@
                                 </div>
                                 <div>
                                     <span class="text-slate-400 font-medium block text-xs uppercase tracking-wide mb-1">Destination URL:</span>
-                                    <div class="p-2 bg-black rounded-lg border border-white/15 font-mono text-[#E5B869] font-semibold text-xs select-all">https://suaglow.com/female-scalp-care</div>
+                                    <div class="p-2 bg-black rounded-lg border border-white/15 font-mono text-[#E5B869] font-semibold text-xs select-all">https://suaglow.com/korean-scalp-hair-rejuvenation.html</div>
                                 </div>
                             </div>
                         </div>
@@ -1893,7 +1908,7 @@
                                         <span class="text-slate-300 text-xs">•</span>
                                         <div class="google-ad-url">
                                             <span class="font-medium text-slate-800">SuA Glow Med Spa</span>
-                                            <span class="text-slate-400">https://suaglow.com/mens-scalp-reset</span>
+                                            <span class="text-slate-400">https://suaglow.com/korean-scalp-hair-rejuvenation.html</span>
                                         </div>
                                     </div>
                                     <i data-lucide="more-vertical" class="w-4 h-4 text-slate-400"></i>
@@ -1901,7 +1916,7 @@
 
                                 <!-- Clickable Headlines -->
                                 <div>
-                                    <a href="../../seoul-man.html" target="_blank" class="google-ad-title block font-google" id="ag3-serp-desktop-title">
+                                    <a href="../../korean-scalp-hair-rejuvenation.html" target="_blank" class="google-ad-title block font-google" id="ag3-serp-desktop-title">
                                         Hairline Receding? Act Early | Men's Scalp Density Reset | SuA Glow Med Spa
                                     </a>
                                 </div>
@@ -1943,7 +1958,7 @@
                                                 <span class="font-semibold text-xs text-slate-900 font-google">SuA Glow Med Spa</span>
                                                 <span class="text-[10px] font-bold text-slate-500 uppercase">Sponsored</span>
                                             </div>
-                                            <div class="text-[11px] text-slate-500 font-google">suaglow.com › mens-scalp-reset</div>
+                                            <div class="text-[11px] text-slate-500 font-google">suaglow.com › korean-scalp-hair-rejuvenation</div>
                                         </div>
                                     </div>
                                     <i data-lucide="more-vertical" class="w-4 h-4 text-slate-400"></i>
@@ -1951,7 +1966,7 @@
 
                                 <!-- Mobile Headline Link -->
                                 <div>
-                                    <a href="../../seoul-man.html" target="_blank" class="text-base sm:text-lg font-medium text-[#1a0dab] hover:underline font-google leading-snug block" id="ag3-serp-mobile-title">
+                                    <a href="../../korean-scalp-hair-rejuvenation.html" target="_blank" class="text-base sm:text-lg font-medium text-[#1a0dab] hover:underline font-google leading-snug block" id="ag3-serp-mobile-title">
                                         Hairline Receding? Act Early | Men's Scalp Density Reset | SuA Glow Med Spa
                                     </a>
                                 </div>
@@ -2011,37 +2026,37 @@
                             <!-- Recommended Photographic Asset from Workspace -->
                             <div class="space-y-3 pt-1">
                                 <div class="space-y-1.5">
-                                    <div class="aspect-[16/10] sm:aspect-[16/9] w-full rounded-xl overflow-hidden border border-white/15 bg-slate-950 relative group shadow-sm">
-                                        <img id="ag3-visual-primary-img" src="../../assets/scalp_concern_hairline.jpg" alt="Male Hairline Recession Pattern" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <div class="aspect-[16/10] sm:aspect-[16/9] w-full rounded-xl overflow-hidden border border-sky-400/40 bg-slate-950 relative group shadow-sm">
+                                        <img id="ag3-visual-primary-img" src="../../assets/google-ads-sua/hair/Male looking at Hair Loss.png" alt="Male Hairline & Crown Hair Loss" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                                         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-3">
                                             <div>
-                                                <span id="ag3-visual-primary-badge" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800 text-[10px] font-bold uppercase tracking-wider mb-1">Authentic Scalp Analysis · Hairline Focus</span>
-                                                <div id="ag3-visual-primary-caption" class="text-xs sm:text-sm text-white font-semibold">Male Frontal &amp; Temple Hairline Recession Pattern</div>
+                                                <span id="ag3-visual-primary-badge" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800 text-[10px] font-bold uppercase tracking-wider mb-1">Male Scalp Analysis · Hairline &amp; Crown</span>
+                                                <div id="ag3-visual-primary-caption" class="text-xs sm:text-sm text-white font-semibold">Male Hairline Recession &amp; Crown Thinning</div>
                                             </div>
                                             <span class="text-[10px] text-slate-300 font-mono hidden sm:inline-block">1:1 / Landscape Ready</span>
                                         </div>
                                     </div>
-                                    <div id="ag3-visual-primary-filename" class="text-xs text-slate-400 font-mono truncate">scalp_concern_hairline.jpg</div>
+                                    <div id="ag3-visual-primary-filename" class="text-xs text-slate-400 font-mono truncate">Male looking at Hair Loss.png</div>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-3">
                                     <div class="space-y-1.5">
                                         <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
-                                            <img id="ag3-visual-thumb1-img" src="../../assets/dep_scalp_man_treatment.jpg" alt="Clinical Needle-Free Male Scalp Treatment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                            <img id="ag3-visual-thumb1-img" src="../../assets/google-ads-sua/hair/BA Side Profile.png" alt="Male Hair Density Before & After" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
-                                                <span id="ag3-visual-thumb1-caption" class="text-xs text-white font-medium">Needle-Free Hairline Infusion</span>
+                                                <span id="ag3-visual-thumb1-caption" class="text-xs text-white font-medium">Hairline Density Results</span>
                                             </div>
                                         </div>
-                                        <div id="ag3-visual-thumb1-filename" class="text-xs text-slate-400 font-mono truncate">dep_scalp_man_treatment.jpg</div>
+                                        <div id="ag3-visual-thumb1-filename" class="text-xs text-slate-400 font-mono truncate">BA Side Profile.png</div>
                                     </div>
                                     <div class="space-y-1.5">
                                         <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/15 bg-slate-950 relative group">
-                                            <img id="ag3-visual-thumb2-img" src="../../assets/dep_hair_man.jpg" alt="Male Hair Density Consultation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                            <img id="ag3-visual-thumb2-img" src="../../assets/google-ads-sua/hair/Hair Loss of Top.png" alt="Male Vertex & Crown Hair Density" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2">
-                                                <span id="ag3-visual-thumb2-caption" class="text-[10px] text-white font-medium">Male Hair Density Consultation</span>
+                                                <span id="ag3-visual-thumb2-caption" class="text-[10px] text-white font-medium">Vertex &amp; Crown Support</span>
                                             </div>
                                         </div>
-                                        <div id="ag3-visual-thumb2-filename" class="text-[10.5px] text-slate-400 font-mono truncate">dep_hair_man.jpg</div>
+                                        <div id="ag3-visual-thumb2-filename" class="text-[10.5px] text-slate-400 font-mono truncate">Hair Loss of Top.png</div>
                                     </div>
                                 </div>
                             </div>
@@ -2083,7 +2098,7 @@
                                 </div>
                                 <div>
                                     <span class="text-slate-400 font-medium block text-xs uppercase tracking-wide mb-1">Destination URL:</span>
-                                    <div class="p-2 bg-black rounded-lg border border-white/15 font-mono text-[#E5B869] font-semibold text-xs select-all">https://suaglow.com/mens-scalp-reset</div>
+                                    <div class="p-2 bg-black rounded-lg border border-white/15 font-mono text-[#E5B869] font-semibold text-xs select-all">https://suaglow.com/korean-scalp-hair-rejuvenation.html</div>
                                 </div>
                             </div>
                         </div>
@@ -2293,95 +2308,96 @@
 
                 <!-- 1:1 Image Grid -->
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-5">
-                    <!-- Card 1: Unisex Couple Graphic -->
-                    <a href="../../assets/unisex_scalp_couple.jpg" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border border-[#AA987C]/50 bg-slate-100 shadow-sm hover:shadow-lg hover:border-[#AA987C] transition-all duration-300">
-                        <img src="../../assets/unisex_scalp_couple.jpg" alt="Unisex Scalp & Hair Density" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
-                            <span class="text-[10px] sm:text-xs font-mono text-amber-300 font-medium truncate">unisex_scalp_couple.jpg</span>
-                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Hair Density &amp; Scalp Parting (SuA Glow Clinic)</h4>
+                    <!-- New Hair Asset 1: BA Curly Hair Loss -->
+                    <a href="../../assets/google-ads-sua/hair/BA Hiar Loss 1 Curly Hair.png" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border-2 border-[#AA987C] bg-slate-950 shadow-md hover:shadow-xl transition-all duration-300">
+                        <img src="../../assets/google-ads-sua/hair/BA Hiar Loss 1 Curly Hair.png" alt="Clinical Hair Loss Before & After (Curly Hair)" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-mono text-[#E5B869] font-bold truncate">BA Hiar Loss 1 Curly Hair.png</span>
+                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Clinical Before &amp; After (Curly Hair Density)</h4>
                         </div>
-                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/50 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/60 backdrop-blur-sm text-[#E5B869] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                             <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                         </div>
                     </a>
-                    <!-- Card 1 -->
+
+                    <!-- New Hair Asset 2: BA Side Profile -->
+                    <a href="../../assets/google-ads-sua/hair/BA Side Profile.png" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border-2 border-[#AA987C] bg-slate-950 shadow-md hover:shadow-xl transition-all duration-300">
+                        <img src="../../assets/google-ads-sua/hair/BA Side Profile.png" alt="Side Profile Hair Density Results" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-mono text-[#E5B869] font-bold truncate">BA Side Profile.png</span>
+                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Hair Density Results (Side Profile)</h4>
+                        </div>
+                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/60 backdrop-blur-sm text-[#E5B869] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </div>
+                    </a>
+
+                    <!-- New Hair Asset 3: Asian Woman Mature Hair Loss -->
+                    <a href="../../assets/google-ads-sua/hair/Asian woman mature hair loss.png" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border-2 border-rose-400 bg-slate-950 shadow-md hover:shadow-xl transition-all duration-300">
+                        <img src="../../assets/google-ads-sua/hair/Asian woman mature hair loss.png" alt="Mature Female Scalp Thinning & Parting" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-mono text-rose-300 font-bold truncate">Asian woman mature hair loss.png</span>
+                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Mature Female Scalp Thinning &amp; Parting</h4>
+                        </div>
+                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/60 backdrop-blur-sm text-rose-300 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </div>
+                    </a>
+
+                    <!-- New Hair Asset 4: Male Looking at Hair Loss -->
+                    <a href="../../assets/google-ads-sua/hair/Male looking at Hair Loss.png" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border-2 border-sky-400 bg-slate-950 shadow-md hover:shadow-xl transition-all duration-300">
+                        <img src="../../assets/google-ads-sua/hair/Male looking at Hair Loss.png" alt="Male Hairline & Crown Hair Loss Concern" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-mono text-sky-300 font-bold truncate">Male looking at Hair Loss.png</span>
+                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Male Hairline &amp; Crown Hair Loss Concern</h4>
+                        </div>
+                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/60 backdrop-blur-sm text-sky-300 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </div>
+                    </a>
+
+                    <!-- New Hair Asset 5: Woman Hair Loss on Brush -->
+                    <a href="../../assets/google-ads-sua/hair/Woman Blonde Asian Hair Loss seen on brush.png" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border-2 border-rose-400 bg-slate-950 shadow-md hover:shadow-xl transition-all duration-300">
+                        <img src="../../assets/google-ads-sua/hair/Woman Blonde Asian Hair Loss seen on brush.png" alt="Hair Loss on Brush & Excessive Shedding" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-mono text-rose-300 font-bold truncate">Woman Blonde Asian Hair Loss seen on brush.png</span>
+                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Excessive Shedding &amp; Hair on Brush</h4>
+                        </div>
+                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/60 backdrop-blur-sm text-rose-300 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </div>
+                    </a>
+
+                    <!-- New Hair Asset 6: Hair Loss of Top -->
+                    <a href="../../assets/google-ads-sua/hair/Hair Loss of Top.png" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border-2 border-amber-400 bg-slate-950 shadow-md hover:shadow-xl transition-all duration-300">
+                        <img src="../../assets/google-ads-sua/hair/Hair Loss of Top.png" alt="Top-Down Scalp Parting & Crown Thinning" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-mono text-amber-300 font-bold truncate">Hair Loss of Top.png</span>
+                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Overhead Parting &amp; Crown Thinning</h4>
+                        </div>
+                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/60 backdrop-blur-sm text-amber-300 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </div>
+                    </a>
+
+                    <!-- New Hair Asset 7: Caucasian Hair Loss -->
+                    <a href="../../assets/google-ads-sua/hair/Caucasian Hair Loss.png" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border-2 border-amber-400 bg-slate-950 shadow-md hover:shadow-xl transition-all duration-300">
+                        <img src="../../assets/google-ads-sua/hair/Caucasian Hair Loss.png" alt="Caucasian Hair Loss & Density Evaluation" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-mono text-amber-300 font-bold truncate">Caucasian Hair Loss.png</span>
+                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Caucasian Scalp Thinning &amp; Density Evaluation</h4>
+                        </div>
+                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/60 backdrop-blur-sm text-amber-300 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </div>
+                    </a>
+
+                    <!-- Card 8: Hero Scalp Rejuvenation -->
                     <a href="../../assets/korean_scalp_hero_bg.jpg" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-2xs hover:shadow-lg hover:border-[#AA987C] transition-all duration-300">
                         <img src="../../assets/korean_scalp_hero_bg.jpg" alt="Hero Scalp Rejuvenation" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
                             <span class="text-[10px] sm:text-xs font-mono text-amber-300 font-medium truncate">korean_scalp_hero_bg.jpg</span>
                             <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Hero Scalp Rejuvenation</h4>
-                        </div>
-                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/50 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                        </div>
-                    </a>
-
-                    <!-- Card 2 -->
-                    <a href="../../assets/korean_female_scalp_model.jpg" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-2xs hover:shadow-lg hover:border-[#AA987C] transition-all duration-300">
-                        <img src="../../assets/korean_female_scalp_model.jpg" alt="Female Scalp Model (Clinic)" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
-                            <span class="text-[10px] sm:text-xs font-mono text-amber-300 font-medium truncate">korean_female_scalp_model.jpg</span>
-                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Female Scalp Model (Clinic)</h4>
-                        </div>
-                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/50 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                        </div>
-                    </a>
-
-                    <!-- Card 3 -->
-                    <a href="../../assets/korean_male_scalp_model.jpg" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-2xs hover:shadow-lg hover:border-[#AA987C] transition-all duration-300">
-                        <img src="../../assets/korean_male_scalp_model.jpg" alt="Male Scalp Model (Clinic)" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
-                            <span class="text-[10px] sm:text-xs font-mono text-amber-300 font-medium truncate">korean_male_scalp_model.jpg</span>
-                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Male Scalp Model (Clinic)</h4>
-                        </div>
-                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/50 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                        </div>
-                    </a>
-
-                    <!-- Card 4 -->
-                    <a href="../../assets/korean_female_seamless_model.jpg" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-2xs hover:shadow-lg hover:border-[#AA987C] transition-all duration-300">
-                        <img src="../../assets/korean_female_seamless_model.jpg" alt="Female Scalp & Flowing Hair" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
-                            <span class="text-[10px] sm:text-xs font-mono text-amber-300 font-medium truncate">korean_female_seamless_model.jpg</span>
-                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Female Scalp &amp; Flowing Hair</h4>
-                        </div>
-                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/50 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                        </div>
-                    </a>
-
-                    <!-- Card 5 -->
-                    <a href="../../assets/korean_male_seamless_model.jpg" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-2xs hover:shadow-lg hover:border-[#AA987C] transition-all duration-300">
-                        <img src="../../assets/korean_male_seamless_model.jpg" alt="Male Scalp & Hair Density" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
-                            <span class="text-[10px] sm:text-xs font-mono text-amber-300 font-medium truncate">korean_male_seamless_model.jpg</span>
-                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Male Scalp &amp; Hair Density</h4>
-                        </div>
-                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/50 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                        </div>
-                    </a>
-
-                    <!-- Card 6 -->
-                    <a href="../../assets/korean_female_model_cutout.png" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border border-slate-200 bg-gradient-to-b from-slate-100 to-slate-200 shadow-2xs hover:shadow-lg hover:border-[#AA987C] transition-all duration-300">
-                        <img src="../../assets/korean_female_model_cutout.png" alt="Female Model Cutout Profile" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
-                            <span class="text-[10px] sm:text-xs font-mono text-amber-300 font-medium truncate">korean_female_model_cutout.png</span>
-                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Female Model Cutout Profile</h4>
-                        </div>
-                        <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/50 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                        </div>
-                    </a>
-
-                    <!-- Card 7 -->
-                    <a href="../../assets/korean_male_model_cutout.png" target="_blank" class="group block relative aspect-square rounded-2xl overflow-hidden border border-slate-200 bg-gradient-to-b from-slate-100 to-slate-200 shadow-2xs hover:shadow-lg hover:border-[#AA987C] transition-all duration-300">
-                        <img src="../../assets/korean_male_model_cutout.png" alt="Male Model Cutout Profile" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4">
-                            <span class="text-[10px] sm:text-xs font-mono text-amber-300 font-medium truncate">korean_male_model_cutout.png</span>
-                            <h4 class="text-xs sm:text-sm font-semibold text-white leading-tight drop-shadow-sm mt-0.5">Male Model Cutout Profile</h4>
                         </div>
                         <div class="absolute top-2.5 right-2.5 w-7 h-7 rounded-lg bg-black/50 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                             <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
@@ -3770,17 +3786,17 @@
                     visualAngle: {
                         pill: "Angle 1 of 4: Value & Intro Offer",
                         headline: "Korean Scalp Reset | $399 Introductory Treatment",
-                        brief: "\"Clean split focus of scalp parting and healthy hair follicles highlighting the complete $399 Korean Scalp Reset intro protocol.\"",
-                        primaryImg: "../../assets/unisex_scalp_couple.jpg",
-                        primaryBadge: "Authentic Clinic Backdrop · Hair Focus",
-                        primaryCaption: "Follicular Density & Scalp Parting ($399 Reset)",
-                        primaryFilename: "unisex_scalp_couple.jpg",
-                        thumb1Img: "../../assets/scalp_analysis_consultation.jpg",
-                        thumb1Caption: "Micro-Camera Scalp Diagnostics",
-                        thumb1Filename: "scalp_analysis_consultation.jpg",
-                        thumb2Img: "../../assets/dep_scalp_woman_treatment.jpg",
-                        thumb2Caption: "Needle-Free Transdermal Infusion",
-                        thumb2Filename: "dep_scalp_woman_treatment.jpg"
+                        brief: "\"Clean clinical demonstration of follicle density restoration highlighting the complete $399 Korean Scalp Reset intro protocol.\"",
+                        primaryImg: "../../assets/google-ads-sua/hair/BA Hiar Loss 1 Curly Hair.png",
+                        primaryBadge: "Clinical Results · Follicular Density",
+                        primaryCaption: "Follicular Density Restoration ($399 Reset)",
+                        primaryFilename: "BA Hiar Loss 1 Curly Hair.png",
+                        thumb1Img: "../../assets/google-ads-sua/hair/BA Side Profile.png",
+                        thumb1Caption: "Side Profile Density Assessment",
+                        thumb1Filename: "BA Side Profile.png",
+                        thumb2Img: "../../assets/google-ads-sua/hair/Caucasian Hair Loss.png",
+                        thumb2Caption: "Parting Line Scalp Analysis",
+                        thumb2Filename: "Caucasian Hair Loss.png"
                     }
                 },
                 {
@@ -3795,17 +3811,17 @@
                     visualAngle: {
                         pill: "Angle 2 of 4: Local Authority & Medical Care",
                         headline: "Physician-Guided Scalp Care | Carrollton Medical Clinic",
-                        brief: "\"Physician-guided consultation room setting with high-magnification trichoscope screen examining follicular root health in Carrollton, TX.\"",
-                        primaryImg: "../../assets/scalp_analysis_consultation.jpg",
-                        primaryBadge: "Authentic Clinic Consultation · Scope Diagnostics",
-                        primaryCaption: "High-Magnification Trichoscopic Scalp Analysis",
-                        primaryFilename: "scalp_analysis_consultation.jpg",
-                        thumb1Img: "../../assets/unisex_scalp_couple.jpg",
+                        brief: "\"Clinical scalp analysis and follicular root health assessment in Carrollton, TX.\"",
+                        primaryImg: "../../assets/google-ads-sua/hair/BA Side Profile.png",
+                        primaryBadge: "Authentic Clinical Results · Side Profile",
+                        primaryCaption: "Side Profile Scalp & Hairline Density",
+                        primaryFilename: "BA Side Profile.png",
+                        thumb1Img: "../../assets/google-ads-sua/hair/Caucasian Hair Loss.png",
                         thumb1Caption: "Pre-Treatment Density Assessment",
-                        thumb1Filename: "unisex_scalp_couple.jpg",
-                        thumb2Img: "../../assets/dep_scalp_woman_treatment.jpg",
-                        thumb2Caption: "Clinical Protocol Administration",
-                        thumb2Filename: "dep_scalp_woman_treatment.jpg"
+                        thumb1Filename: "Caucasian Hair Loss.png",
+                        thumb2Img: "../../assets/google-ads-sua/hair/Hair Loss of Top.png",
+                        thumb2Caption: "Overhead Density Mapping",
+                        thumb2Filename: "Hair Loss of Top.png"
                     }
                 },
                 {
@@ -3821,16 +3837,16 @@
                         pill: "Angle 3 of 4: Medical vs Head Spa Contrast",
                         headline: "More Than a Head Spa | Cellular Follicle Rejuvenation",
                         brief: "\"Cellular-level follicle contrast demonstrating medical transdermal delivery into the dermal layer vs superficial hair washing at a head spa.\"",
-                        primaryImg: "../../assets/dep_scalp_woman_treatment.jpg",
-                        primaryBadge: "Clinical Treatment Bed · Dermal Delivery",
-                        primaryCaption: "DEP Medical Transdermal Delivery (Sub-Dermal Active Infusion)",
-                        primaryFilename: "dep_scalp_woman_treatment.jpg",
-                        thumb1Img: "../../assets/unisex_scalp_couple.jpg",
-                        thumb1Caption: "Deep Root Follicle Support",
-                        thumb1Filename: "unisex_scalp_couple.jpg",
-                        thumb2Img: "../../assets/scalp_analysis_consultation.jpg",
-                        thumb2Caption: "Clinical Scalp Diagnostics",
-                        thumb2Filename: "scalp_analysis_consultation.jpg"
+                        primaryImg: "../../assets/google-ads-sua/hair/Caucasian Hair Loss.png",
+                        primaryBadge: "Clinical Assessment · Root Support",
+                        primaryCaption: "Follicle Health & Scalp Barrier Analysis",
+                        primaryFilename: "Caucasian Hair Loss.png",
+                        thumb1Img: "../../assets/google-ads-sua/hair/BA Hiar Loss 1 Curly Hair.png",
+                        thumb1Caption: "Follicular Vitality Results",
+                        thumb1Filename: "BA Hiar Loss 1 Curly Hair.png",
+                        thumb2Img: "../../assets/google-ads-sua/hair/BA Side Profile.png",
+                        thumb2Caption: "Side Profile Density Check",
+                        thumb2Filename: "BA Side Profile.png"
                     }
                 },
                 {
@@ -3845,17 +3861,17 @@
                     visualAngle: {
                         pill: "Angle 4 of 4: Needle-Free Transdermal Tech",
                         headline: "Needle-Free Hair Rejuvenation | FDA-Cleared DEP Tech",
-                        brief: "\"Close-up macro demonstration of the FDA-cleared DEP handheld applicator delivering active peptides into follicles with zero needles or pain.\"",
-                        primaryImg: "../../assets/dep_scalp_woman_treatment.jpg",
-                        primaryBadge: "FDA-Cleared Technology · Needle-Free",
-                        primaryCaption: "Handheld DEP Applicator Delivering Actives Without Injections",
-                        primaryFilename: "dep_scalp_woman_treatment.jpg",
-                        thumb1Img: "../../assets/scalp_analysis_consultation.jpg",
-                        thumb1Caption: "Digital Follicle Mapping",
-                        thumb1Filename: "scalp_analysis_consultation.jpg",
-                        thumb2Img: "../../assets/unisex_scalp_couple.jpg",
-                        thumb2Caption: "Full Scalp Treatment Area",
-                        thumb2Filename: "unisex_scalp_couple.jpg"
+                        brief: "\"Targeted transdermal delivery of active peptides into follicles with zero needles or pain.\"",
+                        primaryImg: "../../assets/google-ads-sua/hair/Hair Loss of Top.png",
+                        primaryBadge: "FDA-Cleared Technology · Zero Needles",
+                        primaryCaption: "Top-Down Scalp Parting & Crown Follicle Infusion",
+                        primaryFilename: "Hair Loss of Top.png",
+                        thumb1Img: "../../assets/google-ads-sua/hair/BA Hiar Loss 1 Curly Hair.png",
+                        thumb1Caption: "Crown Restoration Results",
+                        thumb1Filename: "BA Hiar Loss 1 Curly Hair.png",
+                        thumb2Img: "../../assets/google-ads-sua/hair/BA Side Profile.png",
+                        thumb2Caption: "Full Scalp Density Balance",
+                        thumb2Filename: "BA Side Profile.png"
                     }
                 }
             ],
@@ -3872,17 +3888,17 @@
                     visualAngle: {
                         pill: "Angle 1 of 4: Widening Part Detection",
                         headline: "Widening Part? | Female Follicle Restoration",
-                        brief: "\"Macro top-down view of female scalp parting line illustrating early follicular spacing and hair miniaturization.\"",
-                        primaryImg: "../../assets/scalp_concern_parting.jpg",
+                        brief: "\"Examination of female scalp parting line illustrating early follicular spacing and hair miniaturization.\"",
+                        primaryImg: "../../assets/google-ads-sua/hair/Asian woman mature hair loss.png",
                         primaryBadge: "Authentic Scalp Analysis · Parting Focus",
                         primaryCaption: "Female Scalp Parting Line & Hair Miniaturization Assessment",
-                        primaryFilename: "scalp_concern_parting.jpg",
-                        thumb1Img: "../../assets/dep_scalp_woman_treatment.jpg",
-                        thumb1Caption: "Targeted Parting Infusion",
-                        thumb1Filename: "dep_scalp_woman_treatment.jpg",
-                        thumb2Img: "../../assets/scalp_concern_texture.jpg",
-                        thumb2Caption: "Scalp Barrier & Skin Texture",
-                        thumb2Filename: "scalp_concern_texture.jpg"
+                        primaryFilename: "Asian woman mature hair loss.png",
+                        thumb1Img: "../../assets/google-ads-sua/hair/Woman Blonde Asian Hair Loss seen on brush.png",
+                        thumb1Caption: "Excessive Hair Shedding Check",
+                        thumb1Filename: "Woman Blonde Asian Hair Loss seen on brush.png",
+                        thumb2Img: "../../assets/google-ads-sua/hair/Hair Loss of Top.png",
+                        thumb2Caption: "Overhead Parting Analysis",
+                        thumb2Filename: "Hair Loss of Top.png"
                     }
                 },
                 {
@@ -3897,17 +3913,17 @@
                     visualAngle: {
                         pill: "Angle 2 of 4: Female Scalp Reset ($399)",
                         headline: "$399 Female Scalp Reset | Restorative Korean Protocol",
-                        brief: "\"Comfortable clinical suite environment showcasing a woman receiving the non-invasive Korean Scalp Reset treatment.\"",
-                        primaryImg: "../../assets/dep_scalp_woman_treatment.jpg",
-                        primaryBadge: "Authentic Treatment Suite · Female Care",
+                        brief: "\"Comfortable clinical environment showcasing non-invasive Korean Scalp Reset treatment for women.\"",
+                        primaryImg: "../../assets/google-ads-sua/hair/Woman Blonde Asian Hair Loss seen on brush.png",
+                        primaryBadge: "Authentic Analysis · Shedding Awareness",
                         primaryCaption: "Targeted Korean Scalp Reset for Women ($399)",
-                        primaryFilename: "dep_scalp_woman_treatment.jpg",
-                        thumb1Img: "../../assets/scalp_concern_parting.jpg",
+                        primaryFilename: "Woman Blonde Asian Hair Loss seen on brush.png",
+                        thumb1Img: "../../assets/google-ads-sua/hair/Asian woman mature hair loss.png",
                         thumb1Caption: "Parting Line Targeting",
-                        thumb1Filename: "scalp_concern_parting.jpg",
-                        thumb2Img: "../../assets/scalp_concern_texture.jpg",
-                        thumb2Caption: "Healthy Follicular Environment",
-                        thumb2Filename: "scalp_concern_texture.jpg"
+                        thumb1Filename: "Asian woman mature hair loss.png",
+                        thumb2Img: "../../assets/google-ads-sua/hair/Hair Loss of Top.png",
+                        thumb2Caption: "Crown & Vertex Health",
+                        thumb2Filename: "Hair Loss of Top.png"
                     }
                 },
                 {
@@ -3922,17 +3938,17 @@
                     visualAngle: {
                         pill: "Angle 3 of 4: Hairline & Parting Density",
                         headline: "Restore Hairline & Parting Density | Women's Scalp Care",
-                        brief: "\"High-definition inspection of temporal hairline and frontal part density, focusing on cellular root activation.\"",
-                        primaryImg: "../../assets/scalp_concern_parting.jpg",
+                        brief: "\"Inspection of temporal hairline and frontal part density, focusing on cellular root activation.\"",
+                        primaryImg: "../../assets/google-ads-sua/hair/Hair Loss of Top.png",
                         primaryBadge: "Diagnostic Scope · Density Check",
-                        primaryCaption: "Frontal Parting & Temple Hairline Density Check",
-                        primaryFilename: "scalp_concern_parting.jpg",
-                        thumb1Img: "../../assets/dep_scalp_woman_treatment.jpg",
-                        thumb1Caption: "Cellular Peptide Delivery",
-                        thumb1Filename: "dep_scalp_woman_treatment.jpg",
-                        thumb2Img: "../../assets/scalp_concern_texture.jpg",
-                        thumb2Caption: "Micro-Circulation Support",
-                        thumb2Filename: "scalp_concern_texture.jpg"
+                        primaryCaption: "Frontal Parting & Crown Density Check",
+                        primaryFilename: "Hair Loss of Top.png",
+                        thumb1Img: "../../assets/google-ads-sua/hair/Asian woman mature hair loss.png",
+                        thumb1Caption: "Parting Line Restoration",
+                        thumb1Filename: "Asian woman mature hair loss.png",
+                        thumb2Img: "../../assets/google-ads-sua/hair/Woman Blonde Asian Hair Loss seen on brush.png",
+                        thumb2Caption: "Shedding Reduction Support",
+                        thumb2Filename: "Woman Blonde Asian Hair Loss seen on brush.png"
                     }
                 },
                 {
@@ -3947,17 +3963,17 @@
                     visualAngle: {
                         pill: "Angle 4 of 4: Needle-Free Clinical Infusion",
                         headline: "Pain-Free Scalp Infusion | Zero Needles · Zero Downtime",
-                        brief: "\"Gentle glide of the DEP transdermal device along the female scalp line, emphasizing pain-free comfort and zero downtime.\"",
-                        primaryImg: "../../assets/dep_scalp_woman_treatment.jpg",
+                        brief: "\"Gentle transdermal delivery along the female scalp line, emphasizing pain-free comfort and zero downtime.\"",
+                        primaryImg: "../../assets/google-ads-sua/hair/Asian woman mature hair loss.png",
                         primaryBadge: "DEP Transdermal · Zero Injections",
-                        primaryCaption: "Comfortable DEP Transdermal Applicator (Zero Injections)",
-                        primaryFilename: "dep_scalp_woman_treatment.jpg",
-                        thumb1Img: "../../assets/scalp_concern_parting.jpg",
-                        thumb1Caption: "Part Line Follicle Nutrition",
-                        thumb1Filename: "scalp_concern_parting.jpg",
-                        thumb2Img: "../../assets/scalp_concern_texture.jpg",
-                        thumb2Caption: "Surface Barrier Normalization",
-                        thumb2Filename: "scalp_concern_texture.jpg"
+                        primaryCaption: "Comfortable Transdermal Delivery for Women",
+                        primaryFilename: "Asian woman mature hair loss.png",
+                        thumb1Img: "../../assets/google-ads-sua/hair/Hair Loss of Top.png",
+                        thumb1Caption: "Crown Follicle Nutrition",
+                        thumb1Filename: "Hair Loss of Top.png",
+                        thumb2Img: "../../assets/google-ads-sua/hair/Woman Blonde Asian Hair Loss seen on brush.png",
+                        thumb2Caption: "Follicle Retention Support",
+                        thumb2Filename: "Woman Blonde Asian Hair Loss seen on brush.png"
                     }
                 }
             ],
@@ -3974,17 +3990,17 @@
                     visualAngle: {
                         pill: "Angle 1 of 4: Receding Hairline Prevention",
                         headline: "Hairline Receding? | Act Early with Korean Scalp Care",
-                        brief: "\"Close examination of frontal hairline recession (temple angles) demonstrating non-surgical preventive scalp support.\"",
-                        primaryImg: "../../assets/scalp_concern_hairline.jpg",
+                        brief: "\"Close examination of frontal hairline recession demonstrating non-surgical preventive scalp support.\"",
+                        primaryImg: "../../assets/google-ads-sua/hair/Male looking at Hair Loss.png",
                         primaryBadge: "Authentic Scalp Analysis · Hairline Focus",
                         primaryCaption: "Male Frontal & Temple Hairline Recession Pattern",
-                        primaryFilename: "scalp_concern_hairline.jpg",
-                        thumb1Img: "../../assets/dep_scalp_man_treatment.jpg",
-                        thumb1Caption: "Needle-Free Hairline Infusion",
-                        thumb1Filename: "dep_scalp_man_treatment.jpg",
-                        thumb2Img: "../../assets/dep_hair_man.jpg",
-                        thumb2Caption: "Male Hair Density Consultation",
-                        thumb2Filename: "dep_hair_man.jpg"
+                        primaryFilename: "Male looking at Hair Loss.png",
+                        thumb1Img: "../../assets/google-ads-sua/hair/BA Side Profile.png",
+                        thumb1Caption: "Hairline Density Results",
+                        thumb1Filename: "BA Side Profile.png",
+                        thumb2Img: "../../assets/google-ads-sua/hair/Hair Loss of Top.png",
+                        thumb2Caption: "Crown & Vertex Analysis",
+                        thumb2Filename: "Hair Loss of Top.png"
                     }
                 },
                 {
@@ -3999,17 +4015,17 @@
                     visualAngle: {
                         pill: "Angle 2 of 4: Male Scalp Reset ($399)",
                         headline: "Men's Hair Loss Dallas | $399 Korean Scalp Reset",
-                        brief: "\"Active clinical treatment on male patient in Carrollton, TX delivering Korean scalp rejuvenation for $399.\"",
-                        primaryImg: "../../assets/dep_scalp_man_treatment.jpg",
-                        primaryBadge: "Clinical Treatment Bed · Male Protocol",
-                        primaryCaption: "Clinical Scalp Infusion for Male Thinning ($399 Special)",
-                        primaryFilename: "dep_scalp_man_treatment.jpg",
-                        thumb1Img: "../../assets/scalp_concern_hairline.jpg",
+                        brief: "\"Clinical scalp care on male patient in Carrollton, TX delivering Korean scalp rejuvenation for $399.\"",
+                        primaryImg: "../../assets/google-ads-sua/hair/BA Side Profile.png",
+                        primaryBadge: "Clinical Results · Male Protocol",
+                        primaryCaption: "Clinical Scalp Density Results for Male Thinning ($399 Special)",
+                        primaryFilename: "BA Side Profile.png",
+                        thumb1Img: "../../assets/google-ads-sua/hair/Male looking at Hair Loss.png",
                         thumb1Caption: "Hairline Assessment",
-                        thumb1Filename: "scalp_concern_hairline.jpg",
-                        thumb2Img: "../../assets/dep_hair_man.jpg",
+                        thumb1Filename: "Male looking at Hair Loss.png",
+                        thumb2Img: "../../assets/google-ads-sua/hair/Hair Loss of Top.png",
                         thumb2Caption: "Crown & Temple Care",
-                        thumb2Filename: "dep_hair_man.jpg"
+                        thumb2Filename: "Hair Loss of Top.png"
                     }
                 },
                 {
@@ -4025,16 +4041,16 @@
                         pill: "Angle 3 of 4: Crown & Vertex Stimulation",
                         headline: "Crown Thinning Care | Non-Surgical Follicle Stimulation",
                         brief: "\"Overhead vertex angle targeting crown thinning, stimulating sluggish follicles to resist DHT-related miniaturization.\"",
-                        primaryImg: "../../assets/dep_scalp_man_treatment.jpg",
+                        primaryImg: "../../assets/google-ads-sua/hair/Hair Loss of Top.png",
                         primaryBadge: "Vertex Targeting · DHT Defense",
-                        primaryCaption: "Crown & Vertex Targeting via Transdermal DEP",
-                        primaryFilename: "dep_scalp_man_treatment.jpg",
-                        thumb1Img: "../../assets/dep_hair_man.jpg",
+                        primaryCaption: "Crown & Vertex Targeting via Transdermal Delivery",
+                        primaryFilename: "Hair Loss of Top.png",
+                        thumb1Img: "../../assets/google-ads-sua/hair/Male looking at Hair Loss.png",
                         thumb1Caption: "Non-Surgical Follicle Activation",
-                        thumb1Filename: "dep_hair_man.jpg",
-                        thumb2Img: "../../assets/scalp_concern_hairline.jpg",
+                        thumb1Filename: "Male looking at Hair Loss.png",
+                        thumb2Img: "../../assets/google-ads-sua/hair/BA Side Profile.png",
                         thumb2Caption: "Hairline Boundary Check",
-                        thumb2Filename: "scalp_concern_hairline.jpg"
+                        thumb2Filename: "BA Side Profile.png"
                     }
                 },
                 {
@@ -4049,17 +4065,17 @@
                     visualAngle: {
                         pill: "Angle 4 of 4: Needle-Free Transdermal Care",
                         headline: "Needle-Free Male Scalp Care | Carrollton Clinic",
-                        brief: "\"Sleek close-up of the medical-grade DEP applicator delivering active nutrients directly to male hair roots without surgery or needles.\"",
-                        primaryImg: "../../assets/dep_scalp_man_treatment.jpg",
+                        brief: "\"Medical-grade transdermal delivery of active nutrients directly to male hair roots without surgery or needles.\"",
+                        primaryImg: "../../assets/google-ads-sua/hair/Male looking at Hair Loss.png",
                         primaryBadge: "FDA-Cleared Technology · Zero Needles",
-                        primaryCaption: "Precision Needle-Free DEP Applicator for Men",
-                        primaryFilename: "dep_scalp_man_treatment.jpg",
-                        thumb1Img: "../../assets/dep_hair_man.jpg",
+                        primaryCaption: "Precision Needle-Free Scalp Care for Men",
+                        primaryFilename: "Male looking at Hair Loss.png",
+                        thumb1Img: "../../assets/google-ads-sua/hair/BA Side Profile.png",
                         thumb1Caption: "Physician-Guided Protocol",
-                        thumb1Filename: "dep_hair_man.jpg",
-                        thumb2Img: "../../assets/scalp_concern_hairline.jpg",
+                        thumb1Filename: "BA Side Profile.png",
+                        thumb2Img: "../../assets/google-ads-sua/hair/Hair Loss of Top.png",
                         thumb2Caption: "Recession Line Treatment",
-                        thumb2Filename: "scalp_concern_hairline.jpg"
+                        thumb2Filename: "Hair Loss of Top.png"
                     }
                 }
             ]
@@ -4242,7 +4258,7 @@ Call Extension: 972-665-8737
 
 AD GROUP 1: COMBINED / HAIR LOSS
 Audience: All Genders, Ages 25–65+
-Destination URL: https://suaglow.com/scalp-reset
+Destination URL: https://suaglow.com/korean-scalp-hair-rejuvenation.html
 
 Keywords:
 "hair loss treatment Dallas"
@@ -4276,7 +4292,7 @@ Clean, macro-level cross-section graphic of a hair follicle showing the differen
 
 AD GROUP 2: THINNING / WOMEN
 Audience Demographics: Gender > Female Only
-Destination URL: https://suaglow.com/female-scalp-care
+Destination URL: https://suaglow.com/korean-scalp-hair-rejuvenation.html
 
 Keywords:
 "female hair loss treatment"
@@ -4310,7 +4326,7 @@ Top-down view of a female scalp showing a widening part, transitioning into a ca
 
 AD GROUP 3: HAIRLINE / MEN
 Audience Demographics: Gender > Male Only
-Destination URL: https://suaglow.com/mens-scalp-reset
+Destination URL: https://suaglow.com/korean-scalp-hair-rejuvenation.html
 
 Keywords:
 "male hair loss treatment"

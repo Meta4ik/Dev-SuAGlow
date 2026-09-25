@@ -29,7 +29,7 @@
     "title": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "fullTitle": "Collagen Stimulation & Acne Scar Treatment Dallas | Korean Skin Booster | SuA Glow",
     "category": "Treatments & Modalities",
-    "sizeKb": 48
+    "sizeKb": 75
   },
   {
     "path": "coming-soon.html",
@@ -325,7 +325,7 @@
     "title": "Vip Membership Card",
     "fullTitle": "vip-membership-card.html",
     "category": "Section Components",
-    "sizeKb": 12
+    "sizeKb": 14
   },
   {
     "path": "components/sections/what-is-standard.html",
@@ -357,7 +357,7 @@
     "title": "Contact & Book",
     "fullTitle": "Contact & Book | SuA K-Glow Korean Medical Aesthetics – Carrollton, TX",
     "category": "Core Pages",
-    "sizeKb": 41
+    "sizeKb": 42
   },
   {
     "path": "cookie-notices-choices.html",
@@ -613,7 +613,7 @@
     "title": "SuA K-Glow",
     "fullTitle": "SuA K-Glow | Korean Medical Aesthetics",
     "category": "Core Pages",
-    "sizeKb": 74
+    "sizeKb": 76
   },
   {
     "path": "injectables.html",
@@ -637,7 +637,7 @@
     "title": "Google Ads Campaign Hub: Korean Scalp & Hair Reset",
     "fullTitle": "Google Ads Campaign Hub: Korean Scalp & Hair Reset | SuA Glow Internal",
     "category": "Internal & Campaigns",
-    "sizeKb": 345
+    "sizeKb": 348
   },
   {
     "path": "internal/index.html",
@@ -653,7 +653,7 @@
     "title": "IV Therapy Dallas & Carrollton",
     "fullTitle": "IV Therapy Dallas & Carrollton | IV Infusion & Wellness | SuA Glow",
     "category": "Treatments & Modalities",
-    "sizeKb": 97
+    "sizeKb": 95
   },
   {
     "path": "korean-scalp-hair-rejuvenation.html",
@@ -693,7 +693,7 @@
     "title": "Korean Glass Skin Membership Dallas",
     "fullTitle": "Korean Glass Skin Membership Dallas | SuA Glow",
     "category": "Core Pages",
-    "sizeKb": 66
+    "sizeKb": 72
   },
   {
     "path": "microneedling.html",
@@ -741,7 +741,7 @@
     "title": "Press & Media",
     "fullTitle": "Press & Media | SuA K-Glow | Korean Medical Aesthetics",
     "category": "Core Pages",
-    "sizeKb": 3
+    "sizeKb": 4
   },
   {
     "path": "privacy-policy.html",
@@ -781,7 +781,7 @@
     "title": "Korean Scar Treatment",
     "fullTitle": "Korean Scar Treatment | SuA K Glow Korean Med Spa Carrollton",
     "category": "Treatments & Modalities",
-    "sizeKb": 41
+    "sizeKb": 42
   },
   {
     "path": "seoul-man.html",
@@ -805,7 +805,7 @@
     "title": "Skincare & Products",
     "fullTitle": "Skincare & Products | SuA K-Glow | Carrollton, TX",
     "category": "Core Pages",
-    "sizeKb": 25
+    "sizeKb": 26
   },
   {
     "path": "signature-treatment.html",
@@ -870,6 +870,14 @@
     "fullTitle": "Patient Stories | SuA K-Glow Korean Medical Aesthetics",
     "category": "Core Pages",
     "sizeKb": 33
+  },
+  {
+    "path": "thank-you.html",
+    "filename": "thank-you.html",
+    "title": "Thank You",
+    "fullTitle": "Thank You | SuA K-Glow Korean Medical Aesthetics",
+    "category": "Core Pages",
+    "sizeKb": 6
   },
   {
     "path": "tone-up-facial.html",
