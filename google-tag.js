@@ -7,7 +7,7 @@
   // --- CONFIGURATION ---
   // Replace these values with your actual Google Ads ID and Conversion Labels
   window.SUA_TRACKING_CONFIG = Object.assign({
-    googleAdsId: 'AW-XXXXXXXXXX',        // Google Ads Conversion ID (e.g. AW-1234567890)
+    googleAdsId: 'AW-18481004220',       // Google Ads Conversion ID
     ga4MeasurementId: 'G-XXXXXXXXXX',   // GA4 Measurement ID (optional, e.g. G-ABC123XYZ)
     conversionLabels: {
       bookingClick: '',                 // Google Ads conversion label for booking clicks
