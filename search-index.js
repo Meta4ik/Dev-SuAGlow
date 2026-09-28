@@ -5,7 +5,7 @@ const SEARCH_INDEX = [
     "title": "YOUR SKIN HAS RECEIPTS. LET’S READ THEM.",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "K-Beauty skin intelligence meets 3D facial analysis. SuA Glow offers Aura 3D Skin Analysis in Carrollton, serving Dallas–Fort Worth patients looking for a more detailed, provider-guided approach to skin health and aesthetic planning. You know what you see in the mirror. We like to look closer. With one advanced capture, Aura creates a photorealistic 3D digital twin of your face + neck—giving your SuA Glow provider a closer look at your skin and facial features before building your personalized aesthetic plan. Diagnostic Scope Because choosing your next treatment based on TikTok? Cute. We’d rather look at your actual skin. Interactive Digital Twin Photorealistic 3D Face + Neck Capture",
+    "content": "K-Beauty skin intelligence meets 3D facial analysis. SuA Glow offers Aura 3D Skin Analysis in Carrollton, serving Dallas–Fort Worth patients looking for a more detailed, provider-guided approach to skin health and aesthetic planning. You know what you see in the mirror. We like to look closer. With one advanced capture, Aura creates a photorealistic 3D digital twin of your face + neck—giving your SuA Glow provider a closer look at your skin and facial features before building your personalized aesthetic plan.",
     "snippet": "K-Beauty skin intelligence meets 3D facial analysis. SuA Glow offers Aura 3D Skin Analysis in Carrollton, serving Dallas–Fort Worth patients looking for a more ..."
   },
   {
@@ -149,7 +149,7 @@ const SEARCH_INDEX = [
     "title": "YOUR SKIN HAS RECEIPTS. LET’S READ THEM.",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "K-Beauty skin intelligence meets 3D facial analysis. SuA Glow offers Aura 3D Skin Analysis in Carrollton, serving Dallas–Fort Worth patients looking for a more detailed, provider-guided approach to skin health and aesthetic planning. You know what you see in the mirror. We like to look closer. With one advanced capture, Aura creates a photorealistic 3D digital twin of your face + neck—giving your SuA Glow provider a closer look at your skin and facial features before building your personalized aesthetic plan. Diagnostic Scope Because choosing your next treatment based on TikTok? Cute. We’d rather look at your actual skin. Interactive Digital Twin Photorealistic 3D Face + Neck Capture",
+    "content": "K-Beauty skin intelligence meets 3D facial analysis. SuA Glow offers Aura 3D Skin Analysis in Carrollton, serving Dallas–Fort Worth patients looking for a more detailed, provider-guided approach to skin health and aesthetic planning. You know what you see in the mirror. We like to look closer. With one advanced capture, Aura creates a photorealistic 3D digital twin of your face + neck—giving your SuA Glow provider a closer look at your skin and facial features before building your personalized aesthetic plan.",
     "snippet": "K-Beauty skin intelligence meets 3D facial analysis. SuA Glow offers Aura 3D Skin Analysis in Carrollton, serving Dallas–Fort Worth patients looking for a more ..."
   },
   {
@@ -365,7 +365,7 @@ const SEARCH_INDEX = [
     "title": "Why Korean Clinics Prefer Gradual Improvement Over Aggressive Correction",
     "pageTitle": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "category": "K-BEAUTY • COLLAGEN • SKIN QUALITY",
-    "content": "Modern Korean aesthetics prioritizes skin quality, prevention-focused planning, and natural-looking outcomes over dramatic transformation. The goal is optimization: skin that looks refreshed, healthier, and exceptionally well maintained. Skin Booster Structure Diagram Clinically Referenced Dermal Map Together, these treatments help support the Korean Glass Skin philosophy.",
+    "content": "Modern Korean aesthetics prioritizes skin quality, prevention-focused planning, and natural-looking outcomes over dramatic transformation. The goal is optimization: skin that looks refreshed, healthier, and exceptionally well maintained. Together, these treatments help support the Korean Glass Skin philosophy.",
     "snippet": "Modern Korean aesthetics prioritizes skin quality, prevention-focused planning, and natural-looking outcomes over dramatic transformation. The goal is optimizat..."
   },
   {

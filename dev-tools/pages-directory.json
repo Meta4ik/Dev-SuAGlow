@@ -1,11 +1,35 @@
 [
   {
+    "path": ".venv-rembg/lib/python3.14/site-packages/gradio/templates/frontend/index.html",
+    "filename": "index.html",
+    "title": "Index",
+    "fullTitle": "index.html",
+    "category": "Core Pages",
+    "sizeKb": 4
+  },
+  {
+    "path": ".venv-rembg/lib/python3.14/site-packages/gradio/templates/frontend/share.html",
+    "filename": "share.html",
+    "title": "Share",
+    "fullTitle": "share.html",
+    "category": "Core Pages",
+    "sizeKb": 4
+  },
+  {
+    "path": ".venv-rembg/lib/python3.14/site-packages/numba/core/annotations/template.html",
+    "filename": "template.html",
+    "title": "Template",
+    "fullTitle": "template.html",
+    "category": "Core Pages",
+    "sizeKb": 3
+  },
+  {
     "path": "3d-skin-analysis.html",
     "filename": "3d-skin-analysis.html",
     "title": "Aura 3D Skin Analysis Dallas",
     "fullTitle": "Aura 3D Skin Analysis Dallas | SuA Glow Carrollton TX",
     "category": "Core Pages",
-    "sizeKb": 90
+    "sizeKb": 88
   },
   {
     "path": "about.html",
@@ -29,7 +53,7 @@
     "title": "Aura 3D Skin Analysis Dallas",
     "fullTitle": "Aura 3D Skin Analysis Dallas | SuA Glow Carrollton TX",
     "category": "Core Pages",
-    "sizeKb": 90
+    "sizeKb": 88
   },
   {
     "path": "bridal-glow.html",
@@ -45,7 +69,7 @@
     "title": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "fullTitle": "Collagen Stimulation & Acne Scar Treatment Dallas | Korean Skin Booster | SuA Glow",
     "category": "Treatments & Modalities",
-    "sizeKb": 83
+    "sizeKb": 82
   },
   {
     "path": "coming-soon.html",
@@ -637,7 +661,7 @@
     "title": "SuA K-Glow",
     "fullTitle": "SuA K-Glow | Korean Medical Aesthetics",
     "category": "Core Pages",
-    "sizeKb": 76
+    "sizeKb": 77
   },
   {
     "path": "injectables.html",
