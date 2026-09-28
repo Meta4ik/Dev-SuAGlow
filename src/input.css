@@ -617,6 +617,7 @@ html {
     background-color: #AA987C;
     color: #FFFFFF;
     box-shadow: 0 4px 20px rgba(170, 152, 124, 0.25);
+    border: 1.5px solid transparent;
 }
 
 .btn-primary::after {
@@ -632,7 +633,7 @@ html {
 
 .btn-primary:hover {
     background-color: #948267;
-    box-shadow: 0 8px 30px rgba(170, 152, 124, 0.40);
+    box-shadow: 0 0 0 1.5px #AA987C, 0 8px 30px rgba(170, 152, 124, 0.50), 0 0 20px rgba(229, 184, 105, 0.45);
     transform: translateY(-2px);
     color: #FFFFFF;
 }
@@ -644,6 +645,21 @@ html {
 .btn-primary:active {
     transform: translateY(0);
     box-shadow: 0 2px 10px rgba(170, 152, 124, 0.2);
+}
+
+/* Rollover Edge Glow for Book Appointment buttons when rolling over to white on white backgrounds */
+#floating-book-btn,
+.btn-book-appointment {
+    border: 1.5px solid transparent;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#floating-book-btn:hover,
+.btn-book-appointment:hover,
+a[href*="online-booking"].hover\:bg-white:hover,
+.btn-primary.hover\:bg-white:hover {
+    border-color: #AA987C !important;
+    box-shadow: 0 0 0 2px #AA987C, 0 10px 35px rgba(170, 152, 124, 0.60), 0 0 30px rgba(229, 184, 105, 0.75) !important;
 }
 
 /* 2. Secondary Button: Refined Taupe Outline */

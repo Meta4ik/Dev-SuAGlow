@@ -257,7 +257,7 @@ function renderMonthlySpecials(customConfig) {
                             <div class="relative z-10 flex flex-col justify-between h-full flex-1">
                                 <!-- Top Bar: Logo (Left) & Badge (Right) -->
                                 <div class="flex flex-row justify-between items-start w-full pt-2 md:pt-3 mb-1">
-                                    <img src="assets/logo-main.png" alt="SuA K Glow" class="h-9 md:h-11 w-auto object-contain opacity-100 mt-2 md:mt-3" onerror="this.onerror=null; this.src='assets/logo-main.webp';">
+                                    <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-9 md:h-11 w-auto object-contain opacity-100 mt-2 md:mt-3">
                                     <span class="text-[9.5px] md:text-[10px] font-heading tracking-[0.3em] font-extrabold text-warm-gold uppercase bg-near-black px-3.5 py-1.5 rounded-full border border-warm-gold/40 shadow-lg whitespace-nowrap inline-block">
                                         ${meta.badge}
                                     </span>

@@ -1194,9 +1194,9 @@ function initFloatingActionBar() {
     <!-- Floating Action Dock Card (Amplified Warm Glow & Site Button Match) -->
     <div id="floating-action-card"
       class="rounded-full shadow-[0_15px_45px_rgba(170,152,124,0.6),0_0_35px_rgba(229,184,105,0.7)] hover:shadow-[0_20px_55px_rgba(170,152,124,0.8),0_0_50px_rgba(229,184,105,0.9)] transition-all duration-300 transform hover:scale-[1.03]">
-      <!-- Book Appointment CTA Button (Matches Site Hero Button Style) -->
+      <!-- Book Appointment CTA Button (Matches Site Hero Button Style with Rollover Edge Glow) -->
       <a href="${bookingUrl}" target="_blank" rel="noopener noreferrer" id="floating-book-btn"
-        class="py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-warm-gold/20 inline-flex items-center gap-2.5 uppercase font-heading whitespace-nowrap">
+        class="py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-near-black text-white border border-transparent hover:border-[#AA987C] rounded-full transition-all duration-300 shadow-[0_10px_25px_rgba(170,152,124,0.4)] hover:shadow-[0_0_0_2px_#AA987C,0_10px_35px_rgba(170,152,124,0.6),0_0_30px_rgba(229,184,105,0.7)] inline-flex items-center gap-2.5 uppercase font-heading whitespace-nowrap">
         <svg class="w-4 h-4 stroke-[2.2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
           <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
           <line x1="16" y1="2" x2="16" y2="6"></line>
