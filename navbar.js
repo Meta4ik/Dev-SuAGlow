@@ -59,8 +59,8 @@ const NAVBAR_HTML = `
                         <!-- Top Banner: 3D Skin Analysis (Start Here / New) -->
                         <div class="col-span-4 pb-4 mb-2 border-b border-light-gray/40 flex items-center justify-between">
                             <a href="3d-skin-analysis.html" class="group flex items-center gap-3 bg-gradient-to-r from-[#131619] to-[#252A2F] text-white px-5 py-2.5 rounded-2xl hover:from-[#252A2F] hover:to-[#131619] transition-all shadow-sm">
-                                <span class="w-7 h-7 rounded-xl bg-warm-gold/20 flex items-center justify-center text-warm-gold">
-                                    <i data-lucide="scan-face" class="w-4 h-4"></i>
+                                <span class="w-8 h-8 rounded-xl bg-warm-gold/20 flex items-center justify-center p-1 overflow-hidden shrink-0">
+                                    <img src="assets/aura_device_large.png" alt="Aura 3D Device" class="w-full h-full object-contain">
                                 </span>
                                 <div>
                                     <span class="text-xs font-semibold uppercase tracking-wider text-white group-hover:text-warm-gold transition-colors">Aura 3D Skin Analysis</span>
@@ -393,7 +393,9 @@ const NAVBAR_HTML = `
                         <div class="mb-1">
                             <a href="3d-skin-analysis.html" class="flex items-center justify-between p-3 rounded-xl bg-near-black text-white shadow-sm">
                                 <div class="flex items-center gap-2.5">
-                                    <i data-lucide="scan-face" class="w-4 h-4 text-warm-gold"></i>
+                                    <span class="w-6 h-6 rounded-lg bg-warm-gold/20 flex items-center justify-center p-0.5 overflow-hidden shrink-0">
+                                        <img src="assets/aura_device_large.png" alt="Aura 3D Device" class="w-full h-full object-contain">
+                                    </span>
                                     <div>
                                         <span class="font-heading text-xs font-semibold uppercase tracking-wider block text-white">3D Skin Analysis</span>
                                         <span class="text-[10px] text-white/60 block">Aura Digital Twin Consultation</span>

@@ -174,18 +174,20 @@
 
     <!-- 01 · AURA 3D SKIN ANALYSIS (HERO SECTION) -->
     <section id="hero" data-nav-theme="dark" class="relative min-h-[90vh] flex items-center justify-center pt-[150px] pb-20 px-6 sm:px-8 md:px-16 bg-[#131619] text-white overflow-hidden">
-        <!-- Ambient Luxury Glow Background -->
-        <div class="absolute inset-0 z-0 bg-[#131619] pointer-events-none overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#131619]/90 via-[#131619]/60 to-[#131619]"></div>
-            <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] bg-[#AA987C] blur-[180px] rounded-full opacity-15"></div>
-            <div class="absolute -bottom-20 right-10 w-[500px] h-[500px] bg-[#E5B869] blur-[160px] rounded-full opacity-10"></div>
+        <!-- Ambient Luxury Glow Background with Aura Silhouette Visual -->
+        <div class="absolute inset-0 z-0 bg-[#0d1017] pointer-events-none overflow-hidden">
+            <img src="assets/aura_hero_bg.jpg" alt="Aura 3D Skin Analysis Silhouette" class="w-full h-full object-cover object-[center_30%] opacity-40 mix-blend-screen scale-105">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#131619]/80 via-[#131619]/40 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#131619]/50 via-transparent to-[#131619]/80"></div>
+            <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] bg-[#2B7FFF] blur-[180px] rounded-full opacity-10"></div>
+            <div class="absolute -bottom-20 right-10 w-[500px] h-[500px] bg-[#AA987C] blur-[160px] rounded-full opacity-15"></div>
         </div>
 
         <div class="max-w-7xl mx-auto relative z-10 w-full">
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
                 <!-- Left Column: Copy & Messaging -->
-                <div class="lg:col-span-7 space-y-6 animate-on-scroll fade-right">
+                <div class="lg:col-span-6 space-y-6 animate-on-scroll fade-right flex flex-col justify-center">
                     <!-- Eyebrow Pill Header -->
                     <div class="inline-flex items-center gap-2">
                         <span class="badge-glass !text-warm-gold !bg-warm-gold/10 !border-warm-gold/20 uppercase tracking-widest text-[10.5px] font-semibold px-4 py-1.5 rounded-full">
@@ -204,38 +206,50 @@
                         </p>
                     </div>
 
-                    <p class="text-sm md:text-base font-light text-white/80 leading-relaxed max-w-2xl [text-wrap:balance]">
+                    <p class="text-sm md:text-base font-light text-white/80 leading-relaxed max-w-xl [text-wrap:balance]">
                         SuA Glow offers Aura 3D Skin Analysis in Carrollton, serving Dallas&ndash;Fort Worth patients looking for a more detailed, provider-guided approach to skin health and aesthetic planning.
                     </p>
 
                     <div class="border-l-2 border-[#AA987C]/60 pl-4 py-1 space-y-2">
                         <p class="text-sm text-white/90 font-medium">You know what you see in the mirror. We like to look closer.</p>
-                        <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                        <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed max-w-lg">
                             With one advanced capture, Aura creates a photorealistic 3D digital twin of your face + neck&mdash;giving your SuA Glow provider a closer look at your skin and facial features before building your personalized aesthetic plan.
                         </p>
                     </div>
 
 
                     <!-- Actions -->
-                    <div class="pt-2 flex flex-wrap items-center gap-4">
+                    <div class="pt-4 flex flex-wrap items-center gap-4">
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" rel="noopener noreferrer" class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300 shadow-lg hover:shadow-warm-gold/20 inline-flex items-center gap-2">
                             <span>ANALYZE MY SKIN</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
-                        <a href="#digital-twin" class="btn-outline text-xs px-6 py-4 tracking-widest uppercase rounded-full border border-white/20 text-white/80 hover:bg-white/10 hover:text-white transition-all duration-300">
-                            Explore Digital Twin
-                        </a>
                     </div>
                 </div>
 
-                <!-- Right Column: Hero Visual Graphic -->
-                <div class="lg:col-span-5 animate-on-scroll fade-left delay-100 lg:-mt-8">
-                    <div class="relative group">
-                        <!-- Glow behind image -->
-                        <div class="absolute -inset-8 bg-gradient-to-tr from-[#AA987C]/20 via-transparent to-[#E5B869]/20 rounded-full blur-3xl opacity-75 group-hover:opacity-100 transition duration-700 pointer-events-none"></div>
-                        
-                        <div class="relative">
-                            <img src="assets/aura_hero_device.png" alt="Aura 3D Skin Analysis and Facial Imaging System at SuA Glow Carrollton" class="w-full lg:w-[115%] lg:-ml-[5%] h-auto object-contain object-center drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] transform group-hover:scale-102 transition duration-700">
+                <!-- Right Column: Graphic Collage (LDM/Oligio Style) -->
+                <div class="lg:col-span-6 animate-on-scroll fade-left delay-100 lg:-mt-8">
+                    <div class="relative w-full h-full min-h-[400px] flex items-center justify-center">
+                        <!-- Circular Badge -->
+                        <div class="absolute hidden md:flex items-center justify-center z-20 text-[#AA987C] float-slow"
+                            style="width: 140px; height: 140px; top: -20px; right: -10px; animation: float 6s ease-in-out infinite;">
+                            <div class="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.15)] border border-white/10"></div>
+                            <svg viewBox="0 0 100 100" class="relative z-10" style="width: 95%; height: 95%; animation: spin-badge 20s linear infinite;">
+                                <path id="textCircleBannerAura" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="transparent" />
+                                <text font-family="Montserrat, sans-serif" font-size="7.9" font-weight="700" fill="currentColor" class="uppercase" letter-spacing="0.1em">
+                                    <textPath href="#textCircleBannerAura" startOffset="0%">
+                                        NOW AVAILABLE IN DFW &bull; CARROLLTON, TX &bull;
+                                    </textPath>
+                                </text>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center z-10">
+                                <img src="assets/sua_texas.svg" alt="Texas" style="width: 32px; height: 32px; filter: brightness(0) invert(1); opacity: 0.85;">
+                            </div>
+                        </div>
+
+                        <!-- Base: Device Image (Centered, Full Width) -->
+                        <div class="relative w-full h-[450px] sm:h-[520px] hover:translate-y-[-8px] transition-transform duration-500 z-10 flex items-center justify-center">
+                            <img src="assets/aura_device_large.png" alt="Aura 3D Skin Analysis Device" class="max-w-full max-h-full object-contain p-2 relative z-10 drop-shadow-2xl">
                         </div>
                     </div>
                 </div>
@@ -417,7 +431,7 @@
                 <!-- Center Large 3D Aura Face (Dark Luxury Background) -->
                 <div class="lg:col-span-6 order-1 lg:order-2 text-center animate-on-scroll zoom-in">
                     <div class="relative inline-block max-w-lg mx-auto rounded-3xl overflow-hidden border border-white/15 bg-black/60 shadow-[0_0_50px_rgba(170,152,124,0.15)] group">
-                        <img src="assets/aura_diagnostic_face.jpg" alt="Aura 3D Digital Twin Skin Diagnostic Mapping at SuA Glow" class="w-full h-auto object-cover transform group-hover:scale-102 transition duration-700">
+                        <img src="assets/aura_diagnostic_face_v2.jpg" alt="Aura 3D Digital Twin Skin Diagnostic Mapping at SuA Glow" class="w-full h-auto object-cover transform group-hover:scale-102 transition duration-700">
                         
                         <!-- Minimal Visual Pins overlay -->
                         <div class="absolute inset-0 pointer-events-none flex flex-col justify-between p-6">
@@ -521,7 +535,7 @@
                 <!-- 1. ANALYZE -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col group">
                     <div class="aspect-[4/3] bg-charcoal relative overflow-hidden">
-                        <img src="assets/aura_screen_analyze.jpg" alt="Aura 3D Analyze Mode Screen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="assets/aura_screen_visualize.png" alt="Aura 3D Analyze Mode Screen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-warm-gold uppercase tracking-wider border border-white/10">
                             01 &middot; ANALYZE
                         </span>
@@ -539,7 +553,7 @@
                 <!-- 2. MEASURE -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col group">
                     <div class="aspect-[4/3] bg-charcoal relative overflow-hidden">
-                        <img src="assets/aura_screen_measure.jpg" alt="Aura 3D Measure Mode Screen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="assets/aura_screen_measure.png" alt="Aura 3D Measure Mode Screen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-warm-gold uppercase tracking-wider border border-white/10">
                             02 &middot; MEASURE
                         </span>
@@ -557,7 +571,7 @@
                 <!-- 3. COMPARE -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col group">
                     <div class="aspect-[4/3] bg-charcoal relative overflow-hidden">
-                        <img src="assets/aura_screen_compare.jpg" alt="Aura 3D Compare Mode Screen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="assets/aura_screen_compare.png" alt="Aura 3D Compare Mode Screen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-warm-gold uppercase tracking-wider border border-white/10">
                             03 &middot; COMPARE
                         </span>
@@ -575,7 +589,7 @@
                 <!-- 4. VISUALIZE -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col group">
                     <div class="aspect-[4/3] bg-charcoal relative overflow-hidden">
-                        <img src="assets/aura_screen_visualize.jpg" alt="Aura 3D Visualize Simulation Mode Screen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="assets/aura_screen_analyze.png" alt="Aura 3D Visualize Simulation Mode Screen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-warm-gold uppercase tracking-wider border border-white/10">
                             04 &middot; VISUALIZE
                         </span>
@@ -608,12 +622,12 @@
     <!-- 05 · FROM 3D SKIN SCAN TO YOUR SUAGLOW SKIN HEALTH PLAN -->
     <section id="health-plan" class="py-24 px-6 sm:px-10 bg-white border-b border-light-gray/40">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
                 
                 <!-- Left Column: Clinic Consultation Photograph -->
-                <div class="lg:col-span-6 animate-on-scroll fade-right">
-                    <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-light-gray/60">
-                        <img src="assets/aura_consultation_provider.jpg" alt="SuA Glow Master Clinician Reviewing 3D Skin Scan in Carrollton Consultation Room" class="w-full h-auto object-cover transform group-hover:scale-102 transition duration-700">
+                <div class="lg:col-span-6 animate-on-scroll fade-right h-full">
+                    <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-light-gray/60 h-full min-h-[350px] sm:min-h-[450px]">
+                        <img src="assets/aura_ipad_planning.jpg" alt="SuA Glow Provider Planning with Aura 3D Analysis on iPad" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-102 transition duration-700">
                         <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md rounded-2xl p-4 border border-white/40 shadow-sm flex items-center gap-3">
                             <div class="w-8 h-8 rounded-full bg-taupe/10 flex items-center justify-center text-taupe shrink-0">
                                 <i data-lucide="user-check" class="w-4 h-4"></i>
@@ -627,7 +641,7 @@
                 </div>
 
                 <!-- Right Column: The 4-Step Clinical Framework -->
-                <div class="lg:col-span-6 space-y-8 animate-on-scroll fade-left">
+                <div class="lg:col-span-6 space-y-8 animate-on-scroll fade-left flex flex-col justify-center h-full py-6 lg:py-10">
                     <div class="space-y-3">
                         <span class="badge-standard text-[11px] uppercase tracking-widest bg-off-white border-taupe/20 text-taupe font-semibold px-4 py-1.5 rounded-full inline-block">
                             05 &middot; PROVIDER-GUIDED PLANNING
@@ -832,8 +846,8 @@
 
                 <!-- 5. IMPROVE SKIN QUALITY -->
                 <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
-                    <div class="aspect-[4/3] bg-charcoal/5 relative overflow-hidden">
-                        <img src="assets/diverse_women_shades_models.jpg" alt="Skin Quality Boosters Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-[#1E2328] via-[#15191D] to-[#0E1113] relative overflow-hidden">
+                        <img src="assets/diverse_women_shades_models_nobg.png" alt="Skin Quality Boosters Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-semibold text-taupe uppercase tracking-wider shadow-sm">
                             Pathway 05
                         </span>
