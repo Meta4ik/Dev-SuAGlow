@@ -1228,5 +1228,4 @@ function initFloatingActionBar() {
   window.addEventListener('scroll', handleFloatingDockScroll, { passive: true });
   handleFloatingDockScroll();
 }
-}
 
