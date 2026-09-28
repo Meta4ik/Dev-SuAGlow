@@ -1,5 +1,13 @@
 [
   {
+    "path": "3d-skin-analysis.html",
+    "filename": "3d-skin-analysis.html",
+    "title": "Aura 3D Skin Analysis Dallas",
+    "fullTitle": "Aura 3D Skin Analysis Dallas | SuA Glow Carrollton TX",
+    "category": "Core Pages",
+    "sizeKb": 90
+  },
+  {
     "path": "about.html",
     "filename": "about.html",
     "title": "About Us",
@@ -16,6 +24,14 @@
     "sizeKb": 7
   },
   {
+    "path": "aura-3d-skin-analysis.html",
+    "filename": "aura-3d-skin-analysis.html",
+    "title": "Aura 3D Skin Analysis Dallas",
+    "fullTitle": "Aura 3D Skin Analysis Dallas | SuA Glow Carrollton TX",
+    "category": "Core Pages",
+    "sizeKb": 90
+  },
+  {
     "path": "bridal-glow.html",
     "filename": "bridal-glow.html",
     "title": "Bridal Glow",
@@ -29,7 +45,7 @@
     "title": "Collagen Stimulation & Acne Scar Treatment Dallas",
     "fullTitle": "Collagen Stimulation & Acne Scar Treatment Dallas | Korean Skin Booster | SuA Glow",
     "category": "Treatments & Modalities",
-    "sizeKb": 75
+    "sizeKb": 83
   },
   {
     "path": "coming-soon.html",
@@ -318,6 +334,14 @@
     "fullTitle": "treatment-hub-grid.html",
     "category": "Section Components",
     "sizeKb": 1
+  },
+  {
+    "path": "components/sections/treatment-plan-builder.html",
+    "filename": "treatment-plan-builder.html",
+    "title": "Treatment Plan Builder",
+    "fullTitle": "treatment-plan-builder.html",
+    "category": "Section Components",
+    "sizeKb": 19
   },
   {
     "path": "components/sections/vip-membership-card.html",
@@ -837,7 +861,7 @@
     "title": "Skin Health",
     "fullTitle": "Skin Health | SuA K-Glow | Korean Medical Aesthetics",
     "category": "Treatments & Modalities",
-    "sizeKb": 17
+    "sizeKb": 21
   },
   {
     "path": "skin-quality-boosters.html",
@@ -885,6 +909,6 @@
     "title": "Korean Tone-Up Facial Dallas",
     "fullTitle": "Korean Tone-Up Facial Dallas | Brightening Facial | Korean Glass Skin Treatment | SuA Glow",
     "category": "Treatments & Modalities",
-    "sizeKb": 63
+    "sizeKb": 82
   }
 ]

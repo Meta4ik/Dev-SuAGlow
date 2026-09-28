@@ -56,6 +56,22 @@ const NAVBAR_HTML = `
                 </a>
                 <div class="mega-menu p-10">
                     <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 text-left">
+                        <!-- Top Banner: 3D Skin Analysis (Start Here / New) -->
+                        <div class="col-span-4 pb-4 mb-2 border-b border-light-gray/40 flex items-center justify-between">
+                            <a href="3d-skin-analysis.html" class="group flex items-center gap-3 bg-gradient-to-r from-[#131619] to-[#252A2F] text-white px-5 py-2.5 rounded-2xl hover:from-[#252A2F] hover:to-[#131619] transition-all shadow-sm">
+                                <span class="w-7 h-7 rounded-xl bg-warm-gold/20 flex items-center justify-center text-warm-gold">
+                                    <i data-lucide="scan-face" class="w-4 h-4"></i>
+                                </span>
+                                <div>
+                                    <span class="text-xs font-semibold uppercase tracking-wider text-white group-hover:text-warm-gold transition-colors">Aura 3D Skin Analysis</span>
+                                    <span class="text-[10px] text-white/60 block">Photorealistic 3D Digital Twin &amp; Provider Consultation</span>
+                                </div>
+                                <span class="ml-3 px-2.5 py-0.5 rounded-full bg-warm-gold text-charcoal font-bold text-[9px] uppercase tracking-wider">Start Here / New</span>
+                            </a>
+                            <a href="skin-health.html" class="text-[11px] font-semibold text-taupe hover:text-near-black uppercase tracking-wider flex items-center gap-1">
+                                All Skin Health Departments <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
 
                         <!-- Col 1: Skin Booster & Scar Treatment -->
                         <div>
@@ -372,6 +388,20 @@ const NAVBAR_HTML = `
                         Skin Health <i data-lucide="plus" class="w-4 h-4"></i>
                     </button>
                     <div class="accordion-content hidden flex flex-col gap-5 pl-4 mt-2">
+
+                        <!-- 3D Skin Analysis (New / Start Here) -->
+                        <div class="mb-1">
+                            <a href="3d-skin-analysis.html" class="flex items-center justify-between p-3 rounded-xl bg-near-black text-white shadow-sm">
+                                <div class="flex items-center gap-2.5">
+                                    <i data-lucide="scan-face" class="w-4 h-4 text-warm-gold"></i>
+                                    <div>
+                                        <span class="font-heading text-xs font-semibold uppercase tracking-wider block text-white">3D Skin Analysis</span>
+                                        <span class="text-[10px] text-white/60 block">Aura Digital Twin Consultation</span>
+                                    </div>
+                                </div>
+                                <span class="px-2 py-0.5 rounded-full bg-warm-gold text-charcoal font-bold text-[9px] uppercase tracking-wider shrink-0">New</span>
+                            </a>
+                        </div>
 
                         <!-- Skin Boosters -->
                         <div>
