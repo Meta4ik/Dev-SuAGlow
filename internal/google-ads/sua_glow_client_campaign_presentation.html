@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuA Glow • Google Ads Campaign Strategy & Launch Dossier</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --taupe: #AA987C;
+            --gold: #E5B869;
+            --dark-charcoal: #1E2124;
+            --near-black: #131619;
+            --off-white: #F8F9FA;
+            --white: #FFFFFF;
+            --border-color: #E2E8F0;
+            --text-dark: #2D3748;
+            --text-muted: #718096;
+            --green: #10B981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        .no-print-bar {
+            background: var(--dark-charcoal);
+            color: var(--white);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-print {
+            background: var(--taupe);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s;
+        }
+
+        .btn-print:hover {
+            background: #968469;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 28px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            page-break-inside: avoid;
+        }
+
+        .hero-card {
+            background: var(--dark-charcoal);
+            color: var(--white);
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 8px;
+            height: 100%;
+            background: var(--gold);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-charcoal);
+        }
+
+        .hero-title {
+            color: var(--white);
+            font-size: 32px;
+            font-weight: 700;
+            margin: 12px 0 8px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-subtitle {
+            color: var(--taupe);
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .badge-live {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--green);
+            border: 1px solid var(--green);
+        }
+
+        .badge-gold {
+            background: rgba(229, 184, 105, 0.15);
+            color: var(--gold);
+            border: 1px solid var(--gold);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .stat-card {
+            background: var(--off-white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-val {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--dark-charcoal);
+            margin: 4px 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .stat-sub {
+            font-size: 12px;
+            color: var(--taupe);
+            font-weight: 500;
+        }
+
+        .ad-group-box {
+            border: 1px solid var(--border-color);
+            border-left: 6px solid var(--taupe);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            background: var(--white);
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .pill {
+            background: var(--off-white);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 12px;
+            color: var(--text-dark);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .headline-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .headline-item {
+            background: var(--off-white);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .headline-num {
+            color: var(--taupe);
+            font-weight: 700;
+            font-size: 11px;
+        }
+
+        .desc-box {
+            background: var(--off-white);
+            border-left: 3px solid var(--gold);
+            padding: 10px 14px;
+            border-radius: 4px;
+            font-size: 13px;
+            margin-top: 8px;
+            color: var(--text-dark);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+            font-size: 13px;
+        }
+
+        th {
+            background: var(--off-white);
+            text-align: left;
+            padding: 10px 14px;
+            color: var(--dark-charcoal);
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-color);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        @media print {
+            .no-print-bar {
+                display: none !important;
+            }
+            body {
+                background: var(--white);
+            }
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            .card {
+                border: 1px solid #ccc;
+                box-shadow: none;
+                margin-bottom: 20px;
+                page-break-inside: avoid;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Action Bar for Easy Printing/Export -->
+    <div class="no-print-bar">
+        <div style="display:flex; align-items:center; gap:12px;">
+            <i data-lucide="file-check-2" style="color:var(--gold);"></i>
+            <span style="font-weight:600; font-size:14px;">SuA Glow • Executive Client Campaign Strategy Dossier</span>
+        </div>
+        <div style="display:flex; gap:12px;">
+            <a href="sua_glow_campaign_overview.pdf" download class="btn-print" style="text-decoration:none; background:#2D3748;">
+                <i data-lucide="download" style="width:16px; height:16px;"></i> Download PDF File
+            </a>
+            <button onclick="window.print()" class="btn-print">
+                <i data-lucide="printer" style="width:16px; height:16px;"></i> Print / Save as PDF
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 1: EXECUTIVE HERO COVER -->
+        <!-- ========================================================================= -->
+        <div class="card hero-card">
+            <span class="brand-subtitle">SuA Glow  •  Client Strategy &amp; Launch Dossier</span>
+            <h1 class="hero-title">Google Ads Campaign Master Architecture</h1>
+            <p style="color: var(--taupe); font-size: 16px; max-width: 800px; margin-bottom: 24px;">
+                $399 Korean Scalp &amp; Hair Rejuvenation Protocol  |  Dallas–Fort Worth Metroplex Expansion
+            </p>
+            <div style="display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">
+                <span class="badge badge-live"><i data-lucide="check-circle-2" style="width:14px; height:14px;"></i> Status: Active &amp; Live</span>
+                <span class="badge badge-gold"><i data-lucide="dollar-sign" style="width:14px; height:14px;"></i> Budget: $40.00 / Day (~$1,200/mo)</span>
+                <span class="badge" style="background: rgba(255,255,255,0.1); color: #fff;"><i data-lucide="shield-check" style="width:14px; height:14px;"></i> Optimization: 92.3%</span>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 16px; font-size: 13px; color: #A0AEC0; font-family: 'JetBrains Mono', monospace;">
+                Account: SuA Glow (480-656-3884) &bull; Manager: 133-161-8593 &bull; Campaign ID: 24303707971 &bull; Location: Carrollton, TX
+            </div>
+        </div>
+
+        <!-- 4 Key Stat Metric Cards -->
+        <div class="grid-4" style="margin-bottom: 28px;">
+            <div class="stat-card">
+                <div class="stat-label">Daily Budget Pacing</div>
+                <div class="stat-val">$40.00</div>
+                <div class="stat-sub">~$1,200/mo pacing</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Ad Groups</div>
+                <div class="stat-val">3 Segments</div>
+                <div class="stat-sub">100% "Good" Ad Strength</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Active Keywords</div>
+                <div class="stat-val">44 Keywords</div>
+                <div class="stat-sub">Strict high-intent phrase match</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Target Geofence</div>
+                <div class="stat-val">13 DFW Cities</div>
+                <div class="stat-sub">Strict "Presence" setting</div>
+            </div>
+        </div>
+
+        <!-- Executive Narrative -->
+        <div class="card">
+            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; display:flex; align-items:center; gap:8px;">
+                <i data-lucide="target" style="color:var(--taupe);"></i> Strategic Executive Summary
+            </h2>
+            <p style="font-size: 14px; color: var(--text-dark); line-height: 1.7; margin-bottom: 14px;">
+                This Google Ads campaign executes a high-converting, medically guided patient acquisition funnel built for SuA Glow’s flagship <strong>$399 Korean Scalp Reset</strong> protocol. Moving decisively beyond superficial relaxation "head spas," the strategy establishes SuA Glow as Dallas–Fort Worth's premier clinical authority for non-surgical, needle-free follicular delivery.
+            </p>
+            <div class="grid-3" style="margin-top: 20px;">
+                <div style="background:var(--off-white); padding:16px; border-radius:10px; border:1px solid var(--border-color);">
+                    <div style="font-weight:700; font-size:14px; color:var(--dark-charcoal); margin-bottom:6px;">1. Clinical Differentiation</div>
+                    <p style="font-size:12px; color:var(--text-muted); line-height:1.6;">
+                        Directly separates SuA Glow from standard Korean head spas. Emphasizes physician-guided care, FDA-cleared technology, and deep transdermal follicle infusion.
+                    </p>
+                </div>
+                <div style="background:var(--off-white); padding:16px; border-radius:10px; border:1px solid var(--border-color);">
+                    <div style="font-weight:700; font-size:14px; color:var(--dark-charcoal); margin-bottom:6px;">2. Transparent $399 Hook</div>
+                    <p style="font-size:12px; color:var(--text-muted); line-height:1.6;">
+                        Front-loads the $399 introductory Scalp Reset price point across headlines to pre-qualify high-intent patients while deterring bargain hunters.
+                    </p>
+                </div>
+                <div style="background:var(--off-white); padding:16px; border-radius:10px; border:1px solid var(--border-color);">
+                    <div style="font-weight:700; font-size:14px; color:var(--dark-charcoal); margin-bottom:6px;">3. Zero-Waste Guardrails</div>
+                    <p style="font-size:12px; color:var(--text-muted); line-height:1.6;">
+                        Enforces 22 negative keywords to block costly surgical queries (hair transplant, FUE, FUT) and geofences strictly to 13 affluent North Texas municipalities.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 2: AD GROUPS & KEYWORD ARCHITECTURE -->
+        <!-- ========================================================================= -->
+        <div class="page-break"></div>
+        <div class="card">
+            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 6px; display:flex; align-items:center; gap:8px;">
+                <i data-lucide="layers" style="color:var(--taupe);"></i> Audience Segmentation &amp; 3 Dedicated Ad Groups
+            </h2>
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 24px;">
+                Each search segment has an isolated ad group, tailored search copy, matching display URL path, and dedicated keyword inventory:
+            </p>
+
+            <!-- Ad Group 1 -->
+            <div class="ad-group-box" style="border-left-color: var(--taupe);">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                    <div>
+                        <h3 style="font-size: 18px; font-weight: 700;">Ad Group 1: Combined / Hair Loss</h3>
+                        <p style="font-size: 13px; color: var(--taupe); font-weight: 600;">Broad Intent, Cellular Diagnostics &amp; Head Spa Contrast</p>
+                    </div>
+                    <span class="badge" style="background:#F0FDF4; color:#15803D; border:1px solid #BBF7D0;">Ad Strength: Good</span>
+                </div>
+                <p style="font-size: 13px; color: var(--text-dark); margin: 10px 0;">
+                    <strong>Destination:</strong> <code style="font-size:12px; color:var(--taupe);">https://suaglow.com/korean-scalp-hair-rejuvenation.html</code> | <strong>Display Path:</strong> <code style="font-size:12px;">scalp / reset</code>
+                </p>
+                <div style="font-size: 12px; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-top:14px;">15 Target Keywords (Phrase Match):</div>
+                <div class="pill-list">
+                    <span class="pill">"hair loss treatment Dallas"</span>
+                    <span class="pill">"hair loss treatment near me"</span>
+                    <span class="pill">"hair loss clinic near me"</span>
+                    <span class="pill">"scalp treatment for hair loss"</span>
+                    <span class="pill">"Korean scalp treatment"</span>
+                    <span class="pill">"hair loss specialist Dallas"</span>
+                    <span class="pill">"hair loss doctor near me"</span>
+                    <span class="pill">"scalp clinic near me"</span>
+                    <span class="pill">"scalp rejuvenation Dallas"</span>
+                    <span class="pill">"best hair loss clinic Dallas"</span>
+                    <span class="pill">"hair restoration near me non surgical"</span>
+                    <span class="pill">"hair thinning clinic Dallas"</span>
+                    <span class="pill">"Korean head spa hair loss"</span>
+                    <span class="pill">"non surgical hair loss treatment"</span>
+                    <span class="pill">"scalp therapy for hair loss near me"</span>
+                </div>
+            </div>
+
+            <!-- Ad Group 2 -->
+            <div class="ad-group-box" style="border-left-color: #EC4899;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                    <div>
+                        <h3 style="font-size: 18px; font-weight: 700;">Ad Group 2: Thinning / Women</h3>
+                        <p style="font-size: 13px; color: #DB2777; font-weight: 600;">Female Diffuse Thinning, Part-Line Widening &amp; Postpartum Care</p>
+                    </div>
+                    <span class="badge" style="background:#F0FDF4; color:#15803D; border:1px solid #BBF7D0;">Ad Strength: Good</span>
+                </div>
+                <p style="font-size: 13px; color: var(--text-dark); margin: 10px 0;">
+                    <strong>Destination:</strong> <code style="font-size:12px; color:var(--taupe);">https://suaglow.com/korean-scalp-hair-rejuvenation.html</code> | <strong>Display Path:</strong> <code style="font-size:12px;">female / scalp-care</code>
+                </p>
+                <div style="font-size: 12px; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-top:14px;">15 Target Keywords (Phrase Match):</div>
+                <div class="pill-list">
+                    <span class="pill">"female hair loss treatment"</span>
+                    <span class="pill">"female hair loss treatment near me"</span>
+                    <span class="pill">"female thinning hair treatment"</span>
+                    <span class="pill">"thinning hair treatment near me"</span>
+                    <span class="pill">"treatment for thinning hair"</span>
+                    <span class="pill">"women hair loss clinic near me"</span>
+                    <span class="pill">"women thinning hair treatment near me"</span>
+                    <span class="pill">"female hair loss specialist Dallas"</span>
+                    <span class="pill">"hair loss treatment for women"</span>
+                    <span class="pill">"widening part treatment"</span>
+                    <span class="pill">"female pattern hair loss treatment"</span>
+                    <span class="pill">"best treatment for female thinning hair"</span>
+                    <span class="pill">"women hair thinning solutions"</span>
+                    <span class="pill">"diffuse thinning treatment female"</span>
+                    <span class="pill">"scalp treatment for female hair loss"</span>
+                </div>
+            </div>
+
+            <!-- Ad Group 3 -->
+            <div class="ad-group-box" style="border-left-color: #2563EB;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                    <div>
+                        <h3 style="font-size: 18px; font-weight: 700;">Ad Group 3: Hairline / Men</h3>
+                        <p style="font-size: 13px; color: #1D4ED8; font-weight: 600;">Male Receding Temples, Crown Density &amp; Non-Surgical Restoration</p>
+                    </div>
+                    <span class="badge" style="background:#F0FDF4; color:#15803D; border:1px solid #BBF7D0;">Ad Strength: Good</span>
+                </div>
+                <p style="font-size: 13px; color: var(--text-dark); margin: 10px 0;">
+                    <strong>Destination:</strong> <code style="font-size:12px; color:var(--taupe);">https://suaglow.com/korean-scalp-hair-rejuvenation.html</code> | <strong>Display Path:</strong> <code style="font-size:12px;">mens / hair-density</code>
+                </p>
+                <div style="font-size: 12px; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-top:14px;">14 Target Keywords (Phrase Match):</div>
+                <div class="pill-list">
+                    <span class="pill">"male hair loss treatment"</span>
+                    <span class="pill">"male thinning hair treatment"</span>
+                    <span class="pill">"hair loss clinic Dallas"</span>
+                    <span class="pill">"scalp therapy for hair loss"</span>
+                    <span class="pill">"male hair loss clinic near me"</span>
+                    <span class="pill">"men hair thinning treatment near me"</span>
+                    <span class="pill">"receding hairline treatment Dallas"</span>
+                    <span class="pill">"crown thinning treatment male"</span>
+                    <span class="pill">"non surgical male hair restoration"</span>
+                    <span class="pill">"hair loss treatment for men near me"</span>
+                    <span class="pill">"male pattern baldness non surgical"</span>
+                    <span class="pill">"men scalp treatment for hair loss"</span>
+                    <span class="pill">"best hair loss treatment for men"</span>
+                    <span class="pill">"hair density treatment men"</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 3: RESPONSIVE SEARCH ADS COPY MATRIX -->
+        <!-- ========================================================================= -->
+        <div class="page-break"></div>
+        <div class="card">
+            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 6px; display:flex; align-items:center; gap:8px;">
+                <i data-lucide="file-text" style="color:var(--taupe);"></i> Responsive Search Ads (RSA) Copy Specifications
+            </h2>
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 24px;">
+                Every Responsive Search Ad has been expanded to the maximum <strong>15 headlines</strong> and <strong>4 descriptions</strong>, strictly character-validated (&le;30 chars headlines, &le;90 chars descriptions) to achieve Google's highest quality score tiers.
+            </p>
+
+            <h3 style="font-size:16px; font-weight:700; margin-bottom:12px;">Ad Group 1 Copy Matrix (Combined / Hair Loss)</h3>
+            <div class="headline-grid">
+                <div class="headline-item"><span class="headline-num">H1</span> Hair Loss Treatment Dallas</div>
+                <div class="headline-item"><span class="headline-num">H2</span> Korean Scalp Treatment</div>
+                <div class="headline-item"><span class="headline-num">H3</span> Scalp Treatment For Hair Loss</div>
+                <div class="headline-item"><span class="headline-num">H4</span> Hair Loss Clinic Near You</div>
+                <div class="headline-item"><span class="headline-num">H5</span> Hair Loss Treatment Near You</div>
+                <div class="headline-item"><span class="headline-num">H6</span> $399 Korean Scalp Reset</div>
+                <div class="headline-item"><span class="headline-num">H7</span> Hair Loss? Think Scalp.</div>
+                <div class="headline-item"><span class="headline-num">H8</span> More Than a Head Spa</div>
+                <div class="headline-item"><span class="headline-num">H9</span> SuA Glow Scalp Rejuvenation</div>
+                <div class="headline-item"><span class="headline-num">H10</span> Needle-Free Follicle Care</div>
+                <div class="headline-item"><span class="headline-num">H11</span> Physician-Guided Scalp Care</div>
+                <div class="headline-item"><span class="headline-num">H12</span> FDA-Cleared Scalp Tech</div>
+                <div class="headline-item"><span class="headline-num">H13</span> Seoul-Inspired Scalp Care</div>
+                <div class="headline-item"><span class="headline-num">H14</span> Stop Hair Shedding Today</div>
+                <div class="headline-item"><span class="headline-num">H15</span> Book Scalp Assessment Today</div>
+            </div>
+            <div style="margin-top:14px; margin-bottom:28px;">
+                <div class="desc-box"><strong>D1 (85/90):</strong> Concerned about thinning or shedding? Start your personalized scalp assessment today.</div>
+                <div class="desc-box"><strong>D2 (87/90):</strong> Physician-guided Seoul-inspired hair loss treatment &amp; scalp rejuvenation in Carrollton.</div>
+                <div class="desc-box"><strong>D3 (87/90):</strong> Experience our $399 Korean Scalp Reset. Medically guided FDA-cleared scalp technology.</div>
+                <div class="desc-box"><strong>D4 (88/90):</strong> Effective scalp treatment for hair loss with needle-free transdermal delivery. Book now.</div>
+            </div>
+
+            <h3 style="font-size:16px; font-weight:700; margin-bottom:12px;">Ad Group 2 Copy Matrix (Thinning / Women)</h3>
+            <div class="headline-grid">
+                <div class="headline-item"><span class="headline-num">H1</span> Female Hair Loss Treatment</div>
+                <div class="headline-item"><span class="headline-num">H2</span> Treatment For Thinning Hair</div>
+                <div class="headline-item"><span class="headline-num">H3</span> Female Thinning Hair Care</div>
+                <div class="headline-item"><span class="headline-num">H4</span> Thinning Hair Treatment Dallas</div>
+                <div class="headline-item"><span class="headline-num">H5</span> Hair Loss Treatment Near You</div>
+                <div class="headline-item"><span class="headline-num">H6</span> Widening Part? Start Here.</div>
+                <div class="headline-item"><span class="headline-num">H7</span> $399 Scalp &amp; Hair Reset</div>
+                <div class="headline-item"><span class="headline-num">H8</span> Needle-Free Scalp Infusion</div>
+                <div class="headline-item"><span class="headline-num">H9</span> SuA Glow Women Scalp Care</div>
+                <div class="headline-item"><span class="headline-num">H10</span> Restore Female Hair Density</div>
+                <div class="headline-item"><span class="headline-num">H11</span> Gentle Needle-Free Follicle</div>
+                <div class="headline-item"><span class="headline-num">H12</span> Korean Scalp Rejuvenation</div>
+                <div class="headline-item"><span class="headline-num">H13</span> Physician-Guided Female Care</div>
+                <div class="headline-item"><span class="headline-num">H14</span> Postpartum &amp; Stress Thinning</div>
+                <div class="headline-item"><span class="headline-num">H15</span> Book Scalp Assessment Today</div>
+            </div>
+            <div style="margin-top:14px; margin-bottom:28px;">
+                <div class="desc-box"><strong>D1 (86/90):</strong> Female hair loss treatment and thinning hair care. Start your scalp assessment today.</div>
+                <div class="desc-box"><strong>D2 (88/90):</strong> Noticing hairline changes or shedding? Your scalp needs more than a surface power wash.</div>
+                <div class="desc-box"><strong>D3 (83/90):</strong> Experience our $399 Korean Scalp Reset. No guessing, just a plan built around you.</div>
+                <div class="desc-box"><strong>D4 (84/90):</strong> FDA-cleared needle-free technology for female thinning hair. Book your visit in DFW.</div>
+            </div>
+
+            <h3 style="font-size:16px; font-weight:700; margin-bottom:12px;">Ad Group 3 Copy Matrix (Hairline / Men)</h3>
+            <div class="headline-grid">
+                <div class="headline-item"><span class="headline-num">H1</span> Male Hair Loss Treatment</div>
+                <div class="headline-item"><span class="headline-num">H2</span> Male Thinning Hair Care</div>
+                <div class="headline-item"><span class="headline-num">H3</span> Hair Loss Clinic Dallas</div>
+                <div class="headline-item"><span class="headline-num">H4</span> Scalp Therapy For Hair Loss</div>
+                <div class="headline-item"><span class="headline-num">H5</span> Thinning Hairline? Think Scalp</div>
+                <div class="headline-item"><span class="headline-num">H6</span> $399 Korean Scalp Reset</div>
+                <div class="headline-item"><span class="headline-num">H7</span> Non-Surgical Hair Care</div>
+                <div class="headline-item"><span class="headline-num">H8</span> Advanced Scalp Infusion</div>
+                <div class="headline-item"><span class="headline-num">H9</span> Receding Hairline Care</div>
+                <div class="headline-item"><span class="headline-num">H10</span> Crown Thinning Treatment</div>
+                <div class="headline-item"><span class="headline-num">H11</span> Needle-Free Follicle Infusion</div>
+                <div class="headline-item"><span class="headline-num">H12</span> SuA Glow Men Scalp Care</div>
+                <div class="headline-item"><span class="headline-num">H13</span> Physician-Guided Scalp Plan</div>
+                <div class="headline-item"><span class="headline-num">H14</span> No Surgery No Downtime</div>
+                <div class="headline-item"><span class="headline-num">H15</span> Book Male Scalp Assessment</div>
+            </div>
+            <div style="margin-top:14px;">
+                <div class="desc-box"><strong>D1 (83/90):</strong> Male hair loss treatment in Dallas. Address crown thinning and receding hairlines.</div>
+                <div class="desc-box"><strong>D2 (85/90):</strong> Receding hairline or crown thinning? Address it without painful surgery or downtime.</div>
+                <div class="desc-box"><strong>D3 (82/90):</strong> Get a physician-guided scalp assessment and try our $399 Korean Scalp Reset today.</div>
+                <div class="desc-box"><strong>D4 (83/90):</strong> FDA-cleared needle-free scalp therapy for hair loss. Book your consultation in DFW.</div>
+            </div>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 4: GEOFENCING, NEGATIVE SHIELD & CREATIVE ASSETS -->
+        <!-- ========================================================================= -->
+        <div class="page-break"></div>
+        <div class="card">
+            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 6px; display:flex; align-items:center; gap:8px;">
+                <i data-lucide="shield" style="color:var(--taupe);"></i> Targeting, Waste Protection &amp; Creative Library
+            </h2>
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 24px;">
+                Comprehensive parameters configured to ensure absolute budget efficiency and brand alignment.
+            </p>
+
+            <div class="grid-2">
+                <!-- 13 Cities -->
+                <div style="background:var(--off-white); padding:20px; border-radius:12px; border:1px solid var(--border-color);">
+                    <div style="font-weight:700; font-size:15px; color:var(--dark-charcoal); margin-bottom:4px;">13 Target Municipalities (DFW)</div>
+                    <div style="font-size:12px; color:var(--taupe); margin-bottom:12px;">Setting: "Presence: People in or regularly in location"</div>
+                    <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; font-size:13px;">
+                        <div>&bull; Carrollton (Base)</div>
+                        <div>&bull; Dallas</div>
+                        <div>&bull; Plano</div>
+                        <div>&bull; Frisco</div>
+                        <div>&bull; The Colony</div>
+                        <div>&bull; Lewisville</div>
+                        <div>&bull; Richardson</div>
+                        <div>&bull; Addison</div>
+                        <div>&bull; Farmers Branch</div>
+                        <div>&bull; Irving</div>
+                        <div>&bull; Flower Mound</div>
+                        <div>&bull; Allen &amp; McKinney</div>
+                    </div>
+                </div>
+
+                <!-- 22 Negatives -->
+                <div style="background:var(--off-white); padding:20px; border-radius:12px; border:1px solid var(--border-color);">
+                    <div style="font-weight:700; font-size:15px; color:var(--dark-charcoal); margin-bottom:4px;">22 Negative Keywords Shield</div>
+                    <div style="font-size:12px; color:var(--taupe); margin-bottom:12px;">Filters out costly non-target and surgical search intent</div>
+                    <div style="font-size:12px; color:var(--text-dark); line-height:1.7;">
+                        <strong>Surgical:</strong> transplant, hair transplant, FUE, FUT, Turkey<br>
+                        <strong>Hair Pieces:</strong> wig, toupee, extensions<br>
+                        <strong>Salon Cuts:</strong> haircut, hairstyle, shampoo, conditioner<br>
+                        <strong>E-Commerce / DIY:</strong> Amazon, DIY, home remedy, free<br>
+                        <strong>Employment:</strong> jobs, career, school, certification, training
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uploaded Image Assets Table -->
+            <div style="margin-top:28px;">
+                <h3 style="font-size:16px; font-weight:700; margin-bottom:4px;">7 Curated Creative Images Uploaded to Google Ads Asset Library</h3>
+                <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">Uploaded directly into Account 480-656-3884 (Tools &gt; Shared library &gt; Asset library) ready for immediate deployment.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image Asset File</th>
+                            <th>Dimensions</th>
+                            <th>Ad Group Mapping</th>
+                            <th>Visual &amp; Psychological Intent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Male looking at Hair Loss.png</strong></td>
+                            <td>1254 &times; 1254 (1:1)</td>
+                            <td><span class="badge" style="background:#EFF6FF; color:#1D4ED8;">Ad Group 3: Men</span></td>
+                            <td>Relatable male hairline evaluation &amp; crown thinning concern</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BA Side Profile.png</strong></td>
+                            <td>2048 &times; 768 (2.6:1)</td>
+                            <td><span class="badge" style="background:#EFF6FF; color:#1D4ED8;">Ad Group 3: Men</span></td>
+                            <td>Clinical proof of temple and temporal peak density recovery</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Asian woman mature hair loss.png</strong></td>
+                            <td>1024 &times; 1536 (2:3)</td>
+                            <td><span class="badge" style="background:#FDF2F8; color:#BE185D;">Ad Group 2: Women</span></td>
+                            <td>Visible part-line widening and diffuse female scalp thinning</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Woman Blonde Asian Hair Loss on brush.png</strong></td>
+                            <td>1024 &times; 1536 (2:3)</td>
+                            <td><span class="badge" style="background:#FDF2F8; color:#BE185D;">Ad Group 2: Women</span></td>
+                            <td>Emotional trigger: Excessive shedding seen during daily grooming</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Caucasian Hair Loss.png</strong></td>
+                            <td>1186 &times; 1326 (~1:1)</td>
+                            <td><span class="badge" style="background:#FDF2F8; color:#BE185D;">Ad Group 2: Women</span></td>
+                            <td>Midline scalp exposure and clinical scalp diagnostic assessment</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BA Hiar Loss 1 Curly Hair.png</strong></td>
+                            <td>2048 &times; 768 (2.6:1)</td>
+                            <td><span class="badge" style="background:#F8FAFC; color:#334155;">Ad Group 1: Combined</span></td>
+                            <td>Verified before &amp; after density transformation on crown</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hair Loss of Top.png</strong></td>
+                            <td>1377 &times; 1142 (~1.2:1)</td>
+                            <td><span class="badge" style="background:#F8FAFC; color:#334155;">Ad Group 1: Combined</span></td>
+                            <td>Macro top-of-head follicular diagnostic close-up</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 5: 30-DAY LAUNCH & OPTIMIZATION ROADMAP -->
+        <!-- ========================================================================= -->
+        <div class="card">
+            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 6px; display:flex; align-items:center; gap:8px;">
+                <i data-lucide="trending-up" style="color:var(--taupe);"></i> 30-Day Growth &amp; Scaling Roadmap
+            </h2>
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+                Strategic milestones to transition the campaign from initial machine learning into high-efficiency lead generation:
+            </p>
+            <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:16px;">
+                <div style="background:var(--off-white); padding:18px; border-radius:12px; border:1px solid var(--border-color);">
+                    <div style="font-size:11px; font-weight:700; color:var(--taupe); text-transform:uppercase;">Days 1 – 7</div>
+                    <div style="font-weight:700; font-size:14px; margin:4px 0 8px 0;">Algorithm Learning</div>
+                    <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">Maximize Clicks bid pacing. Verify call tracking and lead form conversion signals.</p>
+                </div>
+                <div style="background:var(--off-white); padding:18px; border-radius:12px; border:1px solid var(--border-color);">
+                    <div style="font-size:11px; font-weight:700; color:var(--taupe); text-transform:uppercase;">Days 8 – 14</div>
+                    <div style="font-weight:700; font-size:14px; margin:4px 0 8px 0;">Search Query Scrub</div>
+                    <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">Scrub search terms report. Add negative keywords for any non-converting consumer searches.</p>
+                </div>
+                <div style="background:var(--off-white); padding:18px; border-radius:12px; border:1px solid var(--border-color);">
+                    <div style="font-size:11px; font-weight:700; color:var(--taupe); text-transform:uppercase;">Days 15 – 30</div>
+                    <div style="font-weight:700; font-size:14px; margin:4px 0 8px 0;">Target CPA Switch</div>
+                    <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">Transition to Target CPA bidding once 30+ conversions log, stabilizing cost per consultation.</p>
+                </div>
+                <div style="background:var(--off-white); padding:18px; border-radius:12px; border:1px solid var(--border-color);">
+                    <div style="font-size:11px; font-weight:700; color:var(--taupe); text-transform:uppercase;">Month 2+</div>
+                    <div style="font-weight:700; font-size:14px; margin:4px 0 8px 0;">Visual Ad Extensions</div>
+                    <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">Attach the 7 staged Image Assets as Google's 28-day spend threshold clears, boosting Search CTR.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; color: var(--text-muted); font-size: 12px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+            SuA Glow • Internal Strategy Dossier &bull; Prepared for Client Presentation &bull; Carrollton, TX &bull; suaglow.com
+        </div>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

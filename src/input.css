@@ -339,6 +339,41 @@ html {
     margin-bottom: 1rem;
 }
 
+/* Aura Nav Banner Styling & Interactive Rollover */
+.aura-nav-banner {
+    background: linear-gradient(135deg, #2b7fff 0%, #1e60eb 50%, #0d4ece 100%);
+    box-shadow: 0 4px 18px rgba(30, 96, 235, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    cursor: pointer;
+}
+
+.aura-nav-banner:hover {
+    background: linear-gradient(135deg, #3b88ff 0%, #2566f4 50%, #1055df 100%);
+    box-shadow: 0 8px 26px rgba(30, 96, 235, 0.65), 0 0 15px rgba(59, 136, 255, 0.35);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.aura-nav-banner .aura-device-img {
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.aura-nav-banner:hover .aura-device-img {
+    transform: scale(1.15) translateY(-3px) rotate(-1deg);
+    filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.5));
+}
+
+.aura-nav-banner .aura-arrow-icon {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.aura-nav-banner:hover .aura-arrow-icon {
+    transform: translateX(4px);
+}
+
 /* Navbar Theme Transitions */
 #navbar.nav-scrolled {
     background: rgba(255, 255, 255, 0.9);

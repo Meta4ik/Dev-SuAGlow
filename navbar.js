@@ -57,16 +57,18 @@ const NAVBAR_HTML = `
                 <div class="mega-menu p-10">
                     <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 text-left">
                         <!-- Top Banner: 3D Skin Analysis (Start Here / New) -->
-                        <div class="col-span-4 pb-4 mb-2 border-b border-light-gray/40 flex items-center justify-between">
-                            <a href="3d-skin-analysis.html" class="group flex items-center gap-3 bg-gradient-to-r from-[#131619] to-[#252A2F] text-white px-5 py-2.5 rounded-2xl hover:from-[#252A2F] hover:to-[#131619] transition-all shadow-sm">
-                                <span class="w-8 h-8 rounded-xl bg-warm-gold/20 flex items-center justify-center p-1 overflow-hidden shrink-0">
-                                    <img src="assets/aura_device_large.png" alt="Aura 3D Device" class="w-full h-full object-contain">
-                                </span>
-                                <div>
-                                    <span class="text-xs font-semibold uppercase tracking-wider text-white group-hover:text-warm-gold transition-colors">Aura 3D Skin Analysis</span>
-                                    <span class="text-[10px] text-white/60 block">Photorealistic 3D Digital Twin &amp; Provider Consultation</span>
+                        <div class="col-span-4 pt-3 pb-4 mb-2 border-b border-light-gray/40 flex items-center justify-between">
+                            <a href="3d-skin-analysis.html" class="aura-nav-banner group flex items-center gap-3 text-white pl-4 pr-5 py-2.5 rounded-2xl mt-1">
+                                <!-- Device Breaking Out of Banner Top/Left -->
+                                <div class="relative w-12 h-10 shrink-0 flex items-center justify-center">
+                                    <img src="assets/aura_device_large.png" alt="Aura 3D Device" class="aura-device-img absolute -top-4 -left-1 w-14 h-14 object-contain pointer-events-none">
                                 </div>
-                                <span class="ml-3 px-2.5 py-0.5 rounded-full bg-warm-gold text-charcoal font-bold text-[9px] uppercase tracking-wider">Start Here / New</span>
+                                <div class="ml-1">
+                                    <span class="text-xs font-semibold uppercase tracking-wider text-white group-hover:text-white transition-colors">Aura 3D Skin Analysis</span>
+                                    <span class="text-[10px] text-white/85 group-hover:text-white/95 block transition-colors">Photorealistic 3D Digital Twin &amp; Provider Consultation</span>
+                                </div>
+                                <span class="ml-3 inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-white text-[#0d4ece] group-hover:bg-[#FFF2B2] group-hover:text-amber-950 font-bold text-[11px] uppercase tracking-wider shadow-sm shrink-0 transition-colors text-center leading-none">Start Here</span>
+                                <i data-lucide="arrow-right" class="aura-arrow-icon w-3.5 h-3.5 text-white/70 group-hover:text-white ml-0.5 shrink-0"></i>
                             </a>
                             <a href="skin-health.html" class="text-[11px] font-semibold text-taupe hover:text-near-black uppercase tracking-wider flex items-center gap-1">
                                 All Skin Health Departments <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
@@ -390,18 +392,18 @@ const NAVBAR_HTML = `
                     <div class="accordion-content hidden flex flex-col gap-5 pl-4 mt-2">
 
                         <!-- 3D Skin Analysis (New / Start Here) -->
-                        <div class="mb-1">
-                            <a href="3d-skin-analysis.html" class="flex items-center justify-between p-3 rounded-xl bg-near-black text-white shadow-sm">
+                        <div class="pt-3 mb-2 flex justify-center">
+                            <a href="3d-skin-analysis.html" class="aura-nav-banner w-full flex items-center justify-between px-3.5 py-3 rounded-2xl text-white">
                                 <div class="flex items-center gap-2.5">
-                                    <span class="w-6 h-6 rounded-lg bg-warm-gold/20 flex items-center justify-center p-0.5 overflow-hidden shrink-0">
-                                        <img src="assets/aura_device_large.png" alt="Aura 3D Device" class="w-full h-full object-contain">
-                                    </span>
-                                    <div>
-                                        <span class="font-heading text-xs font-semibold uppercase tracking-wider block text-white">3D Skin Analysis</span>
-                                        <span class="text-[10px] text-white/60 block">Aura Digital Twin Consultation</span>
+                                    <div class="relative w-9 h-9 shrink-0 flex items-center justify-center">
+                                        <img src="assets/aura_device_large.png" alt="Aura 3D Device" class="aura-device-img absolute -top-3.5 -left-1 w-12 h-12 object-contain pointer-events-none">
+                                    </div>
+                                    <div class="flex flex-col justify-center">
+                                        <span class="font-heading text-xs font-semibold uppercase tracking-wider block text-white leading-tight">3D Skin Analysis</span>
+                                        <span class="text-[10px] text-white/85 block mt-0.5">Aura Digital Twin Consultation</span>
                                     </div>
                                 </div>
-                                <span class="px-2 py-0.5 rounded-full bg-warm-gold text-charcoal font-bold text-[9px] uppercase tracking-wider shrink-0">New</span>
+                                <span class="inline-flex items-center justify-center px-3.5 py-1 rounded-full bg-white text-[#0d4ece] font-bold text-[10px] uppercase tracking-wider shadow-sm shrink-0 leading-none">Start Here</span>
                             </a>
                         </div>
 

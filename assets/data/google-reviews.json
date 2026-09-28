@@ -1,10 +1,34 @@
 {
   "place_name": "SuA Glow",
   "rating": "5.0",
-  "user_ratings_total": 130,
-  "formatted_badge": "5.0 · 130 reviews",
-  "last_updated": "2026-09-28T10:05:03.771Z",
+  "user_ratings_total": 134,
+  "formatted_badge": "5.0 · 134 reviews",
+  "last_updated": "2026-09-28T23:29:43.795Z",
   "reviews": [
+    {
+      "author_name": "Meg",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLMixy5YhtyeyS6V6ZSqCDIgvyGJnQCq2gm1Kqtr7D0vtxe7A=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Reasonable priced for packages. Gentle and professional! I’m looking forward to start this journey with them! Please check them out if you are in the area~~",
+      "time": 1790627297,
+      "relative_time_description": "in the last week"
+    },
+    {
+      "author_name": "Shanna Lawrence",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUhl5bl3lUdEKmqb7KiTqi_TtJUNAxCUyiXOGEkasrVH1wR3gZXmA=s128-c0x00000000-cc-rp-mo-ba2",
+      "rating": 5,
+      "text": "dedicated, knowledgeable, and always looking for ways to better serve their clients. It's refreshing to see a practitioner so committed to growth.",
+      "time": 1790612130,
+      "relative_time_description": "in the last week"
+    },
+    {
+      "author_name": "Eunice Lee",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIhkxi1wrJYsPp7IpG1SQFk1e6GtfD1bH-SVP5ldKyue7iUHl_V=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Ultimate K-beauty is finally here! ✨ I had such a great experience. The consultation was very professional and thorough, with detailed explanations and personalized recommendations based on my features, preferences, and beauty goals. The prices are\nreasonable, and they also offer great promotions. If you’re looking for professional, personalized K-beauty services, I highly recommend this place!",
+      "time": 1790610627,
+      "relative_time_description": "in the last week"
+    },
     {
       "author_name": "Jennifer Laird",
       "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVbQPAUCXfr24uVBfBzt80GxTGGPff0JVcBmRqfN3NRQ9jxPO2G=s128-c0x00000000-cc-rp-mo",
@@ -19,30 +43,6 @@
       "rating": 5,
       "text": "",
       "time": 1790552681,
-      "relative_time_description": "in the last week"
-    },
-    {
-      "author_name": "Kate",
-      "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVABHPkUv5Uo4OFFN1Eqd44jkr-m6tyLxbdvReS5_SePtiwJeo=s128-c0x00000000-cc-rp-mo",
-      "rating": 5,
-      "text": "",
-      "time": 1790535765,
-      "relative_time_description": "in the last week"
-    },
-    {
-      "author_name": "S Dhadwar",
-      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLqQCGL09w06Hdl8YWH2KZJTRY-gA9Bfqqb9_ZY4_sxUSDNSQ=s128-c0x00000000-cc-rp-mo",
-      "rating": 5,
-      "text": "",
-      "time": 1790483396,
-      "relative_time_description": "in the last week"
-    },
-    {
-      "author_name": "Sarah Noble",
-      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJ2uqYe6RJNe38uXjHuNsWap1_-UhB37WsI3iKm5B3MBGK-1Q=s128-c0x00000000-cc-rp-mo",
-      "rating": 5,
-      "text": "",
-      "time": 1790479555,
       "relative_time_description": "in the last week"
     },
     {
