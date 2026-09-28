@@ -21,9 +21,16 @@
 
     <!-- Google Tag & Ads Conversion Tracking -->
     <script src="google-tag.js"></script>
+    <!-- Event snippet for Submit lead form conversion page -->
     <script>
-        // Trigger conversion event on thank you confirmation page load
         document.addEventListener('DOMContentLoaded', function() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18472178231/1oWBCOuBv4kdELeknOhE',
+                    'value': 1.0,
+                    'currency': 'USD'
+                });
+            }
             if (window.suaTrackConversion) {
                 window.suaTrackConversion('formSubmission', {
                     event_category: 'Lead Conversion',

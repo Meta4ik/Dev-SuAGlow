@@ -7,18 +7,22 @@
   // --- CONFIGURATION ---
   // Replace these values with your actual Google Ads ID and Conversion Labels
   window.SUA_TRACKING_CONFIG = Object.assign({
-    googleAdsId: 'AW-18481004220',       // Google Ads Conversion ID
-    ga4MeasurementId: 'G-XXXXXXXXXX',   // GA4 Measurement ID (optional, e.g. G-ABC123XYZ)
+    googleAdsIds: ['AW-18481004220', 'AW-18472178231'], // Google Ads Conversion IDs
+    ga4MeasurementId: 'G-XXXXXXXXXX',                   // GA4 Measurement ID (optional, e.g. G-ABC123XYZ)
     conversionLabels: {
       bookingClick: '',                 // Google Ads conversion label for booking clicks
       phoneCallClick: '',               // Google Ads conversion label for phone calls
-      formSubmission: '',               // Google Ads conversion label for form submits
+      formSubmission: '1oWBCOuBv4kdELeknOhE', // Google Ads conversion label for form submits (AW-18472178231)
       scalpResetConsultation: ''        // Dedicated label for Scalp Reset campaign
     },
     debug: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   }, window.SUA_TRACKING_CONFIG || {});
 
   const config = window.SUA_TRACKING_CONFIG;
+  // Normalize googleAdsIds to an array
+  const adsIds = Array.isArray(config.googleAdsIds)
+    ? config.googleAdsIds.filter(id => id && !id.includes('XXXX'))
+    : (config.googleAdsId && !config.googleAdsId.includes('XXXX') ? [config.googleAdsId] : []);
 
   // Initialize dataLayer and gtag function
   window.dataLayer = window.dataLayer || [];
@@ -27,12 +31,12 @@
   }
   window.gtag = gtag;
 
-  // Set default timestamp and config
+  // Set default timestamp
   gtag('js', new Date());
 
-  // Only attempt to load remote script if a valid ID is provided or in debug mode
-  const primaryId = (config.googleAdsId && !config.googleAdsId.includes('XXXX')) 
-    ? config.googleAdsId 
+  // Determine primary script loader ID
+  const primaryId = adsIds.length > 0 
+    ? adsIds[0] 
     : (config.ga4MeasurementId && !config.ga4MeasurementId.includes('XXXX') ? config.ga4MeasurementId : null);
 
   if (primaryId) {
@@ -42,10 +46,12 @@
     script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(primaryId)}`;
     document.head.appendChild(script);
 
-    // Configure Google Ads & GA4
-    if (config.googleAdsId && !config.googleAdsId.includes('XXXX')) {
-      gtag('config', config.googleAdsId);
-    }
+    // Configure all Google Ads IDs
+    adsIds.forEach(id => {
+      gtag('config', id);
+    });
+
+    // Configure GA4
     if (config.ga4MeasurementId && !config.ga4MeasurementId.includes('XXXX')) {
       gtag('config', config.ga4MeasurementId);
     }
@@ -64,23 +70,28 @@
     // Google Analytics 4 Custom Event
     gtag('event', action, params);
 
-    // Google Ads Specific Conversion
-    let sendTo = null;
-    if (config.googleAdsId && !config.googleAdsId.includes('XXXX')) {
-      const label = config.conversionLabels[action] || params.conversionLabel;
-      if (label) {
-        sendTo = `${config.googleAdsId}/${label}`;
-      }
-    }
-
-    if (sendTo) {
+    // If explicit send_to provided, fire directly
+    if (params.send_to) {
       gtag('event', 'conversion', {
-        'send_to': sendTo,
-        'value': params.value || 1.0,
-        'currency': 'USD',
+        'send_to': params.send_to,
+        'value': params.value !== undefined ? params.value : 1.0,
+        'currency': params.currency || 'USD',
         'transaction_id': params.transaction_id || ''
       });
     }
+
+    // Google Ads Specific Conversions (send to configured Ads IDs)
+    adsIds.forEach(id => {
+      const label = (config.conversionLabels && config.conversionLabels[action]) || params.conversionLabel;
+      if (label && (!params.send_to || !params.send_to.startsWith(id))) {
+        gtag('event', 'conversion', {
+          'send_to': `${id}/${label}`,
+          'value': params.value !== undefined ? params.value : 1.0,
+          'currency': params.currency || 'USD',
+          'transaction_id': params.transaction_id || ''
+        });
+      }
+    });
   };
 
   /**
