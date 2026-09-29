@@ -11,9 +11,14 @@
     ga4MeasurementId: 'G-XXXXXXXXXX',                   // GA4 Measurement ID (optional, e.g. G-ABC123XYZ)
     conversionLabels: {
       bookingClick: '',                 // Google Ads conversion label for booking clicks
-      phoneCallClick: '',               // Google Ads conversion label for phone calls
+      phoneCallClick: 'bKqPCOuC5oodELz9tuxE', // Google Ads conversion label for phone calls (AW-18481004220)
       formSubmission: '1oWBCOuBv4kdELeknOhE', // Google Ads conversion label for form submits (AW-18472178231)
       scalpResetConsultation: ''        // Dedicated label for Scalp Reset campaign
+    },
+    // Account-specific conversion targets
+    accountSpecificConversions: {
+      phoneCallClick: ['AW-18481004220/bKqPCOuC5oodELz9tuxE'],
+      formSubmission: ['AW-18472178231/1oWBCOuBv4kdELeknOhE']
     },
     debug: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   }, window.SUA_TRACKING_CONFIG || {});
@@ -80,18 +85,30 @@
       });
     }
 
-    // Google Ads Specific Conversions (send to configured Ads IDs)
-    adsIds.forEach(id => {
-      const label = (config.conversionLabels && config.conversionLabels[action]) || params.conversionLabel;
-      if (label && (!params.send_to || !params.send_to.startsWith(id))) {
+    // Account-specific targeted conversions (prevents firing label against wrong Ads account)
+    if (config.accountSpecificConversions && config.accountSpecificConversions[action]) {
+      config.accountSpecificConversions[action].forEach(target => {
         gtag('event', 'conversion', {
-          'send_to': `${id}/${label}`,
+          'send_to': target,
           'value': params.value !== undefined ? params.value : 1.0,
           'currency': params.currency || 'USD',
           'transaction_id': params.transaction_id || ''
         });
-      }
-    });
+      });
+    } else {
+      // Fallback: Google Ads Specific Conversions (send to configured Ads IDs)
+      adsIds.forEach(id => {
+        const label = (config.conversionLabels && config.conversionLabels[action]) || params.conversionLabel;
+        if (label && (!params.send_to || !params.send_to.startsWith(id))) {
+          gtag('event', 'conversion', {
+            'send_to': `${id}/${label}`,
+            'value': params.value !== undefined ? params.value : 1.0,
+            'currency': params.currency || 'USD',
+            'transaction_id': params.transaction_id || ''
+          });
+        }
+      });
+    }
   };
 
   /**

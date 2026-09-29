@@ -1,10 +1,18 @@
 {
   "place_name": "SuA Glow",
   "rating": "5.0",
-  "user_ratings_total": 130,
-  "formatted_badge": "5.0 · 130 reviews",
-  "last_updated": "2026-09-29T17:42:39.928Z",
+  "user_ratings_total": 131,
+  "formatted_badge": "5.0 · 131 reviews",
+  "last_updated": "2026-09-29T19:01:28.599Z",
   "reviews": [
+    {
+      "author_name": "Jasmin Urista",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJhSr-6LaCpa75IYX1NWMrssmasQ3u7JFc2WYrvsy_3yDMCcw=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Sophia is so sweet and informative. She goes over your areas of concerns and helps you personalize what it is that you need. My services were Botox and Radiesse. I cannot wait for my results to settle in. Thank you so much 🤍",
+      "time": 1790704822,
+      "relative_time_description": "in the last week"
+    },
     {
       "author_name": "Meg",
       "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLMixy5YhtyeyS6V6ZSqCDIgvyGJnQCq2gm1Kqtr7D0vtxe7A=s128-c0x00000000-cc-rp-mo",
@@ -35,14 +43,6 @@
       "rating": 5,
       "text": "",
       "time": 1790555994,
-      "relative_time_description": "in the last week"
-    },
-    {
-      "author_name": "Jordyn McGregor",
-      "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVscn5sSvLZburxWJGg8Oq8J6fHTZNWJ4IKvpoZ67AepzJC-FQ=s128-c0x00000000-cc-rp-mo",
-      "rating": 5,
-      "text": "",
-      "time": 1790552681,
       "relative_time_description": "in the last week"
     },
     {
