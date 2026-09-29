@@ -27,13 +27,14 @@ Before pushing to FTP or manually updating your production environment, you shou
 Run this command from inside your `dev-site` folder:
 
 ```bash
-# Syncs all files while ignoring .git, node_modules, and other dev files
+# Syncs all files while ignoring .git, node_modules, internal, dev-tools, and other dev files
 rsync -av --delete \
   --exclude='.git' \
   --exclude='node_modules' \
   --exclude='src' \
   --exclude='scratch' \
   --exclude='dev-tools' \
+  --exclude='internal' \
   --exclude='kam_doc_updates' \
   . ../live-site/
 ```
@@ -41,15 +42,18 @@ rsync -av --delete \
 ## 3. Pushing to FTP (`suaglow.com/public_html`)
 Once your files are synced to the `live-site` folder, you can upload them to your FTP server.
 
+> [!CAUTION]
+> **Strict Production Rule**: `internal/` (internal dossiers, ad collateral) and `dev-tools/` must **NEVER** be uploaded to the live FTP server!
+
 **Option A: Using your AppleScript Droplet**
 1. Open Finder and go to the `live-site` folder.
 2. Select the files/folders you want to upload (or select all with `Cmd + A`).
 3. Drag and drop them onto your `suaglow.com - public_html droplet.app` droplet.
 
-*(Remember to configure your droplet's preferences to ignore `.git`, `node_modules`, `kam_doc_updates`, `dev-tools`, and `scratch`!)*
+*(Remember to configure your droplet's preferences to ignore `.git`, `node_modules`, `kam_doc_updates`, `dev-tools`, `internal`, and `scratch`!)*
 
 **Option B: Using Python Automation (What we used today)**
-If the droplet acts up, you can run the python script we created today from your `live-site` folder:
+If the droplet acts up, you can run the python script from your `dev-site` or `live-site` folder (exclusions for `internal/` and `dev-tools/` are enforced automatically):
 
 ```bash
 cd ../live-site
@@ -60,5 +64,5 @@ python3 ftp_upload.py
 If you install `lftp` via Homebrew (`brew install lftp`), you can run this from your `live-site` folder:
 
 ```bash
-lftp -u qzao065afvpx,'r5697@sJY9PgOYEh' ftp://suaglow.com -e "mirror -R -x '^\.' -x '^node_modules/' -x '^scratch/' -x '^dev-tools/' -x '^kam_doc_updates/' -x '^src/' . public_html; quit"
+lftp -u qzao065afvpx,'r5697@sJY9PgOYEh' ftp://suaglow.com -e "mirror -R -x '^\.' -x '^node_modules/' -x '^scratch/' -x '^dev-tools/' -x '^internal/' -x '^kam_doc_updates/' -x '^src/' . public_html; quit"
 ```

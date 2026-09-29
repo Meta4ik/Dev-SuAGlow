@@ -9,3 +9,8 @@
 - **Signature Aesthetics**:
   - Warm neutral tones, minimalist medical aesthetic, warm taupe/champagne accents (`#AA987C`, `#E5B869`).
   - Realistic Korean clinical aesthetics, needle-free DEP treatment devices, and modern consultation spaces.
+
+## Deployment & Production Security Standards
+- **Strict FTP / Production Exclusions**: The `internal/` (internal dossiers, ad collateral, marketing experiments) and `dev-tools/` directories are strictly local development and internal audit tools.
+- **Never Upload to Public Server**: Under NO circumstance should `internal/` or `dev-tools/` be uploaded to the public FTP server (`suaglow.com/public_html`) or live production hosting.
+- **Automated Upload Scripts**: All sync/deploy tools, `package.json` scripts, and `ftp_upload.py` scripts must explicitly maintain `'internal'` and `'dev-tools'` in their exclude sets.
