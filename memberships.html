@@ -52,6 +52,32 @@
             opacity: 0.95;
             transition: filter 0.3s ease, opacity 0.3s ease;
         }
+
+        /* Hero Text Staggered Reveal Animations */
+        @keyframes heroFadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-anim {
+            opacity: 0;
+            animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            will-change: transform, opacity;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-anim {
+                animation: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
     </style>
 </head>
 
@@ -60,24 +86,24 @@
 
     <!-- Hero Section (Strictly following DESIGN.md Standard Inner-Page Hero pattern) -->
     <section id="hero" data-nav-theme="dark"
-        class="relative min-h-[1360px] lg:min-h-[1440px] flex items-start justify-center text-center px-6 sm:px-8 pt-[780px] sm:pt-[840px] md:pt-[900px] lg:pt-[940px] overflow-hidden bg-near-black pb-28 sm:pb-36">
+        class="relative min-h-[1260px] lg:min-h-[1320px] flex items-start justify-center text-center px-6 sm:px-8 pt-[740px] sm:pt-[800px] md:pt-[860px] lg:pt-[900px] overflow-hidden bg-near-black pb-16 sm:pb-20">
         <div class="absolute inset-0 z-0 pointer-events-none">
             <!-- Background Image: Radiant and bright on top, anchored to top -->
             <div class="absolute top-0 inset-x-0 h-[880px] sm:h-[960px] md:h-[1020px] overflow-hidden">
-                <img src="assets/diverse_models_candid_laughing.jpg" alt="SuA Glow Korean Glass Skin Community - Inclusive Care & Diverse Skin Tones"
-                    class="w-full h-full object-cover object-[center_top]">
+                <img src="assets/member_hero.webp" alt="SuA Glow Korean Glass Skin Community - Inclusive Care & Diverse Skin Tones"
+                    class="w-full h-full object-cover object-[center_20%]">
                 <!-- Graded Overlay: Crystal clear & bright across faces, softly grading to deep dark at bottom of frame -->
                 <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent via-22% via-near-black/75 via-75% to-near-black"></div>
             </div>
             <!-- Solid deep dark canvas where text and CTAs sit with 100% crystal clear legibility -->
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-52% via-near-black/95 via-68% to-near-black to-80%"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% via-near-black/95 via-68% to-near-black to-80%"></div>
             <div class="absolute bottom-0 inset-x-0 h-64 bg-near-black"></div>
             <div class="absolute top-[960px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-warm-gold/15 blur-[160px] rounded-full pointer-events-none"></div>
         </div>
 
         <div class="relative z-10 max-w-4xl mx-auto">
-            <!-- Floating Circular Price Badge (Desktop Hero - Signature Frosted Glass Style) -->
-            <div class="absolute hidden xl:flex items-center justify-center z-20 text-[#AA987C] pointer-events-none float-slow"
+            <!-- Floating Circular Price Badge (Desktop Hero - Signature Frosted Glass Style - Hidden for now) -->
+            <div class="absolute !hidden items-center justify-center z-20 text-[#AA987C] pointer-events-none float-slow"
                 style="width: 140px; height: 140px; top: -10px; right: -80px; animation: float 6s ease-in-out infinite;">
                 <div class="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.25)] border border-white/20"></div>
                 <svg viewBox="0 0 100 100" class="relative z-10 w-[95%] h-[95%]" style="animation: spin-badge 20s linear infinite;">
@@ -94,33 +120,56 @@
                 </div>
             </div>
 
-            <span
-                class="inline-flex items-center justify-center leading-none px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[10px] sm:text-xs tracking-[0.25em] uppercase text-warm-gold font-semibold mb-6">
-                <span class="pt-[1px]">THE SUA GLOW GLASS SKIN METHOD™</span>
-            </span>
-
-            <h1 class="heading-wide text-3xl sm:text-5xl md:text-6xl text-white mb-6 uppercase tracking-[0.12em] [text-wrap:balance]">
-                Korean Glass Skin <span class="text-warm-gold font-normal">Membership</span>
-            </h1>
-
-            <p class="font-heading text-base sm:text-xl text-white/90 font-medium tracking-wide mb-4 [text-wrap:balance] uppercase">
-                K-Beauty Is All About The Layers. So Is Your Facial.
-            </p>
-
-            <p class="font-body text-sm sm:text-base text-white/70 max-w-2xl mx-auto leading-relaxed mb-8 [text-wrap:balance]">
-                Five curated layers. One monthly Korean skin ritual. Designed in Carrollton for your Dallas glow.
-            </p>
-
-            <!-- Supervising Physician Badge -->
-            <div class="inline-flex items-center justify-center leading-none gap-2 px-3.5 py-2 bg-white/5 border border-white/10 rounded-full text-[11px] text-white/60 tracking-wider mb-8">
-                <span class="pt-[1px]">Supervising Physician: <strong class="text-white/80">Adam Yang, MD</strong></span>
+            <!-- Category Pill -->
+            <div class="hero-anim" style="animation-delay: 0.1s;">
+                <span
+                    class="inline-flex items-center justify-center leading-none px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[10px] sm:text-xs tracking-[0.25em] uppercase text-warm-gold font-semibold mb-6">
+                    <span class="pt-[1px]">THE SUA GLOW GLASS SKIN METHOD™</span>
+                </span>
             </div>
 
-            <!-- Hero CTA -->
-            <div class="flex items-center justify-center">
+            <!-- Main Heading Matching Graphic -->
+            <h1 class="hero-anim font-heading font-light text-3xl sm:text-5xl md:text-6xl text-white mb-6 uppercase tracking-[0.14em] [text-wrap:balance] leading-[1.15]"
+                style="animation-delay: 0.25s;">
+                Korean Glass Skin<br><span class="text-warm-gold font-normal tracking-[0.16em]">Membership</span>
+            </h1>
+
+            <!-- Subtitle 1 -->
+            <p class="hero-anim font-heading text-sm sm:text-base md:text-lg text-white font-medium tracking-[0.2em] mb-4 [text-wrap:balance] uppercase"
+                style="animation-delay: 0.4s;">
+                Five Layers. One Monthly Korean Skin Ritual.
+            </p>
+
+            <!-- Subtitle 2 -->
+            <p class="hero-anim font-body text-sm sm:text-base text-white/80 max-w-2xl mx-auto leading-relaxed mb-10 [text-wrap:balance]"
+                style="animation-delay: 0.55s;">
+                A physician-guided approach to hydration, skin quality<br class="hidden sm:inline"> and your signature SuA Glow.
+            </p>
+
+            <!-- Early Access Capsule Pill Bar -->
+            <div class="hero-anim max-w-2xl mx-auto mb-10" style="animation-delay: 0.7s;">
+                <div class="inline-flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full border border-warm-gold/50 bg-black/60 backdrop-blur-md w-full sm:w-auto shadow-[0_4px_25px_rgba(0,0,0,0.5)]">
+                    <span class="font-heading text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase text-warm-gold">
+                        Early Access
+                    </span>
+                    <span class="hidden sm:inline-block w-px h-6 bg-white/20"></span>
+                    <div class="flex items-baseline gap-1">
+                        <span class="font-heading font-bold text-2xl sm:text-3xl text-white tracking-tight">$199</span>
+                        <span class="font-body text-xs sm:text-sm text-white/70 uppercase tracking-wider">/month</span>
+                    </div>
+                    <span class="hidden sm:inline-block w-px h-6 bg-white/20"></span>
+                    <span class="font-heading text-[11px] sm:text-xs font-medium tracking-[0.18em] uppercase text-white/80">
+                        Limited to the First <span class="text-xs sm:text-sm font-semibold text-warm-gold">50</span> Members
+                    </span>
+                </div>
+            </div>
+
+            <!-- Hero CTA Matching Graphic -->
+            <div class="hero-anim flex items-center justify-center" style="animation-delay: 0.85s;">
                 <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                    class="btn-primary inline-flex items-center justify-center w-full sm:w-auto text-center">
-                    START YOUR GLASS SKIN ERA
+                    class="group inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.18em] uppercase text-[#1B1E21] bg-gradient-to-r from-[#D6C7B2] via-[#AA987C] to-[#948267] hover:brightness-110 shadow-[0_6px_25px_rgba(170,152,124,0.35)] hover:shadow-[0_8px_30px_rgba(170,152,124,0.5)] hover:scale-[1.02] transition-all duration-300">
+                    <span>START YOUR GLASS SKIN ERA</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                 </a>
             </div>
         </div>

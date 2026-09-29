@@ -1314,11 +1314,11 @@ const SEARCH_INDEX = [
   },
   {
     "url": "memberships.html#hero",
-    "title": "Korean Glass Skin Membership",
+    "title": "Korean Glass SkinMembership",
     "pageTitle": "Korean Glass Skin Membership Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "K-Beauty Is All About The Layers. So Is Your Facial. Five curated layers. One monthly Korean skin ritual. Designed in Carrollton for your Dallas glow.",
-    "snippet": "K-Beauty Is All About The Layers. So Is Your Facial. Five curated layers. One monthly Korean skin ritual. Designed in Carrollton for your Dallas glow."
+    "content": "Five Layers. One Monthly Korean Skin Ritual. A physician-guided approach to hydration, skin quality and your signature SuA Glow.",
+    "snippet": "Five Layers. One Monthly Korean Skin Ritual. A physician-guided approach to hydration, skin quality and your signature SuA Glow."
   },
   {
     "url": "memberships.html#five-layers",
