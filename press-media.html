@@ -59,11 +59,17 @@
     <script src="script.js?v=43"></script>
 
     <!-- Load the News Content dynamically -->
-    <script src="news.js?v=43"></script>
+    <script src="news.js?v=45"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             if (typeof NEWS_HTML !== 'undefined') {
                 document.getElementById('news-container').innerHTML = NEWS_HTML;
+                
+                // Initialize Category Filter Tabs
+                if (typeof initNewsFilters === 'function') {
+                    initNewsFilters();
+                }
+
                 // Re-initialize any Lucide icons inside the dynamically loaded content
                 if (window.lucide) {
                     lucide.createIcons();
