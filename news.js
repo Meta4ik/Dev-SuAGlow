@@ -166,7 +166,7 @@ const NEWS_HTML = `
         <!-- Section Header -->
         <div class="text-center mb-16 animate-on-scroll fade-up">
             <span class="inline-block text-[11px] tracking-[0.35em] text-[#AA987C] uppercase font-bold mb-4">
-                FOR EDUCATIONAL & INFORMATIONAL PURPOSES ONLY
+                FOR EDUCATIONAL PURPOSES ONLY
             </span>
             <h1 class="heading-wide text-3xl md:text-5xl text-near-black mb-6 uppercase tracking-[0.15em]">
                 Press & Media Coverage
