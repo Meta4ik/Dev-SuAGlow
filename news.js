@@ -165,15 +165,18 @@ const NEWS_HTML = `
     <div class="max-w-7xl mx-auto">
         <!-- Section Header -->
         <div class="text-center mb-16 animate-on-scroll fade-up">
-            <span class="inline-block text-[11px] tracking-[0.4em] text-[#AA987C] uppercase font-bold mb-4">
-                Clinical Evidence & Global Aesthetics
+            <span class="inline-block text-[11px] tracking-[0.35em] text-[#AA987C] uppercase font-bold mb-4">
+                FOR EDUCATIONAL & INFORMATIONAL PURPOSES ONLY
             </span>
             <h1 class="heading-wide text-3xl md:text-5xl text-near-black mb-6 uppercase tracking-[0.15em]">
                 Press & Media Coverage
             </h1>
             <div class="w-20 h-[1.5px] bg-[#AA987C]/40 mx-auto mb-8"></div>
             <p class="font-body text-charcoal/70 max-w-2xl mx-auto leading-relaxed text-base md:text-lg">
-                The global movement for cellular skin regeneration, needle-free delivery, and Korean clinical longevity—as featured in leading world publications.
+                Curated third-party features and global aesthetic trends highlighting skin longevity, regenerative treatments, and modern skincare technology.
+            </p>
+            <p class="text-[11px] text-charcoal/40 tracking-wider max-w-2xl mx-auto mt-4 leading-relaxed font-light">
+                *The articles below are provided for general educational and informational purposes only. Third-party editorial content does not constitute medical advice, diagnosis, or treatment endorsements.
             </p>
         </div>
 
