@@ -25,8 +25,8 @@ const MONTHLY_SPECIALS_CONFIG_OCTOBER = {
         offerPillars: "Korean-founded · Korean PA-C provider · Physician-guided",
         offerCtaText: "Claim Your October Offer",
         offerCtaUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
-        flyerImage: "assets/SuA-Glow-October-Specials.jpg?v=104",
-        downloadFlyerImage: "assets/SuA-Glow-October-Specials.jpg?v=104",
+        flyerImage: "assets/SuA-Glow-October-Specials.jpg?v=105",
+        downloadFlyerImage: "assets/SuA-Glow-October-Specials.jpg?v=105",
         cardBackground: "assets/october_card_bg.jpg",
         headerBackground: "assets/october_header_bg.jpg",
         bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
@@ -91,3 +91,8 @@ const MONTHLY_SPECIALS_CONFIG_OCTOBER = {
         { icon: "map-pin", title: "DALLAS K-BEAUTY", subtitle: "Carrollton · DFW" }
     ]
 };
+
+// Also export MONTHLY_SPECIALS_CONFIG
+if (typeof MONTHLY_SPECIALS_CONFIG === 'undefined') {
+    var MONTHLY_SPECIALS_CONFIG = MONTHLY_SPECIALS_CONFIG_OCTOBER;
+}
