@@ -16,15 +16,31 @@ function renderMonthlySpecials(customConfig) {
 
     const { meta, featuredSteps, additionalPromos, brandPillars } = config;
 
+    const isOctober = (meta.month && meta.month.toLowerCase().includes('october')) || (meta.title && meta.title.toLowerCase().includes('october'));
+
     // --- VIEW 1: Web Interactive 3-Step Cards ---
     const webStepsHTML = featuredSteps.map((stepItem, index) => {
         const delayClass = `delay-${(index + 1) * 100}`;
+        const cardBgImage = stepItem.cardBackground || meta.cardBackground || 'assets/dallas_fall_card_bg.jpg';
         const tagsHTML = stepItem.tags ? stepItem.tags.map(tag => 
-            `<span class="text-[9px] uppercase tracking-wider font-semibold px-2.5 py-1 bg-warm-gold/10 text-warm-gold rounded-full border border-warm-gold/20">${tag}</span>`
+            isOctober
+                ? `<span class="text-[9px] uppercase tracking-wider font-semibold px-2.5 py-1 bg-[#ff6b35]/10 text-[#c85a2b] rounded-full border border-[#ff6b35]/25">${tag}</span>`
+                : `<span class="text-[9px] uppercase tracking-wider font-semibold px-2.5 py-1 bg-warm-gold/10 text-warm-gold rounded-full border border-warm-gold/20">${tag}</span>`
         ).join(' ') : '';
 
+        const badgeColor = isOctober ? 'text-[#c85a2b]' : 'text-warm-gold';
+        const cardBorderColor = isOctober ? 'border-[#e8a36e]/40 hover:border-[#ff6b35]/60' : 'border-warm-gold/30 hover:border-warm-gold/60';
+        const hookColor = isOctober ? 'text-[#c04e22]' : 'text-[#b85324]';
+        const ctaBtnClass = isOctober 
+            ? 'btn-sm inline-flex items-center justify-center gap-2 w-full md:w-auto px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider bg-gradient-to-r from-[#e65c00] to-[#f97316] text-white shadow-md hover:from-[#c84e00] hover:to-[#ea580c] hover:shadow-lg transition-all transform hover:-translate-y-0.5' 
+            : 'btn-primary btn-sm inline-flex items-center justify-center gap-2 w-full md:w-auto';
+
+        const gradientOverlay = isOctober
+            ? 'linear-gradient(to right, rgba(255, 255, 255, 0.98) 0%, rgba(255, 253, 250, 0.94) 48%, rgba(255, 250, 245, 0.70) 75%, rgba(255, 250, 245, 0.25) 100%)'
+            : 'linear-gradient(to right, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.94) 50%, rgba(255, 255, 255, 0.70) 75%, rgba(255, 255, 255, 0.25) 100%)';
+
         return `
-            <div class="bg-white rounded-[24px] border border-warm-gold/30 p-4 md:p-6 pl-4 md:pl-56 shadow-soft hover:shadow-2xl transition-all duration-500 flex flex-col md:grid md:grid-cols-[1fr_auto] items-stretch gap-6 md:gap-8 group animate-on-scroll fade-up relative min-h-[160px] overflow-hidden ${delayClass}" style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.94) 50%, rgba(255, 255, 255, 0.70) 75%, rgba(255, 255, 255, 0.25) 100%), url('${meta.cardBackground || 'assets/dallas_fall_card_bg.jpg'}'); background-size: cover; background-position: right center;">
+            <div class="bg-white rounded-[24px] border ${cardBorderColor} p-4 md:p-6 pl-4 md:pl-56 shadow-soft hover:shadow-2xl transition-all duration-500 flex flex-col md:grid md:grid-cols-[1fr_auto] items-stretch gap-6 md:gap-8 group animate-on-scroll fade-up relative min-h-[160px] overflow-hidden ${delayClass}" style="background-image: ${gradientOverlay}, url('${cardBgImage}'); background-size: cover; background-position: right center;">
                 <!-- Left Image Container (4:5 Aspect Ratio on Mobile to show full image) -->
                 <div class="w-full md:w-44 aspect-[4/5] md:aspect-auto h-auto md:h-auto md:absolute md:top-4 md:bottom-4 md:left-4 rounded-[18px] overflow-hidden bg-off-white shrink-0 border border-charcoal/10 relative z-10">
                     <img src="${stepItem.image}" alt="${stepItem.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
@@ -33,9 +49,10 @@ function renderMonthlySpecials(customConfig) {
                 <!-- Center: Content Area (Full height flex column) -->
                 <div class="text-left flex flex-col justify-between h-full py-1 pr-0 md:pr-4">
                     <div>
-                        <span class="text-[10px] tracking-[0.3em] font-bold text-warm-gold uppercase block mb-1">${stepItem.badge}</span>
+                        <span class="text-[10px] tracking-[0.3em] font-bold ${badgeColor} uppercase block mb-1">${stepItem.badge}</span>
                         <h3 class="font-heading text-xl md:text-2xl text-near-black tracking-wide mb-1">${stepItem.title}</h3>
                         <p class="font-body text-xs font-semibold text-taupe tracking-wider uppercase mb-2">${stepItem.subtitle}</p>
+                        ${stepItem.hook ? `<p class="font-serif italic text-sm ${hookColor} font-medium mb-2.5">${stepItem.hook}</p>` : ''}
                         <p class="font-body text-sm text-charcoal/70 leading-relaxed mb-4">${stepItem.description}</p>
                     </div>
                     <div class="flex flex-wrap gap-2">${tagsHTML}</div>
@@ -44,16 +61,16 @@ function renderMonthlySpecials(customConfig) {
                 <!-- Right Column: Price Top + Book Button Bottom (Clean vertical separation) -->
                 <div class="flex flex-col justify-between items-center md:items-end h-full py-1 shrink-0 w-full md:w-auto border-t md:border-t-0 pt-4 md:pt-0 border-charcoal/5">
                     <!-- Top Right Price -->
-                    <div class="text-center md:text-right mb-4 md:mb-0 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/80 shadow-xs inline-block">
+                    <div class="text-center md:text-right mb-4 md:mb-0 bg-white/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/80 shadow-xs inline-block">
                         ${stepItem.price ? `
                             <span class="font-body text-2xl md:text-3xl font-extrabold text-near-black tracking-tight leading-none block">${stepItem.price}</span>
-                            ${stepItem.priceDetail ? `<span class="block text-[10px] text-taupe font-bold tracking-wider uppercase mt-1">${stepItem.priceDetail}</span>` : ''}
+                            ${stepItem.priceDetail ? `<span class="block text-[10px] ${isOctober ? 'text-[#c04e22]' : 'text-taupe'} font-bold tracking-wider uppercase mt-1">${stepItem.priceDetail}</span>` : ''}
                         ` : ''}
                     </div>
 
                     <!-- Bottom Right Book Button -->
                     <div>
-                        <a href="${stepItem.bookingUrl}" target="_blank" class="btn-primary btn-sm inline-flex items-center justify-center gap-2 w-full md:w-auto">
+                        <a href="${stepItem.bookingUrl}" target="_blank" class="${ctaBtnClass}">
                             <span>Book Now</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -100,12 +117,12 @@ function renderMonthlySpecials(customConfig) {
     const gridColsClass = pillarsCount === 5 ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-5' : 'grid-cols-2 md:grid-cols-4';
     const pillarsHTML = (brandPillars || []).map(pillar => `
         <div class="flex items-center gap-3 justify-center text-left">
-            <div class="w-10 h-10 rounded-full bg-warm-gold/10 text-warm-gold flex items-center justify-center shrink-0 border border-warm-gold/20">
+            <div class="w-10 h-10 rounded-full ${isOctober ? 'bg-[#ff6b35]/15 text-[#c85a2b] border-[#ff6b35]/30' : 'bg-warm-gold/10 text-warm-gold border-warm-gold/20'} flex items-center justify-center shrink-0 border">
                 <i data-lucide="${pillar.icon}" class="w-5 h-5"></i>
             </div>
             <div>
                 <h4 class="font-heading text-xs font-bold text-near-black uppercase tracking-wider">${pillar.title}</h4>
-                <p class="font-body text-[10px] text-taupe tracking-wide">${pillar.subtitle}</p>
+                <p class="font-body text-[10px] ${isOctober ? 'text-[#a45228]' : 'text-taupe'} tracking-wide">${pillar.subtitle}</p>
             </div>
         </div>
     `).join('');
@@ -130,6 +147,7 @@ function renderMonthlySpecials(customConfig) {
                     <p class="font-body text-[11px] font-semibold text-taupe tracking-wide mb-1">
                         ${stepItem.subtitle}
                     </p>
+                    ${stepItem.hook ? `<p class="font-serif italic text-[10.5px] text-[#b85324] font-medium mb-1">${stepItem.hook}</p>` : ''}
                     <p class="font-body text-[10px] text-charcoal/80 leading-relaxed">
                         ${stepItem.description}
                     </p>
@@ -150,9 +168,13 @@ function renderMonthlySpecials(customConfig) {
         ? brandPillars.map(p => `${p.title}: ${p.subtitle}`).join(' • ')
         : 'KOREAN EXPERTISE • PHYSICIAN GUIDED CARE • CUSTOMIZED TREATMENT • HEALTHY SKIN. LASTING GLOW.';
 
+    const heroBgStyle = meta.headerBackground 
+        ? `background-image: linear-gradient(to bottom, rgba(250, 248, 245, 0.85) 0%, rgba(250, 248, 245, 0.95) 100%), url('${meta.headerBackground}'); background-size: cover; background-position: center top;` 
+        : '';
+
     return `
         <!-- Main Campaign Header Section -->
-        <section id="promotions-hero" data-nav-theme="light" class="py-16 md:py-24 bg-off-white relative overflow-hidden">
+        <section id="promotions-hero" data-nav-theme="light" class="py-16 md:py-24 bg-off-white relative overflow-hidden" ${heroBgStyle ? `style="${heroBgStyle}"` : ''}>
             <div class="starburst-container"><div class="sb-3"></div></div>
             <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
                 
@@ -160,36 +182,37 @@ function renderMonthlySpecials(customConfig) {
                 <div class="text-center max-w-3xl mx-auto mb-12 animate-on-scroll fade-up">
                     ${meta.pillImage ? `
                         <div class="mb-6 flex justify-center">
-                            <img src="${meta.pillImage}" alt="Labor Day Glow Drop" class="h-32 sm:h-40 md:h-48 w-auto max-w-full object-contain mx-auto filter drop-shadow-sm">
+                            <img src="${meta.pillImage}" alt="${meta.pill || 'Seasonal Special'}" class="h-32 sm:h-40 md:h-48 w-auto max-w-full object-contain mx-auto filter drop-shadow-sm">
                         </div>
                     ` : (meta.pill ? `
                         <div class="mb-3">
-                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.25em] uppercase bg-[#721c24]/10 text-[#8b2635] border border-[#721c24]/20 shadow-sm">
-                                <i data-lucide="sparkles" class="w-3 h-3 text-[#8b2635]"></i>
+                            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.25em] uppercase ${isOctober ? 'bg-[#ff6b35]/20 text-[#c04e22] border border-[#ff6b35]/40 shadow-sm' : 'bg-[#721c24]/10 text-[#8b2635] border border-[#721c24]/20 shadow-sm'}">
+                                <i data-lucide="sparkles" class="w-3.5 h-3.5 ${isOctober ? 'text-[#c04e22]' : 'text-[#8b2635]'}"></i>
                                 ${meta.pill}
                             </span>
                         </div>
                     ` : '')}
-                    <span class="inline-block text-[10px] md:text-xs tracking-[0.4em] text-warm-gold uppercase font-bold mb-4 italic whitespace-nowrap">${meta.badge}</span>
+                    <span class="inline-block text-[10px] md:text-xs tracking-[0.4em] ${isOctober ? 'text-[#c04e22]' : 'text-warm-gold'} uppercase font-bold mb-4 italic whitespace-nowrap">${meta.badge}</span>
                     <h1 class="heading-wide text-3xl md:text-5xl text-near-black mb-4 uppercase tracking-[0.15em] leading-tight">${meta.title}</h1>
-                    <p class="font-body text-taupe italic tracking-widest opacity-90 uppercase text-xs md:text-sm mb-4">${meta.subtitle}</p>
+                    <p class="font-body ${isOctober ? 'text-[#a45228]' : 'text-taupe'} italic tracking-widest opacity-90 uppercase text-xs md:text-sm mb-4">${meta.subtitle}</p>
                     ${meta.tagline ? `<p class="font-body text-xs md:text-sm text-charcoal/70 max-w-2xl md:max-w-3xl mx-auto mb-6 leading-relaxed [text-wrap:pretty]">${meta.tagline}</p>` : ''}
-                    <div class="w-24 h-[1px] bg-warm-gold/40 mx-auto"></div>
+                    <div class="w-24 h-[1px] ${isOctober ? 'bg-[#ff6b35]/40' : 'bg-warm-gold/40'} mx-auto"></div>
                 </div>
 
                 <!-- Highlight Offer Callout Banner -->
                 <div class="max-w-4xl mx-auto mb-12 animate-on-scroll fade-up">
-                    <div class="bg-gradient-to-r from-near-black via-near-black/95 to-near-black text-white p-8 md:p-10 rounded-[28px] shadow-2xl border border-warm-gold/30 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left relative overflow-hidden">
-                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-warm-gold/10 rounded-full blur-2xl"></div>
+                    <div class="bg-gradient-to-r ${isOctober ? 'from-[#1a120b] via-[#24170e] to-[#1a120b] border-[#ff6b35]/40 shadow-[0_15px_35px_rgba(230,92,0,0.25)]' : 'from-near-black via-near-black/95 to-near-black border-warm-gold/30 shadow-2xl'} text-white p-8 md:p-10 rounded-[28px] border flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left relative overflow-hidden">
+                        <div class="absolute -right-10 -bottom-10 w-48 h-48 ${isOctober ? 'bg-[#ff6b35]/20' : 'bg-warm-gold/10'} rounded-full blur-2xl"></div>
+                        <div class="absolute -left-10 -top-10 w-40 h-40 ${isOctober ? 'bg-[#ff9f1c]/15' : 'bg-white/5'} rounded-full blur-2xl"></div>
                         <div class="z-10 max-w-2xl">
-                            <span class="text-[10px] uppercase tracking-[0.3em] text-warm-gold font-bold block mb-2">${meta.offerBadge || 'Exclusive September Offer'}</span>
+                            <span class="text-[10px] uppercase tracking-[0.3em] ${isOctober ? 'text-[#ff9f1c]' : 'text-warm-gold'} font-bold block mb-2">${meta.offerBadge || (isOctober ? 'Exclusive October Offer' : 'Exclusive September Offer')}</span>
                             <h2 class="font-heading text-xl sm:text-2xl md:text-3xl text-white font-bold tracking-wide leading-tight">${meta.offerCallout}</h2>
                             ${meta.offerTagline ? `
-                                <p class="font-heading text-xs sm:text-sm text-warm-gold font-bold tracking-widest uppercase mt-2.5">
+                                <p class="font-heading text-xs sm:text-sm ${isOctober ? 'text-[#ff9f1c]' : 'text-warm-gold'} font-bold tracking-widest uppercase mt-2.5">
                                     ${meta.offerTagline}
                                 </p>
                             ` : ''}
-                            <p class="font-body text-xs sm:text-sm text-white/80 mt-2 leading-relaxed">
+                            <p class="font-body text-xs sm:text-sm text-white/85 mt-2 leading-relaxed">
                                 ${meta.offerSubtext || `Book your consultation during ${meta.month} to redeem.`}
                             </p>
                             ${meta.offerPillars ? `
@@ -198,7 +221,7 @@ function renderMonthlySpecials(customConfig) {
                                 </p>
                             ` : ''}
                         </div>
-                        <a href="${meta.offerCtaUrl || meta.bookingUrl}" ${meta.offerCtaUrl && meta.offerCtaUrl.startsWith('#') ? '' : 'target="_blank"'} class="btn-primary shrink-0 z-10 whitespace-nowrap">
+                        <a href="${meta.offerCtaUrl || meta.bookingUrl}" ${meta.offerCtaUrl && meta.offerCtaUrl.startsWith('#') ? '' : 'target="_blank"'} class="${isOctober ? 'px-8 py-3.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider bg-gradient-to-r from-[#e65c00] to-[#f97316] text-white shadow-xl hover:from-[#c84e00] hover:to-[#ea580c] transition-all transform hover:-translate-y-0.5' : 'btn-primary'} shrink-0 z-10 whitespace-nowrap">
                             ${meta.offerCtaText || 'Claim Offer Today'}
                         </a>
                     </div>
@@ -207,7 +230,7 @@ function renderMonthlySpecials(customConfig) {
                 <!-- View Switcher Tabs (Desktop Only) -->
                 <div class="hidden md:block mb-12 text-center animate-on-scroll fade-up">
                     <div class="inline-flex p-1.5 bg-white rounded-full border border-charcoal/10 shadow-sm">
-                        <button id="tab-program-btn" onclick="switchSpecialsTab('program')" class="px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 bg-near-black text-warm-gold shadow">
+                        <button id="tab-program-btn" onclick="switchSpecialsTab('program')" class="px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 ${isOctober ? 'bg-[#1a120b] text-[#ff9f1c]' : 'bg-near-black text-warm-gold'} shadow">
                             Featured Offers
                         </button>
                         <button id="tab-poster-btn" onclick="switchSpecialsTab('poster')" class="px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 text-charcoal/60 hover:text-near-black">
@@ -218,7 +241,7 @@ function renderMonthlySpecials(customConfig) {
 
                 <!-- Mobile View: Link to open Flyer in Lightbox with Share Button -->
                 <div class="block md:hidden mb-8 text-center animate-on-scroll fade-up">
-                    <button type="button" onclick="openFlyerLightbox()" class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-warm-gold bg-near-black hover:bg-warm-gold hover:text-near-black border border-warm-gold/40 shadow-md transition-all duration-300 cursor-pointer">
+                    <button type="button" onclick="openFlyerLightbox()" class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider ${isOctober ? 'text-[#ff9f1c] bg-[#1a120b] hover:bg-[#e65c00] hover:text-white border border-[#ff6b35]/40' : 'text-warm-gold bg-near-black hover:bg-warm-gold hover:text-near-black border border-warm-gold/40'} shadow-md transition-all duration-300 cursor-pointer">
                         <i data-lucide="download" class="w-4 h-4"></i>
                         <span>Click to Download & Share Flyer</span>
                     </button>
@@ -243,91 +266,14 @@ function renderMonthlySpecials(customConfig) {
                 <!-- VIEW 2: 4:5 Social Aspect Ratio Interactive Flyer View -->
                 <div id="specials-poster-view" class="hidden max-w-[800px] mx-auto animate-on-scroll fade-up">
                     <div class="text-center mb-6 print:hidden">
-                        <button onclick="downloadFlyerImage()" id="download-flyer-btn" class="px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-warm-gold bg-near-black hover:bg-warm-gold hover:text-near-black border border-warm-gold/40 hover:border-warm-gold shadow-md inline-flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer z-20">
+                        <button onclick="downloadFlyerImage()" id="download-flyer-btn" class="px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider ${isOctober ? 'text-[#ff9f1c] bg-[#1a120b] hover:bg-[#e65c00] hover:text-white border border-[#ff6b35]/40' : 'text-warm-gold bg-near-black hover:bg-warm-gold hover:text-near-black border border-warm-gold/40'} shadow-md inline-flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer z-20">
                             <i data-lucide="download" class="w-4 h-4"></i> Click to Download and Share
                         </button>
                     </div>
                     
                     <div class="w-full flex justify-center">
-                        <div id="flyer-card-element" class="w-full md:w-[800px] h-auto md:h-[1050px] bg-cover bg-top rounded-none shadow-2xl border border-charcoal/10 p-5 md:p-7 flex flex-col justify-between relative overflow-hidden text-near-black print:shadow-none print:border-none print:m-0 print:p-8 print:w-full print:max-w-none" style="background-image: url('${meta.flyerImage || 'assets/specials-flyer-model-bg.png'}'); background-position: right top; background-color: #faf8f5;">
-                            <!-- Protective Soft Gradient Overlay (Left 58% only - Models on right remain 100% clear) -->
-                            <div class="absolute inset-y-0 left-0 w-[58%] bg-gradient-to-r from-white/90 via-white/40 to-transparent pointer-events-none z-0"></div>
-                            
-                            <!-- Front Layer: Full Opacity Content Container -->
-                            <div class="relative z-10 flex flex-col justify-between h-full flex-1">
-                                <!-- Top Bar: Logo (Left) & Badge (Right) -->
-                                <div class="flex flex-row justify-between items-start w-full pt-2 md:pt-3 mb-1">
-                                    <img src="assets/logo-main.webp" alt="SuA K Glow" class="h-9 md:h-11 w-auto object-contain opacity-100 mt-2 md:mt-3">
-                                    <span class="text-[9.5px] md:text-[10px] font-heading tracking-[0.3em] font-extrabold text-warm-gold uppercase bg-near-black px-3.5 py-1.5 rounded-full border border-warm-gold/40 shadow-lg whitespace-nowrap inline-block">
-                                        ${meta.badge}
-                                    </span>
-                                </div>
-
-                                <!-- Balanced Main Headline: Centered between Top Bar and Service Blocks -->
-                                <div class="text-left max-w-full md:max-w-[460px] my-auto py-2">
-                                    <h2 class="heading-wide text-2xl sm:text-3xl md:text-[32px] text-near-black uppercase tracking-[0.15em] leading-tight font-medium opacity-100">
-                                        ${meta.title}
-                                    </h2>
-                                    <p class="font-body text-xs md:text-sm text-taupe italic tracking-widest uppercase font-semibold mt-1.5 opacity-100 whitespace-nowrap">
-                                        ${meta.subtitle}
-                                    </p>
-                                </div>
-
-                                <!-- Service Cards Wireframe Layout (Pushed down close to black callout) -->
-                                <div class="space-y-3 mb-2 w-full max-w-[590px]">
-                                    ${flyerCardsHTML}
-                                </div>
-
-                                <!-- Bottom Offers Box -->
-                                <div class="mt-1 bg-gradient-to-r from-near-black via-near-black/95 to-near-black text-white rounded-[16px] p-3 border border-warm-gold/40 shadow-xl flex flex-row items-center justify-between gap-3">
-                                    <div class="w-auto shrink-0 pr-2 sm:pr-4 border-r border-white/20 text-left">
-                                        <span class="text-[9px] tracking-[0.3em] text-warm-gold uppercase font-extrabold block mb-0.5">
-                                            LIMITED TIME
-                                        </span>
-                                        <h3 class="font-heading text-sm sm:text-base md:text-lg text-white font-bold uppercase tracking-[0.12em] whitespace-nowrap">
-                                            ${meta.month.toUpperCase()} OFFERS
-                                        </h3>
-                                    </div>
-                                    <div class="w-auto shrink-0 pl-2 sm:pl-4 text-right">
-                                        <span class="font-heading text-sm sm:text-base md:text-lg lg:text-xl text-warm-gold font-extrabold tracking-tight block whitespace-nowrap">
-                                            SEOUL STYLE. DALLAS GLOW.
-                                        </span>
-                                        <span class="text-[8.5px] sm:text-[9.5px] text-white/90 font-body font-semibold block mt-0.5 whitespace-nowrap">
-                                            Authentic K-Beauty Medical Aesthetics
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <!-- Call To Action Text -->
-                                <div class="mt-2 text-center">
-                                    <a href="${meta.bookingUrl}" target="_blank" class="heading-wide text-xs md:text-sm font-semibold tracking-[0.25em] text-near-black hover:text-warm-gold transition-colors uppercase border-b-2 border-warm-gold/40 pb-0.5 inline-block">
-                                        BOOK YOUR CONSULTATION TODAY.
-                                    </a>
-                                </div>
-
-                                <!-- Brand Pillars Row -->
-                                <div class="mt-2 pt-2 border-t border-charcoal/10 text-center">
-                                    <p class="font-heading text-[8px] md:text-[9px] tracking-[0.2em] font-semibold text-taupe uppercase">
-                                        ${flyerPillarsText}
-                                    </p>
-                                </div>
-
-                                <!-- Footer Contact Info Bar -->
-                                <div class="mt-2.5 bg-near-black text-white/90 py-2.5 px-4 md:px-6 rounded-xl text-[9px] md:text-[10px] flex flex-col sm:flex-row items-center justify-between gap-2 md:gap-3 text-center border border-warm-gold/20 shadow-md">
-                                    <span class="font-body opacity-90 inline-flex items-center gap-1.5">
-                                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
-                                        4116 State Highway 121, Suite 120, Carrollton, TX 75010
-                                    </span>
-                                    <span class="font-body opacity-90 inline-flex items-center gap-1.5">
-                                        <i data-lucide="phone" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
-                                        972-665-8737
-                                    </span>
-                                    <span class="font-body opacity-90 inline-flex items-center gap-1.5">
-                                        <i data-lucide="globe" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
-                                        suaglow.com
-                                    </span>
-                                </div>
-                            </div>
+                        <div id="flyer-card-element" class="w-full max-w-[800px] rounded-2xl shadow-2xl overflow-hidden border ${isOctober ? 'border-[#ff6b35]/30' : 'border-charcoal/10'} bg-white">
+                            <img src="${meta.downloadFlyerImage || meta.flyerImage || 'assets/SuA-Glow-October-Specials.jpg'}" alt="${meta.title || 'SuA Glow Specials Flyer'}" class="w-full h-auto block object-contain">
                         </div>
                     </div>
                 </div>
@@ -348,12 +294,12 @@ function renderMonthlySpecials(customConfig) {
 
                     <!-- Flyer Image -->
                     <div class="w-full overflow-hidden rounded-2xl shadow-2xl border border-white/20 bg-near-black mb-5">
-                        <img id="lightbox-flyer-img" src="${meta.downloadFlyerImage || 'assets/SuA-Glow-September-Specials.jpg'}" alt="SuA Glow September Specials Flyer" class="w-full h-auto max-h-[72vh] object-contain mx-auto block">
+                        <img id="lightbox-flyer-img" src="${meta.downloadFlyerImage || 'assets/SuA-Glow-September-Specials.jpg'}" alt="${meta.title || 'SuA Glow Specials Flyer'}" class="w-full h-auto max-h-[72vh] object-contain mx-auto block">
                     </div>
 
                     <!-- Action Button Below Flyer -->
                     <div class="flex flex-wrap items-center justify-center gap-3 w-full">
-                        <button type="button" onclick="downloadFlyerImage()" id="lightbox-share-btn" class="btn-primary text-xs py-3.5 px-8 inline-flex items-center justify-center gap-2 shadow-xl cursor-pointer">
+                        <button type="button" onclick="downloadFlyerImage()" id="lightbox-share-btn" class="${isOctober ? 'px-8 py-3.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider bg-gradient-to-r from-[#e65c00] to-[#f97316] text-white shadow-xl hover:from-[#c84e00] hover:to-[#ea580c] transition-all' : 'btn-primary text-xs py-3.5 px-8'} inline-flex items-center justify-center gap-2 shadow-xl cursor-pointer">
                             <i data-lucide="share-2" class="w-4 h-4"></i>
                             <span>Share Flyer</span>
                         </button>
@@ -427,16 +373,24 @@ function switchSpecialsTab(tab) {
     const programBtn = document.getElementById('tab-program-btn');
     const posterBtn = document.getElementById('tab-poster-btn');
 
+    const config = window.__currentSpecialsConfig || {};
+    const meta = config.meta || {};
+    const isOctober = (meta.month && meta.month.toLowerCase().includes('october')) || (meta.title && meta.title.toLowerCase().includes('october'));
+    const activeClass = isOctober 
+        ? "px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 bg-[#1a120b] text-[#ff9f1c] shadow"
+        : "px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 bg-near-black text-warm-gold shadow";
+    const inactiveClass = "px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 text-charcoal/60 hover:text-near-black";
+
     if (tab === 'program') {
         programView.classList.remove('hidden');
         posterView.classList.add('hidden');
-        programBtn.className = "px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 bg-near-black text-warm-gold shadow";
-        posterBtn.className = "px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 text-charcoal/60 hover:text-near-black";
+        programBtn.className = activeClass;
+        posterBtn.className = inactiveClass;
     } else {
         programView.classList.add('hidden');
         posterView.classList.remove('hidden');
-        posterBtn.className = "px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 bg-near-black text-warm-gold shadow";
-        programBtn.className = "px-6 py-2.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-all duration-300 text-charcoal/60 hover:text-near-black";
+        posterBtn.className = activeClass;
+        programBtn.className = inactiveClass;
     }
 
     if (window.lucide) {
