@@ -682,6 +682,27 @@ html {
     box-shadow: 0 2px 10px rgba(170, 152, 124, 0.2);
 }
 
+/* 1.1 Halloween Theme Button: Signature Radiant October Orange */
+.btn-halloween {
+    background-color: #e13f00 !important;
+    color: #FFFFFF !important;
+    border: 1.5px solid transparent !important;
+    box-shadow: 0 4px 20px rgba(225, 63, 0, 0.35) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-halloween:hover {
+    background-color: #c83700 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 0 0 2px #e13f00, 0 8px 30px rgba(225, 63, 0, 0.55), 0 0 20px rgba(255, 120, 40, 0.5) !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-halloween:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 10px rgba(225, 63, 0, 0.3) !important;
+}
+
 /* Rollover Edge Glow for Book Appointment buttons when rolling over to white on white backgrounds */
 #floating-book-btn,
 .btn-book-appointment {
