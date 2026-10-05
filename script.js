@@ -432,7 +432,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 10. Hero Collage Movement Physics (Scroll Parallax & 3D Cursor Physics)
   initHeroCollagePhysics();
+
+  // 11. Digital Twin Typography Parallax
+  initDigitalTwinTypographyParallax();
 });
+
+/**
+ * Digital Twin Kinetic Typography Parallax & Vertical Scrolling Tracks
+ * Powers independent vertical scrolling speeds for 'TURN IT', 'ZOOM IN', 'COMPARE', 'LOOK CLOSER'
+ */
+function initDigitalTwinTypographyParallax() {
+  const container = document.getElementById('interactive-twin-showcase') || document.getElementById('twin-scroll-container');
+  if (!container) return;
+
+  const words = container.querySelectorAll('.twin-scroll-word, .twin-parallax-word');
+  if (!words || words.length === 0) return;
+
+  let ticking = false;
+
+  function updateTypographyScroll() {
+    const rect = container.getBoundingClientRect();
+    const windowH = window.innerHeight;
+
+    // Check if container is in or near viewport
+    if (rect.top < windowH && rect.bottom > 0) {
+      // Calculate how far we have scrolled relative to the top of the container
+      const scrolledPastTop = windowH - rect.top;
+
+      words.forEach((word) => {
+        const speed = parseFloat(word.dataset.speed) || 0.25;
+        // Continuous smooth vertical translation proportional to scroll distance
+        const translateY = scrolledPastTop * speed;
+        word.style.transform = `translate3d(0, ${translateY}px, 0)`;
+      });
+    }
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateTypographyScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  updateTypographyScroll();
+}
 
 /**
  * Hero Collage Movement Physics (Scroll Parallax & 3D Cursor Depth Physics)

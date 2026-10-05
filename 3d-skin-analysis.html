@@ -176,19 +176,17 @@
     <div id="nav-placeholder"></div>
 
     <!-- 01 · AURA 3D SKIN ANALYSIS (HERO SECTION) -->
-    <section id="hero" data-nav-theme="dark" class="relative min-h-[90vh] flex items-center justify-center pt-[150px] pb-20 px-6 sm:px-8 md:px-16 bg-[#131619] text-white overflow-hidden">
-        <!-- Ambient Luxury Glow Background with Aura Silhouette Visual -->
-        <div class="absolute inset-0 z-0 bg-[#0d1017] pointer-events-none overflow-hidden">
-            <img src="assets/aura_hero_bg.jpg" alt="Aura 3D Skin Analysis Silhouette" class="w-full h-full object-cover object-[center_30%] opacity-40 mix-blend-screen scale-105">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#131619]/80 via-[#131619]/40 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-[#131619]/50 via-transparent to-[#131619]/80"></div>
-            <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] bg-[#2B7FFF] blur-[180px] rounded-full opacity-10"></div>
-            <div class="absolute -bottom-20 right-10 w-[500px] h-[500px] bg-[#AA987C] blur-[160px] rounded-full opacity-15"></div>
+    <section id="hero" data-nav-theme="dark" class="relative min-h-[90vh] flex items-center justify-center pt-[140px] pb-16 px-6 sm:px-8 md:px-12 text-white overflow-hidden" style="background: linear-gradient(180deg, #0f0d38 0%, #16114c 25%, #1c155c 50%, #231c70 75%, #2a1f82 100%);">
+        <!-- Ambient Background with Profile Visual (More visible per user request) -->
+        <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+            <img src="assets/aura_hero_skin_profile.png" alt="Aura 3D Skin Health Aesthetic Profile" class="w-full h-full object-cover object-[right_center] sm:object-[center_25%] opacity-45 mix-blend-luminosity filter contrast-110 brightness-110">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0f0d38]/90 via-[#0f0d38]/50 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#2a1f82]/70 via-transparent to-[#0f0d38]/40"></div>
         </div>
 
         <div class="max-w-7xl mx-auto relative z-10 w-full">
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 <!-- Left Column: Copy & Messaging -->
                 <div class="lg:col-span-6 space-y-6 animate-on-scroll fade-right flex flex-col justify-center">
                     <!-- Eyebrow Pill Header -->
@@ -230,29 +228,43 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Graphic Collage (LDM/Oligio Style) -->
-                <div class="lg:col-span-6 animate-on-scroll fade-left delay-100 lg:-mt-8">
-                    <div class="relative w-full h-full min-h-[400px] flex items-center justify-center">
-                        <!-- Circular Badge -->
-                        <div class="absolute hidden md:flex items-center justify-center z-20 text-[#AA987C] float-slow"
-                            style="width: 140px; height: 140px; top: -20px; right: -10px; animation: float 6s ease-in-out infinite;">
-                            <div class="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.15)] border border-white/10"></div>
-                            <svg viewBox="0 0 100 100" class="relative z-10" style="width: 95%; height: 95%; animation: spin-badge 20s linear infinite;">
-                                <path id="textCircleBannerAura" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="transparent" />
-                                <text font-family="Montserrat, sans-serif" font-size="7.9" font-weight="700" fill="currentColor" class="uppercase" letter-spacing="0.1em">
-                                    <textPath href="#textCircleBannerAura" startOffset="0%">
-                                        NOW AVAILABLE IN DFW &bull; CARROLLTON, TX &bull;
-                                    </textPath>
-                                </text>
-                            </svg>
-                            <div class="absolute inset-0 flex items-center justify-center z-10">
-                                <img src="assets/sua_texas.svg" alt="Texas" style="width: 32px; height: 32px; filter: brightness(0) invert(1); opacity: 0.85;">
+                <!-- Right Column: Graphic Collage (Expanded to fill right area) -->
+                <div class="lg:col-span-6 animate-on-scroll fade-left delay-100 flex items-center justify-center lg:justify-end w-full">
+                    <div class="relative w-full max-w-[620px] lg:max-w-none h-[450px] sm:h-[540px] md:h-[580px] lg:h-[620px]">
+                        
+                        <!-- Base (Left / Mid-Left): Consultation Photo (Expanded prominently) -->
+                        <div class="absolute left-0 top-6 sm:top-8 w-[66%] sm:w-[64%] h-[72%] sm:h-[75%] rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-[#131619] z-10 group">
+                            <img src="assets/aura_hero_consultation.jpg" alt="Aura 3D Skin Analysis Consultation &amp; Digital Twin Review" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                        </div>
+
+                        <!-- Circular Badge: Positioned at the top right corner of the consultation photo -->
+                        <div class="hero-badge-card absolute z-30 text-[#AA987C] float-slow pointer-events-auto left-[50%] sm:left-[51%] top-[-8px] sm:top-[-4px] flex items-center justify-center"
+                            style="width: 130px; height: 130px; animation: float 6s ease-in-out infinite;">
+                            <!-- Circular Glass Background Plate -->
+                            <div class="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.35)] border border-white/20"></div>
+                            
+                            <!-- Spinning Text SVG Ring (Centered via flex and inset) -->
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <svg viewBox="0 0 100 100" class="w-full h-full" style="animation: spin-badge 20s linear infinite; transform-origin: 50% 50%;">
+                                    <path id="textCircleBanner" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="transparent" />
+                                    <text font-family="Montserrat, sans-serif" font-size="7.6" font-weight="700" fill="currentColor" class="uppercase" letter-spacing="0.1em">
+                                        <textPath href="#textCircleBanner" startOffset="0%">
+                                            NOW AVAILABLE IN DFW &bull; CARROLLTON, TX &bull;
+                                        </textPath>
+                                    </text>
+                                </svg>
+                            </div>
+
+                            <!-- Texas Symbol (Centered dead-center in the badge) -->
+                            <div class="relative z-10 flex items-center justify-center pointer-events-none">
+                                <img src="assets/sua_texas.svg" alt="Texas" style="width: 30px; height: 30px; filter: brightness(0) invert(1); opacity: 0.9;">
                             </div>
                         </div>
 
-                        <!-- Base: Device Image (Centered, Full Width) -->
-                        <div class="relative w-full h-[450px] sm:h-[520px] hover:translate-y-[-8px] transition-transform duration-500 z-10 flex items-center justify-center">
-                            <img src="assets/aura_device_large.png" alt="Aura 3D Skin Analysis Device" class="max-w-full max-h-full object-contain p-2 relative z-10 drop-shadow-2xl">
+                        <!-- Device (Lower Right): Anchored bottom right, expanded to fill right area -->
+                        <div class="absolute right-0 bottom-0 w-[48%] sm:w-[46%] h-[68%] sm:h-[72%] flex items-end justify-center hover:translate-y-[-4px] transition-transform duration-500 z-20 pointer-events-none drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)]">
+                            <img src="assets/aura_device_hero_nobox.png" alt="Aura 3D Facial Imaging &amp; Skin Analysis Device" class="max-w-full max-h-full object-contain pointer-events-auto filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.65)]">
                         </div>
                     </div>
                 </div>
@@ -263,41 +275,156 @@
     <!-- MD DELEGATION & MEDICAL OVERSIGHT -->
     <div id="oversight-placeholder" data-treatment="Aura 3D Skin Analysis &amp; Facial Imaging"></div>
 
-    <!-- 02 · MEET YOUR DIGITAL TWIN -->
-    <section id="digital-twin" class="py-24 px-6 sm:px-10 bg-off-white border-b border-light-gray/40">
-        <div class="max-w-6xl mx-auto space-y-16">
+    <!-- 02 · CONSULTATION AT A GLANCE (PAGE 1) -->
+    <section id="glance" class="py-20 px-6 sm:px-10 bg-off-white border-b border-light-gray/40">
+        <div class="max-w-6xl mx-auto space-y-12">
             
+            <!-- Hero Card with Background Visual & Heading -->
+            <div class="relative rounded-3xl overflow-hidden shadow-soft border border-light-gray/60 bg-white">
+                <!-- Hero Card with Clean Split: Left Text + Abstract Background & Right Framed Image -->
+                <div class="relative w-full min-h-[300px] sm:min-h-[340px] lg:min-h-[360px] flex flex-col md:flex-row items-center justify-between overflow-hidden p-6 sm:p-10 lg:p-12 gap-8">
+                    
+                    <!-- Ambient Light Abstract Skincare Refraction Background -->
+                    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+                        <img src="assets/aura_abstract_light_bg.jpg" alt="Aura 3D Abstract Skin Analysis Aesthetic" class="w-full h-full object-cover opacity-60">
+                        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent max-w-xl"></div>
+                    </div>
+                    
+                    <!-- Left Text content (Clean white background, completely unobstructed) -->
+                    <div class="relative z-10 max-w-lg space-y-4">
+                        <span class="inline-block px-3.5 py-1 rounded-full bg-[#AA987C]/15 border border-[#AA987C]/30 text-[#AA987C] text-[10.5px] uppercase tracking-widest font-semibold w-fit">
+                            CONSULTATION AT A GLANCE
+                        </span>
+                        <h2 class="heading-wide text-2xl sm:text-4xl text-near-black font-medium leading-tight">
+                            AURA 3D<br>
+                            <span class="text-[#AA987C]">SKIN ANALYSIS</span>
+                        </h2>
+                        <p class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-charcoal/80">
+                            SEE MORE. GUESS LESS.
+                        </p>
+                        <p class="text-xs sm:text-sm font-light text-charcoal/70 leading-relaxed max-w-md">
+                            3D imaging. Provider insight. A plan built around your actual skin.
+                        </p>
+                    </div>
+
+                    <!-- Right / Upper-Right Image (Smaller, positioned in upper right, not overlapping text) -->
+                    <div class="w-full md:w-[48%] lg:w-[44%] h-[240px] sm:h-[280px] lg:h-[300px] rounded-2xl overflow-hidden shadow-md border border-light-gray/60 relative shrink-0">
+                        <img src="assets/aura_scan_patient_face.jpg" alt="Aura 3D Skin Analysis Consultation and Imaging at SuA Glow" class="w-full h-full object-cover object-[center_30%]">
+                    </div>
+                </div>
+
+                <!-- 6 Glance Cards Grid (2x3) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-light-gray/50 border-t border-light-gray/50">
+                    
+                    <!-- 1. WHAT WE LOOK AT -->
+                    <div class="bg-white p-6 sm:p-7 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-warm-gold/15 text-taupe flex items-center justify-center shrink-0">
+                            <i data-lucide="sparkles" class="w-5 h-5 text-taupe"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-xs font-semibold uppercase tracking-wider text-near-black">WHAT WE LOOK AT</h3>
+                            <p class="text-xs font-light text-charcoal/70 leading-relaxed">
+                                Pores, texture, fine lines, visible redness, brown spots and facial proportions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2. HOW IT WORKS -->
+                    <div class="bg-white p-6 sm:p-7 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-warm-gold/15 text-taupe flex items-center justify-center shrink-0">
+                            <i data-lucide="settings" class="w-5 h-5 text-taupe"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-xs font-semibold uppercase tracking-wider text-near-black">HOW IT WORKS</h3>
+                            <p class="text-xs font-light text-charcoal/70 leading-relaxed">
+                                Aura creates a photorealistic 3D digital twin of your face + neck for review with your provider.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 3. YOUR CONSULTATION -->
+                    <div class="bg-white p-6 sm:p-7 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-warm-gold/15 text-taupe flex items-center justify-center shrink-0">
+                            <i data-lucide="user" class="w-5 h-5 text-taupe"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-xs font-semibold uppercase tracking-wider text-near-black">YOUR CONSULTATION</h3>
+                            <p class="text-xs font-light text-charcoal/70 leading-relaxed">
+                                Review your analysis, concerns, goals and treatment history with your SuA Glow provider.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 4. WHAT YOU GET -->
+                    <div class="bg-white p-6 sm:p-7 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-warm-gold/15 text-taupe flex items-center justify-center shrink-0">
+                            <i data-lucide="file-text" class="w-5 h-5 text-taupe"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-xs font-semibold uppercase tracking-wider text-near-black">WHAT YOU GET</h3>
+                            <p class="text-xs font-light text-charcoal/70 leading-relaxed">
+                                Your personal Aura skin analysis report + a personalized skin health plan.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 5. CONSULTATION FEE -->
+                    <div class="bg-white p-6 sm:p-7 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-warm-gold/15 text-taupe flex items-center justify-center shrink-0">
+                            <i data-lucide="dollar-sign" class="w-5 h-5 text-taupe"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex items-baseline gap-2">
+                                <h3 class="text-xs font-semibold uppercase tracking-wider text-near-black">CONSULTATION FEE</h3>
+                                <span class="text-base font-semibold text-taupe font-heading">$100</span>
+                            </div>
+                            <p class="text-xs font-light text-charcoal/70 leading-relaxed">
+                                Your full consultation fee may be applied toward a SuA Glow treatment within 60 days.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 6. DOWNTIME -->
+                    <div class="bg-white p-6 sm:p-7 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-warm-gold/15 text-taupe flex items-center justify-center shrink-0">
+                            <i data-lucide="clock" class="w-5 h-5 text-taupe"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-xs font-semibold uppercase tracking-wider text-near-black">DOWNTIME</h3>
+                            <p class="text-xs font-light text-charcoal/70 leading-relaxed">
+                                None. No needles. No heat. No treatment. Just 3D imaging.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 03 · MEET YOUR DIGITAL TWIN (PAGE 2) - STARTS DIRECTLY UNDER AURA 3D SKIN ANALYSIS (PAGE 1) -->
+    <section id="digital-twin" class="py-24 px-6 sm:px-10 bg-off-white border-b border-light-gray/40 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto space-y-16 relative z-10">
+
             <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto space-y-4 animate-on-scroll fade-up">
+            <div class="text-center max-w-3xl mx-auto space-y-4 animate-on-scroll fade-up relative z-10">
                 <span class="badge-standard text-[11px] uppercase tracking-widest bg-white border-taupe/20 text-taupe font-semibold px-4 py-1.5 rounded-full inline-block">
-                    MEET YOUR DIGITAL TWIN
+                    WHAT IS AURA 3D SKIN ANALYSIS?
                 </span>
                 <h2 class="heading-wide text-3xl sm:text-5xl text-near-black font-normal [text-wrap:balance]">
-                    YOUR FACE. <span class="text-[#AA987C]">IN 3D.</span>
+                    MEET YOUR <span class="text-[#AA987C]">DIGITAL TWIN</span>
                 </h2>
                 <p class="text-base sm:text-lg text-charcoal/80 font-medium italic">
-                    See what your mirror can&rsquo;t show you.
+                    Aura is an advanced 3D facial imaging and skin analysis system that creates a high-resolution digital twin of your face + neck.
                 </p>
                 <p class="text-sm sm:text-base font-light text-charcoal/70 leading-relaxed">
-                    One Aura capture creates an interactive 3D view of your face + neck, giving you and your SuA Glow provider a new way to look at your skin, facial features and aesthetic goals&mdash;together.
+                    One Aura capture creates an interactive 3D view of your face + neck, giving you and your SuA Glow provider a shared way to look at your skin, facial features and aesthetic goals&mdash;together.
                 </p>
             </div>
 
-            <!-- Turn / Zoom / Compare / Look Closer Bar -->
-            <div class="bg-near-black text-white rounded-2xl sm:rounded-full py-4 px-6 sm:px-10 text-center shadow-lg border border-charcoal/10 animate-on-scroll fade-up">
-                <p class="text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-warm-gold flex flex-wrap items-center justify-center gap-3 sm:gap-6 font-heading">
-                    <span>TURN IT.</span>
-                    <span class="text-white/30 hidden sm:inline">&bull;</span>
-                    <span>ZOOM IN.</span>
-                    <span class="text-white/30 hidden sm:inline">&bull;</span>
-                    <span>COMPARE.</span>
-                    <span class="text-white/30 hidden sm:inline">&bull;</span>
-                    <span>LOOK CLOSER.</span>
-                </p>
-            </div>
-
-            <!-- AURA 3D INTERACTIVE SHOWCASE VIDEO -->
-            <div class="animate-on-scroll fade-up">
+            <!-- AURA 3D INTERACTIVE SHOWCASE VIDEO (Restored to original clean video player) -->
+            <div class="animate-on-scroll fade-up relative z-10">
                 <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-black/60 aspect-video group">
                     <iframe src="https://play.vidyard.com/nqovcCJZB992mgCwwqD9gm.html?autoplay=1&muted=1&loop=1" 
                         title="Aura 3D Skin Analysis Video Showcase" 
@@ -308,58 +435,92 @@
                 </div>
             </div>
 
-            <!-- K-Beauty Strategy vs Guesswork Card -->
-            <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-soft border border-light-gray/60 space-y-10 animate-on-scroll fade-up">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                    
-                    <div class="lg:col-span-6 space-y-6">
-                        <div class="space-y-2">
-                            <span class="text-xs uppercase tracking-[0.2em] text-[#AA987C] font-semibold">Korean Aesthetic Philosophy</span>
-                            <h3 class="heading-wide text-2xl sm:text-3xl text-near-black font-medium leading-snug">
-                                GLASS SKIN ISN&rsquo;T GUESSWORK.<br>
-                                <span class="text-[#AA987C]">IT&rsquo;S A STRATEGY.</span>
-                            </h3>
-                        </div>
-                        <p class="text-sm font-light text-charcoal/80 leading-relaxed">
-                            K-Beauty isn&rsquo;t about throwing everything at your face. It&rsquo;s about knowing what your skin actually needs.
-                        </p>
+            <!-- K-Beauty Strategy vs Guesswork Card (Page 3 Update) -->
+            <div class="bg-off-white rounded-3xl overflow-hidden shadow-soft border border-light-gray/60 animate-on-scroll fade-up">
+                <div class="relative">
+                    <!-- Top section with Model photo and Philosophy Header -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                        <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-between space-y-8">
+                            <div class="space-y-4">
+                                <div class="inline-flex items-center gap-2">
+                                    <span class="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#AA987C] font-semibold">The SuA Glow Philosophy</span>
+                                </div>
+                                <h3 class="heading-wide text-2xl sm:text-4xl text-near-black font-medium leading-tight">
+                                    GLASS SKIN ISN&rsquo;T GUESSWORK.<br>
+                                    <span class="text-[#AA987C]">IT&rsquo;S A STRATEGY.</span>
+                                </h3>
+                                <p class="text-sm sm:text-base font-light text-charcoal/80 leading-relaxed max-w-lg">
+                                    K-Beauty isn&rsquo;t about doing more. It&rsquo;s about understanding what your skin needs&mdash;and choosing what makes sense for it.
+                                </p>
+                            </div>
 
-                        <!-- The 4 Critical Questions Grid -->
-                        <div class="grid grid-cols-2 gap-3 pt-2">
-                            <div class="p-4 rounded-xl bg-off-white border border-light-gray/60">
-                                <p class="text-xs font-semibold text-near-black uppercase tracking-wider">HYDRATE</p>
-                                <p class="text-[11px] text-charcoal/60 font-light">or stimulate collagen?</p>
+                            <!-- 4 Key Pillars: HYDRATE, CALM, REFINE, STIMULATE -->
+                            <div class="grid grid-cols-2 gap-3 sm:gap-4 pt-2">
+                                <div class="p-4 sm:p-5 rounded-2xl bg-white border border-light-gray/60 shadow-xs flex items-center gap-3 sm:gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-warm-gold/15 flex items-center justify-center text-taupe shrink-0">
+                                        <i data-lucide="droplet" class="w-5 h-5 text-taupe"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm sm:text-base font-semibold text-near-black uppercase tracking-wider">HYDRATE</p>
+                                        <p class="text-xs sm:text-sm text-charcoal/70 font-normal">Restore moisture + glow</p>
+                                    </div>
+                                </div>
+                                <div class="p-4 sm:p-5 rounded-2xl bg-white border border-light-gray/60 shadow-xs flex items-center gap-3 sm:gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-warm-gold/15 flex items-center justify-center text-taupe shrink-0">
+                                        <i data-lucide="feather" class="w-5 h-5 text-taupe"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm sm:text-base font-semibold text-near-black uppercase tracking-wider">CALM</p>
+                                        <p class="text-xs sm:text-sm text-charcoal/70 font-normal">Support stressed skin</p>
+                                    </div>
+                                </div>
+                                <div class="p-4 sm:p-5 rounded-2xl bg-white border border-light-gray/60 shadow-xs flex items-center gap-3 sm:gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-warm-gold/15 flex items-center justify-center text-taupe shrink-0">
+                                        <i data-lucide="sparkles" class="w-5 h-5 text-taupe"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm sm:text-base font-semibold text-near-black uppercase tracking-wider">REFINE</p>
+                                        <p class="text-xs sm:text-sm text-charcoal/70 font-normal">Improve texture + tone</p>
+                                    </div>
+                                </div>
+                                <div class="p-4 sm:p-5 rounded-2xl bg-white border border-light-gray/60 shadow-xs flex items-center gap-3 sm:gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-warm-gold/15 flex items-center justify-center text-taupe shrink-0">
+                                        <i data-lucide="zap" class="w-5 h-5 text-taupe"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm sm:text-base font-semibold text-near-black uppercase tracking-wider">STIMULATE</p>
+                                        <p class="text-xs sm:text-sm text-charcoal/70 font-normal">Support collagen + firmness</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="p-4 rounded-xl bg-off-white border border-light-gray/60">
-                                <p class="text-xs font-semibold text-near-black uppercase tracking-wider">CALM</p>
-                                <p class="text-[11px] text-charcoal/60 font-light">or correct?</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-off-white border border-light-gray/60">
-                                <p class="text-xs font-semibold text-near-black uppercase tracking-wider">TEXTURE</p>
-                                <p class="text-[11px] text-charcoal/60 font-light">or tone?</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-off-white border border-light-gray/60">
-                                <p class="text-xs font-semibold text-near-black uppercase tracking-wider">TREAT</p>
-                                <p class="text-[11px] text-charcoal/60 font-light">or wait?</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="lg:col-span-6 bg-gradient-to-br from-[#131619] to-[#20252A] rounded-2xl p-8 text-white space-y-6 shadow-md border border-white/10">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-warm-gold/10 border border-warm-gold/20 text-warm-gold text-[10px] uppercase tracking-wider font-semibold">
-                            <i data-lucide="sparkles" class="w-3 h-3"></i> Clinical Triad
+                            <p class="text-sm sm:text-base italic text-charcoal/70 pt-2 border-t border-light-gray/40">
+                                And sometimes, the right plan is to wait.
+                            </p>
                         </div>
-                        <h4 class="text-base sm:text-lg font-medium text-white tracking-wide leading-snug">
-                            3D SKIN INTELLIGENCE &times; KOREAN AESTHETIC PHILOSOPHY &times; CLINICAL JUDGMENT
-                        </h4>
-                        <p class="text-xs sm:text-sm font-light text-white/70 leading-relaxed">
-                            Your Aura analysis is considered alongside your skin concerns, aesthetic goals, treatment history and clinical assessment to help build a personalized approach to your skin.
-                        </p>
-                        
-                        <div class="pt-4 border-t border-white/10 space-y-1">
-                            <p class="text-xs font-semibold text-warm-gold tracking-widest uppercase">TECHNOLOGY SHOWS US MORE.</p>
-                            <p class="text-sm font-semibold text-white tracking-wide">YOUR SUA GLOW PROVIDER DECIDES WHAT MATTERS.</p>
-                            <p class="text-xs italic text-white/50 pt-1">That&rsquo;s where your glow plan starts.</p>
+
+                        <!-- Right Column: Model Photo & Clinical Triad Dark Box -->
+                        <div class="lg:col-span-5 relative min-h-[420px] lg:min-h-full flex flex-col justify-end overflow-hidden">
+                            <img src="assets/aura_glass_skin_model.jpg" alt="Korean Glass Skin Model at SuA Glow" class="absolute inset-0 w-full h-full object-cover object-[center_20%]">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                            
+                            <!-- Overlaid Clinical Triad Box -->
+                            <div class="relative z-10 m-6 p-6 sm:p-7 rounded-2xl bg-black/90 backdrop-blur-md text-white border border-white/15 space-y-3.5 shadow-xl">
+                                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-warm-gold/20 text-warm-gold text-[11px] sm:text-xs uppercase tracking-wider font-semibold border border-warm-gold/30">
+                                    TECHNOLOGY + EXPERTISE
+                                </div>
+                                <h4 class="text-sm sm:text-base font-semibold tracking-wide text-white leading-snug">
+                                    3D SKIN INTELLIGENCE &times; KOREAN AESTHETIC PHILOSOPHY &times; CLINICAL JUDGMENT
+                                </h4>
+                                <p class="text-xs sm:text-sm font-light text-white/80 leading-relaxed">
+                                    Aura gives us another way to see your skin. Your SuA Glow provider considers your skin concerns, aesthetic goals, treatment history, Aura analysis and clinical assessment together to help build a personalized approach.
+                                </p>
+                                <div class="pt-3 border-t border-white/10 space-y-1">
+                                    <p class="text-xs uppercase font-bold tracking-widest text-warm-gold">TECHNOLOGY SHOWS US MORE.</p>
+                                    <p class="text-xs sm:text-sm font-semibold text-white tracking-wide">YOUR PROVIDER DECIDES WHAT MATTERS.</p>
+                                    <p class="text-xs italic text-white/60 pt-0.5">That&rsquo;s where your glow plan starts.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -369,7 +530,7 @@
     </section>
 
 
-    <!-- 03 · WHAT WE LOOK AT / WHAT DOES AURA 3D SKIN ANALYSIS LOOK AT? -->
+    <!-- 04 · WHAT WE LOOK AT / WHAT DOES AURA 3D SKIN ANALYSIS LOOK AT? (PAGE 3) -->
     <section id="what-we-look-at" class="py-24 px-6 sm:px-10 bg-[#131619] text-white relative overflow-hidden">
         <!-- Abstract Dark Aura Background Elements -->
         <div class="absolute inset-0 z-0 pointer-events-none">
@@ -387,8 +548,8 @@
                     YOUR MIRROR SEES SKIN.<br>
                     <span class="text-[#AA987C]">WE LOOK CLOSER.</span>
                 </h2>
-                <p class="text-sm sm:text-base font-light text-white/75 leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
-                    Your reflection shows you the surface. Aura gives your SuA Glow provider another way to visualize and explore different characteristics of your skin and facial features as part of your consultation.
+                <p class="text-sm sm:text-base font-light text-white/80 leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
+                    Aura gives you and your SuA Glow provider another way to visualize key skin characteristics and facial features as part of your consultation. Aura&rsquo;s own materials support analysis of wrinkles, texture, red areas, brown spots, pores, and facial dimensions.
                 </p>
             </div>
 
@@ -439,10 +600,10 @@
                         <!-- Minimal Visual Pins overlay -->
                         <div class="absolute inset-0 pointer-events-none flex flex-col justify-between p-6">
                             <div class="flex justify-between items-start">
-                                <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] text-warm-gold border border-white/10 uppercase tracking-widest font-mono">
+                                <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] text-warm-gold border border-white/10 uppercase tracking-widest font-semibold">
                                     3D Digital Twin Scan
                                 </span>
-                                <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] text-white/60 border border-white/10 font-mono">
+                                <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] text-white/60 border border-white/10 uppercase tracking-wider font-medium">
                                     Aura v3.5
                                 </span>
                             </div>
@@ -490,7 +651,7 @@
 
             <!-- Sub-modes / Filter Strip -->
             <div class="pt-4 max-w-4xl mx-auto text-center border-t border-white/10 space-y-6 animate-on-scroll fade-up">
-                <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-[11px] font-mono uppercase text-white/60 tracking-wider">
+                <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-[11px] uppercase text-white/60 tracking-wider">
                     <span class="px-3 py-1.5 rounded-lg bg-white/10 text-warm-gold font-semibold border border-warm-gold/30">3D VIEW</span>
                     <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10">PORES</span>
                     <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10">TEXTURE</span>
@@ -539,7 +700,7 @@
                 <div class="bg-white rounded-2xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col group">
                     <div class="aspect-[4/3] bg-charcoal relative overflow-hidden">
                         <img src="assets/aura_screen_visualize.png" alt="Aura 3D Analyze Mode Screen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-warm-gold uppercase tracking-wider border border-white/10">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] text-warm-gold uppercase tracking-wider border border-white/10 font-semibold">
                             ANALYZE
                         </span>
                     </div>
@@ -557,7 +718,7 @@
                 <div class="bg-white rounded-2xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col group">
                     <div class="aspect-[4/3] bg-charcoal relative overflow-hidden">
                         <img src="assets/aura_screen_measure.png" alt="Aura 3D Measure Mode Screen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-warm-gold uppercase tracking-wider border border-white/10">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] text-warm-gold uppercase tracking-wider border border-white/10 font-semibold">
                             MEASURE
                         </span>
                     </div>
@@ -575,7 +736,7 @@
                 <div class="bg-white rounded-2xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col group">
                     <div class="aspect-[4/3] bg-charcoal relative overflow-hidden">
                         <img src="assets/aura_screen_compare.png" alt="Aura 3D Compare Mode Screen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-warm-gold uppercase tracking-wider border border-white/10">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] text-warm-gold uppercase tracking-wider border border-white/10 font-semibold">
                             COMPARE
                         </span>
                     </div>
@@ -593,7 +754,7 @@
                 <div class="bg-white rounded-2xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col group">
                     <div class="aspect-[4/3] bg-charcoal relative overflow-hidden">
                         <img src="assets/aura_screen_analyze.png" alt="Aura 3D Visualize Simulation Mode Screen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-warm-gold uppercase tracking-wider border border-white/10">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] text-warm-gold uppercase tracking-wider border border-white/10 font-semibold">
                             VISUALIZE
                         </span>
                     </div>
@@ -643,81 +804,78 @@
                     </div>
                 </div>
 
-                <!-- Right Column: The 4-Step Clinical Framework -->
+                <!-- Right Column: The 4-Step Clinical Framework (Page 4 Update) -->
                 <div class="lg:col-span-6 space-y-8 animate-on-scroll fade-left flex flex-col justify-center h-full py-6 lg:py-10">
-                    <div class="space-y-3">
+                    <div class="space-y-4">
                         <span class="badge-standard text-[11px] uppercase tracking-widest bg-off-white border-taupe/20 text-taupe font-semibold px-4 py-1.5 rounded-full inline-block">
-                            PROVIDER-GUIDED PLANNING
+                            ANALYSIS + CONSULTATION
                         </span>
                         <h2 class="heading-wide text-2xl sm:text-4xl text-near-black font-medium leading-tight [text-wrap:balance]">
                             THE SCAN ISN&rsquo;T THE PLAN.<br>
                             <span class="text-[#AA987C]">IT STARTS THE CONVERSATION.</span>
                         </h2>
-                        <p class="text-sm font-light text-charcoal/80 leading-relaxed">
-                            Aura gives us another way to see your skin and facial features. But your treatment plan isn&rsquo;t built by a screen.
-                        </p>
-                        <p class="text-xs sm:text-sm font-light text-charcoal/70 leading-relaxed">
-                            Your SuA Glow provider considers your Aura 3D analysis alongside your concerns, aesthetic goals, treatment history and clinical assessment to decide what makes sense for your skin&mdash;and what doesn&rsquo;t.
-                        </p>
-                    </div>
-
-                    <!-- 4 Clinical Framework Steps with Icons -->
-                    <div class="space-y-4">
-                        <!-- Step: SEE -->
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-off-white border border-light-gray/60 hover:border-taupe/40 transition-colors">
-                            <span class="w-10 h-10 rounded-xl bg-warm-gold/15 text-taupe flex items-center justify-center shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-taupe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
-                            </span>
-                            <div>
-                                <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-near-black">SEE</h3>
-                                <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-0.5">
-                                    Review your 3D scan, skin characteristics and facial features together.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Step: LISTEN -->
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-off-white border border-light-gray/60 hover:border-taupe/40 transition-colors">
-                            <span class="w-10 h-10 rounded-xl bg-warm-gold/15 text-taupe flex items-center justify-center shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-taupe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/></svg>
-                            </span>
-                            <div>
-                                <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-near-black">LISTEN</h3>
-                                <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-0.5">
-                                    Talk about what&rsquo;s bothering you, what isn&rsquo;t, and what you actually want to change.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Step: PRIORITIZE -->
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-off-white border border-light-gray/60 hover:border-taupe/40 transition-colors">
-                            <span class="w-10 h-10 rounded-xl bg-warm-gold/15 text-taupe flex items-center justify-center shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-taupe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="4" y1="21" y2="14"/><line x1="4" x2="4" y1="10" y2="3"/><line x1="12" x2="12" y1="21" y2="12"/><line x1="12" x2="12" y1="8" y2="3"/><line x1="20" x2="20" y1="21" y2="16"/><line x1="20" x2="20" y1="12" y2="3"/><line x1="1" x2="7" y1="14" y2="14"/><line x1="9" x2="15" y1="8" y2="8"/><line x1="17" x2="23" y1="16" y2="16"/></svg>
-                            </span>
-                            <div>
-                                <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-near-black">PRIORITIZE</h3>
-                                <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-0.5">
-                                    Separate what could be treated from what actually makes sense to treat.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Step: PLAN -->
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-off-white border border-light-gray/60 hover:border-taupe/40 transition-colors">
-                            <span class="w-10 h-10 rounded-xl bg-warm-gold/15 text-taupe flex items-center justify-center shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-taupe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
-                            </span>
-                            <div>
-                                <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-near-black">PLAN</h3>
-                                <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-0.5">
-                                    Build a personalized strategy around your skin, goals and timeline.
-                                </p>
-                            </div>
+                        <div class="space-y-2 text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed">
+                            <p>
+                                Aura gives us another way to see your skin and facial features.
+                            </p>
+                            <p class="font-normal text-near-black">
+                                But your treatment plan isn&rsquo;t built by a screen.
+                            </p>
+                            <p>
+                                Your SuA Glow provider reviews your Aura 3D analysis alongside your concerns, aesthetic goals, treatment history and clinical assessment to decide what makes sense for your skin&mdash;and what doesn&rsquo;t.
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Strong SuA Glow Ending Callout -->
-                    <div class="p-6 rounded-2xl bg-near-black text-white space-y-2 border border-charcoal/20">
+                    <!-- 4 Framework Steps: 2x2 Grid (No numbers, round icon badges per Page 4 update) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Card: SEE -->
+                        <div class="p-5 rounded-2xl bg-off-white border border-light-gray/60 shadow-xs space-y-3">
+                            <div class="w-10 h-10 rounded-full bg-warm-gold/15 text-taupe flex items-center justify-center">
+                                <i data-lucide="eye" class="w-4 h-4 text-taupe"></i>
+                            </div>
+                            <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-near-black">SEE</h3>
+                            <p class="text-xs font-light text-charcoal/70 leading-relaxed">
+                                Review your 3D scan, skin characteristics and facial features together.
+                            </p>
+                        </div>
+
+                        <!-- Card: LISTEN -->
+                        <div class="p-5 rounded-2xl bg-off-white border border-light-gray/60 shadow-xs space-y-3">
+                            <div class="w-10 h-10 rounded-full bg-warm-gold/15 text-taupe flex items-center justify-center">
+                                <i data-lucide="message-square" class="w-4 h-4 text-taupe"></i>
+                            </div>
+                            <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-near-black">LISTEN</h3>
+                            <p class="text-xs font-light text-charcoal/70 leading-relaxed">
+                                Talk about what matters to you&mdash;and what you actually want to change.
+                            </p>
+                        </div>
+
+                        <!-- Card: PRIORITIZE -->
+                        <div class="p-5 rounded-2xl bg-off-white border border-light-gray/60 shadow-xs space-y-3">
+                            <div class="w-10 h-10 rounded-full bg-warm-gold/15 text-taupe flex items-center justify-center">
+                                <i data-lucide="sliders" class="w-4 h-4 text-taupe"></i>
+                            </div>
+                            <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-near-black">PRIORITIZE</h3>
+                            <p class="text-xs font-light text-charcoal/70 leading-relaxed">
+                                Separate what could be treated from what actually makes sense to treat.
+                            </p>
+                        </div>
+
+                        <!-- Card: PLAN -->
+                        <div class="p-5 rounded-2xl bg-off-white border border-light-gray/60 shadow-xs space-y-3">
+                            <div class="w-10 h-10 rounded-full bg-warm-gold/15 text-taupe flex items-center justify-center">
+                                <i data-lucide="file-text" class="w-4 h-4 text-taupe"></i>
+                            </div>
+                            <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-near-black">PLAN</h3>
+                            <p class="text-xs font-light text-charcoal/70 leading-relaxed">
+                                Build a personalized strategy around your skin, goals and timeline.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Strong SuA Glow Ending Callout (Dark Card from Page 4) -->
+                    <div class="p-6 rounded-2xl bg-[#131619] text-white space-y-2 border border-white/10 shadow-md">
                         <p class="text-xs font-semibold uppercase tracking-[0.2em] text-warm-gold">
                             YOUR SKIN DOESN&rsquo;T NEED EVERYTHING. IT NEEDS THE RIGHT THINGS.
                         </p>
@@ -731,407 +889,501 @@
         </div>
     </section>
 
-    <!-- 06 · ONE SCAN. DIFFERENT SKIN STORIES. -->
+    <!-- 06 · ONE SCAN. DIFFERENT WAYS TO TREAT YOUR SKIN (PAGE 5 TREATMENT FINDER) -->
     <section id="pathways" class="py-24 px-6 sm:px-10 bg-off-white border-b border-light-gray/40">
-        <div class="max-w-7xl mx-auto space-y-16">
+        <div class="max-w-6xl mx-auto space-y-16">
             
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto space-y-4 animate-on-scroll fade-up">
                 <span class="badge-standard text-[11px] uppercase tracking-widest bg-white border-taupe/20 text-taupe font-semibold px-4 py-1.5 rounded-full inline-block">
-                    WHERE YOUR PLAN CAN GO &bull; SKIN HEALTH PATHWAYS
+                    TREATMENT FINDER
                 </span>
                 <h2 class="heading-wide text-3xl sm:text-5xl text-near-black font-normal [text-wrap:balance]">
-                    ONE SCAN. <span class="text-[#AA987C]">DIFFERENT SKIN STORIES.</span>
+                    ONE SCAN. <span class="text-[#AA987C]">DIFFERENT WAYS</span> TO TREAT YOUR SKIN.
                 </h2>
                 <p class="text-sm sm:text-base font-light text-charcoal/70 leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
-                    Your Aura consultation helps us understand what your skin is showing, what matters to you&mdash;and where your SuA Glow skin health plan may go next.
+                    Your Aura consultation helps us understand what your skin is showing, what matters to you&mdash;and which SuA Glow treatment category may make sense to explore next.
                 </p>
             </div>
 
-            <!-- 6 Pathways Grid (Matching Skin Health Departments) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 animate-on-scroll fade-up">
+            <!-- 6 Treatment Finder Cards Grid (Page 5) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 animate-on-scroll fade-up">
                 
-                <!-- 1. SKIN QUALITY BOOSTERS -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
-                    <div class="aspect-[4/3] bg-charcoal/5 relative overflow-hidden">
-                        <img src="assets/hydration_glow_model.png" alt="Skin Quality Boosters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
-                        <div>
-                            <h3 class="heading-wide text-base sm:text-lg font-medium text-near-black uppercase tracking-wider">Skin Quality Boosters</h3>
-                            <p class="text-xs text-taupe font-medium mt-1">Healing &middot; Hydration &middot; Collagen &middot; Dermal Matrix</p>
-                            <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-2">
-                                Targeting the dermal matrix itself to rebuild elasticity, restore skin barrier integrity, and cultivate authentic Korean glass skin.
-                            </p>
+                <!-- 1. SKIN QUALITY TREATMENTS -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] bg-charcoal/5 relative overflow-hidden">
+                            <img src="assets/hydration_glow_model.png" alt="Skin Quality Treatments at SuA Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
-                        
-                        <!-- Services in this category -->
-                        <div class="pt-4 border-t border-light-gray/50 space-y-2">
-                            <p class="text-[10px] uppercase font-bold tracking-widest text-taupe/90">Services &amp; Treatments:</p>
-                            <ul class="space-y-1.5">
-                                <li>
-                                    <a href="skin-quality-boosters.html#healing-essence" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Healing Essence</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="skin-quality-boosters.html#hydration-glow" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Hydration and Glow</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="skin-quality-boosters.html#collagen-stimulation" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Collagen Stimulation</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="skin-quality-boosters.html#dermal-matrix" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Dermal Matrix</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="p-6 sm:p-8 space-y-4">
+                            <div>
+                                <h3 class="heading-wide text-base sm:text-lg font-medium text-near-black uppercase tracking-wider">Skin Quality Treatments</h3>
+                                <p class="text-xs text-taupe font-medium mt-1">Hydration &bull; Radiance &bull; Texture &bull; Overall Skin Quality</p>
+                                <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-2">
+                                    Skin boosters and skin-quality treatments designed to support healthier-looking, more luminous skin.
+                                </p>
+                            </div>
+                            
+                            <!-- Services in this category -->
+                            <div class="pt-4 border-t border-light-gray/50 space-y-2">
+                                <p class="text-[10px] uppercase font-bold tracking-widest text-taupe/90">Services &amp; Treatments:</p>
+                                <ul class="space-y-1.5">
+                                    <li>
+                                        <a href="skin-quality-boosters.html#healing-essence" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                             <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Healing Essence</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="skin-quality-boosters.html#hydration-glow" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Hydration and Glow</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="skin-quality-boosters.html#collagen-stimulation" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Collagen Stimulation</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="skin-quality-boosters.html#dermal-matrix" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Dermal Matrix</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-0">
+                        <div class="pt-3 border-t border-light-gray/50">
+                            <a href="skin-quality-boosters.html" class="text-xs font-semibold text-taupe hover:text-near-black inline-flex items-center gap-1.5 transition-colors uppercase tracking-wider">
+                                Explore Skin Quality Treatments &rarr;
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- 2. INJECTABLES -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
-                    <div class="aspect-[4/3] bg-charcoal/5 relative overflow-hidden">
-                        <img src="assets/collagen_stimulation_model.png" alt="Injectables" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
-                        <div>
-                            <h3 class="heading-wide text-base sm:text-lg font-medium text-near-black uppercase tracking-wider">Injectables</h3>
-                            <p class="text-xs text-taupe font-medium mt-1">Cosmetic Tox &middot; Medical Tox &middot; Fillers &middot; Biostimulators</p>
-                            <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-2">
-                                Korean aesthetic principles prioritizing natural facial balance, subtle movement, and structural foundation over dramatic change.
-                            </p>
+                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] bg-charcoal/5 relative overflow-hidden">
+                            <img src="assets/collagen_stimulation_model.png" alt="Injectables at SuA Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
-                        
-                        <!-- Services in this category -->
-                        <div class="pt-4 border-t border-light-gray/50 space-y-2">
-                            <p class="text-[10px] uppercase font-bold tracking-widest text-taupe/90">Services &amp; Treatments:</p>
-                            <ul class="space-y-1.5">
-                                <li>
-                                    <a href="cosmetic-tox.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Cosmetic Tox</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="medical-tox.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Medical Tox</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="dermal-filler.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Dermal Fillers</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="radiesse.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Radiesse Biostimulator</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="p-6 sm:p-8 space-y-4">
+                            <div>
+                                <h3 class="heading-wide text-base sm:text-lg font-medium text-near-black uppercase tracking-wider">Injectables</h3>
+                                <p class="text-xs text-taupe font-medium mt-1">Movement &bull; Volume &bull; Facial Balance &bull; Refinement</p>
+                                <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-2">
+                                    Provider-guided injectables may help support facial balance, soften expression lines and refine selected features.
+                                </p>
+                            </div>
+                            
+                            <!-- Services in this category -->
+                            <div class="pt-4 border-t border-light-gray/50 space-y-2">
+                                <p class="text-[10px] uppercase font-bold tracking-widest text-taupe/90">Services &amp; Treatments:</p>
+                                <ul class="space-y-1.5">
+                                    <li>
+                                        <a href="cosmetic-tox.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Cosmetic Tox</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="medical-tox.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Medical Tox</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="dermal-fillers.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Dermal Fillers</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="biostimulators.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Biostimulators</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-0">
+                        <div class="pt-3 border-t border-light-gray/50">
+                            <a href="cosmetic-tox.html" class="text-xs font-semibold text-taupe hover:text-near-black inline-flex items-center gap-1.5 transition-colors uppercase tracking-wider">
+                                Explore Injectables &rarr;
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- 3. SKIN REJUVENATION -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
-                    <div class="aspect-[4/3] bg-charcoal/5 relative overflow-hidden">
-                        <img src="assets/korean_woman_tone_up_new.jpg" alt="Skin Rejuvenation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
-                        <div>
-                            <h3 class="heading-wide text-base sm:text-lg font-medium text-near-black uppercase tracking-wider">Skin Rejuvenation</h3>
-                            <p class="text-xs text-taupe font-medium mt-1">Energy Devices &middot; Non-Invasive Lifting &middot; Infusion</p>
-                            <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-2">
-                                Advanced Korean device innovations for deep collagen stimulation, non-invasive tightening, and needle-free nutrient delivery.
-                            </p>
+                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] bg-charcoal/5 relative overflow-hidden">
+                            <img src="assets/korean_woman_tone_up_new.jpg" alt="Skin Rejuvenation at SuA Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
-                        
-                        <!-- Services in this category -->
-                        <div class="pt-4 border-t border-light-gray/50 space-y-2">
-                            <p class="text-[10px] uppercase font-bold tracking-widest text-taupe/90">Services &amp; Treatments:</p>
-                            <ul class="space-y-1.5">
-                                <li>
-                                    <a href="oligio-x.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Oligio X RF Lifting</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="ldm-water-drop-lifting.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">LDM Ultrasound Lifting</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="microneedling.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">SkinPen Microneedling</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="needleless-infusion-therapy.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Needleless Infusion (DEP)</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="korean-scalp-hair-rejuvenation.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Scalp &amp; Hair Rejuvenation</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="p-6 sm:p-8 space-y-4">
+                            <div>
+                                <h3 class="heading-wide text-base sm:text-lg font-medium text-near-black uppercase tracking-wider">Skin Rejuvenation</h3>
+                                <p class="text-xs text-taupe font-medium mt-1">Texture &bull; Pores &bull; Firmness &bull; Visible Signs of Aging</p>
+                                <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-2">
+                                    Advanced skin rejuvenation treatments that may help improve texture, refine pores and support smoother, firmer-looking skin.
+                                </p>
+                            </div>
+                            
+                            <!-- Services in this category -->
+                            <div class="pt-4 border-t border-light-gray/50 space-y-2">
+                                <p class="text-[10px] uppercase font-bold tracking-widest text-taupe/90">Services &amp; Treatments:</p>
+                                <ul class="space-y-1.5">
+                                    <li>
+                                        <a href="oligio-x.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Oligio X RF Lifting</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="skinpen-microneedling.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">SkinPen Microneedling</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="chemical-peels.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Korean Chemical Peels</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="korean-scalp-hair-rejuvenation.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Scalp &amp; Hair Rejuvenation</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-0">
+                        <div class="pt-3 border-t border-light-gray/50">
+                            <a href="oligio-x.html" class="text-xs font-semibold text-taupe hover:text-near-black inline-flex items-center gap-1.5 transition-colors uppercase tracking-wider">
+                                Explore Skin Rejuvenation &rarr;
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- 4. SIGNATURE TREATMENTS -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
-                    <div class="aspect-[4/3] bg-charcoal/5 relative overflow-hidden">
-                        <img src="assets/korean_female_seamless_model.jpg" alt="Signature Treatments" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
-                        <div>
-                            <h3 class="heading-wide text-base sm:text-lg font-medium text-near-black uppercase tracking-wider">Signature Treatments</h3>
-                            <p class="text-xs text-taupe font-medium mt-1">Multi-Step Protocols &middot; Exclusive Packages &middot; Events</p>
-                            <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-2">
-                                Bespoke treatment combinations created exclusively by Sophia Yang for intensive skin restoration, special occasions, and men's skin health.
-                            </p>
+                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] bg-charcoal/5 relative overflow-hidden">
+                            <img src="assets/korean_female_seamless_model.jpg" alt="Signature Treatments at SuA Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
-                        
-                        <!-- Services in this category -->
-                        <div class="pt-4 border-t border-light-gray/50 space-y-2">
-                            <p class="text-[10px] uppercase font-bold tracking-widest text-taupe/90">Services &amp; Treatments:</p>
-                            <ul class="space-y-1.5">
-                                <li>
-                                    <a href="signature-treatment.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">SuA Glow Signature</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="bridal-glow.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Bridal Glow Program</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="one-day-glow.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">One Day Glow</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="seoul-man.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Seoul Man Treatment</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="p-6 sm:p-8 space-y-4">
+                            <div>
+                                <h3 class="heading-wide text-base sm:text-lg font-medium text-near-black uppercase tracking-wider">Signature Treatments</h3>
+                                <p class="text-xs text-taupe font-medium mt-1">Curated &bull; Layered &bull; Personalized &bull; Results-Driven</p>
+                                <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-2">
+                                    Thoughtfully designed treatment experiences that combine the best of SuA Glow to support your unique skin goals.
+                                </p>
+                            </div>
+                            
+                            <!-- Services in this category -->
+                            <div class="pt-4 border-t border-light-gray/50 space-y-2">
+                                <p class="text-[10px] uppercase font-bold tracking-widest text-taupe/90">Services &amp; Treatments:</p>
+                                <ul class="space-y-1.5">
+                                    <li>
+                                        <a href="signature-treatment.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">SuA Glow Signature</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="bridal-glow.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Bridal Glow Program</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="one-day-glow.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">One Day Glow</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="seoul-man.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Seoul Man Treatment</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-0">
+                        <div class="pt-3 border-t border-light-gray/50">
+                            <a href="signature-treatment.html" class="text-xs font-semibold text-taupe hover:text-near-black inline-flex items-center gap-1.5 transition-colors uppercase tracking-wider">
+                                Explore Signature Treatments &rarr;
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 5. K BEAUTY FACIALS -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
-                    <div class="aspect-[4/3] bg-gradient-to-br from-[#1E2328] via-[#15191D] to-[#0E1113] relative overflow-hidden">
-                        <img src="assets/diverse_women_shades_models_nobg.png" alt="K Beauty Facials" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
-                        <div>
-                            <h3 class="heading-wide text-base sm:text-lg font-medium text-near-black uppercase tracking-wider">K Beauty Facials</h3>
-                            <p class="text-xs text-taupe font-medium mt-1">Barrier Repair &middot; Salmon PN &middot; Dewy Luminosity</p>
-                            <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-2">
-                                Authentic Korean clinical facial protocols focused on deep cellular hydration, soothing compromised barriers, and glass-skin radiance.
-                            </p>
+                <!-- 5. K-BEAUTY FACIALS -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] bg-gradient-to-br from-[#1E2328] via-[#15191D] to-[#0E1113] relative overflow-hidden">
+                            <img src="assets/diverse_women_shades_models_nobg.png" alt="K-Beauty Facials at SuA Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
-                        
-                        <!-- Services in this category -->
-                        <div class="pt-4 border-t border-light-gray/50 space-y-2">
-                            <p class="text-[10px] uppercase font-bold tracking-widest text-taupe/90">Services &amp; Treatments:</p>
-                            <ul class="space-y-1.5">
-                                <li>
-                                    <a href="salmon-pn-facial.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Salmon PN Facial</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="ldm-water-drop-lifting.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Water Drop Lifting</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tone-up-facial.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Tone-Up Facial</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="glass-skin-hydration-glow.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Glass Skin Hydration</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="p-6 sm:p-8 space-y-4">
+                            <div>
+                                <h3 class="heading-wide text-base sm:text-lg font-medium text-near-black uppercase tracking-wider">K-Beauty Facials</h3>
+                                <p class="text-xs text-taupe font-medium mt-1">Hydration &bull; Glow &bull; Calming &bull; Skin Maintenance</p>
+                                <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-2">
+                                    K-Beauty facials support hydration, soothing care and visible radiance through customized, skin-first treatment plans.
+                                </p>
+                            </div>
+                            
+                            <!-- Services in this category -->
+                            <div class="pt-4 border-t border-light-gray/50 space-y-2">
+                                <p class="text-[10px] uppercase font-bold tracking-widest text-taupe/90">Services &amp; Treatments:</p>
+                                <ul class="space-y-1.5">
+                                    <li>
+                                        <a href="salmon-pn-facial.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Salmon PN Glass Facial</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ldm-water-drop-lifting.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Water Drop Lifting</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tone-up-facial.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Tone-Up Facial</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="glass-skin-hydration-glow.html" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Glass Skin Hydration</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-0">
+                        <div class="pt-3 border-t border-light-gray/50">
+                            <a href="salmon-pn-facial.html" class="text-xs font-semibold text-taupe hover:text-near-black inline-flex items-center gap-1.5 transition-colors uppercase tracking-wider">
+                                Explore K-Beauty Facials &rarr;
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- 6. SCAR TREATMENT -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
-                    <div class="aspect-[4/3] bg-charcoal/5 relative overflow-hidden">
-                        <img src="assets/cosmetic_tox_model.png" alt="Scar Treatment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
-                        <div>
-                            <h3 class="heading-wide text-base sm:text-lg font-medium text-near-black uppercase tracking-wider">Scar Treatment</h3>
-                            <p class="text-xs text-taupe font-medium mt-1">Acne Scars &middot; Subcision &middot; Dermal Untethering</p>
-                            <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-2">
-                                Multi-modality protocols targeting fibrotic scar tissue, deep acne depressions, and uneven texture through subcision and dermal remodeling.
-                            </p>
+                <div class="bg-white rounded-3xl overflow-hidden border border-light-gray/60 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] bg-charcoal/5 relative overflow-hidden">
+                            <img src="assets/cosmetic_tox_model.png" alt="Scar Treatment at SuA Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
-                        
-                        <!-- Services in this category -->
-                        <div class="pt-4 border-t border-light-gray/50 space-y-2">
-                            <p class="text-[10px] uppercase font-bold tracking-widest text-taupe/90">Services &amp; Treatments:</p>
-                            <ul class="space-y-1.5">
-                                <li>
-                                    <a href="scar-treatment.html#acne-scars" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Acne Scar Remodeling</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="scar-treatment.html#subcision" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Subcision &amp; Untethering</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="scar-treatment.html#pigmentation" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Post-Inflammatory Hyperpigmentation</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="scar-treatment.html#surgical-scars" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
-                                        <span class="flex items-center gap-2">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
-                                            <span class="font-medium">Surgical &amp; Stretch Mark Revision</span>
-                                        </span>
-                                        <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="p-6 sm:p-8 space-y-4">
+                            <div>
+                                <h3 class="heading-wide text-base sm:text-lg font-medium text-near-black uppercase tracking-wider">Scar Treatment</h3>
+                                <p class="text-xs text-taupe font-medium mt-1">Acne Scars &bull; Uneven Texture &bull; Post-Acne Concerns</p>
+                                <p class="text-xs font-light text-charcoal/70 leading-relaxed mt-2">
+                                    Targeted scar-focused treatments designed to help improve the appearance of acne scarring and uneven skin texture.
+                                </p>
+                            </div>
+                            
+                            <!-- Services in this category -->
+                            <div class="pt-4 border-t border-light-gray/50 space-y-2">
+                                <p class="text-[10px] uppercase font-bold tracking-widest text-taupe/90">Services &amp; Treatments:</p>
+                                <ul class="space-y-1.5">
+                                    <li>
+                                        <a href="scar-treatment.html#acne-scars" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Acne Scar Remodeling</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="scar-treatment.html#subcision" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Subcision &amp; Untethering</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="scar-treatment.html#pigmentation" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Post-Inflammatory Hyperpigmentation</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="scar-treatment.html#surgical-scars" class="group/item flex items-center justify-between text-xs text-charcoal/80 hover:text-taupe transition-colors py-0.5">
+                                            <span class="flex items-center gap-2">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-taupe group-hover/item:scale-125 transition-transform"></span>
+                                                <span class="font-medium">Surgical &amp; Stretch Mark Revision</span>
+                                            </span>
+                                            <span class="text-taupe text-[11px] group-hover/item:translate-x-0.5 transition-transform">&rarr;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-0">
+                        <div class="pt-3 border-t border-light-gray/50">
+                            <a href="scar-treatment.html" class="text-xs font-semibold text-taupe hover:text-near-black inline-flex items-center gap-1.5 transition-colors uppercase tracking-wider">
+                                Explore Scar Treatment &rarr;
+                            </a>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <!-- Bottom Pathway Philosophy Quote -->
-            <div class="bg-white rounded-2xl p-8 text-center max-w-3xl mx-auto shadow-sm border border-light-gray/60 space-y-2 animate-on-scroll fade-up">
-                <p class="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-near-black font-heading">
-                    YOUR SCAN DOESN&rsquo;T PICK A TREATMENT. IT HELPS US ASK BETTER QUESTIONS.
+            <!-- Bottom Quote per Page 5 -->
+            <div class="pt-8 text-center max-w-3xl mx-auto space-y-2 border-t border-light-gray/60 animate-on-scroll fade-up">
+                <p class="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-near-black font-heading">
+                    YOUR SCAN DOESN&rsquo;T PICK A TREATMENT.
                 </p>
-                <p class="text-xs sm:text-sm font-light text-charcoal/70 leading-relaxed">
-                    Sometimes the plan is one treatment. Sometimes it&rsquo;s a combination. And sometimes the right answer is: <span class="text-taupe font-medium italic">not yet.</span>
+                <p class="text-xs sm:text-sm font-light text-taupe tracking-wider uppercase font-medium">
+                    IT HELPS US NARROW THE CONVERSATION.
                 </p>
             </div>
 
         </div>
     </section>
 
-    <!-- 07 · CONSULTATION PRICING & VALUE CARD (Aura 3D Skin Health Consultation — $100) -->
+
+
+    <!-- 08 · MEMBERSHIP & SKIN HEALTH RITUAL (PAGE 7) -->
+    <section id="membership" class="py-24 px-6 sm:px-10 bg-off-white border-b border-light-gray/40">
+        <div class="max-w-4xl mx-auto space-y-12">
+            
+            <div class="text-center space-y-6 animate-on-scroll fade-up">
+                <span class="badge-standard text-[11px] uppercase tracking-widest bg-white border-taupe/20 text-taupe font-semibold px-4 py-1.5 rounded-full inline-block">
+                    MEMBERSHIP
+                </span>
+                <h2 class="heading-wide text-3xl sm:text-5xl text-near-black font-normal [text-wrap:balance]">
+                    WANT TO MAKE SKIN HEALTH <span class="text-[#AA987C]">A RITUAL?</span>
+                </h2>
+                
+                <div class="space-y-4 max-w-2xl mx-auto text-sm sm:text-base font-light text-charcoal/80 leading-relaxed">
+                    <p class="font-normal text-near-black">
+                        Your Aura consultation can be the beginning&mdash;not the whole story.
+                    </p>
+                    <p>
+                        Explore the SuA Glow Glass Skin Method, our monthly K-Beauty membership designed around consistent skin care, thoughtful treatment planning and long-term skin quality.
+                    </p>
+                    <p class="text-xs sm:text-sm uppercase tracking-widest text-taupe font-semibold pt-1">
+                        Monthly. Skin-first. Seoul-inspired.
+                    </p>
+                </div>
+
+                <div class="pt-2">
+                    <a href="memberships.html" class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-near-black text-white rounded-full transition-all duration-300 inline-flex items-center gap-2 shadow-md">
+                        <span>EXPLORE MEMBERSHIP</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Specific Ongoing Skin Assessment Callout (Page 7) -->
+            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-light-gray/60 shadow-soft text-center max-w-2xl mx-auto space-y-3 animate-on-scroll fade-up">
+                <h3 class="heading-wide text-sm sm:text-base font-semibold text-near-black uppercase tracking-wider">
+                    YOUR SKIN CHANGES. YOUR PLAN SHOULD TOO.
+                </h3>
+                <p class="text-xs sm:text-sm font-light text-charcoal/70 leading-relaxed">
+                    Glass Skin Method members use ongoing skin assessment alongside their monthly K-Beauty ritual to help keep treatment decisions aligned with their skin over time.
+                </p>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- 09 · CONSULTATION PRICING & VALUE CARD (PAGES 8 & 9) -->
     <section id="pricing" class="py-24 px-6 sm:px-10 bg-white border-b border-light-gray/40">
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-5xl mx-auto space-y-12">
             
             <div class="bg-gradient-to-br from-[#131619] via-[#1C2024] to-[#252A2F] rounded-3xl p-8 sm:p-14 text-white shadow-2xl border border-white/10 relative overflow-hidden animate-on-scroll fade-up">
                 <!-- Background ambient highlight -->
@@ -1139,7 +1391,7 @@
 
                 <div class="relative z-10 space-y-10">
                     
-                    <!-- Header -->
+                    <!-- Header (Page 8 & 9: Change Investment to CONSULTATION · $100) -->
                     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-8 border-b border-white/15">
                         <div class="space-y-3">
                             <span class="inline-block px-3.5 py-1 rounded-full bg-warm-gold/15 border border-warm-gold/30 text-warm-gold text-[10.5px] uppercase tracking-widest font-semibold">
@@ -1149,16 +1401,16 @@
                                 AURA 3D SKIN HEALTH<br><span class="text-warm-gold">CONSULTATION</span>
                             </h2>
                             <p class="text-xs sm:text-sm font-light text-white/70 max-w-xl leading-relaxed">
-                                Aura 3D facial imaging + skin analysis + a personalized consultation with your SuA Glow provider.
+                                3D facial imaging + skin analysis + a personalized consultation with your SuA Glow provider.
                             </p>
                         </div>
                         <div class="text-left sm:text-right shrink-0">
-                            <span class="text-xs uppercase tracking-widest text-white/40 block font-mono">Investment</span>
-                            <span class="text-4xl sm:text-5xl font-light text-white tracking-tight font-display">$100</span>
+                            <span class="text-xs uppercase tracking-widest text-warm-gold block font-semibold">CONSULTATION &bull; $100</span>
+                            <span class="text-4xl sm:text-5xl font-light text-white tracking-tight font-heading">$100</span>
                         </div>
                     </div>
 
-                    <!-- What's Included: 3 Core Blocks -->
+                    <!-- What's Included: 3 Core Blocks (Page 8) -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-2.5">
                             <div class="w-8 h-8 rounded-lg bg-warm-gold/10 flex items-center justify-center text-warm-gold mb-3">
@@ -1166,7 +1418,7 @@
                             </div>
                             <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">3D SKIN ANALYSIS</h3>
                             <p class="text-xs font-light text-white/70 leading-relaxed">
-                                Advanced Aura 3D facial imaging and analysis to take a closer look at your skin and facial features.
+                                Advanced Aura 3D imaging to take a closer look at your skin and facial features.
                             </p>
                         </div>
 
@@ -1176,7 +1428,7 @@
                             </div>
                             <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">PROVIDER REVIEW + PLAN</h3>
                             <p class="text-xs font-light text-white/70 leading-relaxed">
-                                Dedicated time with your provider to review analysis, understand goals, and discuss what makes sense.
+                                Dedicated time with your provider to review your analysis, concerns, goals and treatment history.
                             </p>
                         </div>
 
@@ -1184,14 +1436,14 @@
                             <div class="w-8 h-8 rounded-lg bg-warm-gold/10 flex items-center justify-center text-warm-gold mb-3">
                                 <i data-lucide="file-text" class="w-4 h-4"></i>
                             </div>
-                            <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">PERSONAL REPORT</h3>
+                            <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">YOUR PERSONAL REPORT</h3>
                             <p class="text-xs font-light text-white/70 leading-relaxed">
-                                You&rsquo;ll receive a copy of your Aura report to keep as a visual baseline you can reference over time.
+                                Receive a copy of your Aura skin analysis report to keep as a visual baseline for future reference.
                             </p>
                         </div>
                     </div>
 
-                    <!-- $100 Becomes Part of Your Plan Callout Box -->
+                    <!-- $100 Becomes Part of Your Plan Callout Box (Page 8) -->
                     <div class="bg-gradient-to-r from-warm-gold/20 via-warm-gold/10 to-transparent border border-warm-gold/30 rounded-2xl p-6 sm:p-8 space-y-3">
                         <div class="flex items-center gap-2 text-warm-gold">
                             <i data-lucide="check-circle" class="w-5 h-5 shrink-0"></i>
@@ -1203,13 +1455,13 @@
                             Apply your full <strong class="text-white font-medium">$100 consultation fee</strong> toward a SuA Glow treatment booked within 60 days of your consultation.
                         </p>
                         <div class="pl-7 pt-2 flex flex-wrap items-center gap-6 text-[11px] uppercase tracking-wider text-white/60">
-                            <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-warm-gold"></i> No pressure to treat today</span>
-                            <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-warm-gold"></i> Understand your skin first</span>
-                            <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-warm-gold"></i> Decide what makes sense second</span>
+                            <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-warm-gold"></i> NO PRESSURE TO TREAT TODAY</span>
+                            <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-warm-gold"></i> UNDERSTAND YOUR SKIN FIRST</span>
+                            <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-warm-gold"></i> DECIDE WHAT MAKES SENSE SECOND</span>
                         </div>
                     </div>
 
-                    <!-- Booking CTA Button -->
+                    <!-- Booking CTA Button (Page 9) -->
                     <div class="text-center pt-2">
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" rel="noopener noreferrer" class="btn-primary py-4 px-10 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300 inline-flex items-center gap-2 shadow-xl">
                             <span>BOOK MY 3D SKIN CONSULTATION</span>
@@ -1217,6 +1469,27 @@
                         </a>
                     </div>
 
+                </div>
+            </div>
+
+            <!-- GOOD TO KNOW (PAGE 9 ADDITION) -->
+            <div class="p-8 sm:p-10 rounded-3xl bg-off-white border border-light-gray/60 space-y-4 animate-on-scroll fade-up max-w-4xl mx-auto">
+                <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-taupe"></span>
+                    <h3 class="heading-wide text-xs sm:text-sm font-semibold uppercase tracking-wider text-near-black">
+                        GOOD TO KNOW
+                    </h3>
+                </div>
+                <div class="space-y-3 text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed">
+                    <p>
+                        Aura is an assessment and visualization tool&mdash;not a medical diagnosis.
+                    </p>
+                    <p>
+                        Your provider reviews your Aura analysis alongside your concerns, goals, treatment history and clinical assessment. Treatment recommendations, timing and results vary by individual.
+                    </p>
+                    <p class="font-normal text-charcoal/90">
+                        3D visualizations and simulations are consultation tools and do not predict or guarantee treatment outcomes.
+                    </p>
                 </div>
             </div>
 
@@ -1392,33 +1665,55 @@
     <!-- Local SEO & Near Me Dynamic Injection -->
     <div id="nearme-placeholder" data-product="Aura 3D Skin Analysis"></div>
 
-    <!-- MODULE 15: STANDARDIZED FINAL CONVERSION SECTION (REQUIRED BY SUA GLOW ARCHITECTURE) -->
-    <section id="book-consultation" class="py-24 bg-[#131619] text-white text-center relative overflow-hidden">
-        <div class="max-w-4xl mx-auto px-6 relative z-10 space-y-6">
-            <p class="text-xs uppercase tracking-[0.25em] text-[#AA987C] font-semibold">YOUR NEXT STEP</p>
-            <h2 class="heading-wide text-3xl sm:text-5xl font-medium tracking-tight text-white">
-                READY TO BUILD<br><span class="text-[#AA987C]">YOUR TREATMENT PLAN?</span>
-            </h2>
-            <p class="text-sm sm:text-base text-white/70 max-w-2xl mx-auto leading-relaxed font-light">
-                Start with a personalized consultation at SuA Glow in Carrollton. We&rsquo;ll evaluate your concerns, goals, medical history, and appropriate treatment options to develop an individualized plan for you.
-            </p>
-            
-            <div class="pt-4">
-                <div class="inline-block bg-white/5 border border-white/10 rounded-2xl px-6 py-4 mb-6">
-                    <p class="text-[11px] uppercase tracking-wider text-warm-gold font-medium">NEW PATIENTS</p>
-                    <p class="text-sm font-semibold text-white">Consultation + Aura 3D Skin Analysis</p>
+    <!-- MODULE 15: STANDARDIZED FINAL CONVERSION SECTION (PAGE 8 TONE-UP STYLE) -->
+    <section id="book-consultation" class="py-20 sm:py-24 bg-off-white border-t border-light-gray/40 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 sm:px-10">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-soft border border-light-gray/60 grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                
+                <!-- Left Column: Copy & Booking CTA -->
+                <div class="lg:col-span-7 p-8 sm:p-14 flex flex-col justify-between space-y-8 animate-on-scroll fade-right">
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-[11px] uppercase tracking-[0.25em] text-[#AA987C] font-semibold">YOUR NEXT STEP</p>
+                            <div class="w-10 h-0.5 bg-[#AA987C]/40 mt-2 mb-4"></div>
+                            <h2 class="heading-wide text-2xl sm:text-4xl text-near-black font-medium leading-tight">
+                                READY TO BUILD<br>
+                                <span class="text-[#AA987C]">YOUR SKIN HEALTH PLAN?</span>
+                            </h2>
+                        </div>
+
+                        <div class="space-y-3 text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed">
+                            <p class="font-normal text-near-black">
+                                Great skin starts with understanding your skin.
+                            </p>
+                            <p>
+                                New patients begin with a personalized consultation and skin analysis to help establish a visible skin baseline and identify your concerns.
+                            </p>
+                            <p>
+                                Your provider will review your skin, medical history, concerns, and goals to determine an appropriate individualized treatment plan.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 pt-2">
+                        <div>
+                            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" rel="noopener noreferrer" class="btn-primary py-4 px-10 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-near-black text-white rounded-full transition-all duration-300 inline-flex items-center gap-2 shadow-md">
+                                <span>BOOK YOUR CONSULTATION</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </div>
+                        <p class="text-[10.5px] uppercase tracking-[0.2em] text-charcoal/50 font-medium">
+                            CARROLLTON, TX &bull; SERVING DALLAS&ndash;FORT WORTH
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" rel="noopener noreferrer" class="btn-primary py-4 px-10 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-white hover:text-black rounded-full transition-all duration-300 inline-flex items-center gap-2">
-                        <span>BOOK YOUR CONSULTATION</span>
-                        <span>&rarr;</span>
-                    </a>
+
+                <!-- Right Column: Model Face Profile Scan Visual (Tone-Up Example from Page 8) -->
+                <div class="lg:col-span-5 relative min-h-[350px] lg:min-h-full bg-off-white overflow-hidden">
+                    <img src="assets/aura_side_profile_scan.jpg" alt="Aura 3D Skin Analysis Consultation at SuA Glow" class="w-full h-full object-cover object-center">
                 </div>
+
             </div>
-            
-            <p class="text-[11px] uppercase tracking-[0.2em] text-white/40 pt-4">
-                CARROLLTON, TX &bull; SERVING DALLAS&ndash;FORT WORTH
-            </p>
         </div>
     </section>
 

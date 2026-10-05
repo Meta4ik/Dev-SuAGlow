@@ -873,6 +873,14 @@ const SEARCH_INDEX = [
     "snippet": "September Instagram Carousel Studio Complete 4-slide carousel in 4:5 portrait format (1080 × 1350 px), optimized for Instagram feed engagement with ready-to-cop..."
   },
   {
+    "url": "instagram-october.html",
+    "title": "October Instagram Studio",
+    "pageTitle": "October Instagram Studio",
+    "category": "Spa Treatments",
+    "content": "\"Glow or Treat\" Instagram Post 4:5 single-card design featuring the autumn pumpkin fair festival atmosphere, rounded treatment cards with model on left, protocol text in middle, device shot on right, and promotional pricing. Seoul Glow. Zero Tricks. Three authentic Korean aesthetic protocols to lift, repair & renew with promotional pricing through Oct 31. K-VOLUME LIFT Oligio X® 600 Shots + Volume Filler No Tricks, Just Lift. Balance + Seoul magic. GLOW BARRIER Rejuran® Healing Essence + SkinTox Scary-dry skin? Your K-Beauty rescue. HAIR REVIVAL Needle-Free Scalp Infusion · 2 Sessions Hair looking haunted? Start at the scalp. Instagram 4:5 Feed Post Curated 4:5 post with flat, unrounded 90° canvas edges for borderless export and copy/pasting. Interior features soft rounded treatment cards, model on left, middle clinical specs, authentic device on right, and price badges against a fall pumpkin fair festival backdrop. October promotional pricing valid through October 31, 2026. In-person consultation required to confirm candidacy. Cannot be combined with other offers.",
+    "snippet": "\"Glow or Treat\" Instagram Post 4:5 single-card design featuring the autumn pumpkin fair festival atmosphere, rounded treatment cards with model on left, protoco..."
+  },
+  {
     "url": "iv-infusion-wellness-therapy.html#hero",
     "title": "IV Infusion &Wellness Therapy",
     "pageTitle": "IV Therapy Dallas & Carrollton",
