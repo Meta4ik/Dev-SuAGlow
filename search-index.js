@@ -1362,6 +1362,14 @@ const SEARCH_INDEX = [
   },
   {
     "url": "membership-card.html",
+    "title": "Ready To Join The Club?",
+    "pageTitle": "VIP Membership Card",
+    "category": "Spa Treatments",
+    "content": "$199/month for our five-layer signature Korean ritual: Aquafacial, DEP Infusion, LDM Ultrasound, Celluma LED, and Glutathione IV Push.",
+    "snippet": "$199/month for our five-layer signature Korean ritual: Aquafacial, DEP Infusion, LDM Ultrasound, Celluma LED, and Glutathione IV Push."
+  },
+  {
+    "url": "membership-card.html",
     "title": "How To Include This Card On Different Pages",
     "pageTitle": "VIP Membership Card",
     "category": "Spa Treatments",
@@ -1373,7 +1381,7 @@ const SEARCH_INDEX = [
     "title": "7 Interactive Layers Of Luxury Aesthetics",
     "pageTitle": "VIP Membership Card",
     "category": "Spa Treatments",
-    "content": "Uses CSS `transform-style: preserve-3d` and staggered `translateZ` steps (from +10px to +40px) so the microchip, logo, and model feel physically multi-dimensional. Pure CSS diffraction grating with dynamic rainbow angular gradients and `mix-blend-mode: color-dodge` that reacts in real-time to your cursor position. Gold contact etched circuit pads, contactless NFC radio arcs, and an animated specular micro-shine giving high-tech medical membership authenticity. High-resolution Korean Glass Skin model portrait blended over the signature repeating S-monogram pattern from our membership experience. Lightweight `requestAnimationFrame` lerp loop eliminates pointer jitter, delivering butter-smooth tilt response and a natural cubic-bezier spring return. Card back includes authentic magnetic stripe, signature panel, encrypted member CID, QR code scanner mockup, and clinic concierge details. $199/month for our five-layer signature Korean ritual: Aquafacial, DEP Infusion, LDM Ultrasound, Celluma LED, and Glutathione IV Push.",
+    "content": "Uses CSS `transform-style: preserve-3d` and staggered `translateZ` steps (from +10px to +40px) so the microchip, logo, and model feel physically multi-dimensional. Pure CSS diffraction grating with dynamic rainbow angular gradients and `mix-blend-mode: color-dodge` that reacts in real-time to your cursor position. Gold contact etched circuit pads, contactless NFC radio arcs, and an animated specular micro-shine giving high-tech medical membership authenticity. High-resolution Korean Glass Skin model portrait blended over the signature repeating S-monogram pattern from our membership experience. Lightweight `requestAnimationFrame` lerp loop eliminates pointer jitter, delivering butter-smooth tilt response and a natural cubic-bezier spring return. Card back includes authentic magnetic stripe, signature panel, encrypted member CID, QR code scanner mockup, and clinic concierge details.",
     "snippet": "Uses CSS `transform-style: preserve-3d` and staggered `translateZ` steps (from +10px to +40px) so the microchip, logo, and model feel physically multi-dimension..."
   },
   {
