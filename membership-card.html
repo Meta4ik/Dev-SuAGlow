@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Membership Card | Holographic 3D Tech Card | SuA K-Glow Dallas</title>
+    <meta name="description"
+        content="SuA K-Glow VIP Membership Holographic Tech Card featuring pure CSS and vanilla JS 3D tilt effect, prismatic holographic diffraction, and authentic Korean Glass Skin aesthetics.">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+KR:wght@600;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="dist/output.css?v=50">
+    <link rel="stylesheet" href="style.css?v=50">
+    <link rel="stylesheet" href="membership-card.css?v=17">
+
+    <!-- Google Tag & Icons -->
+    <script src="google-tag.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Showcase Specific Enhancements */
+        .hud-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .code-block-scroll::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        .code-block-scroll::-webkit-scrollbar-thumb {
+            background: rgba(170, 152, 124, 0.4);
+            border-radius: 3px;
+        }
+
+        /* Ambient Glow Spheres */
+        .ambient-glow-gold {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(170, 152, 124, 0.15) 0%, transparent 70%);
+            filter: blur(80px);
+            pointer-events: none;
+        }
+
+        .ambient-glow-cyan {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(0, 229, 255, 0.08) 0%, transparent 70%);
+            filter: blur(90px);
+            pointer-events: none;
+        }
+
+        /* Subtle Grid Background */
+        .bg-tech-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        /* Dark Theme Guarantee for Showcase Page */
+        html, body {
+            background-color: #090C0E !important;
+            color: #FFFFFF !important;
+        }
+
+        #hero {
+            background-color: #0A0D10 !important;
+        }
+
+        .stage-section {
+            background: linear-gradient(180deg, #F8F9FA 0%, #F1F3F5 50%, #ECEEF0 100%) !important;
+            color: #404345 !important;
+        }
+
+        .embed-section {
+            background-color: #0C0F12 !important;
+        }
+
+        .anatomy-section {
+            background-color: #090B0D !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#090C0E] text-white antialiased selection:bg-warm-gold/20 selection:text-white" style="background-color: #090C0E !important; color: #FFFFFF !important;">
+
+    <!-- Injected Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- =========================================================================
+         HERO SECTION: Inner-Page Standard with Cyber-K-Beauty Showcase
+         ========================================================================= -->
+    <section id="hero" data-nav-theme="dark"
+        class="relative min-h-[50vh] flex items-start justify-center text-center px-6 sm:px-8 pt-[220px] md:pt-[240px] overflow-hidden bg-[#0A0D10] pb-16">
+        
+        <!-- Background Ambient Lighting -->
+        <div class="absolute inset-0 z-0 opacity-60 pointer-events-none">
+            <div class="ambient-glow-gold top-10 left-1/2 -translate-x-1/2"></div>
+            <div class="ambient-glow-cyan top-48 right-10"></div>
+            <div class="absolute inset-0 bg-tech-grid"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0A0D10]/40 via-transparent to-[#0A0D10]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto animate-on-scroll fade-up">
+            <!-- Category Badge -->
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 backdrop-blur-md border border-white/15 rounded-full text-[10px] sm:text-xs tracking-[0.28em] uppercase text-warm-gold font-semibold mb-6">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-warm-gold"></i>
+                <span>THE SUA GLOW GLASS SKIN METHOD™</span>
+            </span>
+
+            <!-- Main Heading -->
+            <h1 class="heading-wide text-4xl sm:text-6xl lg:text-7xl text-white mb-6 uppercase tracking-[0.12em] [text-wrap:balance]">
+                Membership <span class="text-warm-gold font-normal">Card</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="font-body text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed mb-6 [text-wrap:balance]">
+                The SuA Glow Glass Skin Method™ Holographic Tech Card — featuring pure CSS and vanilla JS 3D tilt, luxury S-monogram pattern substrate, and authentic model backdrop.
+            </p>
+
+            <div class="flex items-center justify-center gap-3 text-xs tracking-widest uppercase text-white/50">
+                <span>Move Mouse to Tilt</span>
+                <span class="text-warm-gold">•</span>
+                <span>Click Card to Flip</span>
+                <span class="text-warm-gold">•</span>
+                <span>60 FPS Hardware-Accelerated</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         THE INTERACTIVE CARD STAGE
+         ========================================================================= -->
+    <section class="stage-section py-12 md:py-20 px-4 sm:px-8 relative overflow-hidden bg-[#F6F7F8] border-y border-charcoal/10" data-nav-theme="light">
+        <div class="max-w-5xl mx-auto">
+            
+            <!-- Card Stage Box -->
+            <div class="relative rounded-3xl bg-white/95 p-6 sm:p-12 md:p-16 border border-charcoal/10 shadow-[0_25px_65px_rgba(0,0,0,0.08)] backdrop-blur-xl overflow-hidden">
+                
+                <!-- Background Accent Glows -->
+                <div class="ambient-glow-gold -top-20 -left-20 opacity-30"></div>
+                <div class="ambient-glow-gold -bottom-20 -right-20 opacity-20"></div>
+
+                <!-- 3D Card Mount Centerpiece -->
+                <div class="py-6 sm:py-10 flex items-center justify-center">
+                    <div id="showcase-card-mount" class="w-full max-w-[480px]">
+                        <!-- Card is loaded here via standalone include or JS initialization -->
+                        <div id="membership-card-placeholder"></div>
+                    </div>
+                </div>
+
+                <!-- Interactive Control Bar -->
+                <div class="mt-8 pt-8 border-t border-charcoal/10 flex flex-wrap items-center justify-between gap-4">
+                    
+                    <!-- Left: Card Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-3">
+                        <!-- Flip Button -->
+                        <button id="btn-flip-card"
+                            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal/5 hover:bg-charcoal/10 border border-charcoal/15 text-xs font-semibold tracking-wider uppercase transition-all duration-300 hover:scale-105 active:scale-95 text-charcoal hover:text-near-black shadow-sm">
+                            <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-warm-gold"></i>
+                            <span>Flip Card (Front / Back)</span>
+                        </button>
+
+                        <!-- Auto-Float / Demo Tilt Button -->
+                        <button id="btn-toggle-demo"
+                            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal/5 hover:bg-charcoal/10 border border-charcoal/15 text-xs font-semibold tracking-wider uppercase transition-all duration-300 hover:scale-105 active:scale-95 text-charcoal hover:text-near-black shadow-sm">
+                            <i data-lucide="play" class="w-3.5 h-3.5 text-warm-gold" id="icon-demo-play"></i>
+                            <span id="text-demo-state">Auto Demo Tilt</span>
+                        </button>
+
+                        <!-- Angle Sweep Diagnostic Button -->
+                        <button id="btn-sweep-test"
+                            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal/5 hover:bg-charcoal/10 border border-charcoal/15 text-xs font-semibold tracking-wider uppercase transition-all duration-300 hover:scale-105 active:scale-95 text-charcoal hover:text-near-black shadow-sm"
+                            title="Diagnose & verify smoothness across all angles (-16° to +16°)">
+                            <i data-lucide="gauge" class="w-3.5 h-3.5 text-warm-gold" id="icon-sweep-test"></i>
+                            <span id="text-sweep-state">Sweep Angles (0° → +16°)</span>
+                        </button>
+                    </div>
+
+                    <!-- Right: Holographic Foil Finish Themes -->
+                    <div class="flex items-center gap-2 bg-charcoal/5 p-1.5 rounded-full border border-charcoal/15 shadow-inner">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-charcoal/60 pl-3 pr-2 hidden sm:inline">
+                            Foil:
+                        </span>
+                        
+                        <button data-theme-btn="gold"
+                            class="px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 bg-warm-gold text-white shadow-sm"
+                            title="Champagne Gold Luxury">
+                            K-Glow Gold
+                        </button>
+
+                        <button data-theme-btn="prism"
+                            class="px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 text-charcoal/70 hover:text-near-black"
+                            title="Prismatic Rainbow Iridescence">
+                            Seoul Prism
+                        </button>
+                        
+                        <button data-theme-btn="diamond"
+                            class="px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 text-charcoal/70 hover:text-near-black"
+                            title="Cyber Laser Cyan / Diamond">
+                            Diamond
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Live Physics HUD Telemetry Bar -->
+                <div class="mt-6 pt-5 border-t border-charcoal/10 flex flex-wrap items-center justify-between gap-4 text-xs text-charcoal/70 hud-mono">
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <div>
+                            <span class="text-charcoal/50">ROT_X:</span> <span id="hud-rx" class="text-near-black font-semibold">0.00°</span>
+                        </div>
+                        <div>
+                            <span class="text-charcoal/50">ROT_Y:</span> <span id="hud-ry" class="text-near-black font-semibold">0.00°</span>
+                        </div>
+                        <div>
+                            <span class="text-charcoal/50">HOLO_ANGLE:</span> <span id="hud-ha" class="text-warm-gold font-semibold">135.0°</span>
+                        </div>
+                        <div>
+                            <span class="text-charcoal/50">GLARE_SPOT:</span> <span id="hud-glare" class="text-near-black font-semibold">50% , 50%</span>
+                        </div>
+                    </div>
+
+                    <div class="text-[11px] text-charcoal/50 tracking-wider uppercase">
+                        ISO/IEC 7810 ID-1 RATIO (1.586:1)
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         HOW TO INCLUDE ON ANY PAGE (The Developer Embed Guide)
+         ========================================================================= -->
+    <section class="embed-section py-20 md:py-28 px-6 md:px-12 bg-[#0C0F12] border-t border-white/5 relative">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs uppercase tracking-[0.28em] font-semibold text-warm-gold mb-3 inline-block">
+                    MODULAR INCLUDE ARCHITECTURE
+                </span>
+                <h2 class="font-heading text-3xl sm:text-5xl text-white uppercase tracking-wider leading-tight">
+                    How To Include This Card<br>
+                    <span class="text-warm-gold font-normal">On Different Pages</span>
+                </h2>
+                <p class="text-sm sm:text-base text-white/70 font-light mt-4 leading-relaxed">
+                    Designed to be dropped anywhere across the SuA Glow site with 1 line of HTML, zero external dependencies, and responsive fluid scaling.
+                </p>
+            </div>
+
+            <!-- Embed Methods Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                
+                <!-- Method 1: Dynamic JS Include (Recommended) -->
+                <div class="bg-[#13161A] rounded-2xl p-7 border border-white/10 shadow-xl flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="w-6 h-6 rounded-full bg-warm-gold/20 text-warm-gold text-xs font-bold flex items-center justify-center">1</span>
+                                <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold">
+                                    One-Line Dynamic Placeholder (Easiest)
+                                </h3>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-warm-gold bg-warm-gold/10 px-2.5 py-1 rounded-full border border-warm-gold/20">
+                                Recommended
+                            </span>
+                        </div>
+                        
+                        <p class="text-xs sm:text-sm text-white/70 font-light mb-4 leading-relaxed">
+                            Simply place this `div` placeholder anywhere on your target page (e.g. in `memberships.html` or `index.html`), link the stylesheet and script, and the engine automatically builds and attaches the 3D card!
+                        </p>
+
+                        <!-- Code Snippet -->
+                        <div class="relative bg-[#0A0C0E] rounded-xl p-4 border border-white/10 mb-4 code-block-scroll overflow-x-auto">
+                            <pre class="hud-mono text-xs text-white/90 leading-relaxed"><code><span class="text-white/40">&lt;!-- 1. Include CSS in &lt;head&gt; --&gt;</span>
+&lt;link rel="stylesheet" href="membership-card.css"&gt;
+
+<span class="text-white/40">&lt;!-- 2. Place anywhere on your page --&gt;</span>
+&lt;div id="membership-card-placeholder"&gt;&lt;/div&gt;
+
+<span class="text-white/40">&lt;!-- 3. Include JS before &lt;/body&gt; --&gt;</span>
+&lt;script src="membership-card.js"&gt;&lt;/script&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <button id="btn-copy-method1"
+                        class="w-full py-3 rounded-full bg-warm-gold hover:bg-white text-near-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-sm">
+                        <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                        <span id="text-copy-method1">Copy 1-Line Embed Code</span>
+                    </button>
+                </div>
+
+                <!-- Method 2: Pure HTML Snippet / Server-side Include -->
+                <div class="bg-[#13161A] rounded-2xl p-7 border border-white/10 shadow-xl flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <span class="w-6 h-6 rounded-full bg-cyan-400/20 text-cyan-400 text-xs font-bold flex items-center justify-center">2</span>
+                                <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold">
+                                    Direct Component File Include
+                                </h3>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 bg-cyan-400/10 px-2.5 py-1 rounded-full border border-cyan-400/20">
+                                Component File
+                            </span>
+                        </div>
+                        
+                        <p class="text-xs sm:text-sm text-white/70 font-light mb-4 leading-relaxed">
+                            The complete component HTML is saved in <code class="text-warm-gold hud-mono bg-black/40 px-1.5 py-0.5 rounded">components/membership-card.html</code>. You can copy the code directly or inject it with custom settings.
+                        </p>
+
+                        <!-- Code Snippet -->
+                        <div class="relative bg-[#0A0C0E] rounded-xl p-4 border border-white/10 mb-4 code-block-scroll overflow-x-auto">
+                            <pre class="hud-mono text-xs text-white/90 leading-relaxed"><code><span class="text-white/40">// Custom JS init with options:</span>
+initMembershipCard('my-container-id', {
+  maxTilt: 18,        <span class="text-white/40">// Tilt degrees</span>
+  theme: 'prism',     <span class="text-white/40">// 'prism' | 'gold' | 'diamond'</span>
+  autoFloat: false,   <span class="text-white/40">// Floating tour</span>
+  smoothing: 0.14     <span class="text-white/40">// Physics lerp</span>
+});</code></pre>
+                        </div>
+                    </div>
+
+                    <a href="components/membership-card.html" target="_blank"
+                        class="w-full py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2">
+                        <i data-lucide="external-link" class="w-3.5 h-3.5 text-warm-gold"></i>
+                        <span>View Raw Component HTML</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         THE ANATOMY OF THE HOLOGRAPHIC CARD (Features Breakdown)
+         ========================================================================= -->
+    <section class="anatomy-section py-20 md:py-28 px-6 md:px-12 bg-[#090B0D] border-t border-white/5 relative">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-[0.28em] font-semibold text-warm-gold mb-3 inline-block">
+                    ENGINEERING & CRAFTSMANSHIP
+                </span>
+                <h2 class="font-heading text-3xl sm:text-5xl text-white uppercase tracking-wider leading-tight">
+                    7 Interactive Layers<br>
+                    <span class="text-warm-gold font-normal">Of Luxury Aesthetics</span>
+                </h2>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
+                    <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="layers" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
+                        01. 3D Parallax Depth Stack
+                    </h3>
+                    <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                        Uses CSS `transform-style: preserve-3d` and staggered `translateZ` steps (from +10px to +40px) so the microchip, logo, and model feel physically multi-dimensional.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
+                    <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="sparkles" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
+                        02. Prismatic Holographic Foil
+                    </h3>
+                    <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                        Pure CSS diffraction grating with dynamic rainbow angular gradients and `mix-blend-mode: color-dodge` that reacts in real-time to your cursor position.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
+                    <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="cpu" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
+                        03. EMV Smart Chip & NFC Tech
+                    </h3>
+                    <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                        Gold contact etched circuit pads, contactless NFC radio arcs, and an animated specular micro-shine giving high-tech medical membership authenticity.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
+                    <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="user-check" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
+                        04. Model Art & S-Monogram Pattern
+                    </h3>
+                    <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                        High-resolution Korean Glass Skin model portrait blended over the signature repeating S-monogram pattern from our membership experience.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
+                    <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
+                        05. 60+ FPS Interpolated Physics
+                    </h3>
+                    <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                        Lightweight `requestAnimationFrame` lerp loop eliminates pointer jitter, delivering butter-smooth tilt response and a natural cubic-bezier spring return.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
+                    <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="repeat" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
+                        06. 3D Two-Sided Card Flip
+                    </h3>
+                    <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                        Card back includes authentic magnetic stripe, signature panel, encrypted member CID, QR code scanner mockup, and clinic concierge details.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- VIP Membership Banner with Embedded Mini Card -->
+            <div class="mt-16 p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#FFFFFF] via-[#FAF9F6] to-[#F5F2EC] border border-warm-gold/40 shadow-[0_20px_50px_rgba(0,0,0,0.08)] flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left relative overflow-hidden">
+                <div class="max-w-xl z-10">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-warm-gold/15 text-warm-gold text-[11px] uppercase tracking-[0.22em] font-bold mb-1">
+                        <i data-lucide="sparkles" class="w-3 h-3 text-warm-gold"></i>
+                        <span>KOREAN GLASS SKIN CLUB</span>
+                    </span>
+                    <h3 class="font-heading text-2xl sm:text-3xl text-near-black uppercase mt-2 tracking-wide font-medium">
+                        Ready To Join The Club?
+                    </h3>
+                    <p class="text-xs sm:text-sm text-charcoal/85 font-normal mt-2 leading-relaxed">
+                        $199/month for our five-layer signature Korean ritual: Aquafacial, DEP Infusion, LDM Ultrasound, Celluma LED, and Glutathione IV Push.
+                    </p>
+                    <div class="mt-5 flex items-center justify-center lg:justify-start gap-4">
+                        <a href="memberships.html" class="btn-primary shadow-md">
+                            View Membership Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mini 3D Holographic Card Preview -->
+                <div class="w-full max-w-[280px] sm:max-w-[300px] shrink-0 z-10 py-1 flex items-center justify-center">
+                    <div id="callout-card-placeholder" class="holo-card-mini w-full"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Injected Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="navbar.js?v=51"></script>
+    <script src="footer.js?v=43"></script>
+    <script src="membership-card.js?v=17"></script>
+    <script src="script.js?v=43"></script>
+
+    <!-- Showcase Page Interactive Controller -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Initialize Card in Mount Target (Default: K-Glow Gold)
+            const engine = initMembershipCard('membership-card-placeholder', {
+                maxTilt: 16,
+                theme: 'gold',
+                autoFloat: false,
+                smoothing: 0.14
+            });
+
+            // 1b. Initialize Mini Holographic Card in "Ready To Join The Club?" Banner
+            const miniEngine = initMembershipCard('callout-card-placeholder', {
+                maxTilt: 14,
+                theme: 'gold',
+                autoFloat: true,
+                smoothing: 0.12
+            });
+
+            // 2. Flip Button
+            const btnFlip = document.getElementById('btn-flip-card');
+            if (btnFlip && engine) {
+                btnFlip.addEventListener('click', () => {
+                    engine.toggleFlip();
+                });
+            }
+
+            // 3. Demo Auto-Tilt Toggle
+            const btnDemo = document.getElementById('btn-toggle-demo');
+            const textDemoState = document.getElementById('text-demo-state');
+            const iconDemoPlay = document.getElementById('icon-demo-play');
+            if (btnDemo && engine) {
+                btnDemo.addEventListener('click', () => {
+                    const isFloating = engine.toggleAutoFloat();
+                    if (isFloating) {
+                        textDemoState.textContent = 'Pause Demo Tilt';
+                        btnDemo.classList.add('bg-warm-gold/20', 'border-warm-gold', 'text-near-black');
+                    } else {
+                        textDemoState.textContent = 'Auto Demo Tilt';
+                        btnDemo.classList.remove('bg-warm-gold/20', 'border-warm-gold', 'text-near-black');
+                    }
+                });
+            }
+
+            // 3b. Interactive Diagnostic Angle Sweep (0° -> +16° -> -16° -> 0°)
+            const btnSweep = document.getElementById('btn-sweep-test');
+            const textSweepState = document.getElementById('text-sweep-state');
+            let sweepAnimId = null;
+            if (btnSweep && engine) {
+                btnSweep.addEventListener('click', () => {
+                    if (sweepAnimId) {
+                        cancelAnimationFrame(sweepAnimId);
+                        sweepAnimId = null;
+                        textSweepState.textContent = 'Sweep Angles (0° → +16°)';
+                        btnSweep.classList.remove('!bg-warm-gold/25', '!border-warm-gold', '!text-near-black');
+                        engine.onPointerLeave();
+                        return;
+                    }
+
+                    // Stop auto-float if running
+                    if (engine.isAutoFloating) {
+                        engine.toggleAutoFloat();
+                        textDemoState.textContent = 'Auto Demo Tilt';
+                        btnDemo.classList.remove('bg-warm-gold/20', 'border-warm-gold', 'text-near-black');
+                    }
+
+                    engine.onPointerEnter();
+                    textSweepState.textContent = 'Sweeping... (Watch HUD)';
+                    btnSweep.classList.add('!bg-warm-gold/25', '!border-warm-gold', '!text-near-black');
+
+                    const startTime = performance.now();
+                    const duration = 6000; // 6 seconds total sweep
+
+                    function runSweep(now) {
+                        const elapsed = (now - startTime) % duration;
+                        const progress = elapsed / duration;
+                        // Sinusoidal sweep from 0 -> +1 (+16deg) -> -1 (-16deg) -> 0
+                        const sweepTargetX = Math.sin(progress * Math.PI * 2);
+                        const sweepTargetY = Math.sin(progress * Math.PI * 4) * 0.35;
+
+                        engine.targetX = sweepTargetX;
+                        engine.targetY = sweepTargetY;
+
+                        if (now - startTime < duration) {
+                            sweepAnimId = requestAnimationFrame(runSweep);
+                        } else {
+                            sweepAnimId = null;
+                            textSweepState.textContent = 'Sweep Angles (0° → +16°)';
+                            btnSweep.classList.remove('!bg-warm-gold/25', '!border-warm-gold', '!text-near-black');
+                            engine.onPointerLeave();
+                        }
+                    }
+                    sweepAnimId = requestAnimationFrame(runSweep);
+                });
+            }
+
+            // 4. Foil Theme Selector
+            const themeBtns = document.querySelectorAll('[data-theme-btn]');
+            themeBtns.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const theme = btn.getAttribute('data-theme-btn');
+                    if (engine) engine.setTheme(theme);
+
+                    // Update active button classes
+                    themeBtns.forEach((b) => {
+                        b.classList.remove('bg-warm-gold', 'text-white', 'shadow-sm');
+                        b.classList.add('text-charcoal/70');
+                    });
+                    btn.classList.add('bg-warm-gold', 'text-white', 'shadow-sm');
+                    btn.classList.remove('text-charcoal/70');
+                });
+            });
+
+            // 5. Physics HUD Telemetry Update Loop
+            const hudRx = document.getElementById('hud-rx');
+            const hudRy = document.getElementById('hud-ry');
+            const hudHa = document.getElementById('hud-ha');
+            const hudGlare = document.getElementById('hud-glare');
+
+            const cardWrapper = document.querySelector('[data-holo-card]');
+            if (cardWrapper) {
+                function updateHud() {
+                    const rx = cardWrapper.style.getPropertyValue('--rot-x') || '0deg';
+                    const ry = cardWrapper.style.getPropertyValue('--rot-y') || '0deg';
+                    const ha = cardWrapper.style.getPropertyValue('--holo-angle') || '135deg';
+                    const gx = cardWrapper.style.getPropertyValue('--glare-x') || '50%';
+                    const gy = cardWrapper.style.getPropertyValue('--glare-y') || '50%';
+
+                    if (hudRx) hudRx.textContent = rx;
+                    if (hudRy) hudRy.textContent = ry;
+                    if (hudHa) hudHa.textContent = ha;
+                    if (hudGlare) hudGlare.textContent = `${parseFloat(gx).toFixed(0)}% , ${parseFloat(gy).toFixed(0)}%`;
+
+                    requestAnimationFrame(updateHud);
+                }
+                requestAnimationFrame(updateHud);
+            }
+
+            // 6. Copy Embed Code Helper
+            const btnCopy1 = document.getElementById('btn-copy-method1');
+            const textCopy1 = document.getElementById('text-copy-method1');
+            if (btnCopy1 && textCopy1) {
+                btnCopy1.addEventListener('click', () => {
+                    const snippet = `<!-- SuA Glow Holographic Membership Card Include -->\n<link rel="stylesheet" href="membership-card.css">\n<div id="membership-card-placeholder"></div>\n<script src="membership-card.js"><\/script>`;
+                    navigator.clipboard.writeText(snippet).then(() => {
+                        const original = textCopy1.textContent;
+                        textCopy1.textContent = 'Copied to Clipboard! ✓';
+                        btnCopy1.classList.add('!bg-green-500', '!text-white');
+                        setTimeout(() => {
+                            textCopy1.textContent = original;
+                            btnCopy1.classList.remove('!bg-green-500', '!text-white');
+                        }, 2200);
+                    });
+                });
+            }
+
+            // Re-render Lucide icons
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>

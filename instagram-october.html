@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>October Instagram Studio | Clean Luxe Clinic | SuA K Glow Med Spa</title>
+    <meta name="description" content="Instagram 4:5 post design studio for SuA K Glow October 'Glow or Treat' promotion. Clean Luxe Clinic edition with sharp unrounded edges, large treatment visuals, devices, and one-click PNG export.">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS Output -->
+    <link rel="stylesheet" href="dist/output.css?v=105">
+
+    <!-- Lucide Icons & html2canvas -->
+    <script src="google-tag.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <style>
+        .font-heading { font-family: 'Montserrat', sans-serif; }
+        .font-body { font-family: 'Poppins', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+
+        /* 4:5 Instagram Canvas: Sharp, 100% flat edges for clean screenshotting/export */
+        .ig-post-canvas {
+            width: 100%;
+            max-width: 520px;
+            aspect-ratio: 4 / 5;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.45);
+            border-radius: 0px !important;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background-color: #faf7f2;
+        }
+
+        /* Festive Colors */
+        :root {
+            --autumn-orange: #e13f00;
+            --autumn-amber: #e59020;
+            --warm-gold: #c69b56;
+        }
+
+        .text-autumn-orange { color: #e13f00; }
+        .bg-autumn-orange { background-color: #e13f00; }
+        .border-autumn-orange { border-color: #e13f00; }
+    </style>
+</head>
+
+<body class="bg-[#101114] text-white min-h-screen antialiased font-body selection:bg-autumn-orange selection:text-white">
+
+    <!-- Top Sticky Header -->
+    <header class="border-b border-white/10 bg-black/60 backdrop-blur-md sticky top-0 z-40 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <a href="specials-october.html" class="flex items-center gap-2 text-white/70 hover:text-white text-xs font-heading font-semibold uppercase tracking-wider transition-colors">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <span>October Specials Page</span>
+                </a>
+                <span class="text-white/20">|</span>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+                    <span class="text-xs font-heading font-bold uppercase tracking-widest text-orange-400">Clean Luxe Clinic · 4:5 Single Post</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button onclick="downloadCurrentPost()" id="top-download-btn" class="bg-autumn-orange hover:bg-orange-600 text-white font-heading font-bold uppercase tracking-wider text-xs py-2 px-5 inline-flex items-center gap-2 shadow-lg transition-all cursor-pointer">
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                    <span>Export High-Res Graphic (PNG)</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-10">
+
+        <!-- Header Introduction -->
+        <div class="text-center max-w-2xl mx-auto mb-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-orange-500/10 border border-orange-500/30 text-orange-400 text-[10px] font-heading font-bold uppercase tracking-[0.25em] mb-3 rounded-full">
+                <span>🎃 October 2026 Promo · Instagram 4:5 Studio</span>
+            </div>
+            <h1 class="font-heading text-2xl md:text-3xl font-extrabold uppercase tracking-wide text-white mb-2">
+                "Glow or Treat" Instagram Post
+            </h1>
+            <p class="text-xs md:text-sm text-white/60 leading-relaxed">
+                4:5 single-card design featuring the autumn pumpkin fair festival atmosphere, rounded treatment cards with model on left, protocol text in middle, device shot on right, and promotional pricing.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+            <!-- Left: 4:5 Instagram Preview Canvas Container -->
+            <div class="lg:col-span-7 flex flex-col items-center justify-center">
+
+                <!-- 4:5 INSTAGRAM CANVAS (Clean Luxe Clinic Single Post: Flat 90deg Outer Box for Clean Export/Pasting) -->
+                <div id="simpler-post-luxe" class="ig-post-canvas flex flex-col justify-between p-5 sm:p-6 relative text-[#1f2024] bg-[#faf7f2]">
+                    
+                    <!-- Autumn Texas State Fair Pumpkin Festival Sunset Background -->
+                    <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('assets/october_sunset_pumpkins_bg.jpg');"></div>
+                    <!-- Ambient atmosphere tint (keeps vivid fall colors while preserving card contrast) -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-stone-900/30 via-transparent to-stone-900/40 z-0"></div>
+                    
+                    <!-- TOP BAR: Logo + Clean Rounded Pill Badge -->
+                    <div class="relative z-10 flex items-center justify-between w-full">
+                        <div id="logo-wrapper" class="flex items-center transition-all duration-300">
+                            <img id="post-logo-img" src="assets/logo-orange.png" alt="SuA K Glow" class="h-6 sm:h-7 w-auto object-contain transition-all duration-300">
+                        </div>
+                        <span class="text-[8px] sm:text-[8.5px] font-heading font-extrabold uppercase tracking-[0.2em] bg-stone-900/95 text-white px-3.5 py-1 rounded-full border border-stone-800 shadow-xs backdrop-blur-md">
+                            Limited Time · Oct 2026
+                        </span>
+                    </div>
+
+                    <!-- CENTER HEADLINE & BRANDING: Glow or Treat with Soft White Cloud Gradient -->
+                    <div class="relative z-20 my-auto py-2 px-4 text-center flex flex-col items-center">
+                        <!-- Seamless Feathered White Cloud (100% borderless, zero rectangular edges) -->
+                        <div class="absolute -top-12 -bottom-10 -left-16 -right-16 pointer-events-none" style="z-index: 1; background: radial-gradient(ellipse 55% 50% at 50% 50%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.75) 30%, rgba(255, 255, 255, 0.35) 55%, rgba(255, 255, 255, 0.08) 75%, rgba(255, 255, 255, 0) 100%); filter: blur(8px);"></div>
+
+                        <div class="mb-1 relative" style="z-index: 2;">
+                            <img src="assets/glow-or-treat-title.png" alt="Glow or Treat" class="h-16 sm:h-20 w-auto object-contain mx-auto filter drop-shadow-sm">
+                        </div>
+                        <span class="relative text-[8.5px] sm:text-[9px] font-heading font-extrabold uppercase tracking-[0.3em] text-autumn-orange block mb-0.5" style="z-index: 2;">
+                            The SuA Glow October Edit
+                        </span>
+                        <h2 class="relative font-serif text-lg sm:text-xl font-bold text-stone-900 tracking-tight leading-tight mb-0.5" style="z-index: 2;">
+                            Seoul Glow. Zero Tricks.
+                        </h2>
+                        <p class="relative font-body text-[10px] sm:text-[10.5px] text-stone-700 max-w-[340px] leading-relaxed mx-auto font-medium" style="z-index: 2;">
+                            Three authentic Korean aesthetic protocols to lift, repair & renew with promotional pricing through Oct 31.
+                        </p>
+                    </div>
+
+                    <!-- 3 ROUNDED TREATMENT CARDS (Model Left | Text Middle | Device Right | Price) -->
+                    <div class="relative z-10 space-y-2.5 my-1">
+                        
+                        <!-- CARD 1: K-Volume Lift -->
+                        <div class="bg-white/95 backdrop-blur-md p-2 sm:p-2.5 rounded-2xl flex items-center justify-between gap-2 sm:gap-2.5 shadow-sm border border-[#e8a36e]/40 hover:border-orange-500/60 transition-all relative overflow-hidden group">
+                            <!-- Model Image (Left) -->
+                            <div class="w-[78px] sm:w-[84px] h-[78px] sm:h-[84px] rounded-xl overflow-hidden shrink-0 border border-stone-200/90 bg-stone-100 shadow-xs">
+                                <img src="assets/october_model_k_volume_lift.jpg" alt="K-Volume Lift Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            
+                            <!-- Middle: Text Content -->
+                            <div class="flex-1 min-w-0 text-left px-0.5">
+                                <span class="text-[7.5px] sm:text-[8px] font-heading font-extrabold uppercase tracking-widest text-autumn-orange block mb-0.5">FIRM + BALANCE + RESTORE</span>
+                                <h4 class="font-heading text-xs sm:text-[13px] font-black text-stone-900 leading-tight uppercase tracking-tight">K-VOLUME LIFT</h4>
+                                <p class="text-[7px] sm:text-[7.5px] font-bold text-stone-500 uppercase tracking-wider whitespace-nowrap">Oligio X® 600 Shots + Volume Filler</p>
+                                <p class="font-serif italic text-[7.5px] sm:text-[8.5px] text-[#de542f] font-semibold leading-tight mt-0.5 whitespace-nowrap">No Tricks, Just Lift · Seoul Magic</p>
+                                <div class="flex flex-wrap gap-1 mt-1">
+                                    <span class="text-[6.5px] uppercase font-bold px-1.5 py-0.5 rounded-full bg-orange-500/10 text-orange-800 border border-orange-500/25">Oligio X® 600</span>
+                                    <span class="text-[6.5px] uppercase font-bold px-1.5 py-0.5 rounded-full bg-orange-500/10 text-orange-800 border border-orange-500/25">Volume Filler</span>
+                                    <span class="text-[6.5px] uppercase font-bold px-1.5 py-0.5 rounded-full bg-orange-500/10 text-orange-800 border border-orange-500/25">RF Tightening</span>
+                                </div>
+                            </div>
+
+                            <!-- Device Image (Right) -->
+                            <div class="w-[66px] sm:w-[72px] h-[78px] sm:h-[84px] rounded-xl overflow-hidden shrink-0 border border-stone-200/90 bg-stone-50 shadow-xs">
+                                <img src="assets/october_device_card1.jpg" alt="Oligio X Handheld Device" class="w-full h-full object-cover">
+                            </div>
+
+                            <!-- Price & Book (Far Right) -->
+                            <div class="shrink-0 text-right flex flex-col justify-between items-end h-[78px] sm:h-[84px] py-0.5 pl-0.5 min-w-[66px]">
+                                <div class="bg-white/95 px-2 py-1 rounded-xl border border-[#e8a36e]/40 shadow-xs text-right w-full">
+                                    <span class="font-heading text-xs sm:text-sm font-black text-stone-900 leading-none block">$1,599</span>
+                                    <span class="text-[6.5px] sm:text-[7px] text-[#de542f] font-bold uppercase tracking-wider block mt-0.5">Reg. $2,400+</span>
+                                </div>
+                                <span class="px-2.5 py-0.5 bg-autumn-orange text-white font-heading font-bold uppercase tracking-wider text-[7px] sm:text-[7.5px] rounded-full inline-flex items-center gap-0.5 shadow-xs">
+                                    <span>Book</span>
+                                    <i data-lucide="arrow-right" class="w-2 h-2"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2: Glow Barrier -->
+                        <div class="bg-white/95 backdrop-blur-md p-2 sm:p-2.5 rounded-2xl flex items-center justify-between gap-2 sm:gap-2.5 shadow-sm border border-[#e8a36e]/40 hover:border-orange-500/60 transition-all relative overflow-hidden group">
+                            <!-- Model Image (Left) -->
+                            <div class="w-[78px] sm:w-[84px] h-[78px] sm:h-[84px] rounded-xl overflow-hidden shrink-0 border border-stone-200/90 bg-stone-100 shadow-xs">
+                                <img src="assets/october_model_glow_barrier.jpg" alt="Glow Barrier Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            
+                            <!-- Middle: Text Content -->
+                            <div class="flex-1 min-w-0 text-left px-0.5">
+                                <span class="text-[7.5px] sm:text-[8px] font-heading font-extrabold uppercase tracking-widest text-autumn-orange block mb-0.5">HYDRATE + SUPPORT + GLOW</span>
+                                <h4 class="font-heading text-xs sm:text-[13px] font-black text-stone-900 leading-tight uppercase tracking-tight">GLOW BARRIER</h4>
+                                <p class="text-[7px] sm:text-[7.5px] font-bold text-stone-500 uppercase tracking-wide whitespace-nowrap">Rejuran® Healing Essence + SkinTox</p>
+                                <p class="font-serif italic text-[7.5px] sm:text-[8.5px] text-[#de542f] font-semibold leading-tight mt-0.5 whitespace-nowrap">Scary-Dry Skin? Your K-Beauty Rescue</p>
+                                <div class="flex flex-wrap gap-1 mt-1">
+                                    <span class="text-[6.5px] uppercase font-bold px-1.5 py-0.5 rounded-full bg-orange-500/10 text-orange-800 border border-orange-500/25">Rejuran® DNA</span>
+                                    <span class="text-[6.5px] uppercase font-bold px-1.5 py-0.5 rounded-full bg-orange-500/10 text-orange-800 border border-orange-500/25">SkinTox</span>
+                                    <span class="text-[6.5px] uppercase font-bold px-1.5 py-0.5 rounded-full bg-orange-500/10 text-orange-800 border border-orange-500/25">Barrier Repair</span>
+                                </div>
+                            </div>
+
+                            <!-- Device Image (Right) -->
+                            <div class="w-[66px] sm:w-[72px] h-[78px] sm:h-[84px] rounded-xl overflow-hidden shrink-0 border border-stone-200/90 bg-stone-50 shadow-xs">
+                                <img src="assets/october_device_card2.jpg" alt="Rejuran Protocol Kit" class="w-full h-full object-cover">
+                            </div>
+
+                            <!-- Price & Book (Far Right) -->
+                            <div class="shrink-0 text-right flex flex-col justify-between items-end h-[78px] sm:h-[84px] py-0.5 pl-0.5 min-w-[66px]">
+                                <div class="bg-white/95 px-2 py-1 rounded-xl border border-[#e8a36e]/40 shadow-xs text-right w-full">
+                                    <span class="font-heading text-xs sm:text-sm font-black text-stone-900 leading-none block">$699</span>
+                                    <span class="text-[6.5px] sm:text-[7px] text-[#de542f] font-bold uppercase tracking-wider block mt-0.5">Reg. $1,000+</span>
+                                </div>
+                                <span class="px-2.5 py-0.5 bg-autumn-orange text-white font-heading font-bold uppercase tracking-wider text-[7px] sm:text-[7.5px] rounded-full inline-flex items-center gap-0.5 shadow-xs">
+                                    <span>Book</span>
+                                    <i data-lucide="arrow-right" class="w-2 h-2"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3: Hair Revival -->
+                        <div class="bg-white/95 backdrop-blur-md p-2 sm:p-2.5 rounded-2xl flex items-center justify-between gap-2 sm:gap-2.5 shadow-sm border border-[#e8a36e]/40 hover:border-orange-500/60 transition-all relative overflow-hidden group">
+                            <!-- Model Image (Left) -->
+                            <div class="w-[78px] sm:w-[84px] h-[78px] sm:h-[84px] rounded-xl overflow-hidden shrink-0 border border-stone-200/90 bg-stone-100 shadow-xs">
+                                <img src="assets/october_model_hair_revival.jpg" alt="Hair Revival Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            
+                            <!-- Middle: Text Content -->
+                            <div class="flex-1 min-w-0 text-left px-0.5">
+                                <span class="text-[7.5px] sm:text-[8px] font-heading font-extrabold uppercase tracking-widest text-autumn-orange block mb-0.5">SCALP + HAIR WELLNESS</span>
+                                <h4 class="font-heading text-xs sm:text-[13px] font-black text-stone-900 leading-tight uppercase tracking-tight">HAIR REVIVAL</h4>
+                                <p class="text-[7px] sm:text-[7.5px] font-bold text-stone-500 uppercase tracking-wide whitespace-nowrap">Needle-Free Scalp Infusion · 2 Sessions</p>
+                                <p class="font-serif italic text-[7.5px] sm:text-[8.5px] text-[#de542f] font-semibold leading-tight mt-0.5 whitespace-nowrap">Hair Looking Haunted? Start At Scalp</p>
+                                <div class="flex flex-wrap gap-1 mt-1">
+                                    <span class="text-[6.5px] uppercase font-bold px-1.5 py-0.5 rounded-full bg-orange-500/10 text-orange-800 border border-orange-500/25">2 Sessions</span>
+                                    <span class="text-[6.5px] uppercase font-bold px-1.5 py-0.5 rounded-full bg-orange-500/10 text-orange-800 border border-orange-500/25">DEP Infusion</span>
+                                    <span class="text-[6.5px] uppercase font-bold px-1.5 py-0.5 rounded-full bg-orange-500/10 text-orange-800 border border-orange-500/25">Red Light</span>
+                                </div>
+                            </div>
+
+                            <!-- Device Image (Right) -->
+                            <div class="w-[66px] sm:w-[72px] h-[78px] sm:h-[84px] rounded-xl overflow-hidden shrink-0 border border-stone-200/90 bg-stone-50 shadow-xs">
+                                <img src="assets/october_device_card3.jpg" alt="DEP Scalp Applicator Wand" class="w-full h-full object-cover">
+                            </div>
+
+                            <!-- Price & Book (Far Right) -->
+                            <div class="shrink-0 text-right flex flex-col justify-between items-end h-[78px] sm:h-[84px] py-0.5 pl-0.5 min-w-[66px]">
+                                <div class="bg-white/95 px-2 py-1 rounded-xl border border-[#e8a36e]/40 shadow-xs text-right w-full">
+                                    <span class="font-heading text-xs sm:text-sm font-black text-stone-900 leading-none block">$1,199</span>
+                                    <span class="text-[6.5px] sm:text-[7px] text-[#de542f] font-bold uppercase tracking-wider block mt-0.5">Reg. $1,800+</span>
+                                </div>
+                                <span class="px-2.5 py-0.5 bg-autumn-orange text-white font-heading font-bold uppercase tracking-wider text-[7px] sm:text-[7.5px] rounded-full inline-flex items-center gap-0.5 shadow-xs">
+                                    <span>Book</span>
+                                    <i data-lucide="arrow-right" class="w-2 h-2"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- FOOTER BAR: Clean Rounded Aesthetic -->
+                    <div class="relative z-10 bg-stone-900/95 text-white px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl flex items-center justify-between shadow-md border border-stone-800/80 backdrop-blur-sm">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="instagram" class="w-3.5 h-3.5 text-orange-400"></i>
+                            <span class="text-[9px] sm:text-[9.5px] font-heading font-bold tracking-wider text-white">@suaglowmedspa</span>
+                            <span class="text-white/30 text-[10px]">·</span>
+                            <span class="text-[8.5px] sm:text-[9px] text-white/70">Carrollton HQ</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 bg-autumn-orange text-white px-3.5 py-1 rounded-full font-heading font-bold text-[8px] sm:text-[8.5px] uppercase tracking-wider shadow-sm">
+                            <span>Link In Bio To Book</span>
+                            <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Live Logo Style Switcher Toolbar -->
+                <div class="mt-4 w-full max-w-[520px] bg-white/5 border border-white/10 rounded-2xl p-3 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-md">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="palette" class="w-4 h-4 text-orange-400"></i>
+                        <span class="text-xs font-heading font-bold uppercase tracking-wider text-white">Logo Style:</span>
+                    </div>
+                    <div class="inline-flex p-1 bg-black/40 rounded-xl border border-white/10 gap-1 w-full sm:w-auto justify-center">
+                        <button type="button" onclick="setLogoStyle('orange')" id="btn-logo-orange" class="px-3 py-1.5 rounded-lg text-xs font-heading font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all bg-autumn-orange text-white shadow-xs cursor-pointer">
+                            <span class="w-2.5 h-2.5 rounded-full bg-white"></span>
+                            <span>Bright Orange</span>
+                        </button>
+                        <button type="button" onclick="setLogoStyle('white-pill')" id="btn-logo-white-pill" class="px-3 py-1.5 rounded-lg text-xs font-heading font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all text-white/70 hover:text-white cursor-pointer">
+                            <span class="w-2.5 h-2.5 rounded-full bg-stone-900 border border-white/40"></span>
+                            <span>White in Dark Pill</span>
+                        </button>
+                        <button type="button" onclick="setLogoStyle('white-pure')" id="btn-logo-white-pure" class="px-3 py-1.5 rounded-lg text-xs font-heading font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all text-white/70 hover:text-white cursor-pointer">
+                            <span class="w-2.5 h-2.5 rounded-full bg-white border border-stone-300"></span>
+                            <span>Pure White</span>
+                        </button>
+                        <button type="button" onclick="setLogoStyle('original')" id="btn-logo-original" class="px-3 py-1.5 rounded-lg text-xs font-heading font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all text-white/70 hover:text-white cursor-pointer">
+                            <span class="w-2.5 h-2.5 rounded-full bg-[#ab987c]"></span>
+                            <span>Taupe</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Export action button below canvas -->
+                <div class="mt-3 flex flex-wrap items-center justify-center gap-2">
+                    <button onclick="downloadCurrentPost()" class="bg-autumn-orange hover:bg-orange-600 text-white font-heading font-bold uppercase tracking-wider text-xs py-2.5 px-6 rounded-full inline-flex items-center gap-2 shadow-lg cursor-pointer transition-all">
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        <span>Download Post Graphic (1080 &times; 1350 PNG)</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Instagram Ready Captions & Copy Tools -->
+            <div class="lg:col-span-5 space-y-6">
+
+                <!-- Quick Action Guide -->
+                <div class="p-5 bg-white/5 border border-white/10 rounded-2xl">
+                    <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-orange-400 flex items-center gap-2 mb-2">
+                        <i data-lucide="zap" class="w-4 h-4"></i>
+                        Instagram 4:5 Feed Post
+                    </h3>
+                    <p class="text-xs text-white/70 leading-relaxed mb-3">
+                        Curated 4:5 post with flat, unrounded 90&deg; canvas edges for borderless export and copy/pasting. Interior features soft rounded treatment cards, model on left, middle clinical specs, authentic device on right, and price badges against a fall pumpkin fair festival backdrop.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-[10px] font-heading font-bold text-white/80">
+                        <span class="px-2.5 py-1 bg-white/10 rounded-full">1080 &times; 1350 px (4:5)</span>
+                        <span class="px-2.5 py-1 bg-white/10 rounded-full">Sharp Outer Bounds</span>
+                        <span class="px-2.5 py-1 bg-white/10 rounded-full">Rounded Interior Cards</span>
+                        <span class="px-2.5 py-1 bg-white/10 rounded-full">Model + Device Shots</span>
+                        <span class="px-2.5 py-1 bg-orange-500/20 text-orange-300 rounded-full">October 31 Expiry</span>
+                    </div>
+                </div>
+
+                <!-- Ready-To-Copy Caption Card -->
+                <div class="p-6 bg-white/5 border border-white/10 rounded-2xl relative">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-[10px] font-heading font-bold uppercase tracking-widest text-orange-400">Instagram Feed Caption</span>
+                        <button onclick="copyCaption()" id="copy-caption-btn" class="px-3.5 py-1.5 text-[10px] font-heading font-bold uppercase tracking-wider bg-orange-500/20 hover:bg-orange-500/30 text-orange-300 border border-orange-500/30 transition-all flex items-center gap-1.5 cursor-pointer rounded-full">
+                            <i data-lucide="copy" class="w-3 h-3"></i>
+                            <span id="copy-btn-text">Copy Caption</span>
+                        </button>
+                    </div>
+
+                    <!-- Caption Block -->
+                    <div id="caption-text-block" class="bg-black/50 p-4 text-xs text-white/85 font-body whitespace-pre-line leading-relaxed max-h-[420px] overflow-y-auto border border-white/5 rounded-xl">
+GLOW OR TREAT! 🍫✨ The SuA Glow October Edit is live.
+
+Scary-dry skin or hair looking a little haunted? Dallas fall meets authentic K-Beauty. Three October-only ways to lift, repair + renew with zero tricks and all treats:
+
+✨ 1️⃣ K-VOLUME LIFT | $1,599 (Reg. $2,400+)
+Oligio X® 600 Targeted Monopolar RF Shots + Volume Restoration Filler (Smile Lines or Temples). Lift sagging contours, smooth smile lines, and restore natural youthful facial architecture.
+
+✨ 2️⃣ GLOW BARRIER | $699 (Reg. $1,000+)
+Rejuran® Healing Essence (Salmon DNA Polynucleotides) + micro-dosed SkinTox. Rebuild a compromised skin barrier and unlock lasting glass skin radiance.
+
+✨ 3️⃣ HAIR REVIVAL | $1,199 (Reg. $1,800+)
+Needle-Free DEP Scalp Infusion (2 Sessions) + Medical-Grade Celluma Red Light. Delivers potent follicle-stimulating growth factors directly to roots with zero injections.
+
+🇰🇷 Authentic Korean Medical Aesthetics
+👨‍⚕️ Dr. Adam Yang, MD & Sophia Yang, PA-C
+📍 Carrollton, TX (DFW Area)
+⏰ Valid through October 31, 2026
+
+🔗 Tap the link in our bio to book your consultation or secure your October promotional pricing before appointments fill up!
+
+.
+.
+#SuAGlow #GlowOrTreat #OctoberSpecials #DallasMedSpa #CarrolltonTX #KBeautyDallas #OligioX #Rejuran #SkinTox #KoreanScalpCare #GlassSkin #DallasAesthetics #DFWBeauty #SkinTightening #HairRevival
+                    </div>
+                </div>
+
+                <!-- Terms Fine Print Card -->
+                <div class="p-5 bg-white/5 border border-white/10 rounded-2xl text-xs text-white/70 space-y-2">
+                    <div class="flex items-center gap-2 font-heading font-bold text-white text-[11px] uppercase tracking-wider">
+                        <i data-lucide="info" class="w-4 h-4 text-orange-400"></i>
+                        <span>Promotion Details & Rules</span>
+                    </div>
+                    <p class="leading-relaxed text-[11px]">
+                        October promotional pricing valid through October 31, 2026. In-person consultation required to confirm candidacy. Cannot be combined with other offers.
+                    </p>
+                    <div class="pt-2 border-t border-white/10 flex items-center justify-between text-[10px] text-white/50">
+                        <span>SuA K-Glow Med Spa · Carrollton HQ</span>
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="text-orange-400 hover:underline">suaglow.com</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        function downloadCurrentPost() {
+            const canvasEl = document.getElementById('simpler-post-luxe');
+            const topBtn = document.getElementById('top-download-btn');
+            if (!canvasEl) return;
+
+            const originalBtnHtml = topBtn ? topBtn.innerHTML : '';
+            if (topBtn) {
+                topBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Generating 4:5 Image...`;
+                if (window.lucide) lucide.createIcons();
+            }
+
+            html2canvas(canvasEl, {
+                scale: 2.5, // 1080x1350 resolution
+                useCORS: true,
+                allowTaint: true,
+                backgroundColor: '#faf7f2',
+                logging: false
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'SuA-Glow-October-Clean-Luxe-Post.png';
+                link.href = canvas.toDataURL('image/png');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }).catch(err => {
+                console.error('Export error:', err);
+                alert('Could not auto-export canvas. Please check browser permissions or use screenshot tool.');
+            }).finally(() => {
+                if (topBtn) {
+                    topBtn.innerHTML = originalBtnHtml;
+                    if (window.lucide) lucide.createIcons();
+                }
+            });
+        }
+
+        function copyCaption() {
+            const block = document.getElementById('caption-text-block');
+            const btnText = document.getElementById('copy-btn-text');
+            if (!block) return;
+
+            navigator.clipboard.writeText(block.innerText).then(() => {
+                if (btnText) {
+                    btnText.innerText = "Copied!";
+                    setTimeout(() => {
+                        btnText.innerText = "Copy Caption";
+                    }, 2500);
+                }
+            }).catch(err => {
+                console.error('Copy failed:', err);
+            });
+        }
+
+        function setLogoStyle(style) {
+            const logoWrapper = document.getElementById('logo-wrapper');
+            const logoImg = document.getElementById('post-logo-img');
+            if (!logoWrapper || !logoImg) return;
+
+            // Reset buttons
+            const buttons = {
+                'orange': document.getElementById('btn-logo-orange'),
+                'white-pill': document.getElementById('btn-logo-white-pill'),
+                'white-pure': document.getElementById('btn-logo-white-pure'),
+                'original': document.getElementById('btn-logo-original')
+            };
+
+            for (const key in buttons) {
+                if (buttons[key]) {
+                    buttons[key].className = 'px-3 py-1.5 rounded-lg text-xs font-heading font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all text-white/70 hover:text-white cursor-pointer';
+                }
+            }
+
+            if (buttons[style]) {
+                buttons[style].className = 'px-3 py-1.5 rounded-lg text-xs font-heading font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all bg-autumn-orange text-white shadow-xs cursor-pointer';
+            }
+
+            // Apply style to logo
+            if (style === 'orange') {
+                logoWrapper.className = 'flex items-center transition-all duration-300';
+                logoImg.src = 'assets/logo-orange.png';
+                logoImg.className = 'h-6 sm:h-7 w-auto object-contain transition-all duration-300';
+            } else if (style === 'white-pill') {
+                logoWrapper.className = 'flex items-center bg-stone-900/95 px-3 py-1 rounded-full border border-stone-800 shadow-xs transition-all duration-300';
+                logoImg.src = 'assets/logo-white.png';
+                logoImg.className = 'h-5 sm:h-5.5 w-auto object-contain transition-all duration-300';
+            } else if (style === 'white-pure') {
+                logoWrapper.className = 'flex items-center transition-all duration-300';
+                logoImg.src = 'assets/logo-white.png';
+                logoImg.className = 'h-6 sm:h-7 w-auto object-contain transition-all duration-300 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]';
+            } else if (style === 'original') {
+                logoWrapper.className = 'flex items-center transition-all duration-300';
+                logoImg.src = 'assets/logo-main.webp';
+                logoImg.className = 'h-6 sm:h-7 w-auto object-contain transition-all duration-300';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>

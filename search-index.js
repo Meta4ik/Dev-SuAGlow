@@ -9,20 +9,28 @@ const SEARCH_INDEX = [
     "snippet": "K-Beauty skin intelligence meets 3D facial analysis. SuA Glow offers Aura 3D Skin Analysis in Carrollton, serving Dallas–Fort Worth patients looking for a more ..."
   },
   {
-    "url": "3d-skin-analysis.html#digital-twin",
-    "title": "YOUR FACE. IN 3D.",
+    "url": "3d-skin-analysis.html#glance",
+    "title": "AURA 3D SKIN ANALYSIS",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "See what your mirror can’t show you. One Aura capture creates an interactive 3D view of your face + neck, giving you and your SuA Glow provider a new way to look at your skin, facial features and aesthetic goals—together. TURN IT. • ZOOM IN. • COMPARE. • LOOK CLOSER. K-Beauty isn’t about throwing everything at your face. It’s about knowing what your skin actually needs. HYDRATE or stimulate collagen? CALM or correct? TEXTURE or tone? TREAT or wait? Your Aura analysis is considered alongside your skin concerns, aesthetic goals, treatment history and clinical assessment to help build a personalized approach to your skin. TECHNOLOGY SHOWS US MORE. YOUR SUA GLOW PROVIDER DECIDES WHAT MATTERS. That’s where your glow plan starts.",
-    "snippet": "See what your mirror can’t show you. One Aura capture creates an interactive 3D view of your face + neck, giving you and your SuA Glow provider a new way to loo..."
+    "content": "SEE MORE. GUESS LESS. 3D imaging. Provider insight. A plan built around your actual skin. Pores, texture, fine lines, visible redness, brown spots and facial proportions. Aura creates a photorealistic 3D digital twin of your face + neck for review with your provider. Review your analysis, concerns, goals and treatment history with your SuA Glow provider. Your personal Aura skin analysis report + a personalized skin health plan. Your full consultation fee may be applied toward a SuA Glow treatment within 60 days. None. No needles. No heat. No treatment. Just 3D imaging.",
+    "snippet": "SEE MORE. GUESS LESS. 3D imaging. Provider insight. A plan built around your actual skin. Pores, texture, fine lines, visible redness, brown spots and facial pr..."
+  },
+  {
+    "url": "3d-skin-analysis.html#digital-twin",
+    "title": "MEET YOUR DIGITAL TWIN",
+    "pageTitle": "Aura 3D Skin Analysis Dallas",
+    "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
+    "content": "Aura is an advanced 3D facial imaging and skin analysis system that creates a high-resolution digital twin of your face + neck. One Aura capture creates an interactive 3D view of your face + neck, giving you and your SuA Glow provider a shared way to look at your skin, facial features and aesthetic goals—together. K-Beauty isn’t about doing more. It’s about understanding what your skin needs—and choosing what makes sense for it. HYDRATE Restore moisture + glow CALM Support stressed skin REFINE Improve texture + tone STIMULATE Support collagen + firmness And sometimes, the right plan is to wait. Aura gives us another way to see your skin. Your SuA Glow provider considers your skin concerns, aesthetic goals, treatment history, Aura analysis and clinical assessment together to help build a personalized approach. TECHNOLOGY SHOWS US MORE. YOUR PROVIDER DECIDES WHAT MATTERS. That’s where your glow plan starts.",
+    "snippet": "Aura is an advanced 3D facial imaging and skin analysis system that creates a high-resolution digital twin of your face + neck. One Aura capture creates an inte..."
   },
   {
     "url": "3d-skin-analysis.html#what-we-look-at",
     "title": "YOUR MIRROR SEES SKIN. WE LOOK CLOSER.",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "Your reflection shows you the surface. Aura gives your SuA Glow provider another way to visualize and explore different characteristics of your skin and facial features as part of your consultation. Look beyond what makeup and lighting can hide. Explore visible smoothness, irregularity and skin surface. Take a closer look at visible lines across the face. Visualize areas of visible redness and variation in skin tone. Explore visible areas of pigmentation and discoloration. View facial features and proportions in three dimensions. WHAT WE SEE HELPS SHAPE WHAT WE DO NEXT. Not every finding needs treatment. The goal is to understand your skin before deciding what makes sense for it.",
-    "snippet": "Your reflection shows you the surface. Aura gives your SuA Glow provider another way to visualize and explore different characteristics of your skin and facial ..."
+    "content": "Aura gives you and your SuA Glow provider another way to visualize key skin characteristics and facial features as part of your consultation. Aura’s own materials support analysis of wrinkles, texture, red areas, brown spots, pores, and facial dimensions. Look beyond what makeup and lighting can hide. Explore visible smoothness, irregularity and skin surface. Take a closer look at visible lines across the face. Visualize areas of visible redness and variation in skin tone. Explore visible areas of pigmentation and discoloration. View facial features and proportions in three dimensions. WHAT WE SEE HELPS SHAPE WHAT WE DO NEXT. Not every finding needs treatment. The goal is to understand your skin before deciding what makes sense for it.",
+    "snippet": "Aura gives you and your SuA Glow provider another way to visualize key skin characteristics and facial features as part of your consultation. Aura’s own materia..."
   },
   {
     "url": "3d-skin-analysis.html#more-than-scan",
@@ -37,24 +45,32 @@ const SEARCH_INDEX = [
     "title": "THE SCAN ISN’T THE PLAN. IT STARTS THE CONVERSATION.",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "Provider-Guided Consultation Clinical assessment contextualizes every diagnostic data point. Aura gives us another way to see your skin and facial features. But your treatment plan isn’t built by a screen. Your SuA Glow provider considers your Aura 3D analysis alongside your concerns, aesthetic goals, treatment history and clinical assessment to decide what makes sense for your skin—and what doesn’t. Review your 3D scan, skin characteristics and facial features together. Talk about what’s bothering you, what isn’t, and what you actually want to change. Separate what could be treated from what actually makes sense to treat. Build a personalized strategy around your skin, goals and timeline. YOUR SKIN DOESN’T NEED EVERYTHING. IT NEEDS THE RIGHT THINGS. Technology gives us more information. Clinical judgment decides what matters.",
+    "content": "Provider-Guided Consultation Clinical assessment contextualizes every diagnostic data point. Aura gives us another way to see your skin and facial features. But your treatment plan isn’t built by a screen. Your SuA Glow provider reviews your Aura 3D analysis alongside your concerns, aesthetic goals, treatment history and clinical assessment to decide what makes sense for your skin—and what doesn’t. Review your 3D scan, skin characteristics and facial features together. Talk about what matters to you—and what you actually want to change. Separate what could be treated from what actually makes sense to treat. Build a personalized strategy around your skin, goals and timeline. YOUR SKIN DOESN’T NEED EVERYTHING. IT NEEDS THE RIGHT THINGS. Technology gives us more information. Clinical judgment decides what matters.",
     "snippet": "Provider-Guided Consultation Clinical assessment contextualizes every diagnostic data point. Aura gives us another way to see your skin and facial features. But..."
   },
   {
     "url": "3d-skin-analysis.html#pathways",
-    "title": "ONE SCAN. DIFFERENT SKIN STORIES.",
+    "title": "ONE SCAN. DIFFERENT WAYS TO TREAT YOUR SKIN.",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "Your Aura consultation helps us understand what your skin is showing, what matters to you—and where your SuA Glow skin health plan may go next. Healing · Hydration · Collagen · Dermal Matrix Targeting the dermal matrix itself to rebuild elasticity, restore skin barrier integrity, and cultivate authentic Korean glass skin. Services & Treatments: Healing Essence → Hydration and Glow → Collagen Stimulation → Dermal Matrix → Cosmetic Tox · Medical Tox · Fillers · Biostimulators Korean aesthetic principles prioritizing natural facial balance, subtle movement, and structural foundation over dramatic change. Services & Treatments: Cosmetic Tox → Medical Tox → Dermal Fillers → Radiesse Biostimulator → Energy Devices · Non-Invasive Lifting · Infusion Advanced Korean device innovations for deep collagen stimulation, non-invasive tightening, and needle-free nutrient delivery. Services & Treatments: Oligio X RF Lifting → LDM Ultrasound Lifting → SkinPen Microneedling → Needleless Infusion (DEP) → Scalp & Hair Rejuvenation → Multi-Step Protocols · Exclusive Packages · Events Bespoke treatment combinations created exclusively by Sophia Yang for intensive skin restoration, special occasions, and men's skin health. Services & Treatments: SuA Glow Signature → Bridal Glow Program → One Day Glow → Seoul Man Treatment → Barrier Repair · Salmon PN · Dewy Luminosity Authentic Korean clinical facial protocols focused on deep cellular hydration, soothing compromised barriers, and glass-skin radiance. Services & Treatments: Salmon PN Facial → Water Drop Lifting → Tone-Up Facial → Glass Skin Hydration → Acne Scars · Subcision · Dermal Untethering Multi-modality protocols targeting fibrotic scar tissue, deep acne depressions, and uneven texture through subcision and dermal remodeling. Services & Treatments: Acne Scar Remodeling → Subcision & Untethering → Post-Inflammatory Hyperpigmentation → Surgical & Stretch Mark Revision → YOUR SCAN DOESN’T PICK A TREATMENT. IT HELPS US ASK BETTER QUESTIONS. Sometimes the plan is one treatment. Sometimes it’s a combination. And sometimes the right answer is: not yet.",
-    "snippet": "Your Aura consultation helps us understand what your skin is showing, what matters to you—and where your SuA Glow skin health plan may go next. Healing · Hydrat..."
+    "content": "Your Aura consultation helps us understand what your skin is showing, what matters to you—and which SuA Glow treatment category may make sense to explore next. Hydration • Radiance • Texture • Overall Skin Quality Skin boosters and skin-quality treatments designed to support healthier-looking, more luminous skin. Services & Treatments: Healing Essence → Hydration and Glow → Collagen Stimulation → Dermal Matrix → Movement • Volume • Facial Balance • Refinement Provider-guided injectables may help support facial balance, soften expression lines and refine selected features. Services & Treatments: Cosmetic Tox → Medical Tox → Dermal Fillers → Biostimulators → Texture • Pores • Firmness • Visible Signs of Aging Advanced skin rejuvenation treatments that may help improve texture, refine pores and support smoother, firmer-looking skin. Services & Treatments: Oligio X RF Lifting → SkinPen Microneedling → Korean Chemical Peels → Scalp & Hair Rejuvenation → Curated • Layered • Personalized • Results-Driven Thoughtfully designed treatment experiences that combine the best of SuA Glow to support your unique skin goals. Services & Treatments: SuA Glow Signature → Bridal Glow Program → One Day Glow → Seoul Man Treatment → Hydration • Glow • Calming • Skin Maintenance K-Beauty facials support hydration, soothing care and visible radiance through customized, skin-first treatment plans. Services & Treatments: Salmon PN Glass Facial → Water Drop Lifting → Tone-Up Facial → Glass Skin Hydration → Acne Scars • Uneven Texture • Post-Acne Concerns Targeted scar-focused treatments designed to help improve the appearance of acne scarring and uneven skin texture. Services & Treatments: Acne Scar Remodeling → Subcision & Untethering → Post-Inflammatory Hyperpigmentation → Surgical & Stretch Mark Revision → YOUR SCAN DOESN’T PICK A TREATMENT. IT HELPS US NARROW THE CONVERSATION.",
+    "snippet": "Your Aura consultation helps us understand what your skin is showing, what matters to you—and which SuA Glow treatment category may make sense to explore next. ..."
+  },
+  {
+    "url": "3d-skin-analysis.html#membership",
+    "title": "WANT TO MAKE SKIN HEALTH A RITUAL?",
+    "pageTitle": "Aura 3D Skin Analysis Dallas",
+    "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
+    "content": "Your Aura consultation can be the beginning—not the whole story. Explore the SuA Glow Glass Skin Method, our monthly K-Beauty membership designed around consistent skin care, thoughtful treatment planning and long-term skin quality. Monthly. Skin-first. Seoul-inspired. Glass Skin Method members use ongoing skin assessment alongside their monthly K-Beauty ritual to help keep treatment decisions aligned with their skin over time.",
+    "snippet": "Your Aura consultation can be the beginning—not the whole story. Explore the SuA Glow Glass Skin Method, our monthly K-Beauty membership designed around consist..."
   },
   {
     "url": "3d-skin-analysis.html#pricing",
     "title": "AURA 3D SKIN HEALTHCONSULTATION",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "Aura 3D facial imaging + skin analysis + a personalized consultation with your SuA Glow provider. Advanced Aura 3D facial imaging and analysis to take a closer look at your skin and facial features. Dedicated time with your provider to review analysis, understand goals, and discuss what makes sense. You’ll receive a copy of your Aura report to keep as a visual baseline you can reference over time. Apply your full $100 consultation fee toward a SuA Glow treatment booked within 60 days of your consultation.",
-    "snippet": "Aura 3D facial imaging + skin analysis + a personalized consultation with your SuA Glow provider. Advanced Aura 3D facial imaging and analysis to take a closer ..."
+    "content": "3D facial imaging + skin analysis + a personalized consultation with your SuA Glow provider. Advanced Aura 3D imaging to take a closer look at your skin and facial features. Dedicated time with your provider to review your analysis, concerns, goals and treatment history. Receive a copy of your Aura skin analysis report to keep as a visual baseline for future reference. Apply your full $100 consultation fee toward a SuA Glow treatment booked within 60 days of your consultation. Aura is an assessment and visualization tool—not a medical diagnosis. Your provider reviews your Aura analysis alongside your concerns, goals, treatment history and clinical assessment. Treatment recommendations, timing and results vary by individual. 3D visualizations and simulations are consultation tools and do not predict or guarantee treatment outcomes.",
+    "snippet": "3D facial imaging + skin analysis + a personalized consultation with your SuA Glow provider. Advanced Aura 3D imaging to take a closer look at your skin and fac..."
   },
   {
     "url": "3d-skin-analysis.html#faq",
@@ -66,11 +82,11 @@ const SEARCH_INDEX = [
   },
   {
     "url": "3d-skin-analysis.html#book-consultation",
-    "title": "READY TO BUILDYOUR TREATMENT PLAN?",
+    "title": "READY TO BUILD YOUR SKIN HEALTH PLAN?",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "YOUR NEXT STEP Start with a personalized consultation at SuA Glow in Carrollton. We’ll evaluate your concerns, goals, medical history, and appropriate treatment options to develop an individualized plan for you. NEW PATIENTS Consultation + Aura 3D Skin Analysis CARROLLTON, TX • SERVING DALLAS–FORT WORTH",
-    "snippet": "YOUR NEXT STEP Start with a personalized consultation at SuA Glow in Carrollton. We’ll evaluate your concerns, goals, medical history, and appropriate treatment..."
+    "content": "YOUR NEXT STEP Great skin starts with understanding your skin. New patients begin with a personalized consultation and skin analysis to help establish a visible skin baseline and identify your concerns. Your provider will review your skin, medical history, concerns, and goals to determine an appropriate individualized treatment plan. CARROLLTON, TX • SERVING DALLAS–FORT WORTH",
+    "snippet": "YOUR NEXT STEP Great skin starts with understanding your skin. New patients begin with a personalized consultation and skin analysis to help establish a visible..."
   },
   {
     "url": "about.html#hero",
@@ -153,20 +169,28 @@ const SEARCH_INDEX = [
     "snippet": "K-Beauty skin intelligence meets 3D facial analysis. SuA Glow offers Aura 3D Skin Analysis in Carrollton, serving Dallas–Fort Worth patients looking for a more ..."
   },
   {
-    "url": "aura-3d-skin-analysis.html#digital-twin",
-    "title": "YOUR FACE. IN 3D.",
+    "url": "aura-3d-skin-analysis.html#glance",
+    "title": "AURA 3D SKIN ANALYSIS",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "See what your mirror can’t show you. One Aura capture creates an interactive 3D view of your face + neck, giving you and your SuA Glow provider a new way to look at your skin, facial features and aesthetic goals—together. TURN IT. • ZOOM IN. • COMPARE. • LOOK CLOSER. K-Beauty isn’t about throwing everything at your face. It’s about knowing what your skin actually needs. HYDRATE or stimulate collagen? CALM or correct? TEXTURE or tone? TREAT or wait? Your Aura analysis is considered alongside your skin concerns, aesthetic goals, treatment history and clinical assessment to help build a personalized approach to your skin. TECHNOLOGY SHOWS US MORE. YOUR SUA GLOW PROVIDER DECIDES WHAT MATTERS. That’s where your glow plan starts.",
-    "snippet": "See what your mirror can’t show you. One Aura capture creates an interactive 3D view of your face + neck, giving you and your SuA Glow provider a new way to loo..."
+    "content": "SEE MORE. GUESS LESS. 3D imaging. Provider insight. A plan built around your actual skin. Pores, texture, fine lines, visible redness, brown spots and facial proportions. Aura creates a photorealistic 3D digital twin of your face + neck for review with your provider. Review your analysis, concerns, goals and treatment history with your SuA Glow provider. Your personal Aura skin analysis report + a personalized skin health plan. Your full consultation fee may be applied toward a SuA Glow treatment within 60 days. None. No needles. No heat. No treatment. Just 3D imaging.",
+    "snippet": "SEE MORE. GUESS LESS. 3D imaging. Provider insight. A plan built around your actual skin. Pores, texture, fine lines, visible redness, brown spots and facial pr..."
+  },
+  {
+    "url": "aura-3d-skin-analysis.html#digital-twin",
+    "title": "MEET YOUR DIGITAL TWIN",
+    "pageTitle": "Aura 3D Skin Analysis Dallas",
+    "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
+    "content": "Aura is an advanced 3D facial imaging and skin analysis system that creates a high-resolution digital twin of your face + neck. One Aura capture creates an interactive 3D view of your face + neck, giving you and your SuA Glow provider a shared way to look at your skin, facial features and aesthetic goals—together. K-Beauty isn’t about doing more. It’s about understanding what your skin needs—and choosing what makes sense for it. HYDRATE Restore moisture + glow CALM Support stressed skin REFINE Improve texture + tone STIMULATE Support collagen + firmness And sometimes, the right plan is to wait. Aura gives us another way to see your skin. Your SuA Glow provider considers your skin concerns, aesthetic goals, treatment history, Aura analysis and clinical assessment together to help build a personalized approach. TECHNOLOGY SHOWS US MORE. YOUR PROVIDER DECIDES WHAT MATTERS. That’s where your glow plan starts.",
+    "snippet": "Aura is an advanced 3D facial imaging and skin analysis system that creates a high-resolution digital twin of your face + neck. One Aura capture creates an inte..."
   },
   {
     "url": "aura-3d-skin-analysis.html#what-we-look-at",
     "title": "YOUR MIRROR SEES SKIN. WE LOOK CLOSER.",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "Your reflection shows you the surface. Aura gives your SuA Glow provider another way to visualize and explore different characteristics of your skin and facial features as part of your consultation. Look beyond what makeup and lighting can hide. Explore visible smoothness, irregularity and skin surface. Take a closer look at visible lines across the face. Visualize areas of visible redness and variation in skin tone. Explore visible areas of pigmentation and discoloration. View facial features and proportions in three dimensions. WHAT WE SEE HELPS SHAPE WHAT WE DO NEXT. Not every finding needs treatment. The goal is to understand your skin before deciding what makes sense for it.",
-    "snippet": "Your reflection shows you the surface. Aura gives your SuA Glow provider another way to visualize and explore different characteristics of your skin and facial ..."
+    "content": "Aura gives you and your SuA Glow provider another way to visualize key skin characteristics and facial features as part of your consultation. Aura’s own materials support analysis of wrinkles, texture, red areas, brown spots, pores, and facial dimensions. Look beyond what makeup and lighting can hide. Explore visible smoothness, irregularity and skin surface. Take a closer look at visible lines across the face. Visualize areas of visible redness and variation in skin tone. Explore visible areas of pigmentation and discoloration. View facial features and proportions in three dimensions. WHAT WE SEE HELPS SHAPE WHAT WE DO NEXT. Not every finding needs treatment. The goal is to understand your skin before deciding what makes sense for it.",
+    "snippet": "Aura gives you and your SuA Glow provider another way to visualize key skin characteristics and facial features as part of your consultation. Aura’s own materia..."
   },
   {
     "url": "aura-3d-skin-analysis.html#more-than-scan",
@@ -181,24 +205,32 @@ const SEARCH_INDEX = [
     "title": "THE SCAN ISN’T THE PLAN. IT STARTS THE CONVERSATION.",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "Provider-Guided Consultation Clinical assessment contextualizes every diagnostic data point. Aura gives us another way to see your skin and facial features. But your treatment plan isn’t built by a screen. Your SuA Glow provider considers your Aura 3D analysis alongside your concerns, aesthetic goals, treatment history and clinical assessment to decide what makes sense for your skin—and what doesn’t. Review your 3D scan, skin characteristics and facial features together. Talk about what’s bothering you, what isn’t, and what you actually want to change. Separate what could be treated from what actually makes sense to treat. Build a personalized strategy around your skin, goals and timeline. YOUR SKIN DOESN’T NEED EVERYTHING. IT NEEDS THE RIGHT THINGS. Technology gives us more information. Clinical judgment decides what matters.",
+    "content": "Provider-Guided Consultation Clinical assessment contextualizes every diagnostic data point. Aura gives us another way to see your skin and facial features. But your treatment plan isn’t built by a screen. Your SuA Glow provider reviews your Aura 3D analysis alongside your concerns, aesthetic goals, treatment history and clinical assessment to decide what makes sense for your skin—and what doesn’t. Review your 3D scan, skin characteristics and facial features together. Talk about what matters to you—and what you actually want to change. Separate what could be treated from what actually makes sense to treat. Build a personalized strategy around your skin, goals and timeline. YOUR SKIN DOESN’T NEED EVERYTHING. IT NEEDS THE RIGHT THINGS. Technology gives us more information. Clinical judgment decides what matters.",
     "snippet": "Provider-Guided Consultation Clinical assessment contextualizes every diagnostic data point. Aura gives us another way to see your skin and facial features. But..."
   },
   {
     "url": "aura-3d-skin-analysis.html#pathways",
-    "title": "ONE SCAN. DIFFERENT SKIN STORIES.",
+    "title": "ONE SCAN. DIFFERENT WAYS TO TREAT YOUR SKIN.",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "Your Aura consultation helps us understand what your skin is showing, what matters to you—and where your SuA Glow skin health plan may go next. Healing · Hydration · Collagen · Dermal Matrix Targeting the dermal matrix itself to rebuild elasticity, restore skin barrier integrity, and cultivate authentic Korean glass skin. Services & Treatments: Healing Essence → Hydration and Glow → Collagen Stimulation → Dermal Matrix → Cosmetic Tox · Medical Tox · Fillers · Biostimulators Korean aesthetic principles prioritizing natural facial balance, subtle movement, and structural foundation over dramatic change. Services & Treatments: Cosmetic Tox → Medical Tox → Dermal Fillers → Radiesse Biostimulator → Energy Devices · Non-Invasive Lifting · Infusion Advanced Korean device innovations for deep collagen stimulation, non-invasive tightening, and needle-free nutrient delivery. Services & Treatments: Oligio X RF Lifting → LDM Ultrasound Lifting → SkinPen Microneedling → Needleless Infusion (DEP) → Scalp & Hair Rejuvenation → Multi-Step Protocols · Exclusive Packages · Events Bespoke treatment combinations created exclusively by Sophia Yang for intensive skin restoration, special occasions, and men's skin health. Services & Treatments: SuA Glow Signature → Bridal Glow Program → One Day Glow → Seoul Man Treatment → Barrier Repair · Salmon PN · Dewy Luminosity Authentic Korean clinical facial protocols focused on deep cellular hydration, soothing compromised barriers, and glass-skin radiance. Services & Treatments: Salmon PN Facial → Water Drop Lifting → Tone-Up Facial → Glass Skin Hydration → Acne Scars · Subcision · Dermal Untethering Multi-modality protocols targeting fibrotic scar tissue, deep acne depressions, and uneven texture through subcision and dermal remodeling. Services & Treatments: Acne Scar Remodeling → Subcision & Untethering → Post-Inflammatory Hyperpigmentation → Surgical & Stretch Mark Revision → YOUR SCAN DOESN’T PICK A TREATMENT. IT HELPS US ASK BETTER QUESTIONS. Sometimes the plan is one treatment. Sometimes it’s a combination. And sometimes the right answer is: not yet.",
-    "snippet": "Your Aura consultation helps us understand what your skin is showing, what matters to you—and where your SuA Glow skin health plan may go next. Healing · Hydrat..."
+    "content": "Your Aura consultation helps us understand what your skin is showing, what matters to you—and which SuA Glow treatment category may make sense to explore next. Hydration • Radiance • Texture • Overall Skin Quality Skin boosters and skin-quality treatments designed to support healthier-looking, more luminous skin. Services & Treatments: Healing Essence → Hydration and Glow → Collagen Stimulation → Dermal Matrix → Movement • Volume • Facial Balance • Refinement Provider-guided injectables may help support facial balance, soften expression lines and refine selected features. Services & Treatments: Cosmetic Tox → Medical Tox → Dermal Fillers → Biostimulators → Texture • Pores • Firmness • Visible Signs of Aging Advanced skin rejuvenation treatments that may help improve texture, refine pores and support smoother, firmer-looking skin. Services & Treatments: Oligio X RF Lifting → SkinPen Microneedling → Korean Chemical Peels → Scalp & Hair Rejuvenation → Curated • Layered • Personalized • Results-Driven Thoughtfully designed treatment experiences that combine the best of SuA Glow to support your unique skin goals. Services & Treatments: SuA Glow Signature → Bridal Glow Program → One Day Glow → Seoul Man Treatment → Hydration • Glow • Calming • Skin Maintenance K-Beauty facials support hydration, soothing care and visible radiance through customized, skin-first treatment plans. Services & Treatments: Salmon PN Glass Facial → Water Drop Lifting → Tone-Up Facial → Glass Skin Hydration → Acne Scars • Uneven Texture • Post-Acne Concerns Targeted scar-focused treatments designed to help improve the appearance of acne scarring and uneven skin texture. Services & Treatments: Acne Scar Remodeling → Subcision & Untethering → Post-Inflammatory Hyperpigmentation → Surgical & Stretch Mark Revision → YOUR SCAN DOESN’T PICK A TREATMENT. IT HELPS US NARROW THE CONVERSATION.",
+    "snippet": "Your Aura consultation helps us understand what your skin is showing, what matters to you—and which SuA Glow treatment category may make sense to explore next. ..."
+  },
+  {
+    "url": "aura-3d-skin-analysis.html#membership",
+    "title": "WANT TO MAKE SKIN HEALTH A RITUAL?",
+    "pageTitle": "Aura 3D Skin Analysis Dallas",
+    "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
+    "content": "Your Aura consultation can be the beginning—not the whole story. Explore the SuA Glow Glass Skin Method, our monthly K-Beauty membership designed around consistent skin care, thoughtful treatment planning and long-term skin quality. Monthly. Skin-first. Seoul-inspired. Glass Skin Method members use ongoing skin assessment alongside their monthly K-Beauty ritual to help keep treatment decisions aligned with their skin over time.",
+    "snippet": "Your Aura consultation can be the beginning—not the whole story. Explore the SuA Glow Glass Skin Method, our monthly K-Beauty membership designed around consist..."
   },
   {
     "url": "aura-3d-skin-analysis.html#pricing",
     "title": "AURA 3D SKIN HEALTHCONSULTATION",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "Aura 3D facial imaging + skin analysis + a personalized consultation with your SuA Glow provider. Advanced Aura 3D facial imaging and analysis to take a closer look at your skin and facial features. Dedicated time with your provider to review analysis, understand goals, and discuss what makes sense. You’ll receive a copy of your Aura report to keep as a visual baseline you can reference over time. Apply your full $100 consultation fee toward a SuA Glow treatment booked within 60 days of your consultation.",
-    "snippet": "Aura 3D facial imaging + skin analysis + a personalized consultation with your SuA Glow provider. Advanced Aura 3D facial imaging and analysis to take a closer ..."
+    "content": "3D facial imaging + skin analysis + a personalized consultation with your SuA Glow provider. Advanced Aura 3D imaging to take a closer look at your skin and facial features. Dedicated time with your provider to review your analysis, concerns, goals and treatment history. Receive a copy of your Aura skin analysis report to keep as a visual baseline for future reference. Apply your full $100 consultation fee toward a SuA Glow treatment booked within 60 days of your consultation. Aura is an assessment and visualization tool—not a medical diagnosis. Your provider reviews your Aura analysis alongside your concerns, goals, treatment history and clinical assessment. Treatment recommendations, timing and results vary by individual. 3D visualizations and simulations are consultation tools and do not predict or guarantee treatment outcomes.",
+    "snippet": "3D facial imaging + skin analysis + a personalized consultation with your SuA Glow provider. Advanced Aura 3D imaging to take a closer look at your skin and fac..."
   },
   {
     "url": "aura-3d-skin-analysis.html#faq",
@@ -210,11 +242,11 @@ const SEARCH_INDEX = [
   },
   {
     "url": "aura-3d-skin-analysis.html#book-consultation",
-    "title": "READY TO BUILDYOUR TREATMENT PLAN?",
+    "title": "READY TO BUILD YOUR SKIN HEALTH PLAN?",
     "pageTitle": "Aura 3D Skin Analysis Dallas",
     "category": "AURA 3D SKIN ANALYSIS & FACIAL IMAGING • CARROLLTON, TX",
-    "content": "YOUR NEXT STEP Start with a personalized consultation at SuA Glow in Carrollton. We’ll evaluate your concerns, goals, medical history, and appropriate treatment options to develop an individualized plan for you. NEW PATIENTS Consultation + Aura 3D Skin Analysis CARROLLTON, TX • SERVING DALLAS–FORT WORTH",
-    "snippet": "YOUR NEXT STEP Start with a personalized consultation at SuA Glow in Carrollton. We’ll evaluate your concerns, goals, medical history, and appropriate treatment..."
+    "content": "YOUR NEXT STEP Great skin starts with understanding your skin. New patients begin with a personalized consultation and skin analysis to help establish a visible skin baseline and identify your concerns. Your provider will review your skin, medical history, concerns, and goals to determine an appropriate individualized treatment plan. CARROLLTON, TX • SERVING DALLAS–FORT WORTH",
+    "snippet": "YOUR NEXT STEP Great skin starts with understanding your skin. New patients begin with a personalized consultation and skin analysis to help establish a visible..."
   },
   {
     "url": "bridal-glow.html#hero",
@@ -877,7 +909,7 @@ const SEARCH_INDEX = [
     "title": "October Instagram Studio",
     "pageTitle": "October Instagram Studio",
     "category": "Spa Treatments",
-    "content": "\"Glow or Treat\" Instagram Post 4:5 single-card design featuring the autumn pumpkin fair festival atmosphere, rounded treatment cards with model on left, protocol text in middle, device shot on right, and promotional pricing. Seoul Glow. Zero Tricks. Three authentic Korean aesthetic protocols to lift, repair & renew with promotional pricing through Oct 31. K-VOLUME LIFT Oligio X® 600 Shots + Volume Filler No Tricks, Just Lift. Balance + Seoul magic. GLOW BARRIER Rejuran® Healing Essence + SkinTox Scary-dry skin? Your K-Beauty rescue. HAIR REVIVAL Needle-Free Scalp Infusion · 2 Sessions Hair looking haunted? Start at the scalp. Instagram 4:5 Feed Post Curated 4:5 post with flat, unrounded 90° canvas edges for borderless export and copy/pasting. Interior features soft rounded treatment cards, model on left, middle clinical specs, authentic device on right, and price badges against a fall pumpkin fair festival backdrop. October promotional pricing valid through October 31, 2026. In-person consultation required to confirm candidacy. Cannot be combined with other offers.",
+    "content": "\"Glow or Treat\" Instagram Post 4:5 single-card design featuring the autumn pumpkin fair festival atmosphere, rounded treatment cards with model on left, protocol text in middle, device shot on right, and promotional pricing. Seoul Glow. Zero Tricks. Three authentic Korean aesthetic protocols to lift, repair & renew with promotional pricing through Oct 31. K-VOLUME LIFT Oligio X® 600 Shots + Volume Filler No Tricks, Just Lift · Seoul Magic GLOW BARRIER Rejuran® Healing Essence + SkinTox Scary-Dry Skin? Your K-Beauty Rescue HAIR REVIVAL Needle-Free Scalp Infusion · 2 Sessions Hair Looking Haunted? Start At Scalp Instagram 4:5 Feed Post Curated 4:5 post with flat, unrounded 90° canvas edges for borderless export and copy/pasting. Interior features soft rounded treatment cards, model on left, middle clinical specs, authentic device on right, and price badges against a fall pumpkin fair festival backdrop. October promotional pricing valid through October 31, 2026. In-person consultation required to confirm candidacy. Cannot be combined with other offers.",
     "snippet": "\"Glow or Treat\" Instagram Post 4:5 single-card design featuring the autumn pumpkin fair festival atmosphere, rounded treatment cards with model on left, protoco..."
   },
   {
@@ -1319,6 +1351,30 @@ const SEARCH_INDEX = [
     "category": "Korean Body Reset™",
     "content": "K-BEAUTY METABOLIC WELLNESS • CARROLLTON HQ",
     "snippet": "K-BEAUTY METABOLIC WELLNESS • CARROLLTON HQ"
+  },
+  {
+    "url": "membership-card.html#hero",
+    "title": "Membership Card",
+    "pageTitle": "VIP Membership Card",
+    "category": "Spa Treatments",
+    "content": "The SuA Glow Glass Skin Method™ Holographic Tech Card — featuring pure CSS and vanilla JS 3D tilt, luxury S-monogram pattern substrate, and authentic model backdrop.",
+    "snippet": "The SuA Glow Glass Skin Method™ Holographic Tech Card — featuring pure CSS and vanilla JS 3D tilt, luxury S-monogram pattern substrate, and authentic model back..."
+  },
+  {
+    "url": "membership-card.html",
+    "title": "How To Include This Card On Different Pages",
+    "pageTitle": "VIP Membership Card",
+    "category": "Spa Treatments",
+    "content": "Designed to be dropped anywhere across the SuA Glow site with 1 line of HTML, zero external dependencies, and responsive fluid scaling. Simply place this `div` placeholder anywhere on your target page (e.g. in `memberships.html` or `index.html`), link the stylesheet and script, and the engine automatically builds and attaches the 3D card! The complete component HTML is saved in components/membership-card.html. You can copy the code directly or inject it with custom settings.",
+    "snippet": "Designed to be dropped anywhere across the SuA Glow site with 1 line of HTML, zero external dependencies, and responsive fluid scaling. Simply place this `div` ..."
+  },
+  {
+    "url": "membership-card.html",
+    "title": "7 Interactive Layers Of Luxury Aesthetics",
+    "pageTitle": "VIP Membership Card",
+    "category": "Spa Treatments",
+    "content": "Uses CSS `transform-style: preserve-3d` and staggered `translateZ` steps (from +10px to +40px) so the microchip, logo, and model feel physically multi-dimensional. Pure CSS diffraction grating with dynamic rainbow angular gradients and `mix-blend-mode: color-dodge` that reacts in real-time to your cursor position. Gold contact etched circuit pads, contactless NFC radio arcs, and an animated specular micro-shine giving high-tech medical membership authenticity. High-resolution Korean Glass Skin model portrait blended over the signature repeating S-monogram pattern from our membership experience. Lightweight `requestAnimationFrame` lerp loop eliminates pointer jitter, delivering butter-smooth tilt response and a natural cubic-bezier spring return. Card back includes authentic magnetic stripe, signature panel, encrypted member CID, QR code scanner mockup, and clinic concierge details. $199/month for our five-layer signature Korean ritual: Aquafacial, DEP Infusion, LDM Ultrasound, Celluma LED, and Glutathione IV Push.",
+    "snippet": "Uses CSS `transform-style: preserve-3d` and staggered `translateZ` steps (from +10px to +40px) so the microchip, logo, and model feel physically multi-dimension..."
   },
   {
     "url": "memberships.html#hero",

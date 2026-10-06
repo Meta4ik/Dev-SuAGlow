@@ -1469,3 +1469,6 @@ mark.search-highlight {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Holographic Tech Membership Card */
+@import '../membership-card.css';

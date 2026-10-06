@@ -1,0 +1,805 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700;900&display=swap');
+
+/* ==========================================================================
+   SuA Glow — Holographic Tech Membership Card
+   Pure CSS + Vanilla JS 3D Tilt Engine & Holographic Diffraction Shaders
+   ========================================================================== */
+
+:root {
+  --card-aspect-ratio: 1.5858; /* ISO/IEC 7810 ID-1 standard */
+  --gold-foil: linear-gradient(135deg, #ECC078 0%, #F5DEB3 25%, #AA987C 50%, #E6C587 75%, #8C7B65 100%);
+  --gold-glow: #AA987C;
+  --sua-dark: #0D1013;
+}
+
+/* Page Background Guarantee */
+body:has(#membership-card-placeholder),
+body:has(#showcase-card-mount),
+body:has([data-holo-card]) {
+  background-color: #090C0E !important;
+  color: #FFFFFF !important;
+}
+
+/* --------------------------------------------------------------------------
+   Container & Perspective
+   -------------------------------------------------------------------------- */
+.holo-card-perspective {
+  perspective: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+}
+
+/* Outer wrapper handles fluid dimensions and centering */
+.holo-card-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 85.6 / 53.98;
+  border-radius: 24px;
+  cursor: grab;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.4, 1);
+}
+
+.holo-card-wrapper:active {
+  cursor: grabbing;
+}
+
+/* Reset / Spring transition when cursor leaves */
+.holo-card-wrapper.is-springing {
+  transition: transform 0.8s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
+}
+
+/* Auto-demo float animation */
+.holo-card-wrapper.is-demo-floating {
+  animation: cardDemoFloat 7s ease-in-out infinite alternate;
+}
+
+@keyframes cardDemoFloat {
+  0% {
+    transform: rotateX(8deg) rotateY(-14deg) translateY(-6px);
+  }
+  50% {
+    transform: rotateX(-6deg) rotateY(12deg) translateY(6px);
+  }
+  100% {
+    transform: rotateX(10deg) rotateY(-8deg) translateY(-4px);
+  }
+}
+
+/* Dynamic Ambient Floating Shadow — decoupled from 3D card tilt to eliminate plane intersection */
+.holo-card-shadow {
+  position: absolute;
+  inset: 5%;
+  z-index: 0;
+  border-radius: 30px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.35) 50%, transparent 75%);
+  filter: blur(28px);
+  transform: translateZ(-180px) scale(0.92);
+  pointer-events: none;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  will-change: transform, opacity;
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   Card Flipper (3D Front/Back Flip)
+   -------------------------------------------------------------------------- */
+.holo-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  transform-style: preserve-3d;
+  transition: transform 0.85s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.holo-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+/* Common Face Styling */
+.holo-card-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #0c0e11;
+  box-shadow: 
+    0 30px 60px -12px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 0 35px -5px rgba(170, 152, 124, 0.25);
+  border: 1px solid rgba(220, 195, 155, 0.45);
+}
+
+.holo-card-front {
+  transform: translateZ(1px);
+}
+
+.holo-card-back {
+  transform: rotateY(180deg) translateZ(1px);
+}
+
+/* --------------------------------------------------------------------------
+   Layers: Substrate, S-Monogram Pattern, Model, Textures
+   -------------------------------------------------------------------------- */
+.holo-card-substrate {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(26, 32, 38, 0.95) 0%, #0B0E11 100%),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 4px);
+  z-index: 1;
+}
+
+/* S Monogram Repeating Background Pattern Overlay (Matching Membership Page) */
+.holo-card-monogram {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-image: url('assets/s-monogram-pattern.svg');
+  background-repeat: repeat;
+  background-size: 110px 110px;
+  opacity: 0.32;
+  mix-blend-mode: screen;
+  mask-image: radial-gradient(ellipse at 38% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.2) 65%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at 38% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.2) 65%, transparent 100%);
+}
+
+/* Background Model Portrait with Atmospheric Vignette */
+.holo-card-model {
+  position: absolute;
+  right: -2%;
+  top: 0;
+  bottom: 0;
+  width: 72%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.holo-card-model img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right 18%;
+  filter: contrast(1.08) brightness(0.92) saturate(1.05);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.02) 10%, rgba(0,0,0,0.12) 20%, rgba(0,0,0,0.35) 35%, rgba(0,0,0,0.72) 55%, rgba(0,0,0,0.95) 75%, black 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.02) 10%, rgba(0,0,0,0.12) 20%, rgba(0,0,0,0.35) 35%, rgba(0,0,0,0.72) 55%, rgba(0,0,0,0.95) 75%, black 100%);
+  transition: transform 0.6s ease;
+}
+
+/* Cyber Tech Grid / Circuit Overlay */
+.holo-card-circuit {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: 
+    radial-gradient(rgba(170, 152, 124, 0.25) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px, 40px 40px, 40px 40px;
+  mix-blend-mode: screen;
+}
+
+/* --------------------------------------------------------------------------
+   HOLOGRAPHIC FOIL & PRISMATIC DIFFRACTION
+   -------------------------------------------------------------------------- */
+.holo-card-foil {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  border-radius: 22px;
+  overflow: hidden;
+  mix-blend-mode: color-dodge;
+  opacity: var(--holo-opacity, 0.75);
+  transition: opacity 0.3s ease;
+  will-change: background, opacity;
+}
+
+/* Standard Mode: Seoul Prism (Rainbow iridescence) */
+.holo-theme-prism .holo-card-foil {
+  background: 
+    radial-gradient(
+      ellipse 150% 120% at var(--glare-x, 50%) var(--glare-y, 50%),
+      rgba(255, 255, 255, 0.45) 0%,
+      rgba(255, 235, 59, 0.25) 20%,
+      rgba(0, 229, 255, 0.18) 45%,
+      rgba(124, 77, 255, 0.08) 70%,
+      transparent 100%
+    ),
+    linear-gradient(
+      var(--holo-angle, 135deg),
+      rgba(255, 0, 128, 0.26) 0%,
+      rgba(255, 110, 0, 0.24) 14%,
+      rgba(255, 225, 60, 0.28) 28%,
+      rgba(0, 230, 120, 0.24) 42%,
+      rgba(0, 220, 255, 0.28) 57%,
+      rgba(125, 80, 255, 0.24) 71%,
+      rgba(230, 60, 200, 0.26) 85%,
+      rgba(255, 0, 128, 0.26) 100%
+    );
+  background-size: 100% 100%, 100% 100%;
+  background-repeat: no-repeat, no-repeat;
+  mix-blend-mode: color-dodge;
+}
+
+/* Alternative Mode: K-Glow Gold (Pure champagne luxury sheen) */
+.holo-theme-gold .holo-card-foil {
+  background: 
+    radial-gradient(
+      ellipse 150% 120% at var(--glare-x, 50%) var(--glare-y, 50%),
+      rgba(255, 250, 235, 0.55) 0%,
+      rgba(236, 192, 120, 0.32) 28%,
+      rgba(170, 152, 124, 0.14) 55%,
+      rgba(170, 152, 124, 0.03) 80%,
+      transparent 100%
+    ),
+    linear-gradient(
+      var(--holo-angle, 135deg),
+      rgba(170, 152, 124, 0.22) 0%,
+      rgba(255, 240, 205, 0.42) 25%,
+      rgba(214, 184, 135, 0.28) 50%,
+      rgba(255, 240, 205, 0.42) 75%,
+      rgba(170, 152, 124, 0.22) 100%
+    );
+  background-size: 100% 100%, 100% 100%;
+  background-repeat: no-repeat, no-repeat;
+  mix-blend-mode: overlay;
+}
+
+/* Alternative Mode: Obsidian Diamond (Laser cyan / ultraviolet) */
+.holo-theme-diamond .holo-card-foil {
+  background: 
+    radial-gradient(
+      ellipse 150% 120% at var(--glare-x, 50%) var(--glare-y, 50%),
+      rgba(255, 255, 255, 0.50) 0%,
+      rgba(0, 240, 255, 0.30) 28%,
+      rgba(179, 102, 255, 0.16) 55%,
+      rgba(179, 102, 255, 0.03) 80%,
+      transparent 100%
+    ),
+    linear-gradient(
+      var(--holo-angle, 135deg),
+      rgba(0, 240, 255, 0.24) 0%,
+      rgba(179, 102, 255, 0.28) 25%,
+      rgba(255, 255, 255, 0.35) 50%,
+      rgba(0, 255, 200, 0.28) 75%,
+      rgba(0, 240, 255, 0.24) 100%
+    );
+  background-size: 100% 100%, 100% 100%;
+  background-repeat: no-repeat, no-repeat;
+  mix-blend-mode: color-dodge;
+}
+
+/* --------------------------------------------------------------------------
+   DYNAMIC GLARE / SPECULAR REFLECTION
+   -------------------------------------------------------------------------- */
+.holo-card-glare {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  border-radius: 22px;
+  background: radial-gradient(
+    circle 480px at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(255, 255, 255, 0.32) 25%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.01) 75%,
+    transparent 100%
+  );
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  mix-blend-mode: overlay;
+  opacity: var(--glare-opacity, 0.45);
+  transition: opacity 0.25s ease;
+  will-change: background, opacity;
+}
+
+/* Edge Chamfer Light Strip */
+.holo-card-edge-highlight {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  z-index: 7;
+  pointer-events: none;
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(220, 195, 155, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   FOREGROUND TECH & BRANDING ELEMENTS
+   -------------------------------------------------------------------------- */
+.holo-card-content {
+  position: relative;
+  z-index: 8;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1.75rem;
+  color: white;
+  pointer-events: auto;
+}
+
+@media (min-width: 640px) {
+  .holo-card-content {
+    padding: 1.75rem 2rem;
+  }
+}
+
+/* Top Row: Brand & NFC */
+.holo-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.holo-brand-lockup {
+  display: flex;
+  align-items: center;
+}
+
+.holo-regular-logo {
+  height: 36px;
+  width: auto;
+  max-width: 195px;
+  object-fit: contain;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.85));
+}
+
+@media (min-width: 640px) {
+  .holo-regular-logo {
+    height: 44px;
+    max-width: 235px;
+  }
+}
+
+/* Middle Row: Gold Metallic EMV Smart Chip on Middle Left */
+.holo-card-mid {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0.2rem 0;
+  width: 100%;
+}
+
+/* Gold Metallic EMV Smart Chip */
+.holo-emv-chip {
+  width: 44px;
+  height: 35px;
+  border-radius: 7px;
+  background: linear-gradient(135deg, #ECC078 0%, #D4AF37 35%, #996515 70%, #F5DEB3 100%);
+  border: 1px solid #735016;
+  box-shadow: 
+    0 4px 10px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(18px);
+}
+
+.holo-emv-chip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 50% 50%, transparent 5px, rgba(90, 60, 10, 0.8) 5.5px, transparent 6.5px),
+    linear-gradient(to right, transparent 21px, rgba(90, 60, 10, 0.8) 21px, rgba(90, 60, 10, 0.8) 23px, transparent 23px),
+    linear-gradient(to bottom, transparent 16px, rgba(90, 60, 10, 0.8) 16px, rgba(90, 60, 10, 0.8) 18px, transparent 18px);
+  mix-blend-mode: multiply;
+}
+
+.holo-emv-chip::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent 40%, rgba(255, 255, 255, 0.6) 50%, transparent 60%);
+  transform: rotate(25deg);
+  animation: chipShine 6s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes chipShine {
+  0%, 75% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(100%) rotate(25deg); }
+}
+
+@media (min-width: 640px) {
+  .holo-emv-chip {
+    width: 48px;
+    height: 38px;
+  }
+}
+
+/* Horizontal Korean Letters (After Membership Pass) */
+.holo-korean-horizontal {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Noto Serif KR', 'Nanum Myeongjo', 'Apple SD Gothic Neo', serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  background: linear-gradient(180deg, #FFFFFF 0%, #ECC078 55%, #C2A066 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 10px rgba(170, 152, 124, 0.4));
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+  padding-left: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .holo-korean-horizontal {
+    font-size: 1.10rem;
+    letter-spacing: 0.15em;
+  }
+}
+
+/* Bottom Row: The SuA Glow Glass Skin Method™, Founding 50, VIP Membership Pass */
+.holo-card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.holo-card-method-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.holo-card-method-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.60rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(220, 195, 155, 0.92);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.25;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+@media (min-width: 640px) {
+  .holo-card-method-title {
+    font-size: 0.70rem;
+    letter-spacing: 0.15em;
+  }
+}
+
+.holo-card-method-title .tm-sup {
+  font-size: 0.44rem;
+  color: #ECC078;
+  font-weight: 800;
+}
+
+.holo-card-member-since {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #F5E8D3;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 0.18rem 0.55rem;
+  border-radius: 9999px;
+  background: rgba(10, 12, 14, 0.75);
+  border: 1px solid rgba(220, 195, 155, 0.45);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.holo-card-details-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.65rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 0.45rem;
+}
+
+.holo-vip-pass-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85), 0 0 14px rgba(170, 152, 124, 0.45);
+  white-space: nowrap;
+  line-height: 1.15;
+}
+
+@media (min-width: 640px) {
+  .holo-vip-pass-text {
+    font-size: 1.08rem;
+    letter-spacing: 0.22em;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CARD BACK STYLING
+   -------------------------------------------------------------------------- */
+.holo-card-back-content {
+  position: relative;
+  z-index: 8;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  color: white;
+}
+
+/* Magnetic Stripe */
+.holo-magstripe {
+  width: 100%;
+  height: 44px;
+  background: linear-gradient(180deg, #090B0D 0%, #171A1E 50%, #090B0D 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.holo-magstripe::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(170, 152, 124, 0.08) 0px,
+    rgba(170, 152, 124, 0.08) 2px,
+    transparent 2px,
+    transparent 8px
+  );
+  opacity: 0.6;
+}
+
+/* Signature & CVC Area */
+.holo-back-mid {
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.holo-signature-panel {
+  flex: 1;
+  height: 34px;
+  background: #EAE6DF;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.holo-signature-panel::before {
+  content: "SUA K-GLOW // AUTHENTIC VIP ACCESS // CARROLLTON TX //";
+  font-family: monospace;
+  font-size: 8px;
+  color: rgba(0, 0, 0, 0.15);
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.holo-signature-text {
+  position: absolute;
+  right: 1rem;
+  font-family: 'Brush Script MT', cursive, sans-serif;
+  font-size: 1.15rem;
+  color: #1a1e24;
+  font-style: italic;
+}
+
+.holo-cvc-box {
+  width: 48px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(220, 195, 155, 0.4);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.holo-cvc-box span.code {
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ECC078;
+}
+
+.holo-cvc-box span.lbl {
+  font-size: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Back Bottom Info & QR Mockup */
+.holo-back-bottom {
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.holo-back-legal {
+  font-size: 0.46rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  max-width: 310px;
+}
+
+.holo-back-legal strong {
+  color: #ECC078;
+  font-weight: 600;
+}
+
+.holo-qr-mock {
+  width: 42px;
+  height: 42px;
+  background: white;
+  border-radius: 6px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.holo-qr-mock svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Mini Card Variant (For callout banners, widgets, and sidebars)
+   -------------------------------------------------------------------------- */
+.holo-card-mini .holo-card-wrapper {
+  max-width: 320px;
+  border-radius: 18px;
+}
+
+.holo-card-mini .holo-card-inner,
+.holo-card-mini .holo-card-face,
+.holo-card-mini .holo-card-foil,
+.holo-card-mini .holo-card-glare,
+.holo-card-mini .holo-card-edge-highlight {
+  border-radius: 16px;
+}
+
+.holo-card-mini .holo-card-content {
+  padding: 1rem 1.15rem !important;
+}
+
+.holo-card-mini .holo-regular-logo {
+  height: 24px !important;
+  max-width: 130px !important;
+}
+
+.holo-card-mini .holo-card-mid {
+  padding: 0.1rem 0;
+}
+
+.holo-card-mini .holo-emv-chip {
+  width: 32px !important;
+  height: 25px !important;
+  border-radius: 5px !important;
+}
+
+.holo-card-mini .holo-emv-chip::before {
+  background: 
+    radial-gradient(circle at 50% 50%, transparent 3.5px, rgba(90, 60, 10, 0.8) 4px, transparent 5px),
+    linear-gradient(to right, transparent 15px, rgba(90, 60, 10, 0.8) 15px, rgba(90, 60, 10, 0.8) 16.5px, transparent 16.5px),
+    linear-gradient(to bottom, transparent 11px, rgba(90, 60, 10, 0.8) 11px, rgba(90, 60, 10, 0.8) 12.5px, transparent 12.5px);
+}
+
+.holo-card-mini .holo-korean-horizontal {
+  font-size: 0.72rem !important;
+  padding-left: 0.15rem !important;
+}
+
+.holo-card-mini .holo-card-bottom {
+  gap: 0.25rem !important;
+}
+
+.holo-card-mini .holo-card-method-title {
+  font-size: 0.46rem !important;
+  letter-spacing: 0.10em !important;
+}
+
+.holo-card-mini .holo-card-method-title .tm-sup {
+  font-size: 0.36rem !important;
+}
+
+.holo-card-mini .holo-card-member-since {
+  font-size: 0.40rem !important;
+  padding: 0.10rem 0.38rem !important;
+  letter-spacing: 0.12em !important;
+}
+
+.holo-card-mini .holo-card-details-row {
+  padding-top: 0.28rem !important;
+}
+
+.holo-card-mini .holo-vip-pass-text {
+  font-size: 0.68rem !important;
+  letter-spacing: 0.14em !important;
+}
+
+.holo-card-mini .holo-back-mid {
+  padding: 0 1rem;
+}
+
+.holo-card-mini .holo-signature-panel {
+  height: 26px;
+}
+
+.holo-card-mini .holo-cvc-box {
+  width: 38px;
+  height: 26px;
+}
+
+.holo-card-mini .holo-back-bottom {
+  padding: 0 1rem;
+}
+
+.holo-card-mini .holo-back-legal {
+  font-size: 0.38rem;
+  max-width: 200px;
+}
+
+.holo-card-mini .holo-qr-mock {
+  width: 32px;
+  height: 32px;
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility & Reduced Motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .holo-card-wrapper,
+  .holo-card-inner,
+  .holo-card-model img,
+  .holo-card-wrapper.is-demo-floating {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}

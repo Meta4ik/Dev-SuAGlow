@@ -1,0 +1,121 @@
+<!-- ==========================================================================
+     SuA Glow — Holographic Tech Membership Card Component (Include)
+     Usage:
+       1. Include CSS: <link rel="stylesheet" href="membership-card.css">
+       2. Place this HTML snippet anywhere in your page.
+       3. Include JS: <script src="membership-card.js"></script>
+       4. Initialize: initMembershipCard('my-card-container');
+     ========================================================================== -->
+
+<div id="sua-membership-card-embed" class="holo-card-perspective holo-theme-gold" data-holo-container>
+  <!-- Floating Ambient Blur Shadow -->
+  <div class="holo-card-shadow"></div>
+
+  <!-- 3D Transform Wrapper -->
+  <div class="holo-card-wrapper" data-holo-card>
+    <div class="holo-card-inner" data-holo-inner>
+      
+      <!-- ================= CARD FRONT ================= -->
+      <div class="holo-card-face holo-card-front">
+        <!-- Layer 1: Dark Obsidian Substrate -->
+        <div class="holo-card-substrate"></div>
+
+        <!-- Layer 2: S Monogram Repeating Pattern Overlay (Matching Membership Page) -->
+        <div class="holo-card-monogram"></div>
+
+        <!-- Layer 3: Model Background Image -->
+        <div class="holo-card-model">
+          <img src="assets/vip_korean_model_glass_skin.jpg" alt="SuA Glow Korean Glass Skin VIP Member" loading="eager">
+        </div>
+
+        <!-- Layer 4: Cyber Circuit & Micro-Grid Overlay -->
+        <div class="holo-card-circuit"></div>
+
+        <!-- Layer 5: Prismatic Holographic Foil Overlay (Color Dodge / Overlay) -->
+        <div class="holo-card-foil"></div>
+
+        <!-- Layer 6: Dynamic Glare / Specular Highlight Spot -->
+        <div class="holo-card-glare"></div>
+
+        <!-- Layer 7: Inner Chamfer Light Border -->
+        <div class="holo-card-edge-highlight"></div>
+
+        <!-- Layer 8: Elevated Tech Foreground Content -->
+        <div class="holo-card-content">
+          <!-- Top Row: Logo -->
+          <div class="holo-card-top">
+            <div class="holo-brand-lockup">
+              <img src="assets/logo-main.webp" alt="SuA K-Glow" class="holo-regular-logo">
+            </div>
+          </div>
+
+          <!-- Mid Row: EMV Microchip on Middle Left -->
+          <div class="holo-card-mid">
+            <div class="holo-emv-chip" aria-label="Security Chip"></div>
+          </div>
+
+          <!-- Bottom Row: The SuA Glow Glass Skin Method™, Founding 50, VIP Membership Pass + Horizontal Korean -->
+          <div class="holo-card-bottom">
+            <div class="holo-card-method-row">
+              <span class="holo-card-method-title">
+                The SuA Glow Glass Skin Method<span class="tm-sup">™</span>
+              </span>
+              <span class="holo-card-member-since">FOUNDING 50</span>
+            </div>
+
+            <div class="holo-card-details-row">
+              <span class="holo-vip-pass-text">VIP MEMBERSHIP PASS</span>
+              <span class="holo-korean-horizontal" aria-label="SuA in Korean">수아</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= CARD BACK ================= -->
+      <div class="holo-card-face holo-card-back">
+        <!-- Substrate, S-Monogram Pattern & Holographic Foil -->
+        <div class="holo-card-substrate"></div>
+        <div class="holo-card-monogram" style="opacity: 0.22;"></div>
+        <div class="holo-card-circuit" style="opacity: 0.25;"></div>
+        <div class="holo-card-foil" style="opacity: 0.35;"></div>
+        <div class="holo-card-glare"></div>
+        <div class="holo-card-edge-highlight"></div>
+
+        <!-- Back Content -->
+        <div class="holo-card-back-content">
+          <!-- Magnetic Stripe -->
+          <div class="holo-magstripe"></div>
+
+          <!-- Signature Strip & CVC -->
+          <div class="holo-back-mid">
+            <div class="holo-signature-panel">
+              <span class="holo-signature-text">SuA Glow VIP</span>
+            </div>
+            <div class="holo-cvc-box">
+              <span class="code">777</span>
+              <span class="lbl">CID</span>
+            </div>
+          </div>
+
+          <!-- Legal & QR Code -->
+          <div class="holo-back-bottom">
+            <div class="holo-back-legal">
+              <strong>The SuA Glow Glass Skin Method™ VIP Pass</strong><br>
+              Valid for monthly all-inclusive 5-layer Glass Skin Ritual.<br>
+              4116 State Hwy 121, Suite 120, Carrollton, TX 75010<br>
+              Concierge Hotline: (972) 665-8737 • suaglow.com
+            </div>
+
+            <!-- High-tech QR Mockup -->
+            <div class="holo-qr-mock">
+              <svg viewBox="0 0 24 24" fill="currentColor" text-anchor="middle">
+                <path d="M2 2h8v8H2zm2 2v4h4V4zm-2 10h8v8H2zm2 2v4h4v-4zm10-14h8v8h-8zm2 2v4h4V4zm0 10h2v2h-2zm4 0h2v4h-2zm-4 4h4v2h-4zm6-2h2v4h-2zm-6-2h2v2h-2zm4 4h2v2h-2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
