@@ -704,6 +704,17 @@ body:has([data-holo-card]) {
   border-radius: 16px;
 }
 
+/* Finer, scaled-down repeating background pattern on mini card */
+.holo-card-mini .holo-card-monogram {
+  background-size: 45px 45px !important;
+  opacity: 0.28 !important;
+}
+
+.holo-card-mini .holo-card-circuit {
+  background-size: 10px 10px, 20px 20px, 20px 20px !important;
+  opacity: 0.30 !important;
+}
+
 .holo-card-mini .holo-card-content {
   padding: 1rem 1.15rem !important;
 }
