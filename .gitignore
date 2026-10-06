@@ -29,3 +29,5 @@ scratch/
 .agent/
 **/.*agent*
 dev-tools/get_refresh_token.js
+.chrome-cache/
+**/.chrome-cache/**
