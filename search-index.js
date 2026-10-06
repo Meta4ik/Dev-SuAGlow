@@ -1353,14 +1353,6 @@ const SEARCH_INDEX = [
     "snippet": "K-BEAUTY METABOLIC WELLNESS • CARROLLTON HQ"
   },
   {
-    "url": "membership-card.html#hero",
-    "title": "Membership Card",
-    "pageTitle": "VIP Membership Card",
-    "category": "Spa Treatments",
-    "content": "The SuA Glow Glass Skin Method™ Holographic Tech Card — featuring pure CSS and vanilla JS 3D tilt, luxury S-monogram pattern substrate, and authentic model backdrop.",
-    "snippet": "The SuA Glow Glass Skin Method™ Holographic Tech Card — featuring pure CSS and vanilla JS 3D tilt, luxury S-monogram pattern substrate, and authentic model back..."
-  },
-  {
     "url": "membership-card.html",
     "title": "Ready To Join The Club?",
     "pageTitle": "VIP Membership Card",
@@ -1373,16 +1365,8 @@ const SEARCH_INDEX = [
     "title": "How To Include This Card On Different Pages",
     "pageTitle": "VIP Membership Card",
     "category": "Spa Treatments",
-    "content": "Designed to be dropped anywhere across the SuA Glow site with 1 line of HTML, zero external dependencies, and responsive fluid scaling. Simply place this `div` placeholder anywhere on your target page (e.g. in `memberships.html` or `index.html`), link the stylesheet and script, and the engine automatically builds and attaches the 3D card! The complete component HTML is saved in components/membership-card.html. You can copy the code directly or inject it with custom settings.",
+    "content": "Designed to be dropped anywhere across the SuA Glow site with 1 line of HTML, zero external dependencies, and responsive fluid scaling. Simply place this `div` placeholder anywhere on your target page (e.g. in `memberships.html` or `index.html`), link the stylesheet and script, and the engine automatically builds and attaches the 3D card! The complete component HTML is saved in components/membership-card.html. You can copy the code directly or inject it with custom settings. Uses CSS `transform-style: preserve-3d` and staggered `translateZ` steps (from +10px to +40px) so the microchip, logo, and model feel physically multi-dimensional. Pure CSS diffraction grating with dynamic rainbow angular gradients and `mix-blend-mode: color-dodge` that reacts in real-time to your cursor position. Gold contact etched circuit pads, contactless NFC radio arcs, and an animated specular micro-shine giving high-tech medical membership authenticity. High-resolution Korean Glass Skin model portrait blended over the signature repeating S-monogram pattern from our membership experience. Lightweight `requestAnimationFrame` lerp loop eliminates pointer jitter, delivering butter-smooth tilt response and a natural cubic-bezier spring return. Card back includes authentic magnetic stripe, signature panel, encrypted member CID, QR code scanner mockup, and clinic concierge details.",
     "snippet": "Designed to be dropped anywhere across the SuA Glow site with 1 line of HTML, zero external dependencies, and responsive fluid scaling. Simply place this `div` ..."
-  },
-  {
-    "url": "membership-card.html",
-    "title": "7 Interactive Layers Of Luxury Aesthetics",
-    "pageTitle": "VIP Membership Card",
-    "category": "Spa Treatments",
-    "content": "Uses CSS `transform-style: preserve-3d` and staggered `translateZ` steps (from +10px to +40px) so the microchip, logo, and model feel physically multi-dimensional. Pure CSS diffraction grating with dynamic rainbow angular gradients and `mix-blend-mode: color-dodge` that reacts in real-time to your cursor position. Gold contact etched circuit pads, contactless NFC radio arcs, and an animated specular micro-shine giving high-tech medical membership authenticity. High-resolution Korean Glass Skin model portrait blended over the signature repeating S-monogram pattern from our membership experience. Lightweight `requestAnimationFrame` lerp loop eliminates pointer jitter, delivering butter-smooth tilt response and a natural cubic-bezier spring return. Card back includes authentic magnetic stripe, signature panel, encrypted member CID, QR code scanner mockup, and clinic concierge details.",
-    "snippet": "Uses CSS `transform-style: preserve-3d` and staggered `translateZ` steps (from +10px to +40px) so the microchip, logo, and model feel physically multi-dimension..."
   },
   {
     "url": "memberships.html#hero",

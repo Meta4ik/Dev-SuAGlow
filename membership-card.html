@@ -123,17 +123,10 @@
                 Membership <span class="text-warm-gold font-normal">Card</span>
             </h1>
 
-            <!-- Subtitle -->
-            <p class="font-body text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed mb-6 [text-wrap:balance]">
-                The SuA Glow Glass Skin Method™ Holographic Tech Card — featuring pure CSS and vanilla JS 3D tilt, luxury S-monogram pattern substrate, and authentic model backdrop.
-            </p>
-
-            <div class="flex items-center justify-center gap-3 text-xs tracking-widest uppercase text-white/50">
+            <div class="flex items-center justify-center gap-3 text-xs sm:text-sm tracking-widest uppercase text-white/60">
                 <span>Move Mouse to Tilt</span>
                 <span class="text-warm-gold">•</span>
                 <span>Click Card to Flip</span>
-                <span class="text-warm-gold">•</span>
-                <span>60 FPS Hardware-Accelerated</span>
             </div>
         </div>
     </section>
@@ -267,49 +260,62 @@
     </section>
 
     <!-- =========================================================================
-         HOW TO INCLUDE ON ANY PAGE (The Developer Embed Guide)
+         DEVELOPER & TECHNICAL DETAILS (Collapsible Accordion)
          ========================================================================= -->
-    <section class="embed-section py-20 md:py-28 px-6 md:px-12 bg-[#0C0F12] border-t border-white/5 relative">
-        <div class="max-w-5xl mx-auto">
+    <section class="py-14 sm:py-16 px-4 sm:px-8 bg-[#090C0E] border-t border-white/5 relative">
+        <div class="max-w-6xl mx-auto text-center">
             
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="text-xs uppercase tracking-[0.28em] font-semibold text-warm-gold mb-3 inline-block">
-                    MODULAR INCLUDE ARCHITECTURE
-                </span>
-                <h2 class="font-heading text-3xl sm:text-5xl text-white uppercase tracking-wider leading-tight">
-                    How To Include This Card<br>
-                    <span class="text-warm-gold font-normal">On Different Pages</span>
-                </h2>
-                <p class="text-sm sm:text-base text-white/70 font-light mt-4 leading-relaxed">
-                    Designed to be dropped anywhere across the SuA Glow site with 1 line of HTML, zero external dependencies, and responsive fluid scaling.
-                </p>
-            </div>
+            <!-- Accordion Toggle Button -->
+            <button id="btn-toggle-tech-specs" type="button" aria-expanded="false" aria-controls="tech-specs-content"
+                class="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-warm-gold/40 text-xs sm:text-sm uppercase tracking-[0.22em] font-semibold text-white/80 hover:text-white transition-all duration-300 shadow-xl cursor-pointer">
+                <i data-lucide="layers" class="w-4 h-4 text-warm-gold group-hover:scale-110 transition-transform duration-300"></i>
+                <span id="text-specs-toggle">Click here to view developer & technical details</span>
+                <i data-lucide="chevron-down" id="icon-specs-chevron" class="w-4 h-4 text-warm-gold transition-transform duration-300"></i>
+            </button>
 
-            <!-- Embed Methods Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <!-- Collapsible Content (Hidden by default) -->
+            <div id="tech-specs-content" class="hidden text-left mt-12 pt-10 border-t border-white/10 space-y-20 transition-all duration-500">
                 
-                <!-- Method 1: Dynamic JS Include (Recommended) -->
-                <div class="bg-[#13161A] rounded-2xl p-7 border border-white/10 shadow-xl flex flex-col justify-between h-full">
-                    <div>
-                        <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
-                            <div class="flex items-center gap-2.5">
-                                <span class="w-6 h-6 rounded-full bg-warm-gold/20 text-warm-gold text-xs font-bold flex items-center justify-center">1</span>
-                                <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold">
-                                    One-Line Dynamic Placeholder (Easiest)
-                                </h3>
-                            </div>
-                            <span class="text-[10px] uppercase font-bold tracking-widest text-warm-gold bg-warm-gold/10 px-2.5 py-1 rounded-full border border-warm-gold/20">
-                                Recommended
-                            </span>
-                        </div>
-                        
-                        <p class="text-xs sm:text-sm text-white/70 font-light mb-4 leading-relaxed">
-                            Simply place this `div` placeholder anywhere on your target page (e.g. in `memberships.html` or `index.html`), link the stylesheet and script, and the engine automatically builds and attaches the 3D card!
+                <!-- Section A: How to Include on Different Pages -->
+                <div>
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <span class="text-xs uppercase tracking-[0.28em] font-semibold text-warm-gold mb-3 inline-block">
+                            MODULAR INCLUDE ARCHITECTURE
+                        </span>
+                        <h2 class="font-heading text-3xl sm:text-4xl text-white uppercase tracking-wider leading-tight">
+                            How To Include This Card<br>
+                            <span class="text-warm-gold font-normal">On Different Pages</span>
+                        </h2>
+                        <p class="text-sm sm:text-base text-white/70 font-light mt-3 leading-relaxed">
+                            Designed to be dropped anywhere across the SuA Glow site with 1 line of HTML, zero external dependencies, and responsive fluid scaling.
                         </p>
+                    </div>
 
-                        <!-- Code Snippet -->
-                        <div class="relative bg-[#0A0C0E] rounded-xl p-4 border border-white/10 mb-4 code-block-scroll overflow-x-auto">
-                            <pre class="hud-mono text-xs text-white/90 leading-relaxed"><code><span class="text-white/40">&lt;!-- 1. Include CSS in &lt;head&gt; --&gt;</span>
+                    <!-- Embed Methods Grid -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                        
+                        <!-- Method 1: Dynamic JS Include (Recommended) -->
+                        <div class="bg-[#13161A] rounded-2xl p-7 border border-white/10 shadow-xl flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="w-6 h-6 rounded-full bg-warm-gold/20 text-warm-gold text-xs font-bold flex items-center justify-center">1</span>
+                                        <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold">
+                                            One-Line Dynamic Placeholder (Easiest)
+                                        </h3>
+                                    </div>
+                                    <span class="text-[10px] uppercase font-bold tracking-widest text-warm-gold bg-warm-gold/10 px-2.5 py-1 rounded-full border border-warm-gold/20">
+                                        Recommended
+                                    </span>
+                                </div>
+                                
+                                <p class="text-xs sm:text-sm text-white/70 font-light mb-4 leading-relaxed">
+                                    Simply place this `div` placeholder anywhere on your target page (e.g. in `memberships.html` or `index.html`), link the stylesheet and script, and the engine automatically builds and attaches the 3D card!
+                                </p>
+
+                                <!-- Code Snippet -->
+                                <div class="relative bg-[#0A0C0E] rounded-xl p-4 border border-white/10 mb-4 code-block-scroll overflow-x-auto">
+                                    <pre class="hud-mono text-xs text-white/90 leading-relaxed"><code><span class="text-white/40">&lt;!-- 1. Include CSS in &lt;head&gt; --&gt;</span>
 &lt;link rel="stylesheet" href="membership-card.css"&gt;
 
 <span class="text-white/40">&lt;!-- 2. Place anywhere on your page --&gt;</span>
@@ -317,153 +323,151 @@
 
 <span class="text-white/40">&lt;!-- 3. Include JS before &lt;/body&gt; --&gt;</span>
 &lt;script src="membership-card.js"&gt;&lt;/script&gt;</code></pre>
-                        </div>
-                    </div>
-
-                    <button id="btn-copy-method1"
-                        class="w-full py-3 rounded-full bg-warm-gold hover:bg-white text-near-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-sm">
-                        <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-                        <span id="text-copy-method1">Copy 1-Line Embed Code</span>
-                    </button>
-                </div>
-
-                <!-- Method 2: Pure HTML Snippet / Server-side Include -->
-                <div class="bg-[#13161A] rounded-2xl p-7 border border-white/10 shadow-xl flex flex-col justify-between h-full">
-                    <div>
-                        <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
-                            <div class="flex items-center gap-2.5">
-                                <span class="w-6 h-6 rounded-full bg-cyan-400/20 text-cyan-400 text-xs font-bold flex items-center justify-center">2</span>
-                                <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold">
-                                    Direct Component File Include
-                                </h3>
+                                </div>
                             </div>
-                            <span class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 bg-cyan-400/10 px-2.5 py-1 rounded-full border border-cyan-400/20">
-                                Component File
-                            </span>
-                        </div>
-                        
-                        <p class="text-xs sm:text-sm text-white/70 font-light mb-4 leading-relaxed">
-                            The complete component HTML is saved in <code class="text-warm-gold hud-mono bg-black/40 px-1.5 py-0.5 rounded">components/membership-card.html</code>. You can copy the code directly or inject it with custom settings.
-                        </p>
 
-                        <!-- Code Snippet -->
-                        <div class="relative bg-[#0A0C0E] rounded-xl p-4 border border-white/10 mb-4 code-block-scroll overflow-x-auto">
-                            <pre class="hud-mono text-xs text-white/90 leading-relaxed"><code><span class="text-white/40">// Custom JS init with options:</span>
+                            <button id="btn-copy-method1"
+                                class="w-full py-3 rounded-full bg-warm-gold hover:bg-white text-near-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-sm">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                                <span id="text-copy-method1">Copy 1-Line Embed Code</span>
+                            </button>
+                        </div>
+
+                        <!-- Method 2: Pure HTML Snippet / Server-side Include -->
+                        <div class="bg-[#13161A] rounded-2xl p-7 border border-white/10 shadow-xl flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="w-6 h-6 rounded-full bg-cyan-400/20 text-cyan-400 text-xs font-bold flex items-center justify-center">2</span>
+                                        <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold">
+                                            Direct Component File Include
+                                        </h3>
+                                    </div>
+                                    <span class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 bg-cyan-400/10 px-2.5 py-1 rounded-full border border-cyan-400/20">
+                                        Component File
+                                    </span>
+                                </div>
+                                
+                                <p class="text-xs sm:text-sm text-white/70 font-light mb-4 leading-relaxed">
+                                    The complete component HTML is saved in <code class="text-warm-gold hud-mono bg-black/40 px-1.5 py-0.5 rounded">components/membership-card.html</code>. You can copy the code directly or inject it with custom settings.
+                                </p>
+
+                                <!-- Code Snippet -->
+                                <div class="relative bg-[#0A0C0E] rounded-xl p-4 border border-white/10 mb-4 code-block-scroll overflow-x-auto">
+                                    <pre class="hud-mono text-xs text-white/90 leading-relaxed"><code><span class="text-white/40">// Custom JS init with options:</span>
 initMembershipCard('my-container-id', {
   maxTilt: 18,        <span class="text-white/40">// Tilt degrees</span>
   theme: 'prism',     <span class="text-white/40">// 'prism' | 'gold' | 'diamond'</span>
   autoFloat: false,   <span class="text-white/40">// Floating tour</span>
   smoothing: 0.14     <span class="text-white/40">// Physics lerp</span>
 });</code></pre>
+                                </div>
+                            </div>
+
+                            <a href="components/membership-card.html" target="_blank"
+                                class="w-full py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2">
+                                <i data-lucide="external-link" class="w-3.5 h-3.5 text-warm-gold"></i>
+                                <span>View Raw Component HTML</span>
+                            </a>
                         </div>
-                    </div>
 
-                    <a href="components/membership-card.html" target="_blank"
-                        class="w-full py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2">
-                        <i data-lucide="external-link" class="w-3.5 h-3.5 text-warm-gold"></i>
-                        <span>View Raw Component HTML</span>
-                    </a>
+                    </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================================
-         THE ANATOMY OF THE HOLOGRAPHIC CARD (Features Breakdown)
-         ========================================================================= -->
-    <section class="anatomy-section py-20 md:py-28 px-6 md:px-12 bg-[#090B0D] border-t border-white/5 relative">
-        <div class="max-w-6xl mx-auto">
-            
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs uppercase tracking-[0.28em] font-semibold text-warm-gold mb-3 inline-block">
-                    ENGINEERING & CRAFTSMANSHIP
-                </span>
-                <h2 class="font-heading text-3xl sm:text-5xl text-white uppercase tracking-wider leading-tight">
-                    7 Interactive Layers<br>
-                    <span class="text-warm-gold font-normal">Of Luxury Aesthetics</span>
-                </h2>
-            </div>
-
-            <!-- Features Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Feature 1 -->
-                <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
-                    <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
-                        <i data-lucide="layers" class="w-5 h-5"></i>
+                <!-- Section B: 7 Interactive Layers Breakdown -->
+                <div>
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <span class="text-xs uppercase tracking-[0.28em] font-semibold text-warm-gold mb-3 inline-block">
+                            ENGINEERING & CRAFTSMANSHIP
+                        </span>
+                        <h2 class="font-heading text-3xl sm:text-4xl text-white uppercase tracking-wider leading-tight">
+                            7 Interactive Layers<br>
+                            <span class="text-warm-gold font-normal">Of Luxury Aesthetics</span>
+                        </h2>
                     </div>
-                    <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
-                        01. 3D Parallax Depth Stack
-                    </h3>
-                    <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                        Uses CSS `transform-style: preserve-3d` and staggered `translateZ` steps (from +10px to +40px) so the microchip, logo, and model feel physically multi-dimensional.
-                    </p>
-                </div>
 
-                <!-- Feature 2 -->
-                <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
-                    <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
-                        <i data-lucide="sparkles" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
-                        02. Prismatic Holographic Foil
-                    </h3>
-                    <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                        Pure CSS diffraction grating with dynamic rainbow angular gradients and `mix-blend-mode: color-dodge` that reacts in real-time to your cursor position.
-                    </p>
-                </div>
+                    <!-- Features Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <!-- Feature 1 -->
+                        <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
+                            <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="layers" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
+                                01. 3D Parallax Depth Stack
+                            </h3>
+                            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                                Uses CSS `transform-style: preserve-3d` and staggered `translateZ` steps (from +10px to +40px) so the microchip, logo, and model feel physically multi-dimensional.
+                            </p>
+                        </div>
 
-                <!-- Feature 3 -->
-                <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
-                    <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
-                        <i data-lucide="cpu" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
-                        03. EMV Smart Chip & NFC Tech
-                    </h3>
-                    <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                        Gold contact etched circuit pads, contactless NFC radio arcs, and an animated specular micro-shine giving high-tech medical membership authenticity.
-                    </p>
-                </div>
+                        <!-- Feature 2 -->
+                        <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
+                            <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="sparkles" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
+                                02. Prismatic Holographic Foil
+                            </h3>
+                            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                                Pure CSS diffraction grating with dynamic rainbow angular gradients and `mix-blend-mode: color-dodge` that reacts in real-time to your cursor position.
+                            </p>
+                        </div>
 
-                <!-- Feature 4 -->
-                <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
-                    <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
-                        <i data-lucide="user-check" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
-                        04. Model Art & S-Monogram Pattern
-                    </h3>
-                    <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                        High-resolution Korean Glass Skin model portrait blended over the signature repeating S-monogram pattern from our membership experience.
-                    </p>
-                </div>
+                        <!-- Feature 3 -->
+                        <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
+                            <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="cpu" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
+                                03. EMV Smart Chip & NFC Tech
+                            </h3>
+                            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                                Gold contact etched circuit pads, contactless NFC radio arcs, and an animated specular micro-shine giving high-tech medical membership authenticity.
+                            </p>
+                        </div>
 
-                <!-- Feature 5 -->
-                <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
-                    <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
-                        <i data-lucide="zap" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
-                        05. 60+ FPS Interpolated Physics
-                    </h3>
-                    <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                        Lightweight `requestAnimationFrame` lerp loop eliminates pointer jitter, delivering butter-smooth tilt response and a natural cubic-bezier spring return.
-                    </p>
-                </div>
+                        <!-- Feature 4 -->
+                        <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
+                            <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="user-check" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
+                                04. Model Art & S-Monogram Pattern
+                            </h3>
+                            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                                High-resolution Korean Glass Skin model portrait blended over the signature repeating S-monogram pattern from our membership experience.
+                            </p>
+                        </div>
 
-                <!-- Feature 6 -->
-                <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
-                    <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
-                        <i data-lucide="repeat" class="w-5 h-5"></i>
+                        <!-- Feature 5 -->
+                        <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
+                            <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="zap" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
+                                05. 60+ FPS Interpolated Physics
+                            </h3>
+                            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                                Lightweight `requestAnimationFrame` lerp loop eliminates pointer jitter, delivering butter-smooth tilt response and a natural cubic-bezier spring return.
+                            </p>
+                        </div>
+
+                        <!-- Feature 6 -->
+                        <div class="p-6 rounded-2xl bg-[#111418] border border-white/10 hover:border-warm-gold/40 transition-colors group">
+                            <div class="w-10 h-10 rounded-xl bg-warm-gold/15 flex items-center justify-center text-warm-gold mb-5 group-hover:scale-110 transition-transform">
+                                <i data-lucide="repeat" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
+                                06. 3D Two-Sided Card Flip
+                            </h3>
+                            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                                Card back includes authentic magnetic stripe, signature panel, encrypted member CID, QR code scanner mockup, and clinic concierge details.
+                            </p>
+                        </div>
+
                     </div>
-                    <h3 class="font-heading text-sm uppercase tracking-wider text-white font-bold mb-2">
-                        06. 3D Two-Sided Card Flip
-                    </h3>
-                    <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                        Card back includes authentic magnetic stripe, signature panel, encrypted member CID, QR code scanner mockup, and clinic concierge details.
-                    </p>
                 </div>
 
             </div>
@@ -633,6 +637,32 @@ initMembershipCard('my-container-id', {
                             btnCopy1.classList.remove('!bg-green-500', '!text-white');
                         }, 2200);
                     });
+                });
+            }
+
+            // 7. Developer & Technical Specs Accordion Toggle
+            const btnSpecs = document.getElementById('btn-toggle-tech-specs');
+            const contentSpecs = document.getElementById('tech-specs-content');
+            const chevronSpecs = document.getElementById('icon-specs-chevron');
+            const textSpecs = document.getElementById('text-specs-toggle');
+
+            if (btnSpecs && contentSpecs) {
+                btnSpecs.addEventListener('click', () => {
+                    const isHidden = contentSpecs.classList.contains('hidden');
+                    if (isHidden) {
+                        contentSpecs.classList.remove('hidden');
+                        btnSpecs.setAttribute('aria-expanded', 'true');
+                        btnSpecs.classList.add('border-warm-gold/50', 'bg-white/10');
+                        if (chevronSpecs) chevronSpecs.classList.add('rotate-180');
+                        if (textSpecs) textSpecs.textContent = 'Click to hide developer & technical details';
+                        if (window.lucide) lucide.createIcons();
+                    } else {
+                        contentSpecs.classList.add('hidden');
+                        btnSpecs.setAttribute('aria-expanded', 'false');
+                        btnSpecs.classList.remove('border-warm-gold/50', 'bg-white/10');
+                        if (chevronSpecs) chevronSpecs.classList.remove('rotate-180');
+                        if (textSpecs) textSpecs.textContent = 'Click here to view developer & technical details';
+                    }
                 });
             }
 
