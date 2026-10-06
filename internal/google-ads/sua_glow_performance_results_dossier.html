@@ -108,10 +108,49 @@
         .header-logo-bar {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 20px;
             margin-bottom: 20px;
             padding-bottom: 16px;
             border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+
+        /* Header Sub-Pills (Aligned underneath the links) */
+        .header-sub-pills {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+            margin-top: 6px;
+        }
+
+        .sub-pill {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            color: var(--text-dark);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .sub-pill:hover {
+            border-color: var(--taupe);
+            color: var(--taupe-dark);
+            background: var(--off-white);
+        }
+
+        .sub-pill.active {
+            background: var(--dark-charcoal);
+            border-color: var(--gold);
+            color: var(--gold);
+            box-shadow: 0 2px 6px rgba(30, 33, 36, 0.2);
         }
 
         /* Timeframe Selector Section (Top of Dashboard) */
@@ -146,21 +185,9 @@
             gap: 8px;
         }
 
-        .timeframe-controls-wrapper {
-            display: grid;
-            grid-template-columns: 320px 1fr auto;
-            gap: 16px;
-            align-items: center;
-        }
-
-        @media (max-width: 900px) {
-            .timeframe-controls-wrapper {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .select-wrapper {
             position: relative;
+            width: 100%;
         }
 
         .custom-select {
@@ -168,7 +195,7 @@
             background: var(--off-white);
             border: 2px solid var(--border-color);
             border-radius: 10px;
-            padding: 10px 38px 10px 14px;
+            padding: 12px 38px 12px 14px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: 13px;
@@ -195,36 +222,86 @@
             color: var(--taupe);
         }
 
-        .pill-group {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
+        /* Week-by-Week Full-Width Pill Row (Underneath the Dropdown) */
+        .week-pills-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 14px;
+            width: 100%;
         }
 
-        .time-pill {
+        .week-card-pill {
             background: var(--off-white);
-            border: 1px solid var(--border-color);
-            color: var(--text-muted);
-            padding: 8px 16px;
-            border-radius: 30px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 12px;
-            font-weight: 600;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 12px 16px;
             cursor: pointer;
+            text-align: left;
             transition: all 0.2s ease;
-            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            position: relative;
         }
 
-        .time-pill:hover {
+        .week-card-pill:hover {
             border-color: var(--taupe);
-            color: var(--dark-charcoal);
+            background: var(--white);
+            transform: translateY(-1px);
         }
 
-        .time-pill.active {
-            background: var(--dark-charcoal);
+        .week-card-pill.active {
+            background: var(--white);
             border-color: var(--gold);
-            color: var(--gold);
-            box-shadow: 0 2px 8px rgba(30, 33, 36, 0.2);
+            box-shadow: 0 4px 14px rgba(229, 184, 105, 0.25);
+        }
+
+        /* Distinct Current Week Highlight */
+        .week-card-pill.is-current {
+            border-color: var(--green);
+            background: rgba(16, 185, 129, 0.03);
+        }
+
+        .week-card-pill.is-current.active {
+            border-color: var(--green);
+            background: rgba(16, 185, 129, 0.08);
+            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.25);
+        }
+
+        .current-week-tag {
+            position: absolute;
+            top: -10px;
+            right: 12px;
+            background: var(--green);
+            color: var(--white);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(16, 185, 129, 0.35);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* Live Pulsing Dot */
+        @keyframes pulseLive {
+            0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        .live-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10B981;
+            animation: pulseLive 1.8s infinite;
+            margin-right: 6px;
+            vertical-align: middle;
         }
 
         /* Cards & Components */
@@ -485,7 +562,7 @@
         }
 
         @media print {
-            .no-print-bar, .timeframe-panel, .btn-action {
+            .no-print-bar, .timeframe-panel, .btn-action, .header-sub-pills {
                 display: none !important;
             }
             body {
@@ -515,7 +592,9 @@
             <i data-lucide="bar-chart-3" style="color:var(--gold);"></i>
             <span>SuA Glow • Google Ads Performance Dashboard</span>
             <span style="opacity:0.6; margin:0 4px;">|</span>
-            <span id="navTimeframeBadge" style="color:var(--gold); font-weight:700;">This Week (Oct 5–11)</span>
+            <span id="navTimeframeBadge" style="color:var(--gold); font-weight:700;">
+                <span class="live-dot"></span>Week 2 (Oct 5–11) • CURRENT WEEK
+            </span>
         </div>
         <div style="display:flex; gap:10px; align-items:center;">
             <button onclick="openEditorModal()" class="btn-action" title="Edit or input exact figures from Google Ads UI">
@@ -530,67 +609,93 @@
     <div class="container">
 
         <!-- ========================================================================= -->
-        <!-- HEADER WITH LOGOS AT TOP -->
+        <!-- HEADER WITH LOGOS AT TOP & AGGREGATE PILLS UNDERNEATH LINKS -->
         <!-- ========================================================================= -->
         <div class="header-logo-bar">
-            <img src="images/sua_glow_circular_logo.png" alt="SuA Glow Logo Emblem" style="height: 54px; width: 54px; object-fit: contain;">
-            <img src="images/sua_k_glow_wordmark_logo.png" alt="SuA K Glow Wordmark" style="height: 36px; object-fit: contain;">
-            <div style="margin-left: auto; text-align: right; font-size: 12px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">
-                Account: 480-656-3884 &bull; Campaign ID: 24303707971<br>
-                Carrollton, TX &bull; suaglow.com &bull; 972-665-8737
+            <!-- Left: Brand Logo Emblem & Wordmark -->
+            <div style="display:flex; align-items:center; gap:18px;">
+                <img src="images/sua_glow_circular_logo.png" alt="SuA Glow Logo Emblem" style="height: 56px; width: 56px; object-fit: contain;">
+                <img src="images/sua_k_glow_wordmark_logo.png" alt="SuA K Glow Wordmark" style="height: 38px; object-fit: contain;">
+            </div>
+
+            <!-- Right: Account info & Aggregate Pills Aligned Across Bottom Underneath Links -->
+            <div style="margin-left: auto; text-align: right;">
+                <div style="font-size: 12px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; line-height: 1.5;">
+                    Account: <strong>480-656-3884</strong> &bull; Campaign ID: <strong>24303707971</strong><br>
+                    Carrollton, TX &bull; <a href="https://suaglow.com" target="_blank" style="color:var(--taupe); text-decoration:none; font-weight:600;">suaglow.com</a> &bull; <a href="tel:972-665-8737" style="color:var(--taupe); text-decoration:none; font-weight:600;">972-665-8737</a>
+                </div>
+                <!-- Pills aligned across the bottom underneath the links: Launch Days & All Time Cumulative -->
+                <div class="header-sub-pills">
+                    <button class="sub-pill time-pill" data-period="launch" onclick="setTimeframe('launch')" title="View Launch 48h Baseline (Sep 28–29, 2026)">
+                        <i data-lucide="flag" style="width:12px; height:12px;"></i> Launch Days 1–2 (Sep 28–29)
+                    </button>
+                    <button class="sub-pill time-pill" data-period="all" onclick="setTimeframe('all')" title="View All Time Cumulative Performance (Sep 28 – Present)">
+                        <i data-lucide="layers" style="width:12px; height:12px;"></i> All Time Cumulative (Sep 28 – Present)
+                    </button>
+                </div>
             </div>
         </div>
 
         <!-- ========================================================================= -->
-        <!-- TOP SECTION: TIMEFRAME SELECTOR (WEEK BY WEEK / DROPDOWN) -->
+        <!-- TOP SECTION: TIMEFRAME SELECTOR (CHRONOLOGICAL ORDER & WEEKLY ROW) -->
         <!-- ========================================================================= -->
         <div class="timeframe-panel">
             <div class="timeframe-panel-header">
                 <div class="timeframe-title">
                     <i data-lucide="calendar" style="color:var(--gold); width:18px; height:18px;"></i>
-                    <span>Select Performance Timeframe</span>
+                    <span>Performance Timeframe Selector</span>
                 </div>
                 <div style="display:flex; align-items:center; gap:8px;">
-                    <span style="font-size:12px; color:var(--text-muted);">Current Selection:</span>
-                    <span id="selectedRangeLabel" style="font-size:12px; font-weight:700; color:var(--dark-charcoal); background:var(--off-white); padding:3px 10px; border-radius:6px; border:1px solid var(--border-color);">
-                        Oct 5 – Oct 6, 2026 (Live Pacing)
+                    <span style="font-size:12px; color:var(--text-muted);">Selected Window:</span>
+                    <span id="selectedRangeLabel" style="font-size:12px; font-weight:700; color:var(--dark-charcoal); background:var(--off-white); padding:4px 12px; border-radius:6px; border:1px solid var(--border-color);">
+                        Oct 5 – Oct 11, 2026 (Week 2 Live Pacing)
+                    </span>
+                    <span id="currentWeekIndicatorBadge" class="badge badge-live" style="font-size:11px; padding:3px 10px;">
+                        <span class="live-dot"></span>CURRENT WEEK
                     </span>
                 </div>
             </div>
 
-            <div class="timeframe-controls-wrapper">
-                <!-- Dropdown Selector -->
-                <div class="select-wrapper">
-                    <select id="timeframeSelect" class="custom-select" onchange="onTimeframeChange(this.value)">
-                        <option value="week2" selected>This Week (Oct 5 – Oct 11, 2026 • Live Pacing)</option>
-                        <option value="week1">Week 1 (Sep 28 – Oct 4, 2026 • Launch Week)</option>
-                        <option value="all">All Time / Cumulative (Sep 28 – Present)</option>
-                        <option value="launch">Initial 48h Baseline (Sep 28 – Sep 29, 2026)</option>
-                    </select>
-                    <i data-lucide="chevron-down" class="select-arrow" style="width:16px; height:16px;"></i>
+            <!-- 1. Chronological Dropdown Selector -->
+            <div class="select-wrapper">
+                <select id="timeframeSelect" class="custom-select" onchange="onTimeframeChange(this.value)">
+                    <option value="launch">1. Launch Days 1–2 (Sep 28 – Sep 29, 2026 • Baseline)</option>
+                    <option value="week1">2. Week 1 (Sep 28 – Oct 4, 2026 • Full Launch Week)</option>
+                    <option value="week2" selected>3. Week 2 (Oct 5 – Oct 11, 2026) ★ CURRENT WEEK (LIVE PACING)</option>
+                    <option value="all">4. All Time Cumulative (Sep 28 – Present • Full Campaign)</option>
+                </select>
+                <i data-lucide="chevron-down" class="select-arrow" style="width:16px; height:16px;"></i>
+            </div>
+
+            <!-- 2. Weekly Progression Pills: All the way across in a row underneath the dropdown -->
+            <div class="week-pills-row">
+                <!-- Week 1 Pill -->
+                <div class="week-card-pill time-pill" data-period="week1" onclick="setTimeframe('week1')">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span style="font-weight:700; font-size:13px; color:var(--dark-charcoal); font-family:'Montserrat', sans-serif;">
+                            Week 1 (Sep 28 – Oct 4, 2026)
+                        </span>
+                        <span style="font-size:11px; color:var(--text-muted); font-weight:600;">Completed</span>
+                    </div>
+                    <div style="font-size:12px; color:var(--text-muted);">
+                        148 Clicks &bull; 11.56% CTR &bull; $1.79 CPC &bull; <strong>15 Inquiries</strong>
+                    </div>
                 </div>
 
-                <!-- Quick-Click Week Pills -->
-                <div class="pill-group">
-                    <button class="time-pill active" data-period="week2" onclick="setTimeframe('week2')">
-                        <i data-lucide="zap" style="width:12px; height:12px; display:inline-block; vertical-align:middle; margin-right:4px;"></i> This Week (Oct 5–11)
-                    </button>
-                    <button class="time-pill" data-period="week1" onclick="setTimeframe('week1')">
-                        Week 1 (Sep 28 – Oct 4)
-                    </button>
-                    <button class="time-pill" data-period="all" onclick="setTimeframe('all')">
-                        All Time (Cumulative)
-                    </button>
-                    <button class="time-pill" data-period="launch" onclick="setTimeframe('launch')">
-                        Launch Days 1–2
-                    </button>
-                </div>
-
-                <!-- Live Pacing Tag -->
-                <div>
-                    <span id="pacingHealthTag" class="pill-green" style="font-size:12px;">
-                        <i data-lucide="trending-up" style="width:12px; height:12px; display:inline-block; vertical-align:middle; margin-right:2px;"></i> Accelerating CTR
+                <!-- Week 2 Pill (Highlighted as Current Week) -->
+                <div class="week-card-pill is-current time-pill active" data-period="week2" onclick="setTimeframe('week2')">
+                    <span class="current-week-tag">
+                        <span class="live-dot" style="background:#fff; width:6px; height:6px; margin-right:4px;"></span>CURRENT WEEK (LIVE)
                     </span>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span style="font-weight:700; font-size:13px; color:var(--green); font-family:'Montserrat', sans-serif; display:flex; align-items:center;">
+                            <span class="live-dot"></span>Week 2 (Oct 5 – Oct 11, 2026)
+                        </span>
+                        <span style="font-size:11px; color:var(--green); font-weight:700; margin-right:110px;">Active Pacing</span>
+                    </div>
+                    <div style="font-size:12px; color:var(--text-dark);">
+                        <strong>45 Clicks</strong> &bull; <strong style="color:var(--green);">12.64% CTR</strong> &bull; $1.65 CPC &bull; <strong style="color:var(--gold);">7 Inquiries ($10.60 CPL)</strong>
+                    </div>
                 </div>
             </div>
         </div>
@@ -599,7 +704,7 @@
         <!-- SECTION 1: EXECUTIVE HERO COVER -->
         <!-- ========================================================================= -->
         <div class="card hero-card">
-            <span class="brand-subtitle" id="heroSubtitle">Executive Performance Report  &bull;  This Week (Week 2 Pacing)</span>
+            <span class="brand-subtitle" id="heroSubtitle">Executive Performance Report  &bull;  This Week (Week 2 Live Pacing)</span>
             <h1 class="hero-title" id="heroTitle">SuA Glow Hair &amp; Scalp Reset</h1>
             <p id="heroDescription" style="color: var(--taupe); font-size: 15px; max-width: 800px; margin-bottom: 20px;">
                 Live Google Search Campaign Analytics &bull; $399 Korean Scalp Reset &bull; Dallas–Fort Worth Metroplex
@@ -647,7 +752,7 @@
                     <i data-lucide="scale" style="color:var(--taupe);"></i> Industry Benchmark Comparison
                 </h2>
                 <span id="benchmarkTimeframeTag" style="font-size:12px; color:var(--text-muted); font-weight:600;">
-                    Showing: This Week (Week 2)
+                    Showing: Week 2 (Oct 5–11) • Current Week
                 </span>
             </div>
             <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
@@ -677,7 +782,7 @@
                     <i data-lucide="pie-chart" style="color:var(--taupe);"></i> Performance by Patient Segment (Ad Groups)
                 </h2>
                 <span id="adGroupTimeframeTag" style="font-size:12px; color:var(--text-muted); font-weight:600;">
-                    Showing: This Week (Week 2)
+                    Showing: Week 2 (Oct 5–11) • Current Week
                 </span>
             </div>
             <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
@@ -736,14 +841,14 @@
         </div>
 
         <!-- ========================================================================= -->
-        <!-- SECTION 6: DAY-BY-DAY TRAJECTORY IN TIMEFRAME -->
+        <!-- SECTION 6: DAY-BY-DAY TRAJECTORY IN TIMEFRAME (CHRONOLOGICAL) -->
         <!-- ========================================================================= -->
         <div class="card">
             <h2 style="font-size: 18px; font-weight: 700; margin-bottom: 6px; display:flex; align-items:center; gap:8px;">
-                <i data-lucide="trending-up" style="color:var(--taupe);"></i> Daily Pacing &amp; Learning Trajectory
+                <i data-lucide="trending-up" style="color:var(--taupe);"></i> Daily Pacing &amp; Learning Trajectory (Chronological)
             </h2>
             <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 18px;">
-                Daily performance metrics illustrating auction learning, click momentum, and cost optimization:
+                Daily performance metrics in chronological order illustrating auction learning, click momentum, and cost optimization:
             </p>
             <div class="grid-2" id="dailyPacingContainer">
                 <!-- Dynamic Pacing Cards Populated by JS -->
@@ -908,12 +1013,12 @@
             </div>
 
             <div style="margin-bottom:16px;">
-                <label style="font-size:12px; font-weight:700; color:var(--text-dark); display:block; margin-bottom:6px;">Target Period to Update:</label>
+                <label style="font-size:12px; font-weight:700; color:var(--text-dark); display:block; margin-bottom:6px;">Target Period to Update (Chronological):</label>
                 <select id="editPeriodSelect" class="custom-select" style="background:#fff;" onchange="loadEditorValues(this.value)">
-                    <option value="week2">This Week (Week 2: Oct 5 – Oct 11, 2026)</option>
-                    <option value="week1">Week 1 (Sep 28 – Oct 4, 2026)</option>
-                    <option value="all">All Time / Cumulative</option>
-                    <option value="launch">Launch Initial 48h</option>
+                    <option value="launch">1. Launch Days 1–2 (Sep 28 – Sep 29, 2026)</option>
+                    <option value="week1">2. Week 1 (Sep 28 – Oct 4, 2026)</option>
+                    <option value="week2">3. Week 2 (Oct 5 – Oct 11, 2026 • CURRENT WEEK)</option>
+                    <option value="all">4. All Time Cumulative (Sep 28 – Present)</option>
                 </select>
             </div>
 
@@ -936,7 +1041,7 @@
                 </div>
                 <div class="form-group">
                     <label>Date Range Label</label>
-                    <input type="text" id="editDateRange" placeholder="e.g. Oct 5 – Oct 6, 2026">
+                    <input type="text" id="editDateRange" placeholder="e.g. Oct 5 – Oct 11, 2026">
                 </div>
                 <div class="form-group">
                     <label>Daily Budget ($/day)</label>
@@ -956,16 +1061,117 @@
     </div>
 
     <!-- ========================================================================= -->
-    <!-- CLIENT JAVASCRIPT: WEEK-BY-WEEK DATA & INTERACTIVITY -->
+    <!-- CLIENT JAVASCRIPT: STRICT CHRONOLOGICAL DATA & TWO-WAY SYNC -->
     <!-- ========================================================================= -->
     <script>
-        // Default Dataset: Comprehensive Week-by-Week Google Ads Metrics
+        // Chronological Dataset Definition
         const defaultTimeframeData = {
+            launch: {
+                key: "launch",
+                order: 1,
+                name: "Launch Days 1–2 (Sep 28 – Sep 29, 2026)",
+                shortName: "Launch Days 1–2",
+                subtitle: "Executive Performance Report • Initial Launch Baseline (Days 1–2)",
+                dateRange: "Sep 28 – Sep 29, 2026 (Launch Baseline)",
+                isCurrent: false,
+                statusBadge: "Status: Active & Serving",
+                dailyBudget: "$40.00/day",
+                totalSpend: "$48.74",
+                spendSub: "Initial auction entry",
+                clicks: "27",
+                clicksSub: "High-intent prospective patients",
+                impressions: "242",
+                impressionsSub: "Targeted DFW search auctions",
+                ctr: "11.16%",
+                ctrSub: "+160% above industry benchmark",
+                cpc: "$1.81",
+                cpcSub: "60% below DFW market average ($4.50+)",
+                leads: "2",
+                cpl: "$24.37",
+                pacingTag: "Launch Baseline Established",
+                pacingTagClass: "pill-green",
+                benchmarks: [
+                    { metric: "Click-Through Rate (CTR)", actual: "11.16%", bench: "3.8% – 4.5%", assess: "OUTSTANDING (+160% above benchmark)", pill: "pill-green" },
+                    { metric: "Average Cost Per Click (CPC)", actual: "$1.81", bench: "$4.50 – $7.20", assess: "EXCELLENT (60% lower acquisition cost)", pill: "pill-green" },
+                    { metric: "Ad Strength & Coverage", actual: "100% 'Good'", bench: "Average / Incomplete", assess: "Full 15 headlines & 4 descriptions active", pill: "pill-green" },
+                    { metric: "Targeting Efficiency", actual: "100% Search Only", bench: "Display Expanded (Diluted)", assess: "Zero budget waste; 13 DFW cities with strict presence", pill: "pill-green" }
+                ],
+                adGroups: [
+                    { name: "Ad Group 2: Thinning / Women", color: "#DB2777", impr: "121", clicks: "14", ctr: "11.57%", cpc: "$1.61", spend: "$22.50", leads: "1", insight: "Top Performer: Highest volume & lowest cost per click." },
+                    { name: "Ad Group 1: Combined / Hair Loss", color: "var(--taupe)", impr: "110", clicks: "12", ctr: "10.91%", cpc: "$1.99", spend: "$23.92", leads: "1", insight: "Strong clinical intent on Korean scalp treatments." },
+                    { name: "Ad Group 3: Hairline / Men", color: "#2563EB", impr: "11", clicks: "1", ctr: "9.09%", cpc: "$2.32", spend: "$2.32", leads: "0", insight: "Newly activated; steadily building auction history." }
+                ],
+                totalRow: { impr: "242", clicks: "27", ctr: "11.16%", cpc: "$1.81", spend: "$48.74", leads: "2", note: "High-efficiency patient acquisition funnel." },
+                searchTerms: [
+                    { query: "korean hair treatment for hair loss", group: "Combined / Hair Loss", match: "Phrase match", clicks: "2", ctr: "100.0%", cpc: "$2.61", spend: "$5.22" },
+                    { query: "how to grow hair back on your head", group: "Thinning / Women", match: "Phrase match", clicks: "2", ctr: "66.7%", cpc: "$0.74", spend: "$1.47" },
+                    { query: "hair growth clinic near me", group: "Combined / Hair Loss", match: "Exact match", clicks: "1", ctr: "100.0%", cpc: "$1.33", spend: "$1.33" },
+                    { query: "stem cells for hair growth", group: "Combined / Hair Loss", match: "Phrase match", clicks: "1", ctr: "50.0%", cpc: "$2.20", spend: "$2.20" },
+                    { query: "aveya hair growth spray", group: "Combined / Hair Loss", match: "Phrase match", clicks: "1", ctr: "33.3%", cpc: "$2.64", spend: "$2.64" }
+                ],
+                dailyPacing: [
+                    { label: "Day 1 (Sep 28, 2026): Launch Entry", desc: "Initial auction entry & impressions pickup", impr: "181", clicks: "16", ctr: "8.84%", cpc: "$2.17", spend: "$34.71", borderCol: "var(--taupe)" },
+                    { label: "Day 2 (Sep 29, 2026): CTR Acceleration", desc: "CTR jumped to 17.74% while CPC dropped to $1.28", impr: "62", clicks: "11", ctr: "17.74%", cpc: "$1.28", spend: "$14.03", borderCol: "var(--green)" }
+                ]
+            },
+            week1: {
+                key: "week1",
+                order: 2,
+                name: "Week 1 (Sep 28 – Oct 4, 2026 • Full Launch Week)",
+                shortName: "Week 1 (Sep 28–Oct 4)",
+                subtitle: "Executive Performance Report • Full Launch Week 1 (Days 1–7)",
+                dateRange: "Sep 28 – Oct 4, 2026 (Full First Week)",
+                isCurrent: false,
+                statusBadge: "Status: Active & Serving",
+                dailyBudget: "$40.00/day",
+                totalSpend: "$264.80",
+                spendSub: "Average $37.83/day",
+                clicks: "148",
+                clicksSub: "Qualified DFW patient visitors",
+                impressions: "1,280",
+                impressionsSub: "Targeted DFW search auctions",
+                ctr: "11.56%",
+                ctrSub: "+175% above industry benchmark",
+                cpc: "$1.79",
+                cpcSub: "60% below DFW market average",
+                leads: "15",
+                cpl: "$17.65",
+                pacingTag: "Completed Launch Week",
+                pacingTagClass: "pill-green",
+                benchmarks: [
+                    { metric: "Click-Through Rate (CTR)", actual: "11.56%", bench: "3.8% – 4.5%", assess: "OUTSTANDING (+175% above benchmark)", pill: "pill-green" },
+                    { metric: "Average Cost Per Click (CPC)", actual: "$1.79", bench: "$4.50 – $7.20", assess: "EXCELLENT (60% lower acquisition cost)", pill: "pill-green" },
+                    { metric: "Ad Strength & Coverage", actual: "100% 'Good'", bench: "Average / Incomplete", assess: "Full 15 headlines & 4 descriptions active", pill: "pill-green" },
+                    { metric: "Patient Leads (Calls & Forms)", actual: "15 Leads", bench: "2 – 4 Leads/week", assess: "EXCELLENT ($17.65 Blended CPL)", pill: "pill-green" },
+                    { metric: "Targeting Efficiency", actual: "100% Search Only", bench: "Display Expanded (Diluted)", assess: "Zero budget waste; 13 DFW cities with strict presence", pill: "pill-green" }
+                ],
+                adGroups: [
+                    { name: "Ad Group 2: Thinning / Women", color: "#DB2777", impr: "642", clicks: "79", ctr: "12.31%", cpc: "$1.64", spend: "$129.56", leads: "9", insight: "Primary Growth Engine: Highest click volume & lowest CPL" },
+                    { name: "Ad Group 1: Combined / Hair Loss", color: "var(--taupe)", impr: "518", clicks: "58", ctr: "11.20%", cpc: "$1.91", spend: "$110.78", leads: "5", insight: "Strong intent on clinic-based Korean scalp reset" },
+                    { name: "Ad Group 3: Hairline / Men", color: "#2563EB", impr: "120", clicks: "11", ctr: "9.17%", cpc: "$2.22", spend: "$24.46", leads: "1", insight: "Activated mid-week; building search impression share" }
+                ],
+                totalRow: { impr: "1,280", clicks: "148", ctr: "11.56%", cpc: "$1.79", spend: "$264.80", leads: "15", note: "Strong initial week establishing campaign Quality Score." },
+                searchTerms: [
+                    { query: "korean hair treatment for hair loss", group: "Combined / Hair Loss", match: "Phrase match", clicks: "14", ctr: "21.5%", cpc: "$1.92", spend: "$26.88" },
+                    { query: "how to grow hair back on your head", group: "Thinning / Women", match: "Phrase match", clicks: "12", ctr: "18.2%", cpc: "$1.40", spend: "$16.80" },
+                    { query: "hair growth clinic near me", group: "Combined / Hair Loss", match: "Exact match", clicks: "9", ctr: "24.3%", cpc: "$1.65", spend: "$14.85" },
+                    { query: "hair thinning solutions dallas", group: "Thinning / Women", match: "Phrase match", clicks: "8", ctr: "19.0%", cpc: "$1.55", spend: "$12.40" },
+                    { query: "stem cells for hair growth", group: "Combined / Hair Loss", match: "Phrase match", clicks: "6", ctr: "15.4%", cpc: "$2.10", spend: "$12.60" },
+                    { query: "scalp rejuvenation treatment near me", group: "Combined / Hair Loss", match: "Phrase match", clicks: "5", ctr: "17.9%", cpc: "$1.85", spend: "$9.25" }
+                ],
+                dailyPacing: [
+                    { label: "Mon–Wed (Sep 28–30): Initial Entry", desc: "Initial entry into DFW auctions with $35/day pace", impr: "518", clicks: "57", ctr: "11.00%", cpc: "$1.86", spend: "$105.86", borderCol: "var(--taupe)" },
+                    { label: "Thu–Sun (Oct 1–4): Efficiency Peak", desc: "CTR climbed to 12.1% while CPC compressed to $1.74", impr: "762", clicks: "91", ctr: "11.94%", cpc: "$1.74", spend: "$158.94", borderCol: "var(--green)" }
+                ]
+            },
             week2: {
-                name: "This Week (Week 2: Oct 5 – Oct 11, 2026)",
-                shortName: "This Week (Oct 5–11)",
-                subtitle: "Executive Performance Report • This Week (Week 2 Pacing)",
-                dateRange: "Oct 5 – Oct 6, 2026 (Live Pacing)",
+                key: "week2",
+                order: 3,
+                name: "Week 2 (Oct 5 – Oct 11, 2026) ★ CURRENT WEEK",
+                shortName: "Week 2 (Oct 5–11) • CURRENT WEEK",
+                subtitle: "Executive Performance Report • CURRENT WEEK (Week 2 Live Pacing)",
+                dateRange: "Oct 5 – Oct 11, 2026 (Live Pacing)",
+                isCurrent: true,
                 statusBadge: "Status: Active & Serving",
                 dailyBudget: "$40.00/day",
                 totalSpend: "$74.20",
@@ -980,7 +1186,7 @@
                 cpcSub: "63% below DFW market average ($4.50+)",
                 leads: "7",
                 cpl: "$10.60",
-                pacingTag: "Accelerating CTR (+100%)",
+                pacingTag: "Accelerating CTR & Volume",
                 pacingTagClass: "pill-green",
                 benchmarks: [
                     { metric: "Click-Through Rate (CTR)", actual: "12.64%", bench: "3.8% – 4.5%", assess: "OUTSTANDING (+200% above benchmark)", pill: "pill-green" },
@@ -1009,58 +1215,14 @@
                     { label: "Tuesday (Oct 6, 2026 to date)", desc: "Accelerating CTR & low CPC ($1.70)", impr: "164", clicks: "21", ctr: "12.80%", cpc: "$1.70", spend: "$35.80", borderCol: "var(--green)" }
                 ]
             },
-            week1: {
-                name: "Week 1 (Sep 28 – Oct 4, 2026 • Full Launch Week)",
-                shortName: "Week 1 (Sep 28–Oct 4)",
-                subtitle: "Executive Performance Report • Full Launch Week (Days 1–7)",
-                dateRange: "Sep 28 – Oct 4, 2026 (First Full Week)",
-                statusBadge: "Status: Active & Serving",
-                dailyBudget: "$40.00/day",
-                totalSpend: "$264.80",
-                spendSub: "Average $37.83/day",
-                clicks: "148",
-                clicksSub: "Qualified DFW visitors",
-                impressions: "1,280",
-                impressionsSub: "Targeted DFW search auctions",
-                ctr: "11.56%",
-                ctrSub: "+175% above industry benchmark",
-                cpc: "$1.79",
-                cpcSub: "60% below DFW market average",
-                leads: "15",
-                cpl: "$17.65",
-                pacingTag: "Successful Launch Baseline",
-                pacingTagClass: "pill-green",
-                benchmarks: [
-                    { metric: "Click-Through Rate (CTR)", actual: "11.56%", bench: "3.8% – 4.5%", assess: "OUTSTANDING (+175% above benchmark)", pill: "pill-green" },
-                    { metric: "Average Cost Per Click (CPC)", actual: "$1.79", bench: "$4.50 – $7.20", assess: "EXCELLENT (60% lower acquisition cost)", pill: "pill-green" },
-                    { metric: "Ad Strength & Coverage", actual: "100% 'Good'", bench: "Average / Incomplete", assess: "Full 15 headlines & 4 descriptions active", pill: "pill-green" },
-                    { metric: "Patient Leads (Calls & Forms)", actual: "15 Leads", bench: "2 – 4 Leads/week", assess: "EXCELLENT ($17.65 Blended CPL)", pill: "pill-green" },
-                    { metric: "Targeting Efficiency", actual: "100% Search Only", bench: "Display Expanded (Diluted)", assess: "Zero budget waste; 13 DFW cities with strict presence", pill: "pill-green" }
-                ],
-                adGroups: [
-                    { name: "Ad Group 2: Thinning / Women", color: "#DB2777", impr: "642", clicks: "79", ctr: "12.31%", cpc: "$1.64", spend: "$129.56", leads: "9", insight: "Primary Growth Engine: Highest click volume & lowest CPL" },
-                    { name: "Ad Group 1: Combined / Hair Loss", color: "var(--taupe)", impr: "518", clicks: "58", ctr: "11.20%", cpc: "$1.91", spend: "$110.78", leads: "5", insight: "Strong intent on clinic-based Korean scalp reset" },
-                    { name: "Ad Group 3: Hairline / Men", color: "#2563EB", impr: "120", clicks: "11", ctr: "9.17%", cpc: "$2.22", spend: "$24.46", leads: "1", insight: "Activated mid-week; building search impression share" }
-                ],
-                totalRow: { impr: "1,280", clicks: "148", ctr: "11.56%", cpc: "$1.79", spend: "$264.80", leads: "15", note: "Strong initial week establishing campaign Quality Score." },
-                searchTerms: [
-                    { query: "korean hair treatment for hair loss", group: "Combined / Hair Loss", match: "Phrase match", clicks: "14", ctr: "21.5%", cpc: "$1.92", spend: "$26.88" },
-                    { query: "how to grow hair back on your head", group: "Thinning / Women", match: "Phrase match", clicks: "12", ctr: "18.2%", cpc: "$1.40", spend: "$16.80" },
-                    { query: "hair growth clinic near me", group: "Combined / Hair Loss", match: "Exact match", clicks: "9", ctr: "24.3%", cpc: "$1.65", spend: "$14.85" },
-                    { query: "hair thinning solutions dallas", group: "Thinning / Women", match: "Phrase match", clicks: "8", ctr: "19.0%", cpc: "$1.55", spend: "$12.40" },
-                    { query: "stem cells for hair growth", group: "Combined / Hair Loss", match: "Phrase match", clicks: "6", ctr: "15.4%", cpc: "$2.10", spend: "$12.60" },
-                    { query: "scalp rejuvenation treatment near me", group: "Combined / Hair Loss", match: "Phrase match", clicks: "5", ctr: "17.9%", cpc: "$1.85", spend: "$9.25" }
-                ],
-                dailyPacing: [
-                    { label: "Mon–Wed (Sep 28–30): Auction Entry", desc: "Initial entry into DFW auctions with $35/day pace", impr: "518", clicks: "57", ctr: "11.00%", cpc: "$1.86", spend: "$105.86", borderCol: "var(--taupe)" },
-                    { label: "Thu–Sun (Oct 1–4): Efficiency Peak", desc: "CTR climbed to 12.1% while CPC compressed to $1.74", impr: "762", clicks: "91", ctr: "11.94%", cpc: "$1.74", spend: "$158.94", borderCol: "var(--green)" }
-                ]
-            },
             all: {
-                name: "All Time / Cumulative (Sep 28 – Present)",
-                shortName: "All Time (Cumulative)",
-                subtitle: "Executive Performance Report • Cumulative Campaign Analytics (Sep 28 – Present)",
-                dateRange: "Sep 28 – Oct 6, 2026 (9 Days Live)",
+                key: "all",
+                order: 4,
+                name: "All Time Cumulative (Sep 28 – Present)",
+                shortName: "All Time Cumulative",
+                subtitle: "Executive Performance Report • All Time Cumulative Analytics (Sep 28 – Present)",
+                dateRange: "Sep 28 – Oct 6, 2026 (Full Campaign)",
+                isCurrent: false,
                 statusBadge: "Status: Active & Serving",
                 dailyBudget: "$40.00/day",
                 totalSpend: "$339.00",
@@ -1102,55 +1264,10 @@
                     { label: "Week 1 Cumulative (Sep 28 – Oct 4)", desc: "148 clicks, $1.79 CPC, 15 patient inquiries logged", impr: "1,280", clicks: "148", ctr: "11.56%", cpc: "$1.79", spend: "$264.80", borderCol: "var(--taupe)" },
                     { label: "Week 2 to Date (Oct 5 – Oct 6)", desc: "45 clicks, $1.65 CPC, 7 patient inquiries logged", impr: "356", clicks: "45", ctr: "12.64%", cpc: "$1.65", spend: "$74.20", borderCol: "var(--green)" }
                 ]
-            },
-            launch: {
-                name: "Initial 48h Baseline (Sep 28 – Sep 29, 2026)",
-                shortName: "Launch Days 1–2",
-                subtitle: "Executive Performance Report • Initial Launch Results",
-                dateRange: "Sep 28 – Sep 29, 2026 (Launch 48 Hours)",
-                statusBadge: "Status: Active & Serving",
-                dailyBudget: "$40.00/day",
-                totalSpend: "$48.74",
-                spendSub: "Initial auction entry",
-                clicks: "27",
-                clicksSub: "High-intent prospective patients",
-                impressions: "242",
-                impressionsSub: "Targeted DFW search auctions",
-                ctr: "11.16%",
-                ctrSub: "+160% above industry benchmark",
-                cpc: "$1.81",
-                cpcSub: "60% below DFW market average ($4.50+)",
-                leads: "2",
-                cpl: "$24.37",
-                pacingTag: "Initial Benchmark Baseline",
-                pacingTagClass: "pill-green",
-                benchmarks: [
-                    { metric: "Click-Through Rate (CTR)", actual: "11.16%", bench: "3.8% – 4.5%", assess: "OUTSTANDING (+160% above benchmark)", pill: "pill-green" },
-                    { metric: "Average Cost Per Click (CPC)", actual: "$1.81", bench: "$4.50 – $7.20", assess: "EXCELLENT (60% lower acquisition cost)", pill: "pill-green" },
-                    { metric: "Ad Strength & Coverage", actual: "100% 'Good'", bench: "Average / Incomplete", assess: "Full 15 headlines & 4 descriptions active", pill: "pill-green" },
-                    { metric: "Targeting Efficiency", actual: "100% Search Only", bench: "Display Expanded (Diluted)", assess: "Zero budget waste; 13 DFW cities with strict presence", pill: "pill-green" }
-                ],
-                adGroups: [
-                    { name: "Ad Group 2: Thinning / Women", color: "#DB2777", impr: "121", clicks: "14", ctr: "11.57%", cpc: "$1.61", spend: "$22.50", leads: "1", insight: "Top Performer: Highest volume & lowest cost per click." },
-                    { name: "Ad Group 1: Combined / Hair Loss", color: "var(--taupe)", impr: "110", clicks: "12", ctr: "10.91%", cpc: "$1.99", spend: "$23.92", leads: "1", insight: "Strong clinical intent on Korean scalp treatments." },
-                    { name: "Ad Group 3: Hairline / Men", color: "#2563EB", impr: "11", clicks: "1", ctr: "9.09%", cpc: "$2.32", spend: "$2.32", leads: "0", insight: "Newly activated; steadily building auction history." }
-                ],
-                totalRow: { impr: "242", clicks: "27", ctr: "11.16%", cpc: "$1.81", spend: "$48.74", leads: "2", note: "High-efficiency patient acquisition funnel." },
-                searchTerms: [
-                    { query: "korean hair treatment for hair loss", group: "Combined / Hair Loss", match: "Phrase match", clicks: "2", ctr: "100.0%", cpc: "$2.61", spend: "$5.22" },
-                    { query: "how to grow hair back on your head", group: "Thinning / Women", match: "Phrase match", clicks: "2", ctr: "66.7%", cpc: "$0.74", spend: "$1.47" },
-                    { query: "hair growth clinic near me", group: "Combined / Hair Loss", match: "Exact match", clicks: "1", ctr: "100.0%", cpc: "$1.33", spend: "$1.33" },
-                    { query: "stem cells for hair growth", group: "Combined / Hair Loss", match: "Phrase match", clicks: "1", ctr: "50.0%", cpc: "$2.20", spend: "$2.20" },
-                    { query: "aveya hair growth spray", group: "Combined / Hair Loss", match: "Phrase match", clicks: "1", ctr: "33.3%", cpc: "$2.64", spend: "$2.64" }
-                ],
-                dailyPacing: [
-                    { label: "Launch Day (Sep 28, 2026)", desc: "Initial auction entry & impressions pickup", impr: "181", clicks: "16", ctr: "8.84%", cpc: "$2.17", spend: "$34.71", borderCol: "var(--taupe)" },
-                    { label: "Day 2 Pacing (Sep 29, 2026)", desc: "Accelerating CTR & decreasing CPC", impr: "62", clicks: "11", ctr: "17.74%", cpc: "$1.28", spend: "$14.03", borderCol: "var(--green)" }
-                ]
             }
         };
 
-        // Load custom saved overrides from LocalStorage if available
+        // Load custom overrides from LocalStorage if available
         let appData = JSON.parse(localStorage.getItem('suaGlowAdMetrics') || 'null');
         if (!appData) {
             appData = defaultTimeframeData;
@@ -1163,12 +1280,22 @@
             currentPeriod = periodKey;
             const data = appData[periodKey] || appData['week2'];
 
-            // 1. Update Navigation and Header Badges
-            document.getElementById('navTimeframeBadge').textContent = data.shortName;
+            // 1. Update Navigation Bar and Header Indicators
+            const navBadge = document.getElementById('navTimeframeBadge');
+            if (data.isCurrent) {
+                navBadge.innerHTML = `<span class="live-dot"></span>${data.shortName}`;
+                document.getElementById('currentWeekIndicatorBadge').style.display = 'inline-flex';
+            } else {
+                navBadge.textContent = data.shortName;
+                document.getElementById('currentWeekIndicatorBadge').style.display = 'none';
+            }
+
             document.getElementById('selectedRangeLabel').textContent = data.dateRange;
 
-            // Update Dropdown and Pills active state
+            // Sync Dropdown value
             document.getElementById('timeframeSelect').value = periodKey;
+
+            // Sync all pill elements (.time-pill, .sub-pill, .week-card-pill)
             document.querySelectorAll('.time-pill').forEach(btn => {
                 if (btn.getAttribute('data-period') === periodKey) {
                     btn.classList.add('active');
@@ -1176,10 +1303,6 @@
                     btn.classList.remove('active');
                 }
             });
-
-            // Update Pacing Tag
-            const pTag = document.getElementById('pacingHealthTag');
-            pTag.textContent = data.pacingTag;
 
             // 2. Update Hero Banner
             document.getElementById('heroSubtitle').textContent = data.subtitle;
@@ -1198,14 +1321,14 @@
             document.getElementById('statCpc').textContent = data.cpc;
             document.getElementById('statCpcSub').textContent = data.cpcSub;
 
-            // Add smooth fade class
+            // Trigger subtle fade-in transition
             document.querySelectorAll('.stat-val').forEach(el => {
                 el.classList.remove('fade-in');
                 void el.offsetWidth;
                 el.classList.add('fade-in');
             });
 
-            // 4. Update Section Headers
+            // 4. Update Section Subtitles
             document.getElementById('benchmarkTimeframeTag').textContent = `Showing: ${data.shortName}`;
             document.getElementById('adGroupTimeframeTag').textContent = `Showing: ${data.shortName}`;
 
@@ -1241,7 +1364,7 @@
                 agTbody.appendChild(tr);
             });
 
-            // Total Row
+            // Ad Group Total Row
             const trTotal = document.createElement('tr');
             trTotal.style.background = 'var(--off-white)';
             trTotal.style.fontWeight = '700';
@@ -1274,7 +1397,7 @@
                 sqTbody.appendChild(tr);
             });
 
-            // 8. Update Daily Pacing Cards
+            // 8. Update Daily Pacing Cards (Strict Chronological)
             const dpContainer = document.getElementById('dailyPacingContainer');
             dpContainer.innerHTML = '';
             data.dailyPacing.forEach(dp => {
@@ -1307,7 +1430,7 @@
             lucide.createIcons();
         }
 
-        // Event Handlers for Timeframe Selection
+        // Two-way Event Handlers
         function onTimeframeChange(val) {
             renderDashboard(val);
         }
@@ -1349,7 +1472,6 @@
             const ctr = imp > 0 ? ((clk / imp) * 100).toFixed(2) + '%' : '0.00%';
             const cpc = clk > 0 ? '$' + (spd / clk).toFixed(2) : '$0.00';
 
-            // Update in data
             appData[periodKey].impressions = imp.toLocaleString();
             appData[periodKey].clicks = clk.toLocaleString();
             appData[periodKey].totalSpend = '$' + spd.toFixed(2);
@@ -1359,7 +1481,6 @@
             if (dr) appData[periodKey].dateRange = dr;
             if (db) appData[periodKey].dailyBudget = db;
 
-            // Also update total row
             appData[periodKey].totalRow.impr = imp.toLocaleString();
             appData[periodKey].totalRow.clicks = clk.toLocaleString();
             appData[periodKey].totalRow.spend = '$' + spd.toFixed(2);
@@ -1367,10 +1488,8 @@
             appData[periodKey].totalRow.cpc = cpc;
             appData[periodKey].totalRow.leads = lds;
 
-            // Save to localStorage
             localStorage.setItem('suaGlowAdMetrics', JSON.stringify(appData));
 
-            // Close modal and re-render
             closeEditorModal();
             renderDashboard(periodKey);
         }
@@ -1384,7 +1503,7 @@
             }
         }
 
-        // Initial Load (default: week2)
+        // Initialize with Week 2 (Current Week) on page load
         document.addEventListener('DOMContentLoaded', () => {
             renderDashboard('week2');
         });
