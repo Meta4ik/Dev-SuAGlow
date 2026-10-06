@@ -460,60 +460,86 @@ body:has([data-holo-card]) {
   }
 }
 
-/* Bottom Row: The SuA Glow Glass Skin Method™, Founding 50, VIP Membership Pass */
+/* Bottom Stack: Founding 50, The SuA Glow Glass Skin Method™, VIP Membership Pass */
 .holo-card-bottom {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
-}
-
-.holo-card-method-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.75rem;
-}
-
-.holo-card-method-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.60rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(220, 195, 155, 0.92);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
-  line-height: 1.25;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 2px;
+  gap: 0.35rem;
 }
 
 @media (min-width: 640px) {
-  .holo-card-method-title {
-    font-size: 0.70rem;
-    letter-spacing: 0.15em;
+  .holo-card-bottom {
+    gap: 0.45rem;
   }
 }
 
-.holo-card-method-title .tm-sup {
-  font-size: 0.44rem;
-  color: #ECC078;
-  font-weight: 800;
+.holo-card-tier-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .holo-card-member-since {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.52rem;
+  font-size: 0.48rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #F5E8D3;
   font-weight: 700;
   white-space: nowrap;
-  padding: 0.18rem 0.55rem;
+  padding: 0.14rem 0.50rem;
   border-radius: 9999px;
   background: rgba(10, 12, 14, 0.75);
   border: 1px solid rgba(220, 195, 155, 0.45);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 640px) {
+  .holo-card-member-since {
+    font-size: 0.54rem;
+    padding: 0.16rem 0.55rem;
+  }
+}
+
+.holo-card-method-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.holo-card-method-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(220, 195, 155, 0.95);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.2;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .holo-card-method-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+  }
+}
+
+.holo-card-method-title .tm-sup {
+  display: inline-block;
+  font-size: 0.62em;
+  font-weight: 800;
+  color: #ECC078;
+  vertical-align: top;
+  position: relative;
+  top: -0.32em;
+  margin-left: 3px;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .holo-card-details-row {
@@ -747,22 +773,25 @@ body:has([data-holo-card]) {
 }
 
 .holo-card-mini .holo-card-bottom {
-  gap: 0.25rem !important;
-}
-
-.holo-card-mini .holo-card-method-title {
-  font-size: 0.46rem !important;
-  letter-spacing: 0.10em !important;
-}
-
-.holo-card-mini .holo-card-method-title .tm-sup {
-  font-size: 0.36rem !important;
+  gap: 0.20rem !important;
 }
 
 .holo-card-mini .holo-card-member-since {
-  font-size: 0.40rem !important;
-  padding: 0.10rem 0.38rem !important;
+  font-size: 0.38rem !important;
+  padding: 0.08rem 0.35rem !important;
   letter-spacing: 0.12em !important;
+}
+
+.holo-card-mini .holo-card-method-title {
+  font-size: 0.44rem !important;
+  letter-spacing: 0.08em !important;
+  white-space: nowrap !important;
+}
+
+.holo-card-mini .holo-card-method-title .tm-sup {
+  font-size: 0.62em !important;
+  top: -0.28em !important;
+  margin-left: 2px !important;
 }
 
 .holo-card-mini .holo-card-details-row {
