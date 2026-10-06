@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuA Glow • Google Ads Performance &amp; Results Dashboard</title>
     
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -597,6 +602,9 @@
             </span>
         </div>
         <div style="display:flex; gap:10px; align-items:center;">
+            <button onclick="purgeCacheAndReload()" class="btn-action" title="Clear local storage cache and hard-reload latest version">
+                <i data-lucide="rotate-cw" style="width:14px; height:14px;"></i> Clear Cache
+            </button>
             <button onclick="openEditorModal()" class="btn-action" title="Edit or input exact figures from Google Ads UI">
                 <i data-lucide="edit-3" style="width:14px; height:14px;"></i> Update Metrics
             </button>
@@ -1267,13 +1275,28 @@
             }
         };
 
-        // Load custom overrides from LocalStorage if available
-        let appData = JSON.parse(localStorage.getItem('suaGlowAdMetrics') || 'null');
+        // Automatically clear old legacy cache keys from previous revisions
+        if (localStorage.getItem('suaGlowAdMetrics') && !localStorage.getItem('suaGlowAdMetrics_v3')) {
+            localStorage.removeItem('suaGlowAdMetrics');
+        }
+
+        // Load custom overrides from LocalStorage (v3) if available
+        let appData = JSON.parse(localStorage.getItem('suaGlowAdMetrics_v3') || 'null');
         if (!appData) {
             appData = defaultTimeframeData;
         }
 
         let currentPeriod = 'week2';
+
+        // Purge local storage cache and hard-reload latest version
+        function purgeCacheAndReload() {
+            localStorage.removeItem('suaGlowAdMetrics');
+            localStorage.removeItem('suaGlowAdMetrics_v2');
+            localStorage.removeItem('suaGlowAdMetrics_v3');
+            sessionStorage.clear();
+            const cleanUrl = window.location.origin + window.location.pathname + '?_t=' + Date.now();
+            window.location.replace(cleanUrl);
+        }
 
         // Master Render Function
         function renderDashboard(periodKey) {
@@ -1488,7 +1511,7 @@
             appData[periodKey].totalRow.cpc = cpc;
             appData[periodKey].totalRow.leads = lds;
 
-            localStorage.setItem('suaGlowAdMetrics', JSON.stringify(appData));
+            localStorage.setItem('suaGlowAdMetrics_v3', JSON.stringify(appData));
 
             closeEditorModal();
             renderDashboard(periodKey);
@@ -1497,6 +1520,8 @@
         function resetToDefaults() {
             if (confirm('Reset metrics back to default baseline data?')) {
                 localStorage.removeItem('suaGlowAdMetrics');
+                localStorage.removeItem('suaGlowAdMetrics_v2');
+                localStorage.removeItem('suaGlowAdMetrics_v3');
                 appData = JSON.parse(JSON.stringify(defaultTimeframeData));
                 closeEditorModal();
                 renderDashboard(currentPeriod);
