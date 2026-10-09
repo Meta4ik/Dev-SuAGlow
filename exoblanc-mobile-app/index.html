@@ -289,6 +289,29 @@
       border: none;
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
     }
+    .device-shell.mode-responsive aside {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 720px;
+      margin: 0 auto;
+      z-index: 40;
+    }
+    .device-shell.mode-responsive .modal-sheet {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 720px;
+      margin: 0 auto;
+      z-index: 50;
+    }
+    .device-shell.mode-responsive #modalOverlay {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+    }
 
     .phone-notch {
       display: none;
@@ -297,13 +320,17 @@
       display: flex;
     }
 
-    /* Bottom Modal Sheet Slide Up */
+    /* Bottom Modal Sheet Slide Up - Safari Hit Test Fix */
     .modal-sheet {
       transform: translateY(100%);
-      transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.38s ease;
+      pointer-events: none;
+      visibility: hidden;
     }
     .modal-sheet.open {
       transform: translateY(0%);
+      pointer-events: auto;
+      visibility: visible;
     }
 
     /* Custom Scrollbar styled with SuA Taupe/Gold */
@@ -838,23 +865,23 @@
       </div>
 
       <!-- ================= FIXED BOTTOM ACTION BAR ================= -->
-      <aside class="absolute bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur-md border-t border-taupe/15 px-5 py-3.5 flex items-center justify-center shadow-floating">
-        <div class="flex items-center justify-center gap-3 w-full max-w-sm">
+      <aside class="absolute bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-taupe/15 px-5 py-3.5 pb-[max(14px,env(safe-area-inset-bottom))] flex items-center justify-center shadow-floating">
+        <div class="flex items-center justify-center gap-3 w-full max-w-sm relative z-10">
           <!-- Quick Call Button -->
-          <a href="tel:972-665-8737" title="Call Clinic" class="w-12 h-12 rounded-full bg-off-white border border-taupe/20 flex items-center justify-center text-taupe hover:text-warm-gold hover:border-warm-gold transition tap-action shadow-soft shrink-0">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <a id="bottomCallBtn" href="tel:972-665-8737" title="Call Clinic" class="w-12 h-12 rounded-full bg-off-white border border-taupe/20 flex items-center justify-center text-taupe hover:text-warm-gold hover:border-warm-gold transition tap-action shadow-soft shrink-0 cursor-pointer select-none">
+            <svg class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
           </a>
 
           <!-- Primary Book CTA Button (Official SuA Glow .btn-primary) -->
-          <button onclick="openBookingModal('Exoblanc Consultation')" class="btn-primary flex-1 tap-action justify-center">
+          <button id="bottomBookBtn" type="button" onclick="openBookingModal('Exoblanc Consultation')" class="btn-primary flex-1 tap-action justify-center cursor-pointer select-none">
             <span>Book Consultation</span>
-            <span class="text-sm leading-none">→</span>
+            <span class="text-sm leading-none pointer-events-none">→</span>
           </button>
         </div>
       </aside>
 
       <!-- ================= INTERACTIVE BOOKING MODAL ================= -->
-      <div id="modalOverlay" onclick="closeBookingModal()" class="absolute inset-0 bg-near-black/50 backdrop-blur-xs z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+      <div id="modalOverlay" onclick="closeBookingModal()" class="absolute inset-0 bg-near-black/50 backdrop-blur-xs z-50 opacity-0 pointer-events-none invisible transition-all duration-300"></div>
 
       <div id="bookingModal" class="modal-sheet absolute bottom-0 left-0 right-0 z-50 bg-white rounded-t-[36px] p-6 max-h-[88%] overflow-y-auto shadow-modal border-t border-taupe/20">
         
@@ -1150,22 +1177,41 @@
     // Booking Slide-Up Sheet Modal
     function openBookingModal(heading) {
       if (heading) {
-        document.getElementById('modalHeading').textContent = heading;
-        document.getElementById('modalSub').textContent = 'Personalized Regimen Assessment at SuA Glow';
+        const headingEl = document.getElementById('modalHeading');
+        const subEl = document.getElementById('modalSub');
+        if (headingEl) headingEl.textContent = heading;
+        if (subEl) subEl.textContent = 'Personalized Regimen Assessment at SuA Glow';
       }
       const modal = document.getElementById('bookingModal');
       const overlay = document.getElementById('modalOverlay');
-      modal.classList.add('open');
-      overlay.classList.remove('opacity-0', 'pointer-events-none');
-      overlay.classList.add('opacity-100', 'pointer-events-auto');
+      if (modal) {
+        modal.classList.add('open');
+      }
+      if (overlay) {
+        overlay.classList.remove('opacity-0', 'pointer-events-none', 'invisible');
+        overlay.classList.add('opacity-100', 'pointer-events-auto', 'visible');
+      }
     }
 
     function closeBookingModal() {
       const modal = document.getElementById('bookingModal');
       const overlay = document.getElementById('modalOverlay');
-      modal.classList.remove('open');
-      overlay.classList.remove('opacity-100', 'pointer-events-auto');
-      overlay.classList.add('opacity-0', 'pointer-events-none');
+      if (modal) {
+        modal.classList.remove('open');
+      }
+      if (overlay) {
+        overlay.classList.remove('opacity-100', 'pointer-events-auto', 'visible');
+        overlay.classList.add('opacity-0', 'pointer-events-none', 'invisible');
+      }
+    }
+
+    // Direct event listener binding for robust Safari support
+    const bottomBookBtn = document.getElementById('bottomBookBtn');
+    if (bottomBookBtn) {
+      bottomBookBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openBookingModal('Exoblanc Consultation');
+      });
     }
 
     function setConsultType(btn) {
