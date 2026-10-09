@@ -414,13 +414,31 @@
           <!-- Product Image Views (Centered & Prominent) -->
           <div class="relative flex-1 w-full flex items-center justify-center p-2">
             
-            <!-- View 1: Bottle Front & Center (DEFAULT) -->
+            <!-- View 1: Real Bottle Front & Center (DEFAULT) -->
             <div id="productSlide-bottle" class="product-slide absolute inset-0 flex items-center justify-center transition-opacity duration-400 opacity-100 p-4">
-              <div class="absolute w-60 h-60 rounded-full bg-white/70 blur-2xl pointer-events-none"></div>
-              <img src="assets/product-front-center.jpg" alt="Exoblanc Boosting Serum Bottle Front and Center" class="h-[92%] max-w-[85%] object-contain filter drop-shadow-2xl relative z-10" />
+              <div class="absolute w-64 h-64 rounded-full bg-white/80 blur-2xl pointer-events-none"></div>
+              <img src="assets/product-bottle-transparent.png" alt="Exoblanc Boosting Serum Official Product Bottle" class="h-[94%] max-w-[85%] object-contain filter drop-shadow-2xl relative z-10" />
             </div>
 
-            <!-- View 2: Model Glass Skin Result -->
+            <!-- View 2: Real Product on Luxury Water Ripples -->
+            <div id="productSlide-water" class="product-slide absolute inset-0 flex items-center justify-center transition-opacity duration-400 opacity-0">
+              <img src="assets/product-water-ripples.jpg" alt="Exoblanc Boosting Serum Hydration Ripples" class="w-full h-full object-cover object-center" />
+              <div class="absolute inset-0 bg-gradient-to-t from-near-black/50 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-5 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-near-black border border-taupe/20">
+                Official Studio Editorial
+              </div>
+            </div>
+
+            <!-- View 3: Bottle & Retail Box Packaging -->
+            <div id="productSlide-box" class="product-slide absolute inset-0 flex items-center justify-center transition-opacity duration-400 opacity-0">
+              <img src="assets/product-with-box.jpg" alt="Exoblanc Boosting Serum Packaging" class="w-full h-full object-cover object-center" />
+              <div class="absolute inset-0 bg-gradient-to-t from-near-black/50 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-5 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-near-black border border-taupe/20">
+                Bottle &amp; Retail Carton
+              </div>
+            </div>
+
+            <!-- View 4: Model Glass Skin Result -->
             <div id="productSlide-model" class="product-slide absolute inset-0 flex items-center justify-center transition-opacity duration-400 opacity-0">
               <img src="assets/model.jpg" alt="Exoblanc Skin Glow Result" class="w-full h-full object-cover object-center" />
               <div class="absolute inset-0 bg-gradient-to-t from-near-black/50 via-transparent to-transparent"></div>
@@ -429,7 +447,7 @@
               </div>
             </div>
 
-            <!-- View 3: Dewy Serum Droplet Macro -->
+            <!-- View 5: Dewy Serum Droplet Macro -->
             <div id="productSlide-texture" class="product-slide absolute inset-0 flex items-center justify-center transition-opacity duration-400 opacity-0">
               <img src="assets/texture.jpg" alt="Micro Droplet Serum Slip" class="w-full h-full object-cover object-center" />
               <div class="absolute inset-0 bg-gradient-to-t from-near-black/50 via-transparent to-transparent"></div>
@@ -438,20 +456,16 @@
               </div>
             </div>
 
-            <!-- View 4: Full Campaign Board -->
-            <div id="productSlide-board" class="product-slide absolute inset-0 flex items-center justify-center transition-opacity duration-400 opacity-0">
-              <img src="assets/hero-full.jpg" alt="Full Campaign Visual" class="w-full h-full object-cover object-center" />
-            </div>
-
           </div>
 
           <!-- Pagination Indicator Dots -->
           <div class="relative z-30 pb-5 flex flex-col items-center gap-2">
             <div class="flex items-center gap-1.5 bg-white/70 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft border border-white/60">
-              <button onclick="setProductSlide('bottle', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-warm-gold transition-all"></button>
-              <button onclick="setProductSlide('model', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all"></button>
-              <button onclick="setProductSlide('texture', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all"></button>
-              <button onclick="setProductSlide('board', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all"></button>
+              <button onclick="setProductSlide('bottle', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-warm-gold transition-all" title="Bottle"></button>
+              <button onclick="setProductSlide('water', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all" title="Water Ripples"></button>
+              <button onclick="setProductSlide('box', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all" title="Packaging"></button>
+              <button onclick="setProductSlide('model', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all" title="Results"></button>
+              <button onclick="setProductSlide('texture', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all" title="Texture"></button>
             </div>
           </div>
 
