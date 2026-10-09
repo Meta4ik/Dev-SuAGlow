@@ -451,10 +451,10 @@
 
           <!-- Top Floating Action Bar Over Image -->
           <div class="relative z-30 pt-4 px-4 flex items-center justify-between pointer-events-none">
-            <a href="#collectionSection" title="View Catalog" class="pointer-events-auto px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-taupe/20 shadow-soft flex items-center gap-1.5 text-near-black hover:bg-white transition tap-action text-[11px] font-heading font-bold tracking-wider uppercase">
-              <span>All 14 Products</span>
-              <span class="text-warm-gold font-bold">↓</span>
-            </a>
+            <div class="pointer-events-auto px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-taupe/20 shadow-soft flex items-center gap-1.5 text-near-black text-[10px] font-heading font-bold tracking-wider uppercase">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Clinic Tier Essential</span>
+            </div>
 
             <!-- Brand Kicker with SuA Glow Logo -->
             <div class="pointer-events-auto px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-taupe/20 shadow-soft flex items-center gap-2">
@@ -645,141 +645,68 @@
             </div>
           </div>
 
-          <!-- ================= COMPLETE EXOBLANC PRODUCTS COLLECTION SECTION ================= -->
-          <section id="collectionSection" class="pt-5 border-t border-taupe/15 space-y-3.5">
-            
-            <div class="flex items-center justify-between">
-              <div>
-                <span class="text-[10px] font-heading font-bold tracking-[0.25em] uppercase text-taupe block">Official exoblanc.com Lineup</span>
-                <h2 class="font-heading text-xl font-bold text-near-black tracking-wide">The Exoblanc Collection</h2>
-              </div>
-              <span class="badge-standard">
-                14 Products
-              </span>
-            </div>
-
-            <p class="font-body text-xs text-charcoal/70 leading-relaxed">
-              Explore the complete Korean bio-exosome medical aesthetic lineup available through consultation at SuA Glow in Carrollton, TX.
-            </p>
-
-            <!-- Category Filter Tabs with SuA Glow Styling -->
-            <div class="flex items-center gap-1.5 overflow-x-auto pb-1 pt-1 no-scrollbar text-xs">
-              <button onclick="filterProducts('All', this)" class="prod-filter-btn px-3.5 py-1.5 rounded-full bg-warm-gold text-white font-heading font-bold tracking-wider uppercase text-[10px] shrink-0 transition tap-action shadow-soft">
-                All (14)
-              </button>
-              <button onclick="filterProducts('Routine', this)" class="prod-filter-btn px-3.5 py-1.5 rounded-full bg-off-white text-charcoal font-heading font-semibold tracking-wider uppercase text-[10px] shrink-0 border border-taupe/20 hover:border-warm-gold transition tap-action">
-                Daily Routine
-              </button>
-              <button onclick="filterProducts('Serum', this)" class="prod-filter-btn px-3.5 py-1.5 rounded-full bg-off-white text-charcoal font-heading font-semibold tracking-wider uppercase text-[10px] shrink-0 border border-taupe/20 hover:border-warm-gold transition tap-action">
-                Serums &amp; Oils
-              </button>
-              <button onclick="filterProducts('Moisturizer', this)" class="prod-filter-btn px-3.5 py-1.5 rounded-full bg-off-white text-charcoal font-heading font-semibold tracking-wider uppercase text-[10px] shrink-0 border border-taupe/20 hover:border-warm-gold transition tap-action">
-                Creams &amp; Barrier
-              </button>
-              <button onclick="filterProducts('Cleanser', this)" class="prod-filter-btn px-3.5 py-1.5 rounded-full bg-off-white text-charcoal font-heading font-semibold tracking-wider uppercase text-[10px] shrink-0 border border-taupe/20 hover:border-warm-gold transition tap-action">
-                Cleanser &amp; Toner
-              </button>
-              <button onclick="filterProducts('Specialty', this)" class="prod-filter-btn px-3.5 py-1.5 rounded-full bg-off-white text-charcoal font-heading font-semibold tracking-wider uppercase text-[10px] shrink-0 border border-taupe/20 hover:border-warm-gold transition tap-action">
-                Specialty
-              </button>
-            </div>
-
-            <!-- 14 Product Cards Grid -->
-            <div id="productCatalogGrid" class="grid grid-cols-2 gap-3 pt-2">
-              <!-- Dynamically Populated by JavaScript from Official Data -->
-            </div>
-
-          </section>
-
-          <!-- ================= KOREAN ROUTINE TIMELINE ================= -->
-          <section class="pt-5 border-t border-taupe/15 space-y-3.5">
+          <!-- ================= CLINICAL APPLICATION PROTOCOL (DEDICATED SINGLE PRODUCT FOCUS) ================= -->
+          <section class="pt-5 border-t border-taupe/15 space-y-4">
             
             <div class="flex items-center justify-between">
               <div>
                 <span class="text-[10px] font-heading font-bold tracking-[0.25em] uppercase text-taupe block">Esthetician Prescribed</span>
-                <h2 class="font-heading text-xl font-bold text-near-black tracking-wide">Daily Korean Routine</h2>
+                <h2 class="font-heading text-xl font-bold text-near-black tracking-wide">Application Protocol</h2>
               </div>
-              <span class="badge-standard">6 Steps</span>
+              <span class="badge-gold">
+                Daily Ritual
+              </span>
             </div>
 
-            <div class="rounded-2xl bg-off-white p-4 border border-taupe/20 space-y-3">
+            <p class="font-body text-xs text-charcoal/75 leading-relaxed">
+              Maximize the bio-cellular delivery of Exoblanc Boosting Serum with our clinic-developed daily regimen.
+            </p>
+
+            <div class="space-y-3">
               
-              <!-- Step 1 -->
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-white border border-taupe/15 shadow-soft">
-                <span class="font-heading text-[11px] font-bold text-warm-gold shrink-0 w-14 pt-0.5">08:00 AM</span>
-                <div class="flex-1">
-                  <div class="flex items-center justify-between">
-                    <p class="font-heading text-xs font-bold text-near-black">Step 1: Gentle Cleanser</p>
-                    <span class="text-[9px] uppercase font-bold text-teal-600 bg-teal-50 px-1.5 py-0.5 rounded font-heading">pH 5.5</span>
+              <!-- Morning Routine -->
+              <div class="p-4 rounded-2xl bg-off-white border border-taupe/20 space-y-2 transition hover:border-warm-gold/50 shadow-soft">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-warm-gold"></span>
+                    <span class="font-heading text-xs font-bold text-near-black uppercase tracking-wider">Morning Protocol</span>
                   </div>
-                  <p class="font-body text-[11px] text-warm-gold font-semibold mt-0.5">Exoblanc Relief Bubble Cleanser</p>
-                  <p class="font-body text-[10.5px] text-charcoal/70">Micro-foam removes impurities without stripping moisture.</p>
+                  <span class="text-[9.5px] uppercase font-heading font-bold text-warm-gold bg-warm-gold/10 px-2 py-0.5 rounded-full">08:00 AM • Glow Shield</span>
                 </div>
+                <h3 class="font-heading text-[13px] font-bold text-near-black">1–2 Pumps • Deep Hydration &amp; Antioxidant Defense</h3>
+                <p class="font-body text-xs text-charcoal/75 leading-relaxed">
+                  After gentle cleansing and toning, dispense 1–2 pumps onto clean fingertips. Press into face and neck in upward lifting sweeps. Provides cellular moisture retention and protection against environmental stress throughout the day. Follow with SPF 50+.
+                </p>
               </div>
 
-              <!-- Step 2 -->
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-white border border-taupe/15 shadow-soft">
-                <span class="font-heading text-[11px] font-bold text-warm-gold shrink-0 w-14 pt-0.5">08:05 AM</span>
-                <div class="flex-1">
-                  <div class="flex items-center justify-between">
-                    <p class="font-heading text-xs font-bold text-near-black">Step 2: Hydrating Toner</p>
-                    <span class="text-[9px] uppercase font-bold text-blue-gray bg-blue-gray/10 px-1.5 py-0.5 rounded font-heading">Prep</span>
+              <!-- Evening Routine -->
+              <div class="p-4 rounded-2xl bg-off-white border border-taupe/20 space-y-2 transition hover:border-warm-gold/50 shadow-soft">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-charcoal"></span>
+                    <span class="font-heading text-xs font-bold text-near-black uppercase tracking-wider">Evening Protocol</span>
                   </div>
-                  <p class="font-body text-[11px] text-warm-gold font-semibold mt-0.5">Exoblanc Foaming Toner</p>
-                  <p class="font-body text-[10.5px] text-charcoal/70">Deep micro-hydration to prime cellular uptake.</p>
+                  <span class="text-[9.5px] uppercase font-heading font-bold text-charcoal bg-taupe/15 px-2 py-0.5 rounded-full">09:30 PM • Intensive Repair</span>
                 </div>
+                <h3 class="font-heading text-[13px] font-bold text-near-black">2–3 Pumps • Cellular Overnight Regeneration</h3>
+                <p class="font-body text-xs text-charcoal/75 leading-relaxed">
+                  Dispense 2–3 pumps and gently massage across cleansed skin. Nano-liposomal exosomes and marine PDRN penetrate deeply to repair the moisture barrier and stimulate collagen synthesis while skin rests.
+                </p>
               </div>
 
-              <!-- Step 3 (HERO with Warm Gold Brand Accent) -->
-              <div class="flex items-start gap-3 p-3.5 rounded-xl bg-warm-gold text-white shadow-glow border border-warm-gold">
-                <span class="font-heading text-[11px] font-extrabold text-white shrink-0 w-14 pt-0.5">08:08 AM</span>
-                <div class="flex-1">
-                  <div class="flex items-center justify-between">
-                    <p class="font-heading text-xs font-extrabold text-white">Step 3: Core Bio-Boost</p>
-                    <span class="text-[9px] uppercase font-heading font-black text-near-black bg-white px-2 py-0.5 rounded-full">★ HERO</span>
+              <!-- In-Clinic DEP Bio-Infusion Highlight -->
+              <div class="p-4 rounded-2xl bg-gradient-to-br from-near-black to-[#2A2E33] text-white space-y-2.5 shadow-soft border border-taupe/30">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <img src="assets/suaglow-s-only-gold.png" alt="SuA" class="w-3.5 h-3.5 object-contain" />
+                    <span class="font-heading text-xs font-bold text-white uppercase tracking-wider">Professional In-Clinic Boost</span>
                   </div>
-                  <p class="font-heading text-xs font-bold text-white mt-0.5">Exoblanc Boosting Serum</p>
-                  <p class="font-body text-[11px] text-white/90 leading-tight mt-0.5">Exosomes, PDRN &amp; 5-Peptide Complex for deep skin barrier support.</p>
+                  <span class="text-[9.5px] uppercase font-heading font-black text-near-black bg-warm-gold px-2 py-0.5 rounded-full">Carrollton, TX</span>
                 </div>
-              </div>
-
-              <!-- Step 4 -->
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-white border border-taupe/15 shadow-soft">
-                <span class="font-heading text-[11px] font-bold text-warm-gold shrink-0 w-14 pt-0.5">08:12 AM</span>
-                <div class="flex-1">
-                  <div class="flex items-center justify-between">
-                    <p class="font-heading text-xs font-bold text-near-black">Step 4: Eye Contour</p>
-                    <span class="text-[9px] uppercase font-bold text-taupe bg-taupe/10 px-1.5 py-0.5 rounded font-heading">NMN</span>
-                  </div>
-                  <p class="font-body text-[11px] text-warm-gold font-semibold mt-0.5">Exoblanc NMN Eyecream</p>
-                  <p class="font-body text-[10.5px] text-charcoal/70">Smooths delicate periorbital fine lines.</p>
-                </div>
-              </div>
-
-              <!-- Step 5 -->
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-white border border-taupe/15 shadow-soft">
-                <span class="font-heading text-[11px] font-bold text-warm-gold shrink-0 w-14 pt-0.5">08:15 AM</span>
-                <div class="flex-1">
-                  <div class="flex items-center justify-between">
-                    <p class="font-heading text-xs font-bold text-near-black">Step 5: Barrier Moisture Lock</p>
-                    <span class="text-[9px] uppercase font-bold text-taupe bg-taupe/10 px-1.5 py-0.5 rounded font-heading">Lock</span>
-                  </div>
-                  <p class="font-body text-[11px] text-warm-gold font-semibold mt-0.5">Exoblanc Boosting Cream / Barrier Cream</p>
-                  <p class="font-body text-[10.5px] text-charcoal/70">Seals regenerative actives with lipid barrier protection.</p>
-                </div>
-              </div>
-
-              <!-- Step 6 -->
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-white border border-taupe/15 shadow-soft">
-                <span class="font-heading text-[11px] font-bold text-warm-gold shrink-0 w-14 pt-0.5">All Day</span>
-                <div class="flex-1">
-                  <div class="flex items-center justify-between">
-                    <p class="font-heading text-xs font-bold text-near-black">Step 6: Calming Shield</p>
-                    <span class="text-[9px] uppercase font-bold text-teal-600 bg-teal-50 px-1.5 py-0.5 rounded font-heading">Mist</span>
-                  </div>
-                  <p class="font-body text-[11px] text-warm-gold font-semibold mt-0.5">Exoblanc Soothing Mist</p>
-                  <p class="font-body text-[10.5px] text-charcoal/70">Portable all-day hydration reset &amp; glow.</p>
-                </div>
+                <h3 class="font-heading text-[13px] font-bold text-warm-gold">Needle-Free DEP Dermoelectroporation Infusion</h3>
+                <p class="font-body text-xs text-light-gray/90 leading-relaxed">
+                  Experience 10x deeper transdermal penetration at SuA Glow Medical Aesthetics. Our FDA-cleared DEP technology delivers Exoblanc exosomes straight into the dermis without injections, needles, or downtime.
+                </p>
               </div>
 
             </div>
@@ -1083,206 +1010,7 @@
 
   <!-- ================= LOGIC SCRIPTS ================= -->
   <script>
-    // 14 OFFICIAL EXOBLANC PRODUCTS PULLED DIRECTLY FROM EXOBLANC.COM
-    const EXOBLANC_PRODUCTS = [
-      {
-        title: "Exoblanc Boosting Serum",
-        cat: "Serum",
-        group: "Routine",
-        step: "Core Step 3",
-        subtitle: "Exosomes • 5-Peptide • PDRN",
-        badge: "Hero Essential",
-        image: "assets/products/exoblanc-boosting-serum.jpg",
-        url: "https://exoblanc.com/product/exoblanc-boosting-serum/"
-      },
-      {
-        title: "Exoblanc Boosting Cream",
-        cat: "Moisturizer",
-        group: "Routine",
-        step: "Core Step 5",
-        subtitle: "Deep Cellular Moisture Lock",
-        badge: "Elasticity Cream",
-        image: "assets/products/exoblanc-boosting-cream.jpg",
-        url: "https://exoblanc.com/product/exoblanc-boosting-cream/"
-      },
-      {
-        title: "Exoblanc Foaming Toner",
-        cat: "Toner",
-        group: "Routine",
-        step: "Step 2: Tone",
-        subtitle: "Hydrating Micro-Foam Barrier Prep",
-        badge: "Micro-Foam",
-        image: "assets/products/exoblanc-foaming-toner.jpg",
-        url: "https://exoblanc.com/product/exoblanc-foaming-toner/"
-      },
-      {
-        title: "Exoblanc Relief Bubble Cleanser",
-        cat: "Cleanser",
-        group: "Routine",
-        step: "Step 1: Cleanse",
-        subtitle: "Gentle Micro-Bubble pH Balanced",
-        badge: "pH Balanced",
-        image: "assets/products/exoblanc-relief-bubble-cleanser.jpg",
-        url: "https://exoblanc.com/product/exoblanc-relief-bubble-cleanser/"
-      },
-      {
-        title: "Exoblanc NMN Eyecream",
-        cat: "Eye Care",
-        group: "Specialty",
-        step: "Step 4: Eye Contour",
-        subtitle: "NMN Anti-Aging Firming Care",
-        badge: "NMN Bio-Tech",
-        image: "assets/products/exoblanc-nmn-eyecream.jpg",
-        url: "https://exoblanc.com/product/exoblanc-nmn-eyecream/"
-      },
-      {
-        title: "Exoblanc Skin Barrier Cream",
-        cat: "Moisturizer",
-        group: "Routine",
-        step: "Intensive Barrier",
-        subtitle: "Post-Procedure Lipid Barrier Shield",
-        badge: "Barrier Shield",
-        image: "assets/products/exoblanc-skin-barrier-cream.jpg",
-        url: "https://exoblanc.com/product/exoblanc-skin-barrier-cream/"
-      },
-      {
-        title: "Exoblanc Refine Peeling Ampoule",
-        cat: "Treatment",
-        group: "Specialty",
-        step: "Exfoliation Boost",
-        subtitle: "Gentle Bio-Renew Peeling Matrix",
-        badge: "Clinic Ampoule",
-        image: "assets/products/exoblanc-refine-peeling-ampoule.jpg",
-        url: "https://exoblanc.com/product/exoblanc-refine-peeling-ampoule/"
-      },
-      {
-        title: "Exoblanc PDRN Mask",
-        cat: "Mask",
-        group: "Specialty",
-        step: "Weekly Ritual",
-        subtitle: "Salmon DNA Intensive Sheet Mask",
-        badge: "PDRN Marine",
-        image: "assets/products/exoblanc-pdrn-mask.jpg",
-        url: "https://exoblanc.com/product/exoblanc-pdrn-mask/"
-      },
-      {
-        title: "Exoblanc Oil CERA",
-        cat: "Oils",
-        group: "Serum",
-        step: "Ceramide Radiance",
-        subtitle: "Pure Ceramide Barrier Oil Infusion",
-        badge: "Ceramide Seal",
-        image: "assets/products/exoblanc-oil-cera.jpg",
-        url: "https://exoblanc.com/product/exoblanc-oil-cera/"
-      },
-      {
-        title: "Exoblanc Oil CURE",
-        cat: "Oils",
-        group: "Serum",
-        step: "Calming Rescue",
-        subtitle: "Soothing Botanical Treatment Oil",
-        badge: "Soothing Relief",
-        image: "assets/products/exoblanc-oil-cure.jpg",
-        url: "https://exoblanc.com/product/exoblanc-oil-cure/"
-      },
-      {
-        title: "Exoblanc Oil Vita",
-        cat: "Oils",
-        group: "Serum",
-        step: "Vitamin Boost",
-        subtitle: "Multivitamin Complex Radiance Oil",
-        badge: "Vitamin Glow",
-        image: "assets/products/exoblanc-oil-vita.jpg",
-        url: "https://exoblanc.com/product/exoblanc-oil-vita/"
-      },
-      {
-        title: "Exoblanc Spicule Cream",
-        cat: "Specialty",
-        group: "Specialty",
-        step: "Night Rejuvenation",
-        subtitle: "Bio-Spicule Micro-Needle Matrix",
-        badge: "Bio-Spicule",
-        image: "assets/products/exoblanc-spicule-cream.jpg",
-        url: "https://exoblanc.com/product/exoblanc-spicule-cream/"
-      },
-      {
-        title: "Exoblanc White Bloom",
-        cat: "Specialty",
-        group: "Specialty",
-        step: "Tone-Up Glow",
-        subtitle: "Glass-Skin Brightening Bloom",
-        badge: "Tone-Up",
-        image: "assets/products/exoblanc-white-bloom.jpg",
-        url: "https://exoblanc.com/product/exoblanc-white-bloom/"
-      },
-      {
-        title: "Exoblanc Soothing Mist",
-        cat: "Mist",
-        group: "Routine",
-        step: "All-Day Reset",
-        subtitle: "Calming Barrier Moisture Mist",
-        badge: "Portable Glow",
-        image: "assets/products/exoblanc-soothing-mist.jpg",
-        url: "https://exoblanc.com/product/exoblanc-soothing-mist/"
-      }
-    ];
 
-    // Render Product Catalog with SuA Glow Product Card Styling
-    function renderCatalog(filter = 'All') {
-      const container = document.getElementById('productCatalogGrid');
-      if (!container) return;
-
-      const filtered = EXOBLANC_PRODUCTS.filter(p => {
-        if (filter === 'All') return true;
-        if (filter === 'Routine') return p.group === 'Routine';
-        if (filter === 'Serum') return p.cat === 'Serum' || p.cat === 'Oils';
-        if (filter === 'Moisturizer') return p.cat === 'Moisturizer';
-        if (filter === 'Cleanser') return p.cat === 'Cleanser' || p.cat === 'Toner';
-        if (filter === 'Specialty') return p.group === 'Specialty' || p.cat === 'Mask' || p.cat === 'Treatment';
-        return true;
-      });
-
-      container.innerHTML = filtered.map(p => `
-        <div class="product-card p-3 flex flex-col justify-between group tap-action">
-          <div class="relative w-full aspect-square bg-[#F8F6F2] rounded-xl overflow-hidden p-2 flex items-center justify-center mb-2">
-            <span class="absolute top-1.5 left-1.5 text-[8.5px] uppercase font-heading font-bold tracking-wider px-1.5 py-0.5 rounded bg-white/90 text-warm-gold border border-taupe/20 z-10 shadow-2xs">
-              ${p.badge}
-            </span>
-            <img src="${p.image}" alt="${p.title}" class="max-h-[90%] max-w-[90%] object-contain group-hover:scale-105 transition duration-300" loading="lazy" />
-          </div>
-
-          <div class="flex-1 flex flex-col justify-between">
-            <div>
-              <span class="text-[9.5px] font-heading font-semibold text-warm-gold block uppercase tracking-wider">${p.step}</span>
-              <h3 class="font-heading text-xs font-bold text-near-black leading-snug line-clamp-2 mt-0.5">${p.title}</h3>
-              <p class="font-body text-[10px] text-charcoal/70 line-clamp-1 mt-0.5">${p.subtitle}</p>
-            </div>
-
-            <div class="mt-2.5 pt-2 border-t border-taupe/15 flex items-center justify-between">
-              <div>
-                <span class="font-heading text-xs font-bold text-warm-gold">$TBD</span>
-                <span class="text-[8.5px] font-heading uppercase text-taupe block leading-none">Clinic</span>
-              </div>
-              <button onclick="openBookingModal('Consult for ${p.title.replace(/'/g, "\\'")}')" class="btn-primary btn-sm tap-action !px-2.5 !py-1">
-                + Consult
-              </button>
-            </div>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    // Filter Buttons
-    function filterProducts(category, btn) {
-      document.querySelectorAll('.prod-filter-btn').forEach(b => {
-        b.className = 'prod-filter-btn px-3.5 py-1.5 rounded-full bg-off-white text-charcoal font-heading font-semibold tracking-wider uppercase text-[10px] shrink-0 border border-taupe/20 hover:border-warm-gold transition tap-action';
-      });
-      btn.className = 'prod-filter-btn px-3.5 py-1.5 rounded-full bg-warm-gold text-white font-heading font-bold tracking-wider uppercase text-[10px] shrink-0 transition tap-action shadow-soft';
-      renderCatalog(category);
-    }
-
-    // Initialize Catalog on Load
-    renderCatalog('All');
 
     // Live Clock for Phone Notch
     function updateClock() {
