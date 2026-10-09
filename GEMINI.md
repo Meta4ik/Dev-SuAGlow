@@ -14,3 +14,10 @@
 - **Strict FTP / Production Exclusions**: The `internal/` (internal dossiers, ad collateral, marketing experiments) and `dev-tools/` directories are strictly local development and internal audit tools.
 - **Never Upload to Public Server**: Under NO circumstance should `internal/` or `dev-tools/` be uploaded to the public FTP server (`suaglow.com/public_html`) or live production hosting.
 - **Automated Upload Scripts**: All sync/deploy tools, `package.json` scripts, and `ftp_upload.py` scripts must explicitly maintain `'internal'` and `'dev-tools'` in their exclude sets.
+
+## Motion & Animation Architecture (GSAP, Lenis, React Bits)
+- **Library Modules**: Reusable motion utilities are located in `motion.js` and `motion.css`.
+- **Standard Dependencies**: `gsap` and `lenis` are installed in `package.json` (`node_modules/`).
+- **Interactive Reference**: Live demo and test suite is maintained at `dev-tools/motion-showcase.html`.
+- **API & Usage Reference**: Refer to `MOTION.md` for class names, data-attributes, and `SuAMotion` methods.
+

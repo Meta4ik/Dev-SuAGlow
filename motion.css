@@ -1,0 +1,114 @@
+/* ========================================================
+   SuA K-Glow Motion & Animation Architecture CSS
+   Pairs with GSAP, Lenis, and React Bits Patterns
+   ======================================================== */
+
+/* 1. Lenis Smooth Scroll Recommended Foundation */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* 2. React Bits: Shiny Text / Metallic Foil Shimmer */
+.shiny-text {
+  color: #b5b5b5a4;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 20%, rgba(247, 235, 215, 0.95) 45%, rgba(229, 184, 105, 1) 50%, rgba(247, 235, 215, 0.95) 55%, rgba(255, 255, 255, 0) 80%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: sua-shine 4s linear infinite;
+}
+
+@keyframes sua-shine {
+  0% { background-position: 100% }
+  100% { background-position: -100% }
+}
+
+/* 3. React Bits: Spotlight Card (Mouse-Tracking Radial Glow) */
+.spotlight-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  top: var(--mouse-y, -1000px);
+  left: var(--mouse-x, -1000px);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(229, 184, 105, 0.16) 0%, rgba(170, 152, 124, 0.04) 45%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+.spotlight-card:hover {
+  border-color: rgba(229, 184, 105, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(229, 184, 105, 0.1);
+}
+
+/* 4. React Bits: 3D Perspective Tilt Card (TiltedCard) */
+.tilt-card-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.tilt-card {
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.tilt-card-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba(255,255,255,0.18) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+.tilt-card:hover .tilt-card-glare {
+  opacity: 1;
+}
+
+/* 5. Before & After Split-Screen Comparison */
+.ba-slider-container {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.ba-before-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  clip-path: polygon(0 0, var(--split-pos, 50%) 0, var(--split-pos, 50%) 100%, 0 100%);
+}
+
+/* 6. Gold Text Gradient Helper */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fff5e6 0%, #e5b869 50%, #aa987c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

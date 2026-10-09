@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuA Glow Motion Showcase — GSAP + Lenis + React Bits Master Suite</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Urbanist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS Play CDN (instant rendering of all luxury utilities) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'sua-dark': '#0a0b0e',
+            'sua-card': '#13151b',
+            'gold': {
+              300: '#f5e5c9',
+              400: '#ebd19f',
+              500: '#e5b869',
+              600: '#cfa04c',
+              700: '#aa8036',
+            },
+            'taupe': '#8F857B',
+            'warm-gold': '#AA987C',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            heading: ['"Montserrat"', 'sans-serif'],
+            sans: ['"Urbanist"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* Lenis Smooth Scroll Recommended CSS */
+    html.lenis, html.lenis body {
+      height: auto;
+    }
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+    .lenis.lenis-smooth iframe {
+      pointer-events: none;
+    }
+
+    /* Core Luxury Styling */
+    body {
+      background-color: #0a0b0e;
+      color: #f3efe9;
+      font-family: 'Urbanist', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Custom luxury gold text gradients */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fff5e6 0%, #e5b869 50%, #aa987c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* React Bits: Shiny Text / Metallic Foil Shimmer */
+    .shiny-text {
+      color: #b5b5b5a4;
+      background: linear-gradient(120deg, rgba(255, 255, 255, 0) 20%, rgba(247, 235, 215, 0.95) 45%, rgba(229, 184, 105, 1) 50%, rgba(247, 235, 215, 0.95) 55%, rgba(255, 255, 255, 0) 80%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      display: inline-block;
+      animation: shine 4s linear infinite;
+    }
+
+    @keyframes shine {
+      0% { background-position: 100% }
+      100% { background-position: -100% }
+    }
+
+    /* React Bits: Spotlight Card Effect Styling */
+    .spotlight-card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 1.25rem;
+      overflow: hidden;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .spotlight-card::before {
+      content: '';
+      position: absolute;
+      top: var(--mouse-y, -1000px);
+      left: var(--mouse-x, -1000px);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(229, 184, 105, 0.16) 0%, rgba(170, 152, 124, 0.04) 45%, transparent 70%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .spotlight-card:hover::before {
+      opacity: 1;
+    }
+    .spotlight-card:hover {
+      border-color: rgba(229, 184, 105, 0.35);
+      box-shadow: 0 10px 30px -10px rgba(229, 184, 105, 0.1);
+    }
+
+    /* React Bits: 3D Tilted Card */
+    .tilt-card-container {
+      perspective: 1000px;
+      transform-style: preserve-3d;
+    }
+    .tilt-card {
+      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+    .tilt-card-glare {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba(255,255,255,0.18) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: inherit;
+    }
+    .tilt-card:hover .tilt-card-glare {
+      opacity: 1;
+    }
+
+    /* Floating Pill Badge */
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      background: rgba(229, 184, 105, 0.1);
+      border: 1px solid rgba(229, 184, 105, 0.25);
+      color: #e5b869;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Floating Diagnostic HUD */
+    #diagnosticHud {
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    /* Custom Luxury Trailing Cursor */
+    #luxuryCursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 28px;
+      height: 28px;
+      border: 1.5px solid rgba(229, 184, 105, 0.7);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: width 0.25s, height 0.25s, background-color 0.25s, border-color 0.25s;
+      z-index: 9999;
+      display: none;
+    }
+    #luxuryCursorDot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background-color: #e5b869;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 10000;
+      display: none;
+    }
+
+    /* Before / After Slider Styling */
+    .ba-slider-container {
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .ba-before-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      clip-path: polygon(0 0, var(--split-pos, 50%) 0, var(--split-pos, 50%) 100%, 0 100%);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0b0e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(229, 184, 105, 0.3);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(229, 184, 105, 0.6);
+    }
+  </style>
+
+  <!-- Production-Stable UMD Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+</head>
+<body class="selection:bg-[#e5b869]/30 selection:text-white">
+
+  <!-- Custom Luxury Trailing Cursor -->
+  <div id="luxuryCursor"></div>
+  <div id="luxuryCursorDot"></div>
+
+  <!-- ======================================================== -->
+  <!-- 1. LIVE ENGINE DIAGNOSTIC HUD & CONTROLLER BAR           -->
+  <!-- ======================================================== -->
+  <aside id="diagnosticHud" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:bottom-6 z-50 bg-[#13151b]/95 border border-[#e5b869]/30 rounded-2xl p-4 shadow-2xl max-w-md w-auto">
+    <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-3">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-mono text-xs font-semibold text-white tracking-wider uppercase">Motion Systems Diagnostic</span>
+      </div>
+      <button id="toggleHudDetails" class="text-[11px] text-[#e5b869] hover:underline flex items-center gap-1">
+        <span>Controls</span> <i class="fa-solid fa-chevron-up text-[9px] transition-transform" id="hudChevron"></i>
+      </button>
+    </div>
+
+    <!-- Live Status Indicators -->
+    <div class="grid grid-cols-3 gap-2 font-mono text-[11px] mb-3">
+      <div class="bg-black/40 rounded-lg p-2 border border-white/5">
+        <div class="text-white/40 text-[9px] uppercase">GSAP Core</div>
+        <div id="statusGsap" class="text-emerald-400 font-bold truncate">Active v3.12</div>
+      </div>
+      <div class="bg-black/40 rounded-lg p-2 border border-white/5">
+        <div class="text-white/40 text-[9px] uppercase">ScrollTrigger</div>
+        <div id="statusST" class="text-emerald-400 font-bold truncate">Active (6 triggers)</div>
+      </div>
+      <div class="bg-black/40 rounded-lg p-2 border border-white/5">
+        <div class="text-white/40 text-[9px] uppercase">Lenis Smooth</div>
+        <div id="statusLenis" class="text-emerald-400 font-bold truncate">Running (1.2s)</div>
+      </div>
+    </div>
+
+    <!-- Live Scroll Telemetry -->
+    <div class="flex items-center justify-between text-[11px] font-mono text-white/60 bg-black/30 rounded-lg px-3 py-1.5 border border-white/5 mb-3">
+      <div>Velocity: <span id="telemetryVelocity" class="text-[#e5b869] font-bold">0.00</span></div>
+      <div>Direction: <span id="telemetryDirection" class="text-white">Idle</span></div>
+      <div>Progress: <span id="telemetryPct" class="text-[#e5b869] font-bold">0%</span></div>
+    </div>
+
+    <!-- Expandable Controls Drawer -->
+    <div id="hudDrawer" class="space-y-3 pt-2 border-t border-white/10 hidden">
+      <!-- Lenis Toggle & Duration Slider -->
+      <div>
+        <div class="flex justify-between text-xs font-mono mb-1">
+          <span class="text-white/80">Lenis Momentum Duration:</span>
+          <span id="sliderValue" class="text-[#e5b869] font-bold">1.2s</span>
+        </div>
+        <input id="lenisDurationRange" type="range" min="0.3" max="2.5" step="0.1" value="1.2" class="w-full accent-[#e5b869] cursor-pointer">
+      </div>
+
+      <div class="grid grid-cols-2 gap-2">
+        <button id="hudToggleLenis" class="px-3 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-mono hover:bg-emerald-500/30 transition flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-power-off"></i> <span>Lenis: Enabled</span>
+        </button>
+        <button id="hudToggleCursor" class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-white/80 text-xs font-mono hover:bg-white/10 transition flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-arrow-pointer text-[#e5b869]"></i> <span>Luxury Cursor: Off</span>
+        </button>
+      </div>
+
+      <!-- Quick Nav Jump Buttons -->
+      <div class="grid grid-cols-3 gap-1 pt-1 font-mono text-[10px]">
+        <button data-scroll-to="#lenis-demo" class="quick-scroll-btn py-1 rounded bg-white/5 hover:bg-[#e5b869]/20 hover:text-[#e5b869] text-white/60 transition text-center">01. Lenis</button>
+        <button data-scroll-to="#gsap-pinned-demo" class="quick-scroll-btn py-1 rounded bg-white/5 hover:bg-[#e5b869]/20 hover:text-[#e5b869] text-white/60 transition text-center">02. Pinning</button>
+        <button data-scroll-to="#gsap-horizontal-demo" class="quick-scroll-btn py-1 rounded bg-white/5 hover:bg-[#e5b869]/20 hover:text-[#e5b869] text-white/60 transition text-center">03. Horizontal</button>
+        <button data-scroll-to="#gsap-readalong-demo" class="quick-scroll-btn py-1 rounded bg-white/5 hover:bg-[#e5b869]/20 hover:text-[#e5b869] text-white/60 transition text-center">04. Read-Along</button>
+        <button data-scroll-to="#before-after-demo" class="quick-scroll-btn py-1 rounded bg-white/5 hover:bg-[#e5b869]/20 hover:text-[#e5b869] text-white/60 transition text-center">05. Before/After</button>
+        <button data-scroll-to="#cardstack-demo" class="quick-scroll-btn py-1 rounded bg-white/5 hover:bg-[#e5b869]/20 hover:text-[#e5b869] text-white/60 transition text-center">06. Card Stack</button>
+        <button data-scroll-to="#aurora-demo" class="quick-scroll-btn py-1 rounded bg-white/5 hover:bg-[#e5b869]/20 hover:text-[#e5b869] text-white/60 transition text-center">07. Aurora Glow</button>
+        <button data-scroll-to="#reactbits-demo" class="quick-scroll-btn py-1 rounded bg-white/5 hover:bg-[#e5b869]/20 hover:text-[#e5b869] text-white/60 transition text-center col-span-2">08. React Bits Suite &darr;</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ======================================================== -->
+  <!-- 2. FIXED NAVIGATION BAR                                  -->
+  <!-- ======================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-[#0a0b0e]/85 border-b border-white/10 px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-[#aa987c] to-[#e5b869] flex items-center justify-center font-bold text-black text-sm shadow-lg shadow-[#e5b869]/20">
+        S
+      </div>
+      <div>
+        <span class="font-heading font-bold text-sm tracking-widest uppercase text-white">SuA K-Glow</span>
+        <span class="text-[11px] text-[#aa987c] block -mt-0.5 font-mono">Full Motion Master Suite</span>
+      </div>
+    </div>
+
+    <!-- Center Navigation Links -->
+    <nav class="hidden xl:flex items-center gap-5 text-xs font-mono text-white/70">
+      <a href="#lenis-demo" class="hover:text-[#e5b869] transition">01 Lenis</a>
+      <a href="#gsap-pinned-demo" class="hover:text-[#e5b869] transition">02 Pinning</a>
+      <a href="#gsap-horizontal-demo" class="hover:text-[#e5b869] transition">03 Horizontal</a>
+      <a href="#gsap-readalong-demo" class="hover:text-[#e5b869] transition">04 Read-Along</a>
+      <a href="#before-after-demo" class="hover:text-[#e5b869] transition">05 Before/After</a>
+      <a href="#cardstack-demo" class="hover:text-[#e5b869] transition">06 Stack</a>
+      <a href="#aurora-demo" class="hover:text-[#e5b869] transition">07 Aurora</a>
+      <a href="#reactbits-demo" class="hover:text-[#e5b869] transition">08 Micro-UI</a>
+    </nav>
+    
+    <!-- Smooth scroll progress bar & back link -->
+    <div class="flex items-center gap-4">
+      <div class="hidden sm:flex items-center gap-2">
+        <span class="text-[11px] font-mono text-white/50">Overall:</span>
+        <div class="w-24 md:w-32 h-1.5 bg-white/10 rounded-full overflow-hidden">
+          <div id="scrollProgress" class="h-full bg-gradient-to-r from-[#aa987c] to-[#e5b869] w-0"></div>
+        </div>
+      </div>
+      <a href="./index.html" class="text-xs font-mono px-3 py-1.5 rounded-lg border border-white/15 bg-white/5 hover:bg-[#e5b869]/10 hover:border-[#e5b869]/40 text-[#e5b869] transition">
+        &larr; Dev Hub
+      </a>
+    </div>
+  </header>
+
+
+  <!-- ======================================================== -->
+  <!-- 3. HERO SECTION: MOTION STACK PRESENTATION               -->
+  <!-- ======================================================== -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-28 pb-16 relative overflow-hidden">
+    <!-- Ambient Light Blobs -->
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-br from-[#e5b869]/15 to-[#aa987c]/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto z-10">
+      <div class="tag-badge mb-6 hero-anim">
+        <i class="fa-solid fa-wand-magic-sparkles text-[#e5b869]"></i> Complete Motion Architecture
+      </div>
+
+      <h1 class="hero-anim text-4xl sm:text-6xl md:text-7xl font-bold font-serif mb-6 leading-[1.1] text-white">
+        Aesthetic Physics for <br/>
+        <span class="shiny-text font-serif italic text-4xl sm:text-6xl md:text-7xl">High-End Korean Medical Spa</span>
+      </h1>
+
+      <p class="hero-anim text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto font-light leading-relaxed mb-8">
+        Every capability across <strong>Lenis Momentum Physics</strong>, <strong>GSAP Cinematic ScrollTrigger</strong>, and the <strong>React Bits</strong> luxury micro-interaction library.
+      </p>
+
+      <!-- Quick Action Buttons -->
+      <div class="hero-anim flex flex-wrap items-center justify-center gap-4">
+        <a href="#lenis-demo" class="px-7 py-3.5 rounded-full bg-gradient-to-r from-[#e5b869] to-[#aa987c] text-black font-semibold text-sm hover:brightness-110 transition shadow-xl shadow-[#e5b869]/20 flex items-center gap-2">
+          <span>Explore All 8 Modules</span> <i class="fa-solid fa-arrow-down text-xs"></i>
+        </a>
+        <button id="heroQuickLock" class="px-6 py-3.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-sm transition flex items-center gap-2">
+          <i class="fa-solid fa-sliders text-[#e5b869]"></i>
+          <span>Open Telemetry HUD &darr;</span>
+        </button>
+      </div>
+
+      <!-- Statistics Counters in Hero -->
+      <div id="statsSection" class="hero-anim mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 text-left max-w-4xl mx-auto">
+        <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-sm">
+          <div class="text-3xl font-bold font-serif text-[#e5b869] flex items-baseline">
+            <span class="counter-number" data-target="99.4">0</span><span>%</span>
+          </div>
+          <div class="text-xs font-semibold text-white mt-1">Client Retention</div>
+          <div class="text-[11px] text-white/50">Glass-skin glow longevity</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-sm">
+          <div class="text-3xl font-bold font-serif text-[#e5b869] flex items-baseline">
+            <span class="counter-number" data-target="5240">0</span><span>+</span>
+          </div>
+          <div class="text-xs font-semibold text-white mt-1">Rituals Completed</div>
+          <div class="text-[11px] text-white/50">Diasono & DEP infusions</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-sm">
+          <div class="text-3xl font-bold font-serif text-[#e5b869] flex items-baseline">
+            <span class="counter-number" data-target="15">0</span><span>+</span>
+          </div>
+          <div class="text-xs font-semibold text-white mt-1">Years Seoul Heritage</div>
+          <div class="text-[11px] text-white/50">Direct Gangnam protocols</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-sm">
+          <div class="text-3xl font-bold font-serif text-[#e5b869] flex items-baseline">
+            <span>0</span>
+          </div>
+          <div class="text-xs font-semibold text-white mt-1">Downtime Days</div>
+          <div class="text-[11px] text-white/50">Needle-free cellular transdermal</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
+      <span class="text-[10px] uppercase font-mono tracking-widest text-[#aa987c]">Scroll To Begin</span>
+      <div class="w-5 h-8 rounded-full border-2 border-white/20 flex items-start justify-center p-1">
+        <div class="w-1.5 h-2 bg-[#e5b869] rounded-full animate-bounce"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- 4. SECTION 01: LENIS SMOOTH SCROLLING DEMO & LAB         -->
+  <!-- ======================================================== -->
+  <section id="lenis-demo" class="py-28 px-6 border-t border-white/10 relative">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="tag-badge mb-3">Module 01</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-serif text-white">Lenis Smooth Scrolling</h2>
+          <p class="text-white/60 text-base mt-2 max-w-xl">
+            A lightweight, normalized momentum scrolling engine designed specifically for synchronizing with modern WebGL and GSAP animations without lag or tearing.
+          </p>
+        </div>
+        <div class="flex flex-col gap-2">
+          <div class="bg-black/40 border border-white/10 rounded-xl p-4 text-xs font-mono">
+            <span class="text-[#e5b869] font-bold">Current Easing:</span> <span id="currentEasingDisplay">t &rarr; 1 - pow(2, -10t) (Exponential)</span>
+          </div>
+          <div class="flex gap-2">
+            <button id="setEaseLuxury" class="px-3 py-1.5 rounded-lg bg-[#e5b869]/20 border border-[#e5b869]/40 text-[#e5b869] text-xs font-mono hover:bg-[#e5b869]/30 transition">
+              Luxury Butter (1.4s)
+            </button>
+            <button id="setEaseSnappy" class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/15 text-white/80 text-xs font-mono hover:bg-white/10 transition">
+              Snappy Fast (0.7s)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Comparison 3-Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="spotlight-card p-8">
+          <div class="w-12 h-12 rounded-xl bg-[#e5b869]/10 text-[#e5b869] flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-feather"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Zero-Jitter Normalized Momentum</h3>
+          <p class="text-sm text-white/60 leading-relaxed">
+            Standard browser scroll jumps in discrete 100px increments. Lenis converts mouse wheel and trackpad impulses into smooth cubic or exponential curves.
+          </p>
+          <div class="mt-6 pt-4 border-t border-white/10 text-xs font-mono text-[#e5b869]">
+            Result: Silky 120Hz refresh on ProMotion displays
+          </div>
+        </div>
+
+        <div class="spotlight-card p-8">
+          <div class="w-12 h-12 rounded-xl bg-[#e5b869]/10 text-[#e5b869] flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-arrows-spin"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">GSAP ScrollTrigger Sync</h3>
+          <p class="text-sm text-white/60 leading-relaxed">
+            By piping <code>lenis.on('scroll', ScrollTrigger.update)</code> and driving Lenis via <code>gsap.ticker</code>, visual scrub timelines never jitter out of phase.
+          </p>
+          <div class="mt-6 pt-4 border-t border-white/10 text-xs font-mono text-[#e5b869]">
+            Result: Zero tearing on pinned or parallax sections
+          </div>
+        </div>
+
+        <div class="spotlight-card p-8">
+          <div class="w-12 h-12 rounded-xl bg-[#e5b869]/10 text-[#e5b869] flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-lock-open"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Non-Destructive Scroll Locking</h3>
+          <p class="text-sm text-white/60 leading-relaxed">
+            Opening a consultation booking modal or navigation drawer? <code>lenis.stop()</code> freezes scroll without resetting the page position or breaking layout flow.
+          </p>
+          <div class="mt-6 pt-4 border-t border-white/10 text-xs font-mono text-[#e5b869]">
+            Result: No layout jump when toggling luxury drawers
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Comparison Banner -->
+      <div class="p-6 rounded-2xl bg-gradient-to-r from-black/80 via-white/[0.03] to-black/80 border border-[#e5b869]/20 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <span class="text-xs font-mono text-[#e5b869] uppercase font-bold tracking-wider">Test The Difference Right Now</span>
+          <h4 class="text-xl font-bold font-serif text-white mt-1">Switch Between Native Scroll & Lenis Momentum</h4>
+          <p class="text-sm text-white/60 mt-1">Notice how the momentum glide feels under your fingers when enabled.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="inlineToggleLenis" class="px-6 py-3 rounded-xl bg-[#e5b869] text-black font-semibold text-sm hover:brightness-110 transition shadow-lg shadow-[#e5b869]/20 flex items-center gap-2">
+            <i class="fa-solid fa-toggle-on"></i> <span id="inlineLenisLabel">Toggle Smooth Scroll</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- 5. SECTION 02: GSAP SCROLLTRIGGER PINNED NARRATIVE       -->
+  <!-- ======================================================== -->
+  <section id="gsap-pinned-demo" class="py-28 px-6 border-t border-white/10 relative bg-black/40">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16">
+        <span class="tag-badge mb-3">Module 02</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-serif text-white">GSAP Pinned Storytelling Sequence</h2>
+        <p class="text-white/60 text-base mt-2 max-w-xl">
+          As you scroll, the clinical diagnostic card on the left remains locked (pinned) in viewport space while you read through the multi-stage treatment protocol on the right.
+        </p>
+      </div>
+
+      <!-- PINNED WRAPPER -->
+      <div id="pinContainer" class="flex flex-col lg:flex-row gap-12 items-start relative min-h-[1400px]">
+        
+        <!-- Pinned Left Card (Stays in viewport) -->
+        <div id="pinnedSidebar" class="lg:w-5/12 w-full p-8 rounded-2xl bg-gradient-to-b from-[#13151b] to-black/90 border border-[#e5b869]/30 backdrop-blur-xl shadow-2xl lg:sticky lg:top-28">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs uppercase font-bold tracking-widest text-[#e5b869] font-mono">Live Pin Active</span>
+            <span id="activePhaseBadge" class="text-[11px] px-2.5 py-0.5 rounded-full bg-[#e5b869]/20 text-[#e5b869] font-mono">Phase 1/4</span>
+          </div>
+
+          <h3 class="text-2xl sm:text-3xl font-bold font-serif text-white mb-3">5 Layers 1 Ritual Clinical Protocol</h3>
+          <p class="text-sm text-white/70 leading-relaxed mb-6">
+            This sidebar remains pinned as you progress down the page. Notice how the scrub progress percentage and step indicator below dynamically synchronize with your scroll depth.
+          </p>
+          
+          <!-- Scrub Progress Bars & Meters -->
+          <div class="space-y-4 p-4 rounded-xl bg-black/60 border border-white/10 mb-6">
+            <div class="flex justify-between text-xs font-mono text-white/70">
+              <span>Section Scrub Completion:</span>
+              <span id="pinProgressText" class="text-[#e5b869] font-bold">0%</span>
+            </div>
+            <div class="w-full h-2.5 bg-white/10 rounded-full overflow-hidden">
+              <div id="pinProgressBar" class="h-full bg-gradient-to-r from-[#aa987c] to-[#e5b869] w-0 transition-all duration-75"></div>
+            </div>
+
+            <!-- Ritual Step Dots -->
+            <div class="flex justify-between items-center pt-2">
+              <div class="flex items-center gap-1.5 font-mono text-[10px]">
+                <span id="dot1" class="w-2.5 h-2.5 rounded-full bg-[#e5b869] transition-all"></span>
+                <span id="dot2" class="w-2.5 h-2.5 rounded-full bg-white/20 transition-all"></span>
+                <span id="dot3" class="w-2.5 h-2.5 rounded-full bg-white/20 transition-all"></span>
+                <span id="dot4" class="w-2.5 h-2.5 rounded-full bg-white/20 transition-all"></span>
+              </div>
+              <span id="currentStepName" class="text-xs text-[#e5b869] font-mono">Step 1: Hydro-Cleanse</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-white/50 font-mono">
+            <span>Powered by ScrollTrigger</span>
+            <code class="text-[#e5b869]">{ pin: true, scrub: 0.5 }</code>
+          </div>
+        </div>
+
+        <!-- Scrolling Steps on the Right -->
+        <div class="lg:w-7/12 w-full space-y-24 py-6">
+          
+          <!-- STEP 1 -->
+          <div id="stepCard1" class="gsap-step-card p-8 rounded-2xl bg-[#13151b]/80 border border-white/10 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-full bg-[#e5b869] text-black font-bold flex items-center justify-center font-mono">01</span>
+              <span class="text-xs font-mono text-[#aa987c]">Duration: 15 Mins</span>
+            </div>
+            <h4 class="text-xl sm:text-2xl font-bold font-serif text-white mb-2">Aquafacial Hydro-Cleanse & Vortex Extraction</h4>
+            <p class="text-sm text-white/70 leading-relaxed mb-4">
+              Gentle vacuum-assisted vortex infusion flushes congested pores with clinical AHA/BHA solutions without mechanical abrasion or epidermal trauma.
+            </p>
+            <div class="p-3 rounded-lg bg-black/40 border border-white/5 text-xs text-[#e5b869] font-mono">
+              Targets: Sebum congestion, hyper-keratinized dead cell layers
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div id="stepCard2" class="gsap-step-card p-8 rounded-2xl bg-[#13151b]/80 border border-white/10 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-full bg-[#e5b869] text-black font-bold flex items-center justify-center font-mono">02</span>
+              <span class="text-xs font-mono text-[#aa987c]">Duration: 20 Mins</span>
+            </div>
+            <h4 class="text-xl sm:text-2xl font-bold font-serif text-white mb-2">Diasono 310 LDM Cellular Ultrasound</h4>
+            <p class="text-sm text-white/70 leading-relaxed mb-4">
+              1MHz, 3MHz, and 10MHz alternating acoustic pressure waves stimulate dermal fibroblasts and activate Heat Shock Proteins (HSP72) to rebuild collagen scaffolds.
+            </p>
+            <div class="p-3 rounded-lg bg-black/40 border border-white/5 text-xs text-[#e5b869] font-mono">
+              Targets: Cellular density, inflammatory MMP enzyme suppression
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div id="stepCard3" class="gsap-step-card p-8 rounded-2xl bg-[#13151b]/80 border border-white/10 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-full bg-[#e5b869] text-black font-bold flex items-center justify-center font-mono">03</span>
+              <span class="text-xs font-mono text-[#aa987c]">Duration: 25 Mins</span>
+            </div>
+            <h4 class="text-xl sm:text-2xl font-bold font-serif text-white mb-2">Needle-Free DEP Follicle Infusion</h4>
+            <p class="text-sm text-white/70 leading-relaxed mb-4">
+              Medical-grade transdermal electroporation pulses create temporary aqueous channels across the stratum corneum, delivering salmon PDRN and exosome peptides with zero pain.
+            </p>
+            <div class="p-3 rounded-lg bg-black/40 border border-white/5 text-xs text-[#e5b869] font-mono">
+              Targets: Deep reticular dermis bio-peptide saturation
+            </div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div id="stepCard4" class="gsap-step-card p-8 rounded-2xl bg-[#13151b]/80 border border-white/10 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-full bg-[#e5b869] text-black font-bold flex items-center justify-center font-mono">04</span>
+              <span class="text-xs font-mono text-[#aa987c]">Duration: 15 Mins</span>
+            </div>
+            <h4 class="text-xl sm:text-2xl font-bold font-serif text-white mb-2">Celluma LED Photobiomodulation & Cryo-Seal</h4>
+            <p class="text-sm text-white/70 leading-relaxed mb-4">
+              NASA-researched 640nm red and 830nm near-infrared wavelengths stimulate cytochrome c oxidase in mitochondrial membranes, accelerating ATP synthesis for enduring glass radiance.
+            </p>
+            <div class="p-3 rounded-lg bg-black/40 border border-white/5 text-xs text-[#e5b869] font-mono">
+              Targets: Mitochondrial regeneration & long-lasting glass radiance
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- 6. SECTION 03: GSAP HORIZONTAL SCROLL CAROUSEL           -->
+  <!-- ======================================================== -->
+  <section id="gsap-horizontal-demo" class="border-t border-white/10 relative overflow-hidden bg-[#0d0f14]">
+    <div class="py-16 px-6 max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <span class="tag-badge mb-3">Module 03</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-serif text-white">Horizontal Scrub Track</h2>
+          <p class="text-white/60 text-base mt-2 max-w-xl">
+            Vertical scrolling smoothly drives a horizontal translation timeline. This gives editorial lookbooks and treatment portfolios a high-fashion, cinematic feel.
+          </p>
+        </div>
+        <div class="text-xs font-mono text-[#e5b869] bg-black/50 border border-white/10 px-4 py-2.5 rounded-xl">
+          <i class="fa-solid fa-arrows-left-right mr-2"></i> Scroll vertically to traverse slides &rarr;
+        </div>
+      </div>
+    </div>
+
+    <!-- Pinned Horizontal Track Container -->
+    <div id="horizontalSection" class="relative">
+      <div id="horizontalTrack" class="flex gap-8 px-6 lg:px-24 py-12 w-max items-center">
+        
+        <!-- CARD 1 -->
+        <div class="horizontal-card w-[340px] sm:w-[420px] p-8 rounded-3xl bg-gradient-to-b from-[#13151b] to-black border border-[#e5b869]/30 shadow-2xl flex-shrink-0">
+          <div class="text-xs font-mono text-[#e5b869] mb-3">Portfolio 01 / Signature</div>
+          <h3 class="text-2xl font-bold font-serif text-white mb-2">SuA Signature Glass Facial</h3>
+          <p class="text-sm text-white/70 leading-relaxed mb-6">
+            The multi-stage aesthetic ritual that transforms dull, fatigued skin into porcelain clarity with zero downtime.
+          </p>
+          <div class="flex items-center justify-between pt-4 border-t border-white/10 text-xs font-mono text-white/50">
+            <span>Duration: 75 Mins</span>
+            <span class="text-[#e5b869] font-bold">$280 VIP</span>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="horizontal-card w-[340px] sm:w-[420px] p-8 rounded-3xl bg-gradient-to-b from-[#13151b] to-black border border-white/15 shadow-2xl flex-shrink-0">
+          <div class="text-xs font-mono text-[#e5b869] mb-3">Portfolio 02 / Cellular</div>
+          <h3 class="text-2xl font-bold font-serif text-white mb-2">Diasono 310 LDM Ultrasound</h3>
+          <p class="text-sm text-white/70 leading-relaxed mb-6">
+            Cellular matrix activation using patented German-Korean triple-frequency acoustic energy for collagen rebuilding.
+          </p>
+          <div class="flex items-center justify-between pt-4 border-t border-white/10 text-xs font-mono text-white/50">
+            <span>Duration: 60 Mins</span>
+            <span class="text-[#e5b869] font-bold">$320 VIP</span>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="horizontal-card w-[340px] sm:w-[420px] p-8 rounded-3xl bg-gradient-to-b from-[#13151b] to-black border border-white/15 shadow-2xl flex-shrink-0">
+          <div class="text-xs font-mono text-[#e5b869] mb-3">Portfolio 03 / Needle-Free</div>
+          <h3 class="text-2xl font-bold font-serif text-white mb-2">DEP Transdermal Electroporation</h3>
+          <p class="text-sm text-white/70 leading-relaxed mb-6">
+            FDA-cleared iontophoresis + electroporation delivering medical exosomes and salmon DNA deep into dermis without needles.
+          </p>
+          <div class="flex items-center justify-between pt-4 border-t border-white/10 text-xs font-mono text-white/50">
+            <span>Duration: 50 Mins</span>
+            <span class="text-[#e5b869] font-bold">$350 VIP</span>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="horizontal-card w-[340px] sm:w-[420px] p-8 rounded-3xl bg-gradient-to-b from-[#13151b] to-black border border-white/15 shadow-2xl flex-shrink-0">
+          <div class="text-xs font-mono text-[#e5b869] mb-3">Portfolio 04 / Regenerative</div>
+          <h3 class="text-2xl font-bold font-serif text-white mb-2">Scalp Micro-Infusion Therapy</h3>
+          <p class="text-sm text-white/70 leading-relaxed mb-6">
+            Follicular stem peptide infusion targeting hair density and micro-vascular scalp circulation.
+          </p>
+          <div class="flex items-center justify-between pt-4 border-t border-white/10 text-xs font-mono text-white/50">
+            <span>Duration: 60 Mins</span>
+            <span class="text-[#e5b869] font-bold">$290 VIP</span>
+          </div>
+        </div>
+
+        <!-- CARD 5 (FINALE) -->
+        <div class="horizontal-card w-[340px] sm:w-[420px] p-8 rounded-3xl bg-gradient-to-b from-[#e5b869]/20 to-black border border-[#e5b869]/50 shadow-2xl flex-shrink-0">
+          <div class="text-xs font-mono text-[#e5b869] mb-3">Portfolio 05 / Consultation</div>
+          <h3 class="text-2xl font-bold font-serif text-white mb-2">AURA 3D Skin Biometric Scan</h3>
+          <p class="text-sm text-white/70 leading-relaxed mb-6">
+            Multispectral polarimetric analysis evaluating pore depth, melanin clusters, and subsurface vascularity.
+          </p>
+          <div class="flex items-center justify-between pt-4 border-t border-white/10 text-xs font-mono text-white/50">
+            <span>Complimentary</span>
+            <span class="text-[#e5b869] font-bold">Included in All Rituals</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- 7. SECTION 04: GSAP SCROLL-DRIVEN READ-ALONG HIGHLIGHT   -->
+  <!-- ======================================================== -->
+  <section id="gsap-readalong-demo" class="py-28 px-6 border-t border-white/10 relative bg-black/60">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-12 text-center">
+        <span class="tag-badge mb-3">Module 04</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-serif text-white">Scroll-Driven Read-Along Manifesto</h2>
+        <p class="text-white/60 text-base mt-2 max-w-xl mx-auto">
+          As you scroll past this manifesto, each word illuminates sequentially from 20% opacity to 100% radiant champagne gold, focusing reading attention.
+        </p>
+      </div>
+
+      <!-- Scroller Text Container -->
+      <div id="readAlongContainer" class="p-8 sm:p-14 rounded-3xl bg-[#13151b]/90 border border-[#e5b869]/25 shadow-2xl">
+        <div class="flex items-center justify-between pb-6 mb-8 border-b border-white/10 text-xs font-mono text-[#aa987c]">
+          <span><i class="fa-solid fa-feather-pointed mr-1"></i> SuA K-Glow Philosophy</span>
+          <span>Scrub Progress: <span id="readAlongProgress" class="text-[#e5b869] font-bold">0%</span></span>
+        </div>
+
+        <p id="manifestoParagraph" class="text-2xl sm:text-4xl md:text-5xl font-serif font-medium leading-relaxed tracking-wide">
+          True Korean aesthetic medicine does not mask fatigue — it awakens cellular vitality. Through triple-frequency acoustic resonance and needle-free electroporation, every stratum of your skin receives pure bio-engineered exosomes at medical depths with zero trauma.
+        </p>
+
+        <div class="mt-10 pt-6 border-t border-white/10 flex items-center justify-between text-xs font-mono text-white/50">
+          <span>Powered by <code>ScrollTrigger scrubbed word opacity</code></span>
+          <span class="text-[#e5b869]">Pure GSAP Timeline</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- 8. SECTION 05: BEFORE & AFTER SPLIT COMPARISON SLIDER    -->
+  <!-- ======================================================== -->
+  <section id="before-after-demo" class="py-28 px-6 border-t border-white/10 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="tag-badge mb-3">Module 05</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-serif text-white">Before & After Clinical Split-Slider</h2>
+          <p class="text-white/60 text-base mt-2 max-w-xl">
+            Interactive dual-layer comparative slider. Drag the divider handle or click the automatic sweep buttons to inspect treatment transformation.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="baAutoSweep" class="px-4 py-2 rounded-xl bg-[#e5b869]/20 border border-[#e5b869]/40 text-[#e5b869] text-xs font-mono hover:bg-[#e5b869]/30 transition">
+            <i class="fa-solid fa-play mr-1"></i> Auto-Sweep Animation
+          </button>
+          <button id="baCenter" class="px-3 py-2 rounded-xl bg-white/5 border border-white/15 text-white/80 text-xs font-mono hover:bg-white/10 transition">
+            Center 50%
+          </button>
+        </div>
+      </div>
+
+      <!-- Before/After Frame -->
+      <div class="spotlight-card p-4 sm:p-6 rounded-3xl">
+        <div id="baSlider" class="ba-slider-container relative w-full h-[400px] sm:h-[500px] rounded-2xl overflow-hidden cursor-ew-resize border border-white/15 bg-black">
+          
+          <!-- AFTER LAYER (Bottom / Full Background) -->
+          <div class="absolute inset-0 bg-gradient-to-br from-[#1c1917] to-[#0a0b0e] flex items-center justify-center p-8 select-none">
+            <div class="text-center max-w-md z-10">
+              <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-mono font-bold mb-4 inline-block">
+                AFTER PROTOCOL: GLASS SKIN RADIANCE
+              </span>
+              <h3 class="text-3xl sm:text-4xl font-bold font-serif text-white mb-3">Post-Treatment Clarity</h3>
+              <p class="text-sm text-white/70 leading-relaxed mb-6">
+                Poreless texture, restored stratum corneum barrier, deep reticular hydration, and continuous cellular luminescence.
+              </p>
+              <div class="grid grid-cols-2 gap-3 text-xs font-mono text-[#e5b869]">
+                <div class="p-2 rounded-lg bg-black/50 border border-white/10">+84% Collagen Scaffolding</div>
+                <div class="p-2 rounded-lg bg-black/50 border border-white/10">-92% Congestion Impurities</div>
+              </div>
+            </div>
+            <!-- Glow background overlay -->
+            <div class="absolute inset-0 bg-radial from-[#e5b869]/20 to-transparent pointer-events-none"></div>
+          </div>
+
+          <!-- BEFORE LAYER (Clipped by polygon / split-pos) -->
+          <div id="baBeforeLayer" class="ba-before-image bg-gradient-to-br from-[#27272a] to-[#09090b] flex items-center justify-center p-8 select-none" style="--split-pos: 50%;">
+            <div class="text-center max-w-md z-10">
+              <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-mono font-bold mb-4 inline-block">
+                BEFORE PROTOCOL: FATIGUE & CONGESTION
+              </span>
+              <h3 class="text-3xl sm:text-4xl font-bold font-serif text-white mb-3">Pre-Treatment Baseline</h3>
+              <p class="text-sm text-white/70 leading-relaxed mb-6">
+                Keratinized dead stratum layers, localized redness, sebum congestion, and compromised barrier moisture loss.
+              </p>
+              <div class="grid grid-cols-2 gap-3 text-xs font-mono text-white/50">
+                <div class="p-2 rounded-lg bg-black/50 border border-white/10">High Melanin Clumping</div>
+                <div class="p-2 rounded-lg bg-black/50 border border-white/10">Diminished Cell Turnover</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DRAGGABLE DIVIDER LINE & HANDLE -->
+          <div id="baHandle" class="absolute top-0 bottom-0 w-1 bg-[#e5b869] pointer-events-none transform -translate-x-1/2 shadow-[0_0_15px_rgba(229,184,105,0.8)]" style="left: 50%;">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#e5b869] text-black flex items-center justify-center shadow-xl font-bold text-xs">
+              <i class="fa-solid fa-left-right"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex items-center justify-between pt-4 px-2 text-xs font-mono text-white/60">
+          <span>&larr; Drag handle horizontally across photo</span>
+          <span class="text-[#e5b869]">Position: <span id="baPositionText">50%</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- 9. SECTION 06: CARD STACK / SWIPE DECK                   -->
+  <!-- ======================================================== -->
+  <section id="cardstack-demo" class="py-28 px-6 border-t border-white/10 relative bg-[#0d0e12]">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="tag-badge mb-3">Module 06</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-serif text-white">Card Stack &amp; Swipe Deck</h2>
+          <p class="text-white/60 text-base mt-2 max-w-xl">
+            Inspired by <strong>React Bits CardStack</strong>. A 3D fanned deck of VIP client ritual dossiers. Click the button or drag the top card to cycle through the stack.
+          </p>
+        </div>
+        <button id="cycleCardStack" class="px-6 py-3 rounded-xl bg-gradient-to-r from-[#e5b869] to-[#aa987c] text-black font-semibold text-xs hover:brightness-110 transition shadow-lg shadow-[#e5b869]/20 flex items-center gap-2">
+          <span>Next VIP Case Dossier</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- CARD STACK CONTAINER -->
+      <div class="relative h-[420px] max-w-lg mx-auto flex items-center justify-center">
+        
+        <!-- CARD 1 (Top) -->
+        <div class="deck-card absolute w-full p-8 rounded-3xl bg-gradient-to-br from-[#1a1b22] to-[#0a0b0e] border border-[#e5b869]/40 shadow-2xl transition-all duration-500 ease-out cursor-pointer" data-index="0" style="transform: translateY(0px) scale(1) rotate(0deg); z-index: 30;">
+          <div class="flex justify-between items-center mb-6">
+            <span class="text-xs font-mono text-[#e5b869] font-bold uppercase">Case Study 01 &bull; Beverly Hills VIP</span>
+            <span class="px-2.5 py-1 rounded bg-[#e5b869]/20 text-[#e5b869] text-[10px] font-mono">Dossier Verified</span>
+          </div>
+          <h3 class="text-2xl font-bold font-serif text-white mb-2">Red Carpet Glass Glow Prep</h3>
+          <p class="text-sm text-white/70 leading-relaxed mb-6">
+            Administered 48 hours prior to an awards gala. Combined Aquafacial hydro-cleanse with LDM ultrasound for zero-redness porcelain radiance.
+          </p>
+          <div class="p-4 rounded-xl bg-black/50 border border-white/10 text-xs font-mono flex justify-between text-white/60">
+            <span>Result: Instant Dewy Texture</span>
+            <span class="text-[#e5b869]">100% Zero Makeup Needed</span>
+          </div>
+        </div>
+
+        <!-- CARD 2 (Middle) -->
+        <div class="deck-card absolute w-full p-8 rounded-3xl bg-gradient-to-br from-[#1a1b22] to-[#0a0b0e] border border-white/20 shadow-2xl transition-all duration-500 ease-out cursor-pointer" data-index="1" style="transform: translateY(16px) scale(0.95) rotate(-2deg); z-index: 20;">
+          <div class="flex justify-between items-center mb-6">
+            <span class="text-xs font-mono text-[#e5b869] font-bold uppercase">Case Study 02 &bull; Executive Series</span>
+            <span class="px-2.5 py-1 rounded bg-white/10 text-white/80 text-[10px] font-mono">Dossier Verified</span>
+          </div>
+          <h3 class="text-2xl font-bold font-serif text-white mb-2">Cellular Reticular Infusion</h3>
+          <p class="text-sm text-white/70 leading-relaxed mb-6">
+            Targeted stubborn deep skin dehydration and periorbital fine lines with needle-free DEP electroporation and salmon PDRN polynucleotides.
+          </p>
+          <div class="p-4 rounded-xl bg-black/50 border border-white/10 text-xs font-mono flex justify-between text-white/60">
+            <span>Result: 3x Moisture Retention</span>
+            <span class="text-[#e5b869]">6-Month Protocol</span>
+          </div>
+        </div>
+
+        <!-- CARD 3 (Back) -->
+        <div class="deck-card absolute w-full p-8 rounded-3xl bg-gradient-to-br from-[#1a1b22] to-[#0a0b0e] border border-white/10 shadow-2xl transition-all duration-500 ease-out cursor-pointer" data-index="2" style="transform: translateY(32px) scale(0.9) rotate(2deg); z-index: 10;">
+          <div class="flex justify-between items-center mb-6">
+            <span class="text-xs font-mono text-[#e5b869] font-bold uppercase">Case Study 03 &bull; Post-Sun Recovery</span>
+            <span class="px-2.5 py-1 rounded bg-white/10 text-white/80 text-[10px] font-mono">Dossier Verified</span>
+          </div>
+          <h3 class="text-2xl font-bold font-serif text-white mb-2">Exosome Barrier Restoration</h3>
+          <p class="text-sm text-white/70 leading-relaxed mb-6">
+            Calmed intense UV photo-damage and broken skin moisture barrier using Diasono 10MHz triple acoustic ultrasound and Celluma LED phototherapy.
+          </p>
+          <div class="p-4 rounded-xl bg-black/50 border border-white/10 text-xs font-mono flex justify-between text-white/60">
+            <span>Result: Erythema Vanished</span>
+            <span class="text-[#e5b869]">Immediate Soothing</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-8 text-xs font-mono text-white/50">
+        Click top card or button to rotate &bull; 3D perspective transforms with scale &amp; z-index sorting
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- 10. SECTION 07: FLUID AURORA GLOW AMBIENT CANVAS        -->
+  <!-- ======================================================== -->
+  <section id="aurora-demo" class="py-28 px-6 border-t border-white/10 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="tag-badge mb-3">Module 07</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-serif text-white">Fluid Aurora Glow Canvas</h2>
+          <p class="text-white/60 text-base mt-2 max-w-xl">
+            Inspired by <strong>React Bits Aurora Background</strong>. A real-time GPU-accelerated canvas shader creating organic, undulating ambient champagne-gold light waves.
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="toggleAuroraSpeed" class="px-4 py-2 rounded-xl bg-white/5 border border-white/15 text-white/80 text-xs font-mono hover:bg-white/10 transition">
+            Speed: <span id="auroraSpeedText" class="text-[#e5b869]">Normal (1x)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Aurora Interactive Canvas Box -->
+      <div class="relative h-[380px] sm:h-[450px] rounded-3xl overflow-hidden border border-[#e5b869]/30 shadow-2xl bg-[#08090c] flex items-center justify-center p-8 text-center">
+        <!-- Canvas -->
+        <canvas id="auroraCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-80"></canvas>
+        
+        <!-- Foreground Overlay Content -->
+        <div class="relative z-10 max-w-lg p-8 rounded-2xl bg-black/60 backdrop-blur-md border border-white/15">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#e5b869] font-bold">Ambient Atmospheric Luxury</span>
+          <h3 class="text-3xl font-bold font-serif text-white mt-2 mb-3">Ethereal Korean Sanctuary</h3>
+          <p class="text-sm text-white/70 leading-relaxed mb-6">
+            Move your cursor across this container. The undulating aurora waves subtly distort and shift based on pointer gravity.
+          </p>
+          <div class="flex items-center justify-center gap-3 text-xs font-mono text-[#e5b869]">
+            <i class="fa-solid fa-atom"></i> <span>Dynamic Simplex Noise &bull; 60fps Render Loop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- 11. SECTION 08: REACT BITS INTERACTIVE COMPONENT LAB     -->
+  <!-- ======================================================== -->
+  <section id="reactbits-demo" class="py-28 px-6 border-t border-white/10 relative">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16">
+        <span class="tag-badge mb-3">Module 08</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-serif text-white">React Bits Component Patterns</h2>
+        <p class="text-white/60 text-base mt-2 max-w-2xl">
+          High-performance vanilla implementations of popular <strong>reactbits.dev</strong> patterns — completely zero-dependency, GPU-accelerated, and tailored for luxury aesthetics.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- COMPONENT 1: Radial Spotlight Card -->
+        <div class="spotlight-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono text-[#e5b869]">React Bits 01 &bull; SpotlightCard</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white/80 font-mono">Mouse Glow</span>
+            </div>
+            <h3 class="text-2xl font-bold font-serif text-white mb-3">Radial Cursor Spotlight</h3>
+            <p class="text-sm text-white/70 leading-relaxed mb-6">
+              Move your mouse over this card. A subtle champagne-gold radial spotlight calculates relative mouse coordinates in real-time, subtly illuminating boundaries.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-black/40 border border-white/10 font-mono text-xs text-white/60 flex items-center justify-between">
+            <span>CSS Variables: <code>--mouse-x</code>, <code>--mouse-y</code></span>
+            <span class="text-[#e5b869]">Live Tracking</span>
+          </div>
+        </div>
+
+        <!-- COMPONENT 2: 3D Tilted Card with Glare -->
+        <div class="tilt-card-container flex flex-col justify-between">
+          <div id="demoTiltCard" class="tilt-card relative p-8 rounded-2xl bg-gradient-to-br from-[#13151b] to-black border border-white/15 h-full flex flex-col justify-between overflow-hidden shadow-2xl">
+            <div class="tilt-card-glare"></div>
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-xs font-mono text-[#e5b869]">React Bits 02 &bull; TiltedCard</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white/80 font-mono">3D Perspective</span>
+              </div>
+              <h3 class="text-2xl font-bold font-serif text-white mb-3">3D Gyro Perspective Tilt</h3>
+              <p class="text-sm text-white/70 leading-relaxed mb-6">
+                Hover over this card and move around the corners. The card tilts in 3D perspective space with reactive specular light reflection.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-black/40 border border-white/10 font-mono text-xs text-white/60 flex items-center justify-between">
+              <span>Transform: <code id="tiltTransformValue">rotateX(0deg) rotateY(0deg)</code></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMPONENT 3: Decrypted Text Resolver -->
+        <div class="spotlight-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono text-[#e5b869]">React Bits 03 &bull; DecryptedText</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white/80 font-mono">Glyph FX</span>
+            </div>
+            <h3 class="text-2xl font-bold font-serif text-white mb-3">Cryptographic Text Scramble</h3>
+            <p class="text-sm text-white/70 leading-relaxed mb-6">
+              Click the trigger to initiate character-by-character cryptographic decoding inspired by high-tech biotech and medical interfaces.
+            </p>
+
+            <div class="p-5 rounded-xl bg-black/80 border border-[#e5b869]/30 font-mono text-center mb-6">
+              <span id="scrambleTarget" class="text-lg md:text-xl font-bold text-[#e5b869] tracking-wider">SUA_EXOSOME_PROTOCOL_V4</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-white/10">
+            <span class="text-xs font-mono text-white/50">Auto-resolves in 40 frames</span>
+            <button id="triggerScramble" class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#e5b869] to-[#aa987c] text-black font-semibold text-xs hover:brightness-110 transition flex items-center gap-1.5 shadow-lg shadow-[#e5b869]/15">
+              <i class="fa-solid fa-bolt"></i> <span>Re-Scramble Text</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- COMPONENT 4: Magnetic VIP Button -->
+        <div class="spotlight-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono text-[#e5b869]">React Bits 04 &bull; Magnet</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white/80 font-mono">Cursor Physics</span>
+            </div>
+            <h3 class="text-2xl font-bold font-serif text-white mb-3">Magnetic Attraction Pull</h3>
+            <p class="text-sm text-white/70 leading-relaxed mb-6">
+              Move your mouse within 100 pixels of the button below. Notice the magnetic gravitational attraction snapping the CTA toward your cursor.
+            </p>
+
+            <div class="h-28 flex items-center justify-center">
+              <button id="magneticBtn" class="px-8 py-4 rounded-full bg-gradient-to-r from-[#aa987c] to-[#e5b869] text-black font-bold text-sm shadow-2xl shadow-[#e5b869]/25 transition-transform duration-100 ease-out flex items-center gap-2">
+                <span>Reserve VIP Glass Facial</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-white/10 font-mono text-xs">
+            <span class="text-white/50">Magnetic Radius: 120px</span>
+            <span class="text-[#e5b869]">Spring Coefficient: 0.35</span>
+          </div>
+        </div>
+
+        <!-- COMPONENT 5: Split-Text Character Cascades -->
+        <div class="spotlight-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono text-[#e5b869]">React Bits 05 &bull; SplitText</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white/80 font-mono">Typography</span>
+            </div>
+            <h3 class="text-2xl font-bold font-serif text-white mb-3">Split Character Wave</h3>
+            <p class="text-sm text-white/70 leading-relaxed mb-6">
+              Hover over each menu entry below. Individual characters cascade upward with microsecond staggers using GSAP power3 easing.
+            </p>
+
+            <div class="space-y-3 font-heading font-bold text-lg sm:text-xl">
+              <div class="split-hover group cursor-pointer flex items-center justify-between p-3.5 rounded-xl bg-white/[0.02] hover:bg-[#e5b869]/10 transition border border-transparent hover:border-[#e5b869]/30">
+                <span class="split-text group-hover:text-[#e5b869] transition-colors">DIASONO ULTRASOUND RITUAL</span>
+                <i class="fa-solid fa-arrow-right text-xs opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-[#e5b869]"></i>
+              </div>
+              <div class="split-hover group cursor-pointer flex items-center justify-between p-3.5 rounded-xl bg-white/[0.02] hover:bg-[#e5b869]/10 transition border border-transparent hover:border-[#e5b869]/30">
+                <span class="split-text group-hover:text-[#e5b869] transition-colors">TRANSDERMAL EXOSOME INFUSION</span>
+                <i class="fa-solid fa-arrow-right text-xs opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-[#e5b869]"></i>
+              </div>
+              <div class="split-hover group cursor-pointer flex items-center justify-between p-3.5 rounded-xl bg-white/[0.02] hover:bg-[#e5b869]/10 transition border border-transparent hover:border-[#e5b869]/30">
+                <span class="split-text group-hover:text-[#e5b869] transition-colors">AURA 3D CLINICAL ANALYSIS</span>
+                <i class="fa-solid fa-arrow-right text-xs opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-[#e5b869]"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-white/10 font-mono text-xs">
+            <span class="text-white/50">Stagger Delay: 0.02s / char</span>
+            <span class="text-[#e5b869]">GSAP Char Splitting</span>
+          </div>
+        </div>
+
+        <!-- COMPONENT 6: True Focus Sliding Tab Indicator -->
+        <div class="spotlight-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono text-[#e5b869]">React Bits 06 &bull; TrueFocus</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white/80 font-mono">Elastic Pill</span>
+            </div>
+            <h3 class="text-2xl font-bold font-serif text-white mb-3">Elastic Focus Indicator</h3>
+            <p class="text-sm text-white/70 leading-relaxed mb-6">
+              Hover across the treatment categories below. A golden glowing pill tracks and springs to whichever tab your cursor hovers over.
+            </p>
+
+            <div class="p-2 rounded-2xl bg-black/60 border border-white/10 relative flex flex-wrap gap-2" id="elasticTabsContainer">
+              <!-- Sliding Indicator -->
+              <div id="elasticPill" class="absolute bg-[#e5b869] rounded-xl transition-all duration-300 ease-out pointer-events-none opacity-0 shadow-lg shadow-[#e5b869]/30"></div>
+              
+              <button class="elastic-tab px-4 py-2 rounded-xl text-xs font-mono relative z-10 text-black font-bold">Face &amp; Neck</button>
+              <button class="elastic-tab px-4 py-2 rounded-xl text-xs font-mono relative z-10 text-white/70 hover:text-white">Scalp &amp; Hair</button>
+              <button class="elastic-tab px-4 py-2 rounded-xl text-xs font-mono relative z-10 text-white/70 hover:text-white">Aesthetic Body</button>
+              <button class="elastic-tab px-4 py-2 rounded-xl text-xs font-mono relative z-10 text-white/70 hover:text-white">IV Therapy</button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-6 border-t border-white/10 font-mono text-xs">
+            <span class="text-white/50">Spring Physics: 300ms ease-out</span>
+            <span class="text-[#e5b869]">BoundingBox Tracking</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- 12. FOOTER & SUMMARY                                     -->
+  <!-- ======================================================== -->
+  <footer class="py-20 text-center border-t border-white/10 text-white/50 text-xs font-mono bg-black">
+    <p>SuA K-Glow Med Spa Motion Suite &bull; GSAP 3.12 + ScrollTrigger &bull; Lenis 1.1+ &bull; React Bits Vanilla</p>
+    <div class="mt-4 flex items-center justify-center gap-6">
+      <a href="./index.html" class="text-[#e5b869] hover:underline">Developer Hub</a>
+      <span>&bull;</span>
+      <a href="./sitemap.html" class="text-[#e5b869] hover:underline">Dev Sitemap</a>
+      <span>&bull;</span>
+      <a href="../index.html" class="text-[#e5b869] hover:underline">Main Public Site</a>
+    </div>
+  </footer>
+
+
+  <!-- ======================================================== -->
+  <!-- 13. SCRIPT ENGINE LOGIC                                  -->
+  <!-- ======================================================== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // ----------------------------------------------------
+      // A. ENGINE VERIFICATION & STATUS UPDATES
+      // ----------------------------------------------------
+      const statusGsap = document.getElementById("statusGsap");
+      const statusST = document.getElementById("statusST");
+      const statusLenis = document.getElementById("statusLenis");
+
+      const hasGsap = typeof gsap !== "undefined";
+      const hasST = typeof ScrollTrigger !== "undefined";
+      const hasLenis = typeof Lenis !== "undefined";
+
+      if (hasGsap) {
+        statusGsap.textContent = `Active (v${gsap.version || '3.x'})`;
+      } else {
+        statusGsap.textContent = "GSAP Missing";
+        statusGsap.className = "text-red-400 font-bold truncate";
+      }
+
+      if (hasST) {
+        gsap.registerPlugin(ScrollTrigger);
+        statusST.textContent = "Registered";
+      } else {
+        statusST.textContent = "ST Missing";
+        statusST.className = "text-red-400 font-bold truncate";
+      }
+
+      // ----------------------------------------------------
+      // B. LENIS INITIALIZATION & GSAP SYNC
+      // ----------------------------------------------------
+      let lenis = null;
+      let lenisActive = true;
+      let currentDuration = 1.2;
+
+      function initLenis(duration = 1.2, easingFunc = null) {
+        if (!hasLenis) return;
+        
+        if (lenis) {
+          lenis.destroy();
+        }
+
+        const ease = easingFunc || ((t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)));
+
+        lenis = new Lenis({
+          duration: duration,
+          easing: ease,
+          orientation: 'vertical',
+          smoothWheel: true,
+          wheelMultiplier: 1.0,
+          touchMultiplier: 1.5,
+          autoRaf: false,
+        });
+
+        // Pipe Lenis scroll events into GSAP ScrollTrigger
+        lenis.on('scroll', (e) => {
+          if (hasST) ScrollTrigger.update();
+          
+          // Update top scrollbar
+          const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+          const scrollPct = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+          document.getElementById('scrollProgress').style.width = scrollPct + '%';
+          
+          // Update HUD Telemetry
+          const vel = e.velocity ? Math.abs(e.velocity).toFixed(2) : '0.00';
+          document.getElementById('telemetryVelocity').textContent = vel;
+          document.getElementById('telemetryPct').textContent = Math.round(scrollPct) + '%';
+          document.getElementById('telemetryDirection').textContent = e.direction === 1 ? 'Down' : (e.direction === -1 ? 'Up' : 'Idle');
+        });
+
+        statusLenis.textContent = `Active (${duration}s)`;
+        statusLenis.className = "text-emerald-400 font-bold truncate";
+      }
+
+      if (hasLenis) {
+        initLenis(currentDuration);
+
+        // Drive Lenis tick via GSAP ticker
+        if (hasGsap) {
+          gsap.ticker.add((time) => {
+            if (lenis && lenisActive) {
+              lenis.raf(time * 1000);
+            }
+          });
+          gsap.ticker.lagSmoothing(0);
+        }
+      } else {
+        statusLenis.textContent = "Lenis Missing";
+        statusLenis.className = "text-red-400 font-bold truncate";
+      }
+
+      // ----------------------------------------------------
+      // C. HUD EXPANSION & CONTROLS
+      // ----------------------------------------------------
+      const toggleHudDetails = document.getElementById("toggleHudDetails");
+      const hudDrawer = document.getElementById("hudDrawer");
+      const hudChevron = document.getElementById("hudChevron");
+
+      toggleHudDetails.addEventListener("click", () => {
+        hudDrawer.classList.toggle("hidden");
+        hudChevron.classList.toggle("rotate-180");
+      });
+
+      // Quick Scroll Buttons in HUD
+      document.querySelectorAll(".quick-scroll-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const target = btn.getAttribute("data-scroll-to");
+          if (lenis && lenisActive) {
+            lenis.scrollTo(target, { offset: -60, duration: 1.2 });
+          } else {
+            const el = document.querySelector(target);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Duration Slider
+      const lenisDurationRange = document.getElementById("lenisDurationRange");
+      const sliderValue = document.getElementById("sliderValue");
+
+      lenisDurationRange.addEventListener("input", (e) => {
+        const val = parseFloat(e.target.value);
+        currentDuration = val;
+        sliderValue.textContent = val.toFixed(1) + 's';
+        if (lenisActive) {
+          initLenis(currentDuration);
+        }
+      });
+
+      // Easing Presets
+      document.getElementById("setEaseLuxury").addEventListener("click", () => {
+        currentDuration = 1.4;
+        lenisDurationRange.value = 1.4;
+        sliderValue.textContent = '1.4s';
+        initLenis(1.4, (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)));
+        document.getElementById("currentEasingDisplay").textContent = "t → 1 - pow(2, -10t) (Luxury)";
+      });
+
+      document.getElementById("setEaseSnappy").addEventListener("click", () => {
+        currentDuration = 0.7;
+        lenisDurationRange.value = 0.7;
+        sliderValue.textContent = '0.7s';
+        initLenis(0.7, (t) => t * (2 - t));
+        document.getElementById("currentEasingDisplay").textContent = "t * (2 - t) (Snappy EaseOut)";
+      });
+
+      // Toggle Lenis On / Off
+      function toggleLenisState() {
+        if (!hasLenis) return;
+        const hudBtn = document.getElementById("hudToggleLenis");
+        const inlineBtn = document.getElementById("inlineToggleLenis");
+        const inlineLabel = document.getElementById("inlineLenisLabel");
+
+        if (lenisActive) {
+          lenis.destroy();
+          lenisActive = false;
+          statusLenis.textContent = "Disabled (Native)";
+          statusLenis.className = "text-amber-400 font-bold truncate";
+          hudBtn.innerHTML = `<i class="fa-solid fa-power-off"></i> <span>Lenis: Disabled</span>`;
+          hudBtn.className = "px-3 py-2 rounded-lg bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-mono hover:bg-amber-500/30 transition flex items-center justify-center gap-1.5";
+          inlineLabel.textContent = "Enable Smooth Scroll";
+        } else {
+          initLenis(currentDuration);
+          lenisActive = true;
+          statusLenis.textContent = `Active (${currentDuration}s)`;
+          statusLenis.className = "text-emerald-400 font-bold truncate";
+          hudBtn.innerHTML = `<i class="fa-solid fa-power-off"></i> <span>Lenis: Enabled</span>`;
+          hudBtn.className = "px-3 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-mono hover:bg-emerald-500/30 transition flex items-center justify-center gap-1.5";
+          inlineLabel.textContent = "Disable (Use Native)";
+        }
+      }
+
+      document.getElementById("hudToggleLenis").addEventListener("click", toggleLenisState);
+      document.getElementById("inlineToggleLenis").addEventListener("click", toggleLenisState);
+
+      // Luxury Custom Cursor Toggle
+      let luxuryCursorActive = false;
+      const cursorEl = document.getElementById("luxuryCursor");
+      const cursorDotEl = document.getElementById("luxuryCursorDot");
+      const hudToggleCursor = document.getElementById("hudToggleCursor");
+
+      hudToggleCursor.addEventListener("click", () => {
+        luxuryCursorActive = !luxuryCursorActive;
+        if (luxuryCursorActive) {
+          cursorEl.style.display = "block";
+          cursorDotEl.style.display = "block";
+          hudToggleCursor.innerHTML = `<i class="fa-solid fa-arrow-pointer text-emerald-400"></i> <span class="text-emerald-300">Cursor: On</span>`;
+        } else {
+          cursorEl.style.display = "none";
+          cursorDotEl.style.display = "none";
+          hudToggleCursor.innerHTML = `<i class="fa-solid fa-arrow-pointer text-[#e5b869]"></i> <span>Cursor: Off</span>`;
+        }
+      });
+
+      let mouseX = -100, mouseY = -100;
+      let cursorX = -100, cursorY = -100;
+
+      window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (luxuryCursorActive) {
+          cursorDotEl.style.left = `${mouseX}px`;
+          cursorDotEl.style.top = `${mouseY}px`;
+        }
+      });
+
+      // Cursor smoothing RAF
+      function animateCursor() {
+        if (luxuryCursorActive) {
+          cursorX += (mouseX - cursorX) * 0.18;
+          cursorY += (mouseY - cursorY) * 0.18;
+          cursorEl.style.left = `${cursorX}px`;
+          cursorEl.style.top = `${cursorY}px`;
+        }
+        requestAnimationFrame(animateCursor);
+      }
+      animateCursor();
+
+      // Expand cursor on hovering links & buttons
+      document.querySelectorAll("a, button, input").forEach(el => {
+        el.addEventListener("mouseenter", () => {
+          if (luxuryCursorActive) {
+            cursorEl.style.width = "48px";
+            cursorEl.style.height = "48px";
+            cursorEl.style.backgroundColor = "rgba(229, 184, 105, 0.15)";
+            cursorEl.style.borderColor = "#e5b869";
+          }
+        });
+        el.addEventListener("mouseleave", () => {
+          if (luxuryCursorActive) {
+            cursorEl.style.width = "28px";
+            cursorEl.style.height = "28px";
+            cursorEl.style.backgroundColor = "transparent";
+            cursorEl.style.borderColor = "rgba(229, 184, 105, 0.7)";
+          }
+        });
+      });
+
+      // ----------------------------------------------------
+      // D. GSAP TIMELINES & ANIMATIONS
+      // ----------------------------------------------------
+      if (hasGsap) {
+        // Hero Entrance
+        gsap.from(".hero-anim", {
+          opacity: 0,
+          y: 40,
+          duration: 1.1,
+          stagger: 0.12,
+          ease: "power3.out"
+        });
+
+        // Statistics Number Counters (React Bits / GSAP Counter)
+        if (hasST) {
+          ScrollTrigger.create({
+            trigger: "#statsSection",
+            start: "top 85%",
+            once: true,
+            onEnter: () => {
+              document.querySelectorAll(".counter-number").forEach(counter => {
+                const targetVal = parseFloat(counter.getAttribute("data-target"));
+                const isDecimal = targetVal % 1 !== 0;
+                gsap.to(counter, {
+                  innerHTML: targetVal,
+                  duration: 2.2,
+                  ease: "power2.out",
+                  snap: isDecimal ? { innerHTML: 0.1 } : { innerHTML: 1 },
+                  onUpdate: function() {
+                    if (isDecimal) {
+                      counter.innerHTML = parseFloat(counter.innerHTML).toFixed(1);
+                    } else {
+                      counter.innerHTML = Math.round(counter.innerHTML).toLocaleString();
+                    }
+                  }
+                });
+              });
+            }
+          });
+        }
+
+        // 1. PINNED STORYTELLING SECTION
+        if (hasST) {
+          const stepNames = [
+            "Step 1: Hydro-Cleanse",
+            "Step 2: LDM Ultrasound",
+            "Step 3: DEP Electroporation",
+            "Step 4: LED Cryo-Seal"
+          ];
+
+          // Overall section scrub progress
+          ScrollTrigger.create({
+            trigger: "#pinContainer",
+            start: "top 120px",
+            end: "bottom bottom",
+            onUpdate: (self) => {
+              const pct = Math.round(self.progress * 100);
+              document.getElementById("pinProgressBar").style.width = pct + "%";
+              document.getElementById("pinProgressText").textContent = pct + "%";
+
+              // Determine current phase (0 to 3)
+              const phase = Math.min(3, Math.floor(self.progress * 4));
+              document.getElementById("activePhaseBadge").textContent = `Phase ${phase + 1}/4`;
+              document.getElementById("currentStepName").textContent = stepNames[phase];
+
+              // Update indicator dots
+              [1, 2, 3, 4].forEach(n => {
+                const dot = document.getElementById(`dot${n}`);
+                if (n === phase + 1) {
+                  dot.className = "w-2.5 h-2.5 rounded-full bg-[#e5b869] shadow-md shadow-[#e5b869]/50 transition-all";
+                } else if (n < phase + 1) {
+                  dot.className = "w-2.5 h-2.5 rounded-full bg-[#aa987c] transition-all";
+                } else {
+                  dot.className = "w-2.5 h-2.5 rounded-full bg-white/20 transition-all";
+                }
+              });
+            }
+          });
+
+          // Individual Step Card Highlights
+          [1, 2, 3, 4].forEach((idx) => {
+            const card = document.getElementById(`stepCard${idx}`);
+            if (card) {
+              ScrollTrigger.create({
+                trigger: card,
+                start: "top 60%",
+                end: "bottom 40%",
+                onEnter: () => {
+                  card.classList.add("border-[#e5b869]/60", "bg-[#13151b]", "shadow-2xl");
+                  card.classList.remove("border-white/10", "bg-[#13151b]/80");
+                },
+                onLeaveBack: () => {
+                  card.classList.remove("border-[#e5b869]/60", "bg-[#13151b]", "shadow-2xl");
+                  card.classList.add("border-white/10", "bg-[#13151b]/80");
+                }
+              });
+            }
+          });
+
+          // 2. HORIZONTAL SCROLL TRACK DEMO
+          const horizontalTrack = document.getElementById("horizontalTrack");
+          const horizontalSection = document.getElementById("horizontalSection");
+
+          if (horizontalTrack && horizontalSection) {
+            const totalWidth = horizontalTrack.scrollWidth;
+            const scrollDistance = totalWidth - window.innerWidth;
+
+            gsap.to(horizontalTrack, {
+              x: () => -(scrollDistance + 80),
+              ease: "none",
+              scrollTrigger: {
+                trigger: horizontalSection,
+                start: "top 90px",
+                end: () => `+=${totalWidth}`,
+                pin: true,
+                scrub: 1,
+                invalidateOnRefresh: true,
+              }
+            });
+          }
+
+          // 3. READ-ALONG MANIFESTO WORD SCRUB
+          const manifestoEl = document.getElementById("manifestoParagraph");
+          if (manifestoEl) {
+            const words = manifestoEl.innerText.split(/\s+/);
+            manifestoEl.innerHTML = words.map(w => `<span class="read-word inline-block opacity-20 transition-colors duration-200">${w}&nbsp;</span>`).join('');
+            
+            const wordSpans = manifestoEl.querySelectorAll(".read-word");
+
+            gsap.to(wordSpans, {
+              opacity: 1,
+              color: "#e5b869",
+              stagger: 0.05,
+              ease: "none",
+              scrollTrigger: {
+                trigger: "#readAlongContainer",
+                start: "top 65%",
+                end: "bottom 45%",
+                scrub: 0.5,
+                onUpdate: (self) => {
+                  document.getElementById("readAlongProgress").textContent = Math.round(self.progress * 100) + "%";
+                }
+              }
+            });
+          }
+        }
+      }
+
+      // ----------------------------------------------------
+      // E. BEFORE & AFTER SPLIT COMPARISON SLIDER
+      // ----------------------------------------------------
+      const baSlider = document.getElementById("baSlider");
+      const baBeforeLayer = document.getElementById("baBeforeLayer");
+      const baHandle = document.getElementById("baHandle");
+      const baPositionText = document.getElementById("baPositionText");
+
+      let isDraggingBA = false;
+
+      function updateBASplit(clientX) {
+        if (!baSlider) return;
+        const rect = baSlider.getBoundingClientRect();
+        let posX = clientX - rect.left;
+        posX = Math.max(0, Math.min(rect.width, posX));
+        const pct = (posX / rect.width) * 100;
+
+        baBeforeLayer.style.setProperty("--split-pos", `${pct}%`);
+        baHandle.style.left = `${pct}%`;
+        baPositionText.textContent = `${Math.round(pct)}%`;
+      }
+
+      if (baSlider) {
+        baSlider.addEventListener("mousedown", (e) => {
+          isDraggingBA = true;
+          updateBASplit(e.clientX);
+        });
+
+        window.addEventListener("mouseup", () => {
+          isDraggingBA = false;
+        });
+
+        baSlider.addEventListener("mousemove", (e) => {
+          if (isDraggingBA) updateBASplit(e.clientX);
+        });
+
+        // Touch support
+        baSlider.addEventListener("touchstart", (e) => {
+          isDraggingBA = true;
+          updateBASplit(e.touches[0].clientX);
+        });
+        window.addEventListener("touchend", () => {
+          isDraggingBA = false;
+        });
+        baSlider.addEventListener("touchmove", (e) => {
+          if (isDraggingBA) updateBASplit(e.touches[0].clientX);
+        });
+
+        // Center Button
+        document.getElementById("baCenter").addEventListener("click", () => {
+          if (hasGsap) {
+            gsap.to(baHandle, {
+              left: "50%",
+              duration: 0.5,
+              ease: "power2.out",
+              onUpdate: function() {
+                const currentPct = parseFloat(baHandle.style.left);
+                baBeforeLayer.style.setProperty("--split-pos", `${currentPct}%`);
+                baPositionText.textContent = `${Math.round(currentPct)}%`;
+              }
+            });
+          }
+        });
+
+        // Auto Sweep Animation
+        document.getElementById("baAutoSweep").addEventListener("click", () => {
+          if (hasGsap) {
+            const tl = gsap.timeline();
+            tl.to(baHandle, {
+              left: "15%",
+              duration: 1.2,
+              ease: "power2.inOut",
+              onUpdate: () => {
+                const p = parseFloat(baHandle.style.left);
+                baBeforeLayer.style.setProperty("--split-pos", `${p}%`);
+                baPositionText.textContent = `${Math.round(p)}%`;
+              }
+            })
+            .to(baHandle, {
+              left: "85%",
+              duration: 1.8,
+              ease: "power2.inOut",
+              onUpdate: () => {
+                const p = parseFloat(baHandle.style.left);
+                baBeforeLayer.style.setProperty("--split-pos", `${p}%`);
+                baPositionText.textContent = `${Math.round(p)}%`;
+              }
+            })
+            .to(baHandle, {
+              left: "50%",
+              duration: 1.0,
+              ease: "power2.out",
+              onUpdate: () => {
+                const p = parseFloat(baHandle.style.left);
+                baBeforeLayer.style.setProperty("--split-pos", `${p}%`);
+                baPositionText.textContent = `${Math.round(p)}%`;
+              }
+            });
+          }
+        });
+      }
+
+      // ----------------------------------------------------
+      // F. REACT BITS PATTERN: CARD STACK / SWIPE DECK
+      // ----------------------------------------------------
+      const deckCards = Array.from(document.querySelectorAll(".deck-card"));
+      const cycleCardStackBtn = document.getElementById("cycleCardStack");
+
+      const cardStyles = [
+        { y: 0, scale: 1, rotate: 0, z: 30, border: "rgba(229, 184, 105, 0.4)" },
+        { y: 16, scale: 0.95, rotate: -2, z: 20, border: "rgba(255, 255, 255, 0.2)" },
+        { y: 32, scale: 0.9, rotate: 2, z: 10, border: "rgba(255, 255, 255, 0.1)" }
+      ];
+
+      function applyDeckStyles() {
+        deckCards.forEach((card, idx) => {
+          const s = cardStyles[idx % cardStyles.length];
+          card.style.transform = `translateY(${s.y}px) scale(${s.scale}) rotate(${s.rotate}deg)`;
+          card.style.zIndex = s.z;
+          card.style.borderColor = s.border;
+        });
+      }
+
+      function rotateDeck() {
+        const topCard = deckCards.shift();
+        deckCards.push(topCard);
+
+        if (hasGsap) {
+          gsap.to(topCard, {
+            y: -120,
+            x: 80,
+            rotate: 15,
+            opacity: 0,
+            duration: 0.35,
+            ease: "power2.in",
+            onComplete: () => {
+              applyDeckStyles();
+              gsap.fromTo(topCard, 
+                { y: 50, x: 0, opacity: 0 }, 
+                { y: 32, x: 0, opacity: 1, duration: 0.4, ease: "power2.out" }
+              );
+            }
+          });
+        } else {
+          applyDeckStyles();
+        }
+      }
+
+      if (cycleCardStackBtn) {
+        cycleCardStackBtn.addEventListener("click", rotateDeck);
+      }
+      deckCards.forEach(c => c.addEventListener("click", rotateDeck));
+
+      // ----------------------------------------------------
+      // G. REACT BITS PATTERN: FLUID AURORA GLOW CANVAS
+      // ----------------------------------------------------
+      const auroraCanvas = document.getElementById("auroraCanvas");
+      let auroraSpeed = 1.0;
+
+      if (auroraCanvas) {
+        const ctx = auroraCanvas.getContext("2d");
+        let width = auroraCanvas.width = auroraCanvas.offsetWidth;
+        let height = auroraCanvas.height = auroraCanvas.offsetHeight;
+
+        window.addEventListener("resize", () => {
+          if (auroraCanvas) {
+            width = auroraCanvas.width = auroraCanvas.offsetWidth;
+            height = auroraCanvas.height = auroraCanvas.offsetHeight;
+          }
+        });
+
+        let step = 0;
+        function renderAurora() {
+          step += 0.015 * auroraSpeed;
+          ctx.clearRect(0, 0, width, height);
+
+          // Create multi-wave undulating gradient
+          for (let i = 0; i < 3; i++) {
+            const grad = ctx.createRadialGradient(
+              width * 0.5 + Math.sin(step + i * 2) * (width * 0.25),
+              height * 0.5 + Math.cos(step * 0.8 + i) * (height * 0.25),
+              10,
+              width * 0.5,
+              height * 0.5,
+              width * 0.6
+            );
+
+            if (i === 0) {
+              grad.addColorStop(0, "rgba(229, 184, 105, 0.35)");
+              grad.addColorStop(0.5, "rgba(170, 152, 124, 0.15)");
+              grad.addColorStop(1, "rgba(10, 11, 14, 0)");
+            } else if (i === 1) {
+              grad.addColorStop(0, "rgba(245, 229, 201, 0.25)");
+              grad.addColorStop(0.6, "rgba(207, 160, 76, 0.1)");
+              grad.addColorStop(1, "rgba(10, 11, 14, 0)");
+            } else {
+              grad.addColorStop(0, "rgba(143, 133, 123, 0.2)");
+              grad.addColorStop(0.7, "rgba(19, 21, 27, 0)");
+              grad.addColorStop(1, "rgba(10, 11, 14, 0)");
+            }
+
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, width, height);
+          }
+
+          requestAnimationFrame(renderAurora);
+        }
+        renderAurora();
+
+        // Speed Toggle
+        const toggleAuroraSpeedBtn = document.getElementById("toggleAuroraSpeed");
+        const auroraSpeedText = document.getElementById("auroraSpeedText");
+
+        if (toggleAuroraSpeedBtn) {
+          toggleAuroraSpeedBtn.addEventListener("click", () => {
+            if (auroraSpeed === 1.0) {
+              auroraSpeed = 2.5;
+              auroraSpeedText.textContent = "Fast (2.5x)";
+              auroraSpeedText.className = "text-amber-400 font-bold";
+            } else if (auroraSpeed === 2.5) {
+              auroraSpeed = 0.5;
+              auroraSpeedText.textContent = "Slow (0.5x)";
+              auroraSpeedText.className = "text-cyan-400 font-bold";
+            } else {
+              auroraSpeed = 1.0;
+              auroraSpeedText.textContent = "Normal (1x)";
+              auroraSpeedText.className = "text-[#e5b869]";
+            }
+          });
+        }
+      }
+
+      // ----------------------------------------------------
+      // H. REACT BITS PATTERN: SPOTLIGHT CARD
+      // ----------------------------------------------------
+      const spotlightCards = document.querySelectorAll('.spotlight-card');
+      spotlightCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+        });
+      });
+
+      // ----------------------------------------------------
+      // I. REACT BITS PATTERN: 3D TILT CARD (TiltedCard)
+      // ----------------------------------------------------
+      const demoTiltCard = document.getElementById("demoTiltCard");
+      const tiltTransformValue = document.getElementById("tiltTransformValue");
+
+      if (demoTiltCard) {
+        demoTiltCard.addEventListener("mousemove", (e) => {
+          const rect = demoTiltCard.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = ((y - centerY) / centerY) * -12;
+          const rotateY = ((x - centerX) / centerX) * 12;
+
+          demoTiltCard.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(1)}deg) rotateY(${rotateY.toFixed(1)}deg) scale3d(1.02, 1.02, 1.02)`;
+          demoTiltCard.style.setProperty('--glare-x', `${(x / rect.width) * 100}%`);
+          demoTiltCard.style.setProperty('--glare-y', `${(y / rect.height) * 100}%`);
+
+          if (tiltTransformValue) {
+            tiltTransformValue.textContent = `rotateX(${rotateX.toFixed(1)}deg) rotateY(${rotateY.toFixed(1)}deg)`;
+          }
+        });
+
+        demoTiltCard.addEventListener("mouseleave", () => {
+          demoTiltCard.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+          if (tiltTransformValue) {
+            tiltTransformValue.textContent = `rotateX(0deg) rotateY(0deg)`;
+          }
+        });
+      }
+
+      // ----------------------------------------------------
+      // J. REACT BITS PATTERN: DECRYPTED TEXT SCRAMBLER
+      // ----------------------------------------------------
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~|}{[]";
+      const targetEl = document.getElementById('scrambleTarget');
+      const originalText = targetEl.textContent;
+      const triggerScrambleBtn = document.getElementById('triggerScramble');
+
+      function scrambleText() {
+        let iteration = 0;
+        const interval = setInterval(() => {
+          targetEl.innerText = targetEl.innerText
+            .split("")
+            .map((char, index) => {
+              if (index < iteration) {
+                return originalText[index];
+              }
+              return chars[Math.floor(Math.random() * chars.length)];
+            })
+            .join("");
+
+          if (iteration >= originalText.length) {
+            clearInterval(interval);
+          }
+          iteration += 1 / 2;
+        }, 30);
+      }
+
+      if (triggerScrambleBtn) {
+        triggerScrambleBtn.addEventListener('click', scrambleText);
+      }
+
+      // ----------------------------------------------------
+      // K. REACT BITS PATTERN: MAGNETIC BUTTON
+      // ----------------------------------------------------
+      const magnetBtn = document.getElementById('magneticBtn');
+      if (magnetBtn) {
+        magnetBtn.addEventListener('mousemove', (e) => {
+          const rect = magnetBtn.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          magnetBtn.style.transform = `translate(${x * 0.35}px, ${y * 0.35}px)`;
+        });
+
+        magnetBtn.addEventListener('mouseleave', () => {
+          magnetBtn.style.transform = `translate(0px, 0px)`;
+        });
+      }
+
+      // ----------------------------------------------------
+      // L. REACT BITS PATTERN: SPLIT-TEXT CHAR STAGGER
+      // ----------------------------------------------------
+      document.querySelectorAll('.split-text').forEach(el => {
+        const text = el.innerText;
+        el.innerHTML = text.split('').map(char => `<span class="inline-block transition-transform duration-200">${char === ' ' ? '&nbsp;' : char}</span>`).join('');
+        
+        el.parentElement.addEventListener('mouseenter', () => {
+          if (hasGsap) {
+            gsap.fromTo(el.querySelectorAll('span'), 
+              { y: 8, opacity: 0 },
+              { y: 0, opacity: 1, duration: 0.3, stagger: 0.02, ease: "power2.out" }
+            );
+          }
+        });
+      });
+
+      // ----------------------------------------------------
+      // M. REACT BITS PATTERN: ELASTIC FOCUS INDICATOR
+      // ----------------------------------------------------
+      const tabs = document.querySelectorAll(".elastic-tab");
+      const pill = document.getElementById("elasticPill");
+      const tabsContainer = document.getElementById("elasticTabsContainer");
+
+      function updatePill(activeTab) {
+        if (!pill || !activeTab) return;
+        const rect = activeTab.getBoundingClientRect();
+        const containerRect = tabsContainer.getBoundingClientRect();
+
+        pill.style.width = `${rect.width}px`;
+        pill.style.height = `${rect.height}px`;
+        pill.style.left = `${rect.left - containerRect.left}px`;
+        pill.style.top = `${rect.top - containerRect.top}px`;
+        pill.style.opacity = "1";
+      }
+
+      if (tabs.length > 0) {
+        updatePill(tabs[0]);
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener("mouseenter", () => {
+          tabs.forEach(t => {
+            t.classList.remove("text-black", "font-bold");
+            t.classList.add("text-white/70");
+          });
+          tab.classList.remove("text-white/70");
+          tab.classList.add("text-black", "font-bold");
+          updatePill(tab);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
