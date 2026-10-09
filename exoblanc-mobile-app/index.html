@@ -261,63 +261,38 @@
       overflow: hidden;
     }
 
-    /* Phone Shell (Desktop Preview Mode) */
+    /* App Shell Container - Flush to Top of Screen */
     .device-shell {
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .device-shell.mode-frame {
-      max-width: 420px;
-      margin: 20px auto;
-      border-radius: 50px;
-      border: 11px solid #131619;
-      box-shadow: 0 30px 80px -15px rgba(19, 22, 25, 0.4), 0 0 0 1px rgba(170, 152, 124, 0.25);
-      height: calc(100vh - 40px);
-      max-height: 900px;
-      position: relative;
-      overflow: hidden;
-    }
-    .device-shell.mode-frame #app-scroll-container {
-      height: 100%;
-      overflow-y: auto;
-      overscroll-behavior-y: contain;
-    }
-    .device-shell.mode-responsive {
-      max-width: 720px;
+      width: 100%;
+      max-width: 480px;
       margin: 0 auto;
       min-height: 100vh;
-      border-radius: 0;
-      border: none;
+      position: relative;
+      background-color: #F6F7F8;
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
     }
-    .device-shell.mode-responsive aside {
+    .device-shell aside {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      max-width: 720px;
+      max-width: 480px;
       margin: 0 auto;
       z-index: 40;
     }
-    .device-shell.mode-responsive .modal-sheet {
+    .device-shell .modal-sheet {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      max-width: 720px;
+      max-width: 480px;
       margin: 0 auto;
       z-index: 50;
     }
-    .device-shell.mode-responsive #modalOverlay {
+    .device-shell #modalOverlay {
       position: fixed;
       inset: 0;
       z-index: 50;
-    }
-
-    .phone-notch {
-      display: none;
-    }
-    .mode-frame .phone-notch {
-      display: flex;
     }
 
     /* Bottom Modal Sheet Slide Up - Safari Hit Test Fix */
@@ -358,41 +333,10 @@
 
 <body class="bg-off-white text-charcoal font-body antialiased selection:bg-taupe selection:text-white">
 
-  <!-- ================= TOP DESKTOP UTILITY BAR ================= -->
-  <header class="hidden sm:flex bg-near-black text-white py-2.5 px-4 sticky top-0 z-50 border-b border-white/10 items-center justify-between shadow-md">
-    <div class="flex items-center gap-3">
-      <a href="https://suaglow.com" target="_blank" class="flex items-center gap-2 tap-action">
-        <img src="assets/logo-white.png" alt="SuA Glow Logo" class="h-6 w-auto object-contain" />
-      </a>
-      <span class="text-white/30 text-xs hidden sm:inline">•</span>
-      <div class="hidden sm:flex items-center gap-1.5">
-        <span class="w-2 h-2 rounded-full bg-teal-glow animate-pulse"></span>
-        <span class="font-heading font-bold tracking-[0.2em] uppercase text-[10px] text-warm-gold">Carrollton, TX</span>
-      </div>
-      <span class="hidden md:inline-block text-white/30 text-xs">•</span>
-      <span class="hidden md:inline-block text-light-gray text-[11px] font-body">Exoblanc Korean Aesthetic Skincare</span>
-    </div>
-  </header>
-
   <!-- ================= APP VIEWPORT ================= -->
-  <main class="w-full flex justify-center py-0 sm:py-4 px-0 sm:px-4">
+  <main class="w-full flex justify-center p-0 m-0">
     
-    <div id="deviceShell" class="device-shell mode-frame w-full bg-off-white relative flex flex-col shadow-2xl">
-      
-      <!-- iPhone Notch Status Bar (Frame Mode) -->
-      <div class="phone-notch z-40 bg-[#F2EFEA] pt-2 px-6 pb-1 justify-between items-center text-[12px] font-semibold tracking-tight text-near-black/80 select-none border-b border-taupe/15">
-        <span id="clockDisplay" class="font-heading text-[11px] font-semibold">9:41</span>
-        <div class="w-24 h-5 bg-near-black rounded-full flex items-center justify-end px-2">
-          <span class="w-2 h-2 rounded-full bg-teal-glow mr-1 animate-pulse"></span>
-        </div>
-        <div class="flex items-center gap-1.5 text-near-black/70">
-          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z"/></svg>
-          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4z"/></svg>
-          <div class="w-4 h-2.5 border border-near-black/70 rounded-xs p-0.5 flex items-center">
-            <div class="h-full bg-near-black/70 w-3 rounded-2xs"></div>
-          </div>
-        </div>
-      </div>
+    <div id="deviceShell" class="device-shell w-full bg-off-white relative flex flex-col shadow-2xl">
 
       <!-- Scrollable Inner Screen -->
       <div id="app-scroll-container" class="flex-1 overflow-y-auto overflow-x-hidden relative pb-32">
@@ -976,19 +920,6 @@
   <script>
 
 
-    // Live Clock for Phone Notch
-    function updateClock() {
-      const now = new Date();
-      let h = now.getHours();
-      let m = now.getMinutes();
-      h = h % 12 || 12;
-      m = m < 10 ? '0' + m : m;
-      const el = document.getElementById('clockDisplay');
-      if (el) el.textContent = `${h}:${m}`;
-    }
-    updateClock();
-    setInterval(updateClock, 30000);
-
     // ================= PRODUCT TOUCH & DRAG SLIDER =================
     let currentSlideIndex = 0;
     const totalSlides = 5;
@@ -1269,13 +1200,6 @@
           showToastNotification('Removed from favorites.');
         }
       });
-    }
-
-    // Mobile Detection
-    const shell = document.getElementById('deviceShell');
-    if (window.innerWidth < 640 && shell) {
-      shell.classList.remove('mode-frame');
-      shell.classList.add('mode-responsive');
     }
   </script>
 
