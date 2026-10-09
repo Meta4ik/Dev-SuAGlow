@@ -411,64 +411,77 @@
             </button>
           </div>
 
-          <!-- Product Image Views (Centered & Prominent) -->
-          <div class="relative flex-1 w-full flex items-center justify-center p-2">
-            
-            <!-- View 1: Exoblanc Boosting Serum Bottle & Box (DEFAULT FIRST PHOTO) -->
-            <div id="productSlide-primary" class="product-slide absolute inset-0 flex items-center justify-center transition-opacity duration-400 opacity-100">
-              <img src="assets/product-hero-box-bottle.jpg" alt="Exoblanc Boosting Serum Bottle &amp; Retail Box" class="w-full h-full object-cover object-center" />
-              <div class="absolute inset-0 bg-gradient-to-t from-near-black/45 via-transparent to-transparent"></div>
-              <div class="absolute bottom-6 left-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-near-black border border-taupe/20">
-                Bottle &amp; Retail Box
+          <!-- Product Image Views (Touch & Drag Slideable Carousel) -->
+          <div id="heroCarouselWrapper" class="relative flex-1 w-full overflow-hidden cursor-grab active:cursor-grabbing touch-pan-y select-none">
+            <div id="productCarouselTrack" class="flex w-full h-full transition-transform duration-300 ease-out will-change-transform" style="transform: translateX(0%);">
+              
+              <!-- Slide 0: Exoblanc Boosting Serum Bottle & Box (DEFAULT FIRST PHOTO) -->
+              <div class="product-slide w-full h-full flex-shrink-0 relative flex items-center justify-center overflow-hidden">
+                <img src="assets/product-hero-box-bottle.jpg" alt="Exoblanc Boosting Serum Bottle &amp; Retail Box" class="w-full h-full object-cover object-center pointer-events-none select-none" draggable="false" />
+                <div class="absolute inset-0 bg-gradient-to-t from-near-black/45 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-6 left-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-near-black border border-taupe/20 pointer-events-none">
+                  Bottle &amp; Retail Box
+                </div>
               </div>
+
+              <!-- Slide 1: Official Exoblanc Boosting Serum Commercial Photoshoot -->
+              <div class="product-slide w-full h-full flex-shrink-0 relative flex items-center justify-center overflow-hidden">
+                <img src="assets/product-water-ripples.jpg" alt="Exoblanc Boosting Serum Commercial Photoshoot" class="w-full h-full object-cover object-center pointer-events-none select-none" draggable="false" />
+                <div class="absolute inset-0 bg-gradient-to-t from-near-black/45 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-6 left-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-near-black border border-taupe/20 pointer-events-none">
+                  Editorial Photoshoot
+                </div>
+              </div>
+
+              <!-- Slide 2: Exoblanc Clinic Pedestal Display -->
+              <div class="product-slide w-full h-full flex-shrink-0 relative flex items-center justify-center overflow-hidden">
+                <img src="assets/product-pedestal.jpg" alt="Exoblanc Boosting Serum Studio Pedestal" class="w-full h-full object-cover object-center pointer-events-none select-none" draggable="false" />
+                <div class="absolute inset-0 bg-gradient-to-t from-near-black/45 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-6 left-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-near-black border border-taupe/20 pointer-events-none">
+                  Clinic Display
+                </div>
+              </div>
+
+              <!-- Slide 3: Clinical Model Glass Skin Finish -->
+              <div class="product-slide w-full h-full flex-shrink-0 relative flex items-center justify-center overflow-hidden">
+                <img src="assets/model.jpg" alt="Exoblanc Skin Glow Result" class="w-full h-full object-cover object-center pointer-events-none select-none" draggable="false" />
+                <div class="absolute inset-0 bg-gradient-to-t from-near-black/50 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-6 left-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-near-black border border-taupe/20 pointer-events-none">
+                  Clinical Glass Skin Finish
+                </div>
+              </div>
+
+              <!-- Slide 4: Dewy Serum Droplet Macro -->
+              <div class="product-slide w-full h-full flex-shrink-0 relative flex items-center justify-center overflow-hidden">
+                <img src="assets/texture.jpg" alt="Micro Droplet Serum Slip" class="w-full h-full object-cover object-center pointer-events-none select-none" draggable="false" />
+                <div class="absolute inset-0 bg-gradient-to-t from-near-black/50 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-6 left-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-near-black border border-taupe/20 pointer-events-none">
+                  Lightweight Hydration Slip
+                </div>
+              </div>
+
             </div>
 
-            <!-- View 2: Official Exoblanc Boosting Serum Commercial Photoshoot -->
-            <div id="productSlide-water" class="product-slide absolute inset-0 flex items-center justify-center transition-opacity duration-400 opacity-0">
-              <img src="assets/product-water-ripples.jpg" alt="Exoblanc Boosting Serum Commercial Photoshoot" class="w-full h-full object-cover object-center" />
-              <div class="absolute inset-0 bg-gradient-to-t from-near-black/45 via-transparent to-transparent"></div>
-              <div class="absolute bottom-6 left-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-near-black border border-taupe/20">
-                Editorial Photoshoot
-              </div>
-            </div>
-
-            <!-- View 3: Exoblanc Clinic Pedestal Display -->
-            <div id="productSlide-pedestal" class="product-slide absolute inset-0 flex items-center justify-center transition-opacity duration-400 opacity-0">
-              <img src="assets/product-pedestal.jpg" alt="Exoblanc Boosting Serum Studio Pedestal" class="w-full h-full object-cover object-center" />
-              <div class="absolute inset-0 bg-gradient-to-t from-near-black/45 via-transparent to-transparent"></div>
-              <div class="absolute bottom-6 left-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-near-black border border-taupe/20">
-                Clinic Display
-              </div>
-            </div>
-
-            <!-- View 4: Clinical Model Glass Skin Finish -->
-            <div id="productSlide-model" class="product-slide absolute inset-0 flex items-center justify-center transition-opacity duration-400 opacity-0">
-              <img src="assets/model.jpg" alt="Exoblanc Skin Glow Result" class="w-full h-full object-cover object-center" />
-              <div class="absolute inset-0 bg-gradient-to-t from-near-black/50 via-transparent to-transparent"></div>
-              <div class="absolute bottom-6 left-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-near-black border border-taupe/20">
-                Clinical Glass Skin Finish
-              </div>
-            </div>
-
-            <!-- View 5: Dewy Serum Droplet Macro -->
-            <div id="productSlide-texture" class="product-slide absolute inset-0 flex items-center justify-center transition-opacity duration-400 opacity-0">
-              <img src="assets/texture.jpg" alt="Micro Droplet Serum Slip" class="w-full h-full object-cover object-center" />
-              <div class="absolute inset-0 bg-gradient-to-t from-near-black/50 via-transparent to-transparent"></div>
-              <div class="absolute bottom-6 left-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-near-black border border-taupe/20">
-                Lightweight Hydration Slip
-              </div>
-            </div>
-
+            <!-- Touch / Click Arrow Overlays -->
+            <button type="button" onclick="prevSlide(event)" aria-label="Previous photo" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/80 hover:bg-white backdrop-blur-md border border-white/60 shadow-soft flex items-center justify-center text-charcoal hover:text-warm-gold transition tap-action opacity-80 hover:opacity-100">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" onclick="nextSlide(event)" aria-label="Next photo" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/80 hover:bg-white backdrop-blur-md border border-white/60 shadow-soft flex items-center justify-center text-charcoal hover:text-warm-gold transition tap-action opacity-80 hover:opacity-100">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
+            </button>
           </div>
 
-          <!-- Pagination Indicator Dots -->
-          <div class="relative z-30 pb-5 flex flex-col items-center gap-2">
-            <div class="flex items-center gap-1.5 bg-white/70 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft border border-white/60">
-              <button onclick="setProductSlide('primary', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-warm-gold transition-all" title="Bottle & Box"></button>
-              <button onclick="setProductSlide('water', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all" title="Editorial"></button>
-              <button onclick="setProductSlide('pedestal', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all" title="Clinic Display"></button>
-              <button onclick="setProductSlide('model', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all" title="Results"></button>
-              <button onclick="setProductSlide('texture', this)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all" title="Texture"></button>
+          <!-- Pagination Indicator Dots & Swipe Cue -->
+          <div class="relative z-30 pb-4 flex flex-col items-center gap-1.5 pointer-events-none">
+            <div class="pointer-events-auto flex items-center gap-1.5 bg-white/80 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-soft border border-white/60">
+              <button onclick="goToSlide(0)" class="dot-btn w-2.5 h-2.5 rounded-full bg-warm-gold transition-all" title="Bottle & Box"></button>
+              <button onclick="goToSlide(1)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all" title="Editorial"></button>
+              <button onclick="goToSlide(2)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all" title="Clinic Display"></button>
+              <button onclick="goToSlide(3)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all" title="Results"></button>
+              <button onclick="goToSlide(4)" class="dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all" title="Texture"></button>
+            </div>
+            <div class="text-[9px] font-heading font-medium tracking-widest uppercase text-taupe/70 drop-shadow-sm flex items-center gap-1 pointer-events-none">
+              <span>‹</span> <span>Swipe to view gallery</span> <span>›</span>
             </div>
           </div>
 
@@ -1284,26 +1297,166 @@
     updateClock();
     setInterval(updateClock, 30000);
 
-    // Product Slide Switcher
-    function setProductSlide(id, dotBtn) {
-      document.querySelectorAll('.product-slide').forEach(s => {
-        s.classList.remove('opacity-100');
-        s.classList.add('opacity-0');
-      });
-      const target = document.getElementById(`productSlide-${id}`);
-      if (target) {
-        target.classList.remove('opacity-0');
-        target.classList.add('opacity-100');
-      }
+    // ================= PRODUCT TOUCH & DRAG SLIDER =================
+    let currentSlideIndex = 0;
+    const totalSlides = 5;
+    const track = document.getElementById('productCarouselTrack');
+    const wrapper = document.getElementById('heroCarouselWrapper');
+
+    function updateSlidePosition(animate = true) {
+      if (!track) return;
+      track.style.transition = animate ? 'transform 0.35s cubic-bezier(0.25, 1, 0.5, 1)' : 'none';
+      track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
 
       // Update dots
-      document.querySelectorAll('.dot-btn').forEach(d => {
-        d.className = 'dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all';
+      document.querySelectorAll('.dot-btn').forEach((dot, idx) => {
+        if (idx === currentSlideIndex) {
+          dot.className = 'dot-btn w-2.5 h-2.5 rounded-full bg-warm-gold transition-all';
+        } else {
+          dot.className = 'dot-btn w-2.5 h-2.5 rounded-full bg-taupe/30 hover:bg-warm-gold transition-all';
+        }
       });
-      if (dotBtn) {
-        dotBtn.className = 'dot-btn w-2.5 h-2.5 rounded-full bg-warm-gold transition-all';
-      }
     }
+
+    function goToSlide(index) {
+      if (index < 0) index = 0;
+      if (index >= totalSlides) index = totalSlides - 1;
+      currentSlideIndex = index;
+      updateSlidePosition(true);
+    }
+
+    function prevSlide(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      if (currentSlideIndex > 0) {
+        currentSlideIndex--;
+      } else {
+        currentSlideIndex = totalSlides - 1;
+      }
+      updateSlidePosition(true);
+    }
+
+    function nextSlide(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      if (currentSlideIndex < totalSlides - 1) {
+        currentSlideIndex++;
+      } else {
+        currentSlideIndex = 0;
+      }
+      updateSlidePosition(true);
+    }
+
+    // Fallback for legacy setProductSlide
+    const slideIdMap = { 'primary': 0, 'water': 1, 'pedestal': 2, 'model': 3, 'texture': 4, 'box': 0 };
+    function setProductSlide(id, dotBtn) {
+      const idx = slideIdMap[id] !== undefined ? slideIdMap[id] : 0;
+      goToSlide(idx);
+    }
+
+    // Touch and Drag Gesture Engine
+    (function initTouchSlider() {
+      if (!wrapper || !track) return;
+
+      let startX = 0;
+      let startY = 0;
+      let currentX = 0;
+      let currentY = 0;
+      let isDragging = false;
+      let isHorizontalSwipe = null;
+      let startTime = 0;
+
+      function onStart(e) {
+        const touch = e.touches ? e.touches[0] : e;
+        startX = touch.clientX;
+        startY = touch.clientY;
+        currentX = startX;
+        currentY = startY;
+        isDragging = true;
+        isHorizontalSwipe = null;
+        startTime = Date.now();
+        track.style.transition = 'none';
+      }
+
+      function onMove(e) {
+        if (!isDragging) return;
+        const touch = e.touches ? e.touches[0] : e;
+        currentX = touch.clientX;
+        currentY = touch.clientY;
+        const deltaX = currentX - startX;
+        const deltaY = currentY - startY;
+
+        // Detect swipe direction after initial 7px threshold
+        if (isHorizontalSwipe === null) {
+          if (Math.abs(deltaX) > 7 || Math.abs(deltaY) > 7) {
+            isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY);
+          }
+        }
+
+        if (isHorizontalSwipe) {
+          if (e.cancelable) e.preventDefault();
+          // Edge damping resistance
+          let effectiveDeltaX = deltaX;
+          if ((currentSlideIndex === 0 && deltaX > 0) || (currentSlideIndex === totalSlides - 1 && deltaX < 0)) {
+            effectiveDeltaX = deltaX * 0.3;
+          }
+          const wrapperWidth = wrapper.offsetWidth || window.innerWidth || 400;
+          const deltaPercent = (effectiveDeltaX / wrapperWidth) * 100;
+          track.style.transform = `translateX(calc(-${currentSlideIndex * 100}% + ${deltaPercent}%))`;
+        }
+      }
+
+      function onEnd(e) {
+        if (!isDragging) return;
+        isDragging = false;
+        const deltaX = currentX - startX;
+        const deltaTime = Date.now() - startTime;
+        const velocity = Math.abs(deltaX) / (deltaTime || 1);
+
+        if (isHorizontalSwipe) {
+          // If swiped more than 40px or quick flick
+          if (deltaX < -40 || (deltaX < -20 && velocity > 0.3)) {
+            if (currentSlideIndex < totalSlides - 1) {
+              currentSlideIndex++;
+            }
+          } else if (deltaX > 40 || (deltaX > 20 && velocity > 0.3)) {
+            if (currentSlideIndex > 0) {
+              currentSlideIndex--;
+            }
+          }
+        }
+        isHorizontalSwipe = null;
+        updateSlidePosition(true);
+      }
+
+      // Touch Listeners
+      wrapper.addEventListener('touchstart', onStart, { passive: true });
+      wrapper.addEventListener('touchmove', onMove, { passive: false });
+      wrapper.addEventListener('touchend', onEnd, { passive: true });
+      wrapper.addEventListener('touchcancel', onEnd, { passive: true });
+
+      // Mouse Drag Listeners (Desktop Testing & Trackpads)
+      wrapper.addEventListener('mousedown', (e) => {
+        if (e.button !== 0) return;
+        onStart(e);
+      });
+      window.addEventListener('mousemove', (e) => {
+        if (isDragging) onMove(e);
+      });
+      window.addEventListener('mouseup', (e) => {
+        if (isDragging) onEnd(e);
+      });
+
+      // Keyboard Arrow Support
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+      });
+    })();
 
     // Variant Selection
     function selectVariant(btn, type) {
