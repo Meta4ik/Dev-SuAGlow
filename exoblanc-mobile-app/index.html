@@ -449,26 +449,12 @@
             </button>
           </div>
 
-          <!-- Top Floating Action Bar Over Image -->
-          <div class="relative z-30 pt-4 px-4 flex items-center justify-between pointer-events-none">
-            <div class="pointer-events-auto px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-taupe/20 shadow-soft flex items-center gap-1.5 text-near-black text-[10px] font-heading font-bold tracking-wider uppercase">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Clinic Tier Essential</span>
-            </div>
-
-            <!-- Brand Kicker with SuA Glow Logo -->
-            <div class="pointer-events-auto px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-taupe/20 shadow-soft flex items-center gap-2">
-              <img src="assets/logo-main.webp" alt="SuA Glow" class="h-4 w-auto object-contain" />
-              <span class="w-1 h-1 rounded-full bg-warm-gold"></span>
-              <span class="font-heading font-bold tracking-[0.15em] uppercase text-[9px] text-taupe">Carrollton</span>
-            </div>
-
-            <!-- Wishlist Heart -->
-            <button id="likeBtn" title="Wishlist" class="pointer-events-auto w-10 h-10 rounded-full bg-white/90 backdrop-blur-md border border-taupe/20 shadow-soft flex items-center justify-center text-taupe hover:text-warm-gold hover:bg-white transition tap-action">
-              <svg id="likeIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-              </svg>
-            </button>
+          <!-- Top Floating Header Over Image -->
+          <div class="relative z-30 pt-4 px-5 flex items-center justify-start pointer-events-none">
+            <!-- Left-Aligned Brand Logo (No Pill, Single High-Contrast Color) -->
+            <a href="https://suaglow.com" target="_blank" rel="noopener" class="pointer-events-auto flex items-center gap-2 tap-action">
+              <img src="assets/logo-dark.png" alt="SuA K Glow Medical Aesthetics" class="h-6 w-auto object-contain filter drop-shadow-xs" />
+            </a>
           </div>
 
           <!-- Pagination Indicator Dots & Swipe Cue -->
@@ -883,9 +869,8 @@
           </div>
 
           <!-- Brand Footer -->
-          <div class="text-center pt-4 pb-2 space-y-1.5 opacity-80">
-            <img src="assets/logo-main.webp" alt="SuA Glow" class="h-4.5 mx-auto object-contain opacity-75" />
-            <p class="font-body text-[10px] text-charcoal/60 tracking-wider">
+          <div class="text-center pt-3 pb-2 opacity-70">
+            <p class="font-body text-[10px] text-charcoal/70 tracking-wider">
               SuA Glow Korean Medical Aesthetics • Carrollton, TX<br/>
               Authorized Exoblanc Bio-Active Skincare Line
             </p>
@@ -1271,19 +1256,22 @@
       toast.classList.add('opacity-0', 'pointer-events-none', '-translate-y-2');
     }
 
-    // Wishlist Toggle
+    // Wishlist Toggle (Optional)
     let isLiked = false;
-    document.getElementById('likeBtn').addEventListener('click', () => {
-      isLiked = !isLiked;
-      const icon = document.getElementById('likeIcon');
-      if (isLiked) {
-        icon.setAttribute('fill', 'currentColor');
-        showToastNotification('Saved Exoblanc Boosting Serum to your favorites.');
-      } else {
-        icon.setAttribute('fill', 'none');
-        showToastNotification('Removed from favorites.');
-      }
-    });
+    const likeBtn = document.getElementById('likeBtn');
+    if (likeBtn) {
+      likeBtn.addEventListener('click', () => {
+        isLiked = !isLiked;
+        const icon = document.getElementById('likeIcon');
+        if (isLiked) {
+          icon?.setAttribute('fill', 'currentColor');
+          showToastNotification('Saved Exoblanc Boosting Serum to your favorites.');
+        } else {
+          icon?.setAttribute('fill', 'none');
+          showToastNotification('Removed from favorites.');
+        }
+      });
+    }
 
     // Frame Toggle
     const viewToggleBtn = document.getElementById('viewToggleBtn');
