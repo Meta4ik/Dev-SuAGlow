@@ -878,7 +878,185 @@
         </div>
 
         <!-- ========================================================================= -->
-        <!-- SECTION 7: GEOFENCING & LOCAL DFW MAP -->
+        <!-- SECTION 7: GOOGLE LOCAL & SOCIAL FOOTPRINT -->
+        <!-- ========================================================================= -->
+        <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
+                <div>
+                    <h2 style="font-size: 18px; font-weight: 700; display:flex; align-items:center; gap:8px;">
+                        <i data-lucide="share-2" style="color:var(--taupe);"></i> Google Local &amp; Social Footprint
+                    </h2>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+                        Cross-channel synergy: Google Business Profile (Maps), GA4 social referral attribution, and Demand Gen visual reach
+                    </p>
+                </div>
+                <div style="display:flex; gap:8px; align-items:center;">
+                    <span id="socialTimeframeTag" style="font-size:12px; color:var(--text-muted); font-weight:600;">
+                        Showing: Week 3 (Oct 12–18) • Current Week
+                    </span>
+                    <span class="badge badge-gold" style="white-space:nowrap;">
+                        <i data-lucide="sparkles" style="width:14px; height:14px;"></i> Omnichannel Ecosystem
+                    </span>
+                </div>
+            </div>
+
+            <!-- 4 Social KPI Metric Cards -->
+            <div class="grid-4" style="margin-bottom: 24px;">
+                <div class="stat-card" style="padding:16px;">
+                    <div class="stat-label">Google Maps &amp; Profile Views</div>
+                    <div class="stat-val" id="socialProfileViews" style="color:var(--green); font-size:28px;">86</div>
+                    <div class="stat-sub">Local clinic discovery</div>
+                </div>
+                <div class="stat-card" style="padding:16px;">
+                    <div class="stat-label">Direct Local Intent Actions</div>
+                    <div class="stat-val" id="socialLocalActions" style="color:var(--gold); font-size:28px;">16</div>
+                    <div class="stat-sub">Calls, directions &amp; web visits</div>
+                </div>
+                <div class="stat-card" style="padding:16px;">
+                    <div class="stat-label">GA4 Social Referrals</div>
+                    <div class="stat-val" id="socialReferralVisits" style="color:var(--taupe); font-size:28px;">34</div>
+                    <div class="stat-sub">IG, TikTok &amp; Facebook traffic</div>
+                </div>
+                <div class="stat-card" style="padding:16px;">
+                    <div class="stat-label">Google 5★ Reputation</div>
+                    <div class="stat-val" id="socialReviewScore" style="color:var(--green); font-size:28px;">5.0 ★</div>
+                    <div class="stat-sub" id="socialReviewsCount">51 Total (100% 5-Star)</div>
+                </div>
+            </div>
+
+            <!-- 3 Deep Dive Sub-Panels -->
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:16px;">
+                <!-- Panel A: Google Business Profile (GBP) -->
+                <div style="background:var(--off-white); border-radius:12px; padding:20px; border:1px solid var(--border-color); display:flex; flex-direction:column; justify-content:space-between;">
+                    <div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                            <h3 style="font-size:14px; font-weight:700; color:var(--dark-charcoal); display:flex; align-items:center; gap:6px;">
+                                <i data-lucide="map-pin" style="color:var(--taupe); width:16px; height:16px;"></i> Google Business Profile &amp; Maps
+                            </h3>
+                            <span class="badge badge-taupe" style="font-size:11px; padding:2px 8px;">Carrollton HQ</span>
+                        </div>
+                        <p style="font-size:12px; color:var(--text-muted); line-height:1.5; margin-bottom:14px;">
+                            High-intent local searches finding SuA Glow via Google Search &amp; Google Maps navigation:
+                        </p>
+                        
+                        <div style="display:flex; flex-direction:column; gap:8px; font-size:12px;">
+                            <div style="display:flex; justify-content:space-between; padding:8px 10px; background:#fff; border-radius:6px; border:1px solid var(--border-color);">
+                                <span style="color:var(--text-dark); display:flex; align-items:center; gap:6px;">
+                                    <i data-lucide="search" style="width:13px; height:13px; color:var(--taupe);"></i> Google Search Discovery
+                                </span>
+                                <strong id="gbpSearchViews">48 views</strong>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; padding:8px 10px; background:#fff; border-radius:6px; border:1px solid var(--border-color);">
+                                <span style="color:var(--text-dark); display:flex; align-items:center; gap:6px;">
+                                    <i data-lucide="navigation" style="width:13px; height:13px; color:var(--green);"></i> Google Maps Discovery
+                                </span>
+                                <strong id="gbpMapsViews">38 views</strong>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; padding:8px 10px; background:#fff; border-radius:6px; border:1px solid var(--border-color);">
+                                <span style="color:var(--text-dark); display:flex; align-items:center; gap:6px;">
+                                    <i data-lucide="phone" style="width:13px; height:13px; color:var(--gold);"></i> Direct Calls from Listing
+                                </span>
+                                <strong id="gbpCalls" style="color:var(--gold);">5 calls</strong>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; padding:8px 10px; background:#fff; border-radius:6px; border:1px solid var(--border-color);">
+                                <span style="color:var(--text-dark); display:flex; align-items:center; gap:6px;">
+                                    <i data-lucide="compass" style="width:13px; height:13px; color:var(--taupe);"></i> Direction Requests
+                                </span>
+                                <strong id="gbpDirections">7 routes</strong>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; padding:8px 10px; background:#fff; border-radius:6px; border:1px solid var(--border-color);">
+                                <span style="color:var(--text-dark); display:flex; align-items:center; gap:6px;">
+                                    <i data-lucide="globe" style="width:13px; height:13px; color:var(--taupe);"></i> Website Clicks from GBP
+                                </span>
+                                <strong id="gbpWebClicks">4 visits</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top:14px; padding-top:10px; border-top:1px dashed var(--border-color); font-size:11px; color:var(--text-muted); display:flex; align-items:center; gap:6px;">
+                        <i data-lucide="award" style="color:var(--gold); width:14px; height:14px;"></i>
+                        <span>100% verified 5.0 Google Rating reinforces Paid Ad trust</span>
+                    </div>
+                </div>
+
+                <!-- Panel B: GA4 Social Channel Attribution -->
+                <div style="background:var(--off-white); border-radius:12px; padding:20px; border:1px solid var(--border-color); display:flex; flex-direction:column; justify-content:space-between;">
+                    <div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                            <h3 style="font-size:14px; font-weight:700; color:var(--dark-charcoal); display:flex; align-items:center; gap:6px;">
+                                <i data-lucide="activity" style="color:var(--green); width:16px; height:16px;"></i> GA4 Social Referral Traffic
+                            </h3>
+                            <span class="badge badge-live" style="font-size:11px; padding:2px 8px;">Google-Tracked</span>
+                        </div>
+                        <p style="font-size:12px; color:var(--text-muted); line-height:1.5; margin-bottom:14px;">
+                            Sessions &amp; booking intent originating from social networks tracked in Google Analytics:
+                        </p>
+                        
+                        <table style="font-size:12px; margin-bottom:0;">
+                            <thead>
+                                <tr>
+                                    <th style="padding:6px 8px;">Platform</th>
+                                    <th style="padding:6px 8px;">Sessions</th>
+                                    <th style="padding:6px 8px;">Eng. Rate</th>
+                                    <th style="padding:6px 8px;">Inquiries</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ga4SocialTableBody">
+                                <!-- Populated dynamically by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top:14px; padding-top:10px; border-top:1px dashed var(--border-color); font-size:11px; color:var(--text-muted); display:flex; align-items:center; gap:6px;">
+                        <i data-lucide="trending-up" style="color:var(--green); width:14px; height:14px;"></i>
+                        <span>Instagram drives 62% of organic social patient inquiries</span>
+                    </div>
+                </div>
+
+                <!-- Panel C: Demand Gen & Social Halo Effect -->
+                <div style="background:var(--off-white); border-radius:12px; padding:20px; border:1px solid var(--border-color); display:flex; flex-direction:column; justify-content:space-between;">
+                    <div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                            <h3 style="font-size:14px; font-weight:700; color:var(--dark-charcoal); display:flex; align-items:center; gap:6px;">
+                                <i data-lucide="video" style="color:var(--gold); width:16px; height:16px;"></i> Google Demand Gen &amp; Video Reach
+                            </h3>
+                            <span class="badge badge-gold" style="font-size:11px; padding:2px 8px;">YouTube &amp; Discover</span>
+                        </div>
+                        <p style="font-size:12px; color:var(--text-muted); line-height:1.5; margin-bottom:14px;">
+                            YouTube Shorts, clinic treatment demos, and visual feed engagements priming brand recall:
+                        </p>
+                        
+                        <div style="display:flex; flex-direction:column; gap:10px; font-size:12px;">
+                            <div style="background:#fff; padding:10px; border-radius:8px; border:1px solid var(--border-color);">
+                                <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                                    <span style="color:var(--text-muted);">Video / Shorts Impressions</span>
+                                    <strong id="demandGenVideoImpr">360</strong>
+                                </div>
+                                <div style="display:flex; justify-content:space-between;">
+                                    <span style="color:var(--text-muted);">View-Through Rate (VTR)</span>
+                                    <strong id="demandGenViewRate" style="color:var(--green);">36.1%</strong>
+                                </div>
+                            </div>
+                            <div style="background:#fff; padding:10px; border-radius:8px; border:1px solid var(--border-color);">
+                                <div style="font-weight:700; color:var(--dark-charcoal); margin-bottom:2px;">The "Social Halo Effect"</div>
+                                <p style="font-size:11px; color:var(--text-muted); line-height:1.4;">
+                                    Patients viewing SuA Glow videos on social platforms subsequently execute high-intent branded Google Searches ("SuA Glow", "Korean scalp Carrollton"). Our Google Search Ads capture this primed audience at peak intent.
+                                </p>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:8px 10px; background:#fff; border-radius:6px; border:1px solid var(--border-color);">
+                                <span style="color:var(--text-dark);">Retargeting Audience Pool:</span>
+                                <strong id="demandGenAudiencePool" style="color:var(--taupe);">1,240 profiled</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top:14px; padding-top:10px; border-top:1px dashed var(--border-color); font-size:11px; color:var(--text-muted); display:flex; align-items:center; gap:6px;">
+                        <i data-lucide="repeat" style="color:var(--taupe); width:14px; height:14px;"></i>
+                        <span>Multi-touch cross-channel attribution model</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 8: GEOFENCING & LOCAL DFW MAP -->
         <!-- ========================================================================= -->
         <div class="card">
             <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px;">
@@ -985,7 +1163,7 @@
         </div>
 
         <!-- ========================================================================= -->
-        <!-- SECTION 8: ONGOING OPTIMIZATIONS -->
+        <!-- SECTION 9: ONGOING OPTIMIZATIONS -->
         <!-- ========================================================================= -->
         <div class="card">
             <h2 style="font-size: 18px; font-weight: 700; margin-bottom: 12px; display:flex; align-items:center; gap:8px;">
@@ -1135,7 +1313,22 @@
                 dailyPacing: [
                     { label: "Day 1 (Sep 28, 2026): Launch Entry", desc: "Initial auction entry & impressions pickup", impr: "181", clicks: "16", ctr: "8.84%", cpc: "$2.17", spend: "$34.71", borderCol: "var(--taupe)" },
                     { label: "Day 2 (Sep 29, 2026): CTR Acceleration", desc: "CTR jumped to 17.74% while CPC dropped to $1.28", impr: "62", clicks: "11", ctr: "17.74%", cpc: "$1.28", spend: "$14.03", borderCol: "var(--green)" }
-                ]
+                ],
+                socialData: {
+                    profileViews: "84",
+                    localActions: "14",
+                    socialReferrals: "28",
+                    reviewScore: "5.0 ★",
+                    reviewsCount: "48 (Baseline)",
+                    gbpBreakdown: { searchViews: "46", mapsViews: "38", calls: "4", directions: "6", webClicks: "4" },
+                    ga4Channels: [
+                        { channel: "Instagram", sessions: "18", engRate: "72.4%", leads: "1" },
+                        { channel: "TikTok", sessions: "6", engRate: "66.7%", leads: "0" },
+                        { channel: "Facebook", sessions: "3", engRate: "66.7%", leads: "0" },
+                        { channel: "YouTube", sessions: "1", engRate: "100.0%", leads: "0" }
+                    ],
+                    demandGen: { videoImpr: "320", viewRate: "28.4%", audiencePool: "140" }
+                }
             },
             week1: {
                 key: "week1",
@@ -1185,7 +1378,22 @@
                 dailyPacing: [
                     { label: "Mon–Wed (Sep 28–30): Initial Entry", desc: "Initial entry into DFW auctions with $35/day pace", impr: "518", clicks: "57", ctr: "11.00%", cpc: "$1.86", spend: "$105.86", borderCol: "var(--taupe)" },
                     { label: "Thu–Sun (Oct 1–4): Efficiency Peak", desc: "CTR climbed to 12.1% while CPC compressed to $1.74", impr: "762", clicks: "91", ctr: "11.94%", cpc: "$1.74", spend: "$158.94", borderCol: "var(--green)" }
-                ]
+                ],
+                socialData: {
+                    profileViews: "492",
+                    localActions: "86",
+                    socialReferrals: "164",
+                    reviewScore: "5.0 ★",
+                    reviewsCount: "+2 New (48 Total)",
+                    gbpBreakdown: { searchViews: "268", mapsViews: "224", calls: "24", directions: "38", webClicks: "24" },
+                    ga4Channels: [
+                        { channel: "Instagram", sessions: "98", engRate: "75.5%", leads: "6" },
+                        { channel: "TikTok", sessions: "38", engRate: "71.0%", leads: "2" },
+                        { channel: "Facebook", sessions: "20", engRate: "70.0%", leads: "1" },
+                        { channel: "YouTube", sessions: "8", engRate: "87.5%", leads: "1" }
+                    ],
+                    demandGen: { videoImpr: "1,840", viewRate: "32.1%", audiencePool: "780" }
+                }
             },
             week2: {
                 key: "week2",
@@ -1235,7 +1443,22 @@
                 dailyPacing: [
                     { label: "Mon–Wed (Oct 5–7): Mid-Week Acceleration", desc: "Solid auction momentum with 73 clicks and $1.65 CPC", impr: "584", clicks: "73", ctr: "12.50%", cpc: "$1.65", spend: "$120.45", borderCol: "var(--taupe)" },
                     { label: "Thu–Sun (Oct 8–11): Weekend Conversion Surge", desc: "CTR maintained at 12.50% while converting 12 additional inquiries", impr: "744", clicks: "93", ctr: "12.50%", cpc: "$1.65", spend: "$153.45", borderCol: "var(--green)" }
-                ]
+                ],
+                socialData: {
+                    profileViews: "538",
+                    localActions: "94",
+                    socialReferrals: "192",
+                    reviewScore: "5.0 ★",
+                    reviewsCount: "+3 New (51 Total)",
+                    gbpBreakdown: { searchViews: "295", mapsViews: "243", calls: "28", directions: "42", webClicks: "24" },
+                    ga4Channels: [
+                        { channel: "Instagram", sessions: "116", engRate: "76.7%", leads: "8" },
+                        { channel: "TikTok", sessions: "44", engRate: "72.7%", leads: "3" },
+                        { channel: "Facebook", sessions: "22", engRate: "72.7%", leads: "1" },
+                        { channel: "YouTube", sessions: "10", engRate: "90.0%", leads: "1" }
+                    ],
+                    demandGen: { videoImpr: "2,150", viewRate: "34.8%", audiencePool: "1,120" }
+                }
             },
             week3: {
                 key: "week3",
@@ -1284,7 +1507,22 @@
                 ],
                 dailyPacing: [
                     { label: "Monday (Oct 12, 2026 to date)", desc: "Strong opening week pace with 13.13% CTR and low CPC ($1.61)", impr: "198", clicks: "26", ctr: "13.13%", cpc: "$1.61", spend: "$41.86", borderCol: "var(--green)" }
-                ]
+                ],
+                socialData: {
+                    profileViews: "86",
+                    localActions: "16",
+                    socialReferrals: "34",
+                    reviewScore: "5.0 ★",
+                    reviewsCount: "51 Total (100% 5-Star)",
+                    gbpBreakdown: { searchViews: "48", mapsViews: "38", calls: "5", directions: "7", webClicks: "4" },
+                    ga4Channels: [
+                        { channel: "Instagram", sessions: "21", engRate: "76.2%", leads: "1" },
+                        { channel: "TikTok", sessions: "8", engRate: "75.0%", leads: "1" },
+                        { channel: "Facebook", sessions: "3", engRate: "66.7%", leads: "0" },
+                        { channel: "YouTube", sessions: "2", engRate: "100.0%", leads: "0" }
+                    ],
+                    demandGen: { videoImpr: "360", viewRate: "36.1%", audiencePool: "1,240" }
+                }
             },
             all: {
                 key: "all",
@@ -1335,23 +1573,41 @@
                     { label: "Week 1 Cumulative (Sep 28 – Oct 4)", desc: "148 clicks, $1.79 CPC, 15 patient inquiries logged", impr: "1,280", clicks: "148", ctr: "11.56%", cpc: "$1.79", spend: "$264.80", borderCol: "var(--taupe)" },
                     { label: "Week 2 Cumulative (Oct 5 – Oct 11)", desc: "166 clicks, $1.65 CPC, 19 patient inquiries logged", impr: "1,328", clicks: "166", ctr: "12.50%", cpc: "$1.65", spend: "$274.60", borderCol: "var(--taupe)" },
                     { label: "Week 3 to Date (Oct 12)", desc: "26 clicks, $1.61 CPC, 3 patient inquiries logged", impr: "198", clicks: "26", ctr: "13.13%", cpc: "$1.61", spend: "$41.86", borderCol: "var(--green)" }
-                ]
+                ],
+                socialData: {
+                    profileViews: "1,116",
+                    localActions: "196",
+                    socialReferrals: "390",
+                    reviewScore: "5.0 ★",
+                    reviewsCount: "51 Total (100% 5-Star)",
+                    gbpBreakdown: { searchViews: "611", mapsViews: "505", calls: "57", directions: "87", webClicks: "52" },
+                    ga4Channels: [
+                        { channel: "Instagram", sessions: "235", engRate: "76.2%", leads: "15" },
+                        { channel: "TikTok", sessions: "90", engRate: "72.2%", leads: "6" },
+                        { channel: "Facebook", sessions: "45", engRate: "71.1%", leads: "2" },
+                        { channel: "YouTube", sessions: "20", engRate: "90.0%", leads: "2" }
+                    ],
+                    demandGen: { videoImpr: "4,350", viewRate: "33.8%", audiencePool: "1,240" }
+                }
             }
         };
 
         // Automatically clear old legacy cache keys from previous revisions
-        if (localStorage.getItem('suaGlowAdMetrics') && !localStorage.getItem('suaGlowAdMetrics_v4')) {
+        if (localStorage.getItem('suaGlowAdMetrics') && !localStorage.getItem('suaGlowAdMetrics_v5')) {
             localStorage.removeItem('suaGlowAdMetrics');
         }
-        if (localStorage.getItem('suaGlowAdMetrics_v2') && !localStorage.getItem('suaGlowAdMetrics_v4')) {
+        if (localStorage.getItem('suaGlowAdMetrics_v2') && !localStorage.getItem('suaGlowAdMetrics_v5')) {
             localStorage.removeItem('suaGlowAdMetrics_v2');
         }
-        if (localStorage.getItem('suaGlowAdMetrics_v3') && !localStorage.getItem('suaGlowAdMetrics_v4')) {
+        if (localStorage.getItem('suaGlowAdMetrics_v3') && !localStorage.getItem('suaGlowAdMetrics_v5')) {
             localStorage.removeItem('suaGlowAdMetrics_v3');
         }
+        if (localStorage.getItem('suaGlowAdMetrics_v4') && !localStorage.getItem('suaGlowAdMetrics_v5')) {
+            localStorage.removeItem('suaGlowAdMetrics_v4');
+        }
 
-        // Load custom overrides from LocalStorage (v4) if available
-        let appData = JSON.parse(localStorage.getItem('suaGlowAdMetrics_v4') || 'null');
+        // Load custom overrides from LocalStorage (v5) if available
+        let appData = JSON.parse(localStorage.getItem('suaGlowAdMetrics_v5') || 'null');
         if (!appData) {
             appData = defaultTimeframeData;
         }
@@ -1364,6 +1620,7 @@
             localStorage.removeItem('suaGlowAdMetrics_v2');
             localStorage.removeItem('suaGlowAdMetrics_v3');
             localStorage.removeItem('suaGlowAdMetrics_v4');
+            localStorage.removeItem('suaGlowAdMetrics_v5');
             sessionStorage.clear();
             const cleanUrl = window.location.origin + window.location.pathname + '?_t=' + Date.now();
             window.location.replace(cleanUrl);
@@ -1520,6 +1777,55 @@
                 dpContainer.appendChild(card);
             });
 
+            // 9. Update Google Local & Social Footprint (Section 7)
+            if (data.socialData) {
+                const sTag = document.getElementById('socialTimeframeTag');
+                if (sTag) sTag.textContent = `Showing: ${data.shortName}`;
+                const pv = document.getElementById('socialProfileViews');
+                if (pv) pv.textContent = data.socialData.profileViews;
+                const la = document.getElementById('socialLocalActions');
+                if (la) la.textContent = data.socialData.localActions;
+                const srv = document.getElementById('socialReferralVisits');
+                if (srv) srv.textContent = data.socialData.socialReferrals;
+                const sc = document.getElementById('socialReviewScore');
+                if (sc) sc.textContent = data.socialData.reviewScore;
+                const rc = document.getElementById('socialReviewsCount');
+                if (rc) rc.textContent = data.socialData.reviewsCount;
+
+                const sv = document.getElementById('gbpSearchViews');
+                if (sv) sv.textContent = `${data.socialData.gbpBreakdown.searchViews} views`;
+                const mv = document.getElementById('gbpMapsViews');
+                if (mv) mv.textContent = `${data.socialData.gbpBreakdown.mapsViews} views`;
+                const cl = document.getElementById('gbpCalls');
+                if (cl) cl.textContent = `${data.socialData.gbpBreakdown.calls} calls`;
+                const dr = document.getElementById('gbpDirections');
+                if (dr) dr.textContent = `${data.socialData.gbpBreakdown.directions} routes`;
+                const wc = document.getElementById('gbpWebClicks');
+                if (wc) wc.textContent = `${data.socialData.gbpBreakdown.webClicks} visits`;
+
+                const ga4Tbody = document.getElementById('ga4SocialTableBody');
+                if (ga4Tbody && data.socialData.ga4Channels) {
+                    ga4Tbody.innerHTML = '';
+                    data.socialData.ga4Channels.forEach(ch => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td style="padding:6px 8px;"><strong>${ch.channel}</strong></td>
+                            <td style="padding:6px 8px;">${ch.sessions}</td>
+                            <td style="padding:6px 8px; color:var(--green); font-weight:600;">${ch.engRate}</td>
+                            <td style="padding:6px 8px;"><strong style="color:var(--gold);">${ch.leads}</strong></td>
+                        `;
+                        ga4Tbody.appendChild(tr);
+                    });
+                }
+
+                const dgv = document.getElementById('demandGenVideoImpr');
+                if (dgv) dgv.textContent = data.socialData.demandGen.videoImpr;
+                const dgr = document.getElementById('demandGenViewRate');
+                if (dgr) dgr.textContent = data.socialData.demandGen.viewRate;
+                const dga = document.getElementById('demandGenAudiencePool');
+                if (dga) dga.textContent = `${data.socialData.demandGen.audiencePool} profiled`;
+            }
+
             // Refresh lucide icons
             lucide.createIcons();
         }
@@ -1582,7 +1888,7 @@
             appData[periodKey].totalRow.cpc = cpc;
             appData[periodKey].totalRow.leads = lds;
 
-            localStorage.setItem('suaGlowAdMetrics_v4', JSON.stringify(appData));
+            localStorage.setItem('suaGlowAdMetrics_v5', JSON.stringify(appData));
 
             closeEditorModal();
             renderDashboard(periodKey);
@@ -1594,6 +1900,7 @@
                 localStorage.removeItem('suaGlowAdMetrics_v2');
                 localStorage.removeItem('suaGlowAdMetrics_v3');
                 localStorage.removeItem('suaGlowAdMetrics_v4');
+                localStorage.removeItem('suaGlowAdMetrics_v5');
                 appData = JSON.parse(JSON.stringify(defaultTimeframeData));
                 closeEditorModal();
                 renderDashboard(currentPeriod);
