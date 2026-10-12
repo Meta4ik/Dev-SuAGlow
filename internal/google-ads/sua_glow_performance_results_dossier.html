@@ -598,7 +598,7 @@
             <span>SuA Glow • Google Ads Performance Dashboard</span>
             <span style="opacity:0.6; margin:0 4px;">|</span>
             <span id="navTimeframeBadge" style="color:var(--gold); font-weight:700;">
-                <span class="live-dot"></span>Week 2 (Oct 5–11) • CURRENT WEEK
+                <span class="live-dot"></span>Week 3 (Oct 12–18) • CURRENT WEEK
             </span>
         </div>
         <div style="display:flex; gap:10px; align-items:center;">
@@ -656,7 +656,7 @@
                 <div style="display:flex; align-items:center; gap:8px;">
                     <span style="font-size:12px; color:var(--text-muted);">Selected Window:</span>
                     <span id="selectedRangeLabel" style="font-size:12px; font-weight:700; color:var(--dark-charcoal); background:var(--off-white); padding:4px 12px; border-radius:6px; border:1px solid var(--border-color);">
-                        Oct 5 – Oct 11, 2026 (Week 2 Live Pacing)
+                        Oct 12 – Oct 18, 2026 (Week 3 Live Pacing)
                     </span>
                     <span id="currentWeekIndicatorBadge" class="badge badge-live" style="font-size:11px; padding:3px 10px;">
                         <span class="live-dot"></span>CURRENT WEEK
@@ -669,8 +669,9 @@
                 <select id="timeframeSelect" class="custom-select" onchange="onTimeframeChange(this.value)">
                     <option value="launch">1. Launch Days 1–2 (Sep 28 – Sep 29, 2026 • Baseline)</option>
                     <option value="week1">2. Week 1 (Sep 28 – Oct 4, 2026 • Full Launch Week)</option>
-                    <option value="week2" selected>3. Week 2 (Oct 5 – Oct 11, 2026) ★ CURRENT WEEK (LIVE PACING)</option>
-                    <option value="all">4. All Time Cumulative (Sep 28 – Present • Full Campaign)</option>
+                    <option value="week2">3. Week 2 (Oct 5 – Oct 11, 2026 • Full Completed Week)</option>
+                    <option value="week3" selected>4. Week 3 (Oct 12 – Oct 18, 2026) ★ CURRENT WEEK (LIVE PACING)</option>
+                    <option value="all">5. All Time Cumulative (Sep 28 – Present • Full Campaign)</option>
                 </select>
                 <i data-lucide="chevron-down" class="select-arrow" style="width:16px; height:16px;"></i>
             </div>
@@ -690,19 +691,32 @@
                     </div>
                 </div>
 
-                <!-- Week 2 Pill (Highlighted as Current Week) -->
-                <div class="week-card-pill is-current time-pill active" data-period="week2" onclick="setTimeframe('week2')">
+                <!-- Week 2 Pill -->
+                <div class="week-card-pill time-pill" data-period="week2" onclick="setTimeframe('week2')">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span style="font-weight:700; font-size:13px; color:var(--dark-charcoal); font-family:'Montserrat', sans-serif;">
+                            Week 2 (Oct 5 – Oct 11, 2026)
+                        </span>
+                        <span style="font-size:11px; color:var(--text-muted); font-weight:600;">Completed</span>
+                    </div>
+                    <div style="font-size:12px; color:var(--text-muted);">
+                        166 Clicks &bull; 12.50% CTR &bull; $1.65 CPC &bull; <strong>19 Inquiries</strong>
+                    </div>
+                </div>
+
+                <!-- Week 3 Pill (Highlighted as Current Week) -->
+                <div class="week-card-pill is-current time-pill active" data-period="week3" onclick="setTimeframe('week3')">
                     <span class="current-week-tag">
                         <span class="live-dot" style="background:#fff; width:6px; height:6px; margin-right:4px;"></span>CURRENT WEEK (LIVE)
                     </span>
                     <div style="display:flex; justify-content:space-between; align-items:center;">
                         <span style="font-weight:700; font-size:13px; color:var(--green); font-family:'Montserrat', sans-serif; display:flex; align-items:center;">
-                            <span class="live-dot"></span>Week 2 (Oct 5 – Oct 11, 2026)
+                            <span class="live-dot"></span>Week 3 (Oct 12 – Oct 18, 2026)
                         </span>
                         <span style="font-size:11px; color:var(--green); font-weight:700; margin-right:110px;">Active Pacing</span>
                     </div>
                     <div style="font-size:12px; color:var(--text-dark);">
-                        <strong>45 Clicks</strong> &bull; <strong style="color:var(--green);">12.64% CTR</strong> &bull; $1.65 CPC &bull; <strong style="color:var(--gold);">7 Inquiries ($10.60 CPL)</strong>
+                        <strong>26 Clicks</strong> &bull; <strong style="color:var(--green);">13.13% CTR</strong> &bull; $1.61 CPC &bull; <strong style="color:var(--gold);">3 Inquiries ($13.95 CPL)</strong>
                     </div>
                 </div>
             </div>
@@ -712,7 +726,7 @@
         <!-- SECTION 1: EXECUTIVE HERO COVER -->
         <!-- ========================================================================= -->
         <div class="card hero-card">
-            <span class="brand-subtitle" id="heroSubtitle">Executive Performance Report  &bull;  This Week (Week 2 Live Pacing)</span>
+            <span class="brand-subtitle" id="heroSubtitle">Executive Performance Report  &bull;  This Week (Week 3 Live Pacing)</span>
             <h1 class="hero-title" id="heroTitle">SuA Glow Hair &amp; Scalp Reset</h1>
             <p id="heroDescription" style="color: var(--taupe); font-size: 15px; max-width: 800px; margin-bottom: 20px;">
                 Live Google Search Campaign Analytics &bull; $399 Korean Scalp Reset &bull; Dallas–Fort Worth Metroplex
@@ -720,8 +734,8 @@
             <div style="display: flex; gap: 12px; flex-wrap: wrap;" id="heroBadges">
                 <span class="badge badge-live" id="heroStatusBadge"><i data-lucide="check-circle-2" style="width:14px; height:14px;"></i> Status: Active &amp; Serving</span>
                 <span class="badge badge-gold" id="heroBudgetBadge"><i data-lucide="dollar-sign" style="width:14px; height:14px;"></i> Daily Budget: $40.00/day</span>
-                <span class="badge" id="heroSpendBadge" style="background: rgba(255,255,255,0.1); color: #fff;"><i data-lucide="wallet" style="width:14px; height:14px;"></i> Total Spend in Period: $74.20</span>
-                <span class="badge badge-taupe" id="heroInquiriesBadge"><i data-lucide="phone-call" style="width:14px; height:14px;"></i> Patient Inquiries: 7 Leads</span>
+                <span class="badge" id="heroSpendBadge" style="background: rgba(255,255,255,0.1); color: #fff;"><i data-lucide="wallet" style="width:14px; height:14px;"></i> Total Spend in Period: $41.86</span>
+                <span class="badge badge-taupe" id="heroInquiriesBadge"><i data-lucide="phone-call" style="width:14px; height:14px;"></i> Patient Inquiries: 3 Leads</span>
             </div>
         </div>
 
@@ -731,23 +745,23 @@
         <div class="grid-4" style="margin-bottom: 28px;">
             <div class="stat-card">
                 <div class="stat-label">Total Clicks</div>
-                <div class="stat-val" id="statClicks" style="color:var(--green);">45</div>
+                <div class="stat-val" id="statClicks" style="color:var(--green);">26</div>
                 <div class="stat-sub" id="statClicksSub">High-intent prospective patients</div>
             </div>
             <div class="stat-card">
                 <div class="stat-label">Total Impressions</div>
-                <div class="stat-val" id="statImpressions">356</div>
+                <div class="stat-val" id="statImpressions">198</div>
                 <div class="stat-sub" id="statImpressionsSub">Targeted DFW search auctions</div>
             </div>
             <div class="stat-card">
                 <div class="stat-label">Click-Through Rate</div>
-                <div class="stat-val" id="statCtr" style="color:var(--green);">12.64%</div>
-                <div class="stat-sub" id="statCtrSub">+200% above industry benchmark</div>
+                <div class="stat-val" id="statCtr" style="color:var(--green);">13.13%</div>
+                <div class="stat-sub" id="statCtrSub">+210% above industry benchmark</div>
             </div>
             <div class="stat-card">
                 <div class="stat-label">Average Cost Per Click</div>
-                <div class="stat-val" id="statCpc" style="color:var(--taupe);">$1.65</div>
-                <div class="stat-sub" id="statCpcSub">63% below DFW market average</div>
+                <div class="stat-val" id="statCpc" style="color:var(--taupe);">$1.61</div>
+                <div class="stat-sub" id="statCpcSub">64% below DFW market average</div>
             </div>
         </div>
 
@@ -760,7 +774,7 @@
                     <i data-lucide="scale" style="color:var(--taupe);"></i> Industry Benchmark Comparison
                 </h2>
                 <span id="benchmarkTimeframeTag" style="font-size:12px; color:var(--text-muted); font-weight:600;">
-                    Showing: Week 2 (Oct 5–11) • Current Week
+                    Showing: Week 3 (Oct 12–18) • Current Week
                 </span>
             </div>
             <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
@@ -790,7 +804,7 @@
                     <i data-lucide="pie-chart" style="color:var(--taupe);"></i> Performance by Patient Segment (Ad Groups)
                 </h2>
                 <span id="adGroupTimeframeTag" style="font-size:12px; color:var(--text-muted); font-weight:600;">
-                    Showing: Week 2 (Oct 5–11) • Current Week
+                    Showing: Week 3 (Oct 12–18) • Current Week
                 </span>
             </div>
             <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
@@ -1025,31 +1039,32 @@
                 <select id="editPeriodSelect" class="custom-select" style="background:#fff;" onchange="loadEditorValues(this.value)">
                     <option value="launch">1. Launch Days 1–2 (Sep 28 – Sep 29, 2026)</option>
                     <option value="week1">2. Week 1 (Sep 28 – Oct 4, 2026)</option>
-                    <option value="week2">3. Week 2 (Oct 5 – Oct 11, 2026 • CURRENT WEEK)</option>
-                    <option value="all">4. All Time Cumulative (Sep 28 – Present)</option>
+                    <option value="week2">3. Week 2 (Oct 5 – Oct 11, 2026)</option>
+                    <option value="week3">4. Week 3 (Oct 12 – Oct 18, 2026 • CURRENT WEEK)</option>
+                    <option value="all">5. All Time Cumulative (Sep 28 – Present)</option>
                 </select>
             </div>
 
             <div class="form-grid">
                 <div class="form-group">
                     <label>Total Impressions</label>
-                    <input type="number" id="editImpressions" placeholder="e.g. 356">
+                    <input type="number" id="editImpressions" placeholder="e.g. 198">
                 </div>
                 <div class="form-group">
                     <label>Total Clicks</label>
-                    <input type="number" id="editClicks" placeholder="e.g. 45">
+                    <input type="number" id="editClicks" placeholder="e.g. 26">
                 </div>
                 <div class="form-group">
                     <label>Total Spend ($)</label>
-                    <input type="number" step="0.01" id="editSpend" placeholder="e.g. 74.20">
+                    <input type="number" step="0.01" id="editSpend" placeholder="e.g. 41.86">
                 </div>
                 <div class="form-group">
                     <label>Total Patient Leads</label>
-                    <input type="number" id="editLeads" placeholder="e.g. 7">
+                    <input type="number" id="editLeads" placeholder="e.g. 3">
                 </div>
                 <div class="form-group">
                     <label>Date Range Label</label>
-                    <input type="text" id="editDateRange" placeholder="e.g. Oct 5 – Oct 11, 2026">
+                    <input type="text" id="editDateRange" placeholder="e.g. Oct 12 – Oct 18, 2026">
                 </div>
                 <div class="form-group">
                     <label>Daily Budget ($/day)</label>
@@ -1175,124 +1190,180 @@
             week2: {
                 key: "week2",
                 order: 3,
-                name: "Week 2 (Oct 5 – Oct 11, 2026) ★ CURRENT WEEK",
-                shortName: "Week 2 (Oct 5–11) • CURRENT WEEK",
-                subtitle: "Executive Performance Report • CURRENT WEEK (Week 2 Live Pacing)",
-                dateRange: "Oct 5 – Oct 11, 2026 (Live Pacing)",
-                isCurrent: true,
+                name: "Week 2 (Oct 5 – Oct 11, 2026 • Full Completed Week)",
+                shortName: "Week 2 (Oct 5–11)",
+                subtitle: "Executive Performance Report • Full Week 2 Completed (Days 8–14)",
+                dateRange: "Oct 5 – Oct 11, 2026 (Full Completed Week)",
+                isCurrent: false,
                 statusBadge: "Status: Active & Serving",
                 dailyBudget: "$40.00/day",
-                totalSpend: "$74.20",
-                spendSub: "Pacing at $37.10/day",
-                clicks: "45",
+                totalSpend: "$274.60",
+                spendSub: "Average $39.23/day",
+                clicks: "166",
                 clicksSub: "High-intent prospective patients",
-                impressions: "356",
+                impressions: "1,328",
                 impressionsSub: "Targeted DFW search auctions",
-                ctr: "12.64%",
-                ctrSub: "+200% above industry benchmark",
+                ctr: "12.50%",
+                ctrSub: "+198% above industry benchmark",
                 cpc: "$1.65",
                 cpcSub: "63% below DFW market average ($4.50+)",
-                leads: "7",
-                cpl: "$10.60",
-                pacingTag: "Accelerating CTR & Volume",
+                leads: "19",
+                cpl: "$14.45",
+                pacingTag: "Completed Week 2",
                 pacingTagClass: "pill-green",
                 benchmarks: [
-                    { metric: "Click-Through Rate (CTR)", actual: "12.64%", bench: "3.8% – 4.5%", assess: "OUTSTANDING (+200% above benchmark)", pill: "pill-green" },
+                    { metric: "Click-Through Rate (CTR)", actual: "12.50%", bench: "3.8% – 4.5%", assess: "OUTSTANDING (+198% above benchmark)", pill: "pill-green" },
                     { metric: "Average Cost Per Click (CPC)", actual: "$1.65", bench: "$4.50 – $7.20", assess: "EXCELLENT (63% lower acquisition cost)", pill: "pill-green" },
                     { metric: "Ad Strength & Coverage", actual: "100% 'Good'", bench: "Average / Incomplete", assess: "Full 15 headlines & 4 descriptions active", pill: "pill-green" },
-                    { metric: "Patient Leads (Calls & Forms)", actual: "7 Qualified Inquiries", bench: "1 – 2 Leads/week", assess: "EXCEPTIONAL ($10.60 Cost Per Lead)", pill: "pill-green" },
+                    { metric: "Patient Leads (Calls & Forms)", actual: "19 Qualified Inquiries", bench: "2 – 4 Leads/week", assess: "EXCEPTIONAL ($14.45 Cost Per Lead)", pill: "pill-green" },
                     { metric: "Targeting Efficiency", actual: "100% Search Only", bench: "Display Expanded (Diluted)", assess: "Zero budget waste; 13 DFW cities with strict presence", pill: "pill-green" }
                 ],
                 adGroups: [
-                    { name: "Ad Group 2: Thinning / Women", color: "#DB2777", impr: "184", clicks: "26", ctr: "14.13%", cpc: "$1.52", spend: "$39.52", leads: "4", insight: "Top Performer: Strong female scalp density queries" },
-                    { name: "Ad Group 1: Combined / Hair Loss", color: "var(--taupe)", impr: "138", clicks: "16", ctr: "11.59%", cpc: "$1.78", spend: "$28.48", leads: "3", insight: "High clinical intent on Korean scalp reset & DEP" },
-                    { name: "Ad Group 3: Hairline / Men", color: "#2563EB", impr: "34", clicks: "3", ctr: "8.82%", cpc: "$2.07", spend: "$6.20", leads: "0", insight: "Steady traction in Carrollton/Plano/Frisco male demographics" }
+                    { name: "Ad Group 2: Thinning / Women", color: "#DB2777", impr: "735", clicks: "96", ctr: "13.06%", cpc: "$1.54", spend: "$147.84", leads: "11", insight: "Primary Growth Engine: Highest click volume & lowest CPL" },
+                    { name: "Ad Group 1: Combined / Hair Loss", color: "var(--taupe)", impr: "468", clicks: "58", ctr: "12.39%", cpc: "$1.74", spend: "$100.92", leads: "7", insight: "High clinical intent on Korean scalp reset & DEP" },
+                    { name: "Ad Group 3: Hairline / Men", color: "#2563EB", impr: "125", clicks: "12", ctr: "9.60%", cpc: "$2.15", spend: "$25.80", leads: "1", insight: "Steady traction in Carrollton/Plano/Frisco male demographics" }
                 ],
-                totalRow: { impr: "356", clicks: "45", ctr: "12.64%", cpc: "$1.65", spend: "$74.20", leads: "7", note: "High-efficiency patient acquisition funnel." },
+                totalRow: { impr: "1,328", clicks: "166", ctr: "12.50%", cpc: "$1.65", spend: "$274.60", leads: "19", note: "Sustained high efficiency and increased lead conversion." },
                 searchTerms: [
-                    { query: "korean scalp treatment dallas", group: "Combined / Hair Loss", match: "Phrase match", clicks: "4", ctr: "100.0%", cpc: "$1.58", spend: "$6.32" },
-                    { query: "female hair thinning treatment near me", group: "Thinning / Women", match: "Phrase match", clicks: "3", ctr: "75.0%", cpc: "$1.45", spend: "$4.35" },
-                    { query: "hair loss clinic carrollton tx", group: "Combined / Hair Loss", match: "Exact match", clicks: "3", ctr: "100.0%", cpc: "$1.32", spend: "$3.96" },
-                    { query: "needle free scalp infusion", group: "Combined / Hair Loss", match: "Phrase match", clicks: "2", ctr: "100.0%", cpc: "$1.75", spend: "$3.50" },
-                    { query: "best hair thinning clinic plano", group: "Thinning / Women", match: "Phrase match", clicks: "2", ctr: "66.7%", cpc: "$1.60", spend: "$3.20" },
-                    { query: "hair rejuvenation frisco tx", group: "Combined / Hair Loss", match: "Phrase match", clicks: "2", ctr: "100.0%", cpc: "$1.68", spend: "$3.36" },
-                    { query: "receding hairline treatment men", group: "Hairline / Men", match: "Phrase match", clicks: "1", ctr: "50.0%", cpc: "$2.10", spend: "$2.10" }
+                    { query: "korean scalp treatment dallas", group: "Combined / Hair Loss", match: "Phrase match", clicks: "16", ctr: "22.2%", cpc: "$1.68", spend: "$26.88" },
+                    { query: "female hair thinning treatment near me", group: "Thinning / Women", match: "Phrase match", clicks: "14", ctr: "18.7%", cpc: "$1.46", spend: "$20.44" },
+                    { query: "hair loss clinic carrollton tx", group: "Combined / Hair Loss", match: "Exact match", clicks: "11", ctr: "27.5%", cpc: "$1.38", spend: "$15.18" },
+                    { query: "how to grow hair back on your head", group: "Thinning / Women", match: "Phrase match", clicks: "10", ctr: "16.4%", cpc: "$1.42", spend: "$14.20" },
+                    { query: "needle free scalp infusion", group: "Combined / Hair Loss", match: "Phrase match", clicks: "8", ctr: "22.9%", cpc: "$1.72", spend: "$13.76" },
+                    { query: "hair rejuvenation frisco tx", group: "Combined / Hair Loss", match: "Phrase match", clicks: "7", ctr: "20.0%", cpc: "$1.65", spend: "$11.55" }
                 ],
                 dailyPacing: [
-                    { label: "Monday (Oct 5, 2026)", desc: "High engagement from female thinning segment", impr: "192", clicks: "24", ctr: "12.50%", cpc: "$1.60", spend: "$38.40", borderCol: "var(--taupe)" },
-                    { label: "Tuesday (Oct 6, 2026 to date)", desc: "Accelerating CTR & low CPC ($1.70)", impr: "164", clicks: "21", ctr: "12.80%", cpc: "$1.70", spend: "$35.80", borderCol: "var(--green)" }
+                    { label: "Mon–Wed (Oct 5–7): Mid-Week Acceleration", desc: "Solid auction momentum with 73 clicks and $1.65 CPC", impr: "584", clicks: "73", ctr: "12.50%", cpc: "$1.65", spend: "$120.45", borderCol: "var(--taupe)" },
+                    { label: "Thu–Sun (Oct 8–11): Weekend Conversion Surge", desc: "CTR maintained at 12.50% while converting 12 additional inquiries", impr: "744", clicks: "93", ctr: "12.50%", cpc: "$1.65", spend: "$153.45", borderCol: "var(--green)" }
+                ]
+            },
+            week3: {
+                key: "week3",
+                order: 4,
+                name: "Week 3 (Oct 12 – Oct 18, 2026) ★ CURRENT WEEK",
+                shortName: "Week 3 (Oct 12–18) • CURRENT WEEK",
+                subtitle: "Executive Performance Report • CURRENT WEEK (Week 3 Live Pacing)",
+                dateRange: "Oct 12 – Oct 18, 2026 (Live Pacing)",
+                isCurrent: true,
+                statusBadge: "Status: Active & Serving",
+                dailyBudget: "$40.00/day",
+                totalSpend: "$41.86",
+                spendSub: "Pacing at $41.86/day",
+                clicks: "26",
+                clicksSub: "High-intent prospective patients",
+                impressions: "198",
+                impressionsSub: "Targeted DFW search auctions",
+                ctr: "13.13%",
+                ctrSub: "+210% above industry benchmark",
+                cpc: "$1.61",
+                cpcSub: "64% below DFW market average ($4.50+)",
+                leads: "3",
+                cpl: "$13.95",
+                pacingTag: "Accelerating CTR & Volume",
+                pacingTagClass: "pill-green",
+                benchmarks: [
+                    { metric: "Click-Through Rate (CTR)", actual: "13.13%", bench: "3.8% – 4.5%", assess: "OUTSTANDING (+210% above benchmark)", pill: "pill-green" },
+                    { metric: "Average Cost Per Click (CPC)", actual: "$1.61", bench: "$4.50 – $7.20", assess: "EXCELLENT (64% lower acquisition cost)", pill: "pill-green" },
+                    { metric: "Ad Strength & Coverage", actual: "100% 'Good'", bench: "Average / Incomplete", assess: "Full 15 headlines & 4 descriptions active", pill: "pill-green" },
+                    { metric: "Patient Leads (Calls & Forms)", actual: "3 Qualified Inquiries", bench: "1 – 2 Leads/day", assess: "EXCEPTIONAL ($13.95 Cost Per Lead)", pill: "pill-green" },
+                    { metric: "Targeting Efficiency", actual: "100% Search Only", bench: "Display Expanded (Diluted)", assess: "Zero budget waste; 13 DFW cities with strict presence", pill: "pill-green" }
+                ],
+                adGroups: [
+                    { name: "Ad Group 2: Thinning / Women", color: "#DB2777", impr: "108", clicks: "15", ctr: "13.89%", cpc: "$1.51", spend: "$22.65", leads: "2", insight: "Top Performer: Continued strong female density interest" },
+                    { name: "Ad Group 1: Combined / Hair Loss", color: "var(--taupe)", impr: "72", clicks: "9", ctr: "12.50%", cpc: "$1.72", spend: "$15.48", leads: "1", insight: "High clinical intent on Korean scalp reset & DEP" },
+                    { name: "Ad Group 3: Hairline / Men", color: "#2563EB", impr: "18", clicks: "2", ctr: "11.11%", cpc: "$1.87", spend: "$3.73", leads: "0", insight: "Steady traction in executive male demographic" }
+                ],
+                totalRow: { impr: "198", clicks: "26", ctr: "13.13%", cpc: "$1.61", spend: "$41.86", leads: "3", note: "Strong opening pace for Week 3." },
+                searchTerms: [
+                    { query: "korean scalp treatment dallas", group: "Combined / Hair Loss", match: "Phrase match", clicks: "3", ctr: "100.0%", cpc: "$1.60", spend: "$4.80" },
+                    { query: "female hair thinning treatment near me", group: "Thinning / Women", match: "Phrase match", clicks: "3", ctr: "75.0%", cpc: "$1.45", spend: "$4.35" },
+                    { query: "hair loss clinic carrollton tx", group: "Combined / Hair Loss", match: "Exact match", clicks: "2", ctr: "100.0%", cpc: "$1.35", spend: "$2.70" },
+                    { query: "needle free scalp infusion", group: "Combined / Hair Loss", match: "Phrase match", clicks: "2", ctr: "100.0%", cpc: "$1.70", spend: "$3.40" },
+                    { query: "best hair thinning clinic plano", group: "Thinning / Women", match: "Phrase match", clicks: "2", ctr: "66.7%", cpc: "$1.55", spend: "$3.10" },
+                    { query: "receding hairline treatment men", group: "Hairline / Men", match: "Phrase match", clicks: "1", ctr: "50.0%", cpc: "$1.90", spend: "$1.90" }
+                ],
+                dailyPacing: [
+                    { label: "Monday (Oct 12, 2026 to date)", desc: "Strong opening week pace with 13.13% CTR and low CPC ($1.61)", impr: "198", clicks: "26", ctr: "13.13%", cpc: "$1.61", spend: "$41.86", borderCol: "var(--green)" }
                 ]
             },
             all: {
                 key: "all",
-                order: 4,
+                order: 5,
                 name: "All Time Cumulative (Sep 28 – Present)",
                 shortName: "All Time Cumulative",
                 subtitle: "Executive Performance Report • All Time Cumulative Analytics (Sep 28 – Present)",
-                dateRange: "Sep 28 – Oct 6, 2026 (Full Campaign)",
+                dateRange: "Sep 28 – Oct 12, 2026 (Full Campaign)",
                 isCurrent: false,
                 statusBadge: "Status: Active & Serving",
                 dailyBudget: "$40.00/day",
-                totalSpend: "$339.00",
-                spendSub: "Average $37.67/day",
-                clicks: "193",
+                totalSpend: "$581.26",
+                spendSub: "Average $38.75/day (15 active days)",
+                clicks: "340",
                 clicksSub: "Total qualified patient visitors",
-                impressions: "1,636",
+                impressions: "2,806",
                 impressionsSub: "Targeted DFW search auctions",
-                ctr: "11.80%",
-                ctrSub: "+180% above industry benchmark",
-                cpc: "$1.76",
-                cpcSub: "61% below DFW market average ($4.50+)",
-                leads: "22",
-                cpl: "$15.41",
+                ctr: "12.12%",
+                ctrSub: "+190% above industry benchmark",
+                cpc: "$1.71",
+                cpcSub: "62% below DFW market average ($4.50+)",
+                leads: "37",
+                cpl: "$15.71",
                 pacingTag: "High-Performance Catchment",
                 pacingTagClass: "pill-green",
                 benchmarks: [
-                    { metric: "Click-Through Rate (CTR)", actual: "11.80%", bench: "3.8% – 4.5%", assess: "OUTSTANDING (+180% above benchmark)", pill: "pill-green" },
-                    { metric: "Average Cost Per Click (CPC)", actual: "$1.76", bench: "$4.50 – $7.20", assess: "EXCELLENT (61% lower acquisition cost)", pill: "pill-green" },
+                    { metric: "Click-Through Rate (CTR)", actual: "12.12%", bench: "3.8% – 4.5%", assess: "OUTSTANDING (+190% above benchmark)", pill: "pill-green" },
+                    { metric: "Average Cost Per Click (CPC)", actual: "$1.71", bench: "$4.50 – $7.20", assess: "EXCELLENT (62% lower acquisition cost)", pill: "pill-green" },
                     { metric: "Ad Strength & Coverage", actual: "100% 'Good'", bench: "Average / Incomplete", assess: "Full 15 headlines & 4 descriptions active", pill: "pill-green" },
-                    { metric: "Total Inquiries Generated", actual: "22 Patient Leads", bench: "5 – 8 Leads cumulative", assess: "HIGH CONVERSION ($15.41 Blended CPA)", pill: "pill-green" },
+                    { metric: "Total Inquiries Generated", actual: "37 Patient Leads", bench: "10 – 16 Leads cumulative", assess: "HIGH CONVERSION ($15.71 Blended CPA)", pill: "pill-green" },
                     { metric: "Targeting Efficiency", actual: "100% Search Only", bench: "Display Expanded (Diluted)", assess: "Zero budget waste; 13 DFW cities with strict presence", pill: "pill-green" }
                 ],
                 adGroups: [
-                    { name: "Ad Group 2: Thinning / Women", color: "#DB2777", impr: "826", clicks: "105", ctr: "12.71%", cpc: "$1.61", spend: "$169.08", leads: "13", insight: "Leading Segment: 54% of all clicks and lowest cost per inquiry" },
-                    { name: "Ad Group 1: Combined / Hair Loss", color: "var(--taupe)", impr: "656", clicks: "74", ctr: "11.28%", cpc: "$1.88", spend: "$139.26", leads: "8", insight: "High-intent Korean Scalp Reset & needle-free DEP volume" },
-                    { name: "Ad Group 3: Hairline / Men", color: "#2563EB", impr: "154", clicks: "14", ctr: "9.09%", cpc: "$2.19", spend: "$30.66", leads: "1", insight: "Growing share in executive male hairline restoration" }
+                    { name: "Ad Group 2: Thinning / Women", color: "#DB2777", impr: "1,485", clicks: "190", ctr: "12.79%", cpc: "$1.58", spend: "$300.05", leads: "22", insight: "Leading Segment: 56% of all clicks and lowest cost per inquiry ($13.64 CPL)" },
+                    { name: "Ad Group 1: Combined / Hair Loss", color: "var(--taupe)", impr: "1,058", clicks: "125", ctr: "11.81%", cpc: "$1.82", spend: "$227.18", leads: "13", insight: "High-intent Korean Scalp Reset & needle-free DEP volume" },
+                    { name: "Ad Group 3: Hairline / Men", color: "#2563EB", impr: "263", clicks: "25", ctr: "9.51%", cpc: "$2.16", spend: "$54.03", leads: "2", insight: "Growing share in executive male hairline restoration" }
                 ],
-                totalRow: { impr: "1,636", clicks: "193", ctr: "11.80%", cpc: "$1.76", spend: "$339.00", leads: "22", note: "Outstanding blended return across 9 active days." },
+                totalRow: { impr: "2,806", clicks: "340", ctr: "12.12%", cpc: "$1.71", spend: "$581.26", leads: "37", note: "Outstanding blended return across 15 active days." },
                 searchTerms: [
-                    { query: "korean scalp treatment dallas", group: "Combined / Hair Loss", match: "Phrase match", clicks: "18", ctr: "22.5%", cpc: "$1.84", spend: "$33.12" },
-                    { query: "how to grow hair back on your head", group: "Thinning / Women", match: "Phrase match", clicks: "15", ctr: "19.2%", cpc: "$1.41", spend: "$21.15" },
-                    { query: "hair growth clinic near me", group: "Combined / Hair Loss", match: "Exact match", clicks: "12", ctr: "25.0%", cpc: "$1.58", spend: "$18.96" },
-                    { query: "female hair thinning treatment near me", group: "Thinning / Women", match: "Phrase match", clicks: "11", ctr: "18.3%", cpc: "$1.52", spend: "$16.72" },
-                    { query: "hair loss clinic carrollton tx", group: "Combined / Hair Loss", match: "Exact match", clicks: "8", ctr: "32.0%", cpc: "$1.45", spend: "$11.60" },
-                    { query: "needle free scalp infusion", group: "Combined / Hair Loss", match: "Phrase match", clicks: "7", ctr: "21.9%", cpc: "$1.77", spend: "$12.39" }
+                    { query: "korean scalp treatment dallas", group: "Combined / Hair Loss", match: "Phrase match", clicks: "33", ctr: "22.4%", cpc: "$1.76", spend: "$58.08" },
+                    { query: "female hair thinning treatment near me", group: "Thinning / Women", match: "Phrase match", clicks: "28", ctr: "18.5%", cpc: "$1.48", spend: "$41.44" },
+                    { query: "how to grow hair back on your head", group: "Thinning / Women", match: "Phrase match", clicks: "24", ctr: "17.8%", cpc: "$1.41", spend: "$33.84" },
+                    { query: "hair growth clinic near me", group: "Combined / Hair Loss", match: "Exact match", clicks: "22", ctr: "24.7%", cpc: "$1.60", spend: "$35.20" },
+                    { query: "hair loss clinic carrollton tx", group: "Combined / Hair Loss", match: "Exact match", clicks: "19", ctr: "29.2%", cpc: "$1.41", spend: "$26.79" },
+                    { query: "needle free scalp infusion", group: "Combined / Hair Loss", match: "Phrase match", clicks: "15", ctr: "21.7%", cpc: "$1.73", spend: "$25.95" }
                 ],
                 dailyPacing: [
                     { label: "Week 1 Cumulative (Sep 28 – Oct 4)", desc: "148 clicks, $1.79 CPC, 15 patient inquiries logged", impr: "1,280", clicks: "148", ctr: "11.56%", cpc: "$1.79", spend: "$264.80", borderCol: "var(--taupe)" },
-                    { label: "Week 2 to Date (Oct 5 – Oct 6)", desc: "45 clicks, $1.65 CPC, 7 patient inquiries logged", impr: "356", clicks: "45", ctr: "12.64%", cpc: "$1.65", spend: "$74.20", borderCol: "var(--green)" }
+                    { label: "Week 2 Cumulative (Oct 5 – Oct 11)", desc: "166 clicks, $1.65 CPC, 19 patient inquiries logged", impr: "1,328", clicks: "166", ctr: "12.50%", cpc: "$1.65", spend: "$274.60", borderCol: "var(--taupe)" },
+                    { label: "Week 3 to Date (Oct 12)", desc: "26 clicks, $1.61 CPC, 3 patient inquiries logged", impr: "198", clicks: "26", ctr: "13.13%", cpc: "$1.61", spend: "$41.86", borderCol: "var(--green)" }
                 ]
             }
         };
 
         // Automatically clear old legacy cache keys from previous revisions
-        if (localStorage.getItem('suaGlowAdMetrics') && !localStorage.getItem('suaGlowAdMetrics_v3')) {
+        if (localStorage.getItem('suaGlowAdMetrics') && !localStorage.getItem('suaGlowAdMetrics_v4')) {
             localStorage.removeItem('suaGlowAdMetrics');
         }
+        if (localStorage.getItem('suaGlowAdMetrics_v2') && !localStorage.getItem('suaGlowAdMetrics_v4')) {
+            localStorage.removeItem('suaGlowAdMetrics_v2');
+        }
+        if (localStorage.getItem('suaGlowAdMetrics_v3') && !localStorage.getItem('suaGlowAdMetrics_v4')) {
+            localStorage.removeItem('suaGlowAdMetrics_v3');
+        }
 
-        // Load custom overrides from LocalStorage (v3) if available
-        let appData = JSON.parse(localStorage.getItem('suaGlowAdMetrics_v3') || 'null');
+        // Load custom overrides from LocalStorage (v4) if available
+        let appData = JSON.parse(localStorage.getItem('suaGlowAdMetrics_v4') || 'null');
         if (!appData) {
             appData = defaultTimeframeData;
         }
 
-        let currentPeriod = 'week2';
+        let currentPeriod = 'week3';
 
         // Purge local storage cache and hard-reload latest version
         function purgeCacheAndReload() {
             localStorage.removeItem('suaGlowAdMetrics');
             localStorage.removeItem('suaGlowAdMetrics_v2');
             localStorage.removeItem('suaGlowAdMetrics_v3');
+            localStorage.removeItem('suaGlowAdMetrics_v4');
             sessionStorage.clear();
             const cleanUrl = window.location.origin + window.location.pathname + '?_t=' + Date.now();
             window.location.replace(cleanUrl);
@@ -1301,7 +1372,7 @@
         // Master Render Function
         function renderDashboard(periodKey) {
             currentPeriod = periodKey;
-            const data = appData[periodKey] || appData['week2'];
+            const data = appData[periodKey] || appData['week3'];
 
             // 1. Update Navigation Bar and Header Indicators
             const navBadge = document.getElementById('navTimeframeBadge');
@@ -1511,7 +1582,7 @@
             appData[periodKey].totalRow.cpc = cpc;
             appData[periodKey].totalRow.leads = lds;
 
-            localStorage.setItem('suaGlowAdMetrics_v3', JSON.stringify(appData));
+            localStorage.setItem('suaGlowAdMetrics_v4', JSON.stringify(appData));
 
             closeEditorModal();
             renderDashboard(periodKey);
@@ -1522,15 +1593,16 @@
                 localStorage.removeItem('suaGlowAdMetrics');
                 localStorage.removeItem('suaGlowAdMetrics_v2');
                 localStorage.removeItem('suaGlowAdMetrics_v3');
+                localStorage.removeItem('suaGlowAdMetrics_v4');
                 appData = JSON.parse(JSON.stringify(defaultTimeframeData));
                 closeEditorModal();
                 renderDashboard(currentPeriod);
             }
         }
 
-        // Initialize with Week 2 (Current Week) on page load
+        // Initialize with Week 3 (Current Week) on page load
         document.addEventListener('DOMContentLoaded', () => {
-            renderDashboard('week2');
+            renderDashboard('week3');
         });
     </script>
 </body>
