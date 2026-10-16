@@ -1841,12 +1841,12 @@ export const SECTION_LIBRARY = {
         id: 'consultation-policy',
         name: 'Consultation Policy & Fee Card',
         category: 'philosophy',
-        description: 'Dedicated consultation policy banner detailing the $50 fee credit toward same-day treatments.',
+        description: 'Dedicated consultation policy banner detailing the $100 fee credit toward same-day treatments.',
         defaultProps: {
             badgeText: 'Personalized Consultations',
             title: 'Every Glow Begins with a Plan',
             description: 'Enjoy dedicated one-on-one time with your provider to discuss your skin, goals and personalized treatment options.',
-            feeAmount: '$50',
+            feeAmount: '$100',
             feeLabel: 'Consultation Fee',
             creditText: 'Applied to Same-Day Treatment',
             ctaText: 'Book Your Consultation',
@@ -1899,7 +1899,7 @@ export const SECTION_LIBRARY = {
                         ${p.description}
                     </p>
                     
-                    <!-- $50 Consultation Fee: Mobile Stacked Card (matching mobile sample) -->
+                    <!-- $100 Consultation Fee: Mobile Stacked Card (matching mobile sample) -->
                     <div class="flex md:hidden flex-col gap-1.5 bg-[#EDE7DF] border border-[#E2DBD1]/80 p-3 rounded-2xl shadow-xs w-fit max-w-[190px]">
                         <span class="text-3xl font-bold text-[#1B1E21] tracking-tight leading-none">${p.feeAmount}</span>
                         <span class="text-[9px] font-bold uppercase tracking-[0.14em] text-[#635A50] leading-none mt-0.5">${p.feeLabel}</span>
@@ -1909,7 +1909,7 @@ export const SECTION_LIBRARY = {
                         </div>
                     </div>
 
-                    <!-- $50 Consultation Fee: Desktop Horizontal Pill Box (1:1 with desktop target) -->
+                    <!-- $100 Consultation Fee: Desktop Horizontal Pill Box (1:1 with desktop target) -->
                     <div class="hidden md:inline-flex items-center gap-4 sm:gap-5 bg-[#EDE7DF] border border-[#E2DBD1]/80 px-4.5 py-2.5 sm:px-5 sm:py-2.5 rounded-2xl shadow-xs w-fit">
                         <div class="flex items-center gap-2.5">
                             <span class="text-3xl sm:text-[32px] font-bold text-[#1B1E21] tracking-tight leading-none">${p.feeAmount}</span>

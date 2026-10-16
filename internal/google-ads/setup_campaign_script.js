@@ -5,9 +5,10 @@
  * Campaign: "SuA Glow Hair & Scalp Reset"
  * 
  * Solutions Implemented:
- * 1. Expands keywords from 14 to 44 high-intent targeted phrase keywords to clear "Missing enough relevant keywords".
- * 2. Pauses any older duplicate/draft ads with "Poor" Ad Strength, leaving only the 15-headline "Good/Excellent" RSAs active.
- * 3. Confirms all 15 headlines, 4 descriptions, 22 negative keywords, and 13 DFW locations.
+ * 1. Expands keywords for high-converting Ad Groups 1 & 2 (Combined Scalp & Women Thinning).
+ * 2. Explicitly pauses Ad Group 3: Hairline / Men to eliminate unfruitful ad spend and consolidate budget.
+ * 3. Pauses older duplicate/draft ads with "Poor" Ad Strength, leaving only Good/Excellent 15-headline RSAs.
+ * 4. Confirms all responsive search ads, descriptions, 22 negative keywords, and 13 DFW locations.
  */
 
 function main() {
@@ -123,55 +124,10 @@ function main() {
         "Experience our $399 Korean Scalp Reset. No guessing, just a plan built around you.",
         "FDA-cleared needle-free technology for female thinning hair. Book your visit in DFW."
       ]
-    },
-    {
-      name: "Ad Group 3: Hairline / Men",
-      cpc: 3.50,
-      path1: "mens",
-      path2: "hair-density",
-      keywords: [
-        '"male hair loss treatment"',
-        '"male thinning hair treatment"',
-        '"hair loss clinic Dallas"',
-        '"scalp therapy for hair loss"',
-        '"male hair loss clinic near me"',
-        '"men hair thinning treatment near me"',
-        '"receding hairline treatment Dallas"',
-        '"crown thinning treatment male"',
-        '"non surgical male hair restoration"',
-        '"hair loss treatment for men near me"',
-        '"male pattern baldness non surgical"',
-        '"men scalp treatment for hair loss"',
-        '"best hair loss treatment for men"',
-        '"hair density treatment men"'
-      ],
-      headlines: [
-        "Male Hair Loss Treatment",
-        "Male Thinning Hair Care",
-        "Hair Loss Clinic Dallas",
-        "Scalp Therapy For Hair Loss",
-        "Thinning Hairline? Think Scalp",
-        "$399 Korean Scalp Reset",
-        "Non-Surgical Hair Care",
-        "Advanced Scalp Infusion",
-        "Receding Hairline Care",
-        "Crown Thinning Treatment",
-        "Needle-Free Follicle Infusion",
-        "SuA Glow Men Scalp Care",
-        "Physician-Guided Scalp Plan",
-        "No Surgery No Downtime",
-        "Book Male Scalp Assessment"
-      ],
-      descriptions: [
-        "Male hair loss treatment in Dallas. Address crown thinning and receding hairlines.",
-        "Receding hairline or crown thinning? Address it without painful surgery or downtime.",
-        "Get a physician-guided scalp assessment and try our $399 Korean Scalp Reset today.",
-        "FDA-cleared needle-free scalp therapy for hair loss. Book your consultation in DFW."
-      ]
     }
   ];
 
-  // 2. PROCESS AD GROUPS & KEYWORDS
+  // 2. PROCESS ACTIVE AD GROUPS & KEYWORDS (Groups 1 & 2)
   for (var g = 0; g < adGroupsData.length; g++) {
     var data = adGroupsData[g];
     Logger.log("--------------------------------------------------");
@@ -226,10 +182,53 @@ function main() {
     }
   }
 
+  // 3. EXPLICITLY PAUSE AD GROUP 3 (MEN DEMOGRAPHIC DISCONTINUED)
+  Logger.log("--------------------------------------------------");
+  Logger.log("Auditing & Disabling: Ad Group 3: Hairline / Men");
+  var ag3Iterator = campaign.adGroups()
+    .withCondition('Name CONTAINS_IGNORE_CASE "Ad Group 3"')
+    .get();
+
+  if (ag3Iterator.hasNext()) {
+    while (ag3Iterator.hasNext()) {
+      var ag3 = ag3Iterator.next();
+      if (ag3.isEnabled()) {
+        ag3.pause();
+        Logger.log("  🛑 Paused Ad Group 3 ('" + ag3.getName() + "') - focus on men disabled.");
+      } else {
+        Logger.log("  ✓ Confirmed Ad Group 3 ('" + ag3.getName() + "') is already PAUSED.");
+      }
+
+      // Also pause any active ads inside Ad Group 3
+      var ag3Ads = ag3.ads().withCondition('Status = "ENABLED"').get();
+      var pausedAg3Ads = 0;
+      while (ag3Ads.hasNext()) {
+        ag3Ads.next().pause();
+        pausedAg3Ads++;
+      }
+      if (pausedAg3Ads > 0) {
+        Logger.log("  🛑 Paused " + pausedAg3Ads + " active ad(s) in Ad Group 3.");
+      }
+
+      // Also pause any active keywords inside Ad Group 3
+      var ag3Kws = ag3.keywords().withCondition('Status = "ENABLED"').get();
+      var pausedAg3Kws = 0;
+      while (ag3Kws.hasNext()) {
+        ag3Kws.next().pause();
+        pausedAg3Kws++;
+      }
+      if (pausedAg3Kws > 0) {
+        Logger.log("  🛑 Paused " + pausedAg3Kws + " active keyword(s) in Ad Group 3.");
+      }
+    }
+  } else {
+    Logger.log("  ℹ️ Ad Group 3 not found in campaign (already removed or renamed).");
+  }
+
   Logger.log("==================================================");
-  Logger.log("DIAGNOSTIC RESOLUTION COMPLETED!");
-  Logger.log("1. Total active keywords expanded to 44 (eliminating 'Missing enough keywords').");
-  Logger.log("2. Older low-headline draft ads paused (eliminating 'Ad strength is poor').");
-  Logger.log("3. Only high-strength 15-headline RSAs remain active.");
+  Logger.log("OPTIMIZATION & PRUNING COMPLETED!");
+  Logger.log("1. Active keywords focused on high-converting Groups 1 & 2.");
+  Logger.log("2. Ad Group 3 (Men) successfully PAUSED to eliminate unfruitful ad spend.");
+  Logger.log("3. 100% of campaign daily budget consolidated to Female & Combined intent.");
   Logger.log("==================================================");
 }

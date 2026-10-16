@@ -68,16 +68,16 @@ const MONTHLY_SPECIALS_CONFIG = {
         {
             step: 3,
             badge: "SCALP + HAIR WELLNESS",
-            title: "Hair Revival",
-            subtitle: "Needle-Free Scalp Infusion · 2 Sessions + Red Light",
+            title: "HAIR REVIVAL",
+            subtitle: "NEEDLE-FREE SCALP INFUSION • BUY 2 SESSIONS, GET 1 FREE!",
             price: "$1,199",
             originalPrice: "$1,800+",
-            priceDetail: "Regular Value $1,800+",
+            priceDetail: "BUY 2 SESSIONS • GET 1 FREE",
             hook: "Hair looking a little haunted? Start at the scalp.",
-            description: "Korean clinical scalp renewal powered by needle-free DEP (DermoElectroPoration®) technology. Delivers potent follicle-stimulating growth factors directly to roots, paired with medical-grade Celluma red light.",
+            description: "Korean-inspired scalp rejuvenation combining needle-free DEP (DermoElectroPoration®) infusion with red light therapy to support scalp wellness and healthier-looking hair.",
             image: "assets/october_model_hair_revival.jpg",
             cardBackground: "assets/october_card3_device_far_right.jpg",
-            tags: ["2 Sessions", "Scalp Wellness", "Red Light", "Follicle Renewal · Confident"],
+            tags: ["3 SESSIONS", "1 FREE", "NEEDLE-FREE", "RED LIGHT"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         }
     ],
