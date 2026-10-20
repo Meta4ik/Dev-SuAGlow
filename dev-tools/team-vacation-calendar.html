@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUA GLOW | Team Vacation Calendar (2026 - 2027)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: rgba(22, 27, 34, 0.85);
+      --card-border: #30363d;
+      --text-main: #f0f6fc;
+      --text-muted: #8b949e;
+      --text-dim: #6e7681;
+      --accent: #58a6ff;
+      --accent-glow: rgba(88, 166, 255, 0.15);
+      
+      /* Person Palette */
+      --kameron-color: #818cf8;
+      --kameron-bg: rgba(129, 140, 248, 0.15);
+      --kameron-border: rgba(129, 140, 248, 0.35);
+      
+      --irene-color: #34d399;
+      --irene-bg: rgba(52, 211, 153, 0.15);
+      --irene-border: rgba(52, 211, 153, 0.35);
+      
+      --sophia-color: #fb7185;
+      --sophia-bg: rgba(251, 113, 133, 0.15);
+      --sophia-border: rgba(251, 113, 133, 0.35);
+      
+      --multi-color: #f59e0b;
+      --multi-bg: rgba(245, 158, 11, 0.15);
+      --multi-border: rgba(245, 158, 11, 0.35);
+
+      --holiday-color: #fbbf24;
+      --holiday-bg: rgba(251, 191, 36, 0.12);
+      --holiday-border: rgba(251, 191, 36, 0.3);
+      
+      --radius: 12px;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    [data-theme="light"] {
+      --bg: #f6f8fa;
+      --card-bg: #ffffff;
+      --card-border: #d0d7de;
+      --text-main: #1f2328;
+      --text-muted: #57606a;
+      --text-dim: #8c959f;
+      --accent: #0969da;
+      --accent-glow: rgba(9, 105, 218, 0.1);
+
+      --kameron-color: #4338ca;
+      --kameron-bg: #e0e7ff;
+      --kameron-border: #c7d2fe;
+
+      --irene-color: #047857;
+      --irene-bg: #d1fae5;
+      --irene-border: #a7f3d0;
+
+      --sophia-color: #be123c;
+      --sophia-bg: #ffe4e6;
+      --sophia-border: #fecdd3;
+
+      --multi-color: #b45309;
+      --multi-bg: #fef3c7;
+      --multi-border: #fde68a;
+
+      --holiday-color: #b45309;
+      --holiday-bg: #fffbeb;
+      --holiday-border: #fef3c7;
+      --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.5;
+      padding: 24px 16px;
+      min-height: 100vh;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-org {
+      background: linear-gradient(135deg, #4f46e5, #06b6d4);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* BUTTONS & CONTROLS */
+    button, .btn {
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      color: var(--text-main);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    button:hover, .btn:hover {
+      border-color: var(--text-muted);
+      transform: translateY(-1px);
+    }
+
+    button.primary, .btn.primary {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+    button.primary:hover {
+      filter: brightness(1.1);
+    }
+
+    button.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+
+    .segmented-control {
+      display: inline-flex;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--card-border);
+      border-radius: 9px;
+      padding: 3px;
+    }
+    [data-theme="light"] .segmented-control {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .segmented-control button {
+      border: none;
+      background: transparent;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--text-muted);
+      box-shadow: none;
+      transform: none !important;
+    }
+
+    .segmented-control button.active {
+      background: var(--card-bg);
+      color: var(--text-main);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    /* STATS & SUMMARY BAR */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .summary-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .summary-card:hover {
+      border-color: var(--text-muted);
+      transform: translateY(-2px);
+    }
+
+    .summary-card.active-filter {
+      outline: 2px solid var(--accent);
+      border-color: transparent;
+    }
+
+    .summary-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .avatar-kameron { background: var(--kameron-bg); color: var(--kameron-color); border: 1px solid var(--kameron-border); }
+    .avatar-irene { background: var(--irene-bg); color: var(--irene-color); border: 1px solid var(--irene-border); }
+    .avatar-sophia { background: var(--sophia-bg); color: var(--sophia-color); border: 1px solid var(--sophia-border); }
+    .avatar-team { background: rgba(88, 166, 255, 0.15); color: var(--accent); border: 1px solid rgba(88, 166, 255, 0.35); }
+
+    .summary-info h3 {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .summary-info .days-count {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .summary-info .destinations {
+      font-size: 11px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 170px;
+    }
+
+    /* CONTROLS BAR: Filters, Search & Month Jump */
+    .controls-bar {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-right: 4px;
+    }
+
+    .pill-filter {
+      font-size: 12px;
+      padding: 5px 11px;
+      border-radius: 20px;
+      border: 1px solid var(--card-border);
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .pill-filter:hover {
+      border-color: var(--text-muted);
+      color: var(--text-main);
+    }
+
+    .pill-filter.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+
+    .pill-filter.active[data-person="Kameron"] {
+      background: var(--kameron-color);
+      border-color: var(--kameron-color);
+    }
+    .pill-filter.active[data-person="Irene"] {
+      background: var(--irene-color);
+      border-color: var(--irene-color);
+    }
+    .pill-filter.active[data-person="Sophia"] {
+      background: var(--sophia-color);
+      border-color: var(--sophia-color);
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 240px;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--card-border);
+      padding: 7px 12px 7px 32px;
+      border-radius: 8px;
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    [data-theme="light"] .search-box input {
+      background: #f6f8fa;
+    }
+
+    .search-box input:focus {
+      border-color: var(--accent);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      pointer-events: none;
+      font-size: 13px;
+    }
+
+    /* MONTH NAVIGATOR */
+    .month-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 8px 0 0 0;
+    }
+
+    .current-month-heading {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .month-badge {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-glow);
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    /* CALENDAR GRID VIEW */
+    .calendar-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .month-block {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    }
+
+    .month-header-bar {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .month-title {
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .weekdays-header {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      background: rgba(0, 0, 0, 0.25);
+      border-bottom: 1px solid var(--card-border);
+    }
+    [data-theme="light"] .weekdays-header {
+      background: #f1f3f5;
+    }
+
+    .weekday {
+      padding: 10px 12px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--text-dim);
+    }
+
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      background: var(--card-border);
+      gap: 1px;
+    }
+
+    .day-cell {
+      background: var(--card-bg);
+      min-height: 110px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: background 0.15s ease;
+      position: relative;
+    }
+
+    .day-cell:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    [data-theme="light"] .day-cell:hover {
+      background: #fafbfc;
+    }
+
+    .day-cell.other-month {
+      background: rgba(0, 0, 0, 0.35);
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+    [data-theme="light"] .day-cell.other-month {
+      background: #eaeef2;
+      opacity: 0.45;
+    }
+
+    .day-cell.is-today {
+      box-shadow: inset 0 0 0 2px var(--accent);
+    }
+
+    .day-cell.is-weekend {
+      background: rgba(0, 0, 0, 0.12);
+    }
+    [data-theme="light"] .day-cell.is-weekend {
+      background: #fbfcfd;
+    }
+
+    .day-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .day-number {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+    }
+
+    .day-cell.is-today .day-number {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* BADGES */
+    .holiday-badge {
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--holiday-bg);
+      color: var(--holiday-color);
+      border: 1px solid var(--holiday-border);
+      border-radius: 6px;
+      padding: 3px 6px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 2px;
+      line-height: 1.2;
+    }
+
+    .vacation-pill {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 7px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      line-height: 1.2;
+      cursor: pointer;
+      transition: transform 0.1s ease, filter 0.1s ease;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .vacation-pill:hover {
+      transform: scale(1.02);
+      filter: brightness(1.1);
+    }
+
+    .vacation-pill.kameron {
+      background: var(--kameron-bg);
+      color: var(--kameron-color);
+      border: 1px solid var(--kameron-border);
+    }
+
+    .vacation-pill.irene {
+      background: var(--irene-bg);
+      color: var(--irene-color);
+      border: 1px solid var(--irene-border);
+    }
+
+    .vacation-pill.sophia {
+      background: var(--sophia-bg);
+      color: var(--sophia-color);
+      border: 1px solid var(--sophia-border);
+    }
+
+    .vacation-pill.multi {
+      background: var(--multi-bg);
+      color: var(--multi-color);
+      border: 1px solid var(--multi-border);
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: currentColor;
+    }
+
+    /* TABLE / LIST VIEW */
+    .table-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    th {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 12px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--card-border);
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s ease;
+      white-space: nowrap;
+    }
+    [data-theme="light"] th {
+      background: #f1f3f5;
+    }
+
+    th:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+    }
+
+    th.sorted {
+      color: var(--accent);
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--card-border);
+      color: var(--text-main);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* TIMELINE VIEW */
+    .timeline-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .timeline-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .timeline-person-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .timeline-tracks {
+      position: relative;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 6px;
+      overflow-x: auto;
+    }
+    [data-theme="light"] .timeline-tracks {
+      background: #f8fafc;
+    }
+
+    .trip-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .trip-card .trip-dates {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .trip-card .trip-dest {
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* MODAL */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      padding: 16px;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-dialog {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      transform: translateY(20px);
+      transition: transform 0.2s ease;
+    }
+
+    .modal-overlay.open .modal-dialog {
+      transform: translateY(0);
+    }
+
+    .modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h2 {
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .modal-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input, .form-group select {
+      padding: 9px 12px;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+    [data-theme="light"] .form-group input, [data-theme="light"] .form-group select {
+      background: #f6f8fa;
+    }
+
+    .form-group input:focus, .form-group select:focus {
+      border-color: var(--accent);
+    }
+
+    .modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    /* PRINT STYLES */
+    @media print {
+      body {
+        background: #fff !important;
+        color: #000 !important;
+        padding: 0;
+      }
+      .controls-bar, .header-actions, .summary-grid, .modal-overlay, .segmented-control {
+        display: none !important;
+      }
+      .month-block {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+        margin-bottom: 24px;
+      }
+      .day-cell {
+        min-height: 85px !important;
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 860px) {
+      .day-cell {
+        min-height: 75px;
+        padding: 4px;
+      }
+      .vacation-pill {
+        font-size: 9.5px;
+        padding: 2px 4px;
+      }
+      .holiday-badge {
+        font-size: 9.5px;
+        padding: 2px 4px;
+      }
+      .weekday {
+        padding: 6px 2px;
+        font-size: 10px;
+      }
+      .brand-title h1 {
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <div>
+        <div class="brand-title">
+          <span class="badge-org">SUA GLOW</span>
+          <h1>Team Vacation Calendar</h1>
+        </div>
+        <p class="subtitle">Oct 2026 – Jan 2027 • Track PTO, holidays, overlapping travel & coverage</p>
+      </div>
+
+      <div class="header-actions">
+        <!-- View Switcher -->
+        <div class="segmented-control" id="viewSwitcher">
+          <button class="active" onclick="switchView('calendar')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="18" y2="10"></line></svg>
+            Calendar
+          </button>
+          <button onclick="switchView('table')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            Table & Sort
+          </button>
+          <button onclick="switchView('timeline')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            Trips & Gantt
+          </button>
+        </div>
+
+        <button onclick="openModal()" class="primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          Add PTO
+        </button>
+
+        <button onclick="exportToCSV()" title="Export CSV">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Export
+        </button>
+
+        <button onclick="window.print()" title="Print Calendar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Print
+        </button>
+
+        <button onclick="toggleTheme()" id="themeBtn" title="Toggle Light/Dark">
+          <svg id="themeIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- SUMMARY METRICS -->
+    <div class="summary-grid">
+      <div class="summary-card" onclick="filterByPerson('ALL')">
+        <div class="summary-avatar avatar-team">ALL</div>
+        <div class="summary-info">
+          <h3>Total Vacation Days</h3>
+          <div class="days-count" id="statTotalDays">85 <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">person-days</span></div>
+          <div class="destinations">Denver, Asia, Korea, Springfield</div>
+        </div>
+      </div>
+
+      <div class="summary-card" id="cardKameron" onclick="filterByPerson('Kameron')">
+        <div class="summary-avatar avatar-kameron">K</div>
+        <div class="summary-info">
+          <h3>Kameron</h3>
+          <div class="days-count" id="statKameron">38 <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span></div>
+          <div class="destinations">Denver (7d), Asia (30d), Springfield (1d)</div>
+        </div>
+      </div>
+
+      <div class="summary-card" id="cardIrene" onclick="filterByPerson('Irene')">
+        <div class="summary-avatar avatar-irene">I</div>
+        <div class="summary-info">
+          <h3>Irene</h3>
+          <div class="days-count" id="statIrene">28 <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span></div>
+          <div class="destinations">Korea (28d in Nov)</div>
+        </div>
+      </div>
+
+      <div class="summary-card" id="cardSophia" onclick="filterByPerson('Sophia')">
+        <div class="summary-avatar avatar-sophia">S</div>
+        <div class="summary-info">
+          <h3>Sophia</h3>
+          <div class="days-count" id="statSophia">19 <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span></div>
+          <div class="destinations">Springfield (1d), Korea (18d in Dec)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTROLS: Filter by Person, Location, Month, and Search -->
+    <div class="controls-bar">
+      <div class="filter-group">
+        <span class="filter-label">Filter:</span>
+        <button class="pill-filter active" data-person="ALL" onclick="filterByPerson('ALL')">All Team</button>
+        <button class="pill-filter" data-person="Kameron" onclick="filterByPerson('Kameron')">Kameron</button>
+        <button class="pill-filter" data-person="Irene" onclick="filterByPerson('Irene')">Irene</button>
+        <button class="pill-filter" data-person="Sophia" onclick="filterByPerson('Sophia')">Sophia</button>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Month:</span>
+        <button class="pill-filter active" data-month="ALL" onclick="filterByMonth('ALL')">All Months</button>
+        <button class="pill-filter" data-month="2026-10" onclick="filterByMonth('2026-10')">Oct 2026</button>
+        <button class="pill-filter" data-month="2026-11" onclick="filterByMonth('2026-11')">Nov 2026</button>
+        <button class="pill-filter" data-month="2026-12" onclick="filterByMonth('2026-12')">Dec 2026</button>
+        <button class="pill-filter" data-month="2027-01" onclick="filterByMonth('2027-01')">Jan 2027</button>
+      </div>
+
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search person, city, holiday..." oninput="handleSearch()">
+      </div>
+    </div>
+
+    <!-- CALENDAR VIEW -->
+    <div id="calendarView" class="calendar-container">
+      <!-- Months will render here via JavaScript -->
+    </div>
+
+    <!-- SORTABLE TABLE VIEW -->
+    <div id="tableView" class="table-container" style="display: none;">
+      <div style="padding: 16px 20px; border-bottom: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <h2 style="font-size: 16px; font-weight: 800;">Sortable Team Vacation Schedule</h2>
+          <p style="font-size: 12px; color: var(--text-muted)">Click any column header to sort ascending or descending.</p>
+        </div>
+        <div id="tableCounter" style="font-size: 12px; font-weight: 600; color: var(--text-muted)"></div>
+      </div>
+      <table id="sortableTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable('date')" id="th-date" class="sorted">Date <span class="sort-icon">▲</span></th>
+            <th onclick="sortTable('day')" id="th-day">Day <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('person')" id="th-person">Team Member <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('destination')" id="th-destination">Destination / Note <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('holiday')" id="th-holiday">Holiday <span class="sort-icon">↕</span></th>
+            <th onclick="sortTable('month')" id="th-month">Month <span class="sort-icon">↕</span></th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Rows will render here -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TIMELINE / GANTT VIEW -->
+    <div id="timelineView" class="timeline-container" style="display: none;">
+      <div style="border-bottom: 1px solid var(--card-border); padding-bottom: 12px;">
+        <h2 style="font-size: 18px; font-weight: 800;">Team Trip Timeline & Overlaps</h2>
+        <p style="font-size: 13px; color: var(--text-muted)">Overview of planned vacations, multi-day journeys, and team overlap windows.</p>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-person-header">
+          <div class="summary-avatar avatar-kameron" style="width: 28px; height: 28px; font-size: 12px;">K</div>
+          <span>Kameron (3 Trips • 38 Days Total)</span>
+        </div>
+        <div class="timeline-tracks">
+          <div class="trip-card" style="border-left: 4px solid var(--kameron-color);">
+            <div class="trip-dest">Denver, CO</div>
+            <div class="trip-dates">Oct 1 – Oct 7, 2026 (7 days)</div>
+          </div>
+          <div class="trip-card" style="border-left: 4px solid var(--multi-color);">
+            <div class="trip-dest">Springfield, IL (with Sophia)</div>
+            <div class="trip-dates">Oct 26, 2026 (1 day)</div>
+          </div>
+          <div class="trip-card" style="border-left: 4px solid var(--kameron-color);">
+            <div class="trip-dest">Asia Tour</div>
+            <div class="trip-dates">Nov 4 – Dec 4, 2026 (31 continuous days)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-person-header">
+          <div class="summary-avatar avatar-irene" style="width: 28px; height: 28px; font-size: 12px;">I</div>
+          <span>Irene (1 Trip • 28 Days Total)</span>
+        </div>
+        <div class="timeline-tracks">
+          <div class="trip-card" style="border-left: 4px solid var(--irene-color);">
+            <div class="trip-dest">Korea</div>
+            <div class="trip-dates">Nov 2 – Nov 29, 2026 (28 continuous days)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-person-header">
+          <div class="summary-avatar avatar-sophia" style="width: 28px; height: 28px; font-size: 12px;">S</div>
+          <span>Sophia (4 Trips • 19 Days Total)</span>
+        </div>
+        <div class="timeline-tracks">
+          <div class="trip-card" style="border-left: 4px solid var(--multi-color);">
+            <div class="trip-dest">Springfield, IL (with Kameron)</div>
+            <div class="trip-dates">Oct 26, 2026 (1 day)</div>
+          </div>
+          <div class="trip-card" style="border-left: 4px solid var(--sophia-color);">
+            <div class="trip-dest">Korea (Week 1)</div>
+            <div class="trip-dates">Dec 8 – Dec 13, 2026 (6 days)</div>
+          </div>
+          <div class="trip-card" style="border-left: 4px solid var(--sophia-color);">
+            <div class="trip-dest">Korea (Week 2)</div>
+            <div class="trip-dates">Dec 15 – Dec 20, 2026 (6 days)</div>
+          </div>
+          <div class="trip-card" style="border-left: 4px solid var(--sophia-color);">
+            <div class="trip-dest">Korea (Week 3 / Christmas)</div>
+            <div class="trip-dates">Dec 22 – Dec 27, 2026 (6 days)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OVERLAP CALLOUT -->
+      <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px; padding: 14px 18px; display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 20px;">⚡</span>
+        <div>
+          <strong style="color: var(--multi-color); font-size: 13px;">Team Coverage Notice:</strong>
+          <p style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">
+            Between <strong>Nov 4 – Nov 29, 2026</strong>, both <strong>Kameron</strong> (in Asia) and <strong>Irene</strong> (in Korea) will be away simultaneously for 26 days. Ensure on-call / project coverage during this peak window.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ADD / EDIT VACATION MODAL -->
+  <div class="modal-overlay" id="vacationModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Add Vacation / PTO</h2>
+        <button onclick="closeModal()" style="border: none; background: transparent; font-size: 18px; color: var(--text-dim); cursor: pointer;">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="inputPerson">Team Member</label>
+          <select id="inputPerson">
+            <option value="Kameron">Kameron</option>
+            <option value="Irene">Irene</option>
+            <option value="Sophia">Sophia</option>
+            <option value="Sophia & Kameron">Sophia & Kameron</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="inputLocation">Destination / Note</label>
+          <input type="text" id="inputLocation" placeholder="e.g. Hawaii, Denver, Tokyo, OOO">
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label for="inputStartDate">Start Date</label>
+            <input type="date" id="inputStartDate" value="2026-10-21">
+          </div>
+          <div class="form-group">
+            <label for="inputEndDate">End Date</label>
+            <input type="date" id="inputEndDate" value="2026-10-21">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeModal()">Cancel</button>
+        <button class="primary" onclick="saveNewPTO()">Save to Calendar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // 1. DATA DEFINITIONS
+    const HOLIDAYS = {
+      '2026-10-12': "Columbus Day",
+      '2026-11-11': "Veterans Day",
+      '2026-11-26': "Thanksgiving Day",
+      '2026-12-25': "Christmas Day",
+      '2027-01-01': "New Year's Day",
+      '2027-01-18': "Martin Luther King Jr. Day"
+    };
+
+    // Initial parsed dataset from user CSV
+    let VACATION_DATA = [];
+
+    // Helper to add date range
+    function addRange(person, destination, startStr, endStr) {
+      const cur = new Date(startStr + 'T00:00:00');
+      const end = new Date(endStr + 'T00:00:00');
+      while (cur <= end) {
+        const y = cur.getFullYear();
+        const m = String(cur.getMonth() + 1).padStart(2, '0');
+        const d = String(cur.getDate()).padStart(2, '0');
+        const dateKey = `${y}-${m}-${d}`;
+        VACATION_DATA.push({
+          date: dateKey,
+          person: person,
+          destination: destination
+        });
+        cur.setDate(cur.getDate() + 1);
+      }
+    }
+
+    // Populate dataset according to the CSV:
+    // October 2026:
+    // Kameron in Denver: Oct 1 - Oct 7 (Thu Oct 1 to Wed Oct 7)
+    addRange('Kameron', 'Denver', '2026-10-01', '2026-10-07');
+    // Oct 26: Sophia & Kameron in Springfield IL
+    addRange('Sophia & Kameron', 'Springfield IL', '2026-10-26', '2026-10-26');
+
+    // November 2026:
+    // Irene in Korea: Nov 2 - Nov 29 (28 days)
+    addRange('Irene', 'Korea', '2026-11-02', '2026-11-29');
+    // Kameron in Asia: Nov 4 - Nov 29 (26 days in Nov)
+    addRange('Kameron', 'Asia', '2026-11-04', '2026-11-29');
+
+    // December 2026:
+    // Kameron in Asia: Dec 1 - Dec 4 (Tue Dec 1 to Fri Dec 4)
+    addRange('Kameron', 'Asia', '2026-12-01', '2026-12-04');
+    // Sophia in Korea:
+    // Dec 8 - Dec 13 (Tue-Sun)
+    addRange('Sophia', 'Korea', '2026-12-08', '2026-12-13');
+    // Dec 15 - Dec 20 (Tue-Sun)
+    addRange('Sophia', 'Korea', '2026-12-15', '2026-12-20');
+    // Dec 22 - Dec 27 (Tue-Sun)
+    addRange('Sophia', 'Korea', '2026-12-22', '2026-12-27');
+
+    // Active filters & sorting states
+    let currentFilterPerson = 'ALL';
+    let currentFilterMonth = 'ALL';
+    let currentSearchQuery = '';
+    let sortColumn = 'date';
+    let sortAsc = true;
+    const MONTH_KEYS = ['2026-10', '2026-11', '2026-12', '2027-01'];
+    const MONTH_NAMES = {
+      '2026-10': 'October 2026',
+      '2026-11': 'November 2026',
+      '2026-12': 'December 2026',
+      '2027-01': 'January 2027'
+    };
+
+    // 2. RENDERING CALENDAR
+    function renderCalendar() {
+      const container = document.getElementById('calendarView');
+      container.innerHTML = '';
+
+      const targetMonths = currentFilterMonth === 'ALL' ? MONTH_KEYS : [currentFilterMonth];
+
+      targetMonths.forEach(mKey => {
+        const [yearStr, monthStr] = mKey.split('-');
+        const year = parseInt(yearStr, 10);
+        const monthIndex = parseInt(monthStr, 10) - 1; // 0-based
+
+        const block = document.createElement('div');
+        block.className = 'month-block';
+
+        // Month Header
+        const header = document.createElement('div');
+        header.className = 'month-header-bar';
+        header.innerHTML = `
+          <div class="month-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent);"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="18" y2="10"></line></svg>
+            ${MONTH_NAMES[mKey]}
+          </div>
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">SUA GLOW TEAM</span>
+        `;
+        block.appendChild(header);
+
+        // Weekday Names: MON to SUN (as in source)
+        const weekdaysBar = document.createElement('div');
+        weekdaysBar.className = 'weekdays-header';
+        const dayNames = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+        dayNames.forEach(d => {
+          const wd = document.createElement('div');
+          wd.className = 'weekday';
+          wd.textContent = d;
+          weekdaysBar.appendChild(wd);
+        });
+        block.appendChild(weekdaysBar);
+
+        // Days Grid
+        const grid = document.createElement('div');
+        grid.className = 'days-grid';
+
+        // Calculation: day of week for 1st of month (Monday = 0 ... Sunday = 6)
+        const firstDay = new Date(year, monthIndex, 1);
+        let firstDayOfWeek = firstDay.getDay() - 1; // Mon=0, Sun=6
+        if (firstDayOfWeek === -1) firstDayOfWeek = 6;
+
+        const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
+        const daysInPrevMonth = new Date(year, monthIndex, 0).getDate();
+
+        // Previous month padding cells
+        for (let i = 0; i < firstDayOfWeek; i++) {
+          const prevDayNum = daysInPrevMonth - firstDayOfWeek + i + 1;
+          const cell = document.createElement('div');
+          cell.className = 'day-cell other-month';
+          cell.innerHTML = `<div class="day-top"><span class="day-number">${prevDayNum}</span></div>`;
+          grid.appendChild(cell);
+        }
+
+        // Current month cells
+        for (let day = 1; day <= daysInMonth; day++) {
+          const cell = document.createElement('div');
+          cell.className = 'day-cell';
+
+          const dateStr = `${year}-${String(monthIndex + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+          
+          // Weekend check
+          const curDateObj = new Date(year, monthIndex, day);
+          const dayOfWeek = curDateObj.getDay();
+          if (dayOfWeek === 0 || dayOfWeek === 6) {
+            cell.classList.add('is-weekend');
+          }
+
+          // Today check (2026-10-20 reference or local user time)
+          if (dateStr === '2026-10-20') {
+            cell.classList.add('is-today');
+          }
+
+          let html = `
+            <div class="day-top">
+              <span class="day-number">${day}</span>
+              ${dateStr === '2026-10-20' ? '<span style="font-size:10px; font-weight:700; color:var(--accent); background:var(--accent-glow); padding:1px 5px; border-radius:4px;">TODAY</span>' : ''}
+            </div>
+          `;
+
+          // Check for Holiday
+          if (HOLIDAYS[dateStr]) {
+            html += `
+              <div class="holiday-badge" title="${HOLIDAYS[dateStr]}">
+                <span>★</span>
+                <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${HOLIDAYS[dateStr]}</span>
+              </div>
+            `;
+          }
+
+          // Check for Vacations matching filters
+          const items = VACATION_DATA.filter(v => v.date === dateStr);
+          items.forEach(v => {
+            // Apply Person Filter
+            if (currentFilterPerson !== 'ALL') {
+              if (currentFilterPerson === 'Kameron' && !v.person.includes('Kameron')) return;
+              if (currentFilterPerson === 'Irene' && !v.person.includes('Irene')) return;
+              if (currentFilterPerson === 'Sophia' && !v.person.includes('Sophia')) return;
+            }
+
+            // Apply Search Query
+            if (currentSearchQuery) {
+              const q = currentSearchQuery.toLowerCase();
+              const match = v.person.toLowerCase().includes(q) || 
+                            v.destination.toLowerCase().includes(q) ||
+                            (HOLIDAYS[dateStr] && HOLIDAYS[dateStr].toLowerCase().includes(q));
+              if (!match) return;
+            }
+
+            let pillClass = 'kameron';
+            if (v.person === 'Irene') pillClass = 'irene';
+            if (v.person === 'Sophia') pillClass = 'sophia';
+            if (v.person.includes('&')) pillClass = 'multi';
+
+            html += `
+              <div class="vacation-pill ${pillClass}" title="${v.person} in ${v.destination} (${dateStr})" onclick="showDayDetails('${dateStr}', '${v.person}', '${v.destination}')">
+                <span class="dot"></span>
+                <span>${v.person.split('&')[0].trim()} • ${v.destination}</span>
+              </div>
+            `;
+          });
+
+          cell.innerHTML = html;
+          grid.appendChild(cell);
+        }
+
+        // Next month padding cells to complete 7-column grid
+        const totalCells = firstDayOfWeek + daysInMonth;
+        const remainder = totalCells % 7;
+        if (remainder !== 0) {
+          const nextDaysNeeded = 7 - remainder;
+          for (let i = 1; i <= nextDaysNeeded; i++) {
+            const cell = document.createElement('div');
+            cell.className = 'day-cell other-month';
+            cell.innerHTML = `<div class="day-top"><span class="day-number">${i}</span></div>`;
+            grid.appendChild(cell);
+          }
+        }
+
+        block.appendChild(grid);
+        container.appendChild(block);
+      });
+    }
+
+    // 3. TABLE RENDERING & SORTING
+    function renderTable() {
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = '';
+
+      // Flatten dates that have vacations or holidays
+      let rows = [];
+
+      // Combine vacations
+      VACATION_DATA.forEach(v => {
+        rows.push({
+          date: v.date,
+          day: new Date(v.date + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'short' }),
+          person: v.person,
+          destination: v.destination,
+          holiday: HOLIDAYS[v.date] || '—',
+          month: v.date.substring(0, 7)
+        });
+      });
+
+      // Add standalone holidays that have no vacation assigned yet
+      Object.keys(HOLIDAYS).forEach(hDate => {
+        const hasVacation = VACATION_DATA.some(v => v.date === hDate);
+        if (!hasVacation) {
+          rows.push({
+            date: hDate,
+            day: new Date(hDate + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'short' }),
+            person: 'All Team (Company Holiday)',
+            destination: 'Holiday Off',
+            holiday: HOLIDAYS[hDate],
+            month: hDate.substring(0, 7)
+          });
+        }
+      });
+
+      // Filter by Month
+      if (currentFilterMonth !== 'ALL') {
+        rows = rows.filter(r => r.month === currentFilterMonth);
+      }
+
+      // Filter by Person
+      if (currentFilterPerson !== 'ALL') {
+        rows = rows.filter(r => {
+          if (r.person.includes('All Team')) return true;
+          return r.person.includes(currentFilterPerson);
+        });
+      }
+
+      // Filter by Search Query
+      if (currentSearchQuery) {
+        const q = currentSearchQuery.toLowerCase();
+        rows = rows.filter(r => 
+          r.person.toLowerCase().includes(q) || 
+          r.destination.toLowerCase().includes(q) || 
+          r.holiday.toLowerCase().includes(q) ||
+          r.date.includes(q)
+        );
+      }
+
+      // Sorting
+      rows.sort((a, b) => {
+        let valA = a[sortColumn];
+        let valB = b[sortColumn];
+
+        if (sortColumn === 'date') {
+          return sortAsc ? valA.localeCompare(valB) : valB.localeCompare(valA);
+        } else {
+          return sortAsc ? valA.localeCompare(valB) : valB.localeCompare(valA);
+        }
+      });
+
+      document.getElementById('tableCounter').innerText = `Showing ${rows.length} scheduled records`;
+
+      if (rows.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" style="text-align:center; padding: 32px; color: var(--text-dim);">No matching calendar records found for this filter.</td></tr>`;
+        return;
+      }
+
+      rows.forEach(r => {
+        const tr = document.createElement('tr');
+
+        let personBadgeClass = 'kameron';
+        if (r.person.includes('Irene')) personBadgeClass = 'irene';
+        if (r.person.includes('Sophia')) personBadgeClass = 'sophia';
+        if (r.person.includes('&')) personBadgeClass = 'multi';
+        if (r.person.includes('All Team')) personBadgeClass = 'holiday-badge';
+
+        tr.innerHTML = `
+          <td style="font-family: 'JetBrains Mono', monospace; font-weight: 600;">${r.date}</td>
+          <td style="color: var(--text-muted);">${r.day}</td>
+          <td>
+            <span class="badge ${personBadgeClass}">
+              ${r.person}
+            </span>
+          </td>
+          <td><strong>${r.destination}</strong></td>
+          <td>
+            ${r.holiday !== '—' ? `<span class="holiday-badge" style="display:inline-flex;">★ ${r.holiday}</span>` : '<span style="color:var(--text-dim)">—</span>'}
+          </td>
+          <td style="color: var(--text-muted); font-size: 12px;">${MONTH_NAMES[r.month] || r.month}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function sortTable(column) {
+      if (sortColumn === column) {
+        sortAsc = !sortAsc;
+      } else {
+        sortColumn = column;
+        sortAsc = true;
+      }
+
+      // Update Header Icons
+      ['date', 'day', 'person', 'destination', 'holiday', 'month'].forEach(col => {
+        const th = document.getElementById(`th-${col}`);
+        if (th) {
+          if (col === column) {
+            th.classList.add('sorted');
+            th.querySelector('.sort-icon').textContent = sortAsc ? '▲' : '▼';
+          } else {
+            th.classList.remove('sorted');
+            th.querySelector('.sort-icon').textContent = '↕';
+          }
+        }
+      });
+
+      renderTable();
+    }
+
+    // 4. VIEW SWITCHING
+    function switchView(viewName) {
+      document.getElementById('calendarView').style.display = viewName === 'calendar' ? 'flex' : 'none';
+      document.getElementById('tableView').style.display = viewName === 'table' ? 'block' : 'none';
+      document.getElementById('timelineView').style.display = viewName === 'timeline' ? 'flex' : 'none';
+
+      // Update button styles
+      const buttons = document.querySelectorAll('#viewSwitcher button');
+      buttons[0].className = viewName === 'calendar' ? 'active' : '';
+      buttons[1].className = viewName === 'table' ? 'active' : '';
+      buttons[2].className = viewName === 'timeline' ? 'active' : '';
+
+      if (viewName === 'table') {
+        renderTable();
+      }
+    }
+
+    // 5. FILTERING
+    function filterByPerson(person) {
+      currentFilterPerson = person;
+      
+      // Update filter pills
+      document.querySelectorAll('.filter-group button[data-person]').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-person') === person);
+      });
+
+      // Update summary cards active state
+      document.querySelectorAll('.summary-card').forEach(c => c.classList.remove('active-filter'));
+      if (person === 'Kameron') document.getElementById('cardKameron').classList.add('active-filter');
+      if (person === 'Irene') document.getElementById('cardIrene').classList.add('active-filter');
+      if (person === 'Sophia') document.getElementById('cardSophia').classList.add('active-filter');
+
+      renderCalendar();
+      renderTable();
+    }
+
+    function filterByMonth(monthKey) {
+      currentFilterMonth = monthKey;
+
+      document.querySelectorAll('.filter-group button[data-month]').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-month') === monthKey);
+      });
+
+      renderCalendar();
+      renderTable();
+    }
+
+    function handleSearch() {
+      currentSearchQuery = document.getElementById('searchInput').value.trim();
+      renderCalendar();
+      renderTable();
+    }
+
+    // 6. MODAL & PTO ADDITION
+    function openModal() {
+      document.getElementById('vacationModal').classList.add('open');
+    }
+
+    function closeModal() {
+      document.getElementById('vacationModal').classList.remove('open');
+    }
+
+    function saveNewPTO() {
+      const person = document.getElementById('inputPerson').value;
+      const destination = document.getElementById('inputLocation').value.trim() || 'Vacation';
+      const start = document.getElementById('inputStartDate').value;
+      const end = document.getElementById('inputEndDate').value;
+
+      if (!start || !end) {
+        alert('Please select both start and end dates.');
+        return;
+      }
+      if (start > end) {
+        alert('Start date must be before or equal to end date.');
+        return;
+      }
+
+      addRange(person, destination, start, end);
+      closeModal();
+      updateStats();
+      renderCalendar();
+      renderTable();
+      alert(`Added vacation for ${person} (${start} to ${end})`);
+    }
+
+    function showDayDetails(date, person, destination) {
+      alert(`🗓 Date: ${date}\n👤 Team Member: ${person}\n📍 Destination: ${destination}\n★ Holiday: ${HOLIDAYS[date] || 'None'}`);
+    }
+
+    function updateStats() {
+      let kamCount = 0;
+      let ireneCount = 0;
+      let sophiaCount = 0;
+
+      VACATION_DATA.forEach(v => {
+        if (v.person.includes('Kameron')) kamCount++;
+        if (v.person.includes('Irene')) ireneCount++;
+        if (v.person.includes('Sophia')) sophiaCount++;
+      });
+
+      document.getElementById('statTotalDays').innerHTML = `${VACATION_DATA.length} <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">person-days</span>`;
+      document.getElementById('statKameron').innerHTML = `${kamCount} <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span>`;
+      document.getElementById('statIrene').innerHTML = `${ireneCount} <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span>`;
+      document.getElementById('statSophia').innerHTML = `${sophiaCount} <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span>`;
+    }
+
+    // 7. EXPORT CSV
+    function exportToCSV() {
+      let csvContent = "data:text/csv;charset=utf-8,Date,Day,Team Member,Destination,Holiday\n";
+      VACATION_DATA.forEach(v => {
+        const day = new Date(v.date + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'short' });
+        const hol = HOLIDAYS[v.date] || "";
+        csvContent += `"${v.date}","${day}","${v.person}","${v.destination}","${hol}"\n`;
+      });
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "SUA_GLOW_Team_Vacations_2026_2027.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // 8. THEME TOGGLE
+    function toggleTheme() {
+      const body = document.body;
+      const cur = body.getAttribute('data-theme');
+      const next = cur === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', next);
+    }
+
+    // Initial load
+    renderCalendar();
+    renderTable();
+  </script>
+</body>
+</html>
