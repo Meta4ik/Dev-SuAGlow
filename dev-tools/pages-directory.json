@@ -544,6 +544,14 @@
     "sizeKb": 20
   },
   {
+    "path": "dev-tools/team-vacation-calendar.html",
+    "filename": "team-vacation-calendar.html",
+    "title": "SUA GLOW",
+    "fullTitle": "SUA GLOW | Team Vacation Calendar (2026 - 2027)",
+    "category": "Dev Tools",
+    "sizeKb": 90
+  },
+  {
     "path": "dev-tools/tracker.html",
     "filename": "tracker.html",
     "title": "Internal Progress Tracker",
@@ -749,7 +757,7 @@
     "title": "Internal Links & Hidden Pages Directory",
     "fullTitle": "Internal Links & Hidden Pages Directory | SuA K-Glow",
     "category": "Internal & Campaigns",
-    "sizeKb": 58
+    "sizeKb": 59
   },
   {
     "path": "iv-infusion-wellness-therapy.html",
@@ -914,10 +922,10 @@
   {
     "path": "shop-skincare.html",
     "filename": "shop-skincare.html",
-    "title": "Clinical Skincare Collection",
-    "fullTitle": "Clinical Skincare Collection | Rejuran, Exoblanc &amp; Pharmesthetic | SuA K-Glow Carrollton TX",
+    "title": "Skincare Products",
+    "fullTitle": "Skincare Products | Rejuran, Exoblanc &amp; Pharmesthetic | SuA K-Glow Carrollton TX",
     "category": "Core Pages",
-    "sizeKb": 102
+    "sizeKb": 117
   },
   {
     "path": "signature-treatment.html",
@@ -960,6 +968,14 @@
     "sizeKb": 30
   },
   {
+    "path": "skincare-products.html",
+    "filename": "skincare-products.html",
+    "title": "Skincare Products",
+    "fullTitle": "Skincare Products | Rejuran, Exoblanc &amp; Pharmesthetic | SuA K-Glow Carrollton TX",
+    "category": "Core Pages",
+    "sizeKb": 117
+  },
+  {
     "path": "specials-october.html",
     "filename": "specials-october.html",
     "title": "October Specials",
@@ -982,6 +998,14 @@
     "fullTitle": "Specials | SuA K Glow Korean Med Spa",
     "category": "Core Pages",
     "sizeKb": 4
+  },
+  {
+    "path": "team-vacation-calendar.html",
+    "filename": "team-vacation-calendar.html",
+    "title": "SUA GLOW",
+    "fullTitle": "SUA GLOW | Team Vacation Calendar (2026 - 2027)",
+    "category": "Core Pages",
+    "sizeKb": 90
   },
   {
     "path": "testimonials.html",

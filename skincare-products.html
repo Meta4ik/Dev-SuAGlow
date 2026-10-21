@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Products | Rejuran, Exoblanc &amp; Pharmesthetic | SuA K-Glow Carrollton TX</title>
+    <meta name="description" content="Explore SuA Glow's curated medical-grade skincare products: REJURAN® MEDI Line, Exoblanc Exosome Line, and Pharmesthetic Conapidil. Available exclusively in-office in Carrollton, TX.">
+    <link rel="canonical" href="https://suaglow.com/skincare-products.html">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="dist/output.css?v=50">
+
+    <!-- Google Tag & Ads Conversion Tracking -->
+    <script src="google-tag.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-off-white text-charcoal antialiased">
+
+    <!-- Global Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section id="page-hero" data-nav-theme="dark"
+        class="relative min-h-[48vh] flex flex-col items-center justify-start text-center px-6 md:px-8 overflow-hidden pt-[240px] pb-24 md:pb-28">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/bg_hero.webp" class="w-full h-full object-cover" alt="SuA Glow Skincare Products">
+            <div class="absolute inset-0 bg-white/55 backdrop-blur-[2px]"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
+            <span
+                class="inline-block px-6 py-2 border border-[#AA987C]/30 text-[#AA987C] text-xs font-bold uppercase tracking-[0.45em] mb-8 rounded-full bg-white/80 backdrop-blur-sm shadow-xs">
+                Exclusively In-Office Consultation &amp; Treatment
+            </span>
+            <h1 class="heading-wide text-3xl sm:text-5xl md:text-7xl mb-8 leading-[1.08] [text-wrap:balance]">
+                Skincare<br><span class="text-[#AA987C]">Products.</span>
+            </h1>
+            <p
+                class="text-sm md:text-xl text-[#404345]/80 max-w-3xl mx-auto mb-10 font-light tracking-wide leading-relaxed [text-wrap:balance]">
+                Curated medical-grade formulations chosen to prepare, protect, and amplify your clinical aesthetic results.
+                <span class="block mt-3 text-[#AA987C] font-medium tracking-wide">Available exclusively at our Carrollton clinic under medical delegation.</span>
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3 text-xs tracking-wider uppercase font-semibold text-charcoal/70">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 border border-light-gray"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-taupe"></i> Medical-Grade Only</span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 border border-light-gray"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-warm-gold"></i> Authentic Korean Formulas</span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 border border-light-gray"><i data-lucide="user-check" class="w-3.5 h-3.5 text-taupe"></i> PA-C Prescribed Protocols</span>
+            </div>
+        </div>
+        <div class="absolute top-[10%] left-[-5%] w-[600px] h-[600px] bg-[#EAECED]/40 rounded-full blur-[140px] -z-10"></div>
+        <div class="absolute bottom-[-5%] right-[-5%] w-[700px] h-[700px] bg-[#DFE0DD]/30 rounded-full blur-[160px] -z-10"></div>
+    </section>
+
+    <!-- Catalog Quick Filter / Brand Selector -->
+    <section class="sticky top-[72px] z-30 bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-3.5 px-4 md:px-8 shadow-xs">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
+            <span class="text-[11px] font-heading font-semibold text-charcoal/50 uppercase tracking-widest hidden md:inline shrink-0">
+                Jump To Line:
+            </span>
+            <div class="flex items-center gap-2 sm:gap-3 w-full md:w-auto">
+                <button type="button" onclick="filterLine('all')" id="tab-all"
+                    class="line-tab active px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-near-black text-white shadow-xs">
+                    All Lines
+                </button>
+                <button type="button" onclick="filterLine('rejuran')" id="tab-rejuran"
+                    class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
+                    REJURAN® Healing Care
+                </button>
+                <button type="button" onclick="filterLine('exoblanc')" id="tab-exoblanc"
+                    class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
+                    Exoblanc Exosome
+                </button>
+                <button type="button" onclick="filterLine('pharmesthetic')" id="tab-pharmesthetic"
+                    class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
+                    Pharmesthetic Conapidil
+                </button>
+            </div>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="hidden lg:inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-wider text-taupe hover:text-warm-gold shrink-0">
+                Book Consultation <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Notice Banner: In-Office Purchase Only -->
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-10">
+        <div class="bg-[#FAF7F2] border border-[#AA987C]/30 rounded-2xl p-4 md:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div class="flex items-center gap-3.5">
+                <div class="w-10 h-10 rounded-full bg-[#AA987C]/15 text-[#AA987C] flex items-center justify-center shrink-0">
+                    <i data-lucide="info" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h4 class="font-heading text-xs uppercase tracking-wider font-bold text-near-black">Clinical Consultation Directive</h4>
+                    <p class="text-xs text-charcoal/70 font-light mt-0.5">
+                        These medical-grade formulations feature high-potency cellular actives (c-PDRN®, Purified Exosomes, Volufiline™). To protect patient outcomes, products are prescribed and purchased during your visit or consultation.
+                    </p>
+                </div>
+            </div>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="btn-primary text-xs !py-2.5 !px-5 whitespace-nowrap shrink-0">
+                Book Skin Evaluation
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN PRODUCT CATALOG CONTAINER -->
+    <main class="py-16 px-6 md:px-12 max-w-7xl mx-auto space-y-28">
+
+        <!-- ========================================== -->
+        <!-- ========================================== -->
+        <!-- LINE 1: REJURAN® HEALING CARE & MEDI LINE  -->
+        <!-- ========================================== -->
+        <section id="line-rejuran" class="line-section scroll-mt-32">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-14 animate-on-scroll fade-up">
+                <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
+                    PharmaResearch • Patented c-PDRN® (Hydrolyzed DNA)
+                </span>
+                <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-5 text-near-black [text-wrap:balance]">
+                    REJURAN® Healing Care System
+                </h2>
+                <p class="text-charcoal/75 text-sm md:text-base font-light leading-relaxed [text-wrap:balance]">
+                    Developed by Korea's leading regenerative medicine scientists at PharmaResearch, the REJURAN® Healing Care collection is powered by patented marine growth factor <strong>c-PDRN®</strong> (Hydrolyzed Salmon DNA)—a bio-active cellular regenerative agent engineered via DOT™ technology to mimic natural human DNA fragments. Clinically proven to accelerate cellular turnover, restore skin barrier integrity, and optimize aesthetic recovery.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-5 text-[10px] tracking-wider uppercase font-semibold text-charcoal/60">
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">5-Piece Complete Regimen</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">USDA Organic Certified Facility</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">FDA OTC Licensed</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">DOT™ Fragment Optimizing Tech</span>
+                </div>
+            </div>
+
+            <!-- FEATURED HERO: REJURAN® HEALING CARE SET (5-PIECE REGIMEN) -->
+            <div class="mb-14 bg-white rounded-3xl overflow-hidden border border-[#AA987C]/30 shadow-md transition-all duration-300">
+                <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+                    <!-- Image Column -->
+                    <div class="lg:col-span-5 relative bg-[#FAF8F5] aspect-square w-full overflow-hidden border-b lg:border-b-0 lg:border-r border-light-gray/70">
+                        <img src="assets/products/rejuran-healing-care-set-open.webp" alt="Rejuran Healing Care Set - 5-Piece Regimen"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="badge-glass absolute top-5 left-5 text-[10px] font-semibold text-warm-gold border-[#AA987C]/30">Complete 5-Piece Regimen</span>
+                        <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">SKU: PRM-100</span>
+                    </div>
+                    <!-- Details Column -->
+                    <div class="lg:col-span-7 p-7 sm:p-10 lg:p-12 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest bg-taupe/10 px-3 py-1 rounded-full">REJURAN® PRO Clinical Regimen</span>
+                                <span class="text-[10px] font-heading font-medium text-charcoal/60 uppercase tracking-wider">Patented Hydrolyzed DNA (c-PDRN®)</span>
+                            </div>
+                            <h3 class="heading-wide text-2xl sm:text-3xl font-bold text-near-black leading-tight mb-4 [text-wrap:balance]">
+                                Rejuran® Healing Care Set
+                            </h3>
+                            <p class="text-charcoal/80 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                                The Rejuran® Healing Care Set is a complete, five-piece regimen of restorative skincare essentials that incorporate proprietary Hydrolyzed DNA (c-PDRN®) with other proven skincare ingredients. These powerful, scientifically developed formulas nourish, protect, and support natural healing and cellular turnover to address visible signs of aging including dark spots, wrinkles, sagging, loss of firmness, and uneven texture. The result is a complexion that looks and feels healthier, more resilient, and radiant with an authentic Korean glass-glow.
+                            </p>
+
+                            <!-- What's Included / Regimen Breakdown -->
+                            <div class="mb-6 bg-[#FAF7F2] p-5 rounded-2xl border border-[#AA987C]/25">
+                                <h4 class="font-heading text-xs font-bold uppercase tracking-wider text-near-black mb-3 flex items-center gap-2">
+                                    <i data-lucide="layers" class="w-4 h-4 text-warm-gold"></i>
+                                    What's Included in This Bundle:
+                                </h4>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-charcoal/85">
+                                    <div class="flex items-start gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">1</span>
+                                        <div>
+                                            <span class="font-medium text-near-black">Concentrated Multitasking Serum</span>
+                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 30 ml / 1.01 fl oz • Cellular Turnover</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">2</span>
+                                        <div>
+                                            <span class="font-medium text-near-black">Healing Eye Gel</span>
+                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 15 ml / 0.5 fl oz • Elasticity &amp; Depuffing</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">3</span>
+                                        <div>
+                                            <span class="font-medium text-near-black">Intensive Moisturizer</span>
+                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 40 ml / 1.35 fl oz • Deep Hydration &amp; Barrier</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">4</span>
+                                        <div>
+                                            <span class="font-medium text-near-black">Healing Cream</span>
+                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 50 ml / 1.69 fl oz • Intensive Repair</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-2 sm:col-span-2">
+                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">5</span>
+                                        <div>
+                                            <span class="font-medium text-near-black">Sunscreen SPF 50+ PA+++</span>
+                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 50 ml / 1.69 fl oz • UV Shield &amp; Healing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Row -->
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 border-t border-light-gray/60">
+                            <div class="flex items-center gap-2 text-xs text-charcoal/70">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-warm-gold shrink-0"></i>
+                                <span>In-Office Purchase Only • Prescribed During Visit</span>
+                            </div>
+                            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                                class="btn-primary text-xs !py-3 !px-6 whitespace-nowrap w-full sm:w-auto text-center">
+                                Consult Sophia to Order Set
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid: 5 Individual Items + Pairing Guide -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. Concentrated Multitasking Serum -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-[#FAF8F5]">
+                            <img src="assets/products/rejuran-multitasking-serum.webp" alt="Rejuran Concentrated Multitasking Serum"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Cellular Turnover</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">30 ml / 1.01 fl oz</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 1 • Active Serum</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Concentrated Multitasking Serum
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Utilizes Hydrolyzed DNA (c-PDRN®) to nourish, protect, and support natural healing and cellular turnover, addressing visible signs of aging including dark spots, wrinkles, sagging, loss of firmness, and uneven texture. The result is a healthier, more resilient complexion with a youthful glow.
+                            </p>
+                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
+                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
+                                Apply 3 to 4 drops on fingertips to freshly cleansed skin. Gently massage onto the face, neck, and décolleté once or twice daily.
+                            </div>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Supports natural healing &amp; accelerates cellular turnover</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Softens dark spots, expression lines, and loss of firmness</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Fosters a resilient, radiant Korean glass-glow complexion</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
+                                Hydrolyzed DNA (c-PDRN®), Blackberry Leaf Extract, Blueberry Fruit Extract, Black Mulberry Extract, Aloe Vera Leaf Juice, Argan Kernel Oil, Sodium Hyaluronate, Arbutin, Adenosine.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">
+                            Consult Sophia to Order
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 2. Healing Eye Gel -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-[#FAF8F5]">
+                            <img src="assets/products/rejuran-healing-eye-gel.webp" alt="Rejuran Healing Eye Gel"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Eye Contour Elasticity</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">15 ml / 0.5 fl oz</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 2 • Periorbital Contour</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Healing Eye Gel
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Incorporates Hydrolyzed DNA (c-PDRN®) to improve the appearance of elasticity and restore skin firmness around the eye area, reducing the visible signs of aging and fatigue for a refreshed and revitalized look.
+                            </p>
+                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
+                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
+                                Apply a pea-size amount to freshly cleansed skin using the tip of the ring finger. Gently massage around the entire eye area in a circular motion once or twice daily.
+                            </div>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Restores firm elasticity to delicate periorbital tissue</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Depuffs and revitalizes tired under-eye bags &amp; shadows</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Safe, lightweight hydration for upper and lower eyelid contours</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
+                                Hydrolyzed DNA (c-PDRN®), Sodium Hyaluronate, Tocopheryl Acetate (Vitamin E), Adenosine, Lavandula Angustifolia (Lavender) Oil, Pelargonium Graveolens Flower Oil.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">
+                            Consult Sophia to Order
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 3. Intensive Moisturizer -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-[#FAF8F5]">
+                            <img src="assets/products/rejuran-intensive-moisturizer.webp" alt="Rejuran Intensive Moisturizer"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Barrier Hydration</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">40 ml / 1.35 fl oz</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 3 • Barrier Moisture</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Intensive Moisturizer
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Formulated with Hydrolyzed DNA (c-PDRN®) and other hydrating ingredients to deeply moisturize and nourish the skin, improving skin texture, firmness, and overall appearance while supporting natural healing processes.
+                            </p>
+                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
+                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
+                                Apply 2 pumps on fingertips to freshly cleansed skin after serum, but before sunscreen. Gently massage into face, neck, and décolleté once or twice daily.
+                            </div>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Deeply seals hydration and reinforces compromised barrier lipids</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Enhances skin firmness, bounce, and refined surface texture</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Shields parched skin against harsh dry climates and environmental stress</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
+                                Hydrolyzed DNA (c-PDRN®), Simmondsia Chinensis (Jojoba) Seed Oil, Butyrospermum Parkii (Shea) Butter, Adenosine, Lavender Oil, Bergamot Peel Oil.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">
+                            Consult Sophia to Order
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 4. Healing Cream -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-[#FAF8F5]">
+                            <img src="assets/products/rejuran-healing-cream.webp" alt="Rejuran Healing Cream"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Cellular Regeneration</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">50 ml / 1.69 fl oz</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 4 • Intensive Repair</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Healing Cream
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Combines Hydrolyzed DNA (c-PDRN®) with emollient-rich ingredients to provide intensive hydration and support skin's natural repair processes, enhancing skin firmness and elasticity, and minimizing signs of aging.
+                            </p>
+                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
+                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
+                                Apply a pea-size amount to freshly cleansed skin using fingertips, and gently massage into face, neck, and décolleté once or twice daily.
+                            </div>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Accelerates post-microneedling, laser, and chemical peel recovery</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Significantly increases elasticity, dermal firmness, and smoothness</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Replenishes biocompatible moisture to reverse chronological dryness</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
+                                Hydrolyzed DNA (c-PDRN®), Shea Butter, Squalane, Tocopheryl Acetate, Adenosine, Lavender Oil, Bergamot Peel Oil, Grapefruit Peel Oil.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">
+                            Consult Sophia to Order
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 5. Sunscreen SPF 50+ PA+++ -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-[#FAF8F5]">
+                            <img src="assets/products/rejuran-sunscreen.webp" alt="Rejuran Sunscreen SPF 50+ PA+++"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Clinical UV Shield</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">50 ml / 1.69 fl oz</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 5 • Daytime UV Defense</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Sunscreen SPF 50+ PA+++
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Features Hydrolyzed DNA (c-PDRN®) along with protective and nourishing ingredients to shield the skin from harmful UV rays while promoting skin healing and hydration, maintaining a youthful and healthy complexion.
+                            </p>
+                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
+                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
+                                Apply a generous amount using fingertips. Smooth over face and neck until absorbed. Re-apply as needed after swimming, excessive perspiration, or towel drying.
+                            </div>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Broad-spectrum UVA/UVB SPF 50+ PA+++ defense against photodamage</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>c-PDRN® continuously supports recovery of sensitized &amp; treated skin</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Silky, weightless finish with no white cast or greasy film</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
+                                Hydrolyzed DNA (c-PDRN®), Pomegranate Seed Oil, Black Mulberry Extract, Blackberry Leaf Extract, Aloe Vera Leaf Juice, Jojoba Seed Oil, Shea Butter, Oat Kernel Extract, Squalane, Sodium Hyaluronate.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">
+                            Consult Sophia to Order
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Consultation & Pairing Note Card -->
+                <div class="bg-[#F8F6F2] rounded-3xl p-8 border border-[#AA987C]/30 flex flex-col justify-between text-center md:text-left">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-white text-warm-gold flex items-center justify-center mb-6 shadow-xs mx-auto md:mx-0">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading text-lg font-bold text-near-black mb-3 [text-wrap:balance]">
+                            Pairing Rejuran® with In-Office Protocols
+                        </h3>
+                        <p class="text-charcoal/70 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                            Sophia Yang, PA-C custom-pairs the REJURAN® Healing Care home regimen with our in-clinic treatments (such as Salmon PN Facials, Skin Quality Boosters, and Oligio X RF Lifting) to exponentially extend post-treatment collagen remodeling and skin barrier renewal.
+                        </p>
+                        <div class="space-y-2 text-xs text-charcoal/80 font-medium">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#AA987C]"></i>
+                                <span>300% Greater c-PDRN bio-absorption</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#AA987C]"></i>
+                                <span>Zero downtime barrier sealing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-secondary w-full text-center block text-xs !py-2.5">
+                            Book Personalized Skin Protocol
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- LINE 2: EXOBLANC EXOSOME LINE (11 ITEMS)   -->
+        <!-- ========================================== -->
+        <section id="line-exoblanc" class="line-section scroll-mt-32">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll fade-up">
+                <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
+                    Next-Gen Bio-Aesthetics • Pure Exosomes
+                </span>
+                <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-5 text-near-black [text-wrap:balance]">
+                    Exoblanc Exosome Collection
+                </h2>
+                <p class="text-charcoal/75 text-sm md:text-base font-light leading-relaxed [text-wrap:balance]">
+                    Harnessing state-of-the-art Korean exosome bio-technology, Exoblanc isolates nano-sized extracellular vesicles that communicate directly with skin cells. Engineered to stimulate collagen synthesis, restore cellular density, and create lasting glass-skin vitality.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-5 text-[10px] tracking-wider uppercase font-semibold text-charcoal/60">
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">Cell-Free Bio-Signaling</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">5-Peptide Complex</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">Dermatologist Tested</span>
+                </div>
+            </div>
+
+            <!-- Products Grid: 11 Core Formulations -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. Relief Bubble Cleanser -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/exoblanc-relief-bubble-cleanser.jpg" alt="Exoblanc Relief Bubble Cleanser"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">pH Balanced</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">150 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Step 1: Cleanse</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Relief Bubble Cleanser
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
+                                Self-foaming micro-bubble cleanser that melts makeup, sunscreen, and pore congestion without stripping the delicate acid mantle. Leaves skin calm, clean, and prepped.
+                            </p>
+                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                                <span class="font-semibold text-near-black">Actives:</span> Exosome Extract, Amino Acid Surfactants, Centella Asiatica.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">In-Office Purchase Only</a>
+                    </div>
+                </article>
+
+                <!-- 2. Foaming Toner -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/exoblanc-foaming-toner.jpg" alt="Exoblanc Foaming Toner"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Micro-Foam Prep</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">150 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Step 2: Tone</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Foaming Toner
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
+                                Innovative foam-format toner delivering high-speed moisture absorption. Calms post-cleansing sensitivity and primes the cellular matrix for maximum active penetration.
+                            </p>
+                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                                <span class="font-semibold text-near-black">Actives:</span> Exosome Complex, Multi-Depth Hyaluronic Acid, Panthenol (B5).
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">In-Office Purchase Only</a>
+                    </div>
+                </article>
+
+                <!-- 3. Refine Peeling Ampoule -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/exoblanc-refine-peeling-ampoule.jpg" alt="Exoblanc Refine Peeling Ampoule"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Bio-Renew Peeling</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">30 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Step 3B: Exfoliate</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Refine Peeling Ampoule
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
+                                Clinic-grade exfoliating solution that gently dissolves dead surface cells and clears pore blockages without mechanical abrasion, revealing refined glass skin texture.
+                            </p>
+                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                                <span class="font-semibold text-near-black">Actives:</span> PHA/LHA Bio-Acids, Plant-Derived Exosomes, Allantoin.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">In-Office Purchase Only</a>
+                    </div>
+                </article>
+
+                <!-- 4. Boosting Serum (HERO ESSENTIAL) -->
+                <article class="bg-white rounded-3xl overflow-hidden border-2 border-warm-gold/50 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group relative">
+                    <div class="absolute -top-3 right-6 z-10 bg-gradient-to-r from-warm-gold to-taupe text-white text-[10px] font-heading font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-sm">
+                        Hero Formulation
+                    </div>
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-[#FAF7F2]">
+                            <img src="assets/products/exoblanc-boosting-serum.jpg" alt="Exoblanc Boosting Serum"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Exosomes • PDRN</span>
+                            <span class="absolute bottom-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">50 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-warm-gold uppercase tracking-widest block">Step 3: Core Cellular Boost</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Exoblanc Boosting Serum
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
+                                The flagship essential of the Exoblanc system. Merges high-concentration pure exosomes with a 5-peptide complex and salmon DNA (PDRN) to stimulate deep cellular renewal and elasticity.
+                            </p>
+                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                                <span class="font-semibold text-near-black">Actives:</span> Purified Exosome Vesicles, Salmon PDRN, 5-Peptide Matrix, Niacinamide.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">In-Office Purchase Only</a>
+                    </div>
+                </article>
+
+                <!-- 5. Boosting Cream -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/exoblanc-boosting-cream.jpg" alt="Exoblanc Boosting Cream"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Elasticity Lock</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">50 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Step 5: Moisture Lock</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Boosting Cream
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
+                                Deep cellular replenishment cream that strengthens dermal structural integrity, locks in active serums, and imparts an immediate silky, dewy finish.
+                            </p>
+                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                                <span class="font-semibold text-near-black">Actives:</span> Exosome Extract, Ceramide NP, Squalane, Adenosine.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">In-Office Purchase Only</a>
+                    </div>
+                </article>
+
+                <!-- 6. Skin Barrier Cream -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/exoblanc-skin-barrier-cream.jpg" alt="Exoblanc Skin Barrier Cream"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Barrier Repair</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">50 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Step 5B: Barrier Seal</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Skin Barrier Cream
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
+                                Intensive post-procedure recovery cream designed to soothe sensitized, inflamed, or laser-treated skin and rapidly restore the stratum corneum lipid barrier.
+                            </p>
+                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                                <span class="font-semibold text-near-black">Actives:</span> Exosomes, Madecassoside, Multi-Ceramide Liposomes, Ectoin.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">In-Office Purchase Only</a>
+                    </div>
+                </article>
+
+                <!-- 7. NMN Eyecream -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/exoblanc-nmn-eyecream.jpg" alt="Exoblanc NMN Eyecream"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">NMN Bio-Tech</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">30 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Step 4: Eye Contour</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    NMN Eyecream
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
+                                Longevity-focused eye formula powered by cellular-energy coenzyme NMN and exosomes to target deep crow's feet, sagging periorbital tissue, and dark pigmentation.
+                            </p>
+                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                                <span class="font-semibold text-near-black">Actives:</span> NMN (Nicotinamide Mononucleotide), Exosomes, Acetyl Hexapeptide-8.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">In-Office Purchase Only</a>
+                    </div>
+                </article>
+
+                <!-- 8. Spicule Cream -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/exoblanc-spicule-cream.jpg" alt="Exoblanc Spicule Cream"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Bio-Microneedles</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">50 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Night Routine • Collagen Stim</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Spicule Cream
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
+                                Purified marine micro-spicules create microscopic dermal pathways, delivering exosomes directly to target layers while continually stimulating nocturnal collagen remodeling.
+                            </p>
+                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                                <span class="font-semibold text-near-black">Actives:</span> Hydrolyzed Sea Sponge Spicules, Exosome Vesicles, Tripeptides.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">In-Office Purchase Only</a>
+                    </div>
+                </article>
+
+                <!-- 9. White Bloom -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/exoblanc-white-bloom.jpg" alt="Exoblanc White Bloom"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Glass Skin Tone-Up</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">50 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Radiance Infusion</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    White Bloom
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
+                                High-potency brightening cream that suppresses melanin transfer while leaving a light-refracting, porcelain glow. Ideal for dull skin and post-inflammatory pigmentation.
+                            </p>
+                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                                <span class="font-semibold text-near-black">Actives:</span> Glutathione, Tranexamic Acid, Exosomes, Niacinamide.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">In-Office Purchase Only</a>
+                    </div>
+                </article>
+
+                <!-- 10. Soothing Mist -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/exoblanc-soothing-mist.jpg" alt="Exoblanc Soothing Mist"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Portable Shield</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">100 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Daily Refresh</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Soothing Mist
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
+                                Micro-aerosolized hydration shield delivering instant moisture replenishment and antioxidant defense across air-conditioned, heated, or flight-stressed environments.
+                            </p>
+                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                                <span class="font-semibold text-near-black">Actives:</span> Exosome Extract, Damask Rose Floral Water, Centella Asiatica.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">In-Office Purchase Only</a>
+                    </div>
+                </article>
+
+                <!-- 11. PDRN Mask -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/exoblanc-pdrn-mask.jpg" alt="Exoblanc PDRN Mask"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Weekly Ritual</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">5 Sheets / Box</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Intensive Sheet Mask</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    PDRN Mask
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
+                                Densely saturated biocellulose sheet soaked in clinical salmon DNA (PDRN) and exosome ampoule to drench sensitized skin in restorative moisture and reveal an immediate glass glow.
+                            </p>
+                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                                <span class="font-semibold text-near-black">Actives:</span> Salmon PDRN, Exosomes, Hydrolyzed Collagen, Trehalose.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">In-Office Purchase Only</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ============================================================== -->
+        <!-- LINE 3: PHARMESTHETIC / CONAPIDIL & VIBANQUENTMANKA             -->
+        <!-- ============================================================== -->
+        <section id="line-pharmesthetic" class="line-section scroll-mt-32">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll fade-up">
+                <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
+                    Korean Aesthetic Master • Conapidil (코나피딜) &amp; VQM
+                </span>
+                <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-5 text-near-black [text-wrap:balance]">
+                    Pharmesthetic Master Collection
+                </h2>
+                <p class="text-charcoal/75 text-sm md:text-base font-light leading-relaxed [text-wrap:balance]">
+                    Directly curated from the Korean aesthetic master platform (<em>master.pharmesthetic.com</em>), featuring CONAPIDIL's signature barrier-repositioning formulations and VIBANQUENTMANKA's clinical regenerative emergency care. Revered across elite Seoul dermatology clinics for post-procedure recovery, thermal cooling, and dermal restructuring.
+                </p>
+                <div class="bg-amber-50/80 border border-amber-200/60 rounded-xl px-4 py-2 mt-5 text-[11px] text-amber-900 inline-block">
+                    <span class="font-semibold">Curated Clinical Home-Care:</span> Prescribed and guided under personalized consultation with Sophia Yang, PA-C.
+                </div>
+            </div>
+
+            <!-- Products Grid: Core Formulations & Clinical Essentials -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. VIBANQUENTMANKA Lotion (Renewal) -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/pharmesthetic-vibanquentmanka-lotion.webp" alt="VIBANQUENTMANKA Lotion Renewal - PDRN Emergency Hybrid Lotion"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Emergency Barrier PDRN</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">30 mL / 1.01 fl oz</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">VQM Master • Emergency Recovery Hybrid</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    VIBANQUENTMANKA Lotion (비반콴트망카 로션)
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Known across Seoul clinics as the "skin fire extinguisher" (formerly Phytocin V2), this intensive emergency hybrid lotion combines marine Sodium DNA (PDRN), AMISCARE(N)®, and Centella to rapidly extinguish redness and repair compromised barriers with a natural tone-adjusting botanical finish.
+                            </p>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Indications</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Rapid emergency relief post-laser, peeling, or extractions</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Natural botanical beige finish adapts seamlessly with zero artificial dyes</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Actives:</span>
+                                Sodium DNA (PDRN), AMISCARE(N) Sensitive Complex, Centella Asiatica, Niacinamide, Adenosine.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">Consult with Sophia to Order</a>
+                    </div>
+                </article>
+
+                <!-- 2. Conapidil Lotion Polishing -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/pharmesthetic-lotion-polishing.webp" alt="Conapidil Lotion Polishing Cleanser"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Gentle Milk Cleansing</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">200 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">CONAPIDIL Core 1 • Clinical Cleansing &amp; Prep</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Lotion Polishing (로션 폴리싱)
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Ultra-gentle botanical milk cleanser that safely dissolves sebum, sunscreen, and particulate residue without tissue wiping or lipid stripping. Leaves sensitized barriers soft, balanced, and protected.
+                            </p>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Indications</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>For compromised, thin, or easily irritated skin barriers</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>No harsh wiping required; rinses cleanly with tepid water</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Actives:</span>
+                                Plant-derived Emollient Complex, Niacinamide, 4-Terpineol, Portulaca Oleracea.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">Consult with Sophia to Order</a>
+                    </div>
+                </article>
+
+                <!-- 3. Conapidil Green Baxin -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/pharmesthetic-green-baxin.webp" alt="Conapidil Green Baxin Cooling Gel"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Thermal Antipyretic Gel</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">150 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">CONAPIDIL Core 2 • Thermal Defense &amp; Cooling</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Green Baxin (그린박신)
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Dermal antipyretic cooling gel ("피부 해열제") engineered to immediately discharge trapped facial heat, lower surface skin temperature, and suppress thermal aging and capillary redness following clinical procedures or environmental stress.
+                            </p>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Indications</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Instantly dissipates excess facial heat and calms rosacea/redness</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Tightens heat-dilated pores and accelerates sensitized barrier repair</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Actives:</span>
+                                Patented Soothing Cooler™ Complex, Pure Medi, Beta-Glucan 1000, Hinoki Cypress Water, Centella Asiatica.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">Consult with Sophia to Order</a>
+                    </div>
+                </article>
+
+                <!-- 4. Conapidil Finish Lotion -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/pharmesthetic-finish-lotion.webp" alt="Conapidil Finish Lotion SPF 50+ PA+++"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Clinical UV Shield SPF 50+</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">20 g</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">CONAPIDIL Core 3 • Post-Procedure Defense</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Finish Lotion SPF 50+ PA+++ (피니쉬로션)
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Medical-grade physical mineral sunscreen formulated specifically for the critical 72-hour post-procedure recovery window. Provides high-potency UVA/UVB defense while Ceramide NP and Centella calm redness with an ultra-sheer, foundation-free blurring finish.
+                            </p>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Indications</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Mandatory 72-hour protective shield post-laser, peeling, or facial</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Zero white cast; delivers a refined blur and natural radiant tone</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Actives:</span>
+                                Micronized Zinc Oxide &amp; Titanium Dioxide (SPF 50+ PA+++), Ceramide NP, Niacinamide, Centella Asiatica.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">Consult with Sophia to Order</a>
+                    </div>
+                </article>
+
+                <!-- 5. Conapidil Superjection Home -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/pharmesthetic-superjection-home.webp" alt="Conapidil Superjection Home Intensive Kit"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Clinical Booster Kit</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">Multi-Step Home Kit</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">CONAPIDIL Core 4 • Cellular Booster Home Protocol</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Superjection Home (슈퍼젝션 홈)
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Professional-grade home booster protocol engineered to address deep stubborn pigmentation ("속기미"), pore slackening, and dermal density. Features targeted Starter ampoules (2mL x 4), high-potency Activators (3.5mL x 4), and Active Cream (18g) with precision applicators.
+                            </p>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Indications</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Treats deep dermal pigmentation, discoloration, and loss of firmness</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Restores high-density collagen bounce under 1:1 clinical guidance</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Actives:</span>
+                                High-Purity Hyaluronic Acid Matrix, Exosome/Peptide Bio-Signaling Complex, Micro-Lipid Active Cream.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">Consult with Sophia to Order</a>
+                    </div>
+                </article>
+
+                <!-- 6. Conapidil Cemenzal Light -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/pharmesthetic-cemenzal-light.webp" alt="Conapidil Cemenzal Light High Potency Cream 100"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Volume Repositioning</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">100 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">CONAPIDIL Core 5 • High Potency Cream 100</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Cemenzal Light (세멘잘라이트)
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Daily facial contour and barrier repositioning cream infused with patented French Volufiline™ and human stem cell culture conditioned media. Sustains facial volume, elasticity, and lifted contours between clinic visits while restoring fragile skin.
+                            </p>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Indications</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Daily barrier repositioning to maintain peak facial volume and firmness</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Sustains clinic-achieved contouring and lifting between professional visits</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Actives:</span>
+                                Volufiline™ (France Sederma), Human Stem Cell Media, Multi-Ceramide Liposomes, Resveratrol.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">Consult with Sophia to Order</a>
+                    </div>
+                </article>
+
+                <!-- 7. Conapidil Gel Polishing -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/pharmesthetic-gel-polishing.webp" alt="Conapidil Gel Polishing Cleanser"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Low-Irritation Gel</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">200 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Step 1B • Pore Purification</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Gel Polishing (겔 폴리싱)
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Hypoallergenic water-based gel cleanser that generates delicate micro-bubbles to purify stubborn pore waste and balance excess sebum without tightness or moisture loss.
+                            </p>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Indications</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Balances oil-to-water ratio for combination &amp; oily skin</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Leaves pores refined, cooled, and refreshed</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Actives:</span>
+                                Gentle Amino Surfactants, Betaine, Tea Tree Leaf Oil, Centella Asiatica.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">Consult with Sophia to Order</a>
+                    </div>
+                </article>
+
+                <!-- 8. Conapidil Gel Starter -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/pharmesthetic-gel-starter.webp" alt="Conapidil Gel Starter Ampoule Toner"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Ampoule-Toner Hybrid</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">200 mL</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Step 2 • Barrier Conditioning Primer</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Gel Starter (겔 스타터)
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                High-density clinical gel that acts as both a barrier-stabilizing toner and an ampoule substitute. Quenches micro-dehydration and primes skin cells for optimal post-procedure uptake.
+                            </p>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Indications</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>pH 5.5 mildly acidic formula soothes redness and burning</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Can be dispensed as a cooling gel or micro-foam</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Actives:</span>
+                                8-Fold Hyaluronic Acid, Centella Asiatica Extract, Amino Acid Complex, Allantoin.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">Consult with Sophia to Order</a>
+                    </div>
+                </article>
+
+                <!-- 9. Conapidil CemenSheet -->
+                <article class="bg-white rounded-3xl overflow-hidden border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full bg-off-white">
+                            <img src="assets/products/pharmesthetic-cemensheet.webp" alt="Conapidil CemenSheet Pre-Cut Mask"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="badge-glass absolute top-5 left-5 text-[10px]">Dermal Conditioning</span>
+                            <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold text-near-black/70 bg-white/90 px-2.5 py-0.5 rounded-full border border-light-gray">5 Sheets / Pack</span>
+                        </div>
+                        <div class="p-7">
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Weekly Reset • Pre-Cut Mask</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    CemenSheet (세멘시트 재단형)
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Korea's iconic pre-cut clinical conditioning sheet mask. Known as the "pavement reset," it hugs facial contours securely to evacuate trapped sebum, relieve thermal inflammation, and smooth rough skin.
+                            </p>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Indications</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Ergonomic pre-cut design conforms seamlessly to facial contours</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Clears stubborn sebum build-up without pore damage</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Actives:</span>
+                                Resveratrol, Witch Hazel Extract, Fomes Officinalis (Mushroom) Extract, Peppermint Oil.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-0">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">Consult with Sophia to Order</a>
+                    </div>
+                </article>
+
+                <!-- Sophia's Master Philosophy Card -->
+                <div class="bg-near-black text-white rounded-3xl p-8 flex flex-col justify-between text-center md:text-left relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-2xl bg-white/10 text-warm-gold flex items-center justify-center mb-6 shadow-xs mx-auto md:mx-0">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="heading-wide text-xl font-bold mb-3 [text-wrap:balance]">
+                            Certified Korean Aesthetics Guidance
+                        </h3>
+                        <p class="text-white/75 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                            Sophia Yang, PA-C studied Korean clinical skincare principles in Seoul. At SuA Glow, every home-care recommendation is tailored strictly to your skin barrier condition, avoiding the common trial-and-error cycle of over-the-counter products.
+                        </p>
+                        <div class="border-t border-white/10 pt-4 text-xs text-warm-gold/90 font-medium space-y-1.5">
+                            <p>• Zero over-exfoliation protocols</p>
+                            <p>• Barrier-first hydration architecture</p>
+                            <p>• Medical director oversight</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 relative z-10">
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="btn-primary w-full text-center block text-xs !py-2.5">
+                            Book Consultation with Sophia
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Why Medical-Grade Matters Section -->
+    <section class="py-24 bg-white relative z-10 px-6 border-t border-b border-light-gray">
+        <div class="max-w-4xl mx-auto text-center animate-on-scroll fade-up">
+            <div class="w-16 h-16 bg-[#AA987C]/10 text-[#AA987C] rounded-full flex items-center justify-center mx-auto mb-8">
+                <i data-lucide="shield-check" class="w-8 h-8"></i>
+            </div>
+            <p class="heading-wide text-xs tracking-[0.4em] text-[#AA987C] mb-3 uppercase">Clinical Precision</p>
+            <h3 class="heading-wide text-2xl md:text-3xl font-bold mb-6 text-near-black [text-wrap:balance]">
+                Why Medical-Grade Matters
+            </h3>
+            <p class="text-charcoal/70 text-sm md:text-base font-light mb-6 leading-relaxed [text-wrap:balance]">
+                Medical-grade skincare products contain significantly higher concentrations of pharmaceutical-grade active ingredients—such as proprietary marine DNA (c-PDRN®), pure exosome vesicles, and bioactive growth factors—than typical over-the-counter retail cosmetics.
+            </p>
+            <p class="text-charcoal/70 text-sm md:text-base font-light mb-10 leading-relaxed [text-wrap:balance]">
+                Because these formulations penetrate into deeper epidermal and dermal layers, their application is customized to your unique barrier profile. Under the clinical delegation of <strong>Sophia Yang, PA-C</strong> and medical director <strong>Dr. Adam Yang, MD</strong>, each regimen is tailored during your in-office evaluation.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="btn-primary">Visit Our Carrollton Clinic</a>
+                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" class="btn-secondary">Book Skincare Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="py-24 px-6 md:px-12 max-w-4xl mx-auto">
+        <div class="text-center mb-16 animate-on-scroll fade-up">
+            <p class="heading-wide text-xs tracking-[0.4em] text-[#AA987C] mb-3 uppercase">Patient Information</p>
+            <h3 class="heading-wide text-2xl md:text-3xl font-bold text-near-black">Frequently Asked Questions</h3>
+        </div>
+
+        <div class="space-y-4">
+            <details class="group bg-white p-6 rounded-2xl border border-light-gray/80 [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+                <summary class="flex items-center justify-between cursor-pointer font-heading text-sm md:text-base font-semibold text-near-black">
+                    <span>Why can't I order these products directly online?</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-taupe group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-xs md:text-sm font-light text-charcoal/70 leading-relaxed">
+                    Per our medical delegation agreements and clinical guidelines established by our supervising physician Dr. Adam Yang and PA-C Sophia Yang, medical-grade lines like REJURAN® MEDI, Exoblanc, and Pharmesthetic feature bioactive concentrations that require provider oversight. We prescribe these during your in-office consultation or appointment to guarantee safety and maximize your clinical results.
+                </p>
+            </details>
+
+            <details class="group bg-white p-6 rounded-2xl border border-light-gray/80 [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+                <summary class="flex items-center justify-between cursor-pointer font-heading text-sm md:text-base font-semibold text-near-black">
+                    <span>Can I purchase products if I am not currently receiving a facial or treatment?</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-taupe group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-xs md:text-sm font-light text-charcoal/70 leading-relaxed">
+                    Yes! You are welcome to book a dedicated skincare consultation with Sophia Yang, PA-C. We will perform an assessment (or Aura 3D digital skin analysis) and curate your optimal home-care regimen.
+                </p>
+            </details>
+
+            <details class="group bg-white p-6 rounded-2xl border border-light-gray/80 [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+                <summary class="flex items-center justify-between cursor-pointer font-heading text-sm md:text-base font-semibold text-near-black">
+                    <span>How do these home care products complement treatments like Oligio X or LDM?</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-taupe group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-xs md:text-sm font-light text-charcoal/70 leading-relaxed">
+                    Clinical treatments stimulate neocollagenesis and cell turnover. Applying medical-grade c-PDRN®, exosomes, and barrier peptides at home supplies the raw cellular nutrients required for accelerated healing, extending the longevity and radiance of your results.
+                </p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Near Me Location & Brand CTA Section -->
+    <div id="nearme-placeholder"></div>
+
+    <section id="final-consultation-cta" data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
+        <div class="max-w-4xl mx-auto animate-on-scroll fade-up">
+            <img src="assets/logo-main.webp" alt="SuA K-Glow"
+                class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
+            <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-16 uppercase">K-Beauty Medspa • Carrollton HQ</p>
+            <h3 class="heading-wide text-2xl md:text-4xl mb-8 leading-snug [text-wrap:balance]">
+                K-Beauty doesn't chase trends.<br>It builds
+                <span class="text-warm-gold opacity-90">better skin.</span>
+            </h3>
+            <p class="text-sm md:text-base text-white/60 max-w-xl mx-auto mb-10 font-light">
+                Schedule your consultation to experience medical-grade Korean aesthetic care customized to your goals.
+            </p>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="btn-primary">Book In-Office Consultation</a>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Shared Scripts -->
+    <script src="navbar.js?v=52"></script>
+    <script src="footer.js?v=44"></script>
+    <script src="script.js?v=44"></script>
+
+    <!-- Simple Line Filter Switcher -->
+    <script>
+        function filterLine(line) {
+            const tabs = document.querySelectorAll('.line-tab');
+            tabs.forEach(t => {
+                t.classList.remove('bg-near-black', 'text-white', 'shadow-xs');
+                t.classList.add('bg-off-white', 'text-charcoal');
+            });
+            const activeTab = document.getElementById('tab-' + line);
+            if (activeTab) {
+                activeTab.classList.remove('bg-off-white', 'text-charcoal');
+                activeTab.classList.add('bg-near-black', 'text-white', 'shadow-xs');
+            }
+
+            const sections = document.querySelectorAll('.line-section');
+            if (line === 'all') {
+                sections.forEach(s => s.classList.remove('hidden'));
+            } else {
+                sections.forEach(s => {
+                    if (s.id === 'line-' + line) {
+                        s.classList.remove('hidden');
+                        s.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                        s.classList.add('hidden');
+                    }
+                });
+            }
+        }
+    </script>
+
+</body>
+
+</html>
