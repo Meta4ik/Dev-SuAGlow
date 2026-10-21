@@ -39,7 +39,7 @@ const FOOTER_HTML = `
                         TikTok</a>
                     </li>
                     <li><a href="skincare-products.html" class="hover:text-taupe transition-colors flex items-center gap-2">
-                        <i data-lucide="shopping-bag" class="w-4 h-4 text-taupe"></i> Skincare Products</a>
+                        <i data-lucide="shopping-bag" class="w-4 h-4 text-taupe"></i> Skincare</a>
                     </li>
                     <li><a href="memberships.html" class="hover:text-taupe transition-colors flex items-center gap-2">
                         <i data-lucide="sparkles" class="w-4 h-4 text-taupe"></i> Glass Skin Membership</a>
