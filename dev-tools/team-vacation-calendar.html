@@ -965,7 +965,7 @@
     }
   </style>
 </head>
-<body data-theme="dark">
+<body data-theme="light">
 
   <div class="container">
 
@@ -1126,7 +1126,8 @@
         <div>
           <strong style="color: var(--multi-color); font-size: 13px;">Team Coverage Notice:</strong>
           <p style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">
-            • <strong>Nov 25 – Nov 27</strong> (Thanksgiving window): <strong>Kameron</strong> (in Asia), <strong>Irene</strong> (in Korea), and <strong>Marcus</strong> (Thanksgiving break) are all off.<br>
+            • <strong>Nov 10 – Nov 29</strong>: <strong>Kameron</strong> (in Asia), <strong>Irene</strong> (in Korea), and <strong>Mickey</strong> (Korea & LA) are all traveling simultaneously.<br>
+            • <strong>Nov 25 – Nov 27</strong> (Thanksgiving peak): <strong>Kameron</strong>, <strong>Irene</strong>, <strong>Mickey</strong>, and <strong>Marcus</strong> are all off simultaneously.<br>
             • <strong>Dec 24 – Dec 26</strong> (Christmas window): Both <strong>Sophia</strong> (in Korea) and <strong>Marcus</strong> (Christmas break) are off simultaneously with the Christmas holiday.
           </p>
         </div>
@@ -1146,7 +1147,7 @@
       <div class="modal-body">
         <div class="form-group">
           <label for="inputEmpName">Employee Name *</label>
-          <input type="text" id="inputEmpName" placeholder="e.g. Jasmine, Micky, Sarah" autofocus>
+          <input type="text" id="inputEmpName" placeholder="e.g. Jasmine, Mickey, Sarah" autofocus>
         </div>
         <div class="form-group">
           <label for="inputEmpRole">Role / Title (Optional)</label>
@@ -1236,15 +1237,27 @@
       { id: 'Kameron', name: 'Kameron', role: 'Team Member', color: '#818cf8', bg: 'rgba(129, 140, 248, 0.15)', border: 'rgba(129, 140, 248, 0.35)', isCustom: false },
       { id: 'Irene', name: 'Irene', role: 'Team Member', color: '#34d399', bg: 'rgba(52, 211, 153, 0.15)', border: 'rgba(52, 211, 153, 0.35)', isCustom: false },
       { id: 'Sophia', name: 'Sophia', role: 'Team Member', color: '#fb7185', bg: 'rgba(251, 113, 133, 0.15)', border: 'rgba(251, 113, 133, 0.35)', isCustom: false },
-      { id: 'Marcus', name: 'Marcus', role: 'Team Member', color: '#38bdf8', bg: 'rgba(56, 189, 248, 0.15)', border: 'rgba(56, 189, 248, 0.35)', isCustom: false }
+      { id: 'Marcus', name: 'Marcus', role: 'Team Member', color: '#38bdf8', bg: 'rgba(56, 189, 248, 0.15)', border: 'rgba(56, 189, 248, 0.35)', isCustom: false },
+      { id: 'Mickey', name: 'Mickey', role: 'Team Member', color: '#a855f7', bg: 'rgba(168, 85, 247, 0.15)', border: 'rgba(168, 85, 247, 0.35)', isCustom: false }
     ];
 
     let TEAM_MEMBERS = [];
     try {
       const savedMembers = localStorage.getItem('suaglow_team_members');
-      TEAM_MEMBERS = savedMembers ? JSON.parse(savedMembers) : DEFAULT_TEAM_MEMBERS;
+      if (savedMembers) {
+        TEAM_MEMBERS = JSON.parse(savedMembers);
+        // Ensure default members (especially Mickey) are included
+        DEFAULT_TEAM_MEMBERS.forEach(def => {
+          if (!TEAM_MEMBERS.some(m => m.name.toLowerCase() === def.name.toLowerCase())) {
+            TEAM_MEMBERS.push(def);
+          }
+        });
+        localStorage.setItem('suaglow_team_members', JSON.stringify(TEAM_MEMBERS));
+      } else {
+        TEAM_MEMBERS = [...DEFAULT_TEAM_MEMBERS];
+      }
     } catch (e) {
-      TEAM_MEMBERS = DEFAULT_TEAM_MEMBERS;
+      TEAM_MEMBERS = [...DEFAULT_TEAM_MEMBERS];
     }
 
     // Helper to calculate RGBA
@@ -1283,13 +1296,31 @@
       addBaseRange('Sophia', 'Korea', '2026-12-15', '2026-12-20');
       addBaseRange('Sophia', 'Korea', '2026-12-22', '2026-12-27');
       addBaseRange('Marcus', 'Christmas Break', '2026-12-24', '2026-12-26');
+      // Mickey in Korea (11/10 - 11/22) and LA (11/22 - 11/30)
+      addBaseRange('Mickey', 'Korea', '2026-11-10', '2026-11-21');
+      addBaseRange('Mickey', 'LA', '2026-11-22', '2026-11-30');
       return base;
     }
 
     let VACATION_DATA = [];
     try {
       const savedVacations = localStorage.getItem('suaglow_vacation_data');
-      VACATION_DATA = savedVacations ? JSON.parse(savedVacations) : initBaseVacations();
+      if (savedVacations) {
+        VACATION_DATA = JSON.parse(savedVacations);
+        // Automatically inject Mickey if not already in saved data
+        const hasMickey = VACATION_DATA.some(v => v.person.toLowerCase().includes('mickey'));
+        if (!hasMickey) {
+          const base = initBaseVacations();
+          base.forEach(b => {
+            if (b.person.toLowerCase().includes('mickey')) {
+              VACATION_DATA.push(b);
+            }
+          });
+          localStorage.setItem('suaglow_vacation_data', JSON.stringify(VACATION_DATA));
+        }
+      } else {
+        VACATION_DATA = initBaseVacations();
+      }
     } catch (e) {
       VACATION_DATA = initBaseVacations();
     }
@@ -1935,15 +1966,28 @@
       document.body.removeChild(link);
     }
 
-    // 11. THEME TOGGLE
+    // 11. THEME TOGGLE (Defaults to Light)
+    function initTheme() {
+      try {
+        const savedTheme = localStorage.getItem('suaglow_theme') || 'light';
+        document.body.setAttribute('data-theme', savedTheme);
+      } catch (e) {
+        document.body.setAttribute('data-theme', 'light');
+      }
+    }
+
     function toggleTheme() {
       const body = document.body;
-      const cur = body.getAttribute('data-theme');
+      const cur = body.getAttribute('data-theme') || 'light';
       const next = cur === 'dark' ? 'light' : 'dark';
       body.setAttribute('data-theme', next);
+      try {
+        localStorage.setItem('suaglow_theme', next);
+      } catch (e) {}
     }
 
     // Initial load
+    initTheme();
     renderSummaryAndFilters();
     renderCalendar();
     renderTable();
