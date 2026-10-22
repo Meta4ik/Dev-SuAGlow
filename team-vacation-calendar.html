@@ -239,6 +239,81 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
+    
+    .btn-add-emp {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: rgba(56, 189, 248, 0.4);
+      color: var(--accent);
+    }
+    .btn-add-emp:hover {
+      background: rgba(56, 189, 248, 0.22);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .add-employee-card {
+      border: 2px dashed var(--card-border);
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-muted);
+      cursor: pointer;
+      min-height: 80px;
+    }
+    .add-employee-card:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-glow);
+    }
+
+    .color-picker-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .color-swatch {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .color-swatch:hover {
+      transform: scale(1.15);
+    }
+    .color-swatch.selected {
+      border-color: #fff;
+      transform: scale(1.1);
+      box-shadow: 0 0 0 2px var(--card-bg), 0 0 8px rgba(255,255,255,0.5);
+    }
+
+    .emp-delete-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      font-size: 13px;
+      cursor: pointer;
+      padding: 2px 6px;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.15s ease, color 0.15s ease;
+    }
+    .summary-card:hover .emp-delete-btn {
+      opacity: 1;
+    }
+    .emp-delete-btn:hover {
+      color: #ef4444;
+      background: rgba(239, 68, 68, 0.15);
+    }
+
     /* STATS & SUMMARY BAR */
     .summary-grid {
       display: grid;
@@ -948,54 +1023,33 @@
     </header>
 
     <!-- SUMMARY METRICS -->
-    <div class="summary-grid">
-      <div class="summary-card" onclick="filterByPerson('ALL')">
-        <div class="summary-avatar avatar-team">ALL</div>
-        <div class="summary-info">
-          <h3>Total Vacation Days</h3>
-          <div class="days-count" id="statTotalDays">91 <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">person-days</span></div>
-          <div class="destinations">Denver, Asia, Korea, Springfield, Holidays</div>
-        </div>
-      </div>
-
-      <div class="summary-card" id="cardKameron" onclick="filterByPerson('Kameron')">
-        <div class="summary-avatar avatar-kameron">K</div>
-        <div class="summary-info">
-          <h3>Kameron</h3>
-          <div class="days-count" id="statKameron">38 <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span></div>
-          <div class="destinations">Denver (7d), Asia (30d), Springfield (1d)</div>
-        </div>
-      </div>
-
-      <div class="summary-card" id="cardIrene" onclick="filterByPerson('Irene')">
-        <div class="summary-avatar avatar-irene">I</div>
-        <div class="summary-info">
-          <h3>Irene</h3>
-          <div class="days-count" id="statIrene">28 <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span></div>
-          <div class="destinations">Korea (28d in Nov)</div>
-        </div>
-      </div>
-
-      <div class="summary-card" id="cardSophia" onclick="filterByPerson('Sophia')">
-        <div class="summary-avatar avatar-sophia">S</div>
-        <div class="summary-info">
-          <h3>Sophia</h3>
-          <div class="days-count" id="statSophia">19 <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span></div>
-          <div class="destinations">Springfield (1d), Korea (18d in Dec)</div>
-        </div>
-      </div>
-
-      <div class="summary-card" id="cardMarcus" onclick="filterByPerson('Marcus')">
-        <div class="summary-avatar avatar-marcus">M</div>
-        <div class="summary-info">
-          <h3>Marcus</h3>
-          <div class="days-count" id="statMarcus">6 <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span></div>
-          <div class="destinations">Thanksgiving (3d), Christmas (3d)</div>
-        </div>
-      </div>
+    <div class="summary-grid" id="summaryGrid">
+      <!-- Rendered dynamically by JavaScript -->
     </div>
 
     <!-- CONTROLS: Filter by Person, Location, Month, and Search -->
+    <div class="controls-bar">
+      <div class="filter-group">
+        <span class="filter-label">Filter:</span>
+        <div id="personFiltersContainer" style="display: inline-flex; gap: 8px; flex-wrap: wrap;">
+          <!-- Rendered dynamically by JavaScript -->
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Month:</span>
+        <button class="pill-filter active" data-month="ALL" onclick="filterByMonth('ALL')">All Months</button>
+        <button class="pill-filter" data-month="2026-10" onclick="filterByMonth('2026-10')">Oct 2026</button>
+        <button class="pill-filter" data-month="2026-11" onclick="filterByMonth('2026-11')">Nov 2026</button>
+        <button class="pill-filter" data-month="2026-12" onclick="filterByMonth('2026-12')">Dec 2026</button>
+        <button class="pill-filter" data-month="2027-01" onclick="filterByMonth('2027-01')">Jan 2027</button>
+      </div>
+
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search person, city, holiday..." oninput="handleSearch()">
+      </div>
+    </div>
     <div class="controls-bar">
       <div class="filter-group">
         <span class="filter-label">Filter:</span>
@@ -1054,89 +1108,16 @@
 
     <!-- TIMELINE / GANTT VIEW -->
     <div id="timelineView" class="timeline-container" style="display: none;">
-      <div style="border-bottom: 1px solid var(--card-border); padding-bottom: 12px;">
-        <h2 style="font-size: 18px; font-weight: 800;">Team Trip Timeline & Overlaps</h2>
-        <p style="font-size: 13px; color: var(--text-muted)">Overview of planned vacations, multi-day journeys, and team overlap windows.</p>
+      <div style="border-bottom: 1px solid var(--card-border); padding-bottom: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <h2 style="font-size: 18px; font-weight: 800;">Team Trip Timeline & Overlaps</h2>
+          <p style="font-size: 13px; color: var(--text-muted)">Overview of planned vacations, multi-day journeys, and team overlap windows.</p>
+        </div>
+        <button onclick="openEmployeeModal()" class="btn-add-emp" style="font-size: 12px; padding: 6px 12px;">+ Add Employee</button>
       </div>
 
-      <!-- MARCUS TIMELINE ROW -->
-      <div class="timeline-row">
-        <div class="timeline-person-header">
-          <div class="summary-avatar avatar-marcus" style="width: 28px; height: 28px; font-size: 12px;">M</div>
-          <span>Marcus (2 Holiday Breaks • 6 Days Total)</span>
-        </div>
-        <div class="timeline-tracks">
-          <div class="trip-card" style="border-left: 4px solid var(--marcus-color);">
-            <div class="trip-dest">Thanksgiving Break (Eve + Day + Day After)</div>
-            <div class="trip-dates">Nov 25 – Nov 27, 2026 (3 days)</div>
-          </div>
-          <div class="trip-card" style="border-left: 4px solid var(--marcus-color);">
-            <div class="trip-dest">Christmas Break (Christmas Eve + Day + Day After)</div>
-            <div class="trip-dates">Dec 24 – Dec 26, 2026 (3 days)</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- KAMERON TIMELINE ROW -->
-      <div class="timeline-row">
-        <div class="timeline-person-header">
-          <div class="summary-avatar avatar-kameron" style="width: 28px; height: 28px; font-size: 12px;">K</div>
-          <span>Kameron (3 Trips • 38 Days Total)</span>
-        </div>
-        <div class="timeline-tracks">
-          <div class="trip-card" style="border-left: 4px solid var(--kameron-color);">
-            <div class="trip-dest">Denver, CO</div>
-            <div class="trip-dates">Oct 1 – Oct 7, 2026 (7 days)</div>
-          </div>
-          <div class="trip-card" style="border-left: 4px solid var(--multi-color);">
-            <div class="trip-dest">Springfield, IL (with Sophia)</div>
-            <div class="trip-dates">Oct 26, 2026 (1 day)</div>
-          </div>
-          <div class="trip-card" style="border-left: 4px solid var(--kameron-color);">
-            <div class="trip-dest">Asia Tour</div>
-            <div class="trip-dates">Nov 4 – Dec 4, 2026 (31 continuous days)</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- IRENE TIMELINE ROW -->
-      <div class="timeline-row">
-        <div class="timeline-person-header">
-          <div class="summary-avatar avatar-irene" style="width: 28px; height: 28px; font-size: 12px;">I</div>
-          <span>Irene (1 Trip • 28 Days Total)</span>
-        </div>
-        <div class="timeline-tracks">
-          <div class="trip-card" style="border-left: 4px solid var(--irene-color);">
-            <div class="trip-dest">Korea</div>
-            <div class="trip-dates">Nov 2 – Nov 29, 2026 (28 continuous days)</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SOPHIA TIMELINE ROW -->
-      <div class="timeline-row">
-        <div class="timeline-person-header">
-          <div class="summary-avatar avatar-sophia" style="width: 28px; height: 28px; font-size: 12px;">S</div>
-          <span>Sophia (4 Trips • 19 Days Total)</span>
-        </div>
-        <div class="timeline-tracks">
-          <div class="trip-card" style="border-left: 4px solid var(--multi-color);">
-            <div class="trip-dest">Springfield, IL (with Kameron)</div>
-            <div class="trip-dates">Oct 26, 2026 (1 day)</div>
-          </div>
-          <div class="trip-card" style="border-left: 4px solid var(--sophia-color);">
-            <div class="trip-dest">Korea (Week 1)</div>
-            <div class="trip-dates">Dec 8 – Dec 13, 2026 (6 days)</div>
-          </div>
-          <div class="trip-card" style="border-left: 4px solid var(--sophia-color);">
-            <div class="trip-dest">Korea (Week 2)</div>
-            <div class="trip-dates">Dec 15 – Dec 20, 2026 (6 days)</div>
-          </div>
-          <div class="trip-card" style="border-left: 4px solid var(--sophia-color);">
-            <div class="trip-dest">Korea (Week 3 / Christmas)</div>
-            <div class="trip-dates">Dec 22 – Dec 27, 2026 (6 days)</div>
-          </div>
-        </div>
+      <div id="dynamicTimelineRows" style="display: flex; flex-direction: column; gap: 18px;">
+        <!-- Dynamically rendered timeline rows per employee -->
       </div>
 
       <!-- OVERLAP CALLOUT -->
@@ -1152,6 +1133,40 @@
       </div>
     </div>
 
+  </div>
+
+  
+  <!-- ADD / MANAGE EMPLOYEE MODAL -->
+  <div class="modal-overlay" id="employeeModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Add Team Member</h2>
+        <button onclick="closeEmployeeModal()" style="border: none; background: transparent; font-size: 18px; color: var(--text-dim); cursor: pointer;">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="inputEmpName">Employee Name *</label>
+          <input type="text" id="inputEmpName" placeholder="e.g. Jasmine, Micky, Sarah" autofocus>
+        </div>
+        <div class="form-group">
+          <label for="inputEmpRole">Role / Title (Optional)</label>
+          <input type="text" id="inputEmpRole" placeholder="e.g. Aesthetician, Nurse Injector, Front Desk">
+        </div>
+        <div class="form-group">
+          <label>Theme Badge Color</label>
+          <div class="color-picker-grid" id="colorPickerGrid"></div>
+          <input type="hidden" id="selectedEmpColor" value="#a855f7">
+        </div>
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--card-border); border-radius: 8px; padding: 10px 14px; font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 16px;">💡</span>
+          <span>Adding an employee instantly generates their summary card, timeline track, and calendar filter.</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeEmployeeModal()">Cancel</button>
+        <button class="primary" onclick="saveNewEmployee()">Save Employee</button>
+      </div>
+    </div>
   </div>
 
   <!-- ADD / EDIT VACATION MODAL -->
@@ -1196,7 +1211,7 @@
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
-    // 1. DATA DEFINITIONS
+    // 1. DATA DEFINITIONS & TEAM MANAGEMENT
     const HOLIDAYS = {
       '2026-10-12': "Columbus Day",
       '2026-11-11': "Veterans Day",
@@ -1206,10 +1221,80 @@
       '2027-01-18': "Martin Luther King Jr. Day"
     };
 
-    // Initial parsed dataset from user CSV & Team updates
-    let VACATION_DATA = [];
+    const PRESET_COLORS = [
+      '#a855f7', // Purple
+      '#ec4899', // Pink
+      '#06b6d4', // Cyan
+      '#10b981', // Emerald
+      '#f59e0b', // Amber
+      '#6366f1', // Indigo
+      '#38bdf8', // Sky Blue
+      '#f43f5e'  // Rose
+    ];
 
-    // Helper to add date range
+    const DEFAULT_TEAM_MEMBERS = [
+      { id: 'Kameron', name: 'Kameron', role: 'Team Member', color: '#818cf8', bg: 'rgba(129, 140, 248, 0.15)', border: 'rgba(129, 140, 248, 0.35)', isCustom: false },
+      { id: 'Irene', name: 'Irene', role: 'Team Member', color: '#34d399', bg: 'rgba(52, 211, 153, 0.15)', border: 'rgba(52, 211, 153, 0.35)', isCustom: false },
+      { id: 'Sophia', name: 'Sophia', role: 'Team Member', color: '#fb7185', bg: 'rgba(251, 113, 133, 0.15)', border: 'rgba(251, 113, 133, 0.35)', isCustom: false },
+      { id: 'Marcus', name: 'Marcus', role: 'Team Member', color: '#38bdf8', bg: 'rgba(56, 189, 248, 0.15)', border: 'rgba(56, 189, 248, 0.35)', isCustom: false }
+    ];
+
+    let TEAM_MEMBERS = [];
+    try {
+      const savedMembers = localStorage.getItem('suaglow_team_members');
+      TEAM_MEMBERS = savedMembers ? JSON.parse(savedMembers) : DEFAULT_TEAM_MEMBERS;
+    } catch (e) {
+      TEAM_MEMBERS = DEFAULT_TEAM_MEMBERS;
+    }
+
+    // Helper to calculate RGBA
+    function hexToRgba(hex, alpha) {
+      hex = hex.replace('#', '');
+      if (hex.length === 3) {
+        hex = hex.split('').map(c => c + c).join('');
+      }
+      const r = parseInt(hex.substring(0, 2), 16) || 120;
+      const g = parseInt(hex.substring(2, 4), 16) || 120;
+      const b = parseInt(hex.substring(4, 6), 16) || 120;
+      return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    }
+
+    // Initial base vacations
+    function initBaseVacations() {
+      const base = [];
+      function addBaseRange(person, destination, startStr, endStr) {
+        const cur = new Date(startStr + 'T00:00:00');
+        const end = new Date(endStr + 'T00:00:00');
+        while (cur <= end) {
+          const y = cur.getFullYear();
+          const m = String(cur.getMonth() + 1).padStart(2, '0');
+          const d = String(cur.getDate()).padStart(2, '0');
+          base.push({ date: `${y}-${m}-${d}`, person: person, destination: destination });
+          cur.setDate(cur.getDate() + 1);
+        }
+      }
+      addBaseRange('Kameron', 'Denver', '2026-10-01', '2026-10-07');
+      addBaseRange('Sophia & Kameron', 'Springfield IL', '2026-10-26', '2026-10-26');
+      addBaseRange('Irene', 'Korea', '2026-11-02', '2026-11-29');
+      addBaseRange('Kameron', 'Asia', '2026-11-04', '2026-11-29');
+      addBaseRange('Marcus', 'Thanksgiving Break', '2026-11-25', '2026-11-27');
+      addBaseRange('Kameron', 'Asia', '2026-12-01', '2026-12-04');
+      addBaseRange('Sophia', 'Korea', '2026-12-08', '2026-12-13');
+      addBaseRange('Sophia', 'Korea', '2026-12-15', '2026-12-20');
+      addBaseRange('Sophia', 'Korea', '2026-12-22', '2026-12-27');
+      addBaseRange('Marcus', 'Christmas Break', '2026-12-24', '2026-12-26');
+      return base;
+    }
+
+    let VACATION_DATA = [];
+    try {
+      const savedVacations = localStorage.getItem('suaglow_vacation_data');
+      VACATION_DATA = savedVacations ? JSON.parse(savedVacations) : initBaseVacations();
+    } catch (e) {
+      VACATION_DATA = initBaseVacations();
+    }
+
+    // Helper to add vacation range and persist
     function addRange(person, destination, startStr, endStr) {
       const cur = new Date(startStr + 'T00:00:00');
       const end = new Date(endStr + 'T00:00:00');
@@ -1217,45 +1302,18 @@
         const y = cur.getFullYear();
         const m = String(cur.getMonth() + 1).padStart(2, '0');
         const d = String(cur.getDate()).padStart(2, '0');
-        const dateKey = `${y}-${m}-${d}`;
         VACATION_DATA.push({
-          date: dateKey,
+          date: `${y}-${m}-${d}`,
           person: person,
           destination: destination
         });
         cur.setDate(cur.getDate() + 1);
       }
+      try {
+        localStorage.setItem('suaglow_vacation_data', JSON.stringify(VACATION_DATA));
+      } catch (err) {}
     }
 
-    // Populate dataset:
-    // October 2026:
-    // Kameron in Denver: Oct 1 - Oct 7 (Thu Oct 1 to Wed Oct 7)
-    addRange('Kameron', 'Denver', '2026-10-01', '2026-10-07');
-    // Oct 26: Sophia & Kameron in Springfield IL
-    addRange('Sophia & Kameron', 'Springfield IL', '2026-10-26', '2026-10-26');
-
-    // November 2026:
-    // Irene in Korea: Nov 2 - Nov 29 (28 days)
-    addRange('Irene', 'Korea', '2026-11-02', '2026-11-29');
-    // Kameron in Asia: Nov 4 - Nov 29 (26 days in Nov)
-    addRange('Kameron', 'Asia', '2026-11-04', '2026-11-29');
-    // Marcus Thanksgiving Break: Nov 25 - Nov 27 (Day before Thanksgiving, Thanksgiving Day, Day after)
-    addRange('Marcus', 'Thanksgiving Break', '2026-11-25', '2026-11-27');
-
-    // December 2026:
-    // Kameron in Asia: Dec 1 - Dec 4 (Tue Dec 1 to Fri Dec 4)
-    addRange('Kameron', 'Asia', '2026-12-01', '2026-12-04');
-    // Sophia in Korea:
-    // Dec 8 - Dec 13 (Tue-Sun)
-    addRange('Sophia', 'Korea', '2026-12-08', '2026-12-13');
-    // Dec 15 - Dec 20 (Tue-Sun)
-    addRange('Sophia', 'Korea', '2026-12-15', '2026-12-20');
-    // Dec 22 - Dec 27 (Tue-Sun)
-    addRange('Sophia', 'Korea', '2026-12-22', '2026-12-27');
-    // Marcus Christmas Break: Dec 24 - Dec 26 (Christmas Eve, Christmas Day, Day after)
-    addRange('Marcus', 'Christmas Break', '2026-12-24', '2026-12-26');
-
-    // Active filters & sorting states
     let currentFilterPerson = 'ALL';
     let currentFilterMonth = 'ALL';
     let currentSearchQuery = '';
@@ -1269,9 +1327,183 @@
       '2027-01': 'January 2027'
     };
 
-    // 2. RENDERING CALENDAR
+    // Find style for a person
+    function getPersonMeta(name) {
+      const member = TEAM_MEMBERS.find(m => m.name.toLowerCase() === name.toLowerCase());
+      if (member) return member;
+      if (name.includes('&')) {
+        return {
+          name: name,
+          color: '#f59e0b',
+          bg: 'rgba(245, 158, 11, 0.15)',
+          border: 'rgba(245, 158, 11, 0.35)',
+          avatar: '&'
+        };
+      }
+      return {
+        name: name,
+        color: '#94a3b8',
+        bg: 'rgba(148, 163, 184, 0.15)',
+        border: 'rgba(148, 163, 184, 0.35)',
+        avatar: name.charAt(0).toUpperCase()
+      };
+    }
+
+    // 2. RENDERING SUMMARY GRID & FILTER PILLS
+    function renderSummaryAndFilters() {
+      // Summary Grid
+      const grid = document.getElementById('summaryGrid');
+      if (grid) {
+        let totalDays = VACATION_DATA.length;
+        let html = `
+          <div class="summary-card ${currentFilterPerson === 'ALL' ? 'active-filter' : ''}" onclick="filterByPerson('ALL')">
+            <div class="summary-avatar avatar-team">ALL</div>
+            <div class="summary-info">
+              <h3>Total Scheduled Days</h3>
+              <div class="days-count">${totalDays} <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">person-days</span></div>
+              <div class="destinations">${TEAM_MEMBERS.length} active team members</div>
+            </div>
+          </div>
+        `;
+
+        TEAM_MEMBERS.forEach(m => {
+          let days = 0;
+          let dests = new Set();
+          VACATION_DATA.forEach(v => {
+            if (v.person.toLowerCase().includes(m.name.toLowerCase())) {
+              days++;
+              dests.add(v.destination);
+            }
+          });
+          const destList = Array.from(dests).join(', ') || 'No trips scheduled';
+          const isActive = currentFilterPerson === m.name ? 'active-filter' : '';
+          const initial = m.name.charAt(0).toUpperCase();
+
+          html += `
+            <div class="summary-card ${isActive}" id="card-${m.name}" onclick="filterByPerson('${m.name}')" style="border-top: 3px solid ${m.color}">
+              ${m.isCustom ? `<button class="emp-delete-btn" onclick="deleteEmployee(event, '${m.id}')" title="Delete employee">✕</button>` : ''}
+              <div class="summary-avatar" style="background: ${m.bg}; color: ${m.color}; border: 1px solid ${m.border}; font-weight: 800;">
+                ${initial}
+              </div>
+              <div class="summary-info">
+                <h3>${m.name} ${m.role && m.role !== 'Team Member' ? `<span style="font-size:11px; font-weight:normal; color:var(--text-dim);">(${m.role})</span>` : ''}</h3>
+                <div class="days-count" style="color: ${m.color};">${days} <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span></div>
+                <div class="destinations" title="${destList}">${destList}</div>
+              </div>
+            </div>
+          `;
+        });
+
+        // Add Employee quick card
+        html += `
+          <div class="summary-card add-employee-card" onclick="openEmployeeModal()" title="Add another team member">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+              <span style="font-size: 20px;">＋</span>
+              <span style="font-size: 12px; font-weight: 700;">Add Employee</span>
+            </div>
+          </div>
+        `;
+
+        grid.innerHTML = html;
+      }
+
+      // Filter Pills
+      const pillsContainer = document.getElementById('personFiltersContainer');
+      if (pillsContainer) {
+        let phtml = `
+          <button class="pill-filter ${currentFilterPerson === 'ALL' ? 'active' : ''}" onclick="filterByPerson('ALL')">All Team</button>
+        `;
+        TEAM_MEMBERS.forEach(m => {
+          const isActive = currentFilterPerson === m.name;
+          const activeStyle = isActive ? `background: ${m.color}; border-color: ${m.color}; color: #fff;` : '';
+          phtml += `
+            <button class="pill-filter ${isActive ? 'active' : ''}" onclick="filterByPerson('${m.name}')" style="${activeStyle}">
+              ${m.name}
+            </button>
+          `;
+        });
+        pillsContainer.innerHTML = phtml;
+      }
+
+      // Update Person Dropdown in Add PTO Modal
+      const personSelect = document.getElementById('inputPerson');
+      if (personSelect) {
+        let shtml = '';
+        TEAM_MEMBERS.forEach(m => {
+          shtml += `<option value="${m.name}">${m.name}${m.role && m.role !== 'Team Member' ? ` (${m.role})` : ''}</option>`;
+        });
+        shtml += `<option value="Sophia & Kameron">Sophia & Kameron (Joint)</option>`;
+        personSelect.innerHTML = shtml;
+      }
+
+      // Update Timeline Rows
+      renderTimelineTracks();
+    }
+
+    // 3. TIMELINE RENDERING
+    function renderTimelineTracks() {
+      const container = document.getElementById('dynamicTimelineRows');
+      if (!container) return;
+
+      let html = '';
+      TEAM_MEMBERS.forEach(m => {
+        // Collect contiguous trip intervals for this person
+        const personVacs = VACATION_DATA.filter(v => v.person.toLowerCase().includes(m.name.toLowerCase()));
+        personVacs.sort((a, b) => a.date.localeCompare(b.date));
+
+        // Group into contiguous blocks with same destination
+        const trips = [];
+        let currentTrip = null;
+
+        personVacs.forEach(v => {
+          if (!currentTrip) {
+            currentTrip = { dest: v.destination, start: v.date, end: v.date, count: 1 };
+          } else {
+            const prevDate = new Date(currentTrip.end + 'T00:00:00');
+            const thisDate = new Date(v.date + 'T00:00:00');
+            const diffDays = Math.round((thisDate - prevDate) / (1000 * 60 * 60 * 24));
+
+            if (diffDays <= 1 && currentTrip.dest === v.destination) {
+              currentTrip.end = v.date;
+              currentTrip.count++;
+            } else {
+              trips.push(currentTrip);
+              currentTrip = { dest: v.destination, start: v.date, end: v.date, count: 1 };
+            }
+          }
+        });
+        if (currentTrip) trips.push(currentTrip);
+
+        const totalDays = personVacs.length;
+        const initial = m.name.charAt(0).toUpperCase();
+
+        html += `
+          <div class="timeline-row">
+            <div class="timeline-person-header">
+              <div class="summary-avatar" style="width: 28px; height: 28px; font-size: 12px; background: ${m.bg}; color: ${m.color}; border: 1px solid ${m.border};">
+                ${initial}
+              </div>
+              <span>${m.name} (${trips.length} Trip${trips.length === 1 ? '' : 's'} • ${totalDays} Day${totalDays === 1 ? '' : 's'} Total)</span>
+            </div>
+            <div class="timeline-tracks">
+              ${trips.length > 0 ? trips.map(t => `
+                <div class="trip-card" style="border-left: 4px solid ${m.color};">
+                  <div class="trip-dest">${t.dest}</div>
+                  <div class="trip-dates">${t.start} – ${t.end} (${t.count} day${t.count === 1 ? '' : 's'})</div>
+                </div>
+              `).join('') : '<div style="font-size: 12px; color: var(--text-dim); padding: 6px;">No upcoming trips scheduled</div>'}
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // 4. RENDERING CALENDAR
     function renderCalendar() {
       const container = document.getElementById('calendarView');
+      if (!container) return;
       container.innerHTML = '';
 
       const targetMonths = currentFilterMonth === 'ALL' ? MONTH_KEYS : [currentFilterMonth];
@@ -1279,12 +1511,11 @@
       targetMonths.forEach(mKey => {
         const [yearStr, monthStr] = mKey.split('-');
         const year = parseInt(yearStr, 10);
-        const monthIndex = parseInt(monthStr, 10) - 1; // 0-based
+        const monthIndex = parseInt(monthStr, 10) - 1;
 
         const block = document.createElement('div');
         block.className = 'month-block';
 
-        // Month Header
         const header = document.createElement('div');
         header.className = 'month-header-bar';
         header.innerHTML = `
@@ -1296,7 +1527,6 @@
         `;
         block.appendChild(header);
 
-        // Weekday Names: MON to SUN
         const weekdaysBar = document.createElement('div');
         weekdaysBar.className = 'weekdays-header';
         const dayNames = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
@@ -1308,18 +1538,16 @@
         });
         block.appendChild(weekdaysBar);
 
-        // Days Grid
         const grid = document.createElement('div');
         grid.className = 'days-grid';
 
         const firstDay = new Date(year, monthIndex, 1);
-        let firstDayOfWeek = firstDay.getDay() - 1; // Mon=0, Sun=6
+        let firstDayOfWeek = firstDay.getDay() - 1;
         if (firstDayOfWeek === -1) firstDayOfWeek = 6;
 
         const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
         const daysInPrevMonth = new Date(year, monthIndex, 0).getDate();
 
-        // Previous month padding cells
         for (let i = 0; i < firstDayOfWeek; i++) {
           const prevDayNum = daysInPrevMonth - firstDayOfWeek + i + 1;
           const cell = document.createElement('div');
@@ -1328,7 +1556,6 @@
           grid.appendChild(cell);
         }
 
-        // Current month cells
         for (let day = 1; day <= daysInMonth; day++) {
           const cell = document.createElement('div');
           cell.className = 'day-cell';
@@ -1352,7 +1579,6 @@
             </div>
           `;
 
-          // Check for Holiday
           if (HOLIDAYS[dateStr]) {
             html += `
               <div class="holiday-badge" title="${HOLIDAYS[dateStr]}">
@@ -1362,18 +1588,12 @@
             `;
           }
 
-          // Check for Vacations matching filters
           const items = VACATION_DATA.filter(v => v.date === dateStr);
           items.forEach(v => {
-            // Apply Person Filter
             if (currentFilterPerson !== 'ALL') {
-              if (currentFilterPerson === 'Kameron' && !v.person.includes('Kameron')) return;
-              if (currentFilterPerson === 'Irene' && !v.person.includes('Irene')) return;
-              if (currentFilterPerson === 'Sophia' && !v.person.includes('Sophia')) return;
-              if (currentFilterPerson === 'Marcus' && !v.person.includes('Marcus')) return;
+              if (!v.person.toLowerCase().includes(currentFilterPerson.toLowerCase())) return;
             }
 
-            // Apply Search Query
             if (currentSearchQuery) {
               const q = currentSearchQuery.toLowerCase();
               const match = v.person.toLowerCase().includes(q) || 
@@ -1382,15 +1602,12 @@
               if (!match) return;
             }
 
-            let pillClass = 'kameron';
-            if (v.person === 'Irene') pillClass = 'irene';
-            if (v.person === 'Sophia') pillClass = 'sophia';
-            if (v.person === 'Marcus') pillClass = 'marcus';
-            if (v.person.includes('&')) pillClass = 'multi';
+            const meta = getPersonMeta(v.person);
+            const styleAttr = `background: ${meta.bg}; color: ${meta.color}; border: 1px solid ${meta.border};`;
 
             html += `
-              <div class="vacation-pill ${pillClass}" title="${v.person} • ${v.destination} (${dateStr})" onclick="showDayDetails('${dateStr}', '${v.person}', '${v.destination}')">
-                <span class="dot"></span>
+              <div class="vacation-pill" style="${styleAttr}" title="${v.person} • ${v.destination} (${dateStr})" onclick="showDayDetails('${dateStr}', '${v.person}', '${v.destination}')">
+                <span class="dot" style="background: ${meta.color};"></span>
                 <span>${v.person.split('&')[0].trim()} • ${v.destination}</span>
               </div>
             `;
@@ -1400,7 +1617,6 @@
           grid.appendChild(cell);
         }
 
-        // Next month padding cells
         const totalCells = firstDayOfWeek + daysInMonth;
         const remainder = totalCells % 7;
         if (remainder !== 0) {
@@ -1418,9 +1634,10 @@
       });
     }
 
-    // 3. TABLE RENDERING & SORTING
+    // 5. TABLE RENDERING & SORTING
     function renderTable() {
       const tbody = document.getElementById('tableBody');
+      if (!tbody) return;
       tbody.innerHTML = '';
 
       let rows = [];
@@ -1436,7 +1653,6 @@
         });
       });
 
-      // Standalone holidays
       Object.keys(HOLIDAYS).forEach(hDate => {
         const hasVacation = VACATION_DATA.some(v => v.date === hDate);
         if (!hasVacation) {
@@ -1451,20 +1667,17 @@
         }
       });
 
-      // Filter by Month
       if (currentFilterMonth !== 'ALL') {
         rows = rows.filter(r => r.month === currentFilterMonth);
       }
 
-      // Filter by Person
       if (currentFilterPerson !== 'ALL') {
         rows = rows.filter(r => {
           if (r.person.includes('All Team')) return true;
-          return r.person.includes(currentFilterPerson);
+          return r.person.toLowerCase().includes(currentFilterPerson.toLowerCase());
         });
       }
 
-      // Filter by Search Query
       if (currentSearchQuery) {
         const q = currentSearchQuery.toLowerCase();
         rows = rows.filter(r => 
@@ -1475,7 +1688,6 @@
         );
       }
 
-      // Sorting
       rows.sort((a, b) => {
         let valA = a[sortColumn];
         let valB = b[sortColumn];
@@ -1495,19 +1707,15 @@
 
       rows.forEach(r => {
         const tr = document.createElement('tr');
-
-        let personBadgeClass = 'kameron';
-        if (r.person.includes('Irene')) personBadgeClass = 'irene';
-        if (r.person.includes('Sophia')) personBadgeClass = 'sophia';
-        if (r.person.includes('Marcus')) personBadgeClass = 'marcus';
-        if (r.person.includes('&')) personBadgeClass = 'multi';
-        if (r.person.includes('All Team')) personBadgeClass = 'holiday-badge';
+        const meta = getPersonMeta(r.person);
+        const badgeStyle = r.person.includes('All Team') ? '' : `background: ${meta.bg}; color: ${meta.color}; border: 1px solid ${meta.border};`;
+        const badgeClass = r.person.includes('All Team') ? 'holiday-badge' : 'badge';
 
         tr.innerHTML = `
           <td style="font-family: 'JetBrains Mono', monospace; font-weight: 600;">${r.date}</td>
           <td style="color: var(--text-muted);">${r.day}</td>
           <td>
-            <span class="badge ${personBadgeClass}">
+            <span class="${badgeClass}" style="${badgeStyle}">
               ${r.person}
             </span>
           </td>
@@ -1545,7 +1753,7 @@
       renderTable();
     }
 
-    // 4. VIEW SWITCHING
+    // 6. VIEW SWITCHING
     function switchView(viewName) {
       document.getElementById('calendarView').style.display = viewName === 'calendar' ? 'flex' : 'none';
       document.getElementById('tableView').style.display = viewName === 'table' ? 'block' : 'none';
@@ -1561,31 +1769,19 @@
       }
     }
 
-    // 5. FILTERING
+    // 7. FILTERING
     function filterByPerson(person) {
       currentFilterPerson = person;
-      
-      document.querySelectorAll('.filter-group button[data-person]').forEach(btn => {
-        btn.classList.toggle('active', btn.getAttribute('data-person') === person);
-      });
-
-      document.querySelectorAll('.summary-card').forEach(c => c.classList.remove('active-filter'));
-      if (person === 'Kameron') document.getElementById('cardKameron').classList.add('active-filter');
-      if (person === 'Irene') document.getElementById('cardIrene').classList.add('active-filter');
-      if (person === 'Sophia') document.getElementById('cardSophia').classList.add('active-filter');
-      if (person === 'Marcus') document.getElementById('cardMarcus').classList.add('active-filter');
-
+      renderSummaryAndFilters();
       renderCalendar();
       renderTable();
     }
 
     function filterByMonth(monthKey) {
       currentFilterMonth = monthKey;
-
       document.querySelectorAll('.filter-group button[data-month]').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-month') === monthKey);
       });
-
       renderCalendar();
       renderTable();
     }
@@ -1596,7 +1792,97 @@
       renderTable();
     }
 
-    // 6. MODAL & PTO ADDITION
+    // 8. EMPLOYEE MANAGEMENT MODAL
+    function initColorPicker() {
+      const container = document.getElementById('colorPickerGrid');
+      if (!container) return;
+      container.innerHTML = '';
+      PRESET_COLORS.forEach((c, idx) => {
+        const swatch = document.createElement('div');
+        swatch.className = `color-swatch ${idx === 0 ? 'selected' : ''}`;
+        swatch.style.background = c;
+        swatch.onclick = () => {
+          document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('selected'));
+          swatch.classList.add('selected');
+          document.getElementById('selectedEmpColor').value = c;
+        };
+        container.appendChild(swatch);
+      });
+    }
+
+    function openEmployeeModal() {
+      initColorPicker();
+      document.getElementById('inputEmpName').value = '';
+      document.getElementById('inputEmpRole').value = '';
+      document.getElementById('selectedEmpColor').value = PRESET_COLORS[0];
+      document.getElementById('employeeModal').classList.add('open');
+      setTimeout(() => document.getElementById('inputEmpName').focus(), 100);
+    }
+
+    function closeEmployeeModal() {
+      document.getElementById('employeeModal').classList.remove('open');
+    }
+
+    function saveNewEmployee() {
+      const name = document.getElementById('inputEmpName').value.trim();
+      const role = document.getElementById('inputEmpRole').value.trim() || 'Team Member';
+      const color = document.getElementById('selectedEmpColor').value || '#a855f7';
+
+      if (!name) {
+        alert('Please enter an employee name.');
+        return;
+      }
+
+      // Check duplicates
+      const exists = TEAM_MEMBERS.some(m => m.name.toLowerCase() === name.toLowerCase());
+      if (exists) {
+        alert(`An employee named "${name}" already exists.`);
+        return;
+      }
+
+      const newMember = {
+        id: 'emp_' + Date.now(),
+        name: name,
+        role: role,
+        color: color,
+        bg: hexToRgba(color, 0.15),
+        border: hexToRgba(color, 0.35),
+        isCustom: true
+      };
+
+      TEAM_MEMBERS.push(newMember);
+      try {
+        localStorage.setItem('suaglow_team_members', JSON.stringify(TEAM_MEMBERS));
+      } catch (err) {}
+
+      closeEmployeeModal();
+      renderSummaryAndFilters();
+      renderCalendar();
+      renderTable();
+      alert(`🎉 Added ${name} to the SUA GLOW team! You can now filter by their name and assign PTO.`);
+    }
+
+    function deleteEmployee(event, empId) {
+      event.stopPropagation();
+      const member = TEAM_MEMBERS.find(m => m.id === empId);
+      if (!member) return;
+
+      if (confirm(`Remove ${member.name} from the team roster?`)) {
+        TEAM_MEMBERS = TEAM_MEMBERS.filter(m => m.id !== empId);
+        try {
+          localStorage.setItem('suaglow_team_members', JSON.stringify(TEAM_MEMBERS));
+        } catch (err) {}
+
+        if (currentFilterPerson === member.name) {
+          currentFilterPerson = 'ALL';
+        }
+        renderSummaryAndFilters();
+        renderCalendar();
+        renderTable();
+      }
+    }
+
+    // 9. VACATION / PTO MODAL
     function openModal() {
       document.getElementById('vacationModal').classList.add('open');
     }
@@ -1622,7 +1908,7 @@
 
       addRange(person, destination, start, end);
       closeModal();
-      updateStats();
+      renderSummaryAndFilters();
       renderCalendar();
       renderTable();
       alert(`Added vacation for ${person} (${start} to ${end})`);
@@ -1632,27 +1918,7 @@
       alert(`🗓 Date: ${date}\n👤 Team Member: ${person}\n📍 Destination: ${destination}\n★ Holiday: ${HOLIDAYS[date] || 'None'}`);
     }
 
-    function updateStats() {
-      let kamCount = 0;
-      let ireneCount = 0;
-      let sophiaCount = 0;
-      let marcusCount = 0;
-
-      VACATION_DATA.forEach(v => {
-        if (v.person.includes('Kameron')) kamCount++;
-        if (v.person.includes('Irene')) ireneCount++;
-        if (v.person.includes('Sophia')) sophiaCount++;
-        if (v.person.includes('Marcus')) marcusCount++;
-      });
-
-      document.getElementById('statTotalDays').innerHTML = `${VACATION_DATA.length} <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">person-days</span>`;
-      document.getElementById('statKameron').innerHTML = `${kamCount} <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span>`;
-      document.getElementById('statIrene').innerHTML = `${ireneCount} <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span>`;
-      document.getElementById('statSophia').innerHTML = `${sophiaCount} <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span>`;
-      document.getElementById('statMarcus').innerHTML = `${marcusCount} <span style="font-size: 13px; font-weight: normal; color: var(--text-muted)">days</span>`;
-    }
-
-    // 7. EXPORT CSV
+    // 10. EXPORT CSV
     function exportToCSV() {
       let csvContent = "data:text/csv;charset=utf-8,Date,Day,Team Member,Destination,Holiday\n";
       VACATION_DATA.forEach(v => {
@@ -1669,7 +1935,7 @@
       document.body.removeChild(link);
     }
 
-    // 8. THEME TOGGLE
+    // 11. THEME TOGGLE
     function toggleTheme() {
       const body = document.body;
       const cur = body.getAttribute('data-theme');
@@ -1678,8 +1944,10 @@
     }
 
     // Initial load
+    renderSummaryAndFilters();
     renderCalendar();
     renderTable();
   </script>
+
 </body>
 </html>
