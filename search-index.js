@@ -2461,8 +2461,8 @@ const SEARCH_INDEX = [
     "title": "SUA GLOW",
     "pageTitle": "SUA GLOW",
     "category": "Spa Treatments",
-    "content": "Team Vacation Calendar Oct 2026 – Jan 2027 • Track PTO, holidays, overlapping travel & coverage Total Vacation Days Kameron Irene Sophia Marcus Sortable Team Vacation Schedule Click any column header to sort ascending or descending. Team Trip Timeline & Overlaps Overview of planned vacations, multi-day journeys, and team overlap windows. • Nov 25 – Nov 27 (Thanksgiving window): Kameron (in Asia), Irene (in Korea), and Marcus (Thanksgiving break) are all off. • Dec 24 – Dec 26 (Christmas window): Both Sophia (in Korea) and Marcus (Christmas break) are off simultaneously with the Christmas holiday. Add Vacation / PTO",
-    "snippet": "Team Vacation Calendar Oct 2026 – Jan 2027 • Track PTO, holidays, overlapping travel & coverage Total Vacation Days Kameron Irene Sophia Marcus Sortable Team Va..."
+    "content": "Team Vacation Calendar Oct 2026 – Jan 2027 • Track PTO, holidays, overlapping travel & coverage Sortable Team Vacation Schedule Click any column header to sort ascending or descending. Team Trip Timeline & Overlaps Overview of planned vacations, multi-day journeys, and team overlap windows. • Nov 25 – Nov 27 (Thanksgiving window): Kameron (in Asia), Irene (in Korea), and Marcus (Thanksgiving break) are all off. • Dec 24 – Dec 26 (Christmas window): Both Sophia (in Korea) and Marcus (Christmas break) are off simultaneously with the Christmas holiday. Add Team Member Add Vacation / PTO",
+    "snippet": "Team Vacation Calendar Oct 2026 – Jan 2027 • Track PTO, holidays, overlapping travel & coverage Sortable Team Vacation Schedule Click any column header to sort ..."
   },
   {
     "url": "testimonials.html#hero",
