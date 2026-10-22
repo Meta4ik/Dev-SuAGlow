@@ -4,9 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUA GLOW | Team Vacation Calendar (2026 - 2027)</title>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Firebase SDK (Compat) for Live Real-Time Cloud Sync -->
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
   <style>
     :root {
       --bg: #0d1117;
@@ -979,7 +984,12 @@
               <span class="badge-org">SUA GLOW</span>
               <h1>Team Vacation Calendar</h1>
             </div>
-            <p class="subtitle">Oct 2026 – Jan 2027 • Track PTO, holidays, overlapping travel & coverage</p>
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 3px;">
+              <p class="subtitle" style="margin-top: 0;">Oct 2026 – Jan 2027 • Track PTO, holidays, overlapping travel & coverage</p>
+              <div id="cloudSyncStatus" style="display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text-muted); background: rgba(0, 0, 0, 0.04); padding: 2px 8px; border-radius: 12px; border: 1px solid var(--card-border);" title="Live Cloud Sync: Any added employees or PTO automatically sync across all team devices">
+                <span style="font-size: 8px; color: #10b981;">●</span> <span>Live Cloud Sync</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1189,6 +1199,26 @@
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
+    // ── FIREBASE CLOUD DATABASE SYNC CONFIG ──
+    const firebaseConfig = {
+      projectId: "suaglow-a70fc",
+      appId: "1:241093481778:web:6d859fd5b6132471ccb32b",
+      storageBucket: "suaglow-a70fc.firebasestorage.app",
+      apiKey: "AIzaSyAQ6d9613GUwBVsAFozZCeLXrnGGoOEeh0",
+      authDomain: "suaglow-a70fc.firebaseapp.com",
+      messagingSenderId: "241093481778"
+    };
+
+    let db = null;
+    try {
+      if (typeof firebase !== 'undefined') {
+        const fbApp = firebase.initializeApp(firebaseConfig);
+        db = firebase.firestore();
+      }
+    } catch (e) {
+      console.warn("Firebase init:", e);
+    }
+
     // 1. DATA DEFINITIONS & TEAM MANAGEMENT
     const HOLIDAYS = {
       '2026-10-12': "Columbus Day",
@@ -1320,6 +1350,9 @@
       try {
         localStorage.setItem('suaglow_vacation_data', JSON.stringify(VACATION_DATA));
       } catch (err) {}
+      if (db) {
+        db.collection('calendar_data').doc('vacations').set({ items: VACATION_DATA });
+      }
     }
 
     let currentFilterPerson = 'ALL';
@@ -1867,7 +1900,18 @@
       renderSummaryAndFilters();
       renderCalendar();
       renderTable();
-      alert(`🎉 Added ${name} to the SUA GLOW team! You can now filter by their name and assign PTO.`);
+
+      // Cloud Sync across all team members
+      if (db) {
+        db.collection('calendar_data').doc('roster').set({ members: TEAM_MEMBERS })
+          .then(() => alert(`🎉 Added ${name} to SUA GLOW team! Live synced across all devices.`))
+          .catch(err => {
+            console.warn("Cloud roster sync error:", err);
+            alert(`🎉 Added ${name} to the SUA GLOW team!`);
+          });
+      } else {
+        alert(`🎉 Added ${name} to the SUA GLOW team!`);
+      }
     }
 
     function deleteEmployee(event, empId) {
@@ -1880,6 +1924,9 @@
         try {
           localStorage.setItem('suaglow_team_members', JSON.stringify(TEAM_MEMBERS));
         } catch (err) {}
+        if (db) {
+          db.collection('calendar_data').doc('roster').set({ members: TEAM_MEMBERS });
+        }
 
         if (currentFilterPerson === member.name) {
           currentFilterPerson = 'ALL';
@@ -1964,7 +2011,61 @@
     }
 
     // Initial load
+
+    // Real-Time Cloud Synchronization
+    function initCloudSync() {
+      if (!db) return;
+      const statusEl = document.getElementById('cloudSyncStatus');
+
+      // Listen to Real-time Roster Updates
+      db.collection('calendar_data').doc('roster').onSnapshot(doc => {
+        if (doc.exists && doc.data().members && doc.data().members.length > 0) {
+          const cloudMembers = doc.data().members;
+          // Merge to ensure base team is always present
+          DEFAULT_TEAM_MEMBERS.forEach(def => {
+            if (!cloudMembers.some(m => m.name.toLowerCase() === def.name.toLowerCase())) {
+              cloudMembers.push(def);
+            }
+          });
+          TEAM_MEMBERS = cloudMembers;
+          try { localStorage.setItem('suaglow_team_members', JSON.stringify(TEAM_MEMBERS)); } catch(e){}
+          renderSummaryAndFilters();
+          renderCalendar();
+          renderTable();
+        } else {
+          // Initialize remote roster with base team
+          db.collection('calendar_data').doc('roster').set({ members: DEFAULT_TEAM_MEMBERS });
+        }
+        if (statusEl) {
+          statusEl.innerHTML = '<span style="font-size: 8px; color: #10b981;">●</span> <span>Live Cloud Sync</span>';
+          statusEl.style.color = '#10b981';
+        }
+      }, err => {
+        console.warn("Roster listener error:", err);
+        if (statusEl) {
+          statusEl.innerHTML = '<span style="font-size: 8px; color: #f59e0b;">●</span> <span>Local Cache</span>';
+        }
+      });
+
+      // Listen to Real-time Vacations Updates
+      db.collection('calendar_data').doc('vacations').onSnapshot(doc => {
+        if (doc.exists && doc.data().items && doc.data().items.length > 0) {
+          VACATION_DATA = doc.data().items;
+          try { localStorage.setItem('suaglow_vacation_data', JSON.stringify(VACATION_DATA)); } catch(e){}
+          renderSummaryAndFilters();
+          renderCalendar();
+          renderTable();
+        } else {
+          // Initialize remote vacations with base vacations
+          db.collection('calendar_data').doc('vacations').set({ items: initBaseVacations() });
+        }
+      }, err => {
+        console.warn("Vacations listener error:", err);
+      });
+    }
+
     initTheme();
+    initCloudSync();
     renderSummaryAndFilters();
     renderCalendar();
     renderTable();
