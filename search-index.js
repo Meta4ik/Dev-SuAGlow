@@ -2101,7 +2101,7 @@ const SEARCH_INDEX = [
     "title": "Three Collections. One Skin-First Philosophy.",
     "pageTitle": "Skincare Products",
     "category": "Complete 5-Piece Regimen",
-    "content": "Korean skincare isn't about using more products. It's about finding the right formulations for your skin. Give your skin barrier some love. Korean skincare focused on moisture, skin comfort, and healthy-looking skin. Your daily dose of Seoul science. Innovative formulations featuring exosome-related ingredients, PDRN, and peptides for hydration and radiant-looking skin. Cellular Bio-Regeneration Powered by patented marine growth factor c-PDRN® (Hydrolyzed Salmon DNA)—engineered via DOT™ technology to accelerate cellular turnover, restore skin barrier integrity, and optimize recovery. Advanced care. Your skin's next chapter. Specialized Korean home-care formulations incorporated into a routine with individualized guidance for post-procedure recovery, thermal cooling, and dermal restructuring.",
+    "content": "Korean skincare isn't about using more products. It's about finding the right formulations for your skin. Give your skin barrier some love. Korean skincare focused on moisture, skin comfort, and healthy-looking skin.",
     "snippet": "Korean skincare isn't about using more products. It's about finding the right formulations for your skin. Give your skin barrier some love. Korean skincare focu..."
   },
   {
@@ -2397,7 +2397,7 @@ const SEARCH_INDEX = [
     "title": "Three Collections. One Skin-First Philosophy.",
     "pageTitle": "Skincare Products",
     "category": "Complete 5-Piece Regimen",
-    "content": "Korean skincare isn't about using more products. It's about finding the right formulations for your skin. Give your skin barrier some love. Korean skincare focused on moisture, skin comfort, and healthy-looking skin. Your daily dose of Seoul science. Innovative formulations featuring exosome-related ingredients, PDRN, and peptides for hydration and radiant-looking skin. Cellular Bio-Regeneration Powered by patented marine growth factor c-PDRN® (Hydrolyzed Salmon DNA)—engineered via DOT™ technology to accelerate cellular turnover, restore skin barrier integrity, and optimize recovery. Advanced care. Your skin's next chapter. Specialized Korean home-care formulations incorporated into a routine with individualized guidance for post-procedure recovery, thermal cooling, and dermal restructuring.",
+    "content": "Korean skincare isn't about using more products. It's about finding the right formulations for your skin. Give your skin barrier some love. Korean skincare focused on moisture, skin comfort, and healthy-looking skin.",
     "snippet": "Korean skincare isn't about using more products. It's about finding the right formulations for your skin. Give your skin barrier some love. Korean skincare focu..."
   },
   {

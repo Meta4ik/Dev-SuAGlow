@@ -55,10 +55,10 @@
 
                 <!-- Big Main Headline (Montserrat Display) -->
                 <div class="space-y-2">
-                    <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-near-black font-light leading-[1.12] [text-wrap:balance]">
-                        <span class="bg-gradient-to-r from-warm-gold to-[#8F857B] bg-clip-text text-transparent font-normal">KOREAN</span> SKINCARE.<br>
-                        SEOUL SCIENCE.<br>
-                        YOUR DAILY <span class="bg-gradient-to-r from-warm-gold to-[#8F857B] bg-clip-text text-transparent font-normal">GLOW.</span>
+                    <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-near-black font-light leading-[1.15]">
+                        <span class="block"><span class="bg-gradient-to-r from-warm-gold to-[#8F857B] bg-clip-text text-transparent font-normal">KOREAN</span> SKINCARE.</span>
+                        <span class="block">SEOUL SCIENCE.</span>
+                        <span class="block">YOUR DAILY <span class="bg-gradient-to-r from-warm-gold to-[#8F857B] bg-clip-text text-transparent font-normal">GLOW.</span></span>
                     </h1>
                 </div>
 
@@ -109,92 +109,56 @@
             </p>
         </div>
 
-        <!-- 3 Collection Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- 3 Brand Logos Selector -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto">
 
-            <!-- Card 1: Exoblanc -->
-            <div onclick="selectCollection('exoblanc')"
-                class="group cursor-pointer bg-white rounded-3xl p-7 border border-light-gray/80 hover:border-warm-gold/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
-                <div>
-                    <div class="relative overflow-hidden aspect-[4/3] w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/50 flex items-center justify-center p-6 group-hover:bg-[#FAF6F0] transition-colors">
-                        <img src="assets/products/exoblanc-boosting-serum.jpg" alt="Exoblanc Skincare Collection"
-                            class="h-full object-contain group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3.5 left-3.5 z-20 text-[9.5px] font-heading font-bold uppercase tracking-wider text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full border border-light-gray shadow-xs">
-                            11 Formulations
-                        </span>
-                    </div>
-                    <div class="mb-2">
-                        <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Seoul Science</span>
-                        <h3 class="heading-wide text-xl font-bold text-near-black mt-1">Exoblanc</h3>
-                        <p class="text-xs text-warm-gold font-medium mt-0.5">Your daily dose of Seoul science.</p>
-                    </div>
-                    <p class="text-charcoal/70 text-xs font-light leading-relaxed mt-3">
-                        Innovative formulations featuring exosome-related ingredients, PDRN, and peptides for hydration and radiant-looking skin.
-                    </p>
+            <!-- Brand 1: Rejuran MEDI -->
+            <button type="button" onclick="selectCollection('rejuran')" id="brand-card-rejuran"
+                class="brand-card group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-6 sm:p-7 border border-light-gray/80 hover:border-warm-gold/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5">
+                <div class="h-16 flex items-center justify-center w-full px-4">
+                    <img src="assets/logo-rejuran.png" alt="Rejuran MEDI"
+                        class="max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
                 </div>
-                <div class="pt-6 mt-6 border-t border-light-gray/60 flex items-center justify-between text-xs font-heading font-semibold text-warm-gold group-hover:text-near-black transition-colors">
-                    <span>View Products</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                <div class="mt-4 flex items-center gap-1.5 text-xs font-heading font-semibold text-taupe group-hover:text-warm-gold transition-colors">
+                    <span>Rejuran MEDI</span>
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"></i>
                 </div>
-            </div>
+                <span class="text-[10px] text-charcoal/50 font-light mt-0.5">6 Formulations · Cellular Bio-Regeneration</span>
+            </button>
 
-            <!-- Card 2: Rejuran MEDI -->
-            <div onclick="selectCollection('rejuran')"
-                class="group cursor-pointer bg-white rounded-3xl p-7 border border-light-gray/80 hover:border-warm-gold/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
-                <div>
-                    <div class="relative overflow-hidden aspect-[4/3] w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/50 flex items-center justify-center p-6 group-hover:bg-[#FAF6F0] transition-colors">
-                        <img src="assets/products/rejuran-healing-care-set-open.webp" alt="Rejuran MEDI Collection"
-                            class="h-full object-contain group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3.5 left-3.5 z-20 text-[9.5px] font-heading font-bold uppercase tracking-wider text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full border border-light-gray shadow-xs">
-                            6 Formulations
-                        </span>
-                    </div>
-                    <div class="mb-2">
-                        <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Patented c-PDRN® DNA</span>
-                        <h3 class="heading-wide text-xl font-bold text-near-black mt-1">Rejuran MEDI</h3>
-                        <p class="text-xs text-warm-gold font-medium mt-0.5">Cellular Bio-Regeneration</p>
-                    </div>
-                    <p class="text-charcoal/70 text-xs font-light leading-relaxed mt-3">
-                        Powered by patented marine growth factor c-PDRN® (Hydrolyzed Salmon DNA)—engineered via DOT™ technology to accelerate cellular turnover, restore skin barrier integrity, and optimize recovery.
-                    </p>
+            <!-- Brand 2: Exoblanc -->
+            <button type="button" onclick="selectCollection('exoblanc')" id="brand-card-exoblanc"
+                class="brand-card group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-6 sm:p-7 border border-light-gray/80 hover:border-warm-gold/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5">
+                <div class="h-16 flex items-center justify-center w-full px-4">
+                    <img src="assets/logo-exoblanc.png" alt="Exoblanc"
+                        class="max-h-9 sm:max-h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
                 </div>
-                <div class="pt-6 mt-6 border-t border-light-gray/60 flex items-center justify-between text-xs font-heading font-semibold text-warm-gold group-hover:text-near-black transition-colors">
-                    <span>View Products</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                <div class="mt-4 flex items-center gap-1.5 text-xs font-heading font-semibold text-taupe group-hover:text-warm-gold transition-colors">
+                    <span>Exoblanc</span>
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"></i>
                 </div>
-            </div>
+                <span class="text-[10px] text-charcoal/50 font-light mt-0.5">11 Formulations · Seoul Science & Exosomes</span>
+            </button>
 
-            <!-- Card 3: Pharmesthetic -->
-            <div onclick="selectCollection('pharmesthetic')"
-                class="group cursor-pointer bg-white rounded-3xl p-7 border border-light-gray/80 hover:border-warm-gold/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
-                <div>
-                    <div class="relative overflow-hidden aspect-[4/3] w-full rounded-2xl bg-white mb-6 border border-light-gray/50 flex items-center justify-center p-6 group-hover:bg-[#FAF6F0] transition-colors">
-                        <img src="assets/products/pharmesthetic-vibanquentmanka-lotion.webp" alt="Pharmesthetic Collection"
-                            class="h-full object-contain group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3.5 left-3.5 z-20 text-[9.5px] font-heading font-bold uppercase tracking-wider text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full border border-light-gray shadow-xs">
-                            9 Formulations
-                        </span>
-                    </div>
-                    <div class="mb-2">
-                        <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Seoul Clinic Emergency Care</span>
-                        <h3 class="heading-wide text-xl font-bold text-near-black mt-1">Pharmesthetic</h3>
-                        <p class="text-xs text-warm-gold font-medium mt-0.5">Advanced care. Your skin's next chapter.</p>
-                    </div>
-                    <p class="text-charcoal/70 text-xs font-light leading-relaxed mt-3">
-                        Specialized Korean home-care formulations incorporated into a routine with individualized guidance for post-procedure recovery, thermal cooling, and dermal restructuring.
-                    </p>
+            <!-- Brand 3: Pharmesthetic -->
+            <button type="button" onclick="selectCollection('pharmesthetic')" id="brand-card-pharmesthetic"
+                class="brand-card group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-6 sm:p-7 border border-light-gray/80 hover:border-warm-gold/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5">
+                <div class="h-16 flex items-center justify-center w-full px-4">
+                    <img src="assets/logo-conapidil.png" alt="Pharmesthetic Conapidil"
+                        class="max-h-10 sm:max-h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
                 </div>
-                <div class="pt-6 mt-6 border-t border-light-gray/60 flex items-center justify-between text-xs font-heading font-semibold text-warm-gold group-hover:text-near-black transition-colors">
-                    <span>View Products</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                <div class="mt-4 flex items-center gap-1.5 text-xs font-heading font-semibold text-taupe group-hover:text-warm-gold transition-colors">
+                    <span>Pharmesthetic</span>
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"></i>
                 </div>
-            </div>
+                <span class="text-[10px] text-charcoal/50 font-light mt-0.5">9 Formulations · Clinic Master Collection</span>
+            </button>
 
         </div>
     </section>
 
     <!-- Catalog Quick Filter / Brand Selector (Sticky Bar) -->
-    <section id="catalog-nav" class="sticky top-[72px] z-30 bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-3.5 px-4 md:px-8 shadow-xs">
+    <section id="catalog-nav" class="hidden sticky top-[72px] z-30 bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-3.5 px-4 md:px-8 shadow-xs">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
             <span class="text-[11px] font-heading font-semibold text-charcoal/50 uppercase tracking-widest hidden md:inline shrink-0">
                 Filter Collection:
@@ -204,13 +168,13 @@
                     class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
                     All Collections
                 </button>
-                <button type="button" onclick="filterLine('exoblanc')" id="tab-exoblanc"
-                    class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
-                    Exoblanc
-                </button>
                 <button type="button" onclick="filterLine('rejuran')" id="tab-rejuran"
                     class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
                     Rejuran MEDI
+                </button>
+                <button type="button" onclick="filterLine('exoblanc')" id="tab-exoblanc"
+                    class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
+                    Exoblanc
                 </button>
                 <button type="button" onclick="filterLine('pharmesthetic')" id="tab-pharmesthetic"
                     class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
@@ -1567,20 +1531,40 @@
 
     <!-- Interactive Collection Switcher & URL Hash Handler -->
     <script>
-        function selectCollection(line) {
+        function selectCollection(line, shouldScroll = true) {
+            const catalogNav = document.getElementById('catalog-nav');
             const catalog = document.getElementById('product-catalog');
+            if (catalogNav) {
+                catalogNav.classList.remove('hidden');
+            }
             if (catalog) {
                 catalog.classList.remove('hidden');
             }
-            filterLine(line, true);
+            filterLine(line, shouldScroll);
         }
 
         function filterLine(line, shouldScroll = true) {
+            const catalogNav = document.getElementById('catalog-nav');
             const catalog = document.getElementById('product-catalog');
+            if (catalogNav && catalogNav.classList.contains('hidden')) {
+                catalogNav.classList.remove('hidden');
+            }
             if (catalog && catalog.classList.contains('hidden')) {
                 catalog.classList.remove('hidden');
             }
 
+            // Sync active state on the 3 top brand cards
+            document.querySelectorAll('.brand-card').forEach(card => {
+                card.classList.remove('border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
+                card.classList.add('border-light-gray/80', 'bg-white');
+            });
+            const activeCard = document.getElementById('brand-card-' + line);
+            if (activeCard) {
+                activeCard.classList.remove('border-light-gray/80', 'bg-white');
+                activeCard.classList.add('border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
+            }
+
+            // Sync active state on filter tabs
             const tabs = document.querySelectorAll('.line-tab');
             tabs.forEach(t => {
                 t.classList.remove('bg-near-black', 'text-white', 'shadow-xs');
@@ -1634,9 +1618,9 @@
         window.addEventListener('DOMContentLoaded', () => {
             const hash = window.location.hash.replace('#', '').toLowerCase();
             if (hash === 'exoblanc' || hash === 'rejuran' || hash === 'pharmesthetic') {
-                selectCollection(hash);
+                selectCollection(hash, false);
             } else if (hash === 'all') {
-                selectCollection('all');
+                selectCollection('all', false);
             }
         });
     </script>
