@@ -186,60 +186,50 @@
         </div>
     </section>
 
-    <!-- Catalog Quick Filter / Brand Selector (Sticky Bar) -->
-    <section id="catalog-nav" class="hidden sticky top-[72px] z-30 bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-3.5 px-4 md:px-8 shadow-xs">
-        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
-            <span class="text-[11px] font-heading font-semibold text-charcoal/50 uppercase tracking-widest hidden md:inline shrink-0">
-                Filter Collection:
-            </span>
-            <div class="flex items-center gap-2 sm:gap-3 w-full md:w-auto">
+    <!-- Catalog Quick Filter / Unified Sub-Navigation (Sticky Bar) -->
+    <nav id="catalog-nav" aria-label="Skincare Collection Filter" class="hidden sticky top-[72px] z-30 bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-3 px-4 md:px-8 shadow-xs">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+            <!-- Filter Pills -->
+            <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-0.5">
+                <span class="text-[11px] font-heading font-semibold text-charcoal/50 uppercase tracking-widest hidden xl:inline shrink-0 mr-2">
+                    Filter:
+                </span>
                 <button type="button" onclick="filterLine('all')" id="tab-all"
-                    class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
-                    All Collections
+                    class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
+                    All Collections <span class="text-[10px] opacity-70 ml-1">(26)</span>
                 </button>
                 <button type="button" onclick="filterLine('rejuran')" id="tab-rejuran"
-                    class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
-                    Rejuran MEDI
+                    class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
+                    Rejuran MEDI <span class="text-[10px] opacity-70 ml-1">(6)</span>
                 </button>
                 <button type="button" onclick="filterLine('exoblanc')" id="tab-exoblanc"
-                    class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
-                    Exoblanc
+                    class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
+                    Exoblanc <span class="text-[10px] opacity-70 ml-1">(11)</span>
                 </button>
                 <button type="button" onclick="filterLine('pharmesthetic')" id="tab-pharmesthetic"
-                    class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
-                    Pharmesthetic
+                    class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
+                    Pharmesthetic <span class="text-[10px] opacity-70 ml-1">(9)</span>
                 </button>
             </div>
-            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                class="hidden lg:inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-wider text-taupe hover:text-warm-gold shrink-0">
-                Book your consultation. <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-        </div>
-    </section>
 
-    <!-- MAIN PRODUCT CATALOG CONTAINER (Initially hidden until user selects a collection or clicks all) -->
-    <main id="product-catalog" class="hidden py-16 px-6 md:px-12 max-w-7xl mx-auto space-y-24">
-
-        <!-- Active Collection Header Bar -->
-        <div class="bg-[#FAF8F5] border border-light-gray/80 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-3">
-                <span class="w-2.5 h-2.5 rounded-full bg-warm-gold animate-pulse"></span>
-                <span id="active-line-title" class="text-xs sm:text-sm font-heading font-bold uppercase tracking-widest text-near-black">
-                    Displaying Formulations
-                </span>
-            </div>
-            <div class="flex items-center gap-4 text-xs font-heading font-semibold">
-                <button type="button" onclick="filterLine('all')" class="text-warm-gold hover:text-near-black transition-colors flex items-center gap-1.5">
-                    <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-                    <span>View All Collections</span>
-                </button>
-                <span class="text-charcoal/30">|</span>
-                <a href="#skincare-edit" class="text-charcoal/60 hover:text-near-black transition-colors flex items-center gap-1">
+            <!-- Right Actions: Brand Overview anchor + Book Consultation CTA -->
+            <div class="hidden md:flex items-center gap-4 shrink-0 text-xs font-heading font-semibold">
+                <a href="#skincare-edit" class="text-charcoal/60 hover:text-near-black transition-colors flex items-center gap-1.5 py-1.5">
                     <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
                     <span>Brand Overview</span>
                 </a>
+                <span class="text-charcoal/20">|</span>
+                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                    class="inline-flex items-center gap-1.5 text-taupe hover:text-warm-gold font-bold uppercase tracking-wider transition-colors py-1.5">
+                    <span>Book your consultation.</span>
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                </a>
             </div>
         </div>
+    </nav>
+
+    <!-- MAIN PRODUCT CATALOG CONTAINER (Initially hidden until user selects a collection or clicks all) -->
+    <main id="product-catalog" class="hidden py-12 md:py-16 px-6 md:px-12 max-w-7xl mx-auto space-y-24">
 
         <!-- ========================================== -->
         <!-- LINE 1: REJURAN® MEDI LINE                 -->
@@ -1600,11 +1590,15 @@
 
             const sections = document.querySelectorAll('.line-section');
             if (line === 'all') {
-                sections.forEach(s => s.classList.remove('hidden'));
+                sections.forEach(s => {
+                    s.classList.remove('hidden');
+                    s.querySelectorAll('.animate-on-scroll').forEach(el => el.classList.add('visible'));
+                });
             } else {
                 sections.forEach(s => {
                     if (s.id === 'line-' + line) {
                         s.classList.remove('hidden');
+                        s.querySelectorAll('.animate-on-scroll').forEach(el => el.classList.add('visible'));
                     } else {
                         s.classList.add('hidden');
                     }
@@ -1640,9 +1634,9 @@
         window.addEventListener('DOMContentLoaded', () => {
             const hash = window.location.hash.replace('#', '').toLowerCase();
             if (hash === 'exoblanc' || hash === 'rejuran' || hash === 'pharmesthetic') {
-                selectCollection(hash, false);
+                selectCollection(hash, true);
             } else if (hash === 'all') {
-                selectCollection('all', false);
+                selectCollection('all', true);
             }
         });
     </script>
