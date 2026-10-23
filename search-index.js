@@ -2369,12 +2369,12 @@ const SEARCH_INDEX = [
     "snippet": "Clinical Precision Medical-grade skincare products contain significantly higher concentrations of pharmaceutical-grade active ingredients—such as proprietary ma..."
   },
   {
-    "url": "skincare-products.html",
+    "url": "skincare-products.html#faq",
     "title": "Frequently Asked Questions",
     "pageTitle": "Skincare Products",
     "category": "Complete 5-Piece Regimen",
-    "content": "Patient Information Per our medical delegation agreements and clinical guidelines established by our supervising physician Dr. Adam Yang and PA-C Sophia Yang, medical-grade lines like REJURAN® MEDI, Exoblanc, and Pharmesthetic feature bioactive concentrations that require provider oversight. We prescribe these during your in-office consultation or appointment to guarantee safety and maximize your clinical results. Yes! You are welcome to book a dedicated skincare consultation with Sophia Yang, PA-C. We will perform an assessment (or Aura 3D digital skin analysis) and curate your optimal home-care regimen. Clinical treatments stimulate neocollagenesis and cell turnover. Applying medical-grade c-PDRN®, exosomes, and barrier peptides at home supplies the raw cellular nutrients required for accelerated healing, extending the longevity and radiance of your results.",
-    "snippet": "Patient Information Per our medical delegation agreements and clinical guidelines established by our supervising physician Dr. Adam Yang and PA-C Sophia Yang, m..."
+    "content": "Per our medical delegation agreements and clinical guidelines established by our supervising physician Dr. Adam Yang and PA-C Sophia Yang, medical-grade lines like REJURAN® MEDI, Exoblanc, and Pharmesthetic feature bioactive concentrations that require provider oversight. We prescribe these during your in-office consultation or appointment to guarantee safety and maximize your clinical results. Yes! You are welcome to book a dedicated skincare consultation with Sophia Yang, PA-C. We will perform an assessment (or Aura 3D digital skin analysis) and curate your optimal home-care regimen. Clinical treatments stimulate neocollagenesis and cell turnover. Applying medical-grade c-PDRN®, exosomes, and barrier peptides at home supplies the raw cellular nutrients required for accelerated healing, extending the longevity and radiance of your results.",
+    "snippet": "Per our medical delegation agreements and clinical guidelines established by our supervising physician Dr. Adam Yang and PA-C Sophia Yang, medical-grade lines l..."
   },
   {
     "url": "skincare-products.html#final-consultation-cta",

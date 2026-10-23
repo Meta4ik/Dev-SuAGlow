@@ -1482,42 +1482,52 @@
     </section>
 
     <!-- Frequently Asked Questions -->
-    <section class="py-24 px-6 md:px-12 max-w-4xl mx-auto">
-        <div class="text-center mb-16 animate-on-scroll fade-up">
-            <p class="heading-wide text-xs tracking-[0.4em] text-[#AA987C] mb-3 uppercase">Patient Information</p>
-            <h3 class="heading-wide text-2xl md:text-3xl font-bold text-near-black">Frequently Asked Questions</h3>
-        </div>
+    <section id="faq" class="py-24 px-6 md:px-12 bg-off-white border-t border-b border-light-gray">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 space-y-3 animate-on-scroll fade-up">
+                <span class="badge-glass !text-taupe !bg-taupe/10 !border-taupe/20 inline-block uppercase tracking-wider text-[10px]">
+                    Questions &amp; Answers
+                </span>
+                <h2 class="heading-wide text-2xl sm:text-3xl lg:text-4xl text-near-black font-bold">Frequently Asked Questions</h2>
+            </div>
 
-        <div class="space-y-4">
-            <details class="group bg-white p-6 rounded-2xl border border-light-gray/80 [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
-                <summary class="flex items-center justify-between cursor-pointer font-heading text-sm md:text-base font-semibold text-near-black">
-                    <span>Why can't I order these products directly online?</span>
-                    <i data-lucide="chevron-down" class="w-4 h-4 text-taupe group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-xs md:text-sm font-light text-charcoal/70 leading-relaxed">
-                    Per our medical delegation agreements and clinical guidelines established by our supervising physician Dr. Adam Yang and PA-C Sophia Yang, medical-grade lines like REJURAN® MEDI, Exoblanc, and Pharmesthetic feature bioactive concentrations that require provider oversight. We prescribe these during your in-office consultation or appointment to guarantee safety and maximize your clinical results.
-                </p>
-            </details>
+            <div class="space-y-4 animate-on-scroll fade-up">
+                <!-- Q1 -->
+                <details class="bg-white p-6 group border border-light-gray hover:border-taupe/30 transition-all rounded-2xl shadow-soft [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider">
+                        <span>Why can't I order these products directly online?</span>
+                        <i data-lucide="plus" class="w-4 h-4 text-taupe shrink-0 group-open:hidden"></i>
+                        <i data-lucide="minus" class="w-4 h-4 text-taupe shrink-0 hidden group-open:inline"></i>
+                    </summary>
+                    <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
+                        Per our medical delegation agreements and clinical guidelines established by our supervising physician Dr. Adam Yang and PA-C Sophia Yang, medical-grade lines like REJURAN® MEDI, Exoblanc, and Pharmesthetic feature bioactive concentrations that require provider oversight. We prescribe these during your in-office consultation or appointment to guarantee safety and maximize your clinical results.
+                    </p>
+                </details>
 
-            <details class="group bg-white p-6 rounded-2xl border border-light-gray/80 [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
-                <summary class="flex items-center justify-between cursor-pointer font-heading text-sm md:text-base font-semibold text-near-black">
-                    <span>Can I purchase products if I am not currently receiving a facial or treatment?</span>
-                    <i data-lucide="chevron-down" class="w-4 h-4 text-taupe group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-xs md:text-sm font-light text-charcoal/70 leading-relaxed">
-                    Yes! You are welcome to book a dedicated skincare consultation with Sophia Yang, PA-C. We will perform an assessment (or Aura 3D digital skin analysis) and curate your optimal home-care regimen.
-                </p>
-            </details>
+                <!-- Q2 -->
+                <details class="bg-white p-6 group border border-light-gray hover:border-taupe/30 transition-all rounded-2xl shadow-soft [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider">
+                        <span>Can I purchase products if I am not currently receiving a facial or treatment?</span>
+                        <i data-lucide="plus" class="w-4 h-4 text-taupe shrink-0 group-open:hidden"></i>
+                        <i data-lucide="minus" class="w-4 h-4 text-taupe shrink-0 hidden group-open:inline"></i>
+                    </summary>
+                    <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
+                        Yes! You are welcome to book a dedicated skincare consultation with Sophia Yang, PA-C. We will perform an assessment (or Aura 3D digital skin analysis) and curate your optimal home-care regimen.
+                    </p>
+                </details>
 
-            <details class="group bg-white p-6 rounded-2xl border border-light-gray/80 [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
-                <summary class="flex items-center justify-between cursor-pointer font-heading text-sm md:text-base font-semibold text-near-black">
-                    <span>How do these home care products complement treatments like Oligio X or LDM?</span>
-                    <i data-lucide="chevron-down" class="w-4 h-4 text-taupe group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-xs md:text-sm font-light text-charcoal/70 leading-relaxed">
-                    Clinical treatments stimulate neocollagenesis and cell turnover. Applying medical-grade c-PDRN®, exosomes, and barrier peptides at home supplies the raw cellular nutrients required for accelerated healing, extending the longevity and radiance of your results.
-                </p>
-            </details>
+                <!-- Q3 -->
+                <details class="bg-white p-6 group border border-light-gray hover:border-taupe/30 transition-all rounded-2xl shadow-soft [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider">
+                        <span>How do these home care products complement treatments like Oligio X or LDM?</span>
+                        <i data-lucide="plus" class="w-4 h-4 text-taupe shrink-0 group-open:hidden"></i>
+                        <i data-lucide="minus" class="w-4 h-4 text-taupe shrink-0 hidden group-open:inline"></i>
+                    </summary>
+                    <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
+                        Clinical treatments stimulate neocollagenesis and cell turnover. Applying medical-grade c-PDRN®, exosomes, and barrier peptides at home supplies the raw cellular nutrients required for accelerated healing, extending the longevity and radiance of your results.
+                    </p>
+                </details>
+            </div>
         </div>
     </section>
 
@@ -1573,15 +1583,23 @@
                 catalog.classList.remove('hidden');
             }
 
-            // Sync active state on the 3 top brand cards
-            document.querySelectorAll('.brand-card').forEach(card => {
-                card.classList.remove('border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
-                card.classList.add('border-light-gray/80', 'bg-white');
-            });
-            const activeCard = document.getElementById('brand-card-' + line);
-            if (activeCard) {
-                activeCard.classList.remove('border-light-gray/80', 'bg-white');
-                activeCard.classList.add('border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
+            // Sync active & grayed-out states on the 3 top brand cards
+            const brandCards = document.querySelectorAll('.brand-card');
+            if (line === 'all') {
+                brandCards.forEach(card => {
+                    card.classList.remove('is-inactive', 'is-active', 'border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
+                    card.classList.add('border-light-gray/80', 'bg-white');
+                });
+            } else {
+                brandCards.forEach(card => {
+                    if (card.id === 'brand-card-' + line) {
+                        card.classList.remove('is-inactive', 'border-light-gray/80', 'bg-white');
+                        card.classList.add('is-active', 'border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
+                    } else {
+                        card.classList.remove('is-active', 'border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
+                        card.classList.add('is-inactive');
+                    }
+                });
             }
 
             // Sync active state on filter tabs
@@ -1690,15 +1708,19 @@
             updateSticky();
         }
 
-        // Check URL hash & initialize sticky controller on page load
+        // Check URL parameters & hash, and initialize sticky controller on page load
         window.addEventListener('DOMContentLoaded', () => {
             initStickyCollectionBar();
 
+            const urlParams = new URLSearchParams(window.location.search);
+            const lineParam = urlParams.get('line');
             const hash = window.location.hash.replace('#', '').toLowerCase();
-            if (hash === 'exoblanc' || hash === 'rejuran' || hash === 'pharmesthetic') {
-                selectCollection(hash, true, false);
-            } else if (hash === 'all') {
-                selectCollection('all', true, false);
+            const activeTarget = lineParam || hash;
+
+            if (activeTarget === 'exoblanc' || activeTarget === 'rejuran' || activeTarget === 'pharmesthetic') {
+                selectCollection(activeTarget, !lineParam, false);
+            } else if (activeTarget === 'all') {
+                selectCollection('all', !lineParam, false);
             }
         });
     </script>

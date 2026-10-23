@@ -157,6 +157,36 @@ h6:not(.font-light):not(.font-thin):not(.heading-wide) {
     transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
 }
 
+/* Brand Card Active / Inactive States */
+.brand-card {
+    transition: opacity 0.3s ease, filter 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-card.is-inactive {
+    opacity: 0.35 !important;
+    filter: grayscale(100%) !important;
+    background-color: #F6F7F8 !important;
+    border-color: rgba(223, 224, 221, 0.6) !important;
+    box-shadow: none !important;
+}
+
+.brand-card.is-inactive img,
+.brand-card.is-inactive .card-logo-img {
+    filter: grayscale(100%) !important;
+    opacity: 0.45 !important;
+}
+
+.brand-card.is-inactive:hover {
+    transform: none !important;
+}
+
+/* In sticky mode, brand cards are purely visual indicator logos */
+#sticky-collection-bar.is-sticky .brand-card {
+    pointer-events: none !important;
+    cursor: default !important;
+    user-select: none;
+}
+
 @media (min-width: 768px) {
     #sticky-collection-bar.is-sticky {
         position: fixed;
@@ -173,11 +203,15 @@ h6:not(.font-light):not(.font-thin):not(.heading-wide) {
         padding-bottom: 0.35rem;
     }
 
+    /* In sticky mode, brand cards are purely visual indicator logos */
     #sticky-collection-bar.is-sticky .brand-card {
         padding: 0.85rem 1.15rem;
         border-radius: 0.85rem;
         background: #FFFFFF;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        pointer-events: none !important;
+        cursor: default !important;
+        user-select: none;
     }
 
     #sticky-collection-bar.is-sticky .card-logo-container {
