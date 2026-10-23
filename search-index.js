@@ -2381,8 +2381,8 @@ const SEARCH_INDEX = [
     "title": "K-Beauty doesn't chase trends.It builds better skin.",
     "pageTitle": "Skincare Products",
     "category": "Complete 5-Piece Regimen",
-    "content": "K-Beauty Medspa • Carrollton HQ Schedule your consultation to experience medical-grade Korean aesthetic care customized to your goals.",
-    "snippet": "K-Beauty Medspa • Carrollton HQ Schedule your consultation to experience medical-grade Korean aesthetic care customized to your goals."
+    "content": "K-Beauty Medspa • Carrollton HQ Experience medical-grade Korean aesthetic care customized to your skin's unique barrier profile.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ Experience medical-grade Korean aesthetic care customized to your skin's unique barrier profile."
   },
   {
     "url": "specials-october.html#final-consultation-cta",
