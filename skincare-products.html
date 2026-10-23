@@ -32,7 +32,7 @@
 
     <!-- Hero Section (Section A - Matches Hair Page Large Luminous Editorial Layout) -->
     <section id="hero" data-nav-theme="light"
-        class="relative min-h-[82vh] lg:min-h-[88vh] flex items-center justify-center pt-[140px] pb-16 lg:pb-24 px-6 md:px-12 bg-[#FAF8F5] text-charcoal overflow-hidden">
+        class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center pt-[200px] sm:pt-[220px] pb-16 lg:pb-24 px-6 md:px-12 bg-[#FAF8F5] text-charcoal overflow-hidden">
         <!-- Parallax Background & Atmospheric Glow -->
         <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
             <img src="assets/skincare-hero-banner.webp" alt="Korean Skincare Seoul Science SuA Glow"
@@ -53,36 +53,38 @@
                     </span>
                 </div>
 
-                <!-- Big Main Headline (Montserrat Display - Exactly 3 Distinct Lines with refined font scale & generous line spacing) -->
+                <!-- Big Main Headline (Montserrat Display - Exactly 3 Distinct Lines matching LDM hero reference) -->
                 <div>
-                    <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-near-black font-light leading-[1.28] sm:leading-[1.32] lg:leading-[1.38] space-y-1.5 sm:space-y-2.5 lg:space-y-3 !tracking-[0.08em] sm:!tracking-[0.1em]">
-                        <span class="block whitespace-nowrap"><span class="bg-gradient-to-r from-warm-gold to-[#8F857B] bg-clip-text text-transparent font-normal">KOREAN</span> SKINCARE.</span>
+                    <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-near-black font-light leading-tight [text-wrap:balance]">
+                        <span class="block whitespace-nowrap"><span class="text-[#AA987C]">KOREAN</span> SKINCARE.</span>
                         <span class="block whitespace-nowrap">SEOUL SCIENCE.</span>
-                        <span class="block whitespace-nowrap">YOUR DAILY <span class="bg-gradient-to-r from-warm-gold to-[#8F857B] bg-clip-text text-transparent font-normal">GLOW.</span></span>
+                        <span class="block whitespace-nowrap">YOUR DAILY <span class="text-[#AA987C]">GLOW.</span></span>
                     </h1>
                 </div>
 
-                <!-- Subtitle -->
-                <p class="text-sm sm:text-base text-charcoal/85 font-light tracking-wide">
-                    Beyond the treatment. <span class="italic text-warm-gold font-serif sm:text-lg">Beautiful skin begins at home.</span>
+                <!-- Subtitle (Matching LDM hero reference) -->
+                <p class="text-base sm:text-lg font-medium text-warm-gold/90 tracking-wider uppercase font-body [text-wrap:balance]">
+                    Beyond the treatment. <span class="italic font-light">Beautiful skin begins at home.</span>
                 </p>
 
-                <!-- Description -->
-                <div class="space-y-3 max-w-xl text-xs sm:text-sm text-charcoal/75 font-light leading-relaxed">
+                <!-- Description (Matching LDM hero reference) -->
+                <div class="space-y-3 max-w-xl text-sm md:text-base font-light text-charcoal/80 leading-relaxed [text-wrap:balance]">
                     <p>
                         Discover three thoughtfully curated Korean skincare collections—Rejuran MEDI, Exoblanc, and Pharmesthetic. Our curated collection was selected to support hydration, skin barrier health, and a smoother, more radiant-looking complexion.
                     </p>
-                    <p class="text-[11px] sm:text-xs text-warm-gold font-medium uppercase tracking-wider">
+                    <p class="text-xs sm:text-sm text-warm-gold font-medium uppercase tracking-wider">
                         Because your skin deserves more than a one-size-fits-all routine.
                     </p>
                 </div>
 
-                <!-- CTA Button -->
-                <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <!-- CTA Button (Matching LDM hero reference) -->
+                <div class="pt-4 flex flex-wrap gap-4 items-center">
                     <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                        class="btn-primary inline-flex items-center gap-2 !py-3.5 !px-8 text-xs font-semibold tracking-widest shadow-md">
+                        class="btn-primary py-4 px-8 text-xs font-semibold tracking-widest bg-[#AA987C] hover:bg-near-black hover:text-white rounded-full transition-all duration-300 uppercase shadow-md inline-flex items-center gap-2">
                         <span>Book your consultation.</span>
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
                     </a>
                 </div>
             </div>
@@ -92,7 +94,7 @@
     <!-- ============================================================== -->
     <!-- INTRODUCING THE THREE COLLECTIONS (THE SUA GLOW SKINCARE EDIT)  -->
     <!-- ============================================================== -->
-    <section id="skincare-edit" class="bg-[#FAF8F5] py-16 md:py-24 px-6 md:px-12 border-b border-light-gray/40">
+    <section id="skincare-edit" class="bg-[#FAF8F5] py-16 md:py-24 px-6 md:px-12 border-b border-light-gray/40 scroll-mt-48">
         <div class="max-w-7xl mx-auto">
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-14 animate-on-scroll fade-up">
@@ -186,8 +188,8 @@
         </div>
     </section>
 
-    <!-- Catalog Quick Filter / Unified Sub-Navigation (Sticky Bar) -->
-    <nav id="catalog-nav" aria-label="Skincare Collection Filter" class="hidden sticky top-[72px] z-30 bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-3 px-4 md:px-8 shadow-xs">
+    <!-- Catalog Quick Filter / Unified Sub-Navigation (Docked right underneath main navbar on desktop) -->
+    <nav id="catalog-nav" aria-label="Skincare Collection Filter" class="w-full bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-2.5 sm:py-3 px-4 md:px-8 shadow-xs">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
             <!-- Filter Pills -->
             <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-0.5">
@@ -1622,10 +1624,12 @@
             }
 
             if (shouldScroll) {
-                const nav = document.getElementById('catalog-nav');
-                if (nav) {
-                    const navTop = nav.getBoundingClientRect().top + window.pageYOffset - 72;
-                    window.scrollTo({ top: navTop, behavior: 'smooth' });
+                const target = line === 'all' ? document.getElementById('product-catalog') : document.getElementById('line-' + line);
+                if (target) {
+                    const nav = document.getElementById('navbar');
+                    const navHeight = nav ? nav.offsetHeight : 148;
+                    const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+                    window.scrollTo({ top: targetTop, behavior: 'smooth' });
                 }
             }
             if (window.lucide) {
@@ -1633,8 +1637,14 @@
             }
         }
 
-        // Check URL hash or query param on page load
+        // Dock catalog-nav into navbar & check URL hash on page load
         window.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+            const catalogNav = document.getElementById('catalog-nav');
+            if (navbar && catalogNav) {
+                navbar.appendChild(catalogNav);
+            }
+
             const hash = window.location.hash.replace('#', '').toLowerCase();
             if (hash === 'exoblanc' || hash === 'rejuran' || hash === 'pharmesthetic') {
                 selectCollection(hash, true);
