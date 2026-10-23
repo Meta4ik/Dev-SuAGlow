@@ -4,6 +4,8 @@
     "installCommand": "npm install",
     "cleanUrls": true,
     "rewrites": [
+        { "source": "/shop-skincare", "destination": "/skincare-products.html" },
+        { "source": "/shop-skincare.html", "destination": "/skincare-products.html" },
         { "source": "/scalp-reset", "destination": "/korean-scalp-hair-rejuvenation.html" },
         { "source": "/female-scalp-care", "destination": "/korean-scalp-hair-rejuvenation.html" },
         { "source": "/mens-scalp-reset", "destination": "/korean-scalp-hair-rejuvenation.html" },
