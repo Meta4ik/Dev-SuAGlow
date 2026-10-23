@@ -7,10 +7,6 @@
     <title>Skincare Products | Rejuran, Exoblanc &amp; Pharmesthetic | SuA K-Glow Carrollton TX</title>
     <meta name="description" content="Explore SuA Glow's curated medical-grade skincare products: REJURAN® MEDI Line, Exoblanc Exosome Line, and Pharmesthetic Conapidil. Available exclusively in-office in Carrollton, TX.">
     <link rel="canonical" href="https://suaglow.com/skincare-products.html">
-    <meta http-equiv="refresh" content="0; url=skincare-products.html">
-    <script>
-        window.location.replace('skincare-products.html' + window.location.hash);
-    </script>
     <link rel="icon" href="assets/favicon.png" type="image/png">
 
     <!-- Google Fonts -->
@@ -34,58 +30,191 @@
     <!-- Global Navigation -->
     <div id="nav-placeholder"></div>
 
-    <!-- Hero Section -->
-    <section id="page-hero" data-nav-theme="dark"
-        class="relative min-h-[48vh] flex flex-col items-center justify-start text-center px-6 md:px-8 overflow-hidden pt-[240px] pb-24 md:pb-28">
-        <div class="absolute inset-0 z-0">
-            <img src="assets/bg_hero.webp" class="w-full h-full object-cover" alt="SuA Glow Skincare Products">
-            <div class="absolute inset-0 bg-white/55 backdrop-blur-[2px]"></div>
+    <!-- Hero Section (Section A - Matches Hair Page Large Luminous Editorial Layout) -->
+    <section id="hero" data-nav-theme="light"
+        class="relative min-h-[82vh] lg:min-h-[88vh] flex items-center justify-center pt-[140px] pb-16 lg:pb-24 px-6 md:px-12 bg-[#FAF8F5] text-charcoal overflow-hidden">
+        <!-- Parallax Background & Atmospheric Glow -->
+        <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+            <img src="assets/skincare-hero-banner.webp" alt="Korean Skincare Seoul Science SuA Glow"
+                class="w-full h-full object-cover object-[78%_center] lg:object-right">
+            <!-- Left Gradient to ensure clear text contrast while preserving image sharpness on the right -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[#FAF8F5] via-[#FAF8F5]/95 to-[#FAF8F5]/70 md:via-[#FAF8F5]/90 md:to-transparent md:w-[68%] lg:w-[55%] z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-[#FAF8F5]/40 z-10"></div>
+            <!-- Ambient Warm Gold Rim Glow -->
+            <div class="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-warm-gold/15 blur-[150px] rounded-full pointer-events-none z-10"></div>
         </div>
-        <div class="relative z-10 max-w-5xl animate-on-scroll fade-up delay-200">
-            <span
-                class="inline-block px-6 py-2 border border-[#AA987C]/30 text-[#AA987C] text-xs font-bold uppercase tracking-[0.45em] mb-8 rounded-full bg-white/80 backdrop-blur-sm shadow-xs">
-                Exclusively In-Office Consultation &amp; Treatment
-            </span>
-            <h1 class="heading-wide text-3xl sm:text-5xl md:text-7xl mb-8 leading-[1.08] [text-wrap:balance]">
-                Skincare<br><span class="text-[#AA987C]">Products.</span>
-            </h1>
-            <p
-                class="text-sm md:text-xl text-[#404345]/80 max-w-3xl mx-auto mb-10 font-light tracking-wide leading-relaxed [text-wrap:balance]">
-                Curated medical-grade formulations chosen to prepare, protect, and amplify your clinical aesthetic results.
-                <span class="block mt-3 text-[#AA987C] font-medium tracking-wide">Available exclusively at our Carrollton clinic under medical delegation.</span>
-            </p>
-            <div class="flex flex-wrap items-center justify-center gap-3 text-xs tracking-wider uppercase font-semibold text-charcoal/70">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 border border-light-gray"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-taupe"></i> Medical-Grade Only</span>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 border border-light-gray"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-warm-gold"></i> Authentic Korean Formulas</span>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 border border-light-gray"><i data-lucide="user-check" class="w-3.5 h-3.5 text-taupe"></i> PA-C Prescribed Protocols</span>
+
+        <div class="max-w-7xl mx-auto relative z-10 w-full py-8">
+            <div class="max-w-2xl space-y-6 sm:space-y-7 text-left animate-on-scroll fade-right bg-[#FAF8F5]/80 sm:bg-transparent backdrop-blur-[3px] sm:backdrop-blur-none p-4 sm:p-0 rounded-3xl border border-light-gray/40 sm:border-none shadow-xs sm:shadow-none">
+                <!-- Eyebrow Badges -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#AA987C]/30 text-[#AA987C] text-[10px] sm:text-[11px] font-heading font-semibold uppercase tracking-[0.2em] shadow-xs">
+                        KOREAN-FOUNDED · PHYSICIAN-GUIDED · SEOUL-INSPIRED
+                    </span>
+                </div>
+
+                <!-- Big Main Headline (Montserrat Display) -->
+                <div class="space-y-2">
+                    <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-near-black font-light leading-[1.12] [text-wrap:balance]">
+                        <span class="bg-gradient-to-r from-warm-gold to-[#8F857B] bg-clip-text text-transparent font-normal">KOREAN</span> SKINCARE.<br>
+                        SEOUL SCIENCE.<br>
+                        YOUR DAILY <span class="bg-gradient-to-r from-warm-gold to-[#8F857B] bg-clip-text text-transparent font-normal">GLOW.</span>
+                    </h1>
+                </div>
+
+                <!-- Subtitle -->
+                <p class="text-sm sm:text-base text-charcoal/85 font-light tracking-wide">
+                    Beyond the treatment. <span class="italic text-warm-gold font-serif sm:text-lg">Beautiful skin begins at home.</span>
+                </p>
+
+                <!-- Description -->
+                <div class="space-y-3 max-w-xl text-xs sm:text-sm text-charcoal/75 font-light leading-relaxed">
+                    <p>
+                        Discover three thoughtfully curated Korean skincare collections—Rejuran MEDI, Exoblanc, and Pharmesthetic. Our curated collection was selected to support hydration, skin barrier health, and a smoother, more radiant-looking complexion.
+                    </p>
+                    <p class="text-[11px] sm:text-xs text-warm-gold font-medium uppercase tracking-wider">
+                        Because your skin deserves more than a one-size-fits-all routine.
+                    </p>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                        class="btn-primary inline-flex items-center gap-2 !py-3.5 !px-8 text-xs font-semibold tracking-widest shadow-md">
+                        <span>BOOK A SKINCARE CONSULTATION</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="absolute top-[10%] left-[-5%] w-[600px] h-[600px] bg-[#EAECED]/40 rounded-full blur-[140px] -z-10"></div>
-        <div class="absolute bottom-[-5%] right-[-5%] w-[700px] h-[700px] bg-[#DFE0DD]/30 rounded-full blur-[160px] -z-10"></div>
     </section>
 
-    <!-- Catalog Quick Filter / Brand Selector -->
-    <section class="sticky top-[72px] z-30 bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-3.5 px-4 md:px-8 shadow-xs">
+    <!-- ============================================================== -->
+    <!-- INTRODUCING THE THREE COLLECTIONS (THE SUA GLOW SKINCARE EDIT)  -->
+    <!-- ============================================================== -->
+    <section id="skincare-edit" class="py-16 md:py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14 animate-on-scroll fade-up">
+            <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
+                The SuA Glow Skincare Edit
+            </span>
+            <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-4 text-near-black [text-wrap:balance]">
+                Three Collections. One Skin-First Philosophy.
+            </h2>
+            <p class="text-charcoal/75 text-sm md:text-base font-light leading-relaxed [text-wrap:balance] mb-3">
+                Korean skincare isn't about using more products. It's about finding the right formulations for your skin.
+            </p>
+            <p class="text-xs sm:text-sm text-[#AA987C] font-medium tracking-wide">
+                Give your skin barrier some love. Korean skincare focused on moisture, skin comfort, and healthy-looking skin.
+            </p>
+        </div>
+
+        <!-- 3 Collection Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Card 1: Exoblanc -->
+            <div onclick="selectCollection('exoblanc')"
+                class="group cursor-pointer bg-white rounded-3xl p-7 border border-light-gray/80 hover:border-warm-gold/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
+                <div>
+                    <div class="relative overflow-hidden aspect-[4/3] w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/50 flex items-center justify-center p-6 group-hover:bg-[#FAF6F0] transition-colors">
+                        <img src="assets/products/exoblanc-boosting-serum.jpg" alt="Exoblanc Skincare Collection"
+                            class="h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3.5 left-3.5 z-20 text-[9.5px] font-heading font-bold uppercase tracking-wider text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full border border-light-gray shadow-xs">
+                            11 Formulations
+                        </span>
+                    </div>
+                    <div class="mb-2">
+                        <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Seoul Science</span>
+                        <h3 class="heading-wide text-xl font-bold text-near-black mt-1">Exoblanc</h3>
+                        <p class="text-xs text-warm-gold font-medium mt-0.5">Your daily dose of Seoul science.</p>
+                    </div>
+                    <p class="text-charcoal/70 text-xs font-light leading-relaxed mt-3">
+                        Innovative formulations featuring exosome-related ingredients, PDRN, and peptides for hydration and radiant-looking skin.
+                    </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-light-gray/60 flex items-center justify-between text-xs font-heading font-semibold text-warm-gold group-hover:text-near-black transition-colors">
+                    <span>View Products</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </div>
+
+            <!-- Card 2: Rejuran MEDI -->
+            <div onclick="selectCollection('rejuran')"
+                class="group cursor-pointer bg-white rounded-3xl p-7 border border-light-gray/80 hover:border-warm-gold/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
+                <div>
+                    <div class="relative overflow-hidden aspect-[4/3] w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/50 flex items-center justify-center p-6 group-hover:bg-[#FAF6F0] transition-colors">
+                        <img src="assets/products/rejuran-healing-care-set-open.webp" alt="Rejuran MEDI Collection"
+                            class="h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3.5 left-3.5 z-20 text-[9.5px] font-heading font-bold uppercase tracking-wider text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full border border-light-gray shadow-xs">
+                            6 Formulations
+                        </span>
+                    </div>
+                    <div class="mb-2">
+                        <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Patented c-PDRN® DNA</span>
+                        <h3 class="heading-wide text-xl font-bold text-near-black mt-1">Rejuran MEDI</h3>
+                        <p class="text-xs text-warm-gold font-medium mt-0.5">Cellular Bio-Regeneration</p>
+                    </div>
+                    <p class="text-charcoal/70 text-xs font-light leading-relaxed mt-3">
+                        Powered by patented marine growth factor c-PDRN® (Hydrolyzed Salmon DNA)—engineered via DOT™ technology to accelerate cellular turnover, restore skin barrier integrity, and optimize recovery.
+                    </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-light-gray/60 flex items-center justify-between text-xs font-heading font-semibold text-warm-gold group-hover:text-near-black transition-colors">
+                    <span>View Products</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </div>
+
+            <!-- Card 3: Pharmesthetic -->
+            <div onclick="selectCollection('pharmesthetic')"
+                class="group cursor-pointer bg-white rounded-3xl p-7 border border-light-gray/80 hover:border-warm-gold/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
+                <div>
+                    <div class="relative overflow-hidden aspect-[4/3] w-full rounded-2xl bg-white mb-6 border border-light-gray/50 flex items-center justify-center p-6 group-hover:bg-[#FAF6F0] transition-colors">
+                        <img src="assets/products/pharmesthetic-vibanquentmanka-lotion.webp" alt="Pharmesthetic Collection"
+                            class="h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3.5 left-3.5 z-20 text-[9.5px] font-heading font-bold uppercase tracking-wider text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full border border-light-gray shadow-xs">
+                            9 Formulations
+                        </span>
+                    </div>
+                    <div class="mb-2">
+                        <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Seoul Clinic Emergency Care</span>
+                        <h3 class="heading-wide text-xl font-bold text-near-black mt-1">Pharmesthetic</h3>
+                        <p class="text-xs text-warm-gold font-medium mt-0.5">Advanced care. Your skin's next chapter.</p>
+                    </div>
+                    <p class="text-charcoal/70 text-xs font-light leading-relaxed mt-3">
+                        Specialized Korean home-care formulations incorporated into a routine with individualized guidance for post-procedure recovery, thermal cooling, and dermal restructuring.
+                    </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-light-gray/60 flex items-center justify-between text-xs font-heading font-semibold text-warm-gold group-hover:text-near-black transition-colors">
+                    <span>View Products</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Catalog Quick Filter / Brand Selector (Sticky Bar) -->
+    <section id="catalog-nav" class="sticky top-[72px] z-30 bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-3.5 px-4 md:px-8 shadow-xs">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
             <span class="text-[11px] font-heading font-semibold text-charcoal/50 uppercase tracking-widest hidden md:inline shrink-0">
-                Jump To Line:
+                Filter Collection:
             </span>
             <div class="flex items-center gap-2 sm:gap-3 w-full md:w-auto">
                 <button type="button" onclick="filterLine('all')" id="tab-all"
-                    class="line-tab active px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-near-black text-white shadow-xs">
-                    All Lines
-                </button>
-                <button type="button" onclick="filterLine('rejuran')" id="tab-rejuran"
                     class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
-                    REJURAN® Healing Care
+                    All Collections
                 </button>
                 <button type="button" onclick="filterLine('exoblanc')" id="tab-exoblanc"
                     class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
-                    Exoblanc Exosome
+                    Exoblanc
+                </button>
+                <button type="button" onclick="filterLine('rejuran')" id="tab-rejuran"
+                    class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
+                    Rejuran MEDI
                 </button>
                 <button type="button" onclick="filterLine('pharmesthetic')" id="tab-pharmesthetic"
                     class="line-tab px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
-                    Pharmesthetic Conapidil
+                    Pharmesthetic
                 </button>
             </div>
             <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
@@ -95,33 +224,32 @@
         </div>
     </section>
 
-    <!-- Notice Banner: In-Office Purchase Only -->
-    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-10">
-        <div class="bg-[#FAF7F2] border border-[#AA987C]/30 rounded-2xl p-4 md:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-            <div class="flex items-center gap-3.5">
-                <div class="w-10 h-10 rounded-full bg-[#AA987C]/15 text-[#AA987C] flex items-center justify-center shrink-0">
-                    <i data-lucide="info" class="w-5 h-5"></i>
-                </div>
-                <div>
-                    <h4 class="font-heading text-xs uppercase tracking-wider font-bold text-near-black">Clinical Consultation Directive</h4>
-                    <p class="text-xs text-charcoal/70 font-light mt-0.5">
-                        These medical-grade formulations feature high-potency cellular actives (c-PDRN®, Purified Exosomes, Volufiline™). To protect patient outcomes, products are prescribed and purchased during your visit or consultation.
-                    </p>
-                </div>
+    <!-- MAIN PRODUCT CATALOG CONTAINER (Initially hidden until user selects a collection or clicks all) -->
+    <main id="product-catalog" class="hidden py-16 px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+
+        <!-- Active Collection Header Bar -->
+        <div class="bg-[#FAF8F5] border border-light-gray/80 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <span class="w-2.5 h-2.5 rounded-full bg-warm-gold animate-pulse"></span>
+                <span id="active-line-title" class="text-xs sm:text-sm font-heading font-bold uppercase tracking-widest text-near-black">
+                    Displaying Formulations
+                </span>
             </div>
-            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                class="btn-primary text-xs !py-2.5 !px-5 whitespace-nowrap shrink-0">
-                Book Skin Evaluation
-            </a>
+            <div class="flex items-center gap-4 text-xs font-heading font-semibold">
+                <button type="button" onclick="filterLine('all')" class="text-warm-gold hover:text-near-black transition-colors flex items-center gap-1.5">
+                    <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                    <span>View All Collections</span>
+                </button>
+                <span class="text-charcoal/30">|</span>
+                <a href="#skincare-edit" class="text-charcoal/60 hover:text-near-black transition-colors flex items-center gap-1">
+                    <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+                    <span>Brand Overview</span>
+                </a>
+            </div>
         </div>
-    </div>
-
-    <!-- MAIN PRODUCT CATALOG CONTAINER -->
-    <main class="py-16 px-6 md:px-12 max-w-7xl mx-auto space-y-28">
 
         <!-- ========================================== -->
-        <!-- ========================================== -->
-        <!-- LINE 1: REJURAN® HEALING CARE & MEDI LINE  -->
+        <!-- LINE 1: REJURAN® MEDI LINE                 -->
         <!-- ========================================== -->
         <section id="line-rejuran" class="line-section scroll-mt-32">
             <!-- Section Header -->
@@ -129,12 +257,19 @@
                 <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
                     PharmaResearch • Patented c-PDRN® (Hydrolyzed DNA)
                 </span>
-                <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-5 text-near-black [text-wrap:balance]">
-                    REJURAN® Healing Care System
+                <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-4 text-near-black [text-wrap:balance]">
+                    Rejuran MEDI
                 </h2>
                 <p class="text-charcoal/75 text-sm md:text-base font-light leading-relaxed [text-wrap:balance]">
-                    Developed by Korea's leading regenerative medicine scientists at PharmaResearch, the REJURAN® Healing Care collection is powered by patented marine growth factor <strong>c-PDRN®</strong> (Hydrolyzed Salmon DNA)—a bio-active cellular regenerative agent engineered via DOT™ technology to mimic natural human DNA fragments. Clinically proven to accelerate cellular turnover, restore skin barrier integrity, and optimize aesthetic recovery.
+                    The REJURAN® MEDI Healing Care collection is powered by patented marine growth factor <strong>c-PDRN®</strong> (Hydrolyzed Salmon DNA)—a bio-active cellular regenerative agent engineered via DOT™ technology to mimic natural human DNA fragments. Clinically proven to accelerate cellular turnover, restore skin barrier integrity, and optimize aesthetic recovery.
                 </p>
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-5 text-[10px] tracking-wider uppercase font-semibold text-charcoal/60">
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">5-Piece Complete Regimen</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">USDA Organic Certified Facility</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">FDA OTC Licensed</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">DOT™ Fragment Optimizing Tech</span>
+                </div>
+            </div>
                 <div class="flex flex-wrap items-center justify-center gap-2 mt-5 text-[10px] tracking-wider uppercase font-semibold text-charcoal/60">
                     <span class="px-3 py-1 rounded-full bg-white border border-light-gray">5-Piece Complete Regimen</span>
                     <span class="px-3 py-1 rounded-full bg-white border border-light-gray">USDA Organic Certified Facility</span>
@@ -539,19 +674,19 @@
 
 
         <!-- ========================================== -->
-        <!-- LINE 2: EXOBLANC EXOSOME LINE (11 ITEMS)   -->
+        <!-- LINE 2: EXOBLANC (11 ITEMS)                -->
         <!-- ========================================== -->
         <section id="line-exoblanc" class="line-section scroll-mt-32">
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll fade-up">
                 <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
-                    Next-Gen Bio-Aesthetics • Pure Exosomes
+                    Seoul Science • Exosome &amp; Peptide Technology
                 </span>
-                <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-5 text-near-black [text-wrap:balance]">
-                    Exoblanc Exosome Collection
+                <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-4 text-near-black [text-wrap:balance]">
+                    Exoblanc
                 </h2>
                 <p class="text-charcoal/75 text-sm md:text-base font-light leading-relaxed [text-wrap:balance]">
-                    Harnessing state-of-the-art Korean exosome bio-technology, Exoblanc isolates nano-sized extracellular vesicles that communicate directly with skin cells. Engineered to stimulate collagen synthesis, restore cellular density, and create lasting glass-skin vitality.
+                    Your daily dose of Seoul science. Innovative formulations featuring exosome-related ingredients, PDRN, and peptides for hydration and radiant-looking skin.
                 </p>
                 <div class="flex flex-wrap items-center justify-center gap-2 mt-5 text-[10px] tracking-wider uppercase font-semibold text-charcoal/60">
                     <span class="px-3 py-1 rounded-full bg-white border border-light-gray">Cell-Free Bio-Signaling</span>
@@ -901,19 +1036,22 @@
 
 
         <!-- ============================================================== -->
-        <!-- LINE 3: PHARMESTHETIC / CONAPIDIL & VIBANQUENTMANKA             -->
+        <!-- LINE 3: PHARMESTHETIC                                           -->
         <!-- ============================================================== -->
         <section id="line-pharmesthetic" class="line-section scroll-mt-32">
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll fade-up">
                 <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
-                    Korean Aesthetic Master • Conapidil (코나피딜) &amp; VQM
+                    Korean Aesthetic Master • Intensive Clinical Care
                 </span>
-                <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-5 text-near-black [text-wrap:balance]">
-                    Pharmesthetic Master Collection
+                <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-4 text-near-black [text-wrap:balance]">
+                    Pharmesthetic
                 </h2>
+                <p class="text-xs sm:text-sm text-warm-gold font-medium mb-3">
+                    Advanced care. Your skin's next chapter.
+                </p>
                 <p class="text-charcoal/75 text-sm md:text-base font-light leading-relaxed [text-wrap:balance]">
-                    Directly curated clinical home-care formulations, featuring CONAPIDIL's signature barrier-repositioning formulations and VIBANQUENTMANKA's clinical regenerative emergency care. Revered across elite Seoul dermatology clinics for post-procedure recovery, thermal cooling, and dermal restructuring.
+                    Specialized Korean home-care formulations incorporated into a routine with individualized guidance. Directly curated clinical home-care formulations, featuring barrier-repositioning formulations and clinical regenerative emergency care. Revered across elite Seoul dermatology clinics for post-procedure recovery, thermal cooling, and dermal restructuring.
                 </p>
                 <div class="bg-amber-50/80 border border-amber-200/60 rounded-xl px-4 py-2 mt-5 text-[11px] text-amber-900 inline-block">
                     <span class="font-semibold">Curated Clinical Home-Care:</span> Prescribed and guided under personalized consultation with Sophia Yang, PA-C.
@@ -1427,9 +1565,22 @@
     <script src="footer.js?v=44"></script>
     <script src="script.js?v=44"></script>
 
-    <!-- Simple Line Filter Switcher -->
+    <!-- Interactive Collection Switcher & URL Hash Handler -->
     <script>
-        function filterLine(line) {
+        function selectCollection(line) {
+            const catalog = document.getElementById('product-catalog');
+            if (catalog) {
+                catalog.classList.remove('hidden');
+            }
+            filterLine(line, true);
+        }
+
+        function filterLine(line, shouldScroll = true) {
+            const catalog = document.getElementById('product-catalog');
+            if (catalog && catalog.classList.contains('hidden')) {
+                catalog.classList.remove('hidden');
+            }
+
             const tabs = document.querySelectorAll('.line-tab');
             tabs.forEach(t => {
                 t.classList.remove('bg-near-black', 'text-white', 'shadow-xs');
@@ -1448,13 +1599,46 @@
                 sections.forEach(s => {
                     if (s.id === 'line-' + line) {
                         s.classList.remove('hidden');
-                        s.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     } else {
                         s.classList.add('hidden');
                     }
                 });
             }
+
+            // Update active collection status bar
+            const statusEl = document.getElementById('active-line-title');
+            if (statusEl) {
+                if (line === 'exoblanc') {
+                    statusEl.textContent = 'Displaying Exoblanc (11 Formulations)';
+                } else if (line === 'rejuran') {
+                    statusEl.textContent = 'Displaying Rejuran MEDI (6 Formulations)';
+                } else if (line === 'pharmesthetic') {
+                    statusEl.textContent = 'Displaying Pharmesthetic (9 Formulations)';
+                } else {
+                    statusEl.textContent = 'Displaying All Collections (26 Formulations)';
+                }
+            }
+
+            if (shouldScroll) {
+                const nav = document.getElementById('catalog-nav');
+                if (nav) {
+                    nav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+            if (window.lucide) {
+                lucide.createIcons();
+            }
         }
+
+        // Check URL hash or query param on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '').toLowerCase();
+            if (hash === 'exoblanc' || hash === 'rejuran' || hash === 'pharmesthetic') {
+                selectCollection(hash);
+            } else if (hash === 'all') {
+                selectCollection('all');
+            }
+        });
     </script>
 
 </body>

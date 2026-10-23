@@ -1,10 +1,18 @@
 {
   "place_name": "SuA Glow",
   "rating": "5.0",
-  "user_ratings_total": 135,
-  "formatted_badge": "5.0 · 135 reviews",
-  "last_updated": "2026-10-22T18:53:16.401Z",
+  "user_ratings_total": 136,
+  "formatted_badge": "5.0 · 136 reviews",
+  "last_updated": "2026-10-23T19:34:40.606Z",
   "reviews": [
+    {
+      "author_name": "Crystal",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUSczokwc6nJaKJKg-ni-CYWSUj7Tx1aqoPXtQvUQEYFMmFO8RJ=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Sophia and staff were wonderful! She was very knowledgeable and gentle with her treatments. The devices are state of the art and will definitely be back!",
+      "time": 1792697362,
+      "relative_time_description": "in the last week"
+    },
     {
       "author_name": "Miracle612 Kong",
       "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVumeavEUWxkCREbrGX04rjG51BUcKpIS82l_9E8zIWd9o9RirH=s128-c0x00000000-cc-rp-mo",
@@ -35,14 +43,6 @@
       "rating": 5,
       "text": "First time ever for botox. Sophia gave such a great consultation for the first timer and understood exactly what my needs were. Got skintox + botox in jawline and between eyebrows. Much more tolerable pain than I expected. I'm excited to see how it'll turn out in a few days. I'd recommend this place 10/10",
       "time": 1792166256,
-      "relative_time_description": "in the last week"
-    },
-    {
-      "author_name": "MW",
-      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLBRzgmFJ27AE1zFl1oKPoFvUl0kTn2OhbLEfrV2ZC64uLUGw=s128-c0x00000000-cc-rp-mo",
-      "rating": 5,
-      "text": "I had a great experience at SuA Glow. The staff were all so welcoming and professional. I enjoyed my consultation and treatment with Sophia. I highly recommend this place!",
-      "time": 1791940725,
       "relative_time_description": "a week ago"
     },
     {
