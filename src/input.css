@@ -151,6 +151,92 @@ h6:not(.font-light):not(.font-thin):not(.heading-wide) {
     color: #404345;
 }
 
+/* Sticky Collection Header (Brand logos + menu underneath sticky at top) */
+#sticky-collection-bar {
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    #sticky-collection-bar.is-sticky {
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 40;
+        background: rgba(250, 248, 245, 0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+        border-bottom: 1px solid rgba(143, 133, 123, 0.2);
+        padding-top: 0.65rem;
+        padding-bottom: 0.25rem;
+    }
+
+    #sticky-collection-bar.is-sticky .brand-card {
+        padding: 0.6rem 0.85rem;
+        border-radius: 0.85rem;
+        background: #FFFFFF;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    #sticky-collection-bar.is-sticky .card-logo-container {
+        height: 2.25rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+
+    #sticky-collection-bar.is-sticky .card-logo-img {
+        max-height: 1.85rem !important;
+    }
+
+    #sticky-collection-bar.is-sticky .card-kicker,
+    #sticky-collection-bar.is-sticky .card-subtitle,
+    #sticky-collection-bar.is-sticky .card-desc,
+    #sticky-collection-bar.is-sticky .card-footer {
+        display: none !important;
+    }
+
+    #sticky-collection-bar.is-sticky #catalog-nav {
+        margin-top: 0.35rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        border-top: none;
+        border-bottom: none;
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 767px) {
+    #sticky-collection-bar.is-sticky {
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 40;
+        background: rgba(250, 248, 245, 0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        border-bottom: 1px solid rgba(143, 133, 123, 0.2);
+        padding: 0;
+    }
+
+    /* On mobile sticky, keep only the filter pills visible to save viewport */
+    #sticky-collection-bar.is-sticky .brand-logos-container {
+        display: none !important;
+    }
+
+    #sticky-collection-bar.is-sticky #catalog-nav {
+        margin-top: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
 ::-webkit-scrollbar-track {
     background: #F6F7F8;
 }
