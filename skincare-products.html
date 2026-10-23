@@ -53,9 +53,9 @@
                     </span>
                 </div>
 
-                <!-- Big Main Headline (Montserrat Display - Exactly 3 Distinct Lines) -->
-                <div class="space-y-1 sm:space-y-2">
-                    <h1 class="heading-wide text-2xl sm:text-4xl lg:text-[44px] xl:text-[50px] text-near-black font-light leading-[1.2] !tracking-[0.08em] sm:!tracking-[0.1em]">
+                <!-- Big Main Headline (Montserrat Display - Exactly 3 Distinct Lines with refined font scale & generous line spacing) -->
+                <div>
+                    <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-near-black font-light leading-[1.28] sm:leading-[1.32] lg:leading-[1.38] space-y-1.5 sm:space-y-2.5 lg:space-y-3 !tracking-[0.08em] sm:!tracking-[0.1em]">
                         <span class="block whitespace-nowrap"><span class="bg-gradient-to-r from-warm-gold to-[#8F857B] bg-clip-text text-transparent font-normal">KOREAN</span> SKINCARE.</span>
                         <span class="block whitespace-nowrap">SEOUL SCIENCE.</span>
                         <span class="block whitespace-nowrap">YOUR DAILY <span class="bg-gradient-to-r from-warm-gold to-[#8F857B] bg-clip-text text-transparent font-normal">GLOW.</span></span>
@@ -195,20 +195,20 @@
                     Filter:
                 </span>
                 <button type="button" onclick="filterLine('all')" id="tab-all"
-                    class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
-                    All Collections <span class="text-[10px] opacity-70 ml-1">(26)</span>
+                    class="line-tab active px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
+                    All Collections <span class="tab-count text-[10px] ml-1">(26)</span>
                 </button>
                 <button type="button" onclick="filterLine('rejuran')" id="tab-rejuran"
-                    class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
-                    Rejuran MEDI <span class="text-[10px] opacity-70 ml-1">(6)</span>
+                    class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
+                    Rejuran MEDI <span class="tab-count text-[10px] ml-1">(6)</span>
                 </button>
                 <button type="button" onclick="filterLine('exoblanc')" id="tab-exoblanc"
-                    class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
-                    Exoblanc <span class="text-[10px] opacity-70 ml-1">(11)</span>
+                    class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
+                    Exoblanc <span class="tab-count text-[10px] ml-1">(11)</span>
                 </button>
                 <button type="button" onclick="filterLine('pharmesthetic')" id="tab-pharmesthetic"
-                    class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 whitespace-nowrap bg-off-white hover:bg-taupe/10 text-charcoal border border-light-gray">
-                    Pharmesthetic <span class="text-[10px] opacity-70 ml-1">(9)</span>
+                    class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
+                    Pharmesthetic <span class="tab-count text-[10px] ml-1">(9)</span>
                 </button>
             </div>
 
@@ -229,12 +229,12 @@
     </nav>
 
     <!-- MAIN PRODUCT CATALOG CONTAINER (Initially hidden until user selects a collection or clicks all) -->
-    <main id="product-catalog" class="hidden py-12 md:py-16 px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+    <main id="product-catalog" class="hidden pt-10 sm:pt-14 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
 
         <!-- ========================================== -->
         <!-- LINE 1: REJURAN® MEDI LINE                 -->
         <!-- ========================================== -->
-        <section id="line-rejuran" class="line-section scroll-mt-32">
+        <section id="line-rejuran" class="line-section scroll-mt-28">
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-14 animate-on-scroll fade-up">
                 <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
@@ -652,9 +652,9 @@
         <!-- ========================================== -->
         <!-- LINE 2: EXOBLANC (11 ITEMS)                -->
         <!-- ========================================== -->
-        <section id="line-exoblanc" class="line-section scroll-mt-32">
+        <section id="line-exoblanc" class="line-section scroll-mt-28">
             <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll fade-up">
+            <div class="text-center max-w-3xl mx-auto mb-14 animate-on-scroll fade-up">
                 <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
                     Seoul Science • Exosome &amp; Peptide Technology
                 </span>
@@ -1014,9 +1014,9 @@
         <!-- ============================================================== -->
         <!-- LINE 3: PHARMESTHETIC                                           -->
         <!-- ============================================================== -->
-        <section id="line-pharmesthetic" class="line-section scroll-mt-32">
+        <section id="line-pharmesthetic" class="line-section scroll-mt-28">
             <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll fade-up">
+            <div class="text-center max-w-3xl mx-auto mb-14 animate-on-scroll fade-up">
                 <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
                     Korean Aesthetic Master • Intensive Clinical Care
                 </span>
@@ -1577,52 +1577,55 @@
             }
 
             // Sync active state on filter tabs
+            // Toggle active pill tab with bulletproof styles
             const tabs = document.querySelectorAll('.line-tab');
-            tabs.forEach(t => {
-                t.classList.remove('bg-near-black', 'text-white', 'shadow-xs');
-                t.classList.add('bg-off-white', 'text-charcoal');
-            });
+            tabs.forEach(t => t.classList.remove('active'));
             const activeTab = document.getElementById('tab-' + line);
             if (activeTab) {
-                activeTab.classList.remove('bg-off-white', 'text-charcoal');
-                activeTab.classList.add('bg-near-black', 'text-white', 'shadow-xs');
+                activeTab.classList.add('active');
             }
 
+            // Manage sections & exact uniform top spacing
             const sections = document.querySelectorAll('.line-section');
+            const exoblancEl = document.getElementById('line-exoblanc');
+            const pharmestheticEl = document.getElementById('line-pharmesthetic');
+
             if (line === 'all') {
                 sections.forEach(s => {
                     s.classList.remove('hidden');
+                    s.hidden = false;
                     s.querySelectorAll('.animate-on-scroll').forEach(el => el.classList.add('visible'));
                 });
+                if (exoblancEl) {
+                    exoblancEl.classList.add('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
+                }
+                if (pharmestheticEl) {
+                    pharmestheticEl.classList.add('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
+                }
             } else {
                 sections.forEach(s => {
                     if (s.id === 'line-' + line) {
                         s.classList.remove('hidden');
+                        s.hidden = false;
                         s.querySelectorAll('.animate-on-scroll').forEach(el => el.classList.add('visible'));
                     } else {
                         s.classList.add('hidden');
+                        s.hidden = true;
                     }
                 });
-            }
-
-            // Update active collection status bar
-            const statusEl = document.getElementById('active-line-title');
-            if (statusEl) {
-                if (line === 'exoblanc') {
-                    statusEl.textContent = 'Displaying Exoblanc (11 Formulations)';
-                } else if (line === 'rejuran') {
-                    statusEl.textContent = 'Displaying Rejuran MEDI (6 Formulations)';
-                } else if (line === 'pharmesthetic') {
-                    statusEl.textContent = 'Displaying Pharmesthetic (9 Formulations)';
-                } else {
-                    statusEl.textContent = 'Displaying All Collections (26 Formulations)';
+                if (exoblancEl) {
+                    exoblancEl.classList.remove('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
+                }
+                if (pharmestheticEl) {
+                    pharmestheticEl.classList.remove('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
                 }
             }
 
             if (shouldScroll) {
                 const nav = document.getElementById('catalog-nav');
                 if (nav) {
-                    nav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    const navTop = nav.getBoundingClientRect().top + window.pageYOffset - 72;
+                    window.scrollTo({ top: navTop, behavior: 'smooth' });
                 }
             }
             if (window.lucide) {

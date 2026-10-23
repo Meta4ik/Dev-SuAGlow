@@ -113,6 +113,44 @@ h6:not(.font-light):not(.font-thin):not(.heading-wide) {
     transform: translateY(-0.5rem);
 }
 
+/* Skincare Catalog Subnav Filter Tabs */
+.line-tab {
+    background-color: #F6F7F8;
+    color: #404345;
+    border: 1px solid #DFE0DD;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.line-tab:hover {
+    background-color: #EAEBE9;
+    color: #131619;
+    border-color: #CFCFCB;
+}
+
+.line-tab.active {
+    background-color: #131619 !important;
+    color: #FFFFFF !important;
+    border-color: #131619 !important;
+    box-shadow: 0 2px 6px rgba(19, 22, 25, 0.15);
+}
+
+.line-tab.active:hover {
+    background-color: #2D3032 !important;
+    color: #FFFFFF !important;
+    border-color: #2D3032 !important;
+}
+
+.line-tab.active .tab-count {
+    opacity: 0.85;
+    color: #DFE0DD;
+}
+
+.line-tab:not(.active) .tab-count {
+    opacity: 0.65;
+    color: #404345;
+}
+
 ::-webkit-scrollbar-track {
     background: #F6F7F8;
 }
