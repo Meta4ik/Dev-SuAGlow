@@ -111,30 +111,7 @@
                 <!-- 3 Brand Logos Selector -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 max-w-5xl mx-auto items-stretch">
 
-                    <!-- Brand 1: Rejuran MEDI -->
-                    <button type="button" onclick="selectCollection('rejuran')" id="brand-card-rejuran"
-                        class="brand-card group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-6 sm:p-7 pt-7 sm:pt-8 border border-light-gray/80 hover:border-warm-gold/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5">
-                        <div>
-                            <div class="card-logo-container h-14 sm:h-16 flex items-center justify-center w-full px-4 mb-4 sm:mb-5 pt-1 transition-all duration-300">
-                                <img src="assets/logo-rejuran.png" alt="Rejuran MEDI"
-                                    class="card-logo-img max-h-7 sm:max-h-8 w-auto object-contain transition-all duration-300 group-hover:scale-105">
-                            </div>
-                            <div class="mb-1.5">
-                                <span class="card-kicker text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Patented c-PDRN® DNA</span>
-                                <h3 class="card-title heading-wide text-base sm:text-lg font-bold text-near-black mt-1">Rejuran MEDI</h3>
-                                <p class="card-subtitle text-xs text-warm-gold font-medium mt-0.5">Cellular Bio-Regeneration</p>
-                            </div>
-                            <p class="card-desc text-charcoal/70 text-xs font-light leading-relaxed mt-2.5">
-                                Powered by patented marine growth factor c-PDRN® (Hydrolyzed Salmon DNA)—engineered to accelerate cellular turnover, restore skin barrier integrity, and optimize recovery.
-                            </p>
-                        </div>
-                        <div class="card-footer pt-4 mt-4 border-t border-light-gray/60 flex items-center justify-center gap-1.5 text-xs font-heading font-semibold text-taupe group-hover:text-warm-gold transition-colors">
-                            <span>Explore 6 Formulations</span>
-                            <i data-lucide="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"></i>
-                        </div>
-                    </button>
-
-                    <!-- Brand 2: Exoblanc -->
+                    <!-- Brand 1: Exoblanc -->
                     <button type="button" onclick="selectCollection('exoblanc')" id="brand-card-exoblanc"
                         class="brand-card group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-6 sm:p-7 pt-7 sm:pt-8 border border-light-gray/80 hover:border-warm-gold/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5">
                         <div>
@@ -157,7 +134,7 @@
                         </div>
                     </button>
 
-                    <!-- Brand 3: Pharmesthetic -->
+                    <!-- Brand 2: Pharmesthetic -->
                     <button type="button" onclick="selectCollection('pharmesthetic')" id="brand-card-pharmesthetic"
                         class="brand-card group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-6 sm:p-7 pt-7 sm:pt-8 border border-light-gray/80 hover:border-warm-gold/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5">
                         <div>
@@ -180,24 +157,43 @@
                         </div>
                     </button>
 
+                    <!-- Brand 3: Rejuran MEDI -->
+                    <button type="button" onclick="selectCollection('rejuran')" id="brand-card-rejuran"
+                        class="brand-card group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-6 sm:p-7 pt-7 sm:pt-8 border border-light-gray/80 hover:border-warm-gold/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5">
+                        <div>
+                            <div class="card-logo-container h-14 sm:h-16 flex items-center justify-center w-full px-4 mb-4 sm:mb-5 pt-1 transition-all duration-300">
+                                <img src="assets/logo-rejuran.png" alt="Rejuran MEDI"
+                                    class="card-logo-img max-h-7 sm:max-h-8 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="mb-1.5">
+                                <span class="card-kicker text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Patented c-PDRN® DNA</span>
+                                <h3 class="card-title heading-wide text-base sm:text-lg font-bold text-near-black mt-1">Rejuran MEDI</h3>
+                                <p class="card-subtitle text-xs text-warm-gold font-medium mt-0.5">Cellular Bio-Regeneration</p>
+                            </div>
+                            <p class="card-desc text-charcoal/70 text-xs font-light leading-relaxed mt-2.5">
+                                Powered by patented marine growth factor c-PDRN® (Hydrolyzed Salmon DNA)—engineered to accelerate cellular turnover, restore skin barrier integrity, and optimize recovery.
+                            </p>
+                        </div>
+                        <div class="card-footer pt-4 mt-4 border-t border-light-gray/60 flex items-center justify-center gap-1.5 text-xs font-heading font-semibold text-taupe group-hover:text-warm-gold transition-colors">
+                            <span>Explore 6 Formulations</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </button>
+
                 </div>
             </div>
 
             <!-- Menu Underneath The Logos -->
             <nav id="catalog-nav" aria-label="Skincare Collection Filter" class="w-full mt-6 bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-2.5 sm:py-3 px-4 md:px-8 shadow-xs transition-all duration-300">
-                <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+                <div class="max-w-7xl mx-auto flex items-center justify-center">
                     <!-- Filter Pills -->
-                    <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-0.5">
+                    <div class="flex items-center justify-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-0.5">
                         <span class="text-[11px] font-heading font-semibold text-charcoal/50 uppercase tracking-widest hidden xl:inline shrink-0 mr-2">
                             Filter:
                         </span>
                         <button type="button" onclick="filterLine('all')" id="tab-all"
                             class="line-tab active px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
                             All Collections <span class="tab-count text-[10px] ml-1">(26)</span>
-                        </button>
-                        <button type="button" onclick="filterLine('rejuran')" id="tab-rejuran"
-                            class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
-                            Rejuran MEDI <span class="tab-count text-[10px] ml-1">(6)</span>
                         </button>
                         <button type="button" onclick="filterLine('exoblanc')" id="tab-exoblanc"
                             class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
@@ -207,14 +203,10 @@
                             class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
                             Pharmesthetic <span class="tab-count text-[10px] ml-1">(9)</span>
                         </button>
-                    </div>
-
-                    <!-- Right Actions: Brand Overview anchor -->
-                    <div class="hidden md:flex items-center gap-4 shrink-0 text-xs font-heading font-semibold">
-                        <a href="#skincare-edit" class="text-charcoal/60 hover:text-near-black transition-colors flex items-center gap-1.5 py-1.5">
-                            <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
-                            <span>Brand Overview</span>
-                        </a>
+                        <button type="button" onclick="filterLine('rejuran')" id="tab-rejuran"
+                            class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
+                            Rejuran MEDI <span class="tab-count text-[10px] ml-1">(6)</span>
+                        </button>
                     </div>
                 </div>
             </nav>
@@ -225,383 +217,7 @@
     <main id="product-catalog" class="hidden pt-10 sm:pt-14 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
 
         <!-- ========================================== -->
-        <!-- LINE 1: REJURAN® MEDI LINE                 -->
-        <!-- ========================================== -->
-        <section id="line-rejuran" class="line-section scroll-mt-28">
-            <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-14 animate-on-scroll fade-up">
-                <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
-                    PharmaResearch • Patented c-PDRN® (Hydrolyzed DNA)
-                </span>
-                <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-4 text-near-black [text-wrap:balance]">
-                    Rejuran MEDI
-                </h2>
-                <p class="text-charcoal/75 text-sm md:text-base font-light leading-relaxed [text-wrap:balance]">
-                    The REJURAN® MEDI Healing Care collection is powered by patented marine growth factor <strong>c-PDRN®</strong> (Hydrolyzed Salmon DNA)—a bio-active cellular regenerative agent engineered via DOT™ technology to mimic natural human DNA fragments. Clinically proven to accelerate cellular turnover, restore skin barrier integrity, and optimize aesthetic recovery.
-                </p>
-                <div class="flex flex-wrap items-center justify-center gap-2 mt-5 text-[10px] tracking-wider uppercase font-semibold text-charcoal/60">
-                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">5-Piece Complete Regimen</span>
-                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">USDA Organic Certified Facility</span>
-                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">FDA OTC Licensed</span>
-                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">DOT™ Fragment Optimizing Tech</span>
-                </div>
-            </div>
-
-            <!-- FEATURED HERO: REJURAN® HEALING CARE SET (5-PIECE REGIMEN) -->
-            <div class="mb-14 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#AA987C]/30 shadow-md transition-all duration-300">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <!-- Image Column -->
-                    <div class="lg:col-span-5">
-                        <div class="relative bg-[#FAF8F5] aspect-square w-full rounded-2xl overflow-hidden border border-light-gray/70">
-                            <img src="assets/products/rejuran-healing-care-set-open.webp" alt="Rejuran Healing Care Set - 5-Piece Regimen"
-                                class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] font-semibold text-warm-gold border-[#AA987C]/30 shadow-sm">Complete 5-Piece Regimen</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">SKU: PRM-100</span>
-                        </div>
-                    </div>
-                    <!-- Details Column -->
-                    <div class="lg:col-span-7 flex flex-col justify-between">
-                        <div>
-                            <div class="flex flex-wrap items-center gap-2 mb-3">
-                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest bg-taupe/10 px-3 py-1 rounded-full">REJURAN® PRO Clinical Regimen</span>
-                                <span class="text-[10px] font-heading font-medium text-charcoal/60 uppercase tracking-wider">Patented Hydrolyzed DNA (c-PDRN®)</span>
-                            </div>
-                            <h3 class="heading-wide text-2xl sm:text-3xl font-bold text-near-black leading-tight mb-4 [text-wrap:balance]">
-                                Rejuran® Healing Care Set
-                            </h3>
-                            <p class="text-charcoal/80 text-xs sm:text-sm font-light leading-relaxed mb-6">
-                                The Rejuran® Healing Care Set is a complete, five-piece regimen of restorative skincare essentials that incorporate proprietary Hydrolyzed DNA (c-PDRN®) with other proven skincare ingredients. These powerful, scientifically developed formulas nourish, protect, and support natural healing and cellular turnover to address visible signs of aging including dark spots, wrinkles, sagging, loss of firmness, and uneven texture. The result is a complexion that looks and feels healthier, more resilient, and radiant with an authentic Korean glass-glow.
-                            </p>
-
-                            <!-- What's Included / Regimen Breakdown -->
-                            <div class="mb-6 bg-[#FAF7F2] p-5 rounded-2xl border border-[#AA987C]/25">
-                                <h4 class="font-heading text-xs font-bold uppercase tracking-wider text-near-black mb-3 flex items-center gap-2">
-                                    <i data-lucide="layers" class="w-4 h-4 text-warm-gold"></i>
-                                    What's Included in This Bundle:
-                                </h4>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-charcoal/85">
-                                    <div class="flex items-start gap-2">
-                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">1</span>
-                                        <div>
-                                            <span class="font-medium text-near-black">Concentrated Multitasking Serum</span>
-                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 30 ml / 1.01 fl oz • Cellular Turnover</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-2">
-                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">2</span>
-                                        <div>
-                                            <span class="font-medium text-near-black">Healing Eye Gel</span>
-                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 15 ml / 0.5 fl oz • Elasticity &amp; Depuffing</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-2">
-                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">3</span>
-                                        <div>
-                                            <span class="font-medium text-near-black">Intensive Moisturizer</span>
-                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 40 ml / 1.35 fl oz • Deep Hydration &amp; Barrier</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-2">
-                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">4</span>
-                                        <div>
-                                            <span class="font-medium text-near-black">Healing Cream</span>
-                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 50 ml / 1.69 fl oz • Intensive Repair</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-2 sm:col-span-2">
-                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">5</span>
-                                        <div>
-                                            <span class="font-medium text-near-black">Sunscreen SPF 50+ PA+++</span>
-                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 50 ml / 1.69 fl oz • UV Shield &amp; Healing</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- CTA Row -->
-                        <div class="flex items-center gap-2 pt-3 border-t border-light-gray/60 text-xs text-charcoal/70">
-                            <i data-lucide="shield-check" class="w-4 h-4 text-warm-gold shrink-0"></i>
-                            <span>In-Office Purchase Only • Prescribed During Visit</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Products Grid: 5 Individual Items + Pairing Guide -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- 1. Concentrated Multitasking Serum -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
-                            <img src="assets/products/rejuran-multitasking-serum.webp" alt="Rejuran Concentrated Multitasking Serum"
-                                class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Cellular Turnover</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">30 ml / 1.01 fl oz</span>
-                        </div>
-                        <div>
-                            <div class="mb-3">
-                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 1 • Active Serum</span>
-                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
-                                    Concentrated Multitasking Serum
-                                </h3>
-                            </div>
-                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
-                                Utilizes Hydrolyzed DNA (c-PDRN®) to nourish, protect, and support natural healing and cellular turnover, addressing visible signs of aging including dark spots, wrinkles, sagging, loss of firmness, and uneven texture. The result is a healthier, more resilient complexion with a youthful glow.
-                            </p>
-                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
-                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
-                                Apply 3 to 4 drops on fingertips to freshly cleansed skin. Gently massage onto the face, neck, and décolleté once or twice daily.
-                            </div>
-                            <div class="mb-5 space-y-2">
-                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
-                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Supports natural healing &amp; accelerates cellular turnover</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Softens dark spots, expression lines, and loss of firmness</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Fosters a resilient, radiant Korean glass-glow complexion</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
-                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
-                                Hydrolyzed DNA (c-PDRN®), Blackberry Leaf Extract, Blueberry Fruit Extract, Black Mulberry Extract, Aloe Vera Leaf Juice, Argan Kernel Oil, Sodium Hyaluronate, Arbutin, Adenosine.
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 2. Healing Eye Gel -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
-                            <img src="assets/products/rejuran-healing-eye-gel.webp" alt="Rejuran Healing Eye Gel"
-                                class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Eye Contour Elasticity</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">15 ml / 0.5 fl oz</span>
-                        </div>
-                        <div>
-                            <div class="mb-3">
-                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 2 • Periorbital Contour</span>
-                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
-                                    Healing Eye Gel
-                                </h3>
-                            </div>
-                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
-                                Incorporates Hydrolyzed DNA (c-PDRN®) to improve the appearance of elasticity and restore skin firmness around the eye area, reducing the visible signs of aging and fatigue for a refreshed and revitalized look.
-                            </p>
-                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
-                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
-                                Apply a pea-size amount to freshly cleansed skin using the tip of the ring finger. Gently massage around the entire eye area in a circular motion once or twice daily.
-                            </div>
-                            <div class="mb-5 space-y-2">
-                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
-                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Restores firm elasticity to delicate periorbital tissue</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Depuffs and revitalizes tired under-eye bags &amp; shadows</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Safe, lightweight hydration for upper and lower eyelid contours</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
-                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
-                                Hydrolyzed DNA (c-PDRN®), Sodium Hyaluronate, Tocopheryl Acetate (Vitamin E), Adenosine, Lavandula Angustifolia (Lavender) Oil, Pelargonium Graveolens Flower Oil.
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 3. Intensive Moisturizer -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
-                            <img src="assets/products/rejuran-intensive-moisturizer.webp" alt="Rejuran Intensive Moisturizer"
-                                class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Barrier Hydration</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">40 ml / 1.35 fl oz</span>
-                        </div>
-                        <div>
-                            <div class="mb-3">
-                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 3 • Barrier Moisture</span>
-                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
-                                    Intensive Moisturizer
-                                </h3>
-                            </div>
-                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
-                                Formulated with Hydrolyzed DNA (c-PDRN®) and other hydrating ingredients to deeply moisturize and nourish the skin, improving skin texture, firmness, and overall appearance while supporting natural healing processes.
-                            </p>
-                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
-                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
-                                Apply 2 pumps on fingertips to freshly cleansed skin after serum, but before sunscreen. Gently massage into face, neck, and décolleté once or twice daily.
-                            </div>
-                            <div class="mb-5 space-y-2">
-                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
-                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Deeply seals hydration and reinforces compromised barrier lipids</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Enhances skin firmness, bounce, and refined surface texture</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Shields parched skin against harsh dry climates and environmental stress</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
-                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
-                                Hydrolyzed DNA (c-PDRN®), Simmondsia Chinensis (Jojoba) Seed Oil, Butyrospermum Parkii (Shea) Butter, Adenosine, Lavender Oil, Bergamot Peel Oil.
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 4. Healing Cream -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
-                            <img src="assets/products/rejuran-healing-cream.webp" alt="Rejuran Healing Cream"
-                                class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Cellular Regeneration</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">50 ml / 1.69 fl oz</span>
-                        </div>
-                        <div>
-                            <div class="mb-3">
-                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 4 • Intensive Repair</span>
-                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
-                                    Healing Cream
-                                </h3>
-                            </div>
-                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
-                                Combines Hydrolyzed DNA (c-PDRN®) with emollient-rich ingredients to provide intensive hydration and support skin's natural repair processes, enhancing skin firmness and elasticity, and minimizing signs of aging.
-                            </p>
-                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
-                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
-                                Apply a pea-size amount to freshly cleansed skin using fingertips, and gently massage into face, neck, and décolleté once or twice daily.
-                            </div>
-                            <div class="mb-5 space-y-2">
-                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
-                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Accelerates post-microneedling, laser, and chemical peel recovery</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Significantly increases elasticity, dermal firmness, and smoothness</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Replenishes biocompatible moisture to reverse chronological dryness</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
-                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
-                                Hydrolyzed DNA (c-PDRN®), Shea Butter, Squalane, Tocopheryl Acetate, Adenosine, Lavender Oil, Bergamot Peel Oil, Grapefruit Peel Oil.
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 5. Sunscreen SPF 50+ PA+++ -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
-                            <img src="assets/products/rejuran-sunscreen.webp" alt="Rejuran Sunscreen SPF 50+ PA+++"
-                                class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Clinical UV Shield</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">50 ml / 1.69 fl oz</span>
-                        </div>
-                        <div>
-                            <div class="mb-3">
-                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 5 • Daytime UV Defense</span>
-                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
-                                    Sunscreen SPF 50+ PA+++
-                                </h3>
-                            </div>
-                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
-                                Features Hydrolyzed DNA (c-PDRN®) along with protective and nourishing ingredients to shield the skin from harmful UV rays while promoting skin healing and hydration, maintaining a youthful and healthy complexion.
-                            </p>
-                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
-                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
-                                Apply a generous amount using fingertips. Smooth over face and neck until absorbed. Re-apply as needed after swimming, excessive perspiration, or towel drying.
-                            </div>
-                            <div class="mb-5 space-y-2">
-                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
-                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Broad-spectrum UVA/UVB SPF 50+ PA+++ defense against photodamage</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>c-PDRN® continuously supports recovery of sensitized &amp; treated skin</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
-                                        <span>Silky, weightless finish with no white cast or greasy film</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
-                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
-                                Hydrolyzed DNA (c-PDRN®), Pomegranate Seed Oil, Black Mulberry Extract, Blackberry Leaf Extract, Aloe Vera Leaf Juice, Jojoba Seed Oil, Shea Butter, Oat Kernel Extract, Squalane, Sodium Hyaluronate.
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Consultation & Pairing Note Card -->
-                <div class="bg-[#F8F6F2] rounded-3xl p-8 border border-[#AA987C]/30 flex flex-col justify-between text-center md:text-left">
-                    <div>
-                        <div class="w-12 h-12 rounded-2xl bg-white text-warm-gold flex items-center justify-center mb-6 shadow-xs mx-auto md:mx-0">
-                            <i data-lucide="sparkles" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-heading text-lg font-bold text-near-black mb-3 [text-wrap:balance]">
-                            Pairing Rejuran® with In-Office Protocols
-                        </h3>
-                        <p class="text-charcoal/70 text-xs sm:text-sm font-light leading-relaxed mb-6">
-                            Sophia Yang, PA-C custom-pairs the REJURAN® Healing Care home regimen with our in-clinic treatments (such as Salmon PN Facials, Skin Quality Boosters, and Oligio X RF Lifting) to exponentially extend post-treatment collagen remodeling and skin barrier renewal.
-                        </p>
-                        <div class="space-y-2 text-xs text-charcoal/80 font-medium">
-                            <div class="flex items-center gap-2">
-                                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#AA987C]"></i>
-                                <span>300% Greater c-PDRN bio-absorption</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#AA987C]"></i>
-                                <span>Zero downtime barrier sealing</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ========================================== -->
-        <!-- LINE 2: EXOBLANC (11 ITEMS)                -->
+        <!-- LINE 1: EXOBLANC (11 ITEMS)                -->
         <!-- ========================================== -->
         <section id="line-exoblanc" class="line-section scroll-mt-28">
             <!-- Section Header -->
@@ -919,7 +535,9 @@
 
 
         <!-- ============================================================== -->
-        <!-- LINE 3: PHARMESTHETIC                                           -->
+
+
+        <!-- LINE 2: PHARMESTHETIC                                           -->
         <!-- ============================================================== -->
         <section id="line-pharmesthetic" class="line-section scroll-mt-28">
             <!-- Section Header -->
@@ -1313,6 +931,384 @@
             </div>
         </section>
 
+
+        <!-- LINE 3: REJURAN® MEDI LINE                 -->
+        <!-- ========================================== -->
+        <section id="line-rejuran" class="line-section scroll-mt-28">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-14 animate-on-scroll fade-up">
+                <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
+                    PharmaResearch • Patented c-PDRN® (Hydrolyzed DNA)
+                </span>
+                <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-4 text-near-black [text-wrap:balance]">
+                    Rejuran MEDI
+                </h2>
+                <p class="text-charcoal/75 text-sm md:text-base font-light leading-relaxed [text-wrap:balance]">
+                    The REJURAN® MEDI Healing Care collection is powered by patented marine growth factor <strong>c-PDRN®</strong> (Hydrolyzed Salmon DNA)—a bio-active cellular regenerative agent engineered via DOT™ technology to mimic natural human DNA fragments. Clinically proven to accelerate cellular turnover, restore skin barrier integrity, and optimize aesthetic recovery.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-5 text-[10px] tracking-wider uppercase font-semibold text-charcoal/60">
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">5-Piece Complete Regimen</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">USDA Organic Certified Facility</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">FDA OTC Licensed</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-light-gray">DOT™ Fragment Optimizing Tech</span>
+                </div>
+            </div>
+
+            <!-- FEATURED HERO: REJURAN® HEALING CARE SET (5-PIECE REGIMEN) -->
+            <div class="mb-14 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#AA987C]/30 shadow-md transition-all duration-300">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Image Column -->
+                    <div class="lg:col-span-5">
+                        <div class="relative bg-[#FAF8F5] aspect-square w-full rounded-2xl overflow-hidden border border-light-gray/70">
+                            <img src="assets/products/rejuran-healing-care-set-open.webp" alt="Rejuran Healing Care Set - 5-Piece Regimen"
+                                class="w-full h-full object-cover">
+                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] font-semibold text-warm-gold border-[#AA987C]/30 shadow-sm">Complete 5-Piece Regimen</span>
+                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">SKU: PRM-100</span>
+                        </div>
+                    </div>
+                    <!-- Details Column -->
+                    <div class="lg:col-span-7 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest bg-taupe/10 px-3 py-1 rounded-full">REJURAN® PRO Clinical Regimen</span>
+                                <span class="text-[10px] font-heading font-medium text-charcoal/60 uppercase tracking-wider">Patented Hydrolyzed DNA (c-PDRN®)</span>
+                            </div>
+                            <h3 class="heading-wide text-2xl sm:text-3xl font-bold text-near-black leading-tight mb-4 [text-wrap:balance]">
+                                Rejuran® Healing Care Set
+                            </h3>
+                            <p class="text-charcoal/80 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                                The Rejuran® Healing Care Set is a complete, five-piece regimen of restorative skincare essentials that incorporate proprietary Hydrolyzed DNA (c-PDRN®) with other proven skincare ingredients. These powerful, scientifically developed formulas nourish, protect, and support natural healing and cellular turnover to address visible signs of aging including dark spots, wrinkles, sagging, loss of firmness, and uneven texture. The result is a complexion that looks and feels healthier, more resilient, and radiant with an authentic Korean glass-glow.
+                            </p>
+
+                            <!-- What's Included / Regimen Breakdown -->
+                            <div class="mb-6 bg-[#FAF7F2] p-5 rounded-2xl border border-[#AA987C]/25">
+                                <h4 class="font-heading text-xs font-bold uppercase tracking-wider text-near-black mb-3 flex items-center gap-2">
+                                    <i data-lucide="layers" class="w-4 h-4 text-warm-gold"></i>
+                                    What's Included in This Bundle:
+                                </h4>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-charcoal/85">
+                                    <div class="flex items-start gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">1</span>
+                                        <div>
+                                            <span class="font-medium text-near-black">Concentrated Multitasking Serum</span>
+                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 30 ml / 1.01 fl oz • Cellular Turnover</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">2</span>
+                                        <div>
+                                            <span class="font-medium text-near-black">Healing Eye Gel</span>
+                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 15 ml / 0.5 fl oz • Elasticity &amp; Depuffing</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">3</span>
+                                        <div>
+                                            <span class="font-medium text-near-black">Intensive Moisturizer</span>
+                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 40 ml / 1.35 fl oz • Deep Hydration &amp; Barrier</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">4</span>
+                                        <div>
+                                            <span class="font-medium text-near-black">Healing Cream</span>
+                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 50 ml / 1.69 fl oz • Intensive Repair</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-2 sm:col-span-2">
+                                        <span class="w-5 h-5 rounded-full bg-white text-taupe text-[10px] font-bold flex items-center justify-center shrink-0 border border-light-gray">5</span>
+                                        <div>
+                                            <span class="font-medium text-near-black">Sunscreen SPF 50+ PA+++</span>
+                                            <span class="text-[11px] text-charcoal/60 block">NET WT. 50 ml / 1.69 fl oz • UV Shield &amp; Healing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Row -->
+                        <div class="flex items-center gap-2 pt-3 border-t border-light-gray/60 text-xs text-charcoal/70">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-warm-gold shrink-0"></i>
+                            <span>In-Office Purchase Only • Prescribed During Visit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid: 5 Individual Items + Pairing Guide -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. Concentrated Multitasking Serum -->
+                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                            <img src="assets/products/rejuran-multitasking-serum.webp" alt="Rejuran Concentrated Multitasking Serum"
+                                class="w-full h-full object-cover">
+                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Cellular Turnover</span>
+                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">30 ml / 1.01 fl oz</span>
+                        </div>
+                        <div>
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 1 • Active Serum</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Concentrated Multitasking Serum
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Utilizes Hydrolyzed DNA (c-PDRN®) to nourish, protect, and support natural healing and cellular turnover, addressing visible signs of aging including dark spots, wrinkles, sagging, loss of firmness, and uneven texture. The result is a healthier, more resilient complexion with a youthful glow.
+                            </p>
+                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
+                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
+                                Apply 3 to 4 drops on fingertips to freshly cleansed skin. Gently massage onto the face, neck, and décolleté once or twice daily.
+                            </div>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Supports natural healing &amp; accelerates cellular turnover</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Softens dark spots, expression lines, and loss of firmness</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Fosters a resilient, radiant Korean glass-glow complexion</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
+                                Hydrolyzed DNA (c-PDRN®), Blackberry Leaf Extract, Blueberry Fruit Extract, Black Mulberry Extract, Aloe Vera Leaf Juice, Argan Kernel Oil, Sodium Hyaluronate, Arbutin, Adenosine.
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Healing Eye Gel -->
+                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                            <img src="assets/products/rejuran-healing-eye-gel.webp" alt="Rejuran Healing Eye Gel"
+                                class="w-full h-full object-cover">
+                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Eye Contour Elasticity</span>
+                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">15 ml / 0.5 fl oz</span>
+                        </div>
+                        <div>
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 2 • Periorbital Contour</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Healing Eye Gel
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Incorporates Hydrolyzed DNA (c-PDRN®) to improve the appearance of elasticity and restore skin firmness around the eye area, reducing the visible signs of aging and fatigue for a refreshed and revitalized look.
+                            </p>
+                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
+                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
+                                Apply a pea-size amount to freshly cleansed skin using the tip of the ring finger. Gently massage around the entire eye area in a circular motion once or twice daily.
+                            </div>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Restores firm elasticity to delicate periorbital tissue</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Depuffs and revitalizes tired under-eye bags &amp; shadows</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Safe, lightweight hydration for upper and lower eyelid contours</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
+                                Hydrolyzed DNA (c-PDRN®), Sodium Hyaluronate, Tocopheryl Acetate (Vitamin E), Adenosine, Lavandula Angustifolia (Lavender) Oil, Pelargonium Graveolens Flower Oil.
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Intensive Moisturizer -->
+                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                            <img src="assets/products/rejuran-intensive-moisturizer.webp" alt="Rejuran Intensive Moisturizer"
+                                class="w-full h-full object-cover">
+                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Barrier Hydration</span>
+                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">40 ml / 1.35 fl oz</span>
+                        </div>
+                        <div>
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 3 • Barrier Moisture</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Intensive Moisturizer
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Formulated with Hydrolyzed DNA (c-PDRN®) and other hydrating ingredients to deeply moisturize and nourish the skin, improving skin texture, firmness, and overall appearance while supporting natural healing processes.
+                            </p>
+                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
+                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
+                                Apply 2 pumps on fingertips to freshly cleansed skin after serum, but before sunscreen. Gently massage into face, neck, and décolleté once or twice daily.
+                            </div>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Deeply seals hydration and reinforces compromised barrier lipids</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Enhances skin firmness, bounce, and refined surface texture</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Shields parched skin against harsh dry climates and environmental stress</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
+                                Hydrolyzed DNA (c-PDRN®), Simmondsia Chinensis (Jojoba) Seed Oil, Butyrospermum Parkii (Shea) Butter, Adenosine, Lavender Oil, Bergamot Peel Oil.
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Healing Cream -->
+                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                            <img src="assets/products/rejuran-healing-cream.webp" alt="Rejuran Healing Cream"
+                                class="w-full h-full object-cover">
+                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Cellular Regeneration</span>
+                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">50 ml / 1.69 fl oz</span>
+                        </div>
+                        <div>
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 4 • Intensive Repair</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Healing Cream
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Combines Hydrolyzed DNA (c-PDRN®) with emollient-rich ingredients to provide intensive hydration and support skin's natural repair processes, enhancing skin firmness and elasticity, and minimizing signs of aging.
+                            </p>
+                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
+                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
+                                Apply a pea-size amount to freshly cleansed skin using fingertips, and gently massage into face, neck, and décolleté once or twice daily.
+                            </div>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Accelerates post-microneedling, laser, and chemical peel recovery</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Significantly increases elasticity, dermal firmness, and smoothness</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Replenishes biocompatible moisture to reverse chronological dryness</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
+                                Hydrolyzed DNA (c-PDRN®), Shea Butter, Squalane, Tocopheryl Acetate, Adenosine, Lavender Oil, Bergamot Peel Oil, Grapefruit Peel Oil.
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Sunscreen SPF 50+ PA+++ -->
+                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                            <img src="assets/products/rejuran-sunscreen.webp" alt="Rejuran Sunscreen SPF 50+ PA+++"
+                                class="w-full h-full object-cover">
+                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Clinical UV Shield</span>
+                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">50 ml / 1.69 fl oz</span>
+                        </div>
+                        <div>
+                            <div class="mb-3">
+                                <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block">Regimen Step 5 • Daytime UV Defense</span>
+                                <h3 class="font-heading text-lg font-bold text-near-black leading-snug mt-1 [text-wrap:balance]">
+                                    Sunscreen SPF 50+ PA+++
+                                </h3>
+                            </div>
+                            <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-5 leading-relaxed">
+                                Features Hydrolyzed DNA (c-PDRN®) along with protective and nourishing ingredients to shield the skin from harmful UV rays while promoting skin healing and hydration, maintaining a youthful and healthy complexion.
+                            </p>
+                            <div class="mb-4 bg-[#FAF8F5] p-3 rounded-xl border border-light-gray/60 text-[11px] font-light text-charcoal/80">
+                                <span class="font-semibold text-near-black block mb-0.5 uppercase tracking-wider text-[10px]">Protocol:</span>
+                                Apply a generous amount using fingertips. Smooth over face and neck until absorbed. Re-apply as needed after swimming, excessive perspiration, or towel drying.
+                            </div>
+                            <div class="mb-5 space-y-2">
+                                <h4 class="font-heading text-[10px] font-bold uppercase tracking-wider text-near-black">Clinical Benefits</h4>
+                                <ul class="space-y-1.5 text-xs text-charcoal/80 font-light">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Broad-spectrum UVA/UVB SPF 50+ PA+++ defense against photodamage</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>c-PDRN® continuously supports recovery of sensitized &amp; treated skin</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#AA987C] shrink-0 mt-0.5"></i>
+                                        <span>Silky, weightless finish with no white cast or greasy film</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-off-white/70 p-3.5 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70">
+                                <span class="font-semibold text-near-black block mb-0.5">Key Ingredients:</span>
+                                Hydrolyzed DNA (c-PDRN®), Pomegranate Seed Oil, Black Mulberry Extract, Blackberry Leaf Extract, Aloe Vera Leaf Juice, Jojoba Seed Oil, Shea Butter, Oat Kernel Extract, Squalane, Sodium Hyaluronate.
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Consultation & Pairing Note Card -->
+                <div class="bg-[#F8F6F2] rounded-3xl p-8 border border-[#AA987C]/30 flex flex-col justify-between text-center md:text-left">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-white text-warm-gold flex items-center justify-center mb-6 shadow-xs mx-auto md:mx-0">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading text-lg font-bold text-near-black mb-3 [text-wrap:balance]">
+                            Pairing Rejuran® with In-Office Protocols
+                        </h3>
+                        <p class="text-charcoal/70 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                            Sophia Yang, PA-C custom-pairs the REJURAN® Healing Care home regimen with our in-clinic treatments (such as Salmon PN Facials, Skin Quality Boosters, and Oligio X RF Lifting) to exponentially extend post-treatment collagen remodeling and skin barrier renewal.
+                        </p>
+                        <div class="space-y-2 text-xs text-charcoal/80 font-medium">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#AA987C]"></i>
+                                <span>300% Greater c-PDRN bio-absorption</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#AA987C]"></i>
+                                <span>Zero downtime barrier sealing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+
     </main>
 
     <!-- Why Medical-Grade Matters Section -->
@@ -1469,8 +1465,8 @@
 
             // Manage sections & exact uniform top spacing
             const sections = document.querySelectorAll('.line-section');
-            const exoblancEl = document.getElementById('line-exoblanc');
             const pharmestheticEl = document.getElementById('line-pharmesthetic');
+            const rejuranEl = document.getElementById('line-rejuran');
 
             if (line === 'all') {
                 sections.forEach(s => {
@@ -1478,11 +1474,11 @@
                     s.hidden = false;
                     s.querySelectorAll('.animate-on-scroll').forEach(el => el.classList.add('visible'));
                 });
-                if (exoblancEl) {
-                    exoblancEl.classList.add('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
-                }
                 if (pharmestheticEl) {
                     pharmestheticEl.classList.add('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
+                }
+                if (rejuranEl) {
+                    rejuranEl.classList.add('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
                 }
             } else {
                 sections.forEach(s => {
@@ -1495,11 +1491,11 @@
                         s.hidden = true;
                     }
                 });
-                if (exoblancEl) {
-                    exoblancEl.classList.remove('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
-                }
                 if (pharmestheticEl) {
                     pharmestheticEl.classList.remove('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
+                }
+                if (rejuranEl) {
+                    rejuranEl.classList.remove('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
                 }
             }
 
