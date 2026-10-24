@@ -180,6 +180,61 @@ h6:not(.font-light):not(.font-thin):not(.heading-wide) {
     transform: none !important;
 }
 
+/* Tactile Tap Response & Mobile App Micro-interactions (from exoblanc-mobile-app) */
+.tap-action {
+    transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.tap-action:active {
+    transform: scale(0.965);
+    opacity: 0.9;
+}
+
+/* Gold Badge (from exoblanc-mobile-app) */
+.badge-gold {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid rgba(170, 152, 124, 0.4);
+    background-color: rgba(170, 152, 124, 0.08);
+    border-radius: 9999px;
+    font-size: 10px;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: #AA987C;
+    font-weight: 700;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Modal Bottom Sheet (from exoblanc-mobile-app) */
+.modal-sheet {
+    transform: translateY(100%);
+    transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.38s ease;
+    pointer-events: none;
+    visibility: hidden;
+}
+.modal-sheet.open {
+    transform: translateY(0%);
+    pointer-events: auto;
+    visibility: visible;
+}
+
+/* Accordion Grid Animation (from exoblanc-mobile-app) */
+.accordion-collapse {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    opacity: 0;
+}
+.accordion-collapse.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+.accordion-inner {
+    overflow: hidden;
+}
+
 /* In sticky mode, brand cards are purely visual indicator logos */
 #sticky-collection-bar.is-sticky .brand-card {
     pointer-events: none !important;
@@ -288,6 +343,11 @@ h6:not(.font-light):not(.font-thin):not(.heading-wide) {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #AA987C;
+}
+
+/* On skincare-products page, use the dedicated mobile skincare action dock instead of generic floating dock */
+body.skincare-products-page #floating-action-dock {
+    display: none !important;
 }
 
 /* Glass Effect */

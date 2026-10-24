@@ -25,7 +25,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="bg-off-white text-charcoal antialiased">
+<body class="bg-off-white text-charcoal antialiased skincare-products-page">
 
     <!-- Global Navigation -->
     <div id="nav-placeholder"></div>
@@ -45,7 +45,7 @@
         </div>
 
         <div class="max-w-7xl mx-auto relative z-10 w-full py-8">
-            <div class="max-w-3xl space-y-6 sm:space-y-7 text-left animate-on-scroll fade-right bg-[#FAF8F5]/80 sm:bg-transparent backdrop-blur-[3px] sm:backdrop-blur-none p-4 sm:p-0 rounded-3xl border border-light-gray/40 sm:border-none shadow-xs sm:shadow-none">
+            <div class="max-w-3xl space-y-5 sm:space-y-7 text-left animate-on-scroll fade-right bg-[#FAF8F5]/85 sm:bg-transparent backdrop-blur-[4px] sm:backdrop-blur-none p-4 sm:p-0 rounded-2xl sm:rounded-3xl border border-light-gray/40 sm:border-none shadow-xs sm:shadow-none">
                 <!-- Eyebrow Badges -->
                 <div class="flex flex-wrap items-center gap-2">
                     <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#AA987C]/30 text-[#AA987C] text-[10px] sm:text-[11px] font-heading font-semibold uppercase tracking-[0.2em] shadow-xs">
@@ -55,7 +55,7 @@
 
                 <!-- Big Main Headline (Montserrat Display - Exactly 3 Distinct Lines matching LDM hero reference) -->
                 <div>
-                    <h1 class="heading-wide text-3xl sm:text-5xl lg:text-6xl text-near-black font-light leading-tight [text-wrap:balance]">
+                    <h1 class="heading-wide text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-near-black font-light leading-tight [text-wrap:balance]">
                         <span class="block whitespace-nowrap"><span class="text-[#AA987C]">KOREAN</span> SKINCARE.</span>
                         <span class="block whitespace-nowrap">SEOUL SCIENCE.</span>
                         <span class="block whitespace-nowrap">YOUR DAILY <span class="text-[#AA987C]">GLOW.</span></span>
@@ -83,7 +83,7 @@
     <!-- ============================================================== -->
     <!-- INTRODUCING THE THREE COLLECTIONS (THE SUA GLOW SKINCARE EDIT)  -->
     <!-- ============================================================== -->
-    <section id="skincare-edit" class="bg-[#FAF8F5] pt-16 md:pt-24 pb-0 px-6 md:px-12 border-b border-light-gray/40 scroll-mt-28">
+    <section id="skincare-edit" class="bg-[#FAF8F5] pt-12 md:pt-24 pb-0 px-4 sm:px-6 md:px-12 border-b border-light-gray/40 scroll-mt-28">
         <div class="max-w-7xl mx-auto">
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 animate-on-scroll fade-up">
@@ -109,11 +109,11 @@
         <div id="sticky-collection-bar" class="w-full transition-all duration-300">
             <div class="max-w-7xl mx-auto px-0 sm:px-4 brand-logos-container">
                 <!-- 3 Brand Logos Selector -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 max-w-5xl mx-auto items-stretch">
+                <div id="brand-cards-track" class="flex md:grid md:grid-cols-3 gap-3.5 md:gap-6 max-w-5xl mx-auto items-stretch overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar px-1 sm:px-4 md:px-0 pb-3 md:pb-0 scroll-smooth">
 
                     <!-- Brand 1: Exoblanc -->
                     <button type="button" onclick="selectCollection('exoblanc')" id="brand-card-exoblanc"
-                        class="brand-card group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-6 sm:p-7 pt-7 sm:pt-8 border border-light-gray/80 hover:border-warm-gold/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5">
+                        class="brand-card tap-action group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-5 sm:p-7 pt-6 sm:pt-8 border border-light-gray/80 hover:border-warm-gold/60 shadow-soft hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5 w-[84vw] max-w-[85vw] sm:w-[340px] sm:max-w-[340px] md:w-auto md:max-w-none snap-center shrink-0 md:shrink">
                         <div>
                             <div class="card-logo-container h-14 sm:h-16 flex items-center justify-center w-full px-4 mb-4 sm:mb-5 pt-1 transition-all duration-300">
                                 <img src="assets/logo-exoblanc.png" alt="Exoblanc"
@@ -136,7 +136,7 @@
 
                     <!-- Brand 2: Rejuran MEDI -->
                     <button type="button" onclick="selectCollection('rejuran')" id="brand-card-rejuran"
-                        class="brand-card group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-6 sm:p-7 pt-7 sm:pt-8 border border-light-gray/80 hover:border-warm-gold/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5">
+                        class="brand-card tap-action group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-5 sm:p-7 pt-6 sm:pt-8 border border-light-gray/80 hover:border-warm-gold/60 shadow-soft hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5 w-[84vw] max-w-[85vw] sm:w-[340px] sm:max-w-[340px] md:w-auto md:max-w-none snap-center shrink-0 md:shrink">
                         <div>
                             <div class="card-logo-container h-14 sm:h-16 flex items-center justify-center w-full px-4 mb-4 sm:mb-5 pt-1 transition-all duration-300">
                                 <img src="assets/logo-rejuran.png" alt="Rejuran MEDI"
@@ -159,7 +159,7 @@
 
                     <!-- Brand 3: Pharmesthetic -->
                     <button type="button" onclick="selectCollection('pharmesthetic')" id="brand-card-pharmesthetic"
-                        class="brand-card group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-6 sm:p-7 pt-7 sm:pt-8 border border-light-gray/80 hover:border-warm-gold/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5">
+                        class="brand-card tap-action group relative bg-white hover:bg-[#FAF8F5] rounded-2xl p-5 sm:p-7 pt-6 sm:pt-8 border border-light-gray/80 hover:border-warm-gold/60 shadow-soft hover:shadow-lg transition-all duration-300 flex flex-col justify-between text-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-warm-gold/40 hover:-translate-y-0.5 w-[84vw] max-w-[85vw] sm:w-[340px] sm:max-w-[340px] md:w-auto md:max-w-none snap-center shrink-0 md:shrink">
                         <div>
                             <div class="card-logo-container h-14 sm:h-16 flex items-center justify-center w-full px-4 mb-4 sm:mb-5 pt-1 transition-all duration-300">
                                 <img src="assets/logo-pharmesthetic.png" alt="Pharmesthetic"
@@ -181,30 +181,34 @@
                     </button>
 
                 </div>
+                <!-- Mobile Swipe Indicator Cue -->
+                <div class="md:hidden flex items-center justify-center gap-1.5 pt-1 text-[10px] font-heading font-medium text-charcoal/50 uppercase tracking-widest pointer-events-none select-none">
+                    <span>‹</span> <span>Swipe to browse collections</span> <span>›</span>
+                </div>
             </div>
 
             <!-- Menu Underneath The Logos -->
-            <nav id="catalog-nav" aria-label="Skincare Collection Filter" class="w-full mt-6 bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-2.5 sm:py-3 px-4 md:px-8 shadow-xs transition-all duration-300">
+            <nav id="catalog-nav" aria-label="Skincare Collection Filter" class="w-full mt-4 md:mt-6 bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-2 sm:py-3 px-3 md:px-8 shadow-xs transition-all duration-300">
                 <div class="max-w-7xl mx-auto flex items-center justify-center">
                     <!-- Filter Pills -->
-                    <div class="flex items-center justify-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-0.5">
+                    <div class="flex items-center justify-start md:justify-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-0.5 px-1 shrink-0">
                         <span class="text-[11px] font-heading font-semibold text-charcoal/50 uppercase tracking-widest hidden xl:inline shrink-0 mr-2">
                             Filter:
                         </span>
                         <button type="button" onclick="filterLine('all')" id="tab-all"
-                            class="line-tab active px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
+                            class="line-tab tap-action active px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
                             All Collections <span class="tab-count text-[10px] ml-1">(26)</span>
                         </button>
                         <button type="button" onclick="filterLine('exoblanc')" id="tab-exoblanc"
-                            class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
+                            class="line-tab tap-action px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
                             Exoblanc <span class="tab-count text-[10px] ml-1">(11)</span>
                         </button>
                         <button type="button" onclick="filterLine('rejuran')" id="tab-rejuran"
-                            class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
+                            class="line-tab tap-action px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
                             Rejuran MEDI <span class="tab-count text-[10px] ml-1">(6)</span>
                         </button>
                         <button type="button" onclick="filterLine('pharmesthetic')" id="tab-pharmesthetic"
-                            class="line-tab px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
+                            class="line-tab tap-action px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap">
                             Pharmesthetic <span class="tab-count text-[10px] ml-1">(9)</span>
                         </button>
                     </div>
@@ -214,7 +218,7 @@
     </section>
 
     <!-- MAIN PRODUCT CATALOG CONTAINER (Initially hidden until user selects a collection or clicks all) -->
-    <main id="product-catalog" class="hidden pt-10 sm:pt-14 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+    <main id="product-catalog" class="hidden pt-8 sm:pt-14 pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
 
         <!-- ========================================== -->
         <!-- LINE 1: EXOBLANC (11 ITEMS)                -->
@@ -242,13 +246,13 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- 1. Relief Bubble Cleanser -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/exoblanc-relief-bubble-cleanser.jpg" alt="Exoblanc Relief Bubble Cleanser"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">pH Balanced</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">150 mL</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">pH Balanced</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">150 mL</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -260,7 +264,7 @@
                             <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
                                 Self-foaming micro-bubble cleanser that melts makeup, sunscreen, and pore congestion without stripping the delicate acid mantle. Leaves skin calm, clean, and prepped.
                             </p>
-                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                            <div class="bg-off-white/80 p-2.5 sm:p-3 rounded-xl border border-light-gray/60 text-[10.5px] sm:text-[11px] font-light leading-relaxed text-charcoal/75 mb-3 sm:mb-5">
                                 <span class="font-semibold text-near-black">Actives:</span> Exosome Extract, Amino Acid Surfactants, Centella Asiatica.
                             </div>
                         </div>
@@ -268,13 +272,13 @@
                 </article>
 
                 <!-- 2. Foaming Toner -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/exoblanc-foaming-toner.jpg" alt="Exoblanc Foaming Toner"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Micro-Foam Prep</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">150 mL</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Micro-Foam Prep</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">150 mL</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -286,7 +290,7 @@
                             <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
                                 Innovative foam-format toner delivering high-speed moisture absorption. Calms post-cleansing sensitivity and primes the cellular matrix for maximum active penetration.
                             </p>
-                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                            <div class="bg-off-white/80 p-2.5 sm:p-3 rounded-xl border border-light-gray/60 text-[10.5px] sm:text-[11px] font-light leading-relaxed text-charcoal/75 mb-3 sm:mb-5">
                                 <span class="font-semibold text-near-black">Actives:</span> Exosome Complex, Multi-Depth Hyaluronic Acid, Panthenol (B5).
                             </div>
                         </div>
@@ -294,13 +298,13 @@
                 </article>
 
                 <!-- 3. Refine Peeling Ampoule -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/exoblanc-refine-peeling-ampoule.jpg" alt="Exoblanc Refine Peeling Ampoule"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Bio-Renew Peeling</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">30 mL</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Bio-Renew Peeling</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">30 mL</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -312,7 +316,7 @@
                             <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
                                 Clinic-grade exfoliating solution that gently dissolves dead surface cells and clears pore blockages without mechanical abrasion, revealing refined glass skin texture.
                             </p>
-                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                            <div class="bg-off-white/80 p-2.5 sm:p-3 rounded-xl border border-light-gray/60 text-[10.5px] sm:text-[11px] font-light leading-relaxed text-charcoal/75 mb-3 sm:mb-5">
                                 <span class="font-semibold text-near-black">Actives:</span> PHA/LHA Bio-Acids, Plant-Derived Exosomes, Allantoin.
                             </div>
                         </div>
@@ -325,11 +329,11 @@
                         Hero Formulation
                     </div>
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/exoblanc-boosting-serum.jpg" alt="Exoblanc Boosting Serum"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Exosomes • PDRN</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">50 mL</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Exosomes • PDRN</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">50 mL</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -341,7 +345,7 @@
                             <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
                                 The flagship essential of the Exoblanc system. Merges high-concentration pure exosomes with a 5-peptide complex and salmon DNA (PDRN) to stimulate deep cellular renewal and elasticity.
                             </p>
-                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                            <div class="bg-off-white/80 p-2.5 sm:p-3 rounded-xl border border-light-gray/60 text-[10.5px] sm:text-[11px] font-light leading-relaxed text-charcoal/75 mb-3 sm:mb-5">
                                 <span class="font-semibold text-near-black">Actives:</span> Purified Exosome Vesicles, Salmon PDRN, 5-Peptide Matrix, Niacinamide.
                             </div>
                         </div>
@@ -349,13 +353,13 @@
                 </article>
 
                 <!-- 5. Boosting Cream -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/exoblanc-boosting-cream.jpg" alt="Exoblanc Boosting Cream"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Elasticity Lock</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">50 mL</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Elasticity Lock</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">50 mL</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -367,7 +371,7 @@
                             <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
                                 Deep cellular replenishment cream that strengthens dermal structural integrity, locks in active serums, and imparts an immediate silky, dewy finish.
                             </p>
-                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                            <div class="bg-off-white/80 p-2.5 sm:p-3 rounded-xl border border-light-gray/60 text-[10.5px] sm:text-[11px] font-light leading-relaxed text-charcoal/75 mb-3 sm:mb-5">
                                 <span class="font-semibold text-near-black">Actives:</span> Exosome Extract, Ceramide NP, Squalane, Adenosine.
                             </div>
                         </div>
@@ -375,13 +379,13 @@
                 </article>
 
                 <!-- 6. Skin Barrier Cream -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/exoblanc-skin-barrier-cream.jpg" alt="Exoblanc Skin Barrier Cream"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Barrier Repair</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">50 mL</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Barrier Repair</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">50 mL</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -393,7 +397,7 @@
                             <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
                                 Intensive post-procedure recovery cream designed to soothe sensitized, inflamed, or laser-treated skin and rapidly restore the stratum corneum lipid barrier.
                             </p>
-                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                            <div class="bg-off-white/80 p-2.5 sm:p-3 rounded-xl border border-light-gray/60 text-[10.5px] sm:text-[11px] font-light leading-relaxed text-charcoal/75 mb-3 sm:mb-5">
                                 <span class="font-semibold text-near-black">Actives:</span> Exosomes, Madecassoside, Multi-Ceramide Liposomes, Ectoin.
                             </div>
                         </div>
@@ -401,13 +405,13 @@
                 </article>
 
                 <!-- 7. NMN Eyecream -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/exoblanc-nmn-eyecream.jpg" alt="Exoblanc NMN Eyecream"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">NMN Bio-Tech</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">30 mL</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">NMN Bio-Tech</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">30 mL</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -419,7 +423,7 @@
                             <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
                                 Longevity-focused eye formula powered by cellular-energy coenzyme NMN and exosomes to target deep crow's feet, sagging periorbital tissue, and dark pigmentation.
                             </p>
-                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                            <div class="bg-off-white/80 p-2.5 sm:p-3 rounded-xl border border-light-gray/60 text-[10.5px] sm:text-[11px] font-light leading-relaxed text-charcoal/75 mb-3 sm:mb-5">
                                 <span class="font-semibold text-near-black">Actives:</span> NMN (Nicotinamide Mononucleotide), Exosomes, Acetyl Hexapeptide-8.
                             </div>
                         </div>
@@ -427,13 +431,13 @@
                 </article>
 
                 <!-- 8. Spicule Cream -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/exoblanc-spicule-cream.jpg" alt="Exoblanc Spicule Cream"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Bio-Microneedles</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">50 mL</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Bio-Microneedles</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">50 mL</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -445,7 +449,7 @@
                             <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
                                 Purified marine micro-spicules create microscopic dermal pathways, delivering exosomes directly to target layers while continually stimulating nocturnal collagen remodeling.
                             </p>
-                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                            <div class="bg-off-white/80 p-2.5 sm:p-3 rounded-xl border border-light-gray/60 text-[10.5px] sm:text-[11px] font-light leading-relaxed text-charcoal/75 mb-3 sm:mb-5">
                                 <span class="font-semibold text-near-black">Actives:</span> Hydrolyzed Sea Sponge Spicules, Exosome Vesicles, Tripeptides.
                             </div>
                         </div>
@@ -453,13 +457,13 @@
                 </article>
 
                 <!-- 9. White Bloom -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/exoblanc-white-bloom.jpg" alt="Exoblanc White Bloom"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Glass Skin Tone-Up</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">50 mL</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Glass Skin Tone-Up</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">50 mL</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -471,7 +475,7 @@
                             <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
                                 High-potency brightening cream that suppresses melanin transfer while leaving a light-refracting, porcelain glow. Ideal for dull skin and post-inflammatory pigmentation.
                             </p>
-                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                            <div class="bg-off-white/80 p-2.5 sm:p-3 rounded-xl border border-light-gray/60 text-[10.5px] sm:text-[11px] font-light leading-relaxed text-charcoal/75 mb-3 sm:mb-5">
                                 <span class="font-semibold text-near-black">Actives:</span> Glutathione, Tranexamic Acid, Exosomes, Niacinamide.
                             </div>
                         </div>
@@ -479,13 +483,13 @@
                 </article>
 
                 <!-- 10. Soothing Mist -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/exoblanc-soothing-mist.jpg" alt="Exoblanc Soothing Mist"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Portable Shield</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">100 mL</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Portable Shield</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">100 mL</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -497,7 +501,7 @@
                             <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
                                 Micro-aerosolized hydration shield delivering instant moisture replenishment and antioxidant defense across air-conditioned, heated, or flight-stressed environments.
                             </p>
-                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                            <div class="bg-off-white/80 p-2.5 sm:p-3 rounded-xl border border-light-gray/60 text-[10.5px] sm:text-[11px] font-light leading-relaxed text-charcoal/75 mb-3 sm:mb-5">
                                 <span class="font-semibold text-near-black">Actives:</span> Exosome Extract, Damask Rose Floral Water, Centella Asiatica.
                             </div>
                         </div>
@@ -505,13 +509,13 @@
                 </article>
 
                 <!-- 11. PDRN Mask -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/exoblanc-pdrn-mask.jpg" alt="Exoblanc PDRN Mask"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Weekly Ritual</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">5 Sheets / Box</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Weekly Ritual</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">5 Sheets / Box</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -523,7 +527,7 @@
                             <p class="text-charcoal/70 text-xs sm:text-sm font-light mb-4 leading-relaxed">
                                 Densely saturated biocellulose sheet soaked in clinical salmon DNA (PDRN) and exosome ampoule to drench sensitized skin in restorative moisture and reveal an immediate glass glow.
                             </p>
-                            <div class="bg-off-white/70 p-3 rounded-xl border border-light-gray/60 text-[11px] font-light leading-relaxed text-charcoal/70 mb-5">
+                            <div class="bg-off-white/80 p-2.5 sm:p-3 rounded-xl border border-light-gray/60 text-[10.5px] sm:text-[11px] font-light leading-relaxed text-charcoal/75 mb-3 sm:mb-5">
                                 <span class="font-semibold text-near-black">Actives:</span> Salmon PDRN, Exosomes, Hydrolyzed Collagen, Trehalose.
                             </div>
                         </div>
@@ -568,7 +572,7 @@
                             <img src="assets/products/rejuran-healing-care-set-open.webp" alt="Rejuran Healing Care Set - 5-Piece Regimen"
                                 class="w-full h-full object-cover">
                             <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] font-semibold text-warm-gold border-[#AA987C]/30 shadow-sm">Complete 5-Piece Regimen</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">SKU: PRM-100</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">SKU: PRM-100</span>
                         </div>
                     </div>
                     <!-- Details Column -->
@@ -644,13 +648,13 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- 1. Concentrated Multitasking Serum -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/rejuran-multitasking-serum.webp" alt="Rejuran Concentrated Multitasking Serum"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Cellular Turnover</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">30 ml / 1.01 fl oz</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Cellular Turnover</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">30 ml / 1.01 fl oz</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -692,13 +696,13 @@
                 </article>
 
                 <!-- 2. Healing Eye Gel -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/rejuran-healing-eye-gel.webp" alt="Rejuran Healing Eye Gel"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Eye Contour Elasticity</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">15 ml / 0.5 fl oz</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Eye Contour Elasticity</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">15 ml / 0.5 fl oz</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -740,13 +744,13 @@
                 </article>
 
                 <!-- 3. Intensive Moisturizer -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/rejuran-intensive-moisturizer.webp" alt="Rejuran Intensive Moisturizer"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Barrier Hydration</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">40 ml / 1.35 fl oz</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Barrier Hydration</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">40 ml / 1.35 fl oz</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -788,13 +792,13 @@
                 </article>
 
                 <!-- 4. Healing Cream -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/rejuran-healing-cream.webp" alt="Rejuran Healing Cream"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Cellular Regeneration</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">50 ml / 1.69 fl oz</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Cellular Regeneration</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">50 ml / 1.69 fl oz</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -836,13 +840,13 @@
                 </article>
 
                 <!-- 5. Sunscreen SPF 50+ PA+++ -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
-                        <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-[#FAF8F5] mb-6 border border-light-gray/60">
+                        <div class="relative overflow-hidden aspect-square w-full rounded-xl sm:rounded-2xl bg-[#FAF8F5] mb-4 sm:mb-6 border border-light-gray/60">
                             <img src="assets/products/rejuran-sunscreen.webp" alt="Rejuran Sunscreen SPF 50+ PA+++"
                                 class="w-full h-full object-cover">
-                            <span class="badge-glass absolute top-3.5 left-3.5 z-20 text-[10px] shadow-sm">Clinical UV Shield</span>
-                            <span class="absolute top-3.5 right-3.5 z-20 text-[10px] font-heading font-semibold text-near-black/70 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-light-gray shadow-sm">50 ml / 1.69 fl oz</span>
+                            <span class="badge-glass absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 z-20 text-[9px] sm:text-[10px] shadow-xs">Clinical UV Shield</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 text-[9px] sm:text-[10px] font-heading font-semibold text-near-black/75 bg-white/95 backdrop-blur-md px-2 sm:px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs">50 ml / 1.69 fl oz</span>
                         </div>
                         <div>
                             <div class="mb-3">
@@ -938,7 +942,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- 1. VIBANQUENTMANKA Lotion (Renewal) -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
                         <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-white mb-6 border border-light-gray/60 flex items-center justify-center">
                             <img src="assets/products/pharmesthetic-vibanquentmanka-lotion.webp" alt="VIBANQUENTMANKA Lotion Renewal - PDRN Emergency Hybrid Lotion"
@@ -976,7 +980,7 @@
                 </article>
 
                 <!-- 2. Conapidil Lotion Polishing -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
                         <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-white mb-6 border border-light-gray/60 flex items-center justify-center">
                             <img src="assets/products/pharmesthetic-lotion-polishing.webp" alt="Conapidil Lotion Polishing Cleanser"
@@ -1014,7 +1018,7 @@
                 </article>
 
                 <!-- 3. Conapidil Green Baxin -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
                         <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-white mb-6 border border-light-gray/60 flex items-center justify-center">
                             <img src="assets/products/pharmesthetic-green-baxin.webp" alt="Conapidil Green Baxin Cooling Gel"
@@ -1052,7 +1056,7 @@
                 </article>
 
                 <!-- 4. Conapidil Finish Lotion -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
                         <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-white mb-6 border border-light-gray/60 flex items-center justify-center">
                             <img src="assets/products/pharmesthetic-finish-lotion.webp" alt="Conapidil Finish Lotion SPF 50+ PA+++"
@@ -1090,7 +1094,7 @@
                 </article>
 
                 <!-- 5. Conapidil Superjection Home -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
                         <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-white mb-6 border border-light-gray/60 flex items-center justify-center">
                             <img src="assets/products/pharmesthetic-superjection-home.webp" alt="Conapidil Superjection Home Intensive Kit"
@@ -1128,7 +1132,7 @@
                 </article>
 
                 <!-- 6. Conapidil Cemenzal Light -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
                         <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-white mb-6 border border-light-gray/60 flex items-center justify-center">
                             <img src="assets/products/pharmesthetic-cemenzal-light.webp" alt="Conapidil Cemenzal Light High Potency Cream 100"
@@ -1166,7 +1170,7 @@
                 </article>
 
                 <!-- 7. Conapidil Gel Polishing -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
                         <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-white mb-6 border border-light-gray/60 flex items-center justify-center">
                             <img src="assets/products/pharmesthetic-gel-polishing.webp" alt="Conapidil Gel Polishing Cleanser"
@@ -1204,7 +1208,7 @@
                 </article>
 
                 <!-- 8. Conapidil Gel Starter -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
                         <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-white mb-6 border border-light-gray/60 flex items-center justify-center">
                             <img src="assets/products/pharmesthetic-gel-starter.webp" alt="Conapidil Gel Starter Ampoule Toner"
@@ -1242,7 +1246,7 @@
                 </article>
 
                 <!-- 9. Conapidil CemenSheet -->
-                <article class="bg-white rounded-3xl p-6 sm:p-7 border border-light-gray/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <article class="product-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-light-gray/80 shadow-soft transition-all duration-300 flex flex-col justify-between tap-action">
                     <div>
                         <div class="relative overflow-hidden aspect-square w-full rounded-2xl bg-white mb-6 border border-light-gray/60 flex items-center justify-center">
                             <img src="assets/products/pharmesthetic-cemensheet.webp" alt="Conapidil CemenSheet Pre-Cut Mask"
@@ -1404,6 +1408,89 @@
     </section>
 
     <!-- Global Footer -->
+        <!-- Mobile Bottom Clearance -->
+    <div class="h-20 md:hidden"></div>
+
+    <!-- Mobile Sticky Bottom Action Dock (from Exoblanc Mobile Web App UX) -->
+    <aside class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-light-gray/80 px-4 pr-16 sm:pr-4 py-3 pb-[max(12px,env(safe-area-inset-bottom))] flex items-center justify-between shadow-floating md:hidden">
+        <div class="flex items-center justify-between gap-3 w-full max-w-md mx-auto">
+            <!-- Quick Call Clinic Button -->
+            <a href="tel:972-665-8737" title="Call SuA Glow Clinic" aria-label="Call SuA Glow Clinic"
+                class="w-11 h-11 rounded-full bg-off-white border border-light-gray/80 flex items-center justify-center text-taupe hover:text-warm-gold hover:border-warm-gold transition tap-action shadow-xs shrink-0">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+
+            <!-- Quick Consultation Drawer CTA Button -->
+            <button type="button" onclick="openConsultationDrawer()" 
+                class="btn-primary !py-2.5 !px-4 text-[11px] flex-1 tap-action flex items-center justify-center gap-2 shadow-xs">
+                <span>Inquire In-Clinic</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Interactive Mobile Consultation Drawer (Sliding Bottom Sheet from Exoblanc Mobile Web App) -->
+    <div id="consultationOverlay" onclick="closeConsultationDrawer()" 
+        class="fixed inset-0 bg-near-black/50 backdrop-blur-xs z-50 opacity-0 pointer-events-none invisible transition-all duration-300"></div>
+
+    <div id="consultationDrawer" 
+        class="modal-sheet fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-[32px] p-6 pb-12 max-h-[85vh] overflow-y-auto shadow-modal border-t border-taupe/20 max-w-lg mx-auto">
+        
+        <!-- Drag Handle -->
+        <div class="w-12 h-1.5 bg-taupe/30 rounded-full mx-auto mb-4 cursor-pointer tap-action" onclick="closeConsultationDrawer()"></div>
+
+        <div class="flex items-start justify-between mb-4">
+            <div>
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="text-[9px] font-heading font-bold tracking-[0.2em] uppercase text-warm-gold">SuA K-Glow • Carrollton, TX</span>
+                </div>
+                <h3 class="font-heading text-lg sm:text-xl font-bold text-near-black">Curated Skincare Consultation</h3>
+                <p class="font-body text-xs text-charcoal/70 mt-0.5">Under clinical guidance of Sophia Yang, PA-C</p>
+            </div>
+            <button type="button" onclick="closeConsultationDrawer()" class="w-8 h-8 rounded-full bg-off-white border border-light-gray flex items-center justify-center text-charcoal hover:text-near-black tap-action font-bold text-sm">
+                ✕
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <!-- Immediate Call Assistance Option -->
+            <div class="p-3.5 rounded-2xl bg-off-white border border-light-gray/70 flex items-center justify-between">
+                <div>
+                    <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-wider block">Immediate Assistance</span>
+                    <span class="text-xs font-semibold text-near-black">Call our Carrollton clinic</span>
+                </div>
+                <a href="tel:972-665-8737" class="btn-secondary !py-1.5 !px-3.5 !text-[10px] flex items-center gap-1.5 tap-action">
+                    <i data-lucide="phone" class="w-3 h-3"></i> (972) 665-8737
+                </a>
+            </div>
+
+            <!-- Consultation Details & Booking -->
+            <div class="space-y-2.5">
+                <span class="text-[10px] font-heading font-bold uppercase tracking-widest text-taupe block">Curated Home-Care Formulations</span>
+                <p class="text-xs text-charcoal/75 leading-relaxed font-light">
+                    Our medical-grade lines (Exoblanc, Rejuran MEDI, and Pharmesthetic) are prescribed and tailored during consultation to match your barrier condition.
+                </p>
+                <div class="grid grid-cols-2 gap-2 text-xs pt-1">
+                    <div class="p-3 rounded-xl bg-off-white border border-light-gray/60">
+                        <span class="font-heading font-bold text-near-black block text-[11px]">In-Clinic Evaluation</span>
+                        <span class="text-[10px] text-charcoal/60">Carrollton, TX Clinic</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-off-white border border-light-gray/60">
+                        <span class="font-heading font-bold text-near-black block text-[11px]">Provider Tailored</span>
+                        <span class="text-[10px] text-charcoal/60">Barrier-First Protocol</span>
+                    </div>
+                </div>
+                <div class="pt-2">
+                    <a href="contact.html?service=skincare-consultation" class="btn-primary w-full !py-3 text-xs justify-center flex items-center gap-2 tap-action">
+                        <span>Continue to Consultation Form</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </a>
+                    <p class="text-[10px] text-center text-charcoal/50 mt-2 font-light">Sophia Yang, PA-C &amp; Dr. Adam Yang, MD</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="footer-placeholder"></div>
 
     <!-- Shared Scripts -->
@@ -1503,10 +1590,10 @@
                 const target = line === 'all' ? document.getElementById('product-catalog') : document.getElementById('line-' + line);
                 if (target) {
                     const nav = document.getElementById('navbar');
-                    const navHeight = nav ? (nav.classList.contains('nav-scrolled') ? 72 : 110) : 72;
-                    const isDesktop = window.innerWidth >= 768;
-                    const stickyHeight = isDesktop ? 140 : 52;
-                    const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - stickyHeight - 20;
+                    const isMobile = window.innerWidth < 768;
+                    const navHeight = nav ? nav.getBoundingClientRect().height : (isMobile ? 64 : 72);
+                    const stickyHeight = isMobile ? 48 : 140;
+                    const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - stickyHeight - 16;
                     window.scrollTo({ top: targetTop, behavior: isSmooth ? 'smooth' : 'auto' });
                 }
             }
@@ -1524,7 +1611,8 @@
 
             function updateSticky() {
                 const nav = document.getElementById('navbar');
-                const navHeight = nav ? (nav.classList.contains('nav-scrolled') ? 72 : 110) : 72;
+                const isMobile = window.innerWidth < 768;
+                const navHeight = nav ? nav.getBoundingClientRect().height : (isMobile ? 64 : 72);
                 
                 // Get trigger position: where the placeholder sits in the viewport
                 const placeholderRect = placeholder.getBoundingClientRect();
@@ -1541,7 +1629,9 @@
 
                 if (shouldStick && !pastCatalog) {
                     if (!stickyBar.classList.contains('is-sticky')) {
-                        placeholder.style.height = stickyBar.offsetHeight + 'px';
+                        const catalogNav = document.getElementById('catalog-nav');
+                        const stickHeight = isMobile ? (catalogNav ? catalogNav.offsetHeight : 48) : stickyBar.offsetHeight;
+                        placeholder.style.height = stickHeight + 'px';
                         stickyBar.classList.add('is-sticky');
                     }
                     stickyBar.style.top = navHeight + 'px';
@@ -1561,6 +1651,33 @@
         }
 
         // Check URL parameters & hash, and initialize sticky controller on page load
+        
+        // Interactive Mobile Consultation Drawer Controller (from exoblanc-mobile-app)
+        function openConsultationDrawer() {
+            const overlay = document.getElementById('consultationOverlay');
+            const drawer = document.getElementById('consultationDrawer');
+            if (overlay && drawer) {
+                overlay.classList.remove('invisible', 'pointer-events-none');
+                overlay.classList.add('opacity-100');
+                drawer.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeConsultationDrawer() {
+            const overlay = document.getElementById('consultationOverlay');
+            const drawer = document.getElementById('consultationDrawer');
+            if (overlay && drawer) {
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                drawer.classList.remove('open');
+                document.body.style.overflow = '';
+                setTimeout(() => {
+                    overlay.classList.add('invisible');
+                }, 300);
+            }
+        }
+
         window.addEventListener('DOMContentLoaded', () => {
             initStickyCollectionBar();
 

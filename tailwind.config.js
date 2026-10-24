@@ -21,6 +21,8 @@ module.exports = {
             boxShadow: {
                 'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
                 'glow': '0 0 30px rgba(143, 133, 123, 0.3)',
+                'floating': '0 -8px 30px rgba(19, 22, 25, 0.08)',
+                'modal': '0 -20px 50px rgba(19, 22, 25, 0.2)',
             },
             fontFamily: {
                 'heading': ['Montserrat', 'Poppins', 'sans-serif'],
