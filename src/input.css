@@ -317,7 +317,7 @@ h6:not(.font-light):not(.font-thin):not(.heading-wide) {
         padding: 0;
     }
 
-    /* On mobile sticky, keep only the filter pills visible to save viewport */
+    /* On mobile sticky, keep only the filter dropdown visible to save viewport */
     #sticky-collection-bar.is-sticky .brand-logos-container {
         display: none !important;
     }
@@ -329,6 +329,17 @@ h6:not(.font-light):not(.font-thin):not(.heading-wide) {
         border: none;
         background: transparent;
         box-shadow: none;
+    }
+
+    #mobile-collection-select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: none;
+    }
+
+    #mobile-collection-select::-ms-expand {
+        display: none;
     }
 }
 

@@ -190,8 +190,29 @@
             <!-- Menu Underneath The Logos -->
             <nav id="catalog-nav" aria-label="Skincare Collection Filter" class="w-full mt-4 md:mt-6 bg-white/95 backdrop-blur-md border-y border-light-gray/60 py-2 sm:py-3 px-3 md:px-8 shadow-xs transition-all duration-300">
                 <div class="max-w-7xl mx-auto flex items-center justify-center">
-                    <!-- Filter Pills -->
-                    <div class="flex items-center justify-start md:justify-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-0.5 px-1 shrink-0">
+
+                    <!-- Mobile Filter Dropdown (Select Menu) -->
+                    <div class="md:hidden w-full max-w-sm mx-auto px-1 py-0.5">
+                        <label for="mobile-collection-select" class="sr-only">Filter by Collection</label>
+                        <div class="relative flex items-center">
+                            <span class="absolute left-3.5 flex items-center pointer-events-none text-warm-gold z-10">
+                                <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5"></i>
+                            </span>
+                            <select id="mobile-collection-select" onchange="filterLine(this.value)"
+                                class="w-full appearance-none bg-white text-near-black font-heading text-xs font-semibold uppercase tracking-wider pl-9 pr-9 py-2.5 rounded-full border border-light-gray/90 shadow-xs focus:outline-none focus:ring-2 focus:ring-warm-gold/40 focus:border-warm-gold transition-all cursor-pointer">
+                                <option value="all">All Collections (26)</option>
+                                <option value="exoblanc">Exoblanc (11)</option>
+                                <option value="rejuran">Rejuran MEDI (6)</option>
+                                <option value="pharmesthetic">Pharmesthetic (9)</option>
+                            </select>
+                            <span class="absolute right-3.5 flex items-center pointer-events-none text-charcoal/60 z-10">
+                                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Desktop Filter Pills -->
+                    <div class="hidden md:flex items-center justify-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-0.5 px-1 shrink-0">
                         <span class="text-[11px] font-heading font-semibold text-charcoal/50 uppercase tracking-widest hidden xl:inline shrink-0 mr-2">
                             Filter:
                         </span>
@@ -1548,6 +1569,12 @@
             const activeTab = document.getElementById('tab-' + line);
             if (activeTab) {
                 activeTab.classList.add('active');
+            }
+
+            // Sync mobile select menu
+            const mobileSelect = document.getElementById('mobile-collection-select');
+            if (mobileSelect && mobileSelect.value !== line) {
+                mobileSelect.value = line;
             }
 
             // Manage sections & exact uniform top spacing
