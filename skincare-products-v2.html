@@ -885,26 +885,21 @@
     <!-- Hero Section (Section A - Matches Hair Page Large Luminous Editorial Layout) -->
     <section id="hero" data-nav-theme="light"
         class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center pt-32 sm:pt-40 lg:pt-44 pb-16 lg:pb-24 px-6 md:px-12 bg-[#FAF8F5] text-charcoal overflow-hidden">
-        <!-- Parallax Background & Atmospheric Glow -->
-        <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-            <img src="assets/skincare-hero-banner.webp" alt="Korean Skincare Seoul Science SuA Glow"
-                class="w-full h-full object-cover object-[78%_center] lg:object-right">
-            <!-- Left Gradient to ensure clear text contrast while preserving image sharpness on the right -->
-            <div class="absolute inset-0 bg-gradient-to-r from-[#FAF8F5] via-[#FAF8F5]/95 to-[#FAF8F5]/70 md:via-[#FAF8F5]/90 md:to-transparent md:w-[68%] lg:w-[55%] z-10"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-[#FAF8F5]/40 z-10"></div>
-            <!-- Ambient Warm Gold Rim Glow -->
-            <div class="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-warm-gold/15 blur-[150px] rounded-full pointer-events-none z-10"></div>
+        <!-- Hero Model Photo on the Right (Same photo as mobile) -->
+        <div class="absolute right-0 top-0 bottom-0 w-full md:w-[50%] lg:w-[48%] xl:w-[45%] z-0 pointer-events-none overflow-hidden flex items-center justify-end">
+            <img src="assets/skincare-hero-model.jpg" alt="Korean Skincare Seoul Science SuA Glow"
+                class="w-full h-full object-cover object-top lg:object-center mix-blend-multiply opacity-95">
+            <!-- Smooth Gradient Fades into bg-[#FAF8F5] -->
+            <div class="absolute inset-y-0 left-0 w-32 lg:w-48 bg-gradient-to-r from-[#FAF8F5] to-transparent z-10"></div>
+            <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#FAF8F5] to-transparent z-10"></div>
+            <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#FAF8F5] to-transparent z-10"></div>
         </div>
+
+        <!-- Ambient Warm Gold Glow on the Left -->
+        <div class="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-warm-gold/15 blur-[150px] rounded-full pointer-events-none z-0"></div>
 
         <div class="max-w-7xl mx-auto relative z-10 w-full py-8">
             <div class="max-w-3xl space-y-5 sm:space-y-7 text-left animate-on-scroll fade-right bg-[#FAF8F5]/85 sm:bg-transparent backdrop-blur-[4px] sm:backdrop-blur-none p-4 sm:p-0 rounded-2xl sm:rounded-3xl border border-light-gray/40 sm:border-none shadow-xs sm:shadow-none">
-                <!-- Eyebrow Badges -->
-                <div class="flex flex-wrap items-center gap-2">
-                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#AA987C]/30 text-[#AA987C] text-[10px] sm:text-[11px] font-heading font-semibold uppercase tracking-[0.2em] shadow-xs">
-                        KOREAN-FOUNDED · PHYSICIAN-GUIDED · SEOUL-INSPIRED
-                    </span>
-                </div>
-
                 <!-- Big Main Headline (Montserrat Display - Exactly 3 Distinct Lines matching LDM hero reference) -->
                 <div>
                     <h1 class="heading-wide text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-near-black font-light leading-tight [text-wrap:balance]">
