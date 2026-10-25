@@ -27,6 +27,14 @@ function initNavigation() {
       lucide.createIcons();
     }
 
+    // Close mega menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const mega = document.querySelector('.nav-item-mega');
+      if (mega && !mega.contains(e.target)) {
+        mega.classList.remove('is-open');
+      }
+    });
+
     // Initialize Nav-Dependent Components
     initMobileDrawer();
     initMobileAccordions();

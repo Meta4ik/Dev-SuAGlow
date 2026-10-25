@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treatments Compendium Modal Preview | SuA K-Glow Med Spa</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;600;700;800;900&family=Alex+Brush&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind Output CSS -->
+    <link rel="stylesheet" href="dist/output.css?v=56">
+
+    <!-- Google Tag & Analytics -->
+    <script src="google-tag.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Modal Transitions */
+        #treatmentsModalOverlay {
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+        }
+        #treatmentsModalSheet {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+        }
+        #treatmentsModalOverlay.is-open {
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
+        }
+        #treatmentsModalOverlay.is-open #treatmentsModalSheet {
+            transform: translateY(0) scale(1) !important;
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-off-white text-charcoal font-body antialiased selection:bg-warm-gold selection:text-white">
+
+    <!-- Injected Global Navigation Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Content for Context Background -->
+    <main class="pt-36 sm:pt-44 pb-24 px-4 sm:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-warm-gold uppercase mb-3">
+                Interactive Design Preview
+            </span>
+            <h1 class="heading-wide text-3xl sm:text-5xl font-bold text-near-black mb-4">
+                Treatments Compendium Modal
+            </h1>
+            <p class="text-charcoal/75 text-sm sm:text-base font-light leading-relaxed mb-6">
+                Clicking <strong class="font-semibold text-near-black">"Treatments"</strong> in the main navigation (or the demo button below) opens an interactive full-screen compendium directly on your current page with all 8 departments, sub-links, and search filtering.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <button type="button" onclick="openTreatmentsModal()"
+                    class="btn-primary py-3 px-6 text-xs font-heading font-bold tracking-wider uppercase flex items-center gap-2 shadow-md hover:scale-105 transition-transform">
+                    <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                    Open Treatments Compendium
+                </button>
+                <a href="index.html" class="btn-outline-white py-3 px-5 text-xs font-heading font-semibold tracking-wider uppercase">
+                    Return to Homepage
+                </a>
+            </div>
+        </div>
+
+        <!-- Sample Background Cards to Show Backdrop Blur -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 opacity-60 pointer-events-none">
+            <div class="bg-white p-6 rounded-2xl border border-light-gray">
+                <h3 class="font-heading font-bold text-base text-near-black mb-2">Skin Quality Boosters</h3>
+                <p class="text-xs text-charcoal/70">Bio-cellular micro-droplet delivery of polynucleotides and hyaluronic acids.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-light-gray">
+                <h3 class="font-heading font-bold text-base text-near-black mb-2">Oligio X Monopolar RF</h3>
+                <p class="text-xs text-charcoal/70">Korean 6.78 MHz dermal tightening engineered for pain-free collagen synthesis.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-light-gray">
+                <h3 class="font-heading font-bold text-base text-near-black mb-2">Aura 3D Digital Twin</h3>
+                <p class="text-xs text-charcoal/70">Sub-surface multispectral diagnostic imaging and customized care planning.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================================== -->
+    <!-- COMPREHENSIVE TREATMENTS MODAL OVERLAY (OPTION 2)              -->
+    <!-- ============================================================== -->
+    <div id="treatmentsModalOverlay" onclick="handleBackdropClick(event)"
+        class="fixed inset-0 z-[9999] bg-near-black/70 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none invisible flex flex-col justify-end md:justify-center p-0 md:p-6 lg:p-10">
+
+        <!-- Modal Dialog Window / Sheet -->
+        <div id="treatmentsModalSheet"
+            class="relative w-full max-w-6xl mx-auto bg-white rounded-t-3xl md:rounded-3xl shadow-modal flex flex-col max-h-[92vh] md:max-h-[88vh] overflow-hidden transform translate-y-8 md:translate-y-4 scale-[0.98] opacity-0 border border-light-gray/60">
+
+            <!-- Sticky Modal Header -->
+            <header class="px-5 sm:px-8 pt-5 pb-4 border-b border-light-gray/60 bg-white/95 backdrop-blur-md shrink-0 flex flex-col gap-3 z-20">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-[10px] font-heading font-bold tracking-[0.25em] text-warm-gold uppercase">
+                                Comprehensive Directory
+                            </span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-warm-gold/50"></span>
+                            <span class="text-[10px] font-heading font-semibold text-charcoal/50 uppercase tracking-wider">
+                                8 Departments • 25+ Treatments
+                            </span>
+                        </div>
+                        <h2 class="font-heading text-xl sm:text-2xl font-bold text-near-black mt-0.5">
+                            All Treatments &amp; Clinical Pathways
+                        </h2>
+                    </div>
+
+                    <!-- Close Button -->
+                    <button type="button" onclick="closeTreatmentsModal()" aria-label="Close Treatments Directory"
+                        class="w-9 h-9 rounded-full bg-off-white hover:bg-light-gray/60 text-charcoal/80 hover:text-near-black flex items-center justify-center transition-colors tap-action">
+                        <i data-lucide="x" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Live Search & Category Jump Filter -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 pt-1">
+                    <!-- Real-time Search Input -->
+                    <div class="relative flex-1">
+                        <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-charcoal/40 pointer-events-none"></i>
+                        <input type="text" id="treatmentsSearchInput" placeholder="Filter treatments by name, concern, or active ingredient..."
+                            oninput="filterTreatmentsModal(this.value)"
+                            class="w-full bg-[#FAF8F5] text-near-black text-xs rounded-full pl-9 pr-8 py-2 border border-light-gray/80 focus:outline-none focus:ring-2 focus:ring-warm-gold/40 focus:border-warm-gold transition-all placeholder:text-charcoal/40">
+                        <button type="button" id="treatmentsSearchClear" onclick="clearTreatmentsSearch()"
+                            class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-charcoal/40 hover:text-charcoal p-1">
+                            <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+
+                    <!-- Department Category Jump Pills -->
+                    <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5" id="departmentJumpPills">
+                        <button type="button" onclick="filterDepartment('all')" id="dept-pill-all"
+                            class="dept-pill active px-3 py-1 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-near-black text-white tap-action transition-all">
+                            All
+                        </button>
+                        <button type="button" onclick="filterDepartment('boosters')" id="dept-pill-boosters"
+                            class="dept-pill px-3 py-1 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-[#FAF8F5] text-charcoal hover:bg-light-gray/40 border border-light-gray/60 tap-action transition-all">
+                            Boosters
+                        </button>
+                        <button type="button" onclick="filterDepartment('injectables')" id="dept-pill-injectables"
+                            class="dept-pill px-3 py-1 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-[#FAF8F5] text-charcoal hover:bg-light-gray/40 border border-light-gray/60 tap-action transition-all">
+                            Injectables
+                        </button>
+                        <button type="button" onclick="filterDepartment('rejuvenation')" id="dept-pill-rejuvenation"
+                            class="dept-pill px-3 py-1 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-[#FAF8F5] text-charcoal hover:bg-light-gray/40 border border-light-gray/60 tap-action transition-all">
+                            Rejuvenation &amp; Hair
+                        </button>
+                        <button type="button" onclick="filterDepartment('scars')" id="dept-pill-scars"
+                            class="dept-pill px-3 py-1 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-[#FAF8F5] text-charcoal hover:bg-light-gray/40 border border-light-gray/60 tap-action transition-all">
+                            Scars
+                        </button>
+                        <button type="button" onclick="filterDepartment('signature')" id="dept-pill-signature"
+                            class="dept-pill px-3 py-1 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-[#FAF8F5] text-charcoal hover:bg-light-gray/40 border border-light-gray/60 tap-action transition-all">
+                            Signature
+                        </button>
+                        <button type="button" onclick="filterDepartment('facials')" id="dept-pill-facials"
+                            class="dept-pill px-3 py-1 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-[#FAF8F5] text-charcoal hover:bg-light-gray/40 border border-light-gray/60 tap-action transition-all">
+                            K-Beauty Facials
+                        </button>
+                        <button type="button" onclick="filterDepartment('wellness')" id="dept-pill-wellness"
+                            class="dept-pill px-3 py-1 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-[#FAF8F5] text-charcoal hover:bg-light-gray/40 border border-light-gray/60 tap-action transition-all">
+                            Wellness
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Scrollable Content Body -->
+            <div class="overflow-y-auto px-5 sm:px-8 py-6 space-y-6 flex-1 bg-[#FAF8F5]/50">
+
+                <!-- Featured Top Spotlight: Aura 3D Skin Analysis (Start Here) -->
+                <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#0d4ece] via-[#1a5ce0] to-[#0a3899] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm border border-blue-400/30">
+                    <div class="flex items-center gap-3.5">
+                        <div class="relative w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center shrink-0 border border-white/20">
+                            <img src="assets/aura_device_large.png" alt="Aura 3D Device" class="w-10 h-10 object-contain">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="bg-white/20 text-white text-[9px] font-heading font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">
+                                    Recommended First Visit
+                                </span>
+                                <span class="text-white/80 text-[10px]">Seoul Diagnostic Technology</span>
+                            </div>
+                            <h3 class="font-heading text-base font-bold text-white mt-0.5">
+                                Aura 3D Multispectral Skin Analysis
+                            </h3>
+                            <p class="text-xs text-white/80 font-light mt-0.5 line-clamp-1">
+                                Generates your photorealistic digital twin to assess barrier integrity, vascular erythema, and deep pigment.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 shrink-0 w-full sm:w-auto">
+                        <a href="3d-skin-analysis.html"
+                            class="flex-1 sm:flex-initial px-4 py-2 bg-white text-[#0d4ece] hover:bg-[#FFF2B2] hover:text-amber-950 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-colors text-center shadow-xs">
+                            Start Here
+                        </a>
+                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                            class="px-3 py-2 bg-white/15 hover:bg-white/25 rounded-full text-xs text-white font-heading font-semibold uppercase tracking-wider transition-colors text-center border border-white/20">
+                            Book
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8-Department Compendium Grid -->
+                <div id="treatmentsCompendiumGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+                    <!-- ========================================== -->
+                    <!-- 1. SKIN QUALITY BOOSTERS                   -->
+                    <!-- ========================================== -->
+                    <div class="treatment-dept-card bg-white rounded-2xl p-4 sm:p-5 border border-light-gray/70 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between"
+                         data-department="boosters"
+                         data-search="skin quality boosters healing essence hydration glow collagen stimulation dermal matrix rejuran healer polynucleotides juvelook pdlla hyaluronic acid skinvive byryzn cellredm">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="badge-standard bg-charcoal !text-white text-[9.5px]">Boosters</span>
+                                <a href="skin-quality-boosters.html" class="text-[10px] font-heading font-semibold text-taupe hover:text-warm-gold uppercase tracking-wider flex items-center gap-0.5">
+                                    Hub <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                                </a>
+                            </div>
+                            <h3 class="font-heading text-sm font-bold text-near-black">Skin Quality Boosters</h3>
+                            <p class="text-[11px] text-charcoal/65 font-light mt-0.5 mb-3 leading-relaxed">
+                                Intradermal cellular micro-infusions for deep matrix hydration, elasticity, and pore refining.
+                            </p>
+                            <ul class="space-y-1.5 border-t border-light-gray/50 pt-2.5 text-xs">
+                                <li>
+                                    <a href="skin-quality-boosters.html#healing-essence" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Healing Essence</span>
+                                            <span class="text-[10px] text-charcoal/50 block">c-PDRN / Salmon Polynucleotides</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="skin-quality-boosters.html#hydration-glow" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Hydration &amp; Glow</span>
+                                            <span class="text-[10px] text-charcoal/50 block">SkinVive micro-droplet HA</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="skin-quality-boosters.html#collagen-stimulation" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Collagen Stimulation</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Juvelook PDLLA + HA Micro-spheres</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="skin-quality-boosters.html#dermal-matrix" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Dermal Matrix</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Byryzn &amp; Cellredm multi-density HA</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- 2. INJECTABLES & FACIAL ARCHITECTURE       -->
+                    <!-- ========================================== -->
+                    <div class="treatment-dept-card bg-white rounded-2xl p-4 sm:p-5 border border-light-gray/70 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between"
+                         data-department="injectables"
+                         data-search="injectables cosmetic tox skintox medical tox masseter tmj traptox hyperhidrosis dermal filler juvederm restylane radiesse sculptra biostimulators">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="badge-standard bg-charcoal !text-white text-[9.5px]">Injectables</span>
+                                <a href="injectables.html" class="text-[10px] font-heading font-semibold text-taupe hover:text-warm-gold uppercase tracking-wider flex items-center gap-0.5">
+                                    Hub <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                                </a>
+                            </div>
+                            <h3 class="font-heading text-sm font-bold text-near-black">Injectables &amp; Tox</h3>
+                            <p class="text-[11px] text-charcoal/65 font-light mt-0.5 mb-3 leading-relaxed">
+                                Natural facial harmonization, wrinkle relaxation, and biostimulatory structural contouring.
+                            </p>
+                            <ul class="space-y-1.5 border-t border-light-gray/50 pt-2.5 text-xs">
+                                <li>
+                                    <a href="cosmetic-tox.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Cosmetic Tox &amp; SkinTox</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Expression lines &amp; pore tightening</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="medical-tox.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Medical Tox</span>
+                                            <span class="text-[10px] text-charcoal/50 block">TMJ Masseter, TrapTox &amp; Hyperhidrosis</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="dermal-filler.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">HA Dermal Fillers</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Cheeks, lips, chin &amp; tear troughs</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="radiesse.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Biostimulators (Sculptra &amp; Radiesse)</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Long-term deep collagen regeneration</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- 3. SKIN REJUVENATION & HAIR                -->
+                    <!-- ========================================== -->
+                    <div class="treatment-dept-card bg-white rounded-2xl p-4 sm:p-5 border border-light-gray/70 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between"
+                         data-department="rejuvenation"
+                         data-search="skin rejuvenation oligio x rf lifting ldm water drop skinpen microneedling dep needle-free infusion picosecond laser korean scalp hair rejuvenation">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="badge-standard bg-charcoal !text-white text-[9.5px]">Rejuvenation</span>
+                                <span class="badge-glass text-[9px] text-warm-gold font-bold uppercase tracking-wider py-0.5 px-2">Seoul Tech</span>
+                            </div>
+                            <h3 class="font-heading text-sm font-bold text-near-black">Skin Rejuvenation &amp; Hair</h3>
+                            <p class="text-[11px] text-charcoal/65 font-light mt-0.5 mb-3 leading-relaxed">
+                                Clinical ultrasound, radiofrequency lifting, and non-invasive delivery technologies.
+                            </p>
+                            <ul class="space-y-1.5 border-t border-light-gray/50 pt-2.5 text-xs">
+                                <li>
+                                    <a href="oligio-x.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Oligio X RF Lifting</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Monopolar skin tightening</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ldm-water-drop-lifting.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">LDM Water Drop Lifting</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Triple ultrasound cellular therapy</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="microneedling.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">SkinPen Microneedling</span>
+                                            <span class="text-[10px] text-charcoal/50 block">FDA-cleared micro-collagen induction</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="needleless-infusion-therapy.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Needle-free DEP Infusion</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Dermal electroporation delivery</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="korean-scalp-hair-rejuvenation.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Korean Scalp &amp; Hair</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Follicular restoration &amp; barrier health</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- 4. CLINICAL SCAR TREATMENT                 -->
+                    <!-- ========================================== -->
+                    <div class="treatment-dept-card bg-white rounded-2xl p-4 sm:p-5 border border-light-gray/70 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between"
+                         data-department="scars"
+                         data-search="scar treatment acne scars surgical scars stretch marks keloid subcision polynucleotides rf microneedling">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="badge-standard bg-charcoal !text-white text-[9.5px]">Scar Care</span>
+                                <a href="scar-treatment.html" class="text-[10px] font-heading font-semibold text-taupe hover:text-warm-gold uppercase tracking-wider flex items-center gap-0.5">
+                                    Hub <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                                </a>
+                            </div>
+                            <h3 class="font-heading text-sm font-bold text-near-black">Scar Treatment</h3>
+                            <p class="text-[11px] text-charcoal/65 font-light mt-0.5 mb-3 leading-relaxed">
+                                Multi-modality subcision, microneedling, and regenerative polynucleotide scar remodeling.
+                            </p>
+                            <ul class="space-y-1.5 border-t border-light-gray/50 pt-2.5 text-xs">
+                                <li>
+                                    <a href="scar-treatment.html#acne-scars" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Acne Scars</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Rolling, boxcar &amp; icepick revision</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="scar-treatment.html#surgical-scars" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Surgical Scars</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Post-operative tissue smoothing</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="scar-treatment.html#stretch-marks" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Stretch Marks</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Dermal matrix rebuilding</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="scar-treatment.html#keloid" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Keloid Treatment</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Anti-inflammatory scar flattening</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- 5. SIGNATURE GLOW TREATMENTS               -->
+                    <!-- ========================================== -->
+                    <div class="treatment-dept-card bg-white rounded-2xl p-4 sm:p-5 border border-light-gray/70 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between"
+                         data-department="signature"
+                         data-search="signature treatments sua glow signature one day glow bridal glow seoul man red carpet event prep">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="badge-standard bg-charcoal !text-white text-[9.5px]">Signature</span>
+                                <span class="text-[10px] font-heading font-semibold text-warm-gold uppercase tracking-wider">Curated</span>
+                            </div>
+                            <h3 class="font-heading text-sm font-bold text-near-black">Signature Treatments</h3>
+                            <p class="text-[11px] text-charcoal/65 font-light mt-0.5 mb-3 leading-relaxed">
+                                Complete multi-modality combination sessions designed for rapid radiance and special occasions.
+                            </p>
+                            <ul class="space-y-1.5 border-t border-light-gray/50 pt-2.5 text-xs">
+                                <li>
+                                    <a href="signature-treatment.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">SuA Glow Signature</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Our flagship multi-step experience</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="one-day-glow.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">One Day Glow</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Zero-downtime red carpet radiance</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="bridal-glow.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Bridal Glow Protocol</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Custom wedding skin countdown</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="seoul-man.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Seoul Man Treatment</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Tailored male facial contouring</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- 6. K-BEAUTY FACIALS                        -->
+                    <!-- ========================================== -->
+                    <div class="treatment-dept-card bg-white rounded-2xl p-4 sm:p-5 border border-light-gray/70 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between"
+                         data-department="facials"
+                         data-search="k-beauty facials ldm water drop salmon pn facial glass skin hydration glow collagen stimulation tone up facial seoul aesthetics">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="badge-standard bg-charcoal !text-white text-[9.5px]">Facials</span>
+                                <span class="text-[10px] font-heading font-semibold text-warm-gold uppercase tracking-wider">Korean Glass Skin</span>
+                            </div>
+                            <h3 class="font-heading text-sm font-bold text-near-black">K-Beauty Facials</h3>
+                            <p class="text-[11px] text-charcoal/65 font-light mt-0.5 mb-3 leading-relaxed">
+                                Authentic Seoul-protocol facials combining active biologicals with therapeutic technology.
+                            </p>
+                            <ul class="space-y-1.5 border-t border-light-gray/50 pt-2.5 text-xs">
+                                <li>
+                                    <a href="ldm-water-drop-lifting.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">LDM Water Drop Facial</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Deep cellular acoustic hydration</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="salmon-pn-facial.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Salmon PN Facial</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Marine DNA cellular repair</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="glass-skin-hydration-glow.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Glass Skin Hydration &amp; Glow</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Multi-depth barrier replenishment</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="collagen-stimulation-facial.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Collagen Stimulation</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Deep neocollagenesis activation</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tone-up-facial.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Tone Up Facial</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Porcelain radiance &amp; pigment clarity</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- 7. WELLNESS & LONGEVITY MEDICINE           -->
+                    <!-- ========================================== -->
+                    <div class="treatment-dept-card bg-white rounded-2xl p-4 sm:p-5 border border-light-gray/70 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between"
+                         data-department="wellness"
+                         data-search="wellness longevity medicine medical weight loss glp-1 semaglutide tirzepatide body reset glow infusion iv therapy iv push peptides hormone balance">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="badge-standard bg-charcoal !text-white text-[9.5px]">Wellness</span>
+                                <span class="text-[10px] font-heading font-semibold text-warm-gold uppercase tracking-wider">Longevity</span>
+                            </div>
+                            <h3 class="font-heading text-sm font-bold text-near-black">Wellness &amp; Longevity</h3>
+                            <p class="text-[11px] text-charcoal/65 font-light mt-0.5 mb-3 leading-relaxed">
+                                Physician-guided metabolic wellness, cellular IV infusions, and body recomposition.
+                            </p>
+                            <ul class="space-y-1.5 border-t border-light-gray/50 pt-2.5 text-xs">
+                                <li>
+                                    <a href="medical-weight-loss-dallas.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Medical Weight Loss</span>
+                                            <span class="text-[10px] text-charcoal/50 block">Compounded GLP-1 &amp; Korean Body Reset</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="iv-infusion-wellness-therapy.html" class="treatment-item group flex items-start justify-between py-1 text-charcoal/80 hover:text-warm-gold transition-colors">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Glow Infusion Therapy</span>
+                                            <span class="text-[10px] text-charcoal/50 block">IV Infusions &amp; NAD+ / Glutathione</span>
+                                        </div>
+                                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-charcoal/40 group-hover:text-warm-gold shrink-0 mt-0.5"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="py-1 flex items-start justify-between text-charcoal/60">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Body Contouring</span>
+                                            <span class="text-[10px] text-charcoal/40 block">Oligio X Body &amp; EmSculpt</span>
+                                        </div>
+                                        <span class="font-mono text-[8.5px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-1.5 py-0.5 rounded-full uppercase">Soon</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="py-1 flex items-start justify-between text-charcoal/60">
+                                        <div>
+                                            <span class="font-medium block leading-tight">Peptides &amp; Hormone Balance</span>
+                                            <span class="text-[10px] text-charcoal/40 block">Bio-regenerative longevity therapies</span>
+                                        </div>
+                                        <span class="font-mono text-[8.5px] font-semibold text-amber-700 bg-amber-50 border border-amber-200/60 px-1.5 py-0.5 rounded-full uppercase">Soon</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- 8. SKINCARE COLLECTIONS & QUIZ             -->
+                    <!-- ========================================== -->
+                    <div class="treatment-dept-card bg-gradient-to-br from-[#FAF8F5] to-white rounded-2xl p-4 sm:p-5 border border-warm-gold/40 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between"
+                         data-department="all"
+                         data-search="korean skincare products exoblanc rejuran medi pharmesthetic conapidil consultation quiz">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="badge-standard bg-warm-gold text-white text-[9.5px]">Home Regimens</span>
+                                <i data-lucide="sparkle" class="w-3.5 h-3.5 text-warm-gold"></i>
+                            </div>
+                            <h3 class="font-heading text-sm font-bold text-near-black">Korean Skincare Edit</h3>
+                            <p class="text-[11px] text-charcoal/65 font-light mt-0.5 mb-3 leading-relaxed">
+                                Medical-grade post-procedure formulations prescribed to sustain your clinic glow at home.
+                            </p>
+                            <div class="space-y-2 border-t border-light-gray/50 pt-2.5">
+                                <a href="skincare-products.html" class="flex items-center justify-between p-2 rounded-xl bg-white border border-light-gray/70 hover:border-warm-gold transition-colors text-xs font-heading font-semibold text-near-black">
+                                    <span>26 Korean Formulations</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-warm-gold"></i>
+                                </a>
+                                <a href="skincare-products.html#line-exoblanc" class="block text-[11px] text-charcoal/70 hover:text-warm-gold pl-1 transition-colors">
+                                    &bull; Exoblanc Exosome Line (11)
+                                </a>
+                                <a href="skincare-products.html#line-rejuran" class="block text-[11px] text-charcoal/70 hover:text-warm-gold pl-1 transition-colors">
+                                    &bull; Rejuran MEDI c-PDRN (6)
+                                </a>
+                                <a href="skincare-products.html#line-pharmesthetic" class="block text-[11px] text-charcoal/70 hover:text-warm-gold pl-1 transition-colors">
+                                    &bull; Pharmesthetic Clinical (9)
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 mt-3 border-t border-light-gray/60">
+                            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                                class="btn-primary w-full py-2 text-[10px] font-heading font-bold uppercase tracking-wider text-center block">
+                                Book Provider Consult
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Empty State When Search Returns No Results -->
+                <div id="treatmentsZeroResults" class="hidden text-center py-12">
+                    <i data-lucide="search-x" class="w-8 h-8 text-charcoal/30 mx-auto mb-2"></i>
+                    <h4 class="font-heading text-sm font-bold text-near-black">No treatments match your search</h4>
+                    <p class="text-xs text-charcoal/60 mt-1">Try searching for keywords like "Collagen", "Acne", "Lifting", or "Tox".</p>
+                    <button type="button" onclick="clearTreatmentsSearch()" class="mt-3 text-xs font-heading font-semibold text-warm-gold underline uppercase">
+                        Reset Filters
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer Status Bar -->
+            <footer class="px-5 sm:px-8 py-3 bg-white border-t border-light-gray/50 flex flex-col sm:flex-row items-center justify-between gap-2 shrink-0 text-xs text-charcoal/60">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-warm-gold shrink-0"></i>
+                    <span>Supervised by Sophia Yang, PA-C • Carrollton, TX Clinic</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-[11px] hidden md:inline">Press <kbd class="px-1.5 py-0.5 bg-off-white border border-light-gray rounded text-[10px] font-mono">ESC</kbd> to close</span>
+                    <a href="tel:972-665-8737" class="text-taupe hover:text-near-black font-semibold flex items-center gap-1">
+                        <i data-lucide="phone" class="w-3 h-3"></i> (972) 665-8737
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Injected Global Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Shared Navigation & Footer Scripts -->
+    <script src="navbar.js?v=56"></script>
+    <script src="footer.js?v=50"></script>
+    <script src="script.js?v=51"></script>
+
+    <!-- Treatments Modal Controller Script -->
+    <script>
+        function openTreatmentsModal() {
+            const overlay = document.getElementById('treatmentsModalOverlay');
+            if (overlay) {
+                overlay.classList.add('is-open');
+                document.body.style.overflow = 'hidden';
+                const searchInput = document.getElementById('treatmentsSearchInput');
+                if (searchInput && window.innerWidth >= 768) {
+                    setTimeout(() => searchInput.focus(), 200);
+                }
+            }
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        }
+
+        function closeTreatmentsModal() {
+            const overlay = document.getElementById('treatmentsModalOverlay');
+            if (overlay) {
+                overlay.classList.remove('is-open');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function handleBackdropClick(e) {
+            // Close only if clicked directly on the overlay backdrop
+            if (e.target.id === 'treatmentsModalOverlay') {
+                closeTreatmentsModal();
+            }
+        }
+
+        // Close on ESC key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeTreatmentsModal();
+            }
+        });
+
+        // Search Filter
+        let currentDept = 'all';
+        let currentSearch = '';
+
+        function filterTreatmentsModal(val) {
+            currentSearch = val.trim().toLowerCase();
+            const clearBtn = document.getElementById('treatmentsSearchClear');
+            if (clearBtn) {
+                if (currentSearch.length > 0) clearBtn.classList.remove('hidden');
+                else clearBtn.classList.add('hidden');
+            }
+            applyModalFilters();
+        }
+
+        function clearTreatmentsSearch() {
+            const input = document.getElementById('treatmentsSearchInput');
+            if (input) input.value = '';
+            currentSearch = '';
+            const clearBtn = document.getElementById('treatmentsSearchClear');
+            if (clearBtn) clearBtn.classList.add('hidden');
+            applyModalFilters();
+        }
+
+        function filterDepartment(dept) {
+            currentDept = dept;
+            document.querySelectorAll('.dept-pill').forEach(btn => {
+                btn.className = 'dept-pill px-3 py-1 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-[#FAF8F5] text-charcoal hover:bg-light-gray/40 border border-light-gray/60 tap-action transition-all';
+            });
+            const activeBtn = document.getElementById('dept-pill-' + dept);
+            if (activeBtn) {
+                activeBtn.className = 'dept-pill active px-3 py-1 rounded-full text-[11px] font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-near-black text-white tap-action transition-all';
+            }
+            applyModalFilters();
+        }
+
+        function applyModalFilters() {
+            const cards = document.querySelectorAll('.treatment-dept-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardDept = card.getAttribute('data-department');
+                const searchData = (card.getAttribute('data-search') || '').toLowerCase();
+
+                const matchesDept = (currentDept === 'all' || cardDept === currentDept || cardDept === 'all');
+                const matchesSearch = (!currentSearch || searchData.includes(currentSearch));
+
+                if (matchesDept && matchesSearch) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            const zeroResults = document.getElementById('treatmentsZeroResults');
+            if (zeroResults) {
+                if (visibleCount === 0) zeroResults.classList.remove('hidden');
+                else zeroResults.classList.add('hidden');
+            }
+        }
+
+        // Attach modal trigger to main navigation's "Treatments" link dynamically
+        window.addEventListener('DOMContentLoaded', () => {
+            // Find desktop Treatments nav item
+            const desktopTreatmentsLink = document.querySelector('.nav-item-mega > a');
+            if (desktopTreatmentsLink) {
+                desktopTreatmentsLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openTreatmentsModal();
+                });
+            }
+
+            // Find mobile Treatments accordion header or link
+            const mobileTreatmentsTrigger = document.querySelector('.mobile-accordion:first-of-type .accordion-trigger');
+            
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>
