@@ -4,32 +4,884 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skincare Products | Rejuran, Exoblanc &amp; Pharmesthetic | SuA K-Glow Carrollton TX</title>
-    <meta name="description" content="Explore SuA Glow's curated medical-grade skincare products: REJURAN® MEDI Line, Exoblanc Exosome Line, and Pharmesthetic Line. Available exclusively in-office in Carrollton, TX.">
+    <title>Korean Medical Skincare Collections | SuA K-Glow Med Spa</title>
+    <meta name="description"
+        content="Explore Korean medical skincare collections at SuA K-Glow in Carrollton, TX. Exoblanc exosome serums, Rejuran MEDI c-PDRN healing care, and Pharmesthetic clinical skin therapy.">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://suaglow.com/skincare-products.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://suaglow.com/skincare-products.html">
+    <meta property="og:title" content="Korean Medical Skincare Edit | SuA K-Glow">
+    <meta property="og:description" content="Discover professional Korean medical aesthetic skincare. Exoblanc, Rejuran MEDI, and Pharmesthetic.">
+    <meta property="og:image" content="https://suaglow.com/assets/logo-main.webp">
+    <meta property="og:site_name" content="SuA K-Glow">
+
     <link rel="icon" href="assets/favicon.png" type="image/png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;600;700;800;900&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap"
         rel="stylesheet">
 
+    <!-- Tailwind Output CSS -->
     <link rel="stylesheet" href="dist/output.css?v=50">
 
-    <!-- Google Tag & Ads Conversion Tracking -->
+    <!-- Google Tag & Analytics -->
     <script src="google-tag.js"></script>
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .font-script {
+            font-family: 'Alex Brush', cursive;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .category-pill.active {
+            background-color: #AA987C !important;
+            color: #ffffff !important;
+            border-color: #AA987C !important;
+            box-shadow: 0 2px 8px rgba(170, 152, 124, 0.3);
+        }
+        /* Modal sheet smooth spring transition */
+        .modal-sheet {
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .modal-sheet.open {
+            transform: translateY(0%) !important;
+        }
+        /* Suppress generic floating dock on this page */
+        body.skincare-v2-page #floating-action-dock {
+            display: none !important;
+        }
+    </style>
 </head>
 
-<body class="bg-off-white text-charcoal antialiased skincare-products-page">
+<body class="skincare-v2-page bg-off-white text-charcoal font-body antialiased selection:bg-warm-gold selection:text-white">
 
-    <!-- Global Navigation -->
+    <!-- Injected Global Navigation Placeholder -->
     <div id="nav-placeholder"></div>
 
+    <!-- ============================================================== -->
+    <!-- MOBILE APP EXPERIENCE (VISIBLE ONLY ON MOBILE < 768px)          -->
+    <!-- ============================================================== -->
+    <div class="md:hidden pt-32 sm:pt-40 pb-16">
+
+                <!-- 1. Editorial Visual Hero (Bright Luminous Model Background, Inverted Dark Text) -->
+        <section class="px-3 sm:px-4 mb-5">
+            <div class="relative overflow-hidden rounded-3xl bg-[#FAF8F5] text-charcoal shadow-lg flex flex-col justify-end p-5 sm:p-7 border border-[#AA987C]/30">
+                <!-- High-End Radiant Glow Photography Covering Whole Space -->
+                <img src="assets/skincare-hero-model.jpg" alt="Korean Glass Glow Skin Model"
+                    class="absolute inset-0 w-full h-full object-cover object-top">
+
+                <!-- Subtle Soft Luminous Fade (Keeps entire photo visible while ensuring dark text readability) -->
+                <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.40) 65%, rgba(255,255,255,0.78) 80%, rgba(255,255,255,0.94) 100%);"></div>
+
+                <!-- Vertical Spacer: Pushes copy down by 75px to let more of the image show -->
+                <div class="h-[535px] sm:h-[555px] shrink-0 pointer-events-none"></div>
+
+                <!-- All Copy Starting Below Her Neck Section (Inverted Dark Typography) -->
+                <div class="relative z-10 space-y-3 pt-2">
+                    <!-- Main Headline (Exact 3 Lines from Original) -->
+                    <div class="mb-2">
+                        <h1 class="heading-wide text-2xl sm:text-3xl text-near-black font-medium leading-tight [text-wrap:balance]">
+                            <span class="block whitespace-nowrap"><span class="text-[#8E734A] font-semibold">KOREAN</span> SKINCARE.</span>
+                            <span class="block whitespace-nowrap">SEOUL SCIENCE.</span>
+                            <span class="block whitespace-nowrap">YOUR DAILY <span class="text-[#8E734A] font-semibold">GLOW.</span></span>
+                        </h1>
+                    </div>
+
+                    <!-- Subtitle (Exact from Original) -->
+                    <p class="text-xs sm:text-sm font-semibold text-[#8E734A] tracking-wider uppercase font-body [text-wrap:balance] mb-2">
+                        Beyond the treatment. <span class="italic font-normal text-charcoal">Beautiful skin begins at home.</span>
+                    </p>
+
+                    <!-- Description & Tagline (Exact from Original) -->
+                    <div class="space-y-2 text-xs font-normal text-charcoal leading-relaxed [text-wrap:balance] mb-4">
+                        <p>
+                            Discover three thoughtfully curated Korean skincare collections—Exoblanc, Rejuran MEDI, and Pharmesthetic. Our curated collection was selected to support hydration, skin barrier health, and a smoother, more radiant-looking complexion.
+                        </p>
+                        <p class="text-[10.5px] text-[#8E734A] font-bold uppercase tracking-wider">
+                            Because your skin deserves more than a one-size-fits-all routine.
+                        </p>
+                    </div>
+
+                    <!-- Explore Collections Button -->
+                    <div class="pt-3 border-t border-[#AA987C]/25 flex items-center justify-between">
+                        <div class="flex items-center gap-2.5">
+                            <a href="#mobile-app-catalog" class="w-9 h-9 rounded-full bg-warm-gold text-white flex items-center justify-center shadow-xs tap-action hover:scale-105 transition-transform shrink-0">
+                                <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                            </a>
+                            <span class="text-[11px] font-heading font-bold text-near-black uppercase tracking-wider">Explore Collections</span>
+                        </div>
+                        <span class="text-[10px] font-heading text-taupe uppercase tracking-wider font-semibold">26 Formulations</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Mobile App Header & Catalog Controls (Screen 3 Style) -->
+        <section id="mobile-app-catalog" class="sticky top-[64px] z-30 bg-white/95 backdrop-blur-md pt-2.5 pb-3 px-3 sm:px-4 border-b border-light-gray/60 shadow-xs">
+            
+            <!-- Live Real-Time Search Bar -->
+            <div class="relative mb-2.5">
+                <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-charcoal/40 pointer-events-none">
+                    <i data-lucide="search" class="w-4 h-4"></i>
+                </span>
+                <input type="text" id="mobile-search-input" placeholder="Search 26 formulations, actives, steps..."
+                    oninput="handleSearch(this.value)"
+                    class="w-full bg-white text-near-black font-body text-xs rounded-full pl-9 pr-9 py-2.5 border border-light-gray/90 shadow-xs focus:outline-none focus:ring-2 focus:ring-warm-gold/40 focus:border-warm-gold transition-all placeholder:text-charcoal/40">
+                <button type="button" id="search-clear-btn" onclick="clearSearch()"
+                    class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-charcoal/40 hover:text-charcoal p-1">
+                    <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                </button>
+            </div>
+
+            <!-- Horizontal Category Filter Pills (Screen 3 Style) -->
+            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5" id="mobile-category-pills">
+                <button type="button" onclick="setCategory('all')" id="pill-all"
+                    class="category-pill active px-3.5 py-1.5 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-warm-gold text-white shadow-xs tap-action transition-all">
+                    All <span class="text-[10px] opacity-80">(26)</span>
+                </button>
+                <button type="button" onclick="setCategory('exoblanc')" id="pill-exoblanc"
+                    class="category-pill px-3.5 py-1.5 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-white text-charcoal border border-light-gray/80 tap-action transition-all">
+                    Exoblanc <span class="text-[10px] opacity-70">(11)</span>
+                </button>
+                <button type="button" onclick="setCategory('rejuran')" id="pill-rejuran"
+                    class="category-pill px-3.5 py-1.5 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-white text-charcoal border border-light-gray/80 tap-action transition-all">
+                    Rejuran MEDI <span class="text-[10px] opacity-70">(6)</span>
+                </button>
+                <button type="button" onclick="setCategory('pharmesthetic')" id="pill-pharmesthetic"
+                    class="category-pill px-3.5 py-1.5 rounded-full text-xs font-heading font-semibold uppercase tracking-wider whitespace-nowrap bg-white text-charcoal border border-light-gray/80 tap-action transition-all">
+                    Pharmesthetic <span class="text-[10px] opacity-70">(9)</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Search Status / Active Filter Banner -->
+        <div id="search-status-bar" class="hidden px-4 py-2 bg-warm-gold/10 text-near-black text-[11px] font-heading font-medium flex items-center justify-between border-b border-warm-gold/20">
+            <span id="search-status-text">Showing search results</span>
+            <button type="button" onclick="clearSearch()" class="text-taupe hover:text-near-black underline uppercase text-[10px]">Reset</button>
+        </div>
+
+        <!-- 3. 2-Column Product Grid (Screen 3 Style) -->
+        <section class="px-3 sm:px-4 pt-3 pb-28">
+            <div id="app-products-grid" class="grid grid-cols-2 gap-3 sm:gap-4">
+
+                <!-- ========================================== -->
+                <!-- BRAND 1: EXOBLANC                         -->
+                <!-- ========================================== -->
+                <div id="brand-group-exoblanc" class="brand-group col-span-2 pt-4 pb-2">
+                    <div class="flex flex-col items-center justify-center text-center pb-2">
+                        <img src="assets/logo-exoblanc.png" alt="Exoblanc" class="h-7 sm:h-8 w-auto object-contain mb-2">
+                        <span class="text-[9.5px] font-heading font-bold text-taupe uppercase tracking-widest block">Seoul Science • Exosome &amp; Peptide Technology</span>
+                        <p class="text-charcoal/70 text-[11px] font-light max-w-xs mx-auto mt-0.5">Your daily dose of Seoul science for skin barrier renewal.</p>
+                    </div>
+                </div>
+
+            <!-- Product Card: Relief Bubble Cleanser -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="exoblanc"
+                 data-id="exo-1"
+                 data-search="relief bubble cleanser exoblanc step 1: cleanse exosome extract, amino acid surfactants, centella asiatica. self-foaming micro-bubble cleanser that melts makeup, sunscreen, and pore congestion without stripping the delicate acid mantle. leaves skin calm, clean, and prepped."
+                 onclick="openProductDetail('exo-1')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/exoblanc-relief-bubble-cleanser.jpg" alt="Relief Bubble Cleanser" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">pH Balanced</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">150 mL</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Exoblanc • Step 1: Cleanse</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Relief Bubble Cleanser">Relief Bubble Cleanser</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Foaming Toner -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="exoblanc"
+                 data-id="exo-2"
+                 data-search="foaming toner exoblanc step 2: tone exosome complex, multi-depth hyaluronic acid, panthenol (b5). innovative foam-format toner delivering high-speed moisture absorption. calms post-cleansing sensitivity and primes the cellular matrix for maximum active penetration."
+                 onclick="openProductDetail('exo-2')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/exoblanc-foaming-toner.jpg" alt="Foaming Toner" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Micro-Foam Prep</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">150 mL</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Exoblanc • Step 2: Tone</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Foaming Toner">Foaming Toner</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Refine Peeling Ampoule -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="exoblanc"
+                 data-id="exo-3"
+                 data-search="refine peeling ampoule exoblanc step 3b: exfoliate pha/lha bio-acids, plant-derived exosomes, allantoin. clinic-grade exfoliating solution that gently dissolves dead surface cells and clears pore blockages without mechanical abrasion, revealing refined glass skin texture."
+                 onclick="openProductDetail('exo-3')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/exoblanc-refine-peeling-ampoule.jpg" alt="Refine Peeling Ampoule" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Bio-Renew Peeling</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">30 mL</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Exoblanc • Step 3B: Exfoliate</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Refine Peeling Ampoule">Refine Peeling Ampoule</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Exoblanc Boosting Serum -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="exoblanc"
+                 data-id="exo-4"
+                 data-search="exoblanc boosting serum exoblanc step 3: core cellular boost purified exosome vesicles, salmon pdrn, 5-peptide matrix, niacinamide. the flagship essential of the exoblanc system. merges high-concentration pure exosomes with a 5-peptide complex and salmon dna (pdrn) to stimulate deep cellular renewal and elasticity."
+                 onclick="openProductDetail('exo-4')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/exoblanc-boosting-serum.jpg" alt="Exoblanc Boosting Serum" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Exosomes • PDRN</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">50 mL</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Exoblanc • Step 3: Core Cellular Boost</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Exoblanc Boosting Serum">Exoblanc Boosting Serum</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Boosting Cream -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="exoblanc"
+                 data-id="exo-5"
+                 data-search="boosting cream exoblanc step 5: moisture lock exosome extract, ceramide np, squalane, adenosine. deep cellular replenishment cream that strengthens dermal structural integrity, locks in active serums, and imparts an immediate silky, dewy finish."
+                 onclick="openProductDetail('exo-5')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/exoblanc-boosting-cream.jpg" alt="Boosting Cream" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Elasticity Lock</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">50 mL</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Exoblanc • Step 5: Moisture Lock</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Boosting Cream">Boosting Cream</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Skin Barrier Cream -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="exoblanc"
+                 data-id="exo-6"
+                 data-search="skin barrier cream exoblanc step 5b: barrier seal exosomes, madecassoside, multi-ceramide liposomes, ectoin. intensive post-procedure recovery cream designed to soothe sensitized, inflamed, or laser-treated skin and rapidly restore the stratum corneum lipid barrier."
+                 onclick="openProductDetail('exo-6')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/exoblanc-skin-barrier-cream.jpg" alt="Skin Barrier Cream" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Barrier Repair</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">50 mL</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Exoblanc • Step 5B: Barrier Seal</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Skin Barrier Cream">Skin Barrier Cream</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: NMN Eyecream -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="exoblanc"
+                 data-id="exo-7"
+                 data-search="nmn eyecream exoblanc step 4: eye contour nmn (nicotinamide mononucleotide), exosomes, acetyl hexapeptide-8. longevity-focused eye formula powered by cellular-energy coenzyme nmn and exosomes to target deep crow's feet, sagging periorbital tissue, and dark pigmentation."
+                 onclick="openProductDetail('exo-7')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/exoblanc-nmn-eyecream.jpg" alt="NMN Eyecream" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">NMN Bio-Tech</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">30 mL</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Exoblanc • Step 4: Eye Contour</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="NMN Eyecream">NMN Eyecream</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Spicule Cream -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="exoblanc"
+                 data-id="exo-8"
+                 data-search="spicule cream exoblanc night routine • collagen stim hydrolyzed sea sponge spicules, exosome vesicles, tripeptides. purified marine micro-spicules create microscopic dermal pathways, delivering exosomes directly to target layers while continually stimulating nocturnal collagen remodeling."
+                 onclick="openProductDetail('exo-8')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/exoblanc-spicule-cream.jpg" alt="Spicule Cream" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Bio-Microneedles</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">50 mL</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Exoblanc • Night Routine • Collagen Stim</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Spicule Cream">Spicule Cream</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: White Bloom -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="exoblanc"
+                 data-id="exo-9"
+                 data-search="white bloom exoblanc radiance infusion glutathione, tranexamic acid, exosomes, niacinamide. high-potency brightening cream that suppresses melanin transfer while leaving a light-refracting, porcelain glow. ideal for dull skin and post-inflammatory pigmentation."
+                 onclick="openProductDetail('exo-9')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/exoblanc-white-bloom.jpg" alt="White Bloom" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Glass Skin Tone-Up</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">50 mL</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Exoblanc • Radiance Infusion</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="White Bloom">White Bloom</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Soothing Mist -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="exoblanc"
+                 data-id="exo-10"
+                 data-search="soothing mist exoblanc daily refresh exosome extract, damask rose floral water, centella asiatica. micro-aerosolized hydration shield delivering instant moisture replenishment and antioxidant defense across air-conditioned, heated, or flight-stressed environments."
+                 onclick="openProductDetail('exo-10')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/exoblanc-soothing-mist.jpg" alt="Soothing Mist" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Portable Shield</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">100 mL</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Exoblanc • Daily Refresh</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Soothing Mist">Soothing Mist</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: PDRN Mask -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="exoblanc"
+                 data-id="exo-11"
+                 data-search="pdrn mask exoblanc intensive sheet mask salmon pdrn, exosomes, hydrolyzed collagen, trehalose. densely saturated biocellulose sheet soaked in clinical salmon dna (pdrn) and exosome ampoule to drench sensitized skin in restorative moisture and reveal an immediate glass glow."
+                 onclick="openProductDetail('exo-11')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/exoblanc-pdrn-mask.jpg" alt="PDRN Mask" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Weekly Ritual</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">5 Sheets / Box</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Exoblanc • Intensive Sheet Mask</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="PDRN Mask">PDRN Mask</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+                <!-- ========================================== -->
+                <!-- BRAND 2: REJURAN MEDI                     -->
+                <!-- ========================================== -->
+                <div id="brand-group-rejuran" class="brand-group col-span-2 pt-8 pb-2 border-t border-light-gray/60 mt-6">
+                    <div class="flex flex-col items-center justify-center text-center pb-2">
+                        <img src="assets/logo-rejuran.png" alt="Rejuran MEDI" class="h-7 sm:h-8 w-auto object-contain mb-2">
+                        <span class="text-[9.5px] font-heading font-bold text-taupe uppercase tracking-widest block">PharmaResearch • Patented c-PDRN® (Hydrolyzed DNA)</span>
+                        <p class="text-charcoal/70 text-[11px] font-light max-w-xs mx-auto mt-0.5">Cellular regenerative bio-signaling for optimal skin resilience.</p>
+                    </div>
+                </div>
+
+            <!-- Product Card: Healing Care Set -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="rejuran"
+                 data-id="rej-1"
+                 data-search="healing care set rejuran medi complete 5-piece regimen patented c-pdrn® (hydrolyzed salmon dna), organic aloe, ceramide np, peptides. the rejuran® healing care set is a complete, five-piece regimen of restorative skincare essentials that incorporate proprietary hydrolyzed dna (c-pdrn®) with other proven skincare ingredients. these powerful, scientifically developed formulas nourish, protect, and support natural healing and cellular turnover to address visible signs of aging including dark spots, wrinkles, sagging, loss of firmness, and uneven texture. the result is a complexion that looks and feels healthier, more resilient, and radiant with an authentic korean glass-glow."
+                 onclick="openProductDetail('rej-1')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/rejuran-healing-care-set-open.webp" alt="Healing Care Set" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Clinical 5-Piece Set</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">5-Piece Regimen Box</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Rejuran MEDI • Complete 5-Piece Regimen</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Healing Care Set">Healing Care Set</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Concentrated Multitasking Serum -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="rejuran"
+                 data-id="rej-2"
+                 data-search="concentrated multitasking serum rejuran medi regimen step 1 • active serum c-pdrn® (hydrolyzed dna), hyaluronic acid, peptides. utilizes hydrolyzed dna (c-pdrn®) to nourish, protect, and support natural healing and cellular turnover, addressing visible signs of aging including dark spots, wrinkles, sagging, loss of firmness, and uneven texture. the result is a healthier, more resilient complexion with a youthful glow."
+                 onclick="openProductDetail('rej-2')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/rejuran-multitasking-serum.webp" alt="Concentrated Multitasking Serum" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Cellular Turnover</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">30 ml / 1.01 fl oz</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Rejuran MEDI • Regimen Step 1 • Active Serum</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Concentrated Multitasking Serum">Concentrated Multitasking Serum</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Healing Eye Gel -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="rejuran"
+                 data-id="rej-3"
+                 data-search="healing eye gel rejuran medi regimen step 2 • periorbital contour c-pdrn® (hydrolyzed dna), hyaluronic acid, peptides. incorporates hydrolyzed dna (c-pdrn®) to improve the appearance of elasticity and restore skin firmness around the eye area, reducing the visible signs of aging and fatigue for a refreshed and revitalized look."
+                 onclick="openProductDetail('rej-3')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/rejuran-healing-eye-gel.webp" alt="Healing Eye Gel" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Eye Contour Elasticity</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">15 ml / 0.5 fl oz</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Rejuran MEDI • Regimen Step 2 • Periorbital Contour</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Healing Eye Gel">Healing Eye Gel</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Intensive Moisturizer -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="rejuran"
+                 data-id="rej-4"
+                 data-search="intensive moisturizer rejuran medi regimen step 3 • barrier moisture c-pdrn® (hydrolyzed dna), hyaluronic acid, peptides. formulated with hydrolyzed dna (c-pdrn®) and other hydrating ingredients to deeply moisturize and nourish the skin, improving skin texture, firmness, and overall appearance while supporting natural healing processes."
+                 onclick="openProductDetail('rej-4')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/rejuran-intensive-moisturizer.webp" alt="Intensive Moisturizer" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Barrier Hydration</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">40 ml / 1.35 fl oz</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Rejuran MEDI • Regimen Step 3 • Barrier Moisture</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Intensive Moisturizer">Intensive Moisturizer</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Healing Cream -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="rejuran"
+                 data-id="rej-5"
+                 data-search="healing cream rejuran medi regimen step 4 • intensive repair c-pdrn® (hydrolyzed dna), hyaluronic acid, peptides. combines hydrolyzed dna (c-pdrn®) with emollient-rich ingredients to provide intensive hydration and support skin's natural repair processes, enhancing skin firmness and elasticity, and minimizing signs of aging."
+                 onclick="openProductDetail('rej-5')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/rejuran-healing-cream.webp" alt="Healing Cream" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Cellular Regeneration</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">50 ml / 1.69 fl oz</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Rejuran MEDI • Regimen Step 4 • Intensive Repair</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Healing Cream">Healing Cream</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Sunscreen SPF 50+ PA+++ -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="rejuran"
+                 data-id="rej-6"
+                 data-search="sunscreen spf 50+ pa+++ rejuran medi regimen step 5 • daytime uv defense c-pdrn® (hydrolyzed dna), hyaluronic acid, peptides. features hydrolyzed dna (c-pdrn®) along with protective and nourishing ingredients to shield the skin from harmful uv rays while promoting skin healing and hydration, maintaining a youthful and healthy complexion."
+                 onclick="openProductDetail('rej-6')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/rejuran-sunscreen.webp" alt="Sunscreen SPF 50+ PA+++" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Clinical UV Shield</span>
+                        <span class="absolute top-2 right-2 text-[8.5px] font-heading font-medium text-near-black/75 bg-white/90 backdrop-blur-xs px-1.5 py-0.5 rounded-full border border-light-gray/70 shadow-xs">50 ml / 1.69 fl oz</span>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Rejuran MEDI • Regimen Step 5 • Daytime UV Defense</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Sunscreen SPF 50+ PA+++">Sunscreen SPF 50+ PA+++</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+                <!-- ========================================== -->
+                <!-- BRAND 3: PHARMESTHETIC                    -->
+                <!-- ========================================== -->
+                <div id="brand-group-pharmesthetic" class="brand-group col-span-2 pt-8 pb-2 border-t border-light-gray/60 mt-6">
+                    <div class="flex flex-col items-center justify-center text-center pb-2">
+                        <img src="assets/logo-pharmesthetic.png" alt="Pharmesthetic" class="h-7 sm:h-8 w-auto object-contain mb-2">
+                        <span class="text-[9.5px] font-heading font-bold text-taupe uppercase tracking-widest block">Seoul Clinic Emergency Care • Prescription Aesthetics</span>
+                        <p class="text-charcoal/70 text-[11px] font-light max-w-xs mx-auto mt-0.5">Specialized formulations targeting severe barrier damage and sensitivity.</p>
+                    </div>
+                </div>
+
+            <!-- Product Card: VIBANQUENTMANKA Lotion (비반콴트망카 로션) -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="pharmesthetic"
+                 data-id="pharm-1"
+                 data-search="vibanquentmanka lotion (비반콴트망카 로션) pharmesthetic vqm master • emergency recovery hybrid volufiline, pdrn, centella asiatica, bio-ferment. known across seoul clinics as the "skin fire extinguisher" (formerly phytocin v2), this intensive emergency hybrid lotion combines marine sodium dna (pdrn), amiscare(n)®, and centella to rapidly extinguish redness and repair compromised barriers with a natural tone-adjusting botanical finish."
+                 onclick="openProductDetail('pharm-1')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/pharmesthetic-vibanquentmanka-lotion.webp" alt="VIBANQUENTMANKA Lotion (비반콴트망카 로션)" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Clinical Protocol</span>
+                        
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Pharmesthetic • VQM Master • Emergency Recovery Hybrid</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="VIBANQUENTMANKA Lotion (비반콴트망카 로션)">VIBANQUENTMANKA Lotion (비반콴트망카 로션)</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Lotion Polishing (로션 폴리싱) -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="pharmesthetic"
+                 data-id="pharm-2"
+                 data-search="lotion polishing (로션 폴리싱) pharmesthetic conapidil core 1 • clinical cleansing & prep volufiline, pdrn, centella asiatica, bio-ferment. ultra-gentle botanical milk cleanser that safely dissolves sebum, sunscreen, and particulate residue without tissue wiping or lipid stripping. leaves sensitized barriers soft, balanced, and protected."
+                 onclick="openProductDetail('pharm-2')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/pharmesthetic-lotion-polishing.webp" alt="Lotion Polishing (로션 폴리싱)" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Clinical Protocol</span>
+                        
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Pharmesthetic • CONAPIDIL Core 1 • Clinical Cleansing & Prep</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Lotion Polishing (로션 폴리싱)">Lotion Polishing (로션 폴리싱)</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Green Baxin (그린박신) -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="pharmesthetic"
+                 data-id="pharm-3"
+                 data-search="green baxin (그린박신) pharmesthetic conapidil core 2 • thermal defense & cooling volufiline, pdrn, centella asiatica, bio-ferment. dermal antipyretic cooling gel ("피부 해열제") engineered to immediately discharge trapped facial heat, lower surface skin temperature, and suppress thermal aging and capillary redness following clinical procedures or environmental stress."
+                 onclick="openProductDetail('pharm-3')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/pharmesthetic-green-baxin.webp" alt="Green Baxin (그린박신)" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Clinical Protocol</span>
+                        
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Pharmesthetic • CONAPIDIL Core 2 • Thermal Defense & Cooling</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Green Baxin (그린박신)">Green Baxin (그린박신)</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Finish Lotion SPF 50+ PA+++ (피니쉬로션) -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="pharmesthetic"
+                 data-id="pharm-4"
+                 data-search="finish lotion spf 50+ pa+++ (피니쉬로션) pharmesthetic conapidil core 3 • post-procedure defense volufiline, pdrn, centella asiatica, bio-ferment. medical-grade physical mineral sunscreen formulated specifically for the critical 72-hour post-procedure recovery window. provides high-potency uva/uvb defense while ceramide np and centella calm redness with an ultra-sheer, foundation-free blurring finish."
+                 onclick="openProductDetail('pharm-4')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/pharmesthetic-finish-lotion.webp" alt="Finish Lotion SPF 50+ PA+++ (피니쉬로션)" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Clinical Protocol</span>
+                        
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Pharmesthetic • CONAPIDIL Core 3 • Post-Procedure Defense</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Finish Lotion SPF 50+ PA+++ (피니쉬로션)">Finish Lotion SPF 50+ PA+++ (피니쉬로션)</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Superjection Home (슈퍼젝션 홈) -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="pharmesthetic"
+                 data-id="pharm-5"
+                 data-search="superjection home (슈퍼젝션 홈) pharmesthetic conapidil core 4 • cellular booster home protocol volufiline, pdrn, centella asiatica, bio-ferment. professional-grade home booster protocol engineered to address deep stubborn pigmentation ("속기미"), pore slackening, and dermal density. features targeted starter ampoules (2ml x 4), high-potency activators (3.5ml x 4), and active cream (18g) with precision applicators."
+                 onclick="openProductDetail('pharm-5')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/pharmesthetic-superjection-home.webp" alt="Superjection Home (슈퍼젝션 홈)" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Clinical Protocol</span>
+                        
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Pharmesthetic • CONAPIDIL Core 4 • Cellular Booster Home Protocol</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Superjection Home (슈퍼젝션 홈)">Superjection Home (슈퍼젝션 홈)</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Cemenzal Light (세멘잘라이트) -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="pharmesthetic"
+                 data-id="pharm-6"
+                 data-search="cemenzal light (세멘잘라이트) pharmesthetic conapidil core 5 • high potency cream 100 volufiline, pdrn, centella asiatica, bio-ferment. daily facial contour and barrier repositioning cream infused with patented french volufiline™ and human stem cell culture conditioned media. sustains facial volume, elasticity, and lifted contours between clinic visits while restoring fragile skin."
+                 onclick="openProductDetail('pharm-6')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/pharmesthetic-cemenzal-light.webp" alt="Cemenzal Light (세멘잘라이트)" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Clinical Protocol</span>
+                        
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Pharmesthetic • CONAPIDIL Core 5 • High Potency Cream 100</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Cemenzal Light (세멘잘라이트)">Cemenzal Light (세멘잘라이트)</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Gel Polishing (겔 폴리싱) -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="pharmesthetic"
+                 data-id="pharm-7"
+                 data-search="gel polishing (겔 폴리싱) pharmesthetic step 1b • pore purification volufiline, pdrn, centella asiatica, bio-ferment. hypoallergenic water-based gel cleanser that generates delicate micro-bubbles to purify stubborn pore waste and balance excess sebum without tightness or moisture loss."
+                 onclick="openProductDetail('pharm-7')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/pharmesthetic-gel-polishing.webp" alt="Gel Polishing (겔 폴리싱)" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Clinical Protocol</span>
+                        
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Pharmesthetic • Step 1B • Pore Purification</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Gel Polishing (겔 폴리싱)">Gel Polishing (겔 폴리싱)</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: Gel Starter (겔 스타터) -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="pharmesthetic"
+                 data-id="pharm-8"
+                 data-search="gel starter (겔 스타터) pharmesthetic step 2 • barrier conditioning primer volufiline, pdrn, centella asiatica, bio-ferment. high-density clinical gel that acts as both a barrier-stabilizing toner and an ampoule substitute. quenches micro-dehydration and primes skin cells for optimal post-procedure uptake."
+                 onclick="openProductDetail('pharm-8')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/pharmesthetic-gel-starter.webp" alt="Gel Starter (겔 스타터)" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Clinical Protocol</span>
+                        
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Pharmesthetic • Step 2 • Barrier Conditioning Primer</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="Gel Starter (겔 스타터)">Gel Starter (겔 스타터)</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Card: CemenSheet (세멘시트 재단형) -->
+            <div class="product-grid-card tap-action bg-white rounded-2xl p-2.5 sm:p-3 border border-light-gray/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                 data-brand="pharmesthetic"
+                 data-id="pharm-9"
+                 data-search="cemensheet (세멘시트 재단형) pharmesthetic weekly reset • pre-cut mask volufiline, pdrn, centella asiatica, bio-ferment. korea's iconic pre-cut clinical conditioning sheet mask. known as the "pavement reset," it hugs facial contours securely to evacuate trapped sebum, relieve thermal inflammation, and smooth rough skin."
+                 onclick="openProductDetail('pharm-9')">
+                <div>
+                    <div class="relative overflow-hidden aspect-square w-full rounded-xl bg-[#FAF8F5] mb-2.5 border border-light-gray/60 flex items-center justify-center p-2">
+                        <img src="assets/products/pharmesthetic-cemensheet.webp" alt="CemenSheet (세멘시트 재단형)" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105" loading="lazy">
+                        <span class="badge-glass absolute top-2 left-2 text-[8.5px] px-2 py-0.5 shadow-xs">Clinical Protocol</span>
+                        
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-heading font-bold text-taupe uppercase tracking-wider block truncate">Pharmesthetic • Weekly Reset • Pre-Cut Mask</span>
+                        <h4 class="font-heading text-xs font-bold text-near-black leading-tight line-clamp-2 mt-0.5" title="CemenSheet (세멘시트 재단형)">CemenSheet (세멘시트 재단형)</h4>
+                    </div>
+                </div>
+                <div class="pt-2 mt-2 border-t border-light-gray/50 flex items-center justify-between">
+                    <span class="text-[9px] font-heading font-semibold text-warm-gold uppercase tracking-wider">In-Clinic Grade</span>
+                    <span class="w-5 h-5 rounded-full bg-off-white text-charcoal/60 flex items-center justify-center text-[10px]">
+                        <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- Zero Results Message -->
+            <div id="zero-results" class="hidden text-center py-16 px-4">
+                <div class="w-12 h-12 rounded-full bg-off-white text-taupe flex items-center justify-center mx-auto mb-3 border border-light-gray">
+                    <i data-lucide="search-x" class="w-6 h-6"></i>
+                </div>
+                <h4 class="font-heading text-sm font-bold text-near-black mb-1">No Formulations Found</h4>
+                <p class="text-xs text-charcoal/60 mb-4 max-w-xs mx-auto">Try searching for other ingredients like "Exosome", "PDRN", "Peptides", or "Moisturizer".</p>
+                <button type="button" onclick="clearSearch()" class="btn-primary px-4 py-2 text-xs rounded-full uppercase tracking-wider">
+                    View All 26 Formulations
+                </button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- DESKTOP EXPERIENCE (VISIBLE ONLY ON DESKTOP >= 768px)          -->
+    <!-- ============================================================== -->
+    <div class="hidden md:block">
     <!-- Hero Section (Section A - Matches Hair Page Large Luminous Editorial Layout) -->
     <section id="hero" data-nav-theme="light"
         class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center pt-32 sm:pt-40 lg:pt-44 pb-16 lg:pb-24 px-6 md:px-12 bg-[#FAF8F5] text-charcoal overflow-hidden">
@@ -1441,12 +2293,12 @@
                 <i data-lucide="phone" class="w-4 h-4"></i>
             </a>
 
-            <!-- Quick Consultation Drawer CTA Button -->
-            <button type="button" onclick="openConsultationDrawer()" 
+            <!-- Direct Online Booking CTA Button -->
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" rel="noopener noreferrer"
                 class="btn-primary !py-2.5 !px-4 text-[11px] flex-1 tap-action flex items-center justify-center gap-2 shadow-xs">
-                <span>Inquire In-Clinic</span>
+                <span>Book Your Consultation</span>
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-            </button>
+            </a>
         </div>
     </aside>
 
@@ -1512,175 +2364,341 @@
         </div>
     </div>
 
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- SLIDE-UP PRODUCT DETAILS SHEET (SCREEN 2 STYLE)               -->
+    <!-- ============================================================== -->
+    <div id="productDetailOverlay" onclick="closeProductDetail()"
+        class="fixed inset-0 bg-near-black/60 backdrop-blur-xs z-[9998] transition-opacity duration-300 opacity-0 pointer-events-none invisible">
+    </div>
+
+    <div id="productDetailDrawer"
+        class="modal-sheet fixed inset-x-0 bottom-0 z-[9999] bg-white rounded-t-3xl shadow-modal max-h-[90vh] flex flex-col transform translate-y-full will-change-transform">
+        <!-- Drag Handle & Header -->
+        <div class="px-5 pt-3 pb-2 border-b border-light-gray/50 flex items-center justify-between shrink-0">
+            <div class="w-8"></div>
+            <div class="w-10 h-1 bg-light-gray rounded-full mx-auto"></div>
+            <button type="button" onclick="closeProductDetail()" aria-label="Close"
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-off-white text-charcoal/70 hover:text-near-black tap-action">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+        </div>
+
+        <!-- Scrollable Modal Body -->
+        <div class="overflow-y-auto px-5 py-4 flex-1">
+            <!-- Product Image Frame -->
+            <div class="relative w-full aspect-square bg-[#FAF8F5] rounded-2xl overflow-hidden border border-light-gray/70 mb-4 flex items-center justify-center p-6">
+                <img id="detail-img" src="" alt="" class="max-h-full max-w-full object-contain mix-blend-multiply">
+                <span id="detail-badge" class="badge-glass absolute top-3 left-3 text-[10px] shadow-xs"></span>
+                <span id="detail-size" class="absolute top-3 right-3 text-[10px] font-heading font-semibold text-near-black/80 bg-white/95 px-2.5 py-0.5 rounded-full border border-light-gray shadow-xs"></span>
+            </div>
+
+            <!-- Title & Meta -->
+            <div class="mb-4">
+                <span id="detail-kicker" class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block"></span>
+                <h3 id="detail-title" class="font-heading text-xl font-bold text-near-black mt-1 leading-snug"></h3>
+                <div class="flex items-center gap-2 mt-1.5">
+                    <span class="badge-standard !bg-taupe/10 !text-taupe !border-taupe/20 text-[9px] font-heading uppercase tracking-wider">In-Clinic Korean Medical Formulation</span>
+                </div>
+            </div>
+
+            <!-- Segmented Interactive Tabs (Screen 2 from Reference) -->
+            <div class="flex rounded-xl bg-off-white p-1 mb-4 border border-light-gray/60">
+                <button type="button" onclick="switchDetailTab('overview')" id="tab-btn-overview"
+                    class="flex-1 py-1.5 text-xs font-heading font-semibold uppercase tracking-wider rounded-lg transition-all bg-white text-near-black shadow-xs">
+                    Overview
+                </button>
+                <button type="button" onclick="switchDetailTab('actives')" id="tab-btn-actives"
+                    class="flex-1 py-1.5 text-xs font-heading font-semibold uppercase tracking-wider rounded-lg transition-all text-charcoal/60 hover:text-near-black">
+                    Key Actives
+                </button>
+                <button type="button" onclick="switchDetailTab('howToUse')" id="tab-btn-howToUse"
+                    class="flex-1 py-1.5 text-xs font-heading font-semibold uppercase tracking-wider rounded-lg transition-all text-charcoal/60 hover:text-near-black">
+                    How to Use
+                </button>
+            </div>
+
+            <!-- Tab Content Panes -->
+            <div id="tab-content-overview" class="text-xs font-light text-charcoal/80 leading-relaxed space-y-3">
+                <p id="detail-desc"></p>
+                <div class="p-3 bg-off-white/80 rounded-xl border border-light-gray/60 text-[11px] text-charcoal/75">
+                    <strong class="text-near-black font-semibold">Medical Aesthetics Note:</strong> All formulations dispensed in our Carrollton, TX clinic are selected by Sophia Yang, PA-C to support post-procedure barrier regeneration and optimal cellular turnover.
+                </div>
+            </div>
+
+            <div id="tab-content-actives" class="hidden text-xs font-light text-charcoal/80 leading-relaxed space-y-2.5">
+                <div class="p-3.5 bg-[#FAF8F5] rounded-xl border border-warm-gold/30">
+                    <span class="text-[10px] font-heading font-bold text-taupe uppercase tracking-widest block mb-1">Active Ingredient Profile:</span>
+                    <p id="detail-actives" class="text-near-black font-medium text-xs leading-relaxed"></p>
+                </div>
+                <p class="text-[11px] text-charcoal/60">Targeted delivery optimizes cellular bio-signaling and locks in continuous moisture without trans-epidermal water loss.</p>
+            </div>
+
+            <div id="tab-content-howToUse" class="hidden text-xs font-light text-charcoal/80 leading-relaxed space-y-2.5">
+                <div class="p-3 bg-off-white rounded-xl border border-light-gray/60 text-xs">
+                    <span class="font-heading font-semibold text-near-black block mb-1">Recommended Application:</span>
+                    <p id="detail-howToUse" class="text-charcoal/80"></p>
+                </div>
+                <div class="p-3 bg-warm-gold/10 rounded-xl border border-warm-gold/25 text-[11px] text-charcoal/75">
+                    <strong class="text-near-black">Sophia's Clinic Tip:</strong> For post-treatment skin, pat gently with fingertips rather than rubbing. Follow with mineral SPF during morning hours.
+                </div>
+            </div>
+        </div>
+
+        <!-- Fixed Bottom Dual Action Dock (Screen 2 Style) -->
+        <div class="p-3 pl-4 pr-16 sm:pr-4 border-t border-light-gray/60 bg-white/95 backdrop-blur-md flex items-center gap-2 pb-[max(12px,env(safe-area-inset-bottom))]">
+            <a href="tel:972-665-8737" title="Call Clinic"
+                class="w-11 h-11 rounded-xl bg-off-white border border-light-gray/80 flex items-center justify-center text-taupe hover:text-warm-gold hover:border-warm-gold transition tap-action shrink-0">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" rel="noopener noreferrer"
+                class="btn-primary flex-1 h-11 text-[11px] font-heading font-bold tracking-wide uppercase justify-center tap-action shadow-xs flex items-center gap-1.5">
+                <span>Book Your Consultation</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- SLIDING IN-CLINIC CONSULTATION DRAWER                         -->
+    <!-- ============================================================== -->
+    <div id="consultationOverlay" onclick="closeConsultationDrawer()"
+        class="fixed inset-0 bg-near-black/60 backdrop-blur-xs z-[9998] transition-opacity duration-300 opacity-0 pointer-events-none invisible">
+    </div>
+
+    <aside id="consultationDrawer"
+        class="modal-sheet fixed inset-x-0 bottom-0 z-[9999] bg-white rounded-t-3xl shadow-modal max-h-[85vh] flex flex-col transform translate-y-full will-change-transform">
+        <div class="px-6 pt-3 pb-2 border-b border-light-gray/50 flex items-center justify-between shrink-0">
+            <div class="w-8"></div>
+            <div class="w-10 h-1 bg-light-gray rounded-full mx-auto"></div>
+            <button type="button" onclick="closeConsultationDrawer()" aria-label="Close"
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-off-white text-charcoal/70 hover:text-near-black tap-action">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+        </div>
+
+        <div class="overflow-y-auto px-6 py-5 flex-1">
+            <div class="text-center mb-6">
+                <span class="text-[10px] font-heading font-bold tracking-widest text-warm-gold uppercase block mb-1">Carrollton, TX Clinic</span>
+                <h3 class="font-heading text-xl font-bold text-near-black">Curated Skincare Consultation</h3>
+                <p class="text-xs text-charcoal/70 mt-1 font-light leading-relaxed max-w-sm mx-auto">
+                    Medical-grade Korean aesthetic formulations are dispensed in-clinic following an expert skin barrier evaluation.
+                </p>
+            </div>
+
+            <div class="space-y-3 mb-6">
+                <div class="flex items-start gap-3 p-3.5 bg-off-white rounded-2xl border border-light-gray/60">
+                    <div class="w-8 h-8 rounded-full bg-warm-gold/15 text-warm-gold flex items-center justify-center shrink-0 mt-0.5">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading text-xs font-semibold text-near-black">Authentic Korean Medical Formulations</h4>
+                        <p class="text-[11px] text-charcoal/65 mt-0.5">100% verified clinical provenance directly imported from South Korea.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3.5 bg-off-white rounded-2xl border border-light-gray/60">
+                    <div class="w-8 h-8 rounded-full bg-taupe/15 text-taupe flex items-center justify-center shrink-0 mt-0.5">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading text-xs font-semibold text-near-black">Custom Regimen by Sophia Yang, PA-C</h4>
+                        <p class="text-[11px] text-charcoal/65 mt-0.5">Personalized matching for your exact barrier status, skin goals, and treatment plan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <a href="tel:972-665-8737"
+                    class="btn-primary w-full py-3.5 text-xs font-heading font-semibold uppercase tracking-wider flex items-center justify-center gap-2 tap-action">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    Call / Text (972) 665-8737
+                </a>
+                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank" rel="noopener noreferrer"
+                    class="w-full py-3 bg-off-white hover:bg-light-gray/50 text-charcoal rounded-full text-xs font-heading font-semibold uppercase tracking-wider flex items-center justify-center gap-2 border border-light-gray tap-action transition-colors">
+                    <i data-lucide="calendar" class="w-4 h-4 text-warm-gold"></i>
+                    Book Online Appointment
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Injected Global Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
-    <!-- Shared Scripts -->
+    <!-- Shared Navigation & Footer Scripts -->
     <script src="navbar.js?v=52"></script>
     <script src="footer.js?v=44"></script>
     <script src="script.js?v=44"></script>
 
-    <!-- Interactive Collection Switcher & URL Hash Handler -->
+    <!-- Embedded Products Registry & Mobile Controller -->
     <script>
-        function selectCollection(line, shouldScroll = true, isSmooth = true) {
-            const catalogNav = document.getElementById('catalog-nav');
-            const catalog = document.getElementById('product-catalog');
-            if (catalogNav) {
-                catalogNav.classList.remove('hidden');
+        const ALL_PRODUCTS = [{"id": "exo-1", "brand": "exoblanc", "brandName": "Exoblanc", "kicker": "Step 1: Cleanse", "title": "Relief Bubble Cleanser", "badge": "pH Balanced", "size": "150 mL", "img": "assets/products/exoblanc-relief-bubble-cleanser.jpg", "desc": "Self-foaming micro-bubble cleanser that melts makeup, sunscreen, and pore congestion without stripping the delicate acid mantle. Leaves skin calm, clean, and prepped.", "actives": "Exosome Extract, Amino Acid Surfactants, Centella Asiatica.", "howToUse": "Apply gently over clean face and neck. Pat until fully absorbed into skin. Safe for daily AM & PM use."}, {"id": "exo-2", "brand": "exoblanc", "brandName": "Exoblanc", "kicker": "Step 2: Tone", "title": "Foaming Toner", "badge": "Micro-Foam Prep", "size": "150 mL", "img": "assets/products/exoblanc-foaming-toner.jpg", "desc": "Innovative foam-format toner delivering high-speed moisture absorption. Calms post-cleansing sensitivity and primes the cellular matrix for maximum active penetration.", "actives": "Exosome Complex, Multi-Depth Hyaluronic Acid, Panthenol (B5).", "howToUse": "Apply gently over clean face and neck. Pat until fully absorbed into skin. Safe for daily AM & PM use."}, {"id": "exo-3", "brand": "exoblanc", "brandName": "Exoblanc", "kicker": "Step 3B: Exfoliate", "title": "Refine Peeling Ampoule", "badge": "Bio-Renew Peeling", "size": "30 mL", "img": "assets/products/exoblanc-refine-peeling-ampoule.jpg", "desc": "Clinic-grade exfoliating solution that gently dissolves dead surface cells and clears pore blockages without mechanical abrasion, revealing refined glass skin texture.", "actives": "PHA/LHA Bio-Acids, Plant-Derived Exosomes, Allantoin.", "howToUse": "Apply gently over clean face and neck. Pat until fully absorbed into skin. Safe for daily AM & PM use."}, {"id": "exo-4", "brand": "exoblanc", "brandName": "Exoblanc", "kicker": "Step 3: Core Cellular Boost", "title": "Exoblanc Boosting Serum", "badge": "Exosomes • PDRN", "size": "50 mL", "img": "assets/products/exoblanc-boosting-serum.jpg", "desc": "The flagship essential of the Exoblanc system. Merges high-concentration pure exosomes with a 5-peptide complex and salmon DNA (PDRN) to stimulate deep cellular renewal and elasticity.", "actives": "Purified Exosome Vesicles, Salmon PDRN, 5-Peptide Matrix, Niacinamide.", "howToUse": "Apply gently over clean face and neck. Pat until fully absorbed into skin. Safe for daily AM & PM use."}, {"id": "exo-5", "brand": "exoblanc", "brandName": "Exoblanc", "kicker": "Step 5: Moisture Lock", "title": "Boosting Cream", "badge": "Elasticity Lock", "size": "50 mL", "img": "assets/products/exoblanc-boosting-cream.jpg", "desc": "Deep cellular replenishment cream that strengthens dermal structural integrity, locks in active serums, and imparts an immediate silky, dewy finish.", "actives": "Exosome Extract, Ceramide NP, Squalane, Adenosine.", "howToUse": "Apply gently over clean face and neck. Pat until fully absorbed into skin. Safe for daily AM & PM use."}, {"id": "exo-6", "brand": "exoblanc", "brandName": "Exoblanc", "kicker": "Step 5B: Barrier Seal", "title": "Skin Barrier Cream", "badge": "Barrier Repair", "size": "50 mL", "img": "assets/products/exoblanc-skin-barrier-cream.jpg", "desc": "Intensive post-procedure recovery cream designed to soothe sensitized, inflamed, or laser-treated skin and rapidly restore the stratum corneum lipid barrier.", "actives": "Exosomes, Madecassoside, Multi-Ceramide Liposomes, Ectoin.", "howToUse": "Apply gently over clean face and neck. Pat until fully absorbed into skin. Safe for daily AM & PM use."}, {"id": "exo-7", "brand": "exoblanc", "brandName": "Exoblanc", "kicker": "Step 4: Eye Contour", "title": "NMN Eyecream", "badge": "NMN Bio-Tech", "size": "30 mL", "img": "assets/products/exoblanc-nmn-eyecream.jpg", "desc": "Longevity-focused eye formula powered by cellular-energy coenzyme NMN and exosomes to target deep crow's feet, sagging periorbital tissue, and dark pigmentation.", "actives": "NMN (Nicotinamide Mononucleotide), Exosomes, Acetyl Hexapeptide-8.", "howToUse": "Apply gently over clean face and neck. Pat until fully absorbed into skin. Safe for daily AM & PM use."}, {"id": "exo-8", "brand": "exoblanc", "brandName": "Exoblanc", "kicker": "Night Routine • Collagen Stim", "title": "Spicule Cream", "badge": "Bio-Microneedles", "size": "50 mL", "img": "assets/products/exoblanc-spicule-cream.jpg", "desc": "Purified marine micro-spicules create microscopic dermal pathways, delivering exosomes directly to target layers while continually stimulating nocturnal collagen remodeling.", "actives": "Hydrolyzed Sea Sponge Spicules, Exosome Vesicles, Tripeptides.", "howToUse": "Apply gently over clean face and neck. Pat until fully absorbed into skin. Safe for daily AM & PM use."}, {"id": "exo-9", "brand": "exoblanc", "brandName": "Exoblanc", "kicker": "Radiance Infusion", "title": "White Bloom", "badge": "Glass Skin Tone-Up", "size": "50 mL", "img": "assets/products/exoblanc-white-bloom.jpg", "desc": "High-potency brightening cream that suppresses melanin transfer while leaving a light-refracting, porcelain glow. Ideal for dull skin and post-inflammatory pigmentation.", "actives": "Glutathione, Tranexamic Acid, Exosomes, Niacinamide.", "howToUse": "Apply gently over clean face and neck. Pat until fully absorbed into skin. Safe for daily AM & PM use."}, {"id": "exo-10", "brand": "exoblanc", "brandName": "Exoblanc", "kicker": "Daily Refresh", "title": "Soothing Mist", "badge": "Portable Shield", "size": "100 mL", "img": "assets/products/exoblanc-soothing-mist.jpg", "desc": "Micro-aerosolized hydration shield delivering instant moisture replenishment and antioxidant defense across air-conditioned, heated, or flight-stressed environments.", "actives": "Exosome Extract, Damask Rose Floral Water, Centella Asiatica.", "howToUse": "Apply gently over clean face and neck. Pat until fully absorbed into skin. Safe for daily AM & PM use."}, {"id": "exo-11", "brand": "exoblanc", "brandName": "Exoblanc", "kicker": "Intensive Sheet Mask", "title": "PDRN Mask", "badge": "Weekly Ritual", "size": "5 Sheets / Box", "img": "assets/products/exoblanc-pdrn-mask.jpg", "desc": "Densely saturated biocellulose sheet soaked in clinical salmon DNA (PDRN) and exosome ampoule to drench sensitized skin in restorative moisture and reveal an immediate glass glow.", "actives": "Salmon PDRN, Exosomes, Hydrolyzed Collagen, Trehalose.", "howToUse": "Apply gently over clean face and neck. Pat until fully absorbed into skin. Safe for daily AM & PM use."}, {"id": "rej-1", "brand": "rejuran", "brandName": "Rejuran MEDI", "kicker": "Complete 5-Piece Regimen", "title": "Healing Care Set", "badge": "Clinical 5-Piece Set", "size": "5-Piece Regimen Box", "img": "assets/products/rejuran-healing-care-set-open.webp", "desc": "The Rejuran® Healing Care Set is a complete, five-piece regimen of restorative skincare essentials that incorporate proprietary Hydrolyzed DNA (c-PDRN®) with other proven skincare ingredients. These powerful, scientifically developed formulas nourish, protect, and support natural healing and cellular turnover to address visible signs of aging including dark spots, wrinkles, sagging, loss of firmness, and uneven texture. The result is a complexion that looks and feels healthier, more resilient, and radiant with an authentic Korean glass-glow.", "actives": "Patented c-PDRN® (Hydrolyzed Salmon DNA), Organic Aloe, Ceramide NP, Peptides.", "howToUse": "Follow 5-step clinical sequence: 1. Cleanse, 2. Multitasking Serum, 3. Eye Gel, 4. Moisturizer, 5. Sunscreen."}, {"id": "rej-2", "brand": "rejuran", "brandName": "Rejuran MEDI", "kicker": "Regimen Step 1 • Active Serum", "title": "Concentrated Multitasking Serum", "badge": "Cellular Turnover", "size": "30 ml / 1.01 fl oz", "img": "assets/products/rejuran-multitasking-serum.webp", "desc": "Utilizes Hydrolyzed DNA (c-PDRN®) to nourish, protect, and support natural healing and cellular turnover, addressing visible signs of aging including dark spots, wrinkles, sagging, loss of firmness, and uneven texture. The result is a healthier, more resilient complexion with a youthful glow.", "actives": "c-PDRN® (Hydrolyzed DNA), Hyaluronic Acid, Peptides.", "howToUse": "Apply onto targeted area after cleansing or toner. Smooth evenly until absorbed."}, {"id": "rej-3", "brand": "rejuran", "brandName": "Rejuran MEDI", "kicker": "Regimen Step 2 • Periorbital Contour", "title": "Healing Eye Gel", "badge": "Eye Contour Elasticity", "size": "15 ml / 0.5 fl oz", "img": "assets/products/rejuran-healing-eye-gel.webp", "desc": "Incorporates Hydrolyzed DNA (c-PDRN®) to improve the appearance of elasticity and restore skin firmness around the eye area, reducing the visible signs of aging and fatigue for a refreshed and revitalized look.", "actives": "c-PDRN® (Hydrolyzed DNA), Hyaluronic Acid, Peptides.", "howToUse": "Apply onto targeted area after cleansing or toner. Smooth evenly until absorbed."}, {"id": "rej-4", "brand": "rejuran", "brandName": "Rejuran MEDI", "kicker": "Regimen Step 3 • Barrier Moisture", "title": "Intensive Moisturizer", "badge": "Barrier Hydration", "size": "40 ml / 1.35 fl oz", "img": "assets/products/rejuran-intensive-moisturizer.webp", "desc": "Formulated with Hydrolyzed DNA (c-PDRN®) and other hydrating ingredients to deeply moisturize and nourish the skin, improving skin texture, firmness, and overall appearance while supporting natural healing processes.", "actives": "c-PDRN® (Hydrolyzed DNA), Hyaluronic Acid, Peptides.", "howToUse": "Apply onto targeted area after cleansing or toner. Smooth evenly until absorbed."}, {"id": "rej-5", "brand": "rejuran", "brandName": "Rejuran MEDI", "kicker": "Regimen Step 4 • Intensive Repair", "title": "Healing Cream", "badge": "Cellular Regeneration", "size": "50 ml / 1.69 fl oz", "img": "assets/products/rejuran-healing-cream.webp", "desc": "Combines Hydrolyzed DNA (c-PDRN®) with emollient-rich ingredients to provide intensive hydration and support skin's natural repair processes, enhancing skin firmness and elasticity, and minimizing signs of aging.", "actives": "c-PDRN® (Hydrolyzed DNA), Hyaluronic Acid, Peptides.", "howToUse": "Apply onto targeted area after cleansing or toner. Smooth evenly until absorbed."}, {"id": "rej-6", "brand": "rejuran", "brandName": "Rejuran MEDI", "kicker": "Regimen Step 5 • Daytime UV Defense", "title": "Sunscreen SPF 50+ PA+++", "badge": "Clinical UV Shield", "size": "50 ml / 1.69 fl oz", "img": "assets/products/rejuran-sunscreen.webp", "desc": "Features Hydrolyzed DNA (c-PDRN®) along with protective and nourishing ingredients to shield the skin from harmful UV rays while promoting skin healing and hydration, maintaining a youthful and healthy complexion.", "actives": "c-PDRN® (Hydrolyzed DNA), Hyaluronic Acid, Peptides.", "howToUse": "Apply onto targeted area after cleansing or toner. Smooth evenly until absorbed."}, {"id": "pharm-1", "brand": "pharmesthetic", "brandName": "Pharmesthetic", "kicker": "VQM Master • Emergency Recovery Hybrid", "title": "VIBANQUENTMANKA Lotion (비반콴트망카 로션)", "badge": "Clinical Protocol", "size": "", "img": "assets/products/pharmesthetic-vibanquentmanka-lotion.webp", "desc": "Known across Seoul clinics as the \"skin fire extinguisher\" (formerly Phytocin V2), this intensive emergency hybrid lotion combines marine Sodium DNA (PDRN), AMISCARE(N)®, and Centella to rapidly extinguish redness and repair compromised barriers with a natural tone-adjusting botanical finish.", "actives": "Volufiline, PDRN, Centella Asiatica, Bio-Ferment.", "howToUse": "Dispense prescribed dosage. Smooth gently across affected barrier zones."}, {"id": "pharm-2", "brand": "pharmesthetic", "brandName": "Pharmesthetic", "kicker": "CONAPIDIL Core 1 • Clinical Cleansing & Prep", "title": "Lotion Polishing (로션 폴리싱)", "badge": "Clinical Protocol", "size": "", "img": "assets/products/pharmesthetic-lotion-polishing.webp", "desc": "Ultra-gentle botanical milk cleanser that safely dissolves sebum, sunscreen, and particulate residue without tissue wiping or lipid stripping. Leaves sensitized barriers soft, balanced, and protected.", "actives": "Volufiline, PDRN, Centella Asiatica, Bio-Ferment.", "howToUse": "Dispense prescribed dosage. Smooth gently across affected barrier zones."}, {"id": "pharm-3", "brand": "pharmesthetic", "brandName": "Pharmesthetic", "kicker": "CONAPIDIL Core 2 • Thermal Defense & Cooling", "title": "Green Baxin (그린박신)", "badge": "Clinical Protocol", "size": "", "img": "assets/products/pharmesthetic-green-baxin.webp", "desc": "Dermal antipyretic cooling gel (\"피부 해열제\") engineered to immediately discharge trapped facial heat, lower surface skin temperature, and suppress thermal aging and capillary redness following clinical procedures or environmental stress.", "actives": "Volufiline, PDRN, Centella Asiatica, Bio-Ferment.", "howToUse": "Dispense prescribed dosage. Smooth gently across affected barrier zones."}, {"id": "pharm-4", "brand": "pharmesthetic", "brandName": "Pharmesthetic", "kicker": "CONAPIDIL Core 3 • Post-Procedure Defense", "title": "Finish Lotion SPF 50+ PA+++ (피니쉬로션)", "badge": "Clinical Protocol", "size": "", "img": "assets/products/pharmesthetic-finish-lotion.webp", "desc": "Medical-grade physical mineral sunscreen formulated specifically for the critical 72-hour post-procedure recovery window. Provides high-potency UVA/UVB defense while Ceramide NP and Centella calm redness with an ultra-sheer, foundation-free blurring finish.", "actives": "Volufiline, PDRN, Centella Asiatica, Bio-Ferment.", "howToUse": "Dispense prescribed dosage. Smooth gently across affected barrier zones."}, {"id": "pharm-5", "brand": "pharmesthetic", "brandName": "Pharmesthetic", "kicker": "CONAPIDIL Core 4 • Cellular Booster Home Protocol", "title": "Superjection Home (슈퍼젝션 홈)", "badge": "Clinical Protocol", "size": "", "img": "assets/products/pharmesthetic-superjection-home.webp", "desc": "Professional-grade home booster protocol engineered to address deep stubborn pigmentation (\"속기미\"), pore slackening, and dermal density. Features targeted Starter ampoules (2mL x 4), high-potency Activators (3.5mL x 4), and Active Cream (18g) with precision applicators.", "actives": "Volufiline, PDRN, Centella Asiatica, Bio-Ferment.", "howToUse": "Dispense prescribed dosage. Smooth gently across affected barrier zones."}, {"id": "pharm-6", "brand": "pharmesthetic", "brandName": "Pharmesthetic", "kicker": "CONAPIDIL Core 5 • High Potency Cream 100", "title": "Cemenzal Light (세멘잘라이트)", "badge": "Clinical Protocol", "size": "", "img": "assets/products/pharmesthetic-cemenzal-light.webp", "desc": "Daily facial contour and barrier repositioning cream infused with patented French Volufiline™ and human stem cell culture conditioned media. Sustains facial volume, elasticity, and lifted contours between clinic visits while restoring fragile skin.", "actives": "Volufiline, PDRN, Centella Asiatica, Bio-Ferment.", "howToUse": "Dispense prescribed dosage. Smooth gently across affected barrier zones."}, {"id": "pharm-7", "brand": "pharmesthetic", "brandName": "Pharmesthetic", "kicker": "Step 1B • Pore Purification", "title": "Gel Polishing (겔 폴리싱)", "badge": "Clinical Protocol", "size": "", "img": "assets/products/pharmesthetic-gel-polishing.webp", "desc": "Hypoallergenic water-based gel cleanser that generates delicate micro-bubbles to purify stubborn pore waste and balance excess sebum without tightness or moisture loss.", "actives": "Volufiline, PDRN, Centella Asiatica, Bio-Ferment.", "howToUse": "Dispense prescribed dosage. Smooth gently across affected barrier zones."}, {"id": "pharm-8", "brand": "pharmesthetic", "brandName": "Pharmesthetic", "kicker": "Step 2 • Barrier Conditioning Primer", "title": "Gel Starter (겔 스타터)", "badge": "Clinical Protocol", "size": "", "img": "assets/products/pharmesthetic-gel-starter.webp", "desc": "High-density clinical gel that acts as both a barrier-stabilizing toner and an ampoule substitute. Quenches micro-dehydration and primes skin cells for optimal post-procedure uptake.", "actives": "Volufiline, PDRN, Centella Asiatica, Bio-Ferment.", "howToUse": "Dispense prescribed dosage. Smooth gently across affected barrier zones."}, {"id": "pharm-9", "brand": "pharmesthetic", "brandName": "Pharmesthetic", "kicker": "Weekly Reset • Pre-Cut Mask", "title": "CemenSheet (세멘시트 재단형)", "badge": "Clinical Protocol", "size": "", "img": "assets/products/pharmesthetic-cemensheet.webp", "desc": "Korea's iconic pre-cut clinical conditioning sheet mask. Known as the \"pavement reset,\" it hugs facial contours securely to evacuate trapped sebum, relieve thermal inflammation, and smooth rough skin.", "actives": "Volufiline, PDRN, Centella Asiatica, Bio-Ferment.", "howToUse": "Dispense prescribed dosage. Smooth gently across affected barrier zones."}];
+
+        let currentCategory = 'all';
+        let currentSearchQuery = '';
+
+        // Mobile Filter & Search Handler
+        function handleSearch(val) {
+            currentSearchQuery = val.trim().toLowerCase();
+            const clearBtn = document.getElementById('search-clear-btn');
+            const statusBar = document.getElementById('search-status-bar');
+            const statusText = document.getElementById('search-status-text');
+
+            if (currentSearchQuery.length > 0) {
+                if (clearBtn) clearBtn.classList.remove('hidden');
+                if (statusBar) {
+                    statusBar.classList.remove('hidden');
+                    statusText.textContent = `Search results for "${val.trim()}"`;
+                }
+            } else {
+                if (clearBtn) clearBtn.classList.add('hidden');
+                if (statusBar) statusBar.classList.add('hidden');
             }
-            if (catalog) {
-                catalog.classList.remove('hidden');
-            }
-            filterLine(line, shouldScroll, isSmooth);
+
+            applyFilters();
         }
 
-        function filterLine(line, shouldScroll = true, isSmooth = true) {
-            const catalogNav = document.getElementById('catalog-nav');
-            const catalog = document.getElementById('product-catalog');
-            if (catalogNav && catalogNav.classList.contains('hidden')) {
-                catalogNav.classList.remove('hidden');
-            }
-            if (catalog && catalog.classList.contains('hidden')) {
-                catalog.classList.remove('hidden');
+        function clearSearch() {
+            const input = document.getElementById('mobile-search-input');
+            if (input) input.value = '';
+            currentSearchQuery = '';
+            const clearBtn = document.getElementById('search-clear-btn');
+            const statusBar = document.getElementById('search-status-bar');
+            if (clearBtn) clearBtn.classList.add('hidden');
+            if (statusBar) statusBar.classList.add('hidden');
+            applyFilters();
+        }
+
+        function setCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.category-pill').forEach(btn => {
+                btn.classList.remove('active', 'bg-warm-gold', 'text-white', 'shadow-xs');
+                btn.classList.add('bg-white', 'text-charcoal');
+            });
+            const activeBtn = document.getElementById('pill-' + cat);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-charcoal');
+                activeBtn.classList.add('active', 'bg-warm-gold', 'text-white', 'shadow-xs');
             }
 
-            // Sync active & grayed-out states on the 3 top brand cards
-            const brandCards = document.querySelectorAll('.brand-card');
-            if (line === 'all') {
-                brandCards.forEach(card => {
-                    card.classList.remove('is-inactive', 'is-active', 'border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
-                    card.classList.add('border-light-gray/80', 'bg-white');
-                });
-            } else {
-                brandCards.forEach(card => {
-                    if (card.id === 'brand-card-' + line) {
-                        card.classList.remove('is-inactive', 'border-light-gray/80', 'bg-white');
-                        card.classList.add('is-active', 'border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const cards = document.querySelectorAll('.product-grid-card');
+            const brands = ['exoblanc', 'rejuran', 'pharmesthetic'];
+            const visibleByBrand = { exoblanc: 0, rejuran: 0, pharmesthetic: 0 };
+            let totalVisible = 0;
+
+            cards.forEach(card => {
+                const brand = card.getAttribute('data-brand');
+                const searchData = card.getAttribute('data-search') || '';
+
+                const matchesCategory = (currentCategory === 'all' || brand === currentCategory);
+                const matchesSearch = (!currentSearchQuery || searchData.includes(currentSearchQuery));
+
+                if (matchesCategory && matchesSearch) {
+                    card.classList.remove('hidden');
+                    visibleByBrand[brand] = (visibleByBrand[brand] || 0) + 1;
+                    totalVisible++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Update brand-group logo headers
+            brands.forEach(b => {
+                const header = document.getElementById('brand-group-' + b);
+                if (header) {
+                    if (visibleByBrand[b] > 0) {
+                        header.classList.remove('hidden');
                     } else {
-                        card.classList.remove('is-active', 'border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
-                        card.classList.add('is-inactive');
+                        header.classList.add('hidden');
                     }
-                });
-            }
-
-            // Sync active state on filter tabs
-            // Toggle active pill tab with bulletproof styles
-            const tabs = document.querySelectorAll('.line-tab');
-            tabs.forEach(t => t.classList.remove('active'));
-            const activeTab = document.getElementById('tab-' + line);
-            if (activeTab) {
-                activeTab.classList.add('active');
-            }
-
-            // Sync mobile select menu
-            const mobileSelect = document.getElementById('mobile-collection-select');
-            if (mobileSelect && mobileSelect.value !== line) {
-                mobileSelect.value = line;
-            }
-
-            // Manage sections & exact uniform top spacing
-            const sections = document.querySelectorAll('.line-section');
-            const pharmestheticEl = document.getElementById('line-pharmesthetic');
-            const rejuranEl = document.getElementById('line-rejuran');
-
-            if (line === 'all') {
-                sections.forEach(s => {
-                    s.classList.remove('hidden');
-                    s.hidden = false;
-                    s.querySelectorAll('.animate-on-scroll').forEach(el => el.classList.add('visible'));
-                });
-                if (pharmestheticEl) {
-                    pharmestheticEl.classList.add('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
                 }
-                if (rejuranEl) {
-                    rejuranEl.classList.add('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
-                }
-            } else {
-                sections.forEach(s => {
-                    if (s.id === 'line-' + line) {
-                        s.classList.remove('hidden');
-                        s.hidden = false;
-                        s.querySelectorAll('.animate-on-scroll').forEach(el => el.classList.add('visible'));
-                    } else {
-                        s.classList.add('hidden');
-                        s.hidden = true;
-                    }
-                });
-                if (pharmestheticEl) {
-                    pharmestheticEl.classList.remove('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
-                }
-                if (rejuranEl) {
-                    rejuranEl.classList.remove('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
+            });
+
+            const zeroResults = document.getElementById('zero-results');
+            if (zeroResults) {
+                if (totalVisible === 0) {
+                    zeroResults.classList.remove('hidden');
+                } else {
+                    zeroResults.classList.add('hidden');
                 }
             }
+        }
 
-            if (shouldScroll) {
-                const target = line === 'all' ? document.getElementById('product-catalog') : document.getElementById('line-' + line);
-                if (target) {
-                    const nav = document.getElementById('navbar');
-                    const isMobile = window.innerWidth < 768;
-                    const navHeight = nav ? nav.getBoundingClientRect().height : (isMobile ? 64 : 72);
-                    const stickyHeight = isMobile ? 48 : 140;
-                    const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - stickyHeight - 16;
-                    window.scrollTo({ top: targetTop, behavior: isSmooth ? 'smooth' : 'auto' });
-                }
+        // Product Details Sheet Controller (Screen 2 from Reference)
+        function openProductDetail(id) {
+            const p = ALL_PRODUCTS.find(item => item.id === id);
+            if (!p) return;
+
+            document.getElementById('detail-img').src = p.img;
+            document.getElementById('detail-img').alt = p.title;
+            document.getElementById('detail-title').textContent = p.title;
+            document.getElementById('detail-kicker').textContent = `${p.brandName} • ${p.kicker}`;
+            document.getElementById('detail-badge').textContent = p.badge || p.brandName;
+            document.getElementById('detail-size').textContent = p.size || 'In-Clinic Standard';
+            document.getElementById('detail-desc').textContent = p.desc;
+            document.getElementById('detail-actives').textContent = p.actives || 'Patented bio-active peptides, barrier lipids, and soothing botanical complexes.';
+            document.getElementById('detail-howToUse').textContent = p.howToUse || 'Dispense onto clean skin. Smooth evenly across face and neck.';
+
+            // Reset to Overview tab
+            switchDetailTab('overview');
+
+            // Open bottom sheet
+            const overlay = document.getElementById('productDetailOverlay');
+            const drawer = document.getElementById('productDetailDrawer');
+            if (overlay && drawer) {
+                overlay.classList.remove('invisible', 'pointer-events-none');
+                overlay.classList.add('opacity-100');
+                drawer.classList.add('open');
+                document.body.style.overflow = 'hidden';
             }
             if (window.lucide) {
                 lucide.createIcons();
             }
         }
 
-        // Sticky Collection Bar Controller (Product logos + menu underneath sticky at top)
-        function initStickyCollectionBar() {
-            const stickyBar = document.getElementById('sticky-collection-bar');
-            const placeholder = document.getElementById('sticky-collection-placeholder');
-            const catalog = document.getElementById('product-catalog');
-            if (!stickyBar || !placeholder) return;
-
-            function updateSticky() {
-                const nav = document.getElementById('navbar');
-                const isMobile = window.innerWidth < 768;
-                const navHeight = nav ? nav.getBoundingClientRect().height : (isMobile ? 64 : 72);
-                
-                // Get trigger position: where the placeholder sits in the viewport
-                const placeholderRect = placeholder.getBoundingClientRect();
-                const shouldStick = placeholderRect.top <= navHeight;
-
-                // Check if user has scrolled past the end of the catalog
-                let pastCatalog = false;
-                if (catalog && !catalog.classList.contains('hidden')) {
-                    const catalogRect = catalog.getBoundingClientRect();
-                    if (catalogRect.bottom <= navHeight + stickyBar.offsetHeight) {
-                        pastCatalog = true;
-                    }
-                }
-
-                if (shouldStick && !pastCatalog) {
-                    if (!stickyBar.classList.contains('is-sticky')) {
-                        const catalogNav = document.getElementById('catalog-nav');
-                        const stickHeight = isMobile ? (catalogNav ? catalogNav.offsetHeight : 48) : stickyBar.offsetHeight;
-                        placeholder.style.height = stickHeight + 'px';
-                        stickyBar.classList.add('is-sticky');
-                    }
-                    stickyBar.style.top = navHeight + 'px';
-                } else {
-                    if (stickyBar.classList.contains('is-sticky')) {
-                        stickyBar.classList.remove('is-sticky');
-                        stickyBar.style.top = '';
-                        placeholder.style.height = '0px';
-                    }
-                }
+        function closeProductDetail() {
+            const overlay = document.getElementById('productDetailOverlay');
+            const drawer = document.getElementById('productDetailDrawer');
+            if (overlay && drawer) {
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                drawer.classList.remove('open');
+                document.body.style.overflow = '';
+                setTimeout(() => {
+                    overlay.classList.add('invisible');
+                }, 300);
             }
-
-            window.addEventListener('scroll', updateSticky, { passive: true });
-            window.addEventListener('resize', updateSticky);
-            // Run check on start
-            updateSticky();
         }
 
-        // Check URL parameters & hash, and initialize sticky controller on page load
-        
-        // Interactive Mobile Consultation Drawer Controller (from exoblanc-mobile-app)
+        function switchDetailTab(tabName) {
+            // Buttons
+            ['overview', 'actives', 'howToUse'].forEach(t => {
+                const btn = document.getElementById('tab-btn-' + t);
+                const content = document.getElementById('tab-content-' + t);
+                if (btn && content) {
+                    if (t === tabName) {
+                        btn.className = 'flex-1 py-1.5 text-xs font-heading font-semibold uppercase tracking-wider rounded-lg transition-all bg-white text-near-black shadow-xs';
+                        content.classList.remove('hidden');
+                    } else {
+                        btn.className = 'flex-1 py-1.5 text-xs font-heading font-semibold uppercase tracking-wider rounded-lg transition-all text-charcoal/60 hover:text-near-black';
+                        content.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        // Consultation Drawer Controller
         function openConsultationDrawer() {
+            // Close product detail first if open
+            closeProductDetail();
+
             const overlay = document.getElementById('consultationOverlay');
             const drawer = document.getElementById('consultationDrawer');
             if (overlay && drawer) {
@@ -1705,22 +2723,13 @@
             }
         }
 
+        // Initialize icons on load
         window.addEventListener('DOMContentLoaded', () => {
-            initStickyCollectionBar();
-
-            const urlParams = new URLSearchParams(window.location.search);
-            const lineParam = urlParams.get('line');
-            const hash = window.location.hash.replace('#', '').toLowerCase();
-            const activeTarget = lineParam || hash;
-
-            if (activeTarget === 'exoblanc' || activeTarget === 'rejuran' || activeTarget === 'pharmesthetic') {
-                selectCollection(activeTarget, !lineParam, false);
-            } else if (activeTarget === 'all') {
-                selectCollection('all', !lineParam, false);
+            if (window.lucide) {
+                lucide.createIcons();
             }
         });
     </script>
-
 </body>
 
 </html>
