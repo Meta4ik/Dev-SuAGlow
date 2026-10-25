@@ -2533,6 +2533,159 @@
         let currentCategory = 'all';
         let currentSearchQuery = '';
 
+        // Desktop Collection Filter & Switcher
+        function selectCollection(line, shouldScroll = true, isSmooth = true) {
+            const catalogNav = document.getElementById('catalog-nav');
+            const catalog = document.getElementById('product-catalog');
+            if (catalogNav) {
+                catalogNav.classList.remove('hidden');
+            }
+            if (catalog) {
+                catalog.classList.remove('hidden');
+            }
+            filterLine(line, shouldScroll, isSmooth);
+        }
+
+        function filterLine(line, shouldScroll = true, isSmooth = true) {
+            const catalogNav = document.getElementById('catalog-nav');
+            const catalog = document.getElementById('product-catalog');
+            if (catalogNav && catalogNav.classList.contains('hidden')) {
+                catalogNav.classList.remove('hidden');
+            }
+            if (catalog && catalog.classList.contains('hidden')) {
+                catalog.classList.remove('hidden');
+            }
+
+            // Sync active & grayed-out states on the 3 top brand cards
+            const brandCards = document.querySelectorAll('.brand-card');
+            if (line === 'all') {
+                brandCards.forEach(card => {
+                    card.classList.remove('is-inactive', 'is-active', 'border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
+                    card.classList.add('border-light-gray/80', 'bg-white');
+                });
+            } else {
+                brandCards.forEach(card => {
+                    if (card.id === 'brand-card-' + line) {
+                        card.classList.remove('is-inactive', 'border-light-gray/80', 'bg-white');
+                        card.classList.add('is-active', 'border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
+                    } else {
+                        card.classList.remove('is-active', 'border-warm-gold', 'ring-2', 'ring-warm-gold/40', 'bg-[#FAF8F5]', 'shadow-md');
+                        card.classList.add('is-inactive');
+                    }
+                });
+            }
+
+            // Sync active tab in desktop subnav
+            const tabs = document.querySelectorAll('.line-tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            const activeTab = document.getElementById('tab-' + line);
+            if (activeTab) {
+                activeTab.classList.add('active');
+            }
+
+            // Sync mobile select menu if present
+            const mobileSelect = document.getElementById('mobile-collection-select');
+            if (mobileSelect && mobileSelect.value !== line) {
+                mobileSelect.value = line;
+            }
+
+            // Show / hide corresponding product sections
+            const sections = document.querySelectorAll('.line-section');
+            const pharmestheticEl = document.getElementById('line-pharmesthetic');
+            const rejuranEl = document.getElementById('line-rejuran');
+
+            if (line === 'all') {
+                sections.forEach(s => {
+                    s.classList.remove('hidden');
+                    s.hidden = false;
+                    s.querySelectorAll('.animate-on-scroll').forEach(el => el.classList.add('visible'));
+                });
+                if (pharmestheticEl) {
+                    pharmestheticEl.classList.add('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
+                }
+                if (rejuranEl) {
+                    rejuranEl.classList.add('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
+                }
+            } else {
+                sections.forEach(s => {
+                    if (s.id === 'line-' + line) {
+                        s.classList.remove('hidden');
+                        s.hidden = false;
+                        s.querySelectorAll('.animate-on-scroll').forEach(el => el.classList.add('visible'));
+                    } else {
+                        s.classList.add('hidden');
+                        s.hidden = true;
+                    }
+                });
+                if (pharmestheticEl) {
+                    pharmestheticEl.classList.remove('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
+                }
+                if (rejuranEl) {
+                    rejuranEl.classList.remove('pt-20', 'mt-20', 'border-t', 'border-light-gray/60');
+                }
+            }
+
+            if (shouldScroll) {
+                const target = line === 'all' ? document.getElementById('product-catalog') : document.getElementById('line-' + line);
+                if (target) {
+                    const nav = document.getElementById('navbar');
+                    const isMobile = window.innerWidth < 768;
+                    const navHeight = nav ? nav.getBoundingClientRect().height : (isMobile ? 64 : 72);
+                    const stickyHeight = isMobile ? 48 : 140;
+                    const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - stickyHeight - 16;
+                    window.scrollTo({ top: targetTop, behavior: isSmooth ? 'smooth' : 'auto' });
+                }
+            }
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        }
+
+        // Sticky Collection Bar Controller (Product logos + menu underneath sticky at top)
+        function initStickyCollectionBar() {
+            const stickyBar = document.getElementById('sticky-collection-bar');
+            const placeholder = document.getElementById('sticky-collection-placeholder');
+            const catalog = document.getElementById('product-catalog');
+            if (!stickyBar || !placeholder) return;
+
+            function updateSticky() {
+                const nav = document.getElementById('navbar');
+                const isMobile = window.innerWidth < 768;
+                const navHeight = nav ? nav.getBoundingClientRect().height : (isMobile ? 64 : 72);
+
+                const placeholderRect = placeholder.getBoundingClientRect();
+                const shouldStick = placeholderRect.top <= navHeight;
+
+                let pastCatalog = false;
+                if (catalog && !catalog.classList.contains('hidden')) {
+                    const catalogRect = catalog.getBoundingClientRect();
+                    if (catalogRect.bottom <= navHeight + stickyBar.offsetHeight) {
+                        pastCatalog = true;
+                    }
+                }
+
+                if (shouldStick && !pastCatalog) {
+                    if (!stickyBar.classList.contains('is-sticky')) {
+                        const catalogNav = document.getElementById('catalog-nav');
+                        const stickHeight = isMobile ? (catalogNav ? catalogNav.offsetHeight : 48) : stickyBar.offsetHeight;
+                        placeholder.style.height = stickHeight + 'px';
+                        stickyBar.classList.add('is-sticky');
+                    }
+                    stickyBar.style.top = navHeight + 'px';
+                } else {
+                    if (stickyBar.classList.contains('is-sticky')) {
+                        stickyBar.classList.remove('is-sticky');
+                        stickyBar.style.top = '';
+                        placeholder.style.height = '0px';
+                    }
+                }
+            }
+
+            window.addEventListener('scroll', updateSticky, { passive: true });
+            window.addEventListener('resize', updateSticky);
+            updateSticky();
+        }
+
         // Mobile Filter & Search Handler
         function handleSearch(val) {
             currentSearchQuery = val.trim().toLowerCase();
@@ -2716,8 +2869,26 @@
             }
         }
 
-        // Initialize icons on load
+        // Initialize icons and controllers on load
         window.addEventListener('DOMContentLoaded', () => {
+            initStickyCollectionBar();
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const lineParam = urlParams.get('line');
+            const hash = window.location.hash.replace('#', '').toLowerCase();
+            const activeTarget = lineParam || hash;
+
+            if (activeTarget === 'exoblanc' || activeTarget === 'rejuran' || activeTarget === 'pharmesthetic') {
+                selectCollection(activeTarget, !lineParam, false);
+            } else if (activeTarget === 'all') {
+                selectCollection('all', !lineParam, false);
+            } else if (window.innerWidth >= 768) {
+                const catalog = document.getElementById('product-catalog');
+                if (catalog) {
+                    catalog.classList.remove('hidden');
+                }
+            }
+
             if (window.lucide) {
                 lucide.createIcons();
             }
