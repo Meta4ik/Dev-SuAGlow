@@ -63,7 +63,11 @@ def upload_dir(local_dir, remote_dir):
         else:
             local_size = os.path.getsize(local_path)
             facts = remote_entries.get(item)
-            if facts and int(facts.get('size', -1)) == local_size:
+
+            # For static media and assets, skip if remote size matches exactly.
+            # For HTML pages and core layout scripts/styles, always upload to guarantee updates.
+            is_core_web_file = item.endswith('.html') or item in {'navbar.js', 'navbar.html', 'footer.js', 'script.js', 'output.css'}
+            if not is_core_web_file and facts and int(facts.get('size', -1)) == local_size:
                 skipped_count += 1
                 continue
                 
