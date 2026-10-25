@@ -2324,7 +2324,7 @@ const SEARCH_INDEX = [
     "url": "skincare-products-v2.html",
     "title": "KOREAN SKINCARE. SEOUL SCIENCE. YOUR DAILY GLOW.",
     "pageTitle": "Korean Medical Skincare Collections V2",
-    "category": "Korean Glass Glow",
+    "category": "pH Balanced",
     "content": "Beyond the treatment. Beautiful skin begins at home. Discover three thoughtfully curated Korean skincare collections—Exoblanc, Rejuran MEDI, and Pharmesthetic. Our curated collection was selected to support hydration, skin barrier health, and a smoother, more radiant-looking complexion. Because your skin deserves more than a one-size-fits-all routine.",
     "snippet": "Beyond the treatment. Beautiful skin begins at home. Discover three thoughtfully curated Korean skincare collections—Exoblanc, Rejuran MEDI, and Pharmesthetic. ..."
   },
@@ -2332,7 +2332,7 @@ const SEARCH_INDEX = [
     "url": "skincare-products-v2.html",
     "title": "Relief Bubble Cleanser",
     "pageTitle": "Korean Medical Skincare Collections V2",
-    "category": "Korean Glass Glow",
+    "category": "pH Balanced",
     "content": "Your daily dose of Seoul science for skin barrier renewal. Cellular regenerative bio-signaling for optimal skin resilience. Specialized formulations targeting severe barrier damage and sensitivity. Try searching for other ingredients like \"Exosome\", \"PDRN\", \"Peptides\", or \"Moisturizer\".",
     "snippet": "Your daily dose of Seoul science for skin barrier renewal. Cellular regenerative bio-signaling for optimal skin resilience. Specialized formulations targeting s..."
   },
@@ -2340,7 +2340,7 @@ const SEARCH_INDEX = [
     "url": "skincare-products-v2.html#hero",
     "title": "KOREAN SKINCARE. SEOUL SCIENCE. YOUR DAILY GLOW.",
     "pageTitle": "Korean Medical Skincare Collections V2",
-    "category": "Korean Glass Glow",
+    "category": "pH Balanced",
     "content": "Beyond the treatment. Beautiful skin begins at home. Discover three thoughtfully curated Korean skincare collections—Exoblanc, Rejuran MEDI, and Pharmesthetic. Our curated collection was selected to support hydration, skin barrier health, and a smoother, more radiant-looking complexion. Because your skin deserves more than a one-size-fits-all routine.",
     "snippet": "Beyond the treatment. Beautiful skin begins at home. Discover three thoughtfully curated Korean skincare collections—Exoblanc, Rejuran MEDI, and Pharmesthetic. ..."
   },
@@ -2348,7 +2348,7 @@ const SEARCH_INDEX = [
     "url": "skincare-products-v2.html#skincare-edit",
     "title": "Three Collections. One Skin-First Philosophy.",
     "pageTitle": "Korean Medical Skincare Collections V2",
-    "category": "Korean Glass Glow",
+    "category": "pH Balanced",
     "content": "Korean skincare isn't about using more products. It's about finding the right formulations for your skin. Give your skin barrier some love. Korean skincare focused on moisture, skin comfort, and healthy-looking skin.",
     "snippet": "Korean skincare isn't about using more products. It's about finding the right formulations for your skin. Give your skin barrier some love. Korean skincare focu..."
   },
@@ -2356,7 +2356,7 @@ const SEARCH_INDEX = [
     "url": "skincare-products-v2.html#line-exoblanc",
     "title": "Exoblanc",
     "pageTitle": "Korean Medical Skincare Collections V2",
-    "category": "Korean Glass Glow",
+    "category": "pH Balanced",
     "content": "Your daily dose of Seoul science. Innovative formulations featuring exosome-related ingredients, PDRN, and peptides for hydration and radiant-looking skin. Self-foaming micro-bubble cleanser that melts makeup, sunscreen, and pore congestion without stripping the delicate acid mantle. Leaves skin calm, clean, and prepped. Innovative foam-format toner delivering high-speed moisture absorption. Calms post-cleansing sensitivity and primes the cellular matrix for maximum active penetration. Clinic-grade exfoliating solution that gently dissolves dead surface cells and clears pore blockages without mechanical abrasion, revealing refined glass skin texture. The flagship essential of the Exoblanc system. Merges high-concentration pure exosomes with a 5-peptide complex and salmon DNA (PDRN) to stimulate deep cellular renewal and elasticity. Deep cellular replenishment cream that strengthens dermal structural integrity, locks in active serums, and imparts an immediate silky, dewy finish. Intensive post-procedure recovery cream designed to soothe sensitized, inflamed, or laser-treated skin and rapidly restore the stratum corneum lipid barrier. Longevity-focused eye formula powered by cellular-energy coenzyme NMN and exosomes to target deep crow's feet, sagging periorbital tissue, and dark pigmentation. Purified marine micro-spicules create microscopic dermal pathways, delivering exosomes directly to target layers while continually stimulating nocturnal collagen remodeling. High-potency brightening cream that suppresses melanin transfer while leaving a light-refracting, porcelain glow. Ideal for dull skin and post-inflammatory pigmentation. Micro-aerosolized hydration shield delivering instant moisture replenishment and antioxidant defense across air-conditioned, heated, or flight-stressed environments. Densely saturated biocellulose sheet soaked in clinical salmon DNA (PDRN) and exosome ampoule to drench sensitized skin in restorative moisture and reveal an immediate glass glow.",
     "snippet": "Your daily dose of Seoul science. Innovative formulations featuring exosome-related ingredients, PDRN, and peptides for hydration and radiant-looking skin. Self..."
   },
@@ -2364,7 +2364,7 @@ const SEARCH_INDEX = [
     "url": "skincare-products-v2.html#line-rejuran",
     "title": "Rejuran MEDI",
     "pageTitle": "Korean Medical Skincare Collections V2",
-    "category": "Korean Glass Glow",
+    "category": "pH Balanced",
     "content": "The REJURAN® MEDI Healing Care collection is powered by patented marine growth factor c-PDRN® (Hydrolyzed Salmon DNA)—a bio-active cellular regenerative agent engineered via DOT™ technology to mimic natural human DNA fragments. Clinically proven to accelerate cellular turnover, restore skin barrier integrity, and optimize aesthetic recovery. The Rejuran® Healing Care Set is a complete, five-piece regimen of restorative skincare essentials that incorporate proprietary Hydrolyzed DNA (c-PDRN®) with other proven skincare ingredients. These powerful, scientifically developed formulas nourish, protect, and support natural healing and cellular turnover to address visible signs of aging including dark spots, wrinkles, sagging, loss of firmness, and uneven texture. The result is a complexion that looks and feels healthier, more resilient, and radiant with an authentic Korean glass-glow. Utilizes Hydrolyzed DNA (c-PDRN®) to nourish, protect, and support natural healing and cellular turnover, addressing visible signs of aging including dark spots, wrinkles, sagging, loss of firmness, and uneven texture. The result is a healthier, more resilient complexion with a youthful glow. Supports natural healing & accelerates cellular turnover Softens dark spots, expression lines, and loss of firmness Fosters a resilient, radiant Korean glass-glow complexion Incorporates Hydrolyzed DNA (c-PDRN®) to improve the appearance of elasticity and restore skin firmness around the eye area, reducing the visible signs of aging and fatigue for a refreshed and revitalized look. Restores firm elasticity to delicate periorbital tissue Depuffs and revitalizes tired under-eye bags & shadows Safe, lightweight hydration for upper and lower eyelid contours Formulated with Hydrolyzed DNA (c-PDRN®) and other hydrating ingredients to deeply moisturize and nourish the skin, improving skin texture, firmness, and overall appearance while supporting natural healing processes. Deeply seals hydration and reinforces compromised barrier lipids Enhances skin firmness, bounce, and refined surface texture Shields parched skin against harsh dry climates and environmental stress Combines Hydrolyzed DNA (c-PDRN®) with emollient-rich ingredients to provide intensive hydration and support skin's natural repair processes, enhancing skin firmness and elasticity, and minimizing signs of aging. Accelerates post-microneedling, laser, and chemical peel recovery Significantly increases elasticity, dermal firmness, and smoothness Replenishes biocompatible moisture to reverse chronological dryness Features Hydrolyzed DNA (c-PDRN®) along with protective and nourishing ingredients to shield the skin from harmful UV rays while promoting skin healing and hydration, maintaining a youthful and healthy complexion. Broad-spectrum UVA/UVB SPF 50+ PA+++ defense against photodamage c-PDRN® continuously supports recovery of sensitized & treated skin Silky, weightless finish with no white cast or greasy film Sophia Yang, PA-C custom-pairs the REJURAN® Healing Care home regimen with our in-clinic treatments (such as Salmon PN Facials, Skin Quality Boosters, and Oligio X RF Lifting) to exponentially extend post-treatment collagen remodeling and skin barrier renewal.",
     "snippet": "The REJURAN® MEDI Healing Care collection is powered by patented marine growth factor c-PDRN® (Hydrolyzed Salmon DNA)—a bio-active cellular regenerative agent e..."
   },
@@ -2372,7 +2372,7 @@ const SEARCH_INDEX = [
     "url": "skincare-products-v2.html#line-pharmesthetic",
     "title": "Pharmesthetic",
     "pageTitle": "Korean Medical Skincare Collections V2",
-    "category": "Korean Glass Glow",
+    "category": "pH Balanced",
     "content": "Advanced care. Your skin's next chapter. Specialized Korean home-care formulations incorporated into a routine with individualized guidance. Directly curated clinical home-care formulations, featuring barrier-repositioning formulations and clinical regenerative emergency care. Revered across elite Seoul dermatology clinics for post-procedure recovery, thermal cooling, and dermal restructuring. Known across Seoul clinics as the \"skin fire extinguisher\" (formerly Phytocin V2), this intensive emergency hybrid lotion combines marine Sodium DNA (PDRN), AMISCARE(N)®, and Centella to rapidly extinguish redness and repair compromised barriers with a natural tone-adjusting botanical finish. Rapid emergency relief post-laser, peeling, or extractions Natural botanical beige finish adapts seamlessly with zero artificial dyes Ultra-gentle botanical milk cleanser that safely dissolves sebum, sunscreen, and particulate residue without tissue wiping or lipid stripping. Leaves sensitized barriers soft, balanced, and protected. For compromised, thin, or easily irritated skin barriers No harsh wiping required; rinses cleanly with tepid water Dermal antipyretic cooling gel (\"피부 해열제\") engineered to immediately discharge trapped facial heat, lower surface skin temperature, and suppress thermal aging and capillary redness following clinical procedures or environmental stress. Instantly dissipates excess facial heat and calms rosacea/redness Tightens heat-dilated pores and accelerates sensitized barrier repair Medical-grade physical mineral sunscreen formulated specifically for the critical 72-hour post-procedure recovery window. Provides high-potency UVA/UVB defense while Ceramide NP and Centella calm redness with an ultra-sheer, foundation-free blurring finish. Mandatory 72-hour protective shield post-laser, peeling, or facial Zero white cast; delivers a refined blur and natural radiant tone Professional-grade home booster protocol engineered to address deep stubborn pigmentation (\"속기미\"), pore slackening, and dermal density. Features targeted Starter ampoules (2mL x 4), high-potency Activators (3.5mL x 4), and Active Cream (18g) with precision applicators. Treats deep dermal pigmentation, discoloration, and loss of firmness Restores high-density collagen bounce under 1:1 clinical guidance Daily facial contour and barrier repositioning cream infused with patented French Volufiline™ and human stem cell culture conditioned media. Sustains facial volume, elasticity, and lifted contours between clinic visits while restoring fragile skin. Daily barrier repositioning to maintain peak facial volume and firmness Sustains clinic-achieved contouring and lifting between professional visits Hypoallergenic water-based gel cleanser that generates delicate micro-bubbles to purify stubborn pore waste and balance excess sebum without tightness or moisture loss. Balances oil-to-water ratio for combination & oily skin Leaves pores refined, cooled, and refreshed High-density clinical gel that acts as both a barrier-stabilizing toner and an ampoule substitute. Quenches micro-dehydration and primes skin cells for optimal post-procedure uptake. pH 5.5 mildly acidic formula soothes redness and burning Can be dispensed as a cooling gel or micro-foam Korea's iconic pre-cut clinical conditioning sheet mask. Known as the \"pavement reset,\" it hugs facial contours securely to evacuate trapped sebum, relieve thermal inflammation, and smooth rough skin. Ergonomic pre-cut design conforms seamlessly to facial contours Clears stubborn sebum build-up without pore damage Sophia Yang, PA-C studied Korean clinical skincare principles in Seoul. At SuA Glow, every home-care recommendation is tailored strictly to your skin barrier condition, avoiding the common trial-and-error cycle of over-the-counter products.",
     "snippet": "Advanced care. Your skin's next chapter. Specialized Korean home-care formulations incorporated into a routine with individualized guidance. Directly curated cl..."
   },
@@ -2380,7 +2380,7 @@ const SEARCH_INDEX = [
     "url": "skincare-products-v2.html",
     "title": "Why Medical-Grade Matters",
     "pageTitle": "Korean Medical Skincare Collections V2",
-    "category": "Korean Glass Glow",
+    "category": "pH Balanced",
     "content": "Clinical Precision Medical-grade skincare products contain significantly higher concentrations of pharmaceutical-grade active ingredients—such as proprietary marine DNA (c-PDRN®), pure exosome vesicles, and bioactive growth factors—than typical over-the-counter retail cosmetics. Because these formulations penetrate into deeper epidermal and dermal layers, their application is customized to your unique barrier profile. Under the clinical delegation of Sophia Yang, PA-C and medical director Dr. Adam Yang, MD, each regimen is tailored during your in-office evaluation.",
     "snippet": "Clinical Precision Medical-grade skincare products contain significantly higher concentrations of pharmaceutical-grade active ingredients—such as proprietary ma..."
   },
@@ -2388,7 +2388,7 @@ const SEARCH_INDEX = [
     "url": "skincare-products-v2.html#faq",
     "title": "Frequently Asked Questions",
     "pageTitle": "Korean Medical Skincare Collections V2",
-    "category": "Korean Glass Glow",
+    "category": "pH Balanced",
     "content": "Per our medical delegation agreements and clinical guidelines established by our supervising physician Dr. Adam Yang and PA-C Sophia Yang, medical-grade lines like REJURAN® MEDI, Exoblanc, and Pharmesthetic feature bioactive concentrations that require provider oversight. We prescribe these during your in-office consultation or appointment to guarantee safety and maximize your clinical results. Yes! You are welcome to book a dedicated skincare consultation with Sophia Yang, PA-C. We will perform an assessment (or Aura 3D digital skin analysis) and curate your optimal home-care regimen. Clinical treatments stimulate neocollagenesis and cell turnover. Applying medical-grade c-PDRN®, exosomes, and barrier peptides at home supplies the raw cellular nutrients required for accelerated healing, extending the longevity and radiance of your results.",
     "snippet": "Per our medical delegation agreements and clinical guidelines established by our supervising physician Dr. Adam Yang and PA-C Sophia Yang, medical-grade lines l..."
   },
@@ -2396,7 +2396,7 @@ const SEARCH_INDEX = [
     "url": "skincare-products-v2.html#final-consultation-cta",
     "title": "K-Beauty doesn't chase trends.It builds better skin.",
     "pageTitle": "Korean Medical Skincare Collections V2",
-    "category": "Korean Glass Glow",
+    "category": "pH Balanced",
     "content": "K-Beauty Medspa • Carrollton HQ Experience medical-grade Korean aesthetic care customized to your skin's unique barrier profile.",
     "snippet": "K-Beauty Medspa • Carrollton HQ Experience medical-grade Korean aesthetic care customized to your skin's unique barrier profile."
   },

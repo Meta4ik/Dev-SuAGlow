@@ -77,64 +77,69 @@
     <!-- ============================================================== -->
     <div class="md:hidden pt-32 sm:pt-40 pb-16">
 
-                <!-- 1. Editorial Visual Hero (Original Content Preserved + Full Uncropped Photo) -->
+                <!-- 1. Editorial Visual Hero (Full Bleed Background Image, Copy Below Neck) -->
         <section class="px-3 sm:px-4 mb-5">
-            <div class="relative overflow-hidden rounded-3xl bg-[#FAF8F5] border border-[#AA987C]/30 shadow-md p-5 sm:p-7 text-charcoal">
-                <!-- Ambient Glow Effect -->
-                <div class="absolute top-0 right-0 w-64 h-64 bg-warm-gold/10 blur-3xl rounded-full pointer-events-none"></div>
+            <div class="relative overflow-hidden rounded-3xl bg-near-black text-white shadow-xl flex flex-col justify-end p-5 sm:p-7 border border-white/10">
+                <!-- High-End Radiant Glow Photography Pinned to Top -->
+                <img src="assets/skincare-hero-model.jpg" alt="Korean Glass Glow Skin Model"
+                    class="absolute top-0 inset-x-0 w-full h-[540px] object-cover object-top opacity-90">
 
-                <!-- Eyebrow Badge (Exact from Original) -->
-                <div class="mb-3">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#AA987C]/30 text-[#AA987C] text-[9.5px] font-heading font-semibold uppercase tracking-[0.2em] shadow-xs">
-                        KOREAN-FOUNDED · PHYSICIAN-GUIDED · SEOUL-INSPIRED
-                    </span>
+                <!-- Smooth Gradient Overlay: Crystal clear over face & entire neck, fading into solid near-black below neck -->
+                <div class="absolute top-0 inset-x-0 h-[540px] pointer-events-none" style="background: linear-gradient(to bottom, rgba(19,22,25,0) 0%, rgba(19,22,25,0.02) 50%, rgba(19,22,25,0.5) 70%, rgba(19,22,25,0.95) 86%, rgba(19,22,25,1) 100%);"></div>
+
+                <!-- Floating K-Glow Badge in top corner -->
+                <div class="absolute top-4 left-4 z-10 flex items-center gap-1.5 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 text-[9.5px] font-heading font-medium tracking-wider uppercase text-white shadow-xs">
+                    <span class="w-1.5 h-1.5 rounded-full bg-warm-gold animate-pulse"></span>
+                    Korean Glass Glow
                 </div>
 
-                <!-- Main Headline (Exact 3 Lines from Original) -->
-                <div class="mb-2">
-                    <h1 class="heading-wide text-2xl sm:text-3xl text-near-black font-light leading-tight [text-wrap:balance]">
-                        <span class="block whitespace-nowrap"><span class="text-[#AA987C]">KOREAN</span> SKINCARE.</span>
-                        <span class="block whitespace-nowrap">SEOUL SCIENCE.</span>
-                        <span class="block whitespace-nowrap">YOUR DAILY <span class="text-[#AA987C]">GLOW.</span></span>
-                    </h1>
-                </div>
+                <!-- Vertical Spacer: Pushes all copy strictly below her neck section -->
+                <div class="h-[420px] shrink-0 pointer-events-none"></div>
 
-                <!-- Subtitle (Exact from Original) -->
-                <p class="text-xs sm:text-sm font-medium text-warm-gold tracking-wider uppercase font-body [text-wrap:balance] mb-3">
-                    Beyond the treatment. <span class="italic font-light">Beautiful skin begins at home.</span>
-                </p>
-
-                <!-- Full Uncropped Woman's Image in Dedicated Frame -->
-                <div class="relative my-4 w-full max-w-[240px] sm:max-w-[270px] mx-auto">
-                    <div class="relative aspect-square rounded-2xl overflow-hidden border border-[#AA987C]/35 shadow-md bg-white p-1">
-                        <img src="assets/hero-mobile-glow.jpg" alt="Korean Glass Glow Skin Model"
-                            class="w-full h-full object-contain rounded-xl">
-                        <!-- Floating Badge -->
-                        <span class="badge-glass absolute bottom-2.5 right-2.5 text-[9px] shadow-xs bg-white/95 backdrop-blur-md">
-                            Korean Glass Glow
+                <!-- All Copy Starting Below Her Neck Section -->
+                <div class="relative z-10 space-y-3 pt-2">
+                    <!-- Eyebrow Badge (Exact from Original) -->
+                    <div>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-[9.5px] font-heading font-semibold uppercase tracking-[0.2em] shadow-xs">
+                            <span class="w-1.5 h-1.5 rounded-full bg-warm-gold"></span>
+                            KOREAN-FOUNDED · PHYSICIAN-GUIDED · SEOUL-INSPIRED
                         </span>
                     </div>
-                </div>
 
-                <!-- Description & Tagline (Exact from Original) -->
-                <div class="space-y-2 text-xs font-light text-charcoal/80 leading-relaxed [text-wrap:balance] mb-5">
-                    <p>
-                        Discover three thoughtfully curated Korean skincare collections—Exoblanc, Rejuran MEDI, and Pharmesthetic. Our curated collection was selected to support hydration, skin barrier health, and a smoother, more radiant-looking complexion.
-                    </p>
-                    <p class="text-[10.5px] text-warm-gold font-semibold uppercase tracking-wider">
-                        Because your skin deserves more than a one-size-fits-all routine.
-                    </p>
-                </div>
-
-                <!-- Explore Collections Button -->
-                <div class="pt-3 border-t border-light-gray/60 flex items-center justify-between">
-                    <div class="flex items-center gap-2.5">
-                        <a href="#mobile-app-catalog" class="w-9 h-9 rounded-full bg-warm-gold text-white flex items-center justify-center shadow-xs tap-action hover:scale-105 transition-transform shrink-0">
-                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
-                        </a>
-                        <span class="text-[11px] font-heading font-bold text-near-black uppercase tracking-wider">Explore Collections</span>
+                    <!-- Main Headline (Exact 3 Lines from Original) -->
+                    <div class="mb-2">
+                        <h1 class="heading-wide text-2xl sm:text-3xl text-white font-light leading-tight [text-wrap:balance]">
+                            <span class="block whitespace-nowrap"><span class="text-[#AA987C]">KOREAN</span> SKINCARE.</span>
+                            <span class="block whitespace-nowrap">SEOUL SCIENCE.</span>
+                            <span class="block whitespace-nowrap">YOUR DAILY <span class="text-[#AA987C]">GLOW.</span></span>
+                        </h1>
                     </div>
-                    <span class="text-[10px] font-heading text-taupe uppercase tracking-wider font-semibold">26 Formulations</span>
+
+                    <!-- Subtitle (Exact from Original) -->
+                    <p class="text-xs sm:text-sm font-medium text-warm-gold tracking-wider uppercase font-body [text-wrap:balance] mb-2">
+                        Beyond the treatment. <span class="italic font-light text-white/90">Beautiful skin begins at home.</span>
+                    </p>
+
+                    <!-- Description & Tagline (Exact from Original) -->
+                    <div class="space-y-2 text-xs font-light text-white/80 leading-relaxed [text-wrap:balance] mb-4">
+                        <p>
+                            Discover three thoughtfully curated Korean skincare collections—Exoblanc, Rejuran MEDI, and Pharmesthetic. Our curated collection was selected to support hydration, skin barrier health, and a smoother, more radiant-looking complexion.
+                        </p>
+                        <p class="text-[10.5px] text-warm-gold font-semibold uppercase tracking-wider">
+                            Because your skin deserves more than a one-size-fits-all routine.
+                        </p>
+                    </div>
+
+                    <!-- Explore Collections Button -->
+                    <div class="pt-3 border-t border-white/15 flex items-center justify-between">
+                        <div class="flex items-center gap-2.5">
+                            <a href="#mobile-app-catalog" class="w-9 h-9 rounded-full bg-warm-gold text-white flex items-center justify-center shadow-xs tap-action hover:scale-105 transition-transform shrink-0">
+                                <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                            </a>
+                            <span class="text-[11px] font-heading font-bold text-white uppercase tracking-wider">Explore Collections</span>
+                        </div>
+                        <span class="text-[10px] font-heading text-warm-gold uppercase tracking-wider font-semibold">26 Formulations</span>
+                    </div>
                 </div>
             </div>
         </section>
