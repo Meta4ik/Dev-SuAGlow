@@ -7,19 +7,19 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>Dev Pages & Staging Hub | SuA K-Glow Med Spa</title>
+    <title>Staging &amp; Recent Work | SuA K-Glow Med Spa</title>
     
-    <!-- STRICT NOINDEX: Internal development & staging hub only -->
+    <!-- STRICT NOINDEX: Internal staging preview only -->
     <meta name="robots" content="noindex, nofollow">
     <link rel="icon" href="assets/favicon.png" type="image/png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;500;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS (Compiled Output) -->
-    <link rel="stylesheet" href="dist/output.css?v=60">
+    <link rel="stylesheet" href="dist/output.css?v=65">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Lucide Icons -->
@@ -36,30 +36,18 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        .font-mono {
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        /* Glassmorphic card with glowing hover */
+        /* Luxury card with subtle hover elevation */
         .stage-card {
-            background: linear-gradient(145deg, rgba(28, 31, 35, 0.85) 0%, rgba(19, 22, 25, 0.95) 100%);
+            background: linear-gradient(145deg, rgba(28, 31, 35, 0.90) 0%, rgba(18, 20, 23, 0.98) 100%);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 1.25rem;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 1.5rem;
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .stage-card:hover {
-            transform: translateY(-3px);
-            border-color: rgba(170, 152, 124, 0.5);
-            box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7), 0 0 20px -5px rgba(170, 152, 124, 0.2);
-        }
-
-        .filter-btn.active {
-            background-color: #AA987C !important;
-            color: #131619 !important;
-            border-color: #AA987C !important;
-            font-weight: 700;
-            box-shadow: 0 4px 14px rgba(170, 152, 124, 0.35);
+            transform: translateY(-4px);
+            border-color: rgba(170, 152, 124, 0.45);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 25px -5px rgba(170, 152, 124, 0.15);
         }
 
         /* Toast notification */
@@ -75,791 +63,231 @@
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col antialiased selection:bg-[#AA987C] selection:text-[#131619]">
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-[#AA987C] selection:text-[#131619]">
 
-    <!-- Environment Topbar Banner -->
-    <aside aria-label="Environment notification" class="bg-[#181B1E] border-b border-[#AA987C]/30 text-white px-4 py-2 text-xs font-heading tracking-wider flex items-center justify-between">
-        <div class="max-w-7xl mx-auto w-full flex flex-wrap items-center justify-between gap-3">
-            <div class="flex items-center gap-2.5">
+    <!-- Environment Notice Topbar -->
+    <aside aria-label="Environment notification" class="bg-[#181B1E] border-b border-[#AA987C]/30 text-white px-4 py-2 text-xs font-heading tracking-wider">
+        <div class="max-w-6xl mx-auto flex items-center justify-between gap-3">
+            <div class="flex items-center gap-2">
                 <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span class="text-[#AA987C] font-bold uppercase tracking-widest">[INTERNAL STAGING HUB]</span>
-                <span class="hidden sm:inline text-white/70">— Works in Progress &amp; Unreleased Development Pages</span>
+                <span class="text-[#AA987C] font-bold uppercase tracking-widest">[INTERNAL STAGING PREVIEW]</span>
+                <span class="hidden sm:inline text-white/70">— Recent Page Additions &amp; Active Edits</span>
             </div>
-            <div class="flex items-center gap-3 text-[11px] font-mono text-white/60">
-                <span class="inline-flex items-center gap-1.5 bg-white/5 px-2.5 py-0.5 rounded-md border border-white/10">
-                    <i data-lucide="shield-alert" class="w-3 h-3 text-amber-400"></i>
-                    <span>FTP Upload: EXCLUDED</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5 bg-emerald-500/10 text-emerald-300 px-2.5 py-0.5 rounded-md border border-emerald-500/20">
-                    <i data-lucide="cloud" class="w-3 h-3"></i>
-                    <span>Vercel: ACTIVE</span>
-                </span>
+            <div class="flex items-center gap-2 text-[11px] text-white/50">
+                <span class="hidden md:inline">Vercel Staging Environment</span>
+                <span class="text-white/20">•</span>
+                <span class="text-amber-400 font-semibold">FTP: Excluded</span>
             </div>
         </div>
     </aside>
 
     <!-- Main Navigation Header -->
-    <header class="sticky top-0 z-40 bg-[#131619]/90 backdrop-blur-md border-b border-white/10 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            
-            <!-- Brand & Page Title -->
-            <div class="flex items-center gap-3.5">
-                <a href="index.html" class="flex items-center gap-3 group">
-                    <img src="assets/favicon.png" alt="SuA Glow" class="w-8 h-8 group-hover:rotate-6 transition-transform">
-                    <div>
-                        <div class="font-heading font-bold text-sm tracking-widest text-white uppercase leading-none">
-                            SuA K-Glow
-                        </div>
-                        <div class="text-[9px] uppercase tracking-[0.25em] text-[#AA987C] font-semibold mt-0.5">
-                            Medical Aesthetics
-                        </div>
+    <header class="bg-[#131619]/95 backdrop-blur-md border-b border-white/10 px-6 py-5">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3.5 group">
+                <img src="assets/favicon.png" alt="SuA Glow" class="w-9 h-9 group-hover:rotate-6 transition-transform">
+                <div>
+                    <div class="font-heading font-bold text-sm tracking-widest text-white uppercase leading-none">
+                        SuA K-Glow
                     </div>
-                </a>
-                <span class="text-white/20 text-lg">/</span>
-                <span class="px-3 py-1 rounded-full text-xs font-heading font-bold tracking-wider uppercase bg-[#AA987C]/15 text-[#AA987C] border border-[#AA987C]/30">
-                    Dev Pages &amp; Staging
-                </span>
-            </div>
-
-            <!-- Quick Jump Actions -->
-            <div class="flex items-center gap-2 text-xs font-heading">
-                <a href="index.html" target="_blank" class="px-3.5 py-2 rounded-xl text-white/80 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors inline-flex items-center gap-2">
-                    <i data-lucide="home" class="w-3.5 h-3.5 text-[#AA987C]"></i>
-                    <span>Live Homepage</span>
-                </a>
-                <a href="dev-tools/index.html" target="_blank" class="px-3.5 py-2 rounded-xl text-white/80 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors inline-flex items-center gap-2">
-                    <i data-lucide="wrench" class="w-3.5 h-3.5 text-[#AA987C]"></i>
-                    <span>Dev Tools Hub</span>
-                </a>
-                <a href="https://github.com/Meta4ik/Dev-SuAGlow.git" target="_blank" class="px-3.5 py-2 rounded-xl text-[#131619] bg-[#AA987C] hover:bg-[#8F857B] font-bold transition-colors inline-flex items-center gap-2 shadow-md">
-                    <i data-lucide="git-branch" class="w-3.5 h-3.5"></i>
-                    <span>GitHub Repo</span>
-                </a>
-            </div>
-
+                    <div class="text-[9px] uppercase tracking-[0.25em] text-[#AA987C] font-semibold mt-0.5">
+                        Medical Aesthetics • Carrollton HQ
+                    </div>
+                </div>
+            </a>
+            
+            <a href="index.html" target="_blank" class="px-4 py-2 rounded-full text-xs font-heading font-semibold uppercase tracking-wider text-white/80 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors inline-flex items-center gap-2">
+                <i data-lucide="home" class="w-3.5 h-3.5 text-[#AA987C]"></i>
+                <span class="hidden sm:inline">Live Site</span>
+            </a>
         </div>
     </header>
 
-    <!-- Page Body -->
-    <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 py-10 md:py-14">
+    <!-- Content Area: The 3 Recent Additions -->
+    <main class="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 md:px-8 py-12 md:py-16">
 
-        <!-- Hero Header Intro -->
-        <div class="mb-10 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-white/10">
-            <div>
-                <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-[#AA987C] block mb-2">
-                    Central Development Directory
-                </span>
-                <h1 class="heading-wide text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide uppercase leading-tight">
-                    Dev Pages &amp; Staging
-                </h1>
-                <p class="font-body text-sm sm:text-base text-white/70 max-w-2xl mt-3 leading-relaxed">
-                    Direct access to all unreleased campaigns, upcoming service landing pages, interactive prototypes, and internal developer tools currently in staging.
-                </p>
-            </div>
-
-            <!-- Metrics Pill Counters -->
-            <div class="flex items-center justify-center md:justify-end gap-3 shrink-0">
-                <div class="bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-center">
-                    <div id="active-pages-count" class="font-heading font-extrabold text-2xl text-[#AA987C]">--</div>
-                    <div class="text-[10px] font-heading uppercase tracking-wider text-white/50">Staging Pages</div>
-                </div>
-                <div class="bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-center">
-                    <div id="dev-tools-count" class="font-heading font-extrabold text-2xl text-emerald-400">7</div>
-                    <div class="text-[10px] font-heading uppercase tracking-wider text-white/50">Dev Tools</div>
-                </div>
-            </div>
+        <!-- Intro Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-[11px] font-bold uppercase tracking-[0.35em] text-[#AA987C] block mb-2">
+                Recent Development
+            </span>
+            <h1 class="heading-wide text-3xl sm:text-4xl md:text-5xl font-bold text-white uppercase tracking-wide leading-tight mb-4">
+                Staging &amp; Active Work
+            </h1>
+            <p class="font-body text-xs sm:text-sm text-white/70 leading-relaxed">
+                Direct access to the last three page additions and campaign edits we've worked on.
+            </p>
         </div>
 
-        <!-- Filter & Search Controls -->
-        <div class="mb-10 space-y-4">
-            
-            <!-- Search Bar -->
-            <div class="relative max-w-xl">
-                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-white/40">
-                    <i data-lucide="search" class="w-4 h-4"></i>
-                </div>
-                <input 
-                    type="text" 
-                    id="search-input" 
-                    placeholder="Search staging pages by title, URL, or keyword..."
-                    class="w-full pl-11 pr-10 py-3.5 bg-white/5 border border-white/15 focus:border-[#AA987C] rounded-2xl text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#AA987C]/30 transition-all font-body"
-                    oninput="filterPages()"
-                >
-                <button 
-                    id="clear-search-btn" 
-                    onclick="clearSearch()" 
-                    class="hidden absolute inset-y-0 right-0 pr-4 flex items-center text-white/40 hover:text-white"
-                >
-                    <i data-lucide="x" class="w-4 h-4"></i>
-                </button>
-            </div>
+        <!-- 3 Recent Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
 
-            <!-- Category Pills Filter -->
-            <div class="flex flex-wrap items-center gap-2 pt-2" id="filter-container">
-                <button onclick="setCategoryFilter('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs font-heading font-semibold uppercase tracking-wider bg-white/5 text-white/80 border border-white/10 hover:border-white/20 transition-all">
-                    All Pages (<span id="total-badge-count">0</span>)
-                </button>
-                <button onclick="setCategoryFilter('campaigns')" class="filter-btn px-4 py-2 rounded-xl text-xs font-heading font-semibold uppercase tracking-wider bg-white/5 text-white/80 border border-white/10 hover:border-white/20 transition-all">
-                    Campaigns &amp; Specials
-                </button>
-                <button onclick="setCategoryFilter('services')" class="filter-btn px-4 py-2 rounded-xl text-xs font-heading font-semibold uppercase tracking-wider bg-white/5 text-white/80 border border-white/10 hover:border-white/20 transition-all">
-                    Services &amp; Treatments
-                </button>
-                <button onclick="setCategoryFilter('prototypes')" class="filter-btn px-4 py-2 rounded-xl text-xs font-heading font-semibold uppercase tracking-wider bg-white/5 text-white/80 border border-white/10 hover:border-white/20 transition-all">
-                    Prototypes &amp; Labs
-                </button>
-                <button onclick="setCategoryFilter('creative')" class="filter-btn px-4 py-2 rounded-xl text-xs font-heading font-semibold uppercase tracking-wider bg-white/5 text-white/80 border border-white/10 hover:border-white/20 transition-all">
-                    Creative Studios
-                </button>
-                <button onclick="setCategoryFilter('devtools')" class="filter-btn px-4 py-2 rounded-xl text-xs font-heading font-semibold uppercase tracking-wider bg-white/5 text-white/80 border border-white/10 hover:border-white/20 transition-all">
-                    Developer Tools
-                </button>
-            </div>
+            <!-- Card 1: November Specials -->
+            <article class="stage-card p-6 flex flex-col justify-between group">
+                <div>
+                    <!-- Visual Thumbnail Frame -->
+                    <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden bg-black/60 border border-white/10 mb-5 flex items-center justify-center p-3">
+                        <img src="assets/november-promo-oligio-x.png" alt="November Specials" class="w-full h-full object-cover rounded-xl group-hover:scale-103 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-heading font-bold uppercase tracking-wider bg-[#131619]/90 text-[#AA987C] border border-[#AA987C]/40 backdrop-blur-sm">
+                            Latest Edit
+                        </span>
+                    </div>
 
-        </div>
-
-        <!-- Section 1: Active Staging & Work in Progress Grid -->
-        <section class="mb-14">
-            <div class="flex items-center justify-between mb-6">
-                <div class="flex items-center gap-2.5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-[#AA987C]"></span>
-                    <h2 class="font-heading text-lg sm:text-xl font-bold uppercase tracking-wider text-white">
-                        Staging &amp; Unreleased Pages
-                    </h2>
-                </div>
-                <span class="text-xs font-mono text-white/40">Sorted by recent updates</span>
-            </div>
-
-            <!-- Page Cards Grid -->
-            <div id="pages-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- 1. November Specials -->
-                <article class="stage-card p-6 flex flex-col justify-between" data-category="campaigns" data-keywords="november specials chingu friendsgiving oligio x skin barrier hydroglow glass skin offers promotion discount">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-heading font-bold uppercase tracking-wider bg-[#AA987C]/20 text-[#AA987C] border border-[#AA987C]/35">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#AA987C] animate-pulse"></span>
-                                In Active Review
-                            </span>
-                            <span class="text-[11px] font-mono text-white/40">Updated Today</span>
-                        </div>
-                        <h3 class="font-heading text-lg font-bold text-white mb-2 leading-snug">
+                    <!-- Meta & Title -->
+                    <div class="mb-3">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#AA987C] block mb-1">
+                            Campaign Showcase
+                        </span>
+                        <h2 class="font-heading text-lg sm:text-xl font-bold text-white tracking-wide leading-snug">
                             The SuA Glow November Edit: Chingu Friendsgiving
-                        </h3>
-                        <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
-                            November 2026 limited-time campaign. Highlights Oligio X ($300 OFF), Skin Quality Barrier ($200 OFF with ECM + PN/PDRN + HA + Collagen), and HydroGlow Facial ($100 OFF). Features continuous single-page layout without tabs and direct flyer download button.
-                        </p>
-                        <!-- Tags -->
-                        <div class="flex flex-wrap gap-1.5 mb-5">
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Oligio X $300 OFF</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Skin Barrier +HA</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Flyer Download</span>
-                        </div>
+                        </h2>
                     </div>
-                    <!-- Actions -->
-                    <div class="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
-                        <span class="font-mono text-xs text-[#AA987C] truncate">specials-november.html</span>
-                        <div class="flex items-center gap-2 shrink-0">
-                            <button onclick="copyPageUrl('specials-november.html')" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-colors" title="Copy URL">
-                                <i data-lucide="copy" class="w-4 h-4"></i>
-                            </button>
-                            <a href="specials-november.html" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#AA987C] hover:bg-[#8F857B] text-[#131619] font-heading font-bold text-xs uppercase tracking-wider transition-colors shadow">
-                                <span>Preview</span>
-                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
 
-                <!-- 2. Korean HydroGlow Glass Skin Facial -->
-                <article class="stage-card p-6 flex flex-col justify-between" data-category="services" data-keywords="hydroglow korean facial eve omega glass skin aquafacial microcurrent atp red light therapy salon seoul">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-heading font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/35">
-                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                                New Service Page
-                            </span>
-                            <span class="text-[11px] font-mono text-white/40">Ready to Review</span>
-                        </div>
-                        <h3 class="font-heading text-lg font-bold text-white mb-2 leading-snug">
+                    <!-- Summary -->
+                    <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
+                        Featuring framed campaign assets, updated pricing ($300 OFF Oligio X, $200 OFF Skin Quality Barrier +HA +Collagen, $100 OFF HydroGlow Facial), Chingu Friendsgiving branding, and bottom flyer download.
+                    </p>
+
+                    <!-- Features Tags -->
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Oligio X $300 OFF</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Skin Barrier +HA</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">No Tabs</span>
+                    </div>
+                </div>
+
+                <!-- Action Button: Matching Site's Signature btn-primary -->
+                <div class="pt-4 border-t border-white/10 space-y-2">
+                    <a href="specials-november.html" target="_blank" class="btn-primary btn-block text-xs font-semibold tracking-widest shadow-md hover:shadow-xl transition-all">
+                        <span>Preview November</span>
+                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
+                    <button onclick="copyPageUrl('specials-november.html')" class="w-full py-2 px-3 rounded-full text-[11px] font-heading uppercase tracking-wider text-white/50 hover:text-white hover:bg-white/5 transition-colors inline-flex items-center justify-center gap-1.5">
+                        <i data-lucide="copy" class="w-3 h-3"></i>
+                        <span>Copy Link</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Card 2: HydroGlow Page -->
+            <article class="stage-card p-6 flex flex-col justify-between group">
+                <div>
+                    <!-- Visual Thumbnail Frame -->
+                    <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden bg-black/60 border border-white/10 mb-5 flex items-center justify-center p-3">
+                        <img src="assets/november-promo-hydroglow.png" alt="HydroGlow Facial" class="w-full h-full object-cover rounded-xl group-hover:scale-103 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-heading font-bold uppercase tracking-wider bg-[#131619]/90 text-emerald-400 border border-emerald-400/40 backdrop-blur-sm">
+                            New Page
+                        </span>
+                    </div>
+
+                    <!-- Meta & Title -->
+                    <div class="mb-3">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-emerald-400 block mb-1">
+                            New Treatment Page
+                        </span>
+                        <h2 class="font-heading text-lg sm:text-xl font-bold text-white tracking-wide leading-snug">
                             K-Beauty HydroGlow Glass Skin Facial
-                        </h3>
-                        <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
-                            Dedicated high-conversion landing page for the 90-minute multi-technology Eve Omega facial protocol. Explains the 3-step Korean skin barrier sequence (vortex hydro-cleanse, ATP microcurrent, dynamic ultrasound &amp; red light therapy).
-                        </p>
-                        <!-- Tags -->
-                        <div class="flex flex-wrap gap-1.5 mb-5">
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Eve Omega</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">3-Step Protocol</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Glass Skin</span>
-                        </div>
+                        </h2>
                     </div>
-                    <!-- Actions -->
-                    <div class="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
-                        <span class="font-mono text-xs text-[#AA987C] truncate">hydroglow.html</span>
-                        <div class="flex items-center gap-2 shrink-0">
-                            <button onclick="copyPageUrl('hydroglow.html')" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-colors" title="Copy URL">
-                                <i data-lucide="copy" class="w-4 h-4"></i>
-                            </button>
-                            <a href="hydroglow.html" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#AA987C] hover:bg-[#8F857B] text-[#131619] font-heading font-bold text-xs uppercase tracking-wider transition-colors shadow">
-                                <span>Preview</span>
-                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
 
-                <!-- 3. IV Infusion Therapy -->
-                <article class="stage-card p-6 flex flex-col justify-between" data-category="services" data-keywords="iv infusion wellness therapy hydration drips vitamins glutathione nad+ immunity recovery">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-heading font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/35">
-                                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                                Draft / Unreleased
-                            </span>
-                            <span class="text-[11px] font-mono text-white/40">Staged in Git</span>
-                        </div>
-                        <h3 class="font-heading text-lg font-bold text-white mb-2 leading-snug">
-                            IV Infusion Wellness &amp; Hydration Therapy
-                        </h3>
-                        <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
-                            Intravenous vitamin drip therapy and cellular wellness treatments. Includes customized Meyer's Cocktail, Korean Glow Glutathione, Athletic Recovery, and Immunity Boost formulas. Excluded from FTP until provider protocol sign-off.
-                        </p>
-                        <!-- Tags -->
-                        <div class="flex flex-wrap gap-1.5 mb-5">
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Glutathione</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">IV Drips</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Cellular Hydration</span>
-                        </div>
-                    </div>
-                    <!-- Actions -->
-                    <div class="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
-                        <span class="font-mono text-xs text-[#AA987C] truncate">iv-infusion-wellness-therapy.html</span>
-                        <div class="flex items-center gap-2 shrink-0">
-                            <button onclick="copyPageUrl('iv-infusion-wellness-therapy.html')" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-colors" title="Copy URL">
-                                <i data-lucide="copy" class="w-4 h-4"></i>
-                            </button>
-                            <a href="iv-infusion-wellness-therapy.html" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#AA987C] hover:bg-[#8F857B] text-[#131619] font-heading font-bold text-xs uppercase tracking-wider transition-colors shadow">
-                                <span>Preview</span>
-                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                    <!-- Summary -->
+                    <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
+                        Dedicated clinical landing page for the 90-minute Eve Omega facial. Details the 3-step skin barrier sequence (vortex hydro-cleanse, ATP microcurrent, dynamic ultrasound &amp; LED therapy).
+                    </p>
 
-                <!-- 4. Treatments Modal & Drawer Preview -->
-                <article class="stage-card p-6 flex flex-col justify-between" data-category="prototypes" data-keywords="treatments modal drawer preview quick booking interactive ui prototype pop-up slide-over">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-heading font-bold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-500/35">
-                                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                                UI Prototype Lab
-                            </span>
-                            <span class="text-[11px] font-mono text-white/40">UX Component</span>
-                        </div>
-                        <h3 class="font-heading text-lg font-bold text-white mb-2 leading-snug">
-                            Treatments Modal &amp; Slide-Over Drawer
-                        </h3>
-                        <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
-                            Interactive prototype testing treatment detail modals and mobile drawer slide-overs. Allows patients to explore treatment benefits, candidate criteria, and downtime without leaving the browsing context.
-                        </p>
-                        <!-- Tags -->
-                        <div class="flex flex-wrap gap-1.5 mb-5">
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Slide Drawer</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Modal Preview</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Mobile UX</span>
-                        </div>
+                    <!-- Features Tags -->
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Eve Omega</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">3-Step Protocol</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Glass Skin</span>
                     </div>
-                    <!-- Actions -->
-                    <div class="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
-                        <span class="font-mono text-xs text-[#AA987C] truncate">treatments-modal-preview.html</span>
-                        <div class="flex items-center gap-2 shrink-0">
-                            <button onclick="copyPageUrl('treatments-modal-preview.html')" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-colors" title="Copy URL">
-                                <i data-lucide="copy" class="w-4 h-4"></i>
-                            </button>
-                            <a href="treatments-modal-preview.html" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#AA987C] hover:bg-[#8F857B] text-[#131619] font-heading font-bold text-xs uppercase tracking-wider transition-colors shadow">
-                                <span>Preview</span>
-                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 5. Instagram Creative Canvas Studio -->
-                <article class="stage-card p-6 flex flex-col justify-between" data-category="creative" data-keywords="instagram designs creative studio canvas high dpi download flyer social assets 4:5 post carousel">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-heading font-bold uppercase tracking-wider bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/35">
-                                <span class="w-1.5 h-1.5 rounded-full bg-fuchsia-400"></span>
-                                Creative Studio
-                            </span>
-                            <span class="text-[11px] font-mono text-white/40">Asset Tool</span>
-                        </div>
-                        <h3 class="font-heading text-lg font-bold text-white mb-2 leading-snug">
-                            Instagram Creative Canvas &amp; Studio
-                        </h3>
-                        <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
-                            Browser-based high-DPI export canvas for social media creatives. Renders exact 4:5 aspect ratio flyers, promotional slides, and treatment before/after graphics for Instagram and digital ads.
-                        </p>
-                        <!-- Tags -->
-                        <div class="flex flex-wrap gap-1.5 mb-5">
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">4:5 Canvas</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">html2canvas</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Social Graphics</span>
-                        </div>
-                    </div>
-                    <!-- Actions -->
-                    <div class="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
-                        <span class="font-mono text-xs text-[#AA987C] truncate">instagram-designs.html</span>
-                        <div class="flex items-center gap-2 shrink-0">
-                            <button onclick="copyPageUrl('instagram-designs.html')" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-colors" title="Copy URL">
-                                <i data-lucide="copy" class="w-4 h-4"></i>
-                            </button>
-                            <a href="instagram-designs.html" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#AA987C] hover:bg-[#8F857B] text-[#131619] font-heading font-bold text-xs uppercase tracking-wider transition-colors shadow">
-                                <span>Preview</span>
-                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 6. October Campaign Social Studio -->
-                <article class="stage-card p-6 flex flex-col justify-between" data-category="creative" data-keywords="instagram october glow or treat halloween state fair campaign social slides download flyer">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-heading font-bold uppercase tracking-wider bg-orange-500/20 text-orange-300 border border-orange-500/35">
-                                <span class="w-1.5 h-1.5 rounded-full bg-orange-400"></span>
-                                Creative Studio
-                            </span>
-                            <span class="text-[11px] font-mono text-white/40">Autumn Theme</span>
-                        </div>
-                        <h3 class="font-heading text-lg font-bold text-white mb-2 leading-snug">
-                            October "Glow or Treat" Creative Studio
-                        </h3>
-                        <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
-                            Social media export studio for the October seasonal campaign. Features Big Tex Fair autumn backgrounds, Halloween treat cards, and high-resolution flyer export triggers.
-                        </p>
-                        <!-- Tags -->
-                        <div class="flex flex-wrap gap-1.5 mb-5">
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Glow or Treat</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Autumn Colors</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Instagram 4:5</span>
-                        </div>
-                    </div>
-                    <!-- Actions -->
-                    <div class="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
-                        <span class="font-mono text-xs text-[#AA987C] truncate">instagram-october.html</span>
-                        <div class="flex items-center gap-2 shrink-0">
-                            <button onclick="copyPageUrl('instagram-october.html')" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-colors" title="Copy URL">
-                                <i data-lucide="copy" class="w-4 h-4"></i>
-                            </button>
-                            <a href="instagram-october.html" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#AA987C] hover:bg-[#8F857B] text-[#131619] font-heading font-bold text-xs uppercase tracking-wider transition-colors shadow">
-                                <span>Preview</span>
-                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 7. Skin Goals Interactive Bento Lab -->
-                <article class="stage-card p-6 flex flex-col justify-between" data-category="prototypes" data-keywords="skin goals blocks bento grid interactive concerns acne texture anti-aging lifting hydration glass skin">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-heading font-bold uppercase tracking-wider bg-violet-500/20 text-violet-300 border border-violet-500/35">
-                                <span class="w-1.5 h-1.5 rounded-full bg-violet-400"></span>
-                                Component Lab
-                            </span>
-                            <span class="text-[11px] font-mono text-white/40">Bento Grid</span>
-                        </div>
-                        <h3 class="font-heading text-lg font-bold text-white mb-2 leading-snug">
-                            Skin Goals Interactive Bento Grid Lab
-                        </h3>
-                        <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
-                            Modular bento grid components that organize aesthetic treatments by patient goals (e.g., Deep Barrier Repair, V-Line Contouring, Collagen Induction, Pigment Eradication). Built for homepage and consultations.
-                        </p>
-                        <!-- Tags -->
-                        <div class="flex flex-wrap gap-1.5 mb-5">
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Bento Layout</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Patient Pathways</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Skin Concerns</span>
-                        </div>
-                    </div>
-                    <!-- Actions -->
-                    <div class="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
-                        <span class="font-mono text-xs text-[#AA987C] truncate">skin-goals-blocks.html</span>
-                        <div class="flex items-center gap-2 shrink-0">
-                            <button onclick="copyPageUrl('skin-goals-blocks.html')" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-colors" title="Copy URL">
-                                <i data-lucide="copy" class="w-4 h-4"></i>
-                            </button>
-                            <a href="skin-goals-blocks.html" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#AA987C] hover:bg-[#8F857B] text-[#131619] font-heading font-bold text-xs uppercase tracking-wider transition-colors shadow">
-                                <span>Preview</span>
-                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 8. VIP Membership Card Sandbox -->
-                <article class="stage-card p-6 flex flex-col justify-between" data-category="prototypes" data-keywords="membership card sandbox vip metallic sheen animation glow tier benefits pricing">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-heading font-bold uppercase tracking-wider bg-teal-500/20 text-teal-300 border border-teal-500/35">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                                Component Lab
-                            </span>
-                            <span class="text-[11px] font-mono text-white/40">Card UI</span>
-                        </div>
-                        <h3 class="font-heading text-lg font-bold text-white mb-2 leading-snug">
-                            VIP Membership Card Interactive Lab
-                        </h3>
-                        <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
-                            Interactive visual playground for the SuA VIP Membership card. Features custom CSS `@property` conic-gradient glow border, metallic foil reflection, and tier entitlement breakdown.
-                        </p>
-                        <!-- Tags -->
-                        <div class="flex flex-wrap gap-1.5 mb-5">
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Glow Card</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">VIP Perks</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Foil Sheen</span>
-                        </div>
-                    </div>
-                    <!-- Actions -->
-                    <div class="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
-                        <span class="font-mono text-xs text-[#AA987C] truncate">membership-card.html</span>
-                        <div class="flex items-center gap-2 shrink-0">
-                            <button onclick="copyPageUrl('membership-card.html')" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-colors" title="Copy URL">
-                                <i data-lucide="copy" class="w-4 h-4"></i>
-                            </button>
-                            <a href="membership-card.html" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#AA987C] hover:bg-[#8F857B] text-[#131619] font-heading font-bold text-xs uppercase tracking-wider transition-colors shadow">
-                                <span>Preview</span>
-                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 9. Team Vacation Calendar -->
-                <article class="stage-card p-6 flex flex-col justify-between" data-category="prototypes" data-keywords="team vacation calendar schedule clinic coverage providers staff operations time off internal">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-heading font-bold uppercase tracking-wider bg-rose-500/20 text-rose-300 border border-rose-500/35">
-                                <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
-                                Internal Operations
-                            </span>
-                            <span class="text-[11px] font-mono text-white/40">Staff Schedule</span>
-                        </div>
-                        <h3 class="font-heading text-lg font-bold text-white mb-2 leading-snug">
-                            Internal Team Vacation &amp; Coverage Calendar
-                        </h3>
-                        <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
-                            Internal clinic staffing calendar for provider coverage tracking (Sophia Yang PA-C, Dr. Adam Yang MD, aesthetic nurses, and front desk coordinators) at the Carrollton HQ.
-                        </p>
-                        <!-- Tags -->
-                        <div class="flex flex-wrap gap-1.5 mb-5">
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Staff Planning</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Coverage</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60 border border-white/10">Internal Only</span>
-                        </div>
-                    </div>
-                    <!-- Actions -->
-                    <div class="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
-                        <span class="font-mono text-xs text-[#AA987C] truncate">team-vacation-calendar.html</span>
-                        <div class="flex items-center gap-2 shrink-0">
-                            <button onclick="copyPageUrl('team-vacation-calendar.html')" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-colors" title="Copy URL">
-                                <i data-lucide="copy" class="w-4 h-4"></i>
-                            </button>
-                            <a href="team-vacation-calendar.html" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#AA987C] hover:bg-[#8F857B] text-[#131619] font-heading font-bold text-xs uppercase tracking-wider transition-colors shadow">
-                                <span>Preview</span>
-                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-
-            <!-- Empty Search Message -->
-            <div id="no-results-msg" class="hidden text-center py-16 bg-white/5 rounded-3xl border border-white/10 mt-6">
-                <i data-lucide="search-x" class="w-12 h-12 text-[#AA987C] mx-auto mb-3 opacity-60"></i>
-                <h3 class="font-heading text-lg font-bold text-white mb-1">No matching staging pages found</h3>
-                <p class="font-body text-xs text-white/60 max-w-sm mx-auto">Try a different keyword or click "All Pages" to reset your search filter.</p>
-            </div>
-        </section>
-
-        <!-- Section 2: Developer Tooling Suite -->
-        <section class="mb-14 pt-8 border-t border-white/10" id="devtools-section">
-            <div class="flex items-center justify-between mb-6">
-                <div class="flex items-center gap-2.5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-                    <h2 class="font-heading text-lg sm:text-xl font-bold uppercase tracking-wider text-white">
-                        Internal Developer Tools
-                    </h2>
                 </div>
-                <span class="text-xs font-mono text-white/40">Workspace utilities &amp; inspectors</span>
-            </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                
-                <!-- Tool 1: Section Library -->
-                <a href="dev-tools/section-library.html" target="_blank" class="stage-card p-5 block group hover:border-[#AA987C]/60">
-                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#AA987C] mb-3 group-hover:scale-105 transition-transform">
-                        <i data-lucide="layout-grid" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-heading text-sm font-bold text-white mb-1 flex items-center justify-between">
-                        <span>Section Library</span>
-                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 group-hover:text-[#AA987C] transition-all"></i>
-                    </h3>
-                    <p class="text-[11px] text-white/60 leading-relaxed">
-                        Compendium of reusable UI sections (heroes, review grids, FAQ accordions, and pricing blocks).
-                    </p>
-                </a>
-
-                <!-- Tool 2: Style Guide -->
-                <a href="dev-tools/style-guide.html" target="_blank" class="stage-card p-5 block group hover:border-[#AA987C]/60">
-                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-warm-gold mb-3 group-hover:scale-105 transition-transform">
-                        <i data-lucide="palette" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-heading text-sm font-bold text-white mb-1 flex items-center justify-between">
-                        <span>Style Guide</span>
-                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 group-hover:text-[#AA987C] transition-all"></i>
-                    </h3>
-                    <p class="text-[11px] text-white/60 leading-relaxed">
-                        Design tokens, color swatches, font scales, button variants, and glow border specs.
-                    </p>
-                </a>
-
-                <!-- Tool 3: Site Quality & SEO Audit -->
-                <a href="dev-tools/audit.html" target="_blank" class="stage-card p-5 block group hover:border-[#AA987C]/60">
-                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-emerald-400 mb-3 group-hover:scale-105 transition-transform">
-                        <i data-lucide="activity" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-heading text-sm font-bold text-white mb-1 flex items-center justify-between">
-                        <span>Site Audit &amp; SEO</span>
-                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 group-hover:text-[#AA987C] transition-all"></i>
-                    </h3>
-                    <p class="text-[11px] text-white/60 leading-relaxed">
-                        Automated health audit inspecting page titles, meta tags, image alt attributes, and link targets.
-                    </p>
-                </a>
-
-                <!-- Tool 4: Task & Feature Tracker -->
-                <a href="dev-tools/tracker.html" target="_blank" class="stage-card p-5 block group hover:border-[#AA987C]/60">
-                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 mb-3 group-hover:scale-105 transition-transform">
-                        <i data-lucide="check-square" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-heading text-sm font-bold text-white mb-1 flex items-center justify-between">
-                        <span>Task Tracker</span>
-                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 group-hover:text-[#AA987C] transition-all"></i>
-                    </h3>
-                    <p class="text-[11px] text-white/60 leading-relaxed">
-                        Live sprint status, completed enhancements, and client feedback items backlog.
-                    </p>
-                </a>
-
-                <!-- Tool 5: Motion & Animations Gallery -->
-                <a href="dev-tools/motion-showcase.html" target="_blank" class="stage-card p-5 block group hover:border-[#AA987C]/60">
-                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-400 mb-3 group-hover:scale-105 transition-transform">
-                        <i data-lucide="sparkles" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-heading text-sm font-bold text-white mb-1 flex items-center justify-between">
-                        <span>Motion Showcase</span>
-                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 group-hover:text-[#AA987C] transition-all"></i>
-                    </h3>
-                    <p class="text-[11px] text-white/60 leading-relaxed">
-                        Interactive playground for scroll-triggered reveal animations and micro-interactions.
-                    </p>
-                </a>
-
-                <!-- Tool 6: Editorial & Typography Styles -->
-                <a href="dev-tools/content-styles.html" target="_blank" class="stage-card p-5 block group hover:border-[#AA987C]/60">
-                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-fuchsia-400 mb-3 group-hover:scale-105 transition-transform">
-                        <i data-lucide="file-text" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-heading text-sm font-bold text-white mb-1 flex items-center justify-between">
-                        <span>Content Styles</span>
-                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 group-hover:text-[#AA987C] transition-all"></i>
-                    </h3>
-                    <p class="text-[11px] text-white/60 leading-relaxed">
-                        Editorial typography patterns, callout quotes, disclaimers, and prose blocks.
-                    </p>
-                </a>
-
-                <!-- Tool 7: Master Developer Directory -->
-                <a href="dev-tools/index.html" target="_blank" class="stage-card p-5 block group hover:border-[#AA987C]/60">
-                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 mb-3 group-hover:scale-105 transition-transform">
-                        <i data-lucide="folder-search" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-heading text-sm font-bold text-white mb-1 flex items-center justify-between">
-                        <span>All 130+ Pages Index</span>
-                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 group-hover:text-[#AA987C] transition-all"></i>
-                    </h3>
-                    <p class="text-[11px] text-white/60 leading-relaxed">
-                        Full searchable repository directory indexing every HTML file, size, and category.
-                    </p>
-                </a>
-
-                <!-- Tool 8: Staging Sitemap Reference -->
-                <a href="dev-tools/sitemap.html" target="_blank" class="stage-card p-5 block group hover:border-[#AA987C]/60">
-                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-rose-400 mb-3 group-hover:scale-105 transition-transform">
-                        <i data-lucide="network" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-heading text-sm font-bold text-white mb-1 flex items-center justify-between">
-                        <span>Visual Sitemap</span>
-                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 group-hover:text-[#AA987C] transition-all"></i>
-                    </h3>
-                    <p class="text-[11px] text-white/60 leading-relaxed">
-                        Hierarchical tree diagram showing site navigation structure and sub-pages.
-                    </p>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- Section 3: Seasonal Promotion Archives (Reference) -->
-        <section class="pt-8 border-t border-white/10">
-            <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center gap-2.5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-white/30"></span>
-                    <h2 class="font-heading text-base sm:text-lg font-bold uppercase tracking-wider text-white/80">
-                        Past Promotion Archives (Reference)
-                    </h2>
+                <!-- Action Button: Matching Site's Signature btn-primary -->
+                <div class="pt-4 border-t border-white/10 space-y-2">
+                    <a href="hydroglow.html" target="_blank" class="btn-primary btn-block text-xs font-semibold tracking-widest shadow-md hover:shadow-xl transition-all">
+                        <span>Preview HydroGlow</span>
+                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
+                    <button onclick="copyPageUrl('hydroglow.html')" class="w-full py-2 px-3 rounded-full text-[11px] font-heading uppercase tracking-wider text-white/50 hover:text-white hover:bg-white/5 transition-colors inline-flex items-center justify-center gap-1.5">
+                        <i data-lucide="copy" class="w-3 h-3"></i>
+                        <span>Copy Link</span>
+                    </button>
                 </div>
-                <span class="text-xs font-mono text-white/40">Historical campaigns</span>
-            </div>
+            </article>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <a href="specials.html" target="_blank" class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-all flex items-center justify-between group">
-                    <div>
-                        <div class="text-xs font-heading font-bold text-white uppercase group-hover:text-[#AA987C] transition-colors">Current Live Specials (October)</div>
-                        <div class="text-[11px] font-mono text-white/50">specials.html</div>
+            <!-- Card 3: October Specials -->
+            <article class="stage-card p-6 flex flex-col justify-between group">
+                <div>
+                    <!-- Visual Thumbnail Frame -->
+                    <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden bg-black/60 border border-white/10 mb-5 flex items-center justify-center p-3">
+                        <img src="assets/glow-or-treat-title.png" alt="October Specials" class="w-full h-full object-contain p-2 group-hover:scale-103 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-heading font-bold uppercase tracking-wider bg-[#131619]/90 text-orange-400 border border-orange-400/40 backdrop-blur-sm">
+                            Active Specials
+                        </span>
                     </div>
-                    <i data-lucide="external-link" class="w-4 h-4 text-white/40 group-hover:text-white"></i>
-                </a>
 
-                <a href="specials-october.html" target="_blank" class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-all flex items-center justify-between group">
-                    <div>
-                        <div class="text-xs font-heading font-bold text-white uppercase group-hover:text-[#AA987C] transition-colors">October "Glow or Treat"</div>
-                        <div class="text-[11px] font-mono text-white/50">specials-october.html</div>
+                    <!-- Meta & Title -->
+                    <div class="mb-3">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-orange-400 block mb-1">
+                            Monthly Promotion
+                        </span>
+                        <h2 class="font-heading text-lg sm:text-xl font-bold text-white tracking-wide leading-snug">
+                            The SuA Glow October Edit: Glow or Treat
+                        </h2>
                     </div>
-                    <i data-lucide="external-link" class="w-4 h-4 text-white/40 group-hover:text-white"></i>
-                </a>
 
-                <a href="specials-september.html" target="_blank" class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-all flex items-center justify-between group">
-                    <div>
-                        <div class="text-xs font-heading font-bold text-white uppercase group-hover:text-[#AA987C] transition-colors">September Launch Edit</div>
-                        <div class="text-[11px] font-mono text-white/50">specials-september.html</div>
+                    <!-- Summary -->
+                    <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
+                        Current active monthly campaign. Showcases the October 3-step lift &amp; renewal program, autumn Big Tex Fair visual styling, and direct printable flyer download button.
+                    </p>
+
+                    <!-- Features Tags -->
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Glow or Treat</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Autumn Theme</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">October Live</span>
                     </div>
-                    <i data-lucide="external-link" class="w-4 h-4 text-white/40 group-hover:text-white"></i>
-                </a>
-            </div>
-        </section>
+                </div>
+
+                <!-- Action Button: Matching Site's Signature btn-primary -->
+                <div class="pt-4 border-t border-white/10 space-y-2">
+                    <a href="specials.html" target="_blank" class="btn-primary btn-block text-xs font-semibold tracking-widest shadow-md hover:shadow-xl transition-all">
+                        <span>Preview October</span>
+                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
+                    <button onclick="copyPageUrl('specials.html')" class="w-full py-2 px-3 rounded-full text-[11px] font-heading uppercase tracking-wider text-white/50 hover:text-white hover:bg-white/5 transition-colors inline-flex items-center justify-center gap-1.5">
+                        <i data-lucide="copy" class="w-3 h-3"></i>
+                        <span>Copy Link</span>
+                    </button>
+                </div>
+            </article>
+
+        </div>
 
     </main>
 
-    <!-- Footer Disclaimer -->
-    <footer class="mt-16 bg-[#131619] border-t border-white/10 py-8 px-6 text-center text-xs font-body text-white/50">
-        <div class="max-w-7xl mx-auto space-y-2">
-            <p class="font-heading font-semibold text-white/70 uppercase tracking-widest text-[11px]">
-                SuA K-Glow Internal Staging &amp; Dev Hub • Carrollton HQ
-            </p>
-            <p class="text-[11px] text-white/40 max-w-xl mx-auto">
-                Confidential &amp; internal use only. This directory and all linked draft assets are excluded from production FTP deployments (<code class="text-amber-400">EXCLUDE</code> in <code class="text-white/60">ftp_upload.py</code>).
-            </p>
+    <!-- Footer Notice -->
+    <footer class="bg-[#131619] border-t border-white/10 py-6 px-6 text-center text-xs font-body text-white/40">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
+            <span>SuA K-Glow Internal Staging Hub • Carrollton HQ</span>
+            <span>Excluded from production FTP (<code class="text-amber-400">EXCLUDE</code> in <code class="text-white/60">ftp_upload.py</code>)</span>
         </div>
     </footer>
 
     <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-[#1B1E21] text-white px-5 py-3 rounded-2xl border border-[#AA987C]/50 shadow-2xl flex items-center gap-3 text-xs font-medium">
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-[#1B1E21] text-white px-5 py-3 rounded-full border border-[#AA987C]/50 shadow-2xl flex items-center gap-3 text-xs font-medium">
         <i data-lucide="check-circle" class="w-4 h-4 text-[#AA987C]"></i>
         <span id="toast-msg">Link copied to clipboard!</span>
     </div>
 
-    <!-- Client-side Search & Filter Scripts -->
+    <!-- Copy Script -->
     <script>
-        let currentCategory = 'all';
-
-        function updateCounts() {
-            const cards = document.querySelectorAll('#pages-grid article');
-            const activeCountEl = document.getElementById('active-pages-count');
-            const totalBadgeCount = document.getElementById('total-badge-count');
-            if (activeCountEl) activeCountEl.textContent = cards.length;
-            if (totalBadgeCount) totalBadgeCount.textContent = cards.length;
-        }
-
-        function setCategoryFilter(category) {
-            currentCategory = category;
-
-            // Update button styles
-            document.querySelectorAll('#filter-container .filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
-
-            // If devtools category is selected, smooth scroll to devtools section
-            if (category === 'devtools') {
-                const devtoolsSec = document.getElementById('devtools-section');
-                if (devtoolsSec) {
-                    devtoolsSec.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-
-            filterPages();
-        }
-
-        function filterPages() {
-            const query = (document.getElementById('search-input').value || '').trim().toLowerCase();
-            const clearBtn = document.getElementById('clear-search-btn');
-            if (clearBtn) {
-                if (query.length > 0) {
-                    clearBtn.classList.remove('hidden');
-                } else {
-                    clearBtn.classList.add('hidden');
-                }
-            }
-
-            const cards = document.querySelectorAll('#pages-grid article');
-            let visibleCount = 0;
-
-            cards.forEach(card => {
-                const category = card.dataset.category || '';
-                const keywords = (card.dataset.keywords || '').toLowerCase();
-                const cardText = card.textContent.toLowerCase();
-
-                const matchesCategory = (currentCategory === 'all' || currentCategory === 'devtools' || category === currentCategory);
-                const matchesQuery = !query || cardText.includes(query) || keywords.includes(query);
-
-                if (matchesCategory && matchesQuery) {
-                    card.classList.remove('hidden');
-                    visibleCount++;
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-
-            const noResultsMsg = document.getElementById('no-results-msg');
-            if (noResultsMsg) {
-                if (visibleCount === 0 && currentCategory !== 'devtools') {
-                    noResultsMsg.classList.remove('hidden');
-                } else {
-                    noResultsMsg.classList.add('hidden');
-                }
-            }
-        }
-
-        function clearSearch() {
-            const searchInput = document.getElementById('search-input');
-            if (searchInput) {
-                searchInput.value = '';
-                filterPages();
-                searchInput.focus();
-            }
-        }
-
         function copyPageUrl(pagePath) {
             const fullUrl = window.location.origin + '/' + pagePath;
             navigator.clipboard.writeText(fullUrl).then(() => {
                 showToast(`Copied: ${fullUrl}`);
             }).catch(() => {
-                // Fallback prompt
                 prompt('Copy this URL:', fullUrl);
             });
         }
@@ -872,16 +300,14 @@
                 toast.classList.add('show');
                 setTimeout(() => {
                     toast.classList.remove('show');
-                }, 3000);
+                }, 2800);
             }
         }
 
-        // Initialize icons and counts on page load
         document.addEventListener('DOMContentLoaded', () => {
             if (window.lucide) {
                 lucide.createIcons();
             }
-            updateCounts();
         });
     </script>
 </body>
