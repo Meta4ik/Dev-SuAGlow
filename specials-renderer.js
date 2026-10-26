@@ -133,15 +133,6 @@ function renderNovemberSpecials(config) {
                     ${novemberCardsHTML}
                 </div>
 
-                <!-- Download & Share Flyer Action Button (Matching Friendsgiving Logo Color & Balanced Equal Spacing) -->
-                <div class="pt-8 pb-4 text-center print:hidden animate-on-scroll fade-up">
-                    <button type="button" onclick="downloadFlyerImage()" id="download-flyer-btn" class="inline-flex items-center justify-center gap-2.5 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider text-white bg-[#964E40] hover:bg-[#803F33] shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer leading-none">
-                        <i data-lucide="download" class="w-4 h-4 shrink-0"></i>
-                        <span>Download &amp; Share November Flyer</span>
-                    </button>
-                    <p class="text-[11px] text-white/50 tracking-wider uppercase mt-3">High-resolution official campaign flyer (PNG)</p>
-                </div>
-
                 <!-- Disclaimer & Bottom Pillars -->
                 <div class="pt-8 text-center space-y-4 animate-on-scroll fade-up">
                     <p class="text-sm sm:text-base font-serif italic text-white/80 tracking-wide">
@@ -157,33 +148,6 @@ function renderNovemberSpecials(config) {
                 </div>
             </div>
 
-        </div>
-
-        <!-- Flyer Lightbox Modal (For Mobile & Quick Share) -->
-        <div id="specials-flyer-lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 sm:p-6 overflow-y-auto" onclick="if(event.target === this) closeFlyerLightbox();">
-            <div class="relative max-w-md w-full flex flex-col items-center text-center my-auto">
-                <!-- Close Button -->
-                <button type="button" onclick="closeFlyerLightbox()" class="absolute -top-12 right-0 z-20 text-white/80 hover:text-white bg-white/10 hover:bg-white/25 rounded-full p-2.5 transition-colors cursor-pointer border border-white/20 shadow-lg" aria-label="Close Lightbox">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-
-                <!-- Flyer Image -->
-                <div class="w-full overflow-hidden rounded-2xl shadow-2xl border border-white/20 bg-near-black mb-5">
-                    <img id="lightbox-flyer-img" src="${meta.downloadFlyerImage || 'assets/SuA-Glow-November-Specials.png'}" alt="${meta.title || 'SuA Glow Specials Flyer'}" class="w-full h-auto max-h-[72vh] object-contain mx-auto block">
-                </div>
-
-                <!-- Action Button Below Flyer -->
-                <div class="flex flex-wrap items-center justify-center gap-3 w-full">
-                    <button type="button" onclick="downloadFlyerImage()" id="lightbox-share-btn" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white bg-[#964E40] hover:bg-[#803F33] shadow-xl cursor-pointer leading-none">
-                        <i data-lucide="share-2" class="w-4 h-4 shrink-0"></i>
-                        <span>Share Flyer</span>
-                    </button>
-                    <button type="button" onclick="triggerDirectDownloadFromUrl()" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white bg-white/15 hover:bg-white/25 border border-white/30 transition-all cursor-pointer leading-none">
-                        <i data-lucide="download" class="w-4 h-4 shrink-0"></i>
-                        <span>Download</span>
-                    </button>
-                </div>
-            </div>
         </div>
     </section>
     `;
