@@ -745,12 +745,12 @@ const SEARCH_INDEX = [
     "snippet": "Unlike traditional topical moisturizers that only sit on the surface, professional Korean hydration strategies support deeper, long-lasting moisture retention. ..."
   },
   {
-    "url": "glass-skin-hydration-glow.html#comparison",
-    "title": "How Does Hydration & Glow Compare to Other Treatments?",
+    "url": "glass-skin-hydration-glow.html#plan-builder",
+    "title": "HYDRATE THE SKIN.CUSTOMIZE THE GLOW.",
     "pageTitle": "Korean Hydration Facial Dallas",
     "category": "Hydration & Glow",
-    "content": "Think of these treatments as complementary parts of your Korean Glass Skin journey. Each modality addresses a distinct dimension of skin health. Deep Hydration & Dewiness Floods moisture into dehydrated skin to restore light reflection, suppleness, and dewy radiance. Cellular Hydration & Soothing Dual-frequency ultrasound that calms sensitive barriers, reduces redness, and lifts moisture to the surface. Cellular Healing & Matrix Bio-active polynucleotides (Rejuran) that repair damaged skin barriers, refine pore structure, and smooth scars. Radiance & Brightening Targets dullness, pigmentation, and uneven tone with brightening boosters and glutathione for luminous clarity.",
-    "snippet": "Think of these treatments as complementary parts of your Korean Glass Skin journey. Each modality addresses a distinct dimension of skin health. Deep Hydration ..."
+    "content": "Start with deep hydration. Layer additional K-Beauty treatments based on what your skin needs. THE FOUNDATION DEW + PLUMP Add deep hydration for dewy, refreshed, lit-from-within skin. YOUR PROVIDER BUILDS THE COMBINATION AROUND YOUR SKIN — NOT A PRESET PACKAGE.",
+    "snippet": "Start with deep hydration. Layer additional K-Beauty treatments based on what your skin needs. THE FOUNDATION DEW + PLUMP Add deep hydration for dewy, refreshed..."
   },
   {
     "url": "glass-skin-hydration-glow.html#bridal-prep",
@@ -783,6 +783,86 @@ const SEARCH_INDEX = [
     "category": "Spa Treatments",
     "content": "Effective Date: January 2026 SuA Glow (“we,” “us,” or “our”) is committed to protecting the privacy and security of your Protected Health Information (“PHI”). This Notice of Privacy Practices (“Notice”) describes how we may use and disclose your PHI, your rights regarding your PHI, and our legal obligations under the Health Insurance Portability and Accountability Act of 1996 (“HIPAA”). We are required by law to: Maintain the privacy of your PHI Provide you with this Notice Abide by the terms of this Notice We may use and disclose your PHI without your authorization for the following purposes: To provide, coordinate, or manage your healthcare and related services, including sharing information with healthcare providers, specialists, laboratories, pharmacies, or other entities involved in your care. To obtain payment for services provided, including billing, claims management, collections, and coordination with insurance companies or other payers. For operational activities necessary to run our practice, including quality assessment, credentialing, training, auditing, compliance reviews, and administrative functions. We may use or disclose your PHI without your written authorization in certain circumstances, including: Public health activities (e.g., reporting communicable diseases, adverse events, or recalls) Victims of abuse, neglect, or domestic violence, as required by law Health oversight activities, such as audits, investigations, inspections, or licensure actions Judicial and administrative proceedings, including court orders or subpoenas Law enforcement purposes, as permitted by law To prevent or lessen a serious threat to health or safety Specialized government functions, including military, national security, or correctional institutions Workers' compensation claims, as authorized by law Any other use or disclosure of your PHI not described in this Notice will be made only with your written authorization, which you may revoke in writing at any time, except where we have already relied on it. You have the following rights with respect to your PHI: You may inspect or request a copy of your medical records. Requests must be submitted in writing to our Privacy Officer. Reasonable, cost-based fees may apply. You may request restrictions on certain uses or disclosures of your PHI. While we are not required to agree, we will comply when feasible. If you pay out-of-pocket in full for a service, you may request that information not be shared with your health plan. If you believe your PHI is incorrect or incomplete, you may request an amendment. We may deny requests under certain conditions but will provide a written explanation. You may request a list of certain disclosures of your PHI made within the past six (6) years, excluding those related to treatment, payment, or healthcare operations. You may request that we communicate with you in a specific way or location (e.g., email only, mail only). We will accommodate reasonable requests. You may request a paper copy of this Notice at any time, even if you agreed to receive it electronically. Our Website, online forms, email communications, and messaging systems are not intended for emergency medical use. While we take reasonable measures to protect electronic communications, no online transmission can be guaranteed to be fully secure. Please do not submit highly sensitive medical information through website forms unless specifically instructed to do so by our staff. We may communicate with you via phone calls, text messages (SMS), email, or telehealth platforms regarding appointments, treatment coordination, billing, or practice operations. By providing your contact information, you acknowledge and consent to receive such communications. You may request alternative communication methods or opt out of non-essential communications at any time by contacting us. Standard messaging and data rates may apply. In the event of a breach of unsecured PHI, we will notify affected individuals as required by HIPAA and applicable state law. Notifications will include information about the nature of the breach, steps you should take to protect yourself, and actions we are taking to mitigate harm. We reserve the right to change this Notice at any time. Any changes will be posted on our Website and made available upon request. If you believe your privacy rights have been violated, you may file a complaint with us or with the Secretary of the U.S. Department of Health and Human Services. We will not retaliate against you for filing a complaint. HHS Complaint Portal: www.hhs.gov/hipaa/filing-a-complaint Privacy Officer SuA Glow Email: info@suaglow.com Phone: 972-665-8737 Address: 4116 State Highway 121, Suite 120, Office O, Carrollton, TX 75010",
     "snippet": "Effective Date: January 2026 SuA Glow (“we,” “us,” or “our”) is committed to protecting the privacy and security of your Protected Health Information (“PHI”). T..."
+  },
+  {
+    "url": "hydroglow.html#hero",
+    "title": "Korean HydroGlow",
+    "pageTitle": "Korean HydroGlow Facial Dallas",
+    "category": "EVE OMEGA 3 • PREMIER KOREAN HYDROGLOW FACIAL",
+    "content": "Deep Hydration. Lasting Dew. Very Seoul. Some people moisturize. Korean clinics engineer hydration. Powered by the medical-grade Eve Omega platform, HydroGlow synchronizes deep hydro-dermabrasion, microcurrent cellular toning, lymphatic drainage, and EMS facial contouring for unmatched lit-from-within Korean glass skin.",
+    "snippet": "Deep Hydration. Lasting Dew. Very Seoul. Some people moisturize. Korean clinics engineer hydration. Powered by the medical-grade Eve Omega platform, HydroGlow s..."
+  },
+  {
+    "url": "hydroglow.html#philosophy",
+    "title": "Discover Why Korean Skin Always Looks Different",
+    "pageTitle": "Korean HydroGlow Facial Dallas",
+    "category": "EVE OMEGA 3 • PREMIER KOREAN HYDROGLOW FACIAL",
+    "content": "Seoul-Inspired Rejuvenation Glass Skin Starts with Hydration In Korea, beautiful skin isn't created with heavy makeup. It's created by keeping the skin deeply hydrated, calm, healthy, and resilient every single day. That's why Korean skin clinics have embraced HydroGlow powered by the Eve Omega platform, a physician-guided treatment that restores hydration, strengthens the skin barrier, calms visible redness, and reveals naturally luminous glass skin. Flood skin with lasting moisture for a fresh, radiant glow. Build stronger, more resilient skin that stays hydrated longer. Reveal smoother texture, refined pores, and naturally luminous skin.",
+    "snippet": "Seoul-Inspired Rejuvenation Glass Skin Starts with Hydration In Korea, beautiful skin isn't created with heavy makeup. It's created by keeping the skin deeply h..."
+  },
+  {
+    "url": "hydroglow.html#what-is-hydroglow",
+    "title": "What Is HydroGlow?",
+    "pageTitle": "Korean HydroGlow Facial Dallas",
+    "category": "EVE OMEGA 3 • PREMIER KOREAN HYDROGLOW FACIAL",
+    "content": "In Korean aesthetics, \"HydroGlow\" describes advanced aqueous skin rejuvenation designed to reveal smoother texture, refined glow, and healthy elasticity without harsh downtime. KOREAN HYDROGLOW CANVAS Less Coverage • More Natural Glow Rather than jumping straight to aggressive volume fillers or harsh lasers, Korean aesthetic medicine prioritizes the canvas: skin quality, moisture saturation, and barrier balance. Because deeply hydrated skin naturally bounces, reflects daylight evenly, and emits that effortless dew. Powered by the medical-grade Eve Omega 3 platform, HydroGlow synchronizes non-invasive hydro-dermabrasion, microcurrent cellular stimulation, and EMS muscle contouring to flush pores, recharge cellular ATP, and lock in lasting barrier resilience. Deep radial pore decongestion & vacuum extraction 4-in-1 X-Stream AHA, PHA, LHA & Bromelain Infusion Microcurrent ATP cellular energy & collagen awakening Zero downtime & needle-free glass skin glow Three targeted phases powered by Eve Omega precision hydro-dermabrasion and microcurrent to flood, restore, and illuminate your skin. Using Eve's radial vortex suction, HydroGlow clears sebum and dead cells from pore canals while simultaneously infusing exclusive X-Stream solution (AHA, PHA, LHA) deep into tissue to improve skin bounce instantly. Awakens cellular ATP synthesis and protein production through micro-amperage (µA) currents, calming redness, recharging tired cells, and fortifying the barrier against North Texas heat and indoor AC dryness. EMS muscle toning and therapeutic red LED light exercise facial contours to firm the jawline and lock in active hydration, leaving skin luminous, dewy, and event-ready with zero downtime.",
+    "snippet": "In Korean aesthetics, \"HydroGlow\" describes advanced aqueous skin rejuvenation designed to reveal smoother texture, refined glow, and healthy elasticity without..."
+  },
+  {
+    "url": "hydroglow.html#why-seoul-clinics",
+    "title": "Why Seoul Aesthetic Clinics Choose HydroGlow",
+    "pageTitle": "Korean HydroGlow Facial Dallas",
+    "category": "EVE OMEGA 3 • PREMIER KOREAN HYDROGLOW FACIAL",
+    "content": "Healthy Skin Creates Beautiful Skin Korean aesthetic clinics have long emphasized prevention over correction. Instead of treating visible concerns alone, the focus is on maintaining deep hydration, a healthy skin barrier, and balanced skin function, the foundations of smooth, radiant skin. HydroGlow complements this approach by synchronizing precision aqueous extraction, chemical peeling, and microcurrent energy to support hydration, comfort, and overall skin quality. The result is skin that looks smoother, healthier, and naturally luminous. Prevention-Focused Care: Maintains core skin health over aggressive, high-downtime resurfacing. Deep Moisture & Barrier Balance: Fortifies cellular water reserves and calms redness. Naturally Luminous Results: Reveals refined pores, smoother texture, and lasting glass skin radiance. SEOUL CLINIC CURATION Healthy Skin Creates Beautiful Skin",
+    "snippet": "Healthy Skin Creates Beautiful Skin Korean aesthetic clinics have long emphasized prevention over correction. Instead of treating visible concerns alone, the fo..."
+  },
+  {
+    "url": "hydroglow.html#treatment-modes",
+    "title": "6 Synchronized Modalities",
+    "pageTitle": "Korean HydroGlow Facial Dallas",
+    "category": "EVE OMEGA 3 • PREMIER KOREAN HYDROGLOW FACIAL",
+    "content": "Personalized For Your Skin Needs Radial spiral vortex suction removes sebum and dead surface cells while simultaneously infusing clinical AHA and botanical hydration. Low-level bio-electrical currents awaken cellular ATP synthesis, promoting natural collagen production and refined skin texture. Guided facial contouring massage stimulates lymphatic circulation, clearing stagnant fluid to de-puff and clarify facial contours. Targeted electrical muscle stimulation exercises underlying facial muscles to firm slackened skin and sculpt the Seoul V-line. Medical-grade bio-cellulose sheet mask saturated with multi-molecular hyaluronic acid and ceramides seals active nutrition into tissue. Therapeutic 630nm red LED light calms cellular inflammation, accelerates tissue healing, and seals in the lit-from-within glass glow.",
+    "snippet": "Personalized For Your Skin Needs Radial spiral vortex suction removes sebum and dead surface cells while simultaneously infusing clinical AHA and botanical hydr..."
+  },
+  {
+    "url": "hydroglow.html#eve-omega-system",
+    "title": "Powered by Eve Omega Technology",
+    "pageTitle": "Korean HydroGlow Facial Dallas",
+    "category": "EVE OMEGA 3 • PREMIER KOREAN HYDROGLOW FACIAL",
+    "content": "EVE OMEGA 3 SYSTEM Medical-Grade Korean Hydro-Infusion Platform Intentionally selected for SuA Glow in Carrollton, TX, the Eve Omega 3 platform represents Seoul's pinnacle multi-modality hydro-infusion technology. Combining precision vortex hydro-dermabrasion, exclusive 4-in-1 X-Stream chemical peeling, and dual-frequency microcurrent EMS, Eve Omega delivers Quiet Luxury skin care focused on deep hydration, barrier restoration, and lasting glass skin radiance. Radial vortex suction gently unclogs sebum while saturating skin with deep moisture. 4-in-1 clinical infusion: AHA, PHA, 4th-generation LHA, and natural bromelain enzymes. Awakens cellular ATP energy and tones underlying facial muscles to firm and lift contours.",
+    "snippet": "EVE OMEGA 3 SYSTEM Medical-Grade Korean Hydro-Infusion Platform Intentionally selected for SuA Glow in Carrollton, TX, the Eve Omega 3 platform represents Seoul..."
+  },
+  {
+    "url": "hydroglow.html#plan-builder",
+    "title": "HYDRATE THE SKIN.CUSTOMIZE THE GLOW.",
+    "pageTitle": "Korean HydroGlow Facial Dallas",
+    "category": "EVE OMEGA 3 • PREMIER KOREAN HYDROGLOW FACIAL",
+    "content": "Start with deep hydration. Layer additional K-Beauty treatments based on what your skin needs. THE FOUNDATION DEW + PLUMP Add deep hydration for dewy, refreshed, lit-from-within skin. YOUR PROVIDER BUILDS THE COMBINATION AROUND YOUR SKIN — NOT A PRESET PACKAGE.",
+    "snippet": "Start with deep hydration. Layer additional K-Beauty treatments based on what your skin needs. THE FOUNDATION DEW + PLUMP Add deep hydration for dewy, refreshed..."
+  },
+  {
+    "url": "hydroglow.html#treatment-guide",
+    "title": "What to Expect & Candidate Care",
+    "pageTitle": "Korean HydroGlow Facial Dallas",
+    "category": "EVE OMEGA 3 • PREMIER KOREAN HYDROGLOW FACIAL",
+    "content": "Designed for all skin types, including sensitive and melanin-rich skin, with zero downtime and immediate glass skin radiance. Immediate benefits & post-care Patients experience no downtime. You can immediately return to your daily activities with refreshed, calm, and deeply hydrated skin. Notice temporary glow improvement, smoother texture, brighter tone, and refined pore appearance right after treatment. Helps soothe skin barrier irritation and supports long-term hydration retention when performed regularly. Dehydrated, dull, or congested skin seeking immediate glow and pore refinement Dry or reactive skin affected by North Texas heat, AC, and seasonal winds Brides and event attendees looking for flawless makeup prep with zero downtime Asian and melanin-rich skin types seeking zero pigmentation risk The Korean HydroGlow Facial integrates seamlessly into comprehensive clinical combination plans: Rejuran Salmon PN: Cellular skin repair combined with deep aqueous saturation LDM Water Drop Lifting: Ultrasound barrier restoration paired with vortex infusion Oligio X RF Lifting: Deep monopolar collagen tightening layered over purified glass skin",
+    "snippet": "Designed for all skin types, including sensitive and melanin-rich skin, with zero downtime and immediate glass skin radiance. Immediate benefits & post-care Pat..."
+  },
+  {
+    "url": "hydroglow.html#faq",
+    "title": "HydroGlow FAQs",
+    "pageTitle": "Korean HydroGlow Facial Dallas",
+    "category": "EVE OMEGA 3 • PREMIER KOREAN HYDROGLOW FACIAL",
+    "content": "The Korean HydroGlow Facial is an advanced multi-modality clinical treatment powered by the Eve Omega platform. It combines radial spiral vortex hydro-dermabrasion, 4-in-1 X-Stream chemical peeling, microcurrent ATP stimulation, lymphatic drainage, and EMS muscle contouring to deeply cleanse, hydrate, and re-sculpt the facial canvas. While basic hydrafacials stop at superficial suction and moisture, HydroGlow is a synchronized 90-minute medical ritual. It incorporates dual-frequency microcurrent to awaken cellular ATP energy and EMS (Electrical Muscle Stimulation) to lift slackened cheek and jaw muscles, delivering both deep hydration and structural V-line contouring. X-Stream is Eve Omega's proprietary 4-in-1 clinical exfoliation complex formulated in Korea. It unites AHA (Lactic Acid), PHA (Lactobionic Acid), 4th-generation LHA (Capryloyl Salicylic Acid), and natural Bromelain enzymes to dissolve dead surface keratin bridges and sebum without scratching or stripping delicate barrier lipids. Zero downtime. The treatment is gentle, calming, and soothing. Because it calms inflammation rather than inflicting micro-trauma, you can apply sunscreen or makeup and immediately resume your normal schedule, making it our most requested facial before weddings, galas, and photoshoots. Yes. By combining radial vortex suction with LHA (a gentle, lipophilic acid with the same pH as healthy skin), HydroGlow effortlessly clears blackheads, excess sebum, and trapped impurities from clogged pores while reducing active breakout inflammation. For maintenance and consistent Korean glass skin glow, most clients schedule a treatment every 3 to 4 weeks to sync with the skin's natural cellular turnover cycle. It is also available as a standalone pre-event prep facial 24 to 72 hours before a major occasion.",
+    "snippet": "The Korean HydroGlow Facial is an advanced multi-modality clinical treatment powered by the Eve Omega platform. It combines radial spiral vortex hydro-dermabras..."
+  },
+  {
+    "url": "hydroglow.html#final-consultation-cta",
+    "title": "Refined movement.Controlled glow.Very Seoul.",
+    "pageTitle": "Korean HydroGlow Facial Dallas",
+    "category": "EVE OMEGA 3 • PREMIER KOREAN HYDROGLOW FACIAL",
+    "content": "K-Beauty Medspa • Carrollton HQ HydroGlow facial treatment recommendations at SuA Glow are individualized based on patient goals, skin condition, medical history, and clinical assessment pursuant to supervising physician-approved protocols and applicable Texas regulations.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ HydroGlow facial treatment recommendations at SuA Glow are individualized based on patient goals, skin condition, medical histor..."
   },
   {
     "url": "index.html#hero",
@@ -1897,6 +1977,14 @@ const SEARCH_INDEX = [
     "snippet": "Assessment of your skin barrier, redness, and signs of structural fatigue. A customized approach using Salmon PN to deliver targeted support to compromised area..."
   },
   {
+    "url": "salmon-pn-facial.html#plan-builder",
+    "title": "REPAIR THE FOUNDATION.CUSTOMIZE THE GLOW.",
+    "pageTitle": "Salmon PN Facial",
+    "category": "Recovery & Repair",
+    "content": "Start with Salmon PN cellular repair. Layer additional K-Beauty treatments based on what your skin needs. THE FOUNDATION RENEW + REFINE Add topical Korean PN skin care to support smoother, healthier-looking skin. YOUR PROVIDER BUILDS THE COMBINATION AROUND YOUR SKIN — NOT A PRESET PACKAGE.",
+    "snippet": "Start with Salmon PN cellular repair. Layer additional K-Beauty treatments based on what your skin needs. THE FOUNDATION RENEW + REFINE Add topical Korean PN sk..."
+  },
+  {
     "url": "salmon-pn-facial.html#faq",
     "title": "Salmon PN FAQs",
     "pageTitle": "Salmon PN Facial",
@@ -2399,6 +2487,14 @@ const SEARCH_INDEX = [
     "category": "pH Balanced",
     "content": "K-Beauty Medspa • Carrollton HQ Experience medical-grade Korean aesthetic care customized to your skin's unique barrier profile.",
     "snippet": "K-Beauty Medspa • Carrollton HQ Experience medical-grade Korean aesthetic care customized to your skin's unique barrier profile."
+  },
+  {
+    "url": "specials-november.html#final-consultation-cta",
+    "title": "K-Beauty doesn't chase trends.It builds better skin.",
+    "pageTitle": "[STAGING] The SuA Glow November Edit",
+    "category": "Spa Treatments",
+    "content": "Medical Aesthetics • Carrollton HQ",
+    "snippet": "Medical Aesthetics • Carrollton HQ"
   },
   {
     "url": "specials-october.html#final-consultation-cta",

@@ -677,7 +677,7 @@
     "title": "Korean Hydration Facial Dallas",
     "fullTitle": "Korean Hydration Facial Dallas | Glass Skin Treatment | Hydration Skin Booster | SuA Glow",
     "category": "Treatments & Modalities",
-    "sizeKb": 49
+    "sizeKb": 60
   },
   {
     "path": "hippa-policy.html",
@@ -686,6 +686,14 @@
     "fullTitle": "HIPPA Policy | SuA K Glow Korean Med Spa",
     "category": "Legal & Compliance",
     "sizeKb": 11
+  },
+  {
+    "path": "hydroglow.html",
+    "filename": "hydroglow.html",
+    "title": "Korean HydroGlow Facial Dallas",
+    "fullTitle": "Korean HydroGlow Facial Dallas | Eve Omega 3 Glass Skin | SuA Glow",
+    "category": "Core Pages",
+    "sizeKb": 76
   },
   {
     "path": "index.html",
@@ -893,7 +901,7 @@
     "title": "Salmon PN Facial",
     "fullTitle": "Salmon PN Facial | SuA K Glow Korean Med Spa Carrollton",
     "category": "Treatments & Modalities",
-    "sizeKb": 28
+    "sizeKb": 45
   },
   {
     "path": "scar-treatment.html",
@@ -966,6 +974,14 @@
     "fullTitle": "Korean Medical Skincare Collections | SuA K-Glow Med Spa",
     "category": "Core Pages",
     "sizeKb": 245
+  },
+  {
+    "path": "specials-november.html",
+    "filename": "specials-november.html",
+    "title": "[STAGING] The  November Edit",
+    "fullTitle": "[STAGING] The SuA Glow November Edit | Chingu Friendsgiving | SuA K-Glow Med Spa",
+    "category": "Core Pages",
+    "sizeKb": 5
   },
   {
     "path": "specials-october.html",
