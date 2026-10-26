@@ -39,7 +39,7 @@ const NAVBAR_HTML = `<!-- Navigation -->
     <div class="max-w-[1440px] mx-auto px-4 md:px-12 py-4 md:py-6 flex items-center justify-between">
         <!-- Logo -->
         <a href="index.html" class="flex items-center p-4 md:p-0 shrink-0">
-            <img id="logo-desktop" src="assets/logo-main.webp" alt="SuA Glow Medical Aesthetics"
+            <img id="logo-desktop" src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics"
                 class="logo-brand h-8 md:h-12 w-auto object-contain transition-all duration-300">
         </a>
 
@@ -321,7 +321,7 @@ const NAVBAR_HTML = `<!-- Navigation -->
     <div class="flex flex-col h-full text-left">
         <!-- Drawer Header -->
         <div class="flex items-center justify-between p-6 md:p-8 border-b border-off-white">
-            <img src="assets/logo-main.webp" alt="SuA Glow Medical Aesthetics" class="logo-brand h-7 w-auto object-contain">
+            <img src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics" class="logo-brand h-7 w-auto object-contain">
             <button id="drawer-close" class="text-charcoal p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-off-white transition-colors" aria-label="Close navigation menu">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
