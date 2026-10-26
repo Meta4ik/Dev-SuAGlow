@@ -80,9 +80,9 @@ function renderNovemberSpecials(config) {
     return `
     <!-- November Chingu Friendsgiving Campaign Showcase -->
     <section id="promotions-hero" data-nav-theme="dark" class="py-12 md:py-20 bg-[#0e0e0e] text-white relative overflow-hidden">
-        <!-- Ambient Golden & Terracotta Glow Effects -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-warm-gold/10 blur-[160px] rounded-full pointer-events-none"></div>
-        <div class="absolute bottom-1/4 right-10 w-[400px] h-[400px] bg-[#964E40]/10 blur-[140px] rounded-full pointer-events-none"></div>
+        <!-- Ambient Subtle Glow Effects Centered Behind Cards -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-warm-gold/5 blur-[180px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-10 w-[400px] h-[400px] bg-[#964E40]/5 blur-[160px] rounded-full pointer-events-none"></div>
 
         <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 text-center">
 
@@ -92,10 +92,9 @@ function renderNovemberSpecials(config) {
                     ${meta.campaignLabel || 'THE SUA GLOW NOVEMBER EDIT'}
                 </span>
                 
-                <!-- Stylized Chingu Friendsgiving Logo -->
-                <div class="relative inline-block mx-auto mb-3 sm:mb-4 px-2">
-                    <div class="absolute -inset-6 bg-gradient-to-r from-warm-gold/20 via-[#F5ECE3]/15 to-[#964E40]/25 blur-3xl rounded-full -z-10 pointer-events-none"></div>
-                    <img src="${meta.pillImage || meta.logo || 'assets/chingu-friendsgiving-logo.png'}" alt="Chingu Friendsgiving" class="h-24 sm:h-32 md:h-40 lg:h-48 w-auto max-w-[92vw] sm:max-w-lg md:max-w-xl mx-auto object-contain filter drop-shadow-[0_8px_25px_rgba(0,0,0,0.7)]">
+                <!-- Stylized Chingu Friendsgiving Logo (Clean, no glow) -->
+                <div class="mb-3 sm:mb-4 flex justify-center px-2">
+                    <img src="${meta.pillImage || meta.logo || 'assets/chingu-friendsgiving-logo.png'}" alt="Chingu Friendsgiving" class="h-24 sm:h-32 md:h-40 lg:h-48 w-auto max-w-[92vw] sm:max-w-lg md:max-w-xl mx-auto object-contain">
                     <h1 class="sr-only">${meta.title || 'CHINGU FRIENDSGIVING'}</h1>
                 </div>
 
