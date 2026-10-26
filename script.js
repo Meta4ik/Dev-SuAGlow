@@ -404,6 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initOversight();
   initAccessibilityWidget();
   initFloatingActionBar();
+  initStagingFloatingWidget();
 
   // 2. Setup Reveal Animations
   const revealObserver = new IntersectionObserver((entries) => {
@@ -1280,5 +1281,63 @@ function initFloatingActionBar() {
 
   window.addEventListener('scroll', handleFloatingDockScroll, { passive: true });
   handleFloatingDockScroll();
+}
+
+/**
+ * Staging Floating Quick-Access Wrench
+ * Only displays in development / Vercel preview environments (never active on live production suaglow.com).
+ * Injects a floating circle with a wrench icon linking directly to staging.html.
+ */
+function initStagingFloatingWidget() {
+  if (document.getElementById('staging-floating-trigger')) return;
+
+  // Strict Hostname Guard: Only display on Vercel preview/staging or local development environments
+  const hostname = window.location.hostname;
+  const isDevOrVercel = hostname.includes('vercel.app') || 
+                        hostname === 'localhost' || 
+                        hostname === '127.0.0.1' || 
+                        hostname.endsWith('.local') ||
+                        window.location.protocol === 'file:';
+
+  if (!isDevOrVercel) return;
+
+  // Do not render on staging.html itself
+  if (window.location.pathname.endsWith('/staging.html') || window.location.pathname.endsWith('/staging')) {
+    return;
+  }
+
+  // Determine relative path to staging.html
+  const isSubfolder = window.location.pathname.includes('/education/') || 
+                      window.location.pathname.includes('/dev-tools/') || 
+                      window.location.pathname.includes('/internal/');
+  const stagingUrl = isSubfolder ? '../staging.html' : 'staging.html';
+
+  const widget = document.createElement('div');
+  widget.id = 'staging-floating-trigger';
+  widget.className = 'fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-[9999] select-none group';
+  widget.setAttribute('role', 'region');
+  widget.setAttribute('aria-label', 'Development Staging Navigation');
+
+  widget.innerHTML = `
+    <a href="${stagingUrl}" 
+       title="Open Development Staging" 
+       class="relative flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#131619] text-[#AA987C] border border-[#AA987C]/50 shadow-[0_8px_25px_rgba(0,0,0,0.6),0_0_20px_rgba(170,152,124,0.35)] hover:shadow-[0_12px_30px_rgba(0,0,0,0.8),0_0_28px_rgba(170,152,124,0.6)] hover:border-[#AA987C] hover:text-white hover:scale-110 active:scale-95 transition-all duration-300">
+      
+      <!-- Ambient Rotating Pulse Glow -->
+      <span class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#AA987C]/20 to-transparent pointer-events-none animate-pulse"></span>
+      
+      <!-- Wrench SVG Icon -->
+      <svg class="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 group-hover:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+      </svg>
+      
+      <!-- Floating Tooltip Label (Desktop Hover) -->
+      <span class="absolute right-full mr-3 px-3 py-1.5 rounded-full bg-[#131619]/95 text-[11px] font-heading font-semibold uppercase tracking-wider text-[#AA987C] border border-[#AA987C]/30 shadow-xl whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 -translate-x-1 group-hover:translate-x-0">
+        Staging Hub
+      </span>
+    </a>
+  `;
+
+  document.body.appendChild(widget);
 }
 
