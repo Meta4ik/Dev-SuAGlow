@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS (Compiled Output) -->
-    <link rel="stylesheet" href="dist/output.css?v=65">
+    <link rel="stylesheet" href="dist/output.css?v=68">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Lucide Icons -->
@@ -67,11 +67,11 @@
 
     <!-- Environment Notice Topbar -->
     <aside aria-label="Environment notification" class="bg-[#181B1E] border-b border-[#AA987C]/30 text-white px-4 py-2 text-xs font-heading tracking-wider">
-        <div class="max-w-6xl mx-auto flex items-center justify-between gap-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
             <div class="flex items-center gap-2">
                 <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 <span class="text-[#AA987C] font-bold uppercase tracking-widest">[INTERNAL STAGING PREVIEW]</span>
-                <span class="hidden sm:inline text-white/70">— Recent Page Additions &amp; Active Edits</span>
+                <span class="hidden sm:inline text-white/70">— Recent Page Additions &amp; Active Work</span>
             </div>
             <div class="flex items-center gap-2 text-[11px] text-white/50">
                 <span class="hidden md:inline">Vercel Staging Environment</span>
@@ -83,7 +83,7 @@
 
     <!-- Main Navigation Header -->
     <header class="bg-[#131619]/95 backdrop-blur-md border-b border-white/10 px-6 py-5">
-        <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3.5 group">
                 <img src="assets/favicon.png" alt="SuA Glow" class="w-9 h-9 group-hover:rotate-6 transition-transform">
                 <div>
@@ -103,8 +103,8 @@
         </div>
     </header>
 
-    <!-- Content Area: The 3 Recent Additions -->
-    <main class="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 md:px-8 py-12 md:py-16">
+    <!-- Content Area: The Last 6 Pages Worked On -->
+    <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 py-12 md:py-16">
 
         <!-- Intro Header -->
         <div class="text-center max-w-2xl mx-auto mb-12">
@@ -115,12 +115,12 @@
                 Staging &amp; Active Work
             </h1>
             <p class="font-body text-xs sm:text-sm text-white/70 leading-relaxed">
-                Direct access to the last three page additions and campaign edits we've worked on.
+                Direct access to the last six pages and campaign edits we've worked on.
             </p>
         </div>
 
-        <!-- 3 Recent Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <!-- 6 Recent Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
 
             <!-- Card 1: November Specials -->
             <article class="stage-card p-6 flex flex-col justify-between group">
@@ -136,7 +136,7 @@
                     <!-- Meta & Title -->
                     <div class="mb-3">
                         <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#AA987C] block mb-1">
-                            Campaign Showcase
+                            Campaign Preview
                         </span>
                         <h2 class="font-heading text-lg sm:text-xl font-bold text-white tracking-wide leading-snug">
                             The SuA Glow November Edit: Chingu Friendsgiving
@@ -145,18 +145,18 @@
 
                     <!-- Summary -->
                     <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
-                        Featuring framed campaign assets, updated pricing ($300 OFF Oligio X, $200 OFF Skin Quality Barrier +HA +Collagen, $100 OFF HydroGlow Facial), and Chingu Friendsgiving branding.
+                        November 2026 campaign featuring framed promo images, updated pricing ($300 OFF Oligio X, $200 OFF Skin Quality Barrier +HA +Collagen, $100 OFF HydroGlow), Chingu Friendsgiving logo, and single-page layout without tabs.
                     </p>
 
                     <!-- Features Tags -->
                     <div class="flex flex-wrap gap-1.5 mb-6">
                         <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Oligio X $300 OFF</span>
                         <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Skin Barrier +HA</span>
-                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">No Tabs</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Chingu Edit</span>
                     </div>
                 </div>
 
-                <!-- Action Button: Matching Friendsgiving Terracotta Color -->
+                <!-- Action Button -->
                 <div class="pt-4 border-t border-white/10 space-y-2">
                     <a href="specials-november.html" target="_blank" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#964E40] hover:bg-[#803F33] text-white text-xs font-semibold uppercase tracking-wider shadow-md hover:shadow-xl transition-all">
                         <span>Preview November</span>
@@ -203,7 +203,7 @@
                     </div>
                 </div>
 
-                <!-- Action Button: Matching Site's Signature btn-primary -->
+                <!-- Action Button -->
                 <div class="pt-4 border-t border-white/10 space-y-2">
                     <a href="hydroglow.html" target="_blank" class="btn-primary btn-block text-xs font-semibold tracking-widest shadow-md hover:shadow-xl transition-all">
                         <span>Preview HydroGlow</span>
@@ -216,7 +216,148 @@
                 </div>
             </article>
 
-            <!-- Card 3: October Specials -->
+            <!-- Card 3: Skincare Products & Rejuran Shop -->
+            <article class="stage-card p-6 flex flex-col justify-between group">
+                <div>
+                    <!-- Visual Thumbnail Frame -->
+                    <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden bg-black/60 border border-white/10 mb-5 flex items-center justify-center p-3">
+                        <img src="assets/skincare-hero-model.jpg" alt="Skincare Products Storefront" class="w-full h-full object-cover rounded-xl group-hover:scale-103 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-heading font-bold uppercase tracking-wider bg-[#131619]/90 text-cyan-400 border border-cyan-400/40 backdrop-blur-sm">
+                            Storefront Redesign
+                        </span>
+                    </div>
+
+                    <!-- Meta & Title -->
+                    <div class="mb-3">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-cyan-400 block mb-1">
+                            Storefront &amp; Products
+                        </span>
+                        <h2 class="font-heading text-lg sm:text-xl font-bold text-white tracking-wide leading-snug">
+                            Medical Skincare &amp; Rejuran Storefront
+                        </h2>
+                    </div>
+
+                    <!-- Summary -->
+                    <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
+                        Full redesign of the Korean clinical skincare storefront. Features mobile app UI, brand collection tabs (Rejuran, Exoblanc, PDRN), category filters, and balanced desktop hero framing.
+                    </p>
+
+                    <!-- Features Tags -->
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Rejuran Collection</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Mobile App UI</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Live Redesign</span>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <div class="pt-4 border-t border-white/10 space-y-2">
+                    <a href="skincare-products.html" target="_blank" class="btn-primary btn-block text-xs font-semibold tracking-widest shadow-md hover:shadow-xl transition-all">
+                        <span>Preview Skincare</span>
+                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
+                    <button onclick="copyPageUrl('skincare-products.html')" class="w-full py-2 px-3 rounded-full text-[11px] font-heading uppercase tracking-wider text-white/50 hover:text-white hover:bg-white/5 transition-colors inline-flex items-center justify-center gap-1.5">
+                        <i data-lucide="copy" class="w-3 h-3"></i>
+                        <span>Copy Link</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Card 4: IV Infusion Wellness & Therapy -->
+            <article class="stage-card p-6 flex flex-col justify-between group">
+                <div>
+                    <!-- Visual Thumbnail Frame -->
+                    <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden bg-black/60 border border-white/10 mb-5 flex items-center justify-center p-3">
+                        <img src="assets/wellness-iv.jpg" alt="IV Infusion Therapy" class="w-full h-full object-cover rounded-xl group-hover:scale-103 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-heading font-bold uppercase tracking-wider bg-[#131619]/90 text-amber-400 border border-amber-400/40 backdrop-blur-sm">
+                            Unreleased Draft
+                        </span>
+                    </div>
+
+                    <!-- Meta & Title -->
+                    <div class="mb-3">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-amber-400 block mb-1">
+                            Wellness Treatment
+                        </span>
+                        <h2 class="font-heading text-lg sm:text-xl font-bold text-white tracking-wide leading-snug">
+                            IV Infusion Wellness &amp; Hydration Therapy
+                        </h2>
+                    </div>
+
+                    <!-- Summary -->
+                    <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
+                        Clinical IV vitamin drips and cellular hydration therapy. Menu covers Myers Cocktail, Korean Glow Glutathione, and Athletic Recovery. Excluded from live FTP pending provider sign-off.
+                    </p>
+
+                    <!-- Features Tags -->
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Glutathione Glow</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">IV Vitamin Drips</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Staged Only</span>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <div class="pt-4 border-t border-white/10 space-y-2">
+                    <a href="iv-infusion-wellness-therapy.html" target="_blank" class="btn-primary btn-block text-xs font-semibold tracking-widest shadow-md hover:shadow-xl transition-all">
+                        <span>Preview IV Infusion</span>
+                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
+                    <button onclick="copyPageUrl('iv-infusion-wellness-therapy.html')" class="w-full py-2 px-3 rounded-full text-[11px] font-heading uppercase tracking-wider text-white/50 hover:text-white hover:bg-white/5 transition-colors inline-flex items-center justify-center gap-1.5">
+                        <i data-lucide="copy" class="w-3 h-3"></i>
+                        <span>Copy Link</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Card 5: Salmon PN Skin Booster Facial -->
+            <article class="stage-card p-6 flex flex-col justify-between group">
+                <div>
+                    <!-- Visual Thumbnail Frame -->
+                    <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden bg-black/60 border border-white/10 mb-5 flex items-center justify-center p-3">
+                        <img src="assets/rejuran_tone_up_booster.png" alt="Salmon PN Rejuran Facial" class="w-full h-full object-contain p-2 group-hover:scale-103 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-heading font-bold uppercase tracking-wider bg-[#131619]/90 text-violet-400 border border-violet-400/40 backdrop-blur-sm">
+                            Updated Diagrams
+                        </span>
+                    </div>
+
+                    <!-- Meta & Title -->
+                    <div class="mb-3">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-violet-400 block mb-1">
+                            Treatment Protocol
+                        </span>
+                        <h2 class="font-heading text-lg sm:text-xl font-bold text-white tracking-wide leading-snug">
+                            Rejuran Salmon DNA / PN Skin Booster Facial
+                        </h2>
+                    </div>
+
+                    <!-- Summary -->
+                    <p class="font-body text-xs text-white/70 leading-relaxed mb-4">
+                        Clinical treatment page for Salmon DNA (Polynucleotide / PN) cellular skin healing and barrier restoration. Updated with comprehensive facial treatment plans and multi-step diagrams.
+                    </p>
+
+                    <!-- Features Tags -->
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Salmon DNA</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">PN Skin Booster</span>
+                        <span class="text-[9.5px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/10">Barrier Healing</span>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <div class="pt-4 border-t border-white/10 space-y-2">
+                    <a href="salmon-pn-facial.html" target="_blank" class="btn-primary btn-block text-xs font-semibold tracking-widest shadow-md hover:shadow-xl transition-all">
+                        <span>Preview Salmon PN</span>
+                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
+                    <button onclick="copyPageUrl('salmon-pn-facial.html')" class="w-full py-2 px-3 rounded-full text-[11px] font-heading uppercase tracking-wider text-white/50 hover:text-white hover:bg-white/5 transition-colors inline-flex items-center justify-center gap-1.5">
+                        <i data-lucide="copy" class="w-3 h-3"></i>
+                        <span>Copy Link</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Card 6: October Specials -->
             <article class="stage-card p-6 flex flex-col justify-between group">
                 <div>
                     <!-- Visual Thumbnail Frame -->
@@ -250,7 +391,7 @@
                     </div>
                 </div>
 
-                <!-- Action Button: Matching Site's Signature btn-primary -->
+                <!-- Action Button -->
                 <div class="pt-4 border-t border-white/10 space-y-2">
                     <a href="specials.html" target="_blank" class="btn-primary btn-block text-xs font-semibold tracking-widest shadow-md hover:shadow-xl transition-all">
                         <span>Preview October</span>
@@ -269,7 +410,7 @@
 
     <!-- Footer Notice -->
     <footer class="bg-[#131619] border-t border-white/10 py-6 px-6 text-center text-xs font-body text-white/40">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
             <span>SuA K-Glow Internal Staging Hub • Carrollton HQ</span>
             <span>Excluded from production FTP (<code class="text-amber-400">EXCLUDE</code> in <code class="text-white/60">ftp_upload.py</code>)</span>
         </div>
