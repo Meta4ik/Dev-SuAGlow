@@ -4,39 +4,32 @@
  * Dedicated configuration for the November 2026 campaign:
  * "The SuA Glow November Edit - Chingu Friendsgiving"
  * 
- * Includes all latest team approvals (Sophia, Kameron, Micky):
- * - $300 OFF / $200 OFF / $100 OFF badge hierarchy
- * - 4 callout chips per card
- * - Expanded Skin Quality Barrier formulas (ECM + PN/PDRN + HA + Collagen)
- * - HydroGlow 90-min facial ($100 OFF / $200 OFF with $399 Membership)
- * - Fixed height and bottom-locked CTAs
+ * User Requested Updates:
+ * 1. Oligio X: Listed price changed to "$300 OFF" (Regular Value $1,400+)
+ * 2. Skin Quality Barrier: Added "+HA + Collagen" -> "ECM + PN/PDRN + HA + Collagen"
+ * 3. Bottom disclaimer: "Offer is valid through 11/30/2026"
+ * 4. Assets: Linked to dedicated November frame images
  */
 
 const MONTHLY_SPECIALS_CONFIG_NOVEMBER = {
     // Campaign Overview Metadata
     meta: {
         month: "November 2026",
+        campaignLabel: "THE SUA GLOW NOVEMBER EDIT",
         pill: "CHINGU FRIENDSGIVING 🍂✨",
-        badge: "Limited Time | November Offers",
-        title: "The SuA Glow November Edit",
-        titleLine1: "The SuA Glow",
-        titleLine2: "November Edit",
-        subtitle: "Good Friends. Great Skin. Seoul Glow.",
-        taglinePill: "Chingu (친구) means friend in Korean. At SuA Glow, you're family. This November, we're celebrating our Dallas chingus with a little extra K-Beauty love before the holiday season.",
-        tagline: "",
-        offerBadge: "LIMITED TIME · NOVEMBER 2026",
-        offerCallout: "CHINGU FRIENDSGIVING 🍂✨ <span class=\"md:whitespace-nowrap\">NOVEMBER EDIT</span>",
-        offerTagline: "Good Friends. Great Skin. Seoul Glow.",
-        offerSubtext: "A special thank-you to all our existing clients and friends with treatments due before the year-end rush.",
-        offerPillars: "Korean-founded · Korean PA-C provider · Physician-guided",
-        offerCtaText: "Claim Your November Offer",
-        offerCtaUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
+        badge: "LIMITED TIME | NOVEMBER OFFERS",
+        title: "CHINGU FRIENDSGIVING",
+        subtitle: "GOOD FRIENDS. GREAT SKIN. SEOUL GLOW.",
+        heroImage: "assets/chingu-friendsgiving-hero.png",
+        heroText: "Chingu (친구) means friend in Korean. At SUA Glow, you're family. This November, we're celebrating our Dallas chingus with a little extra K-Beauty love.",
+        sectionTitle: "CHINGU EXCLUSIVES",
+        sectionSubtitle: "A SUA Glow thank you for our clients.",
+        bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
         flyerImage: "assets/SuA-Glow-November-Specials.png",
         downloadFlyerImage: "assets/SuA-Glow-November-Specials.png",
-        cardBackground: "assets/dallas_fall_card_bg.jpg",
-        headerBackground: "assets/member_hero.png",
-        bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
-        terms: "*November promotional pricing valid through November 30, 2026. Limit 2 promotional packages per client. Aesthetic Record consultation required. Cannot be combined with other promotions."
+        validThrough: "Offer is valid through 11/30/2026",
+        footerPillars: "KOREAN-FOUNDED  •  PHYSICIAN-GUIDED  •  CARROLLTON, TX",
+        terms: "*Offer is valid through 11/30/2026. Limit 2 promotional packages per client. Aesthetic Record consultation required. Cannot be combined with other promotions."
     },
 
     // 3-Step Program (Highlighted Offers matching November Edit)
@@ -44,46 +37,40 @@ const MONTHLY_SPECIALS_CONFIG_NOVEMBER = {
         {
             step: 1,
             badge: "LIFT + TIGHTEN + REJUVENATE",
-            title: "Oligio X®",
-            subtitle: "Monopolar RF Lifting & Contouring",
+            title: "OLIGIO X",
+            subtitle: "Your Seoul-style skin-firming refresh awaits.",
             price: "$300 OFF",
-            originalPrice: "$1,400+",
-            priceDetail: "Regular Value $1,400+ (Promo $1,100)",
-            hook: "Your Seoul-style skin-firming refresh awaits.",
-            description: "Monopolar RF energy gently heats the deep dermis to stimulate collagen and elastin, helping to lift, tighten, and sculpt a refined V-line for smoother, firmer, more youthful-looking skin.",
-            image: "assets/oligio_x_model_promo.jpg",
-            cardBackground: "assets/oligio_bg_hero.png",
-            tags: ["600 Full-Face Shots", "Skin Tightening", "V-Line Contour", "Collagen Induction"],
+            priceDetail: "REGULAR VALUE $1,400+",
+            description: "Monopolar RF energy gently heats the skin to stimulate collagen and elastin, helping to lift, tighten, and improve skin elasticity for smoother, firmer, more youthful-looking skin.",
+            image: "assets/november-promo-oligio-x.png",
+            ctaText: "BOOK YOUR OLIGIO X TREATMENT",
+            tags: ["600 SHOTS", "SKIN TIGHTENING", "V-LINE CONTOUR", "COLLAGEN PRODUCTION"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
         {
             step: 2,
             badge: "HYDRATE + REPAIR + GLOW",
-            title: "Skin Quality Barrier",
-            subtitle: "Next-Gen Skin Boosters: ECM • PN/PDRN • HA • Collagen",
+            title: "SKIN QUALITY BARRIER",
+            subtitle: "ECM + PN/PDRN + HA + COLLAGEN",
             price: "$200 OFF",
-            originalPrice: "$799+",
-            priceDetail: "Prices Start at $799",
-            hook: "Rebuild your dermal barrier and unlock deep radiance.",
-            description: "Improve hydration, elasticity, skin texture, barrier function, and dermal integrity with next-generation skin health boosters. Customized across four premier booster types: ECM, Salmon DNA (PN/PDRN), HA, and Collagen.",
-            image: "assets/rejuran_tone-up_booster_salmon_dna.png",
-            cardBackground: "assets/hero_waterdrop_bg.jpg",
-            tags: ["ECM & PN/PDRN", "HA & Collagen", "Barrier Repair", "Radiant Glow"],
+            priceDetail: "SKIN HEALTH BOOSTERS PRICES START AT $799",
+            description: "Improve hydration, elasticity, skin texture, collagen support, skin barrier function, dermal integrity, and overall skin appearance with next generation skin health boosters.",
+            image: "assets/november-promo-skin-barrier.png",
+            ctaText: "BOOK YOUR SKIN QUALITY BARRIER",
+            tags: ["ECM", "PN/PDRN", "BARRIER REPAIR", "HYDRATION", "COLLAGEN SUPPORT", "RADIANT GLOW"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
         {
             step: 3,
             badge: "CLEANSE + INFUSE + GLOW",
-            title: "K-Beauty HydroGlow",
-            subtitle: "90-Minute Glass Skin Facial",
+            title: "K-BEAUTY HYDROGLOW GLASS SKIN FACIAL",
+            subtitle: "90-minute treatment",
             price: "$100 OFF",
-            originalPrice: "$499",
-            priceDetail: "Regular Value $499 (Promo $399) • Or $200 OFF with $399 Membership",
-            hook: "Multi-technology facial for lit-from-within Korean glass skin.",
-            description: "A multi-technology facial designed to deeply cleanse, hydrate, lift, and refine your skin. Combines AquaFacial, microcurrent toning, lymphatic drainage massage, electric muscle stimulation (EMS), bio-cellulose hydration mask, and LED red light therapy.",
-            image: "assets/hydro-injection-placeholder.jpg",
-            cardBackground: "assets/header_bg.png",
-            tags: ["AquaFacial Cleanse", "EMS & Microcurrent", "Lymphatic Massage", "Red Light Therapy"],
+            priceDetail: "REGULAR VALUE $499",
+            description: "A multi-technology facial designed to deeply cleanse, hydrate, lift, and refine your skin. Combines AquaFacial, microcurrent, lymphatic drainage massage, electric muscle stimulation (EMS), hydration mask, and red light therapy for that lit-from-within Korean glass skin.",
+            image: "assets/november-promo-hydroglow.png",
+            ctaText: "BOOK YOUR GLASS SKIN EXPERIENCE",
+            tags: ["AQUAFACIAL", "MICROCURRENT", "LYMPHATIC DRAINAGE MASSAGE", "ELECTRIC MUSCLE STIMULATION (EMS)", "HYDRATION MASK", "RED LIGHT THERAPY"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         }
     ],

@@ -6,6 +6,185 @@
  * View 2 (4:5 Print Flyer Poster): Exact 4:5 ratio printable canvas matching your wireframe layout with lower-right prices.
  */
 
+/**
+ * November Specials Renderer (The SuA Glow November Edit - Chingu Friendsgiving)
+ * Dedicated streamlined flow without tab switcher, featuring bottom download button.
+ */
+function renderNovemberSpecials(config) {
+    const { meta, featuredSteps, brandPillars } = config;
+
+    const novemberCardsHTML = featuredSteps.map((stepItem, index) => {
+        const delayClass = `delay-${(index + 1) * 100}`;
+        const tagsHTML = stepItem.tags ? stepItem.tags.map(tag => 
+            `<span class="text-[9.5px] sm:text-[10px] uppercase tracking-wider font-semibold px-3 py-1.5 bg-[#EFE3D5] text-[#5A5046] rounded-full border border-[#DFD3C5]">${tag}</span>`
+        ).join(' ') : '';
+
+        return `
+            <div class="bg-[#F5ECE3] rounded-[28px] border border-[#E5D7C9] p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.35)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.5)] transition-all duration-500 group animate-on-scroll fade-up ${delayClass}">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+                    
+                    <!-- Left Column: Framed Image + Price Box + Book Button -->
+                    <div class="lg:col-span-5 flex flex-col justify-between space-y-5">
+                        <!-- Framed Promo Image -->
+                        <div class="relative w-full aspect-[16/9] sm:aspect-[2/1] lg:aspect-[16/9] rounded-2xl overflow-hidden border border-black/5 shadow-sm bg-white">
+                            <img src="${stepItem.image}" alt="${stepItem.title}" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700">
+                        </div>
+
+                        <!-- Price Box (Cream Box) -->
+                        <div class="bg-[#EFE3D5] border border-[#DFCFC0] rounded-2xl p-4 sm:p-5 text-center shadow-xs">
+                            <span class="font-body text-3xl sm:text-4xl font-extrabold text-[#1B1E21] tracking-tight block leading-none">
+                                ${stepItem.price}
+                            </span>
+                            ${stepItem.priceDetail ? `
+                                <span class="block text-[10px] sm:text-[11px] font-bold text-[#8C4538] uppercase tracking-wider mt-2">
+                                    ${stepItem.priceDetail}
+                                </span>
+                            ` : ''}
+                        </div>
+
+                        <!-- CTA Button (Terracotta / Cognac) -->
+                        <a href="${stepItem.bookingUrl}" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 py-4 px-6 rounded-2xl bg-[#964E40] hover:bg-[#803F33] text-white text-xs sm:text-[13px] font-heading font-bold uppercase tracking-widest shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                            <span>${stepItem.ctaText || 'Book Your Treatment'}</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Right Column: Category + Title + Subtitle + Description + Tags -->
+                    <div class="lg:col-span-7 flex flex-col justify-between py-1 space-y-6 text-left">
+                        <div>
+                            <span class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-[#8C4538] block mb-2">
+                                ${stepItem.badge}
+                            </span>
+                            <h3 class="heading-wide text-2xl sm:text-3xl lg:text-4xl text-[#1B1E21] font-bold tracking-wide mb-1 leading-tight">
+                                ${stepItem.title}
+                            </h3>
+                            <p class="font-serif italic text-xs sm:text-sm font-semibold text-[#8C4538] tracking-wide mb-4">
+                                ${stepItem.subtitle}
+                            </p>
+                            <p class="font-body text-xs sm:text-sm md:text-base text-[#404345]/90 leading-relaxed font-light">
+                                ${stepItem.description}
+                            </p>
+                        </div>
+
+                        <!-- Tags Grid -->
+                        <div class="flex flex-wrap gap-2 sm:gap-2.5 pt-4 border-t border-[#E5D7C9]/60">
+                            ${tagsHTML}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    return `
+    <!-- November Chingu Friendsgiving Campaign Showcase -->
+    <section id="promotions-hero" data-nav-theme="dark" class="py-12 md:py-20 bg-[#0e0e0e] text-white relative overflow-hidden">
+        <!-- Ambient Golden & Terracotta Glow Effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-warm-gold/10 blur-[160px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-10 w-[400px] h-[400px] bg-[#964E40]/10 blur-[140px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 text-center">
+
+            <!-- Header Title -->
+            <div class="mb-8 animate-on-scroll fade-up">
+                <span class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.35em] text-warm-gold block mb-3">
+                    ${meta.campaignLabel || 'THE SUA GLOW NOVEMBER EDIT'}
+                </span>
+                <h1 class="heading-wide text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-medium tracking-[0.12em] uppercase leading-tight mb-3">
+                    ${meta.title || 'CHINGU FRIENDSGIVING'}
+                </h1>
+                <p class="text-xs sm:text-sm font-medium tracking-[0.25em] uppercase text-white/70">
+                    ${meta.subtitle || 'GOOD FRIENDS. GREAT SKIN. SEOUL GLOW.'}
+                </p>
+            </div>
+
+            <!-- Hero Banner Image (3 Friends) -->
+            <div class="mb-6 max-w-4xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-white/10 animate-on-scroll fade-up delay-100">
+                <img src="${meta.heroImage || 'assets/chingu-friendsgiving-hero.png'}" alt="Chingu Friendsgiving" class="w-full h-auto block object-cover">
+            </div>
+
+            <!-- Hero Warm Italic Message -->
+            <div class="max-w-2xl mx-auto mb-14 animate-on-scroll fade-up delay-200">
+                <p class="font-serif italic text-sm sm:text-base md:text-lg text-white/85 leading-relaxed">
+                    ${meta.heroText || "Chingu (친구) means friend in Korean. At SUA Glow, you're family. This November, we're celebrating our Dallas chingus with a little extra K-Beauty love."}
+                </p>
+            </div>
+
+            <!-- Program View (Continuous single-page layout without tabs) -->
+            <div id="specials-program-view" class="space-y-10">
+                
+                <!-- Section Header -->
+                <div class="mb-8 text-center animate-on-scroll fade-up">
+                    <h2 class="heading-wide text-2xl sm:text-3xl text-white tracking-[0.2em] uppercase font-bold mb-1.5">
+                        ${meta.sectionTitle || 'CHINGU EXCLUSIVES'}
+                    </h2>
+                    <p class="font-serif italic text-xs sm:text-sm text-warm-gold/90">
+                        ${meta.sectionSubtitle || 'A SUA Glow thank you for our clients.'}
+                    </p>
+                </div>
+
+                <!-- The 3 Cards -->
+                <div class="space-y-8">
+                    ${novemberCardsHTML}
+                </div>
+
+                <!-- Download & Share Flyer Action Button at Bottom (Matching October style) -->
+                <div class="pt-8 pb-4 text-center print:hidden animate-on-scroll fade-up">
+                    <button type="button" onclick="downloadFlyerImage()" id="download-flyer-btn" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-xs sm:text-sm font-heading font-bold uppercase tracking-widest text-white bg-[#964E40] hover:bg-[#803F33] shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer">
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        <span>Download &amp; Share November Flyer</span>
+                    </button>
+                    <p class="text-[11px] text-white/50 tracking-wider uppercase mt-3">High-resolution official campaign flyer (PNG)</p>
+                </div>
+
+                <!-- Disclaimer & Bottom Pillars -->
+                <div class="pt-8 text-center space-y-4 animate-on-scroll fade-up">
+                    <p class="text-sm sm:text-base font-serif italic text-white/80 tracking-wide">
+                        ${meta.validThrough || 'Offer is valid through 11/30/2026'}
+                    </p>
+                    <div class="w-24 h-px bg-white/20 mx-auto"></div>
+                    <p class="text-[10px] sm:text-xs uppercase tracking-[0.25em] font-medium text-white/50">
+                        ${meta.footerPillars || 'KOREAN-FOUNDED  •  PHYSICIAN-GUIDED  •  CARROLLTON, TX'}
+                    </p>
+                    <p class="text-[10px] text-white/30 italic max-w-xl mx-auto pt-2">
+                        ${meta.terms}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Flyer Lightbox Modal (For Mobile & Quick Share) -->
+        <div id="specials-flyer-lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 sm:p-6 overflow-y-auto" onclick="if(event.target === this) closeFlyerLightbox();">
+            <div class="relative max-w-md w-full flex flex-col items-center text-center my-auto">
+                <!-- Close Button -->
+                <button type="button" onclick="closeFlyerLightbox()" class="absolute -top-12 right-0 z-20 text-white/80 hover:text-white bg-white/10 hover:bg-white/25 rounded-full p-2.5 transition-colors cursor-pointer border border-white/20 shadow-lg" aria-label="Close Lightbox">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+
+                <!-- Flyer Image -->
+                <div class="w-full overflow-hidden rounded-2xl shadow-2xl border border-white/20 bg-near-black mb-5">
+                    <img id="lightbox-flyer-img" src="${meta.downloadFlyerImage || 'assets/SuA-Glow-November-Specials.png'}" alt="${meta.title || 'SuA Glow Specials Flyer'}" class="w-full h-auto max-h-[72vh] object-contain mx-auto block">
+                </div>
+
+                <!-- Action Button Below Flyer -->
+                <div class="flex flex-wrap items-center justify-center gap-3 w-full">
+                    <button type="button" onclick="downloadFlyerImage()" id="lightbox-share-btn" class="px-8 py-3.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white bg-[#964E40] hover:bg-[#803F33] inline-flex items-center justify-center gap-2 shadow-xl cursor-pointer">
+                        <i data-lucide="share-2" class="w-4 h-4"></i>
+                        <span>Share Flyer</span>
+                    </button>
+                    <button type="button" onclick="triggerDirectDownloadFromUrl()" class="px-5 py-3 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white bg-white/15 hover:bg-white/25 border border-white/30 inline-flex items-center justify-center gap-2 transition-all cursor-pointer">
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        <span>Download</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    `;
+}
+
 function renderMonthlySpecials(customConfig) {
     const config = customConfig || (typeof MONTHLY_SPECIALS_CONFIG !== 'undefined' ? MONTHLY_SPECIALS_CONFIG : null);
     if (!config) {
@@ -17,6 +196,11 @@ function renderMonthlySpecials(customConfig) {
     const { meta, featuredSteps, additionalPromos, brandPillars } = config;
 
     const isOctober = (meta.month && meta.month.toLowerCase().includes('october')) || (meta.title && meta.title.toLowerCase().includes('october'));
+    const isNovember = (meta.month && meta.month.toLowerCase().includes('november')) || (meta.title && meta.title.toLowerCase().includes('november')) || (meta.campaignLabel && meta.campaignLabel.toLowerCase().includes('november'));
+
+    if (isNovember) {
+        return renderNovemberSpecials(config);
+    }
 
     // --- VIEW 1: Web Interactive 3-Step Cards ---
     const webStepsHTML = featuredSteps.map((stepItem, index) => {
@@ -506,8 +690,10 @@ function closeFlyerLightbox() {
 function triggerDirectDownloadFromUrl() {
     const config = window.__currentSpecialsConfig || {};
     const meta = config.meta || {};
-    const flyerUrl = meta.downloadFlyerImage || 'assets/SuA-Glow-September-Specials.jpg';
-    const fileName = meta.month ? `SuA-Glow-${meta.month.replace(/\s+/g, '-')}-Specials.jpg` : 'SuA-Glow-September-Specials.jpg';
+    const flyerUrl = meta.downloadFlyerImage || meta.flyerImage || 'assets/SuA-Glow-September-Specials.jpg';
+    const isPng = flyerUrl.toLowerCase().endsWith('.png');
+    const ext = isPng ? 'png' : 'jpg';
+    const fileName = meta.month ? `SuA-Glow-${meta.month.replace(/\s+/g, '-')}-Specials.${ext}` : `SuA-Glow-Specials.${ext}`;
 
     fetch(flyerUrl)
         .then(res => res.blob())
@@ -571,8 +757,10 @@ function downloadFlyerImage() {
     const lightboxShareBtn = document.getElementById('lightbox-share-btn');
     const config = window.__currentSpecialsConfig || {};
     const meta = config.meta || {};
-    const flyerUrl = meta.downloadFlyerImage || 'assets/SuA-Glow-September-Specials.jpg';
-    const fileName = meta.month ? `SuA-Glow-${meta.month.replace(/\s+/g, '-')}-Specials.jpg` : 'SuA-Glow-September-Specials.jpg';
+    const flyerUrl = meta.downloadFlyerImage || meta.flyerImage || 'assets/SuA-Glow-September-Specials.jpg';
+    const isPng = flyerUrl.toLowerCase().endsWith('.png');
+    const ext = isPng ? 'png' : 'jpg';
+    const fileName = meta.month ? `SuA-Glow-${meta.month.replace(/\s+/g, '-')}-Specials.${ext}` : `SuA-Glow-Specials.${ext}`;
 
     if (downloadBtn) {
         downloadBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Preparing Image...`;
