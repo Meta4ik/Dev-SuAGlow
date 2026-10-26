@@ -42,10 +42,10 @@ function renderNovemberSpecials(config) {
                             ` : ''}
                         </div>
 
-                        <!-- CTA Button: Signature SuA Glow Pill Button -->
-                        <a href="${stepItem.bookingUrl}" target="_blank" class="btn-primary btn-block text-[11px] sm:text-xs font-semibold tracking-wider sm:tracking-widest shadow-md hover:shadow-xl transition-all duration-300">
+                        <!-- CTA Button: Pill Button matching Friendsgiving Logo Color & Balanced Equal Padding -->
+                        <a href="${stepItem.bookingUrl}" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:py-4 rounded-full bg-[#964E40] hover:bg-[#803F33] text-white text-[11px] sm:text-xs font-semibold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-center leading-none">
                             <span>${stepItem.ctaText || 'Book Your Treatment'}</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5 shrink-0"></i>
                         </a>
                     </div>
 
@@ -133,10 +133,10 @@ function renderNovemberSpecials(config) {
                     ${novemberCardsHTML}
                 </div>
 
-                <!-- Download & Share Flyer Action Button (Signature SuA Glow Pill Button) -->
+                <!-- Download & Share Flyer Action Button (Matching Friendsgiving Logo Color & Balanced Equal Spacing) -->
                 <div class="pt-8 pb-4 text-center print:hidden animate-on-scroll fade-up">
-                    <button type="button" onclick="downloadFlyerImage()" id="download-flyer-btn" class="btn-primary py-4 px-8 sm:px-10 text-xs sm:text-sm font-semibold tracking-widest shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer">
-                        <i data-lucide="download" class="w-4 h-4"></i>
+                    <button type="button" onclick="downloadFlyerImage()" id="download-flyer-btn" class="inline-flex items-center justify-center gap-2.5 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider text-white bg-[#964E40] hover:bg-[#803F33] shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer leading-none">
+                        <i data-lucide="download" class="w-4 h-4 shrink-0"></i>
                         <span>Download &amp; Share November Flyer</span>
                     </button>
                     <p class="text-[11px] text-white/50 tracking-wider uppercase mt-3">High-resolution official campaign flyer (PNG)</p>
@@ -174,12 +174,12 @@ function renderNovemberSpecials(config) {
 
                 <!-- Action Button Below Flyer -->
                 <div class="flex flex-wrap items-center justify-center gap-3 w-full">
-                    <button type="button" onclick="downloadFlyerImage()" id="lightbox-share-btn" class="btn-primary py-3 px-8 text-xs font-semibold tracking-widest shadow-xl cursor-pointer">
-                        <i data-lucide="share-2" class="w-4 h-4"></i>
+                    <button type="button" onclick="downloadFlyerImage()" id="lightbox-share-btn" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white bg-[#964E40] hover:bg-[#803F33] shadow-xl cursor-pointer leading-none">
+                        <i data-lucide="share-2" class="w-4 h-4 shrink-0"></i>
                         <span>Share Flyer</span>
                     </button>
-                    <button type="button" onclick="triggerDirectDownloadFromUrl()" class="btn-secondary py-3 px-6 text-xs font-semibold tracking-widest text-white border-white/40 hover:border-warm-gold hover:text-white transition-all cursor-pointer">
-                        <i data-lucide="download" class="w-4 h-4"></i>
+                    <button type="button" onclick="triggerDirectDownloadFromUrl()" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white bg-white/15 hover:bg-white/25 border border-white/30 transition-all cursor-pointer leading-none">
+                        <i data-lucide="download" class="w-4 h-4 shrink-0"></i>
                         <span>Download</span>
                     </button>
                 </div>
