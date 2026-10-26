@@ -1314,7 +1314,7 @@ function initStagingFloatingWidget() {
 
   const widget = document.createElement('div');
   widget.id = 'staging-floating-trigger';
-  widget.className = 'fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-[9999] select-none group';
+  widget.className = 'fixed top-1/2 -translate-y-1/2 right-4 sm:right-6 z-[9999] select-none group';
   widget.setAttribute('role', 'region');
   widget.setAttribute('aria-label', 'Development Staging Navigation');
 
