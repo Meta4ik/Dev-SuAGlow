@@ -2521,6 +2521,14 @@ const SEARCH_INDEX = [
     "snippet": "Medical Aesthetics • Carrollton HQ"
   },
   {
+    "url": "staging.html",
+    "title": "Staging & Unreleased Pages",
+    "pageTitle": "Dev Pages & Staging Hub",
+    "category": "Spa Treatments",
+    "content": "November 2026 limited-time campaign. Highlights Oligio X ($300 OFF), Skin Quality Barrier ($200 OFF with ECM + PN/PDRN + HA + Collagen), and HydroGlow Facial ($100 OFF). Features continuous single-page layout without tabs and direct flyer download button. Dedicated high-conversion landing page for the 90-minute multi-technology Eve Omega facial protocol. Explains the 3-step Korean skin barrier sequence (vortex hydro-cleanse, ATP microcurrent, dynamic ultrasound & red light therapy). Intravenous vitamin drip therapy and cellular wellness treatments. Includes customized Meyer's Cocktail, Korean Glow Glutathione, Athletic Recovery, and Immunity Boost formulas. Excluded from FTP until provider protocol sign-off. Interactive prototype testing treatment detail modals and mobile drawer slide-overs. Allows patients to explore treatment benefits, candidate criteria, and downtime without leaving the browsing context. Browser-based high-DPI export canvas for social media creatives. Renders exact 4:5 aspect ratio flyers, promotional slides, and treatment before/after graphics for Instagram and digital ads. Social media export studio for the October seasonal campaign. Features Big Tex Fair autumn backgrounds, Halloween treat cards, and high-resolution flyer export triggers. Modular bento grid components that organize aesthetic treatments by patient goals (e.g., Deep Barrier Repair, V-Line Contouring, Collagen Induction, Pigment Eradication). Built for homepage and consultations. Interactive visual playground for the SuA VIP Membership card. Features custom CSS `@property` conic-gradient glow border, metallic foil reflection, and tier entitlement breakdown. Internal clinic staffing calendar for provider coverage tracking (Sophia Yang PA-C, Dr. Adam Yang MD, aesthetic nurses, and front desk coordinators) at the Carrollton HQ. Try a different keyword or click \"All Pages\" to reset your search filter.",
+    "snippet": "November 2026 limited-time campaign. Highlights Oligio X ($300 OFF), Skin Quality Barrier ($200 OFF with ECM + PN/PDRN + HA + Collagen), and HydroGlow Facial ($..."
+  },
+  {
     "url": "team-vacation-calendar.html",
     "title": "SUA GLOW",
     "pageTitle": "SUA GLOW",

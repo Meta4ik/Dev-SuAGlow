@@ -91,9 +91,14 @@ function renderNovemberSpecials(config) {
                 <span class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.35em] text-warm-gold block mb-3">
                     ${meta.campaignLabel || 'THE SUA GLOW NOVEMBER EDIT'}
                 </span>
-                <h1 class="heading-wide text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-medium tracking-[0.12em] uppercase leading-tight mb-3">
-                    ${meta.title || 'CHINGU FRIENDSGIVING'}
-                </h1>
+                
+                <!-- Stylized Chingu Friendsgiving Logo -->
+                <div class="relative inline-block mx-auto mb-3 sm:mb-4 px-2">
+                    <div class="absolute -inset-6 bg-gradient-to-r from-warm-gold/20 via-[#F5ECE3]/15 to-[#964E40]/25 blur-3xl rounded-full -z-10 pointer-events-none"></div>
+                    <img src="${meta.pillImage || meta.logo || 'assets/chingu-friendsgiving-logo.png'}" alt="Chingu Friendsgiving" class="h-24 sm:h-32 md:h-40 lg:h-48 w-auto max-w-[92vw] sm:max-w-lg md:max-w-xl mx-auto object-contain filter drop-shadow-[0_8px_25px_rgba(0,0,0,0.7)]">
+                    <h1 class="sr-only">${meta.title || 'CHINGU FRIENDSGIVING'}</h1>
+                </div>
+
                 <p class="text-xs sm:text-sm font-medium tracking-[0.25em] uppercase text-white/70">
                     ${meta.subtitle || 'GOOD FRIENDS. GREAT SKIN. SEOUL GLOW.'}
                 </p>

@@ -17,6 +17,8 @@ const MONTHLY_SPECIALS_CONFIG_NOVEMBER = {
         month: "November 2026",
         campaignLabel: "THE SUA GLOW NOVEMBER EDIT",
         pill: "CHINGU FRIENDSGIVING 🍂✨",
+        pillImage: "assets/chingu-friendsgiving-logo.png",
+        logo: "assets/chingu-friendsgiving-logo.png",
         badge: "LIMITED TIME | NOVEMBER OFFERS",
         title: "CHINGU FRIENDSGIVING",
         subtitle: "GOOD FRIENDS. GREAT SKIN. SEOUL GLOW.",

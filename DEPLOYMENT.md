@@ -36,6 +36,7 @@ rsync -av --delete \
   --exclude='dev-tools' \
   --exclude='internal' \
   --exclude='kam_doc_updates' \
+  --exclude='staging.html' \
   . ../live-site/
 ```
 
@@ -43,7 +44,7 @@ rsync -av --delete \
 Once your files are synced to the `live-site` folder, you can upload them to your FTP server.
 
 > [!CAUTION]
-> **Strict Production Rule**: `internal/` (internal dossiers, ad collateral) and `dev-tools/` must **NEVER** be uploaded to the live FTP server!
+> **Strict Production Rule**: `internal/`, `dev-tools/`, and `staging.html` must **NEVER** be uploaded to the live FTP server! They are for local development and Vercel staging only.
 
 **Option A: Using your AppleScript Droplet**
 1. Open Finder and go to the `live-site` folder.
