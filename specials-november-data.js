@@ -43,10 +43,10 @@ const MONTHLY_SPECIALS_CONFIG_NOVEMBER = {
             subtitle: "Your Seoul-style skin-firming refresh awaits.",
             price: "$300 OFF",
             priceDetail: "REGULAR VALUE $1,400+",
-            description: "Monopolar RF energy gently heats the skin to stimulate collagen and elastin, helping to lift, tighten, and improve skin elasticity for smoother, firmer, more youthful-looking skin.",
+            description: "Your Seoul-style, all-over skin-tightening glow-up starts here! Discover Korean RF technology designed to stimulate collagen, improve skin firmness and elasticity, and tighten the appearance of skin across the face and jawline—for smoother, firmer-looking skin and a naturally refreshed glow.",
             image: "assets/november-promo-oligio-x.png",
             ctaText: "BOOK YOUR OLIGIO X TREATMENT",
-            tags: ["600 SHOTS", "SKIN TIGHTENING", "V-LINE CONTOUR", "COLLAGEN PRODUCTION"],
+            tags: ["600 SHOTS", "SKIN TIGHTENING", "V-LINE CONTOUR", "COLLAGEN PRODUCTION", "IMPROVED SKIN ELASTICITY"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
         {
@@ -56,23 +56,23 @@ const MONTHLY_SPECIALS_CONFIG_NOVEMBER = {
             subtitle: "ECM + PN/PDRN + HA + COLLAGEN",
             price: "$200 OFF",
             priceDetail: "SKIN HEALTH BOOSTERS PRICES START AT $799",
-            description: "Improve hydration, elasticity, skin texture, collagen support, skin barrier function, dermal integrity, and overall skin appearance with next generation skin health boosters.",
+            description: "Beyond hydration. Discover next-generation Korean skin boosters designed to support your skin barrier, improve elasticity and texture, and restore the appearance of healthy, luminous skin.",
             image: "assets/november-promo-skin-barrier.png",
             ctaText: "BOOK YOUR SKIN QUALITY BARRIER",
-            tags: ["ECM", "PN/PDRN", "BARRIER REPAIR", "HYDRATION", "COLLAGEN SUPPORT", "RADIANT GLOW"],
+            tags: ["SKIN BARRIER SUPPORT", "SMOOTHER SKIN TEXTURE", "IMPROVED ELASTICITY", "DEEP HYDRATION", "COLLAGEN SUPPORT"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
         {
             step: 3,
             badge: "CLEANSE + INFUSE + GLOW",
             title: "K-BEAUTY HYDROGLOW GLASS SKIN FACIAL",
-            subtitle: "90-minute treatment",
+            subtitle: "90-MINUTE SEOUL-STYLE GLASS SKIN RITUAL",
             price: "$100 OFF",
             priceDetail: "REGULAR VALUE $499",
-            description: "A multi-technology facial designed to deeply cleanse, hydrate, lift, and refine your skin. Combines AquaFacial, microcurrent, lymphatic drainage massage, electric muscle stimulation (EMS), hydration mask, and red light therapy for that lit-from-within Korean glass skin.",
+            description: "Your chok-chok glow-up starts here! Experience 90 minutes of Korean-inspired skin pampering, combining AquaFacial, microcurrent, lymphatic drainage massage, a hydration mask, and red light therapy to cleanse, refresh, hydrate, and reveal smoother, dewy, luminous-looking skin.",
             image: "assets/november-promo-hydroglow.png",
             ctaText: "BOOK YOUR GLASS SKIN EXPERIENCE",
-            tags: ["AQUAFACIAL", "MICROCURRENT", "LYMPHATIC DRAINAGE MASSAGE", "ELECTRIC MUSCLE STIMULATION (EMS)", "HYDRATION MASK", "RED LIGHT THERAPY"],
+            tags: ["AQUAFACIAL", "MICROCURRENT", "LYMPHATIC DRAINAGE MASSAGE", "HYDRATION MASK", "RED LIGHT THERAPY"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         }
     ],
