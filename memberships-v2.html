@@ -18,13 +18,55 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
         
-    <link rel="stylesheet" href="dist/output.css?v=56">
-    <link rel="stylesheet" href="style.css?v=44">
+    <link rel="stylesheet" href="dist/output.css?v=58">
+    <link rel="stylesheet" href="style.css?v=45">
         <!-- Google Tag & Ads Conversion Tracking -->
     <script src="google-tag.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
+        /* Editorial Membership Card CTA Models */
+        .cta-model-essential {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            width: auto;
+            max-width: none;
+            object-fit: contain;
+            object-position: bottom left;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .cta-model-premium {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 125%;
+            width: auto;
+            max-width: none;
+            object-fit: contain;
+            object-position: bottom right;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+            transition: opacity 0.3s ease;
+        }
+
+        @media (max-width: 639px) {
+            .cta-model-essential {
+                height: 75%;
+                opacity: 0.35;
+            }
+            .cta-model-premium {
+                height: 80%;
+                opacity: 0.35;
+            }
+        }
+
         .glow-card {
             position: relative;
             background: rgba(255, 255, 255, 0.95);
@@ -493,32 +535,73 @@
                         </div>
                     </div>
 
-                    <!-- Column 1 Bottom Action Box (Light Luxury - Fixed Equal Height) -->
-                    <div class="bg-[#FAF8F5] border border-[#E5DFD5] rounded-3xl p-6 sm:p-8 shadow-xl mt-6 flex flex-col justify-between xl:h-[225px] xl:min-h-[225px]">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6 text-xs text-charcoal font-body">
-                            <div class="flex items-center gap-2">
-                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe shrink-0"></i>
-                                <span>60-Min EVE-Omega Facial</span>
+                    <!-- Column 1 Bottom Action Card (Light Luxury - Client Mockup Pattern) -->
+                    <div class="border border-[#E5DFD5] rounded-3xl p-6 sm:p-7 lg:p-8 shadow-xl mt-6 relative overflow-hidden flex flex-col justify-between min-h-[420px] xl:h-[450px] xl:min-h-[450px] group" style="background-color: #FAF7F2;">
+                        
+                        <!-- Model 1 (Absolute - Left & Bottom Anchored, ~40% Width Scaling) -->
+                        <img src="assets/cta_model_essential.png" alt="SuA Glow Essential Member" 
+                             class="cta-model-essential drop-shadow-md">
+
+                        <!-- Content Area: Text on Right -->
+                        <div class="relative z-10 sm:ml-auto w-full sm:w-[58%] lg:w-[60%] flex flex-col justify-center text-left my-auto">
+                            <!-- Header -->
+                            <div class="mb-3 sm:mb-3.5">
+                                <span class="block font-heading font-semibold text-[10px] sm:text-xs tracking-[0.25em] uppercase text-taupe mb-0.5">
+                                    ESSENTIAL MEMBERSHIP
+                                </span>
+                                <h3 class="font-heading font-light text-2xl sm:text-3xl lg:text-[32px] text-[#181B1E] tracking-tight normal-case leading-tight mb-1">
+                                    Start Your Glow
+                                </h3>
+                                <div class="font-heading font-semibold text-xs tracking-[0.22em] uppercase text-warm-gold">
+                                    $199 / MONTH
+                                </div>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe shrink-0"></i>
-                                <span>10% Off Korean Products</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe shrink-0"></i>
-                                <span>Priority Member Booking</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i data-lucide="check" class="w-3.5 h-3.5 text-taupe shrink-0"></i>
-                                <span>Cancel Anytime · No Contract</span>
+
+                            <!-- Perks Stack -->
+                            <div class="space-y-2 sm:space-y-2.5 font-body">
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-[#181B1E] normal-case leading-snug">
+                                        60-Minute Korean Glass Skin Ritual
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-charcoal/70 font-light leading-tight">
+                                        Cleanse, refine, sculpt, nourish and glow
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-[#181B1E] normal-case leading-snug">
+                                        10% Off Korean Skincare
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-charcoal/70 font-light leading-tight">
+                                        Your favorite K-Beauty essentials
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-[#181B1E] normal-case leading-snug">
+                                        Priority Member Booking
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-charcoal/70 font-light leading-tight">
+                                        Easier scheduling, less wait time
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-[#181B1E] normal-case leading-snug">
+                                        No Long-Term Commitment
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-charcoal/70 font-light leading-tight">
+                                        Cancel anytime, enjoy at your pace
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
-                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                            class="group/btn w-full py-4 px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-white bg-gradient-to-r from-[#8F857B] via-[#AA987C] to-[#8F857B] hover:brightness-110 shadow-[0_8px_25px_rgba(143,133,123,0.35)] hover:scale-[1.01] transition-all duration-300 inline-flex items-center justify-center gap-2.5">
-                            <span>START YOUR GLOW — $199/MO</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
-                        </a>
+                        <!-- Bottom Action Button -->
+                        <div class="relative z-10 pt-3 sm:pt-4">
+                            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                                class="group/btn w-full py-3.5 sm:py-4 px-6 sm:px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-[#181B1E] bg-gradient-to-r from-[#D8C7B0] via-[#C5B39A] to-[#A8967E] hover:brightness-105 shadow-[0_8px_25px_rgba(170,152,124,0.35)] hover:shadow-[0_10px_30px_rgba(170,152,124,0.5)] hover:scale-[1.01] transition-all duration-300 inline-flex items-center justify-center gap-2.5">
+                                <span>START YOUR GLOW — $199/MO</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -704,32 +787,76 @@
                         </div>
                     </div>
 
-                    <!-- Column 2 Bottom Action Box (Dark Luxury - Fixed Equal Height) -->
-                    <div class="bg-[#181C20] border border-warm-gold/45 rounded-3xl p-6 sm:p-8 shadow-xl mt-6 relative overflow-hidden flex flex-col justify-between xl:h-[225px] xl:min-h-[225px]">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6 text-xs text-white/80 font-body">
-                            <div class="flex items-center gap-2">
-                                <i data-lucide="check" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
-                                <span>Complete 5-Layer Ritual + IV Push*</span>
+                    <!-- Column 2 Bottom Action Card (Dark Luxury - Client Mockup Pattern) -->
+                    <div class="border border-warm-gold/45 rounded-3xl p-6 sm:p-7 lg:p-8 shadow-2xl mt-6 relative overflow-hidden flex flex-col justify-between min-h-[420px] xl:h-[450px] xl:min-h-[450px] group" style="background: linear-gradient(135deg, #181C20 0%, #131619 50%, #0E1114 100%);">
+                        
+                        <!-- Top Corner Warm Gold Rim Highlight -->
+                        <div class="absolute -top-16 -right-16 w-44 h-44 bg-warm-gold/20 rounded-full blur-2xl pointer-events-none"></div>
+
+                        <!-- Model 2 (Absolute - Right & Bottom Anchored, ~40% Width Scaling) -->
+                        <img src="assets/cta_model_premium.png" alt="SuA Glow Premium Member"
+                             class="cta-model-premium drop-shadow-md">
+
+                        <!-- Content Area: Text on Left -->
+                        <div class="relative z-10 sm:mr-auto w-full sm:w-[58%] lg:w-[60%] flex flex-col justify-center text-left my-auto">
+                            <!-- Header -->
+                            <div class="mb-3 sm:mb-3.5">
+                                <span class="block font-heading font-semibold text-[10px] sm:text-xs tracking-[0.25em] uppercase text-warm-gold mb-0.5">
+                                    PREMIUM MEMBERSHIP
+                                </span>
+                                <h3 class="font-heading font-light text-2xl sm:text-3xl lg:text-[32px] text-white tracking-tight normal-case leading-tight mb-1">
+                                    Elevate Your Glow
+                                </h3>
+                                <div class="font-heading font-semibold text-xs tracking-[0.22em] uppercase text-warm-gold">
+                                    $299 / MONTH
+                                </div>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <i data-lucide="check" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
-                                <span>Monthly Rotating Seoul Drop</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i data-lucide="check" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
-                                <span>10% Off Skincare &amp; Injectables</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i data-lucide="check" class="w-3.5 h-3.5 text-warm-gold shrink-0"></i>
-                                <span>Cancel Anytime · No Contract</span>
+
+                            <!-- Perks Stack -->
+                            <div class="space-y-2 sm:space-y-2.5 font-body">
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-white normal-case leading-snug">
+                                        Complete 5-Layer Ritual + IV Push*
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-white/70 font-light leading-tight">
+                                        Advanced care for deeper, longer-lasting glow
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-white normal-case leading-snug">
+                                        10% Off Skincare &amp; Eligible Treatments
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-white/70 font-light leading-tight">
+                                        Skincare, injectables and more
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-white normal-case leading-snug">
+                                        Exclusive Monthly Seoul Beauty Perk
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-white/70 font-light leading-tight">
+                                        Curated K-Beauty drops just for members
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-white normal-case leading-snug">
+                                        No Long-Term Commitment
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-white/70 font-light leading-tight">
+                                        Cancel anytime, enjoy at your pace
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
-                        <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                            class="group/btn w-full py-4 px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-[#131619] bg-gradient-to-r from-[#D8C7B0] via-[#AA987C] to-[#927F63] hover:brightness-110 shadow-[0_0_30px_rgba(170,152,124,0.45)] hover:shadow-[0_0_40px_rgba(170,152,124,0.65)] hover:scale-[1.01] transition-all duration-300 inline-flex items-center justify-center gap-2.5">
-                            <span>ELEVATE YOUR GLOW — $299/MO</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
-                        </a>
+                        <!-- Bottom Action Button -->
+                        <div class="relative z-10 pt-3 sm:pt-4">
+                            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                                class="group/btn w-full py-3.5 sm:py-4 px-6 sm:px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-[#131619] bg-gradient-to-r from-[#E0D2BE] via-[#C9B69B] to-[#9E8B6E] hover:brightness-105 shadow-[0_8px_30px_rgba(170,152,124,0.45)] hover:shadow-[0_10px_35px_rgba(170,152,124,0.6)] hover:scale-[1.01] transition-all duration-300 inline-flex items-center justify-center gap-2.5">
+                                <span>ELEVATE YOUR GLOW — $299/MO</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
