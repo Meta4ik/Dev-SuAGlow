@@ -801,12 +801,12 @@ const SEARCH_INDEX = [
     "snippet": "Discover our most sought-after K-Beauty treatments, focused on hydration, skin quality, and natural rejuvenation. Healing, hydration, and collagen support for t..."
   },
   {
-    "url": "index.html#membership-spotlight",
-    "title": "EVERYTHING INCLUDED. $299/MONTH.",
+    "url": "index.html#membership-tiers",
+    "title": "CHOOSE YOUR MONTHLY SKIN RITUAL",
     "pageTitle": "SUA K-Glow",
     "category": "Premier\n                    K-Beauty Destination",
-    "content": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift. Hydrate. Refine. Soothe. Restore. Glow. Inner wellness. Outer glow. A rotating K-Beauty discovery — from curated skincare extras, masks and ampoules to seasonal finishing touches. WHAT'S DROPPING THIS MONTH? YOU'LL HAVE TO COME IN AND SEE. MORE THAN A MEMBERSHIP. A SKIN RITUAL. Priority booking Member-only access to new treatments First look at exclusive events CANCEL ANYTIME · NO LONG-TERM COMMITMENT KOREAN-INSPIRED · PROVIDER-CURATED · GLASS SKIN OBSESSED",
-    "snippet": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift...."
+    "content": "Select the Korean skincare ritual curated for your skin goals. 60-MINUTE RITUAL THE 5-STEP GLOW RITUAL AquaFacial • EMS • Molding Mask • LED 90-MINUTE RITUAL THE 5-LAYER GLASS SKIN RITUAL Skin Booster • LDM • LED • Wellness",
+    "snippet": "Select the Korean skincare ritual curated for your skin goals. 60-MINUTE RITUAL THE 5-STEP GLOW RITUAL AquaFacial • EMS • Molding Mask • LED 90-MINUTE RITUAL TH..."
   },
   {
     "url": "index.html#glow-stories",
