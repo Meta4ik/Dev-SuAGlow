@@ -171,20 +171,26 @@
 
     <!-- Split Hero Section (Matching Editorial Pattern & Inspirational Layout) -->
     <section id="hero" data-nav-theme="dark"
-        class="relative min-h-[80vh] lg:min-h-[85vh] flex flex-col justify-end items-center pt-[140px] sm:pt-[155px] lg:pt-[170px] pb-0 px-6 sm:px-8 md:px-12 lg:px-16 bg-[#0D0F12] text-white overflow-hidden">
+        class="relative pt-[175px] sm:pt-[195px] lg:pt-[220px] pb-0 px-6 sm:px-8 md:px-12 lg:px-16 bg-[#090A0C] text-white overflow-hidden">
         
-        <!-- Atmospheric Background & Ambient Rim Glows -->
-        <div class="absolute inset-0 z-0 bg-[#0D0F12] pointer-events-none overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent via-40% to-[#0D0F12]"></div>
-            <div class="absolute top-1/4 right-1/4 w-[650px] h-[650px] bg-warm-gold/15 blur-[160px] rounded-full pointer-events-none"></div>
-            <div class="absolute bottom-10 left-10 w-[500px] h-[500px] bg-warm-gold/10 blur-[150px] rounded-full pointer-events-none"></div>
+        <!-- Atmospheric Background with Radial Gradient Dark Glow -->
+        <div class="absolute inset-0 z-0 bg-[#090A0C] pointer-events-none overflow-hidden">
+            <!-- Center/Right Dark Radial Glow -->
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_75%_75%_at_62%_48%,rgba(170,152,124,0.22)_0%,rgba(143,133,123,0.08)_35%,rgba(9,10,12,0.85)_70%,#090A0C_100%)]"></div>
+            <!-- Subtle Golden Core Behind Model & Particles -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_450px_at_65%_42%,rgba(201,182,155,0.14)_0%,transparent_75%)]"></div>
+            <!-- Soft Vignette Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-transparent via-30% to-[#090A0C]"></div>
+            <!-- Ambient Glow Blobs -->
+            <div class="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-warm-gold/15 blur-[140px] rounded-full pointer-events-none"></div>
+            <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-warm-gold/10 blur-[150px] rounded-full pointer-events-none"></div>
         </div>
 
         <div class="max-w-7xl mx-auto relative z-10 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-end">
                 
                 <!-- Left Column: Copy & CTAs (Exact Inspirational Match) -->
-                <div class="lg:col-span-6 space-y-6 sm:space-y-7 text-left pb-12 sm:pb-16 lg:pb-20">
+                <div class="lg:col-span-6 space-y-6 sm:space-y-7 text-left pb-10 sm:pb-12 lg:pb-14">
                     
                     <!-- Eyebrow Pill Badge -->
                     <div>
@@ -218,7 +224,7 @@
                 </div>
 
                 <!-- Right Column: Model & Interactive Animated Golden Particle Ring Canvas -->
-                <div id="hero-model-col" class="lg:col-span-6 relative flex items-end justify-center lg:justify-end self-end w-full min-h-[440px] sm:min-h-[500px] lg:min-h-[580px] translate-x-0 lg:translate-x-24 xl:translate-x-32 2xl:translate-x-40">
+                <div id="hero-model-col" class="lg:col-span-6 relative flex items-end justify-center lg:justify-end self-end w-full translate-x-0 lg:translate-x-24 xl:translate-x-32 2xl:translate-x-40">
                     
                     <!-- Interactive Golden Particle Canvas (Behind Model) -->
                     <canvas id="hero-particle-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
@@ -226,7 +232,7 @@
                     <!-- Cutout Model Image (Foreground of Canvas) -->
                     <img src="assets/hero_membership_model.png" id="hero-model-img"
                         alt="SUA GLOW Korean Glass Skin Member"
-                        class="relative z-10 w-auto h-auto max-h-[460px] sm:max-h-[520px] lg:max-h-none lg:h-[620px] xl:h-[660px] 2xl:h-[700px] object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.7)] select-none pointer-events-none">
+                        class="relative z-10 w-auto h-auto max-h-[460px] sm:max-h-[500px] lg:max-h-none lg:h-[520px] xl:h-[560px] object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.7)] select-none pointer-events-none">
                 </div>
 
             </div>
@@ -1340,11 +1346,9 @@
         
         function alignHeroModel() {
             if (window.innerWidth >= 1024 && heroSection && modelImg && modelCol) {
-                const eyebrow = heroSection.querySelector('.hero-eyebrow');
-                if (eyebrow) {
-                    const heroBottom = heroSection.getBoundingClientRect().bottom;
-                    const textTop = eyebrow.getBoundingClientRect().top;
-                    const targetHeight = Math.max(500, Math.round(heroBottom - textTop));
+                const leftCol = heroSection.querySelector('.lg\\:col-span-6');
+                if (leftCol) {
+                    const targetHeight = Math.round(leftCol.offsetHeight);
                     modelCol.style.height = targetHeight + 'px';
                     modelImg.style.height = targetHeight + 'px';
                     modelImg.style.width = 'auto';
