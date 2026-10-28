@@ -63,12 +63,12 @@ const FOOTER_HTML = `
         <!-- Medical Disclaimer & Oversight Statement -->
         <div class="pt-8 border-t border-white/[0.03] text-xs font-body text-white/45 leading-relaxed space-y-3 max-w-5xl mx-auto text-center mb-8">
             <p>All medical aesthetic treatments are performed by Sophia Yang, PA-C, under the supervision and medical delegation of Dr. Adam Yang, MD.</p>
-            <p>At SuA Glow, our approach incorporates globally recognized aesthetic techniques, including those used in Korean dermatology, and is delivered in accordance with applicable regulations. Treatment plans and product details are personalized and reviewed during your consultation.</p>
+            <p>At SUA GLOW, our approach incorporates globally recognized aesthetic techniques, including those used in Korean dermatology, and is delivered in accordance with applicable regulations. Treatment plans and product details are personalized and reviewed during your consultation.</p>
         </div>
         
         <div class="pt-8 border-t border-white/[0.03] flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.3em] font-bold opacity-30">
             <div class="flex items-center gap-4">
-                <p>© 2026 SuA K Glow  |  Developed By <a href="mailto:kameron@m360health.com" class="hover:underline transition-all">Kameron Allen</a></p>
+                <p>© 2026 SUA GLOW  |  Developed By <a href="mailto:kameron@m360health.com" class="hover:underline transition-all">Kameron Allen</a></p>
             </div>
             <div class="flex flex-wrap justify-center gap-4 md:gap-8">
                 <a href="privacy-policy.html" class="hover:opacity-100 transition-opacity">Privacy Policy</a>
@@ -89,12 +89,12 @@ if (typeof NEARME_HTML === 'undefined') {
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row gap-12 md:gap-20 items-start">
             <div class="md:w-1/3 animate-on-scroll fade-right">
-                <h2 class="heading-wide text-2xl sm:text-3xl mb-4 text-near-black leading-tight"><span id="nearme-product">SuA Glow</span> Near Me</h2>
+                <h2 class="heading-wide text-2xl sm:text-3xl mb-4 text-near-black leading-tight"><span id="nearme-product">SUA GLOW</span> Near Me</h2>
                 <p class="text-xs uppercase tracking-[0.4em] text-[#AA987C] font-bold">Serving DFW Masterfully</p>
             </div>
             <div class="md:w-2/3 animate-on-scroll fade-left delay-100">
                 <p class="text-base sm:text-lg font-light leading-relaxed text-charcoal/80 mb-8 sm:mb-10">
-                    SuA Glow is located in <strong class="font-semibold text-near-black">Carrollton, TX</strong>, quietly
+                    SUA GLOW is located in <strong class="font-semibold text-near-black">Carrollton, TX</strong>, quietly
                     serving skin obsessives from the entire DFW metroplex including:
                 </p>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-y-4 sm:gap-y-5 text-xs uppercase tracking-[0.25em] font-bold text-charcoal/50">

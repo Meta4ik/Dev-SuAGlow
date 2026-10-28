@@ -111,7 +111,7 @@ function initNearMe() {
       if (pageTitle && !pageTitle.toLowerCase().includes('home') && !pageTitle.toLowerCase().includes('sua glow') && !pageTitle.toLowerCase().includes('sua k-glow')) {
         productName = pageTitle;
       } else {
-        productName = 'SuA Glow';
+        productName = 'SUA GLOW';
       }
     }
 
