@@ -18,7 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
         
-    <link rel="stylesheet" href="dist/output.css?v=60">
+    <link rel="stylesheet" href="dist/output.css?v=61">
     <link rel="stylesheet" href="style.css?v=47">
         <!-- Google Tag & Ads Conversion Tracking -->
     <script src="google-tag.js"></script>
@@ -186,6 +186,9 @@
             <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-warm-gold/10 blur-[150px] rounded-full pointer-events-none"></div>
         </div>
 
+        <!-- Interactive Golden Particle Canvas (Full Hero, Behind Model & Text) -->
+        <canvas id="hero-particle-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-[5]"></canvas>
+
         <div class="max-w-7xl mx-auto relative z-10 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-end">
                 
@@ -223,13 +226,9 @@
                     </p>
                 </div>
 
-                <!-- Right Column: Model & Interactive Animated Golden Particle Ring Canvas -->
-                <div id="hero-model-col" class="lg:col-span-6 relative flex items-end justify-center lg:justify-end self-end w-full translate-x-0 lg:translate-x-24 xl:translate-x-32 2xl:translate-x-40">
-                    
-                    <!-- Interactive Golden Particle Canvas (Behind Model) -->
-                    <canvas id="hero-particle-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
-                    
-                    <!-- Cutout Model Image (Foreground of Canvas) -->
+                <!-- Right Column: Model (Shifted Left 50px on Full Desktop) -->
+                <div id="hero-model-col" class="lg:col-span-6 relative flex items-end justify-center lg:justify-end self-end w-full translate-x-0 lg:translate-x-[46px] xl:translate-x-[78px] 2xl:translate-x-[110px]">
+                    <!-- Cutout Model Image -->
                     <img src="assets/hero_membership_model.png" id="hero-model-img"
                         alt="SUA GLOW Korean Glass Skin Member"
                         class="relative z-10 w-auto h-auto max-h-[460px] sm:max-h-[500px] lg:max-h-none lg:h-[520px] xl:h-[560px] object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.7)] select-none pointer-events-none">
@@ -1451,11 +1450,21 @@
             mouse.currentX += (mouse.targetX - mouse.currentX) * 0.07;
             mouse.currentY += (mouse.targetY - mouse.currentY) * 0.07;
             
-            // Ring geometric center and ellipse radii scaled to container (particles track mouse)
-            const cx = width * 0.52 + mouse.currentX * 0.75;
-            const cy = height * 0.38 + mouse.currentY * 0.75;
-            const rx = Math.min(width * 0.42, 230);
-            const ry = Math.min(width * 0.45, 245);
+            // Dynamically calculate head center from the model image
+            const imgRect = modelImg.getBoundingClientRect();
+            const canvasRect = canvas.getBoundingClientRect();
+            
+            // Model image natural aspect is 1024x759. Head/eye center is at 56% width, 26% height
+            const headX = (imgRect.left - canvasRect.left) + imgRect.width * 0.56;
+            const headY = (imgRect.top - canvasRect.top) + imgRect.height * 0.26;
+            
+            // Ring geometric center centered around her head at all times
+            const cx = headX + mouse.currentX * 0.75;
+            const cy = headY + mouse.currentY * 0.75;
+            
+            // Radii dynamically sized to fit her head and scale proportionally on smaller screens
+            const rx = Math.min(Math.max(imgRect.width * 0.31, 105), 225);
+            const ry = Math.min(Math.max(imgRect.height * 0.42, 115), 235);
             const ringTilt = -0.26; // ~-15 deg tilt
 
             // 1. Orbiting Golden Particle Cloud (Floating Stardust Only)
