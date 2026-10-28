@@ -171,7 +171,7 @@
 
     <!-- Split Hero Section (Matching Editorial Pattern & Inspirational Layout) -->
     <section id="hero" data-nav-theme="dark"
-        class="relative min-h-[85vh] lg:min-h-[88vh] flex items-center justify-center pt-[140px] sm:pt-[155px] lg:pt-[170px] pb-16 sm:pb-20 lg:pb-24 px-6 sm:px-8 md:px-12 lg:px-16 bg-[#0D0F12] text-white overflow-hidden">
+        class="relative min-h-[85vh] lg:min-h-[88vh] flex items-center justify-center pt-[140px] sm:pt-[155px] lg:pt-[170px] pb-12 sm:pb-16 lg:pb-0 px-6 sm:px-8 md:px-12 lg:px-16 bg-[#0D0F12] text-white overflow-hidden">
         
         <!-- Atmospheric Background & Ambient Rim Glows -->
         <div class="absolute inset-0 z-0 bg-[#0D0F12] pointer-events-none overflow-hidden">
@@ -181,14 +181,14 @@
         </div>
 
         <div class="max-w-7xl mx-auto relative z-10 w-full">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 xl:gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-end">
                 
                 <!-- Left Column: Copy & CTAs (Exact Inspirational Match) -->
-                <div class="lg:col-span-7 space-y-6 sm:space-y-7 text-left">
+                <div class="lg:col-span-6 space-y-6 sm:space-y-7 text-left pb-12 sm:pb-16 lg:pb-20">
                     
                     <!-- Eyebrow Pill Badge -->
                     <div>
-                        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-warm-gold/35 bg-warm-gold/10 text-warm-gold text-[10px] sm:text-xs font-heading font-semibold tracking-[0.25em] uppercase">
+                        <span class="hero-eyebrow inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-warm-gold/35 bg-warm-gold/10 text-warm-gold text-[10px] sm:text-xs font-heading font-semibold tracking-[0.25em] uppercase">
                             K-BEAUTY &bull; MONTHLY SKINCARE &bull; MEMBERSHIP
                         </span>
                     </div>
@@ -227,7 +227,7 @@
                 </div>
 
                 <!-- Right Column: Model & Interactive Animated Golden Particle Ring Canvas -->
-                <div class="lg:col-span-5 relative flex items-end justify-center min-h-[440px] sm:min-h-[500px] lg:min-h-[560px]">
+                <div id="hero-model-col" class="lg:col-span-6 relative flex items-end justify-center lg:justify-end self-end w-full min-h-[440px] sm:min-h-[500px] lg:min-h-[580px]">
                     
                     <!-- Interactive Golden Particle Canvas (Behind Model) -->
                     <canvas id="hero-particle-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
@@ -235,7 +235,7 @@
                     <!-- Cutout Model Image (Foreground of Canvas) -->
                     <img src="assets/hero_membership_model.png" id="hero-model-img"
                         alt="SuA Glow Korean Glass Skin Member"
-                        class="relative z-10 w-full h-auto max-h-[480px] sm:max-h-[540px] lg:max-h-[600px] object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.7)] select-none pointer-events-none transition-transform duration-200 ease-out">
+                        class="relative z-10 w-auto h-auto max-h-[460px] sm:max-h-[520px] lg:max-h-none lg:h-[620px] xl:h-[660px] 2xl:h-[700px] object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.7)] select-none pointer-events-none transition-transform duration-200 ease-out">
                 </div>
 
             </div>
@@ -1340,13 +1340,35 @@
         const ctx = canvas.getContext('2d');
         const heroSection = document.getElementById('hero');
         const modelImg = document.getElementById('hero-model-img');
+        const modelCol = document.getElementById('hero-model-col');
         
         let width = 0;
         let height = 0;
         let dpr = window.devicePixelRatio || 1;
         let mouse = { x: -1000, y: -1000, targetX: 0, targetY: 0, currentX: 0, currentY: 0, active: false };
         
+        function alignHeroModel() {
+            if (window.innerWidth >= 1024 && heroSection && modelImg && modelCol) {
+                const eyebrow = heroSection.querySelector('.hero-eyebrow');
+                if (eyebrow) {
+                    const heroBottom = heroSection.getBoundingClientRect().bottom;
+                    const textTop = eyebrow.getBoundingClientRect().top;
+                    const targetHeight = Math.max(500, Math.round(heroBottom - textTop));
+                    modelCol.style.height = targetHeight + 'px';
+                    modelImg.style.height = targetHeight + 'px';
+                    modelImg.style.width = 'auto';
+                    modelImg.style.maxWidth = 'none';
+                }
+            } else if (modelCol && modelImg) {
+                modelCol.style.height = '';
+                modelImg.style.height = '';
+                modelImg.style.width = '';
+                modelImg.style.maxWidth = '';
+            }
+        }
+        
         function resize() {
+            alignHeroModel();
             const rect = canvas.getBoundingClientRect();
             width = rect.width;
             height = rect.height;
@@ -1569,7 +1591,12 @@
         }
         
         window.addEventListener('resize', resize);
-        resize();
+        window.addEventListener('load', resize);
+        if (modelImg.complete) {
+            resize();
+        } else {
+            modelImg.addEventListener('load', resize);
+        }
         requestAnimationFrame(render);
     })();
     </script>
