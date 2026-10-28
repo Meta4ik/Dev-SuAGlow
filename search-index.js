@@ -1449,6 +1449,54 @@ const SEARCH_INDEX = [
     "snippet": "Designed to be dropped anywhere across the SuA Glow site with 1 line of HTML, zero external dependencies, and responsive fluid scaling. Simply place this `div` ..."
   },
   {
+    "url": "memberships-v1.html#hero",
+    "title": "Korean Glass SkinMembership",
+    "pageTitle": "Korean Glass Skin Membership Dallas",
+    "category": "QUESTIONS & ANSWERS",
+    "content": "Five Layers. One Monthly Korean Skin Ritual. A physician-guided approach to hydration, skin quality and your signature SuA Glow.",
+    "snippet": "Five Layers. One Monthly Korean Skin Ritual. A physician-guided approach to hydration, skin quality and your signature SuA Glow."
+  },
+  {
+    "url": "memberships-v1.html#five-layers",
+    "title": "5 Layers. One Korean Skin Ritual.",
+    "pageTitle": "Korean Glass Skin Membership Dallas",
+    "category": "QUESTIONS & ANSWERS",
+    "content": "다섯 단계 · 하나의 루틴 Instead of asking one treatment to do everything, the SuA Glow Glass Skin Method™ layers five complementary treatments into one cohesive monthly Korean ritual. Our liquid microdermabrasion step gently clarifies pores, lifts dead surface cells, and infuses multi-phase hydration to create an immaculate, receptive canvas. Medical-grade active ingredients infused deeply via our FDA-cleared DEP pulsed system without needles, pain, or puncturing the skin barrier. The Korean clinic favorite. Multi-frequency ultrasound waves micro-massage cells, stimulate collagen enzymes, calm tissue, and lock in deep translucent hydration. Settle under our medical-grade Celluma phototherapy arch. Soothing red wavelengths reduce surface erythema, recharge mitochondrial vitality, and seal in the glow. Your monthly wellness layer, administered when medically appropriate following clinical assessment. The body's master antioxidant promotes cellular recovery and whole-body radiance. 아름다움은 루틴이다 — Skin is a Ritual. SEOUL-INSPIRED · PHYSICIAN-GUIDED · CARROLLTON, TX",
+    "snippet": "다섯 단계 · 하나의 루틴 Instead of asking one treatment to do everything, the SuA Glow Glass Skin Method™ layers five complementary treatments into one cohesive monthly ..."
+  },
+  {
+    "url": "memberships-v1.html",
+    "title": "Glass Skin Is A Practice, Not A Quick Fix.",
+    "pageTitle": "Korean Glass Skin Membership Dallas",
+    "category": "QUESTIONS & ANSWERS",
+    "content": "Glass skin isn't created with one random facial. It's built through consistent, layered, personalized skin care. Every month, SuA Glow layers five complementary treatments into one provider-curated Korean Glass Skin Ritual — then personalizes your Skin Booster Edit around what your skin needs right now. Instead of asking one machine to do everything, our multi-modal approach nurtures each layer of the skin barrier. A monthly ritual for long-term radiance. Skin-first. Always. Your Skin Booster Edit evolves with your skin. Five complementary steps. One ritual. SEOUL PHILOSOPHYDALLAS ADDRESS. VERY K-BEAUTY. SUA GLOWCARROLLTON, TX",
+    "snippet": "Glass skin isn't created with one random facial. It's built through consistent, layered, personalized skin care. Every month, SuA Glow layers five complementary..."
+  },
+  {
+    "url": "memberships-v1.html",
+    "title": "EVERYTHING INCLUDED. $299/MONTH.",
+    "pageTitle": "Korean Glass Skin Membership Dallas",
+    "category": "QUESTIONS & ANSWERS",
+    "content": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift. Hydrate. Refine. Soothe. Restore. Glow. Inner wellness. Outer glow. A rotating K-Beauty discovery — from curated skincare extras, masks and ampoules to seasonal finishing touches. WHAT'S DROPPING THIS MONTH? YOU'LL HAVE TO COME IN AND SEE. MORE THAN A MEMBERSHIP. A SKIN RITUAL. Priority booking Member-only access to new treatments First look at exclusive events CANCEL ANYTIME · NO LONG-TERM COMMITMENT KOREAN-INSPIRED · PROVIDER-CURATED · GLASS SKIN OBSESSED",
+    "snippet": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift...."
+  },
+  {
+    "url": "memberships-v1.html#faq",
+    "title": "Korean Glass Skin Membership FAQs",
+    "pageTitle": "Korean Glass Skin Membership Dallas",
+    "category": "QUESTIONS & ANSWERS",
+    "content": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. Your $299 monthly membership includes one provider-curated 5-Layer Korean Glass Skin Ritual featuring AquaFacial, Needle-Free Skin Booster Infusion, LDM Water Drop Lifting, LED Red Light Therapy, and a Glutathione IV Push when medically appropriate. Members also receive the rotating Seoul Glow Drop, priority booking, and member-only perks. K-Beauty is all about the layers. So is your facial. Rather than relying on one treatment, the SuA Glow Glass Skin Method™ brings five complementary layers together in one Korean-inspired monthly ritual. The method combines consistent skin care, medical aesthetic technology, and provider-guided personalization rather than a one-and-done approach. The membership is designed for adults who want a consistent, skin-first approach to hydration, radiance, texture, and overall skin quality. Your provider evaluates your skin, goals, medical history, and treatment candidacy to determine whether the ritual—and each included layer—is appropriate for you. Yes. The five-layer framework provides the foundation, while your Skin Booster Edit can be personalized around what your skin needs right now. Your monthly focus may include DEWY for hydration, TONE-UP for radiance, CALM for barrier support, or SMOOTH for texture, based on provider assessment and individual candidacy. The membership is designed around one Glass Skin Ritual each month. That's intentional: the SuA Glow philosophy emphasizes consistent, layered skin care rather than chasing one-time quick fixes. Your provider may modify or defer individual treatments when clinically appropriate. Yes. Your membership is $299 per month and includes your monthly 5-Layer Glass Skin Ritual plus eligible member benefits. There is no separate charge for each of the five included layers. Optional treatments, upgrades, products, or services outside the membership are additional. The facial and device-based layers are designed to be gentle, with little to no expected downtime for most appropriate candidates. The Glutathione IV Push involves IV administration and is included only when medically appropriate. Individual experiences, treatment recommendations, and responses vary. Yes. The Glass Skin Membership is designed without a long-term membership commitment. Pauses, cancellations, and other membership changes are subject to the notice requirements and terms outlined in your membership agreement. The Korean Glass Skin Membership is available exclusively at SuA Glow Medical Aesthetics in Carrollton, Texas, serving Dallas–Fort Worth and surrounding communities including Plano, Frisco, Coppell, Addison, Grapevine, and Southlake. The Seoul Drop is your rotating K-Beauty discovery included with the Glass Skin Membership. Selections may include curated skincare extras, masks, ampoules, or seasonal finishing touches, with the featured discovery changing periodically. What's dropping next? You'll have to come in and see.",
+    "snippet": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. Your $299 monthly membership includes one provider-curate..."
+  },
+  {
+    "url": "memberships-v1.html#final-consultation-cta",
+    "title": "Five layers. One ritual.Very K-Beauty.",
+    "pageTitle": "Korean Glass Skin Membership Dallas",
+    "category": "QUESTIONS & ANSWERS",
+    "content": "K-Beauty Medspa • Carrollton HQ Treatment selection and sequencing for the SUA GLOW Glass Skin Membership are individualized based on patient goals, skin condition, medical history, and clinical assessment under supervising physician protocols.",
+    "snippet": "K-Beauty Medspa • Carrollton HQ Treatment selection and sequencing for the SUA GLOW Glass Skin Membership are individualized based on patient goals, skin condit..."
+  },
+  {
     "url": "memberships-v2.html#hero",
     "title": "YOUR SKIN. YOUR RITUAL. YOUR GLOW.",
     "pageTitle": "Korean Glass Skin Memberships Dallas",
@@ -1506,48 +1554,56 @@ const SEARCH_INDEX = [
   },
   {
     "url": "memberships.html#hero",
-    "title": "Korean Glass SkinMembership",
-    "pageTitle": "Korean Glass Skin Membership Dallas",
+    "title": "YOUR SKIN. YOUR RITUAL. YOUR GLOW.",
+    "pageTitle": "Korean Glass Skin Memberships Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "Five Layers. One Monthly Korean Skin Ritual. A physician-guided approach to hydration, skin quality and your signature SuA Glow.",
-    "snippet": "Five Layers. One Monthly Korean Skin Ritual. A physician-guided approach to hydration, skin quality and your signature SuA Glow."
+    "content": "TWO RITUALS. ONE BEAUTIFUL COMMITMENT. Discover SUA GLOW's Korean-inspired memberships, thoughtfully designed to cleanse, nourish, and refresh your skin month after month.",
+    "snippet": "TWO RITUALS. ONE BEAUTIFUL COMMITMENT. Discover SUA GLOW's Korean-inspired memberships, thoughtfully designed to cleanse, nourish, and refresh your skin month a..."
   },
   {
-    "url": "memberships.html#five-layers",
-    "title": "5 Layers. One Korean Skin Ritual.",
-    "pageTitle": "Korean Glass Skin Membership Dallas",
+    "url": "memberships.html#membership-tiers",
+    "title": "CHOOSE YOUR MONTHLY SKIN RITUAL",
+    "pageTitle": "Korean Glass Skin Memberships Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "다섯 단계 · 하나의 루틴 Instead of asking one treatment to do everything, the SuA Glow Glass Skin Method™ layers five complementary treatments into one cohesive monthly Korean ritual. Our liquid microdermabrasion step gently clarifies pores, lifts dead surface cells, and infuses multi-phase hydration to create an immaculate, receptive canvas. Medical-grade active ingredients infused deeply via our FDA-cleared DEP pulsed system without needles, pain, or puncturing the skin barrier. The Korean clinic favorite. Multi-frequency ultrasound waves micro-massage cells, stimulate collagen enzymes, calm tissue, and lock in deep translucent hydration. Settle under our medical-grade Celluma phototherapy arch. Soothing red wavelengths reduce surface erythema, recharge mitochondrial vitality, and seal in the glow. Your monthly wellness layer, administered when medically appropriate following clinical assessment. The body's master antioxidant promotes cellular recovery and whole-body radiance. 아름다움은 루틴이다 — Skin is a Ritual. SEOUL-INSPIRED · PHYSICIAN-GUIDED · CARROLLTON, TX",
-    "snippet": "다섯 단계 · 하나의 루틴 Instead of asking one treatment to do everything, the SuA Glow Glass Skin Method™ layers five complementary treatments into one cohesive monthly ..."
+    "content": "Select the Korean skincare ritual curated for your skin goals. 60-MINUTE RITUAL THE 5-STEP GLOW RITUAL AquaFacial • EMS • Molding Mask • LED 90-MINUTE RITUAL THE 5-LAYER GLASS SKIN RITUAL Skin Booster • LDM • LED • Wellness",
+    "snippet": "Select the Korean skincare ritual curated for your skin goals. 60-MINUTE RITUAL THE 5-STEP GLOW RITUAL AquaFacial • EMS • Molding Mask • LED 90-MINUTE RITUAL TH..."
+  },
+  {
+    "url": "memberships.html#membership-collection",
+    "title": "5 Layers. Two Ways to Glow.",
+    "pageTitle": "Korean Glass Skin Memberships Dallas",
+    "category": "QUESTIONS & ANSWERS",
+    "content": "다섯 단계 · 당신을 위한 맞춤 루틴 Instead of asking one treatment to do everything, SuA Glow layers five complementary treatments into one cohesive monthly Korean ritual. Choose the depth of care that fits your skin goals. 60-Minute Korean Facial Ritual A consistent, results-driven monthly facial using our EVE-Omega workstation. Gentle, effective, and perfect for maintaining clear, hydrated, and healthy skin. Begin with a Korean double cleanse and gentle dermabrasion to remove surface impurities, smooth away dead skin cells, and prepare your complexion for the next layer of your glass skin ritual. Our AquaFacial combines gentle vortex suction with hydrating solutions to help remove pore debris, refine skin texture, and replenish moisture—leaving your complexion feeling refreshed, smooth, and beautifully radiant. Personalize your ritual with one of three sculpting experiences: Microcurrent (MTS), Electrical Muscle Stimulation (EMS), or Korean Facial Sculpting Massage. Each offers a unique approach to refreshing facial contours and promoting a more sculpted, revitalized appearance. A Korean skincare favorite. This customized modeling mask helps soothe stressed skin, replenish moisture, and leave your complexion feeling refreshed, soft, and beautifully balanced. Complete your Korean glass skin ritual with gentle red-light therapy designed to help soothe the appearance of redness, restore vitality, and leave your complexion with a radiant glow. Cleanse, refine, sculpt, nourish and glow Your favorite K-Beauty essentials Easier scheduling, less wait time Cancel anytime, enjoy at your pace 90-Minute Clinical Five-Layer Ritual Our most comprehensive monthly treatment combining advanced medical devices, skin booster infusion, LDM ultrasound, and LED for deeper hydration, collagen support, and long-term skin quality. Liquid microdermabrasion gently clarifies pores, lifts dead surface cells, and infuses multi-phase hydration to create an immaculate canvas. Medical-grade active ingredients infused deeply via our FDA-cleared DEP pulsed system without needles, pain, or puncturing the barrier. The Korean clinic favorite. Multi-frequency ultrasound waves micro-massage cells, stimulate collagen enzymes, and lock in deep translucent hydration. Complete your Korean glass skin ritual with gentle red-light therapy designed to help soothe the appearance of redness, restore vitality, and leave your complexion with a radiant glow. Administered when medically appropriate following clinical assessment. The body's master antioxidant promotes cellular recovery and whole-body radiance. Advanced care for deeper, longer-lasting glow Skincare, injectables and more Curated K-Beauty drops just for members Cancel anytime, enjoy at your pace *Glutathione IV Push administered only following individual clinical evaluation and supervising physician delegation.",
+    "snippet": "다섯 단계 · 당신을 위한 맞춤 루틴 Instead of asking one treatment to do everything, SuA Glow layers five complementary treatments into one cohesive monthly Korean ritual. Ch..."
   },
   {
     "url": "memberships.html",
     "title": "Glass Skin Is A Practice, Not A Quick Fix.",
-    "pageTitle": "Korean Glass Skin Membership Dallas",
+    "pageTitle": "Korean Glass Skin Memberships Dallas",
     "category": "QUESTIONS & ANSWERS",
     "content": "Glass skin isn't created with one random facial. It's built through consistent, layered, personalized skin care. Every month, SuA Glow layers five complementary treatments into one provider-curated Korean Glass Skin Ritual — then personalizes your Skin Booster Edit around what your skin needs right now. Instead of asking one machine to do everything, our multi-modal approach nurtures each layer of the skin barrier. A monthly ritual for long-term radiance. Skin-first. Always. Your Skin Booster Edit evolves with your skin. Five complementary steps. One ritual. SEOUL PHILOSOPHYDALLAS ADDRESS. VERY K-BEAUTY. SUA GLOWCARROLLTON, TX",
     "snippet": "Glass skin isn't created with one random facial. It's built through consistent, layered, personalized skin care. Every month, SuA Glow layers five complementary..."
   },
   {
     "url": "memberships.html",
-    "title": "EVERYTHING INCLUDED. $299/MONTH.",
-    "pageTitle": "Korean Glass Skin Membership Dallas",
+    "title": "MORE THAN A MEMBERSHIP. A COMPLETE KOREAN RITUAL.",
+    "pageTitle": "Korean Glass Skin Memberships Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift. Hydrate. Refine. Soothe. Restore. Glow. Inner wellness. Outer glow. A rotating K-Beauty discovery — from curated skincare extras, masks and ampoules to seasonal finishing touches. WHAT'S DROPPING THIS MONTH? YOU'LL HAVE TO COME IN AND SEE. MORE THAN A MEMBERSHIP. A SKIN RITUAL. Priority booking Member-only access to new treatments First look at exclusive events CANCEL ANYTIME · NO LONG-TERM COMMITMENT KOREAN-INSPIRED · PROVIDER-CURATED · GLASS SKIN OBSESSED",
-    "snippet": "Five layers. Member perks. A little Seoul every month. Korean skincare. Medical technology. Real results. Cleanse and refresh. Personalized for your skin. Lift...."
+    "content": "Enjoy exclusive spa savings, VIP booking access, and curated Korean beauty surprises with every visit. Every month, our providers curate a limited-edition Korean skincare discovery for our Premium members. From clinic-grade ampoules and modeling masks to seasonal sheet masks and post-care essentials sourced directly from Seoul. 10% Off all Korean retail skincare & sun protection products Priority Scheduling for evenings, weekends, and peak calendar dates Member-First Access to new Korean aesthetic device launches Cancel Anytime with simple 30-day notice — zero contracts KOREAN-INSPIRED · PROVIDER-CURATED · CARROLLTON, TX",
+    "snippet": "Enjoy exclusive spa savings, VIP booking access, and curated Korean beauty surprises with every visit. Every month, our providers curate a limited-edition Korea..."
   },
   {
     "url": "memberships.html#faq",
     "title": "Korean Glass Skin Membership FAQs",
-    "pageTitle": "Korean Glass Skin Membership Dallas",
+    "pageTitle": "Korean Glass Skin Memberships Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. Your $299 monthly membership includes one provider-curated 5-Layer Korean Glass Skin Ritual featuring AquaFacial, Needle-Free Skin Booster Infusion, LDM Water Drop Lifting, LED Red Light Therapy, and a Glutathione IV Push when medically appropriate. Members also receive the rotating Seoul Glow Drop, priority booking, and member-only perks. K-Beauty is all about the layers. So is your facial. Rather than relying on one treatment, the SuA Glow Glass Skin Method™ brings five complementary layers together in one Korean-inspired monthly ritual. The method combines consistent skin care, medical aesthetic technology, and provider-guided personalization rather than a one-and-done approach. The membership is designed for adults who want a consistent, skin-first approach to hydration, radiance, texture, and overall skin quality. Your provider evaluates your skin, goals, medical history, and treatment candidacy to determine whether the ritual—and each included layer—is appropriate for you. Yes. The five-layer framework provides the foundation, while your Skin Booster Edit can be personalized around what your skin needs right now. Your monthly focus may include DEWY for hydration, TONE-UP for radiance, CALM for barrier support, or SMOOTH for texture, based on provider assessment and individual candidacy. The membership is designed around one Glass Skin Ritual each month. That's intentional: the SuA Glow philosophy emphasizes consistent, layered skin care rather than chasing one-time quick fixes. Your provider may modify or defer individual treatments when clinically appropriate. Yes. Your membership is $299 per month and includes your monthly 5-Layer Glass Skin Ritual plus eligible member benefits. There is no separate charge for each of the five included layers. Optional treatments, upgrades, products, or services outside the membership are additional. The facial and device-based layers are designed to be gentle, with little to no expected downtime for most appropriate candidates. The Glutathione IV Push involves IV administration and is included only when medically appropriate. Individual experiences, treatment recommendations, and responses vary. Yes. The Glass Skin Membership is designed without a long-term membership commitment. Pauses, cancellations, and other membership changes are subject to the notice requirements and terms outlined in your membership agreement. The Korean Glass Skin Membership is available exclusively at SuA Glow Medical Aesthetics in Carrollton, Texas, serving Dallas–Fort Worth and surrounding communities including Plano, Frisco, Coppell, Addison, Grapevine, and Southlake. The Seoul Drop is your rotating K-Beauty discovery included with the Glass Skin Membership. Selections may include curated skincare extras, masks, ampoules, or seasonal finishing touches, with the featured discovery changing periodically. What's dropping next? You'll have to come in and see.",
-    "snippet": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. Your $299 monthly membership includes one provider-curate..."
+    "content": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. SuA Glow offers two distinct monthly membership tiers designed around Korean skincare philosophy: • Glass Skin Essential ($199/mo): A 60-minute foundational facial ritual utilizing our EVE-Omega platform. Features a Korean double cleanse, gentle dermabrasion, AquaFacial pore refining, dual-prong microcurrent/EMS facial sculpting, a custom Korean hydrating molding mask, and medical LED red light therapy. • Glass Skin Premium™ ($299/mo): Our all-inclusive clinical five-layer ritual combining medical AquaFacial, needle-free DEP skin booster infusion, LDM water drop ultrasound, LED red light therapy, and a Glutathione IV push (administered when clinically appropriate), plus the monthly rotating Seoul Drop. Yes, absolutely! You can upgrade, downgrade, or switch between Glass Skin Essential ($199) and Glass Skin Premium ($299) at any time. Simply notify our front desk before your next monthly billing date, and your membership will adjust seamlessly. The membership is designed for adults who want a consistent, skin-first approach to hydration, radiance, texture, and overall skin quality. Your provider evaluates your skin, goals, medical history, and treatment candidacy to determine whether the ritual—and each included layer—is appropriate for you. Yes. In both memberships, our licensed providers customize the active serums and targeted steps around your current skin needs. For Premium members, your Skin Booster Edit is tailored to focus on DEWY, TONE-UP, CALM, or SMOOTH based on clinical evaluation. Both memberships are designed around one complete ritual each month. The Korean philosophy is built on cumulative consistency rather than harsh, irregular procedures. One monthly session maintains cellular turnover, barrier hydration, and luminous skin quality all year round. No. Both memberships are month-to-month with no long-term contracts or enrollment fees. You may pause or cancel at any time with simple written notice prior to your next renewal. The facial and device-based layers are designed to be gentle, with little to no expected downtime for most appropriate candidates. The Glutathione IV Push involves IV administration and is included only when medically appropriate. Individual experiences, treatment recommendations, and responses vary. Yes. The Glass Skin Membership is designed without a long-term membership commitment. Pauses, cancellations, and other membership changes are subject to the notice requirements and terms outlined in your membership agreement. The Korean Glass Skin Membership is available exclusively at SuA Glow Medical Aesthetics in Carrollton, Texas, serving Dallas–Fort Worth and surrounding communities including Plano, Frisco, Coppell, Addison, Grapevine, and Southlake. The Seoul Drop is your rotating K-Beauty discovery included with the Glass Skin Membership. Selections may include curated skincare extras, masks, ampoules, or seasonal finishing touches, with the featured discovery changing periodically. What's dropping next? You'll have to come in and see.",
+    "snippet": "Everything you need to know about our monthly five-layer ritual, membership pricing, and VIP benefits. SuA Glow offers two distinct monthly membership tiers des..."
   },
   {
     "url": "memberships.html#final-consultation-cta",
     "title": "Five layers. One ritual.Very K-Beauty.",
-    "pageTitle": "Korean Glass Skin Membership Dallas",
+    "pageTitle": "Korean Glass Skin Memberships Dallas",
     "category": "QUESTIONS & ANSWERS",
     "content": "K-Beauty Medspa • Carrollton HQ Treatment selection and sequencing for the SUA GLOW Glass Skin Membership are individualized based on patient goals, skin condition, medical history, and clinical assessment under supervising physician protocols.",
     "snippet": "K-Beauty Medspa • Carrollton HQ Treatment selection and sequencing for the SUA GLOW Glass Skin Membership are individualized based on patient goals, skin condit..."

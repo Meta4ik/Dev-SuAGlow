@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Korean Glass Skin Membership Dallas | SuA Glow</title>
+    <title>Korean Glass Skin Memberships Dallas | SuA Glow</title>
     <meta name="description"
-        content="Join the SuA Glow Glass Skin Club in Carrollton, TX. A $299/month Korean-inspired skincare membership featuring one monthly five-layer Glass Skin Ritual: Aquafacial, Needle-Free Booster Infusion, LDM Ultrasound, Red Light Therapy, and Glutathione IV Push.">
+        content="Explore Korean Glass Skin Memberships at SuA Glow in Carrollton, TX. Choose between the Glass Skin Essential ($199/mo 60-min EVE-Omega facial) and the Glass Skin Premium ($299/mo 90-min clinical 5-layer ritual with LDM ultrasound and Glutathione IV push).">
     <meta name="keywords"
-        content="Korean glass skin membership Dallas, facial membership Carrollton, K-beauty membership Dallas, SuA Glow glass skin club, $299 facial membership, LDM ultrasound membership, glutathione IV push, needle-free infusion, Carrollton med spa membership">
+        content="Korean glass skin membership Dallas, Glass Skin Essential, Glass Skin Premium, facial membership Carrollton, K-beauty membership Dallas, SuA Glow glass skin club, $199 facial membership, $299 facial membership, EVE-Omega facial, LDM ultrasound, Carrollton med spa membership">
     <link rel="icon" href="assets/favicon.png" type="image/png">
     
     <!-- Google Fonts -->
@@ -18,13 +18,57 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
         
-    <link rel="stylesheet" href="dist/output.css?v=56">
-    <link rel="stylesheet" href="style.css?v=44">
+    <link rel="stylesheet" href="dist/output.css?v=61">
+    <link rel="stylesheet" href="style.css?v=47">
         <!-- Google Tag & Ads Conversion Tracking -->
     <script src="google-tag.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
+        /* Editorial Membership Card CTA Models */
+        .cta-model-essential {
+            position: absolute;
+            left: -22%;
+            bottom: 0;
+            height: 100%;
+            width: auto;
+            max-width: none;
+            object-fit: contain;
+            object-position: bottom left;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+            transition: all 0.3s ease;
+        }
+
+        .cta-model-premium {
+            position: absolute;
+            right: -36%;
+            bottom: 0;
+            height: 120%;
+            width: auto;
+            max-width: none;
+            object-fit: contain;
+            object-position: bottom right;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 639px) {
+            .cta-model-essential {
+                left: -15%;
+                height: 60%;
+                opacity: 0.2;
+            }
+            .cta-model-premium {
+                right: -15%;
+                height: 65%;
+                opacity: 0.2;
+            }
+        }
+
         .glow-card {
             position: relative;
             background: rgba(255, 255, 255, 0.95);
@@ -125,372 +169,751 @@
 <body class="bg-off-white text-charcoal antialiased selection:bg-warm-gold/20 selection:text-near-black">
     <div id="nav-placeholder"></div>
 
-    <!-- Hero Section (Strictly following DESIGN.md Standard Inner-Page Hero pattern) -->
+    <!-- Split Hero Section (Matching Editorial Pattern & Inspirational Layout) -->
     <section id="hero" data-nav-theme="dark"
-        class="relative min-h-[1260px] lg:min-h-[1320px] flex items-start justify-center text-center px-6 sm:px-8 pt-[740px] sm:pt-[800px] md:pt-[860px] lg:pt-[900px] overflow-hidden bg-near-black pb-16 sm:pb-20">
-        <div class="absolute inset-0 z-0 pointer-events-none">
-            <!-- Background Image: Radiant and bright on top, anchored to top -->
-            <div class="absolute top-0 inset-x-0 h-[880px] sm:h-[960px] md:h-[1020px] overflow-hidden">
-                <img src="assets/member_hero.webp" alt="SuA Glow Korean Glass Skin Community - Inclusive Care & Diverse Skin Tones"
-                    class="w-full h-full object-cover object-[center_20%]">
-                <!-- Graded Overlay: Crystal clear & bright across faces, softly grading to deep dark at bottom of frame -->
-                <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent via-22% via-near-black/75 via-75% to-near-black"></div>
-            </div>
-            <!-- Solid deep dark canvas where text and CTAs sit with 100% crystal clear legibility -->
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% via-near-black/95 via-68% to-near-black to-80%"></div>
-            <div class="absolute bottom-0 inset-x-0 h-64 bg-near-black"></div>
-            <div class="absolute top-[960px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-warm-gold/15 blur-[160px] rounded-full pointer-events-none"></div>
+        class="relative pt-[175px] sm:pt-[195px] lg:pt-[220px] pb-0 px-6 sm:px-8 md:px-12 lg:px-16 bg-[#090A0C] text-white overflow-hidden">
+        
+        <!-- Atmospheric Background with Radial Gradient Dark Glow -->
+        <div class="absolute inset-0 z-0 bg-[#090A0C] pointer-events-none overflow-hidden">
+            <!-- Center/Right Dark Radial Glow -->
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_75%_75%_at_62%_48%,rgba(170,152,124,0.22)_0%,rgba(143,133,123,0.08)_35%,rgba(9,10,12,0.85)_70%,#090A0C_100%)]"></div>
+            <!-- Subtle Golden Core Behind Model & Particles -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_450px_at_65%_42%,rgba(201,182,155,0.14)_0%,transparent_75%)]"></div>
+            <!-- Soft Vignette Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-transparent via-30% to-[#090A0C]"></div>
+            <!-- Ambient Glow Blobs -->
+            <div class="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-warm-gold/15 blur-[140px] rounded-full pointer-events-none"></div>
+            <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-warm-gold/10 blur-[150px] rounded-full pointer-events-none"></div>
         </div>
 
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <!-- Floating Circular Price Badge (Desktop Hero - Signature Frosted Glass Style - Hidden for now) -->
-            <div class="absolute !hidden items-center justify-center z-20 text-[#AA987C] pointer-events-none float-slow"
-                style="width: 140px; height: 140px; top: -10px; right: -80px; animation: float 6s ease-in-out infinite;">
-                <div class="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.25)] border border-white/20"></div>
-                <svg viewBox="0 0 100 100" class="relative z-10 w-[95%] h-[95%]" style="animation: spin-badge 20s linear infinite;">
-                    <path id="textCirclePriceHero" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="transparent" />
-                    <text font-family="Montserrat, sans-serif" font-size="7.4" font-weight="700" fill="currentColor" class="uppercase" letter-spacing="0.12em">
-                        <textPath href="#textCirclePriceHero" startOffset="0%">
-                            • ALL-INCLUSIVE KOREAN RITUAL • VIP MEMBER •
-                        </textPath>
-                    </text>
-                </svg>
-                <div class="absolute inset-0 flex flex-col items-center justify-center z-20 text-center leading-none">
-                    <span class="font-heading font-black text-3xl text-white tracking-tight leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">$299</span>
-                    <span class="text-[9px] uppercase font-bold tracking-[0.24em] text-[#AA987C] mt-1 drop-shadow">/ MONTH</span>
-                </div>
-            </div>
+        <!-- Interactive Golden Particle Canvas (Full Hero, Behind Model & Text) -->
+        <canvas id="hero-particle-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-[5]"></canvas>
 
-            <!-- Category Pill -->
-            <div class="hero-anim" style="animation-delay: 0.1s;">
-                <span
-                    class="inline-flex items-center justify-center leading-none px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[10px] sm:text-xs tracking-[0.25em] uppercase text-warm-gold font-semibold mb-6">
-                    <span class="pt-[1px]">THE SUA GLOW GLASS SKIN METHOD™</span>
-                </span>
-            </div>
-
-            <!-- Main Heading Matching Graphic -->
-            <h1 class="hero-anim font-heading font-light text-3xl sm:text-5xl md:text-6xl text-white mb-6 uppercase tracking-[0.14em] [text-wrap:balance] leading-[1.15]"
-                style="animation-delay: 0.25s;">
-                Korean Glass Skin<br><span class="text-warm-gold font-normal tracking-[0.16em]">Membership</span>
-            </h1>
-
-            <!-- Subtitle 1 -->
-            <p class="hero-anim font-heading text-sm sm:text-base md:text-lg text-white font-medium tracking-[0.2em] mb-4 [text-wrap:balance] uppercase"
-                style="animation-delay: 0.4s;">
-                Five Layers. One Monthly Korean Skin Ritual.
-            </p>
-
-            <!-- Subtitle 2 -->
-            <p class="hero-anim font-body text-sm sm:text-base text-white/80 max-w-2xl mx-auto leading-relaxed mb-10 [text-wrap:balance]"
-                style="animation-delay: 0.55s;">
-                A physician-guided approach to hydration, skin quality<br class="hidden sm:inline"> and your signature SuA Glow.
-            </p>
-
-            <!-- Early Access Capsule Pill Bar with Signature Border Glow -->
-            <div class="hero-anim max-w-2xl mx-auto mb-10" style="animation-delay: 0.7s;">
-                <div class="early-access-glow-pill inline-flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6 px-6 sm:px-8 py-3.5 sm:py-4 backdrop-blur-md w-full sm:w-auto">
-                    <span class="font-heading text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase text-warm-gold">
-                        VIP Membership
-                    </span>
-                    <span class="hidden sm:inline-block w-px h-6 bg-white/20"></span>
-                    <div class="flex items-baseline gap-1">
-                        <span class="font-heading font-bold text-2xl sm:text-3xl text-white tracking-tight">$299</span>
-                        <span class="font-body text-xs sm:text-sm text-white/70 uppercase tracking-wider">/month</span>
-                    </div>
-                    <span class="hidden sm:inline-block w-px h-6 bg-white/20"></span>
-                    <span class="font-heading text-[11px] sm:text-xs font-medium tracking-[0.18em] uppercase text-white/80">
-                        $599+ Value <span class="text-xs sm:text-sm font-semibold text-warm-gold">→</span> $299/Month
-                    </span>
-                </div>
-            </div>
-
-            <!-- Hero CTA Matching Graphic -->
-            <div class="hero-anim flex items-center justify-center" style="animation-delay: 0.85s;">
-                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                    class="group inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.18em] uppercase text-[#1B1E21] bg-gradient-to-r from-[#D6C7B2] via-[#AA987C] to-[#948267] hover:brightness-110 shadow-[0_6px_25px_rgba(170,152,124,0.35)] hover:shadow-[0_8px_30px_rgba(170,152,124,0.5)] hover:scale-[1.02] transition-all duration-300">
-                    <span>START YOUR GLASS SKIN ERA</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quick Stats / Highlights Bar (Recreated matching reference design) -->
-    <section class="bg-[#FAF8F5] border-y border-[#EAE5DF] py-12 lg:py-16 px-4 sm:px-6 relative z-20">
-        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
-            
-            <!-- Col 1: $299/mo -->
-            <div class="relative flex flex-col items-center justify-center text-center px-4 md:border-r md:border-[#E8E2D9] group">
-                <!-- Soft Circular Halo -->
-                <div class="absolute -top-3 w-20 h-20 rounded-full bg-gradient-to-t from-[#E8DDD1]/45 to-transparent pointer-events-none -z-0"></div>
+        <div class="max-w-7xl mx-auto relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-end">
                 
-                <div class="relative z-10 flex items-baseline justify-center leading-none">
-                    <span class="font-heading font-light text-5xl sm:text-6xl text-[#1B1E21] tracking-tight leading-none">$299</span>
-                    <span class="font-heading font-normal text-2xl sm:text-3xl text-[#AA987C] ml-1 lowercase leading-none">/mo</span>
+                <!-- Left Column: Copy & CTAs (Exact Inspirational Match) -->
+                <div class="lg:col-span-6 space-y-6 sm:space-y-7 text-left pb-10 sm:pb-12 lg:pb-14">
+                    
+                    <!-- Eyebrow Pill Badge -->
+                    <div>
+                        <span class="hero-eyebrow inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-warm-gold/35 bg-warm-gold/10 text-warm-gold text-[10px] sm:text-xs font-heading font-semibold tracking-[0.25em] uppercase">
+                            K-BEAUTY &bull; MONTHLY SKINCARE &bull; MEMBERSHIP
+                        </span>
+                    </div>
+
+                    <!-- Main Display Headline -->
+                    <h1 class="heading-wide text-4xl sm:text-5xl lg:text-[54px] xl:text-[62px] text-white font-light leading-[1.08] uppercase tracking-[0.12em] [text-wrap:balance]">
+                        YOUR SKIN.<br>
+                        YOUR RITUAL.<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#E0D2BE] via-[#C9B69B] to-[#AA987C] font-normal">YOUR GLOW.</span>
+                    </h1>
+
+                    <!-- Subheading -->
+                    <p class="font-heading font-semibold text-xs sm:text-sm uppercase tracking-[0.22em] text-warm-gold/90">
+                        TWO RITUALS. ONE BEAUTIFUL COMMITMENT.
+                    </p>
+
+                    <!-- Italic Quote Callout with Gold Border -->
+                    <div class="border-l-2 border-warm-gold/60 pl-4 py-1 text-white/90 italic font-body font-light text-sm sm:text-base leading-relaxed">
+                        Great skin isn't a one-time treatment.<br class="hidden sm:inline">
+                        It's a beautiful monthly habit.
+                    </div>
+
+                    <!-- Description Body Paragraph -->
+                    <p class="font-body text-xs sm:text-sm md:text-base text-white/75 font-light leading-relaxed max-w-xl">
+                        Discover SUA GLOW's Korean-inspired memberships, thoughtfully designed to cleanse, nourish, and refresh your skin month after month.
+                    </p>
                 </div>
-                <span class="block font-body text-[11px] sm:text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[#8C847A] mt-3.5">
-                    One All-Inclusive Price
-                </span>
+
+                <!-- Right Column: Model (Shifted Left 50px on Full Desktop) -->
+                <div id="hero-model-col" class="lg:col-span-6 relative flex items-end justify-center lg:justify-end self-end w-full translate-x-0 lg:translate-x-[46px] xl:translate-x-[78px] 2xl:translate-x-[110px]">
+                    <!-- Cutout Model Image -->
+                    <img src="assets/hero_membership_model.png" id="hero-model-img"
+                        alt="SUA GLOW Korean Glass Skin Member"
+                        class="relative z-10 w-auto h-auto max-h-[460px] sm:max-h-[500px] lg:max-h-none lg:h-[520px] xl:h-[560px] object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.7)] select-none pointer-events-none">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- The Two Membership Options (Tightened Spacing Between Text & Button) -->
+    <section id="membership-tiers" class="py-14 sm:py-20 px-6 sm:px-8 bg-near-black relative overflow-hidden border-b border-white/5">
+        
+        <div class="max-w-5xl mx-auto text-center mb-8 sm:mb-10">
+            <span class="inline-block px-4 py-1.5 rounded-full border border-warm-gold/30 text-[10px] sm:text-xs font-heading font-semibold tracking-[0.24em] text-warm-gold uppercase bg-warm-gold/10 mb-3">
+                THE SUA GLOW MEMBERSHIP COLLECTION
+            </span>
+            <h2 class="font-heading font-light text-2xl sm:text-3xl md:text-4xl text-white uppercase tracking-wider mb-2">
+                CHOOSE YOUR MONTHLY SKIN RITUAL
+            </h2>
+            <p class="font-body text-xs sm:text-sm text-white/70 tracking-wide max-w-md mx-auto">
+                Select the Korean skincare ritual curated for your skin goals.
+            </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch text-center">
+
+            <!-- Card Block 1: Glass Skin Essential (Light Luxury Theme - Compact) -->
+            <div class="rounded-[2rem] bg-[#FAF8F5]/95 backdrop-blur-xl border border-[#E5DFD5] p-6 sm:p-7 md:p-8 flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:border-taupe/60 transition-all duration-300 relative group">
+                <div>
+                    <!-- Pill Badge -->
+                    <div class="mb-3">
+                        <span class="inline-block px-4 py-1 rounded-full border border-taupe/30 text-[10px] sm:text-xs font-heading font-semibold tracking-[0.24em] text-taupe uppercase bg-taupe/10">
+                            ESSENTIAL
+                        </span>
+                    </div>
+
+                    <!-- Tier Name: "Glass Skin" on top + "ESSENTIAL" graphic underneath -->
+                    <div class="mb-2.5 flex flex-col items-center justify-center">
+                        <h2 class="font-heading font-light text-2xl sm:text-3xl text-[#181B1E] uppercase tracking-wide mb-1">
+                            GLASS SKIN
+                        </h2>
+                        <div class="h-8 sm:h-9 md:h-10 flex items-center justify-center">
+                            <img src="assets/essential-text-dark.png" alt="Essential" class="h-full w-auto object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="flex items-baseline justify-center gap-2 mb-1.5">
+                        <span class="font-heading font-bold text-4xl sm:text-5xl text-[#181B1E] tracking-tight">$199</span>
+                        <span class="font-body text-xs sm:text-sm uppercase tracking-[0.22em] text-charcoal/60 font-medium">/ MONTH</span>
+                    </div>
+
+                    <!-- Subhead / Duration -->
+                    <p class="font-heading text-xs sm:text-sm uppercase tracking-[0.2em] text-taupe font-semibold">
+                        60-MINUTE RITUAL
+                    </p>
+
+                    <!-- Subtle Divider -->
+                    <div class="w-full h-px bg-charcoal/10 my-3 sm:my-3.5"></div>
+
+                    <!-- Section Label -->
+                    <p class="font-heading text-[10px] sm:text-xs font-semibold tracking-[0.22em] text-charcoal/50 uppercase mb-1.5">
+                        THE 5-STEP GLOW RITUAL
+                    </p>
+
+                    <!-- Inclusions Dot List -->
+                    <p class="font-body text-xs sm:text-sm text-charcoal/80 tracking-wider">
+                        AquaFacial &nbsp;•&nbsp; EMS &nbsp;•&nbsp; Molding Mask &nbsp;•&nbsp; LED
+                    </p>
+                </div>
+
+                <!-- Action Button Directly Below With Tight Spacing -->
+                <div class="pt-5 sm:pt-6">
+                    <a href="#membership-collection"
+                        class="group/btn w-full py-3.5 sm:py-4 px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-white bg-gradient-to-r from-[#8F857B] via-[#AA987C] to-[#8F857B] hover:brightness-110 shadow-[0_8px_25px_rgba(143,133,123,0.35)] hover:shadow-[0_10px_30px_rgba(170,152,124,0.35)] hover:scale-[1.01] transition-all duration-300 inline-flex items-center justify-center gap-2.5">
+                        <span>START YOUR GLOW</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
             </div>
 
-            <!-- Col 2: 5 LAYERS -->
-            <div class="relative flex flex-col items-center justify-center text-center px-4 md:border-r md:border-[#E8E2D9] group">
-                <!-- 5 Concentric Arches Graphic -->
-                <div class="absolute -top-7 w-28 h-20 pointer-events-none -z-0 flex items-end justify-center">
-                    <svg viewBox="0 0 120 70" class="w-full h-full text-[#AA987C]/30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 10 70 A 50 50 0 0 1 110 70" stroke="currentColor" stroke-width="1.2" stroke-dasharray="0" opacity="0.25" />
-                        <path d="M 22 70 A 38 38 0 0 1 98 70" stroke="currentColor" stroke-width="1.2" opacity="0.4" />
-                        <path d="M 34 70 A 26 26 0 0 1 86 70" stroke="currentColor" stroke-width="1.2" opacity="0.55" />
-                        <path d="M 46 70 A 14 14 0 0 1 74 70" stroke="currentColor" stroke-width="1.2" opacity="0.7" />
-                        <path d="M 54 70 A 6 6 0 0 1 66 70" stroke="currentColor" stroke-width="1.2" opacity="0.85" />
-                    </svg>
+            <!-- Card Block 2: Glass Skin Premium (Dark Luxury Theme - Compact) -->
+            <div class="rounded-[2rem] bg-[#14171A]/90 backdrop-blur-xl border border-warm-gold/50 p-6 sm:p-7 md:p-8 flex flex-col justify-between shadow-[0_20px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(170,152,124,0.2)] hover:border-warm-gold hover:shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_45px_rgba(170,152,124,0.35)] transition-all duration-300 relative group overflow-hidden">
+                
+                <!-- Top Corner Warm Gold Rim Highlight -->
+                <div class="absolute -top-16 -right-16 w-44 h-44 bg-warm-gold/25 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="relative z-10">
+                    <!-- Pill Badge -->
+                    <div class="mb-3">
+                        <span class="inline-block px-4 py-1 rounded-full border border-warm-gold/70 text-[10px] sm:text-xs font-heading font-semibold tracking-[0.24em] text-warm-gold uppercase bg-warm-gold/15">
+                            PREMIUM
+                        </span>
+                    </div>
+
+                    <!-- Tier Name: "Glass Skin" on top + "PREMIUM" graphic underneath -->
+                    <div class="mb-2.5 flex flex-col items-center justify-center">
+                        <h2 class="font-heading font-light text-2xl sm:text-3xl text-white uppercase tracking-wide mb-1">
+                            GLASS SKIN
+                        </h2>
+                        <div class="h-8 sm:h-9 md:h-10 flex items-center justify-center">
+                            <img src="assets/premium-text-white.png" alt="Premium" class="h-full w-auto object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Price ($299/mo) -->
+                    <div class="flex items-baseline justify-center gap-2 mb-1.5">
+                        <span class="font-heading font-bold text-4xl sm:text-5xl text-white tracking-tight">$299</span>
+                        <span class="font-body text-xs sm:text-sm uppercase tracking-[0.22em] text-white/60 font-light">/ MONTH</span>
+                    </div>
+
+                    <!-- Subhead / Duration -->
+                    <p class="font-heading text-xs sm:text-sm uppercase tracking-[0.2em] text-warm-gold font-semibold">
+                        90-MINUTE RITUAL
+                    </p>
+
+                    <!-- Subtle Divider -->
+                    <div class="w-full h-px bg-white/15 my-3 sm:my-3.5"></div>
+
+                    <!-- Section Label -->
+                    <p class="font-heading text-[10px] sm:text-xs font-semibold tracking-[0.22em] text-white/50 uppercase mb-1.5">
+                        THE 5-LAYER GLASS SKIN RITUAL
+                    </p>
+
+                    <!-- Inclusions Dot List -->
+                    <p class="font-body text-xs sm:text-sm text-white/80 tracking-wider">
+                        Skin Booster &nbsp;•&nbsp; LDM &nbsp;•&nbsp; LED &nbsp;•&nbsp; Wellness
+                    </p>
                 </div>
 
-                <div class="relative z-10 flex items-baseline justify-center leading-none">
-                    <span class="font-heading font-light text-5xl sm:text-6xl text-[#AA987C] tracking-tight leading-none">5</span>
-                    <span class="font-heading font-light text-3xl sm:text-4xl text-[#AA987C] uppercase tracking-[0.14em] ml-2.5 leading-none">Layers</span>
+                <!-- Action Button Directly Below With Tight Spacing -->
+                <div class="relative z-10 pt-5 sm:pt-6">
+                    <a href="#membership-collection"
+                        class="group/btn w-full py-3.5 sm:py-4 px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-[#131619] bg-gradient-to-r from-[#D8C7B0] via-[#AA987C] to-[#927F63] hover:brightness-110 shadow-[0_0_30px_rgba(170,152,124,0.45)] hover:shadow-[0_0_40px_rgba(170,152,124,0.65)] hover:scale-[1.01] transition-all duration-300 inline-flex items-center justify-center gap-2.5">
+                        <span>ELEVATE YOUR GLOW</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                    </a>
                 </div>
-                <span class="block font-body text-[11px] sm:text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[#8C847A] mt-3.5">
-                    One Synergistic Ritual
-                </span>
-            </div>
-
-            <!-- Col 3: SEOUL DROP (Official Brand Logo) -->
-            <div class="relative flex flex-col items-center justify-center text-center px-4 group">
-                <!-- Soft Circular Halo -->
-                <div class="absolute -top-3 w-20 h-20 rounded-full bg-gradient-to-t from-[#E8DDD1]/45 to-transparent pointer-events-none -z-0"></div>
-
-                <div class="relative z-10 flex items-center justify-center h-[52px] sm:h-[60px]">
-                    <img src="assets/seoul-drop-logo.svg" alt="Seoul Drop" class="h-[44px] sm:h-[50px] w-auto object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105" />
-                </div>
-                <span class="block font-body text-[11px] sm:text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[#8C847A] mt-3.5">
-                    Monthly K-Beauty Discovery
-                </span>
             </div>
 
         </div>
     </section>
 
-    <!-- Clinical Oversight & Medical Director (Moved directly after header stats) -->
+    <!-- Clinical Oversight & Medical Director (Moved directly after hero) -->
     <div id="oversight-placeholder" data-treatment="Glass Skin Club"></div>
 
-    <!-- The 5 Layers: The SuA Glow Glass Skin Method™ -->
-    <section id="five-layers" class="py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-[#0B0D0F] border-y border-white/5 relative overflow-hidden">
+    <!-- The 5 Layers: Two Curated Korean Rituals Side-by-Side (Matching Original Monolith Scale) -->
+    <section id="membership-collection" class="py-24 md:py-32 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#0B0D0F] border-y border-white/5 relative overflow-hidden">
         <!-- Full-bleed Dark Abstract Layers Background Graphic -->
         <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
             <img src="assets/dark_abstract_layers_bg.jpg" alt="Dark Abstract Korean Glass Skin Layers Pattern"
                 class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 opacity-60">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0B0D0F]/90 via-[#0B0D0F]/65 to-[#0B0D0F]/95"></div>
-            <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-warm-gold/15 rounded-full blur-[160px]"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0B0D0F]/90 via-[#0B0D0F]/70 to-[#0B0D0F]/95"></div>
+            <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-warm-gold/15 rounded-full blur-[180px]"></div>
         </div>
 
-        <div class="max-w-5xl mx-auto relative z-10">
-            <!-- Section Header (Compact & Centered) -->
-            <div class="text-center mb-10 md:mb-12">
+        <div class="max-w-[1560px] mx-auto relative z-10">
+            <!-- Section Header (Centered) -->
+            <div class="text-center mb-14 md:mb-16">
                 <span class="inline-flex items-center justify-center leading-none px-4 py-2 bg-warm-gold/15 border border-warm-gold/30 rounded-full text-[10px] sm:text-xs tracking-[0.25em] uppercase text-warm-gold font-semibold mb-3 whitespace-nowrap">
-                    <span class="pt-[1px]">THE SUA GLOW GLASS SKIN METHOD™</span>
+                    THE SUA GLOW MEMBERSHIP COLLECTION
                 </span>
                 <h2 class="font-heading font-light text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-[0.06em] leading-tight mb-2 [text-wrap:balance]">
-                    5 Layers. <span class="text-warm-gold font-normal">One Korean Skin Ritual.</span>
+                    5 Layers. <span class="text-warm-gold font-normal">Two Ways to Glow.</span>
                 </h2>
                 <p class="text-warm-gold/90 text-xs sm:text-sm uppercase tracking-[0.28em] font-medium mb-3">
-                    다섯 단계 · 하나의 루틴
+                    다섯 단계 · 당신을 위한 맞춤 루틴
                 </p>
                 <p class="text-white/70 text-xs sm:text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed [text-wrap:balance]">
-                    Instead of asking one treatment to do everything, the SuA Glow Glass Skin Method™ layers five complementary treatments into one cohesive monthly Korean ritual.
+                    Instead of asking one treatment to do everything, SuA Glow layers five complementary treatments into one cohesive monthly Korean ritual. Choose the depth of care that fits your skin goals.
                 </p>
             </div>
 
-            <!-- Unified 5-Layer Monolith (Single cohesive unit matching More Than a Facial box width) -->
-            <div class="w-full max-w-5xl mx-auto bg-[#14181C]/95 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl divide-y divide-white/10 overflow-hidden">
-                <!-- Step 01: PREP (AQUAFACIAL) -->
-                <div class="flex flex-col md:flex-row items-stretch group hover:bg-white/[0.02] transition-colors duration-300">
-                    <!-- Front Column: Large Number on Top, Description Underneath -->
-                    <div class="w-full md:w-36 lg:w-40 bg-[#0E1114] border-b md:border-b-0 md:border-r border-white/10 p-5 sm:p-6 flex md:flex-col items-center justify-between md:justify-center text-center shrink-0">
-                        <span class="font-heading font-light text-5xl sm:text-6xl text-warm-gold tracking-tight leading-none">01</span>
-                        <span class="hidden md:block w-8 h-px bg-warm-gold/40 my-3 mx-auto"></span>
-                        <span class="md:hidden text-white/30 text-lg">|</span>
-                        <span class="font-heading text-xs sm:text-sm uppercase font-bold tracking-[0.25em] text-white/90">PREP</span>
-                    </div>
-                    <!-- Photo Window (Positioned on Left Immediately After Number) -->
-                    <div class="w-full md:w-56 lg:w-64 xl:w-72 relative overflow-hidden shrink-0 aspect-[16/10] md:aspect-auto min-h-[160px] md:min-h-0 bg-black/40 border-b md:border-b-0 md:border-r border-white/10">
-                        <img src="assets/aquafacial_water_splash.jpg" alt="Aquafacial Water Splash Treatment at SuA Glow"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-transparent via-transparent to-[#14181C]/40 pointer-events-none"></div>
-                    </div>
-                    <!-- Content Block -->
-                    <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center text-left space-y-2">
-                        <div class="flex flex-wrap items-center justify-between gap-2">
-                            <h3 class="font-heading font-light text-xl sm:text-2xl md:text-3xl text-white uppercase tracking-wider">
-                                Aquafacial
-                            </h3>
-                            <span class="text-xs sm:text-sm text-warm-gold font-medium uppercase tracking-widest">Cleanse · Polish · Prep</span>
+            <!-- Two Monolith Columns Grid (Side-by-Side on Desktop) -->
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+
+                <!-- ==================== COLUMN 1: GLASS SKIN ESSENTIAL ($199/MO - LIGHT LUXURY) ==================== -->
+                <div class="flex flex-col justify-between h-full space-y-6">
+                    <div>
+                        <!-- Column Header Card (Light Luxury - Fixed Equal Height) -->
+                        <div class="bg-[#FAF8F5] border border-[#E5DFD5] rounded-3xl p-6 sm:p-8 shadow-xl mb-6 flex flex-col justify-between xl:h-[340px] xl:min-h-[340px]">
+                            <div>
+                                <div class="flex items-center justify-between gap-3 mb-4">
+                                    <span class="px-3.5 py-1 rounded-full bg-taupe/15 border border-taupe/30 text-taupe font-semibold text-xs tracking-wider uppercase">
+                                        ESSENTIAL · 60-MIN RITUAL
+                                    </span>
+                                    <span class="font-heading text-xs uppercase tracking-[0.2em] text-charcoal/60 font-semibold">
+                                        FOUNDATIONAL CARE
+                                    </span>
+                                </div>
+                                <div class="mb-3">
+                                    <h3 class="font-heading font-light text-2xl sm:text-3xl text-[#181B1E] uppercase tracking-wide mb-1">
+                                        GLASS SKIN
+                                    </h3>
+                                    <div class="h-7 sm:h-8 flex items-center">
+                                        <img src="assets/essential-text-dark.png" alt="Essential" class="h-full w-auto object-contain">
+                                    </div>
+                                </div>
+                                <div class="flex items-baseline gap-2 mt-2 mb-3">
+                                    <span class="font-heading font-bold text-4xl sm:text-5xl text-[#181B1E] tracking-tight leading-none">$199</span>
+                                    <span class="font-body text-xs sm:text-sm uppercase tracking-widest text-taupe font-semibold">/ month</span>
+                                    <span class="ml-2 text-xs font-heading text-charcoal/40 tracking-wider line-through sm:inline hidden">$350+ VALUE</span>
+                                </div>
+                                <p class="font-heading text-xs sm:text-[13px] uppercase tracking-[0.18em] text-taupe font-semibold mb-2">
+                                    60-Minute Korean Facial Ritual
+                                </p>
+                                <p class="font-body text-xs sm:text-sm text-charcoal/80 leading-relaxed">
+                                    A consistent, results-driven monthly facial using our EVE-Omega workstation. Gentle, effective, and perfect for maintaining clear, hydrated, and healthy skin.
+                                </p>
+                            </div>
                         </div>
-                        <p class="text-sm sm:text-base text-white/80 font-light leading-relaxed">
-                            Our liquid microdermabrasion step gently clarifies pores, lifts dead surface cells, and infuses multi-phase hydration to create an immaculate, receptive canvas.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Step 02: INFUSE (NEEDLE-FREE SKIN BOOSTER INFUSION WITH DEP WAND) -->
-                <div class="flex flex-col md:flex-row items-stretch group hover:bg-white/[0.02] transition-colors duration-300">
-                    <!-- Front Column: Large Number on Top, Description Underneath -->
-                    <div class="w-full md:w-36 lg:w-40 bg-[#0E1114] border-b md:border-b-0 md:border-r border-white/10 p-5 sm:p-6 flex md:flex-col items-center justify-between md:justify-center text-center shrink-0">
-                        <span class="font-heading font-light text-5xl sm:text-6xl text-warm-gold tracking-tight leading-none">02</span>
-                        <span class="hidden md:block w-8 h-px bg-warm-gold/40 my-3 mx-auto"></span>
-                        <span class="md:hidden text-white/30 text-lg">|</span>
-                        <span class="font-heading text-xs sm:text-sm uppercase font-bold tracking-[0.25em] text-white/90">INFUSE</span>
-                    </div>
-                    <!-- Photo Window (Positioned on Left Immediately After Number) -->
-                    <div class="w-full md:w-56 lg:w-64 xl:w-72 relative overflow-hidden shrink-0 aspect-[16/10] md:aspect-auto min-h-[160px] md:min-h-0 bg-black/40 border-b md:border-b-0 md:border-r border-white/10">
-                        <img src="assets/dep_wand_infusion_droplet.jpg" alt="SuA Glow DEP DermoElectroPoration Wand Infusion"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-transparent via-transparent to-[#14181C]/40 pointer-events-none"></div>
-                    </div>
-                    <!-- Content Block -->
-                    <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center text-left space-y-2.5">
-                        <div class="flex flex-wrap items-center justify-between gap-2">
-                            <h3 class="font-heading font-light text-xl sm:text-2xl md:text-3xl text-white uppercase tracking-wider">
-                                Needle-Free Skin Booster Infusion
-                            </h3>
-                            <span class="text-xs sm:text-sm text-warm-gold font-medium uppercase tracking-widest">Your Skin Booster Edit</span>
+                        <!-- 5-Layer Monolith Unit (Light Luxury - Strictly Equal Heights) -->
+                        <div class="w-full bg-[#FCFBF9] rounded-3xl border border-[#E5DFD5] shadow-2xl divide-y divide-[#EAE5DF] overflow-hidden">
+
+                            <!-- Step 1: EXFOLIATE -->
+                            <div class="flex flex-col sm:flex-row items-stretch group hover:bg-[#F7F4EE] transition-colors duration-300 min-h-[175px] xl:h-[240px] xl:min-h-[240px]">
+                                <div class="w-full sm:w-28 lg:w-32 h-full bg-[#F3EFEA] border-b sm:border-b-0 sm:border-r border-[#EAE5DF] p-4 sm:p-5 flex sm:flex-col items-center justify-between sm:justify-center text-center shrink-0">
+                                    <span class="font-heading font-light text-4xl sm:text-5xl text-taupe tracking-tight leading-none">1</span>
+                                    <span class="hidden sm:block w-6 h-px bg-taupe/30 my-2.5 mx-auto"></span>
+                                    <span class="sm:hidden text-charcoal/30 text-base">|</span>
+                                    <span class="font-heading text-[10px] sm:text-xs uppercase font-bold tracking-[0.2em] text-[#181B1E]">EXFOLIATE</span>
+                                </div>
+                                <div class="w-full sm:w-44 md:w-48 lg:w-52 h-full relative overflow-hidden shrink-0 bg-[#EFECE6] border-b sm:border-b-0 sm:border-r border-[#EAE5DF]">
+                                    <img src="assets/aquafacial_water_splash.jpg" alt="Gentle Dermabrasion & Double Cleanse"
+                                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent via-transparent to-black/5 pointer-events-none"></div>
+                                </div>
+                                <div class="flex-1 h-full p-5 sm:p-5 lg:p-6 flex flex-col justify-center text-left space-y-1.5 min-w-0">
+                                    <div class="flex flex-wrap items-center justify-between gap-1.5">
+                                        <h4 class="font-heading font-medium text-lg sm:text-xl text-[#181B1E] uppercase tracking-wider">
+                                            GENTLE DERMABRASION
+                                        </h4>
+                                        <span class="text-[11px] sm:text-xs text-taupe font-semibold uppercase tracking-widest">DOUBLE CLEANSE · EXFOLIATE · PREP</span>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-charcoal/80 font-light leading-relaxed">
+                                        Begin with a Korean double cleanse and gentle dermabrasion to remove surface impurities, smooth away dead skin cells, and prepare your complexion for the next layer of your glass skin ritual.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: REFINE -->
+                            <div class="flex flex-col sm:flex-row items-stretch group hover:bg-[#F7F4EE] transition-colors duration-300 min-h-[175px] xl:h-[240px] xl:min-h-[240px]">
+                                <div class="w-full sm:w-28 lg:w-32 h-full bg-[#F3EFEA] border-b sm:border-b-0 sm:border-r border-[#EAE5DF] p-4 sm:p-5 flex sm:flex-col items-center justify-between sm:justify-center text-center shrink-0">
+                                    <span class="font-heading font-light text-4xl sm:text-5xl text-taupe tracking-tight leading-none">2</span>
+                                    <span class="hidden sm:block w-6 h-px bg-taupe/30 my-2.5 mx-auto"></span>
+                                    <span class="sm:hidden text-charcoal/30 text-base">|</span>
+                                    <span class="font-heading text-[10px] sm:text-xs uppercase font-bold tracking-[0.2em] text-[#181B1E]">REFINE</span>
+                                </div>
+                                <div class="w-full sm:w-44 md:w-48 lg:w-52 h-full relative overflow-hidden shrink-0 bg-[#EFECE6] border-b sm:border-b-0 sm:border-r border-[#EAE5DF]">
+                                    <img src="assets/eve_handle_aquafacial_treatment.jpg" alt="EVE-Omega AquaFacial Treatment"
+                                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent via-transparent to-black/5 pointer-events-none"></div>
+                                </div>
+                                <div class="flex-1 h-full p-5 sm:p-5 lg:p-6 flex flex-col justify-center text-left space-y-1.5 min-w-0">
+                                    <div class="flex flex-wrap items-center justify-between gap-1.5">
+                                        <h4 class="font-heading font-medium text-lg sm:text-xl text-[#181B1E] uppercase tracking-wider">
+                                            AQUAFACIAL
+                                        </h4>
+                                        <span class="text-[11px] sm:text-xs text-taupe font-semibold uppercase tracking-widest">DEEP CLEANSE · REFINE · HYDRATE</span>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-charcoal/80 font-light leading-relaxed">
+                                        Our AquaFacial combines gentle vortex suction with hydrating solutions to help remove pore debris, refine skin texture, and replenish moisture—leaving your complexion feeling refreshed, smooth, and beautifully radiant.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: SCULPT -->
+                            <div class="flex flex-col sm:flex-row items-stretch group hover:bg-[#F7F4EE] transition-colors duration-300 min-h-[175px] xl:h-[240px] xl:min-h-[240px]">
+                                <div class="w-full sm:w-28 lg:w-32 h-full bg-[#F3EFEA] border-b sm:border-b-0 sm:border-r border-[#EAE5DF] p-4 sm:p-5 flex sm:flex-col items-center justify-between sm:justify-center text-center shrink-0">
+                                    <span class="font-heading font-light text-4xl sm:text-5xl text-taupe tracking-tight leading-none">3</span>
+                                    <span class="hidden sm:block w-6 h-px bg-taupe/30 my-2.5 mx-auto"></span>
+                                    <span class="sm:hidden text-charcoal/30 text-base">|</span>
+                                    <span class="font-heading text-[10px] sm:text-xs uppercase font-bold tracking-[0.2em] text-[#181B1E]">SCULPT</span>
+                                </div>
+                                <div class="w-full sm:w-44 md:w-48 lg:w-52 h-full relative overflow-hidden shrink-0 bg-[#EFECE6] border-b sm:border-b-0 sm:border-r border-[#EAE5DF]">
+                                    <img src="assets/eve_microcurrent_two_prongs_treatment.jpg" alt="Dual-Prong Microcurrent & EMS"
+                                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent via-transparent to-black/5 pointer-events-none"></div>
+                                </div>
+                                <div class="flex-1 h-full p-5 sm:p-5 lg:p-6 flex flex-col justify-center text-left space-y-1.5 min-w-0">
+                                    <div class="flex flex-wrap items-center justify-between gap-1.5">
+                                        <h4 class="font-heading font-medium text-lg sm:text-xl text-[#181B1E] uppercase tracking-wider">
+                                            LIFT + SCULPT
+                                        </h4>
+                                        <span class="text-[11px] sm:text-xs text-taupe font-semibold uppercase tracking-widest">YOUR GLOW · YOUR CHOICE</span>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-charcoal/80 font-light leading-relaxed">
+                                        Personalize your ritual with one of three sculpting experiences: Microcurrent (MTS), Electrical Muscle Stimulation (EMS), or Korean Facial Sculpting Massage. Each offers a unique approach to refreshing facial contours and promoting a more sculpted, revitalized appearance.
+                                    </p>
+                                    <div class="pt-1">
+                                        <span class="inline-block px-3 py-1 rounded-full bg-taupe/15 border border-taupe/30 text-[10px] font-heading font-semibold text-taupe tracking-wider uppercase">
+                                            CHOOSE ONE: MTS · EMS · KOREAN FACIAL SCULPT
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 4: NOURISH -->
+                            <div class="flex flex-col sm:flex-row items-stretch group hover:bg-[#F7F4EE] transition-colors duration-300 min-h-[175px] xl:h-[240px] xl:min-h-[240px]">
+                                <div class="w-full sm:w-28 lg:w-32 h-full bg-[#F3EFEA] border-b sm:border-b-0 sm:border-r border-[#EAE5DF] p-4 sm:p-5 flex sm:flex-col items-center justify-between sm:justify-center text-center shrink-0">
+                                    <span class="font-heading font-light text-4xl sm:text-5xl text-taupe tracking-tight leading-none">4</span>
+                                    <span class="hidden sm:block w-6 h-px bg-taupe/30 my-2.5 mx-auto"></span>
+                                    <span class="sm:hidden text-charcoal/30 text-base">|</span>
+                                    <span class="font-heading text-[10px] sm:text-xs uppercase font-bold tracking-[0.2em] text-[#181B1E]">NOURISH</span>
+                                </div>
+                                <div class="w-full sm:w-44 md:w-48 lg:w-52 h-full relative overflow-hidden shrink-0 bg-[#EFECE6] border-b sm:border-b-0 sm:border-r border-[#EAE5DF]">
+                                    <img src="assets/korean_modeling_mask.jpg" alt="Korean Modeling Mask at SuA Glow"
+                                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent via-transparent to-black/5 pointer-events-none"></div>
+                                </div>
+                                <div class="flex-1 h-full p-5 sm:p-5 lg:p-6 flex flex-col justify-center text-left space-y-1.5 min-w-0">
+                                    <div class="flex flex-wrap items-center justify-between gap-1.5">
+                                        <h4 class="font-heading font-medium text-lg sm:text-xl text-[#181B1E] uppercase tracking-wider">
+                                            KOREAN MODELING MASK
+                                        </h4>
+                                        <span class="text-[11px] sm:text-xs text-taupe font-semibold uppercase tracking-widest">SOOTHE · COOL · CONDITION</span>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-charcoal/80 font-light leading-relaxed">
+                                        A Korean skincare favorite. This customized modeling mask helps soothe stressed skin, replenish moisture, and leave your complexion feeling refreshed, soft, and beautifully balanced.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Step 5: GLOW -->
+                            <div class="flex flex-col sm:flex-row items-stretch group hover:bg-[#F7F4EE] transition-colors duration-300 min-h-[175px] xl:h-[240px] xl:min-h-[240px]">
+                                <div class="w-full sm:w-28 lg:w-32 h-full bg-[#F3EFEA] border-b sm:border-b-0 sm:border-r border-[#EAE5DF] p-4 sm:p-5 flex sm:flex-col items-center justify-between sm:justify-center text-center shrink-0">
+                                    <span class="font-heading font-light text-4xl sm:text-5xl text-taupe tracking-tight leading-none">5</span>
+                                    <span class="hidden sm:block w-6 h-px bg-taupe/30 my-2.5 mx-auto"></span>
+                                    <span class="sm:hidden text-charcoal/30 text-base">|</span>
+                                    <span class="font-heading text-[10px] sm:text-xs uppercase font-bold tracking-[0.2em] text-[#181B1E]">GLOW</span>
+                                </div>
+                                <div class="w-full sm:w-44 md:w-48 lg:w-52 h-full relative overflow-hidden shrink-0 bg-[#EFECE6] border-b sm:border-b-0 sm:border-r border-[#EAE5DF]">
+                                    <img src="assets/led_red_light_therapy.jpg" alt="LED Red Light Therapy at SuA Glow"
+                                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent via-transparent to-black/5 pointer-events-none"></div>
+                                </div>
+                                <div class="flex-1 h-full p-5 sm:p-5 lg:p-6 flex flex-col justify-center text-left space-y-1.5 min-w-0">
+                                    <div class="flex flex-wrap items-center justify-between gap-1.5">
+                                        <h4 class="font-heading font-medium text-lg sm:text-xl text-[#181B1E] uppercase tracking-wider">
+                                            LED RED LIGHT THERAPY
+                                        </h4>
+                                        <span class="text-[11px] sm:text-xs text-taupe font-semibold uppercase tracking-widest">CALM · RESTORE · GLOW</span>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-charcoal/80 font-light leading-relaxed">
+                                        Complete your Korean glass skin ritual with gentle red-light therapy designed to help soothe the appearance of redness, restore vitality, and leave your complexion with a radiant glow.
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
-                        <p class="text-sm sm:text-base text-white/80 font-light leading-relaxed">
-                            Medical-grade active ingredients infused deeply via our FDA-cleared DEP pulsed system without needles, pain, or puncturing the skin barrier.
-                        </p>
-                        <!-- 4 Badges inline -->
-                        <div class="flex flex-wrap items-center gap-2 pt-1">
-                            <span class="text-xs uppercase tracking-wider text-white/50 font-medium mr-1">Monthly Focus:</span>
-                            <span class="px-3 py-1 rounded-full bg-warm-gold/15 border border-warm-gold/35 text-[10px] sm:text-xs font-bold text-warm-gold tracking-wider uppercase">DEWY</span>
-                            <span class="px-3 py-1 rounded-full bg-warm-gold/15 border border-warm-gold/35 text-[10px] sm:text-xs font-bold text-warm-gold tracking-wider uppercase">TONE-UP</span>
-                            <span class="px-3 py-1 rounded-full bg-warm-gold/15 border border-warm-gold/35 text-[10px] sm:text-xs font-bold text-warm-gold tracking-wider uppercase">CALM</span>
-                            <span class="px-3 py-1 rounded-full bg-warm-gold/15 border border-warm-gold/35 text-[10px] sm:text-xs font-bold text-warm-gold tracking-wider uppercase">SMOOTH</span>
+                    </div>
+
+                    <!-- Column 1 Bottom Action Card (Light Luxury - Client Mockup Pattern) -->
+                    <div class="border border-[#E5DFD5] rounded-3xl p-6 sm:p-7 lg:p-8 shadow-xl mt-6 relative overflow-hidden flex flex-col justify-between min-h-[420px] xl:h-[450px] xl:min-h-[450px] group" style="background-color: #FAF7F2;">
+                        
+                        <!-- Model 1 (Absolute - Left & Bottom Anchored, ~40% Width Scaling) -->
+                        <img src="assets/cta_model_essential.png" alt="SuA Glow Essential Member" 
+                             class="cta-model-essential drop-shadow-md">
+
+                        <!-- Content Area: Text on Right -->
+                        <div class="relative z-10 sm:ml-auto w-full sm:w-[50%] lg:w-[48%] flex flex-col justify-center text-left my-auto">
+                            <!-- Header -->
+                            <div class="mb-3 sm:mb-3.5">
+                                <span class="block font-heading font-semibold text-[10px] sm:text-xs tracking-[0.25em] uppercase text-taupe mb-0.5">
+                                    ESSENTIAL MEMBERSHIP
+                                </span>
+                                <h3 class="font-heading font-light text-2xl sm:text-3xl lg:text-[32px] text-[#181B1E] tracking-tight normal-case leading-tight mb-1">
+                                    Start Your Glow
+                                </h3>
+                                <div class="font-heading font-semibold text-xs tracking-[0.22em] uppercase text-warm-gold">
+                                    $199 / MONTH
+                                </div>
+                            </div>
+
+                            <!-- Perks Stack -->
+                            <div class="space-y-2 sm:space-y-2.5 font-body">
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-[#181B1E] normal-case leading-snug">
+                                        60-Minute Korean Glass Skin Ritual
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-charcoal/70 font-light leading-tight">
+                                        Cleanse, refine, sculpt, nourish and glow
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-[#181B1E] normal-case leading-snug">
+                                        10% Off Korean Skincare
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-charcoal/70 font-light leading-tight">
+                                        Your favorite K-Beauty essentials
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-[#181B1E] normal-case leading-snug">
+                                        Priority Member Booking
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-charcoal/70 font-light leading-tight">
+                                        Easier scheduling, less wait time
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-[#181B1E] normal-case leading-snug">
+                                        No Long-Term Commitment
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-charcoal/70 font-light leading-tight">
+                                        Cancel anytime, enjoy at your pace
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Step 03: CONDITION (LDM WATER DROP LIFTING) -->
-                <div class="flex flex-col md:flex-row items-stretch group hover:bg-white/[0.02] transition-colors duration-300">
-                    <!-- Front Column: Large Number on Top, Description Underneath -->
-                    <div class="w-full md:w-36 lg:w-40 bg-[#0E1114] border-b md:border-b-0 md:border-r border-white/10 p-5 sm:p-6 flex md:flex-col items-center justify-between md:justify-center text-center shrink-0">
-                        <span class="font-heading font-light text-5xl sm:text-6xl text-warm-gold tracking-tight leading-none">03</span>
-                        <span class="hidden md:block w-8 h-px bg-warm-gold/40 my-3 mx-auto"></span>
-                        <span class="md:hidden text-white/30 text-lg">|</span>
-                        <span class="font-heading text-xs sm:text-sm uppercase font-bold tracking-[0.25em] text-white/90">CONDITION</span>
-                    </div>
-                    <!-- Photo Window (Positioned on Left Immediately After Number) -->
-                    <div class="w-full md:w-56 lg:w-64 xl:w-72 relative overflow-hidden shrink-0 aspect-[16/10] md:aspect-auto min-h-[160px] md:min-h-0 bg-black/40 border-b md:border-b-0 md:border-r border-white/10">
-                        <img src="assets/ldm_treatment_face_close_zoom.jpg" alt="LDM Water Drop Lifting Treatment at SuA Glow"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-transparent via-transparent to-[#14181C]/40 pointer-events-none"></div>
-                    </div>
-                    <!-- Content Block -->
-                    <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center text-left space-y-2">
-                        <div class="flex flex-wrap items-center justify-between gap-2">
-                            <h3 class="font-heading font-light text-xl sm:text-2xl md:text-3xl text-white uppercase tracking-wider">
-                                LDM Water Drop Lifting
-                            </h3>
-                            <span class="text-xs sm:text-sm text-warm-gold font-medium uppercase tracking-widest">Lift · Hydrate · Refine</span>
-                        </div>
-                        <p class="text-sm sm:text-base text-white/80 font-light leading-relaxed">
-                            The Korean clinic favorite. Multi-frequency ultrasound waves micro-massage cells, stimulate collagen enzymes, calm tissue, and lock in deep translucent hydration.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 04: CALM (LED RED LIGHT THERAPY - ACTUAL CELLUMA DEVICE) -->
-                <div class="flex flex-col md:flex-row items-stretch group hover:bg-white/[0.02] transition-colors duration-300">
-                    <!-- Front Column: Large Number on Top, Description Underneath -->
-                    <div class="w-full md:w-36 lg:w-40 bg-[#0E1114] border-b md:border-b-0 md:border-r border-white/10 p-5 sm:p-6 flex md:flex-col items-center justify-between md:justify-center text-center shrink-0">
-                        <span class="font-heading font-light text-5xl sm:text-6xl text-warm-gold tracking-tight leading-none">04</span>
-                        <span class="hidden md:block w-8 h-px bg-warm-gold/40 my-3 mx-auto"></span>
-                        <span class="md:hidden text-white/30 text-lg">|</span>
-                        <span class="font-heading text-xs sm:text-sm uppercase font-bold tracking-[0.25em] text-white/90">CALM</span>
-                    </div>
-                    <!-- Photo Window (Positioned on Left Immediately After Number) -->
-                    <div class="w-full md:w-56 lg:w-64 xl:w-72 relative overflow-hidden shrink-0 aspect-[16/10] md:aspect-auto min-h-[160px] md:min-h-0 bg-black/40 border-b md:border-b-0 md:border-r border-white/10">
-                        <img src="assets/celluma-led-red-light.jpg" alt="Celluma LED Red Light Phototherapy at SuA Glow"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-transparent via-transparent to-[#14181C]/40 pointer-events-none"></div>
-                    </div>
-                    <!-- Content Block -->
-                    <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center text-left space-y-2">
-                        <div class="flex flex-wrap items-center justify-between gap-2">
-                            <h3 class="font-heading font-light text-xl sm:text-2xl md:text-3xl text-white uppercase tracking-wider">
-                                LED Red Light Therapy
-                            </h3>
-                            <span class="text-xs sm:text-sm text-warm-gold font-medium uppercase tracking-widest">The Quiet Layer</span>
-                        </div>
-                        <p class="text-sm sm:text-base text-white/80 font-light leading-relaxed">
-                            Settle under our medical-grade Celluma phototherapy arch. Soothing red wavelengths reduce surface erythema, recharge mitochondrial vitality, and seal in the glow.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 05: WELLNESS (GLUTATHIONE IV PUSH) -->
-                <div class="flex flex-col md:flex-row items-stretch group hover:bg-white/[0.02] transition-colors duration-300">
-                    <!-- Front Column: Large Number on Top, Description Underneath -->
-                    <div class="w-full md:w-36 lg:w-40 bg-[#0E1114] border-b md:border-b-0 md:border-r border-white/10 p-5 sm:p-6 flex md:flex-col items-center justify-between md:justify-center text-center shrink-0">
-                        <span class="font-heading font-light text-5xl sm:text-6xl text-warm-gold tracking-tight leading-none">05</span>
-                        <span class="hidden md:block w-8 h-px bg-warm-gold/40 my-3 mx-auto"></span>
-                        <span class="md:hidden text-white/30 text-lg">|</span>
-                        <span class="font-heading text-xs sm:text-sm uppercase font-bold tracking-[0.25em] text-white/90">WELLNESS</span>
-                    </div>
-                    <!-- Photo Window (Positioned on Left Immediately After Number) -->
-                    <div class="w-full md:w-56 lg:w-64 xl:w-72 relative overflow-hidden shrink-0 aspect-[16/10] md:aspect-auto min-h-[160px] md:min-h-0 bg-black/40 border-b md:border-b-0 md:border-r border-white/10">
-                        <img src="assets/glutathione_iv_wellness_drip.jpg" alt="Glutathione IV Wellness Infusion at SuA Glow"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-transparent via-transparent to-[#14181C]/40 pointer-events-none"></div>
-                    </div>
-                    <!-- Content Block -->
-                    <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center text-left space-y-2">
-                        <div class="flex flex-wrap items-center justify-between gap-2">
-                            <h3 class="font-heading font-light text-xl sm:text-2xl md:text-3xl text-white uppercase tracking-wider">
-                                Glutathione IV Push*
-                            </h3>
-                            <span class="text-xs sm:text-sm text-warm-gold font-medium uppercase tracking-widest">Inner Wellness · Outer Glow</span>
-                        </div>
-                        <p class="text-sm sm:text-base text-white/80 font-light leading-relaxed">
-                            Your monthly wellness layer, administered when medically appropriate following clinical assessment. The body's master antioxidant promotes cellular recovery and whole-body radiance.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ritual Complete Footer Banner (Matching Graphic Concept 3 & PDF Page 3) -->
-            <div class="mt-16 sm:mt-20">
-                <div class="bg-gradient-to-br from-[#1E2328] via-[#15191D] to-[#0E1113] p-8 sm:p-12 md:p-14 rounded-[2.5rem] shadow-2xl border border-warm-gold/40 text-center relative overflow-hidden">
-                    <div class="absolute -top-16 -right-16 w-64 h-64 bg-warm-gold/20 rounded-full blur-3xl pointer-events-none"></div>
-                    <div class="absolute -bottom-16 -left-16 w-64 h-64 bg-taupe/15 rounded-full blur-3xl pointer-events-none"></div>
-
-                    <div class="relative z-10 max-w-3xl mx-auto space-y-5">
-                        <span class="inline-flex items-center justify-center leading-none gap-2 px-4 py-1.5 bg-warm-gold/20 border border-warm-gold/40 rounded-full text-[10px] sm:text-xs tracking-[0.25em] uppercase text-warm-gold font-bold">
-                            <i data-lucide="check-check" class="w-4 h-4 text-warm-gold shrink-0"></i>
-                            <span class="pt-[1px]">05 / 05 · RITUAL COMPLETE</span>
-                        </span>
-
-                        <h3 class="heading-wide text-2xl sm:text-4xl md:text-5xl text-white uppercase tracking-[0.08em] leading-tight [text-wrap:balance]">
-                            More Than a Facial. <br><span class="text-warm-gold font-normal">A Whole New Glow.</span>
-                        </h3>
-
-                        <p class="text-xs sm:text-sm text-white/70 font-light max-w-xl mx-auto tracking-wider uppercase">
-                            아름다움은 루틴이다 — Skin is a Ritual.
-                        </p>
-
-                        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <!-- Bottom Action Button -->
+                        <div class="relative z-10 pt-3 sm:pt-4">
                             <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                                class="btn-primary inline-flex items-center justify-center w-full sm:w-auto text-center gap-2">
-                                <span>START YOUR GLASS SKIN ERA</span>
-                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                class="group/btn w-full py-3.5 sm:py-4 px-6 sm:px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-[#181B1E] bg-gradient-to-r from-[#D8C7B0] via-[#C5B39A] to-[#A8967E] hover:brightness-105 shadow-[0_8px_25px_rgba(170,152,124,0.35)] hover:shadow-[0_10px_30px_rgba(170,152,124,0.5)] hover:scale-[1.01] transition-all duration-300 inline-flex items-center justify-center gap-2.5">
+                                <span>START YOUR GLOW — $199/MO</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
                             </a>
                         </div>
-
-                        <p class="text-[10px] text-white/40 tracking-[0.25em] uppercase pt-2">
-                            SEOUL-INSPIRED · PHYSICIAN-GUIDED · CARROLLTON, TX
-                        </p>
                     </div>
                 </div>
+
+
+                <!-- ==================== COLUMN 2: GLASS SKIN PREMIUM ($299/MO - DARK LUXURY) ==================== -->
+                <div class="flex flex-col justify-between h-full space-y-6">
+                    <div>
+                        <!-- Column Header Card (Dark Luxury - Fixed Equal Height) -->
+                        <div class="bg-[#181C20] border border-warm-gold/45 rounded-3xl p-6 sm:p-8 shadow-xl mb-6 relative overflow-hidden flex flex-col justify-between xl:h-[340px] xl:min-h-[340px]">
+                            <div class="absolute -top-12 -right-12 w-40 h-40 bg-warm-gold/20 rounded-full blur-2xl pointer-events-none"></div>
+
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between gap-3 mb-4">
+                                    <span class="px-3.5 py-1 rounded-full bg-warm-gold/20 border border-warm-gold/40 text-warm-gold font-semibold text-xs tracking-wider uppercase">
+                                        PREMIUM · 90-MIN CLINICAL RITUAL
+                                    </span>
+                                    <span class="font-heading text-xs uppercase tracking-[0.2em] text-warm-gold font-bold flex items-center gap-1.5">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 fill-warm-gold text-warm-gold"></i>
+                                        <span>MOST POPULAR</span>
+                                    </span>
+                                </div>
+                                <div class="mb-3">
+                                    <h3 class="font-heading font-light text-2xl sm:text-3xl text-white uppercase tracking-wide mb-1">
+                                        GLASS SKIN
+                                    </h3>
+                                    <div class="h-7 sm:h-8 flex items-center">
+                                        <img src="assets/premium-text-white.png" alt="Premium" class="h-full w-auto object-contain">
+                                    </div>
+                                </div>
+                                <div class="flex items-baseline gap-2 mt-2 mb-3">
+                                    <span class="font-heading font-bold text-4xl sm:text-5xl text-white tracking-tight leading-none">$299</span>
+                                    <span class="font-body text-xs sm:text-sm uppercase tracking-widest text-warm-gold font-semibold">/ month</span>
+                                    <span class="ml-2 text-xs font-heading text-white/40 tracking-wider line-through sm:inline hidden">$599+ VALUE</span>
+                                </div>
+                                <p class="font-heading text-xs sm:text-[13px] uppercase tracking-[0.18em] text-warm-gold font-semibold mb-2">
+                                    90-Minute Clinical Five-Layer Ritual
+                                </p>
+                                <p class="font-body text-xs sm:text-sm text-white/75 leading-relaxed">
+                                    Our most comprehensive monthly treatment combining advanced medical devices, skin booster infusion, LDM ultrasound, and LED for deeper hydration, collagen support, and long-term skin quality.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 5-Layer Monolith Unit (Dark Luxury - Strictly Equal Heights) -->
+                        <div class="w-full bg-[#14181C]/95 backdrop-blur-md rounded-3xl border border-warm-gold/35 shadow-2xl divide-y divide-white/10 overflow-hidden">
+
+                            <!-- Step 1: PREP (AQUAFACIAL) -->
+                            <div class="flex flex-col sm:flex-row items-stretch group hover:bg-white/[0.02] transition-colors duration-300 min-h-[175px] xl:h-[240px] xl:min-h-[240px]">
+                                <div class="w-full sm:w-28 lg:w-32 h-full bg-[#0E1114] border-b sm:border-b-0 sm:border-r border-white/10 p-4 sm:p-5 flex sm:flex-col items-center justify-between sm:justify-center text-center shrink-0">
+                                    <span class="font-heading font-light text-4xl sm:text-5xl text-warm-gold tracking-tight leading-none">1</span>
+                                    <span class="hidden sm:block w-6 h-px bg-warm-gold/40 my-2.5 mx-auto"></span>
+                                    <span class="sm:hidden text-white/30 text-base">|</span>
+                                    <span class="font-heading text-[10px] sm:text-xs uppercase font-bold tracking-[0.2em] text-white/90">PREP</span>
+                                </div>
+                                <div class="w-full sm:w-44 md:w-48 lg:w-52 h-full relative overflow-hidden shrink-0 aspect-[16/10] sm:aspect-auto min-h-[140px] sm:min-h-0 bg-black/40 border-b sm:border-b-0 sm:border-r border-white/10">
+                                    <img src="assets/aquafacial_water_splash.jpg" alt="Aquafacial Water Splash Treatment at SuA Glow"
+                                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent via-transparent to-[#14181C]/40 pointer-events-none"></div>
+                                </div>
+                                <div class="flex-1 h-full p-5 sm:p-5 lg:p-6 flex flex-col justify-center text-left space-y-1.5 min-w-0">
+                                    <div class="flex flex-wrap items-center justify-between gap-1.5">
+                                        <h4 class="font-heading font-light text-lg sm:text-xl text-white uppercase tracking-wider">
+                                            Aquafacial
+                                        </h4>
+                                        <span class="text-[11px] sm:text-xs text-warm-gold font-medium uppercase tracking-widest">Cleanse · Polish · Prep</span>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-white/80 font-light leading-relaxed">
+                                        Liquid microdermabrasion gently clarifies pores, lifts dead surface cells, and infuses multi-phase hydration to create an immaculate canvas.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: INFUSE (NEEDLE-FREE SKIN BOOSTER INFUSION) -->
+                            <div class="flex flex-col sm:flex-row items-stretch group hover:bg-white/[0.02] transition-colors duration-300 min-h-[175px] xl:h-[240px] xl:min-h-[240px]">
+                                <div class="w-full sm:w-28 lg:w-32 h-full bg-[#0E1114] border-b sm:border-b-0 sm:border-r border-white/10 p-4 sm:p-5 flex sm:flex-col items-center justify-between sm:justify-center text-center shrink-0">
+                                    <span class="font-heading font-light text-4xl sm:text-5xl text-warm-gold tracking-tight leading-none">2</span>
+                                    <span class="hidden sm:block w-6 h-px bg-warm-gold/40 my-2.5 mx-auto"></span>
+                                    <span class="sm:hidden text-white/30 text-base">|</span>
+                                    <span class="font-heading text-[10px] sm:text-xs uppercase font-bold tracking-[0.2em] text-white/90">INFUSE</span>
+                                </div>
+                                <div class="w-full sm:w-44 md:w-48 lg:w-52 h-full relative overflow-hidden shrink-0 aspect-[16/10] sm:aspect-auto min-h-[140px] sm:min-h-0 bg-black/40 border-b sm:border-b-0 sm:border-r border-white/10">
+                                    <img src="assets/dep_wand_infusion_droplet.jpg" alt="SuA Glow DEP Wand Infusion"
+                                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent via-transparent to-[#14181C]/40 pointer-events-none"></div>
+                                </div>
+                                <div class="flex-1 h-full p-5 sm:p-5 lg:p-6 flex flex-col justify-center text-left space-y-1.5 min-w-0">
+                                    <div class="flex flex-wrap items-center justify-between gap-1.5">
+                                        <h4 class="font-heading font-light text-lg sm:text-xl text-white uppercase tracking-wider">
+                                            Needle-Free Booster Infusion
+                                        </h4>
+                                        <span class="text-[11px] sm:text-xs text-warm-gold font-medium uppercase tracking-widest">Skin Booster Edit</span>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-white/80 font-light leading-relaxed">
+                                        Medical-grade active ingredients infused deeply via our FDA-cleared DEP pulsed system without needles, pain, or puncturing the barrier.
+                                    </p>
+                                    <div class="flex flex-wrap items-center gap-1.5 pt-1">
+                                        <span class="px-2 py-0.5 rounded-full bg-warm-gold/20 text-[9px] font-bold text-warm-gold tracking-wider uppercase">DEWY</span>
+                                        <span class="px-2 py-0.5 rounded-full bg-warm-gold/20 text-[9px] font-bold text-warm-gold tracking-wider uppercase">TONE-UP</span>
+                                        <span class="px-2 py-0.5 rounded-full bg-warm-gold/20 text-[9px] font-bold text-warm-gold tracking-wider uppercase">CALM</span>
+                                        <span class="px-2 py-0.5 rounded-full bg-warm-gold/20 text-[9px] font-bold text-warm-gold tracking-wider uppercase">SMOOTH</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: CONDITION (LDM WATER DROP LIFTING) -->
+                            <div class="flex flex-col sm:flex-row items-stretch group hover:bg-white/[0.02] transition-colors duration-300 min-h-[175px] xl:h-[240px] xl:min-h-[240px]">
+                                <div class="w-full sm:w-28 lg:w-32 h-full bg-[#0E1114] border-b sm:border-b-0 sm:border-r border-white/10 p-4 sm:p-5 flex sm:flex-col items-center justify-between sm:justify-center text-center shrink-0">
+                                    <span class="font-heading font-light text-4xl sm:text-5xl text-warm-gold tracking-tight leading-none">3</span>
+                                    <span class="hidden sm:block w-6 h-px bg-warm-gold/40 my-2.5 mx-auto"></span>
+                                    <span class="sm:hidden text-white/30 text-base">|</span>
+                                    <span class="font-heading text-[10px] sm:text-xs uppercase font-bold tracking-[0.2em] text-white/90">CONDITION</span>
+                                </div>
+                                <div class="w-full sm:w-44 md:w-48 lg:w-52 h-full relative overflow-hidden shrink-0 aspect-[16/10] sm:aspect-auto min-h-[140px] sm:min-h-0 bg-black/40 border-b sm:border-b-0 sm:border-r border-white/10">
+                                    <img src="assets/ldm_treatment_face_close_zoom.jpg" alt="LDM Water Drop Lifting Treatment at SuA Glow"
+                                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent via-transparent to-[#14181C]/40 pointer-events-none"></div>
+                                </div>
+                                <div class="flex-1 h-full p-5 sm:p-5 lg:p-6 flex flex-col justify-center text-left space-y-1.5 min-w-0">
+                                    <div class="flex flex-wrap items-center justify-between gap-1.5">
+                                        <h4 class="font-heading font-light text-lg sm:text-xl text-white uppercase tracking-wider">
+                                            LDM Water Drop Lifting
+                                        </h4>
+                                        <span class="text-[11px] sm:text-xs text-warm-gold font-medium uppercase tracking-widest">Lift · Hydrate · Refine</span>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-white/80 font-light leading-relaxed">
+                                        The Korean clinic favorite. Multi-frequency ultrasound waves micro-massage cells, stimulate collagen enzymes, and lock in deep translucent hydration.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Step 4: CALM (LED RED LIGHT THERAPY) -->
+                            <div class="flex flex-col sm:flex-row items-stretch group hover:bg-white/[0.02] transition-colors duration-300 min-h-[175px] xl:h-[240px] xl:min-h-[240px]">
+                                <div class="w-full sm:w-28 lg:w-32 h-full bg-[#0E1114] border-b sm:border-b-0 sm:border-r border-white/10 p-4 sm:p-5 flex sm:flex-col items-center justify-between sm:justify-center text-center shrink-0">
+                                    <span class="font-heading font-light text-4xl sm:text-5xl text-warm-gold tracking-tight leading-none">4</span>
+                                    <span class="hidden sm:block w-6 h-px bg-warm-gold/40 my-2.5 mx-auto"></span>
+                                    <span class="sm:hidden text-white/30 text-base">|</span>
+                                    <span class="font-heading text-[10px] sm:text-xs uppercase font-bold tracking-[0.2em] text-white/90">CALM</span>
+                                </div>
+                                <div class="w-full sm:w-44 md:w-48 lg:w-52 h-full relative overflow-hidden shrink-0 aspect-[16/10] sm:aspect-auto min-h-[140px] sm:min-h-0 bg-black/40 border-b sm:border-b-0 sm:border-r border-white/10">
+                                    <img src="assets/led_red_light_therapy.jpg" alt="LED Red Light Therapy at SuA Glow"
+                                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent via-transparent to-[#14181C]/40 pointer-events-none"></div>
+                                </div>
+                                <div class="flex-1 h-full p-5 sm:p-5 lg:p-6 flex flex-col justify-center text-left space-y-1.5 min-w-0">
+                                    <div class="flex flex-wrap items-center justify-between gap-1.5">
+                                        <h4 class="font-heading font-light text-lg sm:text-xl text-white uppercase tracking-wider">
+                                            LED RED LIGHT THERAPY
+                                        </h4>
+                                        <span class="text-[11px] sm:text-xs text-warm-gold font-medium uppercase tracking-widest">CALM · RESTORE · GLOW</span>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-white/80 font-light leading-relaxed">
+                                        Complete your Korean glass skin ritual with gentle red-light therapy designed to help soothe the appearance of redness, restore vitality, and leave your complexion with a radiant glow.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Step 5: WELLNESS (GLUTATHIONE IV PUSH) -->
+                            <div class="flex flex-col sm:flex-row items-stretch group hover:bg-white/[0.02] transition-colors duration-300 min-h-[175px] xl:h-[240px] xl:min-h-[240px]">
+                                <div class="w-full sm:w-28 lg:w-32 h-full bg-[#0E1114] border-b sm:border-b-0 sm:border-r border-white/10 p-4 sm:p-5 flex sm:flex-col items-center justify-between sm:justify-center text-center shrink-0">
+                                    <span class="font-heading font-light text-4xl sm:text-5xl text-warm-gold tracking-tight leading-none">5</span>
+                                    <span class="hidden sm:block w-6 h-px bg-warm-gold/40 my-2.5 mx-auto"></span>
+                                    <span class="sm:hidden text-white/30 text-base">|</span>
+                                    <span class="font-heading text-[10px] sm:text-xs uppercase font-bold tracking-[0.2em] text-white/90">WELLNESS</span>
+                                </div>
+                                <div class="w-full sm:w-44 md:w-48 lg:w-52 h-full relative overflow-hidden shrink-0 aspect-[16/10] sm:aspect-auto min-h-[140px] sm:min-h-0 bg-black/40 border-b sm:border-b-0 sm:border-r border-white/10">
+                                    <img src="assets/glutathione_iv_wellness_drip.jpg" alt="Glutathione IV Wellness Infusion at SuA Glow"
+                                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent via-transparent to-[#14181C]/40 pointer-events-none"></div>
+                                </div>
+                                <div class="flex-1 h-full p-5 sm:p-5 lg:p-6 flex flex-col justify-center text-left space-y-1.5 min-w-0">
+                                    <div class="flex flex-wrap items-center justify-between gap-1.5">
+                                        <h4 class="font-heading font-light text-lg sm:text-xl text-white uppercase tracking-wider">
+                                            Glutathione IV Push*
+                                        </h4>
+                                        <span class="text-[11px] sm:text-xs text-warm-gold font-medium uppercase tracking-widest">Inner Wellness · Outer Glow</span>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-white/80 font-light leading-relaxed">
+                                        Administered when medically appropriate following clinical assessment. The body's master antioxidant promotes cellular recovery and whole-body radiance.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Column 2 Bottom Action Card (Dark Luxury - Client Mockup Pattern) -->
+                    <div class="border border-warm-gold/45 rounded-3xl p-6 sm:p-7 lg:p-8 shadow-2xl mt-6 relative overflow-hidden flex flex-col justify-between min-h-[420px] xl:h-[450px] xl:min-h-[450px] group" style="background: linear-gradient(135deg, #181C20 0%, #131619 50%, #0E1114 100%);">
+                        
+                        <!-- Top Corner Warm Gold Rim Highlight -->
+                        <div class="absolute -top-16 -right-16 w-44 h-44 bg-warm-gold/20 rounded-full blur-2xl pointer-events-none"></div>
+
+                        <!-- Model 2 (Absolute - Right & Bottom Anchored, ~40% Width Scaling) -->
+                        <img src="assets/cta_model_premium.png" alt="SuA Glow Premium Member"
+                             class="cta-model-premium drop-shadow-md">
+
+                        <!-- Content Area: Text on Left -->
+                        <div class="relative z-10 sm:mr-auto w-full sm:w-[50%] lg:w-[48%] flex flex-col justify-center text-left my-auto">
+                            <!-- Header -->
+                            <div class="mb-3 sm:mb-3.5">
+                                <span class="block font-heading font-semibold text-[10px] sm:text-xs tracking-[0.25em] uppercase text-warm-gold mb-0.5">
+                                    PREMIUM MEMBERSHIP
+                                </span>
+                                <h3 class="font-heading font-light text-2xl sm:text-3xl lg:text-[32px] text-white tracking-tight normal-case leading-tight mb-1">
+                                    Elevate Your Glow
+                                </h3>
+                                <div class="font-heading font-semibold text-xs tracking-[0.22em] uppercase text-warm-gold">
+                                    $299 / MONTH
+                                </div>
+                            </div>
+
+                            <!-- Perks Stack -->
+                            <div class="space-y-2 sm:space-y-2.5 font-body">
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-white normal-case leading-snug">
+                                        Complete 5-Layer Ritual + IV Push*
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-white/70 font-light leading-tight">
+                                        Advanced care for deeper, longer-lasting glow
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-white normal-case leading-snug">
+                                        10% Off Skincare &amp; Eligible Treatments
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-white/70 font-light leading-tight">
+                                        Skincare, injectables and more
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-white normal-case leading-snug">
+                                        Exclusive Monthly Seoul Beauty Perk
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-white/70 font-light leading-tight">
+                                        Curated K-Beauty drops just for members
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-xs sm:text-[13px] text-white normal-case leading-snug">
+                                        No Long-Term Commitment
+                                    </h4>
+                                    <p class="text-[10px] sm:text-[11px] text-white/70 font-light leading-tight">
+                                        Cancel anytime, enjoy at your pace
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Action Button -->
+                        <div class="relative z-10 pt-3 sm:pt-4">
+                            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                                class="group/btn w-full py-3.5 sm:py-4 px-6 sm:px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-[#131619] bg-gradient-to-r from-[#E0D2BE] via-[#C9B69B] to-[#9E8B6E] hover:brightness-105 shadow-[0_8px_30px_rgba(170,152,124,0.45)] hover:shadow-[0_10px_35px_rgba(170,152,124,0.6)] hover:scale-[1.01] transition-all duration-300 inline-flex items-center justify-center gap-2.5">
+                                <span>ELEVATE YOUR GLOW — $299/MO</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Medical Advisory Note -->
+            <div class="text-center mt-12 max-w-2xl mx-auto">
+                <p class="font-body text-[11px] sm:text-xs uppercase tracking-[0.22em] text-white/40 font-medium">
+                    *Glutathione IV Push administered only following individual clinical evaluation and supervising physician delegation.
+                </p>
             </div>
         </div>
     </section>
@@ -601,215 +1024,123 @@
         </div>
     </section>
 
-    <!-- Pricing Card & Inclusions Section (Exact Replica of VIP Membership Graphic) -->
+    <!-- Seoul Drop & VIP Privileges Section -->
     <section class="py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-[#F9F7F2] relative overflow-hidden">
         <!-- S Monogram Repeating Background Pattern Overlay (Subtle 30% Luxury Fade) -->
-        <div class="absolute inset-0 pointer-events-none mix-blend-multiply opacity-30" style="background-image: url('assets/s-monogram-pattern.svg'); background-repeat: repeat; background-size: 240px 240px; -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.60) 40%, rgba(0, 0, 0, 0.15) 70%, rgba(0, 0, 0, 0) 100%); mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.60) 40%, rgba(0, 0, 0, 0.15) 70%, rgba(0, 0, 0, 0) 100%);"></div>
+        <div class="absolute inset-0 pointer-events-none mix-blend-multiply opacity-25" style="background-image: url('assets/s-monogram-pattern.svg'); background-repeat: repeat; background-size: 240px 240px; -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.60) 40%, rgba(0, 0, 0, 0.15) 70%, rgba(0, 0, 0, 0) 100%); mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.60) 40%, rgba(0, 0, 0, 0.15) 70%, rgba(0, 0, 0, 0) 100%);"></div>
 
-        <!-- Subtle Ambient Warm Glow Background -->
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-taupe/10 rounded-full blur-[140px] pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-warm-gold/10 rounded-full blur-[140px] pointer-events-none"></div>
 
         <div class="max-w-6xl mx-auto relative z-10">
-            <!-- Header (VIP Skincare Membership, Everything Included. $299/Month.) -->
+            <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-14 md:mb-16">
                 <span class="text-xs sm:text-[13px] uppercase tracking-[0.28em] font-semibold text-charcoal/60 mb-3 inline-block">
-                    VIP SKINCARE MEMBERSHIP
+                    MEMBER PRIVILEGES &amp; K-BEAUTY EXTRAS
                 </span>
-                <h2 class="font-heading text-3xl sm:text-5xl md:text-[54px] text-near-black leading-tight uppercase tracking-wide">
-                    EVERYTHING INCLUDED.<br>
-                    <span class="italic font-light text-taupe block mt-1">$299/MONTH.</span>
+                <h2 class="font-heading text-3xl sm:text-5xl md:text-[52px] text-near-black leading-tight uppercase tracking-wide">
+                    MORE THAN A MEMBERSHIP.<br>
+                    <span class="italic font-light text-taupe block mt-1">A COMPLETE KOREAN RITUAL.</span>
                 </h2>
-                <p class="font-body text-sm sm:text-base text-charcoal/75 tracking-wide mt-3">
-                    Five layers. Member perks. A little Seoul every month.
+                <p class="font-body text-sm sm:text-base text-charcoal/75 tracking-wide mt-3 max-w-2xl mx-auto">
+                    Enjoy exclusive spa savings, VIP booking access, and curated Korean beauty surprises with every visit.
                 </p>
             </div>
 
-            <!-- Two Cards Container -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-                <!-- Left: 5-Layer Inclusions & Integrated Seoul Drop -->
-                <div class="lg:col-span-7 bg-white rounded-[2rem] p-7 sm:p-9 md:p-10 border border-charcoal/10 shadow-[0_10px_35px_rgba(0,0,0,0.03)] flex flex-col justify-between">
+            <!-- 2-Card Feature Container -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Left: The Seoul Drop Feature -->
+                <div class="lg:col-span-7 bg-white rounded-[2rem] p-8 sm:p-10 border border-charcoal/10 shadow-[0_10px_35px_rgba(0,0,0,0.03)] flex flex-col justify-between">
                     <div>
-                        <!-- Header Inside Left Card -->
-                        <div class="flex items-start justify-between pb-6 mb-6 border-b border-charcoal/10">
+                        <div class="flex items-center justify-between pb-6 mb-6 border-b border-charcoal/10">
                             <div>
-                                <h3 class="font-heading font-bold text-sm sm:text-base uppercase tracking-wider text-near-black">
-                                    YOUR MONTHLY 5-LAYER RITUAL
-                                </h3>
-                                <p class="font-body text-xs sm:text-sm text-charcoal/65 mt-1">
-                                    Korean skincare. Medical technology. Real results.
-                                </p>
-                            </div>
-                            <div class="text-right">
-                                <span class="font-heading text-[10px] sm:text-xs uppercase tracking-[0.2em] text-charcoal/45 font-semibold leading-tight block">
-                                    ONCE A MONTH<br>ALL FOR YOU.
+                                <span class="font-heading text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#AA987C] font-bold block mb-1">
+                                    INCLUDED WITH GLASS SKIN PREMIUM™
                                 </span>
+                                <h3 class="font-heading font-bold text-lg sm:text-xl uppercase tracking-wider text-near-black">
+                                    THE MONTHLY SEOUL DROP
+                                </h3>
                             </div>
+                            <img src="assets/seoul-drop-logo.svg" alt="Seoul Drop" class="h-10 sm:h-12 w-auto object-contain">
                         </div>
 
-                        <!-- 5 Rows with Large Numbers -->
-                        <div class="space-y-5">
-                            <!-- Step 01 -->
-                            <div class="flex items-center">
-                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-11 sm:w-12">01</span>
-                                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border border-charcoal/10 shadow-sm mx-3 sm:mx-4 bg-[#F5F2ED]">
-                                    <img src="assets/aquafacial_water_splash.jpg" alt="Aquafacial" class="w-full h-full object-cover">
-                                </div>
-                                <div>
-                                    <h4 class="font-heading font-bold text-sm sm:text-[15px] uppercase tracking-wider text-near-black leading-snug">
-                                        AQUAFACIAL
-                                    </h4>
-                                    <p class="font-body text-xs sm:text-sm text-charcoal/70 mt-0.5">Cleanse and refresh.</p>
-                                </div>
-                            </div>
+                        <p class="font-body text-sm text-charcoal/75 leading-relaxed mb-6">
+                            Every month, our providers curate a limited-edition Korean skincare discovery for our Premium members. From clinic-grade ampoules and modeling masks to seasonal sheet masks and post-care essentials sourced directly from Seoul.
+                        </p>
 
-                            <!-- Step 02 -->
-                            <div class="flex items-center">
-                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-11 sm:w-12">02</span>
-                                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border border-charcoal/10 shadow-sm mx-3 sm:mx-4 bg-[#F5F2ED]">
-                                    <img src="assets/dep_wand_infusion_droplet.jpg" alt="Needle-Free Skin Booster Infusion" class="w-full h-full object-cover">
-                                </div>
-                                <div>
-                                    <h4 class="font-heading font-bold text-sm sm:text-[15px] uppercase tracking-wider text-near-black leading-snug">
-                                        NEEDLE-FREE SKIN BOOSTER INFUSION
-                                    </h4>
-                                    <p class="font-body text-xs sm:text-sm text-charcoal/70 mt-0.5">Personalized for your skin.</p>
-                                </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                            <div class="bg-[#F9F7F2] p-4 rounded-xl border border-charcoal/5 text-center">
+                                <i data-lucide="gift" class="w-5 h-5 text-taupe mx-auto mb-2"></i>
+                                <span class="block font-heading text-xs uppercase tracking-wider font-bold text-near-black">Rotating</span>
+                                <span class="text-[11px] text-charcoal/60 font-body">Fresh surprise each month</span>
                             </div>
-
-                            <!-- Step 03 -->
-                            <div class="flex items-center">
-                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-11 sm:w-12">03</span>
-                                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border border-charcoal/10 shadow-sm mx-3 sm:mx-4 bg-[#F5F2ED]">
-                                    <img src="assets/ldm_treatment_face_close_zoom.jpg" alt="LDM Water Drop Lifting" class="w-full h-full object-cover">
-                                </div>
-                                <div>
-                                    <h4 class="font-heading font-bold text-sm sm:text-[15px] uppercase tracking-wider text-near-black leading-snug">
-                                        LDM WATER DROP LIFTING
-                                    </h4>
-                                    <p class="font-body text-xs sm:text-sm text-charcoal/70 mt-0.5">Lift. Hydrate. Refine.</p>
-                                </div>
+                            <div class="bg-[#F9F7F2] p-4 rounded-xl border border-charcoal/5 text-center">
+                                <i data-lucide="sparkles" class="w-5 h-5 text-taupe mx-auto mb-2"></i>
+                                <span class="block font-heading text-xs uppercase tracking-wider font-bold text-near-black">K-Beauty</span>
+                                <span class="text-[11px] text-charcoal/60 font-body">Directly from Seoul</span>
                             </div>
-
-                            <!-- Step 04 -->
-                            <div class="flex items-center">
-                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-11 sm:w-12">04</span>
-                                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border border-charcoal/10 shadow-sm mx-3 sm:mx-4 bg-[#F5F2ED]">
-                                    <img src="assets/celluma-led-red-light.jpg" alt="LED Red Light Therapy" class="w-full h-full object-cover">
-                                </div>
-                                <div>
-                                    <h4 class="font-heading font-bold text-sm sm:text-[15px] uppercase tracking-wider text-near-black leading-snug">
-                                        LED RED LIGHT THERAPY
-                                    </h4>
-                                    <p class="font-body text-xs sm:text-sm text-charcoal/70 mt-0.5">Soothe. Restore. Glow.</p>
-                                </div>
-                            </div>
-
-                            <!-- Step 05 -->
-                            <div class="flex items-center">
-                                <span class="font-heading font-light text-3xl sm:text-4xl text-taupe/50 tracking-tight shrink-0 w-11 sm:w-12">05</span>
-                                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border border-charcoal/10 shadow-sm mx-3 sm:mx-4 bg-[#F5F2ED]">
-                                    <img src="assets/glutathione_iv_wellness_drip.jpg" alt="Glutathione IV Push" class="w-full h-full object-cover">
-                                </div>
-                                <div>
-                                    <h4 class="font-heading font-bold text-sm sm:text-[15px] uppercase tracking-wider text-near-black leading-snug">
-                                        GLUTATHIONE IV PUSH
-                                    </h4>
-                                    <p class="font-body text-xs sm:text-sm text-charcoal/70 mt-0.5">Inner wellness. Outer glow.</p>
-                                </div>
+                            <div class="bg-[#F9F7F2] p-4 rounded-xl border border-charcoal/5 text-center">
+                                <i data-lucide="shield-check" class="w-5 h-5 text-taupe mx-auto mb-2"></i>
+                                <span class="block font-heading text-xs uppercase tracking-wider font-bold text-near-black">Curated</span>
+                                <span class="text-[11px] text-charcoal/60 font-body">Provider tested &amp; verified</span>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Integrated Seoul Drop (Soft Warm Beige Box) -->
-                        <div class="mt-8 bg-[#F5F2ED] rounded-2xl p-5 sm:p-6 border border-charcoal/5 text-left flex items-center gap-5 sm:gap-6">
-                            <img src="assets/seoul-drop-logo.svg" alt="Seoul Drop Logo" class="h-16 sm:h-20 md:h-[84px] w-auto object-contain shrink-0 self-center">
-                            <div class="space-y-1.5 flex-1 min-w-0">
-                                <div class="flex items-center justify-between gap-2">
-                                    <span class="font-heading text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-[#AA987C] font-semibold">
-                                        A MONTHLY SURPRISE
-                                    </span>
-                                </div>
-                                <p class="font-body text-xs sm:text-sm text-charcoal/75 leading-relaxed">
-                                    A rotating K-Beauty discovery — from curated skincare extras, masks and ampoules to seasonal finishing touches.
-                                </p>
-                                <p class="font-body text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-charcoal/50 italic pt-0.5 block">
-                                    WHAT'S DROPPING THIS MONTH? YOU'LL HAVE TO COME IN AND SEE.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="mt-8 pt-4 border-t border-charcoal/10 flex items-center justify-between text-xs text-charcoal/50 uppercase tracking-widest font-heading">
+                        <span>WHAT'S DROPPING THIS MONTH?</span>
+                        <span class="text-taupe font-bold">COME IN &amp; SEE &rarr;</span>
                     </div>
                 </div>
 
-                <!-- Right: Luxury Black Card with Korean Model Backdrop -->
-                <div class="lg:col-span-5 relative rounded-[2rem] overflow-hidden bg-[#111315] shadow-2xl border border-charcoal/15 flex flex-col justify-between p-7 sm:p-9 md:p-10 text-white min-h-[580px]">
-                    <!-- Background Model Portrait (Exact placement matching reference: face on far right, orchids bottom right, dark negative space on left) -->
-                    <div class="absolute inset-0 z-0 pointer-events-none">
-                        <img src="assets/vip_korean_model_glass_skin.jpg" alt="Korean Glass Skin Model SuA Glow"
-                            class="w-full h-full object-cover object-right">
-                        <!-- Subtle gradient on left to guarantee crisp text contrast -->
-                        <div class="absolute inset-0 bg-gradient-to-r from-[#111315]/95 via-[#111315]/50 via-48% to-transparent"></div>
+                <!-- Right: Member Privileges Card -->
+                <div class="lg:col-span-5 bg-[#14181C] text-white rounded-[2rem] p-8 sm:p-10 border border-white/10 shadow-2xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-48 h-48 bg-warm-gold/15 rounded-full blur-2xl pointer-events-none"></div>
+
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center p-2 border border-white/15">
+                                <img src="assets/suaglow-s-logo.png" alt="SuA Glow" class="w-full h-full object-contain">
+                            </div>
+                            <div>
+                                <span class="text-[10px] tracking-[0.25em] uppercase text-warm-gold font-bold block">ALL MEMBERS</span>
+                                <h3 class="font-heading text-lg font-light uppercase tracking-wider text-white">VIP PERKS &amp; ACCESS</h3>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-4 text-xs sm:text-sm text-white/85 font-body leading-relaxed mb-8">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-warm-gold shrink-0 mt-0.5"></i>
+                                <span><strong>10% Off</strong> all Korean retail skincare &amp; sun protection products</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-warm-gold shrink-0 mt-0.5"></i>
+                                <span><strong>Priority Scheduling</strong> for evenings, weekends, and peak calendar dates</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-warm-gold shrink-0 mt-0.5"></i>
+                                <span><strong>Member-First Access</strong> to new Korean aesthetic device launches</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-warm-gold shrink-0 mt-0.5"></i>
+                                <span><strong>Cancel Anytime</strong> with simple 30-day notice — zero contracts</span>
+                            </li>
+                        </ul>
                     </div>
 
-                    <!-- Foreground Content (Constrained to left half so it never overlaps the woman) -->
-                    <div class="relative z-10 max-w-[260px] sm:max-w-[290px]">
-                        <!-- SuA Glow Circle Logo Header -->
-                        <div class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center mb-5">
-                            <img src="assets/suaglow-s-logo.png" alt="SuA Glow Circle Logo" class="w-full h-full object-contain rounded-full">
-                        </div>
-
-                        <!-- Tagline -->
-                        <div class="space-y-0.5">
-                            <p class="font-body text-xs sm:text-[13px] tracking-[0.22em] text-white/70 uppercase font-medium">
-                                MORE THAN A MEMBERSHIP.
-                            </p>
-                            <p class="font-body text-xs sm:text-[13px] tracking-[0.22em] text-white/70 uppercase font-medium">
-                                A SKIN RITUAL.
-                            </p>
-                        </div>
-
-                        <!-- Big Price -->
-                        <div class="mt-4">
-                            <span class="font-heading font-light text-5xl sm:text-6xl text-white tracking-tight leading-none">
-                                $299
-                            </span>
-                            <span class="font-body text-xs sm:text-sm tracking-[0.28em] text-white/75 uppercase mt-2 block font-light">
-                                / MONTH
-                            </span>
-                        </div>
-
-                        <!-- Thin Divider -->
-                        <div class="border-b border-white/15 my-6"></div>
-
-                        <!-- Member Perks List (Exact bulletless copy from image) -->
-                        <div>
-                            <h4 class="font-heading text-xs sm:text-[13px] uppercase tracking-[0.22em] text-white/70 font-bold mb-3.5">
-                                MEMBER PERKS
-                            </h4>
-                            <ul class="space-y-2.5 text-xs sm:text-[13px] text-white/90 font-body leading-relaxed">
-                                <li>Priority booking</li>
-                                <li>Member-only access to new treatments</li>
-                                <li>First look at exclusive events</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Bottom CTA & Terms -->
-                    <div class="relative z-10 pt-6 max-w-[280px] sm:max-w-[310px]">
+                    <div class="relative z-10 pt-4 border-t border-white/10">
                         <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
-                            class="btn-primary btn-block text-xs sm:text-sm py-4">
-                            JOIN THE GLASS SKIN CLUB &rarr;
+                            class="btn-primary w-full py-3.5 text-center justify-center text-xs tracking-[0.18em] uppercase font-semibold">
+                            JOIN THE MEMBERSHIP CLUB
                         </a>
-                        <p class="font-body text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-white/60 text-center mt-3 block">
-                            CANCEL ANYTIME · NO LONG-TERM COMMITMENT
-                        </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Bottom Sub-line matching replica -->
+            <!-- Bottom Sub-line -->
             <div class="text-center mt-12">
                 <p class="font-body text-xs sm:text-sm uppercase tracking-[0.25em] text-charcoal/45 font-medium">
-                    KOREAN-INSPIRED · PROVIDER-CURATED · GLASS SKIN OBSESSED
+                    KOREAN-INSPIRED · PROVIDER-CURATED · CARROLLTON, TX
                 </p>
             </div>
         </div>
@@ -835,26 +1166,26 @@
                 <!-- Q1 -->
                 <details class="bg-white p-6 sm:p-8 group border border-light-gray hover:border-taupe/30 transition-all rounded-2xl shadow-soft">
                     <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider list-none marker:hidden [&::-webkit-details-marker]:hidden">
-                        <span>1. What is included in the $299 Glass Skin Membership?</span>
+                        <span>1. What is the difference between Glass Skin Essential ($199) and Glass Skin Premium ($299)?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-taupe shrink-0 group-open:hidden"></i>
                         <i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0 hidden group-open:inline"></i>
                     </summary>
                     <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
-                        Your $299 monthly membership includes one provider-curated 5-Layer Korean Glass Skin Ritual featuring AquaFacial, Needle-Free Skin Booster Infusion, LDM Water Drop Lifting, LED Red Light Therapy, and a Glutathione IV Push when medically appropriate.<br><br>
-                        Members also receive the rotating Seoul Glow Drop, priority booking, and member-only perks.
+                        SuA Glow offers two distinct monthly membership tiers designed around Korean skincare philosophy:<br><br>
+                        • <strong>Glass Skin Essential ($199/mo)</strong>: A 60-minute foundational facial ritual utilizing our EVE-Omega platform. Features a Korean double cleanse, gentle dermabrasion, AquaFacial pore refining, dual-prong microcurrent/EMS facial sculpting, a custom Korean hydrating molding mask, and medical LED red light therapy.<br><br>
+                        • <strong>Glass Skin Premium™ ($299/mo)</strong>: Our all-inclusive clinical five-layer ritual combining medical AquaFacial, needle-free DEP skin booster infusion, LDM water drop ultrasound, LED red light therapy, and a Glutathione IV push (administered when clinically appropriate), plus the monthly rotating Seoul Drop.
                     </p>
                 </details>
 
                 <!-- Q2 -->
                 <details class="bg-white p-6 sm:p-8 group border border-light-gray hover:border-taupe/30 transition-all rounded-2xl shadow-soft">
                     <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider list-none marker:hidden [&::-webkit-details-marker]:hidden">
-                        <span>2. What makes the SuA Glow Glass Skin Method™ different from a regular facial?</span>
+                        <span>2. Can I switch between the Essential and Premium memberships?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-taupe shrink-0 group-open:hidden"></i>
                         <i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0 hidden group-open:inline"></i>
                     </summary>
                     <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
-                        K-Beauty is all about the layers. So is your facial.<br><br>
-                        Rather than relying on one treatment, the SuA Glow Glass Skin Method™ brings five complementary layers together in one Korean-inspired monthly ritual. The method combines consistent skin care, medical aesthetic technology, and provider-guided personalization rather than a one-and-done approach.
+                        Yes, absolutely! You can upgrade, downgrade, or switch between Glass Skin Essential ($199) and Glass Skin Premium ($299) at any time. Simply notify our front desk before your next monthly billing date, and your membership will adjust seamlessly.
                     </p>
                 </details>
 
@@ -879,34 +1210,32 @@
                         <i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0 hidden group-open:inline"></i>
                     </summary>
                     <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
-                        Yes. The five-layer framework provides the foundation, while your Skin Booster Edit can be personalized around what your skin needs right now.<br><br>
-                        Your monthly focus may include DEWY for hydration, TONE-UP for radiance, CALM for barrier support, or SMOOTH for texture, based on provider assessment and individual candidacy.
+                        Yes. In both memberships, our licensed providers customize the active serums and targeted steps around your current skin needs. For Premium members, your Skin Booster Edit is tailored to focus on DEWY, TONE-UP, CALM, or SMOOTH based on clinical evaluation.
                     </p>
                 </details>
 
                 <!-- Q5 -->
                 <details class="bg-white p-6 sm:p-8 group border border-light-gray hover:border-taupe/30 transition-all rounded-2xl shadow-soft">
                     <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider list-none marker:hidden [&::-webkit-details-marker]:hidden">
-                        <span>5. How often should I get the Korean Glass Skin Ritual?</span>
+                        <span>5. How often should I get my membership treatment?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-taupe shrink-0 group-open:hidden"></i>
                         <i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0 hidden group-open:inline"></i>
                     </summary>
                     <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
-                        The membership is designed around one Glass Skin Ritual each month.<br><br>
-                        That's intentional: the SuA Glow philosophy emphasizes consistent, layered skin care rather than chasing one-time quick fixes. Your provider may modify or defer individual treatments when clinically appropriate.
+                        Both memberships are designed around one complete ritual each month.<br><br>
+                        The Korean philosophy is built on cumulative consistency rather than harsh, irregular procedures. One monthly session maintains cellular turnover, barrier hydration, and luminous skin quality all year round.
                     </p>
                 </details>
 
                 <!-- Q6 -->
                 <details class="bg-white p-6 sm:p-8 group border border-light-gray hover:border-taupe/30 transition-all rounded-2xl shadow-soft">
                     <summary class="heading-wide text-xs sm:text-sm cursor-pointer flex justify-between items-center text-charcoal font-semibold tracking-wider list-none marker:hidden [&::-webkit-details-marker]:hidden">
-                        <span>6. Is $299 really the total monthly membership price?</span>
+                        <span>6. Are there any contracts or cancellation fees?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-taupe shrink-0 group-open:hidden"></i>
                         <i data-lucide="minus" class="w-5 h-5 text-taupe shrink-0 hidden group-open:inline"></i>
                     </summary>
                     <p class="font-body text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed mt-4 pt-4 border-t border-light-gray">
-                        Yes. Your membership is $299 per month and includes your monthly 5-Layer Glass Skin Ritual plus eligible member benefits.<br><br>
-                        There is no separate charge for each of the five included layers. Optional treatments, upgrades, products, or services outside the membership are additional.
+                        No. Both memberships are month-to-month with no long-term contracts or enrollment fees. You may pause or cancel at any time with simple written notice prior to your next renewal.
                     </p>
                 </details>
 
@@ -975,7 +1304,7 @@
         <!-- Abstract Background Glow -->
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-taupe/10 blur-[100px] rounded-full pointer-events-none"></div>
 
-        <div class="relative z-10 max-w-4xl mx-auto">
+        <div class="relative z-10 max-w-5xl mx-auto">
             <img src="assets/logo-main.webp" alt="SUA GLOW" class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
             <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-10">K-Beauty Medspa &bull; Carrollton HQ</p>
             <p class="text-xs font-light opacity-40 leading-relaxed mb-12 max-w-2xl mx-auto [text-wrap:balance]">
@@ -998,6 +1327,223 @@
     </section>
 
     <div id="footer-placeholder"></div>
+
+    <!-- Interactive Golden Particle Halo Canvas Animation (Mouse Reactive) -->
+    <script>
+    (function initHeroParticleCanvas() {
+        const canvas = document.getElementById('hero-particle-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const heroSection = document.getElementById('hero');
+        const modelImg = document.getElementById('hero-model-img');
+        const modelCol = document.getElementById('hero-model-col');
+        
+        let width = 0;
+        let height = 0;
+        let dpr = window.devicePixelRatio || 1;
+        let mouse = { x: -1000, y: -1000, targetX: 0, targetY: 0, currentX: 0, currentY: 0, active: false };
+        
+        function alignHeroModel() {
+            if (window.innerWidth >= 1024 && heroSection && modelImg && modelCol) {
+                const leftCol = heroSection.querySelector('.lg\\:col-span-6');
+                if (leftCol) {
+                    const targetHeight = Math.round(leftCol.offsetHeight);
+                    modelCol.style.height = targetHeight + 'px';
+                    modelImg.style.height = targetHeight + 'px';
+                    modelImg.style.width = 'auto';
+                    modelImg.style.maxWidth = 'none';
+                }
+            } else if (modelCol && modelImg) {
+                modelCol.style.height = '';
+                modelImg.style.height = '';
+                modelImg.style.width = '';
+                modelImg.style.maxWidth = '';
+            }
+        }
+        
+        function resize() {
+            alignHeroModel();
+            const rect = canvas.getBoundingClientRect();
+            width = rect.width;
+            height = rect.height;
+            canvas.width = Math.floor(width * dpr);
+            canvas.height = Math.floor(height * dpr);
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+            ctx.scale(dpr, dpr);
+        }
+        
+        // Golden palette from brand tokens: champagne, warm-gold, pale gold, diamond white
+        const GOLD_COLORS = [
+            'rgba(255, 255, 255, ',
+            'rgba(255, 246, 225, ',
+            'rgba(244, 226, 197, ',
+            'rgba(224, 210, 190, ',
+            'rgba(201, 182, 155, ',
+            'rgba(170, 152, 124, ',
+            'rgba(212, 175, 55, '
+        ];
+        
+        const RING_COUNT = 340;
+        const AMBIENT_COUNT = 75;
+        const ringParticles = [];
+        const ambientParticles = [];
+        
+        for (let i = 0; i < RING_COUNT; i++) {
+            const angle = (i / RING_COUNT) * Math.PI * 2 + (Math.random() - 0.5) * 0.05;
+            ringParticles.push({
+                angle: angle,
+                speed: (Math.random() * 0.0018 + 0.0009),
+                rOffset: (Math.random() - 0.5) * 38,
+                size: Math.random() * 2.2 + 0.7,
+                baseAlpha: Math.random() * 0.75 + 0.25,
+                color: GOLD_COLORS[Math.floor(Math.random() * GOLD_COLORS.length)],
+                twinkleSpeed: Math.random() * 0.045 + 0.015,
+                twinklePhase: Math.random() * Math.PI * 2,
+                vx: 0,
+                vy: 0,
+                offsetX: 0,
+                offsetY: 0
+            });
+        }
+        
+        for (let i = 0; i < AMBIENT_COUNT; i++) {
+            ambientParticles.push({
+                x: Math.random(),
+                y: Math.random(),
+                vx: (Math.random() - 0.5) * 0.25,
+                vy: -Math.random() * 0.25 - 0.08,
+                size: Math.random() * 1.8 + 0.6,
+                baseAlpha: Math.random() * 0.55 + 0.2,
+                color: GOLD_COLORS[Math.floor(Math.random() * GOLD_COLORS.length)],
+                twinklePhase: Math.random() * Math.PI * 2
+            });
+        }
+        
+        if (heroSection) {
+            heroSection.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+                mouse.targetX = (e.clientX / window.innerWidth - 0.5) * 22;
+                mouse.targetY = (e.clientY / window.innerHeight - 0.5) * 18;
+                mouse.active = true;
+            });
+            
+            heroSection.addEventListener('mouseleave', () => {
+                mouse.x = -1000;
+                mouse.y = -1000;
+                mouse.targetX = 0;
+                mouse.targetY = 0;
+                mouse.active = false;
+            });
+        }
+        
+        let time = 0;
+        
+        function render() {
+            requestAnimationFrame(render);
+            time++;
+            
+            ctx.clearRect(0, 0, width, height);
+            
+            // Damped mouse tracking
+            mouse.currentX += (mouse.targetX - mouse.currentX) * 0.07;
+            mouse.currentY += (mouse.targetY - mouse.currentY) * 0.07;
+            
+            // Dynamically calculate head center from the model image
+            const imgRect = modelImg.getBoundingClientRect();
+            const canvasRect = canvas.getBoundingClientRect();
+            
+            // Model image natural aspect is 1024x759. Head/eye center is at 56% width, 26% height
+            const headX = (imgRect.left - canvasRect.left) + imgRect.width * 0.56;
+            const headY = (imgRect.top - canvasRect.top) + imgRect.height * 0.26;
+            
+            // Ring geometric center centered around her head at all times
+            const cx = headX + mouse.currentX * 0.75;
+            const cy = headY + mouse.currentY * 0.75;
+            
+            // Radii dynamically sized to fit her head and scale proportionally on smaller screens
+            const rx = Math.min(Math.max(imgRect.width * 0.31, 105), 225);
+            const ry = Math.min(Math.max(imgRect.height * 0.42, 115), 235);
+            const ringTilt = -0.26; // ~-15 deg tilt
+
+            // 1. Orbiting Golden Particle Cloud (Floating Stardust Only)
+            ctx.save();
+            ctx.globalCompositeOperation = 'lighter';
+            
+            for (let i = 0; i < ringParticles.length; i++) {
+                const p = ringParticles[i];
+                p.angle += p.speed;
+                
+                const curR = rx + p.rOffset;
+                const curRy = ry + p.rOffset;
+                const cosA = Math.cos(p.angle);
+                const sinA = Math.sin(p.angle);
+                
+                let px = cx + (curR * cosA * Math.cos(ringTilt) - curRy * sinA * Math.sin(ringTilt));
+                let py = cy + (curR * cosA * Math.sin(ringTilt) + curRy * sinA * Math.cos(ringTilt));
+                
+                // Interactive mouse repulsion & swirl
+                if (mouse.active) {
+                    const dx = (px + p.offsetX) - mouse.x;
+                    const dy = (py + p.offsetY) - mouse.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    const maxDist = 135;
+                    
+                    if (dist < maxDist && dist > 0) {
+                        const force = (1 - dist / maxDist) * 36;
+                        p.vx += (dx / dist) * force * 0.16 + (-dy / dist) * force * 0.08;
+                        p.vy += (dy / dist) * force * 0.16 + (dx / dist) * force * 0.08;
+                    }
+                }
+                
+                p.offsetX += p.vx;
+                p.offsetY += p.vy;
+                p.vx *= 0.88;
+                p.vy *= 0.88;
+                p.offsetX *= 0.92;
+                p.offsetY *= 0.92;
+                
+                const finalX = px + p.offsetX;
+                const finalY = py + p.offsetY;
+                const alpha = p.baseAlpha * (0.6 + 0.4 * Math.sin(time * p.twinkleSpeed + p.twinklePhase));
+                
+                ctx.fillStyle = p.color + alpha + ')';
+                ctx.beginPath();
+                ctx.arc(finalX, finalY, p.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            // 4. Ambient floating sparkles
+            for (let i = 0; i < ambientParticles.length; i++) {
+                const ap = ambientParticles[i];
+                ap.x += ap.vx / width;
+                ap.y += ap.vy / height;
+                if (ap.x < 0) ap.x = 1;
+                if (ap.x > 1) ap.x = 0;
+                if (ap.y < 0) ap.y = 1;
+                if (ap.y > 1) ap.y = 0;
+                
+                const aAlpha = ap.baseAlpha * (0.5 + 0.5 * Math.sin(time * 0.03 + ap.twinklePhase));
+                ctx.fillStyle = ap.color + aAlpha + ')';
+                ctx.beginPath();
+                ctx.arc(ap.x * width, ap.y * height, ap.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            ctx.restore();
+        }
+        
+        window.addEventListener('resize', resize);
+        window.addEventListener('load', resize);
+        if (modelImg.complete) {
+            resize();
+        } else {
+            modelImg.addEventListener('load', resize);
+        }
+        requestAnimationFrame(render);
+    })();
+    </script>
 
     <script src="oversight.js?v=48"></script>
     <script src="nearme.js?v=44"></script>
