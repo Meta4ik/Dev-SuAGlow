@@ -27,7 +27,7 @@ function renderNovemberSpecials(config) {
                     <div class="lg:col-span-5 flex flex-col justify-between space-y-5">
                         <!-- Framed Promo Image -->
                         <div class="relative w-full aspect-[16/9] sm:aspect-[2/1] lg:aspect-[16/9] rounded-2xl overflow-hidden border border-black/5 shadow-sm bg-white">
-                            <img src="${stepItem.image}" alt="${stepItem.title}" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700">
+                            <img src="${stepItem.image}?v=119" alt="${stepItem.title}" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700">
                         </div>
 
                         <!-- Price Box (Cream Box) -->
