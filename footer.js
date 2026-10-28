@@ -62,8 +62,8 @@ const FOOTER_HTML = `
         
         <!-- Medical Disclaimer & Oversight Statement -->
         <div class="pt-8 border-t border-white/[0.03] text-xs font-body text-white/45 leading-relaxed space-y-3 max-w-5xl mx-auto text-center mb-8">
-            <p>All medical aesthetic treatments are performed by Sophia Yang, PA-C, under the supervision and medical delegation of Dr. Adam Yang, MD.</p>
-            <p>At SUA GLOW, our approach incorporates globally recognized aesthetic techniques, including those used in Korean dermatology, and is delivered in accordance with applicable regulations. Treatment plans and product details are personalized and reviewed during your consultation.</p>
+            <p>At SUA GLOW, all medical aesthetic treatments are performed by Sophia Yang, PA-C, under the supervision and medical delegation of Dr. Adam Yang, MD.</p>
+            <p>Our approach incorporates globally recognized aesthetic techniques, including those used in Korean dermatology, and is delivered in accordance with applicable regulations. Treatment plans and product details are personalized and reviewed during your consultation.</p>
         </div>
         
         <div class="pt-8 border-t border-white/[0.03] flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.3em] font-bold opacity-30">

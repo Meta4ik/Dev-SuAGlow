@@ -23,15 +23,15 @@ const MONTHLY_SPECIALS_CONFIG_NOVEMBER = {
         title: "CHINGU FRIENDSGIVING",
         subtitle: "GOOD FRIENDS. GREAT SKIN. SEOUL GLOW.",
         heroImage: "assets/chingu-friendsgiving-hero.png",
-        heroText: "Chingu (친구) means friend in Korean. At SUA Glow, you're family. This November, we're celebrating our Dallas chingus with a little extra K-Beauty love.",
+        heroText: "Chingu (친구) means friend in Korean. At SUA GLOW, every client is a chingu! This November, we're celebrating our Dallas–Fort Worth friends with a little extra K-Beauty love and exclusive year-end glow offers.",
         sectionTitle: "CHINGU EXCLUSIVES",
-        sectionSubtitle: "A SUA Glow thank you for our clients.",
+        sectionSubtitle: "A SUA GLOW thank you for our clients.",
         bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
         flyerImage: "assets/SuA-Glow-November-Specials.png",
         downloadFlyerImage: "assets/SuA-Glow-November-Specials.png",
-        validThrough: "Offer is valid through 11/30/2026",
+        validThrough: "Offers valid through November 30, 2026",
         footerPillars: "KOREAN-FOUNDED  •  PHYSICIAN-GUIDED  •  CARROLLTON, TX",
-        terms: "*Offer is valid through 11/30/2026. Limit 2 promotional packages per client. Aesthetic Record consultation required. Cannot be combined with other promotions."
+        terms: "*Offers valid through November 30, 2026. Limit two promotional purchases per eligible client. Consultation and clinical eligibility required. Offers cannot be combined with other promotions. Individual results may vary."
     },
 
     // 3-Step Program (Highlighted Offers matching November Edit)
@@ -64,15 +64,21 @@ const MONTHLY_SPECIALS_CONFIG_NOVEMBER = {
         },
         {
             step: 3,
-            badge: "CLEANSE + INFUSE + GLOW",
+            badge: "CLEANSE · HYDRATE · REFRESH · GLOW",
             title: "K-BEAUTY HYDROGLOW GLASS SKIN FACIAL",
             subtitle: "90-MINUTE SEOUL-STYLE GLASS SKIN RITUAL",
             price: "$100 OFF",
             priceDetail: "REGULAR VALUE $499",
-            description: "Your chok-chok glow-up starts here! Experience 90 minutes of Korean-inspired skin pampering, combining AquaFacial, microcurrent, lymphatic drainage massage, a hydration mask, and red light therapy to cleanse, refresh, hydrate, and reveal smoother, dewy, luminous-looking skin.",
+            description: "Your chok-chok (촉촉)—dewy, hydrated—glow-up starts here!<br><br>Experience 90 minutes of Korean-inspired skin pampering, combining dermabrasion, aquafacial, personalized facial sculpting, lymphatic drainage massage, a hydration mask, and LED red-light therapy.<br><br>Your sculpting treatment is customized using microcurrent, electrical muscle stimulation (EMS), or Korean facial massage to leave skin looking smoother, refreshed, and beautifully luminous.",
+            featuresTitle: "PERSONALIZED FACIAL SCULPTING — CHOOSE ONE:",
+            features: [
+                "Microcurrent Facial Sculpting",
+                "Electrical Muscle Stimulation (EMS)",
+                "Korean Facial Sculpting Massage"
+            ],
             image: "assets/november-promo-hydroglow.png",
             ctaText: "BOOK YOUR GLASS SKIN EXPERIENCE",
-            tags: ["AQUAFACIAL", "MICROCURRENT", "LYMPHATIC DRAINAGE MASSAGE", "HYDRATION MASK", "RED LIGHT THERAPY"],
+            tags: ["AQUAFACIAL", "DERMABRASION", "MICROCURRENT", "EMS SCULPTING", "KOREAN FACIAL MASSAGE", "LYMPHATIC DRAINAGE", "LED RED-LIGHT"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         }
     ],

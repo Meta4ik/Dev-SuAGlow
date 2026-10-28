@@ -64,6 +64,22 @@ function renderNovemberSpecials(config) {
                             <p class="font-body text-xs sm:text-sm md:text-base text-[#404345]/90 leading-relaxed font-light">
                                 ${stepItem.description}
                             </p>
+
+                            ${stepItem.features && stepItem.features.length ? `
+                                <div class="mt-4 pt-3.5 border-t border-[#E5D7C9]/60">
+                                    <span class="text-[10.5px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#8C4538] block mb-2">
+                                        ${stepItem.featuresTitle || 'PERSONALIZED FACIAL SCULPTING — CHOOSE ONE:'}
+                                    </span>
+                                    <ul class="space-y-1.5 text-xs sm:text-sm text-[#404345]/90 font-light">
+                                        ${stepItem.features.map(f => `
+                                            <li class="flex items-center gap-2">
+                                                <i data-lucide="check" class="w-3.5 h-3.5 text-[#8C4538] shrink-0"></i>
+                                                <span>${f}</span>
+                                            </li>
+                                        `).join('')}
+                                    </ul>
+                                </div>
+                            ` : ''}
                         </div>
 
                         <!-- Tags Grid -->
@@ -111,7 +127,7 @@ function renderNovemberSpecials(config) {
             <!-- Hero Warm Italic Message -->
             <div class="max-w-2xl mx-auto mb-14 animate-on-scroll fade-up delay-200">
                 <p class="font-serif italic text-sm sm:text-base md:text-lg text-white/85 leading-relaxed">
-                    ${meta.heroText || "Chingu (친구) means friend in Korean. At SUA Glow, you're family. This November, we're celebrating our Dallas chingus with a little extra K-Beauty love."}
+                    ${meta.heroText || "Chingu (친구) means friend in Korean. At SUA GLOW, every client is a chingu! This November, we're celebrating our Dallas–Fort Worth friends with a little extra K-Beauty love and exclusive year-end glow offers."}
                 </p>
             </div>
 
@@ -124,7 +140,7 @@ function renderNovemberSpecials(config) {
                         ${meta.sectionTitle || 'CHINGU EXCLUSIVES'}
                     </h2>
                     <p class="font-serif italic text-xs sm:text-sm text-warm-gold/90">
-                        ${meta.sectionSubtitle || 'A SUA Glow thank you for our clients.'}
+                        ${meta.sectionSubtitle || 'A SUA GLOW thank you for our clients.'}
                     </p>
                 </div>
 
