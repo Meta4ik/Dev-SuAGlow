@@ -21,11 +21,11 @@ const SOPHIA_HTML = `
                         Sophia Yang, PA-C brings a Seoul-trained approach to aesthetics to Dallas—where precision, proportion, and a skin-first philosophy guide every treatment. She applies advanced techniques with a focus on natural-looking, balanced results— never overdone. Each treatment is thoughtfully tailored to support hydration, skin texture, and overall appearance, with an emphasis on long-term skin quality.
                     </p>
                     <p>
-                        Many patients notice a smoother, more refined, glass-skin look over time. At SuA Glow, Sophia blends modern Korean aesthetic principles with clinical expertise—focusing on hydration, harmony, and subtle artistry. In Seoul, good skin is intentional—never rushed, never overdone.
+                        Many patients notice a smoother, more refined, glass-skin look over time. At SUA Glow, Sophia blends modern Korean aesthetic principles with clinical expertise—focusing on hydration, harmony, and subtle artistry. In Seoul, good skin is intentional—never rushed, never overdone.
                     </p>
                 </div>
                 
-                <!-- Medical Oversight Card (SuA Glow Style Guide) -->
+                <!-- Medical Oversight Card (SUA Glow Style Guide) -->
                 <div class="relative bg-off-white p-6 sm:p-8 md:p-9 rounded-[2rem] border border-black/5 shadow-soft overflow-hidden">
                     <!-- Background ambient warm glow accent -->
                     <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-[#AA987C]/5 rounded-full blur-2xl pointer-events-none"></div>
@@ -68,7 +68,7 @@ const SOPHIA_HTML = `
                                 Medical Director &amp; Supervising Physician
                             </p>
                             <p class="text-xs sm:text-sm font-light text-charcoal/80 leading-relaxed [text-wrap:pretty]">
-                                Byungwoo Yang, M.D. (also known as Dr. Adam Yang) serves as the Medical Director of SuA Glow, providing clinical oversight and supervision in accordance with Texas regulations. Working in collaboration with the clinical team, he supports a thoughtful, safety-first approach—ensuring each treatment is delivered with precision, care, and consistency.
+                                Byungwoo Yang, M.D. (also known as Dr. Adam Yang) serves as the Medical Director of SUA Glow, providing clinical oversight and supervision in accordance with Texas regulations. Working in collaboration with the clinical team, he supports a thoughtful, safety-first approach—ensuring each treatment is delivered with precision, care, and consistency.
                             </p>
                         </div>
                     </div>

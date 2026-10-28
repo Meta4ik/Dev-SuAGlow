@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skincare Products | Rejuran, Exoblanc &amp; Pharmesthetic | SuA K-Glow Carrollton TX</title>
-    <meta name="description" content="Explore SuA Glow's curated medical-grade skincare products: REJURAN® MEDI Line, Exoblanc Exosome Line, and Pharmesthetic Line. Available exclusively in-office in Carrollton, TX.">
+    <title>Skincare Products | Rejuran, Exoblanc &amp; Pharmesthetic | SUA K-Glow Carrollton TX</title>
+    <meta name="description" content="Explore SUA Glow's curated medical-grade skincare products: REJURAN® MEDI Line, Exoblanc Exosome Line, and Pharmesthetic Line. Available exclusively in-office in Carrollton, TX.">
     <link rel="canonical" href="https://suaglow.com/skincare-products.html">
     <link rel="icon" href="assets/favicon.png" type="image/png">
 
@@ -35,7 +35,7 @@
         class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center pt-32 sm:pt-40 lg:pt-44 pb-16 lg:pb-24 px-6 md:px-12 bg-[#FAF8F5] text-charcoal overflow-hidden">
         <!-- Parallax Background & Atmospheric Glow -->
         <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-            <img src="assets/skincare-hero-banner.webp" alt="Korean Skincare Seoul Science SuA Glow"
+            <img src="assets/skincare-hero-banner.webp" alt="Korean Skincare Seoul Science SUA Glow"
                 class="w-full h-full object-cover object-[78%_center] lg:object-right">
             <!-- Left Gradient to ensure clear text contrast while preserving image sharpness on the right -->
             <div class="absolute inset-0 bg-gradient-to-r from-[#FAF8F5] via-[#FAF8F5]/95 to-[#FAF8F5]/70 md:via-[#FAF8F5]/90 md:to-transparent md:w-[68%] lg:w-[55%] z-10"></div>
@@ -88,7 +88,7 @@
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 animate-on-scroll fade-up">
                 <span class="inline-block text-[11px] font-heading font-bold tracking-[0.4em] text-[#AA987C] mb-3 uppercase">
-                    The SuA Glow Skincare Edit
+                    The SUA Glow Skincare Edit
                 </span>
                 <h2 class="heading-wide text-2xl sm:text-4xl font-bold mb-4 text-near-black [text-wrap:balance]">
                     Three Collections. One Skin-First Philosophy.
@@ -1319,7 +1319,7 @@
                             Certified Korean Aesthetics Guidance
                         </h3>
                         <p class="text-white/75 text-xs sm:text-sm lg:text-base font-light leading-relaxed mb-6 [text-wrap:balance]">
-                            Sophia Yang, PA-C studied Korean clinical skincare principles in Seoul. At SuA Glow, every home-care recommendation is tailored strictly to your skin barrier condition, avoiding the common trial-and-error cycle of over-the-counter products.
+                            Sophia Yang, PA-C studied Korean clinical skincare principles in Seoul. At SUA Glow, every home-care recommendation is tailored strictly to your skin barrier condition, avoiding the common trial-and-error cycle of over-the-counter products.
                         </p>
                         <div class="border-t border-white/10 pt-5 flex flex-wrap gap-x-8 gap-y-2.5 text-xs sm:text-sm text-warm-gold/90 font-medium">
                             <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#AA987C] shrink-0"></i> Zero over-exfoliation protocols</span>
@@ -1413,7 +1413,7 @@
 
     <section id="final-consultation-cta" data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
         <div class="max-w-4xl mx-auto animate-on-scroll fade-up">
-            <img src="assets/logo-main.webp" alt="SuA K-Glow"
+            <img src="assets/logo-main.webp" alt="SUA K-Glow"
                 class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
             <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-16 uppercase">K-Beauty Medspa • Carrollton HQ</p>
             <h3 class="heading-wide text-2xl md:text-4xl mb-8 leading-snug [text-wrap:balance]">
@@ -1436,7 +1436,7 @@
     <aside class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-light-gray/80 px-4 pr-16 sm:pr-4 py-3 pb-[max(12px,env(safe-area-inset-bottom))] flex items-center justify-between shadow-floating md:hidden">
         <div class="flex items-center justify-between gap-3 w-full max-w-md mx-auto">
             <!-- Quick Call Clinic Button -->
-            <a href="tel:972-665-8737" title="Call SuA Glow Clinic" aria-label="Call SuA Glow Clinic"
+            <a href="tel:972-665-8737" title="Call SUA Glow Clinic" aria-label="Call SUA Glow Clinic"
                 class="w-11 h-11 rounded-full bg-off-white border border-light-gray/80 flex items-center justify-center text-taupe hover:text-warm-gold hover:border-warm-gold transition tap-action shadow-xs shrink-0">
                 <i data-lucide="phone" class="w-4 h-4"></i>
             </a>
@@ -1463,7 +1463,7 @@
         <div class="flex items-start justify-between mb-4">
             <div>
                 <div class="flex items-center gap-2 mb-1">
-                    <span class="text-[9px] font-heading font-bold tracking-[0.2em] uppercase text-warm-gold">SuA K-Glow • Carrollton, TX</span>
+                    <span class="text-[9px] font-heading font-bold tracking-[0.2em] uppercase text-warm-gold">SUA K-Glow • Carrollton, TX</span>
                 </div>
                 <h3 class="font-heading text-lg sm:text-xl font-bold text-near-black">Curated Skincare Consultation</h3>
                 <p class="font-body text-xs text-charcoal/70 mt-0.5">Under clinical guidance of Sophia Yang, PA-C</p>

@@ -27,7 +27,7 @@ function processFile(filePath) {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
 
-  const pageTitle = doc.querySelector('title')?.textContent.split('|')[0].trim() || 'SuA Glow';
+  const pageTitle = doc.querySelector('title')?.textContent.split('|')[0].trim() || 'SUA Glow';
   
   // Try to find breadcrumbs or badges for category
   let category = 'Spa Treatments';
@@ -119,7 +119,7 @@ if (fs.existsSync(eduPath) && fs.statSync(eduPath).isDirectory()) {
 */
 
 const outputPath = path.join(ROOT_DIR, 'search-index.js');
-const jsContent = `// Auto-generated Search Index for SuA K-Glow. Do not edit directly.
+const jsContent = `// Auto-generated Search Index for SUA K-Glow. Do not edit directly.
 const SEARCH_INDEX = ${JSON.stringify(searchIndex, null, 2)};
 `;
 
@@ -145,7 +145,7 @@ function generatePagesDirectory() {
       return filename.replace(".html", "").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
     }
     let t = rawTitle.split("|")[0].trim();
-    t = t.replace(/SuA K-Glow/i, "").replace(/SuA Glow/i, "").replace(/Korean Med Spa/i, "").replace(/Korean Medical Aesthetics/i, "").trim();
+    t = t.replace(/SUA K-Glow/i, "").replace(/SUA Glow/i, "").replace(/Korean Med Spa/i, "").replace(/Korean Medical Aesthetics/i, "").trim();
     t = t.replace(/^[-–—\s]+|[-–—\s]+$/g, "");
     if (!t) return rawTitle.split("|")[0].trim();
     return t;

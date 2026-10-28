@@ -1,5 +1,5 @@
 /**
- * SuA Glow - Google Ads & Analytics Tracking Module
+ * SUA Glow - Google Ads & Analytics Tracking Module
  * Centralized tracking loader and automated event listener for conversions.
  */
 
@@ -61,7 +61,7 @@
       gtag('config', config.ga4MeasurementId);
     }
   } else if (config.debug) {
-    console.info('[SuA Glow Tracking] Initialized in DEBUG mode (using placeholder IDs). Events will log to console.');
+    console.info('[SUA Glow Tracking] Initialized in DEBUG mode (using placeholder IDs). Events will log to console.');
   }
 
   /**
@@ -69,7 +69,7 @@
    */
   window.suaTrackConversion = function(action, params = {}) {
     if (config.debug) {
-      console.log(`[SuA Glow Tracking] Conversion fired: "${action}"`, params);
+      console.log(`[SUA Glow Tracking] Conversion fired: "${action}"`, params);
     }
 
     // Google Analytics 4 Custom Event

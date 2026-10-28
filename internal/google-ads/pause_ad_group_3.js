@@ -1,8 +1,8 @@
 /**
  * Google Ads Script - Immediate Disablement of Ad Group 3
- * Account: SuA Glow (Carrollton, TX)
+ * Account: SUA Glow (Carrollton, TX)
  * Target Account ID: 480-656-3884
- * Campaign: "SuA Glow Hair & Scalp Reset"
+ * Campaign: "SUA Glow Hair & Scalp Reset"
  * Target: "Ad Group 3: Hairline / Men"
  * 
  * Purpose:
@@ -12,7 +12,7 @@
  */
 
 function main() {
-  var campaignName = "SuA Glow Hair & Scalp Reset";
+  var campaignName = "SUA Glow Hair & Scalp Reset";
   var adGroupName = "Ad Group 3: Hairline / Men";
 
   Logger.log("==================================================");

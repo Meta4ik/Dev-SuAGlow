@@ -1,5 +1,5 @@
 /**
- * SuA K Glow - Monthly Specials Renderer Engine
+ * SUA K Glow - Monthly Specials Renderer Engine
  * ---------------------------------------------
  * Dynamically builds the interactive Specials UI with dual views:
  * View 1 (3-Step Interactive Program): Modern web layout with step cards, price tags, and additional featured offers.
@@ -7,7 +7,7 @@
  */
 
 /**
- * November Specials Renderer (The SuA Glow November Edit - Chingu Friendsgiving)
+ * November Specials Renderer (The SUA Glow November Edit - Chingu Friendsgiving)
  * Dedicated streamlined flow without tab switcher, featuring bottom download button.
  */
 function renderNovemberSpecials(config) {
@@ -419,7 +419,7 @@ function renderMonthlySpecials(customConfig) {
 
                             <span class="inline-block text-[10px] md:text-xs tracking-[0.35em] text-[#e13f00] uppercase font-bold mb-2 italic whitespace-nowrap drop-shadow-xs">${meta.badge}</span>
                             <h1 class="heading-wide text-2xl sm:text-3xl md:text-5xl text-[#3c0201] mb-2 uppercase tracking-[0.12em] leading-tight drop-shadow-xs">
-                                <span class="block whitespace-nowrap">${meta.titleLine1 || 'The SuA Glow'}</span>
+                                <span class="block whitespace-nowrap">${meta.titleLine1 || 'The SUA Glow'}</span>
                                 <span class="block">${meta.titleLine2 || 'October Edit'}</span>
                             </h1>
                             <p class="font-body text-[#e13f00] italic tracking-widest uppercase text-xs md:text-base mb-3 font-semibold">${meta.subtitle}</p>
@@ -445,7 +445,7 @@ function renderMonthlySpecials(customConfig) {
                     <!-- Screenshot Container Bottom Brand & Details Footer -->
                     <div class="mt-8 pt-5 pb-8 px-6 sm:px-10 border-t border-[#e8a36e]/30 text-center relative z-10 bg-white/50 backdrop-blur-sm">
                         <p class="font-heading text-xs sm:text-sm font-bold tracking-wider text-[#3c0201] uppercase mb-1">
-                            SuA K-Glow Medical Aesthetics • Carrollton HQ
+                            SUA K-Glow Medical Aesthetics • Carrollton HQ
                         </p>
                         <p class="font-body text-[11px] text-charcoal/70 tracking-wide mb-1.5">
                             Korean-Founded • Korean PA-C Provider • Physician-Guided
@@ -487,7 +487,7 @@ function renderMonthlySpecials(customConfig) {
 
                     <!-- Flyer Image -->
                     <div class="w-full overflow-hidden rounded-2xl shadow-2xl border border-white/20 bg-near-black mb-5">
-                        <img id="lightbox-flyer-img" src="${meta.downloadFlyerImage || 'assets/SuA-Glow-October-Specials.jpg'}" alt="${meta.title || 'SuA Glow Specials Flyer'}" class="w-full h-auto max-h-[72vh] object-contain mx-auto block">
+                        <img id="lightbox-flyer-img" src="${meta.downloadFlyerImage || 'assets/SUA-Glow-October-Specials.jpg'}" alt="${meta.title || 'SUA Glow Specials Flyer'}" class="w-full h-auto max-h-[72vh] object-contain mx-auto block">
                     </div>
 
                     <!-- Action Button Below Flyer -->
@@ -608,7 +608,7 @@ function renderMonthlySpecials(customConfig) {
                     
                     <div class="w-full flex justify-center">
                         <div id="flyer-card-element" class="w-full max-w-[800px] rounded-2xl shadow-2xl overflow-hidden border ${isOctober ? 'border-[#de542f]/30' : 'border-charcoal/10'} bg-white">
-                            <img src="${meta.downloadFlyerImage || meta.flyerImage || 'assets/SuA-Glow-October-Specials.jpg'}" alt="${meta.title || 'SuA Glow Specials Flyer'}" class="w-full h-auto block object-contain">
+                            <img src="${meta.downloadFlyerImage || meta.flyerImage || 'assets/SUA-Glow-October-Specials.jpg'}" alt="${meta.title || 'SUA Glow Specials Flyer'}" class="w-full h-auto block object-contain">
                         </div>
                     </div>
                 </div>
@@ -629,7 +629,7 @@ function renderMonthlySpecials(customConfig) {
 
                     <!-- Flyer Image -->
                     <div class="w-full overflow-hidden rounded-2xl shadow-2xl border border-white/20 bg-near-black mb-5">
-                        <img id="lightbox-flyer-img" src="${meta.downloadFlyerImage || 'assets/SuA-Glow-September-Specials.jpg'}" alt="${meta.title || 'SuA Glow Specials Flyer'}" class="w-full h-auto max-h-[72vh] object-contain mx-auto block">
+                        <img id="lightbox-flyer-img" src="${meta.downloadFlyerImage || 'assets/SUA-Glow-September-Specials.jpg'}" alt="${meta.title || 'SUA Glow Specials Flyer'}" class="w-full h-auto max-h-[72vh] object-contain mx-auto block">
                     </div>
 
                     <!-- Action Button Below Flyer -->
@@ -674,10 +674,10 @@ function closeFlyerLightbox() {
 function triggerDirectDownloadFromUrl() {
     const config = window.__currentSpecialsConfig || {};
     const meta = config.meta || {};
-    const flyerUrl = meta.downloadFlyerImage || meta.flyerImage || 'assets/SuA-Glow-September-Specials.jpg';
+    const flyerUrl = meta.downloadFlyerImage || meta.flyerImage || 'assets/SUA-Glow-September-Specials.jpg';
     const isPng = flyerUrl.toLowerCase().endsWith('.png');
     const ext = isPng ? 'png' : 'jpg';
-    const fileName = meta.month ? `SuA-Glow-${meta.month.replace(/\s+/g, '-')}-Specials.${ext}` : `SuA-Glow-Specials.${ext}`;
+    const fileName = meta.month ? `SUA-Glow-${meta.month.replace(/\s+/g, '-')}-Specials.${ext}` : `SUA-Glow-Specials.${ext}`;
 
     fetch(flyerUrl)
         .then(res => res.blob())
@@ -741,10 +741,10 @@ function downloadFlyerImage() {
     const lightboxShareBtn = document.getElementById('lightbox-share-btn');
     const config = window.__currentSpecialsConfig || {};
     const meta = config.meta || {};
-    const flyerUrl = meta.downloadFlyerImage || meta.flyerImage || 'assets/SuA-Glow-September-Specials.jpg';
+    const flyerUrl = meta.downloadFlyerImage || meta.flyerImage || 'assets/SUA-Glow-September-Specials.jpg';
     const isPng = flyerUrl.toLowerCase().endsWith('.png');
     const ext = isPng ? 'png' : 'jpg';
-    const fileName = meta.month ? `SuA-Glow-${meta.month.replace(/\s+/g, '-')}-Specials.${ext}` : `SuA-Glow-Specials.${ext}`;
+    const fileName = meta.month ? `SUA-Glow-${meta.month.replace(/\s+/g, '-')}-Specials.${ext}` : `SUA-Glow-Specials.${ext}`;
 
     if (downloadBtn) {
         downloadBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Preparing Image...`;
@@ -772,8 +772,8 @@ function downloadFlyerImage() {
 
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
                 navigator.share({
-                    title: `SuA K Glow ${meta.month || 'September'} Specials`,
-                    text: `Check out SuA K Glow ${meta.month || 'September'} Specials offers!`,
+                    title: `SUA K Glow ${meta.month || 'September'} Specials`,
+                    text: `Check out SUA K Glow ${meta.month || 'September'} Specials offers!`,
                     files: [file]
                 }).catch(err => {
                     console.log('Share sheet dismissed or failed:', err);
@@ -797,7 +797,7 @@ function downloadFlyerImage() {
         });
 }
 
-function triggerDirectDownload(blob, fileName = 'SuA-Glow-September-Specials.jpg') {
+function triggerDirectDownload(blob, fileName = 'SUA-Glow-September-Specials.jpg') {
     const blobUrl = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.download = fileName;

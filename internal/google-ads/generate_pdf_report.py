@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 WIDTH = 1700
 HEIGHT = 2200
 
-# Color Palette (SuA Glow Luxury Clinical Brand)
+# Color Palette (SUA Glow Luxury Clinical Brand)
 TAUPE = (170, 152, 124)       # #AA987C
 GOLD = (229, 184, 105)        # #E5B869
 DARK_CHARCOAL = (30, 33, 36)  # #1E2124
@@ -37,8 +37,8 @@ def draw_header(draw, title, subtitle, page_num):
     # Top brand bar
     draw.rectangle([(0, 0), (WIDTH, 20)], fill=TAUPE)
     
-    # SuA Glow Logo text
-    draw.text((80, 50), "SuA GLOW", font=get_font(28, bold=True), fill=TAUPE)
+    # SUA Glow Logo text
+    draw.text((80, 50), "SUA GLOW", font=get_font(28, bold=True), fill=TAUPE)
     draw.text((245, 54), "|  KOREAN CLINICAL AESTHETICS", font=get_font(18), fill=TEXT_MUTED)
     
     # Page indicator
@@ -54,7 +54,7 @@ def draw_header(draw, title, subtitle, page_num):
 
 def draw_footer(draw):
     draw.line([(80, HEIGHT - 80), (WIDTH - 80, HEIGHT - 80)], fill=LIGHT_GRAY, width=2)
-    draw.text((80, HEIGHT - 60), "SuA Glow Internal • Google Ads Campaign Deployment & Strategy Blueprint", font=get_font(16), fill=TEXT_MUTED)
+    draw.text((80, HEIGHT - 60), "SUA Glow Internal • Google Ads Campaign Deployment & Strategy Blueprint", font=get_font(16), fill=TEXT_MUTED)
     draw.text((WIDTH - 380, HEIGHT - 60), "suaglow.com • Carrollton, TX", font=get_font(16), fill=TAUPE)
 
 
@@ -73,7 +73,7 @@ def create_page_1():
     hero_y = 120
     draw.rounded_rectangle([(80, hero_y), (WIDTH - 80, hero_y + 360)], radius=24, fill=DARK_CHARCOAL)
     
-    draw.text((130, hero_y + 40), "SuA GLOW  •  CLIENT STRATEGY & LAUNCH DOSSIER", font=get_font(18, bold=True), fill=GOLD)
+    draw.text((130, hero_y + 40), "SUA GLOW  •  CLIENT STRATEGY & LAUNCH DOSSIER", font=get_font(18, bold=True), fill=GOLD)
     draw.text((130, hero_y + 80), "Google Ads Campaign Architecture", font=get_font(46, bold=True), fill=WHITE)
     draw.text((130, hero_y + 145), "Korean Scalp & Hair Reset Protocol  |  Dallas–Fort Worth Expansion", font=get_font(24), fill=TAUPE)
     
@@ -84,7 +84,7 @@ def create_page_1():
     draw.rounded_rectangle([(350, hero_y + 210), (550, hero_y + 260)], radius=12, fill=(170, 152, 124, 50), outline=TAUPE, width=2)
     draw.text((375, hero_y + 225), "BUDGET: $40 / DAY", font=get_font(16, bold=True), fill=GOLD)
     
-    draw.text((130, hero_y + 295), "Account: SuA Glow (480-656-3884)  •  Manager: 133-161-8593  •  Campaign ID: 24303707971", font=get_font(18), fill=(180, 185, 190))
+    draw.text((130, hero_y + 295), "Account: SUA Glow (480-656-3884)  •  Manager: 133-161-8593  •  Campaign ID: 24303707971", font=get_font(18), fill=(180, 185, 190))
 
     # Executive Overview Narrative
     curr_y = 530
@@ -93,9 +93,9 @@ def create_page_1():
     draw.line([(120, curr_y + 60), (280, curr_y + 60)], fill=GOLD, width=3)
     
     summary_text = (
-        "This campaign deploys a high-converting, medically guided acquisition funnel engineered specifically for SuA Glow's\n"
+        "This campaign deploys a high-converting, medically guided acquisition funnel engineered specifically for SUA Glow's\n"
         "flagship $399 Korean Scalp Reset experience. Moving beyond standard relaxation 'head spas,' this campaign positions\n"
-        "SuA Glow as the premier clinical destination for non-surgical needle-free follicle infusion (DEP technology).\n\n"
+        "SUA Glow as the premier clinical destination for non-surgical needle-free follicle infusion (DEP technology).\n\n"
         "Key Accomplishments:\n"
         "• 3 Dedicated Audience Segments: Differentiated ad groups for General Hair Loss, Female Thinning, and Men's Hairline.\n"
         "• 44 High-Intent Phrase Keywords: Eliminating search waste while dominating North Texas commercial queries.\n"
@@ -293,7 +293,7 @@ def create_page_3():
             "headlines": [
                 "Hair Loss Treatment Dallas", "Korean Scalp Treatment", "Scalp Treatment For Hair Loss",
                 "Hair Loss Clinic Near You", "Hair Loss Treatment Near You", "$399 Korean Scalp Reset",
-                "Hair Loss? Think Scalp.", "More Than a Head Spa", "SuA Glow Scalp Rejuvenation",
+                "Hair Loss? Think Scalp.", "More Than a Head Spa", "SUA Glow Scalp Rejuvenation",
                 "Needle-Free Follicle Care", "Physician-Guided Scalp Care", "FDA-Cleared Scalp Tech",
                 "Seoul-Inspired Scalp Care", "Stop Hair Shedding Today", "Book Scalp Assessment Today"
             ],
@@ -309,7 +309,7 @@ def create_page_3():
             "headlines": [
                 "Female Hair Loss Treatment", "Treatment For Thinning Hair", "Female Thinning Hair Care",
                 "Thinning Hair Treatment Dallas", "Hair Loss Treatment Near You", "Widening Part? Start Here.",
-                "$399 Scalp & Hair Reset", "Needle-Free Scalp Infusion", "SuA Glow Women Scalp Care",
+                "$399 Scalp & Hair Reset", "Needle-Free Scalp Infusion", "SUA Glow Women Scalp Care",
                 "Restore Female Hair Density", "Gentle Needle-Free Follicle", "Korean Scalp Rejuvenation",
                 "Physician-Guided Female Care", "Postpartum & Stress Thinning", "Book Scalp Assessment Today"
             ],
@@ -326,7 +326,7 @@ def create_page_3():
                 "Male Hair Loss Treatment", "Male Thinning Hair Care", "Hair Loss Clinic Dallas",
                 "Scalp Therapy For Hair Loss", "Thinning Hairline? Think Scalp", "$399 Korean Scalp Reset",
                 "Non-Surgical Hair Care", "Advanced Scalp Infusion", "Receding Hairline Care",
-                "Crown Thinning Treatment", "Needle-Free Follicle Infusion", "SuA Glow Men Scalp Care",
+                "Crown Thinning Treatment", "Needle-Free Follicle Infusion", "SUA Glow Men Scalp Care",
                 "Physician-Guided Scalp Plan", "No Surgery No Downtime", "Book Male Scalp Assessment"
             ],
             "descriptions": [
@@ -494,7 +494,7 @@ def main():
     print("Generating Page 4...")
     p4 = create_page_4()
 
-    output_path = "/Users/mw/Sites/SuAGlow/dev-site/internal/google-ads/sua_glow_campaign_overview.pdf"
+    output_path = "/Users/mw/Sites/SUAGlow/dev-site/internal/google-ads/sua_glow_campaign_overview.pdf"
     print(f"Saving multi-page PDF to {output_path}...")
     p1.save(output_path, "PDF", resolution=200.0, save_all=True, append_images=[p2, p3, p4])
     print("PDF generation complete! File size:", os.path.getsize(output_path))

@@ -25,8 +25,8 @@ We will follow the exact styling, font pairings, section layouts, and navigation
 
 ### [New Pages]
 
-#### [NEW] [collagen-stimulation-facial.html](file:///Users/mw/Sites/SuAGlow/dev-site/collagen-stimulation-facial.html)
-- **Title**: *Collagen Stimulation & Acne Scar Treatment Dallas | Korean Skin Booster | SuA Glow*
+#### [NEW] [collagen-stimulation-facial.html](file:///Users/mw/Sites/SUAGlow/dev-site/collagen-stimulation-facial.html)
+- **Title**: *Collagen Stimulation & Acne Scar Treatment Dallas | Korean Skin Booster | SUA Glow*
 - **SEO Elements**: Includes the precise keywords and meta description specified in the document.
 - **Header/Hero**: A dark theme hero section matching the Oligio X / LDM style:
   - Background image: `assets/collagen-stimulation/image1.jpeg` (using a dark tint/overlay).
@@ -40,14 +40,14 @@ We will follow the exact styling, font pairings, section layouts, and navigation
 - **FAQ Section**: Dropdown Accordion using `<details>` markup, matching Oligio X style.
 - **CTA Section**: Consistent dark theme footer CTA with telephone number `972-665-8737` prominent.
 
-#### [NEW] [tone-up-facial.html](file:///Users/mw/Sites/SuAGlow/dev-site/tone-up-facial.html)
-- **Title**: *Korean Tone-Up Facial Dallas | Brightening Facial | Korean Glass Skin Treatment | SuA Glow*
+#### [NEW] [tone-up-facial.html](file:///Users/mw/Sites/SUAGlow/dev-site/tone-up-facial.html)
+- **Title**: *Korean Tone-Up Facial Dallas | Brightening Facial | Korean Glass Skin Treatment | SUA Glow*
 - **SEO Elements**: Meta description and keywords fully integrated.
 - **Header/Hero**: Dark theme hero section:
   - Background image: `assets/tone-up/image1.jpeg` (with dark overlay).
 - **Medical Delegation Section**: Placed prominently near the top.
 - **Section 1: Why Tone-Up is the Secret to Luminous Glass Skin**: Grid featuring `assets/tone-up/image2.jpeg` and `image3.png` (Rejuran Tone Up product showcase).
-- **Section 2: Why SuA Glow is Obsessed with Glow**: Clean, minimalist editorial layout.
+- **Section 2: Why SUA Glow is Obsessed with Glow**: Clean, minimalist editorial layout.
 - **Section 3: Treatment Comparison**: Renders the dynamic comparison grid (`image5.png` reference).
 - **Section 4: Gallery / Treatment Steps**: Renders a beautiful grid or slider of the various treatment steps (`image8.jpeg` through `image20.jpeg`).
 - **Transparency & Disclaimers**: Rendered in a clean, light-grey section.
@@ -58,14 +58,14 @@ We will follow the exact styling, font pairings, section layouts, and navigation
 
 ### [Navigation & Components]
 
-#### [MODIFY] [navbar.js](file:///Users/mw/Sites/SuAGlow/dev-site/navbar.js)
+#### [MODIFY] [navbar.js](file:///Users/mw/Sites/SUAGlow/dev-site/navbar.js)
 - Update desktop mega menu:
   - Change "Collagen Stimulation" link to `collagen-stimulation-facial.html`.
   - Change "Tone Up" link to `tone-up-facial.html` and remove the "Soon" badge.
 - Update mobile menu:
   - Replace the links and remove the "Soon" badges.
 
-#### [MODIFY] [navbar.html](file:///Users/mw/Sites/SuAGlow/dev-site/navbar.html)
+#### [MODIFY] [navbar.html](file:///Users/mw/Sites/SUAGlow/dev-site/navbar.html)
 - Sync desktop mega menu and mobile menu links with `navbar.js` to ensure the backup file remains accurate.
 
 ---

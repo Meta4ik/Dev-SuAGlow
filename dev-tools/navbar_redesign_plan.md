@@ -1,6 +1,6 @@
 # Navigation Redesign Proposal
 
-This document outlines the proposed layout and structure for rearranging the main navigation menu of the SuA Glow website.
+This document outlines the proposed layout and structure for rearranging the main navigation menu of the SUA Glow website.
 
 ---
 
@@ -41,7 +41,7 @@ Instead of two separate menus, we combine **Skin Health** and **Wellness** into 
   * *Scar Treatment*: Acne Scars, Surgical Scars, Stretch Marks, Keloid
 * **Column 2: Skin Rejuvenation & K-Beauty Treatments**
   * *Skin Rejuvenation*: Oligio X RF Lifting, LDM Water Drop Lifting, Microneedling, Needle-free Infusion, Picosecond Laser, Korean Scalp & Hair
-  * *Signature Treatments*: SuA Glow Signature, One Day Glow, Bridal Glow, Seoul Man
+  * *Signature Treatments*: SUA Glow Signature, One Day Glow, Bridal Glow, Seoul Man
   * *K-Beauty Facials*: LDM Water Drop Lifting, Salmon PN Facial, Glow & Hydration, Collagen Stimulation, Tone Up
 * **Column 3: Wellness & Longevity Medicine**
   * Medical Weight Loss (Compounded GLP-1 & Korean Body Reset)
@@ -144,7 +144,7 @@ Below is a diff highlighting the changes in the HTML template inside `navbar.js`
         </a>
         <div class="dropdown-menu text-left w-56">
             <p class="text-[9px] uppercase tracking-wider text-charcoal/40 px-4 py-1 font-semibold">Our Story</p>
-            <a href="about.html" class="dropdown-link font-body text-xs pl-6">About SuA Glow</a>
+            <a href="about.html" class="dropdown-link font-body text-xs pl-6">About SUA Glow</a>
             <a href="about.html#k-beauty" class="dropdown-link font-body text-xs pl-6">K-Beauty Philosophy</a>
             <a href="about.html#safety" class="dropdown-link font-body text-xs pl-6">Safety Protocols</a>
             <div class="border-t border-charcoal/5 my-2"></div>

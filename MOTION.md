@@ -1,4 +1,4 @@
-# SuA K-Glow Motion & Animation Architecture Guide
+# SUA K-Glow Motion & Animation Architecture Guide
 
 This guide documents the motion stack installed in the repository for **Codex**, **IDEs** (VS Code, Cursor, Antigravity), and human developers.
 
@@ -6,18 +6,18 @@ This guide documents the motion stack installed in the repository for **Codex**,
 
 ## 1. Installed Libraries
 
-The project dependencies are recorded in [`package.json`](file:///Users/mw/Sites/SuAGlow/dev-site/package.json) and installed in `node_modules/`:
+The project dependencies are recorded in [`package.json`](file:///Users/mw/Sites/SUAGlow/dev-site/package.json) and installed in `node_modules/`:
 - **`gsap@^3.15.0`** (`node_modules/gsap`): Industry-standard timeline and scroll-trigger animation engine.
 - **`lenis@^1.3.26`** (`node_modules/lenis`): Smooth momentum scrolling physics engine.
-- **`motion.js`** ([`motion.js`](file:///Users/mw/Sites/SuAGlow/dev-site/motion.js)): Reusable vanilla helper library exposing `window.SuAMotion`.
-- **`motion.css`** ([`motion.css`](file:///Users/mw/Sites/SuAGlow/dev-site/motion.css)): Reusable CSS animations (shimmer foil, spotlights, 3D tilt, split-sliders).
+- **`motion.js`** ([`motion.js`](file:///Users/mw/Sites/SUAGlow/dev-site/motion.js)): Reusable vanilla helper library exposing `window.SUAMotion`.
+- **`motion.css`** ([`motion.css`](file:///Users/mw/Sites/SUAGlow/dev-site/motion.css)): Reusable CSS animations (shimmer foil, spotlights, 3D tilt, split-sliders).
 
 ---
 
 ## 2. Interactive Reference & Showcase
 
 The live interactive reference showcasing every effect is available at:
-👉 **[`dev-tools/motion-showcase.html`](file:///Users/mw/Sites/SuAGlow/dev-site/dev-tools/motion-showcase.html)** (Served locally at `http://localhost:8088/dev-tools/motion-showcase.html`).
+👉 **[`dev-tools/motion-showcase.html`](file:///Users/mw/Sites/SUAGlow/dev-site/dev-tools/motion-showcase.html)** (Served locally at `http://localhost:8088/dev-tools/motion-showcase.html`).
 
 ---
 
@@ -35,7 +35,7 @@ To add motion effects to any page (e.g., `dep.html`, `korean-scalp-hair-rejuvena
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
 
-<!-- SuA Motion Engine -->
+<!-- SUA Motion Engine -->
 <script src="motion.js"></script>
 ```
 
@@ -46,7 +46,7 @@ Add one line to initialize smooth scroll on the page:
 ```javascript
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    SuAMotion.initSmoothScroll({ duration: 1.2 });
+    SUAMotion.initSmoothScroll({ duration: 1.2 });
   });
 </script>
 ```
@@ -122,4 +122,4 @@ Add one line to initialize smooth scroll on the page:
 ## 4. IDE & Codex Autocomplete Support
 
 - Because `gsap` and `lenis` are declared in `package.json` with TypeScript typings (`d.ts`), IDEs and Codex will provide code completions, parameter suggestions, and JSDoc documentation automatically.
-- `motion.js` is written as a Universal Module (UMD) with full JSDoc annotations, so `SuAMotion.` methods autocomplete in modern code editors.
+- `motion.js` is written as a Universal Module (UMD) with full JSDoc annotations, so `SUAMotion.` methods autocomplete in modern code editors.

@@ -1,11 +1,11 @@
-// SuA Glow Navigation Content
+// SUA Glow Navigation Content
 const NAVBAR_HTML = `<!-- Navigation -->
 <nav id="navbar" class="group/nav fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
     <!-- Top Bar -->
     <div id="nav-topbar" class="bg-charcoal text-white/80 py-2 border-b border-white/10 transition-all duration-300">
         <div class="max-w-[1440px] mx-auto px-4 md:px-12 flex justify-center md:justify-between items-center text-[10px] tracking-[0.2em] uppercase font-body gap-4">
             <div class="hidden md:flex items-center flex-1">
-                <a href="https://www.google.com/maps/place/SuA+Glow/@33.0227643,-96.9350266,17z/data=!3m1!4b1!4m6!3m5!1s0x8d14611a2aa39e01:0xd81ab189a5840191!8m2!3d33.0227643!4d-96.9324517!16s%2Fg%2F11mlsqzn2f?entry=ttu&g_ep=EgoyMDI2MDIyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
+                <a href="https://www.google.com/maps/place/SUA+Glow/@33.0227643,-96.9350266,17z/data=!3m1!4b1!4m6!3m5!1s0x8d14611a2aa39e01:0xd81ab189a5840191!8m2!3d33.0227643!4d-96.9324517!16s%2Fg%2F11mlsqzn2f?entry=ttu&g_ep=EgoyMDI2MDIyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
                     <i data-lucide="map-pin" class="w-3 h-3"></i> <span class="hidden lg:inline">4116 State Highway 121, Suite 120, Office O, Carrollton, TX 75010</span><span class="inline lg:hidden">Carrollton, TX</span>
                 </a>
             </div>
@@ -131,7 +131,7 @@ const NAVBAR_HTML = `<!-- Navigation -->
                                     Signature Treatments
                                 </div>
                                 <ul class="space-y-1 mb-5">
-                                    <li><a href="signature-treatment.html" class="dropdown-link !p-0 hover:!pl-2">SuA Glow Signature</a></li>
+                                    <li><a href="signature-treatment.html" class="dropdown-link !p-0 hover:!pl-2">SUA Glow Signature</a></li>
                                     <li><a href="one-day-glow.html" class="dropdown-link !p-0 hover:!pl-2">One Day Glow</a></li>
                                     <li><a href="bridal-glow.html" class="dropdown-link !p-0 hover:!pl-2">Bridal Glow</a></li>
                                     <li><a href="seoul-man.html" class="dropdown-link !p-0 hover:!pl-2">Seoul Man Treatment</a></li>
@@ -275,7 +275,7 @@ const NAVBAR_HTML = `<!-- Navigation -->
                 </a>
                 <div class="dropdown-menu text-left w-64 !p-4">
                     <p class="text-[9px] uppercase tracking-wider text-charcoal/40 px-3 py-1 font-semibold">Our Story</p>
-                    <a href="about.html" class="dropdown-link font-body text-xs !py-1.5">About SuA Glow</a>
+                    <a href="about.html" class="dropdown-link font-body text-xs !py-1.5">About SUA Glow</a>
                     <a href="about.html#k-beauty" class="dropdown-link font-body text-xs !py-1.5">K-Beauty Philosophy</a>
                     <a href="about.html#safety" class="dropdown-link font-body text-xs !py-1.5">Safety &amp; Medical Oversight</a>
                     <div class="border-t border-charcoal/5 my-2"></div>
@@ -429,7 +429,7 @@ const NAVBAR_HTML = `<!-- Navigation -->
                                 Signature Treatments
                             </div>
                             <div class="flex flex-col gap-1 mt-1.5 pl-2 border-l border-light-gray/60">
-                                <a href="signature-treatment.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors py-1 min-h-[36px] flex items-center">SuA Glow Signature Treatment</a>
+                                <a href="signature-treatment.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors py-1 min-h-[36px] flex items-center">SUA Glow Signature Treatment</a>
                                 <a href="one-day-glow.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors py-1 min-h-[36px] flex items-center">One Day Glow</a>
                                 <a href="bridal-glow.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors py-1 min-h-[36px] flex items-center">Bridal Glow</a>
                                 <a href="seoul-man.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors py-1 min-h-[36px] flex items-center">Seoul Man Treatment</a>
@@ -595,7 +595,7 @@ const NAVBAR_HTML = `<!-- Navigation -->
                         <div>
                             <span class="text-[10px] uppercase font-bold tracking-wider text-charcoal/40 block mb-1.5">Our Story</span>
                             <div class="flex flex-col gap-1 pl-2 border-l border-light-gray/60">
-                                <a href="about.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors py-1 min-h-[36px] flex items-center">About SuA Glow</a>
+                                <a href="about.html" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors py-1 min-h-[36px] flex items-center">About SUA Glow</a>
                                 <a href="about.html#k-beauty" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors py-1 min-h-[36px] flex items-center">What is K-Beauty</a>
                                 <a href="about.html#safety" class="font-body text-sm text-charcoal/70 hover:text-taupe transition-colors py-1 min-h-[36px] flex items-center">Safety &amp; Medical Oversight</a>
                             </div>

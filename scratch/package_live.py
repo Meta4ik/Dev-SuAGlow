@@ -2,7 +2,7 @@ import os
 import shutil
 
 def main():
-    workspace_dir = "/Users/mw/Sites/SuAGlow"
+    workspace_dir = "/Users/mw/Sites/SUAGlow"
     source_dir = os.path.join(workspace_dir, "dev-site")
     live_site_dir = os.path.join(workspace_dir, "live-site")
     zip_output_path = os.path.join(source_dir, "suaglow-live.zip")

@@ -1,8 +1,8 @@
 /**
- * SuA K Glow - October 2026 Specials Data Configuration
+ * SUA K Glow - October 2026 Specials Data Configuration
  * ------------------------------------------------------
  * Dedicated configuration for the October Promotion campaign:
- * "The SuA Glow October Edit - Glow or Treat! 🍫✨"
+ * "The SUA Glow October Edit - Glow or Treat! 🍫✨"
  */
 
 const MONTHLY_SPECIALS_CONFIG_OCTOBER = {
@@ -12,8 +12,8 @@ const MONTHLY_SPECIALS_CONFIG_OCTOBER = {
         pill: "GLOW OR TREAT! 🍫✨",
         pillImage: "assets/glow-or-treat-title.png",
         badge: "Limited Time | October Offers",
-        title: "The SuA Glow October Edit",
-        titleLine1: "The SuA Glow",
+        title: "The SUA Glow October Edit",
+        titleLine1: "The SUA Glow",
         titleLine2: "October Edit",
         subtitle: "Seoul Glow. Zero Tricks.",
         taglinePill: "Scary-dry skin or hair looking a little haunted? Dallas fall meets authentic K-Beauty. Three October-only ways to lift, repair + renew with zero tricks and all treats.",
@@ -25,8 +25,8 @@ const MONTHLY_SPECIALS_CONFIG_OCTOBER = {
         offerPillars: "Korean-founded · Korean PA-C provider · Physician-guided",
         offerCtaText: "Claim Your October Offer",
         offerCtaUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
-        flyerImage: "assets/SuA-Glow-October-Specials.jpg?v=105",
-        downloadFlyerImage: "assets/SuA-Glow-October-Specials.jpg?v=105",
+        flyerImage: "assets/SUA-Glow-October-Specials.jpg?v=105",
+        downloadFlyerImage: "assets/SUA-Glow-October-Specials.jpg?v=105",
         cardBackground: "assets/october_card_bg.jpg",
         headerBackground: "assets/october_header_bg.jpg",
         bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/",

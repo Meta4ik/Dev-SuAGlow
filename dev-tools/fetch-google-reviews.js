@@ -92,13 +92,13 @@ async function main() {
                 author_name: r.author_name,
                 profile_photo_url: r.profile_photo_url,
                 rating: r.rating,
-                text: r.text,
+                text: (r.text || '').replace(/SuA/g, 'SUA'),
                 time: r.time,
                 relative_time_description: r.relative_time_description
             }));
 
         const outputData = {
-            place_name: baseResult.name || 'SuA Glow',
+            place_name: (baseResult.name || 'SUA Glow').replace(/SuA/g, 'SUA'),
             rating: Number(rating).toFixed(1),
             user_ratings_total: totalReviews,
             formatted_badge: `${Number(rating).toFixed(1)} · ${totalReviews} reviews`,

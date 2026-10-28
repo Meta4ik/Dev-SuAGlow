@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 WIDTH = 1700
 HEIGHT = 2200
 
-# Color Palette (SuA Glow Luxury Clinical Brand)
+# Color Palette (SUA Glow Luxury Clinical Brand)
 TAUPE = (170, 152, 124)       # #AA987C
 GOLD = (229, 184, 105)        # #E5B869
 DARK_CHARCOAL = (30, 33, 36)  # #1E2124
@@ -40,7 +40,7 @@ def draw_header_bar(draw, page_num):
 
 def draw_footer(draw):
     draw.line([(80, HEIGHT - 80), (WIDTH - 80, HEIGHT - 80)], fill=LIGHT_GRAY, width=2)
-    draw.text((80, HEIGHT - 60), "SuA Glow • Google Ads Performance & Initial Results Dossier", font=get_font(16), fill=TEXT_MUTED)
+    draw.text((80, HEIGHT - 60), "SUA Glow • Google Ads Performance & Initial Results Dossier", font=get_font(16), fill=TEXT_MUTED)
     draw.text((WIDTH - 420, HEIGHT - 60), "suaglow.com • 972-665-8737 • Carrollton, TX", font=get_font(16), fill=TAUPE)
 
 
@@ -54,8 +54,8 @@ def create_page_1():
     draw_header_bar(draw, 1)
 
     # 1. Place Logo at the top
-    logo_path = "/Users/mw/Sites/SuAGlow/dev-site/internal/google-ads/images/sua_k_glow_wordmark_logo.png"
-    circle_path = "/Users/mw/Sites/SuAGlow/dev-site/internal/google-ads/images/sua_glow_circular_logo.png"
+    logo_path = "/Users/mw/Sites/SUAGlow/dev-site/internal/google-ads/images/sua_k_glow_wordmark_logo.png"
+    circle_path = "/Users/mw/Sites/SUAGlow/dev-site/internal/google-ads/images/sua_glow_circular_logo.png"
     
     if os.path.exists(circle_path):
         circle_logo = Image.open(circle_path).convert("RGBA")
@@ -75,7 +75,7 @@ def create_page_1():
     draw.rounded_rectangle([(80, hero_y), (WIDTH - 80, hero_y + 260)], radius=20, fill=DARK_CHARCOAL)
     
     draw.text((120, hero_y + 35), "EXECUTIVE PERFORMANCE DOSSIER  •  INITIAL LAUNCH RESULTS", font=get_font(16, bold=True), fill=GOLD)
-    draw.text((120, hero_y + 70), "SuA Glow Hair & Scalp Reset", font=get_font(40, bold=True), fill=WHITE)
+    draw.text((120, hero_y + 70), "SUA Glow Hair & Scalp Reset", font=get_font(40, bold=True), fill=WHITE)
     draw.text((120, hero_y + 130), "Live Google Search Campaign Analytics  |  Dallas–Fort Worth Metroplex", font=get_font(22), fill=TAUPE)
     
     # Status badges
@@ -108,7 +108,7 @@ def create_page_1():
     table1_y = 655
     draw.rounded_rectangle([(80, table1_y), (WIDTH - 80, table1_y + 360)], radius=20, fill=WHITE, outline=LIGHT_GRAY, width=2)
     draw.text((120, table1_y + 30), "INDUSTRY BENCHMARK COMPARISON", font=get_font(22, bold=True), fill=DARK_CHARCOAL)
-    draw.text((120, table1_y + 60), "SuA Glow Actuals vs. Standard Medical & Aesthetic Clinic Benchmarks", font=get_font(16), fill=TEXT_MUTED)
+    draw.text((120, table1_y + 60), "SUA Glow Actuals vs. Standard Medical & Aesthetic Clinic Benchmarks", font=get_font(16), fill=TEXT_MUTED)
     draw.line([(120, table1_y + 88), (WIDTH - 120, table1_y + 88)], fill=LIGHT_GRAY, width=1)
 
     headers1 = [("METRIC", 120), ("SUA GLOW ACTUAL", 520), ("INDUSTRY BENCHMARK", 860), ("PERFORMANCE ASSESSMENT", 1220)]
@@ -178,7 +178,7 @@ def create_page_1():
          "An 11.16% Click-Through Rate is nearly 3x higher than standard Google Search benchmarks. This confirms that front-loading the $399 Korean Scalp Reset pricing and physician-guided positioning strongly resonates with local Dallas–Fort Worth searchers."),
         
         ("2. Substantial Cost Advantage ($1.81 Average CPC)", 
-         "In the highly competitive Dallas medical and hair restoration sector, typical search clicks range from $4.50 to $7.50+. Achieving a $1.81 CPC allows SuA Glow to drive maximum qualified clinic traffic at less than half the expected market cost."),
+         "In the highly competitive Dallas medical and hair restoration sector, typical search clicks range from $4.50 to $7.50+. Achieving a $1.81 CPC allows SUA Glow to drive maximum qualified clinic traffic at less than half the expected market cost."),
         
         ("3. Female Thinning Leading Early Engagement", 
          "Ad Group 2 (Thinning / Women) is generating the highest volume and lowest cost-per-click ($1.61 CPC, 11.57% CTR). This highlights an immediate high-intent market of women seeking non-surgical, needle-free solutions for widening parts and diffuse shedding."),
@@ -208,13 +208,13 @@ def create_page_2():
     draw_header_bar(draw, 2)
 
     # Top Small Logo
-    circle_path = "/Users/mw/Sites/SuAGlow/dev-site/internal/google-ads/images/sua_glow_circular_logo.png"
+    circle_path = "/Users/mw/Sites/SUAGlow/dev-site/internal/google-ads/images/sua_glow_circular_logo.png"
     if os.path.exists(circle_path):
         circle_logo = Image.open(circle_path).convert("RGBA")
         circle_logo = circle_logo.resize((70, 70), Image.Resampling.LANCZOS)
         img.paste(circle_logo, (80, 50), circle_logo)
 
-    draw.text((165, 58), "SuA GLOW", font=get_font(26, bold=True), fill=TAUPE)
+    draw.text((165, 58), "SUA GLOW", font=get_font(26, bold=True), fill=TAUPE)
     draw.text((320, 62), "|  SEARCH QUERY INTELLIGENCE & OPTIMIZATION ROADMAP", font=get_font(18), fill=TEXT_MUTED)
 
     # 1. REAL PATIENT SEARCH TERMS REPORT
@@ -331,17 +331,17 @@ def create_page_3():
     draw_header_bar(draw, 3)
 
     # Top Small Logo
-    circle_path = "/Users/mw/Sites/SuAGlow/dev-site/internal/google-ads/images/sua_glow_circular_logo.png"
+    circle_path = "/Users/mw/Sites/SUAGlow/dev-site/internal/google-ads/images/sua_glow_circular_logo.png"
     if os.path.exists(circle_path):
         circle_logo = Image.open(circle_path).convert("RGBA")
         circle_logo = circle_logo.resize((70, 70), Image.Resampling.LANCZOS)
         img.paste(circle_logo, (80, 50), circle_logo)
 
-    draw.text((165, 58), "SuA GLOW", font=get_font(26, bold=True), fill=TAUPE)
+    draw.text((165, 58), "SUA GLOW", font=get_font(26, bold=True), fill=TAUPE)
     draw.text((320, 62), "|  DFW METROPLEX GEOTARGETING & LOCAL MARKET COVERAGE", font=get_font(18), fill=TEXT_MUTED)
 
     # 1. MAP EMBED CONTAINER
-    map_path = "/Users/mw/Sites/SuAGlow/dev-site/internal/google-ads/images/dfw_geotargeting_map.png"
+    map_path = "/Users/mw/Sites/SUAGlow/dev-site/internal/google-ads/images/dfw_geotargeting_map.png"
     map_y = 160
     map_h = 820
     map_w = WIDTH - 160 # 1540
@@ -365,10 +365,10 @@ def create_page_3():
     
     geo_points = [
         ("Zero Out-of-State Budget Bleed",
-         "Google's default setting ('Presence or Interest') shows ads to anyone researching Texas from California or overseas. SuA Glow uses strict 'Presence', ensuring 100% of budget reaches users physically located in our DFW zone."),
+         "Google's default setting ('Presence or Interest') shows ads to anyone researching Texas from California or overseas. SUA Glow uses strict 'Presence', ensuring 100% of budget reaches users physically located in our DFW zone."),
 
         ("Transit Corridor Alignment (SH-121)",
-         "The SuA Glow clinic is conveniently situated on State Highway 121 (Sam Rayburn Tollway) in Carrollton. This offers direct 10–20 minute commute access for patients traveling from Frisco, Plano, Lewisville, The Colony, and Flower Mound."),
+         "The SUA Glow clinic is conveniently situated on State Highway 121 (Sam Rayburn Tollway) in Carrollton. This offers direct 10–20 minute commute access for patients traveling from Frisco, Plano, Lewisville, The Colony, and Flower Mound."),
 
         ("Affluent Demographic Catchment",
          "Our 13 selected cities capture ~3.8 million North Texas residents with above-average household incomes ($115k+ median in Frisco/Plano/Flower Mound), perfectly matching elective $399–$2,400 clinical hair rejuvenation treatments.")
@@ -445,7 +445,7 @@ def main():
     print("Generating Page 3 of Performance Results Dossier (with DFW Map)...")
     p3 = create_page_3()
 
-    output_path = "/Users/mw/Sites/SuAGlow/dev-site/internal/google-ads/sua_glow_performance_results_dossier.pdf"
+    output_path = "/Users/mw/Sites/SUAGlow/dev-site/internal/google-ads/sua_glow_performance_results_dossier.pdf"
     print(f"Saving 3-page PDF to {output_path}...")
     p1.save(output_path, "PDF", resolution=200.0, save_all=True, append_images=[p2, p3])
     print("PDF generation complete! File size:", os.path.getsize(output_path), "bytes")

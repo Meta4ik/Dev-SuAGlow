@@ -1,5 +1,5 @@
 /**
- * SuA K Glow - September 2026 Specials Data Configuration
+ * SUA K Glow - September 2026 Specials Data Configuration
  * --------------------------------------------------------
  * Dedicated configuration for the September Promotion campaign.
  */
@@ -11,9 +11,9 @@ const MONTHLY_SPECIALS_CONFIG_SEPTEMBER = {
         pill: "LABOR DAY GLOW DROP",
         pillImage: "assets/labor-day.png?v=90",
         badge: "Limited Time | September Offers",
-        title: "The SuA Glow September Edit",
+        title: "The SUA Glow September Edit",
         subtitle: "Seoul Style. Dallas Glow.",
-        tagline: "Dallas summer steal your glow? K-Beauty to the rescue. Your Seoul-style comeback starts at SuA Glow. Three September-only ways to firm, refine + reset.",
+        tagline: "Dallas summer steal your glow? K-Beauty to the rescue. Your Seoul-style comeback starts at SUA Glow. Three September-only ways to firm, refine + reset.",
         offerBadge: "LIMITED TIME · SEPTEMBER 2026",
         offerCallout: "$100 OFF YOUR <span class=\"md:whitespace-nowrap\">SEOUL-STYLE COMEBACK</span>",
         offerSubtext: "Book your consultation during September 2026 to redeem.",
@@ -21,7 +21,7 @@ const MONTHLY_SPECIALS_CONFIG_SEPTEMBER = {
         offerCtaText: "Claim Your Offer",
         offerCtaUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
         flyerImage: "assets/september_flyer_bg_models.jpg?v=56",
-        downloadFlyerImage: "assets/SuA-Glow-September-Specials.jpg?v=80",
+        downloadFlyerImage: "assets/SUA-Glow-September-Specials.jpg?v=80",
         cardBackground: "assets/dallas_fall_card_bg.jpg?v=56",
         bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
         terms: "*September promotional pricing. Consultation is required to determine candidacy. Individual results vary. Offers subject to availability."

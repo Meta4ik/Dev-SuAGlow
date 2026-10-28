@@ -3,7 +3,7 @@
 
 <head>    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Specials | SuA K Glow Korean Med Spa</title>
+    <title>Specials | SUA K Glow Korean Med Spa</title>
     <link rel="icon" href="assets/favicon.png" type="image/png">
 
     <!-- Google Fonts -->
@@ -33,7 +33,7 @@
     <!-- Brand CTA Section -->
     <section data-nav-theme="light" class="bg-near-black text-white py-32 px-10 text-center">
         <div class="max-w-4xl mx-auto animate-on-scroll fade-up">
-            <img src="assets/logo-main.webp" alt="SuA K-Glow"
+            <img src="assets/logo-main.webp" alt="SUA K-Glow"
                 class="h-16 mx-auto mb-8 brightness-0 invert opacity-70">
             <p class="heading-wide text-xs tracking-[0.7em] opacity-30 mb-24 uppercase">Medical Aesthetics • Carrollton
                 HQ</p>

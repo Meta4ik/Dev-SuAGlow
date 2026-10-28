@@ -1,5 +1,5 @@
 /**
- * SuA Glow Injectable Section Library
+ * SUA Glow Injectable Section Library
  * Provides standardized templates, default data, and injection renderers for all site section patterns.
  */
 
@@ -133,7 +133,7 @@ export const SECTION_LIBRARY = {
         defaultProps: {
             categoryBadge: 'Information & Policies',
             title: 'Privacy Policy',
-            subtitle: 'Learn how SuA Glow protects your confidential health and personal information.'
+            subtitle: 'Learn how SUA Glow protects your confidential health and personal information.'
         },
         render: (p = {}) => `
 <section id="page-hero" class="relative pt-[160px] pb-16 px-8 md:px-16 bg-light-gray/60 border-b border-light-gray text-center">
@@ -156,7 +156,7 @@ export const SECTION_LIBRARY = {
             sectionTitle: 'Barrier Recovery & Repair',
             subtitlePhilosophy: 'The Seoul Healing Philosophy',
             leadStatement: 'Beautiful skin is, first and foremost, healthy skin with a strong barrier.',
-            description: 'At SuA Glow, this Korean-inspired recovery treatment utilizes active bio-compounds designed to support the natural healing environment, improve elasticity, and calm compromised barriers.',
+            description: 'At SUA Glow, this Korean-inspired recovery treatment utilizes active bio-compounds designed to support the natural healing environment, improve elasticity, and calm compromised barriers.',
             col1Title: 'Target Focus',
             col1Items: ['Barrier Repair', 'Skin Calming', 'Cellular Support'],
             col2Title: 'Clinical Results',
@@ -343,13 +343,13 @@ export const SECTION_LIBRARY = {
 
     'why-sua': {
         id: 'why-sua',
-        name: 'Why SuA Glow (Value Proposition)',
+        name: 'Why SUA Glow (Value Proposition)',
         category: 'benefits',
         description: 'Brand differentiator block featuring dark styling, gold accents, and 4 pillar callouts.',
         defaultProps: {
-            badgeText: 'The SuA Glow Difference',
+            badgeText: 'The SUA Glow Difference',
             headlineMain: 'Why Choose',
-            headlineAccent: 'SuA Glow',
+            headlineAccent: 'SUA Glow',
             description: 'We bring genuine Seoul aesthetic medical protocols to Dallas, prioritizing skin integrity, subtle elegance, and evidence-based care.',
             ctaText: 'Book Your Visit',
             ctaLink: 'https://suaglow.myaestheticrecord.com/online-booking/',
@@ -1310,11 +1310,11 @@ export const SECTION_LIBRARY = {
             badgeText: 'The Origin',
             sectionTitle: 'Our Story',
             storyParagraphs: [
-                'SuA K-Glow was born from a vision to bring the authentic, results-driven philosophy of Korean medical aesthetics to the heart of Texas. Our founder recognized a gap in the market: the need for treatments that prioritize long-term skin health and regeneration over temporary fillers or aggressive drama.',
-                'We don’t just follow trends; we study the science of skin behavior. Every treatment at SuA K-Glow is rooted in the "water-based" rejuvenation methods popularized in Seoul, focusing on deep hydration, dermal repair, and the unmistakable "glass skin" glow.'
+                'SUA K-Glow was born from a vision to bring the authentic, results-driven philosophy of Korean medical aesthetics to the heart of Texas. Our founder recognized a gap in the market: the need for treatments that prioritize long-term skin health and regeneration over temporary fillers or aggressive drama.',
+                'We don’t just follow trends; we study the science of skin behavior. Every treatment at SUA K-Glow is rooted in the "water-based" rejuvenation methods popularized in Seoul, focusing on deep hydration, dermal repair, and the unmistakable "glass skin" glow.'
             ],
             imgSrc: 'assets/art-of-korean.png',
-            imgAlt: 'SuA Glow Korean Aesthetics Story'
+            imgAlt: 'SUA Glow Korean Aesthetics Story'
         },
         render: (p = {}, opt = {}) => {
             const prefix = opt.assetPrefix || '';
@@ -1529,7 +1529,7 @@ export const SECTION_LIBRARY = {
             sectionSubtitle: 'Understand the distinct physiological differences and benefits of our Seoul-inspired modalities.',
             treatments: [
                 {
-                    title: 'Tone Up Facial (SuA Glow)',
+                    title: 'Tone Up Facial (SUA Glow)',
                     badge: 'Our Signature Korean Approach',
                     points: [
                         'Gentle non-invasive cellular brightening',
@@ -1590,7 +1590,7 @@ export const SECTION_LIBRARY = {
         defaultProps: {
             badgeText: 'Holistic Transformation',
             sectionTitle: 'Preserving Skin & Hair Vitality',
-            description: 'Rapid weight loss can stress the hair cycle and cause facial hollowing. At SuA Glow, every medical weight loss journey is proactively supported with collagen stimulation and hair density therapies.',
+            description: 'Rapid weight loss can stress the hair cycle and cause facial hollowing. At SUA Glow, every medical weight loss journey is proactively supported with collagen stimulation and hair density therapies.',
             imgSrc: 'assets/weight-loss-skin-hair.png',
             imgAlt: 'Skin and Hair Health Medical Weight Loss',
             features: [
@@ -1642,7 +1642,7 @@ export const SECTION_LIBRARY = {
         defaultProps: {
             badgeText: 'Flagship Technology',
             title: 'Experience The Future of Non-Surgical RF Lifting',
-            description: 'Direct from Gangnam, Seoul. Experience Oligio X at SuA K-Glow Med Spa in Dallas-Fort Worth.',
+            description: 'Direct from Gangnam, Seoul. Experience Oligio X at SUA K-Glow Med Spa in Dallas-Fort Worth.',
             bgImg: 'assets/oligio-model1.png',
             ctaPrimaryText: 'Book Treatment',
             ctaPrimaryLink: 'https://suaglow.myaestheticrecord.com/online-booking/',
@@ -1862,7 +1862,7 @@ export const SECTION_LIBRARY = {
             <!-- Model Image on Right: Responsive framing (Mobile 1:1 sample & Desktop 1:1) -->
             <div class="absolute inset-y-0 right-0 w-[62%] sm:w-[58%] lg:w-[58%] z-0 pointer-events-none overflow-hidden">
                 <img src="${p.imageSrc}" 
-                     alt="SuA Glow Personalized Aesthetic Consultation" 
+                     alt="SUA Glow Personalized Aesthetic Consultation" 
                      class="w-full h-full object-cover object-[78%_top] sm:object-[center_10%] lg:object-[center_12%] transform scale-[1.25] sm:scale-[1.33] origin-[70%_20%] sm:origin-[72%_center]">
                 
                 <!-- Seamless Soft Fade on Left Edge of Model -->
@@ -1956,7 +1956,7 @@ export const SECTION_LIBRARY = {
             badgeText: 'Next-Gen Korean RF Lifting',
             titleLine1: 'Seoul-Inspired RF Lifting.',
             titleLine2: 'Without Looking Overdone.',
-            description: 'Experience Oligio X at SuA K-Glow Med Spa. Non-surgical skin tightening designed to stimulate collagen, refine contours, and restore youthful resilience.',
+            description: 'Experience Oligio X at SUA K-Glow Med Spa. Non-surgical skin tightening designed to stimulate collagen, refine contours, and restore youthful resilience.',
             primaryCtaText: 'Book Oligio X Consultation',
             primaryCtaLink: 'https://suaglow.myaestheticrecord.com/online-booking/',
             secondaryCtaText: 'Explore Technology',
@@ -2186,8 +2186,8 @@ export const SECTION_LIBRARY = {
         description: 'Comprehensive breakdown explaining the clinical differences between Thermage, Ultherapy, and Oligio X.',
         defaultProps: {
             badgeText: 'Our Treatment Philosophy',
-            title: 'Why SuA Glow Chose Oligio X',
-            description: 'At SuA Glow, we selected Oligio X because it aligns with our Seoul-inspired philosophy of skin quality first rather than aggressive overcorrection.',
+            title: 'Why SUA Glow Chose Oligio X',
+            description: 'At SUA Glow, we selected Oligio X because it aligns with our Seoul-inspired philosophy of skin quality first rather than aggressive overcorrection.',
             priorities: [
                 'Natural collagen support and fibroblast renewal',
                 'Preserving youthful elasticity without stiffness',
@@ -2388,7 +2388,7 @@ export function injectSection(targetEl, id, customProps = {}, options = {}) {
  * Generates complete starter HTML boilerplate for a new page using selected sections.
  */
 export function generatePageHtml(sectionIds = STANDARD_FLOW_BLUEPRINT, pageMeta = {}, customPropsMap = {}) {
-    const title = pageMeta.title || 'New Treatment | SuA K Glow Med Spa';
+    const title = pageMeta.title || 'New Treatment | SUA K Glow Med Spa';
     const description = pageMeta.description || 'Korean Medical Aesthetics Treatment in Carrollton, TX.';
     
     const sectionsHtml = sectionIds.map(id => {

@@ -102,7 +102,7 @@
         "area": "Operations",
         "topic": "Late Hours / Closing Time",
         "type": "WIP",
-        "issue": "*Determine which days SuA Glow should offer later appointments and how long the clinic should remain open when no patients are scheduled. \n* Confirm how calls are handled during business hours.",
+        "issue": "*Determine which days SUA Glow should offer later appointments and how long the clinic should remain open when no patients are scheduled. \n* Confirm how calls are handled during business hours.",
         "action_needed": "Establish late-clinic days, last appointment times, and closing rules.",
         "assignee": "Jasmine",
         "priority": "High",

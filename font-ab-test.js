@@ -1,5 +1,5 @@
 /**
- * SuA Glow Typography A/B Testing Widget — DISABLED
+ * SUA Glow Typography A/B Testing Widget — DISABLED
  * Cleans up any leftover localStorage keys or class overrides.
  */
 (function () {

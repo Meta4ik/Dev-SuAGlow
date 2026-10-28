@@ -1,11 +1,11 @@
 # Walkthrough - Google Ads & Scalp Reset Campaign Integration
 
-We have integrated Google Ads tracking and refreshed all visual assets in the Google Ads staging hub with the authentic clinical hair loss assets from [`assets/google-ads-sua/hair/`](file:///Users/mw/Sites/SuAGlow/dev-site/assets/google-ads-sua/hair).
+We have integrated Google Ads tracking and refreshed all visual assets in the Google Ads staging hub with the authentic clinical hair loss assets from [`assets/google-ads-sua/hair/`](file:///Users/mw/Sites/SUAGlow/dev-site/assets/google-ads-sua/hair).
 
 ## Key Updates Made
 
 ### 1. New Hair Creative Assets Loaded into Google Ads Hub
-Updated [`internal/google-ads/index.html`](file:///Users/mw/Sites/SuAGlow/dev-site/internal/google-ads/index.html) across all Ad Groups and galleries:
+Updated [`internal/google-ads/index.html`](file:///Users/mw/Sites/SUAGlow/dev-site/internal/google-ads/index.html) across all Ad Groups and galleries:
 - **Ad Group 1 (Combined Demographic / Hair Loss & Rejuvenation)**:
   - Primary Visual: `BA Hiar Loss 1 Curly Hair.png` (Clinical Before & After)
   - Thumbnails: `BA Side Profile.png` & `Caucasian Hair Loss.png`
@@ -24,12 +24,12 @@ Updated [`internal/google-ads/index.html`](file:///Users/mw/Sites/SuAGlow/dev-si
 - Destination URLs across all 3 Ad Groups, SERP previews, and one-click copy blocks now point directly to `https://suaglow.com/korean-scalp-hair-rejuvenation.html`.
 
 ### 3. Tracking Script & Conversion Hub
-- Created [`google-tag.js`](file:///Users/mw/Sites/SuAGlow/dev-site/google-tag.js) with automated conversion listeners for Aesthetic Record booking clicks, phone calls (`tel:`), and form inquiries.
-- Created [`thank-you.html`](file:///Users/mw/Sites/SuAGlow/dev-site/thank-you.html) for destination conversion tracking.
-- Configured clean URL rewrites in [`vercel.json`](file:///Users/mw/Sites/SuAGlow/dev-site/vercel.json).
+- Created [`google-tag.js`](file:///Users/mw/Sites/SUAGlow/dev-site/google-tag.js) with automated conversion listeners for Aesthetic Record booking clicks, phone calls (`tel:`), and form inquiries.
+- Created [`thank-you.html`](file:///Users/mw/Sites/SUAGlow/dev-site/thank-you.html) for destination conversion tracking.
+- Configured clean URL rewrites in [`vercel.json`](file:///Users/mw/Sites/SUAGlow/dev-site/vercel.json).
 
 ---
 
 ## Verification
 - `npm run build` executed cleanly.
-- Verified image rendering and responsive layouts in [`internal/google-ads/index.html`](file:///Users/mw/Sites/SuAGlow/dev-site/internal/google-ads/index.html).
+- Verified image rendering and responsive layouts in [`internal/google-ads/index.html`](file:///Users/mw/Sites/SUAGlow/dev-site/internal/google-ads/index.html).

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700;900&display=swap');
 
 /* ==========================================================================
-   SuA Glow — Holographic Tech Membership Card
+   SUA Glow — Holographic Tech Membership Card
    Pure CSS + Vanilla JS 3D Tilt Engine & Holographic Diffraction Shaders
    ========================================================================== */
 
@@ -460,7 +460,7 @@ body:has([data-holo-card]) {
   }
 }
 
-/* Bottom Stack: The SuA Glow Glass Skin Method™, VIP Membership Pass */
+/* Bottom Stack: The SUA Glow Glass Skin Method™, VIP Membership Pass */
 .holo-card-bottom {
   display: flex;
   flex-direction: column;

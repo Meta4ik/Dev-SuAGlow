@@ -93,7 +93,7 @@ ov_draw.polygon(geofence_poly, fill=(170, 152, 124, 26), outline=(170, 152, 124,
 img = Image.alpha_composite(img, overlay)
 draw = ImageDraw.Draw(img)
 
-# Concentric distance rings around SuA Glow Clinic
+# Concentric distance rings around SUA Glow Clinic
 clinic_x, clinic_y = geo_to_xy(33.0553, -96.8875)
 
 for r_mi, r_px in [(5, 75), (10, 150), (18, 270)]:
@@ -204,7 +204,7 @@ for name, lat, lon, ox, oy in cities:
     draw.rounded_rectangle([(bx, by), (bx + tw, by + 22)], radius=5, fill=WHITE, outline=BORDER_COL, width=1)
     draw.text((bx + 8, by + 4), name, font=get_font(12, bold=True), fill=DARK)
 
-# SuA Glow Clinic HQ Marker
+# SUA Glow Clinic HQ Marker
 for r in [30, 20, 12]:
     draw.ellipse([(clinic_x - r, clinic_y - r), (clinic_x + r, clinic_y + r)], fill=None, outline=(229, 184, 105, 140), width=2)
 
@@ -223,7 +223,7 @@ def draw_star(draw, cx, cy, r_out, r_in, fill=GOLD):
 
 draw_star(draw, clinic_x, clinic_y, 7, 3, GOLD)
 
-# SuA Glow Clinic Callout Card - Placed at (380, 190) with an elegant angled pointer line
+# SUA Glow Clinic Callout Card - Placed at (380, 190) with an elegant angled pointer line
 card_w = 340
 card_h = 82
 card_x = 360
@@ -237,7 +237,7 @@ draw.rounded_rectangle([(card_x, card_y), (card_x + card_w, card_y + card_h)], r
 
 # Card header with gold star
 draw_star(draw, card_x + 24, card_y + 20, 6, 3, GOLD)
-draw.text((card_x + 38, card_y + 12), "SuA GLOW CLINIC HEADQUARTERS", font=get_font(12, bold=True), fill=GOLD)
+draw.text((card_x + 38, card_y + 12), "SUA GLOW CLINIC HEADQUARTERS", font=get_font(12, bold=True), fill=GOLD)
 draw.text((card_x + 18, card_y + 34), "4116 State Hwy 121, Suite 120, Office O", font=get_font(13, bold=True), fill=WHITE)
 draw.text((card_x + 18, card_y + 54), "Carrollton, TX 75010  •  972-665-8737", font=get_font(11), fill=TAUPE)
 
@@ -250,7 +250,7 @@ draw.text((leg_x + 16, leg_y + 14), "GEOTARGETING MAP LEGEND", font=get_font(12,
 # Legend items
 draw.ellipse([(leg_x + 18, leg_y + 40), (leg_x + 28, leg_y + 50)], fill=DARK, outline=GOLD, width=2)
 draw_star(draw, leg_x + 23, leg_y + 45, 4, 2, GOLD)
-draw.text((leg_x + 38, leg_y + 38), "SuA Glow Clinic Flagship (Carrollton)", font=get_font(11, bold=True), fill=DARK)
+draw.text((leg_x + 38, leg_y + 38), "SUA Glow Clinic Flagship (Carrollton)", font=get_font(11, bold=True), fill=DARK)
 
 draw.ellipse([(leg_x + 18, leg_y + 64), (leg_x + 28, leg_y + 74)], fill=WHITE, outline=DARK, width=2)
 draw.ellipse([(leg_x + 21, leg_y + 67), (leg_x + 25, leg_y + 71)], fill=GREEN)

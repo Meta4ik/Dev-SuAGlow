@@ -1,7 +1,7 @@
 {
   "name": "suaglow-dev-site",
   "version": "1.0.0",
-  "description": "SuA K-Glow Med Spa — static site with Tailwind CSS CLI build",
+  "description": "SUA K-Glow Med Spa — static site with Tailwind CSS CLI build",
   "scripts": {
     "build": "node dev-tools/fetch-google-reviews.js && node build-search-index.js && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",

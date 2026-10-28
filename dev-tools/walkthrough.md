@@ -10,7 +10,7 @@ We have created two new treatment pages based on the DOCX content provided and f
   - Tone-Up images: `assets/tone-up/image1.jpeg` through `image20.jpeg`
 
 ### 2. Collagen Stimulation Page
-- **File**: [`collagen-stimulation-facial.html`](file:///Users/mw/Sites/SuAGlow/dev-site/collagen-stimulation-facial.html)
+- **File**: [`collagen-stimulation-facial.html`](file:///Users/mw/Sites/SUAGlow/dev-site/collagen-stimulation-facial.html)
 - **Features**:
   - Dark-tinted hero section using extracted `image1.jpeg`.
   - Prominent **Medical Oversight** delegation section at the top of the page.
@@ -20,7 +20,7 @@ We have created two new treatment pages based on the DOCX content provided and f
   - Prominent call-to-action with the telephone number `972-665-8737`.
 
 ### 3. Tone-Up Page
-- **File**: [`tone-up-facial.html`](file:///Users/mw/Sites/SuAGlow/dev-site/tone-up-facial.html)
+- **File**: [`tone-up-facial.html`](file:///Users/mw/Sites/SUAGlow/dev-site/tone-up-facial.html)
 - **Features**:
   - Dark-tinted hero using extracted `image1.jpeg`.
   - Prominent **Medical Oversight** delegation section near the top.
@@ -31,8 +31,8 @@ We have created two new treatment pages based on the DOCX content provided and f
 
 ### 4. Navigation Menu Update
 - **Files**: 
-  - [`navbar.js`](file:///Users/mw/Sites/SuAGlow/dev-site/navbar.js)
-  - [`navbar.html`](file:///Users/mw/Sites/SuAGlow/dev-site/navbar.html)
+  - [`navbar.js`](file:///Users/mw/Sites/SUAGlow/dev-site/navbar.js)
+  - [`navbar.html`](file:///Users/mw/Sites/SUAGlow/dev-site/navbar.html)
 - **Updates**:
   - Updated "Collagen Stimulation" and "Tone Up" links to point to the new dedicated pages.
   - Removed "Soon" badges from these items in both desktop mega-menus and mobile navigation menus.

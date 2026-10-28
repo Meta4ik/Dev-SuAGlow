@@ -1,6 +1,6 @@
 # Exoblanc Boosting Serum — Mobile Web App Experience
 
-A mobile-first, responsive luxury web application designed for **SuA Glow** (Carrollton, TX) and **Exoblanc Boosting Serum**, capturing the aesthetic of high-end Korean medical esthetics.
+A mobile-first, responsive luxury web application designed for **SUA Glow** (Carrollton, TX) and **Exoblanc Boosting Serum**, capturing the aesthetic of high-end Korean medical esthetics.
 
 ## 📱 Features
 

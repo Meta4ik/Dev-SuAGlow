@@ -1,7 +1,7 @@
-# SuA Glow Design System
+# SUA Glow Design System
 
 ## Overview
-SuA Glow is a premium medical‑aesthetic brand that blends Korean‑beauty precision with a modern, glass‑morphism aesthetic. The visual language emphasizes a **luminescent glow**, subtle luxury, and clean, high‑contrast interactions.
+SUA Glow is a premium medical‑aesthetic brand that blends Korean‑beauty precision with a modern, glass‑morphism aesthetic. The visual language emphasizes a **luminescent glow**, subtle luxury, and clean, high‑contrast interactions.
 
 ## Color Palette
 | Name | Hex | Usage |
@@ -88,4 +88,4 @@ Every non-home page uses this hero pattern. Copy exactly — do not change paddi
 4. **Documentation:** Reference this `DESIGN.md` whenever adding new UI components to keep the system coherent.
 
 ---
-*Generated for the SuA Glow website to serve as a single source of truth for designers and developers.*
+*Generated for the SUA Glow website to serve as a single source of truth for designers and developers.*

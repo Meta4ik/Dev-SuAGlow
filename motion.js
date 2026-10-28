@@ -1,8 +1,8 @@
 /**
- * SuA K-Glow Motion & Animation Architecture Library (motion.js)
+ * SUA K-Glow Motion & Animation Architecture Library (motion.js)
  * High-performance vanilla wrapper for GSAP, Lenis, and React Bits UI patterns.
  * 
- * Works out-of-the-box with any page in the SuAGlow site.
+ * Works out-of-the-box with any page in the SUAGlow site.
  * Compatible with IDEs, Codex, and AI assistants.
  */
 
@@ -10,12 +10,12 @@
   if (typeof module === 'object' && module.exports) {
     module.exports = factory();
   } else {
-    root.SuAMotion = factory();
+    root.SUAMotion = root.SuAMotion = factory();
   }
 })(typeof window !== 'undefined' ? window : this, function () {
   'use strict';
 
-  const SuAMotion = {
+  const SUAMotion = {
     lenis: null,
     isLenisActive: false,
 
@@ -25,7 +25,7 @@
      */
     initSmoothScroll: function (options = {}) {
       if (typeof Lenis === 'undefined') {
-        console.warn('[SuAMotion] Lenis library not found on window. Skipping smooth scroll.');
+        console.warn('[SUAMotion] Lenis library not found on window. Skipping smooth scroll.');
         return null;
       }
 
@@ -326,9 +326,9 @@
   if (typeof document !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {
       // Auto-run micro-interactions if classes exist
-      SuAMotion.initAll();
+      SUAMotion.initAll();
     });
   }
 
-  return SuAMotion;
+  return SUAMotion;
 });

@@ -311,7 +311,7 @@ html {
   color: #ffffff;
 }
 
-/* SuA Glow Dark Theme - Full Color Logo (No Inversion) */
+/* SUA Glow Dark Theme - Full Color Logo (No Inversion) */
 #navbar.nav-dark-theme:not(.nav-scrolled) img {
     filter: none !important;
 }

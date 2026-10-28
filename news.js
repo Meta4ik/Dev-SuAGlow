@@ -1,5 +1,5 @@
 
-// SuA Glow "In The News & Media" Engine
+// SUA Glow "In The News & Media" Engine
 // To add new articles, simply add an entry to the ARTICLES array below.
 
 const ARTICLES = [
@@ -158,7 +158,7 @@ function generateArticlesGrid(items) {
     }).join('');
 }
 
-// SuA Glow "In The News" Component HTML
+// SUA Glow "In The News" Component HTML
 const NEWS_HTML = `
 <!-- News Highlights & Media Coverage -->
 <section id="news" data-nav-theme="dark" class="py-24 md:py-32 px-6 md:px-12 bg-[#F6F7F8]">

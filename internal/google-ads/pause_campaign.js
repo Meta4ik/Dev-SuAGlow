@@ -1,16 +1,16 @@
 /**
  * Google Ads Script - Immediate Pause of Entire Campaign
- * Account: SuA Glow (Carrollton, TX)
+ * Account: SUA Glow (Carrollton, TX)
  * Target Account ID: 480-656-3884
- * Campaign: "SuA Glow Hair & Scalp Reset"
+ * Campaign: "SUA Glow Hair & Scalp Reset"
  * 
  * Purpose:
- * Immediately pauses the entire "SuA Glow Hair & Scalp Reset" campaign to stop
+ * Immediately pauses the entire "SUA Glow Hair & Scalp Reset" campaign to stop
  * all ad spend instantly across all ad groups, ads, and keywords.
  */
 
 function main() {
-  var campaignName = "SuA Glow Hair & Scalp Reset";
+  var campaignName = "SUA Glow Hair & Scalp Reset";
 
   Logger.log("==================================================");
   Logger.log("Initiating Immediate Pause for Campaign: " + campaignName);
@@ -23,7 +23,7 @@ function main() {
   if (!campaignIterator.hasNext()) {
     Logger.log("WARNING: Exact campaign '" + campaignName + "' not found. Searching with partial match...");
     campaignIterator = AdsApp.campaigns()
-      .withCondition('Name CONTAINS_IGNORE_CASE "SuA Glow"')
+      .withCondition('Name CONTAINS_IGNORE_CASE "SUA Glow"')
       .get();
   }
 

@@ -1,8 +1,8 @@
 /**
  * Google Ads Optimization Script - Resolve "Eligible: Limited" & "Ad Strength Poor"
- * Account: SuA Glow (Carrollton, TX)
+ * Account: SUA Glow (Carrollton, TX)
  * Target Account ID: 480-656-3884
- * Campaign: "SuA Glow Hair & Scalp Reset"
+ * Campaign: "SUA Glow Hair & Scalp Reset"
  * 
  * Solutions Implemented:
  * 1. Expands keywords for high-converting Ad Groups 1 & 2 (Combined Scalp & Women Thinning).
@@ -12,7 +12,7 @@
  */
 
 function main() {
-  var campaignName = "SuA Glow Hair & Scalp Reset";
+  var campaignName = "SUA Glow Hair & Scalp Reset";
   var finalUrl = "https://suaglow.com/korean-scalp-hair-rejuvenation.html";
   
   Logger.log("==================================================");
@@ -64,7 +64,7 @@ function main() {
         "$399 Korean Scalp Reset",
         "Hair Loss? Think Scalp.",
         "More Than a Head Spa",
-        "SuA Glow Scalp Rejuvenation",
+        "SUA Glow Scalp Rejuvenation",
         "Needle-Free Follicle Care",
         "Physician-Guided Scalp Care",
         "FDA-Cleared Scalp Tech",
@@ -110,7 +110,7 @@ function main() {
         "Widening Part? Start Here.",
         "$399 Scalp & Hair Reset",
         "Needle-Free Scalp Infusion",
-        "SuA Glow Women Scalp Care",
+        "SUA Glow Women Scalp Care",
         "Restore Female Hair Density",
         "Gentle Needle-Free Follicle",
         "Korean Scalp Rejuvenation",

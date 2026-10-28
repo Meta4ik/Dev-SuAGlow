@@ -1,11 +1,11 @@
 # Google Ads & Scalp Reset Campaign Tracking Integration
 
-This plan sets up Google Ads conversion tracking and Google Tag (`gtag.js`) infrastructure across the SuA Glow website, specifically configured for the **Korean Scalp & Hair Rejuvenation ("Scalp Reset")** campaign staged in [internal/google-ads/index.html](file:///Users/mw/Sites/SuAGlow/dev-site/internal/google-ads/index.html).
+This plan sets up Google Ads conversion tracking and Google Tag (`gtag.js`) infrastructure across the SUA Glow website, specifically configured for the **Korean Scalp & Hair Rejuvenation ("Scalp Reset")** campaign staged in [internal/google-ads/index.html](file:///Users/mw/Sites/SUAGlow/dev-site/internal/google-ads/index.html).
 
 ## User Review Required
 
 > [!IMPORTANT]
-> The tracking script will be initialized with a configurable setup object. You can replace the placeholder Google Ads Conversion ID (`AW-XXXXXXXXXX`) and Conversion Labels in [google-tag.js](file:///Users/mw/Sites/SuAGlow/dev-site/google-tag.js) at any time.
+> The tracking script will be initialized with a configurable setup object. You can replace the placeholder Google Ads Conversion ID (`AW-XXXXXXXXXX`) and Conversion Labels in [google-tag.js](file:///Users/mw/Sites/SUAGlow/dev-site/google-tag.js) at any time.
 
 ---
 
@@ -13,7 +13,7 @@ This plan sets up Google Ads conversion tracking and Google Tag (`gtag.js`) infr
 
 ### Tracking Architecture & Script Infrastructure
 
-#### [NEW] [`google-tag.js`](file:///Users/mw/Sites/SuAGlow/dev-site/google-tag.js)
+#### [NEW] [`google-tag.js`](file:///Users/mw/Sites/SUAGlow/dev-site/google-tag.js)
 Create a centralized, lightweight tracking manager that:
 - Injects the official Google Tag (`gtag.js`) into the `<head>` asynchronously.
 - Stores centralized configuration for:
@@ -30,10 +30,10 @@ Create a centralized, lightweight tracking manager that:
 
 ### Core Scripts & Integration
 
-#### [MODIFY] [`script.js`](file:///Users/mw/Sites/SuAGlow/dev-site/script.js)
+#### [MODIFY] [`script.js`](file:///Users/mw/Sites/SUAGlow/dev-site/script.js)
 - Ensure auto-initialization from `google-tag.js` triggers cleanly on DOM load without delaying page render or Core Web Vitals.
 
-#### [MODIFY] [`korean-scalp-hair-rejuvenation.html`](file:///Users/mw/Sites/SuAGlow/dev-site/korean-scalp-hair-rejuvenation.html)
+#### [MODIFY] [`korean-scalp-hair-rejuvenation.html`](file:///Users/mw/Sites/SUAGlow/dev-site/korean-scalp-hair-rejuvenation.html)
 - Include `<script src="google-tag.js"></script>` in `<head>`.
 - Add explicit tracking attributes (e.g., `data-track-conversion="scalp_reset_booking"`) to the hero and section consultation buttons.
 
@@ -41,11 +41,11 @@ Create a centralized, lightweight tracking manager that:
 
 ### Conversion Destination & URL Routing
 
-#### [NEW] [`thank-you.html`](file:///Users/mw/Sites/SuAGlow/dev-site/thank-you.html)
-- Create a dedicated, beautifully styled SuA Glow "Thank You / Confirmation" page for destination-based conversion tracking (e.g., after contact/consultation form submissions).
+#### [NEW] [`thank-you.html`](file:///Users/mw/Sites/SUAGlow/dev-site/thank-you.html)
+- Create a dedicated, beautifully styled SUA Glow "Thank You / Confirmation" page for destination-based conversion tracking (e.g., after contact/consultation form submissions).
 - Fires `conversion` event on page load for form submission tracking.
 
-#### [MODIFY] [`vercel.json`](file:///Users/mw/Sites/SuAGlow/dev-site/vercel.json)
+#### [MODIFY] [`vercel.json`](file:///Users/mw/Sites/SUAGlow/dev-site/vercel.json)
 - Add rewrite rule so that `/scalp-reset` cleanly routes to `/korean-scalp-hair-rejuvenation.html` as referenced in the Google Ads staging doc.
 
 ---

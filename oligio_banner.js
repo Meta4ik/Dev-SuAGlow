@@ -20,7 +20,7 @@ const OLIGIO_BANNER_HTML = `
                 </h2>
                 
                 <p class="text-sm md:text-base font-light text-white/70 leading-relaxed max-w-xl">
-                    SuA Glow is proud to be among the first medical spas in the Dallas-Fort Worth area to introduce Oligio X RF Lifting as part of our Korean-inspired skin health philosophy.
+                    SUA Glow is proud to be among the first medical spas in the Dallas-Fort Worth area to introduce Oligio X RF Lifting as part of our Korean-inspired skin health philosophy.
                 </p>
                 
                 <div class="pt-4 flex flex-col sm:flex-row items-start gap-4">

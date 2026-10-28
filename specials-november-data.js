@@ -1,8 +1,8 @@
 /**
- * SuA K Glow - November Specials Data Configuration
+ * SUA K Glow - November Specials Data Configuration
  * -------------------------------------------------
  * Dedicated configuration for the November 2026 campaign:
- * "The SuA Glow November Edit - Chingu Friendsgiving"
+ * "The SUA Glow November Edit - Chingu Friendsgiving"
  * 
  * User Requested Updates:
  * 1. Oligio X: Listed price changed to "$300 OFF" (Regular Value $1,400+)
@@ -27,8 +27,8 @@ const MONTHLY_SPECIALS_CONFIG_NOVEMBER = {
         sectionTitle: "CHINGU EXCLUSIVES",
         sectionSubtitle: "A SUA GLOW thank you for our clients.",
         bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
-        flyerImage: "assets/SuA-Glow-November-Specials.png",
-        downloadFlyerImage: "assets/SuA-Glow-November-Specials.png",
+        flyerImage: "assets/SUA-Glow-November-Specials.png",
+        downloadFlyerImage: "assets/SUA-Glow-November-Specials.png",
         validThrough: "Offers valid through November 30, 2026",
         footerPillars: "KOREAN-FOUNDED  •  PHYSICIAN-GUIDED  •  CARROLLTON, TX",
         terms: "*Offers valid through November 30, 2026. Limit two promotional purchases per eligible client. Consultation and clinical eligibility required. Offers cannot be combined with other promotions. Individual results may vary."

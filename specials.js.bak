@@ -17,7 +17,7 @@ const SPECIALS_HTML = `
             class="product-card group bg-white border-2 border-[#AA987C]/40 shadow-soft rounded-[20px] overflow-hidden mb-12 flex flex-col md:flex-row animate-on-scroll fade-up delay-100">
                 <div
                     class="md:w-[45%] h-80 md:h-auto overflow-hidden bg-charcoal/5 relative border-b md:border-b-0 md:border-r border-charcoal/5">
-                    <img src="assets/specials/SuA Launch Special - LAUNCH OFFER.webp"
+                    <img src="assets/specials/SUA Launch Special - LAUNCH OFFER.webp"
                         alt="Signature Launch Offer Lunar Glow"
                         class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
                 </div>
@@ -71,7 +71,7 @@ const SPECIALS_HTML = `
                 <div
                     class="product-card group bg-white shadow-soft rounded-[20px] flex flex-col overflow-hidden animate-on-scroll fade-up delay-100">
                     <div class="h-64 overflow-hidden bg-charcoal/5">
-                        <img src="assets/specials/SuA Launch Special - ULTRASOUND.webp" alt="LDM Triple Ultrasound"
+                        <img src="assets/specials/SUA Launch Special - ULTRASOUND.webp" alt="LDM Triple Ultrasound"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
@@ -93,7 +93,7 @@ const SPECIALS_HTML = `
                 <div
                     class="product-card group bg-white shadow-soft rounded-[20px] flex flex-col overflow-hidden animate-on-scroll fade-up delay-200">
                     <div class="h-64 overflow-hidden bg-charcoal/5">
-                        <img src="assets/specials/SuA Launch Special - LIP PN.webp" alt="Rejuran Lip PN"
+                        <img src="assets/specials/SUA Launch Special - LIP PN.webp" alt="Rejuran Lip PN"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
@@ -116,7 +116,7 @@ const SPECIALS_HTML = `
                 <div
                     class="product-card group bg-white shadow-soft rounded-[20px] flex flex-col overflow-hidden animate-on-scroll fade-up delay-300">
                     <div class="h-64 overflow-hidden bg-charcoal/5 relative">
-                        <img src="assets/specials/SuA Launch Special - Neck refine.webp"
+                        <img src="assets/specials/SUA Launch Special - Neck refine.webp"
                             alt="Byryzn HA Skinbooster Neck"
                             class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
                     </div>
@@ -140,7 +140,7 @@ const SPECIALS_HTML = `
                 <div
                     class="product-card group bg-white shadow-soft rounded-[20px] flex flex-col overflow-hidden animate-on-scroll fade-up delay-100">
                     <div class="h-64 overflow-hidden bg-charcoal/5">
-                        <img src="assets/specials/SuA Launch Special - age-smart.webp" alt="Neurotoxin Age-Smart"
+                        <img src="assets/specials/SUA Launch Special - age-smart.webp" alt="Neurotoxin Age-Smart"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
@@ -163,7 +163,7 @@ const SPECIALS_HTML = `
                 <div
                     class="product-card group bg-white shadow-soft rounded-[20px] flex flex-col overflow-hidden animate-on-scroll fade-up delay-200">
                     <div class="h-64 overflow-hidden bg-charcoal/5">
-                        <img src="assets/specials/SuA Launch Special - skin Reset.webp" alt="Skintox Skin Reset"
+                        <img src="assets/specials/SUA Launch Special - skin Reset.webp" alt="Skintox Skin Reset"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">
@@ -185,7 +185,7 @@ const SPECIALS_HTML = `
                 <div
                     class="product-card group bg-white shadow-soft rounded-[20px] flex flex-col overflow-hidden animate-on-scroll fade-up delay-300">
                     <div class="h-64 overflow-hidden bg-charcoal/5">
-                        <img src="assets/specials/SuA Launch Special - shoulder edit.webp" alt="Traptox Shoulder Edit"
+                        <img src="assets/specials/SUA Launch Special - shoulder edit.webp" alt="Traptox Shoulder Edit"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="p-10 text-center flex flex-col flex-1 panel-fade-v">

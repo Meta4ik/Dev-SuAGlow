@@ -1,27 +1,27 @@
 # Implementation Plan: Korean Scalp & Hair Rejuvenation Page Redesign & Copy Updates
 
-Update [korean-scalp-hair-rejuvenation.html](file:///Users/mw/Sites/SuAGlow/dev-site/korean-scalp-hair-rejuvenation.html) based on the 11-page client feedback PDF. The changes include SEO/GEO metadata optimization, copy refinements across all sections, structural layout streamlining (removing redundant cards/icons, simplifying process flows), an edgier aesthetic for the K-Beauty Difference section, and an AI-inspired layout refresh for the "Why SuA Glow" value pillars with authentic DEP device imagery.
+Update [korean-scalp-hair-rejuvenation.html](file:///Users/mw/Sites/SUAGlow/dev-site/korean-scalp-hair-rejuvenation.html) based on the 11-page client feedback PDF. The changes include SEO/GEO metadata optimization, copy refinements across all sections, structural layout streamlining (removing redundant cards/icons, simplifying process flows), an edgier aesthetic for the K-Beauty Difference section, and an AI-inspired layout refresh for the "Why SUA Glow" value pillars with authentic DEP device imagery.
 
 ## User Review Required
 
 > [!IMPORTANT]
 > **Key Structural & Visual Decisions from Feedback Document:**
 > 1. **5 Focus Steps reduced to 4 numbered items** (Page 2 & 3): Replaced icon cards with clean numbered steps (01 to 04) and updated copy.
-> 2. **Removal of "The SuA Glow Scalp Method" block from Section `method`** (Page 5 & 10): Its image (`scalp_analysis_consultation.jpg`) is repurposed into the "What to Expect at Your Scalp Appointment" section, transforming that section into a modern two-column split card.
+> 2. **Removal of "The SUA Glow Scalp Method" block from Section `method`** (Page 5 & 10): Its image (`scalp_analysis_consultation.jpg`) is repurposed into the "What to Expect at Your Scalp Appointment" section, transforming that section into a modern two-column split card.
 > 3. **Needle-Free Infusion Section Refresh** (Page 6 & 7): Enlarged hero image, updated device handle to DEP, replaced 3 bottom feature cards with an elegant single horizontal line (`HYDRATE · INFUSE · SUPPORT`), and simplified the right-hand expectations panel by removing the support bullet list.
-> 4. **AI-Inspired Design for Value Pillars** (Page 11): Redesigned the "Why SuA Glow / What Makes It K-Beauty?" section with top model banner framing and arch-top image cards (first card text-only, third card featuring the DEP handle).
+> 4. **AI-Inspired Design for Value Pillars** (Page 11): Redesigned the "Why SUA Glow / What Makes It K-Beauty?" section with top model banner framing and arch-top image cards (first card text-only, third card featuring the DEP handle).
 
 ---
 
 ## Detailed Section-by-Section Plan (Mapped to PDF Pages 1–11)
 
 ### Page 1: Hero Section & SEO/GEO Metadata
-- **Title Tag**: Update to `Korean Scalp & Hair Rejuvenation in Carrollton, TX | SuA Glow`
-- **Meta Description**: Update to `Discover Korean-inspired scalp & hair rejuvenation at SuA Glow in Carrollton, TX. Personalized, physician-guided care for scalp health, visible thinning and hair-density concerns.`
+- **Title Tag**: Update to `Korean Scalp & Hair Rejuvenation in Carrollton, TX | SUA Glow`
+- **Meta Description**: Update to `Discover Korean-inspired scalp & hair rejuvenation at SUA Glow in Carrollton, TX. Personalized, physician-guided care for scalp health, visible thinning and hair-density concerns.`
 - **Hero H1**: Keep `Korean Scalp & Hair Rejuvenation` cleanly structured.
 - **Hero Body Copy**:
   - Replace subtext with:
-    - `"K-Beauty starts with skin. At SuA Glow, that includes the scalp."`
+    - `"K-Beauty starts with skin. At SUA Glow, that includes the scalp."`
     - `"Personalized, physician-guided scalp & hair wellness for visible thinning, hair-density concerns and scalp health—with Korean-inspired care and advanced aesthetic technology in Carrollton, TX."`
 
 ---
@@ -90,7 +90,7 @@ Update [korean-scalp-hair-rejuvenation.html](file:///Users/mw/Sites/SuAGlow/dev-
     - **Card 02 (LAYERING)**: `ONE MIRACLE STEP? ANIYO.` | `Thoughtful care is personalized.` | `LAYER SMARTER →`
     - **Card 03 (CONSISTENCY)**: `THE GLOW IS IN THE ROUTINE.` | `Thoughtful care doesn't end after one visit.` | `KEEP GOING →`
   - Bottom Bar: `SKIN-FIRST · SCALP-FIRST · VERY K-BEAUTY`
-- **Bottom Block ("The SuA Glow Scalp Method™")**:
+- **Bottom Block ("The SUA Glow Scalp Method™")**:
   - Remove the entire 4-step method block from this section (per instructions on Pages 5 and 10). The image (`assets/scalp_analysis_consultation.jpg`) is moved to Section `#process`.
 
 ---
@@ -124,7 +124,7 @@ Update [korean-scalp-hair-rejuvenation.html](file:///Users/mw/Sites/SuAGlow/dev-
 ### Page 8: Candidacy & Concerns (`#concerns` - Top Half)
 - **Section Heading**:
   - Title: `IS KOREAN SCALP & HAIR REJUVENATION FOR ME?` (removing `"JUST A REASON TO CHECK IN"`)
-  - Subtitle: `Korean Scalp & Hair Rejuvenation at SuA Glow is personalized for women and men with scalp, visible thinning or hair-density concerns.`
+  - Subtitle: `Korean Scalp & Hair Rejuvenation at SUA Glow is personalized for women and men with scalp, visible thinning or hair-density concerns.`
 - **3 Concern Cards**:
   - Remove numbers `01`, `02`, `03` from cards for a cleaner luxury editorial feel.
 - **Bottom Callout Boxes**:
@@ -184,10 +184,10 @@ Update [korean-scalp-hair-rejuvenation.html](file:///Users/mw/Sites/SuAGlow/dev-
 
 ### Automated Verification
 - Check HTML syntax and closing tags for all modified sections in `korean-scalp-hair-rejuvenation.html`.
-- Verify search index in [search-index.js](file:///Users/mw/Sites/SuAGlow/dev-site/search-index.js).
+- Verify search index in [search-index.js](file:///Users/mw/Sites/SUAGlow/dev-site/search-index.js).
 
 ### Manual / Browser Verification
-- Open [korean-scalp-hair-rejuvenation.html](file:///Users/mw/Sites/SuAGlow/dev-site/korean-scalp-hair-rejuvenation.html) locally via browser.
+- Open [korean-scalp-hair-rejuvenation.html](file:///Users/mw/Sites/SUAGlow/dev-site/korean-scalp-hair-rejuvenation.html) locally via browser.
 - Verify desktop and mobile responsiveness of all modified sections:
   - Hero section text & SEO tags
   - 4 numbered focus steps in Section 2

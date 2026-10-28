@@ -1,5 +1,5 @@
 
-// SuA Glow Footer Content
+// SUA Glow Footer Content
 const FOOTER_HTML = `
 
 
@@ -9,7 +9,7 @@ const FOOTER_HTML = `
             <div class="col-span-1 md:col-span-2 flex flex-col h-full">
                 <h4 class="heading-wide text-xs tracking-[0.3em] mb-6 opacity-40">Location</h4>
                 <div class="w-full grow min-h-[200px] rounded-lg overflow-hidden border border-white/10 opacity-80 hover:opacity-100 transition-opacity">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.2795693997314!2d-96.9324517!3d33.0227643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d14611a2aa39e01%3A0xd81ab189a5840191!2sSuA%20Glow!5e0!3m2!1sen!2sus!4v1772217097981!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.2795693997314!2d-96.9324517!3d33.0227643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d14611a2aa39e01%3A0xd81ab189a5840191!2sSUA%20Glow!5e0!3m2!1sen!2sus!4v1772217097981!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <div>
@@ -17,7 +17,7 @@ const FOOTER_HTML = `
                 <ul class="space-y-4 text-sm font-body text-white/70">
                     <li class="flex items-start gap-3">
                         <i data-lucide="map-pin" class="w-4 h-4 text-taupe shrink-0 mt-1"></i>
-                        <a href="https://www.google.com/maps/place/SuA+Glow/@33.0227643,-96.9350266,17z/data=!3m1!4b1!4m6!3m5!1s0x8d14611a2aa39e01:0xd81ab189a5840191!8m2!3d33.0227643!4d-96.9324517!16s%2Fg%2F11mlsqzn2f?entry=ttu&g_ep=EgoyMDI2MDIyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="hover:text-taupe transition-colors">4116 State Highway 121, Suite 120, Office O<br>Carrollton, TX 75010</a>
+                        <a href="https://www.google.com/maps/place/SUA+Glow/@33.0227643,-96.9350266,17z/data=!3m1!4b1!4m6!3m5!1s0x8d14611a2aa39e01:0xd81ab189a5840191!8m2!3d33.0227643!4d-96.9324517!16s%2Fg%2F11mlsqzn2f?entry=ttu&g_ep=EgoyMDI2MDIyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="hover:text-taupe transition-colors">4116 State Highway 121, Suite 120, Office O<br>Carrollton, TX 75010</a>
                     </li>
                     <li class="flex items-center gap-3">
                         <i data-lucide="phone" class="w-4 h-4 text-taupe shrink-0"></i>

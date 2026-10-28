@@ -1,4 +1,4 @@
-# Oligio X Marketing Guidelines for SuA Glow
+# Oligio X Marketing Guidelines for SUA Glow
 
 
 HelveticaNeue;Helvetica;Helvetica-Bold;
@@ -14,7 +14,7 @@ disc;;;
 
 
 
-From: Kameron SuA Glow <kameron@suaglow.com>Subject: Oligio X Marketing Guidelines for SuA GlowDate: May 29, 2026 at 12:34:07PM CDTTo: Marcus Willis <marcwill@mac.com>Cc: Sophia Sua Glow <sophia@suaglow.com>
+From: Kameron SUA Glow <kameron@suaglow.com>Subject: Oligio X Marketing Guidelines for SUA GlowDate: May 29, 2026 at 12:34:07PM CDTTo: Marcus Willis <marcwill@mac.com>Cc: Sophia Sua Glow <sophia@suaglow.com>
 
 
 
@@ -54,7 +54,7 @@ Korean Skin Quality & Tightening Treatments
 K-Beauty Approach to Collagen Support 		
 Oligio X RF lifting 		
 
-"SuA Glow offers Oligio X® radiofrequency skin tightening treatments.""Treatments are performed using the Oligio X® platform.""Oligio X® utilizes monopolar radiofrequency technology designed to deliver energy to the dermis while protecting the skin surface.""Oligio X® is part of SuA Glow's Korean-inspired approach to skin tightening and skin quality."
+"SUA Glow offers Oligio X® radiofrequency skin tightening treatments.""Treatments are performed using the Oligio X® platform.""Oligio X® utilizes monopolar radiofrequency technology designed to deliver energy to the dermis while protecting the skin surface.""Oligio X® is part of SUA Glow's Korean-inspired approach to skin tightening and skin quality."
 
 We can not say:
 

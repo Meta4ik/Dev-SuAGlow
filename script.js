@@ -1,5 +1,5 @@
 
-// SuA Glow Core Interaction Script
+// SUA Glow Core Interaction Script
 
 /**
  * Navigation Injection & Initialization

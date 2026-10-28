@@ -1,6 +1,6 @@
-# SuA Glow: Master Content Section Compendium
+# SUA Glow: Master Content Section Compendium
 
-This guide outlines the different types of content sections available across the SuA Glow website and lists the specific pages where each section type is currently used. 
+This guide outlines the different types of content sections available across the SUA Glow website and lists the specific pages where each section type is currently used. 
 
 Use this compendium as a menu of options when planning content for new pages or updating existing ones. By providing content that fits these structures, we can maintain consistency across the entire site.
 
@@ -40,7 +40,7 @@ Sections designed to explain exactly what a treatment is, how it works, and the 
 Sections focused on why the patient should choose this treatment and what they can expect from it.
 * **`treatment-benefits`**: Bulleted or grid highlights of the treatment's upside (*[bridal-glow](../bridal-glow.html), [dermal-filler](../dermal-filler.html), [radiesse](../radiesse.html), [salmon-pn-facial](../salmon-pn-facial.html), [signature-treatment](../signature-treatment.html)*)
 * **`expect`**: What the patient will experience during or after the treatment (*[bridal-glow](../bridal-glow.html), [cosmetic-tox](../cosmetic-tox.html), [dermal-filler](../dermal-filler.html), [microneedling](../microneedling.html), [radiesse](../radiesse.html), [seoul-man](../seoul-man.html), etc.*)
-* **`why-sua` / `why-choose-us`**: Why the patient should choose SuA Glow over a competitor for this specific treatment (*[bridal-glow](../bridal-glow.html), [cosmetic-tox](../cosmetic-tox.html), [dermal-filler](../dermal-filler.html), [radiesse](../radiesse.html), [signature-treatment](../signature-treatment.html), [medical-weight-loss-dallas](../medical-weight-loss-dallas.html)*)
+* **`why-sua` / `why-choose-us`**: Why the patient should choose SUA Glow over a competitor for this specific treatment (*[bridal-glow](../bridal-glow.html), [cosmetic-tox](../cosmetic-tox.html), [dermal-filler](../dermal-filler.html), [radiesse](../radiesse.html), [signature-treatment](../signature-treatment.html), [medical-weight-loss-dallas](../medical-weight-loss-dallas.html)*)
 * **`why-skinpen` / `why-we-chose` / `why-seoul-clinics`**: Justifying the specific technology chosen (*[microneedling](../microneedling.html), [oligio-x](../oligio-x.html), [ldm-water-drop-lifting](../ldm-water-drop-lifting.html)*)
 
 ## 4. Social Proof & Results
@@ -57,7 +57,7 @@ Actionable information for the patient.
 * **`financing-widget`**: Information on payment plans (*[financing](../financing.html)*)
 
 ## 6. Philosophy & Brand Approach
-Sections detailing the unique K-Beauty methodology and SuA Glow's ethos.
+Sections detailing the unique K-Beauty methodology and SUA Glow's ethos.
 * **`philosophy` / `philosophies`**: The overarching approach to a treatment (*[bridal-glow](../bridal-glow.html), [collagen-stimulation-facial](../collagen-stimulation-facial.html), [dermal-filler](../dermal-filler.html), [oligio-x](../oligio-x.html), [signature-treatment](../signature-treatment.html), etc.*)
 * **`k-beauty` / `k-beauty-approach` / `seoul-inspired`**: Content linking the treatment to Korean beauty standards (*[about](../about.html), [tone-up-facial](../tone-up-facial.html), [oligio-x](../oligio-x.html)*)
 * **`story` / `difference`**: Brand storytelling and unique differentiators (*[about](../about.html)*)

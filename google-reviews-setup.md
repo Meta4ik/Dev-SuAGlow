@@ -1,6 +1,6 @@
 # Google Reviews Integration Guide
 
-This document outlines the strategy for adding automated Google Reviews to the SuA Glow website, the requirements from Google Cloud, and alternative options.
+This document outlines the strategy for adding automated Google Reviews to the SUA Glow website, the requirements from Google Cloud, and alternative options.
 
 ## Option 1: Automated Build-Step Script (Recommended)
 
@@ -22,7 +22,7 @@ To use the Google Places API, Google strictly requires a **credit card on file**
 
 ### Setup Instructions
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
-2. Create a new project (e.g., "SuA Glow Website").
+2. Create a new project (e.g., "SUA Glow Website").
 3. Set up a Billing Account and add your credit card.
 4. Go to "APIs & Services" > "Library" and enable the **Places API (New)**.
 5. Go to "Credentials" and "Create Credentials" > "API Key".
@@ -38,8 +38,8 @@ If you are uncomfortable putting a credit card into Google Cloud, we can use a t
 ### How it Works
 1. You sign up for a free service like **Elfsight**, **Trustmary**, or **WidgetPack**.
 2. You connect your Google Business account to their platform.
-3. They provide a snippet of HTML/JS code that we paste into the SuA Glow website.
+3. They provide a snippet of HTML/JS code that we paste into the SUA Glow website.
 
 ### Pros & Cons
 - **Pros:** Does not require a Google Cloud account or API key. Can bypass the 5-review limit and show all your reviews. Updates automatically.
-- **Cons:** Free tiers usually include watermarks (e.g., "Powered by Elfsight"). The design cannot be customized to perfectly match the SuA Glow brand unless you pay for a monthly subscription on their platform. Page load speed may be slightly impacted by loading an external iframe/script.
+- **Cons:** Free tiers usually include watermarks (e.g., "Powered by Elfsight"). The design cannot be customized to perfectly match the SUA Glow brand unless you pay for a monthly subscription on their platform. Page load speed may be slightly impacted by loading an external iframe/script.

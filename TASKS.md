@@ -1,4 +1,4 @@
-# SuA Glow Medspa - Project Work & Task Roadmap
+# SUA Glow Medspa - Project Work & Task Roadmap
 
 > **Last Updated:** August 10, 2026  
 > **Status:** Active Development & SEO / Accessibility Enhancement Phase
@@ -15,7 +15,7 @@ This document tracks all project achievements completed over the past 30 days (J
 ### 1. Monthly Specials & Interactive Promotions Engine
 - [x] **August Specials ("The Korean Fall Skin & Body Reset")**:
   - Implemented dynamic interactive specials engine (`specials-renderer.js`, `specials-data.js`, `specials.html`).
-  - Added full interactive HTML flyer webpage view with high-res export & download (`SuA-Glow-August-Specials.png`).
+  - Added full interactive HTML flyer webpage view with high-res export & download (`SUA-Glow-August-Specials.png`).
   - Integrated Web Share API for native iOS/Android sharing drawers.
   - Added seasonal visual enhancements: Ginkgo fall leaves background texture, soft luminous overlays, and brand-consistent gold metallic badges.
 - [x] **July Specials**:
