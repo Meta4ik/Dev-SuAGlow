@@ -18,8 +18,8 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
         
-    <link rel="stylesheet" href="dist/output.css?v=58">
-    <link rel="stylesheet" href="style.css?v=45">
+    <link rel="stylesheet" href="dist/output.css?v=60">
+    <link rel="stylesheet" href="style.css?v=47">
         <!-- Google Tag & Ads Conversion Tracking -->
     <script src="google-tag.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -28,7 +28,7 @@
         /* Editorial Membership Card CTA Models */
         .cta-model-essential {
             position: absolute;
-            left: 0;
+            left: -22%;
             bottom: 0;
             height: 100%;
             width: auto;
@@ -38,14 +38,14 @@
             z-index: 0;
             pointer-events: none;
             user-select: none;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .cta-model-premium {
             position: absolute;
-            right: 0;
+            right: -36%;
             bottom: 0;
-            height: 125%;
+            height: 120%;
             width: auto;
             max-width: none;
             object-fit: contain;
@@ -53,17 +53,19 @@
             z-index: 0;
             pointer-events: none;
             user-select: none;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         @media (max-width: 639px) {
             .cta-model-essential {
-                height: 75%;
-                opacity: 0.35;
+                left: -15%;
+                height: 60%;
+                opacity: 0.2;
             }
             .cta-model-premium {
-                height: 80%;
-                opacity: 0.35;
+                right: -15%;
+                height: 65%;
+                opacity: 0.2;
             }
         }
 
@@ -543,7 +545,7 @@
                              class="cta-model-essential drop-shadow-md">
 
                         <!-- Content Area: Text on Right -->
-                        <div class="relative z-10 sm:ml-auto w-full sm:w-[58%] lg:w-[60%] flex flex-col justify-center text-left my-auto">
+                        <div class="relative z-10 sm:ml-auto w-full sm:w-[50%] lg:w-[48%] flex flex-col justify-center text-left my-auto">
                             <!-- Header -->
                             <div class="mb-3 sm:mb-3.5">
                                 <span class="block font-heading font-semibold text-[10px] sm:text-xs tracking-[0.25em] uppercase text-taupe mb-0.5">
@@ -798,7 +800,7 @@
                              class="cta-model-premium drop-shadow-md">
 
                         <!-- Content Area: Text on Left -->
-                        <div class="relative z-10 sm:mr-auto w-full sm:w-[58%] lg:w-[60%] flex flex-col justify-center text-left my-auto">
+                        <div class="relative z-10 sm:mr-auto w-full sm:w-[50%] lg:w-[48%] flex flex-col justify-center text-left my-auto">
                             <!-- Header -->
                             <div class="mb-3 sm:mb-3.5">
                                 <span class="block font-heading font-semibold text-[10px] sm:text-xs tracking-[0.25em] uppercase text-warm-gold mb-0.5">
