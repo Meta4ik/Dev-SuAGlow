@@ -103,9 +103,9 @@ function renderNovemberSpecials(config) {
                 </p>
             </div>
 
-            <!-- Hero Banner Image (3 Friends) -->
+            <!-- Hero Banner Image (Friendsgiving Gathering) -->
             <div class="mb-6 max-w-4xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-white/10 animate-on-scroll fade-up delay-100">
-                <img src="${meta.heroImage || 'assets/chingu-friendsgiving-hero.png'}" alt="Chingu Friendsgiving" class="w-full h-auto block object-cover">
+                <img src="${meta.heroImage || 'assets/chingu-friendsgiving-hero.png'}?v=118" alt="Chingu Friendsgiving" class="w-full h-auto block object-cover">
             </div>
 
             <!-- Hero Warm Italic Message -->
