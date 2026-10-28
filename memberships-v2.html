@@ -169,161 +169,210 @@
 <body class="bg-off-white text-charcoal antialiased selection:bg-warm-gold/20 selection:text-near-black">
     <div id="nav-placeholder"></div>
 
-    <!-- Hero Section -->
+    <!-- Split Hero Section (Matching Editorial Pattern & Inspirational Layout) -->
     <section id="hero" data-nav-theme="dark"
-        class="relative flex flex-col items-center justify-start text-center overflow-hidden bg-near-black pb-16 sm:pb-24">
+        class="relative min-h-[85vh] lg:min-h-[88vh] flex items-center justify-center pt-[140px] sm:pt-[155px] lg:pt-[170px] pb-16 sm:pb-20 lg:pb-24 px-6 sm:px-8 md:px-12 lg:px-16 bg-[#0D0F12] text-white overflow-hidden">
         
-        <!-- Hero Background & Image Wrapper (Resizes proportionally with screen width so the whole photo is visible on mobile) -->
-        <div class="relative w-full overflow-hidden pt-[85px] sm:pt-[95px] md:pt-0">
-            <!-- Fluid Aspect Ratio Container for member_hero.webp (1855:1000) -->
-            <div class="w-full aspect-[1855/1000] max-h-[780px] relative overflow-hidden bg-near-black">
-                <img src="assets/member_hero.webp" alt="SuA Glow Korean Glass Skin Community - Inclusive Care & Diverse Skin Tones"
-                    class="w-full h-full object-cover object-top sm:object-[center_15%]">
-                
-                <!-- Top Graded Overlay for Navbar readability -->
-                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent via-25% to-transparent pointer-events-none"></div>
-                
-                <!-- Bottom Graded Overlay: Seamlessly blends the bottom of the photo into near-black canvas -->
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-55% via-near-black/85 via-80% to-near-black pointer-events-none"></div>
-            </div>
-            
-            <!-- Warm Gold Ambient Glow at bottom of hero visual -->
-            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 w-[800px] h-[400px] bg-warm-gold/15 blur-[140px] rounded-full pointer-events-none"></div>
+        <!-- Atmospheric Background & Ambient Rim Glows -->
+        <div class="absolute inset-0 z-0 bg-[#0D0F12] pointer-events-none overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent via-40% to-[#0D0F12]"></div>
+            <div class="absolute top-1/4 right-1/4 w-[650px] h-[650px] bg-warm-gold/15 blur-[160px] rounded-full pointer-events-none"></div>
+            <div class="absolute bottom-10 left-10 w-[500px] h-[500px] bg-warm-gold/10 blur-[150px] rounded-full pointer-events-none"></div>
         </div>
 
-        <!-- Hero Content Container (Flows naturally below the photo) -->
-        <div class="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-8 -mt-6 sm:-mt-12 md:-mt-20 lg:-mt-28">
-            <!-- Main Heading Matching Reference Graphic -->
-            <h1 class="hero-anim font-heading font-light text-2xl sm:text-4xl md:text-5xl text-white uppercase tracking-[0.14em] sm:tracking-[0.18em] mb-3 leading-tight [text-wrap:balance]"
-                style="animation-delay: 0.2s;">
-                THE SUA GLOW <span class="text-warm-gold font-normal">MEMBERSHIP COLLECTION</span>
-            </h1>
-
-            <!-- Subtitle Matching Reference Graphic -->
-            <p class="hero-anim font-body text-xs sm:text-sm md:text-base text-white/75 tracking-wide mb-10 sm:mb-12 max-w-xl mx-auto"
-                style="animation-delay: 0.35s;">
-                Choose your monthly Korean skin ritual.
-            </p>
-
-            <!-- The Two Substantial Membership Card Blocks (Matching Reference Graphic) -->
-            <div class="hero-anim max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch text-center"
-                style="animation-delay: 0.5s;">
-
-                <!-- Card Block 1: Glass Skin Essential (Light Luxury Theme) -->
-                <div class="rounded-[2rem] sm:rounded-[2.5rem] bg-[#FAF8F5]/95 backdrop-blur-xl border border-[#E5DFD5] p-6 sm:p-8 md:p-9 flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:border-taupe/60 transition-all duration-300 relative group md:h-[500px] min-h-[500px]">
+        <div class="max-w-7xl mx-auto relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 xl:gap-12 items-center">
+                
+                <!-- Left Column: Copy & CTAs (Exact Inspirational Match) -->
+                <div class="lg:col-span-7 space-y-6 sm:space-y-7 text-left">
+                    
+                    <!-- Eyebrow Pill Badge -->
                     <div>
-                        <!-- Pill Badge -->
-                        <div class="mb-4">
-                            <span class="inline-block px-4 py-1 rounded-full border border-taupe/30 text-[10px] sm:text-xs font-heading font-semibold tracking-[0.24em] text-taupe uppercase bg-taupe/10">
-                                ESSENTIAL
-                            </span>
-                        </div>
-
-                        <!-- Tier Name: "Glass Skin" on top + "ESSENTIAL" graphic underneath -->
-                        <div class="mb-3 flex flex-col items-center justify-center">
-                            <h2 class="font-heading font-light text-2xl sm:text-3xl text-[#181B1E] uppercase tracking-wide mb-1">
-                                GLASS SKIN
-                            </h2>
-                            <div class="h-8 sm:h-9 md:h-10 flex items-center justify-center">
-                                <img src="assets/essential-text-dark.png" alt="Essential" class="h-full w-auto object-contain">
-                            </div>
-                        </div>
-
-                        <!-- Price -->
-                        <div class="flex items-baseline justify-center gap-2 mb-2">
-                            <span class="font-heading font-bold text-4xl sm:text-5xl text-[#181B1E] tracking-tight">$199</span>
-                            <span class="font-body text-xs sm:text-sm uppercase tracking-[0.22em] text-charcoal/60 font-medium">/ MONTH</span>
-                        </div>
-
-                        <!-- Subhead / Duration -->
-                        <p class="font-heading text-xs sm:text-sm uppercase tracking-[0.2em] text-taupe font-semibold">
-                            60-MINUTE RITUAL
-                        </p>
-
-                        <!-- Subtle Divider -->
-                        <div class="w-full h-px bg-charcoal/10 my-4 sm:my-5"></div>
-
-                        <!-- Section Label -->
-                        <p class="font-heading text-[10px] sm:text-xs font-semibold tracking-[0.22em] text-charcoal/50 uppercase mb-2">
-                            THE 5-STEP GLOW RITUAL
-                        </p>
-
-                        <!-- Inclusions Dot List -->
-                        <p class="font-body text-xs sm:text-sm text-charcoal/80 tracking-wider">
-                            AquaFacial &nbsp;•&nbsp; EMS &nbsp;•&nbsp; Molding Mask &nbsp;•&nbsp; LED
-                        </p>
+                        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-warm-gold/35 bg-warm-gold/10 text-warm-gold text-[10px] sm:text-xs font-heading font-semibold tracking-[0.25em] uppercase">
+                            K-BEAUTY &bull; MONTHLY SKINCARE &bull; MEMBERSHIP
+                        </span>
                     </div>
 
-                    <!-- Large Prominent Action Button -->
-                    <div class="pt-3">
-                        <a href="#membership-collection"
-                            class="group/btn w-full py-3.5 sm:py-4 px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-white bg-gradient-to-r from-[#8F857B] via-[#AA987C] to-[#8F857B] hover:brightness-110 shadow-[0_8px_25px_rgba(143,133,123,0.35)] hover:shadow-[0_10px_30px_rgba(170,152,124,0.35)] hover:scale-[1.01] transition-all duration-300 inline-flex items-center justify-center gap-2.5">
-                            <span>START YOUR GLOW</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                    <!-- Main Display Headline -->
+                    <h1 class="heading-wide text-4xl sm:text-5xl lg:text-[54px] xl:text-[62px] text-white font-light leading-[1.08] uppercase tracking-[0.12em] [text-wrap:balance]">
+                        YOUR SKIN.<br>
+                        YOUR RITUAL.<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#E0D2BE] via-[#C9B69B] to-[#AA987C] font-normal">YOUR GLOW.</span>
+                    </h1>
+
+                    <!-- Subheading -->
+                    <p class="font-heading font-semibold text-xs sm:text-sm uppercase tracking-[0.22em] text-warm-gold/90">
+                        TWO RITUALS. ONE BEAUTIFUL COMMITMENT.
+                    </p>
+
+                    <!-- Italic Quote Callout with Gold Border -->
+                    <div class="border-l-2 border-warm-gold/60 pl-4 py-1 text-white/90 italic font-body font-light text-sm sm:text-base leading-relaxed">
+                        Great skin isn't a one-time treatment.<br class="hidden sm:inline">
+                        It's a beautiful monthly habit.
+                    </div>
+
+                    <!-- Description Body Paragraph -->
+                    <p class="font-body text-xs sm:text-sm md:text-base text-white/75 font-light leading-relaxed max-w-xl">
+                        Discover SUA Glow's Korean-inspired memberships, thoughtfully designed to cleanse, nourish, and refresh your skin month after month.
+                    </p>
+
+                    <!-- Primary Action Button -->
+                    <div class="pt-2">
+                        <a href="#membership-tiers"
+                            class="group/btn inline-flex items-center justify-center gap-3 py-4 px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-[#131619] bg-gradient-to-r from-[#D8C7B0] via-[#C5B39A] to-[#AA987C] hover:brightness-105 shadow-[0_8px_30px_rgba(170,152,124,0.45)] hover:shadow-[0_12px_40px_rgba(170,152,124,0.65)] hover:scale-[1.02] transition-all duration-300">
+                            <span>EXPLORE YOUR MEMBERSHIP</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1.5 transition-transform duration-300"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Card Block 2: Glass Skin Premium (Dark Luxury Theme) -->
-                <div class="rounded-[2rem] sm:rounded-[2.5rem] bg-[#14171A]/90 backdrop-blur-xl border border-warm-gold/50 p-6 sm:p-8 md:p-9 flex flex-col justify-between shadow-[0_20px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(170,152,124,0.2)] hover:border-warm-gold hover:shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_45px_rgba(170,152,124,0.35)] transition-all duration-300 relative group overflow-hidden md:h-[500px] min-h-[500px]">
+                <!-- Right Column: Model & Interactive Animated Golden Particle Ring Canvas -->
+                <div class="lg:col-span-5 relative flex items-end justify-center min-h-[440px] sm:min-h-[500px] lg:min-h-[560px]">
                     
-                    <!-- Top Corner Warm Gold Rim Highlight -->
-                    <div class="absolute -top-16 -right-16 w-44 h-44 bg-warm-gold/25 rounded-full blur-2xl pointer-events-none"></div>
-
-                    <div class="relative z-10">
-                        <!-- Pill Badge -->
-                        <div class="mb-4">
-                            <span class="inline-block px-4 py-1 rounded-full border border-warm-gold/70 text-[10px] sm:text-xs font-heading font-semibold tracking-[0.24em] text-warm-gold uppercase bg-warm-gold/15">
-                                PREMIUM
-                            </span>
-                        </div>
-
-                        <!-- Tier Name: "Glass Skin" on top + "PREMIUM" graphic underneath -->
-                        <div class="mb-3 flex flex-col items-center justify-center">
-                            <h2 class="font-heading font-light text-2xl sm:text-3xl text-white uppercase tracking-wide mb-1">
-                                GLASS SKIN
-                            </h2>
-                            <div class="h-8 sm:h-9 md:h-10 flex items-center justify-center">
-                                <img src="assets/premium-text-white.png" alt="Premium" class="h-full w-auto object-contain">
-                            </div>
-                        </div>
-
-                        <!-- Price ($299/mo per client instructions) -->
-                        <div class="flex items-baseline justify-center gap-2 mb-2">
-                            <span class="font-heading font-bold text-4xl sm:text-5xl text-white tracking-tight">$299</span>
-                            <span class="font-body text-xs sm:text-sm uppercase tracking-[0.22em] text-white/60 font-light">/ MONTH</span>
-                        </div>
-
-                        <!-- Subhead / Duration -->
-                        <p class="font-heading text-xs sm:text-sm uppercase tracking-[0.2em] text-warm-gold font-semibold">
-                            90-MINUTE RITUAL
-                        </p>
-
-                        <!-- Subtle Divider -->
-                        <div class="w-full h-px bg-white/15 my-4 sm:my-5"></div>
-
-                        <!-- Section Label -->
-                        <p class="font-heading text-[10px] sm:text-xs font-semibold tracking-[0.22em] text-white/50 uppercase mb-2">
-                            THE 5-LAYER GLASS SKIN RITUAL
-                        </p>
-
-                        <!-- Inclusions Dot List -->
-                        <p class="font-body text-xs sm:text-sm text-white/80 tracking-wider">
-                            Skin Booster &nbsp;•&nbsp; LDM &nbsp;•&nbsp; LED &nbsp;•&nbsp; Wellness
-                        </p>
-                    </div>
-
-                    <!-- Large Prominent Glowing Action Button -->
-                    <div class="relative z-10 pt-3">
-                        <a href="#membership-collection"
-                            class="group/btn w-full py-3.5 sm:py-4 px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-[#131619] bg-gradient-to-r from-[#D8C7B0] via-[#AA987C] to-[#927F63] hover:brightness-110 shadow-[0_0_30px_rgba(170,152,124,0.45)] hover:shadow-[0_0_40px_rgba(170,152,124,0.65)] hover:scale-[1.01] transition-all duration-300 inline-flex items-center justify-center gap-2.5">
-                            <span>ELEVATE YOUR GLOW</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
+                    <!-- Interactive Golden Particle Canvas (Behind Model) -->
+                    <canvas id="hero-particle-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+                    
+                    <!-- Cutout Model Image (Foreground of Canvas) -->
+                    <img src="assets/hero_membership_model.png" id="hero-model-img"
+                        alt="SuA Glow Korean Glass Skin Member"
+                        class="relative z-10 w-full h-auto max-h-[480px] sm:max-h-[540px] lg:max-h-[600px] object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.7)] select-none pointer-events-none transition-transform duration-200 ease-out">
                 </div>
 
             </div>
+        </div>
+    </section>
+
+    <!-- The Two Membership Options (Tightened Spacing Between Text & Button) -->
+    <section id="membership-tiers" class="py-14 sm:py-20 px-6 sm:px-8 bg-near-black relative overflow-hidden border-b border-white/5">
+        
+        <div class="max-w-5xl mx-auto text-center mb-8 sm:mb-10">
+            <span class="inline-block px-4 py-1.5 rounded-full border border-warm-gold/30 text-[10px] sm:text-xs font-heading font-semibold tracking-[0.24em] text-warm-gold uppercase bg-warm-gold/10 mb-3">
+                THE SUA GLOW MEMBERSHIP COLLECTION
+            </span>
+            <h2 class="font-heading font-light text-2xl sm:text-3xl md:text-4xl text-white uppercase tracking-wider mb-2">
+                CHOOSE YOUR MONTHLY SKIN RITUAL
+            </h2>
+            <p class="font-body text-xs sm:text-sm text-white/70 tracking-wide max-w-md mx-auto">
+                Select the Korean skincare ritual curated for your skin goals.
+            </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch text-center">
+
+            <!-- Card Block 1: Glass Skin Essential (Light Luxury Theme - Compact) -->
+            <div class="rounded-[2rem] bg-[#FAF8F5]/95 backdrop-blur-xl border border-[#E5DFD5] p-6 sm:p-7 md:p-8 flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:border-taupe/60 transition-all duration-300 relative group">
+                <div>
+                    <!-- Pill Badge -->
+                    <div class="mb-3">
+                        <span class="inline-block px-4 py-1 rounded-full border border-taupe/30 text-[10px] sm:text-xs font-heading font-semibold tracking-[0.24em] text-taupe uppercase bg-taupe/10">
+                            ESSENTIAL
+                        </span>
+                    </div>
+
+                    <!-- Tier Name: "Glass Skin" on top + "ESSENTIAL" graphic underneath -->
+                    <div class="mb-2.5 flex flex-col items-center justify-center">
+                        <h2 class="font-heading font-light text-2xl sm:text-3xl text-[#181B1E] uppercase tracking-wide mb-1">
+                            GLASS SKIN
+                        </h2>
+                        <div class="h-8 sm:h-9 md:h-10 flex items-center justify-center">
+                            <img src="assets/essential-text-dark.png" alt="Essential" class="h-full w-auto object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="flex items-baseline justify-center gap-2 mb-1.5">
+                        <span class="font-heading font-bold text-4xl sm:text-5xl text-[#181B1E] tracking-tight">$199</span>
+                        <span class="font-body text-xs sm:text-sm uppercase tracking-[0.22em] text-charcoal/60 font-medium">/ MONTH</span>
+                    </div>
+
+                    <!-- Subhead / Duration -->
+                    <p class="font-heading text-xs sm:text-sm uppercase tracking-[0.2em] text-taupe font-semibold">
+                        60-MINUTE RITUAL
+                    </p>
+
+                    <!-- Subtle Divider -->
+                    <div class="w-full h-px bg-charcoal/10 my-3 sm:my-3.5"></div>
+
+                    <!-- Section Label -->
+                    <p class="font-heading text-[10px] sm:text-xs font-semibold tracking-[0.22em] text-charcoal/50 uppercase mb-1.5">
+                        THE 5-STEP GLOW RITUAL
+                    </p>
+
+                    <!-- Inclusions Dot List -->
+                    <p class="font-body text-xs sm:text-sm text-charcoal/80 tracking-wider">
+                        AquaFacial &nbsp;•&nbsp; EMS &nbsp;•&nbsp; Molding Mask &nbsp;•&nbsp; LED
+                    </p>
+                </div>
+
+                <!-- Action Button Directly Below With Tight Spacing -->
+                <div class="pt-5 sm:pt-6">
+                    <a href="#membership-collection"
+                        class="group/btn w-full py-3.5 sm:py-4 px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-white bg-gradient-to-r from-[#8F857B] via-[#AA987C] to-[#8F857B] hover:brightness-110 shadow-[0_8px_25px_rgba(143,133,123,0.35)] hover:shadow-[0_10px_30px_rgba(170,152,124,0.35)] hover:scale-[1.01] transition-all duration-300 inline-flex items-center justify-center gap-2.5">
+                        <span>START YOUR GLOW</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card Block 2: Glass Skin Premium (Dark Luxury Theme - Compact) -->
+            <div class="rounded-[2rem] bg-[#14171A]/90 backdrop-blur-xl border border-warm-gold/50 p-6 sm:p-7 md:p-8 flex flex-col justify-between shadow-[0_20px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(170,152,124,0.2)] hover:border-warm-gold hover:shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_45px_rgba(170,152,124,0.35)] transition-all duration-300 relative group overflow-hidden">
+                
+                <!-- Top Corner Warm Gold Rim Highlight -->
+                <div class="absolute -top-16 -right-16 w-44 h-44 bg-warm-gold/25 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="relative z-10">
+                    <!-- Pill Badge -->
+                    <div class="mb-3">
+                        <span class="inline-block px-4 py-1 rounded-full border border-warm-gold/70 text-[10px] sm:text-xs font-heading font-semibold tracking-[0.24em] text-warm-gold uppercase bg-warm-gold/15">
+                            PREMIUM
+                        </span>
+                    </div>
+
+                    <!-- Tier Name: "Glass Skin" on top + "PREMIUM" graphic underneath -->
+                    <div class="mb-2.5 flex flex-col items-center justify-center">
+                        <h2 class="font-heading font-light text-2xl sm:text-3xl text-white uppercase tracking-wide mb-1">
+                            GLASS SKIN
+                        </h2>
+                        <div class="h-8 sm:h-9 md:h-10 flex items-center justify-center">
+                            <img src="assets/premium-text-white.png" alt="Premium" class="h-full w-auto object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Price ($299/mo) -->
+                    <div class="flex items-baseline justify-center gap-2 mb-1.5">
+                        <span class="font-heading font-bold text-4xl sm:text-5xl text-white tracking-tight">$299</span>
+                        <span class="font-body text-xs sm:text-sm uppercase tracking-[0.22em] text-white/60 font-light">/ MONTH</span>
+                    </div>
+
+                    <!-- Subhead / Duration -->
+                    <p class="font-heading text-xs sm:text-sm uppercase tracking-[0.2em] text-warm-gold font-semibold">
+                        90-MINUTE RITUAL
+                    </p>
+
+                    <!-- Subtle Divider -->
+                    <div class="w-full h-px bg-white/15 my-3 sm:my-3.5"></div>
+
+                    <!-- Section Label -->
+                    <p class="font-heading text-[10px] sm:text-xs font-semibold tracking-[0.22em] text-white/50 uppercase mb-1.5">
+                        THE 5-LAYER GLASS SKIN RITUAL
+                    </p>
+
+                    <!-- Inclusions Dot List -->
+                    <p class="font-body text-xs sm:text-sm text-white/80 tracking-wider">
+                        Skin Booster &nbsp;•&nbsp; LDM &nbsp;•&nbsp; LED &nbsp;•&nbsp; Wellness
+                    </p>
+                </div>
+
+                <!-- Action Button Directly Below With Tight Spacing -->
+                <div class="relative z-10 pt-5 sm:pt-6">
+                    <a href="#membership-collection"
+                        class="group/btn w-full py-3.5 sm:py-4 px-8 rounded-full font-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase text-[#131619] bg-gradient-to-r from-[#D8C7B0] via-[#AA987C] to-[#927F63] hover:brightness-110 shadow-[0_0_30px_rgba(170,152,124,0.45)] hover:shadow-[0_0_40px_rgba(170,152,124,0.65)] hover:scale-[1.01] transition-all duration-300 inline-flex items-center justify-center gap-2.5">
+                        <span>ELEVATE YOUR GLOW</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -1282,6 +1331,248 @@
     </section>
 
     <div id="footer-placeholder"></div>
+
+    <!-- Interactive Golden Particle Halo Canvas Animation (Mouse Reactive) -->
+    <script>
+    (function initHeroParticleCanvas() {
+        const canvas = document.getElementById('hero-particle-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const heroSection = document.getElementById('hero');
+        const modelImg = document.getElementById('hero-model-img');
+        
+        let width = 0;
+        let height = 0;
+        let dpr = window.devicePixelRatio || 1;
+        let mouse = { x: -1000, y: -1000, targetX: 0, targetY: 0, currentX: 0, currentY: 0, active: false };
+        
+        function resize() {
+            const rect = canvas.getBoundingClientRect();
+            width = rect.width;
+            height = rect.height;
+            canvas.width = Math.floor(width * dpr);
+            canvas.height = Math.floor(height * dpr);
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+            ctx.scale(dpr, dpr);
+        }
+        
+        // Golden palette from brand tokens: champagne, warm-gold, pale gold, diamond white
+        const GOLD_COLORS = [
+            'rgba(255, 255, 255, ',
+            'rgba(255, 246, 225, ',
+            'rgba(244, 226, 197, ',
+            'rgba(224, 210, 190, ',
+            'rgba(201, 182, 155, ',
+            'rgba(170, 152, 124, ',
+            'rgba(212, 175, 55, '
+        ];
+        
+        const RING_COUNT = 340;
+        const AMBIENT_COUNT = 75;
+        const ringParticles = [];
+        const ambientParticles = [];
+        
+        for (let i = 0; i < RING_COUNT; i++) {
+            const angle = (i / RING_COUNT) * Math.PI * 2 + (Math.random() - 0.5) * 0.05;
+            ringParticles.push({
+                angle: angle,
+                speed: (Math.random() * 0.0018 + 0.0009),
+                rOffset: (Math.random() - 0.5) * 38,
+                size: Math.random() * 2.2 + 0.7,
+                baseAlpha: Math.random() * 0.75 + 0.25,
+                color: GOLD_COLORS[Math.floor(Math.random() * GOLD_COLORS.length)],
+                twinkleSpeed: Math.random() * 0.045 + 0.015,
+                twinklePhase: Math.random() * Math.PI * 2,
+                vx: 0,
+                vy: 0,
+                offsetX: 0,
+                offsetY: 0
+            });
+        }
+        
+        for (let i = 0; i < AMBIENT_COUNT; i++) {
+            ambientParticles.push({
+                x: Math.random(),
+                y: Math.random(),
+                vx: (Math.random() - 0.5) * 0.25,
+                vy: -Math.random() * 0.25 - 0.08,
+                size: Math.random() * 1.8 + 0.6,
+                baseAlpha: Math.random() * 0.55 + 0.2,
+                color: GOLD_COLORS[Math.floor(Math.random() * GOLD_COLORS.length)],
+                twinklePhase: Math.random() * Math.PI * 2
+            });
+        }
+        
+        if (heroSection) {
+            heroSection.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+                mouse.targetX = (e.clientX / window.innerWidth - 0.5) * 22;
+                mouse.targetY = (e.clientY / window.innerHeight - 0.5) * 18;
+                mouse.active = true;
+            });
+            
+            heroSection.addEventListener('mouseleave', () => {
+                mouse.x = -1000;
+                mouse.y = -1000;
+                mouse.targetX = 0;
+                mouse.targetY = 0;
+                mouse.active = false;
+            });
+        }
+        
+        let time = 0;
+        
+        function render() {
+            requestAnimationFrame(render);
+            time++;
+            
+            ctx.clearRect(0, 0, width, height);
+            
+            // Damped mouse tracking
+            mouse.currentX += (mouse.targetX - mouse.currentX) * 0.07;
+            mouse.currentY += (mouse.targetY - mouse.currentY) * 0.07;
+            
+            // Subtle 3D parallax on model
+            if (modelImg) {
+                modelImg.style.transform = `translate3d(${mouse.currentX * 0.45}px, ${mouse.currentY * 0.3}px, 0)`;
+            }
+            
+            // Ring geometric center and ellipse radii scaled to container
+            const cx = width * 0.52 + mouse.currentX * 0.75;
+            const cy = height * 0.38 + mouse.currentY * 0.75;
+            const rx = Math.min(width * 0.42, 230);
+            const ry = Math.min(width * 0.45, 245);
+            const ringTilt = -0.26; // ~-15 deg tilt
+            
+            // 1. Core glowing thin halo arc
+            ctx.save();
+            ctx.translate(cx, cy);
+            ctx.rotate(ringTilt);
+            
+            ctx.beginPath();
+            ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
+            ctx.strokeStyle = 'rgba(212, 175, 55, 0.22)';
+            ctx.lineWidth = 1.4;
+            ctx.shadowColor = 'rgba(244, 226, 197, 0.5)';
+            ctx.shadowBlur = 16;
+            ctx.stroke();
+            ctx.restore();
+            
+            // 2. Star Flare Glint at top-right quadrant of the ring
+            const flareAngle = -0.68 + ringTilt;
+            const flareX = cx + rx * Math.cos(flareAngle);
+            const flareY = cy + ry * Math.sin(flareAngle);
+            const flarePulse = Math.sin(time * 0.04) * 0.2 + 0.85;
+            
+            ctx.save();
+            ctx.globalCompositeOperation = 'lighter';
+            
+            // Radial bloom
+            const flareGrad = ctx.createRadialGradient(flareX, flareY, 0, flareX, flareY, 36 * flarePulse);
+            flareGrad.addColorStop(0, 'rgba(255, 255, 255, 0.95)');
+            flareGrad.addColorStop(0.25, 'rgba(255, 242, 205, 0.75)');
+            flareGrad.addColorStop(0.55, 'rgba(170, 152, 124, 0.3)');
+            flareGrad.addColorStop(1, 'rgba(170, 152, 124, 0)');
+            ctx.fillStyle = flareGrad;
+            ctx.beginPath();
+            ctx.arc(flareX, flareY, 36 * flarePulse, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // 4-point diamond rays
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)';
+            ctx.lineWidth = 1.2;
+            const rayLen = 22 * flarePulse;
+            ctx.beginPath();
+            ctx.moveTo(flareX - rayLen, flareY);
+            ctx.lineTo(flareX + rayLen, flareY);
+            ctx.moveTo(flareX, flareY - rayLen);
+            ctx.lineTo(flareX, flareY + rayLen);
+            ctx.stroke();
+            
+            // Diagonals micro-flare
+            const diagLen = rayLen * 0.45;
+            ctx.beginPath();
+            ctx.moveTo(flareX - diagLen, flareY - diagLen);
+            ctx.lineTo(flareX + diagLen, flareY + diagLen);
+            ctx.moveTo(flareX + diagLen, flareY - diagLen);
+            ctx.lineTo(flareX - diagLen, flareY + diagLen);
+            ctx.stroke();
+            ctx.restore();
+            
+            // 3. Orbiting Golden Particle Band
+            ctx.save();
+            ctx.globalCompositeOperation = 'lighter';
+            
+            for (let i = 0; i < ringParticles.length; i++) {
+                const p = ringParticles[i];
+                p.angle += p.speed;
+                
+                const curR = rx + p.rOffset;
+                const curRy = ry + p.rOffset;
+                const cosA = Math.cos(p.angle);
+                const sinA = Math.sin(p.angle);
+                
+                let px = cx + (curR * cosA * Math.cos(ringTilt) - curRy * sinA * Math.sin(ringTilt));
+                let py = cy + (curR * cosA * Math.sin(ringTilt) + curRy * sinA * Math.cos(ringTilt));
+                
+                // Interactive mouse repulsion & swirl
+                if (mouse.active) {
+                    const dx = (px + p.offsetX) - mouse.x;
+                    const dy = (py + p.offsetY) - mouse.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    const maxDist = 135;
+                    
+                    if (dist < maxDist && dist > 0) {
+                        const force = (1 - dist / maxDist) * 36;
+                        p.vx += (dx / dist) * force * 0.16 + (-dy / dist) * force * 0.08;
+                        p.vy += (dy / dist) * force * 0.16 + (dx / dist) * force * 0.08;
+                    }
+                }
+                
+                p.offsetX += p.vx;
+                p.offsetY += p.vy;
+                p.vx *= 0.88;
+                p.vy *= 0.88;
+                p.offsetX *= 0.92;
+                p.offsetY *= 0.92;
+                
+                const finalX = px + p.offsetX;
+                const finalY = py + p.offsetY;
+                const alpha = p.baseAlpha * (0.6 + 0.4 * Math.sin(time * p.twinkleSpeed + p.twinklePhase));
+                
+                ctx.fillStyle = p.color + alpha + ')';
+                ctx.beginPath();
+                ctx.arc(finalX, finalY, p.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            // 4. Ambient floating sparkles
+            for (let i = 0; i < ambientParticles.length; i++) {
+                const ap = ambientParticles[i];
+                ap.x += ap.vx / width;
+                ap.y += ap.vy / height;
+                if (ap.x < 0) ap.x = 1;
+                if (ap.x > 1) ap.x = 0;
+                if (ap.y < 0) ap.y = 1;
+                if (ap.y > 1) ap.y = 0;
+                
+                const aAlpha = ap.baseAlpha * (0.5 + 0.5 * Math.sin(time * 0.03 + ap.twinklePhase));
+                ctx.fillStyle = ap.color + aAlpha + ')';
+                ctx.beginPath();
+                ctx.arc(ap.x * width, ap.y * height, ap.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            ctx.restore();
+        }
+        
+        window.addEventListener('resize', resize);
+        resize();
+        requestAnimationFrame(render);
+    })();
+    </script>
 
     <script src="oversight.js?v=48"></script>
     <script src="nearme.js?v=44"></script>

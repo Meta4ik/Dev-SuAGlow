@@ -1450,11 +1450,19 @@ const SEARCH_INDEX = [
   },
   {
     "url": "memberships-v2.html#hero",
-    "title": "THE SUA GLOW MEMBERSHIP COLLECTION",
+    "title": "YOUR SKIN. YOUR RITUAL. YOUR GLOW.",
     "pageTitle": "Korean Glass Skin Memberships Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "Choose your monthly Korean skin ritual. 60-MINUTE RITUAL THE 5-STEP GLOW RITUAL AquaFacial • EMS • Molding Mask • LED 90-MINUTE RITUAL THE 5-LAYER GLASS SKIN RITUAL Skin Booster • LDM • LED • Wellness",
-    "snippet": "Choose your monthly Korean skin ritual. 60-MINUTE RITUAL THE 5-STEP GLOW RITUAL AquaFacial • EMS • Molding Mask • LED 90-MINUTE RITUAL THE 5-LAYER GLASS SKIN RI..."
+    "content": "TWO RITUALS. ONE BEAUTIFUL COMMITMENT. Discover SUA Glow's Korean-inspired memberships, thoughtfully designed to cleanse, nourish, and refresh your skin month after month.",
+    "snippet": "TWO RITUALS. ONE BEAUTIFUL COMMITMENT. Discover SUA Glow's Korean-inspired memberships, thoughtfully designed to cleanse, nourish, and refresh your skin month a..."
+  },
+  {
+    "url": "memberships-v2.html#membership-tiers",
+    "title": "CHOOSE YOUR MONTHLY SKIN RITUAL",
+    "pageTitle": "Korean Glass Skin Memberships Dallas",
+    "category": "QUESTIONS & ANSWERS",
+    "content": "Select the Korean skincare ritual curated for your skin goals. 60-MINUTE RITUAL THE 5-STEP GLOW RITUAL AquaFacial • EMS • Molding Mask • LED 90-MINUTE RITUAL THE 5-LAYER GLASS SKIN RITUAL Skin Booster • LDM • LED • Wellness",
+    "snippet": "Select the Korean skincare ritual curated for your skin goals. 60-MINUTE RITUAL THE 5-STEP GLOW RITUAL AquaFacial • EMS • Molding Mask • LED 90-MINUTE RITUAL TH..."
   },
   {
     "url": "memberships-v2.html#membership-collection",
