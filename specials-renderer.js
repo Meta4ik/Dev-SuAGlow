@@ -20,16 +20,16 @@ function renderNovemberSpecials(config) {
         ).join(' ') : '';
 
         return `
-            <div class="rounded-[28px] border border-[#E5D7C9] p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.35)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.5)] transition-all duration-500 group animate-on-scroll fade-up ${delayClass}" style="background: linear-gradient(145deg, #FCF8F3 0%, #F5ECE3 42%, #E6D5C3 100%);">
+            <div class="rounded-[28px] border border-[#E5D7C9] hover:border-warm-gold/60 p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.35)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.5)] transition-all duration-500 group animate-on-scroll fade-up ${delayClass}" style="background: linear-gradient(145deg, #FCF8F3 0%, #F5ECE3 42%, #E6D5C3 100%);">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
                     
-                    <!-- Left Column: 1:1 Photo + Price Box (top-aligned directly underneath) + Book Button -->
+                    <!-- Left Column: 4:3 Photo + Price Box (top-aligned directly underneath) + Book Button -->
                     <div class="lg:col-span-5 flex flex-col justify-between">
-                        <!-- Top Block: 1:1 Framed Photo + Price Box right below -->
+                        <!-- Top Block: 4:3 Framed Photo + Price Box right below -->
                         <div class="space-y-4">
-                            <!-- Framed Promo Image (1:1 Ratio) -->
-                            <div class="relative w-full aspect-square rounded-2xl overflow-hidden border border-black/5 shadow-sm bg-white">
-                                <img src="${stepItem.image}?v=122" alt="${stepItem.title}" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700">
+                            <!-- Framed Promo Image (4:3 Ratio) -->
+                            <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-black/5 shadow-sm bg-white">
+                                <img src="${stepItem.image}?v=123" alt="${stepItem.title}" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700">
                             </div>
 
                             <!-- Price Box (Right Underneath Photo) -->
@@ -100,10 +100,19 @@ function renderNovemberSpecials(config) {
 
     return `
     <!-- November Chingu Friendsgiving Campaign Showcase -->
-    <section id="promotions-hero" data-nav-theme="dark" class="py-12 md:py-20 bg-[#0e0e0e] text-white relative overflow-hidden">
-        <!-- Ambient Subtle Glow Effects Centered Behind Cards -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-warm-gold/5 blur-[180px] rounded-full pointer-events-none"></div>
-        <div class="absolute bottom-1/4 right-10 w-[400px] h-[400px] bg-[#964E40]/5 blur-[160px] rounded-full pointer-events-none"></div>
+    <section id="promotions-hero" data-nav-theme="dark" class="py-12 md:py-20 text-white relative overflow-hidden" style="background: linear-gradient(145deg, #16191D 0%, #0E1013 40%, #060709 100%);">
+        
+        <!-- Interactive Mouse-Responsive Spotlight Glow (Low-key Luxury Ambient Effect) -->
+        <div id="promo-interactive-glow" class="pointer-events-none absolute inset-0 z-0 transition-opacity duration-700 ease-out" 
+             style="background: radial-gradient(850px circle at var(--mouse-x, 50%) var(--mouse-y, 30%), rgba(170, 152, 124, 0.09) 0%, rgba(150, 78, 64, 0.04) 40%, transparent 72%);">
+        </div>
+
+        <!-- Ambient Graded Halo Behind Friendsgiving Header -->
+        <div class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[620px] bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(170,152,124,0.12)_0%,rgba(150,78,64,0.05)_45%,transparent_75%)]"></div>
+
+        <!-- Ambient Floating Graded Orbs (Gentle breathing keyframes) -->
+        <div class="pointer-events-none absolute top-1/4 -left-40 w-[600px] h-[600px] rounded-full bg-warm-gold/5 blur-[170px] animate-pulse" style="animation-duration: 9s;"></div>
+        <div class="pointer-events-none absolute bottom-1/4 -right-40 w-[550px] h-[550px] rounded-full bg-[#964E40]/6 blur-[170px] animate-pulse" style="animation-duration: 11s;"></div>
 
         <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 text-center">
 
@@ -173,6 +182,60 @@ function renderNovemberSpecials(config) {
     </section>
     `;
 }
+
+/**
+ * Initializes the silky, low-key interactive mouse-following background glow on the promo page.
+ */
+function initPromoInteractiveBackground() {
+    const hero = document.getElementById('promotions-hero');
+    const glow = document.getElementById('promo-interactive-glow');
+    if (!hero || !glow) return;
+
+    let targetX = hero.clientWidth / 2;
+    let targetY = 320;
+    let currentX = targetX;
+    let currentY = targetY;
+    let rafId = null;
+
+    // Set initial position
+    glow.style.setProperty('--mouse-x', `${targetX}px`);
+    glow.style.setProperty('--mouse-y', `${targetY}px`);
+
+    function onMouseMove(e) {
+        const rect = hero.getBoundingClientRect();
+        targetX = e.clientX - rect.left;
+        targetY = e.clientY - rect.top;
+        if (!rafId) {
+            rafId = requestAnimationFrame(updateGlow);
+        }
+    }
+
+    function updateGlow() {
+        // Silky 0.08 lerp for low-key organic floating movement
+        currentX += (targetX - currentX) * 0.08;
+        currentY += (targetY - currentY) * 0.08;
+        glow.style.setProperty('--mouse-x', `${currentX.toFixed(1)}px`);
+        glow.style.setProperty('--mouse-y', `${currentY.toFixed(1)}px`);
+
+        if (Math.abs(targetX - currentX) > 0.5 || Math.abs(targetY - currentY) > 0.5) {
+            rafId = requestAnimationFrame(updateGlow);
+        } else {
+            rafId = null;
+        }
+    }
+
+    hero.addEventListener('mousemove', onMouseMove, { passive: true });
+
+    // When mouse leaves the section, smoothly drift back towards upper-center
+    hero.addEventListener('mouseleave', () => {
+        targetX = hero.clientWidth / 2;
+        targetY = 360;
+        if (!rafId) {
+            rafId = requestAnimationFrame(updateGlow);
+        }
+    }, { passive: true });
+}
+window.initPromoInteractiveBackground = initPromoInteractiveBackground;
 
 function renderMonthlySpecials(customConfig) {
     const config = customConfig || (typeof MONTHLY_SPECIALS_CONFIG !== 'undefined' ? MONTHLY_SPECIALS_CONFIG : null);
