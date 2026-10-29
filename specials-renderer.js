@@ -20,7 +20,7 @@ function renderNovemberSpecials(config) {
         ).join(' ') : '';
 
         return `
-            <div class="bg-[#F5ECE3] rounded-[28px] border border-[#E5D7C9] p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.35)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.5)] transition-all duration-500 group animate-on-scroll fade-up ${delayClass}">
+            <div class="rounded-[28px] border border-[#E5D7C9] p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.35)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.5)] transition-all duration-500 group animate-on-scroll fade-up ${delayClass}" style="background: linear-gradient(145deg, #FCF8F3 0%, #F5ECE3 42%, #E6D5C3 100%);">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
                     
                     <!-- Left Column: Framed Image + Price Box + Book Button -->
@@ -30,8 +30,8 @@ function renderNovemberSpecials(config) {
                             <img src="${stepItem.image}?v=119" alt="${stepItem.title}" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700">
                         </div>
 
-                        <!-- Price Box (Cream Box) -->
-                        <div class="bg-[#EFE3D5] border border-[#DFCFC0] rounded-2xl p-4 sm:p-5 text-center shadow-xs">
+                        <!-- Price Box (Cream Box with Depth Gradient) -->
+                        <div class="border border-[#DFCFC0] rounded-2xl p-4 sm:p-5 text-center shadow-xs" style="background: linear-gradient(145deg, #F9F3EC 0%, #EFE3D5 50%, #E5D5C4 100%);">
                             <span class="font-body text-3xl sm:text-4xl font-extrabold text-[#1B1E21] tracking-tight block leading-none">
                                 ${stepItem.price}
                             </span>
@@ -208,8 +208,8 @@ function renderMonthlySpecials(customConfig) {
 
         if (isOctober) {
             // For October cards: full max-w-7xl width matching the site, background pushed far right so device is clearly visible,
-            // gradient cleanly protects left text area while opening up the right side for the device.
-            const cardBgInlineStyle = `background-color: #ffffff; background-image: linear-gradient(to right, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.82) 54%, rgba(255, 255, 255, 0) 66%), url('${cardBgImage}'); background-size: auto 100%; background-position: right center; background-repeat: no-repeat;`;
+            // gradient cleanly protects left text area with a subtle warm porcelain depth gradient while opening up the right side for the device.
+            const cardBgInlineStyle = `background: linear-gradient(135deg, #FFFDFB 0%, #FAF5EE 42%, rgba(250, 245, 238, 0.85) 54%, rgba(250, 245, 238, 0) 66%), url('${cardBgImage}'); background-size: auto 100%; background-position: right center; background-repeat: no-repeat;`;
 
             return `
                 <div class="bg-white rounded-[24px] border ${cardBorderColor} p-4 md:p-6 pl-4 md:pl-56 shadow-soft hover:shadow-2xl transition-all duration-500 flex flex-col md:grid md:grid-cols-[1fr_auto] items-stretch gap-6 md:gap-8 group animate-on-scroll fade-up relative min-h-[160px] overflow-hidden w-full ${delayClass}" style="${cardBgInlineStyle}">
