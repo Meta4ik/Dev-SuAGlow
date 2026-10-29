@@ -46,19 +46,19 @@ const MONTHLY_SPECIALS_CONFIG_NOVEMBER = {
             description: "Your Seoul-style, all-over skin-tightening glow-up starts here! Discover Korean RF technology designed to stimulate collagen, improve skin firmness and elasticity, and tighten the appearance of skin across the face and jawline—for smoother, firmer-looking skin and a naturally refreshed glow.",
             image: "assets/november-promo-oligio-x.png",
             ctaText: "BOOK YOUR OLIGIO X TREATMENT",
-            tags: ["600 SHOTS", "SKIN TIGHTENING", "V-LINE CONTOUR", "COLLAGEN PRODUCTION", "IMPROVED SKIN ELASTICITY"],
+            tags: ["SOFTER LOOKING FINE LINES", "SKIN TIGHTENING", "V-LINE CONTOUR", "COLLAGEN PRODUCTION", "IMPROVED SKIN ELASTICITY"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
         {
             step: 2,
             badge: "HYDRATE + REPAIR + GLOW",
-            title: "SKIN QUALITY BARRIER",
+            title: "SKIN QUALITY BOOSTERS",
             subtitle: "ECM + PN/PDRN + HA + COLLAGEN",
             price: "$200 OFF",
             priceDetail: "SKIN HEALTH BOOSTERS PRICES START AT $799",
             description: "Beyond hydration. Discover next-generation Korean skin boosters designed to support your skin barrier, improve elasticity and texture, and restore the appearance of healthy, luminous skin.",
             image: "assets/november-promo-skin-barrier.png",
-            ctaText: "BOOK YOUR SKIN QUALITY BARRIER",
+            ctaText: "BOOK YOUR SKIN QUALITY BOOSTERS",
             tags: ["SKIN BARRIER SUPPORT", "SMOOTHER SKIN TEXTURE", "IMPROVED ELASTICITY", "DEEP HYDRATION", "COLLAGEN SUPPORT"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
