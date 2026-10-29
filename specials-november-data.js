@@ -69,16 +69,17 @@ const MONTHLY_SPECIALS_CONFIG_NOVEMBER = {
             subtitle: "90-MINUTE SEOUL-STYLE GLASS SKIN RITUAL",
             price: "$100 OFF",
             priceDetail: "REGULAR VALUE $499",
-            description: "Your chok-chok (촉촉)—dewy, hydrated—glow-up starts here!<br><br>Experience 90 minutes of Korean-inspired skin pampering, combining dermabrasion, aquafacial, personalized facial sculpting, lymphatic drainage massage, a hydration mask, and LED red-light therapy.<br><br>Your sculpting treatment is customized using microcurrent, electrical muscle stimulation (EMS), or Korean facial massage to leave skin looking smoother, refreshed, and beautifully luminous.",
-            featuresTitle: "PERSONALIZED FACIAL SCULPTING — CHOOSE ONE:",
+            description: "Your chok-chok (촉촉)—dewy, hydrated—glow-up starts here!<br><br>Experience 90 minutes of Korean-inspired skin pampering combining dermabrasion, aquafacial, microcurrent sculpting, electrical muscle stimulation (EMS), Korean facial sculpting massage, a clarifying Korean modeling mask, lymphatic drainage, and LED red-light therapy.<br><br>You receive all four restorative facial techniques for maximum lifting, firming, deep hydration, and glass-skin radiance.",
+            featuresTitle: "ALL 4 INCLUDED IN YOUR 90-MINUTE RITUAL:",
             features: [
                 "Microcurrent Facial Sculpting",
                 "Electrical Muscle Stimulation (EMS)",
-                "Korean Facial Sculpting Massage"
+                "Korean Facial Sculpting Massage",
+                "Korean Modeling Mask"
             ],
             image: "assets/november-promo-hydroglow.png",
             ctaText: "BOOK YOUR GLASS SKIN EXPERIENCE",
-            tags: ["AQUAFACIAL", "DERMABRASION", "MICROCURRENT", "EMS SCULPTING", "KOREAN FACIAL MASSAGE", "LYMPHATIC DRAINAGE", "LED RED-LIGHT"],
+            tags: ["AQUAFACIAL", "DERMABRASION", "MICROCURRENT", "EMS SCULPTING", "KOREAN FACIAL MASSAGE", "KOREAN MODELING MASK", "LYMPHATIC DRAINAGE", "LED RED-LIGHT"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         }
     ],

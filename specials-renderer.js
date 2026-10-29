@@ -23,30 +23,35 @@ function renderNovemberSpecials(config) {
             <div class="rounded-[28px] border border-[#E5D7C9] p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.35)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.5)] transition-all duration-500 group animate-on-scroll fade-up ${delayClass}" style="background: linear-gradient(145deg, #FCF8F3 0%, #F5ECE3 42%, #E6D5C3 100%);">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
                     
-                    <!-- Left Column: Framed Image + Price Box + Book Button -->
-                    <div class="lg:col-span-5 flex flex-col justify-between space-y-5">
-                        <!-- Framed Promo Image -->
-                        <div class="relative w-full aspect-[16/9] sm:aspect-[2/1] lg:aspect-[16/9] rounded-2xl overflow-hidden border border-black/5 shadow-sm bg-white">
-                            <img src="${stepItem.image}?v=119" alt="${stepItem.title}" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700">
-                        </div>
+                    <!-- Left Column: 1:1 Photo + Price Box (top-aligned directly underneath) + Book Button -->
+                    <div class="lg:col-span-5 flex flex-col justify-between">
+                        <!-- Top Block: 1:1 Framed Photo + Price Box right below -->
+                        <div class="space-y-4">
+                            <!-- Framed Promo Image (1:1 Ratio) -->
+                            <div class="relative w-full aspect-square rounded-2xl overflow-hidden border border-black/5 shadow-sm bg-white">
+                                <img src="${stepItem.image}?v=122" alt="${stepItem.title}" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700">
+                            </div>
 
-                        <!-- Price Box (Cream Box with Depth Gradient) -->
-                        <div class="border border-[#DFCFC0] rounded-2xl p-4 sm:p-5 text-center shadow-xs" style="background: linear-gradient(145deg, #F9F3EC 0%, #EFE3D5 50%, #E5D5C4 100%);">
-                            <span class="font-body text-3xl sm:text-4xl font-extrabold text-[#1B1E21] tracking-tight block leading-none">
-                                ${stepItem.price}
-                            </span>
-                            ${stepItem.priceDetail ? `
-                                <span class="block text-[10px] sm:text-[11px] font-bold text-[#8C4538] uppercase tracking-wider mt-2">
-                                    ${stepItem.priceDetail}
+                            <!-- Price Box (Right Underneath Photo) -->
+                            <div class="border border-[#DFCFC0] rounded-2xl p-4 sm:p-5 text-center shadow-xs" style="background: linear-gradient(145deg, #F9F3EC 0%, #EFE3D5 50%, #E5D5C4 100%);">
+                                <span class="font-body text-3xl sm:text-4xl font-extrabold text-[#1B1E21] tracking-tight block leading-none">
+                                    ${stepItem.price}
                                 </span>
-                            ` : ''}
+                                ${stepItem.priceDetail ? `
+                                    <span class="block text-[10px] sm:text-[11px] font-bold text-[#8C4538] uppercase tracking-wider mt-2">
+                                        ${stepItem.priceDetail}
+                                    </span>
+                                ` : ''}
+                            </div>
                         </div>
 
                         <!-- CTA Button: Pill Button matching Friendsgiving Logo Color & Balanced Equal Padding -->
-                        <a href="${stepItem.bookingUrl}" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:py-4 rounded-full bg-[#964E40] hover:bg-[#803F33] text-white text-[11px] sm:text-xs font-semibold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-center leading-none">
-                            <span>${stepItem.ctaText || 'Book Your Treatment'}</span>
-                            <i data-lucide="arrow-right" class="w-3.5 h-3.5 shrink-0"></i>
-                        </a>
+                        <div class="pt-5 mt-auto">
+                            <a href="${stepItem.bookingUrl}" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:py-4 rounded-full bg-[#964E40] hover:bg-[#803F33] text-white text-[11px] sm:text-xs font-semibold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-center leading-none">
+                                <span>${stepItem.ctaText || 'Book Your Treatment'}</span>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5 shrink-0"></i>
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Right Column: Category + Title + Subtitle + Description + Tags -->
