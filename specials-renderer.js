@@ -32,9 +32,9 @@ function renderNovemberSpecials(config) {
                                 <img src="${stepItem.image}?v=123" alt="${stepItem.title}" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700">
                             </div>
 
-                            <!-- Price Box (Right Underneath Photo) -->
+                            <!-- Price Box (Cream Box with Dimensional Black/Gray Gradient Price Text) -->
                             <div class="border border-[#DFCFC0] rounded-2xl p-4 sm:p-5 text-center shadow-xs" style="background: linear-gradient(145deg, #F9F3EC 0%, #EFE3D5 50%, #E5D5C4 100%);">
-                                <span class="font-body text-3xl sm:text-4xl font-extrabold text-[#1B1E21] tracking-tight block leading-none">
+                                <span class="font-body text-3xl sm:text-4xl font-extrabold tracking-tight block leading-none price-text-gradient">
                                     ${stepItem.price}
                                 </span>
                                 ${stepItem.priceDetail ? `
