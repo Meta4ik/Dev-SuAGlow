@@ -883,13 +883,13 @@
 
         <div class="max-w-6xl mx-auto relative z-10">
             <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+            <div class="text-center max-w-5xl mx-auto mb-14 md:mb-16">
                 <span class="text-xs sm:text-[13px] uppercase tracking-[0.28em] font-semibold text-charcoal/60 mb-3 inline-block">
                     MEMBER PRIVILEGES &amp; K-BEAUTY EXTRAS
                 </span>
-                <h2 class="font-heading text-3xl sm:text-5xl md:text-[52px] text-near-black leading-tight uppercase tracking-wide">
-                    MORE THAN A MEMBERSHIP.<br>
-                    <span class="italic font-light text-taupe block mt-1">YOUR MONTHLY K-BEAUTY LOVE.</span>
+                <h2 class="font-heading text-xl sm:text-3xl md:text-5xl lg:text-[52px] text-near-black leading-tight uppercase tracking-wide">
+                    <span class="block whitespace-nowrap">MORE THAN A MEMBERSHIP.</span>
+                    <span class="italic font-light text-taupe block mt-1 whitespace-nowrap">YOUR MONTHLY K-BEAUTY LOVE.</span>
                 </h2>
                 <p class="font-body text-sm sm:text-base text-charcoal/75 tracking-wide mt-3 max-w-2xl mx-auto [text-wrap:balance]">
                     Because your glow deserves a little extra love! Every SUA Glow member enjoys exclusive skincare savings, VIP booking privileges, personalized care, and a little Seoul-inspired surprise each month.
@@ -1078,27 +1078,30 @@
                     </div>
                 </div>
 
-                <!-- Right visual column (Dewy Duo Beauty Portrait with Vignette Overlay) -->
+                <!-- Right visual column (5-Layer One-Ritual Luxury Card with Both Models Fitting Perfectly) -->
                 <div class="lg:col-span-5 relative">
-                    <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border border-charcoal/10 aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] group bg-near-black">
-                        <img src="assets/dewy_duo_kbeauty_models.png" alt="SUA Glow Korean Glass Skin Models"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
-                        <!-- Smooth Bottom Vignette Overlay -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-near-black/95 via-near-black/45 to-transparent"></div>
+                    <div class="rounded-[2rem] overflow-hidden shadow-2xl border border-charcoal/10 bg-[#131619] text-white flex flex-col group">
+                        <!-- Both Models Image Container (Aspect ~1.38/1 ensures both models fit with zero cropping) -->
+                        <div class="relative w-full aspect-[1.38/1] bg-white overflow-hidden">
+                            <img src="assets/dewy_duo_kbeauty_models.png" alt="SUA Glow Korean Glass Skin Models"
+                                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                            <!-- Bottom subtle fade to dark background -->
+                            <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#131619] via-[#131619]/60 to-transparent pointer-events-none"></div>
+                        </div>
 
-                        <!-- Bottom Typography Overlay -->
-                        <div class="absolute bottom-8 left-8 right-8 text-white text-left space-y-4">
+                        <!-- Card Content / Badge Area -->
+                        <div class="p-6 sm:p-8 space-y-4 relative z-10">
                             <div>
-                                <p class="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-white/80 font-medium leading-relaxed">
-                                    SEOUL PHILOSOPHY<br>DALLAS ADDRESS.
+                                <p class="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-warm-gold font-semibold leading-relaxed">
+                                    SEOUL PHILOSOPHY<br class="sm:hidden"> · DALLAS ADDRESS
                                 </p>
-                                <h3 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-light uppercase tracking-wide leading-[1.08] text-white mt-3 mb-2">
+                                <h3 class="font-heading text-3xl sm:text-4xl lg:text-[40px] font-light uppercase tracking-wide leading-[1.08] text-white mt-2 mb-1">
                                     FIVE LAYERS.<br>ONE RITUAL.
                                 </h3>
                             </div>
 
-                            <div class="flex items-end justify-between pt-2">
-                                <p class="text-xs sm:text-sm font-light text-white/90 tracking-[0.3em] uppercase">
+                            <div class="flex items-end justify-between pt-3 border-t border-white/10">
+                                <p class="text-xs sm:text-sm font-light text-white/90 tracking-[0.28em] uppercase">
                                     VERY K-BEAUTY.
                                 </p>
                                 <div class="text-right">

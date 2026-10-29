@@ -1442,7 +1442,7 @@ const SEARCH_INDEX = [
   },
   {
     "url": "memberships-v2.html",
-    "title": "MORE THAN A MEMBERSHIP. A COMPLETE KOREAN RITUAL.",
+    "title": "MORE THAN A MEMBERSHIP. YOUR MONTHLY K-BEAUTY LOVE.",
     "pageTitle": "Korean Glass Skin Memberships Dallas",
     "category": "QUESTIONS & ANSWERS",
     "content": "Enjoy exclusive spa savings, VIP booking access, and curated Korean beauty surprises with every visit. Every month, our providers curate a limited-edition Korean skincare discovery for our Premium members. From clinic-grade ampoules and modeling masks to seasonal sheet masks and post-care essentials sourced directly from Seoul. 10% Off all Korean retail skincare & sun protection products Priority Scheduling for evenings, weekends, and peak calendar dates Member-First Access to new Korean aesthetic device launches Cancel Anytime with simple 30-day notice — zero contracts KOREAN-INSPIRED · PROVIDER-CURATED · CARROLLTON, TX",
@@ -1501,7 +1501,7 @@ const SEARCH_INDEX = [
     "title": "GLASS SKIN IS A PRACTICE, NOT A QUICK FIX.",
     "pageTitle": "Korean Glass Skin Memberships Dallas",
     "category": "QUESTIONS & ANSWERS",
-    "content": "Beautiful glass skin doesn't happen overnight. In Korea, glowing skin is a commitment—not a one-time facial. It's about consistency, personalized care, and giving your skin a little K-Beauty love every month. At SUA Glow, we bring this Seoul-inspired philosophy to Dallas with two thoughtfully curated Glass Skin memberships. Whether you're maintaining your chok-chok (dewy, hydrated) glow or elevating your routine with advanced skin treatments, your ritual is designed around what your skin needs. Great skin is a monthly commitment. Glow by glow. Healthy-looking skin is always in. No shortcuts required. Your skin is unique. Your Korean skincare ritual should be, too. Five complementary steps. One personalized glow ritual. SEOUL PHILOSOPHYDALLAS ADDRESS. VERY K-BEAUTY. SUA GLOWCARROLLTON, TX",
+    "content": "Beautiful glass skin doesn't happen overnight. In Korea, glowing skin is a commitment—not a one-time facial. It's about consistency, personalized care, and giving your skin a little K-Beauty love every month. At SUA Glow, we bring this Seoul-inspired philosophy to Dallas with two thoughtfully curated Glass Skin memberships. Whether you're maintaining your chok-chok (dewy, hydrated) glow or elevating your routine with advanced skin treatments, your ritual is designed around what your skin needs. Great skin is a monthly commitment. Glow by glow. Healthy-looking skin is always in. No shortcuts required. Your skin is unique. Your Korean skincare ritual should be, too. Five complementary steps. One personalized glow ritual. SEOUL PHILOSOPHY · DALLAS ADDRESS VERY K-BEAUTY. SUA GLOWCARROLLTON, TX",
     "snippet": "Beautiful glass skin doesn't happen overnight. In Korea, glowing skin is a commitment—not a one-time facial. It's about consistency, personalized care, and givi..."
   },
   {
