@@ -454,6 +454,9 @@
             const container = document.getElementById('index-specials-container');
             if (container && typeof renderMonthlySpecials === 'function') {
                 container.innerHTML = renderMonthlySpecials();
+                if (typeof initPromoInteractiveBackground === 'function') {
+                    initPromoInteractiveBackground();
+                }
                 if (window.lucide) {
                     lucide.createIcons();
                 }

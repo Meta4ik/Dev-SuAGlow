@@ -2,82 +2,78 @@
  * SUA K Glow - Monthly Specials Data Configuration
  * ------------------------------------------------
  * Dedicated configuration for the active Monthly Specials campaign.
- * Currently active: October 2026 - "The SUA Glow October Edit - Glow or Treat! 🍫✨"
+ * Currently active: November 2026 - "The SUA Glow November Edit - Chingu Friendsgiving 🍂✨"
  */
 
 const MONTHLY_SPECIALS_CONFIG = {
     // Campaign Overview Metadata
     meta: {
-        month: "October 2026",
-        pill: "GLOW OR TREAT! 🍫✨",
-        pillImage: "assets/glow-or-treat-title.png",
-        badge: "Limited Time | October Offers",
-        title: "The SUA Glow October Edit",
-        titleLine1: "The SUA Glow",
-        titleLine2: "October Edit",
-        subtitle: "Seoul Glow. Zero Tricks.",
-        taglinePill: "Scary-dry skin or hair looking a little haunted? Dallas fall meets authentic K-Beauty. Three October-only ways to lift, repair + renew with zero tricks and all treats.",
-        tagline: "",
-        offerBadge: "LIMITED TIME · OCTOBER 2026",
-        offerCallout: "GLOW OR TREAT! 🍫✨ <span class=\"md:whitespace-nowrap\">OCTOBER EDIT</span>",
-        offerTagline: "Seoul Glow. Zero Tricks.",
-        offerSubtext: "Book your consultation during October 2026 to redeem promotional pricing.",
-        offerPillars: "Korean-founded · Korean PA-C provider · Physician-guided",
-        offerCtaText: "Claim Your October Offer",
-        offerCtaUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
-        flyerImage: "assets/SUA-Glow-October-Specials.jpg?v=105",
-        downloadFlyerImage: "assets/SUA-Glow-October-Specials.jpg?v=105",
-        cardBackground: "assets/october_card_bg.jpg",
-        headerBackground: "assets/october_header_bg.jpg",
+        month: "November 2026",
+        campaignLabel: "THE SUA GLOW NOVEMBER EDIT",
+        pill: "CHINGU FRIENDSGIVING 🍂✨",
+        pillImage: "assets/chingu-friendsgiving-logo.png",
+        logo: "assets/chingu-friendsgiving-logo.png",
+        badge: "LIMITED TIME | NOVEMBER OFFERS",
+        title: "CHINGU FRIENDSGIVING",
+        subtitle: "GOOD FRIENDS. GREAT SKIN. SEOUL GLOW.",
+        heroImage: "assets/chingu-friendsgiving-hero.png",
+        heroText: "Chingu (친구) means friend in Korean. At SUA GLOW, every client is a chingu! This November, we're celebrating our Dallas–Fort Worth friends with a little extra K-Beauty love and exclusive year-end glow offers.",
+        sectionTitle: "CHINGU EXCLUSIVES",
+        sectionSubtitle: "A SUA GLOW thank you for our clients.",
         bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
-        terms: "*October promotional pricing valid through October 31, 2026. Consultation required to determine candidacy. Individual results vary. Offers subject to availability and cannot be combined with other promotions."
+        flyerImage: "assets/SUA-Glow-November-Specials.png",
+        downloadFlyerImage: "assets/SUA-Glow-November-Specials.png",
+        validThrough: "Offers valid through November 30, 2026",
+        footerPillars: "KOREAN-FOUNDED  •  PHYSICIAN-GUIDED  •  CARROLLTON, TX",
+        terms: "*Offers valid through November 30, 2026. Limit two promotional purchases per eligible client. Consultation and clinical eligibility required. Offers cannot be combined with other promotions. Individual results may vary."
     },
 
-    // 3-Step Program (Highlighted Offers matching October Edit)
+    // 3-Step Program (Highlighted Offers matching November Edit)
     featuredSteps: [
         {
             step: 1,
-            badge: "FIRM + BALANCE + RESTORE",
-            title: "K-Volume Lift",
-            subtitle: "Oligio X® 600 Shots + Volume Restoration Filler (Smile Lines or Temples)",
-            price: "$1,599",
-            originalPrice: "$2,400+",
-            priceDetail: "Regular Value $2,400+",
-            hook: "No Tricks, Just Lift. Balance + a little Seoul magic.",
-            description: "Targeted Korean monopolar RF skin tightening paired with advanced dermal volume restoration. Lift sagging contours, smooth deep smile lines or temples, and restore youthful facial architecture.",
-            image: "assets/october_model_k_volume_lift.jpg",
-            cardBackground: "assets/october_card1_device_far_right.jpg",
-            tags: ["Oligio X® 600 Shots", "Volume Restoration", "Facial Balance", "Lift · Firm · Restore"],
+            badge: "LIFT + TIGHTEN + REJUVENATE",
+            title: "OLIGIO X",
+            subtitle: "Your Seoul-style skin-firming refresh awaits.",
+            price: "$300 OFF",
+            priceDetail: "REGULAR VALUE $1,400+",
+            description: "Your Seoul-style, all-over skin-tightening glow-up starts here! Discover Korean RF technology designed to stimulate collagen, improve skin firmness and elasticity, and tighten the appearance of skin across the face and jawline—for smoother, firmer-looking skin and a naturally refreshed glow.",
+            image: "assets/november-promo-oligio-x.png",
+            ctaText: "BOOK YOUR OLIGIO X TREATMENT",
+            tags: ["600 SHOTS", "SKIN TIGHTENING", "V-LINE CONTOUR", "COLLAGEN PRODUCTION", "IMPROVED SKIN ELASTICITY"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
         {
             step: 2,
-            badge: "HYDRATE + SUPPORT + GLOW",
-            title: "Glow Barrier",
-            subtitle: "Rejuran® Healing Essence (Topical) + SkinTox",
-            price: "$699",
-            originalPrice: "$1,000+",
-            priceDetail: "Regular Value $1,000+",
-            hook: "Scary-dry skin? Consider this your K-Beauty rescue.",
-            description: "Rebuild a compromised skin barrier and unlock luminous glass skin. Combines salmon DNA polynucleotides (Rejuran Healing Essence) with micro-dosed SkinTox for pore refinement, calm radiance, and cellular repair.",
-            image: "assets/october_model_glow_barrier.jpg",
-            cardBackground: "assets/october_card2_device_far_right.jpg",
-            tags: ["Rejuran® Healing Essence", "SkinTox", "Skin Quality", "Strengthen Barrier · Repair · Glow"],
+            badge: "HYDRATE + REPAIR + GLOW",
+            title: "SKIN QUALITY BARRIER",
+            subtitle: "ECM + PN/PDRN + HA + COLLAGEN",
+            price: "$200 OFF",
+            priceDetail: "SKIN HEALTH BOOSTERS PRICES START AT $799",
+            description: "Beyond hydration. Discover next-generation Korean skin boosters designed to support your skin barrier, improve elasticity and texture, and restore the appearance of healthy, luminous skin.",
+            image: "assets/november-promo-skin-barrier.png",
+            ctaText: "BOOK YOUR SKIN QUALITY BARRIER",
+            tags: ["SKIN BARRIER SUPPORT", "SMOOTHER SKIN TEXTURE", "IMPROVED ELASTICITY", "DEEP HYDRATION", "COLLAGEN SUPPORT"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
         {
             step: 3,
-            badge: "SCALP + HAIR WELLNESS",
-            title: "HAIR REVIVAL",
-            subtitle: "NEEDLE-FREE SCALP INFUSION • BUY 2 SESSIONS, GET 1 FREE!",
-            price: "$1,199",
-            originalPrice: "$1,800+",
-            priceDetail: "BUY 2 SESSIONS • GET 1 FREE",
-            hook: "Hair looking a little haunted? Start at the scalp.",
-            description: "Korean-inspired scalp rejuvenation combining needle-free DEP (DermoElectroPoration®) infusion with red light therapy to support scalp wellness and healthier-looking hair.",
-            image: "assets/october_model_hair_revival.jpg",
-            cardBackground: "assets/october_card3_device_far_right.jpg",
-            tags: ["3 SESSIONS", "1 FREE", "NEEDLE-FREE", "RED LIGHT"],
+            badge: "CLEANSE · HYDRATE · REFRESH · GLOW",
+            title: "K-BEAUTY HYDROGLOW GLASS SKIN FACIAL",
+            subtitle: "90-MINUTE SEOUL-STYLE GLASS SKIN RITUAL",
+            price: "$100 OFF",
+            priceDetail: "REGULAR VALUE $499",
+            description: "Your chok-chok (촉촉)—dewy, hydrated—glow-up starts here!<br><br>Experience 90 minutes of Korean-inspired skin pampering combining dermabrasion, aquafacial, microcurrent sculpting, electrical muscle stimulation (EMS), Korean facial sculpting massage, a clarifying Korean modeling mask, lymphatic drainage, and LED red-light therapy.<br><br>You receive all four restorative facial techniques for maximum lifting, firming, deep hydration, and glass-skin radiance.",
+            featuresTitle: "ALL 4 INCLUDED IN YOUR 90-MINUTE RITUAL:",
+            features: [
+                "Microcurrent Facial Sculpting",
+                "Electrical Muscle Stimulation (EMS)",
+                "Korean Facial Sculpting Massage",
+                "Korean Modeling Mask"
+            ],
+            image: "assets/november-promo-hydroglow.png",
+            ctaText: "BOOK YOUR GLASS SKIN EXPERIENCE",
+            tags: ["AQUAFACIAL", "DERMABRASION", "MICROCURRENT", "EMS SCULPTING", "KOREAN FACIAL MASSAGE", "KOREAN MODELING MASK", "LYMPHATIC DRAINAGE", "LED RED-LIGHT"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         }
     ],
@@ -92,5 +88,7 @@ const MONTHLY_SPECIALS_CONFIG = {
     ]
 };
 
-// Compatibility alias for pages looking for MONTHLY_SPECIALS_CONFIG_OCTOBER
-const MONTHLY_SPECIALS_CONFIG_OCTOBER = MONTHLY_SPECIALS_CONFIG;
+// Global assignment for direct usage
+if (typeof window !== 'undefined') {
+    window.MONTHLY_SPECIALS_CONFIG = MONTHLY_SPECIALS_CONFIG;
+}
