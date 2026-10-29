@@ -100,15 +100,18 @@ function renderNovemberSpecials(config) {
 
     return `
     <!-- November Chingu Friendsgiving Campaign Showcase -->
-    <section id="promotions-hero" data-nav-theme="dark" class="py-12 md:py-20 text-white relative overflow-hidden" style="background: linear-gradient(145deg, #16191D 0%, #0E1013 40%, #060709 100%);">
+    <section id="promotions-hero" data-nav-theme="dark" class="py-12 md:py-20 text-white relative overflow-hidden" style="background: linear-gradient(180deg, #0A0C0E 0%, #16191D 160px, #0E1013 45%, #060709 100%);">
         
+        <!-- Smooth Black Fade at Top (Melts into Nav & Eliminates Seam) -->
+        <div class="pointer-events-none absolute inset-x-0 top-0 h-48 md:h-72 bg-gradient-to-b from-[#0A0C0E] via-[#0A0C0E]/80 to-transparent z-10"></div>
+
         <!-- Interactive Mouse-Responsive Spotlight Glow (Low-key Luxury Ambient Effect) -->
         <div id="promo-interactive-glow" class="pointer-events-none absolute inset-0 z-0 transition-opacity duration-700 ease-out" 
              style="background: radial-gradient(850px circle at var(--mouse-x, 50%) var(--mouse-y, 30%), rgba(170, 152, 124, 0.09) 0%, rgba(150, 78, 64, 0.04) 40%, transparent 72%);">
         </div>
 
-        <!-- Ambient Graded Halo Behind Friendsgiving Header -->
-        <div class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[620px] bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(170,152,124,0.12)_0%,rgba(150,78,64,0.05)_45%,transparent_75%)]"></div>
+        <!-- Ambient Graded Halo Behind Friendsgiving Header (Lowered so it blooms smoothly under the black fade) -->
+        <div class="pointer-events-none absolute top-12 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[620px] bg-[radial-gradient(ellipse_80%_50%_at_50%_20%,rgba(170,152,124,0.12)_0%,rgba(150,78,64,0.05)_45%,transparent_75%)]"></div>
 
         <!-- Ambient Floating Graded Orbs (Gentle breathing keyframes) -->
         <div class="pointer-events-none absolute top-1/4 -left-40 w-[600px] h-[600px] rounded-full bg-warm-gold/5 blur-[170px] animate-pulse" style="animation-duration: 9s;"></div>
@@ -135,7 +138,7 @@ function renderNovemberSpecials(config) {
 
             <!-- Hero Banner Image (Friendsgiving Gathering) -->
             <div class="mb-6 max-w-4xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-white/10 animate-on-scroll fade-up delay-100">
-                <img src="${meta.heroImage || 'assets/chingu-friendsgiving-hero.png'}?v=118" alt="Chingu Friendsgiving" class="w-full h-auto block object-cover">
+                <img src="${meta.heroImage || 'assets/chingu-friendsgiving-hero.png'}?v=125" alt="Chingu Friendsgiving" class="w-full h-auto block object-cover">
             </div>
 
             <!-- Hero Warm Italic Message -->
