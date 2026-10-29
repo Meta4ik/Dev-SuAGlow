@@ -64,22 +64,25 @@ const MONTHLY_SPECIALS_CONFIG_NOVEMBER = {
         },
         {
             step: 3,
-            badge: "CLEANSE · HYDRATE · REFRESH · GLOW",
-            title: "K-BEAUTY HYDROGLOW GLASS SKIN FACIAL",
-            subtitle: "90-MINUTE SEOUL-STYLE GLASS SKIN RITUAL",
+            badge: "CLEANSE · SCULPT · HYDRATE · GLOW",
+            title: "K-BEAUTY GLASS SKIN + HAIR GLOW EXPERIENCE",
+            subtitle: "90-MINUTE SEOUL-STYLE BEAUTY RITUAL",
             price: "$100 OFF",
             priceDetail: "REGULAR VALUE $499",
-            description: "Your chok-chok (촉촉)—dewy, hydrated—glow-up starts here!<br><br>Experience 90 minutes of Korean-inspired skin pampering combining dermabrasion, aquafacial, microcurrent sculpting, electrical muscle stimulation (EMS), Korean facial sculpting massage, a clarifying Korean modeling mask, lymphatic drainage, and LED red-light therapy.<br><br>You receive all four restorative facial techniques for maximum lifting, firming, deep hydration, and glass-skin radiance.",
-            featuresTitle: "ALL 4 INCLUDED IN YOUR 90-MINUTE RITUAL:",
+            description: "Your chok-chok (dewy, hydrated) glow-up starts here!<br><br>Why stop at skincare when you can give your beauty routine the full Seoul treatment?<br><br>Experience 90 minutes of Korean-inspired pampering, combining gentle exfoliation, deep cleansing, facial sculpting, lymphatic drainage massage, LED red light therapy, and a customized Korean modeling mask.<br><br>Our layered approach helps refresh dull-looking skin, improve the appearance of facial contours, and leave your complexion feeling smooth, hydrated, and beautifully radiant.",
+            featuresTitle: "THE GLASS SKIN & HAIR RITUAL INCLUDES",
             features: [
-                "Microcurrent Facial Sculpting",
+                "Gentle Dermabrasion",
+                "AquaFacial",
+                "Microcurrent Facial Sculpting (MET)",
                 "Electrical Muscle Stimulation (EMS)",
-                "Korean Facial Sculpting Massage",
+                "Lymphatic Drainage Massage",
+                "LED Red Light Therapy",
                 "Korean Modeling Mask"
             ],
             image: "assets/november-promo-hydroglow.png",
             ctaText: "BOOK YOUR GLASS SKIN EXPERIENCE",
-            tags: ["AQUAFACIAL", "DERMABRASION", "MICROCURRENT", "EMS SCULPTING", "KOREAN FACIAL MASSAGE", "KOREAN MODELING MASK", "LYMPHATIC DRAINAGE", "LED RED-LIGHT"],
+            tags: ["GENTLE EXFOLIATION", "FACIAL SCULPTING", "DE-PUFF & REFRESH", "SKIN HYDRATION", "SKIN REVITALIZATION"],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         }
     ],
