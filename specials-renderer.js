@@ -29,7 +29,7 @@ function renderNovemberSpecials(config) {
                         <div class="space-y-4">
                             <!-- Framed Promo Image (4:3 Ratio) -->
                             <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-black/5 shadow-sm bg-white">
-                                <img src="${stepItem.image}?v=123" alt="${stepItem.title}" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700">
+                                <img src="${stepItem.image}?v=130" alt="${stepItem.title}" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700">
                             </div>
 
                             <!-- Price Box (Cream Box with Dimensional Black/Gray Gradient Price Text) -->
