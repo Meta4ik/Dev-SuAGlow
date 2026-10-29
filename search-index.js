@@ -1497,7 +1497,7 @@ const SEARCH_INDEX = [
     "snippet": "Because your glow deserves a little extra love! Every SUA Glow member enjoys exclusive skincare savings, VIP booking privileges, personalized care, and a little..."
   },
   {
-    "url": "memberships.html",
+    "url": "memberships.html#philosophy",
     "title": "GLASS SKIN IS A PRACTICE, NOT A QUICK FIX.",
     "pageTitle": "Korean Glass Skin Memberships Dallas",
     "category": "QUESTIONS & ANSWERS",
