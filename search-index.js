@@ -1657,6 +1657,14 @@ const SEARCH_INDEX = [
     "snippet": "Korean Needle-free Infusion treatment recommendations at SUA GLOW are individualized based on patient goals, anatomy, medical history, and clinical assessment p..."
   },
   {
+    "url": "november-social.html",
+    "title": "November Instagram Carousel Studio (4:5)",
+    "pageTitle": "November Instagram Carousel Studio (4:5)",
+    "category": "Spa Treatments",
+    "content": "November Chingu Friendsgiving Designed specifically for Instagram carousels with minimal, high-impact text and aesthetic Korean photography. Clean unrounded borders make it effortless to screenshot directly on your phone or desktop. Good Friends. Great Skin. Seoul Glow. Oligio X RF Lifting Seoul-style skin tightening & contour Skin Quality Boosters ECM • PN/PDRN • Hyaluronic Acid • Collagen Glass Skin + Hair Ritual 90 minutes of Korean facial sculpting & pampering Celebrate Your Skin This November \"Chingu (친구) means friend. At SUA Glow, you're family.\" Quick Screenshot Tip Each card above is calibrated to an exact 4:5 Instagram ratio with 0px corner radius on the canvas. Simply screenshot each box directly, or use the Save PNG buttons above each slide to download high-resolution graphic files.",
+    "snippet": "November Chingu Friendsgiving Designed specifically for Instagram carousels with minimal, high-impact text and aesthetic Korean photography. Clean unrounded bor..."
+  },
+  {
     "url": "oligio-x.html#hero",
     "title": "Meet Oligio X",
     "pageTitle": "Oligio X RF Lifting Dallas",

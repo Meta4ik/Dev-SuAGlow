@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>November Instagram Carousel Studio (4:5) | SUA GLOW</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (compiled) -->
+    <link rel="stylesheet" href="dist/output.css?v=60">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons & html2canvas -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <style>
+        .font-heading { font-family: 'Montserrat', sans-serif; }
+        .font-body { font-family: 'Poppins', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+
+        /* Exact 4:5 Instagram Portrait Ratio (1080 x 1350 equivalent) */
+        .ig-slide-canvas {
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 4 / 5;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            border-radius: 0px !important;
+            background-color: #0E1012;
+            user-select: none;
+        }
+
+        /* Screenshotting focus mode */
+        body.screenshot-mode header,
+        body.screenshot-mode .no-screenshot,
+        body.screenshot-mode #toast {
+            display: none !important;
+        }
+
+        /* Toast notification */
+        #toast {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        #toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0A0C0E] text-white min-h-screen antialiased font-body">
+
+    <!-- Sticky Studio Toolbar -->
+    <header class="border-b border-white/10 bg-[#121417]/95 backdrop-blur-md sticky top-0 z-50 px-4 sm:px-6 py-3.5">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <a href="staging.html" class="flex items-center gap-1.5 text-xs font-heading font-semibold uppercase tracking-wider text-white/60 hover:text-white transition-colors">
+                    <i data-lucide="arrow-left" class="w-4 h-4 text-[#AA987C]"></i>
+                    <span>Staging Hub</span>
+                </a>
+                <span class="text-white/20">•</span>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-xs font-heading font-bold uppercase tracking-widest text-[#AA987C]">
+                        November Social Studio (4:5 Carousel)
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a href="specials-november.html" target="_blank" class="px-3.5 py-1.5 rounded-full text-xs font-heading uppercase tracking-wider text-white/70 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors inline-flex items-center gap-1.5">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    <span class="hidden sm:inline">November Promo</span>
+                </a>
+                <button onclick="copySlideLink()" class="px-3.5 py-1.5 rounded-full text-xs font-heading font-semibold uppercase tracking-wider bg-[#964E40] hover:bg-[#803F33] text-white transition-all inline-flex items-center gap-1.5 shadow-md">
+                    <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+                    <span>Share Page</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-12">
+
+        <!-- Intro Banner & Screenshot Advice -->
+        <div class="max-w-3xl mx-auto text-center mb-10">
+            <span class="text-[11px] font-bold uppercase tracking-[0.35em] text-[#AA987C] block mb-2">
+                Instagram Feed Carousel • 4:5 Portrait
+            </span>
+            <h1 class="heading-wide text-2xl sm:text-4xl font-bold text-white uppercase tracking-wide mb-3">
+                November Chingu Friendsgiving
+            </h1>
+            <p class="text-xs sm:text-sm text-white/70 max-w-xl mx-auto leading-relaxed">
+                Designed specifically for Instagram carousels with minimal, high-impact text and aesthetic Korean photography. Clean unrounded borders make it effortless to screenshot directly on your phone or desktop.
+            </p>
+        </div>
+
+        <!-- Carousel Grid: 5 Consecutive Slides -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-start justify-items-center">
+
+            <!-- ================= SLIDE 1: COVER ================= -->
+            <div class="w-full max-w-[480px] flex flex-col items-center">
+                <div class="w-full flex items-center justify-between mb-3 px-1 no-screenshot">
+                    <span class="text-[11px] font-heading font-bold uppercase tracking-widest text-[#AA987C] flex items-center gap-1.5">
+                        <span class="w-5 h-5 rounded-full bg-[#AA987C]/20 border border-[#AA987C]/40 text-[#AA987C] flex items-center justify-center text-[10px]">1</span>
+                        Cover Slide
+                    </span>
+                    <button onclick="downloadSlide('slide-1', 'SUA-Glow-Nov-Slide1-Cover.png')" class="text-xs text-white/50 hover:text-white transition-colors inline-flex items-center gap-1">
+                        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        <span>Save PNG</span>
+                    </button>
+                </div>
+
+                <!-- 4:5 Slide Canvas (Flat edges for crisp screenshots) -->
+                <div id="slide-1" class="ig-slide-canvas border border-white/10 flex flex-col justify-between p-7 sm:p-9 relative">
+                    <!-- Photo Background with Dark Warm Fade -->
+                    <div class="absolute inset-0 z-0">
+                        <img src="assets/chingu-friendsgiving-hero.png" alt="Friendsgiving" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0E1012] via-[#0E1012]/85 to-[#0E1012]/70"></div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90"></div>
+                    </div>
+
+                    <!-- Top Bar: S Circle Logo + Brand -->
+                    <div class="relative z-10 flex items-center justify-between">
+                        <div class="flex items-center gap-2.5">
+                            <img src="assets/suaglow-s-logo-transparent.png" alt="SUA Logo" class="w-8 h-8 object-contain drop-shadow">
+                            <span class="font-heading text-xs tracking-[0.25em] font-bold text-white uppercase">SUA GLOW</span>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full text-[9px] font-heading font-bold tracking-wider uppercase bg-white/10 backdrop-blur-md text-[#AA987C] border border-white/15">
+                            SWIPE ➔
+                        </span>
+                    </div>
+
+                    <!-- Center Branding: Friendsgiving Logo -->
+                    <div class="relative z-10 text-center my-auto py-6">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#AA987C] block mb-3">
+                            The November Edit
+                        </span>
+                        <img src="assets/chingu-friendsgiving-logo.png" alt="Chingu Friendsgiving" class="h-28 sm:h-36 w-auto mx-auto object-contain drop-shadow-xl mb-4">
+                        <p class="font-heading text-xs font-medium tracking-[0.22em] uppercase text-white/80">
+                            Good Friends. Great Skin. Seoul Glow.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Bar: Minimal Aesthetic Note -->
+                    <div class="relative z-10 pt-4 border-t border-white/15 flex items-center justify-between text-[10px] text-white/60">
+                        <span class="tracking-widest uppercase font-heading font-semibold text-[#AA987C]">Limited Time • Dallas HQ</span>
+                        <span class="tracking-wider">01 / 05</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= SLIDE 2: OLIGIO X ================= -->
+            <div class="w-full max-w-[480px] flex flex-col items-center">
+                <div class="w-full flex items-center justify-between mb-3 px-1 no-screenshot">
+                    <span class="text-[11px] font-heading font-bold uppercase tracking-widest text-[#AA987C] flex items-center gap-1.5">
+                        <span class="w-5 h-5 rounded-full bg-[#AA987C]/20 border border-[#AA987C]/40 text-[#AA987C] flex items-center justify-center text-[10px]">2</span>
+                        Oligio X RF
+                    </span>
+                    <button onclick="downloadSlide('slide-2', 'SUA-Glow-Nov-Slide2-OligioX.png')" class="text-xs text-white/50 hover:text-white transition-colors inline-flex items-center gap-1">
+                        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        <span>Save PNG</span>
+                    </button>
+                </div>
+
+                <!-- 4:5 Slide Canvas -->
+                <div id="slide-2" class="ig-slide-canvas border border-white/10 flex flex-col justify-between p-6 sm:p-7 relative bg-[#F7F2EB] text-[#1B1E21]">
+                    <!-- Top Minimal Header -->
+                    <div class="flex items-center justify-between border-b border-[#E3D5C5] pb-3">
+                        <div class="flex items-center gap-2">
+                            <img src="assets/suaglow-s-logo-transparent.png" alt="SUA Logo" class="w-6 h-6 object-contain">
+                            <span class="font-heading text-[10.5px] tracking-[0.2em] font-bold text-[#8C4538] uppercase">SUA GLOW • 01</span>
+                        </div>
+                        <span class="text-[9.5px] font-bold tracking-widest uppercase text-[#8F857B]">RF Skin Tightening</span>
+                    </div>
+
+                    <!-- Centered Photo Frame (Clean 4:3 Minimal Frame) -->
+                    <div class="my-3 flex-1 flex flex-col justify-center">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden rounded-xl border border-black/5 shadow-md bg-white mb-4">
+                            <img src="assets/november-promo-oligio-x.png" alt="Oligio X" class="w-full h-full object-cover object-center">
+                            <!-- Price Callout Badge -->
+                            <div class="absolute bottom-3 left-3 px-3 py-1.5 rounded-lg bg-[#964E40] text-white shadow-lg">
+                                <span class="font-heading font-extrabold text-sm sm:text-base leading-none block">$300 OFF</span>
+                                <span class="text-[8.5px] tracking-wider uppercase font-semibold text-white/80 block mt-0.5">Reg. $1,400+</span>
+                            </div>
+                        </div>
+
+                        <!-- Minimal Typographic Header -->
+                        <div class="text-left">
+                            <h2 class="heading-wide text-xl sm:text-2xl font-extrabold text-[#1B1E21] tracking-wide leading-tight uppercase mb-1">
+                                Oligio X RF Lifting
+                            </h2>
+                            <p class="font-serif italic text-xs text-[#8C4538] mb-3">
+                                Seoul-style skin tightening &amp; contour
+                            </p>
+
+                            <!-- Clean Minimal Pills (Max 3 for scannability) -->
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="text-[9px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#EFE3D5] text-[#5A5046] border border-[#DFCFC0]">Softer Fine Lines</span>
+                                <span class="text-[9px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#EFE3D5] text-[#5A5046] border border-[#DFCFC0]">Skin Firmness</span>
+                                <span class="text-[9px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#EFE3D5] text-[#5A5046] border border-[#DFCFC0]">V-Line Contour</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Nav Line -->
+                    <div class="pt-3 border-t border-[#E3D5C5] flex items-center justify-between text-[10px] text-[#8F857B]">
+                        <span class="font-heading uppercase tracking-wider font-semibold text-[#8C4538]">Link in bio to book</span>
+                        <span class="tracking-wider">02 / 05</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= SLIDE 3: SKIN BOOSTERS ================= -->
+            <div class="w-full max-w-[480px] flex flex-col items-center">
+                <div class="w-full flex items-center justify-between mb-3 px-1 no-screenshot">
+                    <span class="text-[11px] font-heading font-bold uppercase tracking-widest text-[#AA987C] flex items-center gap-1.5">
+                        <span class="w-5 h-5 rounded-full bg-[#AA987C]/20 border border-[#AA987C]/40 text-[#AA987C] flex items-center justify-center text-[10px]">3</span>
+                        Skin Quality Boosters
+                    </span>
+                    <button onclick="downloadSlide('slide-3', 'SUA-Glow-Nov-Slide3-SkinBoosters.png')" class="text-xs text-white/50 hover:text-white transition-colors inline-flex items-center gap-1">
+                        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        <span>Save PNG</span>
+                    </button>
+                </div>
+
+                <!-- 4:5 Slide Canvas -->
+                <div id="slide-3" class="ig-slide-canvas border border-white/10 flex flex-col justify-between p-6 sm:p-7 relative bg-[#F7F2EB] text-[#1B1E21]">
+                    <!-- Top Minimal Header -->
+                    <div class="flex items-center justify-between border-b border-[#E3D5C5] pb-3">
+                        <div class="flex items-center gap-2">
+                            <img src="assets/suaglow-s-logo-transparent.png" alt="SUA Logo" class="w-6 h-6 object-contain">
+                            <span class="font-heading text-[10.5px] tracking-[0.2em] font-bold text-[#8C4538] uppercase">SUA GLOW • 02</span>
+                        </div>
+                        <span class="text-[9.5px] font-bold tracking-widest uppercase text-[#8F857B]">Korean Regenerative</span>
+                    </div>
+
+                    <!-- Centered Photo Frame (Clean 4:3 Minimal Frame) -->
+                    <div class="my-3 flex-1 flex flex-col justify-center">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden rounded-xl border border-black/5 shadow-md bg-white mb-4">
+                            <img src="assets/november-promo-skin-barrier.png" alt="Skin Quality Boosters" class="w-full h-full object-cover object-center">
+                            <!-- Price Callout Badge -->
+                            <div class="absolute bottom-3 left-3 px-3 py-1.5 rounded-lg bg-[#964E40] text-white shadow-lg">
+                                <span class="font-heading font-extrabold text-sm sm:text-base leading-none block">$200 OFF</span>
+                                <span class="text-[8.5px] tracking-wider uppercase font-semibold text-white/80 block mt-0.5">Starts at $799</span>
+                            </div>
+                        </div>
+
+                        <!-- Minimal Typographic Header -->
+                        <div class="text-left">
+                            <h2 class="heading-wide text-xl sm:text-2xl font-extrabold text-[#1B1E21] tracking-wide leading-tight uppercase mb-1">
+                                Skin Quality Boosters
+                            </h2>
+                            <p class="font-serif italic text-xs text-[#8C4538] mb-3">
+                                ECM • PN/PDRN • Hyaluronic Acid • Collagen
+                            </p>
+
+                            <!-- Clean Minimal Pills -->
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="text-[9px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#EFE3D5] text-[#5A5046] border border-[#DFCFC0]">Barrier Support</span>
+                                <span class="text-[9px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#EFE3D5] text-[#5A5046] border border-[#DFCFC0]">Deep Hydration</span>
+                                <span class="text-[9px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#EFE3D5] text-[#5A5046] border border-[#DFCFC0]">Smoother Texture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Nav Line -->
+                    <div class="pt-3 border-t border-[#E3D5C5] flex items-center justify-between text-[10px] text-[#8F857B]">
+                        <span class="font-heading uppercase tracking-wider font-semibold text-[#8C4538]">Physician-Guided Care</span>
+                        <span class="tracking-wider">03 / 05</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= SLIDE 4: GLASS SKIN RITUAL ================= -->
+            <div class="w-full max-w-[480px] flex flex-col items-center">
+                <div class="w-full flex items-center justify-between mb-3 px-1 no-screenshot">
+                    <span class="text-[11px] font-heading font-bold uppercase tracking-widest text-[#AA987C] flex items-center gap-1.5">
+                        <span class="w-5 h-5 rounded-full bg-[#AA987C]/20 border border-[#AA987C]/40 text-[#AA987C] flex items-center justify-center text-[10px]">4</span>
+                        Glass Skin &amp; Hair
+                    </span>
+                    <button onclick="downloadSlide('slide-4', 'SUA-Glow-Nov-Slide4-GlassSkin.png')" class="text-xs text-white/50 hover:text-white transition-colors inline-flex items-center gap-1">
+                        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        <span>Save PNG</span>
+                    </button>
+                </div>
+
+                <!-- 4:5 Slide Canvas -->
+                <div id="slide-4" class="ig-slide-canvas border border-white/10 flex flex-col justify-between p-6 sm:p-7 relative bg-[#F7F2EB] text-[#1B1E21]">
+                    <!-- Top Minimal Header -->
+                    <div class="flex items-center justify-between border-b border-[#E3D5C5] pb-3">
+                        <div class="flex items-center gap-2">
+                            <img src="assets/suaglow-s-logo-transparent.png" alt="SUA Logo" class="w-6 h-6 object-contain">
+                            <span class="font-heading text-[10.5px] tracking-[0.2em] font-bold text-[#8C4538] uppercase">SUA GLOW • 03</span>
+                        </div>
+                        <span class="text-[9.5px] font-bold tracking-widest uppercase text-[#8F857B]">90-Min Seoul Ritual</span>
+                    </div>
+
+                    <!-- Centered Photo Frame (Clean 4:3 Minimal Frame) -->
+                    <div class="my-3 flex-1 flex flex-col justify-center">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden rounded-xl border border-black/5 shadow-md bg-white mb-4">
+                            <img src="assets/november-promo-hydroglow.png" alt="Glass Skin Ritual" class="w-full h-full object-cover object-center">
+                            <!-- Price Callout Badge -->
+                            <div class="absolute bottom-3 left-3 px-3 py-1.5 rounded-lg bg-[#964E40] text-white shadow-lg">
+                                <span class="font-heading font-extrabold text-sm sm:text-base leading-none block">$100 OFF</span>
+                                <span class="text-[8.5px] tracking-wider uppercase font-semibold text-white/80 block mt-0.5">Reg. $499</span>
+                            </div>
+                        </div>
+
+                        <!-- Minimal Typographic Header -->
+                        <div class="text-left">
+                            <h2 class="heading-wide text-xl sm:text-2xl font-extrabold text-[#1B1E21] tracking-wide leading-tight uppercase mb-1">
+                                Glass Skin + Hair Ritual
+                            </h2>
+                            <p class="font-serif italic text-xs text-[#8C4538] mb-3">
+                                90 minutes of Korean facial sculpting &amp; pampering
+                            </p>
+
+                            <!-- Clean Minimal Pills -->
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="text-[9px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#EFE3D5] text-[#5A5046] border border-[#DFCFC0]">AquaFacial + MET</span>
+                                <span class="text-[9px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#EFE3D5] text-[#5A5046] border border-[#DFCFC0]">Facial Sculpting</span>
+                                <span class="text-[9px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#EFE3D5] text-[#5A5046] border border-[#DFCFC0]">Modeling Mask</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Nav Line -->
+                    <div class="pt-3 border-t border-[#E3D5C5] flex items-center justify-between text-[10px] text-[#8F857B]">
+                        <span class="font-heading uppercase tracking-wider font-semibold text-[#8C4538]">Full Seoul Experience</span>
+                        <span class="tracking-wider">04 / 05</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= SLIDE 5: CLOSING CTA ================= -->
+            <div class="w-full max-w-[480px] flex flex-col items-center">
+                <div class="w-full flex items-center justify-between mb-3 px-1 no-screenshot">
+                    <span class="text-[11px] font-heading font-bold uppercase tracking-widest text-[#AA987C] flex items-center gap-1.5">
+                        <span class="w-5 h-5 rounded-full bg-[#AA987C]/20 border border-[#AA987C]/40 text-[#AA987C] flex items-center justify-center text-[10px]">5</span>
+                        Closing Slide
+                    </span>
+                    <button onclick="downloadSlide('slide-5', 'SUA-Glow-Nov-Slide5-Closing.png')" class="text-xs text-white/50 hover:text-white transition-colors inline-flex items-center gap-1">
+                        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        <span>Save PNG</span>
+                    </button>
+                </div>
+
+                <!-- 4:5 Slide Canvas (Closing Slide) -->
+                <div id="slide-5" class="ig-slide-canvas border border-white/10 flex flex-col justify-between p-7 sm:p-9 relative bg-gradient-to-b from-[#181B1F] to-[#0E1012] text-white text-center">
+                    <!-- Top Minimal Header -->
+                    <div class="flex items-center justify-center gap-2">
+                        <img src="assets/suaglow-s-logo-transparent.png" alt="SUA Logo" class="w-7 h-7 object-contain">
+                        <span class="font-heading text-xs tracking-[0.25em] font-bold text-[#AA987C] uppercase">SUA GLOW</span>
+                    </div>
+
+                    <!-- Center Body -->
+                    <div class="my-auto py-6">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#AA987C] block mb-3">
+                            Reserve Your Session
+                        </span>
+                        <h2 class="heading-wide text-2xl sm:text-3xl font-extrabold text-white tracking-wide uppercase leading-snug mb-3">
+                            Celebrate Your Skin This November
+                        </h2>
+                        <p class="font-serif italic text-xs sm:text-sm text-white/80 max-w-xs mx-auto mb-6">
+                            "Chingu (친구) means friend. At SUA Glow, you're family."
+                        </p>
+
+                        <!-- Highlights Pill Box -->
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 max-w-xs mx-auto space-y-2 mb-6 text-left text-xs text-white/90">
+                            <div class="flex items-center justify-between">
+                                <span>Oligio X RF Lifting</span>
+                                <span class="font-bold text-[#AA987C]">$300 OFF</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span>Skin Quality Boosters</span>
+                                <span class="font-bold text-[#AA987C]">$200 OFF</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span>Glass Skin + Hair Ritual</span>
+                                <span class="font-bold text-[#AA987C]">$100 OFF</span>
+                            </div>
+                        </div>
+
+                        <!-- Pill CTA Button -->
+                        <div class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#964E40] text-white text-xs font-heading font-bold uppercase tracking-wider shadow-xl">
+                            Link In Bio To Book
+                        </div>
+                    </div>
+
+                    <!-- Bottom Clinic Location -->
+                    <div class="pt-4 border-t border-white/10 text-[10.5px] text-white/60 flex items-center justify-between">
+                        <span>Carrollton, TX • Dallas HQ</span>
+                        <span class="tracking-wider">05 / 05</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Screenshot Instructions Banner -->
+        <div class="mt-14 max-w-2xl mx-auto p-6 rounded-2xl bg-[#14171A] border border-white/10 text-center no-screenshot">
+            <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#AA987C]/20 text-[#AA987C] mb-3">
+                <i data-lucide="camera" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-1.5">
+                Quick Screenshot Tip
+            </h3>
+            <p class="text-xs text-white/60 leading-relaxed mb-4">
+                Each card above is calibrated to an exact 4:5 Instagram ratio with 0px corner radius on the canvas. Simply screenshot each box directly, or use the <strong>Save PNG</strong> buttons above each slide to download high-resolution graphic files.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <button onclick="toggleScreenshotMode()" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-heading font-semibold uppercase tracking-wider border border-white/15 transition-all">
+                    Toggle Clean Screenshot Mode
+                </button>
+                <a href="specials-november.html" class="px-5 py-2.5 rounded-full bg-[#964E40] hover:bg-[#803F33] text-white text-xs font-heading font-semibold uppercase tracking-wider transition-all">
+                    View November Landing Page
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-[#1B1E21] text-white px-5 py-3 rounded-full border border-[#AA987C]/50 shadow-2xl flex items-center gap-3 text-xs font-medium">
+        <i data-lucide="check-circle" class="w-4 h-4 text-[#AA987C]"></i>
+        <span id="toast-msg">Link copied to clipboard!</span>
+    </div>
+
+    <!-- Script for One-Click Downloads & Sharing -->
+    <script>
+        function downloadSlide(slideId, filename) {
+            const el = document.getElementById(slideId);
+            if (!el) return;
+            
+            showToast('Generating high-res PNG...');
+            html2canvas(el, {
+                scale: 3, // 3x retina scaling for crisp print & IG quality
+                useCORS: true,
+                backgroundColor: null,
+                logging: false
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = filename;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                showToast('Downloaded ' + filename);
+            }).catch(err => {
+                console.error(err);
+                showToast('Ready to screenshot!');
+            });
+        }
+
+        function toggleScreenshotMode() {
+            document.body.classList.toggle('screenshot-mode');
+            if (document.body.classList.contains('screenshot-mode')) {
+                showToast('Clean mode active. Press ESC or click anywhere to exit.');
+                const escHandler = (e) => {
+                    document.body.classList.remove('screenshot-mode');
+                    document.removeEventListener('keydown', escHandler);
+                    document.removeEventListener('click', escHandler);
+                };
+                setTimeout(() => {
+                    document.addEventListener('keydown', escHandler);
+                    document.addEventListener('click', escHandler);
+                }, 100);
+            }
+        }
+
+        function copySlideLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                showToast('Copied page link to clipboard!');
+            }).catch(() => {
+                prompt('Copy link:', window.location.href);
+            });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            if (toast && toastMsg) {
+                toastMsg.textContent = msg;
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2800);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
