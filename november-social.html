@@ -124,36 +124,41 @@
                 </div>
 
                 <!-- 4:5 Slide Canvas (Flat edges for crisp screenshots) -->
-                <div id="slide-1" class="ig-slide-canvas border border-white/10 flex flex-col justify-between p-7 sm:p-9 relative">
-                    <!-- Photo Background with Dark Warm Fade -->
-                    <div class="absolute inset-0 z-0">
-                        <img src="assets/chingu-friendsgiving-hero.png" alt="Friendsgiving" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0E1012] via-[#0E1012]/85 to-[#0E1012]/70"></div>
-                        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90"></div>
+                <div id="slide-1" class="ig-slide-canvas border border-white/10 flex flex-col justify-between p-7 sm:p-8 relative bg-[#0D0F12] overflow-hidden">
+                    <!-- Photo in Background: Shrunk to Upper Half, Bright & Clear (No Severe Zoom/Crop) -->
+                    <div class="absolute inset-x-0 top-0 h-[58%] z-0 overflow-hidden">
+                        <img src="assets/chingu-friendsgiving-hero.png" alt="Friendsgiving" class="w-full h-full object-cover object-center brightness-110 contrast-105">
+                        <!-- Soft subtle top vignette for logo legibility -->
+                        <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/65 to-transparent"></div>
+                        <!-- Gentle warm fade blending photo smoothly into the dark bottom panel -->
+                        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0D0F12] via-[#0D0F12]/85 to-transparent"></div>
                     </div>
+
+                    <!-- Ambient Warm Spotlight Glow Behind Logo -->
+                    <div class="absolute bottom-20 inset-x-1/4 h-36 rounded-full bg-[#AA987C]/15 blur-3xl pointer-events-none z-0"></div>
 
                     <!-- Top Bar: Official SUA GLOW Logo + Swipe Pill -->
                     <div class="relative z-10 flex items-center justify-between">
-                        <img src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics" class="h-6 sm:h-7 w-auto object-contain brightness-0 invert drop-shadow">
-                        <span class="px-2.5 py-1 rounded-full text-[9px] font-heading font-bold tracking-wider uppercase bg-white/10 backdrop-blur-md text-[#AA987C] border border-white/15">
+                        <img src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics" class="h-6 sm:h-7 w-auto object-contain brightness-0 invert drop-shadow-md">
+                        <span class="px-2.5 py-1 rounded-full text-[9px] font-heading font-bold tracking-wider uppercase bg-black/40 backdrop-blur-md text-[#D6C7B2] border border-white/20 shadow-sm">
                             SWIPE ➔
                         </span>
                     </div>
 
-                    <!-- Center Branding: Friendsgiving Logo -->
-                    <div class="relative z-10 text-center my-auto py-6">
-                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#AA987C] block mb-3">
+                    <!-- Center Branding: Friendsgiving Logo (Dedicated clear zone) -->
+                    <div class="relative z-10 text-center my-auto pt-24 sm:pt-28 pb-3">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#D6C7B2] block mb-2 drop-shadow">
                             The November Edit
                         </span>
-                        <img src="assets/chingu-friendsgiving-logo.png" alt="Chingu Friendsgiving" class="h-28 sm:h-36 w-auto mx-auto object-contain drop-shadow-xl mb-4">
-                        <p class="font-heading text-xs font-medium tracking-[0.22em] uppercase text-white/80">
+                        <img src="assets/chingu-friendsgiving-logo.png" alt="Chingu Friendsgiving" class="h-28 sm:h-36 w-auto mx-auto object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.8)] mb-3">
+                        <p class="font-heading text-xs font-semibold tracking-[0.22em] uppercase text-white/90 drop-shadow">
                             Good Friends. Great Skin. Seoul Glow.
                         </p>
                     </div>
 
                     <!-- Bottom Bar: Minimal Aesthetic Note -->
-                    <div class="relative z-10 pt-4 border-t border-white/15 flex items-center justify-between text-[10px] text-white/60">
-                        <span class="tracking-widest uppercase font-heading font-semibold text-[#AA987C]">Limited Time • Dallas HQ</span>
+                    <div class="relative z-10 pt-3 border-t border-white/15 flex items-center justify-between text-[10px] text-white/70">
+                        <span class="tracking-widest uppercase font-heading font-semibold text-[#D6C7B2]">Limited Time • Dallas HQ</span>
                         <span class="tracking-wider font-medium">1 / 5</span>
                     </div>
                 </div>
@@ -172,31 +177,38 @@
                     </button>
                 </div>
 
-                <!-- 4:5 Slide Canvas -->
-                <div id="slide-2" class="ig-slide-canvas border border-white/10 flex flex-col justify-between p-6 sm:p-7 relative bg-[#F7F2EB] text-[#1B1E21]">
+                <!-- 4:5 Slide Canvas (Multi-Layered Korean Luxury Aesthetic Background) -->
+                <div id="slide-2" class="ig-slide-canvas border border-[#DFD0BE]/40 flex flex-col justify-between p-6 sm:p-7 relative text-[#1B1E21] overflow-hidden" style="background: radial-gradient(circle at 95% 5%, rgba(212, 190, 163, 0.45) 0%, transparent 50%), radial-gradient(circle at 5% 95%, rgba(184, 160, 133, 0.3) 0%, transparent 55%), linear-gradient(155deg, #FCF9F5 0%, #F5ECE0 48%, #E9DAC7 100%);">
+                    <!-- Ambient Luxury Monogram Watermark Background -->
+                    <div class="absolute -bottom-8 -right-8 w-56 h-56 pointer-events-none opacity-[0.05] rotate-12 z-0">
+                        <img src="assets/suaglow-s-logo-transparent.png" alt="" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Subtle Warm Ambient Glow -->
+                    <div class="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-[#AA987C]/15 blur-2xl pointer-events-none z-0"></div>
+
                     <!-- Top Minimal Header -->
-                    <div class="flex items-center justify-between border-b border-[#E3D5C5] pb-2.5">
+                    <div class="relative z-10 flex items-center justify-between border-b border-[#DFCFC0]/80 pb-2.5">
                         <img src="assets/sua_glo_logos/suaglow_logo_hor_1col.png" alt="SUA GLOW Medical Aesthetics" class="h-5 sm:h-6 w-auto object-contain">
                         <div class="flex items-center gap-1.5">
                             <span class="text-[9px] font-bold tracking-widest uppercase text-[#8F857B]">RF Skin Tightening</span>
-                            <span class="w-5 h-5 rounded-full bg-[#EFE3D5] text-[#8C4538] border border-[#DFCFC0] flex items-center justify-center font-heading font-bold text-[10px]">1</span>
+                            <span class="w-5 h-5 rounded-full bg-[#964E40]/10 text-[#8C4538] border border-[#964E40]/25 flex items-center justify-center font-heading font-bold text-[10px]">1</span>
                         </div>
                     </div>
 
                     <!-- Centered Photo Frame & Content -->
-                    <div class="my-auto py-2 flex flex-col justify-between flex-1">
-                        <!-- Photo Frame with Price Badge -->
-                        <div class="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-black/5 shadow-sm bg-white mb-3">
+                    <div class="relative z-10 my-auto py-2 flex flex-col justify-between flex-1">
+                        <!-- Photo Frame with Price Badge (Anchored on RIGHT because model face is on left) -->
+                        <div class="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-[#AA987C]/20 shadow-[0_6px_20px_rgba(140,69,56,0.06)] bg-white mb-3">
                             <img src="assets/november-promo-oligio-x.png" alt="Oligio X" class="w-full h-full object-cover object-center">
-                            <!-- Price Callout Badge -->
-                            <div class="absolute bottom-2.5 left-2.5 px-3 py-1.5 rounded-lg bg-[#964E40] text-white shadow-md">
+                            <!-- Price Callout Badge on the Right -->
+                            <div class="absolute bottom-2.5 right-2.5 px-3 py-1.5 rounded-lg bg-[#964E40] text-white shadow-md text-right">
                                 <span class="font-heading font-extrabold text-sm sm:text-base leading-none block">$300 OFF</span>
                                 <span class="text-[8.5px] tracking-wider uppercase font-semibold text-white/80 block mt-0.5">Reg. $1,400+</span>
                             </div>
                         </div>
 
                         <!-- Minimal Typographic Header -->
-                        <div class="text-left mb-2.5">
+                        <div class="text-left mb-2">
                             <h2 class="heading-wide text-xl sm:text-2xl font-extrabold text-[#1B1E21] tracking-wide leading-tight uppercase mb-0.5">
                                 Oligio X RF Lifting
                             </h2>
@@ -205,33 +217,41 @@
                             </p>
                         </div>
 
-                        <!-- All 5 Pills (No bullet text, generous dedicated layout) -->
-                        <div class="flex flex-wrap gap-1.5 sm:gap-2">
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                SOFTER LOOKING FINE LINES
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                SKIN TIGHTENING
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                V-LINE CONTOUR
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                COLLAGEN PRODUCTION
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                IMPROVED SKIN ELASTICITY
-                            </span>
+                        <!-- 2-Column UX Checklist with SUA GLOW S as Checkmark -->
+                        <div class="p-2.5 sm:p-3 rounded-xl bg-white/55 border border-[#DFCFC0]/80 shadow-[0_2px_8px_rgba(140,69,56,0.04)] backdrop-blur-xs">
+                            <div class="grid grid-cols-2 gap-x-3 items-start">
+                                <!-- Col 1: 3 Items -->
+                                <div class="space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">SOFTER LOOKING FINE LINES</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">SKIN TIGHTENING</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">V-LINE CONTOUR</span>
+                                    </div>
+                                </div>
+                                <!-- Col 2: 2 Items -->
+                                <div class="space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">COLLAGEN PRODUCTION</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">IMPROVED SKIN ELASTICITY</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Bottom Nav Line -->
-                    <div class="pt-2.5 border-t border-[#E3D5C5] flex items-center justify-between text-[10px] text-[#8F857B]">
+                    <div class="relative z-10 pt-2.5 border-t border-[#DFCFC0]/80 flex items-center justify-between text-[10px] text-[#8F857B]">
                         <span class="font-heading uppercase tracking-wider font-semibold text-[#8C4538]">Link in bio to book</span>
                         <span class="tracking-wider font-medium">2 / 5</span>
                     </div>
@@ -251,31 +271,38 @@
                     </button>
                 </div>
 
-                <!-- 4:5 Slide Canvas -->
-                <div id="slide-3" class="ig-slide-canvas border border-white/10 flex flex-col justify-between p-6 sm:p-7 relative bg-[#F7F2EB] text-[#1B1E21]">
+                <!-- 4:5 Slide Canvas (Multi-Layered Korean Luxury Aesthetic Background) -->
+                <div id="slide-3" class="ig-slide-canvas border border-[#DFD0BE]/40 flex flex-col justify-between p-6 sm:p-7 relative text-[#1B1E21] overflow-hidden" style="background: radial-gradient(circle at 95% 5%, rgba(212, 190, 163, 0.45) 0%, transparent 50%), radial-gradient(circle at 5% 95%, rgba(184, 160, 133, 0.3) 0%, transparent 55%), linear-gradient(155deg, #FCF9F5 0%, #F5ECE0 48%, #E9DAC7 100%);">
+                    <!-- Ambient Luxury Monogram Watermark Background -->
+                    <div class="absolute -bottom-8 -right-8 w-56 h-56 pointer-events-none opacity-[0.05] rotate-12 z-0">
+                        <img src="assets/suaglow-s-logo-transparent.png" alt="" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Subtle Warm Ambient Glow -->
+                    <div class="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-[#AA987C]/15 blur-2xl pointer-events-none z-0"></div>
+
                     <!-- Top Minimal Header -->
-                    <div class="flex items-center justify-between border-b border-[#E3D5C5] pb-2.5">
+                    <div class="relative z-10 flex items-center justify-between border-b border-[#DFCFC0]/80 pb-2.5">
                         <img src="assets/sua_glo_logos/suaglow_logo_hor_1col.png" alt="SUA GLOW Medical Aesthetics" class="h-5 sm:h-6 w-auto object-contain">
                         <div class="flex items-center gap-1.5">
                             <span class="text-[9px] font-bold tracking-widest uppercase text-[#8F857B]">Korean Regenerative</span>
-                            <span class="w-5 h-5 rounded-full bg-[#EFE3D5] text-[#8C4538] border border-[#DFCFC0] flex items-center justify-center font-heading font-bold text-[10px]">2</span>
+                            <span class="w-5 h-5 rounded-full bg-[#964E40]/10 text-[#8C4538] border border-[#964E40]/25 flex items-center justify-center font-heading font-bold text-[10px]">2</span>
                         </div>
                     </div>
 
                     <!-- Centered Photo Frame & Content -->
-                    <div class="my-auto py-2 flex flex-col justify-between flex-1">
-                        <!-- Photo Frame with Price Badge -->
-                        <div class="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-black/5 shadow-sm bg-white mb-3">
+                    <div class="relative z-10 my-auto py-2 flex flex-col justify-between flex-1">
+                        <!-- Photo Frame with Price Badge (Anchored on LEFT because model is on right) -->
+                        <div class="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-[#AA987C]/20 shadow-[0_6px_20px_rgba(140,69,56,0.06)] bg-white mb-3">
                             <img src="assets/november-promo-skin-barrier.png" alt="Skin Quality Boosters" class="w-full h-full object-cover object-center">
-                            <!-- Price Callout Badge -->
-                            <div class="absolute bottom-2.5 left-2.5 px-3 py-1.5 rounded-lg bg-[#964E40] text-white shadow-md">
+                            <!-- Price Callout Badge on the Left -->
+                            <div class="absolute bottom-2.5 left-2.5 px-3 py-1.5 rounded-lg bg-[#964E40] text-white shadow-md text-left">
                                 <span class="font-heading font-extrabold text-sm sm:text-base leading-none block">$200 OFF</span>
                                 <span class="text-[8.5px] tracking-wider uppercase font-semibold text-white/80 block mt-0.5">Starts at $799</span>
                             </div>
                         </div>
 
                         <!-- Minimal Typographic Header -->
-                        <div class="text-left mb-2.5">
+                        <div class="text-left mb-2">
                             <h2 class="heading-wide text-xl sm:text-2xl font-extrabold text-[#1B1E21] tracking-wide leading-tight uppercase mb-0.5">
                                 Skin Quality Boosters
                             </h2>
@@ -284,33 +311,41 @@
                             </p>
                         </div>
 
-                        <!-- All 5 Pills (No bullet text, generous dedicated layout) -->
-                        <div class="flex flex-wrap gap-1.5 sm:gap-2">
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                SKIN BARRIER SUPPORT
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                SMOOTHER SKIN TEXTURE
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                IMPROVED ELASTICITY
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                DEEP HYDRATION
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                COLLAGEN SUPPORT
-                            </span>
+                        <!-- 2-Column UX Checklist with SUA GLOW S as Checkmark -->
+                        <div class="p-2.5 sm:p-3 rounded-xl bg-white/55 border border-[#DFCFC0]/80 shadow-[0_2px_8px_rgba(140,69,56,0.04)] backdrop-blur-xs">
+                            <div class="grid grid-cols-2 gap-x-3 items-start">
+                                <!-- Col 1: 3 Items -->
+                                <div class="space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">SKIN BARRIER SUPPORT</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">SMOOTHER SKIN TEXTURE</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">IMPROVED ELASTICITY</span>
+                                    </div>
+                                </div>
+                                <!-- Col 2: 2 Items -->
+                                <div class="space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">DEEP HYDRATION</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">COLLAGEN SUPPORT</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Bottom Nav Line -->
-                    <div class="pt-2.5 border-t border-[#E3D5C5] flex items-center justify-between text-[10px] text-[#8F857B]">
+                    <div class="relative z-10 pt-2.5 border-t border-[#DFCFC0]/80 flex items-center justify-between text-[10px] text-[#8F857B]">
                         <span class="font-heading uppercase tracking-wider font-semibold text-[#8C4538]">Physician-Guided Care</span>
                         <span class="tracking-wider font-medium">3 / 5</span>
                     </div>
@@ -330,31 +365,38 @@
                     </button>
                 </div>
 
-                <!-- 4:5 Slide Canvas -->
-                <div id="slide-4" class="ig-slide-canvas border border-white/10 flex flex-col justify-between p-6 sm:p-7 relative bg-[#F7F2EB] text-[#1B1E21]">
+                <!-- 4:5 Slide Canvas (Multi-Layered Korean Luxury Aesthetic Background) -->
+                <div id="slide-4" class="ig-slide-canvas border border-[#DFD0BE]/40 flex flex-col justify-between p-6 sm:p-7 relative text-[#1B1E21] overflow-hidden" style="background: radial-gradient(circle at 95% 5%, rgba(212, 190, 163, 0.45) 0%, transparent 50%), radial-gradient(circle at 5% 95%, rgba(184, 160, 133, 0.3) 0%, transparent 55%), linear-gradient(155deg, #FCF9F5 0%, #F5ECE0 48%, #E9DAC7 100%);">
+                    <!-- Ambient Luxury Monogram Watermark Background -->
+                    <div class="absolute -bottom-8 -right-8 w-56 h-56 pointer-events-none opacity-[0.05] rotate-12 z-0">
+                        <img src="assets/suaglow-s-logo-transparent.png" alt="" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Subtle Warm Ambient Glow -->
+                    <div class="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-[#AA987C]/15 blur-2xl pointer-events-none z-0"></div>
+
                     <!-- Top Minimal Header -->
-                    <div class="flex items-center justify-between border-b border-[#E3D5C5] pb-2.5">
+                    <div class="relative z-10 flex items-center justify-between border-b border-[#DFCFC0]/80 pb-2.5">
                         <img src="assets/sua_glo_logos/suaglow_logo_hor_1col.png" alt="SUA GLOW Medical Aesthetics" class="h-5 sm:h-6 w-auto object-contain">
                         <div class="flex items-center gap-1.5">
                             <span class="text-[9px] font-bold tracking-widest uppercase text-[#8F857B]">90-Min Seoul Ritual</span>
-                            <span class="w-5 h-5 rounded-full bg-[#EFE3D5] text-[#8C4538] border border-[#DFCFC0] flex items-center justify-center font-heading font-bold text-[10px]">3</span>
+                            <span class="w-5 h-5 rounded-full bg-[#964E40]/10 text-[#8C4538] border border-[#964E40]/25 flex items-center justify-center font-heading font-bold text-[10px]">3</span>
                         </div>
                     </div>
 
                     <!-- Centered Photo Frame & Content -->
-                    <div class="my-auto py-2 flex flex-col justify-between flex-1">
-                        <!-- Photo Frame with Price Badge -->
-                        <div class="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-black/5 shadow-sm bg-white mb-3">
+                    <div class="relative z-10 my-auto py-2 flex flex-col justify-between flex-1">
+                        <!-- Photo Frame with Price Badge (Anchored on RIGHT because model face is on left) -->
+                        <div class="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-[#AA987C]/20 shadow-[0_6px_20px_rgba(140,69,56,0.06)] bg-white mb-3">
                             <img src="assets/november-promo-hydroglow.png" alt="Glass Skin Ritual" class="w-full h-full object-cover object-center">
-                            <!-- Price Callout Badge -->
-                            <div class="absolute bottom-2.5 left-2.5 px-3 py-1.5 rounded-lg bg-[#964E40] text-white shadow-md">
+                            <!-- Price Callout Badge on the Right -->
+                            <div class="absolute bottom-2.5 right-2.5 px-3 py-1.5 rounded-lg bg-[#964E40] text-white shadow-md text-right">
                                 <span class="font-heading font-extrabold text-sm sm:text-base leading-none block">$100 OFF</span>
                                 <span class="text-[8.5px] tracking-wider uppercase font-semibold text-white/80 block mt-0.5">Reg. $499</span>
                             </div>
                         </div>
 
                         <!-- Minimal Typographic Header -->
-                        <div class="text-left mb-2.5">
+                        <div class="text-left mb-2">
                             <h2 class="heading-wide text-xl sm:text-2xl font-extrabold text-[#1B1E21] tracking-wide leading-tight uppercase mb-0.5">
                                 Glass Skin + Hair Ritual
                             </h2>
@@ -363,33 +405,41 @@
                             </p>
                         </div>
 
-                        <!-- All 5 Pills (No bullet text, generous dedicated layout) -->
-                        <div class="flex flex-wrap gap-1.5 sm:gap-2">
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                GENTLE EXFOLIATION
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                FACIAL SCULPTING
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                DE-PUFF &amp; REFRESH
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                SKIN HYDRATION
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider bg-white text-[#4A4036] border border-[#DFCFC0] shadow-xs">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#8C4538] shrink-0"></span>
-                                SKIN REVITALIZATION
-                            </span>
+                        <!-- 2-Column UX Checklist with SUA GLOW S as Checkmark -->
+                        <div class="p-2.5 sm:p-3 rounded-xl bg-white/55 border border-[#DFCFC0]/80 shadow-[0_2px_8px_rgba(140,69,56,0.04)] backdrop-blur-xs">
+                            <div class="grid grid-cols-2 gap-x-3 items-start">
+                                <!-- Col 1: 3 Items -->
+                                <div class="space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">GENTLE EXFOLIATION</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">FACIAL SCULPTING</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">DE-PUFF &amp; REFRESH</span>
+                                    </div>
+                                </div>
+                                <!-- Col 2: 2 Items -->
+                                <div class="space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">SKIN HYDRATION</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-[#2A2D30] leading-tight">SKIN REVITALIZATION</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Bottom Nav Line -->
-                    <div class="pt-2.5 border-t border-[#E3D5C5] flex items-center justify-between text-[10px] text-[#8F857B]">
+                    <div class="relative z-10 pt-2.5 border-t border-[#DFCFC0]/80 flex items-center justify-between text-[10px] text-[#8F857B]">
                         <span class="font-heading uppercase tracking-wider font-semibold text-[#8C4538]">Full Seoul Experience</span>
                         <span class="tracking-wider font-medium">4 / 5</span>
                     </div>
@@ -410,9 +460,12 @@
                 </div>
 
                 <!-- 4:5 Slide Canvas (Closing Slide) -->
-                <div id="slide-5" class="ig-slide-canvas border border-white/10 flex flex-col justify-between p-7 sm:p-9 relative bg-gradient-to-b from-[#181B1F] to-[#0E1012] text-white text-center">
+                <div id="slide-5" class="ig-slide-canvas border border-white/10 flex flex-col justify-between p-7 sm:p-9 relative bg-gradient-to-b from-[#181B1F] to-[#0E1012] text-white text-center overflow-hidden">
+                    <!-- Subtle Ambient Warm Spotlight -->
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(170,152,124,0.18)_0%,transparent_70%)] pointer-events-none"></div>
+
                     <!-- Top Minimal Header -->
-                    <div class="flex items-center justify-center">
+                    <div class="relative z-10 flex items-center justify-center">
                         <img src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics" class="h-6 sm:h-7 w-auto object-contain brightness-0 invert mx-auto drop-shadow">
                     </div>
 
