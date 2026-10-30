@@ -229,7 +229,7 @@ const NAVBAR_HTML = `<!-- Navigation -->
                                         <span class="text-[9px] bg-warm-gold/15 text-warm-gold font-bold px-2 py-0.5 rounded-full uppercase">In-Office Exclusive</span>
                                     </span>
                                     <span class="text-[11px] text-charcoal/60 font-light block mt-0.5">
-                                        Exoblanc Exosome Line • REJURAN® Healing Care • Pharmesthetic Conapidil
+                                        Exoblanc Exosome Line • REJURAN® Healing Care • Pharmastetic
                                     </span>
                                 </div>
                             </div>
@@ -565,7 +565,7 @@ const NAVBAR_HTML = `<!-- Navigation -->
                                 <span>REJURAN® Healing Care</span>
                             </a>
                             <a href="skincare-products.html#line-pharmesthetic" class="font-body text-sm text-charcoal/80 hover:text-taupe transition-colors py-1 min-h-[36px] flex items-center justify-between">
-                                <span>Pharmesthetic Conapidil</span>
+                                <span>Pharmastetic</span>
                             </a>
                         </div>
                     </div>
