@@ -71,8 +71,8 @@ const MONTHLY_SPECIALS_CONFIG = {
                 "Microcurrent Facial Sculpting (MET)",
                 "Electrical Muscle Stimulation (EMS)",
                 "Lymphatic Drainage Massage",
-                "LED Red Light Therapy",
-                "Korean Modeling Mask"
+                "Korean Modeling Mask",
+                "LED Red Light Therapy"
             ],
             image: "assets/november-promo-hydroglow.png",
             ctaText: "BOOK YOUR GLASS SKIN EXPERIENCE",
