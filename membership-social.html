@@ -172,82 +172,92 @@
                         <div class="grid grid-cols-2 gap-3 text-center pt-1">
                             
                             <!-- Column 1: Glass Skin Essential (White Luxury Card) -->
-                            <div class="rounded-2xl bg-[#FAF8F5] p-3 sm:p-3.5 flex flex-col justify-between shadow-2xl border border-[#E5DFD5] text-[#181B1E] text-center">
-                                <div>
-                                    <div class="font-heading font-light text-xs sm:text-sm uppercase tracking-wider leading-none text-[#181B1E] pt-0.5">
-                                        GLASS SKIN
-                                    </div>
-                                    <div class="flex justify-center items-center my-1">
-                                        <img src="assets/essential-text-dark.png" alt="Essential" class="wordmark-essential-sm">
-                                    </div>
-                                    <div class="flex items-baseline justify-center gap-1">
-                                        <span class="font-heading text-xl sm:text-2xl font-extrabold text-[#181B1E] leading-none">$199</span>
-                                        <span class="text-[8.5px] text-taupe font-semibold uppercase tracking-wider">/ MONTH</span>
-                                    </div>
-                                    <div class="text-[8.5px] font-heading font-semibold uppercase tracking-wider text-charcoal/60 mt-0.5 mb-1.5">
-                                        60-MINUTE RITUAL
+                            <div class="rounded-2xl bg-[#FAF8F5] p-3 sm:p-3.5 flex flex-col justify-between shadow-2xl border border-[#E5DFD5] text-[#181B1E] text-center relative overflow-hidden">
+                                <!-- Subtle S-Monogram Tiling Pattern Overlay -->
+                                <div class="absolute inset-0 pointer-events-none opacity-[0.16] mix-blend-multiply tiling-monogram-bg"></div>
+
+                                <div class="relative z-10 flex flex-col justify-between h-full">
+                                    <div>
+                                        <div class="font-heading font-light text-xs sm:text-sm uppercase tracking-wider leading-none text-[#181B1E] pt-0.5">
+                                            GLASS SKIN
+                                        </div>
+                                        <div class="flex justify-center items-center my-1">
+                                            <img src="assets/essential-text-dark.png" alt="Essential" class="wordmark-essential-sm">
+                                        </div>
+                                        <div class="flex items-baseline justify-center gap-1">
+                                            <span class="font-heading text-xl sm:text-2xl font-extrabold text-[#181B1E] leading-none">$199</span>
+                                            <span class="text-[8.5px] text-taupe font-semibold uppercase tracking-wider">/ MONTH</span>
+                                        </div>
+                                        <div class="text-[8.5px] font-heading font-semibold uppercase tracking-wider text-charcoal/60 mt-0.5 mb-1.5">
+                                            60-MINUTE RITUAL
+                                        </div>
+
+                                        <!-- Divider Line -->
+                                        <div class="w-full h-px bg-black/10 my-1.5"></div>
+
+                                        <!-- Step Label (2 lines) -->
+                                        <div class="text-[8px] font-heading font-bold uppercase tracking-[0.2em] text-charcoal/50 mb-1 leading-tight">
+                                            5-STEP<br>GLOW RITUAL
+                                        </div>
+
+                                        <!-- Inclusions List (Clean, wrapping less) -->
+                                        <p class="text-[8.5px] font-body text-charcoal/80 leading-snug px-0.5">
+                                            Dermabrasion • AquaFacial • Facial Sculpting • LED Red Light Therapy • Korean Modeling Mask
+                                        </p>
                                     </div>
 
-                                    <!-- Divider Line -->
-                                    <div class="w-full h-px bg-black/10 my-1.5"></div>
-
-                                    <!-- Step Label (2 lines) -->
-                                    <div class="text-[8px] font-heading font-bold uppercase tracking-[0.2em] text-charcoal/50 mb-1 leading-tight">
-                                        5-STEP<br>GLOW RITUAL
+                                    <!-- CTA Button -->
+                                    <div class="pt-2 mt-1.5">
+                                        <span class="w-full py-1.5 px-2 rounded-full font-heading font-bold text-[8.5px] uppercase tracking-wider text-white bg-[#8F857B] inline-flex items-center justify-center gap-1 shadow-sm">
+                                            <span>START YOUR GLOW</span>
+                                            <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i>
+                                        </span>
                                     </div>
-
-                                    <!-- Inclusions List (Clean, wrapping less) -->
-                                    <p class="text-[8.5px] font-body text-charcoal/80 leading-snug px-0.5">
-                                        Dermabrasion • AquaFacial • Facial Sculpting • LED Red Light Therapy • Korean Modeling Mask
-                                    </p>
-                                </div>
-
-                                <!-- CTA Button -->
-                                <div class="pt-2 mt-1.5">
-                                    <span class="w-full py-1.5 px-2 rounded-full font-heading font-bold text-[8.5px] uppercase tracking-wider text-white bg-[#8F857B] inline-flex items-center justify-center gap-1 shadow-sm">
-                                        <span>START YOUR GLOW</span>
-                                        <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i>
-                                    </span>
                                 </div>
                             </div>
 
                             <!-- Column 2: Glass Skin Premium (Black Luxury Card) -->
-                            <div class="rounded-2xl bg-gradient-to-b from-[#181B1F] via-[#121417] to-[#0A0C0E] p-3 sm:p-3.5 flex flex-col justify-between shadow-2xl border border-warm-gold/50 text-white text-center">
-                                <div>
-                                    <div class="font-heading font-light text-xs sm:text-sm uppercase tracking-wider leading-none text-white/90 pt-0.5">
-                                        GLASS SKIN
-                                    </div>
-                                    <div class="flex justify-center items-center my-1">
-                                        <img src="assets/premium-text-gold.png" alt="Premium" class="wordmark-premium-sm">
-                                    </div>
-                                    <div class="flex items-baseline justify-center gap-1">
-                                        <span class="font-heading text-xl sm:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#E0D2BE] via-[#C9B69B] to-[#AA987C] leading-none">$299</span>
-                                        <span class="text-[8.5px] text-warm-gold font-semibold uppercase tracking-wider">/ MONTH</span>
-                                    </div>
-                                    <div class="text-[8.5px] font-heading font-semibold uppercase tracking-wider text-white/50 mt-0.5 mb-1.5">
-                                        90-MINUTE RITUAL
+                            <div class="rounded-2xl bg-gradient-to-b from-[#181B1F] via-[#121417] to-[#0A0C0E] p-3 sm:p-3.5 flex flex-col justify-between shadow-2xl border border-warm-gold/50 text-white text-center relative overflow-hidden">
+                                <!-- Subtle S-Monogram Tiling Pattern Overlay -->
+                                <div class="absolute inset-0 pointer-events-none opacity-25 mix-blend-screen tiling-monogram-bg"></div>
+
+                                <div class="relative z-10 flex flex-col justify-between h-full">
+                                    <div>
+                                        <div class="font-heading font-light text-xs sm:text-sm uppercase tracking-wider leading-none text-white/90 pt-0.5">
+                                            GLASS SKIN
+                                        </div>
+                                        <div class="flex justify-center items-center my-1">
+                                            <img src="assets/premium-text-gold.png" alt="Premium" class="wordmark-premium-sm">
+                                        </div>
+                                        <div class="flex items-baseline justify-center gap-1">
+                                            <span class="font-heading text-xl sm:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#E0D2BE] via-[#C9B69B] to-[#AA987C] leading-none">$299</span>
+                                            <span class="text-[8.5px] text-warm-gold font-semibold uppercase tracking-wider">/ MONTH</span>
+                                        </div>
+                                        <div class="text-[8.5px] font-heading font-semibold uppercase tracking-wider text-white/50 mt-0.5 mb-1.5">
+                                            90-MINUTE RITUAL
+                                        </div>
+
+                                        <!-- Divider Line -->
+                                        <div class="w-full h-px bg-white/10 my-1.5"></div>
+
+                                        <!-- Step Label (2 lines) -->
+                                        <div class="text-[8px] font-heading font-bold uppercase tracking-[0.2em] text-warm-gold/70 mb-1 leading-tight">
+                                            5-LAYER<br>GLASS SKIN RITUAL
+                                        </div>
+
+                                        <!-- Inclusions List (Clean, wrapping less) -->
+                                        <p class="text-[8.5px] font-body text-white/80 leading-snug px-0.5">
+                                            AquaFacial • Needle-Free Skin Booster • LDM Water Drop Lifting • LED Red Light Therapy • Glutathione Wellness Boost
+                                        </p>
                                     </div>
 
-                                    <!-- Divider Line -->
-                                    <div class="w-full h-px bg-white/10 my-1.5"></div>
-
-                                    <!-- Step Label (2 lines) -->
-                                    <div class="text-[8px] font-heading font-bold uppercase tracking-[0.2em] text-warm-gold/70 mb-1 leading-tight">
-                                        5-LAYER<br>GLASS SKIN RITUAL
+                                    <!-- CTA Button -->
+                                    <div class="pt-2 mt-1.5">
+                                        <span class="w-full py-1.5 px-2 rounded-full font-heading font-bold text-[8.5px] uppercase tracking-wider text-[#131619] bg-gradient-to-r from-[#D6C7B2] via-[#AA987C] to-[#948267] inline-flex items-center justify-center gap-1 shadow-sm">
+                                            <span>ELEVATE YOUR GLOW</span>
+                                            <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i>
+                                        </span>
                                     </div>
-
-                                    <!-- Inclusions List (Clean, wrapping less) -->
-                                    <p class="text-[8.5px] font-body text-white/80 leading-snug px-0.5">
-                                        AquaFacial • Needle-Free Skin Booster • LDM Water Drop Lifting • LED Red Light Therapy • Glutathione Wellness Boost
-                                    </p>
-                                </div>
-
-                                <!-- CTA Button -->
-                                <div class="pt-2 mt-1.5">
-                                    <span class="w-full py-1.5 px-2 rounded-full font-heading font-bold text-[8.5px] uppercase tracking-wider text-[#131619] bg-gradient-to-r from-[#D6C7B2] via-[#AA987C] to-[#948267] inline-flex items-center justify-center gap-1 shadow-sm">
-                                        <span>ELEVATE YOUR GLOW</span>
-                                        <i data-lucide="arrow-right" class="w-2.5 h-2.5"></i>
-                                    </span>
                                 </div>
                             </div>
 
@@ -283,9 +293,8 @@
                 <!-- 4:5 Slide Canvas (WHITE / LIGHT LUXURY VERSION) -->
                 <div id="slide-2" class="ig-slide-canvas border border-[#E5DFD5] flex flex-col justify-between p-7 relative bg-[#FAF7F2] overflow-hidden text-[#181B1E]">
                     
-                    <!-- S Monogram Repeating Background Pattern Overlay (Subtle Warm Tint) -->
-                    <div class="absolute inset-0 pointer-events-none opacity-[0.07] mix-blend-multiply tiling-monogram-bg"
-                         style="-webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 60%, transparent 100%); mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 60%, transparent 100%);"></div>
+                    <!-- S Monogram Repeating Background Pattern Overlay (Richly Visible Behind Glass Skin Essential) -->
+                    <div class="absolute inset-0 pointer-events-none opacity-[0.20] mix-blend-multiply tiling-monogram-bg"></div>
 
                     <!-- Ambient Porcelain Glow -->
                     <div class="absolute top-0 right-0 w-72 h-72 bg-[#EFECE6] rounded-full blur-[80px] pointer-events-none"></div>
@@ -298,15 +307,15 @@
                         </span>
                     </div>
 
-                    <!-- Content Body: Clear typography with descriptions underneath service names -->
-                    <div class="relative z-10 my-auto py-2 text-left max-w-[62%] sm:max-w-[60%]">
+                    <!-- Content Body: Clear typography, full copy flowing without wrapping -->
+                    <div class="relative z-10 my-auto py-2 text-left w-full">
                         
                         <!-- Header Block -->
-                        <div class="mb-3.5">
+                        <div class="mb-3">
                             <span class="text-[9px] font-heading font-bold uppercase tracking-[0.25em] text-[#8F857B] block mb-0.5 whitespace-nowrap">
                                 60-MINUTE KOREAN FACIAL
                             </span>
-                            <h3 class="font-heading font-light text-2xl sm:text-3xl text-[#181B1E] uppercase tracking-wide leading-none">
+                            <h3 class="font-heading font-light text-2xl sm:text-3xl text-[#181B1E] uppercase tracking-wide leading-none whitespace-nowrap">
                                 GLASS SKIN
                             </h3>
                             <div class="my-1.5 flex items-center">
@@ -317,15 +326,15 @@
                             </p>
                         </div>
 
-                        <!-- All 5 Steps: Matching Taupe Bullets (Descriptions directly underneath leading name) -->
-                        <div class="space-y-2 mb-4">
-                            <span class="text-[9px] font-heading font-bold uppercase tracking-[0.22em] text-[#181B1E]/60 block mb-1">
+                        <!-- All 5 Steps: Matching Taupe Bullets (No-wrap, flowing cleanly) -->
+                        <div class="space-y-1.5 mb-3">
+                            <span class="text-[9px] font-heading font-bold uppercase tracking-[0.22em] text-[#181B1E]/60 block mb-1 whitespace-nowrap">
                                 THE 5-STEP GLOW RITUAL:
                             </span>
 
                             <div class="flex items-start gap-2.5 text-xs text-[#181B1E]">
                                 <span class="w-4 h-4 rounded-full bg-[#8F857B] text-white font-heading font-bold text-[9px] flex items-center justify-center shrink-0 mt-0.5">1</span>
-                                <div>
+                                <div class="whitespace-nowrap">
                                     <span class="font-semibold text-[11px] block text-[#181B1E] leading-tight">Gentle Dermabrasion</span>
                                     <span class="text-[9.5px] text-charcoal/70 block leading-tight mt-0.5">Surface polishing &amp; smooth prep</span>
                                 </div>
@@ -333,7 +342,7 @@
 
                             <div class="flex items-start gap-2.5 text-xs text-[#181B1E]">
                                 <span class="w-4 h-4 rounded-full bg-[#8F857B] text-white font-heading font-bold text-[9px] flex items-center justify-center shrink-0 mt-0.5">2</span>
-                                <div>
+                                <div class="whitespace-nowrap">
                                     <span class="font-semibold text-[11px] block text-[#181B1E] leading-tight">AquaFacial Vortex</span>
                                     <span class="text-[9.5px] text-charcoal/70 block leading-tight mt-0.5">Deep pore suction &amp; active hydration</span>
                                 </div>
@@ -341,7 +350,7 @@
 
                             <div class="flex items-start gap-2.5 text-xs text-[#181B1E]">
                                 <span class="w-4 h-4 rounded-full bg-[#8F857B] text-white font-heading font-bold text-[9px] flex items-center justify-center shrink-0 mt-0.5">3</span>
-                                <div>
+                                <div class="whitespace-nowrap">
                                     <span class="font-semibold text-[11px] block text-[#181B1E] leading-tight">Facial Sculpting (MET / EMS)</span>
                                     <span class="text-[9.5px] text-charcoal/70 block leading-tight mt-0.5">Microcurrent contouring &amp; toning</span>
                                 </div>
@@ -349,7 +358,7 @@
 
                             <div class="flex items-start gap-2.5 text-xs text-[#181B1E]">
                                 <span class="w-4 h-4 rounded-full bg-[#8F857B] text-white font-heading font-bold text-[9px] flex items-center justify-center shrink-0 mt-0.5">4</span>
-                                <div>
+                                <div class="whitespace-nowrap">
                                     <span class="font-semibold text-[11px] block text-[#181B1E] leading-tight">LED Red Light Therapy</span>
                                     <span class="text-[9.5px] text-charcoal/70 block leading-tight mt-0.5">Calm redness &amp; recharge cellular glow</span>
                                 </div>
@@ -357,17 +366,20 @@
 
                             <div class="flex items-start gap-2.5 text-xs text-[#181B1E]">
                                 <span class="w-4 h-4 rounded-full bg-[#8F857B] text-white font-heading font-bold text-[9px] flex items-center justify-center shrink-0 mt-0.5">5</span>
-                                <div>
+                                <div class="whitespace-nowrap">
                                     <span class="font-semibold text-[11px] block text-[#181B1E] leading-tight">Korean Modeling Mask</span>
                                     <span class="text-[9.5px] text-charcoal/70 block leading-tight mt-0.5">Cooling relief &amp; glass-skin seal</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Highlights Strip -->
-                        <div class="pt-2.5 border-t border-[#EAE4DB] text-[10px] text-charcoal/80 space-y-0.5">
-                            <div><strong class="text-[#181B1E] font-semibold">Best For:</strong> Consistent monthly skin maintenance</div>
-                            <div><strong class="text-[#181B1E] font-semibold">Duration:</strong> 60-Minute Seoul Facial Experience</div>
+                        <!-- Full Details From Website (No-wrap, flowing cleanly) -->
+                        <div class="pt-2.5 border-t border-[#EAE4DB] text-[9.5px] text-charcoal/80 space-y-1 whitespace-nowrap">
+                            <div><strong class="text-[#181B1E] font-semibold">BEST FOR:</strong> Consistent monthly skin maintenance.</div>
+                            <div><strong class="text-[#181B1E] font-semibold">PRIMARY FOCUS:</strong> Exfoliate, cleanse, sculpt, soothe, and refresh.</div>
+                            <div><strong class="text-[#181B1E] font-semibold">EXPERIENCE:</strong> Traditional Korean-inspired facial ritual.</div>
+                            <div><strong class="text-[#181B1E] font-semibold">IDEAL CLIENT:</strong> Wants a regular facial and healthy-looking, dewy glow.</div>
+                            <div><strong class="text-[#181B1E] font-semibold">DURATION:</strong> 60 minutes</div>
                         </div>
 
                     </div>
@@ -401,8 +413,7 @@
                 <div id="slide-3" class="ig-slide-canvas border border-warm-gold/40 flex flex-col justify-between p-7 relative bg-[#090B0D] overflow-hidden text-white">
                     
                     <!-- S Monogram Repeating Background Pattern Overlay -->
-                    <div class="absolute inset-0 pointer-events-none opacity-25 mix-blend-screen tiling-monogram-bg"
-                         style="-webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.15) 80%, transparent 100%); mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.15) 80%, transparent 100%);"></div>
+                    <div class="absolute inset-0 pointer-events-none opacity-25 mix-blend-screen tiling-monogram-bg"></div>
 
                     <!-- Golden Luxury Rim & Core Lighting -->
                     <div class="absolute -top-12 -right-12 w-64 h-64 bg-warm-gold/25 rounded-full blur-[110px] pointer-events-none"></div>
@@ -415,15 +426,15 @@
                         </span>
                     </div>
 
-                    <!-- Content Body: Clear typography with descriptions underneath service names -->
-                    <div class="relative z-10 my-auto py-2 text-left max-w-[62%] sm:max-w-[60%]">
+                    <!-- Content Body: Clear typography, full copy flowing without wrapping -->
+                    <div class="relative z-10 my-auto py-2 text-left w-full">
                         
                         <!-- Header Block -->
-                        <div class="mb-3.5">
+                        <div class="mb-3">
                             <span class="text-[9px] font-heading font-bold uppercase tracking-[0.25em] text-warm-gold block mb-0.5 whitespace-nowrap">
                                 90-MINUTE CLINICAL RITUAL
                             </span>
-                            <h3 class="font-heading font-light text-2xl sm:text-3xl text-white uppercase tracking-wide leading-none">
+                            <h3 class="font-heading font-light text-2xl sm:text-3xl text-white uppercase tracking-wide leading-none whitespace-nowrap">
                                 GLASS SKIN
                             </h3>
                             <div class="my-1.5 flex items-center">
@@ -434,15 +445,15 @@
                             </p>
                         </div>
 
-                        <!-- All 5 Layers: Matching Gold Bullets (Descriptions directly underneath leading name) -->
-                        <div class="space-y-2 mb-4">
-                            <span class="text-[9px] font-heading font-bold uppercase tracking-[0.22em] text-warm-gold/70 block mb-1">
+                        <!-- All 5 Layers: Matching Gold Bullets (No-wrap, flowing cleanly) -->
+                        <div class="space-y-1.5 mb-3">
+                            <span class="text-[9px] font-heading font-bold uppercase tracking-[0.22em] text-warm-gold/70 block mb-1 whitespace-nowrap">
                                 THE 5-LAYER CLINICAL RITUAL:
                             </span>
 
                             <div class="flex items-start gap-2.5 text-xs text-white">
                                 <span class="w-4 h-4 rounded-full bg-[#AA987C] text-[#131619] font-heading font-bold text-[9px] flex items-center justify-center shrink-0 mt-0.5">1</span>
-                                <div>
+                                <div class="whitespace-nowrap">
                                     <span class="font-semibold text-[11px] block text-white leading-tight">Medical AquaFacial</span>
                                     <span class="text-[9.5px] text-white/60 block leading-tight mt-0.5">Vortex pore purification &amp; hydration</span>
                                 </div>
@@ -450,7 +461,7 @@
 
                             <div class="flex items-start gap-2.5 text-xs text-white">
                                 <span class="w-4 h-4 rounded-full bg-[#AA987C] text-[#131619] font-heading font-bold text-[9px] flex items-center justify-center shrink-0 mt-0.5">2</span>
-                                <div>
+                                <div class="whitespace-nowrap">
                                     <span class="font-semibold text-[11px] block text-white leading-tight">Needle-Free DEP Booster</span>
                                     <span class="text-[9.5px] text-white/60 block leading-tight mt-0.5">Transdermal cellular active infusion</span>
                                 </div>
@@ -458,7 +469,7 @@
 
                             <div class="flex items-start gap-2.5 text-xs text-white">
                                 <span class="w-4 h-4 rounded-full bg-[#AA987C] text-[#131619] font-heading font-bold text-[9px] flex items-center justify-center shrink-0 mt-0.5">3</span>
-                                <div>
+                                <div class="whitespace-nowrap">
                                     <span class="font-semibold text-[11px] block text-white leading-tight">LDM Water Drop Lifting</span>
                                     <span class="text-[9.5px] text-white/60 block leading-tight mt-0.5">Dual-frequency ultrasound contouring</span>
                                 </div>
@@ -466,7 +477,7 @@
 
                             <div class="flex items-start gap-2.5 text-xs text-white">
                                 <span class="w-4 h-4 rounded-full bg-[#AA987C] text-[#131619] font-heading font-bold text-[9px] flex items-center justify-center shrink-0 mt-0.5">4</span>
-                                <div>
+                                <div class="whitespace-nowrap">
                                     <span class="font-semibold text-[11px] block text-white leading-tight">LED Red Light Therapy</span>
                                     <span class="text-[9.5px] text-white/60 block leading-tight mt-0.5">Cellular health &amp; collagen recovery</span>
                                 </div>
@@ -474,21 +485,22 @@
 
                             <div class="flex items-start gap-2.5 text-xs text-white">
                                 <span class="w-4 h-4 rounded-full bg-[#AA987C] text-[#131619] font-heading font-bold text-[9px] flex items-center justify-center shrink-0 mt-0.5">5</span>
-                                <div>
+                                <div class="whitespace-nowrap">
                                     <span class="font-semibold text-[11px] block text-white leading-tight">Glutathione IV Push*</span>
                                     <span class="text-[9.5px] text-white/60 block leading-tight mt-0.5">Systemic master antioxidant for radiance</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- VIP Perk Callout -->
-                        <div class="pt-2.5 border-t border-white/15 text-[10px] text-white/80 space-y-0.5">
-                            <div class="flex items-center gap-1.5 text-warm-gold">
+                        <!-- Full Details From Website (No-wrap, flowing cleanly) -->
+                        <div class="pt-2.5 border-t border-white/15 text-[9.5px] text-white/80 space-y-1 whitespace-nowrap">
+                            <div><strong class="text-white font-semibold">BEST FOR:</strong> More comprehensive skin quality care.</div>
+                            <div><strong class="text-white font-semibold">PRIMARY FOCUS:</strong> Hydration infusion, LDM Water Drop Lifting &amp; LED Therapy.</div>
+                            <div><strong class="text-white font-semibold">EXPERIENCE:</strong> Advanced, technology-led Korean skincare ritual.</div>
+                            <div><strong class="text-white font-semibold">IDEAL CLIENT:</strong> Wants a longer, more comprehensive skincare experience.</div>
+                            <div class="flex items-center gap-1.5 text-warm-gold font-medium">
                                 <i data-lucide="sparkles" class="w-3.5 h-3.5 shrink-0"></i>
-                                <span>Includes Monthly Rotating <strong>Seoul Drop</strong></span>
-                            </div>
-                            <div class="text-[9.5px] text-white/60">
-                                Best For: Advanced skin quality, cellular hydration &amp; lifting
+                                <span>Includes Monthly Rotating <strong>Seoul Drop</strong> • <strong>DURATION:</strong> 90 minutes</span>
                             </div>
                         </div>
 
