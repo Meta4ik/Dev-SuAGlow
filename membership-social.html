@@ -63,11 +63,11 @@
             background-size: 220px 220px;
         }
 
-        /* Perfectly sized wordmark graphics (normalized 1:1 optical scale) */
-        .wordmark-essential-sm { height: 20px; width: auto; object-contain: contain; }
-        .wordmark-premium-sm   { height: 20px; width: auto; object-contain: contain; }
-        .wordmark-essential-lg { height: 26px; width: auto; object-contain: contain; }
-        .wordmark-premium-lg   { height: 26px; width: auto; object-contain: contain; }
+        /* Optical size compensation: Premium requires 24px (sm) / 31px (lg) to visually equal Essential's 20px (sm) / 26px (lg) */
+        .wordmark-essential-sm { height: 20px; width: auto; object-fit: contain; }
+        .wordmark-premium-sm   { height: 24px; width: auto; object-fit: contain; }
+        .wordmark-essential-lg { height: 26px; width: auto; object-fit: contain; }
+        .wordmark-premium-lg   { height: 31px; width: auto; object-fit: contain; }
     </style>
 </head>
 
@@ -180,7 +180,7 @@
                                     <div class="font-heading font-light text-xs sm:text-sm uppercase tracking-wider leading-none text-[#181B1E] pt-0.5">
                                         GLASS SKIN
                                     </div>
-                                    <div class="flex justify-center items-center my-1">
+                                    <div class="h-7 flex justify-center items-center my-0.5">
                                         <img src="assets/essential-text-dark.png" alt="Essential" class="wordmark-essential-sm">
                                     </div>
                                     <div class="flex items-baseline justify-center gap-1">
@@ -215,7 +215,7 @@
                                     <div class="font-heading font-light text-xs sm:text-sm uppercase tracking-wider leading-none text-white/90 pt-0.5">
                                         GLASS SKIN
                                     </div>
-                                    <div class="flex justify-center items-center my-1">
+                                    <div class="h-7 flex justify-center items-center my-0.5">
                                         <img src="assets/premium-text-gold.png" alt="Premium" class="wordmark-premium-sm">
                                     </div>
                                     <div class="flex items-baseline justify-center gap-1">
@@ -301,7 +301,7 @@
                             <h3 class="font-heading font-light text-3xl sm:text-4xl text-[#181B1E] uppercase tracking-wide leading-none">
                                 GLASS SKIN
                             </h3>
-                            <div class="my-1.5">
+                            <div class="h-9 flex items-center my-1.5">
                                 <img src="assets/essential-text-dark.png" alt="Essential" class="wordmark-essential-lg inline-block">
                             </div>
                             <p class="font-serif italic text-xs sm:text-sm text-[#8F857B] whitespace-nowrap mt-1">
@@ -420,7 +420,7 @@
                             <h3 class="font-heading font-light text-3xl sm:text-4xl text-white uppercase tracking-wide leading-none">
                                 GLASS SKIN
                             </h3>
-                            <div class="my-1.5">
+                            <div class="h-9 flex items-center my-1.5">
                                 <img src="assets/premium-text-gold.png" alt="Premium" class="wordmark-premium-lg inline-block">
                             </div>
                             <p class="font-serif italic text-xs sm:text-sm text-warm-gold/90 whitespace-nowrap mt-1">
