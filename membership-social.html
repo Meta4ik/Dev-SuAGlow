@@ -296,13 +296,13 @@
                     <!-- Ambient Porcelain Glow -->
                     <div class="absolute top-0 right-0 w-72 h-72 bg-[#EFECE6] rounded-full blur-[80px] pointer-events-none"></div>
 
-                    <!-- Unboxed Model (Takes up Whole Right Side, Face 100% Clear & Beautiful) -->
-                    <div class="absolute right-[-15px] sm:right-[-5px] top-12 bottom-0 w-[52%] sm:w-[50%] pointer-events-none z-0 flex items-end justify-end">
-                        <img src="assets/cta_model_essential.png" alt="Essential Model" 
-                             class="h-[88%] sm:h-[92%] w-auto max-w-none object-contain object-bottom drop-shadow-[0_20px_35px_rgba(0,0,0,0.18)]">
-                        <!-- Left subtle fade to guarantee text readability -->
-                        <div class="absolute inset-0 bg-gradient-to-r from-[#FAF7F2] via-[#FAF7F2]/60 to-transparent"></div>
-                    </div>
+                    <!-- Unboxed Model (Face positioned cleanly on the right side, away from left text) -->
+                    <img src="assets/cta_model_essential.png" alt="Essential Model" 
+                         class="absolute -right-[15%] sm:-right-[12%] bottom-0 h-[88%] sm:h-[90%] w-auto max-w-none object-contain object-bottom pointer-events-none z-0 drop-shadow-[0_15px_30px_rgba(0,0,0,0.12)]">
+
+                    <!-- Seamless Full-Canvas Left-to-Right Fade (Zero middle cutoff lines; text remains crisp and face stays 100% luminous) -->
+                    <div class="absolute inset-0 pointer-events-none z-0"
+                         style="background: linear-gradient(to right, #FAF7F2 0%, #FAF7F2 38%, rgba(250, 247, 242, 0.9) 50%, rgba(250, 247, 242, 0.25) 64%, transparent 75%);"></div>
 
                     <!-- Top Bar: Dark Logo & Tier Pill -->
                     <div class="relative z-10 flex items-center justify-between border-b border-[#EAE4DB] pb-3">
@@ -312,8 +312,8 @@
                         </span>
                     </div>
 
-                    <!-- Content Body: Overlapping Model Naturally (No Boxes) -->
-                    <div class="relative z-10 my-auto py-2 text-left max-w-[62%] sm:max-w-[60%]">
+                    <!-- Content Body: Contained strictly on the left half -->
+                    <div class="relative z-10 my-auto py-2 text-left max-w-[54%] sm:max-w-[52%]">
                         
                         <!-- Header Block with Exact Size Wordmark -->
                         <div class="mb-3.5">
@@ -421,13 +421,13 @@
                     <!-- Golden Luxury Rim & Core Lighting -->
                     <div class="absolute -top-12 -right-12 w-64 h-64 bg-warm-gold/25 rounded-full blur-[110px] pointer-events-none"></div>
 
-                    <!-- Unboxed Model (Takes up Whole Right Side, Face 100% Clear & Radiant) -->
-                    <div class="absolute right-[-15px] sm:right-[-5px] top-12 bottom-0 w-[52%] sm:w-[50%] pointer-events-none z-0 flex items-end justify-end">
-                        <img src="assets/cta_model_premium.png" alt="Premium Model" 
-                             class="h-[88%] sm:h-[92%] w-auto max-w-none object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.95)]">
-                        <!-- Left subtle fade to guarantee text readability -->
-                        <div class="absolute inset-0 bg-gradient-to-r from-[#090B0D] via-[#090B0D]/70 to-transparent"></div>
-                    </div>
+                    <!-- Unboxed Model (Face positioned cleanly on the right side, away from left text) -->
+                    <img src="assets/cta_model_premium.png" alt="Premium Model" 
+                         class="absolute -right-[26%] sm:-right-[24%] bottom-0 h-[88%] sm:h-[90%] w-auto max-w-none object-contain object-bottom pointer-events-none z-0 drop-shadow-[0_20px_45px_rgba(0,0,0,0.95)]">
+
+                    <!-- Seamless Full-Canvas Left-to-Right Fade (Zero middle cutoff lines; text remains crisp and face stays 100% luminous) -->
+                    <div class="absolute inset-0 pointer-events-none z-0"
+                         style="background: linear-gradient(to right, #090B0D 0%, #090B0D 38%, rgba(9, 11, 13, 0.9) 50%, rgba(9, 11, 13, 0.25) 64%, transparent 75%);"></div>
 
                     <!-- Top Bar: White Logo & Tier Pill -->
                     <div class="relative z-10 flex items-center justify-between border-b border-white/10 pb-3">
@@ -437,8 +437,8 @@
                         </span>
                     </div>
 
-                    <!-- Content Body: Overlapping Model Naturally (No Boxes) -->
-                    <div class="relative z-10 my-auto py-2 text-left max-w-[62%] sm:max-w-[60%]">
+                    <!-- Content Body: Contained strictly on the left half -->
+                    <div class="relative z-10 my-auto py-2 text-left max-w-[54%] sm:max-w-[52%]">
                         
                         <!-- Header Block with Exact Size Wordmark -->
                         <div class="mb-3.5">
