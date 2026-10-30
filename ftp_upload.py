@@ -65,8 +65,8 @@ def upload_dir(local_dir, remote_dir):
             facts = remote_entries.get(item)
 
             # For static media and assets, skip if remote size matches exactly.
-            # For HTML pages and core layout scripts/styles, always upload to guarantee updates.
-            is_core_web_file = item.endswith('.html') or item in {'navbar.js', 'navbar.html', 'footer.js', 'script.js', 'output.css'}
+            # For HTML pages, JS scripts, styles, and data configs, always upload to guarantee updates.
+            is_core_web_file = item.endswith('.html') or item.endswith('.js') or item.endswith('.css') or item.endswith('.json')
             if not is_core_web_file and facts and int(facts.get('size', -1)) == local_size:
                 skipped_count += 1
                 continue
