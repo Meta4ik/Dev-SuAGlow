@@ -1361,6 +1361,14 @@ const SEARCH_INDEX = [
     "snippet": "Designed to be dropped anywhere across the SUA Glow site with 1 line of HTML, zero external dependencies, and responsive fluid scaling. Simply place this `div` ..."
   },
   {
+    "url": "membership-social.html",
+    "title": "Membership Instagram Carousel Studio (4:5)",
+    "pageTitle": "Membership Instagram Carousel Studio (4:5)",
+    "category": "Spa Treatments",
+    "content": "The SUA Glow Membership Collection A 3-part aesthetic Instagram carousel introducing the membership collection with our custom signature monogram tiling background, high-fashion model photography, and calibrated 4:5 framing. TWO RITUALS. ENDLESS GLOW. From everyday skin maintenance to advanced Korean clinical treatments—discover your monthly ritual. *Glutathione administered when medically appropriate • Carrollton, TX Med Spa GLASS SKIN \"Your Monthly Glow Reset\" GLASS SKIN \"Your Seoul-Level Skin Investment\" 1-Click Export & Screenshot Guide Each slide is calibrated to an exact 4:5 Instagram Portrait ratio with crisp 0px flat edges. Click Save PNG above any slide to download 3x retina resolution assets, or toggle Clean Screenshot Mode for distraction-free manual captures.",
+    "snippet": "The SUA Glow Membership Collection A 3-part aesthetic Instagram carousel introducing the membership collection with our custom signature monogram tiling backgro..."
+  },
+  {
     "url": "memberships-v1.html#hero",
     "title": "Korean Glass SkinMembership",
     "pageTitle": "Korean Glass Skin Membership Dallas",
