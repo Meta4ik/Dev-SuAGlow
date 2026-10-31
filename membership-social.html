@@ -129,11 +129,14 @@
                         <span class="w-5 h-5 rounded-full bg-[#AA987C]/20 border border-[#AA987C]/40 text-[#AA987C] flex items-center justify-center text-[10px]">1</span>
                         Slide 1 • Overview
                     </span>
-                    <span class="text-[10px] text-white/40 font-heading uppercase tracking-wider">4:5 Portrait</span>
+                    <button onclick="openFullscreen(1)" class="px-2.5 py-1 rounded-full text-[10.5px] font-heading uppercase tracking-wider text-white/70 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#AA987C]/50 transition-all inline-flex items-center gap-1.5 shadow-sm">
+                        <i data-lucide="maximize-2" class="w-3 h-3 text-[#AA987C]"></i>
+                        <span>Fullscreen</span>
+                    </button>
                 </div>
 
                 <!-- 4:5 Slide Canvas (Flat edges for crisp screenshots) -->
-                <div id="slide-1" class="ig-slide-canvas border border-white/10 flex flex-col justify-between px-3.5 sm:px-4.5 pt-4 pb-3 relative bg-[#0B0D10] overflow-hidden text-white">
+                <div id="slide-1" onclick="openFullscreen(1)" title="Click to view fullscreen for easy screenshot" class="ig-slide-canvas border border-white/10 flex flex-col justify-between px-3.5 sm:px-4.5 pt-4 pb-3 relative bg-[#0B0D10] overflow-hidden text-white cursor-pointer hover:ring-2 hover:ring-[#AA987C]/50 transition-all">
                     
                     <!-- S Monogram Repeating Background Pattern Overlay -->
                     <div class="absolute inset-0 pointer-events-none opacity-25 mix-blend-screen tiling-monogram-bg" 
@@ -299,11 +302,14 @@
                         <span class="w-5 h-5 rounded-full bg-[#AA987C]/20 border border-[#AA987C]/40 text-[#AA987C] flex items-center justify-center text-[10px]">2</span>
                         Slide 2 • Essential (White Card)
                     </span>
-                    <span class="text-[10px] text-white/40 font-heading uppercase tracking-wider">4:5 Portrait</span>
+                    <button onclick="openFullscreen(2)" class="px-2.5 py-1 rounded-full text-[10.5px] font-heading uppercase tracking-wider text-white/70 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#8F857B]/50 transition-all inline-flex items-center gap-1.5 shadow-sm">
+                        <i data-lucide="maximize-2" class="w-3 h-3 text-[#AA987C]"></i>
+                        <span>Fullscreen</span>
+                    </button>
                 </div>
 
                 <!-- 4:5 Slide Canvas (WHITE / LIGHT LUXURY VERSION) -->
-                <div id="slide-2" class="ig-slide-canvas border border-[#E5DFD5] flex flex-col justify-between p-7 relative bg-[#FAF7F2] overflow-hidden text-[#181B1E]">
+                <div id="slide-2" onclick="openFullscreen(2)" title="Click to view fullscreen for easy screenshot" class="ig-slide-canvas border border-[#E5DFD5] flex flex-col justify-between p-7 relative bg-[#FAF7F2] overflow-hidden text-[#181B1E] cursor-pointer hover:ring-2 hover:ring-[#8F857B]/50 transition-all">
                     
                     <!-- S Monogram Repeating Background Pattern Overlay (Richly Visible Behind Glass Skin Essential) -->
                     <div class="absolute inset-0 pointer-events-none opacity-[0.20] mix-blend-multiply tiling-monogram-bg"></div>
@@ -409,11 +415,14 @@
                         <span class="w-5 h-5 rounded-full bg-[#AA987C]/20 border border-[#AA987C]/40 text-[#AA987C] flex items-center justify-center text-[10px]">3</span>
                         Slide 3 • Premium (Black Card)
                     </span>
-                    <span class="text-[10px] text-white/40 font-heading uppercase tracking-wider">4:5 Portrait</span>
+                    <button onclick="openFullscreen(3)" class="px-2.5 py-1 rounded-full text-[10.5px] font-heading uppercase tracking-wider text-white/70 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-warm-gold/50 transition-all inline-flex items-center gap-1.5 shadow-sm">
+                        <i data-lucide="maximize-2" class="w-3 h-3 text-[#AA987C]"></i>
+                        <span>Fullscreen</span>
+                    </button>
                 </div>
 
                 <!-- 4:5 Slide Canvas (BLACK / DARK LUXURY VERSION) -->
-                <div id="slide-3" class="ig-slide-canvas border border-warm-gold/40 flex flex-col justify-between p-7 relative bg-[#090B0D] overflow-hidden text-white">
+                <div id="slide-3" onclick="openFullscreen(3)" title="Click to view fullscreen for easy screenshot" class="ig-slide-canvas border border-warm-gold/40 flex flex-col justify-between p-7 relative bg-[#090B0D] overflow-hidden text-white cursor-pointer hover:ring-2 hover:ring-warm-gold/50 transition-all">
                     
                     <!-- S Monogram Repeating Background Pattern Overlay -->
                     <div class="absolute inset-0 pointer-events-none opacity-25 mix-blend-screen tiling-monogram-bg"></div>
@@ -539,50 +548,211 @@
 
     </main>
 
+    <!-- ================= FULLSCREEN SCREENSHOT LIGHTBOX ================= -->
+    <div id="fullscreen-modal" class="fixed inset-0 z-[100] bg-[#07090B]/95 backdrop-blur-xl flex flex-col items-center justify-between p-4 sm:p-6 hidden select-none transition-opacity duration-200">
+        
+        <!-- Top Toolbar (Completely outside the slide artwork) -->
+        <div id="lightbox-topbar" class="w-full max-w-4xl flex items-center justify-between text-xs font-heading z-30 transition-opacity duration-200">
+            <div class="flex items-center gap-3">
+                <span class="font-bold text-[#AA987C] uppercase tracking-wider flex items-center gap-2">
+                    <span id="lightbox-slide-num" class="w-5 h-5 rounded-full bg-[#AA987C]/20 text-[#AA987C] border border-[#AA987C]/40 flex items-center justify-center text-[10px]">1</span>
+                    <span id="lightbox-slide-name">Slide 1 • Overview</span>
+                </span>
+                <span class="text-white/20 hidden sm:inline">•</span>
+                <span class="text-white/40 text-[11px] font-medium hidden sm:inline">4:5 Instagram Portrait Ratio</span>
+            </div>
+
+            <div class="flex items-center gap-2 sm:gap-3">
+                <!-- Jump to Slide Pills -->
+                <div class="flex items-center bg-white/5 border border-white/10 rounded-full p-0.5">
+                    <button onclick="openFullscreen(1)" id="pill-slide-1" class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase transition-colors">1</button>
+                    <button onclick="openFullscreen(2)" id="pill-slide-2" class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase transition-colors">2</button>
+                    <button onclick="openFullscreen(3)" id="pill-slide-3" class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase transition-colors">3</button>
+                </div>
+
+                <!-- Clean Mode Toggle (Hides UI for 100% clean screenshot) -->
+                <button onclick="toggleLightboxClean()" id="btn-clean-mode" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-[11px] font-semibold uppercase tracking-wider border border-white/15 transition-all inline-flex items-center gap-1.5" title="Hide UI to take screenshots [Key: H]">
+                    <i data-lucide="eye" class="w-3.5 h-3.5 text-[#AA987C]"></i>
+                    <span class="hidden md:inline">Hide UI [H]</span>
+                </button>
+
+                <!-- Close Button -->
+                <button onclick="closeFullscreen()" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-red-500/20 hover:border-red-500/40 hover:text-red-300 text-white text-[11px] font-semibold uppercase tracking-wider border border-white/15 transition-all inline-flex items-center gap-1.5" title="Exit Fullscreen [ESC]">
+                    <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                    <span>Exit [ESC]</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Center Stage: The Slide Isolated & Scaled -->
+        <div onclick="handleStageClick(event)" class="relative w-full flex-1 flex items-center justify-center my-auto overflow-hidden">
+            
+            <!-- Prev Arrow -->
+            <button onclick="prevSlide(event)" class="lightbox-ui-nav absolute left-2 sm:left-6 lg:left-12 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-white flex items-center justify-center transition-all z-30 shadow-xl hover:scale-110" title="Previous Slide [Left Arrow]">
+                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Scaled Slide Host -->
+            <div id="lightbox-viewport" class="relative flex items-center justify-center pointer-events-auto">
+                <div id="lightbox-slide-host" class="relative shadow-2xl transition-transform duration-150">
+                    <!-- Active slide clone inserted here -->
+                </div>
+            </div>
+
+            <!-- Next Arrow -->
+            <button onclick="nextSlide(event)" class="lightbox-ui-nav absolute right-2 sm:right-6 lg:right-12 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-white flex items-center justify-center transition-all z-30 shadow-xl hover:scale-110" title="Next Slide [Right Arrow]">
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <!-- Bottom Guidance Bar -->
+        <div id="lightbox-bottombar" class="w-full max-w-xl text-center text-[11px] text-white/50 font-body z-30 transition-opacity duration-200">
+            <span class="hidden sm:inline">Use <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white text-[10px] font-mono">←</kbd> <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white text-[10px] font-mono">→</kbd> or <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white text-[10px] font-mono">1-3</kbd> to change slides • <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white text-[10px] font-mono">ESC</kbd> to exit • Press <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white text-[10px] font-mono">H</kbd> to toggle controls</span>
+            <span class="sm:hidden">Tap arrows to flip slides • Tap background to toggle controls</span>
+        </div>
+
+    </div>
+
     <!-- Toast Notification -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 bg-[#1B1E21] text-white px-5 py-3 rounded-full border border-[#AA987C]/50 shadow-2xl flex items-center gap-3 text-xs font-medium">
         <i data-lucide="check-circle" class="w-4 h-4 text-[#AA987C]"></i>
         <span id="toast-msg">Link copied to clipboard!</span>
     </div>
 
-    <!-- Script for One-Click Downloads & Sharing -->
+    <!-- Script for Fullscreen Mode, Controls & Sharing -->
     <script>
-        function downloadSlide(slideId, filename) {
-            const el = document.getElementById(slideId);
-            if (!el) return;
+        let currentSlideIndex = 1;
+        const slideMeta = {
+            1: { name: 'Overview • Two Rituals' },
+            2: { name: 'Glass Skin Essential (White Card)' },
+            3: { name: 'Glass Skin Premium (Black Card)' }
+        };
+
+        function updateLightboxScale() {
+            const host = document.getElementById('lightbox-slide-host');
+            if (!host) return;
             
-            showToast('Generating high-res PNG...');
-            html2canvas(el, {
-                scale: 3, // 3x retina scaling for crisp print & IG quality
-                useCORS: true,
-                backgroundColor: null,
-                logging: false
-            }).then(canvas => {
-                const link = document.createElement('a');
-                link.download = filename;
-                link.href = canvas.toDataURL('image/png');
-                link.click();
-                showToast('Downloaded ' + filename);
-            }).catch(err => {
-                console.error(err);
-                showToast('Ready to screenshot!');
+            // Available height for slide
+            const availableHeight = window.innerHeight - 130;
+            const availableWidth = window.innerWidth - 80;
+            
+            // Design base dimensions (480 x 600 = 4:5 ratio)
+            const baseW = 480;
+            const baseH = 600;
+            
+            const scaleByH = availableHeight / baseH;
+            const scaleByW = availableWidth / baseW;
+            const scale = Math.max(0.65, Math.min(scaleByH, scaleByW, 1.45));
+            
+            host.style.transform = `scale(${scale})`;
+            host.style.transformOrigin = 'center center';
+        }
+
+        function openFullscreen(index) {
+            currentSlideIndex = index;
+            const slideId = 'slide-' + index;
+            const orig = document.getElementById(slideId);
+            if (!orig) return;
+            
+            const host = document.getElementById('lightbox-slide-host');
+            host.innerHTML = '';
+            
+            // Clone the original slide
+            const clone = orig.cloneNode(true);
+            clone.id = 'lightbox-active-slide';
+            clone.classList.remove('cursor-pointer', 'hover:ring-2', 'hover:ring-[#AA987C]/50', 'hover:ring-[#8F857B]/50', 'hover:ring-warm-gold/50');
+            clone.removeAttribute('onclick');
+            clone.removeAttribute('title');
+            
+            // Lock dimensions to exact 480x600 4:5 portrait
+            clone.style.width = '480px';
+            clone.style.height = '600px';
+            clone.style.maxWidth = '480px';
+            clone.style.minWidth = '480px';
+            clone.style.aspectRatio = '4 / 5';
+            clone.style.boxShadow = '0 30px 80px -20px rgba(0, 0, 0, 0.85)';
+            
+            host.appendChild(clone);
+            
+            // Update labels
+            document.getElementById('lightbox-slide-num').textContent = index;
+            document.getElementById('lightbox-slide-name').textContent = slideMeta[index].name;
+            
+            // Update pills
+            [1, 2, 3].forEach(i => {
+                const pill = document.getElementById('pill-slide-' + i);
+                if (pill) {
+                    if (i === index) {
+                        pill.className = 'px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-[#AA987C] text-[#131619] shadow-sm';
+                    } else {
+                        pill.className = 'px-2.5 py-1 rounded-full text-[10px] font-bold uppercase text-white/50 hover:text-white transition-colors';
+                    }
+                }
             });
+            
+            updateLightboxScale();
+            
+            const modal = document.getElementById('fullscreen-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function closeFullscreen() {
+            const modal = document.getElementById('fullscreen-modal');
+            if (modal) modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function nextSlide(e) {
+            if (e) e.stopPropagation();
+            const next = currentSlideIndex >= 3 ? 1 : currentSlideIndex + 1;
+            openFullscreen(next);
+        }
+
+        function prevSlide(e) {
+            if (e) e.stopPropagation();
+            const prev = currentSlideIndex <= 1 ? 3 : currentSlideIndex - 1;
+            openFullscreen(prev);
+        }
+
+        function toggleLightboxClean() {
+            const top = document.getElementById('lightbox-topbar');
+            const btm = document.getElementById('lightbox-bottombar');
+            const navs = document.querySelectorAll('.lightbox-ui-nav');
+            
+            const isHidden = top.classList.contains('opacity-0');
+            if (isHidden) {
+                top.classList.remove('opacity-0', 'pointer-events-none');
+                btm.classList.remove('opacity-0', 'pointer-events-none');
+                navs.forEach(n => n.classList.remove('opacity-0', 'pointer-events-none'));
+            } else {
+                top.classList.add('opacity-0', 'pointer-events-none');
+                btm.classList.add('opacity-0', 'pointer-events-none');
+                navs.forEach(n => n.classList.add('opacity-0', 'pointer-events-none'));
+                showToast('UI hidden. Take your screenshot! Press H or click background to restore.');
+            }
+        }
+
+        function handleStageClick(e) {
+            // If user clicked the dark backdrop outside the slide
+            const viewport = document.getElementById('lightbox-viewport');
+            if (viewport && !viewport.contains(e.target)) {
+                const top = document.getElementById('lightbox-topbar');
+                if (top && top.classList.contains('opacity-0')) {
+                    // Restore UI if hidden
+                    toggleLightboxClean();
+                } else {
+                    // Close fullscreen
+                    closeFullscreen();
+                }
+            }
         }
 
         function toggleScreenshotMode() {
-            document.body.classList.toggle('screenshot-mode');
-            if (document.body.classList.contains('screenshot-mode')) {
-                showToast('Clean mode active. Press ESC or click anywhere to exit.');
-                const escHandler = (e) => {
-                    document.body.classList.remove('screenshot-mode');
-                    document.removeEventListener('keydown', escHandler);
-                    document.removeEventListener('click', escHandler);
-                };
-                setTimeout(() => {
-                    document.addEventListener('keydown', escHandler);
-                    document.addEventListener('click', escHandler);
-                }, 100);
-            }
+            // Also opens fullscreen directly for the ultimate clean screenshot experience
+            openFullscreen(1);
         }
 
         function copySlideLink() {
@@ -602,6 +772,43 @@
                 setTimeout(() => toast.classList.remove('show'), 2800);
             }
         }
+
+        // Global Keyboard Shortcuts
+        window.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('fullscreen-modal');
+            const isOpen = modal && !modal.classList.contains('hidden');
+            
+            if (isOpen) {
+                if (e.key === 'Escape') {
+                    closeFullscreen();
+                } else if (e.key === 'ArrowRight' || e.key === 'Right') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft' || e.key === 'Left') {
+                    prevSlide();
+                } else if (e.key === '1') {
+                    openFullscreen(1);
+                } else if (e.key === '2') {
+                    openFullscreen(2);
+                } else if (e.key === '3') {
+                    openFullscreen(3);
+                } else if (e.key === 'h' || e.key === 'H') {
+                    toggleLightboxClean();
+                }
+            } else {
+                // If not in modal, pressing 1, 2, 3 opens that slide in fullscreen
+                if (e.key === '1') openFullscreen(1);
+                if (e.key === '2') openFullscreen(2);
+                if (e.key === '3') openFullscreen(3);
+            }
+        });
+
+        // Window resize keeps scale responsive
+        window.addEventListener('resize', () => {
+            const modal = document.getElementById('fullscreen-modal');
+            if (modal && !modal.classList.contains('hidden')) {
+                updateLightboxScale();
+            }
+        });
 
         document.addEventListener('DOMContentLoaded', () => {
             if (window.lucide) lucide.createIcons();
