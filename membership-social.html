@@ -63,11 +63,20 @@
             background-size: 220px 220px;
         }
 
-        /* Optical size compensation: Premium requires 24px (sm) / 31px (lg) to visually equal Essential's 20px (sm) / 26px (lg) */
-        .wordmark-essential-sm { height: 20px; width: auto; object-fit: contain; }
-        .wordmark-premium-sm   { height: 24px; width: auto; object-fit: contain; }
-        .wordmark-essential-lg { height: 26px; width: auto; object-fit: contain; }
-        .wordmark-premium-lg   { height: 31px; width: auto; object-fit: contain; }
+        /* Equal height wordmarks: Essential and Premium match exactly */
+        .wordmark-essential-sm,
+        .wordmark-premium-sm {
+            height: 24px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .wordmark-essential-lg,
+        .wordmark-premium-lg {
+            height: 30px;
+            width: auto;
+            object-fit: contain;
+        }
     </style>
 </head>
 
