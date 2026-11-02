@@ -1,0 +1,39 @@
+# ====================================================================
+# SUA GLOW Medical Aesthetics - Apache Configuration (.htaccess)
+# Clean URLs, Security, and Extensionless HTML Routing
+# ====================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Custom Redirects (mirrored from vercel.json)
+    RewriteRule ^aura-3d-skin-analysis(?:\.html)?$ /3d-skin-analysis [R=301,L]
+
+    # Custom Aliases & Rewrites
+    RewriteRule ^shop-skincare(?:\.html)?$ skincare-products.html [L]
+    RewriteRule ^scalp-reset(?:\.html)?$ korean-scalp-hair-rejuvenation.html [L]
+    RewriteRule ^female-scalp-care(?:\.html)?$ korean-scalp-hair-rejuvenation.html [L]
+    RewriteRule ^mens-scalp-reset(?:\.html)?$ korean-scalp-hair-rejuvenation.html [L]
+    RewriteRule ^thank-you(?:\.html)?$ thank-you.html [L]
+
+    # If the exact file or directory already exists, serve directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Clean URLs: Map extensionless requests (e.g. /specials) to .html files (e.g. /specials.html)
+    RewriteCond %{DOCUMENT_ROOT}/$1.html -f [OR]
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^([^/]+)/?$ $1.html [L]
+</IfModule>
+
+# Caching and Headers
+<IfModule mod_headers.c>
+    # Prevent caching on specials data scripts so changes appear immediately
+    <FilesMatch "(specials-data\.js|specials-november-data\.js)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+</IfModule>
