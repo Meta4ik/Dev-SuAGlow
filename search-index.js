@@ -2529,6 +2529,14 @@ const SEARCH_INDEX = [
     "snippet": "K-Beauty Medspa • Carrollton HQ Experience medical-grade Korean aesthetic care customized to your skin's unique barrier profile."
   },
   {
+    "url": "specials-december.html#final-consultation-cta",
+    "title": "Cold outside. Chok-chok inside.",
+    "pageTitle": "[STAGING] The SUA GLOW December Edit",
+    "category": "Spa Treatments",
+    "content": "Medical Aesthetics • Carrollton HQ",
+    "snippet": "Medical Aesthetics • Carrollton HQ"
+  },
+  {
     "url": "specials-november.html#final-consultation-cta",
     "title": "K-Beauty doesn't chase trends.It builds better skin.",
     "pageTitle": "[STAGING] The SUA GLOW November Edit",

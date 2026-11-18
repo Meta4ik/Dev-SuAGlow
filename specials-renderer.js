@@ -7,6 +7,276 @@
  */
 
 /**
+ * December Specials Renderer (The SUA Glow December Edit - Seoul Much Glow)
+ * Luxury Holiday Edition: Snow-champagne hero showcasing the evergreen, crimson,
+ * and gold "SEOUL MUCH GLOW" title emblem, flowing into a deep evergreen pine
+ * holiday night with satin crimson & champagne-gold luxury offer cards.
+ */
+function renderDecemberSpecials(config) {
+    const { meta, featuredSteps } = config;
+
+    const goldHollyDivider = (maxWidthClass = 'max-w-xs sm:max-w-sm', iconClass = 'w-7 h-7 sm:w-8 sm:h-8') => `
+        <div class="flex items-center justify-center gap-4 w-full ${maxWidthClass} mx-auto">
+            <span class="block flex-1" style="height: 1.5px; background: linear-gradient(90deg, transparent 0%, rgba(200, 160, 85, 0.55) 40%, #F0D28A 100%);"></span>
+            <img src="assets/gold-holly-divider.svg?v=2" alt="" aria-hidden="true" class="${iconClass} shrink-0 object-contain drop-shadow-[0_2px_8px_rgba(200,160,85,0.4)]">
+            <span class="block flex-1" style="height: 1.5px; background: linear-gradient(270deg, transparent 0%, rgba(200, 160, 85, 0.55) 40%, #F0D28A 100%);"></span>
+        </div>
+    `;
+
+    const decemberCardsHTML = featuredSteps.map((stepItem, index) => {
+        const delayClass = `delay-${(index + 1) * 100}`;
+        const tagsHTML = stepItem.tags ? stepItem.tags.map(tag =>
+            `<span class="text-[9.5px] sm:text-[10px] uppercase tracking-wider font-semibold px-3 py-1.5 bg-[#E9F0EB] text-[#133320] rounded-full border border-[#C7D9CC]">${tag}</span>`
+        ).join(' ') : '';
+
+        const stepItemsHTML = stepItem.stepItems && stepItem.stepItems.length ? `
+            <div class="mt-5 pt-4 border-t border-[#DFD2BE]">
+                <span class="text-[10.5px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#0E2A1A] block mb-3">
+                    ${stepItem.stepsTitle || 'EXPERIENCE BREAKDOWN'}
+                </span>
+                <div class="space-y-2.5">
+                    ${stepItem.stepItems.map(s => `
+                        <div class="flex items-start gap-3 bg-white/75 border border-[#E5D9C7] rounded-xl px-3.5 py-2.5">
+                            <span class="font-heading text-[11px] font-extrabold tracking-widest text-[#E8D2A6] bg-[#0E2A1A] rounded-lg px-2 py-1 shrink-0 leading-none mt-0.5">${s.num}</span>
+                            <div class="text-left">
+                                <span class="font-heading text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#0E2A1A] block">${s.title}</span>
+                                <span class="font-body text-xs text-[#3C423E]/90 leading-relaxed font-light block mt-0.5">${s.detail}</span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        ` : '';
+
+        const glowGoalsHTML = stepItem.glowGoals && stepItem.glowGoals.length ? `
+            <div class="mt-5 pt-4 border-t border-[#DFD2BE]">
+                <span class="text-[10.5px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#0E2A1A] block mb-3">
+                    ${stepItem.goalsTitle || 'CHOOSE YOUR GLOW GOAL'}
+                </span>
+                <div class="space-y-2.5">
+                    ${stepItem.glowGoals.map(g => `
+                        <div class="bg-white/80 border border-[#E3D5BF] rounded-xl px-4 py-3 shadow-xs">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                                <span class="font-heading text-[10.5px] sm:text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#9E1821]">${g.question}</span>
+                                <span class="font-heading text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#0E2A1A] text-[#EBD7B0]">$399</span>
+                            </div>
+                            <p class="font-heading text-xs sm:text-sm font-bold text-[#0E2A1A] leading-snug">${g.treatments}</p>
+                            <p class="font-body text-[11px] sm:text-xs text-[#3C423E]/85 font-light mt-1">${g.method}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        ` : '';
+
+        return `
+            <div class="rounded-[28px] border border-[#D8C7AB]/80 hover:border-[#C8A055] p-6 sm:p-8 md:p-10 shadow-[0_22px_55px_rgba(3,12,7,0.55)] hover:shadow-[0_28px_68px_rgba(3,12,7,0.72)] transition-all duration-500 group animate-on-scroll fade-up ${delayClass}" style="background: linear-gradient(145deg, #FCF9F4 0%, #F6EFE3 48%, #ECE1CE 100%);">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+
+                    <!-- Left Column: 4:3 Photo + Champagne Holiday Price Box + Satin Crimson Book Button -->
+                    <div class="lg:col-span-5 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <!-- Framed Promo Image (4:3 Ratio) -->
+                            <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-[#C8A055]/35 shadow-sm bg-white">
+                                <img src="${stepItem.image}?v=2" alt="${stepItem.title}" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700">
+                                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9.5px] font-heading font-bold uppercase tracking-widest bg-[#0E2A1A]/90 text-[#EBD7B0] border border-[#C8A055]/45 backdrop-blur-sm">
+                                    ${stepItem.step} · Holiday Exclusive
+                                </span>
+                            </div>
+
+                            <!-- Price Box -->
+                            <div class="border border-[#D9C7A9] rounded-2xl p-4 sm:p-5 text-center shadow-xs" style="background: linear-gradient(145deg, #FFFFFF 0%, #F9F3E9 52%, #EFE2CD 100%);">
+                                <span class="font-body text-3xl sm:text-4xl font-extrabold tracking-tight block leading-none text-[#0E2A1A]">
+                                    ${stepItem.price}
+                                </span>
+                                ${stepItem.priceDetail ? `
+                                    <span class="block text-[10px] sm:text-[11px] font-bold text-[#9E1821] uppercase tracking-wider mt-2">
+                                        ${stepItem.priceDetail}
+                                    </span>
+                                ` : ''}
+                            </div>
+                        </div>
+
+                        <!-- Satin Crimson Holiday CTA Button -->
+                        <div class="pt-5 mt-auto">
+                            <a href="${stepItem.bookingUrl}" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:py-4 rounded-full text-white border border-[#E5C687]/40 text-[11px] sm:text-xs font-semibold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:brightness-110 text-center leading-none" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
+                                <span>${stepItem.ctaText || 'Book Your Treatment'}</span>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#F1DBA8] shrink-0"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Category + Title + Subtitle + Hook + Description + Structured Details + Tags -->
+                    <div class="lg:col-span-7 flex flex-col justify-between py-1 space-y-6 text-left">
+                        <div>
+                            <span class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-[#9E1821] block mb-2">
+                                ${stepItem.badge}
+                            </span>
+                            <h3 class="heading-wide text-2xl sm:text-3xl lg:text-[32px] text-[#0E2A1A] font-bold tracking-wide mb-1.5 leading-tight">
+                                ${stepItem.title}
+                            </h3>
+                            <p class="font-heading text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-[#6B573C] mb-3">
+                                ${stepItem.subtitle}
+                            </p>
+                            ${stepItem.hook ? `
+                                <p class="font-serif italic text-sm sm:text-base font-medium text-[#9E1821] tracking-wide mb-3.5">
+                                    ${stepItem.hook}
+                                </p>
+                            ` : ''}
+                            <p class="font-body text-xs sm:text-sm md:text-[15px] text-[#353B37]/90 leading-relaxed font-light">
+                                ${stepItem.description}
+                            </p>
+
+                            ${stepItemsHTML}
+                            ${glowGoalsHTML}
+                        </div>
+
+                        <!-- Benefits Tags Grid -->
+                        <div class="flex flex-wrap gap-2 sm:gap-2.5 pt-4 border-t border-[#DFD2BE]">
+                            ${tagsHTML}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        `;
+    }).join(`
+        <div class="py-2 flex justify-center animate-on-scroll fade-up">
+            ${goldHollyDivider('max-w-xs sm:max-w-md', 'w-7 h-7')}
+        </div>
+    `);
+
+    return `
+    <!-- December Unified Holiday Showcase (Snow-Champagne Header → Atmospheric Fade Behind Hero Photo → Deep Evergreen Night) -->
+    <section id="promotions-hero" data-nav-theme="light" class="text-white relative overflow-hidden bg-[#07140D]">
+
+        <!-- ZONE 1: Frosted Winter Sage-Pine Twilight Header (Darkened for Visible Falling Snow + Luminous Halo Behind Logo) -->
+        <div class="pt-10 pb-8 md:pt-14 md:pb-12 relative" style="background: linear-gradient(180deg, #B5C1B8 0%, #8FA195 52%, #687E70 100%);">
+            <!-- Soft Champagne-Snow Lantern Halo Behind Title Emblem for Crisp Logo Contrast -->
+            <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse 62% 60% at 50% 46%, rgba(252, 248, 240, 0.88) 0%, rgba(245, 238, 226, 0.52) 42%, rgba(245, 238, 226, 0) 76%);"></div>
+            <!-- Delicate Holiday Gold Ambient Accent -->
+            <div class="pointer-events-none absolute -top-20 left-1/4 w-[420px] h-[420px] rounded-full bg-[#C8A055]/14 blur-[110px]"></div>
+            <div class="holiday-sparkles-dark pointer-events-none absolute inset-0 opacity-45"></div>
+            <canvas class="holiday-snow-canvas pointer-events-none absolute inset-0 w-full h-full z-[2]" data-snow-tone="twilight" data-snow-density="44" aria-hidden="true"></canvas>
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 text-center">
+                <div class="animate-on-scroll fade-up">
+                    <!-- Campaign Eyebrow -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/85 border border-[#C8A055]/50 shadow-xs mb-5 backdrop-blur-xs">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#9E1821]"></span>
+                        <span class="text-[10.5px] sm:text-xs font-heading font-bold uppercase tracking-[0.32em] text-[#0E2A1A]">
+                            ${meta.campaignLabel || 'THE SUA GLOW DECEMBER EDIT'}
+                        </span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#9E1821]"></span>
+                    </div>
+
+                    <!-- Bespoke Holiday Title Graphic (SEOUL MUCH GLOW) -->
+                    <div class="mb-4 sm:mb-5 flex justify-center px-2">
+                        ${meta.titleImage ? `
+                            <img src="${meta.titleImage}?v=1" alt="${meta.title || 'SEOUL MUCH GLOW'}" class="h-24 sm:h-32 md:h-40 lg:h-48 w-auto max-w-[92vw] sm:max-w-xl md:max-w-2xl mx-auto object-contain drop-shadow-[0_6px_18px_rgba(14,42,26,0.12)]">
+                            <h1 class="sr-only">${meta.title || 'SEOUL MUCH GLOW'}</h1>
+                        ` : `
+                            <h1 class="heading-wide text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-[0.14em] text-[#0E2A1A]">${meta.title || 'SEOUL MUCH GLOW'}</h1>
+                        `}
+                    </div>
+
+                    <!-- Subtitle & Glossary -->
+                    <p class="text-xs sm:text-sm md:text-base font-heading font-bold tracking-[0.28em] uppercase text-[#0B2416] mb-3 drop-shadow-[0_1px_8px_rgba(255,255,255,0.6)]">
+                        ${meta.subtitle || 'COLD OUTSIDE. CHOK-CHOK INSIDE.'}
+                    </p>
+
+                    ${meta.glossaryNote ? `
+                        <p class="inline-block px-4 py-1.5 rounded-full bg-white/85 border border-[#0E2A1A]/15 font-serif italic text-xs sm:text-sm text-[#3F3322] tracking-wide shadow-xs backdrop-blur-xs">
+                            ${meta.glossaryNote}
+                        </p>
+                    ` : ''}
+                </div>
+            </div>
+        </div>
+
+        <!-- ZONE 2: Hero Photo Stage — Seamless Responsive Gradient Bridge (Frosted Pine #687E70 → Deep Evergreen #0E2619) -->
+        <div class="relative py-4 md:py-6" style="background: linear-gradient(180deg, #687E70 0%, #486152 28%, #254332 64%, #0E2619 100%);">
+            <!-- Soft Champagne Halo Behind Photo -->
+            <div class="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-4xl h-[85%] rounded-full bg-[#E5C687]/18 blur-[95px]"></div>
+            <canvas class="holiday-snow-canvas pointer-events-none absolute inset-0 w-full h-full z-[2]" data-snow-tone="dark" data-snow-density="36" aria-hidden="true"></canvas>
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 relative z-10">
+                <div class="max-w-4xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_26px_65px_rgba(4,16,9,0.52)] border-2 border-[#C8A055]/55 animate-on-scroll fade-up delay-100 bg-[#0E2619]">
+                    <img src="${meta.heroImage}?v=2" alt="${meta.title || 'Seoul Much Glow'}" class="w-full h-auto block object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- ZONE 3: Deep Evergreen Holiday Night & Offer Cards -->
+        <div class="pt-8 pb-16 md:pt-10 md:pb-24 relative" data-nav-theme="dark" style="background: linear-gradient(180deg, #0E2619 0%, #133121 28%, #0B1E14 68%, #07140D 100%);">
+
+            <!-- Subtle Twinkling Holiday Snow & Champagne Starlight -->
+            <div class="holiday-sparkles-dark pointer-events-none absolute inset-0 z-0 opacity-65"></div>
+            <canvas class="holiday-snow-canvas pointer-events-none absolute inset-0 w-full h-full z-[2]" data-snow-tone="dark" data-snow-density="70" aria-hidden="true"></canvas>
+
+            <!-- Interactive Mouse-Responsive Holiday Champagne & Crimson Spotlight Glow -->
+            <div id="promo-interactive-glow" class="pointer-events-none absolute inset-0 z-0 transition-opacity duration-700 ease-out"
+                 style="background: radial-gradient(850px circle at var(--mouse-x, 50%) var(--mouse-y, 28%), rgba(200, 160, 85, 0.14) 0%, rgba(158, 24, 33, 0.08) 42%, transparent 72%);">
+            </div>
+
+            <!-- Ambient Holiday Bokeh Orbs (Evergreen Gold + Velvet Crimson) -->
+            <div class="pointer-events-none absolute top-16 -left-40 w-[580px] h-[580px] rounded-full bg-[#C8A055]/10 blur-[160px] animate-pulse" style="animation-duration: 9s;"></div>
+            <div class="pointer-events-none absolute top-1/2 -right-40 w-[540px] h-[540px] rounded-full bg-[#9E1821]/14 blur-[170px] animate-pulse" style="animation-duration: 11s;"></div>
+            <div class="pointer-events-none absolute bottom-16 left-1/3 w-[480px] h-[480px] rounded-full bg-[#C8A055]/8 blur-[150px]"></div>
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 text-center">
+
+                <!-- Hero Editorial Holiday Message -->
+                <div class="max-w-2xl mx-auto mb-14 animate-on-scroll fade-up delay-200">
+                    <p class="font-serif italic text-sm sm:text-base md:text-lg text-[#F4ECE0]/90 leading-relaxed">
+                        ${meta.heroText}
+                    </p>
+                </div>
+
+                <!-- Program View -->
+                <div id="specials-program-view" class="space-y-10">
+
+                    <!-- Section Header -->
+                    <div class="mb-8 text-center animate-on-scroll fade-up">
+                        <div class="mb-2.5 flex justify-center">
+                            ${goldHollyDivider('max-w-[200px] sm:max-w-[260px]', 'w-8 h-8')}
+                        </div>
+                        <h2 class="heading-wide text-2xl sm:text-3xl text-white tracking-[0.22em] uppercase font-bold mb-1.5">
+                            ${meta.sectionTitle || 'HOLIDAY GLOW EXCLUSIVES'}
+                        </h2>
+                        <p class="font-serif italic text-xs sm:text-sm text-[#E5C88B]">
+                            ${meta.sectionSubtitle || 'Your season of K-Beauty love starts here.'}
+                        </p>
+                    </div>
+
+                    <!-- The 3 December Offer Cards -->
+                    <div class="space-y-6">
+                        ${decemberCardsHTML}
+                    </div>
+
+                    <!-- Disclaimer & Bottom Pillars -->
+                    <div class="pt-8 text-center space-y-4 animate-on-scroll fade-up">
+                        <p class="text-sm sm:text-base font-serif italic text-[#F0DEC0] tracking-wide">
+                            ${meta.validThrough || 'Offers valid through December 31, 2026'}
+                        </p>
+                        <div class="flex justify-center py-1">
+                            ${goldHollyDivider('max-w-[220px] sm:max-w-xs', 'w-7 h-7')}
+                        </div>
+                        <p class="text-[10px] sm:text-xs uppercase tracking-[0.25em] font-medium text-white/60">
+                            ${meta.footerPillars || 'KOREAN-FOUNDED  •  PHYSICIAN-GUIDED  •  CARROLLTON, TX'}
+                        </p>
+                        <p class="text-[10px] text-white/40 italic max-w-xl mx-auto pt-2">
+                            ${meta.terms}
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    `;
+}
+
+/**
  * November Specials Renderer (The SUA Glow November Edit - Chingu Friendsgiving)
  * Dedicated streamlined flow without tab switcher, featuring bottom download button.
  */
@@ -240,6 +510,127 @@ function initPromoInteractiveBackground() {
 }
 window.initPromoInteractiveBackground = initPromoInteractiveBackground;
 
+/**
+ * Initializes subtle, slow-falling luxury holiday snow across all
+ * `.holiday-snow-canvas` background layers (respects reduced motion).
+ */
+function initHolidaySnow() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+    }
+
+    const canvases = document.querySelectorAll('.holiday-snow-canvas');
+    if (!canvases.length) return;
+
+    const instances = [];
+
+    canvases.forEach((canvas) => {
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        const tone = canvas.dataset.snowTone || 'dark';
+        const baseCount = parseInt(canvas.dataset.snowDensity || '45', 10);
+        const state = { canvas, ctx, tone, baseCount, width: 0, height: 0, flakes: [] };
+
+        function seedFlakes() {
+            const areaScale = Math.min(1.4, Math.max(0.55, (state.width * state.height) / (1280 * 900)));
+            const count = Math.max(14, Math.round(state.baseCount * areaScale));
+            state.flakes = [];
+            for (let i = 0; i < count; i++) {
+                const depth = Math.random(); // 0 = distant micro-flake, 1 = nearer soft bokeh flake
+                const isChampagne = Math.random() < (state.tone === 'light' ? 0.65 : 0.22);
+                state.flakes.push({
+                    x: Math.random() * state.width,
+                    y: Math.random() * state.height,
+                    r: 0.9 + depth * 2.3,
+                    vy: 0.18 + depth * 0.48,
+                    vx: (Math.random() - 0.5) * 0.18,
+                    swayAmp: 0.15 + Math.random() * 0.45,
+                    swaySpeed: 0.004 + Math.random() * 0.008,
+                    phase: Math.random() * Math.PI * 2,
+                    alpha: state.tone === 'twilight'
+                        ? (0.28 + depth * 0.36)
+                        : state.tone === 'light'
+                            ? (0.14 + depth * 0.22)
+                            : (0.14 + depth * 0.34),
+                    isChampagne
+                });
+            }
+        }
+
+        function resize() {
+            const rect = canvas.parentElement.getBoundingClientRect();
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            state.width = Math.max(1, rect.width);
+            state.height = Math.max(1, rect.height);
+            canvas.width = Math.round(state.width * dpr);
+            canvas.height = Math.round(state.height * dpr);
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            seedFlakes();
+        }
+
+        resize();
+        state.resize = resize;
+        instances.push(state);
+    });
+
+    if (!instances.length) return;
+
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => instances.forEach(inst => inst.resize()), 180);
+    }, { passive: true });
+
+    let frame = 0;
+    function tick() {
+        if (!document.hidden) {
+            frame++;
+            for (let j = 0; j < instances.length; j++) {
+                const { ctx, width, height, flakes, tone } = instances[j];
+                ctx.clearRect(0, 0, width, height);
+
+                for (let i = 0; i < flakes.length; i++) {
+                    const f = flakes[i];
+                    f.y += f.vy;
+                    f.x += f.vx + Math.sin(frame * f.swaySpeed + f.phase) * f.swayAmp;
+
+                    if (f.y > height + 6) {
+                        f.y = -6;
+                        f.x = Math.random() * width;
+                    }
+                    if (f.x > width + 8) f.x = -8;
+                    else if (f.x < -8) f.x = width + 8;
+
+                    const grad = ctx.createRadialGradient(f.x, f.y, 0, f.x, f.y, f.r * 1.45);
+                    if (tone === 'twilight') {
+                        const rgb = f.isChampagne ? '255, 240, 204' : '255, 255, 255';
+                        grad.addColorStop(0, `rgba(${rgb}, ${f.alpha.toFixed(3)})`);
+                        grad.addColorStop(1, `rgba(${rgb}, 0)`);
+                    } else if (tone === 'light') {
+                        const rgb = f.isChampagne ? '194, 152, 74' : '255, 255, 255';
+                        grad.addColorStop(0, `rgba(${rgb}, ${f.alpha.toFixed(3)})`);
+                        grad.addColorStop(1, `rgba(${rgb}, 0)`);
+                    } else {
+                        const rgb = f.isChampagne ? '238, 206, 140' : '242, 248, 245';
+                        grad.addColorStop(0, `rgba(${rgb}, ${f.alpha.toFixed(3)})`);
+                        grad.addColorStop(1, `rgba(${rgb}, 0)`);
+                    }
+
+                    ctx.beginPath();
+                    ctx.fillStyle = grad;
+                    ctx.arc(f.x, f.y, f.r * 1.45, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+        }
+        requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+}
+window.initHolidaySnow = initHolidaySnow;
+
 function renderMonthlySpecials(customConfig) {
     const config = customConfig || (typeof MONTHLY_SPECIALS_CONFIG !== 'undefined' ? MONTHLY_SPECIALS_CONFIG : null);
     if (!config) {
@@ -252,6 +643,11 @@ function renderMonthlySpecials(customConfig) {
 
     const isOctober = (meta.month && meta.month.toLowerCase().includes('october')) || (meta.title && meta.title.toLowerCase().includes('october'));
     const isNovember = (meta.month && meta.month.toLowerCase().includes('november')) || (meta.title && meta.title.toLowerCase().includes('november')) || (meta.campaignLabel && meta.campaignLabel.toLowerCase().includes('november'));
+    const isDecember = (meta.month && meta.month.toLowerCase().includes('december')) || (meta.title && meta.title.toLowerCase().includes('seoul much glow')) || (meta.campaignLabel && meta.campaignLabel.toLowerCase().includes('december'));
+
+    if (isDecember) {
+        return renderDecemberSpecials(config);
+    }
 
     if (isNovember) {
         return renderNovemberSpecials(config);

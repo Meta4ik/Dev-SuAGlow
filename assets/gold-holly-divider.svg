@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="Gold holiday mistletoe icon">
+  <defs>
+    <!-- Leaf Metallic Champagne-Gold Gradients -->
+    <linearGradient id="goldLeafLeft" x1="12" y1="26" x2="78" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF3CE"/>
+      <stop offset="35%" stop-color="#E8C472"/>
+      <stop offset="72%" stop-color="#C39642"/>
+      <stop offset="100%" stop-color="#966E26"/>
+    </linearGradient>
+    <linearGradient id="goldLeafRight" x1="68" y1="44" x2="116" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FCEFC6"/>
+      <stop offset="38%" stop-color="#E0BA65"/>
+      <stop offset="75%" stop-color="#B98C39"/>
+      <stop offset="100%" stop-color="#8C6522"/>
+    </linearGradient>
+    <!-- Glossy Berry Gold Radial Gradients -->
+    <radialGradient id="goldBerryFront" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFBE8"/>
+      <stop offset="28%" stop-color="#F6DA8E"/>
+      <stop offset="68%" stop-color="#CE9F47"/>
+      <stop offset="100%" stop-color="#946B22"/>
+    </radialGradient>
+    <radialGradient id="goldBerryBack" cx="38%" cy="32%" r="70%">
+      <stop offset="0%" stop-color="#FDF0C4"/>
+      <stop offset="35%" stop-color="#E3BC67"/>
+      <stop offset="75%" stop-color="#B88B36"/>
+      <stop offset="100%" stop-color="#855E1C"/>
+    </radialGradient>
+    <!-- Refined Antique-Gold Outline -->
+    <linearGradient id="goldStroke" x1="10" y1="10" x2="118" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9E762C"/>
+      <stop offset="50%" stop-color="#7B581B"/>
+      <stop offset="100%" stop-color="#5E4212"/>
+    </linearGradient>
+    <!-- Soft Specular Vein -->
+    <linearGradient id="goldVein" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6F4F18"/>
+      <stop offset="100%" stop-color="#9A722B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Scalloped Leaf -->
+  <path d="M68 35
+           C56 36, 47 33, 39 27
+           C39 40, 31 50, 17 53
+           C23 63, 21 74, 10 83
+           C23 82, 31 85, 36 93
+           C44 82, 56 76, 68 74
+           C70 63, 73 53, 78 44 Z"
+        fill="url(#goldLeafLeft)"
+        stroke="url(#goldStroke)"
+        stroke-width="2.6"
+        stroke-linejoin="round"
+        stroke-linecap="round"/>
+
+  <!-- Left Leaf Inner Highlight -->
+  <path d="M64 41 C53 42, 46 39, 41 34 C40 45, 33 54, 22 57 C27 65, 25 73, 18 79"
+        stroke="#FFF6D8"
+        stroke-opacity="0.45"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        fill="none"/>
+
+  <!-- Left Leaf Center Vein -->
+  <path d="M68 43 Q50 53, 33 67"
+        stroke="url(#goldVein)"
+        stroke-width="3.2"
+        stroke-linecap="round"
+        fill="none"/>
+
+  <!-- Right Scalloped Leaf -->
+  <path d="M77 45
+           C69 57, 67 71, 75 81
+           C69 87, 65 93, 62 98
+           C73 102, 81 110, 86 120
+           C92 108, 101 101, 114 98
+           C107 88, 108 75, 117 65
+           C107 62, 101 55, 100 46 Z"
+        fill="url(#goldLeafRight)"
+        stroke="url(#goldStroke)"
+        stroke-width="2.6"
+        stroke-linejoin="round"
+        stroke-linecap="round"/>
+
+  <!-- Right Leaf Inner Highlight -->
+  <path d="M100 53 C101 60, 106 65, 112 68 C105 76, 104 87, 109 95 C99 98, 92 104, 87 113"
+        stroke="#FFF6D8"
+        stroke-opacity="0.42"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        fill="none"/>
+
+  <!-- Right Leaf Center Vein -->
+  <path d="M88 53 Q86 74, 87 95"
+        stroke="url(#goldVein)"
+        stroke-width="3.2"
+        stroke-linecap="round"
+        fill="none"/>
+
+  <!-- Top-Right Back Berry -->
+  <circle cx="101" cy="23" r="14"
+          fill="url(#goldBerryBack)"
+          stroke="url(#goldStroke)"
+          stroke-width="2.6"/>
+  <path d="M96 15.5 A8 8 0 0 1 106 16"
+        stroke="#FFF9E6"
+        stroke-opacity="0.65"
+        stroke-width="2"
+        stroke-linecap="round"
+        fill="none"/>
+
+  <!-- Lower-Right Middle Berry -->
+  <circle cx="95" cy="41" r="15.5"
+          fill="url(#goldBerryBack)"
+          stroke="url(#goldStroke)"
+          stroke-width="2.6"/>
+  <path d="M91 33 A9 9 0 0 1 103 36"
+        stroke="#FFF9E6"
+        stroke-opacity="0.6"
+        stroke-width="2"
+        stroke-linecap="round"
+        fill="none"/>
+
+  <!-- Front-Left Hero Berry -->
+  <circle cx="80" cy="30" r="16"
+          fill="url(#goldBerryFront)"
+          stroke="url(#goldStroke)"
+          stroke-width="2.6"/>
+  <path d="M72.5 23 A9.5 9.5 0 0 1 83.5 20.5"
+        stroke="#FFFDF2"
+        stroke-opacity="0.82"
+        stroke-width="2.4"
+        stroke-linecap="round"
+        fill="none"/>
+</svg>
