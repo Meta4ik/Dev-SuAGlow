@@ -5,13 +5,12 @@
  * "The SUA Glow December Edit - Seoul Much Glow"
  *
  * Incorporates Kameron's Oct 29 V3 copy + title update and
- * Sophia Yang PA-C's Oct 31 finalized clinical edits & pricing:
+ * Sophia Yang PA-C's Nov 21 finalized clinical edits & pricing:
  * 1. Korean Gyeongrak Facial Massage (60-Min) — $299
- * 2. Chok-Chok Needle-Free Skin Quality Booster — $399 flat (all same price;
- *    Rejuran Skin Booster, Rejuran Tone Up, Hyaluronic Acid via DEP, or WIQO via LDM;
- *    no injectables / SkinVive removed while Sophia is out)
+ * 2. SuA Glow Signature Facials (One-Time Sessions) — $249 / $349 / $499 (100-Min Face, Scalp, Neck, Shoulder & Décolleté)
+ *    with Mask ($49), Glow ($99), and Needle-Free SuA Exclusive Add-Ons ($249)
  * 3. Korean Scalp & Hair Rejuvenation (3 Sessions · 90 Min Each) — $1,800 ($600/session)
- *    with new AI Scalp Analyzer (Step 01) + DEP Needle-Free Exosome Infusion x 3 (Step 04)
+ *    with new AI Scalp Analyzer (Step 1) + DEP Needle-Free Exosome Infusion x 3 (Step 4)
  */
 
 const MONTHLY_SPECIALS_CONFIG_DECEMBER = {
@@ -24,7 +23,7 @@ const MONTHLY_SPECIALS_CONFIG_DECEMBER = {
         glossaryNote: "Chok-chok means soft, dewy, hydrated skin in Korean.",
         badge: "LIMITED TIME | DECEMBER HOLIDAY OFFERS",
         heroImage: "assets/december-seoul-much-glow-hero.jpg",
-        heroText: "Baby, it's cold outside—but your glow doesn't have to be! This December, we're bringing a little Seoul to your holiday season with Korean facial sculpting, needle-free skin quality boosters, and scalp &amp; hair rejuvenation.<br><br>Because dry winter skin? <em>Aniyo</em> (No!) Not on our holiday wish list!",
+        heroText: "Baby, it's cold outside—but your glow doesn't have to be! This December, we're bringing a little Seoul to your holiday season with Korean facial sculpting, one-time signature K-Beauty facials, and scalp &amp; hair rejuvenation.<br><br>Because dry winter skin? <em>Aniyo</em> (No!) Not on our holiday wish list!",
         sectionTitle: "HOLIDAY GLOW EXCLUSIVES",
         sectionSubtitle: "Your season of K-Beauty love starts here.",
         bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
@@ -74,34 +73,61 @@ const MONTHLY_SPECIALS_CONFIG_DECEMBER = {
         },
         {
             step: 2,
-            badge: "HYDRATE · REFINE · GLOW",
-            title: "CHOK-CHOK SKIN QUALITY BOOSTER",
-            subtitle: "100% NEEDLE-FREE K-BEAUTY SKIN BOOSTERS",
-            hook: "Thirsty skin? We don't do that here. Four skin-loving treatments. One personalized K-Beauty glow-up.",
-            price: "$399",
-            priceDetail: "ALL NEEDLE-FREE OPTIONS · SAME FLAT PRICE",
-            description: "Dull, thirsty, or tired-looking skin? <em>Aniyo</em> (No!) Not on our watch! Meet <em>Chok-Chok</em>—Korean for soft, dewy, hydrated skin.<br><br>Whether your skin needs a deep hydration refresh, smoother texture, or a little extra barrier love, we deliver every December booster completely needle-free using advanced DEP infusion or soothing LDM technology—with little to no downtime.",
-            goalsTitle: "CHOOSE YOUR GLOW GOAL — $399 EACH",
-            glowGoals: [
+            badge: "CLEANSE · RESTORE · GLASS GLOW",
+            title: "SUA GLOW SIGNATURE FACIALS",
+            subtitle: "ONE-TIME K-BEAUTY FACIAL SESSIONS · NO MEMBERSHIP REQUIRED",
+            hook: "Holiday events on the calendar? Give your skin the full Seoul glass-skin glow-up.",
+            price: "FROM $249",
+            priceDetail: "ONE-TIME SESSIONS · $249 · $349 · $499",
+            description: "Dull, dry, or holiday-stressed skin? <em>Aniyo</em> (No!) Not on our watch! Enjoy our signature Korean aesthetic facials as a one-time holiday session—no membership required.<br><br>Choose your ideal ritual below, and customize your visit with optional mask, glow, or needle-free SuA Exclusive skin booster add-ons.",
+            tiersTitle: "SIGNATURE FACIALS MENU (ONE-TIME SESSIONS)",
+            facialTiers: [
                 {
-                    question: "STRESSED / DULL / THIRSTY SKIN?",
-                    treatments: "Rejuran Skin Booster · Rejuran Tone Up · Hyaluronic Acid",
-                    method: "Needle-Free (DEP) · PN/PDRN · Skin Barrier Care · Chok-Chok Hydration"
+                    name: "K-Beauty Signature",
+                    meta: "60 Minutes",
+                    price: "$249",
+                    featured: false
                 },
                 {
-                    question: "DULL SKIN?",
-                    treatments: "WIQO",
-                    method: "Needle-Free Hand-Applied + LDM Infusion · Smoother, Radiant-Looking Skin"
+                    name: "K-Beauty Barrier Glow",
+                    meta: "90 Minutes",
+                    price: "$349",
+                    featured: false
+                },
+                {
+                    name: "K-Beauty Glass Total Glow",
+                    meta: "100 Minutes · Face · Scalp · Neck · Shoulder · Décolleté",
+                    price: "$499",
+                    featured: true
+                }
+            ],
+            addOnsTitle: "CUSTOMIZE WITH HOLIDAY ADD-ONS",
+            facialAddOns: [
+                {
+                    name: "Mask Enhancements",
+                    price: "$49",
+                    items: "Modeling · Rejuran · Exosome · Collagen · Brightening"
+                },
+                {
+                    name: "Glow Enhancements",
+                    price: "$99",
+                    items: "PLA Peel · Scalp &amp; Hair Glow · Neck, Shoulder &amp; Décolleté Glow"
+                },
+                {
+                    name: "SuA Exclusive Add-Ons",
+                    price: "$249",
+                    items: "Rejuran Skin Booster · Rejuran Tone-Up · Exosome · Hyaluronic Acid · Glutathione · NAD+ · Wiqo SkinBooster",
+                    note: "Delivered via needle-free infusion."
                 }
             ],
             image: "assets/november-promo-skin-barrier.webp",
-            ctaText: "FIND YOUR GLOW",
+            ctaText: "BOOK YOUR SIGNATURE FACIAL",
             tags: [
-                "DEWY, HYDRATED-LOOKING SKIN",
-                "SMOOTHER SKIN TEXTURE",
+                "GLASS SKIN GLOW",
+                "DEEP HYDRATION",
                 "SKIN BARRIER SUPPORT",
-                "REFINED SKIN TONE",
-                "RADIANT, HEALTHY-LOOKING GLOW"
+                "NO MEMBERSHIP REQUIRED",
+                "NEEDLE-FREE ADD-ONS"
             ],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },

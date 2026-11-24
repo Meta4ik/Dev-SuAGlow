@@ -66,10 +66,10 @@ const MONTHLY_SPECIALS_CONFIG_NOVEMBER = {
             step: 3,
             badge: "CLEANSE · SCULPT · HYDRATE · GLOW",
             title: "K-BEAUTY GLASS SKIN + HAIR GLOW EXPERIENCE",
-            subtitle: "90-MINUTE SEOUL-STYLE BEAUTY RITUAL",
+            subtitle: "100-MINUTE SEOUL-STYLE BEAUTY RITUAL · FACE, SCALP, NECK, SHOULDER & DÉCOLLETÉ",
             price: "$100 OFF",
             priceDetail: "REGULAR VALUE $499",
-            description: "Your chok-chok (dewy, hydrated) glow-up starts here!<br><br>Why stop at skincare when you can give your beauty routine the full Seoul treatment?<br><br>Experience 90 minutes of Korean-inspired pampering, combining gentle exfoliation, deep cleansing, facial sculpting, lymphatic drainage massage, LED red light therapy, and a customized Korean modeling mask.<br><br>Our layered approach helps refresh dull-looking skin, improve the appearance of facial contours, and leave your complexion feeling smooth, hydrated, and beautifully radiant.",
+            description: "Your chok-chok (dewy, hydrated) glow-up starts here!<br><br>Why stop at skincare when you can give your beauty routine the full Seoul treatment?<br><br>Experience 100 minutes of Korean-inspired pampering across the face, scalp, neck, shoulder, and décolleté—combining gentle exfoliation, deep cleansing, facial sculpting, lymphatic drainage massage, LED red light therapy, and a customized Korean modeling mask.<br><br>Our layered approach helps refresh dull-looking skin, improve the appearance of facial contours, and leave your complexion feeling smooth, hydrated, and beautifully radiant.",
             featuresTitle: "THE GLASS SKIN & HAIR RITUAL INCLUDES",
             features: [
                 "Gentle Dermabrasion",

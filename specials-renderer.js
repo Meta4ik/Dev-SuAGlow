@@ -68,6 +68,55 @@ function renderDecemberSpecials(config) {
             </div>
         ` : '';
 
+        const facialMenuHTML = stepItem.facialTiers && stepItem.facialTiers.length ? `
+            <div class="mt-5 pt-4 border-t border-[#DFD2BE] space-y-4">
+                <div>
+                    <span class="text-[10.5px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#0E2A1A] block mb-3">
+                        ${stepItem.tiersTitle || 'SIGNATURE FACIALS MENU'}
+                    </span>
+                    <div class="space-y-2.5">
+                        ${stepItem.facialTiers.map(t => t.featured ? `
+                            <div class="rounded-xl px-4 py-3.5 border border-[#C8A055] shadow-sm flex items-center justify-between gap-3" style="background: linear-gradient(135deg, #0E2A1A 0%, #153924 100%);">
+                                <div class="text-left">
+                                    <span class="inline-block text-[9px] font-heading font-bold uppercase tracking-[0.2em] text-[#EBD7B0] mb-0.5">Featured Total Ritual</span>
+                                    <span class="font-heading text-xs sm:text-sm font-bold text-white block leading-snug">${t.name}</span>
+                                    <span class="font-body text-[11px] text-[#E6D6B8]/90 font-light block mt-0.5">${t.meta}</span>
+                                </div>
+                                <span class="font-body text-lg sm:text-xl font-extrabold text-[#F3D99C] shrink-0 pl-3 border-l border-[#C8A055]/40">${t.price}</span>
+                            </div>
+                        ` : `
+                            <div class="bg-white/80 border border-[#E3D5BF] rounded-xl px-4 py-3 flex items-center justify-between gap-3">
+                                <div class="text-left">
+                                    <span class="font-heading text-xs sm:text-sm font-bold text-[#0E2A1A] block leading-snug">${t.name}</span>
+                                    <span class="font-body text-[11px] text-[#3C423E]/80 font-light block mt-0.5">${t.meta}</span>
+                                </div>
+                                <span class="font-body text-base sm:text-lg font-extrabold text-[#0E2A1A] shrink-0 pl-3 border-l border-[#DFD2BE]">${t.price}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                ${stepItem.facialAddOns && stepItem.facialAddOns.length ? `
+                    <div class="pt-3 border-t border-[#DFD2BE]/80">
+                        <span class="text-[10.5px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#9E1821] block mb-2.5">
+                            ${stepItem.addOnsTitle || 'OPTIONAL ADD-ONS'}
+                        </span>
+                        <div class="space-y-2">
+                            ${stepItem.facialAddOns.map(a => `
+                                <div class="bg-white/70 border border-[#E5D9C7] rounded-xl px-3.5 py-2.5">
+                                    <div class="flex items-center justify-between gap-2 mb-0.5">
+                                        <span class="font-heading text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#0E2A1A]">${a.name}</span>
+                                        <span class="font-heading text-[10.5px] font-bold px-2.5 py-0.5 rounded-full bg-[#0E2A1A] text-[#EBD7B0] shrink-0">${a.price}</span>
+                                    </div>
+                                    <p class="font-body text-[11px] sm:text-xs text-[#3C423E]/85 font-light leading-relaxed">${a.items}</p>
+                                    ${a.note ? `<p class="font-serif italic text-[11px] text-[#9E1821] mt-0.5">${a.note}</p>` : ''}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+            </div>
+        ` : '';
+
         return `
             <div class="rounded-[28px] border border-[#D8C7AB]/80 hover:border-[#C8A055] p-6 sm:p-8 md:p-10 shadow-[0_22px_55px_rgba(3,12,7,0.55)] hover:shadow-[0_28px_68px_rgba(3,12,7,0.72)] transition-all duration-500 group animate-on-scroll fade-up ${delayClass}" style="background: linear-gradient(145deg, #FCF9F4 0%, #F6EFE3 48%, #ECE1CE 100%);">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
@@ -128,6 +177,7 @@ function renderDecemberSpecials(config) {
 
                             ${stepItemsHTML}
                             ${glowGoalsHTML}
+                            ${facialMenuHTML}
                         </div>
 
                         <!-- Benefits Tags Grid -->
