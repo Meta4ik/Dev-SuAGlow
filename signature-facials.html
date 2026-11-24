@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>[STAGING] Signature Facials Menu &amp; Estimator | SUA GLOW Med Spa</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="dist/output.css?v=67">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .facial-option-card {
+            transition: all 0.28s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .facial-option-card:hover {
+            transform: translateY(-2px);
+        }
+        .facial-option-card.is-selected {
+            border-color: #E8C98A !important;
+            box-shadow: 0 0 0 1px rgba(232, 201, 138, 0.65), 0 18px 40px -12px rgba(0, 0, 0, 0.65), 0 0 28px rgba(170, 152, 124, 0.22);
+        }
+        .addon-chip {
+            transition: all 0.22s ease;
+        }
+        .addon-chip.is-selected {
+            background: linear-gradient(135deg, rgba(232, 201, 138, 0.22) 0%, rgba(170, 152, 124, 0.14) 100%);
+            border-color: #E8C98A !important;
+            box-shadow: 0 0 18px rgba(200, 160, 85, 0.2);
+        }
+        .addon-chip.is-selected .addon-check {
+            background-color: #E8C98A;
+            color: #131619;
+            border-color: #E8C98A;
+        }
+    </style>
+</head>
+
+<body class="text-white antialiased relative min-h-screen" style="background: linear-gradient(180deg, #0D0F12 0%, #151412 35%, #111316 70%, #0A0B0D 100%);">
+
+    <!-- Staging Notification Banner -->
+    <div class="bg-[#0A0C0E] text-white px-4 py-2.5 text-center text-xs font-heading tracking-wider flex items-center justify-center gap-2 border-b border-warm-gold/30">
+        <span class="inline-block w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+        <span class="text-warm-gold font-bold uppercase tracking-widest">[INTERNAL STAGING PREVIEW]</span>
+        <span class="hidden sm:inline text-white/70">— Signature Facials Interactive Menu &amp; Estimator (Not Live)</span>
+    </div>
+
+    <!-- Global Navigation Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Spacer for fixed navbar -->
+    <section class="h-16 bg-[#0D0F12]"></section>
+
+    <!-- Main Interactive Signature Facials Studio -->
+    <main id="signature-facials-studio" data-nav-theme="dark" class="relative overflow-hidden py-12 md:py-20 px-4 sm:px-6 lg:px-8">
+
+        <!-- Warm Luxury Bronze & Champagne Ambient Glows (echoing the spa menu aesthetic) -->
+        <div class="pointer-events-none absolute -top-24 -left-32 w-[560px] h-[560px] rounded-full bg-[#AA987C]/14 blur-[150px]"></div>
+        <div class="pointer-events-none absolute top-1/3 -right-40 w-[520px] h-[520px] rounded-full bg-[#C8A055]/10 blur-[160px]"></div>
+        <div class="pointer-events-none absolute bottom-0 left-1/3 w-[600px] h-[360px] rounded-full bg-[#AA987C]/10 blur-[150px]"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+
+            <!-- Hero Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                <img src="assets/logo-main.webp" alt="SUA Glow Medical Aesthetics" class="h-10 sm:h-12 mx-auto mb-5 brightness-0 invert opacity-85">
+
+                <div class="flex items-center justify-center gap-4 mb-3">
+                    <span class="w-12 sm:w-20 h-px bg-gradient-to-r from-transparent to-[#D6BC8D]"></span>
+                    <span class="text-[10.5px] sm:text-xs font-heading font-bold uppercase tracking-[0.32em] text-[#D6BC8D]">
+                        Aesthetic Spa Menu
+                    </span>
+                    <span class="w-12 sm:w-20 h-px bg-gradient-to-l from-transparent to-[#D6BC8D]"></span>
+                </div>
+
+                <h1 class="heading-wide text-4xl sm:text-5xl md:text-7xl leading-[1.08] text-white mb-5 [text-wrap:balance]">
+                    Signature <span class="text-warm-gold">Facials</span>
+                </h1>
+
+                <p class="font-body text-sm md:text-lg text-white/70 font-light tracking-wide leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
+                    Select your Korean facial ritual below and customize it with targeted masks, glow enhancements, or needle-free <span class="text-[#E8C98A] font-medium">SuA Exclusive</span> skin booster infusions to build your personalized session estimate.
+                </p>
+            </div>
+
+            <!-- Two-Column Interactive Estimator Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+                <!-- LEFT COLUMN (8 cols): Step 1 Base Facials + Step 2 Add-On Groups -->
+                <div class="lg:col-span-8 space-y-10">
+
+                    <!-- STEP 1: Core Signature Facials -->
+                    <section aria-labelledby="step-1-heading">
+                        <div class="flex items-center justify-between gap-3 mb-5">
+                            <div class="flex items-center gap-3">
+                                <span class="w-7 h-7 rounded-full bg-[#E8C98A] text-[#131619] font-heading text-xs font-extrabold flex items-center justify-center shrink-0">1</span>
+                                <div>
+                                    <h2 id="step-1-heading" class="font-heading text-sm sm:text-base font-bold uppercase tracking-[0.2em] text-white">
+                                        Choose Your Signature Facial
+                                    </h2>
+                                    <p class="font-body text-[11px] sm:text-xs text-white/55">Select one base treatment to begin your estimate</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="facial-tiers-container" class="space-y-4">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </section>
+
+                    <!-- STEP 2: Optional Enhancements & Needle-Free Add-Ons -->
+                    <section aria-labelledby="step-2-heading">
+                        <div class="flex items-center gap-3 mb-5">
+                            <span class="w-7 h-7 rounded-full bg-white/10 border border-[#E8C98A]/50 text-[#E8C98A] font-heading text-xs font-extrabold flex items-center justify-center shrink-0">2</span>
+                            <div>
+                                <h2 id="step-2-heading" class="font-heading text-sm sm:text-base font-bold uppercase tracking-[0.2em] text-white">
+                                    Customize With Enhancements &amp; Add-Ons
+                                </h2>
+                                <p class="font-body text-[11px] sm:text-xs text-white/55">Optional — tap any enhancements to add them to your session</p>
+                            </div>
+                        </div>
+
+                        <div id="addons-groups-container" class="space-y-7">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- RIGHT COLUMN (4 cols): Sticky Live Session Estimator Summary -->
+                <aside class="lg:col-span-4 lg:sticky lg:top-24">
+                    <div class="rounded-3xl border border-[#D6BC8D]/35 p-6 sm:p-7 shadow-[0_24px_60px_rgba(0,0,0,0.65)] relative overflow-hidden"
+                         style="background: linear-gradient(155deg, rgba(30, 27, 23, 0.96) 0%, rgba(18, 20, 23, 0.98) 100%);">
+                        <div class="pointer-events-none absolute -top-16 -right-16 w-44 h-44 rounded-full bg-[#E8C98A]/12 blur-3xl"></div>
+
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between gap-2 pb-4 mb-5 border-b border-white/10">
+                                <div>
+                                    <span class="text-[10px] font-heading font-bold uppercase tracking-[0.25em] text-[#E8C98A] block">
+                                        Your Custom Ritual
+                                    </span>
+                                    <h3 class="font-heading text-lg font-bold text-white tracking-wide">
+                                        Session Estimator
+                                    </h3>
+                                </div>
+                                <button id="reset-estimator-btn" type="button"
+                                    class="text-[10px] font-heading font-semibold uppercase tracking-wider text-white/50 hover:text-[#E8C98A] transition-colors px-2.5 py-1 rounded-full border border-white/10 hover:border-[#E8C98A]/40">
+                                    Reset
+                                </button>
+                            </div>
+
+                            <!-- Selected Base Facial Summary -->
+                            <div id="summary-base-facial" class="mb-5">
+                                <!-- Rendered by JS -->
+                            </div>
+
+                            <!-- Selected Add-Ons List -->
+                            <div class="mb-5">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-white/50">
+                                        Selected Enhancements
+                                    </span>
+                                    <span id="summary-addon-count" class="text-[10px] font-heading font-bold text-[#E8C98A]">0 selected</span>
+                                </div>
+                                <div id="summary-addons-list" class="space-y-2">
+                                    <!-- Rendered by JS -->
+                                </div>
+                            </div>
+
+                            <!-- Total Estimate Box -->
+                            <div class="rounded-2xl bg-black/40 border border-[#D6BC8D]/30 p-4 mb-5">
+                                <div class="flex items-baseline justify-between gap-2">
+                                    <span class="font-heading text-xs font-bold uppercase tracking-[0.2em] text-white/75">
+                                        Estimated Total
+                                    </span>
+                                    <span id="summary-total-price" class="font-body text-3xl font-extrabold text-[#F3DCA7] tracking-tight">
+                                        $499
+                                    </span>
+                                </div>
+                                <p id="summary-duration-line" class="font-body text-[11px] text-white/55 mt-1">
+                                    Base session time: 100 Minutes · Face · Scalp · Neck · Shoulder · Décolleté
+                                </p>
+                            </div>
+
+                            <!-- Optional Membership Savings Nudge -->
+                            <div id="summary-membership-nudge" class="hidden mb-5 rounded-2xl bg-[#E8C98A]/10 border border-[#E8C98A]/30 p-3.5">
+                                <div class="flex items-start gap-2.5">
+                                    <i data-lucide="sparkles" class="w-4 h-4 text-[#E8C98A] shrink-0 mt-0.5"></i>
+                                    <div class="text-left">
+                                        <p id="summary-membership-text" class="font-body text-[11px] text-[#F5E6C4] leading-snug"></p>
+                                        <a href="memberships.html" class="inline-flex items-center gap-1 text-[10px] font-heading font-bold uppercase tracking-wider text-[#E8C98A] hover:underline mt-1.5">
+                                            <span>Compare Memberships</span>
+                                            <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Primary CTA Buttons -->
+                            <div class="space-y-2.5">
+                                <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                                    class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-heading font-bold text-xs uppercase tracking-[0.18em] text-[#131619] bg-gradient-to-r from-[#EBD6A8] via-[#CFAF75] to-[#AA8B52] hover:brightness-110 shadow-lg transition-all">
+                                    <span>Book Your Custom Facial</span>
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                                <button id="copy-summary-btn" type="button"
+                                    class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full font-heading font-semibold text-[11px] uppercase tracking-wider text-white/75 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
+                                    <i data-lucide="copy" class="w-3.5 h-3.5 text-[#E8C98A]"></i>
+                                    <span id="copy-summary-label">Copy Selections for Booking Notes</span>
+                                </button>
+                            </div>
+
+                            <p class="font-body text-[10px] text-white/40 italic text-center mt-4 leading-relaxed">
+                                Estimates are for planning purposes. Final protocol and clinical eligibility are confirmed with your SUA Glow provider.
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Sticky Mini-Bar (visible only on mobile/tablet when scrolling) -->
+    <div id="mobile-estimator-bar" class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-[#131619]/95 backdrop-blur-md border-t border-[#D6BC8D]/35 px-4 py-3 shadow-2xl">
+        <div class="max-w-xl mx-auto flex items-center justify-between gap-3">
+            <div>
+                <span id="mobile-base-name" class="font-heading text-[10px] font-bold uppercase tracking-wider text-[#E8C98A] block leading-tight">K-Beauty Glass Total Glow</span>
+                <div class="flex items-baseline gap-2">
+                    <span id="mobile-total-price" class="font-body text-xl font-extrabold text-white">$499</span>
+                    <span id="mobile-addon-pill" class="text-[10px] text-white/60">0 add-ons</span>
+                </div>
+            </div>
+            <a href="https://suaglow.myaestheticrecord.com/online-booking/" target="_blank"
+                class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-heading font-bold text-[11px] uppercase tracking-wider text-[#131619] bg-gradient-to-r from-[#EBD6A8] via-[#CFAF75] to-[#AA8B52] shrink-0">
+                <span>Book Now</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Global Footer Placeholder -->
+    <div id="footer-placeholder" class="pb-16 lg:pb-0"></div>
+
+    <!-- Shared Scripts -->
+    <script src="navbar.js?v=56"></script>
+    <script src="footer.js?v=50"></script>
+    <script src="script.js?v=51"></script>
+    <script src="signature-facials-data.js?v=1"></script>
+
+    <script>
+        (function () {
+            const menu = window.SIGNATURE_FACIALS_MENU;
+            if (!menu) return;
+
+            // Default selection: featured K-Beauty Glass Total Glow ($499)
+            let selectedFacialId = (menu.facials.find(f => f.featured) || menu.facials[0]).id;
+            const selectedAddOns = new Set();
+
+            const facialsContainer = document.getElementById('facial-tiers-container');
+            const addonsContainer = document.getElementById('addons-groups-container');
+
+            function findAddOn(id) {
+                for (const group of menu.addOnGroups) {
+                    const found = group.items.find(i => i.id === id);
+                    if (found) return { ...found, price: group.price, groupTitle: group.title };
+                }
+                return null;
+            }
+
+            function renderFacials() {
+                facialsContainer.innerHTML = menu.facials.map(f => {
+                    const isSelected = f.id === selectedFacialId;
+                    if (f.featured) {
+                        return `
+                            <button type="button" data-facial-id="${f.id}"
+                                class="facial-option-card ${isSelected ? 'is-selected' : ''} w-full text-left rounded-2xl p-5 sm:p-6 border border-[#E8C98A]/65 relative overflow-hidden cursor-pointer"
+                                style="background: linear-gradient(135deg, #F5DFB0 0%, #E7C88B 55%, #D9B36C 100%);">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <div class="pr-2">
+                                        <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                                            <span class="inline-flex items-center gap-1 text-[9.5px] font-heading font-extrabold uppercase tracking-[0.2em] px-2.5 py-0.5 rounded-full bg-[#131619] text-[#F2D9A2]">
+                                                <i data-lucide="sparkles" class="w-3 h-3"></i>
+                                                ${f.badge || 'Featured'}
+                                            </span>
+                                            <span class="text-[10.5px] font-heading font-bold uppercase tracking-wider text-[#3A2B16]">
+                                                ${f.duration}
+                                            </span>
+                                        </div>
+                                        <h3 class="font-heading text-xl sm:text-2xl font-extrabold text-[#131619] tracking-tight leading-snug">
+                                            ${f.name}
+                                        </h3>
+                                        <p class="font-heading text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#4A3619] mt-1">
+                                            ${f.areas}
+                                        </p>
+                                        <p class="font-body text-xs text-[#2B2010]/85 mt-2 leading-relaxed">
+                                            ${f.tagline}
+                                        </p>
+                                    </div>
+                                    <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-2 sm:pl-5 sm:border-l sm:border-[#131619]/20 shrink-0">
+                                        <span class="font-heading text-3xl sm:text-4xl font-extrabold text-[#131619] tracking-tight leading-none">$${f.price}</span>
+                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-heading font-bold uppercase tracking-wider px-3 py-1 rounded-full ${isSelected ? 'bg-[#131619] text-[#F2D9A2]' : 'bg-[#131619]/15 text-[#131619]'}">
+                                            <i data-lucide="${isSelected ? 'check' : 'plus'}" class="w-3 h-3"></i>
+                                            ${isSelected ? 'Selected' : 'Select'}
+                                        </span>
+                                    </div>
+                                </div>
+                            </button>
+                        `;
+                    }
+
+                    return `
+                        <button type="button" data-facial-id="${f.id}"
+                            class="facial-option-card ${isSelected ? 'is-selected' : ''} w-full text-left rounded-2xl p-5 sm:p-6 border border-white/15 hover:border-[#D6BC8D]/50 bg-white/[0.04] cursor-pointer">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <div class="pr-2">
+                                    <span class="text-[10.5px] font-heading font-bold uppercase tracking-[0.22em] text-[#D6BC8D] block mb-1">
+                                        ${f.duration}
+                                    </span>
+                                    <h3 class="font-heading text-lg sm:text-xl font-bold text-white tracking-wide leading-snug">
+                                        ${f.name}
+                                    </h3>
+                                    <p class="font-body text-xs text-white/65 mt-1.5 leading-relaxed">
+                                        ${f.tagline}
+                                    </p>
+                                </div>
+                                <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-2 sm:pl-5 sm:border-l sm:border-white/10 shrink-0">
+                                    <span class="font-heading text-3xl font-extrabold text-[#F3DCA7] tracking-tight leading-none">$${f.price}</span>
+                                    <span class="inline-flex items-center gap-1.5 text-[10px] font-heading font-bold uppercase tracking-wider px-3 py-1 rounded-full ${isSelected ? 'bg-[#E8C98A] text-[#131619]' : 'bg-white/10 text-white/75'}">
+                                        <i data-lucide="${isSelected ? 'check' : 'plus'}" class="w-3 h-3"></i>
+                                        ${isSelected ? 'Selected' : 'Select'}
+                                    </span>
+                                </div>
+                            </div>
+                        </button>
+                    `;
+                }).join('');
+
+                facialsContainer.querySelectorAll('[data-facial-id]').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        selectedFacialId = btn.dataset.facialId;
+                        renderAll();
+                    });
+                });
+            }
+
+            function renderAddOns() {
+                addonsContainer.innerHTML = menu.addOnGroups.map(group => `
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
+                        <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-4 border-b border-white/10">
+                            <div>
+                                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E8C98A] text-[#131619] font-heading text-xs font-extrabold tracking-wide mb-1.5">
+                                    <span>${group.title} — +$${group.price}</span>
+                                </div>
+                                <p class="font-body text-xs ${group.isNeedleFree ? 'italic text-[#E8C98A]' : 'text-white/60'}">
+                                    ${group.subtitle}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
+                            ${group.items.map(item => {
+                                const isOn = selectedAddOns.has(item.id);
+                                return `
+                                    <button type="button" data-addon-id="${item.id}"
+                                        class="addon-chip ${isOn ? 'is-selected' : ''} flex items-center justify-between gap-2.5 text-left rounded-xl px-3.5 py-3 border border-white/12 bg-black/25 hover:border-[#D6BC8D]/50 cursor-pointer">
+                                        <div class="flex items-center gap-2.5 min-w-0">
+                                            <span class="w-8 h-8 rounded-lg bg-white/5 border border-[#D6BC8D]/25 flex items-center justify-center shrink-0">
+                                                <i data-lucide="${item.icon}" class="w-4 h-4 text-[#E8C98A]"></i>
+                                            </span>
+                                            <span class="font-body text-xs font-medium text-white/90 leading-tight">${item.name}</span>
+                                        </div>
+                                        <span class="addon-check w-5 h-5 rounded-full border border-white/25 flex items-center justify-center shrink-0">
+                                            <i data-lucide="${isOn ? 'check' : 'plus'}" class="w-3 h-3"></i>
+                                        </span>
+                                    </button>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `).join('');
+
+                addonsContainer.querySelectorAll('[data-addon-id]').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const id = btn.dataset.addonId;
+                        if (selectedAddOns.has(id)) selectedAddOns.delete(id);
+                        else selectedAddOns.add(id);
+                        renderAll();
+                    });
+                });
+            }
+
+            function renderSummary() {
+                const base = menu.facials.find(f => f.id === selectedFacialId) || menu.facials[0];
+                const chosenAddOns = Array.from(selectedAddOns).map(findAddOn).filter(Boolean);
+                const addOnTotal = chosenAddOns.reduce((sum, a) => sum + a.price, 0);
+                const grandTotal = base.price + addOnTotal;
+
+                document.getElementById('summary-base-facial').innerHTML = `
+                    <div class="rounded-xl bg-white/5 border border-white/10 p-3.5 flex items-start justify-between gap-3">
+                        <div>
+                            <span class="text-[9.5px] font-heading font-bold uppercase tracking-widest text-[#E8C98A] block">${base.duration}</span>
+                            <span class="font-heading text-sm font-bold text-white block mt-0.5">${base.name}</span>
+                            <span class="font-body text-[11px] text-white/55 block mt-0.5">${base.areas}</span>
+                        </div>
+                        <span class="font-body text-base font-bold text-[#F3DCA7] shrink-0">$${base.price}</span>
+                    </div>
+                `;
+
+                document.getElementById('summary-addon-count').textContent = `${chosenAddOns.length} selected`;
+
+                const listEl = document.getElementById('summary-addons-list');
+                if (!chosenAddOns.length) {
+                    listEl.innerHTML = `<p class="font-body text-xs text-white/40 italic py-2">No enhancements added yet. Tap any option on the left to customize.</p>`;
+                } else {
+                    listEl.innerHTML = chosenAddOns.map(a => `
+                        <div class="flex items-center justify-between gap-2 text-xs bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2">
+                            <span class="text-white/85 truncate">${a.name}</span>
+                            <div class="flex items-center gap-2 shrink-0">
+                                <span class="font-semibold text-[#E8C98A]">+$${a.price}</span>
+                                <button type="button" data-remove-addon="${a.id}" class="text-white/40 hover:text-white" aria-label="Remove ${a.name}">
+                                    <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `).join('');
+
+                    listEl.querySelectorAll('[data-remove-addon]').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            selectedAddOns.delete(btn.dataset.removeAddon);
+                            renderAll();
+                        });
+                    });
+                }
+
+                document.getElementById('summary-total-price').textContent = `$${grandTotal.toLocaleString()}`;
+                document.getElementById('summary-duration-line').textContent = `Base session: ${base.duration} · ${base.areas}`;
+
+                // Membership nudge
+                const nudgeBox = document.getElementById('summary-membership-nudge');
+                if (base.membershipNote) {
+                    nudgeBox.classList.remove('hidden');
+                    document.getElementById('summary-membership-text').textContent = base.membershipNote;
+                } else {
+                    nudgeBox.classList.add('hidden');
+                }
+
+                // Mobile sticky bar
+                document.getElementById('mobile-base-name').textContent = base.name;
+                document.getElementById('mobile-total-price').textContent = `$${grandTotal.toLocaleString()}`;
+                document.getElementById('mobile-addon-pill').textContent = `${chosenAddOns.length} add-on${chosenAddOns.length === 1 ? '' : 's'}`;
+            }
+
+            function renderAll() {
+                renderFacials();
+                renderAddOns();
+                renderSummary();
+                if (window.lucide) lucide.createIcons();
+            }
+
+            document.getElementById('reset-estimator-btn').addEventListener('click', () => {
+                selectedFacialId = (menu.facials.find(f => f.featured) || menu.facials[0]).id;
+                selectedAddOns.clear();
+                renderAll();
+            });
+
+            document.getElementById('copy-summary-btn').addEventListener('click', () => {
+                const base = menu.facials.find(f => f.id === selectedFacialId) || menu.facials[0];
+                const chosenAddOns = Array.from(selectedAddOns).map(findAddOn).filter(Boolean);
+                const total = base.price + chosenAddOns.reduce((s, a) => s + a.price, 0);
+                const lines = [
+                    `SUA Glow Signature Facial Estimate`,
+                    `Base: ${base.name} (${base.duration}) - $${base.price}`,
+                    chosenAddOns.length
+                        ? `Add-Ons: ${chosenAddOns.map(a => `${a.name} (+$${a.price})`).join(', ')}`
+                        : `Add-Ons: None`,
+                    `Estimated Total: $${total}`
+                ];
+                navigator.clipboard.writeText(lines.join('\n')).then(() => {
+                    const lbl = document.getElementById('copy-summary-label');
+                    const orig = lbl.textContent;
+                    lbl.textContent = 'Copied to Clipboard!';
+                    setTimeout(() => { lbl.textContent = orig; }, 1800);
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', renderAll);
+        })();
+    </script>
+</body>
+
+</html>

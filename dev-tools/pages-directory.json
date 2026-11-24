@@ -952,6 +952,14 @@
     "sizeKb": 21
   },
   {
+    "path": "signature-facials.html",
+    "filename": "signature-facials.html",
+    "title": "[STAGING] Signature Facials Menu &amp; Estimator",
+    "fullTitle": "[STAGING] Signature Facials Menu &amp; Estimator | SUA GLOW Med Spa",
+    "category": "Core Pages",
+    "sizeKb": 31
+  },
+  {
     "path": "signature-treatment.html",
     "filename": "signature-treatment.html",
     "title": "Signature Treatment",
@@ -1045,7 +1053,7 @@
     "title": "Newest Site Pages",
     "fullTitle": "Newest Site Pages | SUA K-Glow Med Spa",
     "category": "Core Pages",
-    "sizeKb": 76
+    "sizeKb": 80
   },
   {
     "path": "team-vacation-calendar.html",

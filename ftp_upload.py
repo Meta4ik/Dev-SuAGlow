@@ -25,7 +25,7 @@ EXCLUDE = {
     '.git', 'node_modules', 'src', 'scratch', 'dev-tools', 'internal', 
     'kam_doc_updates', '.env', 'ftp_upload.py', 'package.json', 'package-lock.json', 
     '.DS_Store', 'DEPLOYMENT.md', 'search-index.js', 'extract_logos.py', '.gitignore', 
-    'staging.html', 'iv-infusion-wellness-therapy.html', 'exoblanc-mobile-app', '.agent', '.agents', 
+    'staging.html', 'memberships-v2.html', 'iv-infusion-wellness-therapy.html', 'exoblanc-mobile-app', '.agent', '.agents', 
     '.vercel', '.venv-rembg'
 }
 

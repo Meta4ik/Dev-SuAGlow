@@ -2217,6 +2217,22 @@ const SEARCH_INDEX = [
     "snippet": "K-Beauty Medspa • Carrollton HQ"
   },
   {
+    "url": "signature-facials.html",
+    "title": "Choose Your Signature Facial",
+    "pageTitle": "[STAGING] Signature Facials Menu & Estimator",
+    "category": "Spa Treatments",
+    "content": "Select one base treatment to begin your estimate",
+    "snippet": "Select one base treatment to begin your estimate"
+  },
+  {
+    "url": "signature-facials.html",
+    "title": "Customize With Enhancements & Add-Ons",
+    "pageTitle": "[STAGING] Signature Facials Menu & Estimator",
+    "category": "Spa Treatments",
+    "content": "Optional — tap any enhancements to add them to your session",
+    "snippet": "Optional — tap any enhancements to add them to your session"
+  },
+  {
     "url": "signature-treatment.html#hero",
     "title": "SignatureTreatment",
     "pageTitle": "SUA Glow Signature Treatment",
