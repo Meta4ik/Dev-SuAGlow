@@ -5,10 +5,10 @@
  * "The SUA Glow December Edit - Seoul Much Glow"
  *
  * Incorporates Kameron's Oct 29 V3 copy + title update and
- * Sophia Yang PA-C's Nov 21 finalized clinical edits & pricing:
+ * finalized client meeting edits:
  * 1. Korean Gyeongrak Facial Massage (60-Min) — $299
- * 2. SuA Glow Signature Facials (One-Time Sessions) — $249 / $349 / $499 (100-Min Face, Scalp, Neck, Shoulder & Décolleté)
- *    with Mask ($49), Glow ($99), and Needle-Free SuA Exclusive Add-Ons ($249)
+ * 2. K-Beauty Signature Facial (60-Min One-Time Session) — $249
+ *    (simplified per client request; additional tiers & add-ons discussed in-clinic)
  * 3. Korean Scalp & Hair Rejuvenation (3 Sessions · 90 Min Each) — $1,800 ($600/session)
  *    with new AI Scalp Analyzer (Step 1) + DEP Needle-Free Exosome Infusion x 3 (Step 4)
  */
@@ -74,60 +74,20 @@ const MONTHLY_SPECIALS_CONFIG_DECEMBER = {
         {
             step: 2,
             badge: "CLEANSE · RESTORE · GLASS GLOW",
-            title: "SUA GLOW SIGNATURE FACIALS",
-            subtitle: "ONE-TIME K-BEAUTY FACIAL SESSIONS · NO MEMBERSHIP REQUIRED",
+            title: "K-BEAUTY SIGNATURE FACIAL",
+            subtitle: "60-MINUTE ONE-TIME K-BEAUTY FACIAL · NO MEMBERSHIP REQUIRED",
             hook: "Holiday events on the calendar? Give your skin the full Seoul glass-skin glow-up.",
-            price: "FROM $249",
-            priceDetail: "ONE-TIME SESSIONS · $249 · $349 · $499",
-            description: "Dull, dry, or holiday-stressed skin? <em>Aniyo</em> (No!) Not on our watch! Enjoy our signature Korean aesthetic facials as a one-time holiday session—no membership required.<br><br>Choose your ideal ritual below, and customize your visit with optional mask, glow, or needle-free SuA Exclusive skin booster add-ons.",
-            tiersTitle: "SIGNATURE FACIALS MENU (ONE-TIME SESSIONS)",
-            facialTiers: [
-                {
-                    name: "K-Beauty Signature",
-                    meta: "60 Minutes",
-                    price: "$249",
-                    featured: false
-                },
-                {
-                    name: "K-Beauty Barrier Glow",
-                    meta: "90 Minutes",
-                    price: "$349",
-                    featured: false
-                },
-                {
-                    name: "K-Beauty Glass Total Glow",
-                    meta: "100 Minutes · Face · Scalp · Neck · Shoulder · Décolleté",
-                    price: "$499",
-                    featured: true
-                }
-            ],
-            addOnsTitle: "CUSTOMIZE WITH HOLIDAY ADD-ONS",
-            facialAddOns: [
-                {
-                    name: "Mask Enhancements",
-                    price: "$49",
-                    items: "Modeling · Rejuran · Exosome · Collagen · Brightening"
-                },
-                {
-                    name: "Glow Enhancements",
-                    price: "$99",
-                    items: "PLA Peel · Scalp &amp; Hair Glow · Neck, Shoulder &amp; Décolleté Glow"
-                },
-                {
-                    name: "SuA Exclusive Add-Ons",
-                    price: "$249",
-                    items: "Rejuran Skin Booster · Rejuran Tone-Up · Exosome · Hyaluronic Acid · Glutathione · NAD+ · Wiqo SkinBooster",
-                    note: "Delivered via needle-free infusion."
-                }
-            ],
+            price: "$249",
+            priceDetail: "60-MINUTE ONE-TIME SESSION · LITTLE TO NO DOWNTIME",
+            description: "Dull, dry, or holiday-stressed skin? <em>Aniyo</em> (No!) Not on our watch! Enjoy our signature 60-minute Korean aesthetic facial as a one-time holiday session—no membership required.<br><br>Designed to deeply cleanse, hydrate, and restore a luminous <em>chok-chok</em> glow just in time for your holiday events. Your provider can also walk you through personalized in-clinic upgrades during your visit.",
             image: "assets/november-promo-skin-barrier.webp",
-            ctaText: "BOOK YOUR SIGNATURE FACIAL",
+            ctaText: "BOOK YOUR K-BEAUTY SIGNATURE FACIAL",
             tags: [
                 "GLASS SKIN GLOW",
                 "DEEP HYDRATION",
                 "SKIN BARRIER SUPPORT",
-                "NO MEMBERSHIP REQUIRED",
-                "NEEDLE-FREE ADD-ONS"
+                "60-MINUTE RITUAL",
+                "NO MEMBERSHIP REQUIRED"
             ],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
