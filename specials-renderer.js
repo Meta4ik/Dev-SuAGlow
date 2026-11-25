@@ -127,9 +127,6 @@ function renderDecemberSpecials(config) {
                             <!-- Framed Promo Image (4:3 Ratio) -->
                             <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-[#C8A055]/35 shadow-sm bg-white">
                                 <img src="${stepItem.image}?v=2" alt="${stepItem.title}" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700">
-                                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9.5px] font-heading font-bold uppercase tracking-widest bg-[#0E2A1A]/90 text-[#EBD7B0] border border-[#C8A055]/45 backdrop-blur-sm">
-                                    ${stepItem.step} · Holiday Exclusive
-                                </span>
                             </div>
 
                             <!-- Price Box -->
