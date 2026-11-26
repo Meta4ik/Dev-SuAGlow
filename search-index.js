@@ -473,6 +473,14 @@ const SEARCH_INDEX = [
     "snippet": "K-Beauty Medspa • Carrollton HQ All treatments at SUA GLOW are performed under appropriate medical oversight and within the scope of practice permitted under Te..."
   },
   {
+    "url": "december-social.html#caption-copy-box",
+    "title": "December Promo Caption Box",
+    "pageTitle": "December Instagram Carousel Studio (4:5)",
+    "category": "Spa Treatments",
+    "content": "Paste your finalized Instagram caption below or edit the pre-filled December promo copy. Changes auto-save in your browser, and you can copy the full post text in one click.",
+    "snippet": "Paste your finalized Instagram caption below or edit the pre-filled December promo copy. Changes auto-save in your browser, and you can copy the full post text ..."
+  },
+  {
     "url": "dep.html#hero",
     "title": "Dallas' first FDA-cleared skin infusion for true glass skin",
     "pageTitle": "Needle-Free Skin Infusion (DEP)",
