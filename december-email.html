@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>December Email Campaign Studio | SUA GLOW</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .font-heading { font-family: 'Montserrat', sans-serif; }
+        .font-body { font-family: 'Poppins', sans-serif; }
+        #email-preview-frame {
+            transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background: #07140D;
+        }
+        #toast {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        #toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-[#07110C] text-white min-h-screen antialiased font-body">
+
+    <!-- Sticky Toolbar -->
+    <header class="border-b border-[#C8A055]/25 bg-[#0B1911]/95 backdrop-blur-md sticky top-0 z-50 px-4 sm:px-6 py-3.5">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <a href="staging.html" class="flex items-center gap-1.5 text-xs font-heading font-semibold uppercase tracking-wider text-white/60 hover:text-white transition-colors">
+                    <i data-lucide="arrow-left" class="w-4 h-4 text-[#E6C783]"></i>
+                    <span>Staging Hub</span>
+                </a>
+                <span class="text-white/20">•</span>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-xs font-heading font-bold uppercase tracking-widest text-[#E6C783]">
+                        December Email Campaign Studio
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2">
+                <!-- Viewport Switcher -->
+                <div class="inline-flex rounded-full bg-white/5 border border-white/10 p-0.5">
+                    <button id="btn-desktop" onclick="setPreviewWidth('desktop')" class="px-3 py-1 rounded-full text-[11px] font-heading font-bold uppercase tracking-wider bg-[#C8A055] text-[#0E2619] transition-colors inline-flex items-center gap-1">
+                        <i data-lucide="monitor" class="w-3.5 h-3.5"></i>
+                        <span>Desktop</span>
+                    </button>
+                    <button id="btn-mobile" onclick="setPreviewWidth('mobile')" class="px-3 py-1 rounded-full text-[11px] font-heading font-bold uppercase tracking-wider text-white/65 hover:text-white transition-colors inline-flex items-center gap-1">
+                        <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                        <span>Mobile</span>
+                    </button>
+                </div>
+
+                <!-- Image Host Switcher -->
+                <select id="asset-host-select" onchange="rebuildEmail()" class="px-3 py-1.5 rounded-full text-[11px] font-heading font-semibold bg-white/5 border border-[#C8A055]/35 text-[#EBD7B0] focus:outline-none">
+                    <option value="https://suaglow.vercel.app" class="bg-[#0B1911]">Images: Vercel Staging</option>
+                    <option value="https://suaglow.com" class="bg-[#0B1911]">Images: Live suaglow.com</option>
+                </select>
+
+                <button onclick="copyEmailHtml()" class="px-4 py-1.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white inline-flex items-center gap-1.5 shadow-md border border-[#E5C687]/40 hover:brightness-110 transition-all" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
+                    <i data-lucide="code-2" class="w-3.5 h-3.5"></i>
+                    <span>Copy Email HTML</span>
+                </button>
+                <button onclick="downloadEmailHtml()" class="px-3.5 py-1.5 rounded-full text-xs font-heading font-semibold uppercase tracking-wider text-[#EBD7B0] hover:text-white bg-white/5 hover:bg-white/10 border border-[#C8A055]/35 transition-colors inline-flex items-center gap-1.5">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                    <span>Download .html</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-10">
+
+        <!-- Subject Lines & Send Metadata Panel -->
+        <section class="max-w-4xl mx-auto mb-8 rounded-2xl bg-[#0D1E15] border border-[#C8A055]/30 p-5 sm:p-6 shadow-xl">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <div>
+                    <span class="text-[10px] font-heading font-bold uppercase tracking-[0.28em] text-[#E6C783] block">Ready-to-Send Campaign Metadata</span>
+                    <h1 class="font-heading text-lg sm:text-xl font-bold text-white">Subject Lines &amp; Preview Text</h1>
+                </div>
+                <span class="text-[11px] text-white/55">Table-based • Inline CSS • Gmail / Apple Mail / Outlook Safe</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+                <button onclick="copyText('Cold outside. Chok-chok inside. ✨ Your December SUA Glow Edit', 'Subject Option 1 copied!')" class="text-left p-3.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-[#C8A055]/50 transition-all group">
+                    <span class="text-[9.5px] font-heading font-bold uppercase tracking-wider text-[#E6C783] block mb-1">Option 1 · Branded (Recommended)</span>
+                    <span class="text-xs text-white/90 block leading-snug">Cold outside. Chok-chok inside. ✨ Your December SUA Glow Edit</span>
+                </button>
+                <button onclick="copyText('Holiday Glow Exclusives: $249 K-Beauty Facial + $299 Gyeongrak Sculpting', 'Subject Option 2 copied!')" class="text-left p-3.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-[#C8A055]/50 transition-all group">
+                    <span class="text-[9.5px] font-heading font-bold uppercase tracking-wider text-[#E6C783] block mb-1">Option 2 · Price-Forward</span>
+                    <span class="text-xs text-white/90 block leading-snug">Holiday Glow Exclusives: $249 K-Beauty Facial + $299 Gyeongrak Sculpting</span>
+                </button>
+                <button onclick="copyText('Seoul Much Glow 🎄 Limited-Time December Offers at SUA Glow', 'Subject Option 3 copied!')" class="text-left p-3.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-[#C8A055]/50 transition-all group">
+                    <span class="text-[9.5px] font-heading font-bold uppercase tracking-wider text-[#E6C783] block mb-1">Option 3 · Festive</span>
+                    <span class="text-xs text-white/90 block leading-snug">Seoul Much Glow 🎄 Limited-Time December Offers at SUA Glow</span>
+                </button>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 rounded-xl bg-black/30 border border-white/10 text-xs">
+                <div>
+                    <span class="text-[10px] font-heading font-bold uppercase tracking-wider text-white/50 mr-2">Preview Text:</span>
+                    <span class="text-white/85">Korean Gyeongrak Sculpting ($299), 60-Min K-Beauty Signature Facial ($249), and Scalp &amp; Hair Rejuvenation — valid through Dec 31.</span>
+                </div>
+                <button onclick="copyText('Korean Gyeongrak Sculpting ($299), 60-Min K-Beauty Signature Facial ($249), and Scalp & Hair Rejuvenation — valid through Dec 31.', 'Preview text copied!')" class="shrink-0 px-3 py-1 rounded-full bg-white/10 hover:bg-white/15 text-[10px] font-heading font-bold uppercase tracking-wider text-[#EBD7B0]">
+                    Copy
+                </button>
+            </div>
+        </section>
+
+        <!-- Live Email Preview Stage -->
+        <div class="flex justify-center">
+            <div class="rounded-2xl border border-[#C8A055]/30 p-3 sm:p-5 bg-[#0A1610] shadow-2xl max-w-full overflow-x-auto">
+                <iframe id="email-preview-frame" title="December Promo Email Preview" style="width: 640px; height: 2280px; border: 0; border-radius: 12px; display: block; margin: 0 auto;"></iframe>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-full bg-[#0E2A1A] border border-[#C8A055] text-[#F3DCA7] text-xs font-heading font-bold uppercase tracking-wider shadow-2xl">
+        Copied!
+    </div>
+
+    <script>
+        let currentEmailHtml = '';
+
+        function buildEmailHtml(baseUrl) {
+            const bookingUrl = 'https://suaglow.myaestheticrecord.com/online-booking/';
+            const promoUrl = baseUrl + '/specials-december';
+
+            return `<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>The SUA Glow December Edit — Seoul Much Glow</title>
+<!--[if mso]>
+<style type="text/css">
+body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
+</style>
+<![endif]-->
+</head>
+<body style="margin:0; padding:0; background-color:#07140D; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing:antialiased;">
+
+<!-- Hidden Preheader Text -->
+<div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#07140D;">
+Korean Gyeongrak Sculpting ($299), 60-Min K-Beauty Signature Facial ($249), and Scalp &amp; Hair Rejuvenation — valid through Dec 31.
+</div>
+
+<!-- Outer Background Wrapper -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#07140D;">
+<tr>
+<td align="center" style="padding:24px 12px 40px 12px;">
+
+<!-- 600px Main Email Container -->
+<table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="width:100%; max-width:600px; background-color:#0E2619; border:1px solid #2A4736; border-radius:20px; overflow:hidden;">
+
+    <!-- TOP SNOW-CHAMPAGNE HEADER (High-Contrast Stage for Evergreen/Crimson Title) -->
+    <tr>
+        <td align="center" style="background-color:#FAF5EC; padding:28px 28px 22px 28px;">
+            <!-- SUA Glow Brand Wordmark -->
+            <a href="https://suaglow.com" target="_blank" style="text-decoration:none;">
+                <img src="${baseUrl}/assets/logo-main.webp" alt="SUA Glow Medical Aesthetics" width="140" style="display:block; margin:0 auto 18px auto; max-width:140px; height:auto; border:0;">
+            </a>
+
+            <!-- Eyebrow Pill -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto 14px auto;">
+                <tr>
+                    <td style="background-color:#FFFFFF; border:1px solid #C8A055; border-radius:999px; padding:5px 16px; font-size:10px; font-weight:700; letter-spacing:2.6px; text-transform:uppercase; color:#0E2A1A;">
+                        &#8226;&nbsp; THE SUA GLOW DECEMBER EDIT &nbsp;&#8226;
+                    </td>
+                </tr>
+            </table>
+
+            <!-- SEOUL MUCH GLOW Title Graphic -->
+            <img src="${baseUrl}/assets/seoul-much-glow-title.png" alt="SEOUL MUCH GLOW" width="380" style="display:block; margin:0 auto 12px auto; width:100%; max-width:380px; height:auto; border:0;">
+
+            <!-- Subheadline -->
+            <p style="margin:0 0 8px 0; font-size:13px; font-weight:800; letter-spacing:2.4px; text-transform:uppercase; color:#0E2A1A;">
+                COLD OUTSIDE. <span style="color:#9E1821;">CHOK-CHOK INSIDE.</span>
+            </p>
+            <p style="margin:0; font-size:12px; font-style:italic; color:#5B4A32;">
+                Chok-chok means soft, dewy, hydrated skin in Korean.
+            </p>
+        </td>
+    </tr>
+
+    <!-- HERO LIFESTYLE IMAGE -->
+    <tr>
+        <td align="center" style="background-color:#0E2619; padding:0;">
+            <a href="${promoUrl}" target="_blank" style="text-decoration:none;">
+                <img src="${baseUrl}/assets/december-seoul-much-glow-hero.jpg" alt="Seoul Much Glow Holiday Campaign" width="600" style="display:block; width:100%; max-width:600px; height:auto; border:0; border-top:2px solid #C8A055; border-bottom:2px solid #C8A055;">
+            </a>
+        </td>
+    </tr>
+
+    <!-- EDITORIAL INTRO COPY -->
+    <tr>
+        <td align="center" style="background-color:#0E2619; padding:28px 32px 24px 32px;">
+            <p style="margin:0 0 12px 0; font-size:15px; line-height:1.65; color:#F4ECE0; font-style:italic;">
+                Baby, it&rsquo;s cold outside&mdash;but your glow doesn&rsquo;t have to be! This December, we&rsquo;re bringing a little Seoul to your holiday season with Korean facial sculpting, our signature K-Beauty facial, and scalp &amp; hair rejuvenation.
+            </p>
+            <p style="margin:0 0 22px 0; font-size:14px; line-height:1.6; color:#E6C783; font-style:italic;">
+                Because dry winter skin? <strong>Aniyo</strong> (No!) Not on our holiday wish list!
+            </p>
+
+            <!-- Section Heading -->
+            <p style="margin:0 0 4px 0; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#E6C783;">
+                &#10022; &nbsp; HOLIDAY GLOW EXCLUSIVES &nbsp; &#10022;
+            </p>
+            <p style="margin:0; font-size:13px; color:#CFD8D3;">
+                Your season of K-Beauty love starts here.
+            </p>
+        </td>
+    </tr>
+
+    <!-- OFFER 1: KOREAN GYEONGRAK FACIAL MASSAGE ($299) -->
+    <tr>
+        <td style="background-color:#0E2619; padding:0 24px 20px 24px;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#FAF5EC; border:1px solid #C8A055; border-radius:16px; overflow:hidden;">
+                <tr>
+                    <td style="padding:0;">
+                        <img src="${baseUrl}/assets/december-promo-gyeongrak.jpg" alt="Korean Gyeongrak Facial Massage" width="550" style="display:block; width:100%; max-width:550px; height:auto; border:0;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:22px 24px 24px 24px;">
+                        <p style="margin:0 0 6px 0; font-size:10px; font-weight:700; letter-spacing:2.4px; text-transform:uppercase; color:#9E1821;">
+                            SCULPT &middot; DE-PUFF &middot; HYDRATE
+                        </p>
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td valign="top" style="padding-right:12px;">
+                                    <h2 style="margin:0 0 4px 0; font-size:20px; font-weight:800; line-height:1.25; color:#0E2A1A; text-transform:uppercase; letter-spacing:0.6px;">
+                                        Korean Gyeongrak Facial Massage
+                                    </h2>
+                                    <p style="margin:0 0 12px 0; font-size:12px; font-style:italic; color:#9E1821; font-weight:600;">
+                                        60-Minute Korean Facial Sculpting Experience
+                                    </p>
+                                </td>
+                                <td valign="top" align="right" style="white-space:nowrap;">
+                                    <span style="display:inline-block; background-color:#0E2A1A; color:#F3D99C; font-size:20px; font-weight:800; padding:6px 14px; border-radius:10px;">
+                                        $299
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <p style="margin:0 0 16px 0; font-size:13.5px; line-height:1.6; color:#353B37;">
+                            Less puff. More sculpt. Very K-Beauty. Performed by our licensed Korean estheticians using targeted pressure points, rhythmic sculpting movements, and a hydration-focused finish to refresh contours and ease facial tension with little to no downtime.
+                        </p>
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td style="background-color:#9E1821; border-radius:999px;">
+                                    <a href="${bookingUrl}" target="_blank" style="display:inline-block; padding:12px 24px; font-size:11px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:#FFFFFF; text-decoration:none;">
+                                        Book 60-Min Gyeongrak &rarr;
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- OFFER 2: K-BEAUTY SIGNATURE FACIAL ($249) -->
+    <tr>
+        <td style="background-color:#0E2619; padding:0 24px 20px 24px;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#FAF5EC; border:1px solid #C8A055; border-radius:16px; overflow:hidden;">
+                <tr>
+                    <td style="padding:0;">
+                        <img src="${baseUrl}/assets/november-promo-skin-barrier.webp" alt="K-Beauty Signature Facial" width="550" style="display:block; width:100%; max-width:550px; height:auto; border:0;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:22px 24px 24px 24px;">
+                        <p style="margin:0 0 6px 0; font-size:10px; font-weight:700; letter-spacing:2.4px; text-transform:uppercase; color:#9E1821;">
+                            CLEANSE &middot; RESTORE &middot; GLASS GLOW
+                        </p>
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td valign="top" style="padding-right:12px;">
+                                    <h2 style="margin:0 0 4px 0; font-size:20px; font-weight:800; line-height:1.25; color:#0E2A1A; text-transform:uppercase; letter-spacing:0.6px;">
+                                        K-Beauty Signature Facial
+                                    </h2>
+                                    <p style="margin:0 0 12px 0; font-size:12px; font-style:italic; color:#9E1821; font-weight:600;">
+                                        60-Minute One-Time Session &middot; No Membership Required
+                                    </p>
+                                </td>
+                                <td valign="top" align="right" style="white-space:nowrap;">
+                                    <span style="display:inline-block; background-color:#0E2A1A; color:#F3D99C; font-size:20px; font-weight:800; padding:6px 14px; border-radius:10px;">
+                                        $249
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <p style="margin:0 0 16px 0; font-size:13.5px; line-height:1.6; color:#353B37;">
+                            Holiday events on the calendar? Enjoy our signature 60-minute Korean aesthetic facial as a one-time holiday session&mdash;designed to deeply cleanse, hydrate, and restore a luminous <em>chok-chok</em> glass-skin glow. Ask your provider in-clinic about optional personalized enhancements during your visit.
+                        </p>
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td style="background-color:#9E1821; border-radius:999px;">
+                                    <a href="${bookingUrl}" target="_blank" style="display:inline-block; padding:12px 24px; font-size:11px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:#FFFFFF; text-decoration:none;">
+                                        Book K-Beauty Signature &rarr;
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- OFFER 3: KOREAN SCALP & HAIR REJUVENATION ($1,800) -->
+    <tr>
+        <td style="background-color:#0E2619; padding:0 24px 26px 24px;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#FAF5EC; border:1px solid #C8A055; border-radius:16px; overflow:hidden;">
+                <tr>
+                    <td style="padding:0;">
+                        <img src="${baseUrl}/assets/dep_scalp_woman_treatment.jpg" alt="Korean Scalp & Hair Rejuvenation" width="550" style="display:block; width:100%; max-width:550px; height:auto; border:0;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:22px 24px 24px 24px;">
+                        <p style="margin:0 0 6px 0; font-size:10px; font-weight:700; letter-spacing:2.4px; text-transform:uppercase; color:#9E1821;">
+                            NOURISH &middot; REVIVE &middot; REJUVENATE
+                        </p>
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td valign="top" style="padding-right:12px;">
+                                    <h2 style="margin:0 0 4px 0; font-size:20px; font-weight:800; line-height:1.25; color:#0E2A1A; text-transform:uppercase; letter-spacing:0.6px;">
+                                        Korean Scalp &amp; Hair Rejuvenation
+                                    </h2>
+                                    <p style="margin:0 0 12px 0; font-size:12px; font-style:italic; color:#9E1821; font-weight:600;">
+                                        3 Personalized Sessions &middot; 90 Min Each ($600 / Session)
+                                    </p>
+                                </td>
+                                <td valign="top" align="right" style="white-space:nowrap;">
+                                    <span style="display:inline-block; background-color:#0E2A1A; color:#F3D99C; font-size:20px; font-weight:800; padding:6px 14px; border-radius:10px;">
+                                        $1,800
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <p style="margin:0 0 16px 0; font-size:13.5px; line-height:1.6; color:#353B37;">
+                            Physician-guided women&rsquo;s hair &amp; scalp care combining our new <strong>AI Scalp Analyzer</strong>, gentle microcurrent stimulation, Korean <em>Gi</em> scalp massage, <strong>DEP Needle-Free Exosome Infusion (&times; 3 sessions)</strong>, and LED red light therapy.
+                        </p>
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td style="background-color:#9E1821; border-radius:999px;">
+                                    <a href="${bookingUrl}" target="_blank" style="display:inline-block; padding:12px 24px; font-size:11px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:#FFFFFF; text-decoration:none;">
+                                        Book Hair &amp; Scalp Consult &rarr;
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- FULL PROMO CTA & FOOTER -->
+    <tr>
+        <td align="center" style="background-color:#091910; padding:28px 28px 32px 28px; border-top:1px solid #2A4736;">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto 20px auto;">
+                <tr>
+                    <td style="background-color:#C8A055; border-radius:999px;">
+                        <a href="${promoUrl}" target="_blank" style="display:inline-block; padding:13px 30px; font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:#0E2A1A; text-decoration:none;">
+                            View Full December Specials Page
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+            <p style="margin:0 0 10px 0; font-size:13px; font-style:italic; color:#F0DEC0;">
+                Offers valid through December 31, 2026
+            </p>
+            <p style="margin:0 0 14px 0; font-size:10px; letter-spacing:2.2px; text-transform:uppercase; color:#9FB3A7;">
+                KOREAN-FOUNDED &bull; PHYSICIAN-GUIDED &bull; CARROLLTON, TX
+            </p>
+            <p style="margin:0 0 12px 0; font-size:11px; line-height:1.6; color:#8AA094;">
+                SUA Glow Medical Aesthetics &bull; 4116 State Highway 121, Ste 120-O, Carrollton, TX 75010<br>
+                <a href="tel:9726658737" style="color:#E6C783; text-decoration:none;">972-665-8737</a> &nbsp;|&nbsp;
+                <a href="https://suaglow.com" target="_blank" style="color:#E6C783; text-decoration:none;">suaglow.com</a>
+            </p>
+            <p style="margin:0 0 14px 0; font-size:10px; line-height:1.5; color:#647A6E;">
+                *Offers valid through December 31, 2026. Consultation and clinical eligibility required. Exosome and scalp care protocols use advanced needle-free DEP infusion technology. Cannot be combined with other promotions. Individual results may vary.
+            </p>
+            <p style="margin:0; font-size:10px; color:#647A6E;">
+                You received this email because you opted in to updates from SUA Glow Medical Aesthetics.<br>
+                <a href="{{UNSUBSCRIBE_URL}}" style="color:#9FB3A7; text-decoration:underline;">Unsubscribe</a>
+            </p>
+        </td>
+    </tr>
+
+</table>
+<!-- /600px Main Email Container -->
+
+</td>
+</tr>
+</table>
+</body>
+</html>`;
+        }
+
+        function rebuildEmail() {
+            const host = document.getElementById('asset-host-select').value;
+            currentEmailHtml = buildEmailHtml(host);
+            const iframe = document.getElementById('email-preview-frame');
+            iframe.srcdoc = currentEmailHtml;
+        }
+
+        function setPreviewWidth(mode) {
+            const iframe = document.getElementById('email-preview-frame');
+            const btnDesktop = document.getElementById('btn-desktop');
+            const btnMobile = document.getElementById('btn-mobile');
+            if (mode === 'mobile') {
+                iframe.style.width = '375px';
+                iframe.style.height = '2450px';
+                btnMobile.className = 'px-3 py-1 rounded-full text-[11px] font-heading font-bold uppercase tracking-wider bg-[#C8A055] text-[#0E2619] transition-colors inline-flex items-center gap-1';
+                btnDesktop.className = 'px-3 py-1 rounded-full text-[11px] font-heading font-bold uppercase tracking-wider text-white/65 hover:text-white transition-colors inline-flex items-center gap-1';
+            } else {
+                iframe.style.width = '640px';
+                iframe.style.height = '2280px';
+                btnDesktop.className = 'px-3 py-1 rounded-full text-[11px] font-heading font-bold uppercase tracking-wider bg-[#C8A055] text-[#0E2619] transition-colors inline-flex items-center gap-1';
+                btnMobile.className = 'px-3 py-1 rounded-full text-[11px] font-heading font-bold uppercase tracking-wider text-white/65 hover:text-white transition-colors inline-flex items-center gap-1';
+            }
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2200);
+        }
+
+        function copyText(str, msg) {
+            navigator.clipboard.writeText(str).then(() => showToast(msg));
+        }
+
+        function copyEmailHtml() {
+            navigator.clipboard.writeText(currentEmailHtml).then(() => showToast('Raw Email HTML Copied!'));
+        }
+
+        function downloadEmailHtml() {
+            const blob = new Blob([currentEmailHtml], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'SUA-Glow-December-Email.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast('Downloaded SUA-Glow-December-Email.html');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+            rebuildEmail();
+        });
+    </script>
+</body>
+
+</html>
