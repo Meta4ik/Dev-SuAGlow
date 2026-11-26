@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>December Instagram Carousel Studio (4:5) | SUA GLOW</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (compiled) -->
+    <link rel="stylesheet" href="dist/output.css?v=72">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons & html2canvas -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <style>
+        .font-heading { font-family: 'Montserrat', sans-serif; }
+        .font-body { font-family: 'Poppins', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+
+        /* Exact 4:5 Instagram Portrait Ratio (1080 x 1350 equivalent) */
+        .ig-slide-canvas {
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 4 / 5;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            border-radius: 0px !important;
+            background-color: #07140D;
+            user-select: none;
+        }
+
+        /* Subtle holiday champagne starlight sparkle overlay */
+        .holiday-sparkles {
+            background-image:
+                radial-gradient(1.5px 1.5px at 14% 20%, rgba(255, 245, 224, 0.55), transparent),
+                radial-gradient(2px 2px at 82% 16%, rgba(232, 198, 130, 0.45), transparent),
+                radial-gradient(1.5px 1.5px at 26% 74%, rgba(255, 255, 255, 0.4), transparent),
+                radial-gradient(2px 2px at 74% 68%, rgba(232, 198, 130, 0.4), transparent),
+                radial-gradient(1.5px 1.5px at 52% 12%, rgba(255, 255, 255, 0.45), transparent),
+                radial-gradient(2px 2px at 90% 54%, rgba(232, 198, 130, 0.35), transparent);
+            background-size: 320px 280px;
+        }
+
+        /* Screenshotting focus mode */
+        body.screenshot-mode header,
+        body.screenshot-mode .no-screenshot,
+        body.screenshot-mode #toast {
+            display: none !important;
+        }
+
+        /* Toast notification */
+        #toast {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        #toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-[#07110C] text-white min-h-screen antialiased font-body">
+
+    <!-- Sticky Studio Toolbar -->
+    <header class="border-b border-[#C8A055]/20 bg-[#0B1911]/95 backdrop-blur-md sticky top-0 z-50 px-4 sm:px-6 py-3.5">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <a href="staging.html" class="flex items-center gap-1.5 text-xs font-heading font-semibold uppercase tracking-wider text-white/60 hover:text-white transition-colors">
+                    <i data-lucide="arrow-left" class="w-4 h-4 text-[#E6C783]"></i>
+                    <span>Staging Hub</span>
+                </a>
+                <span class="text-white/20">•</span>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-xs font-heading font-bold uppercase tracking-widest text-[#E6C783]">
+                        December Social Studio (4:5 Carousel)
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a href="#caption-copy-box" class="px-3.5 py-1.5 rounded-full text-xs font-heading uppercase tracking-wider text-[#EBD7B0] hover:text-white bg-white/5 hover:bg-white/10 border border-[#C8A055]/30 transition-colors inline-flex items-center gap-1.5">
+                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                    <span class="hidden sm:inline">Caption Copy</span>
+                </a>
+                <a href="specials-december.html" target="_blank" class="px-3.5 py-1.5 rounded-full text-xs font-heading uppercase tracking-wider text-white/70 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors inline-flex items-center gap-1.5">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    <span class="hidden sm:inline">December Specials</span>
+                </a>
+                <button onclick="copySlideLink()" class="px-3.5 py-1.5 rounded-full text-xs font-heading font-semibold uppercase tracking-wider text-white transition-all inline-flex items-center gap-1.5 shadow-md border border-[#E5C687]/35 hover:brightness-110" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
+                    <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+                    <span>Share Page</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-12">
+
+        <!-- Intro Banner & Screenshot Advice -->
+        <div class="max-w-3xl mx-auto text-center mb-10 no-screenshot">
+            <span class="text-[11px] font-bold uppercase tracking-[0.35em] text-[#E6C783] block mb-2">
+                Instagram Feed Carousel • 4:5 Portrait
+            </span>
+            <h1 class="heading-wide text-2xl sm:text-4xl font-bold text-white uppercase tracking-wide mb-3">
+                December Seoul Much Glow
+            </h1>
+            <p class="text-xs sm:text-sm text-white/70 max-w-xl mx-auto leading-relaxed">
+                Designed specifically for Instagram carousels with minimal, high-impact holiday copy and aesthetic Korean photography. Click any slide to open full-screen screenshot mode, use Save PNG, or paste and copy your Instagram caption below.
+            </p>
+        </div>
+
+        <!-- Carousel Grid: 5 Consecutive Slides -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-start justify-items-center">
+
+            <!-- ================= SLIDE 1: COVER ================= -->
+            <div class="w-full max-w-[480px] flex flex-col items-center">
+                <div class="w-full flex items-center justify-between mb-3 px-1 no-screenshot">
+                    <span class="text-[11px] font-heading font-bold uppercase tracking-widest text-[#E6C783] flex items-center gap-1.5">
+                        <span class="w-5 h-5 rounded-full bg-[#C8A055]/20 border border-[#C8A055]/45 text-[#E6C783] flex items-center justify-center text-[10px]">1</span>
+                        Cover Slide
+                    </span>
+                    <div class="flex items-center gap-3">
+                        <button onclick="openFullscreen(1)" class="text-xs text-white/50 hover:text-[#E6C783] transition-colors inline-flex items-center gap-1">
+                            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                            <span>Expand</span>
+                        </button>
+                        <button onclick="downloadSlide('slide-1', 'SUA-Glow-Dec-Slide1-Cover.png')" class="text-xs text-white/50 hover:text-white transition-colors inline-flex items-center gap-1">
+                            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                            <span>Save PNG</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4:5 Slide Canvas (Upper Photo seamlessly blended into Luminous Snow-Champagne Panel) -->
+                <div id="slide-1" onclick="openFullscreen(1)" title="Click to expand for full-screen screenshot" class="ig-slide-canvas cursor-pointer hover:ring-2 hover:ring-[#C8A055]/60 transition-all border border-[#C8A055]/30 flex flex-col justify-between p-7 sm:p-8 relative overflow-hidden" style="background: #FAF6EE;">
+                    <!-- Photo in Upper Half (Extends to 60%, seamlessly buried under full-canvas fade starting at 32%) -->
+                    <div class="absolute inset-x-0 top-0 h-[60%] z-0 overflow-hidden">
+                        <img src="assets/december-seoul-much-glow-hero.jpg" alt="Seoul Much Glow Holiday" class="w-full h-full object-cover object-center brightness-105 contrast-105">
+                        <!-- Soft top vignette for logo legibility -->
+                        <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/65 to-transparent"></div>
+                    </div>
+
+                    <!-- Full-Canvas Seamless Fade Overlay (Reaches 100% solid #FAF6EE at 56%, completely eliminating any edge seam) -->
+                    <div class="absolute inset-0 pointer-events-none z-[1]" style="background: linear-gradient(180deg, rgba(250, 246, 238, 0) 0%, rgba(250, 246, 238, 0) 30%, rgba(250, 246, 238, 0.35) 42%, rgba(250, 246, 238, 0.85) 51%, #FAF6EE 56%, #FAF6EE 100%);"></div>
+
+                    <!-- Asymmetric Organic Holiday Gold Snowdrops & Starlight (Non-Symmetrical, Light) -->
+                    <svg class="absolute inset-x-0 bottom-0 w-full h-[50%] pointer-events-none z-[1]" viewBox="0 0 480 300" fill="none" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+                        <!-- Scattered champagne-gold 4-point holiday stars (organic, asymmetrical placement) -->
+                        <g fill="#C8A055">
+                            <path d="M58 104 L60 111 L67 113 L60 115 L58 122 L56 115 L49 113 L56 111 Z" opacity="0.42"/>
+                            <path d="M418 76 L419.5 81 L424.5 82.5 L419.5 84 L418 89 L416.5 84 L411.5 82.5 L416.5 81 Z" opacity="0.35"/>
+                            <path d="M84 232 L85.3 236.5 L89.8 237.8 L85.3 239.1 L84 243.6 L82.7 239.1 L78.2 237.8 L82.7 236.5 Z" opacity="0.32"/>
+                            <path d="M438 188 L439.2 192 L443.2 193.2 L439.2 194.4 L438 198.4 L436.8 194.4 L432.8 193.2 L436.8 192 Z" opacity="0.28"/>
+                        </g>
+                        <!-- Soft scattered snowdrops (warm gold & frosted pine) -->
+                        <g fill="#C8A055" opacity="0.32">
+                            <circle cx="38" cy="146" r="2.2"/>
+                            <circle cx="76" cy="168" r="1.4"/>
+                            <circle cx="44" cy="210" r="1.8"/>
+                            <circle cx="114" cy="250" r="1.5"/>
+                            <circle cx="388" cy="118" r="1.7"/>
+                            <circle cx="446" cy="134" r="2.1"/>
+                            <circle cx="364" cy="238" r="1.3"/>
+                        </g>
+                    </svg>
+
+                    <!-- Top Bar: Official SUA GLOW Logo + Swipe Pill -->
+                    <div class="relative z-10 flex items-center justify-between">
+                        <img src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics" class="h-6 sm:h-7 w-auto object-contain brightness-0 invert drop-shadow-md">
+                        <span class="px-2.5 py-1 rounded-full text-[9px] font-heading font-bold tracking-wider uppercase bg-[#0E2A1A]/75 backdrop-blur-md text-[#EBD7B0] border border-[#C8A055]/45 shadow-sm">
+                            SWIPE ➔
+                        </span>
+                    </div>
+
+                    <!-- Lower Branding Zone: Bespoke SEOUL MUCH GLOW Title Emblem -->
+                    <div class="relative z-10 text-center mt-auto pt-36 sm:pt-40 pb-3">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/85 border border-[#C8A055]/45 shadow-xs mb-2.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#9E1821]"></span>
+                            <span class="text-[9px] font-heading font-bold uppercase tracking-[0.28em] text-[#0E2A1A]">
+                                The December Edit
+                            </span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#9E1821]"></span>
+                        </div>
+                        <img src="assets/seoul-much-glow-title.png" alt="Seoul Much Glow" class="h-24 sm:h-28 w-auto mx-auto object-contain drop-shadow-[0_6px_16px_rgba(14,42,26,0.12)] mb-2.5">
+                        <p class="font-heading text-[11px] sm:text-xs font-bold tracking-[0.22em] uppercase text-[#0E2A1A] leading-relaxed">
+                            Cold Outside.<br>
+                            <span class="text-[#9E1821]">Chok-Chok Inside.</span>
+                        </p>
+                    </div>
+
+                    <!-- Bottom Bar -->
+                    <div class="relative z-10 pt-2.5 border-t border-[#D8C7AB] flex items-center justify-between text-[10px] text-[#5B544A]">
+                        <span class="tracking-widest uppercase font-heading font-bold text-[#0E2A1A]">Limited Time • Dallas HQ</span>
+                        <span class="tracking-wider font-semibold text-[#9E1821]">1 / 5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= SLIDE 2: GYEONGRAK FACIAL MASSAGE ================= -->
+            <div class="w-full max-w-[480px] flex flex-col items-center">
+                <div class="w-full flex items-center justify-between mb-3 px-1 no-screenshot">
+                    <span class="text-[11px] font-heading font-bold uppercase tracking-widest text-[#E6C783] flex items-center gap-1.5">
+                        <span class="w-5 h-5 rounded-full bg-[#C8A055]/20 border border-[#C8A055]/45 text-[#E6C783] flex items-center justify-center text-[10px]">2</span>
+                        Gyeongrak Facial
+                    </span>
+                    <div class="flex items-center gap-3">
+                        <button onclick="openFullscreen(2)" class="text-xs text-white/50 hover:text-[#E6C783] transition-colors inline-flex items-center gap-1">
+                            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                            <span>Expand</span>
+                        </button>
+                        <button onclick="downloadSlide('slide-2', 'SUA-Glow-Dec-Slide2-Gyeongrak.png')" class="text-xs text-white/50 hover:text-white transition-colors inline-flex items-center gap-1">
+                            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                            <span>Save PNG</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4:5 Slide Canvas (Deep Evergreen Holiday Night with Snowdrops — matching Slide 5) -->
+                <div id="slide-2" onclick="openFullscreen(2)" title="Click to expand for full-screen screenshot" class="ig-slide-canvas cursor-pointer hover:ring-2 hover:ring-[#C8A055]/60 transition-all border border-[#C8A055]/35 flex flex-col justify-between p-6 sm:p-7 relative text-white overflow-hidden" style="background: linear-gradient(180deg, #112E1E 0%, #0B1F14 55%, #07140D 100%);">
+                    <!-- Snowdrops & Holiday Starlight Overlay -->
+                    <div class="holiday-sparkles absolute inset-0 opacity-65 pointer-events-none z-0"></div>
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_85%_15%,rgba(200,160,85,0.18)_0%,transparent_60%)] pointer-events-none z-0"></div>
+
+                    <!-- Top Minimal Header -->
+                    <div class="relative z-10 flex items-center justify-between border-b border-white/15 pb-2.5">
+                        <img src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics" class="h-5 sm:h-6 w-auto object-contain brightness-0 invert">
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-[9px] font-bold tracking-widest uppercase text-[#E6C783]">SCULPT · DE-PUFF · HYDRATE</span>
+                            <span class="w-5 h-5 rounded-full bg-[#C8A055]/20 text-[#F3D99C] border border-[#C8A055]/50 flex items-center justify-center font-heading font-bold text-[10px]">1</span>
+                        </div>
+                    </div>
+
+                    <!-- Centered Photo Frame & Content -->
+                    <div class="relative z-10 my-auto py-2 flex flex-col justify-between flex-1">
+                        <!-- Photo Frame with Price Badge (Anchored on RIGHT because provider & client face are left/center) -->
+                        <div class="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-[#C8A055]/40 shadow-[0_12px_28px_rgba(0,0,0,0.45)] bg-black/40 mb-3">
+                            <img src="assets/december-promo-gyeongrak.jpg" alt="Korean Gyeongrak Facial Massage" class="w-full h-full object-cover object-center">
+                            <!-- Price Callout Badge on the Right -->
+                            <div class="absolute bottom-2.5 right-2.5 px-3 py-1.5 rounded-lg text-white shadow-md text-right border border-[#E5C687]/40" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
+                                <span class="font-heading font-extrabold text-sm sm:text-base leading-none block">$299</span>
+                                <span class="text-[8.5px] tracking-wider uppercase font-semibold text-[#F6E6C6] block mt-0.5">60-Min Session</span>
+                            </div>
+                        </div>
+
+                        <!-- Minimal Typographic Header -->
+                        <div class="text-left mb-2">
+                            <h2 class="heading-wide text-[15px] sm:text-[17px] font-extrabold text-white tracking-wide leading-tight uppercase mb-0.5">
+                                Korean Gyeongrak Facial Massage
+                            </h2>
+                            <p class="font-serif italic text-xs text-[#EBD7B0]">
+                                Less puff. More sculpt. Very K-Beauty.
+                            </p>
+                        </div>
+
+                        <!-- 2-Column UX Checklist with SUA GLOW S as Checkmark -->
+                        <div class="p-2.5 sm:p-3 rounded-xl bg-white/[0.06] border border-[#C8A055]/30 shadow-inner backdrop-blur-xs">
+                            <div class="grid grid-cols-2 gap-x-3 items-start">
+                                <!-- Col 1: 3 Items -->
+                                <div class="space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">FACIAL DE-PUFFING</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">ENHANCED CONTOURS</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">TENSION RELIEF</span>
+                                    </div>
+                                </div>
+                                <!-- Col 2: 2 Items -->
+                                <div class="space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">SKIN HYDRATION</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">RADIANT-LOOKING SKIN</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Nav Line -->
+                    <div class="relative z-10 pt-2.5 border-t border-white/15 flex items-center justify-between text-[10px] text-white/65">
+                        <span class="font-heading uppercase tracking-wider font-bold text-[#E6C783]">Link in bio to book</span>
+                        <span class="tracking-wider font-semibold text-[#EBD7B0]">2 / 5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= SLIDE 3: K-BEAUTY SIGNATURE FACIAL ================= -->
+            <div class="w-full max-w-[480px] flex flex-col items-center">
+                <div class="w-full flex items-center justify-between mb-3 px-1 no-screenshot">
+                    <span class="text-[11px] font-heading font-bold uppercase tracking-widest text-[#E6C783] flex items-center gap-1.5">
+                        <span class="w-5 h-5 rounded-full bg-[#C8A055]/20 border border-[#C8A055]/45 text-[#E6C783] flex items-center justify-center text-[10px]">3</span>
+                        Signature Facial
+                    </span>
+                    <div class="flex items-center gap-3">
+                        <button onclick="openFullscreen(3)" class="text-xs text-white/50 hover:text-[#E6C783] transition-colors inline-flex items-center gap-1">
+                            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                            <span>Expand</span>
+                        </button>
+                        <button onclick="downloadSlide('slide-3', 'SUA-Glow-Dec-Slide3-SignatureFacial.png')" class="text-xs text-white/50 hover:text-white transition-colors inline-flex items-center gap-1">
+                            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                            <span>Save PNG</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4:5 Slide Canvas (Deep Evergreen Holiday Night with Snowdrops — matching Slide 5) -->
+                <div id="slide-3" onclick="openFullscreen(3)" title="Click to expand for full-screen screenshot" class="ig-slide-canvas cursor-pointer hover:ring-2 hover:ring-[#C8A055]/60 transition-all border border-[#C8A055]/35 flex flex-col justify-between p-6 sm:p-7 relative text-white overflow-hidden" style="background: linear-gradient(180deg, #112E1E 0%, #0B1F14 55%, #07140D 100%);">
+                    <!-- Snowdrops & Holiday Starlight Overlay -->
+                    <div class="holiday-sparkles absolute inset-0 opacity-65 pointer-events-none z-0"></div>
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_85%_15%,rgba(200,160,85,0.18)_0%,transparent_60%)] pointer-events-none z-0"></div>
+
+                    <!-- Top Minimal Header -->
+                    <div class="relative z-10 flex items-center justify-between border-b border-white/15 pb-2.5">
+                        <img src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics" class="h-5 sm:h-6 w-auto object-contain brightness-0 invert">
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-[8.5px] sm:text-[9px] font-bold tracking-widest uppercase text-[#E6C783]">CLEANSE · RESTORE · GLASS GLOW</span>
+                            <span class="w-5 h-5 rounded-full bg-[#C8A055]/20 text-[#F3D99C] border border-[#C8A055]/50 flex items-center justify-center font-heading font-bold text-[10px]">2</span>
+                        </div>
+                    </div>
+
+                    <!-- Centered Photo Frame & Content -->
+                    <div class="relative z-10 my-auto py-2 flex flex-col justify-between flex-1">
+                        <!-- Photo Frame with Price Badge (Anchored on LEFT because model is on right) -->
+                        <div class="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-[#C8A055]/40 shadow-[0_12px_28px_rgba(0,0,0,0.45)] bg-black/40 mb-3">
+                            <img src="assets/november-promo-skin-barrier.webp" alt="K-Beauty Signature Facial" class="w-full h-full object-cover object-center">
+                            <!-- Price Callout Badge on the Left -->
+                            <div class="absolute bottom-2.5 left-2.5 px-3 py-1.5 rounded-lg text-white shadow-md text-left border border-[#E5C687]/40" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
+                                <span class="font-heading font-extrabold text-sm sm:text-base leading-none block">$249</span>
+                                <span class="text-[8.5px] tracking-wider uppercase font-semibold text-[#F6E6C6] block mt-0.5">60-Min • One-Time</span>
+                            </div>
+                        </div>
+
+                        <!-- Minimal Typographic Header -->
+                        <div class="text-left mb-2">
+                            <h2 class="heading-wide text-base sm:text-lg font-extrabold text-white tracking-wide leading-tight uppercase mb-0.5">
+                                K-Beauty Signature Facial
+                            </h2>
+                            <p class="font-serif italic text-xs text-[#EBD7B0]">
+                                60-Minute One-Time Session · No Membership Required
+                            </p>
+                        </div>
+
+                        <!-- 2-Column UX Checklist with SUA GLOW S as Checkmark -->
+                        <div class="p-2.5 sm:p-3 rounded-xl bg-white/[0.06] border border-[#C8A055]/30 shadow-inner backdrop-blur-xs">
+                            <div class="grid grid-cols-2 gap-x-3 items-start">
+                                <!-- Col 1: 3 Items -->
+                                <div class="space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">GLASS SKIN GLOW</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">DEEP HYDRATION</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">SKIN BARRIER SUPPORT</span>
+                                    </div>
+                                </div>
+                                <!-- Col 2: 2 Items -->
+                                <div class="space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">60-MINUTE RITUAL</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">NO MEMBERSHIP NEEDED</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Nav Line -->
+                    <div class="relative z-10 pt-2.5 border-t border-white/15 flex items-center justify-between text-[10px] text-white/65">
+                        <span class="font-heading uppercase tracking-wider font-bold text-[#E6C783]">Holiday Glow Refresh</span>
+                        <span class="tracking-wider font-semibold text-[#EBD7B0]">3 / 5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= SLIDE 4: KOREAN SCALP & HAIR REJUVENATION ================= -->
+            <div class="w-full max-w-[480px] flex flex-col items-center">
+                <div class="w-full flex items-center justify-between mb-3 px-1 no-screenshot">
+                    <span class="text-[11px] font-heading font-bold uppercase tracking-widest text-[#E6C783] flex items-center gap-1.5">
+                        <span class="w-5 h-5 rounded-full bg-[#C8A055]/20 border border-[#C8A055]/45 text-[#E6C783] flex items-center justify-center text-[10px]">4</span>
+                        Scalp &amp; Hair Rejuvenation
+                    </span>
+                    <div class="flex items-center gap-3">
+                        <button onclick="openFullscreen(4)" class="text-xs text-white/50 hover:text-[#E6C783] transition-colors inline-flex items-center gap-1">
+                            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                            <span>Expand</span>
+                        </button>
+                        <button onclick="downloadSlide('slide-4', 'SUA-Glow-Dec-Slide4-ScalpHair.png')" class="text-xs text-white/50 hover:text-white transition-colors inline-flex items-center gap-1">
+                            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                            <span>Save PNG</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4:5 Slide Canvas (Deep Evergreen Holiday Night with Snowdrops — matching Slide 5) -->
+                <div id="slide-4" onclick="openFullscreen(4)" title="Click to expand for full-screen screenshot" class="ig-slide-canvas cursor-pointer hover:ring-2 hover:ring-[#C8A055]/60 transition-all border border-[#C8A055]/35 flex flex-col justify-between p-6 sm:p-7 relative text-white overflow-hidden" style="background: linear-gradient(180deg, #112E1E 0%, #0B1F14 55%, #07140D 100%);">
+                    <!-- Snowdrops & Holiday Starlight Overlay -->
+                    <div class="holiday-sparkles absolute inset-0 opacity-65 pointer-events-none z-0"></div>
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_85%_15%,rgba(200,160,85,0.18)_0%,transparent_60%)] pointer-events-none z-0"></div>
+
+                    <!-- Top Minimal Header -->
+                    <div class="relative z-10 flex items-center justify-between border-b border-white/15 pb-2.5">
+                        <img src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics" class="h-5 sm:h-6 w-auto object-contain brightness-0 invert">
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-[8.5px] sm:text-[9px] font-bold tracking-wider uppercase text-[#E6C783]">NOURISH · REVIVE · REJUVENATE</span>
+                            <span class="w-5 h-5 rounded-full bg-[#C8A055]/20 text-[#F3D99C] border border-[#C8A055]/50 flex items-center justify-center font-heading font-bold text-[10px]">3</span>
+                        </div>
+                    </div>
+
+                    <!-- Centered Photo Frame & Content -->
+                    <div class="relative z-10 my-auto py-2 flex flex-col justify-between flex-1">
+                        <!-- Photo Frame with Price Badge (Anchored on RIGHT away from client's face) -->
+                        <div class="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-[#C8A055]/40 shadow-[0_12px_28px_rgba(0,0,0,0.45)] bg-black/40 mb-3">
+                            <img src="assets/dep_scalp_woman_treatment.jpg" alt="Korean Scalp & Hair Rejuvenation" class="w-full h-full object-cover object-center">
+                            <!-- Price Callout Badge on the Right -->
+                            <div class="absolute bottom-2.5 right-2.5 px-3 py-1.5 rounded-lg text-white shadow-md text-right border border-[#E5C687]/40" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
+                                <span class="font-heading font-extrabold text-sm sm:text-base leading-none block">$1,800</span>
+                                <span class="text-[8.5px] tracking-wider uppercase font-semibold text-[#F6E6C6] block mt-0.5">3 Sessions ($600/ea)</span>
+                            </div>
+                        </div>
+
+                        <!-- Minimal Typographic Header -->
+                        <div class="text-left mb-2">
+                            <h2 class="heading-wide text-[14px] sm:text-[15.5px] font-extrabold text-white tracking-wide leading-tight uppercase mb-0.5">
+                                Korean Scalp &amp; Hair Rejuvenation
+                            </h2>
+                            <p class="font-serif italic text-xs text-[#EBD7B0]">
+                                3 × 90-Min · AI Scalp Analyzer + DEP Exosomes
+                            </p>
+                        </div>
+
+                        <!-- 2-Column UX Checklist with SUA GLOW S as Checkmark -->
+                        <div class="p-2.5 sm:p-3 rounded-xl bg-white/[0.06] border border-[#C8A055]/30 shadow-inner backdrop-blur-xs">
+                            <div class="grid grid-cols-2 gap-x-3 items-start">
+                                <!-- Col 1: 3 Items -->
+                                <div class="space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">AI SCALP ANALYZER</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">DEP EXOSOME INFUSION</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">SCALP STIMULATION</span>
+                                    </div>
+                                </div>
+                                <!-- Col 2: 2 Items -->
+                                <div class="space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">LED RED LIGHT THERAPY</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/suaglow-s-logo-transparent.png" alt="•" class="w-3.5 h-3.5 object-contain shrink-0">
+                                        <span class="text-[9px] sm:text-[9.5px] font-heading font-semibold uppercase tracking-wider text-white/90 leading-tight">HEALTHIER-LOOKING HAIR</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Nav Line -->
+                    <div class="relative z-10 pt-2.5 border-t border-white/15 flex items-center justify-between text-[10px] text-white/65">
+                        <span class="font-heading uppercase tracking-wider font-bold text-[#E6C783]">Physician-Guided Care</span>
+                        <span class="tracking-wider font-semibold text-[#EBD7B0]">4 / 5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= SLIDE 5: CLOSING CTA ================= -->
+            <div class="w-full max-w-[480px] flex flex-col items-center">
+                <div class="w-full flex items-center justify-between mb-3 px-1 no-screenshot">
+                    <span class="text-[11px] font-heading font-bold uppercase tracking-widest text-[#E6C783] flex items-center gap-1.5">
+                        <span class="w-5 h-5 rounded-full bg-[#C8A055]/20 border border-[#C8A055]/45 text-[#E6C783] flex items-center justify-center text-[10px]">5</span>
+                        Closing Slide
+                    </span>
+                    <div class="flex items-center gap-3">
+                        <button onclick="openFullscreen(5)" class="text-xs text-white/50 hover:text-[#E6C783] transition-colors inline-flex items-center gap-1">
+                            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                            <span>Expand</span>
+                        </button>
+                        <button onclick="downloadSlide('slide-5', 'SUA-Glow-Dec-Slide5-Closing.png')" class="text-xs text-white/50 hover:text-white transition-colors inline-flex items-center gap-1">
+                            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                            <span>Save PNG</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4:5 Slide Canvas (Deep Evergreen Holiday Night Closing Slide) -->
+                <div id="slide-5" onclick="openFullscreen(5)" title="Click to expand for full-screen screenshot" class="ig-slide-canvas cursor-pointer hover:ring-2 hover:ring-[#C8A055]/60 transition-all border border-[#C8A055]/35 flex flex-col justify-between p-7 sm:p-9 relative text-white text-center overflow-hidden" style="background: linear-gradient(180deg, #112E1E 0%, #0B1F14 55%, #07140D 100%);">
+                    <!-- Subtle Twinkling Holiday Sparkles & Warm Champagne Spotlight -->
+                    <div class="holiday-sparkles absolute inset-0 opacity-60 pointer-events-none"></div>
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_38%,rgba(200,160,85,0.2)_0%,transparent_70%)] pointer-events-none"></div>
+
+                    <!-- Top Minimal Header -->
+                    <div class="relative z-10 flex items-center justify-center">
+                        <img src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics" class="h-6 sm:h-7 w-auto object-contain brightness-0 invert mx-auto drop-shadow">
+                    </div>
+
+                    <!-- Center Body -->
+                    <div class="relative z-10 my-auto py-4">
+                        <!-- Gold Holly Divider -->
+                        <div class="flex items-center justify-center gap-3 w-full max-w-[200px] mx-auto mb-3.5">
+                            <span class="block flex-1" style="height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(200, 160, 85, 0.6) 50%, #F0D28A 100%);"></span>
+                            <img src="assets/gold-holly-divider.svg" alt="" aria-hidden="true" class="w-5 h-5 shrink-0 object-contain">
+                            <span class="block flex-1" style="height: 1px; background: linear-gradient(270deg, transparent 0%, rgba(200, 160, 85, 0.6) 50%, #F0D28A 100%);"></span>
+                        </div>
+
+                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#E6C783] block mb-2.5">
+                            Reserve Your Holiday Glow
+                        </span>
+                        <h2 class="heading-wide text-2xl sm:text-3xl font-extrabold text-white tracking-wide uppercase leading-snug mb-2.5">
+                            Cold Outside.<br>
+                            <span class="text-[#EBD7B0]">Chok-Chok Inside.</span>
+                        </h2>
+                        <p class="font-serif italic text-xs sm:text-sm text-white/80 max-w-xs mx-auto mb-5">
+                            "Chok-chok means soft, dewy, hydrated skin in Korean."
+                        </p>
+
+                        <!-- Highlights Summary Box -->
+                        <div class="bg-white/5 border border-[#C8A055]/30 rounded-2xl p-4 max-w-xs mx-auto space-y-2 mb-5 text-left text-xs text-white/90">
+                            <div class="flex items-center justify-between gap-2">
+                                <span>Korean Gyeongrak Facial</span>
+                                <span class="font-bold text-[#F3D99C] shrink-0">$299</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-2">
+                                <span>K-Beauty Signature Facial</span>
+                                <span class="font-bold text-[#F3D99C] shrink-0">$249</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-2">
+                                <span>Scalp &amp; Hair (3 Sessions)</span>
+                                <span class="font-bold text-[#F3D99C] shrink-0">$1,800</span>
+                            </div>
+                        </div>
+
+                        <!-- Pill CTA Button -->
+                        <div class="inline-flex items-center justify-center px-8 py-3.5 rounded-full text-white text-xs font-heading font-bold uppercase tracking-wider shadow-xl border border-[#E5C687]/40" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
+                            Link In Bio To Book
+                        </div>
+                    </div>
+
+                    <!-- Bottom Clinic Location -->
+                    <div class="relative z-10 pt-3.5 border-t border-white/15 text-[10.5px] text-white/65 flex items-center justify-between">
+                        <span>Carrollton, TX • Dallas HQ</span>
+                        <span class="tracking-wider font-medium text-[#EBD7B0]">5 / 5</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= INSTAGRAM CAPTION / COPY TEXT BOX ================= -->
+        <section id="caption-copy-box" class="mt-14 max-w-3xl mx-auto p-6 sm:p-8 rounded-2xl bg-[#0D1E15] border border-[#C8A055]/35 shadow-2xl no-screenshot">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                <div>
+                    <span class="text-[10px] font-heading font-bold uppercase tracking-[0.28em] text-[#E6C783] block mb-1">
+                        Social Post Copy Workspace
+                    </span>
+                    <h2 class="font-heading font-bold text-lg sm:text-xl uppercase tracking-wide text-white flex items-center gap-2">
+                        <i data-lucide="file-text" class="w-5 h-5 text-[#E6C783]"></i>
+                        <span>December Promo Caption Box</span>
+                    </h2>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span id="char-count" class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-white/65">
+                        0 / 2,200 chars
+                    </span>
+                </div>
+            </div>
+
+            <p class="text-xs text-white/65 leading-relaxed mb-4">
+                Paste your finalized Instagram caption below or edit the pre-filled December promo copy. Changes auto-save in your browser, and you can copy the full post text in one click.
+            </p>
+
+            <label for="promo-caption-textarea" class="sr-only">December Promo Instagram Caption Copy</label>
+            <textarea
+                id="promo-caption-textarea"
+                rows="12"
+                placeholder="Paste your December promo Instagram copy here..."
+                class="w-full rounded-xl bg-[#07120C] border border-[#C8A055]/35 focus:border-[#E6C783] focus:outline-none focus:ring-2 focus:ring-[#C8A055]/25 p-4 text-sm text-white/95 font-body leading-relaxed resize-y placeholder:text-white/30"
+            ></textarea>
+
+            <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                <div class="flex flex-wrap items-center gap-2">
+                    <button onclick="copyCaption()" class="px-5 py-2.5 rounded-full text-white text-xs font-heading font-bold uppercase tracking-wider shadow-md hover:brightness-110 transition-all inline-flex items-center gap-2 border border-[#E5C687]/35" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
+                        <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                        <span>Copy Caption</span>
+                    </button>
+                    <button onclick="pasteFromClipboard()" class="px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-heading font-semibold uppercase tracking-wider border border-white/15 transition-all inline-flex items-center gap-1.5">
+                        <i data-lucide="clipboard-paste" class="w-3.5 h-3.5 text-[#E6C783]"></i>
+                        <span>Paste Copy</span>
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <button onclick="clearCaption()" class="px-3.5 py-2 rounded-full text-xs font-heading uppercase tracking-wider text-white/55 hover:text-white hover:bg-white/5 transition-colors inline-flex items-center gap-1.5">
+                        <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                        <span>Clear</span>
+                    </button>
+                    <button onclick="resetDefaultCaption()" class="px-3.5 py-2 rounded-full text-xs font-heading uppercase tracking-wider text-[#E6C783]/80 hover:text-[#E6C783] hover:bg-white/5 transition-colors inline-flex items-center gap-1.5">
+                        <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+                        <span>Load Draft</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshot Instructions Banner -->
+        <div class="mt-10 max-w-2xl mx-auto p-6 rounded-2xl bg-[#0D1A13] border border-white/10 text-center no-screenshot">
+            <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#C8A055]/20 text-[#E6C783] mb-3">
+                <i data-lucide="camera" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-1.5">
+                Quick Screenshot &amp; Export Tip
+            </h3>
+            <p class="text-xs text-white/60 leading-relaxed mb-4">
+                Each card above is calibrated to an exact 4:5 Instagram ratio with 0px corner radius on the canvas. Click any slide for full-screen screenshot mode, toggle clean mode below, or use <strong>Save PNG</strong> above each slide for high-resolution exports.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <button onclick="toggleScreenshotMode()" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-heading font-semibold uppercase tracking-wider border border-white/15 transition-all">
+                    Toggle Clean Screenshot Mode
+                </button>
+                <a href="specials-december.html" class="px-5 py-2.5 rounded-full text-white text-xs font-heading font-semibold uppercase tracking-wider transition-all border border-[#E5C687]/35 hover:brightness-110" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
+                    View December Landing Page
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Fullscreen Click-to-Screenshot Lightbox Stage -->
+    <div id="fullscreen-modal" class="fixed inset-0 z-[100] hidden bg-[#050C08]/95 backdrop-blur-lg flex flex-col items-center justify-between p-4 sm:p-6">
+        <!-- Top Control Bar -->
+        <div id="lightbox-topbar" class="w-full max-w-4xl flex flex-wrap items-center justify-between gap-3 z-30 transition-opacity duration-200">
+            <div class="flex items-center gap-2.5">
+                <span class="w-6 h-6 rounded-full bg-[#C8A055]/20 border border-[#C8A055]/50 text-[#E6C783] font-heading font-bold text-xs flex items-center justify-center" id="lightbox-slide-num">1</span>
+                <span class="text-xs font-heading font-bold uppercase tracking-wider text-white" id="lightbox-slide-name">Cover Slide</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <!-- Slide Switcher Pills -->
+                <div class="hidden sm:flex items-center gap-1 bg-white/5 border border-white/10 rounded-full p-1">
+                    <button onclick="openFullscreen(1)" id="pill-slide-1" class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase">1</button>
+                    <button onclick="openFullscreen(2)" id="pill-slide-2" class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase">2</button>
+                    <button onclick="openFullscreen(3)" id="pill-slide-3" class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase">3</button>
+                    <button onclick="openFullscreen(4)" id="pill-slide-4" class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase">4</button>
+                    <button onclick="openFullscreen(5)" id="pill-slide-5" class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase">5</button>
+                </div>
+
+                <!-- Clean Mode Toggle -->
+                <button onclick="toggleLightboxClean()" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-[11px] font-semibold uppercase tracking-wider border border-white/15 transition-all inline-flex items-center gap-1.5" title="Hide UI for screenshot [H]">
+                    <i data-lucide="eye" class="w-3.5 h-3.5 text-[#E6C783]"></i>
+                    <span class="hidden md:inline">Hide UI [H]</span>
+                </button>
+
+                <!-- Close Button -->
+                <button onclick="closeFullscreen()" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-red-500/20 hover:border-red-500/40 hover:text-red-300 text-white text-[11px] font-semibold uppercase tracking-wider border border-white/15 transition-all inline-flex items-center gap-1.5" title="Exit Fullscreen [ESC]">
+                    <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                    <span>Exit [ESC]</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Center Stage -->
+        <div onclick="handleStageClick(event)" class="relative w-full flex-1 flex items-center justify-center my-auto overflow-hidden">
+            <button onclick="prevSlide(event)" class="lightbox-ui-nav absolute left-2 sm:left-6 lg:left-12 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-white flex items-center justify-center transition-all z-30 shadow-xl hover:scale-110" title="Previous Slide [Left Arrow]">
+                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+
+            <div id="lightbox-viewport" class="relative flex items-center justify-center pointer-events-auto">
+                <div id="lightbox-slide-host" class="relative shadow-2xl transition-transform duration-150"></div>
+            </div>
+
+            <button onclick="nextSlide(event)" class="lightbox-ui-nav absolute right-2 sm:right-6 lg:right-12 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-white flex items-center justify-center transition-all z-30 shadow-xl hover:scale-110" title="Next Slide [Right Arrow]">
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <!-- Bottom Guidance Bar -->
+        <div id="lightbox-bottombar" class="w-full max-w-xl text-center text-[11px] text-white/50 font-body z-30 transition-opacity duration-200">
+            <span class="hidden sm:inline">Use <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white text-[10px] font-mono">←</kbd> <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white text-[10px] font-mono">→</kbd> or <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white text-[10px] font-mono">1-5</kbd> to change slides • <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white text-[10px] font-mono">ESC</kbd> to exit • <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white text-[10px] font-mono">H</kbd> to hide controls</span>
+            <span class="sm:hidden">Tap arrows to flip slides • Tap background to toggle controls</span>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-[#0F2418] text-white px-5 py-3 rounded-full border border-[#C8A055]/55 shadow-2xl flex items-center gap-3 text-xs font-medium">
+        <i data-lucide="check-circle" class="w-4 h-4 text-[#E6C783]"></i>
+        <span id="toast-msg">Copied to clipboard!</span>
+    </div>
+
+    <!-- Script for Downloads, Fullscreen Lightbox, Caption Copy Box & Sharing -->
+    <script>
+        const CAPTION_STORAGE_KEY = 'suaglow_december_social_caption_v1';
+        const DEFAULT_DECEMBER_CAPTION = `Cold outside. Chok-chok inside. ✨❄️
+
+Baby, it's cold outside—but your glow doesn't have to be! This December, we're bringing Seoul Much Glow to Carrollton with three limited-time K-Beauty holiday exclusives:
+
+1️⃣ Korean Gyeongrak Facial Massage (60 Min) — $299
+Less puff. More sculpt. Very K-Beauty. Traditional Korean pressure-point & contouring massage with hydration-focused skincare.
+
+2️⃣ K-Beauty Signature Facial (60 Min) — $249
+One-time holiday session—no membership required! Deeply cleanse, hydrate, and restore a luminous chok-chok glass-skin glow before your holiday events.
+
+3️⃣ Korean Scalp & Hair Rejuvenation (3 Sessions · 90 Min Each) — $1,800 ($600/session)
+Physician-guided women's hair & scalp care featuring our new AI Scalp Analyzer, microcurrent stimulation, Korean pressure-point massage, DEP Needle-Free Exosome Infusion (×3), and LED red light therapy.
+
+✨ Offers valid through December 31, 2026.
+📍 Carrollton, TX | Dallas–Fort Worth
+🔗 Tap the link in bio to book your holiday glow!
+
+#SUAGlow #SeoulMuchGlow #KBeautyDallas #CarrolltonMedSpa #KoreanSkincare #GlassSkin #ChokChok #Gyeongrak #KoreanFacial #DallasMedSpa #ScalpRejuvenation #HolidayGlow`;
+
+        let currentSlideIndex = 1;
+        const slideMeta = {
+            1: { name: 'Cover • Seoul Much Glow' },
+            2: { name: 'Offer 1 • Korean Gyeongrak Facial ($299)' },
+            3: { name: 'Offer 2 • K-Beauty Signature Facial ($249)' },
+            4: { name: 'Offer 3 • Korean Scalp & Hair ($1,800)' },
+            5: { name: 'Closing • Reserve Your Holiday Glow' }
+        };
+
+        function updateCharCount() {
+            const textarea = document.getElementById('promo-caption-textarea');
+            const counter = document.getElementById('char-count');
+            if (!textarea || !counter) return;
+            const len = textarea.value.length;
+            counter.textContent = `${len.toLocaleString()} / 2,200 chars`;
+            if (len > 2200) {
+                counter.classList.add('text-red-300', 'border-red-400/40');
+                counter.classList.remove('text-white/65', 'border-white/10');
+            } else {
+                counter.classList.remove('text-red-300', 'border-red-400/40');
+                counter.classList.add('text-white/65', 'border-white/10');
+            }
+        }
+
+        function initCaptionBox() {
+            const textarea = document.getElementById('promo-caption-textarea');
+            if (!textarea) return;
+
+            const saved = localStorage.getItem(CAPTION_STORAGE_KEY);
+            textarea.value = saved !== null ? saved : DEFAULT_DECEMBER_CAPTION;
+            updateCharCount();
+
+            textarea.addEventListener('input', () => {
+                localStorage.setItem(CAPTION_STORAGE_KEY, textarea.value);
+                updateCharCount();
+            });
+        }
+
+        function copyCaption() {
+            const textarea = document.getElementById('promo-caption-textarea');
+            if (!textarea) return;
+            if (!textarea.value.trim()) {
+                showToast('Caption box is empty.');
+                return;
+            }
+            navigator.clipboard.writeText(textarea.value).then(() => {
+                showToast('Caption copied to clipboard!');
+            }).catch(() => {
+                textarea.select();
+                document.execCommand('copy');
+                showToast('Caption copied to clipboard!');
+            });
+        }
+
+        function pasteFromClipboard() {
+            const textarea = document.getElementById('promo-caption-textarea');
+            if (!textarea) return;
+            if (navigator.clipboard && navigator.clipboard.readText) {
+                navigator.clipboard.readText().then((text) => {
+                    if (!text) {
+                        showToast('Clipboard is empty.');
+                        return;
+                    }
+                    textarea.value = text;
+                    localStorage.setItem(CAPTION_STORAGE_KEY, text);
+                    updateCharCount();
+                    showToast('Pasted copy into caption box!');
+                }).catch(() => {
+                    textarea.focus();
+                    showToast('Click inside the box and press Cmd+V / Ctrl+V to paste.');
+                });
+            } else {
+                textarea.focus();
+                showToast('Click inside the box and press Cmd+V / Ctrl+V to paste.');
+            }
+        }
+
+        function clearCaption() {
+            const textarea = document.getElementById('promo-caption-textarea');
+            if (!textarea) return;
+            textarea.value = '';
+            localStorage.setItem(CAPTION_STORAGE_KEY, '');
+            updateCharCount();
+            textarea.focus();
+            showToast('Caption box cleared — ready to paste!');
+        }
+
+        function resetDefaultCaption() {
+            const textarea = document.getElementById('promo-caption-textarea');
+            if (!textarea) return;
+            textarea.value = DEFAULT_DECEMBER_CAPTION;
+            localStorage.setItem(CAPTION_STORAGE_KEY, DEFAULT_DECEMBER_CAPTION);
+            updateCharCount();
+            showToast('Loaded December promo draft copy.');
+        }
+
+        function downloadSlide(slideId, filename) {
+            const el = document.getElementById(slideId);
+            if (!el) return;
+
+            showToast('Generating high-res PNG...');
+            html2canvas(el, {
+                scale: 3,
+                useCORS: true,
+                backgroundColor: null,
+                logging: false
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = filename;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                showToast('Downloaded ' + filename);
+            }).catch(err => {
+                console.error(err);
+                showToast('Ready to screenshot!');
+            });
+        }
+
+        function updateLightboxScale() {
+            const host = document.getElementById('lightbox-slide-host');
+            if (!host) return;
+            const availableHeight = window.innerHeight - 130;
+            const availableWidth = window.innerWidth - 80;
+            const scale = Math.max(0.65, Math.min(availableHeight / 600, availableWidth / 480, 1.45));
+            host.style.transform = `scale(${scale})`;
+            host.style.transformOrigin = 'center center';
+        }
+
+        function openFullscreen(index) {
+            currentSlideIndex = index;
+            const orig = document.getElementById('slide-' + index);
+            if (!orig) return;
+
+            const host = document.getElementById('lightbox-slide-host');
+            host.innerHTML = '';
+
+            const clone = orig.cloneNode(true);
+            clone.id = 'lightbox-active-slide';
+            clone.classList.remove('cursor-pointer', 'hover:ring-2', 'hover:ring-[#C8A055]/60');
+            clone.removeAttribute('onclick');
+            clone.removeAttribute('title');
+            clone.style.width = '480px';
+            clone.style.height = '600px';
+            clone.style.maxWidth = '480px';
+            clone.style.minWidth = '480px';
+            clone.style.aspectRatio = '4 / 5';
+            clone.style.boxShadow = '0 30px 80px -20px rgba(0, 0, 0, 0.85)';
+
+            host.appendChild(clone);
+
+            document.getElementById('lightbox-slide-num').textContent = index;
+            document.getElementById('lightbox-slide-name').textContent = slideMeta[index].name;
+
+            [1, 2, 3, 4, 5].forEach(i => {
+                const pill = document.getElementById('pill-slide-' + i);
+                if (pill) {
+                    pill.className = i === index
+                        ? 'px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-[#E6C783] text-[#0E2A1A] shadow-sm'
+                        : 'px-2.5 py-1 rounded-full text-[10px] font-bold uppercase text-white/50 hover:text-white transition-colors';
+                }
+            });
+
+            updateLightboxScale();
+            document.getElementById('fullscreen-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function closeFullscreen() {
+            const modal = document.getElementById('fullscreen-modal');
+            if (modal) modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function nextSlide(e) {
+            if (e) e.stopPropagation();
+            openFullscreen(currentSlideIndex >= 5 ? 1 : currentSlideIndex + 1);
+        }
+
+        function prevSlide(e) {
+            if (e) e.stopPropagation();
+            openFullscreen(currentSlideIndex <= 1 ? 5 : currentSlideIndex - 1);
+        }
+
+        function toggleLightboxClean() {
+            const top = document.getElementById('lightbox-topbar');
+            const btm = document.getElementById('lightbox-bottombar');
+            const navs = document.querySelectorAll('.lightbox-ui-nav');
+            const isHidden = top.classList.contains('opacity-0');
+            if (isHidden) {
+                top.classList.remove('opacity-0', 'pointer-events-none');
+                btm.classList.remove('opacity-0', 'pointer-events-none');
+                navs.forEach(n => n.classList.remove('opacity-0', 'pointer-events-none'));
+            } else {
+                top.classList.add('opacity-0', 'pointer-events-none');
+                btm.classList.add('opacity-0', 'pointer-events-none');
+                navs.forEach(n => n.classList.add('opacity-0', 'pointer-events-none'));
+                showToast('UI hidden. Take your screenshot! Press H or click backdrop to restore.');
+            }
+        }
+
+        function handleStageClick(e) {
+            const viewport = document.getElementById('lightbox-viewport');
+            if (viewport && !viewport.contains(e.target)) {
+                const top = document.getElementById('lightbox-topbar');
+                if (top && top.classList.contains('opacity-0')) {
+                    toggleLightboxClean();
+                } else {
+                    closeFullscreen();
+                }
+            }
+        }
+
+        function toggleScreenshotMode() {
+            document.body.classList.toggle('screenshot-mode');
+            if (document.body.classList.contains('screenshot-mode')) {
+                showToast('Clean mode active. Press ESC or click anywhere to exit.');
+                const escHandler = () => {
+                    document.body.classList.remove('screenshot-mode');
+                    document.removeEventListener('keydown', escHandler);
+                    document.removeEventListener('click', escHandler);
+                };
+                setTimeout(() => {
+                    document.addEventListener('keydown', escHandler);
+                    document.addEventListener('click', escHandler);
+                }, 100);
+            }
+        }
+
+        function copySlideLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                showToast('Copied page link to clipboard!');
+            }).catch(() => {
+                prompt('Copy link:', window.location.href);
+            });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            if (toast && toastMsg) {
+                toastMsg.textContent = msg;
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2800);
+            }
+        }
+
+        window.addEventListener('keydown', (e) => {
+            const tag = document.activeElement && document.activeElement.tagName;
+            if (tag === 'TEXTAREA' || tag === 'INPUT') return;
+
+            const modal = document.getElementById('fullscreen-modal');
+            const isOpen = modal && !modal.classList.contains('hidden');
+            if (isOpen) {
+                if (e.key === 'Escape') closeFullscreen();
+                else if (e.key === 'ArrowRight') nextSlide();
+                else if (e.key === 'ArrowLeft') prevSlide();
+                else if (['1', '2', '3', '4', '5'].includes(e.key)) openFullscreen(Number(e.key));
+                else if (e.key === 'h' || e.key === 'H') toggleLightboxClean();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            const modal = document.getElementById('fullscreen-modal');
+            if (modal && !modal.classList.contains('hidden')) {
+                updateLightboxScale();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initCaptionBox();
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
