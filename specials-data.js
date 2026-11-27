@@ -1,97 +1,147 @@
 /**
- * SUA K Glow - Monthly Specials Data Configuration
- * ------------------------------------------------
+ * SUA Glow - Monthly Specials Data Configuration
+ * ----------------------------------------------
  * Dedicated configuration for the active Monthly Specials campaign.
- * Currently active: November 2026 - "The SUA Glow November Edit - Chingu Friendsgiving 🍂✨"
+ * Currently active: December 2026 - "The SUA Glow December Edit - Seoul Much Glow"
  */
 
 const MONTHLY_SPECIALS_CONFIG = {
-    // Campaign Overview Metadata
     meta: {
-        month: "November 2026",
-        campaignLabel: "THE SUA GLOW NOVEMBER EDIT",
-        pill: "CHINGU FRIENDSGIVING 🍂✨",
-        pillImage: "assets/chingu-friendsgiving-logo.png",
-        logo: "assets/chingu-friendsgiving-logo.png",
-        badge: "LIMITED TIME | NOVEMBER OFFERS",
-        title: "CHINGU FRIENDSGIVING",
-        subtitle: "GOOD FRIENDS. GREAT SKIN. SEOUL GLOW.",
-        heroImage: "assets/chingu-friendsgiving-hero.png",
-        heroText: "Chingu (친구) means friend in Korean. At SUA GLOW, every client is a chingu! This November, we're celebrating our Dallas–Fort Worth friends with a little extra K-Beauty love and exclusive year-end glow offers.",
-        sectionTitle: "CHINGU EXCLUSIVES",
-        sectionSubtitle: "A SUA GLOW thank you for our clients.",
+        month: "December 2026",
+        campaignLabel: "THE SUA GLOW DECEMBER EDIT",
+        title: "SEOUL MUCH GLOW",
+        titleImage: "assets/seoul-much-glow-title.png",
+        subtitle: "COLD OUTSIDE. CHOK-CHOK INSIDE.",
+        glossaryNote: "Chok-chok means soft, dewy, hydrated skin in Korean.",
+        badge: "LIMITED TIME | DECEMBER HOLIDAY OFFERS",
+        heroImage: "assets/december-seoul-much-glow-hero.jpg",
+        heroText: "Baby, it's cold outside—but your glow doesn't have to be! This December, we're bringing a little Seoul to your holiday season with Korean facial sculpting, one-time signature K-Beauty facials, and scalp &amp; hair rejuvenation.<br><br>Because dry winter skin? <em>Aniyo</em> (No!) Not on our holiday wish list!",
+        sectionTitle: "HOLIDAY GLOW EXCLUSIVES",
+        sectionSubtitle: "Your season of K-Beauty love starts here.",
         bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/",
-        flyerImage: "assets/SUA-Glow-November-Specials.png",
-        downloadFlyerImage: "assets/SUA-Glow-November-Specials.png",
-        validThrough: "Offers valid through November 30, 2026",
+        validThrough: "Offers valid through December 31, 2026",
         footerPillars: "KOREAN-FOUNDED  •  PHYSICIAN-GUIDED  •  CARROLLTON, TX",
-        terms: "*Offers valid through November 30, 2026. Limit two promotional purchases per eligible client. Consultation and clinical eligibility required. Offers cannot be combined with other promotions. Individual results may vary."
+        terms: "*Offers valid through December 31, 2026. Consultation and clinical eligibility required. Exosome and scalp care protocols use advanced needle-free DEP infusion technology. Offers cannot be combined with other promotions. Individual results may vary."
     },
 
-    // 3-Step Program (Highlighted Offers matching November Edit)
     featuredSteps: [
         {
             step: 1,
-            badge: "LIFT + TIGHTEN + REJUVENATE",
-            title: "OLIGIO X",
-            subtitle: "Your Seoul-style skin-firming refresh awaits.",
-            price: "$300 OFF",
-            priceDetail: "REGULAR VALUE $1,400+",
-            description: "Your Seoul-style, all-over skin-tightening glow-up starts here! Discover Korean RF technology designed to stimulate collagen, improve skin firmness and elasticity, and tighten the appearance of skin across the face and jawline—for smoother, firmer-looking skin and a naturally refreshed glow.",
-            image: "assets/november-promo-oligio-x.png",
-            ctaText: "BOOK YOUR OLIGIO X TREATMENT",
-            tags: ["SOFTER LOOKING FINE LINES", "SKIN TIGHTENING", "V-LINE CONTOUR", "COLLAGEN PRODUCTION", "IMPROVED SKIN ELASTICITY"],
+            badge: "SCULPT · DE-PUFF · HYDRATE",
+            title: "KOREAN GYEONGRAK FACIAL MASSAGE",
+            subtitle: "60-MINUTE KOREAN FACIAL SCULPTING EXPERIENCE",
+            hook: "Less puff. More sculpt. Very K-Beauty.",
+            price: "$299",
+            priceDetail: "60-MINUTE SESSION · LITTLE TO NO DOWNTIME",
+            description: "Puffy face? Jawline playing hide-and-seek? <em>Aniyo</em> (No!) Not today!<br><br>Meet Gyeongrak—Korea's signature hands-on facial sculpting technique! At SUA Glow, our newest team members are licensed Korean estheticians trained in traditional Korean facial massage, combining targeted pressure points, rhythmic sculpting movements, and hydration-focused skincare for one beautifully refreshed, seriously pampered face.<br><br>The goal? Ease facial tension, soften the appearance of temporary puffiness, and leave your facial contours looking refreshed and beautifully defined.",
+            stepsTitle: "YOUR 60-MINUTE GYEONGRAK SESSION",
+            stepItems: [
+                {
+                    num: "1",
+                    title: "KOREAN PRESSURE-POINT MASSAGE",
+                    detail: "Targeted hands-on techniques for deep facial muscle relaxation."
+                },
+                {
+                    num: "2",
+                    title: "FACIAL SCULPTING & DE-PUFFING",
+                    detail: "Rhythmic contouring massage to refresh the appearance of facial contours."
+                },
+                {
+                    num: "3",
+                    title: "HYDRATION-FOCUSED FINISH",
+                    detail: "Personalized K-Beauty skincare to leave your complexion feeling soft, comfortable, and refreshed."
+                }
+            ],
+            image: "assets/december-promo-gyeongrak.jpg",
+            ctaText: "BOOK YOUR 60-MINUTE GYEONGRAK FACIAL",
+            tags: [
+                "FACIAL DE-PUFFING",
+                "ENHANCED FACIAL CONTOURS",
+                "FACIAL TENSION RELIEF",
+                "SKIN HYDRATION & NOURISHMENT",
+                "RADIANT-LOOKING SKIN"
+            ],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
         {
             step: 2,
-            badge: "HYDRATE + REPAIR + GLOW",
-            title: "SKIN QUALITY BOOSTERS",
-            subtitle: "ECM + PN/PDRN + HA + COLLAGEN",
-            price: "$200 OFF",
-            priceDetail: "SKIN HEALTH BOOSTERS PRICES START AT $799",
-            description: "Beyond hydration. Discover next-generation Korean skin boosters designed to support your skin barrier, improve elasticity and texture, and restore the appearance of healthy, luminous skin.",
-            image: "assets/november-promo-skin-barrier.png",
-            ctaText: "BOOK YOUR SKIN QUALITY BOOSTERS",
-            tags: ["SKIN BARRIER SUPPORT", "SMOOTHER SKIN TEXTURE", "IMPROVED ELASTICITY", "DEEP HYDRATION", "COLLAGEN SUPPORT"],
+            badge: "CLEANSE · RESTORE · GLASS GLOW",
+            title: "K-BEAUTY SIGNATURE FACIAL",
+            subtitle: "60-MINUTE ONE-TIME K-BEAUTY FACIAL · NO MEMBERSHIP REQUIRED",
+            hook: "Holiday events on the calendar? Give your skin the full Seoul glass-skin glow-up.",
+            price: "$249",
+            priceDetail: "60-MINUTE ONE-TIME SESSION · LITTLE TO NO DOWNTIME",
+            description: "Dull, dry, or holiday-stressed skin? <em>Aniyo</em> (No!) Not on our watch! Enjoy our signature 60-minute Korean aesthetic facial as a one-time holiday session—no membership required.<br><br>Designed to deeply cleanse, hydrate, and restore a luminous <em>chok-chok</em> glow just in time for your holiday events. Your provider can also walk you through personalized in-clinic upgrades during your visit.",
+            image: "assets/november-promo-skin-barrier.webp",
+            ctaText: "BOOK YOUR K-BEAUTY SIGNATURE FACIAL",
+            tags: [
+                "GLASS SKIN GLOW",
+                "DEEP HYDRATION",
+                "SKIN BARRIER SUPPORT",
+                "60-MINUTE RITUAL",
+                "NO MEMBERSHIP REQUIRED"
+            ],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         },
         {
             step: 3,
-            badge: "CLEANSE · SCULPT · HYDRATE · GLOW",
-            title: "K-BEAUTY GLASS SKIN + HAIR GLOW EXPERIENCE",
-            subtitle: "100-MINUTE SEOUL-STYLE BEAUTY RITUAL · FACE, SCALP, NECK, SHOULDER & DÉCOLLETÉ",
-            price: "$100 OFF",
-            priceDetail: "REGULAR VALUE $499",
-            description: "Your chok-chok (dewy, hydrated) glow-up starts here!<br><br>Why stop at skincare when you can give your beauty routine the full Seoul treatment?<br><br>Experience 100 minutes of Korean-inspired pampering across the face, scalp, neck, shoulder, and décolleté—combining gentle exfoliation, deep cleansing, facial sculpting, lymphatic drainage massage, LED red light therapy, and a customized Korean modeling mask.<br><br>Our layered approach helps refresh dull-looking skin, improve the appearance of facial contours, and leave your complexion feeling smooth, hydrated, and beautifully radiant.",
-            featuresTitle: "THE GLASS SKIN & HAIR RITUAL INCLUDES",
-            features: [
-                "Gentle Dermabrasion",
-                "AquaFacial",
-                "Microcurrent Facial Sculpting (MET)",
-                "Electrical Muscle Stimulation (EMS)",
-                "Lymphatic Drainage Massage",
-                "Korean Modeling Mask",
-                "LED Red Light Therapy"
+            badge: "NOURISH · REVIVE · REJUVENATE",
+            title: "KOREAN SCALP & HAIR REJUVENATION",
+            subtitle: "PHYSICIAN-GUIDED WOMEN'S HAIR & SCALP CARE",
+            hook: "Your hair is changing. Your care should, too.",
+            price: "$1,800",
+            priceDetail: "3 PERSONALIZED SESSIONS · 90 MIN EACH ($600 / SESSION)",
+            description: "Ponytail feeling thinner? More hair in your brush? Middle part getting a little too much attention?<br><br><em>Aniyo</em> (No!) We're not leaving your hair concerns to guesswork! Hormones, aging, stress, and lifestyle changes can all affect your hair. At SUA Glow, we combine physician-guided hair and scalp assessment with Korean wellness traditions and modern scalp-care technology.<br><br><strong class='font-heading text-[11px] uppercase tracking-[0.2em] text-[#0E2A1A]'>MEDICAL INSIGHT. KOREAN TECHNIQUES. MODERN SCALP CARE.</strong>",
+            stepsTitle: "YOUR 5-STEP K-BEAUTY SCALP EXPERIENCE",
+            stepItems: [
+                {
+                    num: "1",
+                    title: "KNOW YOUR ROOTS",
+                    detail: "Personalized scalp assessment featuring our new AI Scalp Analyzer to explore thinning, shedding, and medical hair-care options."
+                },
+                {
+                    num: "2",
+                    title: "WAKE UP YOUR SCALP",
+                    detail: "Gentle microcurrent stimulation inspired by emerging hair-follicle research."
+                },
+                {
+                    num: "3",
+                    title: "AWAKEN YOUR GI!",
+                    detail: "Korean pressure-point massage to relieve tension and relax your scalp. Gi means “life energy.”"
+                },
+                {
+                    num: "4",
+                    title: "SAY HELLO TO EXOSOMES!",
+                    detail: "Advanced DEP Needle-Free Infusion (× 3 sessions) featuring exosomes, growth factors, peptides, and hydrating ingredients.*"
+                },
+                {
+                    num: "5",
+                    title: "LIGHT UP YOUR SCALP!",
+                    detail: "LED red light therapy inspired by research into cellular energy and hair-follicle activity."
+                }
             ],
-            image: "assets/november-promo-hydroglow.png",
-            ctaText: "BOOK YOUR GLASS SKIN EXPERIENCE",
-            tags: ["GENTLE EXFOLIATION", "FACIAL SCULPTING", "DE-PUFF & REFRESH", "SKIN HYDRATION", "SKIN REVITALIZATION"],
+            image: "assets/dep_scalp_woman_treatment.jpg",
+            ctaText: "BOOK MY HAIR & SCALP CONSULTATION",
+            tags: [
+                "SCALP HYDRATION & NOURISHMENT",
+                "SCALP STIMULATION",
+                "HAIR & SCALP REVITALIZATION",
+                "SCALP TENSION RELIEF",
+                "HEALTHIER-LOOKING HAIR"
+            ],
             bookingUrl: "https://suaglow.myaestheticrecord.com/online-booking/"
         }
     ],
 
-    // Additional Special Badges & Trust Pillars
     brandPillars: [
         { icon: "award", title: "KOREAN-FOUNDED", subtitle: "Authentic K-Beauty" },
         { icon: "stethoscope", title: "PHYSICIAN-GUIDED", subtitle: "Dr. Adam Yang, MD" },
-        { icon: "user-check", title: "KOREAN PA-C PROVIDER", subtitle: "Sophia Yang, PA-C" },
-        { icon: "sparkles", title: "SEOUL-INSPIRED", subtitle: "Korean aesthetic approach" },
+        { icon: "sparkles", title: "NEEDLE-FREE TECH", subtitle: "DEP · LDM · AI Scalp" },
+        { icon: "heart", title: "SEOUL-INSPIRED", subtitle: "Korean aesthetic approach" },
         { icon: "map-pin", title: "DALLAS K-BEAUTY", subtitle: "Carrollton · DFW" }
     ]
 };
 
-// Global assignment for direct usage
 if (typeof window !== 'undefined') {
     window.MONTHLY_SPECIALS_CONFIG = MONTHLY_SPECIALS_CONFIG;
 }

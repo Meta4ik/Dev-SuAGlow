@@ -139,7 +139,9 @@
 
         function buildEmailHtml(baseUrl) {
             const bookingUrl = 'https://suaglow.myaestheticrecord.com/online-booking/';
-            const promoUrl = baseUrl + '/specials-december';
+            const promoUrl = baseUrl === 'https://suaglow.com'
+                ? 'https://suaglow.com/specials.html'
+                : baseUrl + '/specials-december';
 
             return `<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">

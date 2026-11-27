@@ -2586,7 +2586,7 @@ const SEARCH_INDEX = [
   },
   {
     "url": "specials.html#final-consultation-cta",
-    "title": "K-Beauty doesn't chase trends.It builds better skin.",
+    "title": "Cold outside. Chok-chok inside.",
     "pageTitle": "Specials",
     "category": "Spa Treatments",
     "content": "Medical Aesthetics • Carrollton HQ",
