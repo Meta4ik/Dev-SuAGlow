@@ -118,7 +118,7 @@ function renderDecemberSpecials(config) {
         ` : '';
 
         return `
-            <div class="rounded-[28px] border border-[#D8C7AB]/80 hover:border-[#C8A055] p-6 sm:p-8 md:p-10 shadow-[0_22px_55px_rgba(3,12,7,0.55)] hover:shadow-[0_28px_68px_rgba(3,12,7,0.72)] transition-all duration-500 group animate-on-scroll fade-up ${delayClass}" style="background: linear-gradient(145deg, #FCF9F4 0%, #F6EFE3 48%, #ECE1CE 100%);">
+            <div class="rounded-[28px] border border-[#D8C7AB]/80 hover:border-[#C8A055] p-6 sm:p-8 md:p-10 shadow-[0_22px_55px_rgba(3,12,7,0.55)] hover:shadow-[0_28px_68px_rgba(3,12,7,0.72)] transition-all duration-500 group animate-on-scroll fade-up ${delayClass}" style="background: linear-gradient(145deg, #FCF9F4 0%, #F6EFE3 48%, #ECE1CE 100%); color: #0E2A1A;">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
 
                     <!-- Left Column: 4:3 Photo + Champagne Holiday Price Box + Satin Crimson Book Button -->
@@ -197,7 +197,7 @@ function renderDecemberSpecials(config) {
     <section id="promotions-hero" data-nav-theme="light" class="text-white relative overflow-hidden bg-[#07140D]">
 
         <!-- ZONE 1: Frosted Winter Sage-Pine Twilight Header (Darkened for Visible Falling Snow + Luminous Halo Behind Logo) -->
-        <div class="pt-10 pb-8 md:pt-14 md:pb-12 relative" style="background: linear-gradient(180deg, #B5C1B8 0%, #8FA195 52%, #687E70 100%);">
+        <div class="pt-10 pb-8 md:pt-14 md:pb-12 relative" style="background: linear-gradient(180deg, #B5C1B8 0%, #8FA195 52%, #687E70 100%); color: #0E2A1A;">
             <!-- Soft Champagne-Snow Lantern Halo Behind Title Emblem for Crisp Logo Contrast -->
             <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse 62% 60% at 50% 46%, rgba(252, 248, 240, 0.88) 0%, rgba(245, 238, 226, 0.52) 42%, rgba(245, 238, 226, 0) 76%);"></div>
             <!-- Delicate Holiday Gold Ambient Accent -->
