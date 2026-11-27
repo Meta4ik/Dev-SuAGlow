@@ -66,10 +66,10 @@
                     </button>
                 </div>
 
-                <!-- Image Host Switcher -->
+                <!-- Image Host Switcher (Defaults to Live suaglow.com for Brevo Send) -->
                 <select id="asset-host-select" onchange="rebuildEmail()" class="px-3 py-1.5 rounded-full text-[11px] font-heading font-semibold bg-white/5 border border-[#C8A055]/35 text-[#EBD7B0] focus:outline-none">
-                    <option value="https://suaglow.vercel.app" class="bg-[#0B1911]">Images: Vercel Staging</option>
-                    <option value="https://suaglow.com" class="bg-[#0B1911]">Images: Live suaglow.com</option>
+                    <option value="https://suaglow.com" selected class="bg-[#0B1911]">Live: suaglow.com (Brevo Ready)</option>
+                    <option value="https://suaglow.vercel.app" class="bg-[#0B1911]">Staging: suaglow.vercel.app</option>
                 </select>
 
                 <button onclick="copyEmailHtml()" class="px-4 py-1.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider text-white inline-flex items-center gap-1.5 shadow-md border border-[#E5C687]/40 hover:brightness-110 transition-all" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
@@ -206,9 +206,12 @@ Korean &ldquo;Gyeong-Rak&rdquo; Sculpting ($299), 60-Min K-Beauty Signature Faci
         </td>
     </tr>
 
-    <!-- EDITORIAL INTRO COPY -->
+    <!-- EDITORIAL INTRO COPY WITH BREVO PERSONALIZED GREETING -->
     <tr>
         <td align="center" style="background-color:#0E2619; padding:28px 32px 24px 32px;">
+            <p style="margin:0 0 14px 0; font-size:17px; font-weight:700; color:#F3D99C; letter-spacing:0.4px;">
+                Hi {{ contact.FIRSTNAME | default:'Friend' }},
+            </p>
             <p style="margin:0 0 12px 0; font-size:15px; line-height:1.65; color:#F4ECE0; font-style:italic;">
                 Baby, it&rsquo;s cold outside&mdash;but your glow doesn&rsquo;t have to be! This December, we&rsquo;re bringing a little Seoul to your holiday season with Korean facial sculpting, our signature K-Beauty facial, and scalp &amp; hair rejuvenation.
             </p>
@@ -402,7 +405,7 @@ Korean &ldquo;Gyeong-Rak&rdquo; Sculpting ($299), 60-Min K-Beauty Signature Faci
             </p>
             <p style="margin:0; font-size:10px; color:#647A6E;">
                 You received this email because you opted in to updates from SUA Glow Medical Aesthetics.<br>
-                <a href="{{UNSUBSCRIBE_URL}}" style="color:#9FB3A7; text-decoration:underline;">Unsubscribe</a>
+                <a href="{{ unsubscribe }}" style="color:#9FB3A7; text-decoration:underline;">Unsubscribe</a>
             </p>
         </td>
     </tr>
