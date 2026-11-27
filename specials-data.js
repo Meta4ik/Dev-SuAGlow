@@ -28,13 +28,13 @@ const MONTHLY_SPECIALS_CONFIG = {
         {
             step: 1,
             badge: "SCULPT · DE-PUFF · HYDRATE",
-            title: "KOREAN GYEONGRAK FACIAL MASSAGE",
+            title: "KOREAN “GYEONG-RAK” FACIAL MASSAGE",
             subtitle: "60-MINUTE KOREAN FACIAL SCULPTING EXPERIENCE",
             hook: "Less puff. More sculpt. Very K-Beauty.",
             price: "$299",
             priceDetail: "60-MINUTE SESSION · LITTLE TO NO DOWNTIME",
-            description: "Puffy face? Jawline playing hide-and-seek? <em>Aniyo</em> (No!) Not today!<br><br>Meet Gyeongrak—Korea's signature hands-on facial sculpting technique! At SUA Glow, our newest team members are licensed Korean estheticians trained in traditional Korean facial massage, combining targeted pressure points, rhythmic sculpting movements, and hydration-focused skincare for one beautifully refreshed, seriously pampered face.<br><br>The goal? Ease facial tension, soften the appearance of temporary puffiness, and leave your facial contours looking refreshed and beautifully defined.",
-            stepsTitle: "YOUR 60-MINUTE GYEONGRAK SESSION",
+            description: "Puffy face? Jawline playing hide-and-seek? <em>Aniyo</em> (No!) Not today!<br><br>Meet “Gyeong-Rak”—Korea's signature hands-on facial sculpting technique! At SUA Glow, our newest team members are licensed Korean estheticians trained in traditional Korean facial massage, combining targeted pressure points, rhythmic sculpting movements, and hydration-focused skincare for one beautifully refreshed, seriously pampered face.<br><br>The goal? Ease facial tension, soften the appearance of temporary puffiness, and leave your facial contours looking refreshed and beautifully defined.",
+            stepsTitle: "YOUR 60-MINUTE “GYEONG-RAK” SESSION",
             stepItems: [
                 {
                     num: "1",
@@ -53,7 +53,7 @@ const MONTHLY_SPECIALS_CONFIG = {
                 }
             ],
             image: "assets/december-promo-gyeongrak.jpg",
-            ctaText: "BOOK YOUR 60-MINUTE GYEONGRAK FACIAL",
+            ctaText: "BOOK YOUR 60-MINUTE “GYEONG-RAK” FACIAL",
             tags: [
                 "FACIAL DE-PUFFING",
                 "ENHANCED FACIAL CONTOURS",
