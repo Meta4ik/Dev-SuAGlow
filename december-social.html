@@ -123,8 +123,8 @@
             </p>
         </div>
 
-        <!-- Carousel Grid: 5 Consecutive Slides -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-start justify-items-center">
+        <!-- Carousel Grid: 5 Consecutive Slides (2-col on desktop so each 1:1 square renders at full crisp 480×480) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto items-start justify-items-center">
 
             <!-- ================= SLIDE 1: COVER ================= -->
             <div class="w-full max-w-[480px] flex flex-col items-center">
@@ -146,16 +146,16 @@
                 </div>
 
                 <!-- 1:1 Slide Canvas (Upper Photo seamlessly blended into Luminous Snow-Champagne Panel) -->
-                <div id="slide-1" onclick="openFullscreen(1)" title="Click to expand for full-screen screenshot" class="ig-slide-canvas cursor-pointer hover:ring-2 hover:ring-[#C8A055]/60 transition-all border border-[#C8A055]/30 flex flex-col justify-between p-5 sm:p-6 relative overflow-hidden" style="background: #FAF6EE;">
-                    <!-- Photo in Upper Half (Extends to 56%, seamlessly buried under full-canvas fade starting at 28%) -->
-                    <div class="absolute inset-x-0 top-0 h-[56%] z-0 overflow-hidden">
+                <div id="slide-1" onclick="openFullscreen(1)" title="Click to expand for full-screen screenshot" class="ig-slide-canvas cursor-pointer hover:ring-2 hover:ring-[#C8A055]/60 transition-all border border-[#C8A055]/30 flex flex-col justify-between p-4 sm:p-5 relative overflow-hidden" style="background: #FAF6EE;">
+                    <!-- Photo in Upper Half (Extends to 52%, seamlessly buried under full-canvas fade starting at 24%) -->
+                    <div class="absolute inset-x-0 top-0 h-[52%] z-0 overflow-hidden">
                         <img src="assets/december-seoul-much-glow-hero.jpg" alt="Seoul Much Glow Holiday" class="w-full h-full object-cover object-center brightness-105 contrast-105">
                         <!-- Soft top vignette for logo legibility -->
                         <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/65 to-transparent"></div>
                     </div>
 
-                    <!-- Full-Canvas Seamless Fade Overlay (Reaches 100% solid #FAF6EE at 52%, completely eliminating any edge seam) -->
-                    <div class="absolute inset-0 pointer-events-none z-[1]" style="background: linear-gradient(180deg, rgba(250, 246, 238, 0) 0%, rgba(250, 246, 238, 0) 26%, rgba(250, 246, 238, 0.35) 38%, rgba(250, 246, 238, 0.85) 47%, #FAF6EE 52%, #FAF6EE 100%);"></div>
+                    <!-- Full-Canvas Seamless Fade Overlay (Reaches 100% solid #FAF6EE at 48%, completely eliminating any edge seam) -->
+                    <div class="absolute inset-0 pointer-events-none z-[1]" style="background: linear-gradient(180deg, rgba(250, 246, 238, 0) 0%, rgba(250, 246, 238, 0) 22%, rgba(250, 246, 238, 0.35) 34%, rgba(250, 246, 238, 0.85) 43%, #FAF6EE 48%, #FAF6EE 100%);"></div>
 
                     <!-- Asymmetric Organic Holiday Gold Snowdrops & Starlight (Non-Symmetrical, Light) -->
                     <svg class="absolute inset-x-0 bottom-0 w-full h-[50%] pointer-events-none z-[1]" viewBox="0 0 480 300" fill="none" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
@@ -187,23 +187,23 @@
                     </div>
 
                     <!-- Lower Branding Zone: Bespoke SEOUL MUCH GLOW Title Emblem -->
-                    <div class="relative z-10 text-center mt-auto pt-24 sm:pt-28 pb-1.5">
-                        <div class="inline-flex items-center gap-2 mb-1.5">
+                    <div class="relative z-10 text-center mt-auto pt-16 sm:pt-20 pb-1.5 shrink-0">
+                        <div class="inline-flex items-center gap-2 mb-1">
                             <span class="w-1.5 h-1.5 rounded-full bg-[#9E1821]"></span>
                             <span class="text-[9px] font-heading font-bold uppercase tracking-[0.28em] text-[#0E2A1A]">
                                 The December Edit
                             </span>
                             <span class="w-1.5 h-1.5 rounded-full bg-[#9E1821]"></span>
                         </div>
-                        <img src="assets/seoul-much-glow-title.png" alt="Seoul Much Glow" class="h-20 sm:h-24 w-auto mx-auto object-contain drop-shadow-[0_6px_16px_rgba(14,42,26,0.12)] mb-1.5">
-                        <p class="font-heading text-[10.5px] sm:text-[11px] font-bold tracking-[0.22em] uppercase text-[#0E2A1A] leading-snug">
+                        <img src="assets/seoul-much-glow-title.png" alt="Seoul Much Glow" class="h-16 sm:h-20 w-auto mx-auto object-contain drop-shadow-[0_6px_16px_rgba(14,42,26,0.12)] mb-1.5">
+                        <p class="font-heading text-[10px] sm:text-[11px] font-bold tracking-[0.22em] uppercase text-[#0E2A1A] leading-snug">
                             Cold Outside.<br>
                             <span class="text-[#9E1821]">Chok-Chok Inside.</span>
                         </p>
                     </div>
 
                     <!-- Bottom Bar -->
-                    <div class="relative z-10 pt-2.5 border-t border-[#D8C7AB] flex items-center justify-between text-[10px] text-[#5B544A]">
+                    <div class="relative z-10 pt-2 border-t border-[#D8C7AB] flex items-center justify-between text-[10px] text-[#5B544A] shrink-0">
                         <span class="tracking-widest uppercase font-heading font-bold text-[#0E2A1A]">Limited Time • Dallas HQ</span>
                         <span class="tracking-wider font-semibold text-[#9E1821]">1 / 5</span>
                     </div>
@@ -236,7 +236,7 @@
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_85%_15%,rgba(200,160,85,0.18)_0%,transparent_60%)] pointer-events-none z-0"></div>
 
                     <!-- Top Minimal Header -->
-                    <div class="relative z-10 flex items-center justify-between border-b border-white/15 pb-2.5">
+                    <div class="relative z-10 flex items-center justify-between border-b border-white/15 pb-2 shrink-0">
                         <img src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics" class="h-5 sm:h-6 w-auto object-contain brightness-0 invert">
                         <div class="flex items-center gap-1.5">
                             <span class="text-[9px] font-bold tracking-widest uppercase text-[#E6C783]">SCULPT · DE-PUFF · HYDRATE</span>
@@ -245,9 +245,9 @@
                     </div>
 
                     <!-- Centered Photo Frame & Content -->
-                    <div class="relative z-10 my-auto py-2 flex flex-col justify-between flex-1">
+                    <div class="relative z-10 py-2 flex flex-col justify-between flex-1 min-h-0">
                         <!-- Photo Frame with Price Badge (Anchored on RIGHT because provider & client face are left/center) -->
-                        <div class="relative w-full aspect-[16/9] overflow-hidden rounded-xl border border-[#C8A055]/40 shadow-[0_12px_28px_rgba(0,0,0,0.45)] bg-black/40 mb-2">
+                        <div class="relative w-full flex-1 min-h-0 overflow-hidden rounded-xl border border-[#C8A055]/40 shadow-[0_12px_28px_rgba(0,0,0,0.45)] bg-black/40 mb-2">
                             <img src="assets/december-promo-gyeongrak.jpg" alt="Korean Gyeongrak Facial Massage" class="w-full h-full object-cover object-center">
                             <!-- Price Callout Badge on the Right -->
                             <div class="absolute bottom-2.5 right-2.5 px-3 py-1.5 rounded-lg text-white shadow-md text-right border border-[#E5C687]/40" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
@@ -267,7 +267,7 @@
                         </div>
 
                         <!-- 2-Column UX Checklist with SUA GLOW S as Checkmark -->
-                        <div class="p-2.5 sm:p-3 rounded-xl bg-white/[0.06] border border-[#C8A055]/30 shadow-inner backdrop-blur-xs">
+                        <div class="p-2 sm:p-2.5 rounded-xl bg-white/[0.06] border border-[#C8A055]/30 shadow-inner backdrop-blur-xs shrink-0">
                             <div class="grid grid-cols-2 gap-x-3 items-start">
                                 <!-- Col 1: 3 Items -->
                                 <div class="space-y-1.5 sm:space-y-2">
@@ -300,7 +300,7 @@
                     </div>
 
                     <!-- Bottom Nav Line -->
-                    <div class="relative z-10 pt-2.5 border-t border-white/15 flex items-center justify-between text-[10px] text-white/65">
+                    <div class="relative z-10 pt-2 border-t border-white/15 flex items-center justify-between text-[10px] text-white/65 shrink-0">
                         <span class="font-heading uppercase tracking-wider font-bold text-[#E6C783]">Link in bio to book</span>
                         <span class="tracking-wider font-semibold text-[#EBD7B0]">2 / 5</span>
                     </div>
@@ -333,7 +333,7 @@
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_85%_15%,rgba(200,160,85,0.18)_0%,transparent_60%)] pointer-events-none z-0"></div>
 
                     <!-- Top Minimal Header -->
-                    <div class="relative z-10 flex items-center justify-between border-b border-white/15 pb-2.5">
+                    <div class="relative z-10 flex items-center justify-between border-b border-white/15 pb-2 shrink-0">
                         <img src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics" class="h-5 sm:h-6 w-auto object-contain brightness-0 invert">
                         <div class="flex items-center gap-1.5">
                             <span class="text-[8.5px] sm:text-[9px] font-bold tracking-widest uppercase text-[#E6C783]">CLEANSE · RESTORE · GLASS GLOW</span>
@@ -342,9 +342,9 @@
                     </div>
 
                     <!-- Centered Photo Frame & Content -->
-                    <div class="relative z-10 my-auto py-2 flex flex-col justify-between flex-1">
+                    <div class="relative z-10 py-2 flex flex-col justify-between flex-1 min-h-0">
                         <!-- Photo Frame with Price Badge (Anchored on LEFT because model is on right) -->
-                        <div class="relative w-full aspect-[16/9] overflow-hidden rounded-xl border border-[#C8A055]/40 shadow-[0_12px_28px_rgba(0,0,0,0.45)] bg-black/40 mb-2">
+                        <div class="relative w-full flex-1 min-h-0 overflow-hidden rounded-xl border border-[#C8A055]/40 shadow-[0_12px_28px_rgba(0,0,0,0.45)] bg-black/40 mb-2">
                             <img src="assets/november-promo-skin-barrier.webp" alt="K-Beauty Signature Facial" class="w-full h-full object-cover object-center">
                             <!-- Price Callout Badge on the Left -->
                             <div class="absolute bottom-2.5 left-2.5 px-3 py-1.5 rounded-lg text-white shadow-md text-left border border-[#E5C687]/40" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
@@ -364,7 +364,7 @@
                         </div>
 
                         <!-- 2-Column UX Checklist with SUA GLOW S as Checkmark -->
-                        <div class="p-2.5 sm:p-3 rounded-xl bg-white/[0.06] border border-[#C8A055]/30 shadow-inner backdrop-blur-xs">
+                        <div class="p-2 sm:p-2.5 rounded-xl bg-white/[0.06] border border-[#C8A055]/30 shadow-inner backdrop-blur-xs shrink-0">
                             <div class="grid grid-cols-2 gap-x-3 items-start">
                                 <!-- Col 1: 3 Items -->
                                 <div class="space-y-1.5 sm:space-y-2">
@@ -397,7 +397,7 @@
                     </div>
 
                     <!-- Bottom Nav Line -->
-                    <div class="relative z-10 pt-2.5 border-t border-white/15 flex items-center justify-between text-[10px] text-white/65">
+                    <div class="relative z-10 pt-2 border-t border-white/15 flex items-center justify-between text-[10px] text-white/65 shrink-0">
                         <span class="font-heading uppercase tracking-wider font-bold text-[#E6C783]">Holiday Glow Refresh</span>
                         <span class="tracking-wider font-semibold text-[#EBD7B0]">3 / 5</span>
                     </div>
@@ -430,7 +430,7 @@
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_85%_15%,rgba(200,160,85,0.18)_0%,transparent_60%)] pointer-events-none z-0"></div>
 
                     <!-- Top Minimal Header -->
-                    <div class="relative z-10 flex items-center justify-between border-b border-white/15 pb-2.5">
+                    <div class="relative z-10 flex items-center justify-between border-b border-white/15 pb-2 shrink-0">
                         <img src="assets/logo-main.webp" alt="SUA GLOW Medical Aesthetics" class="h-5 sm:h-6 w-auto object-contain brightness-0 invert">
                         <div class="flex items-center gap-1.5">
                             <span class="text-[8.5px] sm:text-[9px] font-bold tracking-wider uppercase text-[#E6C783]">NOURISH · REVIVE · REJUVENATE</span>
@@ -439,9 +439,9 @@
                     </div>
 
                     <!-- Centered Photo Frame & Content -->
-                    <div class="relative z-10 my-auto py-2 flex flex-col justify-between flex-1">
+                    <div class="relative z-10 py-2 flex flex-col justify-between flex-1 min-h-0">
                         <!-- Photo Frame with Price Badge (Anchored on RIGHT away from client's face) -->
-                        <div class="relative w-full aspect-[16/9] overflow-hidden rounded-xl border border-[#C8A055]/40 shadow-[0_12px_28px_rgba(0,0,0,0.45)] bg-black/40 mb-2">
+                        <div class="relative w-full flex-1 min-h-0 overflow-hidden rounded-xl border border-[#C8A055]/40 shadow-[0_12px_28px_rgba(0,0,0,0.45)] bg-black/40 mb-2">
                             <img src="assets/dep_scalp_woman_treatment.jpg" alt="Korean Scalp & Hair Rejuvenation" class="w-full h-full object-cover object-center">
                             <!-- Price Callout Badge on the Right -->
                             <div class="absolute bottom-2.5 right-2.5 px-3 py-1.5 rounded-lg text-white shadow-md text-right border border-[#E5C687]/40" style="background: linear-gradient(135deg, #9E1821 0%, #B81F29 52%, #86121A 100%);">
@@ -461,7 +461,7 @@
                         </div>
 
                         <!-- 2-Column UX Checklist with SUA GLOW S as Checkmark -->
-                        <div class="p-2.5 sm:p-3 rounded-xl bg-white/[0.06] border border-[#C8A055]/30 shadow-inner backdrop-blur-xs">
+                        <div class="p-2 sm:p-2.5 rounded-xl bg-white/[0.06] border border-[#C8A055]/30 shadow-inner backdrop-blur-xs shrink-0">
                             <div class="grid grid-cols-2 gap-x-3 items-start">
                                 <!-- Col 1: 3 Items -->
                                 <div class="space-y-1.5 sm:space-y-2">
@@ -494,7 +494,7 @@
                     </div>
 
                     <!-- Bottom Nav Line -->
-                    <div class="relative z-10 pt-2.5 border-t border-white/15 flex items-center justify-between text-[10px] text-white/65">
+                    <div class="relative z-10 pt-2 border-t border-white/15 flex items-center justify-between text-[10px] text-white/65 shrink-0">
                         <span class="font-heading uppercase tracking-wider font-bold text-[#E6C783]">Physician-Guided Care</span>
                         <span class="tracking-wider font-semibold text-[#EBD7B0]">4 / 5</span>
                     </div>
@@ -521,7 +521,7 @@
                 </div>
 
                 <!-- 1:1 Slide Canvas (Deep Evergreen Holiday Night Closing Slide) -->
-                <div id="slide-5" onclick="openFullscreen(5)" title="Click to expand for full-screen screenshot" class="ig-slide-canvas cursor-pointer hover:ring-2 hover:ring-[#C8A055]/60 transition-all border border-[#C8A055]/35 flex flex-col justify-between p-5 sm:p-6 relative text-white text-center overflow-hidden" style="background: linear-gradient(180deg, #112E1E 0%, #0B1F14 55%, #07140D 100%);">
+                <div id="slide-5" onclick="openFullscreen(5)" title="Click to expand for full-screen screenshot" class="ig-slide-canvas cursor-pointer hover:ring-2 hover:ring-[#C8A055]/60 transition-all border border-[#C8A055]/35 flex flex-col justify-between p-4 sm:p-5 relative text-white text-center overflow-hidden" style="background: linear-gradient(180deg, #112E1E 0%, #0B1F14 55%, #07140D 100%);">
                     <!-- Subtle Twinkling Holiday Sparkles & Warm Champagne Spotlight -->
                     <div class="holiday-sparkles absolute inset-0 opacity-60 pointer-events-none"></div>
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_38%,rgba(200,160,85,0.2)_0%,transparent_70%)] pointer-events-none"></div>
