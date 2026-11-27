@@ -208,7 +208,7 @@ function renderDecemberSpecials(config) {
             <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 text-center">
                 <div class="animate-on-scroll fade-up">
                     <!-- Campaign Eyebrow -->
-                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/85 border border-[#C8A055]/50 shadow-xs mb-5 backdrop-blur-xs">
+                    <div class="inline-flex items-center gap-2.5 mb-4">
                         <span class="w-1.5 h-1.5 rounded-full bg-[#9E1821]"></span>
                         <span class="text-[10.5px] sm:text-xs font-heading font-bold uppercase tracking-[0.32em] text-[#0E2A1A]">
                             ${meta.campaignLabel || 'THE SUA GLOW DECEMBER EDIT'}
